@@ -1,0 +1,14 @@
+{
+    "name": "flexsim/flexnet-operations",
+    "description": "A package to facilitate interaction with the Flexera FlexNet Operations soap services",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "cole.shirley",
+            "email": "cole.shirley@flexsim.com"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^6.14"
+    }
+}
