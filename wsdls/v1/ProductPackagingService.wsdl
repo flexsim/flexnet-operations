@@ -1,0 +1,3885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:v1.webservices.operations.flexnet.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:v1.webservices.operations.flexnet.com" xmlns:intf="urn:v1.webservices.operations.flexnet.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="urn:v1.webservices.operations.flexnet.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <simpleType name="VersionFormatType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="FIXED"/>
+     <enumeration value="DATE_BASED"/>
+    </restriction>
+   </simpleType>
+   <simpleType name="DupGroupType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="NO_OVERRIDE"/>
+     <enumeration value="GROUPMASK"/>
+     <enumeration value="NONE"/>
+    </restriction>
+   </simpleType>
+   <simpleType name="GroupMaskType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="USER"/>
+     <enumeration value="HOST"/>
+     <enumeration value="DISPLAY"/>
+     <enumeration value="VENDOR"/>
+    </restriction>
+   </simpleType>
+   <complexType name="groupMaskDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="option" type="impl:GroupMaskType"/>
+    </sequence>
+   </complexType>
+   <complexType name="dupGroupDataType">
+    <sequence>
+     <element name="dupGroupOption" type="impl:DupGroupType"/>
+     <element maxOccurs="1" minOccurs="0" name="groupMask" type="impl:groupMaskDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="featureOverrideParamsType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="vendorString" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="notice" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="serialNumber" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="dupGroup" type="impl:dupGroupDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="featureDataType">
+    <sequence>
+     <element name="featureName" type="xsd:string"/>
+     <element name="versionFormat" type="impl:VersionFormatType"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="featureOverrideParams" type="impl:featureOverrideParamsType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createFeatureRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="feature" type="impl:featureDataType"/>
+    </sequence>
+   </complexType>
+   <element name="createFeatureRequest" type="impl:createFeatureRequestType"/>
+   <simpleType name="StatusType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="SUCCESS"/>
+     <enumeration value="FAILURE"/>
+     <enumeration value="PARTIAL_FAILURE"/>
+    </restriction>
+   </simpleType>
+   <complexType name="StatusInfoType">
+    <sequence>
+     <element name="status" type="impl:StatusType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedFeatureDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="feature" type="impl:featureDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedFeatureDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFeature" type="impl:failedFeatureDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdFeatureDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:string"/>
+     <element name="uniqueId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdFeatureDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="createdFeature" type="impl:createdFeatureDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createFeatureResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedFeatureDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdFeatureDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="createFeatureResponse" type="impl:createFeatureResponseType"/>
+   <complexType name="featurePKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="featureIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:featurePKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateFeatureDataType">
+    <sequence>
+     <element name="featureIdentifier" type="impl:featureIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="featureName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="versionFormat" type="impl:VersionFormatType"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="featureOverrideParams" type="impl:featureOverrideParamsType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateFeatureRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="feature" type="impl:updateFeatureDataType"/>
+    </sequence>
+   </complexType>
+   <element name="updateFeatureRequest" type="impl:updateFeatureRequestType"/>
+   <complexType name="failedUpdateFeatureDataType">
+    <sequence>
+     <element name="featureIdentifier" type="impl:featureIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedUpdateFeatureDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFeature" type="impl:failedUpdateFeatureDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateFeatureResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedUpdateFeatureDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="updateFeatureResponse" type="impl:updateFeatureResponseType"/>
+   <complexType name="deleteFeatureDataType">
+    <sequence>
+     <element name="featureIdentifier" type="impl:featureIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteFeatureRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="feature" type="impl:deleteFeatureDataType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteFeatureRequest" type="impl:deleteFeatureRequestType"/>
+   <complexType name="failedDeleteFeatureDataType">
+    <sequence>
+     <element name="featureIdentifier" type="impl:featureIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedDeleteFeatureDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFeature" type="impl:failedDeleteFeatureDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteFeatureResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedDeleteFeatureDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteFeatureResponse" type="impl:deleteFeatureResponseType"/>
+   <simpleType name="simpleSearchType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="STARTS_WITH"/>
+     <enumeration value="CONTAINS"/>
+     <enumeration value="ENDS_WITH"/>
+     <enumeration value="EQUALS"/>
+    </restriction>
+   </simpleType>
+   <complexType name="SimpleQueryType">
+    <sequence>
+     <element name="value" type="xsd:string"/>
+     <element name="searchType" type="impl:simpleSearchType"/>
+    </sequence>
+   </complexType>
+   <complexType name="VersionFormatQueryType">
+    <sequence>
+     <element name="value" type="impl:VersionFormatType"/>
+     <element name="searchType" type="impl:simpleSearchType"/>
+    </sequence>
+   </complexType>
+   <simpleType name="StateType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="DRAFT"/>
+     <enumeration value="ACTIVE"/>
+     <enumeration value="INACTIVE"/>
+     <enumeration value="DEPLOYED"/>
+     <enumeration value="OBSOLETE"/>
+     <enumeration value="TEST"/>
+     <enumeration value="ON_HOLD"/>
+    </restriction>
+   </simpleType>
+   <complexType name="StateQueryType">
+    <sequence>
+     <element name="value" type="impl:StateType"/>
+     <element name="searchType" type="impl:simpleSearchType"/>
+    </sequence>
+   </complexType>
+   <simpleType name="datedSearchType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="BEFORE"/>
+     <enumeration value="AFTER"/>
+     <enumeration value="ON"/>
+    </restriction>
+   </simpleType>
+   <complexType name="DateQueryType">
+    <sequence>
+     <element name="value" type="xsd:date"/>
+     <element name="searchType" type="impl:datedSearchType"/>
+    </sequence>
+   </complexType>
+   <complexType name="featureQueryParametersType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="featureName" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="version" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="versionFormat" nillable="true" type="impl:VersionFormatQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="description" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="state" nillable="true" type="impl:StateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="creationDate" nillable="true" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDate" nillable="true" type="impl:DateQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFeatureCountRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:featureQueryParametersType"/>
+    </sequence>
+   </complexType>
+   <element name="getFeatureCountRequest" type="impl:getFeatureCountRequestType"/>
+   <complexType name="getCountResponseDataType">
+    <sequence>
+     <element name="count" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFeatureCountResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getCountResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getFeatureCountResponse" type="impl:getFeatureCountResponseType"/>
+   <complexType name="getFeaturesQueryRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:featureQueryParametersType"/>
+     <element name="pageNumber" type="xsd:integer"/>
+     <element name="batchSize" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <element name="getFeaturesQueryRequest" type="impl:getFeaturesQueryRequestType"/>
+   <complexType name="featureQueryDataType">
+    <sequence>
+     <element name="uniqueId" type="xsd:string"/>
+     <element name="featureName" type="xsd:string"/>
+     <element name="versionFormat" type="impl:VersionFormatType"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element name="state" type="impl:StateType"/>
+     <element maxOccurs="1" minOccurs="0" name="featureOverrideParams" type="impl:featureOverrideParamsType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFeaturesQueryResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="feature" type="impl:featureQueryDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFeaturesQueryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getFeaturesQueryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getFeaturesQueryResponse" type="impl:getFeaturesQueryResponseType"/>
+   <complexType name="featureStateDataType">
+    <sequence>
+     <element name="featureIdentifier" type="impl:featureIdentifierType"/>
+     <element name="stateToSet" type="impl:StateType"/>
+    </sequence>
+   </complexType>
+   <complexType name="setFeatureStateRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="feature" type="impl:featureStateDataType"/>
+    </sequence>
+   </complexType>
+   <element name="setFeatureStateRequest" type="impl:setFeatureStateRequestType"/>
+   <complexType name="failedFeatureStateDataType">
+    <sequence>
+     <element name="feature" type="impl:featureStateDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedFeatureStateDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFeature" type="impl:failedFeatureStateDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="setFeatureStateResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedFeatureStateDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="setFeatureStateResponse" type="impl:setFeatureStateResponseType"/>
+   <complexType name="featureIdentifierWithCountDataType">
+    <sequence>
+     <element name="featureIdentifier" type="impl:featureIdentifierType"/>
+     <element name="count" type="xsd:positiveInteger"/>
+    </sequence>
+   </complexType>
+   <complexType name="featuresListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="feature" type="impl:featureIdentifierWithCountDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createFeatureBundleDataType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element name="features" type="impl:featuresListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createFeatureBundleRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="featureBundle" type="impl:createFeatureBundleDataType"/>
+    </sequence>
+   </complexType>
+   <element name="createFeatureBundleRequest" type="impl:createFeatureBundleRequestType"/>
+   <complexType name="failedFeatureBundleDataType">
+    <sequence>
+     <element name="featureBundle" type="impl:createFeatureBundleDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedFeatureBundleDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFeatureBundle" type="impl:failedFeatureBundleDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="correlationDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:string"/>
+     <element name="uniqueId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdFeatureBundleDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="createdFeatureBundle" type="impl:correlationDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createFeatureBundleResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedFeatureBundleDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdFeatureBundleDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="createFeatureBundleResponse" type="impl:createFeatureBundleResponseType"/>
+   <complexType name="featureBundlePKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="featureBundleIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:featureBundlePKType"/>
+    </sequence>
+   </complexType>
+   <simpleType name="CollectionOperationType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="REPLACE"/>
+     <enumeration value="ADD"/>
+     <enumeration value="DELETE"/>
+    </restriction>
+   </simpleType>
+   <complexType name="updateFeaturesListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="feature" type="impl:featureIdentifierWithCountDataType"/>
+     <element name="opType" type="impl:CollectionOperationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateFeatureBundleDataType">
+    <sequence>
+     <element name="featureBundleIdentifier" type="impl:featureBundleIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="features" type="impl:updateFeaturesListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateFeatureBundleRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="featureBundle" type="impl:updateFeatureBundleDataType"/>
+    </sequence>
+   </complexType>
+   <element name="updateFeatureBundleRequest" type="impl:updateFeatureBundleRequestType"/>
+   <complexType name="failedUpdateFeatureBundleDataType">
+    <sequence>
+     <element name="featureBundle" type="impl:updateFeatureBundleDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedUpdateFeatureBundleDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFeatureBundle" type="impl:failedUpdateFeatureBundleDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateFeatureBundleResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedUpdateFeatureBundleDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="updateFeatureBundleResponse" type="impl:updateFeatureBundleResponseType"/>
+   <complexType name="deleteFeatureBundleDataType">
+    <sequence>
+     <element name="featureBundleIdentifier" type="impl:featureBundleIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteFeatureBundleRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="featureBundle" type="impl:deleteFeatureBundleDataType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteFeatureBundleRequest" type="impl:deleteFeatureBundleRequestType"/>
+   <complexType name="failedDeleteFeatureBundleDataType">
+    <sequence>
+     <element name="featureBundleIdentifier" type="impl:featureBundleIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedDeleteFeatureBundleDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFeatureBundle" type="impl:failedDeleteFeatureBundleDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteFeatureBundleResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedDeleteFeatureBundleDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteFeatureBundleResponse" type="impl:deleteFeatureBundleResponseType"/>
+   <complexType name="featureBundleQueryParametersType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="name" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="description" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="state" nillable="true" type="impl:StateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="creationDate" nillable="true" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDate" nillable="true" type="impl:DateQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFeatureBundleCountRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:featureBundleQueryParametersType"/>
+    </sequence>
+   </complexType>
+   <element name="getFeatureBundleCountRequest" type="impl:getFeatureBundleCountRequestType"/>
+   <complexType name="getFeatureBundleCountResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getCountResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getFeatureBundleCountResponse" type="impl:getFeatureBundleCountResponseType"/>
+   <complexType name="getFeatureBundlesQueryRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:featureBundleQueryParametersType"/>
+     <element name="pageNumber" type="xsd:integer"/>
+     <element name="batchSize" type="xsd:integer"/>
+     <element name="returnContainedObjects" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <element name="getFeatureBundlesQueryRequest" type="impl:getFeatureBundlesQueryRequestType"/>
+   <complexType name="featureBundleQueryDataType">
+    <sequence>
+     <element name="uniqueId" type="xsd:string"/>
+     <element name="name" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element name="state" type="impl:StateType"/>
+     <element maxOccurs="1" minOccurs="0" name="features" type="impl:featuresListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFeatureBundlesQueryResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="featureBundle" type="impl:featureBundleQueryDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFeatureBundlesQueryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getFeatureBundlesQueryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getFeatureBundlesQueryResponse" type="impl:getFeatureBundlesQueryResponseType"/>
+   <complexType name="featureBundleStateDataType">
+    <sequence>
+     <element name="featureBundleIdentifier" type="impl:featureBundleIdentifierType"/>
+     <element name="stateToSet" type="impl:StateType"/>
+    </sequence>
+   </complexType>
+   <complexType name="setFeatureBundleStateRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="featureBundle" type="impl:featureBundleStateDataType"/>
+    </sequence>
+   </complexType>
+   <element name="setFeatureBundleStateRequest" type="impl:setFeatureBundleStateRequestType"/>
+   <complexType name="failedFeatureBundleStateDataType">
+    <sequence>
+     <element name="featureBundle" type="impl:featureBundleStateDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedFeatureBundleStateDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFeatureBundle" type="impl:failedFeatureBundleStateDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="setFeatureBundleStateResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedFeatureBundleStateDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="setFeatureBundleStateResponse" type="impl:setFeatureBundleStateResponseType"/>
+   <complexType name="licenseTechnologyPKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseTechnologyIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:licenseTechnologyPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseGeneratorPKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseGeneratorIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:licenseGeneratorPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="packagePropertiesDataType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element name="versionFormat" type="impl:VersionFormatType"/>
+    </sequence>
+   </complexType>
+   <complexType name="featureBundleIdentifierWithCountDataType">
+    <sequence>
+     <element name="featureBundleIdentifier" type="impl:featureBundleIdentifierType"/>
+     <element name="count" type="xsd:positiveInteger"/>
+    </sequence>
+   </complexType>
+   <complexType name="featureBundlesListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="featureBundle" type="impl:featureBundleIdentifierWithCountDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseModelPKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseModelIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:licenseModelPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseModelsListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="licenseModel" type="impl:licenseModelIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="trustedKeyPKType">
+    <sequence>
+     <element name="keyName" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="trustedKeyIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:trustedKeyPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="partNumberPKType">
+    <sequence>
+     <element name="partId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="partNumberIdentifierWithModelType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:partNumberPKType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModel" type="impl:licenseModelIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="partNumbersListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="partNumber" type="impl:partNumberIdentifierWithModelType"/>
+    </sequence>
+   </complexType>
+   <complexType name="hostTypePKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="hostTypeListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="hostType" type="impl:hostTypePKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="attributeDescriptorType">
+    <sequence>
+     <element name="attributeName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="stringValue" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="dateValue" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="booleanValue" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="integerValue" type="xsd:integer"/>
+     <element maxOccurs="unbounded" minOccurs="0" name="arrayValue" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="attributeDescriptorDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="attribute" type="impl:attributeDescriptorType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createProductDataType">
+    <sequence>
+     <element name="productName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseTechnology" type="impl:licenseTechnologyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseGenerator" type="impl:licenseGeneratorIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="packageProperties" type="impl:packagePropertiesDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="features" type="impl:featuresListType"/>
+     <element maxOccurs="1" minOccurs="0" name="featureBundles" type="impl:featureBundlesListType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModels" type="impl:licenseModelsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="trustedKey" type="impl:trustedKeyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="virtualTrustedKey" type="impl:trustedKeyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumbers" type="impl:partNumbersListType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostType" type="impl:hostTypePKType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostTypes" type="impl:hostTypeListType"/>
+     <element maxOccurs="1" minOccurs="0" name="usedOnDevice" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="productCategory" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="allowDownloadObsoleteFrInAdmin" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="allowDownloadObsoleteFrInPortal" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="productAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="startDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="endDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="upgradeEmailTemplateVarName" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createProductRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="product" type="impl:createProductDataType"/>
+    </sequence>
+   </complexType>
+   <element name="createProductRequest" type="impl:createProductRequestType"/>
+   <complexType name="failedProductDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="product" type="impl:createProductDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedProductDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedProduct" type="impl:failedProductDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdProductDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:string"/>
+     <element name="uniqueId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdProductDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="createdProduct" type="impl:createdProductDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createProductResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedProductDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdProductDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="createProductResponse" type="impl:createProductResponseType"/>
+   <complexType name="productPKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+     <element name="version" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="productIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:productPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateFeatureBundlesListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="featureBundle" type="impl:featureBundleIdentifierWithCountDataType"/>
+     <element name="opType" type="impl:CollectionOperationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updatePartNumbersListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="partNumber" type="impl:partNumberIdentifierWithModelType"/>
+     <element name="opType" type="impl:CollectionOperationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateLicenseModelsListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="licenseModelIdentifiers" type="impl:licenseModelIdentifierType"/>
+     <element name="opType" type="impl:CollectionOperationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateHostTypeListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="hostType" type="impl:hostTypePKType"/>
+     <element name="opType" type="impl:CollectionOperationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateProductDataType">
+    <sequence>
+     <element name="productIdentifier" type="impl:productIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseGenerator" type="impl:licenseGeneratorIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="packageProperties" type="impl:packagePropertiesDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="features" type="impl:updateFeaturesListType"/>
+     <element maxOccurs="1" minOccurs="0" name="featureBundles" type="impl:updateFeatureBundlesListType"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumbers" type="impl:updatePartNumbersListType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModels" type="impl:updateLicenseModelsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="trustedKey" type="impl:trustedKeyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="virtualTrustedKey" type="impl:trustedKeyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostType" type="impl:hostTypePKType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostTypes" type="impl:updateHostTypeListType"/>
+     <element maxOccurs="1" minOccurs="0" name="usedOnDevice" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="productCategory" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="allowDownloadObsoleteFrInAdmin" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="allowDownloadObsoleteFrInPortal" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="productAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="startDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="endDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="upgradeEmailTemplateVarName" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateProductRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="product" type="impl:updateProductDataType"/>
+    </sequence>
+   </complexType>
+   <element name="updateProductRequest" type="impl:updateProductRequestType"/>
+   <complexType name="failedUpdateProductDataType">
+    <sequence>
+     <element name="product" type="impl:updateProductDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedUpdateProductDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedProduct" type="impl:failedUpdateProductDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateProductResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedUpdateProductDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="updateProductResponse" type="impl:updateProductResponseType"/>
+   <complexType name="deleteProductDataType">
+    <sequence>
+     <element name="productIdentifier" type="impl:productIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteProductRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="product" type="impl:deleteProductDataType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteProductRequest" type="impl:deleteProductRequestType"/>
+   <complexType name="failedDeleteProductDataType">
+    <sequence>
+     <element name="productIdentifier" type="impl:productIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedDeleteProductDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedProduct" type="impl:failedDeleteProductDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteProductResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedDeleteProductDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteProductResponse" type="impl:deleteProductResponseType"/>
+   <complexType name="prodCustomAttributeQueryType">
+    <sequence>
+     <element name="attributeName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="stringValue" type="impl:SimpleQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="prodCustomAttributesQueryListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="attribute" type="impl:prodCustomAttributeQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="productQueryParametersType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="productName" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="version" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="description" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumber" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="state" nillable="true" type="impl:StateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="creationDate" nillable="true" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDate" nillable="true" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseTechnology" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostType" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="usedOnDevice" nillable="true" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="productAttributes" type="impl:prodCustomAttributesQueryListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getProductCountRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:productQueryParametersType"/>
+    </sequence>
+   </complexType>
+   <element name="getProductCountRequest" type="impl:getProductCountRequestType"/>
+   <complexType name="getProductCountResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getCountResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getProductCountResponse" type="impl:getProductCountResponseType"/>
+   <complexType name="getProductsQueryRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:productQueryParametersType"/>
+     <element name="pageNumber" type="xsd:integer"/>
+     <element name="batchSize" type="xsd:integer"/>
+     <element name="returnContainedObjects" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <element name="getProductsQueryRequest" type="impl:getProductsQueryRequestType"/>
+   <complexType name="productQueryDataType">
+    <sequence>
+     <element name="uniqueId" type="xsd:string"/>
+     <element name="productName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element name="state" type="impl:StateType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseTechnology" type="impl:licenseTechnologyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseGenerator" type="impl:licenseGeneratorIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="packageProperties" type="impl:packagePropertiesDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="features" type="impl:featuresListType"/>
+     <element maxOccurs="1" minOccurs="0" name="featureBundles" type="impl:featureBundlesListType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModels" type="impl:licenseModelsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="trustedKey" type="impl:trustedKeyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="virtualTrustedKey" type="impl:trustedKeyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumbers" type="impl:partNumbersListType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostType" type="impl:hostTypePKType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostTypes" type="impl:hostTypeListType"/>
+     <element maxOccurs="1" minOccurs="0" name="usedOnDevice" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="productCategory" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="allowDownloadObsoleteFrInAdmin" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="allowDownloadObsoleteFrInPortal" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="creationDate" type="xsd:dateTime"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDate" type="xsd:dateTime"/>
+     <element maxOccurs="1" minOccurs="0" name="productAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="startDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="endDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="upgradeEmailTemplateVarName" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="getProductsQueryResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="product" type="impl:productQueryDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getProductsQueryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getProductsQueryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getProductsQueryResponse" type="impl:getProductsQueryResponseType"/>
+   <complexType name="createProductCategoryDataType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createProductCategoryRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="productCategory" type="impl:createProductCategoryDataType"/>
+    </sequence>
+   </complexType>
+   <element name="createProductCategoryRequest" type="impl:createProductCategoryRequestType"/>
+   <complexType name="failedProductCategoryDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="productCategory" type="impl:createProductCategoryDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedProductCategoryDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedProductCategory" type="impl:failedProductCategoryDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdProductCategoryDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:string"/>
+     <element name="uniqueId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdProductCategoryDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="createdProductCatgory" type="impl:createdProductCategoryDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createProductCategoryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedProductCategoryDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdProductCategoryDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="createProductCategoryResponse" type="impl:createProductCategoryResponseType"/>
+   <complexType name="getProductCategoriesRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="pageNumber" type="xsd:integer"/>
+     <element name="batchSize" type="xsd:integer"/>
+     <element name="returnContainedObjects" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <element name="getProductCategoriesRequest" type="impl:getProductCategoriesRequestType"/>
+   <simpleType name="AttributeDataType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="TEXT"/>
+     <enumeration value="BOOLEAN"/>
+     <enumeration value="NUMBER"/>
+     <enumeration value="DATE"/>
+     <enumeration value="MULTI_VALUED_TEXT"/>
+     <enumeration value="LONGTEXT"/>
+    </restriction>
+   </simpleType>
+   <complexType name="valueType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="value" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="categoryAttributeDataType">
+    <sequence>
+     <element name="attributeName" type="xsd:string"/>
+     <element name="isRequired" type="xsd:boolean"/>
+     <element name="dataType" type="impl:AttributeDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="maxLength" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="validValues" type="impl:valueType"/>
+    </sequence>
+   </complexType>
+   <complexType name="categoryAttributesDataType">
+    <sequence>
+     <element maxOccurs="unbounded" name="categoryAttribute" type="impl:categoryAttributeDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="productCategoryDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="categoryAttributes" type="impl:categoryAttributesDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getProductCategoriesResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="productCategory" type="impl:productCategoryDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getProductCategoriesResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getProductCategoriesResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getProductCategoriesResponse" type="impl:getProductCategoriesResponseType"/>
+   <complexType name="userPKType">
+    <sequence>
+     <element name="firstName" type="xsd:string"/>
+     <element name="lastName" type="xsd:string"/>
+     <element name="emailAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="phoneNumber" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="userIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="userName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:userPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="handleProductCategoriesToUserRequestType">
+    <sequence>
+     <element name="user" type="impl:userIdentifierType"/>
+     <element maxOccurs="unbounded" name="productCategory" type="impl:productCategoryDataType"/>
+    </sequence>
+   </complexType>
+   <element name="assignProductCategoriesToUserRequest" type="impl:handleProductCategoriesToUserRequestType"/>
+   <complexType name="handleProductCategoriesToUserResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+    </sequence>
+   </complexType>
+   <element name="assignProductCategoriesToUserResponse" type="impl:handleProductCategoriesToUserResponseType"/>
+   <element name="removeProductCategoriesFromUserRequest" type="impl:handleProductCategoriesToUserRequestType"/>
+   <element name="removeProductCategoriesFromUserResponse" type="impl:handleProductCategoriesToUserResponseType"/>
+   <complexType name="getUsersForProductCategoryRequestType">
+    <sequence>
+     <element name="productCategory" type="impl:productCategoryDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getUsersForProductCategoryRequest" type="impl:getUsersForProductCategoryRequestType"/>
+   <complexType name="getUsersForProductCategoryResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="user" type="impl:userIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getUsersForProductCategoryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="userData" type="impl:getUsersForProductCategoryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getUsersForProductCategoryResponse" type="impl:getUsersForProductCategoryResponseType"/>
+   <complexType name="organizationPKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="organizationIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:organizationPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="handleProductCategoryToOrgRequestType">
+    <sequence>
+     <element name="org" type="impl:organizationIdentifierType"/>
+     <element maxOccurs="unbounded" name="productCategory" type="impl:productCategoryDataType"/>
+    </sequence>
+   </complexType>
+   <element name="assignProductCategoriesToOrgRequest" type="impl:handleProductCategoryToOrgRequestType"/>
+   <complexType name="handleProductCategoryToOrgResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+    </sequence>
+   </complexType>
+   <element name="assignProductCategoriesToOrgResponse" type="impl:handleProductCategoryToOrgResponseType"/>
+   <element name="removeProductCategoriesFromOrgRequest" type="impl:handleProductCategoryToOrgRequestType"/>
+   <element name="removeProductCategoriesFromOrgResponse" type="impl:handleProductCategoryToOrgResponseType"/>
+   <complexType name="productStateDataType">
+    <sequence>
+     <element name="productIdentifier" type="impl:productIdentifierType"/>
+     <element name="stateToSet" type="impl:StateType"/>
+    </sequence>
+   </complexType>
+   <complexType name="setProductStateRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="product" type="impl:productStateDataType"/>
+    </sequence>
+   </complexType>
+   <element name="setProductStateRequest" type="impl:setProductStateRequestType"/>
+   <complexType name="failedProductStateDataType">
+    <sequence>
+     <element name="product" type="impl:productStateDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedProductStateDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedProduct" type="impl:failedProductStateDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="setProductStateResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedProductStateDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="setProductStateResponse" type="impl:setProductStateResponseType"/>
+   <complexType name="partNumberIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:partNumberPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="partNumbersSimpleListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="partNumber" type="impl:partNumberIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createMaintenanceDataType">
+    <sequence>
+     <element name="maintenanceName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="allowUpgrades" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="allowUpsells" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="allowRenewals" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumbers" type="impl:partNumbersSimpleListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createMaintenanceRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="maintenance" type="impl:createMaintenanceDataType"/>
+    </sequence>
+   </complexType>
+   <element name="createMaintenanceRequest" type="impl:createMaintenanceRequestType"/>
+   <complexType name="failedMaintenanceDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="maintenance" type="impl:createMaintenanceDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedMaintenanceDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedMaintenance" type="impl:failedMaintenanceDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdMaintenaceDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:string"/>
+     <element name="uniqueId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdMaintenanceDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="createdMaintenance" type="impl:createdMaintenaceDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createMaintenanceResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedMaintenanceDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdMaintenanceDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="createMaintenanceResponse" type="impl:createMaintenanceResponseType"/>
+   <complexType name="maintenancePKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+     <element name="version" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="maintenanceIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:maintenancePKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updatePartNumbersSimpleListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="partNumber" type="impl:partNumberIdentifierType"/>
+     <element name="opType" type="impl:CollectionOperationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateMaintenanceDataType">
+    <sequence>
+     <element name="maintenanceIdentifier" type="impl:maintenanceIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="allowUpgrades" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="allowUpsells" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="allowRenewals" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumbers" type="impl:updatePartNumbersSimpleListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateMaintenanceRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="maintenance" type="impl:updateMaintenanceDataType"/>
+    </sequence>
+   </complexType>
+   <element name="updateMaintenanceRequest" type="impl:updateMaintenanceRequestType"/>
+   <complexType name="failedUpdateMaintenanceDataType">
+    <sequence>
+     <element name="maintenance" type="impl:updateMaintenanceDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedUpdateMaintenanceDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedMaintenance" type="impl:failedUpdateMaintenanceDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateMaintenanceResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedUpdateMaintenanceDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="updateMaintenanceResponse" type="impl:updateMaintenanceResponseType"/>
+   <complexType name="deleteMaintenanceDataType">
+    <sequence>
+     <element name="maintenanceIdentifier" type="impl:maintenanceIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteMaintenanceRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="maintenance" type="impl:deleteMaintenanceDataType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteMaintenanceRequest" type="impl:deleteMaintenanceRequestType"/>
+   <complexType name="failedDeleteMaintenanceDataType">
+    <sequence>
+     <element name="maintenanceIdentifier" type="impl:maintenanceIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedDeleteMaintenanceDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedMaintenance" type="impl:failedDeleteMaintenanceDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteMaintenanceResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedDeleteMaintenanceDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteMaintenanceResponse" type="impl:deleteMaintenanceResponseType"/>
+   <complexType name="maintenanceQueryParametersType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="maintenanceName" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="version" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="description" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumber" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="state" nillable="true" type="impl:StateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="creationDate" nillable="true" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDate" nillable="true" type="impl:DateQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getMaintenanceCountRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:maintenanceQueryParametersType"/>
+    </sequence>
+   </complexType>
+   <element name="getMaintenanceCountRequest" type="impl:getMaintenanceCountRequestType"/>
+   <complexType name="getMaintenanceCountResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getCountResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getMaintenanceCountResponse" type="impl:getMaintenanceCountResponseType"/>
+   <complexType name="getMaintenanceQueryRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:maintenanceQueryParametersType"/>
+     <element name="pageNumber" type="xsd:integer"/>
+     <element name="batchSize" type="xsd:integer"/>
+     <element name="returnContainedObjects" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <element name="getMaintenanceQueryRequest" type="impl:getMaintenanceQueryRequestType"/>
+   <complexType name="maintenanceQueryDataType">
+    <sequence>
+     <element name="uniqueId" type="xsd:string"/>
+     <element name="maintenanceName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element name="state" type="impl:StateType"/>
+     <element maxOccurs="1" minOccurs="0" name="allowUpgrades" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="allowUpsells" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="allowRenewals" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumbers" type="impl:partNumbersSimpleListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getMaintenanceQueryResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="maintenance" type="impl:maintenanceQueryDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getMaintenanceQueryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getMaintenanceQueryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getMaintenanceQueryResponse" type="impl:getMaintenanceQueryResponseType"/>
+   <complexType name="maintenanceStateDataType">
+    <sequence>
+     <element name="maintenanceIdentifier" type="impl:maintenanceIdentifierType"/>
+     <element name="stateToSet" type="impl:StateType"/>
+    </sequence>
+   </complexType>
+   <complexType name="setMaintenanceStateRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="maintenance" type="impl:maintenanceStateDataType"/>
+    </sequence>
+   </complexType>
+   <element name="setMaintenanceStateRequest" type="impl:setMaintenanceStateRequestType"/>
+   <complexType name="failedMaintenanceStateDataType">
+    <sequence>
+     <element name="maintenance" type="impl:maintenanceStateDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedMaintenanceStateDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedMaintenance" type="impl:failedMaintenanceStateDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="setMaintenanceStateResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedMaintenanceStateDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="setMaintenanceStateResponse" type="impl:setMaintenanceStateResponseType"/>
+   <complexType name="productIdentifierWithCountDataType">
+    <sequence>
+     <element name="productIdentifier" type="impl:productIdentifierType"/>
+     <element name="count" type="xsd:positiveInteger"/>
+    </sequence>
+   </complexType>
+   <complexType name="productsListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="product" type="impl:productIdentifierWithCountDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createUniformSuiteDataType">
+    <sequence>
+     <element name="suiteName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseTechnology" type="impl:licenseTechnologyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseGenerator" type="impl:licenseGeneratorIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="packageProperties" type="impl:packagePropertiesDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="products" type="impl:productsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModels" type="impl:licenseModelsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="trustedKey" type="impl:trustedKeyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="virtualTrustedKey" type="impl:trustedKeyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumbers" type="impl:partNumbersListType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostType" type="impl:hostTypePKType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostTypes" type="impl:hostTypeListType"/>
+     <element maxOccurs="1" minOccurs="0" name="usedOnDevice" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="allowDownloadObsoleteFrInAdmin" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="allowDownloadObsoleteFrInPortal" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="productAttributes" type="impl:attributeDescriptorDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createUniformSuiteRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="uniformSuite" type="impl:createUniformSuiteDataType"/>
+    </sequence>
+   </complexType>
+   <element name="createUniformSuiteRequest" type="impl:createUniformSuiteRequestType"/>
+   <complexType name="failedUniformSuiteDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniformSuite" type="impl:createUniformSuiteDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedUniformSuiteDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedUniformSuite" type="impl:failedUniformSuiteDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdUniformSuiteDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:string"/>
+     <element name="uniqueId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdUniformSuiteDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="createdUniformSuite" type="impl:createdUniformSuiteDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createUniformSuiteResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedUniformSuiteDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdUniformSuiteDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="createUniformSuiteResponse" type="impl:createUniformSuiteResponseType"/>
+   <complexType name="suitePKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+     <element name="version" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="suiteIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:suitePKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateProductsListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="productIdentifier" type="impl:productIdentifierWithCountDataType"/>
+     <element name="opType" type="impl:CollectionOperationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateUniformSuiteDataType">
+    <sequence>
+     <element name="suiteIdentifier" type="impl:suiteIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseGenerator" type="impl:licenseGeneratorIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="packageProperties" type="impl:packagePropertiesDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="products" type="impl:updateProductsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModels" type="impl:updateLicenseModelsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="trustedKey" type="impl:trustedKeyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="virtualTrustedKey" type="impl:trustedKeyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumbers" type="impl:updatePartNumbersListType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostType" type="impl:hostTypePKType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostTypes" type="impl:updateHostTypeListType"/>
+     <element maxOccurs="1" minOccurs="0" name="usedOnDevice" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="allowDownloadObsoleteFrInAdmin" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="allowDownloadObsoleteFrInPortal" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="productAttributes" type="impl:attributeDescriptorDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateUniformSuiteRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="uniformSuite" type="impl:updateUniformSuiteDataType"/>
+    </sequence>
+   </complexType>
+   <element name="updateUniformSuiteRequest" type="impl:updateUniformSuiteRequestType"/>
+   <complexType name="failedUpdateUniformSuiteDataType">
+    <sequence>
+     <element name="uniformSuite" type="impl:updateUniformSuiteDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedUpdateUniformSuiteDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedUniformSuite" type="impl:failedUpdateUniformSuiteDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateUniformSuiteResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedUpdateUniformSuiteDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="updateUniformSuiteResponse" type="impl:updateUniformSuiteResponseType"/>
+   <complexType name="deleteUniformSuiteDataType">
+    <sequence>
+     <element name="suiteIdentifier" type="impl:suiteIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteUniformSuiteRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="uniformSuite" type="impl:deleteUniformSuiteDataType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteUniformSuiteRequest" type="impl:deleteUniformSuiteRequestType"/>
+   <complexType name="failedDeleteUniformSuiteDataType">
+    <sequence>
+     <element name="suiteIdentifier" type="impl:suiteIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedDeleteUniformSuiteDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedUniformSuite" type="impl:failedDeleteUniformSuiteDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteUniformSuiteResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedDeleteUniformSuiteDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteUniformSuiteResponse" type="impl:deleteUniformSuiteResponseType"/>
+   <complexType name="suiteCustomAttributeQueryType">
+    <sequence>
+     <element name="attributeName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="stringValue" type="impl:SimpleQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="suiteCustomAttributesQueryListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="attribute" type="impl:suiteCustomAttributeQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="suiteQueryParametersType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="suiteName" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="version" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="description" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumber" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="state" nillable="true" type="impl:StateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="creationDate" nillable="true" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDate" nillable="true" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseTechnology" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostType" nillable="true" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="usedOnDevice" nillable="true" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="productAttributes" type="impl:suiteCustomAttributesQueryListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getUniformSuiteCountRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:suiteQueryParametersType"/>
+    </sequence>
+   </complexType>
+   <element name="getUniformSuiteCountRequest" type="impl:getUniformSuiteCountRequestType"/>
+   <complexType name="getUniformSuiteCountResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getCountResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getUniformSuiteCountResponse" type="impl:getUniformSuiteCountResponseType"/>
+   <complexType name="getUniformSuitesQueryRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:suiteQueryParametersType"/>
+     <element name="pageNumber" type="xsd:integer"/>
+     <element name="batchSize" type="xsd:integer"/>
+     <element name="returnContainedObjects" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <element name="getUniformSuitesQueryRequest" type="impl:getUniformSuitesQueryRequestType"/>
+   <complexType name="uniformSuiteQueryDataType">
+    <sequence>
+     <element name="uniqueId" type="xsd:string"/>
+     <element name="suiteName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="version" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element name="state" type="impl:StateType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseTechnology" type="impl:licenseTechnologyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseGenerator" type="impl:licenseGeneratorIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="packageProperties" type="impl:packagePropertiesDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="products" type="impl:productsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModels" type="impl:licenseModelsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="trustedKey" type="impl:trustedKeyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="virtualTrustedKey" type="impl:trustedKeyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumbers" type="impl:partNumbersListType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostType" type="impl:hostTypePKType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostTypes" type="impl:hostTypeListType"/>
+     <element maxOccurs="1" minOccurs="0" name="usedOnDevice" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="productCategory" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="allowDownloadObsoleteFrInAdmin" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="allowDownloadObsoleteFrInPortal" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="creationDate" type="xsd:dateTime"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDate" type="xsd:dateTime"/>
+     <element maxOccurs="1" minOccurs="0" name="productAttributes" type="impl:attributeDescriptorDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getUniformSuitesQueryResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="uniformSuite" type="impl:uniformSuiteQueryDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getUniformSuitesQueryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getUniformSuitesQueryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getUniformSuitesQueryResponse" type="impl:getUniformSuitesQueryResponseType"/>
+   <complexType name="uniformSuiteStateDataType">
+    <sequence>
+     <element name="suiteIdentifier" type="impl:suiteIdentifierType"/>
+     <element name="stateToSet" type="impl:StateType"/>
+    </sequence>
+   </complexType>
+   <complexType name="setUniformSuiteStateRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="suite" type="impl:uniformSuiteStateDataType"/>
+    </sequence>
+   </complexType>
+   <element name="setUniformSuiteStateRequest" type="impl:setUniformSuiteStateRequestType"/>
+   <complexType name="failedUniformSuiteStateDataType">
+    <sequence>
+     <element name="suite" type="impl:uniformSuiteStateDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedUniformSuiteStateDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedUniformSuite" type="impl:failedUniformSuiteStateDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="setUniformSuiteStateResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedUniformSuiteStateDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="setUniformSuiteStateResponse" type="impl:setUniformSuiteStateResponseType"/>
+   <complexType name="createPartNumberDataType">
+    <sequence>
+     <element name="partId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createPartNumberRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="partNumber" type="impl:createPartNumberDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="processSync" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <element name="createPartNumberRequest" type="impl:createPartNumberRequestType"/>
+   <complexType name="failedPartNumberDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="partNumber" type="impl:createPartNumberDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedPartNumberDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedPartNumber" type="impl:failedPartNumberDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdPartNumberDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:string"/>
+     <element name="uniqueId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdPartNumberDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="createdPartNumber" type="impl:createdPartNumberDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createPartNumberResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedPartNumberDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdPartNumberDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="createPartNumberResponse" type="impl:createPartNumberResponseType"/>
+   <complexType name="deletePartNumberDataType">
+    <sequence>
+     <element name="partNumberIdentifier" type="impl:partNumberIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deletePartNumberRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="partNumber" type="impl:deletePartNumberDataType"/>
+    </sequence>
+   </complexType>
+   <element name="deletePartNumberRequest" type="impl:deletePartNumberRequestType"/>
+   <complexType name="failedDeletePartNumberDataType">
+    <sequence>
+     <element name="partNumber" type="impl:partNumberIdentifierType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedDeletePartNumberDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedPartNumber" type="impl:failedDeletePartNumberDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deletePartNumberResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedDeletePartNumberDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="deletePartNumberResponse" type="impl:deletePartNumberResponseType"/>
+   <complexType name="partNumberQueryParametersType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="partId" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="productName" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModel" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="creationDate" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDate" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="unmappedWithProduct" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="unmappedWithLicenseModel" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="getPartNumberCountRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:partNumberQueryParametersType"/>
+    </sequence>
+   </complexType>
+   <element name="getPartNumberCountRequest" type="impl:getPartNumberCountRequestType"/>
+   <complexType name="partNumberCountDataType">
+    <sequence>
+     <element name="count" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <complexType name="getPartNumberCountResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:partNumberCountDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getPartNumberCountResponse" type="impl:getPartNumberCountResponseType"/>
+   <complexType name="getPartNumbersQueryRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:partNumberQueryParametersType"/>
+     <element name="pageNumber" type="xsd:integer"/>
+     <element name="batchSize" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <element name="getPartNumbersQueryRequest" type="impl:getPartNumbersQueryRequestType"/>
+   <complexType name="partNumberDataType">
+    <sequence>
+     <element name="partNumberIdentifier" type="impl:partNumberIdentifierType"/>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="creationDate" nillable="true" type="xsd:date"/>
+     <element name="lastModifiedDate" nillable="true" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="mappedProduct" type="impl:productIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="mappedLicenseModel" type="impl:licenseModelIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="partNumberDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="partNumber" type="impl:partNumberDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getPartNumbersQueryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:partNumberDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="getPartNumbersQueryResponse" type="impl:getPartNumbersQueryResponseType"/>
+   <simpleType name="relationshipType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="RELATION_UNDEFINED"/>
+     <enumeration value="PRODUCTION_VERSION_OF"/>
+     <enumeration value="DEMO_OF"/>
+     <enumeration value="UPGRADE_FROM"/>
+     <enumeration value="UPGRADE_TO"/>
+     <enumeration value="UPSELL_FROM"/>
+     <enumeration value="UPSELL_TO"/>
+     <enumeration value="IS_MAINTENANCE"/>
+     <enumeration value="HAS_MAINTENANCE"/>
+    </restriction>
+   </simpleType>
+   <complexType name="productRelationshipDataType">
+    <sequence>
+     <element name="productToRelate" type="impl:productIdentifierType"/>
+     <element name="relatedProduct" type="impl:productIdentifierType"/>
+     <element name="relation" type="impl:relationshipType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateProductRelationshipDataType">
+    <complexContent>
+     <extension base="impl:productRelationshipDataType">
+      <sequence>
+       <element name="newRelation" type="impl:relationshipType"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="createProductRelationshipRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="relationship" type="impl:productRelationshipDataType"/>
+    </sequence>
+   </complexType>
+   <element name="createProductRelationshipRequest" type="impl:createProductRelationshipRequestType"/>
+   <complexType name="failedProductRelationshipDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="relationship" type="impl:productRelationshipDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedProductRelationshipDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedRelationship" type="impl:failedProductRelationshipDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createProductRelationshipResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedProductRelationshipDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="createProductRelationshipResponse" type="impl:createProductRelationshipResponseType"/>
+   <complexType name="updateProductRelationshipRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="relationship" type="impl:updateProductRelationshipDataType"/>
+    </sequence>
+   </complexType>
+   <element name="updateProductRelationshipRequest" type="impl:updateProductRelationshipRequestType"/>
+   <complexType name="failedUpdateProductRelationshipDataType">
+    <sequence>
+     <element name="relationship" type="impl:updateProductRelationshipDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedUpdateProductRelationshipDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedRelationship" type="impl:failedUpdateProductRelationshipDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateProductRelationshipResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedUpdateProductRelationshipDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="updateProductRelationshipResponse" type="impl:updateProductRelationshipResponseType"/>
+   <complexType name="deleteProductRelationshipRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="relationship" type="impl:productRelationshipDataType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteProductRelationshipRequest" type="impl:deleteProductRelationshipRequestType"/>
+   <complexType name="deleteProductRelationshipResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedProductRelationshipDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteProductRelationshipResponse" type="impl:deleteProductRelationshipResponseType"/>
+   <complexType name="getProductRelationshipsRequestType">
+    <sequence>
+     <element name="productIdentifier" type="impl:productIdentifierType"/>
+    </sequence>
+   </complexType>
+   <element name="getProductRelationshipsRequest" type="impl:getProductRelationshipsRequestType"/>
+   <complexType name="getProductRelationshipsResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="unbounded" name="relationship" type="impl:productRelationshipDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getProductRelationshipsResponse" type="impl:getProductRelationshipsResponseType"/>
+   <complexType name="identifierQueryParametersType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="name" nillable="true" type="impl:SimpleQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getModelIdentifiersRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:identifierQueryParametersType"/>
+    </sequence>
+   </complexType>
+   <element name="getModelIdentifiersRequest" type="impl:getModelIdentifiersRequestType"/>
+   <complexType name="modelAttributesType">
+    <sequence>
+     <element name="needServerId" type="xsd:boolean"/>
+     <element name="needNodeLockId" type="xsd:boolean"/>
+     <element name="needCount" type="xsd:boolean"/>
+     <element name="needOverdraftCount" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseModelDetailsType">
+    <sequence>
+     <element name="licenseModelIdentifier" type="impl:licenseModelIdentifierType"/>
+     <element name="licenseTechnology" type="impl:licenseTechnologyIdentifierType"/>
+     <element name="attributeDetails" type="impl:modelAttributesType"/>
+    </sequence>
+   </complexType>
+   <complexType name="modelIdentifiersDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="licenseModel" type="impl:licenseModelDetailsType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getModelIdentifiersResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:modelIdentifiersDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="getModelIdentifiersResponse" type="impl:getModelIdentifiersResponseType"/>
+   <complexType name="getTransactionKeyIdentifiersRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:identifierQueryParametersType"/>
+    </sequence>
+   </complexType>
+   <element name="getTransactionKeyIdentifiersRequest" type="impl:getTransactionKeyIdentifiersRequestType"/>
+   <complexType name="transactionKeyIdentifiersDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="transactionKeyIdentifier" type="impl:trustedKeyIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getTransactionKeyIdentifiersResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:transactionKeyIdentifiersDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="getTransactionKeyIdentifiersResponse" type="impl:getTransactionKeyIdentifiersResponseType"/>
+   <complexType name="organizationBasicDataType">
+    <sequence>
+     <element name="orgUnitId" type="xsd:string"/>
+     <element name="displayName" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createOrganizationRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="organization" type="impl:organizationBasicDataType"/>
+    </sequence>
+   </complexType>
+   <element name="createOrganizationRequest" type="impl:createOrganizationRequestType"/>
+   <complexType name="createdOrgDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:string"/>
+     <element name="uniqueId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdOrgDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="createdOrganization" type="impl:createdOrgDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedOrgDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="organization" type="impl:organizationBasicDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedOrgDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedOrganization" type="impl:failedOrgDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createOrganizationResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdOrgDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedOrgDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="createOrganizationResponse" type="impl:createOrganizationResponseType"/>
+   <complexType name="licenseTechnologyQueryParametersType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="name" nillable="true" type="impl:SimpleQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getLicenseTechnologyQueryRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:licenseTechnologyQueryParametersType"/>
+    </sequence>
+   </complexType>
+   <element name="getLicenseTechnologyQueryRequest" type="impl:getLicenseTechnologyQueryRequestType"/>
+   <complexType name="licenseGeneratorsDetailsType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="licenseGeneratorIdentifier" type="impl:licenseGeneratorIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseTechnologyDetailsType">
+    <sequence>
+     <element name="licenseTechnologyIdentifier" type="impl:licenseTechnologyIdentifierType"/>
+     <element name="licenseGenerators" type="impl:licenseGeneratorsDetailsType"/>
+     <element name="hostTypes" type="impl:hostTypeListType"/>
+     <element name="state" type="impl:StateType"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseTechnologyDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="licenseTechnology" type="impl:licenseTechnologyDetailsType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getLicenseTechnologyQueryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:licenseTechnologyDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="getLicenseTechnologyQueryResponse" type="impl:getLicenseTechnologyQueryResponseType"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getFeatureCountResponse">
+
+      <wsdl:part element="impl:getFeatureCountResponse" name="getFeatureCountResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFeatureBundleCountRequest">
+
+      <wsdl:part element="impl:getFeatureBundleCountRequest" name="getFeatureBundleCountRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUniformSuiteCountResponse">
+
+      <wsdl:part element="impl:getUniformSuiteCountResponse" name="getUniformSuiteCountResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteUniformSuiteRequest">
+
+      <wsdl:part element="impl:deleteUniformSuiteRequest" name="deleteUniformSuiteRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPartNumbersQueryRequest">
+
+      <wsdl:part element="impl:getPartNumbersQueryRequest" name="getPartNumbersQueryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFeatureBundlesQueryRequest">
+
+      <wsdl:part element="impl:getFeatureBundlesQueryRequest" name="getFeatureBundlesQueryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteUniformSuiteResponse">
+
+      <wsdl:part element="impl:deleteUniformSuiteResponse" name="deleteUniformSuiteResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createProductRequest">
+
+      <wsdl:part element="impl:createProductRequest" name="createProductRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUsersForProductCategoryResponse">
+
+      <wsdl:part element="impl:getUsersForProductCategoryResponse" name="getUsersForProductCategoryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProductRelationshipsResponse">
+
+      <wsdl:part element="impl:getProductRelationshipsResponse" name="getProductRelationshipsResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteFeatureRequest">
+
+      <wsdl:part element="impl:deleteFeatureRequest" name="deleteFeatureRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPartNumbersQueryResponse">
+
+      <wsdl:part element="impl:getPartNumbersQueryResponse" name="getPartNumbersQueryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createFeatureBundleResponse">
+
+      <wsdl:part element="impl:createFeatureBundleResponse" name="createFeatureBundleResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createFeatureResponse">
+
+      <wsdl:part element="impl:createFeatureResponse" name="createFeatureResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createPartNumberRequest">
+
+      <wsdl:part element="impl:createPartNumberRequest" name="createPartNumberRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProductCategoriesResponse">
+
+      <wsdl:part element="impl:getProductCategoriesResponse" name="getProductCategoriesResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setUniformSuiteStateRequest">
+
+      <wsdl:part element="impl:setUniformSuiteStateRequest" name="setUniformSuiteStateRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeProductCategoriesFromOrgResponse">
+
+      <wsdl:part element="impl:removeProductCategoriesFromOrgResponse" name="removeProductCategoriesFromOrgResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUniformSuiteQueryResponse">
+
+      <wsdl:part element="impl:getUniformSuitesQueryResponse" name="getUniformSuitesQueryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createProductRelationshipRequest">
+
+      <wsdl:part element="impl:createProductRelationshipRequest" name="createProductRelationshipRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setProductStateResponse">
+
+      <wsdl:part element="impl:setProductStateResponse" name="setProductStateResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProductCountResponse">
+
+      <wsdl:part element="impl:getProductCountResponse" name="getProductCountResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProductRelationshipsRequest">
+
+      <wsdl:part element="impl:getProductRelationshipsRequest" name="getProductRelationshipsRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLicenseModelIdentifiersRequest">
+
+      <wsdl:part element="impl:getModelIdentifiersRequest" name="getModelIdentifiersRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeProductCategoriesFromUserResponse">
+
+      <wsdl:part element="impl:removeProductCategoriesFromUserResponse" name="removeProductCategoriesFromUserResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMaintenanceCountResponse">
+
+      <wsdl:part element="impl:getMaintenanceCountResponse" name="getMaintenanceCountResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateFeatureResponse">
+
+      <wsdl:part element="impl:updateFeatureResponse" name="updateFeatureResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteMaintenanceResponse">
+
+      <wsdl:part element="impl:deleteMaintenanceResponse" name="deleteMaintenanceResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createUniformSuiteResponse">
+
+      <wsdl:part element="impl:createUniformSuiteResponse" name="createUniformSuiteResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProductCountRequest">
+
+      <wsdl:part element="impl:getProductCountRequest" name="getProductCountRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteFeatureBundleRequest">
+
+      <wsdl:part element="impl:deleteFeatureBundleRequest" name="deleteFeatureBundleRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createOrganizationResponse">
+
+      <wsdl:part element="impl:createOrganizationResponse" name="createOrganizationResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFeaturesQueryResponse">
+
+      <wsdl:part element="impl:getFeaturesQueryResponse" name="getFeaturesQueryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateProductResponse">
+
+      <wsdl:part element="impl:updateProductResponse" name="updateProductResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateFeatureBundleRequest">
+
+      <wsdl:part element="impl:updateFeatureBundleRequest" name="updateFeatureBundleRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createProductCategoryRequest">
+
+      <wsdl:part element="impl:createProductCategoryRequest" name="createProductCategoryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="assignProductCategoriesToOrgResponse">
+
+      <wsdl:part element="impl:assignProductCategoriesToOrgResponse" name="assignProductCategoriesToOrgResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deletePartNumberRequest">
+
+      <wsdl:part element="impl:deletePartNumberRequest" name="deletePartNumberRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFeatureBundlesQueryResponse">
+
+      <wsdl:part element="impl:getFeatureBundlesQueryResponse" name="getFeatureBundlesQueryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="assignProductCategoriesToOrgRequest">
+
+      <wsdl:part element="impl:assignProductCategoriesToOrgRequest" name="assignProductCategoriesToOrgRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFeatureBundleStateResponse">
+
+      <wsdl:part element="impl:setFeatureBundleStateResponse" name="setFeatureBundleStateResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createFeatureRequest">
+
+      <wsdl:part element="impl:createFeatureRequest" name="createFeatureRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateProductRelationshipResponse">
+
+      <wsdl:part element="impl:updateProductRelationshipResponse" name="updateProductRelationshipResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createPartNumberResponse">
+
+      <wsdl:part element="impl:createPartNumberResponse" name="createPartNumberResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteProductRequest">
+
+      <wsdl:part element="impl:deleteProductRequest" name="deleteProductRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteMaintenanceRequest">
+
+      <wsdl:part element="impl:deleteMaintenanceRequest" name="deleteMaintenanceRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFeatureCountRequest">
+
+      <wsdl:part element="impl:getFeatureCountRequest" name="getFeatureCountRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFeaturesQueryRequest">
+
+      <wsdl:part element="impl:getFeaturesQueryRequest" name="getFeaturesQueryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMaintenanceQueryResponse">
+
+      <wsdl:part element="impl:getMaintenanceQueryResponse" name="getMaintenanceQueryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateMaintenanceResponse">
+
+      <wsdl:part element="impl:updateMaintenanceResponse" name="updateMaintenanceResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPartNumberCountRequest">
+
+      <wsdl:part element="impl:getPartNumberCountRequest" name="getPartNumberCountRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFeatureStateResponse">
+
+      <wsdl:part element="impl:setFeatureStateResponse" name="setFeatureStateResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProductsQueryResponse">
+
+      <wsdl:part element="impl:getProductsQueryResponse" name="getProductsQueryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createUniformSuiteRequest">
+
+      <wsdl:part element="impl:createUniformSuiteRequest" name="createUniformSuiteRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTransactionKeyIdentifiersResponse">
+
+      <wsdl:part element="impl:getTransactionKeyIdentifiersResponse" name="getTransactionKeyIdentifiersResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUniformSuiteCountRequest">
+
+      <wsdl:part element="impl:getUniformSuiteCountRequest" name="getUniformSuiteCountRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createProductRelationshipResponse">
+
+      <wsdl:part element="impl:createProductRelationshipResponse" name="createProductRelationshipResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPartNumberCountResponse">
+
+      <wsdl:part element="impl:getPartNumberCountResponse" name="getPartNumberCountResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateUniformSuiteRequest">
+
+      <wsdl:part element="impl:updateUniformSuiteRequest" name="updateUniformSuiteRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFeatureStateRequest">
+
+      <wsdl:part element="impl:setFeatureStateRequest" name="setFeatureStateRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateUniformSuiteResponse">
+
+      <wsdl:part element="impl:updateUniformSuiteResponse" name="updateUniformSuiteResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProductCategoriesRequest">
+
+      <wsdl:part element="impl:getProductCategoriesRequest" name="getProductCategoriesRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateFeatureBundleResponse">
+
+      <wsdl:part element="impl:updateFeatureBundleResponse" name="updateFeatureBundleResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="assignProductCategoriesToUserResponse">
+
+      <wsdl:part element="impl:assignProductCategoriesToUserResponse" name="assignProductCategoriesToUserResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFeatureBundleStateRequest">
+
+      <wsdl:part element="impl:setFeatureBundleStateRequest" name="setFeatureBundleStateRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setUniformSuiteStateResponse">
+
+      <wsdl:part element="impl:setUniformSuiteStateResponse" name="setUniformSuiteStateResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createProductCategoryResponse">
+
+      <wsdl:part element="impl:createProductCategoryResponse" name="createProductCategoryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUsersForProductCategoryRequest">
+
+      <wsdl:part element="impl:getUsersForProductCategoryRequest" name="getUsersForProductCategoryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProductsQueryRequest">
+
+      <wsdl:part element="impl:getProductsQueryRequest" name="getProductsQueryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLicenseTechnologiesQueryResponse">
+
+      <wsdl:part element="impl:getLicenseTechnologyQueryResponse" name="getLicenseTechnologyQueryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFeatureBundleCountResponse">
+
+      <wsdl:part element="impl:getFeatureBundleCountResponse" name="getFeatureBundleCountResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateMaintenanceRequest">
+
+      <wsdl:part element="impl:updateMaintenanceRequest" name="updateMaintenanceRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteProductResponse">
+
+      <wsdl:part element="impl:deleteProductResponse" name="deleteProductResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createMaintenanceResponse">
+
+      <wsdl:part element="impl:createMaintenanceResponse" name="createMaintenanceResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteProductRelationshipRequest">
+
+      <wsdl:part element="impl:deleteProductRelationshipRequest" name="deleteProductRelationshipRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeProductCategoriesFromUserRequest">
+
+      <wsdl:part element="impl:removeProductCategoriesFromUserRequest" name="removeProductCategoriesFromUserRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createFeatureBundleRequest">
+
+      <wsdl:part element="impl:createFeatureBundleRequest" name="createFeatureBundleRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateProductRelationshipRequest">
+
+      <wsdl:part element="impl:updateProductRelationshipRequest" name="updateProductRelationshipRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMaintenanceQueryRequest">
+
+      <wsdl:part element="impl:getMaintenanceQueryRequest" name="getMaintenanceQueryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setMaintenanceStateResponse">
+
+      <wsdl:part element="impl:setMaintenanceStateResponse" name="setMaintenanceStateResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setMaintenanceStateRequest">
+
+      <wsdl:part element="impl:setMaintenanceStateRequest" name="setMaintenanceStateRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLicenseTechnologiesQueryRequest">
+
+      <wsdl:part element="impl:getLicenseTechnologyQueryRequest" name="getLicenseTechnologyQueryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteFeatureResponse">
+
+      <wsdl:part element="impl:deleteFeatureResponse" name="deleteFeatureResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLicenseModelIdentifiersResponse">
+
+      <wsdl:part element="impl:getModelIdentifiersResponse" name="getModelIdentifiersResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateFeatureRequest">
+
+      <wsdl:part element="impl:updateFeatureRequest" name="updateFeatureRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeProductCategoriesFromOrgRequest">
+
+      <wsdl:part element="impl:removeProductCategoriesFromOrgRequest" name="removeProductCategoriesFromOrgRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateProductRequest">
+
+      <wsdl:part element="impl:updateProductRequest" name="updateProductRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTransactionKeyIdentifiersRequest">
+
+      <wsdl:part element="impl:getTransactionKeyIdentifiersRequest" name="getTransactionKeyIdentifiersRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createOrganizationRequest">
+
+      <wsdl:part element="impl:createOrganizationRequest" name="createOrganizationRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteFeatureBundleResponse">
+
+      <wsdl:part element="impl:deleteFeatureBundleResponse" name="deleteFeatureBundleResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createMaintenanceRequest">
+
+      <wsdl:part element="impl:createMaintenanceRequest" name="createMaintenanceRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMaintenanceCountRequest">
+
+      <wsdl:part element="impl:getMaintenanceCountRequest" name="getMaintenanceCountRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="assignProductCategoriesToUserRequest">
+
+      <wsdl:part element="impl:assignProductCategoriesToUserRequest" name="assignProductCategoriesToUserRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setProductStateRequest">
+
+      <wsdl:part element="impl:setProductStateRequest" name="setProductStateRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteProductRelationshipResponse">
+
+      <wsdl:part element="impl:deleteProductRelationshipResponse" name="deleteProductRelationshipResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createProductResponse">
+
+      <wsdl:part element="impl:createProductResponse" name="createProductResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deletePartNumberResponse">
+
+      <wsdl:part element="impl:deletePartNumberResponse" name="deletePartNumberResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUniformSuiteQueryRequest">
+
+      <wsdl:part element="impl:getUniformSuitesQueryRequest" name="getUniformSuitesQueryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ProductPackagingServiceInterfaceV1">
+
+      <wsdl:operation name="createFeature" parameterOrder="createFeatureRequest">
+
+         <wsdl:input message="impl:createFeatureRequest" name="createFeatureRequest"/>
+
+         <wsdl:output message="impl:createFeatureResponse" name="createFeatureResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateFeature" parameterOrder="updateFeatureRequest">
+
+         <wsdl:input message="impl:updateFeatureRequest" name="updateFeatureRequest"/>
+
+         <wsdl:output message="impl:updateFeatureResponse" name="updateFeatureResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteFeature" parameterOrder="deleteFeatureRequest">
+
+         <wsdl:input message="impl:deleteFeatureRequest" name="deleteFeatureRequest"/>
+
+         <wsdl:output message="impl:deleteFeatureResponse" name="deleteFeatureResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFeatureCount" parameterOrder="getFeatureCountRequest">
+
+         <wsdl:input message="impl:getFeatureCountRequest" name="getFeatureCountRequest"/>
+
+         <wsdl:output message="impl:getFeatureCountResponse" name="getFeatureCountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFeaturesQuery" parameterOrder="getFeaturesQueryRequest">
+
+         <wsdl:input message="impl:getFeaturesQueryRequest" name="getFeaturesQueryRequest"/>
+
+         <wsdl:output message="impl:getFeaturesQueryResponse" name="getFeaturesQueryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFeatureState" parameterOrder="setFeatureStateRequest">
+
+         <wsdl:input message="impl:setFeatureStateRequest" name="setFeatureStateRequest"/>
+
+         <wsdl:output message="impl:setFeatureStateResponse" name="setFeatureStateResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createFeatureBundle" parameterOrder="createFeatureBundleRequest">
+
+         <wsdl:input message="impl:createFeatureBundleRequest" name="createFeatureBundleRequest"/>
+
+         <wsdl:output message="impl:createFeatureBundleResponse" name="createFeatureBundleResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateFeatureBundle" parameterOrder="updateFeatureBundleRequest">
+
+         <wsdl:input message="impl:updateFeatureBundleRequest" name="updateFeatureBundleRequest"/>
+
+         <wsdl:output message="impl:updateFeatureBundleResponse" name="updateFeatureBundleResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteFeatureBundle" parameterOrder="deleteFeatureBundleRequest">
+
+         <wsdl:input message="impl:deleteFeatureBundleRequest" name="deleteFeatureBundleRequest"/>
+
+         <wsdl:output message="impl:deleteFeatureBundleResponse" name="deleteFeatureBundleResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFeatureBundleCount" parameterOrder="getFeatureBundleCountRequest">
+
+         <wsdl:input message="impl:getFeatureBundleCountRequest" name="getFeatureBundleCountRequest"/>
+
+         <wsdl:output message="impl:getFeatureBundleCountResponse" name="getFeatureBundleCountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFeatureBundlesQuery" parameterOrder="getFeatureBundlesQueryRequest">
+
+         <wsdl:input message="impl:getFeatureBundlesQueryRequest" name="getFeatureBundlesQueryRequest"/>
+
+         <wsdl:output message="impl:getFeatureBundlesQueryResponse" name="getFeatureBundlesQueryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFeatureBundleState" parameterOrder="setFeatureBundleStateRequest">
+
+         <wsdl:input message="impl:setFeatureBundleStateRequest" name="setFeatureBundleStateRequest"/>
+
+         <wsdl:output message="impl:setFeatureBundleStateResponse" name="setFeatureBundleStateResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createProduct" parameterOrder="createProductRequest">
+
+         <wsdl:input message="impl:createProductRequest" name="createProductRequest"/>
+
+         <wsdl:output message="impl:createProductResponse" name="createProductResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateProduct" parameterOrder="updateProductRequest">
+
+         <wsdl:input message="impl:updateProductRequest" name="updateProductRequest"/>
+
+         <wsdl:output message="impl:updateProductResponse" name="updateProductResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteProduct" parameterOrder="deleteProductRequest">
+
+         <wsdl:input message="impl:deleteProductRequest" name="deleteProductRequest"/>
+
+         <wsdl:output message="impl:deleteProductResponse" name="deleteProductResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProductCount" parameterOrder="getProductCountRequest">
+
+         <wsdl:input message="impl:getProductCountRequest" name="getProductCountRequest"/>
+
+         <wsdl:output message="impl:getProductCountResponse" name="getProductCountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProductsQuery" parameterOrder="getProductsQueryRequest">
+
+         <wsdl:input message="impl:getProductsQueryRequest" name="getProductsQueryRequest"/>
+
+         <wsdl:output message="impl:getProductsQueryResponse" name="getProductsQueryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createProductCategory" parameterOrder="createProductCategoryRequest">
+
+         <wsdl:input message="impl:createProductCategoryRequest" name="createProductCategoryRequest"/>
+
+         <wsdl:output message="impl:createProductCategoryResponse" name="createProductCategoryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProductCategories" parameterOrder="getProductCategoriesRequest">
+
+         <wsdl:input message="impl:getProductCategoriesRequest" name="getProductCategoriesRequest"/>
+
+         <wsdl:output message="impl:getProductCategoriesResponse" name="getProductCategoriesResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="assignProductCategoriesToUser" parameterOrder="assignProductCategoriesToUserRequest">
+
+         <wsdl:input message="impl:assignProductCategoriesToUserRequest" name="assignProductCategoriesToUserRequest"/>
+
+         <wsdl:output message="impl:assignProductCategoriesToUserResponse" name="assignProductCategoriesToUserResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeProductCategoriesFromUser" parameterOrder="removeProductCategoriesFromUserRequest">
+
+         <wsdl:input message="impl:removeProductCategoriesFromUserRequest" name="removeProductCategoriesFromUserRequest"/>
+
+         <wsdl:output message="impl:removeProductCategoriesFromUserResponse" name="removeProductCategoriesFromUserResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUsersForProductCategory" parameterOrder="getUsersForProductCategoryRequest">
+
+         <wsdl:input message="impl:getUsersForProductCategoryRequest" name="getUsersForProductCategoryRequest"/>
+
+         <wsdl:output message="impl:getUsersForProductCategoryResponse" name="getUsersForProductCategoryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="assignProductCategoriesToOrg" parameterOrder="assignProductCategoriesToOrgRequest">
+
+         <wsdl:input message="impl:assignProductCategoriesToOrgRequest" name="assignProductCategoriesToOrgRequest"/>
+
+         <wsdl:output message="impl:assignProductCategoriesToOrgResponse" name="assignProductCategoriesToOrgResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeProductCategoriesFromOrg" parameterOrder="removeProductCategoriesFromOrgRequest">
+
+         <wsdl:input message="impl:removeProductCategoriesFromOrgRequest" name="removeProductCategoriesFromOrgRequest"/>
+
+         <wsdl:output message="impl:removeProductCategoriesFromOrgResponse" name="removeProductCategoriesFromOrgResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setProductState" parameterOrder="setProductStateRequest">
+
+         <wsdl:input message="impl:setProductStateRequest" name="setProductStateRequest"/>
+
+         <wsdl:output message="impl:setProductStateResponse" name="setProductStateResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createMaintenance" parameterOrder="createMaintenanceRequest">
+
+         <wsdl:input message="impl:createMaintenanceRequest" name="createMaintenanceRequest"/>
+
+         <wsdl:output message="impl:createMaintenanceResponse" name="createMaintenanceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateMaintenance" parameterOrder="updateMaintenanceRequest">
+
+         <wsdl:input message="impl:updateMaintenanceRequest" name="updateMaintenanceRequest"/>
+
+         <wsdl:output message="impl:updateMaintenanceResponse" name="updateMaintenanceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteMaintenance" parameterOrder="deleteMaintenanceRequest">
+
+         <wsdl:input message="impl:deleteMaintenanceRequest" name="deleteMaintenanceRequest"/>
+
+         <wsdl:output message="impl:deleteMaintenanceResponse" name="deleteMaintenanceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMaintenanceCount" parameterOrder="getMaintenanceCountRequest">
+
+         <wsdl:input message="impl:getMaintenanceCountRequest" name="getMaintenanceCountRequest"/>
+
+         <wsdl:output message="impl:getMaintenanceCountResponse" name="getMaintenanceCountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMaintenanceQuery" parameterOrder="getMaintenanceQueryRequest">
+
+         <wsdl:input message="impl:getMaintenanceQueryRequest" name="getMaintenanceQueryRequest"/>
+
+         <wsdl:output message="impl:getMaintenanceQueryResponse" name="getMaintenanceQueryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setMaintenanceState" parameterOrder="setMaintenanceStateRequest">
+
+         <wsdl:input message="impl:setMaintenanceStateRequest" name="setMaintenanceStateRequest"/>
+
+         <wsdl:output message="impl:setMaintenanceStateResponse" name="setMaintenanceStateResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createUniformSuite" parameterOrder="createUniformSuiteRequest">
+
+         <wsdl:input message="impl:createUniformSuiteRequest" name="createUniformSuiteRequest"/>
+
+         <wsdl:output message="impl:createUniformSuiteResponse" name="createUniformSuiteResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateUniformSuite" parameterOrder="updateUniformSuiteRequest">
+
+         <wsdl:input message="impl:updateUniformSuiteRequest" name="updateUniformSuiteRequest"/>
+
+         <wsdl:output message="impl:updateUniformSuiteResponse" name="updateUniformSuiteResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteUniformSuite" parameterOrder="deleteUniformSuiteRequest">
+
+         <wsdl:input message="impl:deleteUniformSuiteRequest" name="deleteUniformSuiteRequest"/>
+
+         <wsdl:output message="impl:deleteUniformSuiteResponse" name="deleteUniformSuiteResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUniformSuiteCount" parameterOrder="getUniformSuiteCountRequest">
+
+         <wsdl:input message="impl:getUniformSuiteCountRequest" name="getUniformSuiteCountRequest"/>
+
+         <wsdl:output message="impl:getUniformSuiteCountResponse" name="getUniformSuiteCountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUniformSuiteQuery" parameterOrder="getUniformSuitesQueryRequest">
+
+         <wsdl:input message="impl:getUniformSuiteQueryRequest" name="getUniformSuiteQueryRequest"/>
+
+         <wsdl:output message="impl:getUniformSuiteQueryResponse" name="getUniformSuiteQueryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setUniformSuiteState" parameterOrder="setUniformSuiteStateRequest">
+
+         <wsdl:input message="impl:setUniformSuiteStateRequest" name="setUniformSuiteStateRequest"/>
+
+         <wsdl:output message="impl:setUniformSuiteStateResponse" name="setUniformSuiteStateResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createPartNumber" parameterOrder="createPartNumberRequest">
+
+         <wsdl:input message="impl:createPartNumberRequest" name="createPartNumberRequest"/>
+
+         <wsdl:output message="impl:createPartNumberResponse" name="createPartNumberResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deletePartNumber" parameterOrder="deletePartNumberRequest">
+
+         <wsdl:input message="impl:deletePartNumberRequest" name="deletePartNumberRequest"/>
+
+         <wsdl:output message="impl:deletePartNumberResponse" name="deletePartNumberResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPartNumberCount" parameterOrder="getPartNumberCountRequest">
+
+         <wsdl:input message="impl:getPartNumberCountRequest" name="getPartNumberCountRequest"/>
+
+         <wsdl:output message="impl:getPartNumberCountResponse" name="getPartNumberCountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPartNumbersQuery" parameterOrder="getPartNumbersQueryRequest">
+
+         <wsdl:input message="impl:getPartNumbersQueryRequest" name="getPartNumbersQueryRequest"/>
+
+         <wsdl:output message="impl:getPartNumbersQueryResponse" name="getPartNumbersQueryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createProductRelationship" parameterOrder="createProductRelationshipRequest">
+
+         <wsdl:input message="impl:createProductRelationshipRequest" name="createProductRelationshipRequest"/>
+
+         <wsdl:output message="impl:createProductRelationshipResponse" name="createProductRelationshipResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateProductRelationship" parameterOrder="updateProductRelationshipRequest">
+
+         <wsdl:input message="impl:updateProductRelationshipRequest" name="updateProductRelationshipRequest"/>
+
+         <wsdl:output message="impl:updateProductRelationshipResponse" name="updateProductRelationshipResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteProductRelationship" parameterOrder="deleteProductRelationshipRequest">
+
+         <wsdl:input message="impl:deleteProductRelationshipRequest" name="deleteProductRelationshipRequest"/>
+
+         <wsdl:output message="impl:deleteProductRelationshipResponse" name="deleteProductRelationshipResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProductRelationships" parameterOrder="getProductRelationshipsRequest">
+
+         <wsdl:input message="impl:getProductRelationshipsRequest" name="getProductRelationshipsRequest"/>
+
+         <wsdl:output message="impl:getProductRelationshipsResponse" name="getProductRelationshipsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLicenseModelIdentifiers" parameterOrder="getModelIdentifiersRequest">
+
+         <wsdl:input message="impl:getLicenseModelIdentifiersRequest" name="getLicenseModelIdentifiersRequest"/>
+
+         <wsdl:output message="impl:getLicenseModelIdentifiersResponse" name="getLicenseModelIdentifiersResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTransactionKeyIdentifiers" parameterOrder="getTransactionKeyIdentifiersRequest">
+
+         <wsdl:input message="impl:getTransactionKeyIdentifiersRequest" name="getTransactionKeyIdentifiersRequest"/>
+
+         <wsdl:output message="impl:getTransactionKeyIdentifiersResponse" name="getTransactionKeyIdentifiersResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createOrganization" parameterOrder="createOrganizationRequest">
+
+         <wsdl:input message="impl:createOrganizationRequest" name="createOrganizationRequest"/>
+
+         <wsdl:output message="impl:createOrganizationResponse" name="createOrganizationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLicenseTechnologiesQuery" parameterOrder="getLicenseTechnologyQueryRequest">
+
+         <wsdl:input message="impl:getLicenseTechnologiesQueryRequest" name="getLicenseTechnologiesQueryRequest"/>
+
+         <wsdl:output message="impl:getLicenseTechnologiesQueryResponse" name="getLicenseTechnologiesQueryResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="v1/ProductPackagingServiceSoapBinding" type="impl:ProductPackagingServiceInterfaceV1">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="createFeature">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createFeatureRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createFeatureResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateFeature">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateFeatureRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateFeatureResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteFeature">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteFeatureRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteFeatureResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFeatureCount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFeatureCountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFeatureCountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFeaturesQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFeaturesQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFeaturesQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFeatureState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setFeatureStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setFeatureStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createFeatureBundle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createFeatureBundleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createFeatureBundleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateFeatureBundle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateFeatureBundleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateFeatureBundleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteFeatureBundle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteFeatureBundleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteFeatureBundleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFeatureBundleCount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFeatureBundleCountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFeatureBundleCountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFeatureBundlesQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFeatureBundlesQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFeatureBundlesQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFeatureBundleState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setFeatureBundleStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setFeatureBundleStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createProduct">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createProductRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createProductResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateProduct">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateProductRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateProductResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteProduct">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteProductRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteProductResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProductCount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getProductCountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getProductCountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProductsQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getProductsQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getProductsQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createProductCategory">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createProductCategoryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createProductCategoryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProductCategories">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getProductCategoriesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getProductCategoriesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="assignProductCategoriesToUser">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="assignProductCategoriesToUserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="assignProductCategoriesToUserResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeProductCategoriesFromUser">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeProductCategoriesFromUserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeProductCategoriesFromUserResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUsersForProductCategory">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUsersForProductCategoryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUsersForProductCategoryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="assignProductCategoriesToOrg">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="assignProductCategoriesToOrgRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="assignProductCategoriesToOrgResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeProductCategoriesFromOrg">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeProductCategoriesFromOrgRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeProductCategoriesFromOrgResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setProductState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setProductStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setProductStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createMaintenance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createMaintenanceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createMaintenanceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateMaintenance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateMaintenanceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateMaintenanceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteMaintenance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteMaintenanceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteMaintenanceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMaintenanceCount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMaintenanceCountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMaintenanceCountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMaintenanceQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMaintenanceQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMaintenanceQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setMaintenanceState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setMaintenanceStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setMaintenanceStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createUniformSuite">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createUniformSuiteRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createUniformSuiteResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateUniformSuite">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateUniformSuiteRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateUniformSuiteResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteUniformSuite">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteUniformSuiteRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteUniformSuiteResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUniformSuiteCount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUniformSuiteCountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUniformSuiteCountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUniformSuiteQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUniformSuiteQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUniformSuiteQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setUniformSuiteState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setUniformSuiteStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setUniformSuiteStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createPartNumber">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createPartNumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createPartNumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deletePartNumber">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deletePartNumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deletePartNumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPartNumberCount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPartNumberCountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPartNumberCountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPartNumbersQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPartNumbersQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPartNumbersQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createProductRelationship">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createProductRelationshipRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createProductRelationshipResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateProductRelationship">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateProductRelationshipRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateProductRelationshipResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteProductRelationship">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteProductRelationshipRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteProductRelationshipResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProductRelationships">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getProductRelationshipsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getProductRelationshipsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLicenseModelIdentifiers">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLicenseModelIdentifiersRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLicenseModelIdentifiersResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTransactionKeyIdentifiers">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTransactionKeyIdentifiersRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTransactionKeyIdentifiersResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createOrganization">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createOrganizationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createOrganizationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLicenseTechnologiesQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLicenseTechnologiesQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLicenseTechnologiesQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="v1/ProductPackagingService">
+
+      <wsdl:port binding="impl:v1/ProductPackagingServiceSoapBinding" name="v1/ProductPackagingService">
+
+         <wsdlsoap:address location="http://localhost/flexnet/services/v1/ProductPackagingService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

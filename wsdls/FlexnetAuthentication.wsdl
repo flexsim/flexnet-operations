@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:com.macrovision:flexnet/platform" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:com.macrovision:flexnet/platform" xmlns:intf="urn:com.macrovision:flexnet/platform" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="urn:com.macrovision:flexnet/platform" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="UserTokenInput" type="xsd:string"/>
+   <complexType name="UserTokenReturnType">
+    <sequence>
+     <element name="Token" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="UserTokenReturn" type="impl:UserTokenReturnType"/>
+   <complexType name="IdentityType">
+    <sequence>
+     <element name="userId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="secureTokenRequest" type="impl:IdentityType"/>
+   <complexType name="TokenResponseType">
+    <sequence>
+     <element name="token" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="secureTokenResponse" type="impl:TokenResponseType"/>
+   <complexType name="AuthenticateUserInputType">
+    <sequence>
+     <element name="userName" type="xsd:string"/>
+     <element name="password" type="xsd:string"/>
+     <element name="domainName" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="AuthenticateUserInput" type="impl:AuthenticateUserInputType"/>
+   <complexType name="AuthenticateUserReturnType">
+    <sequence>
+     <element name="Success" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <element name="AuthenticateUserReturn" type="impl:AuthenticateUserReturnType"/>
+   <complexType name="TokenType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="identity" type="impl:IdentityType"/>
+     <element name="token" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="validateTokenRequest" type="impl:TokenType"/>
+   <complexType name="StatusResponse">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="statusCorelation" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="statusCode" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="statusMessage" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="validateTokenResponse" type="impl:StatusResponse"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getUserTokenResponse">
+
+      <wsdl:part element="impl:UserTokenReturn" name="UserTokenReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSecureTokenResponse">
+
+      <wsdl:part element="impl:secureTokenResponse" name="secureTokenResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserTokenRequest">
+
+      <wsdl:part element="impl:UserTokenInput" name="UserTokenInput"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="authenticateUserResponse">
+
+      <wsdl:part element="impl:AuthenticateUserReturn" name="AuthenticateUserReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSecureTokenRequest">
+
+      <wsdl:part element="impl:secureTokenRequest" name="secureTokenRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="validateTokenResponse">
+
+      <wsdl:part element="impl:validateTokenResponse" name="validateTokenResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="authenticateUserRequest">
+
+      <wsdl:part element="impl:AuthenticateUserInput" name="AuthenticateUserInput"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="validateTokenRequest">
+
+      <wsdl:part element="impl:validateTokenRequest" name="validateTokenRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="FlexnetAuthentication">
+
+      <wsdl:operation name="getUserToken" parameterOrder="UserTokenInput">
+
+         <wsdl:input message="impl:getUserTokenRequest" name="getUserTokenRequest"/>
+
+         <wsdl:output message="impl:getUserTokenResponse" name="getUserTokenResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSecureToken" parameterOrder="secureTokenRequest">
+
+         <wsdl:input message="impl:getSecureTokenRequest" name="getSecureTokenRequest"/>
+
+         <wsdl:output message="impl:getSecureTokenResponse" name="getSecureTokenResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="authenticateUser" parameterOrder="AuthenticateUserInput">
+
+         <wsdl:input message="impl:authenticateUserRequest" name="authenticateUserRequest"/>
+
+         <wsdl:output message="impl:authenticateUserResponse" name="authenticateUserResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="validateToken" parameterOrder="validateTokenRequest">
+
+         <wsdl:input message="impl:validateTokenRequest" name="validateTokenRequest"/>
+
+         <wsdl:output message="impl:validateTokenResponse" name="validateTokenResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="FlexnetAuthenticationSoapBinding" type="impl:FlexnetAuthentication">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getUserToken">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUserTokenRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUserTokenResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSecureToken">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSecureTokenRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSecureTokenResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="authenticateUser">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="authenticateUserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="authenticateUserResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="validateToken">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="validateTokenRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="validateTokenResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="FlexnetAuthenticationService">
+
+      <wsdl:port binding="impl:FlexnetAuthenticationSoapBinding" name="FlexnetAuthentication">
+
+         <wsdlsoap:address location="http://localhost/flexnet/services/FlexnetAuthentication"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:v1.webservices.operations.flexnet.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:v1.webservices.operations.flexnet.com" xmlns:intf="urn:v1.webservices.operations.flexnet.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="urn:v1.webservices.operations.flexnet.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="addressDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="address1" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="address2" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="city" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="state" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="zipcode" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="country" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="region" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <simpleType name="OrgType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="CUSTOMER"/>
+     <enumeration value="PUBLISHER"/>
+     <enumeration value="CHANNEL_PARTNER"/>
+     <enumeration value="SELF_REGISTERED"/>
+    </restriction>
+   </simpleType>
+   <complexType name="attributeDescriptorType">
+    <sequence>
+     <element name="attributeName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="stringValue" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="dateValue" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="booleanValue" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="integerValue" type="xsd:integer"/>
+     <element maxOccurs="unbounded" minOccurs="0" name="arrayValue" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="attributeDescriptorDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="attribute" type="impl:attributeDescriptorType"/>
+    </sequence>
+   </complexType>
+   <complexType name="organizationDataType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+     <element name="displayName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="address" type="impl:addressDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="visible" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="orgType" type="impl:OrgType"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+    </sequence>
+   </complexType>
+   <simpleType name="CreateOrUpdateOperationType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="CREATE_OR_UPDATE"/>
+     <enumeration value="CREATE_OR_IGNORE"/>
+    </restriction>
+   </simpleType>
+   <complexType name="createOrgRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="organization" type="impl:organizationDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="opType" type="impl:CreateOrUpdateOperationType"/>
+    </sequence>
+   </complexType>
+   <element name="createOrgRequest" type="impl:createOrgRequestType"/>
+   <simpleType name="StatusType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="SUCCESS"/>
+     <enumeration value="FAILURE"/>
+     <enumeration value="PARTIAL_FAILURE"/>
+    </restriction>
+   </simpleType>
+   <complexType name="StatusInfoType">
+    <sequence>
+     <element name="status" type="impl:StatusType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedCreateOrgDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="organization" type="impl:organizationDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedCreateOrgDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedOrg" type="impl:failedCreateOrgDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="organizationPKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="organizationIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:organizationPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdOrganizationDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="organization" type="impl:organizationIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createOrgResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedCreateOrgDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdOrganizationDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="createOrgResponse" type="impl:createOrgResponseType"/>
+   <complexType name="linkOrganizationsDataType">
+    <sequence>
+     <element name="parentOrg" type="impl:organizationIdentifierType"/>
+     <element name="subOrg" type="impl:organizationIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="linkOrganizationsRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="orgData" type="impl:linkOrganizationsDataType"/>
+    </sequence>
+   </complexType>
+   <element name="linkOrganizationsRequest" type="impl:linkOrganizationsRequestType"/>
+   <complexType name="failedLinkOrgDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="orgData" type="impl:linkOrganizationsDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedLinkOrgDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedOrgData" type="impl:failedLinkOrgDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="linkOrganizationsResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedLinkOrgDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="linkOrganizationsResponse" type="impl:linkOrganizationsResponseType"/>
+   <simpleType name="CollectionOperationType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="REPLACE"/>
+     <enumeration value="ADD"/>
+     <enumeration value="DELETE"/>
+    </restriction>
+   </simpleType>
+   <complexType name="updateSubOrganizationsListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="subOrganization" type="impl:organizationIdentifierType"/>
+     <element name="opType" type="impl:CollectionOperationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateRelatedOrganizationsListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="relatedOrganization" type="impl:organizationIdentifierType"/>
+     <element name="opType" type="impl:CollectionOperationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateOrgDataType">
+    <sequence>
+     <element name="organization" type="impl:organizationIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="displayName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="address" type="impl:addressDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="subOrganizations" type="impl:updateSubOrganizationsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="relatedOrganizations" type="impl:updateRelatedOrganizationsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="visible" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateOrganizationRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="orgData" type="impl:updateOrgDataType"/>
+    </sequence>
+   </complexType>
+   <element name="updateOrganizationRequest" type="impl:updateOrganizationRequestType"/>
+   <complexType name="failedUpdateOrgDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="orgData" type="impl:updateOrgDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedUpdateOrgDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedOrg" type="impl:failedUpdateOrgDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateOrganizationResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedUpdateOrgDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="updateOrganizationResponse" type="impl:updateOrganizationResponseType"/>
+   <complexType name="deleteOrgDataType">
+    <sequence>
+     <element name="organization" type="impl:organizationIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="deleteSubTree" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteOrganizationRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="orgData" type="impl:deleteOrgDataType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteOrganizationRequest" type="impl:deleteOrganizationRequestType"/>
+   <complexType name="failedDeleteOrgDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="orgData" type="impl:deleteOrgDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedDeleteOrgDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedOrg" type="impl:failedDeleteOrgDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteOrganizationResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedDeleteOrgDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteOrganizationResponse" type="impl:deleteOrganizationResponseType"/>
+   <simpleType name="simpleSearchType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="STARTS_WITH"/>
+     <enumeration value="CONTAINS"/>
+     <enumeration value="ENDS_WITH"/>
+     <enumeration value="EQUALS"/>
+    </restriction>
+   </simpleType>
+   <complexType name="SimpleQueryType">
+    <sequence>
+     <element name="value" type="xsd:string"/>
+     <element name="searchType" type="impl:simpleSearchType"/>
+    </sequence>
+   </complexType>
+   <complexType name="OrgTypeList">
+    <sequence>
+     <element maxOccurs="unbounded" name="orgType" type="impl:OrgType"/>
+    </sequence>
+   </complexType>
+   <complexType name="orgCustomAttributeQueryType">
+    <sequence>
+     <element name="attributeName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="stringValue" type="impl:SimpleQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="orgCustomAttributesQueryListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="attribute" type="impl:orgCustomAttributeQueryType"/>
+    </sequence>
+   </complexType>
+   <simpleType name="datedSearchType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="BEFORE"/>
+     <enumeration value="AFTER"/>
+     <enumeration value="ON"/>
+    </restriction>
+   </simpleType>
+   <complexType name="DateTimeQueryType">
+    <sequence>
+     <element name="value" type="xsd:dateTime"/>
+     <element name="searchType" type="impl:datedSearchType"/>
+    </sequence>
+   </complexType>
+   <complexType name="organizationQueryParametersType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="orgName" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="orgDisplayName" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="address1" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="address2" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="city" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="state" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="zipcode" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="country" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="region" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="onlyRootOrgs" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="orgType" type="impl:OrgType"/>
+     <element maxOccurs="1" minOccurs="0" name="orgTypeList" type="impl:OrgTypeList"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:orgCustomAttributesQueryListType"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDateTime" type="impl:DateTimeQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getOrganizationsQueryRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:organizationQueryParametersType"/>
+     <element name="pageNumber" nillable="true" type="xsd:integer"/>
+     <element name="batchSize" nillable="true" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <element name="getOrganizationsQueryRequest" type="impl:getOrganizationsQueryRequestType"/>
+   <complexType name="organizationDetailDataType">
+    <sequence>
+     <element name="organization" type="impl:organizationIdentifierType"/>
+     <element name="displayName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="address" type="impl:addressDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="visible" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="orgType" type="impl:OrgType"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="dateLastModified" type="xsd:dateTime"/>
+    </sequence>
+   </complexType>
+   <complexType name="getOrganizationsQueryResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="orgData" type="impl:organizationDetailDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getOrganizationsQueryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getOrganizationsQueryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getOrganizationsQueryResponse" type="impl:getOrganizationsQueryResponseType"/>
+   <complexType name="getOrganizationCountRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:organizationQueryParametersType"/>
+    </sequence>
+   </complexType>
+   <element name="getOrganizationCountRequest" type="impl:getOrganizationCountRequestType"/>
+   <complexType name="getOrganizationCountResponseDataType">
+    <sequence>
+     <element name="count" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <complexType name="getOrganizationCountResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getOrganizationCountResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getOrganizationCountResponse" type="impl:getOrganizationCountResponseType"/>
+   <complexType name="getParentOrganizationsRequestType">
+    <sequence>
+     <element name="organization" type="impl:organizationIdentifierType"/>
+    </sequence>
+   </complexType>
+   <element name="getParentOrganizationsRequest" type="impl:getParentOrganizationsRequestType"/>
+   <complexType name="getParentOrganizationsResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getOrganizationsQueryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getParentOrganizationsResponse" type="impl:getParentOrganizationsResponseType"/>
+   <complexType name="getSubOrganizationsRequestType">
+    <sequence>
+     <element name="organization" type="impl:organizationIdentifierType"/>
+    </sequence>
+   </complexType>
+   <element name="getSubOrganizationsRequest" type="impl:getSubOrganizationsRequestType"/>
+   <complexType name="getSubOrganizationsResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getOrganizationsQueryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getSubOrganizationsResponse" type="impl:getSubOrganizationsResponseType"/>
+   <complexType name="userCustomAttributeQueryType">
+    <sequence>
+     <element name="attributeName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="stringValue" type="impl:SimpleQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="userCustomAttributesQueryListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="attribute" type="impl:userCustomAttributeQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="userQueryParametersType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="userName" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="firstName" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="lastName" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="displayName" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="emailAddress" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="phoneNumber" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="faxNumber" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="street" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="city" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="state" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="zipcode" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="country" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="isActive" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="canLogIn" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="orgName" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="orgDisplayName" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:userCustomAttributesQueryListType"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDateTime" type="impl:DateTimeQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="orgType" type="impl:OrgType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getUsersQueryRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:userQueryParametersType"/>
+     <element name="pageNumber" nillable="true" type="xsd:integer"/>
+     <element name="batchSize" nillable="true" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <element name="getUsersQueryRequest" type="impl:getUsersQueryRequestType"/>
+   <complexType name="userPKType">
+    <sequence>
+     <element name="firstName" type="xsd:string"/>
+     <element name="lastName" type="xsd:string"/>
+     <element name="emailAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="phoneNumber" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="userIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="userName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:userPKType"/>
+    </sequence>
+   </complexType>
+   <simpleType name="UserStatusType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="Active"/>
+     <enumeration value="Inactive"/>
+    </restriction>
+   </simpleType>
+   <complexType name="userOrganizationRolesListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="roleName" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="userOrganizationType">
+    <sequence>
+     <element name="organization" type="impl:organizationIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="roles" type="impl:userOrganizationRolesListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="userOrganizationsListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="orgRoles" type="impl:userOrganizationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="userDetailDataType">
+    <sequence>
+     <element name="userIdentifier" type="impl:userIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="displayName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="optIn" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="faxNumber" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="street" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="city" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="state" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="zipcode" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="country" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="status" type="impl:UserStatusType"/>
+     <element maxOccurs="1" minOccurs="0" name="locale" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="timezone" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shared" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="domain" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="dateCreated" type="xsd:dateTime"/>
+     <element maxOccurs="1" minOccurs="0" name="dateLastModified" type="xsd:dateTime"/>
+     <element maxOccurs="1" minOccurs="0" name="dateLastLogin" type="xsd:dateTime"/>
+     <element maxOccurs="1" minOccurs="0" name="orgRolesList" type="impl:userOrganizationsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getUsersQueryResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="user" type="impl:userDetailDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getUsersQueryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getUsersQueryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getUsersQueryResponse" type="impl:getUsersQueryResponseType"/>
+   <complexType name="getUserCountRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:userQueryParametersType"/>
+    </sequence>
+   </complexType>
+   <element name="getUserCountRequest" type="impl:getUserCountRequestType"/>
+   <complexType name="getUserCountResponseDataType">
+    <sequence>
+     <element name="count" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <complexType name="getUserCountResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getUserCountResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getUserCountResponse" type="impl:getUserCountResponseType"/>
+   <complexType name="rolePKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="roleIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:rolePKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createUserOrganizationRolesListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="role" type="impl:roleIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createUserOrganizationType">
+    <sequence>
+     <element name="organization" type="impl:organizationIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="roles" type="impl:createUserOrganizationRolesListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createUserOrganizationsListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="orgRoles" type="impl:createUserOrganizationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createUserDataType">
+    <sequence>
+     <element name="firstName" type="xsd:string"/>
+     <element name="lastName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="displayName" type="xsd:string"/>
+     <element name="emailAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="optIn" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="phoneNumber" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="faxNumber" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="street" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="city" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="state" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="zipcode" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="country" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="locale" type="xsd:string"/>
+     <element name="canLogin" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="userName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="status" type="impl:UserStatusType"/>
+     <element maxOccurs="1" minOccurs="0" name="timezone" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shared" type="xsd:boolean"/>
+     <element name="orgRolesList" type="impl:createUserOrganizationsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createUserRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="user" type="impl:createUserDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="opType" type="impl:CreateOrUpdateOperationType"/>
+    </sequence>
+   </complexType>
+   <element name="createUserRequest" type="impl:createUserRequestType"/>
+   <complexType name="failedCreateUserDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="user" type="impl:createUserDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedCreateUserDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedUser" type="impl:failedCreateUserDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdUserDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="user" type="impl:userIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createUserResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedCreateUserDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdUserDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="createUserResponse" type="impl:createUserResponseType"/>
+   <complexType name="updateUserOrganizationRolesListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="role" type="impl:roleIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateUserOrganizationType">
+    <sequence>
+     <element name="organization" type="impl:organizationIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="roles" type="impl:updateUserOrganizationRolesListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateUserOrganizationsListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="orgRoles" type="impl:updateUserOrganizationType"/>
+     <element name="opType" type="impl:CollectionOperationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateUserDataType">
+    <sequence>
+     <element name="user" type="impl:userIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="firstName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="lastName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="displayName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="emailAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="optIn" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="phoneNumber" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="faxNumber" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="street" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="city" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="state" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="zipcode" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="country" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="status" type="impl:UserStatusType"/>
+     <element maxOccurs="1" minOccurs="0" name="locale" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="timezone" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shared" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="orgRolesList" type="impl:updateUserOrganizationsListType"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateUserRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="userData" type="impl:updateUserDataType"/>
+    </sequence>
+   </complexType>
+   <element name="updateUserRequest" type="impl:updateUserRequestType"/>
+   <complexType name="failedUpdateUserDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="userData" type="impl:updateUserDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedUpdateUserDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedUser" type="impl:failedUpdateUserDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateUserResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedUpdateUserDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="updateUserResponse" type="impl:updateUserResponseType"/>
+   <complexType name="updateUserRolesListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="role" type="impl:roleIdentifierType"/>
+     <element name="opType" type="impl:CollectionOperationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateUserRolesOrganizationDataType">
+    <sequence>
+     <element name="organization" type="impl:organizationIdentifierType"/>
+     <element name="roles" type="impl:updateUserRolesListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateUserRolesDataType">
+    <sequence>
+     <element name="user" type="impl:userIdentifierType"/>
+     <element name="orgRoles" type="impl:updateUserRolesOrganizationDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateUserRolesRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="userData" type="impl:updateUserRolesDataType"/>
+    </sequence>
+   </complexType>
+   <element name="updateUserRolesRequest" type="impl:updateUserRolesRequestType"/>
+   <complexType name="failedUpdateUserRolesDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="userData" type="impl:updateUserRolesDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedUpdateUserRolesDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedUser" type="impl:failedUpdateUserRolesDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="updateUserRolesResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedUpdateUserRolesDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="updateUserRolesResponse" type="impl:updateUserRolesResponseType"/>
+   <complexType name="deleteUserRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="user" type="impl:userIdentifierType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteUserRequest" type="impl:deleteUserRequestType"/>
+   <complexType name="failedDeleteUserDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="user" type="impl:userIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedDeleteUserDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedUser" type="impl:failedDeleteUserDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteUserResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedDeleteUserDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteUserResponse" type="impl:deleteUserResponseType"/>
+   <complexType name="relateOrganizationsDataType">
+    <sequence>
+     <element name="organizationToRelate" type="impl:organizationIdentifierType"/>
+     <element name="relatedOrganization" type="impl:organizationIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="relateOrganizationsRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="orgData" type="impl:relateOrganizationsDataType"/>
+    </sequence>
+   </complexType>
+   <element name="relateOrganizationsRequest" type="impl:relateOrganizationsRequestType"/>
+   <complexType name="failedRelateOrganizationsDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="orgData" type="impl:relateOrganizationsDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedRelateOrganizationsDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedOrgData" type="impl:failedRelateOrganizationsDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="relateOrganizationsResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedRelateOrganizationsDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="relateOrganizationsResponse" type="impl:relateOrganizationsResponseType"/>
+   <complexType name="getRelatedOrganizationsRequestType">
+    <sequence>
+     <element name="organization" type="impl:organizationIdentifierType"/>
+    </sequence>
+   </complexType>
+   <element name="getRelatedOrganizationsRequest" type="impl:getRelatedOrganizationsRequestType"/>
+   <complexType name="getRelatedOrganizationsResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getOrganizationsQueryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getRelatedOrganizationsResponse" type="impl:getRelatedOrganizationsResponseType"/>
+   <complexType name="getUserPermissionsRequestType">
+    <sequence>
+     <element name="userName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="domainName" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="getUserPermissionsRequest" type="impl:getUserPermissionsRequestType"/>
+   <complexType name="permissionListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="permission" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="getUserPermissionsResponseDataType">
+    <sequence>
+     <element name="userName" type="xsd:string"/>
+     <element name="orgType" type="xsd:string"/>
+     <element name="permissions" type="impl:permissionListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getUserPermissionsResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getUserPermissionsResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getUserPermissionsResponse" type="impl:getUserPermissionsResponseType"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="updateUserRolesResponse">
+
+      <wsdl:part element="impl:updateUserRolesResponse" name="updateUserRolesResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUsersQueryResponse">
+
+      <wsdl:part element="impl:getUsersQueryResponse" name="getUsersQueryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateOrganizationRequest">
+
+      <wsdl:part element="impl:updateOrganizationRequest" name="updateOrganizationRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteOrganizationRequest">
+
+      <wsdl:part element="impl:deleteOrganizationRequest" name="deleteOrganizationRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteOrganizationResponse">
+
+      <wsdl:part element="impl:deleteOrganizationResponse" name="deleteOrganizationResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserCountResponse">
+
+      <wsdl:part element="impl:getUserCountResponse" name="getUserCountResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createUserRequest">
+
+      <wsdl:part element="impl:createUserRequest" name="createUserRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createOrganizationResponse">
+
+      <wsdl:part element="impl:createOrgResponse" name="createOrgResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRelatedOrganizationsRequest">
+
+      <wsdl:part element="impl:getRelatedOrganizationsRequest" name="getRelatedOrganizationsRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateUserRequest">
+
+      <wsdl:part element="impl:updateUserRequest" name="updateUserRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateUserResponse">
+
+      <wsdl:part element="impl:updateUserResponse" name="updateUserResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="relateOrganizationsRequest">
+
+      <wsdl:part element="impl:relateOrganizationsRequest" name="relateOrganizationsRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOrganizationCountResponse">
+
+      <wsdl:part element="impl:getOrganizationCountResponse" name="getOrganizationCountResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOrganizationsQueryRequest">
+
+      <wsdl:part element="impl:getOrganizationsQueryRequest" name="getOrganizationsQueryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOrganizationCountRequest">
+
+      <wsdl:part element="impl:getOrganizationCountRequest" name="getOrganizationCountRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="linkOrganizationsRequest">
+
+      <wsdl:part element="impl:linkOrganizationsRequest" name="linkOrganizationsRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSubOrganizationsRequest">
+
+      <wsdl:part element="impl:getSubOrganizationsRequest" name="getSubOrganizationsRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUsersQueryRequest">
+
+      <wsdl:part element="impl:getUsersQueryRequest" name="getUsersQueryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createOrganizationRequest">
+
+      <wsdl:part element="impl:createOrgRequest" name="createOrgRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createUserResponse">
+
+      <wsdl:part element="impl:createUserResponse" name="createUserResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateUserRolesRequest">
+
+      <wsdl:part element="impl:updateUserRolesRequest" name="updateUserRolesRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="linkOrganizationsResponse">
+
+      <wsdl:part element="impl:linkOrganizationsResponse" name="linkOrganizationsResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOrganizationsQueryResponse">
+
+      <wsdl:part element="impl:getOrganizationsQueryResponse" name="getOrganizationsQueryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getParentOrganizationsRequest">
+
+      <wsdl:part element="impl:getParentOrganizationsRequest" name="getParentOrganizationsRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserPermissionsRequest">
+
+      <wsdl:part element="impl:getUserPermissionsRequest" name="getUserPermissionsRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="relateOrganizationsResponse">
+
+      <wsdl:part element="impl:relateOrganizationsResponse" name="relateOrganizationsResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserCountRequest">
+
+      <wsdl:part element="impl:getUserCountRequest" name="getUserCountRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteUserResponse">
+
+      <wsdl:part element="impl:deleteUserResponse" name="deleteUserResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRelatedOrganizationsResponse">
+
+      <wsdl:part element="impl:getRelatedOrganizationsResponse" name="getRelatedOrganizationsResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateOrganizationResponse">
+
+      <wsdl:part element="impl:updateOrganizationResponse" name="updateOrganizationResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteUserRequest">
+
+      <wsdl:part element="impl:deleteUserRequest" name="deleteUserRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getParentOrganizationsResponse">
+
+      <wsdl:part element="impl:getParentOrganizationsResponse" name="getParentOrganizationsResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserPermissionsResponse">
+
+      <wsdl:part element="impl:getUserPermissionsResponse" name="getUserPermissionsResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSubOrganizationsResponse">
+
+      <wsdl:part element="impl:getSubOrganizationsResponse" name="getSubOrganizationsResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="UserOrgHierarchyServiceInterfaceV1">
+
+      <wsdl:operation name="createOrganization" parameterOrder="createOrgRequest">
+
+         <wsdl:input message="impl:createOrganizationRequest" name="createOrganizationRequest"/>
+
+         <wsdl:output message="impl:createOrganizationResponse" name="createOrganizationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="linkOrganizations" parameterOrder="linkOrganizationsRequest">
+
+         <wsdl:input message="impl:linkOrganizationsRequest" name="linkOrganizationsRequest"/>
+
+         <wsdl:output message="impl:linkOrganizationsResponse" name="linkOrganizationsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateOrganization" parameterOrder="updateOrganizationRequest">
+
+         <wsdl:input message="impl:updateOrganizationRequest" name="updateOrganizationRequest"/>
+
+         <wsdl:output message="impl:updateOrganizationResponse" name="updateOrganizationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteOrganization" parameterOrder="deleteOrganizationRequest">
+
+         <wsdl:input message="impl:deleteOrganizationRequest" name="deleteOrganizationRequest"/>
+
+         <wsdl:output message="impl:deleteOrganizationResponse" name="deleteOrganizationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getOrganizationsQuery" parameterOrder="getOrganizationsQueryRequest">
+
+         <wsdl:input message="impl:getOrganizationsQueryRequest" name="getOrganizationsQueryRequest"/>
+
+         <wsdl:output message="impl:getOrganizationsQueryResponse" name="getOrganizationsQueryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getOrganizationCount" parameterOrder="getOrganizationCountRequest">
+
+         <wsdl:input message="impl:getOrganizationCountRequest" name="getOrganizationCountRequest"/>
+
+         <wsdl:output message="impl:getOrganizationCountResponse" name="getOrganizationCountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getParentOrganizations" parameterOrder="getParentOrganizationsRequest">
+
+         <wsdl:input message="impl:getParentOrganizationsRequest" name="getParentOrganizationsRequest"/>
+
+         <wsdl:output message="impl:getParentOrganizationsResponse" name="getParentOrganizationsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSubOrganizations" parameterOrder="getSubOrganizationsRequest">
+
+         <wsdl:input message="impl:getSubOrganizationsRequest" name="getSubOrganizationsRequest"/>
+
+         <wsdl:output message="impl:getSubOrganizationsResponse" name="getSubOrganizationsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUsersQuery" parameterOrder="getUsersQueryRequest">
+
+         <wsdl:input message="impl:getUsersQueryRequest" name="getUsersQueryRequest"/>
+
+         <wsdl:output message="impl:getUsersQueryResponse" name="getUsersQueryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUserCount" parameterOrder="getUserCountRequest">
+
+         <wsdl:input message="impl:getUserCountRequest" name="getUserCountRequest"/>
+
+         <wsdl:output message="impl:getUserCountResponse" name="getUserCountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createUser" parameterOrder="createUserRequest">
+
+         <wsdl:input message="impl:createUserRequest" name="createUserRequest"/>
+
+         <wsdl:output message="impl:createUserResponse" name="createUserResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateUser" parameterOrder="updateUserRequest">
+
+         <wsdl:input message="impl:updateUserRequest" name="updateUserRequest"/>
+
+         <wsdl:output message="impl:updateUserResponse" name="updateUserResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateUserRoles" parameterOrder="updateUserRolesRequest">
+
+         <wsdl:input message="impl:updateUserRolesRequest" name="updateUserRolesRequest"/>
+
+         <wsdl:output message="impl:updateUserRolesResponse" name="updateUserRolesResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteUser" parameterOrder="deleteUserRequest">
+
+         <wsdl:input message="impl:deleteUserRequest" name="deleteUserRequest"/>
+
+         <wsdl:output message="impl:deleteUserResponse" name="deleteUserResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="relateOrganizations" parameterOrder="relateOrganizationsRequest">
+
+         <wsdl:input message="impl:relateOrganizationsRequest" name="relateOrganizationsRequest"/>
+
+         <wsdl:output message="impl:relateOrganizationsResponse" name="relateOrganizationsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRelatedOrganizations" parameterOrder="getRelatedOrganizationsRequest">
+
+         <wsdl:input message="impl:getRelatedOrganizationsRequest" name="getRelatedOrganizationsRequest"/>
+
+         <wsdl:output message="impl:getRelatedOrganizationsResponse" name="getRelatedOrganizationsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUserPermissions" parameterOrder="getUserPermissionsRequest">
+
+         <wsdl:input message="impl:getUserPermissionsRequest" name="getUserPermissionsRequest"/>
+
+         <wsdl:output message="impl:getUserPermissionsResponse" name="getUserPermissionsResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="v1/UserOrgHierarchyServiceSoapBinding" type="impl:UserOrgHierarchyServiceInterfaceV1">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="createOrganization">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createOrganizationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createOrganizationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="linkOrganizations">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="linkOrganizationsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="linkOrganizationsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateOrganization">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateOrganizationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateOrganizationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteOrganization">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteOrganizationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteOrganizationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getOrganizationsQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getOrganizationsQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getOrganizationsQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getOrganizationCount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getOrganizationCountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getOrganizationCountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getParentOrganizations">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getParentOrganizationsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getParentOrganizationsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSubOrganizations">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSubOrganizationsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSubOrganizationsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUsersQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUsersQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUsersQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUserCount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUserCountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUserCountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createUser">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createUserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createUserResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateUser">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateUserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateUserResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateUserRoles">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateUserRolesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateUserRolesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteUser">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteUserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteUserResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="relateOrganizations">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="relateOrganizationsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="relateOrganizationsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRelatedOrganizations">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getRelatedOrganizationsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getRelatedOrganizationsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUserPermissions">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUserPermissionsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUserPermissionsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="v1/UserOrgHierarchyService">
+
+      <wsdl:port binding="impl:v1/UserOrgHierarchyServiceSoapBinding" name="v1/UserOrgHierarchyService">
+
+         <wsdlsoap:address location="http://localhost/flexnet/services/v1/UserOrgHierarchyService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

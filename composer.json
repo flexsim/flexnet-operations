@@ -8,7 +8,35 @@
             "email": "cole.shirley@flexsim.com"
         }
     ],
+    "require": {
+        "ext-soap": "^8.0"
+    },
     "require-dev": {
         "orchestra/testbench": "^6.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flexsim\\FlexnetOperations\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Flexsim\\FlexnetOperations\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "testbench": "@php vendor/bin/testbench"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Flexsim\\FlexnetOperations\\FlexnetOperationsServiceProvider"
+            ],
+            "aliases": {
+                "Flexnet": "Flexsim\\FlexnetOperations\\Facades\\Flexnet"
+            }
+        }
     }
 }

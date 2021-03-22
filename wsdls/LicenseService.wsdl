@@ -1,0 +1,3060 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:com.macrovision:flexnet/operations" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:com.macrovision:flexnet/operations" xmlns:intf="urn:com.macrovision:flexnet/operations" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="urn:com.macrovision:flexnet/operations" xmlns="http://www.w3.org/2001/XMLSchema">
+   <simpleType name="simpleSearchType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="STARTS_WITH"/>
+     <enumeration value="CONTAINS"/>
+     <enumeration value="ENDS_WITH"/>
+     <enumeration value="EQUALS"/>
+    </restriction>
+   </simpleType>
+   <complexType name="SimpleQueryType">
+    <sequence>
+     <element name="value" type="xsd:string"/>
+     <element name="searchType" type="impl:simpleSearchType"/>
+    </sequence>
+   </complexType>
+   <simpleType name="datedSearchType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="BEFORE"/>
+     <enumeration value="AFTER"/>
+     <enumeration value="ON"/>
+    </restriction>
+   </simpleType>
+   <complexType name="DateQueryType">
+    <sequence>
+     <element name="value" type="xsd:date"/>
+     <element name="searchType" type="impl:datedSearchType"/>
+    </sequence>
+   </complexType>
+   <complexType name="DateTimeQueryType">
+    <sequence>
+     <element name="value" type="xsd:dateTime"/>
+     <element name="searchType" type="impl:datedSearchType"/>
+    </sequence>
+   </complexType>
+   <simpleType name="StateType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="DRAFT"/>
+     <enumeration value="ACTIVE"/>
+     <enumeration value="INACTIVE"/>
+     <enumeration value="DEPLOYED"/>
+     <enumeration value="OBSOLETE"/>
+     <enumeration value="TEST"/>
+     <enumeration value="ON_HOLD"/>
+    </restriction>
+   </simpleType>
+   <complexType name="StateQueryType">
+    <sequence>
+     <element name="value" type="impl:StateType"/>
+     <element name="searchType" type="impl:simpleSearchType"/>
+    </sequence>
+   </complexType>
+   <simpleType name="FulfillmentSourceType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="ONLINE"/>
+     <enumeration value="APPLICATION"/>
+    </restriction>
+   </simpleType>
+   <simpleType name="numberSearchType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="GREATER_THAN"/>
+     <enumeration value="GREATER_THAN_EQUALS"/>
+     <enumeration value="LESS_THAN"/>
+     <enumeration value="LESS_THAN_EQUALS"/>
+     <enumeration value="EQUALS"/>
+     <enumeration value="NOT_EQUALS"/>
+    </restriction>
+   </simpleType>
+   <complexType name="NumberQueryType">
+    <sequence>
+     <element name="value" type="xsd:integer"/>
+     <element name="searchType" type="impl:numberSearchType"/>
+    </sequence>
+   </complexType>
+   <complexType name="customAttributeQueryType">
+    <sequence>
+     <element name="attributeName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="stringValue" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="numberValue" type="impl:NumberQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="dateValue" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="booleanValue" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="customAttributesQueryListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="attribute" type="impl:customAttributeQueryType"/>
+    </sequence>
+   </complexType>
+   <simpleType name="ActivationType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="PROGRAMMATIC"/>
+     <enumeration value="MANUAL"/>
+     <enumeration value="SHORT_CODE"/>
+     <enumeration value="DEFAULT"/>
+    </restriction>
+   </simpleType>
+   <complexType name="fulfillmentsQueryParametersType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="entitlementId" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="activationId" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentId" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="product" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostId" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="nodeLockHostId" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="soldTo" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillDate" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillDateTime" type="impl:DateTimeQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="startDate" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="expirationDate" type="impl:DateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDateTime" type="impl:DateTimeQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="state" type="impl:StateQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseTechnology" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="userId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentSource" type="impl:FulfillmentSourceType"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:customAttributesQueryListType"/>
+     <element maxOccurs="1" minOccurs="0" name="customHostAttributes" type="impl:customAttributesQueryListType"/>
+     <element maxOccurs="1" minOccurs="0" name="activationType" type="impl:ActivationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFulfillmentCountRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:fulfillmentsQueryParametersType"/>
+    </sequence>
+   </complexType>
+   <element name="getFulfillmentCountRequest" type="impl:getFulfillmentCountRequestType"/>
+   <simpleType name="StatusType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="SUCCESS"/>
+     <enumeration value="FAILURE"/>
+     <enumeration value="PARTIAL_FAILURE"/>
+    </restriction>
+   </simpleType>
+   <complexType name="StatusInfoType">
+    <sequence>
+     <element name="status" type="impl:StatusType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFulfillmentCountResponseDataType">
+    <sequence>
+     <element name="count" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFulfillmentCountResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getFulfillmentCountResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getFulfillmentCountResponse" type="impl:getFulfillmentCountResponseType"/>
+   <complexType name="getFulfillmentsQueryRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:fulfillmentsQueryParametersType"/>
+     <element name="pageNumber" nillable="true" type="xsd:integer"/>
+     <element name="batchSize" nillable="true" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="includeLicenseText" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="includeConsolidatedHostLicense" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <element name="getFulfillmentsQueryRequest" type="impl:getFulfillmentsQueryRequestType"/>
+   <complexType name="entitlementPKType">
+    <sequence>
+     <element name="entitlementId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="entitlementIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:entitlementPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="fulfillmentPKType">
+    <sequence>
+     <element name="fulfillmentId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="fulfillmentIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:fulfillmentPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="entitlementLineItemPKType">
+    <sequence>
+     <element name="activationId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="entitlementLineItemIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:entitlementLineItemPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="productPKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+     <element name="version" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="productIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:productPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="ServerIDsType">
+    <sequence>
+     <element name="server1" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="server2" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="server3" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="NodeIDsType">
+    <sequence>
+     <element maxOccurs="unbounded" name="nodeId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="attributeDescriptorType">
+    <sequence>
+     <element name="attributeName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="stringValue" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="dateValue" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="booleanValue" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="integerValue" type="xsd:integer"/>
+     <element maxOccurs="unbounded" minOccurs="0" name="arrayValue" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="attributeDescriptorDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="attribute" type="impl:attributeDescriptorType"/>
+    </sequence>
+   </complexType>
+   <complexType name="hostTypePKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="CustomHostIDType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="hostId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="hostAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostType" type="impl:hostTypePKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="consolidatedHostLicenseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" name="license" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <simpleType name="SupportLicenseType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="MASTER"/>
+     <enumeration value="REHOST"/>
+     <enumeration value="RETURN"/>
+     <enumeration value="REPAIR"/>
+     <enumeration value="STOPGAP"/>
+     <enumeration value="EMERGENCY"/>
+     <enumeration value="PUBLISHER_ERROR"/>
+     <enumeration value="TRANSFER"/>
+     <enumeration value="UPGRADE"/>
+     <enumeration value="UPSELL"/>
+     <enumeration value="REGENERATE"/>
+     <enumeration value="REINSTALL"/>
+     <enumeration value="RENEW"/>
+    </restriction>
+   </simpleType>
+   <complexType name="licenseTechnologyPKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseTechnologyIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:licenseTechnologyPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseFileDataType">
+    <sequence>
+     <element name="licenseFileDefinitionName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseText" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="binaryLicense" type="xsd:base64Binary"/>
+     <element maxOccurs="1" minOccurs="0" name="fileName" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseFileDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="licenseFile" type="impl:licenseFileDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="entitledProductDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="product" type="impl:productIdentifierType"/>
+     <element name="quantity" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <complexType name="entitledProductDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="entitledProduct" type="impl:entitledProductDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="fulfillmentDataType">
+    <sequence>
+     <element name="entitlementIdentifier" type="impl:entitlementIdentifierType"/>
+     <element name="fulfillmentIdentifier" type="impl:fulfillmentIdentifierType"/>
+     <element name="fulfillmentType" type="xsd:string"/>
+     <element name="lineItem" type="impl:entitlementLineItemIdentifierType"/>
+     <element name="product" type="impl:productIdentifierType"/>
+     <element name="soldTo" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToEmail" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="serverIds" type="impl:ServerIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="nodeIds" type="impl:NodeIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="customHost" type="impl:CustomHostIDType"/>
+     <element name="fulfilledCount" type="xsd:string"/>
+     <element name="overDraftCount" type="xsd:string"/>
+     <element name="fulfillDate" type="xsd:date"/>
+     <element name="fulfillDateTime" type="xsd:dateTime"/>
+     <element name="isPermanent" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="startDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="expirationDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseText" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="binaryLicense" type="xsd:base64Binary"/>
+     <element maxOccurs="1" minOccurs="0" name="consolidatedHostLicense" type="impl:consolidatedHostLicenseDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="supportAction" type="impl:SupportLicenseType"/>
+     <element name="lastModifiedDateTime" type="xsd:dateTime"/>
+     <element maxOccurs="1" minOccurs="0" name="parentFulfillmentId" type="impl:fulfillmentIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseTechnology" type="impl:licenseTechnologyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModelAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="state" type="impl:StateType"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentSource" type="impl:FulfillmentSourceType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseFiles" type="impl:licenseFileDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="entitledProducts" type="impl:entitledProductDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="activationType" type="impl:ActivationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFulfillmentsQueryResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="fulfillment" type="impl:fulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFulfillmentsQueryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getFulfillmentsQueryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getFulfillmentsQueryResponse" type="impl:getFulfillmentsQueryResponseType"/>
+   <complexType name="customAttributeDescriptorType">
+    <sequence>
+     <element name="attributeName" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="customAttributeDescriptorDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="attribute" type="impl:customAttributeDescriptorType"/>
+    </sequence>
+   </complexType>
+   <complexType name="fulfillmentResponseConfigRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentId" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentType" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="state" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="entitlementId" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="lineitemId" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="product" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="productDescription" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumber" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumberDescription" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseTechnology" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModel" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="soldTo" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="soldToDisplayName" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToEmail" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToAddress" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseHost" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfilledCount" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="overDraftCount" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillDate" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillDateTime" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="isPermanent" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="startDate" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="expirationDate" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="versionDate" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseFileType" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseText" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="binaryLicense" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="supportAction" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDateTime" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="parentFulfillmentId" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentSource" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="orderId" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="orderLineNumber" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="lineitemDescription" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="totalCopies" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="numberOfRemainingCopies" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="isTrusted" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:customAttributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="customHostAttributes" type="impl:customAttributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="migrationId" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="vendorDaemonName" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseFiles" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="FNPTimeZoneValue" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="activationType" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFulfillmentPropertiesRequestType">
+    <sequence>
+     <element name="queryParams" type="impl:fulfillmentsQueryParametersType"/>
+     <element name="fulfillmentResponseConfig" type="impl:fulfillmentResponseConfigRequestType"/>
+     <element name="batchSize" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="pageNumber" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <element name="getFulfillmentPropertiesRequest" type="impl:getFulfillmentPropertiesRequestType"/>
+   <complexType name="partNumberPKType">
+    <sequence>
+     <element name="partId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="partNumberIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:partNumberPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseModelPKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="licenseModelIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:licenseModelPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="organizationPKType">
+    <sequence>
+     <element name="name" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="organizationIdentifierType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="uniqueId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="primaryKeys" type="impl:organizationPKType"/>
+    </sequence>
+   </complexType>
+   <complexType name="fulfillmentPropertiesType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentId" type="impl:fulfillmentIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentType" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="state" type="impl:StateType"/>
+     <element maxOccurs="1" minOccurs="0" name="entitlementId" type="impl:entitlementIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="lineitemId" type="impl:entitlementLineItemIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="product" type="impl:productIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="productDescription" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumber" type="impl:partNumberIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="partNumberDescription" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseTechnology" type="impl:licenseTechnologyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModel" type="impl:licenseModelIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="soldTo" type="impl:organizationIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="soldToDisplayName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToEmail" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseHost" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfilledCount" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="overDraftCount" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillDateTime" type="xsd:dateTime"/>
+     <element maxOccurs="1" minOccurs="0" name="isPermanent" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="startDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="expirationDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="versionDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseFileType" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseText" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="binaryLicense" type="xsd:base64Binary"/>
+     <element maxOccurs="1" minOccurs="0" name="supportAction" type="impl:SupportLicenseType"/>
+     <element maxOccurs="1" minOccurs="0" name="lastModifiedDateTime" type="xsd:dateTime"/>
+     <element maxOccurs="1" minOccurs="0" name="parentFulfillmentId" type="impl:fulfillmentIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentSource" type="impl:FulfillmentSourceType"/>
+     <element maxOccurs="1" minOccurs="0" name="orderId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="orderLineNumber" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="lineitemDescription" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="totalCopies" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="numberOfRemainingCopies" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="isTrusted" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="customAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="customHostAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="migrationId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="vendorDaemonName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseFiles" type="impl:licenseFileDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="entitledProducts" type="impl:entitledProductDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="FNPTimeZoneValue" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="activationType" type="impl:ActivationType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFulfillmentPropertiesResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="unbounded" minOccurs="0" name="fulfillment" type="impl:fulfillmentPropertiesType"/>
+    </sequence>
+   </complexType>
+   <element name="getFulfillmentPropertiesResponse" type="impl:getFulfillmentPropertiesResponseType"/>
+   <complexType name="rehostFulfillmentDataType">
+    <sequence>
+     <element name="fulfillmentIdentifier" type="impl:fulfillmentIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="serverIds" type="impl:ServerIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="nodeIds" type="impl:NodeIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="customHost" type="impl:CustomHostIDType"/>
+     <element maxOccurs="1" minOccurs="0" name="partialCount" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="overDraftCount" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="overridePolicy" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="rehostFulfillmentRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:rehostFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <element name="rehostLicenseRequest" type="impl:rehostFulfillmentRequestType"/>
+   <complexType name="rehostFulfillmentResponseDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:integer"/>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:fulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="rehostResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="fulfillmentData" type="impl:rehostFulfillmentResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedRehostResponseDataType">
+    <sequence>
+     <element name="fulfillment" type="impl:rehostFulfillmentDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedRehostResponselistDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFulfillment" type="impl:failedRehostResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="rehostFulfillmentResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:rehostResponseDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedRehostResponselistDataType"/>
+    </sequence>
+   </complexType>
+   <element name="rehostLicenseResponse" type="impl:rehostFulfillmentResponseType"/>
+   <complexType name="returnFulfillmentDataType">
+    <sequence>
+     <element name="fulfillmentIdentifier" type="impl:fulfillmentIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="partialCount" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="overDraftCount" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="overridePolicy" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="forceReturnOfThisTrustedFulfillment" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="returnFulfillmentRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:returnFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <element name="returnLicenseRequest" type="impl:returnFulfillmentRequestType"/>
+   <complexType name="returnFulfillmentResponseDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillment" type="impl:fulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="returnResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="fulfillmentData" type="impl:returnFulfillmentResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedReturnResponseDataType">
+    <sequence>
+     <element name="fulfillment" type="impl:returnFulfillmentDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedReturnResponselistDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFulfillment" type="impl:failedReturnResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="returnFulfillmentResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:returnResponseDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedReturnResponselistDataType"/>
+    </sequence>
+   </complexType>
+   <element name="returnLicenseResponse" type="impl:returnFulfillmentResponseType"/>
+   <complexType name="repairFulfillmentDataType">
+    <sequence>
+     <element name="fulfillmentIdentifier" type="impl:fulfillmentIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModelAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="overridePolicy" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="FNPTimeZoneValue" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="repairFulfillmentRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:repairFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <element name="repairLicenseRequest" type="impl:repairFulfillmentRequestType"/>
+   <complexType name="repairFulfillmentResponseDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillment" type="impl:fulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="repairResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="fulfillmentData" type="impl:repairFulfillmentResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedRepairResponseDataType">
+    <sequence>
+     <element name="fulfillment" type="impl:repairFulfillmentDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedRepairResponselistDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFulfillment" type="impl:failedRepairResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="repairFulfillmentResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:repairResponseDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedRepairResponselistDataType"/>
+    </sequence>
+   </complexType>
+   <element name="repairLicenseResponse" type="impl:repairFulfillmentResponseType"/>
+   <complexType name="emergencyFulfillmentDataType">
+    <sequence>
+     <element name="fulfillmentIdentifier" type="impl:fulfillmentIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModelAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="FNPTimeZoneValue" type="xsd:string"/>
+     <element name="startDate" type="xsd:date"/>
+     <element name="endDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToEmail" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="serverIds" type="impl:ServerIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="nodeIds" type="impl:NodeIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="customHost" type="impl:CustomHostIDType"/>
+    </sequence>
+   </complexType>
+   <complexType name="emergencyFulfillmentRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:emergencyFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <element name="emergencyLicenseRequest" type="impl:emergencyFulfillmentRequestType"/>
+   <complexType name="emergencyFulfillmentResponseDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillment" type="impl:fulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="emergencyResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="fulfillmentData" type="impl:emergencyFulfillmentResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedEmergencyResponseDataType">
+    <sequence>
+     <element name="fulfillment" type="impl:emergencyFulfillmentDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedEmergencyResponselistDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFulfillment" type="impl:failedEmergencyResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="emergencyFulfillmentResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:emergencyResponseDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedEmergencyResponselistDataType"/>
+    </sequence>
+   </complexType>
+   <element name="emergencyLicenseResponse" type="impl:emergencyFulfillmentResponseType"/>
+   <complexType name="publisherErrorFulfillmentDataType">
+    <sequence>
+     <element name="fulfillmentIdentifier" type="impl:fulfillmentIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModelAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="FNPTimeZoneValue" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToEmail" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="serverIds" type="impl:ServerIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="nodeIds" type="impl:NodeIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="customHost" type="impl:CustomHostIDType"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillCount" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="overridePolicy" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="publisherErrorFulfillmentRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:publisherErrorFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <element name="publisherErrorLicenseRequest" type="impl:publisherErrorFulfillmentRequestType"/>
+   <complexType name="publisherErrorFulfillmentResponseDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillment" type="impl:fulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="publisherErrorResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="fulfillmentData" type="impl:publisherErrorFulfillmentResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedPublisherErrorResponseDataType">
+    <sequence>
+     <element name="fulfillment" type="impl:publisherErrorFulfillmentDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedPublisherErrorResponselistDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFulfillment" type="impl:failedPublisherErrorResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="publisherErrorFulfillmentResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:publisherErrorResponseDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedPublisherErrorResponselistDataType"/>
+    </sequence>
+   </complexType>
+   <element name="publisherErrorLicenseResponse" type="impl:publisherErrorFulfillmentResponseType"/>
+   <complexType name="stopGapFulfillmentDataType">
+    <sequence>
+     <element name="fulfillmentIdentifier" type="impl:fulfillmentIdentifierType"/>
+     <element name="startDate" type="xsd:date"/>
+     <element name="endDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToEmail" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToAddress" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="stopGapFulfillmentRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:stopGapFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <element name="stopGapLicenseRequest" type="impl:stopGapFulfillmentRequestType"/>
+   <complexType name="stopGapFulfillmentResponseDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillment" type="impl:fulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="stopGapResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="fulfillmentData" type="impl:stopGapFulfillmentResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedStopGapResponseDataType">
+    <sequence>
+     <element name="fulfillment" type="impl:stopGapFulfillmentDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedStopGapResponselistDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFulfillment" type="impl:failedStopGapResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="stopGapFulfillmentResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:stopGapResponseDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedStopGapResponselistDataType"/>
+    </sequence>
+   </complexType>
+   <element name="stopGapLicenseResponse" type="impl:stopGapFulfillmentResponseType"/>
+   <complexType name="getFulfillmentAttributesRequestType">
+    <sequence>
+     <element name="licenseModelIdentifier" type="impl:licenseModelIdentifierType"/>
+    </sequence>
+   </complexType>
+   <element name="getFulfillmentAttributesRequest" type="impl:getFulfillmentAttributesRequestType"/>
+   <simpleType name="AttributeDataType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="TEXT"/>
+     <enumeration value="BOOLEAN"/>
+     <enumeration value="NUMBER"/>
+     <enumeration value="DATE"/>
+     <enumeration value="MULTI_VALUED_TEXT"/>
+     <enumeration value="LONGTEXT"/>
+    </restriction>
+   </simpleType>
+   <complexType name="valueType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="value" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="attributeMetaDescriptorType">
+    <sequence>
+     <element name="attributeName" type="xsd:string"/>
+     <element name="attributeDataType" type="impl:AttributeDataType"/>
+     <element name="namespace" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="validValues" type="impl:valueType"/>
+    </sequence>
+   </complexType>
+   <complexType name="attributeMetaDescriptorDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="attribute" type="impl:attributeMetaDescriptorType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFulfillmentAttributesDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentAttributes" type="impl:attributeMetaDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="needTimeZone" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFulfillmentAttributesResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getFulfillmentAttributesDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getFulfillmentAttributesResponse" type="impl:getFulfillmentAttributesResponseType"/>
+   <complexType name="getHostAttributesRequestType">
+    <sequence>
+     <element name="licenseTechnologyIdentifier" type="impl:licenseTechnologyIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostType" type="impl:hostTypePKType"/>
+    </sequence>
+   </complexType>
+   <element name="getHostAttributesRequest" type="impl:getHostAttributesRequestType"/>
+   <complexType name="getHostAttributesDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="hostAttributes" type="impl:attributeMetaDescriptorDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getHostAttributesResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getHostAttributesDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getHostAttributesResponse" type="impl:getHostAttributesResponseType"/>
+   <complexType name="createFulfillmentDataType">
+    <sequence>
+     <element name="activationId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillCount" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="overDraftCount" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="startDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="versionDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="versionStartDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="soldTo" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToEmail" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="serverIds" type="impl:ServerIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="nodeIds" type="impl:NodeIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="customHost" type="impl:CustomHostIDType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModelAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="overridePolicy" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="owner" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="FNPTimeZoneValue" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createFulfillmentRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:createFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <element name="verifyCreateLicenseRequest" type="impl:createFulfillmentRequestType"/>
+   <complexType name="failedFulfillmentDataType">
+    <sequence>
+     <element name="fulfillment" type="impl:createFulfillmentDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedFulfillmentDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedFulfillment" type="impl:failedFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdFulfillmentDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:string"/>
+     <element name="uniqueId" type="xsd:string"/>
+     <element name="fulfillmentId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseText" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="binaryLicense" type="xsd:base64Binary"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseFiles" type="impl:licenseFileDataListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="verifiedFulfillmentDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdFulfillmentDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="createdFulfillment" type="impl:createdFulfillmentDataType"/>
+     <element maxOccurs="unbounded" minOccurs="0" name="verifiedFulfillment" type="impl:verifiedFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createFulfillmentResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedFulfillmentDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdFulfillmentDataListType"/>
+    </sequence>
+   </complexType>
+   <element name="verifyCreateLicenseResponse" type="impl:createFulfillmentResponseType"/>
+   <element name="createLicenseRequest" type="impl:createFulfillmentRequestType"/>
+   <element name="createLicenseResponse" type="impl:createFulfillmentResponseType"/>
+   <complexType name="simpleAttributeDataType">
+    <sequence>
+     <element name="attributeName" type="xsd:string"/>
+     <element name="attributeValue" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="publisherAttributesListDataType">
+    <sequence>
+     <element maxOccurs="unbounded" name="attribute" type="impl:simpleAttributeDataType"/>
+    </sequence>
+   </complexType>
+   <simpleType name="ShortCodeActivationType">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="REINSTALL"/>
+     <enumeration value="REACTIVATE"/>
+    </restriction>
+   </simpleType>
+   <complexType name="createShortCodeDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="bulkEntitlementId" type="xsd:string"/>
+     <element name="webRegkey" type="xsd:string"/>
+     <element name="shortCode" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="publisherAttributes" type="impl:publisherAttributesListDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="overridePolicy" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="shortCodeActivationType" type="impl:ShortCodeActivationType"/>
+     <element maxOccurs="1" minOccurs="0" name="reinstallFulfillment" type="impl:fulfillmentIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="activateShortCodeRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="shortCodeData" type="impl:createShortCodeDataType"/>
+    </sequence>
+   </complexType>
+   <element name="activateShortCodeRequest" type="impl:activateShortCodeRequestType"/>
+   <complexType name="duplicateFulfillmentRecordListDataType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:fulfillmentIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedShortCodeDataType">
+    <sequence>
+     <element name="shortCodeData" type="impl:createShortCodeDataType"/>
+     <element name="reason" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="duplicateFulfillmentRecords" type="impl:duplicateFulfillmentRecordListDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdShortCodeDataType">
+    <sequence>
+     <element name="shortCode" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="activateShortCodeResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedShortCodeDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdShortCodeDataType"/>
+    </sequence>
+   </complexType>
+   <element name="activateShortCodeResponse" type="impl:activateShortCodeResponseType"/>
+   <complexType name="repairShortCodeDataType">
+    <sequence>
+     <element name="shortCode" type="xsd:string"/>
+     <element name="webRegKey" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="publisherAttributes" type="impl:publisherAttributesListDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="overridePolicy" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="repairShortCodeRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="shortCodeData" type="impl:repairShortCodeDataType"/>
+    </sequence>
+   </complexType>
+   <element name="repairShortCodeRequest" type="impl:repairShortCodeRequestType"/>
+   <complexType name="failedRepairShortCodeDataType">
+    <sequence>
+     <element name="shortCodeData" type="impl:repairShortCodeDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="repairedShortCodeDataType">
+    <sequence>
+     <element name="shortCode" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="repairShortCodeResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedRepairShortCodeDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:repairedShortCodeDataType"/>
+    </sequence>
+   </complexType>
+   <element name="repairShortCodeResponse" type="impl:repairShortCodeResponseType"/>
+   <complexType name="returnShortCodeDataType">
+    <sequence>
+     <element name="shortCode" type="xsd:string"/>
+     <element name="webRegKey" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="publisherAttributes" type="impl:publisherAttributesListDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="overridePolicy" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <simpleType name="ReturnedShortCodeReturnReason">
+    <restriction base="xsd:NMTOKEN">
+     <enumeration value="UPGRADE"/>
+     <enumeration value="UPSELL"/>
+     <enumeration value="RENEW"/>
+     <enumeration value="REHOST"/>
+    </restriction>
+   </simpleType>
+   <complexType name="returnShortCodeRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="shortCodeData" type="impl:returnShortCodeDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="returnReason" type="impl:ReturnedShortCodeReturnReason"/>
+    </sequence>
+   </complexType>
+   <element name="returnShortCodeRequest" type="impl:returnShortCodeRequestType"/>
+   <complexType name="failedReturnShortCodeDataType">
+    <sequence>
+     <element name="shortCodeData" type="impl:returnShortCodeDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="returnedShortCodeDataType">
+    <sequence>
+     <element name="shortCode" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="returnShortCodeResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedReturnShortCodeDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:returnedShortCodeDataType"/>
+    </sequence>
+   </complexType>
+   <element name="returnShortCodeResponse" type="impl:returnShortCodeResponseType"/>
+   <complexType name="emailContactListType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="emailId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="emailLicenseRequestType">
+    <sequence>
+     <element name="fulfillmentIdentifier" type="impl:fulfillmentIdentifierType"/>
+     <element maxOccurs="1" minOccurs="0" name="ignoreExistingEmailList" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="validateEmailAddresses" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="emailIdList" type="impl:emailContactListType"/>
+     <element maxOccurs="1" minOccurs="0" name="locale" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="emailLicenseRequest" type="impl:emailLicenseRequestType"/>
+   <complexType name="emailLicenseResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+    </sequence>
+   </complexType>
+   <element name="emailLicenseResponse" type="impl:emailLicenseResponseType"/>
+   <complexType name="fulfillmentIdentifierListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillmentIdentifier" type="impl:fulfillmentIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="consolidateFulfillmentsRequestType">
+    <sequence>
+     <element name="fulfillments" type="impl:fulfillmentIdentifierListType"/>
+    </sequence>
+   </complexType>
+   <element name="consolidateFulfillmentsRequest" type="impl:consolidateFulfillmentsRequestType"/>
+   <complexType name="consolidatedLicenseDataType">
+    <sequence>
+     <element name="consolidatedLicenseId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseText" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="binaryLicense" type="xsd:base64Binary"/>
+     <element name="soldTo" type="xsd:string"/>
+     <element name="criteria" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="state" type="impl:StateType"/>
+     <element name="consolidatedFulfillments" type="impl:fulfillmentIdentifierListType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseFiles" type="impl:licenseFileDataListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="consolidatedResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" name="consolidatedLicense" type="impl:consolidatedLicenseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="consolidateFulfillmentsResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:consolidatedResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="consolidateFulfillmentsResponse" type="impl:consolidateFulfillmentsResponseType"/>
+   <complexType name="consolidatedFulfillmentsQPType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="consolidatedLicenseId" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentId" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="activationId" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="entitlementId" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="soldTo" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="criteria" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="state" type="impl:StateQueryType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getConsolidatedFulfillmentCountRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:consolidatedFulfillmentsQPType"/>
+    </sequence>
+   </complexType>
+   <element name="getConsolidatedFulfillmentCountRequest" type="impl:getConsolidatedFulfillmentCountRequestType"/>
+   <complexType name="getConsolidatedFulfillmentCountResponseDataType">
+    <sequence>
+     <element name="count" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <complexType name="getConsolidatedFulfillmentCountResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getConsolidatedFulfillmentCountResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getConsolidatedFulfillmentCountResponse" type="impl:getConsolidatedFulfillmentCountResponseType"/>
+   <complexType name="getConsolidatedFulfillmentsQueryRequestType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="queryParams" type="impl:consolidatedFulfillmentsQPType"/>
+     <element name="pageNumber" nillable="true" type="xsd:integer"/>
+     <element name="batchSize" nillable="true" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="includeLicenseText" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <element name="getConsolidatedFulfillmentsQueryRequest" type="impl:getConsolidatedFulfillmentsQueryRequestType"/>
+   <complexType name="getConsolidatedFulfillmentsQueryResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="consolidatedLicense" type="impl:consolidatedLicenseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getConsolidatedFulfillmentsQueryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getConsolidatedFulfillmentsQueryResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getConsolidatedFulfillmentsQueryResponse" type="impl:getConsolidatedFulfillmentsQueryResponseType"/>
+   <complexType name="activationIdsListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="activationId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFmtAttributesForBatchActivationRequestType">
+    <sequence>
+     <element name="activationIds" type="impl:activationIdsListType"/>
+    </sequence>
+   </complexType>
+   <element name="getFmtAttributesForBatchActivationRequest" type="impl:getFmtAttributesForBatchActivationRequestType"/>
+   <complexType name="activationIdOverDraftMapType">
+    <sequence>
+     <element name="activationId" type="xsd:string"/>
+     <element name="overDraftAllowed" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="overDraftDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="activationIdMap" type="impl:activationIdOverDraftMapType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFmtAttributesForBatchDataType">
+    <sequence>
+     <element name="needStartDate" type="xsd:boolean"/>
+     <element name="needVersionDate" type="xsd:boolean"/>
+     <element name="needVersionStartDate" type="xsd:boolean"/>
+     <element name="needServerId" type="xsd:boolean"/>
+     <element name="needNodeLockId" type="xsd:boolean"/>
+     <element name="needCustomHost" type="xsd:boolean"/>
+     <element name="needCount" type="xsd:boolean"/>
+     <element name="needSoldTo" type="xsd:boolean"/>
+     <element name="overDraftData" type="impl:overDraftDataListType"/>
+     <element name="modelType" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="modelAttributes" type="impl:attributeMetaDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="hostAttributes" type="impl:attributeMetaDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="needTimeZone" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFmtAttributesForBatchActivationResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:getFmtAttributesForBatchDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getFmtAttributesForBatchActivationResponse" type="impl:getFmtAttributesForBatchActivationResponseType"/>
+   <complexType name="hostIdDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="serverIds" type="impl:ServerIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="nodeIds" type="impl:NodeIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="customHost" type="impl:CustomHostIDType"/>
+    </sequence>
+   </complexType>
+   <complexType name="hostIdDataSetType">
+    <sequence>
+     <element maxOccurs="unbounded" name="hostIdData" type="impl:hostIdDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="countForHostsType">
+    <sequence>
+     <element name="hostDataRefId" type="xsd:string"/>
+     <element name="fulfillCount" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="overDraftCount" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <complexType name="countDataType">
+    <sequence>
+     <element name="activationId" type="xsd:string"/>
+     <element maxOccurs="unbounded" name="countForHosts" type="impl:countForHostsType"/>
+    </sequence>
+   </complexType>
+   <complexType name="countDataSetType">
+    <sequence>
+     <element maxOccurs="unbounded" name="countData" type="impl:countDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="commonBatchDataSetType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="startDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="versionDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="versionStartDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="soldTo" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToEmail" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModelAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="overridePolicy" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="FNPTimeZoneValue" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createLicensesAsBatchRequestType">
+    <sequence>
+     <element name="activationIds" type="impl:activationIdsListType"/>
+     <element name="hostIdDataSet" type="impl:hostIdDataSetType"/>
+     <element maxOccurs="1" minOccurs="0" name="countDataSet" type="impl:countDataSetType"/>
+     <element name="commonBatchDataSet" type="impl:commonBatchDataSetType"/>
+    </sequence>
+   </complexType>
+   <element name="createLicensesAsBatchRequest" type="impl:createLicensesAsBatchRequestType"/>
+   <complexType name="createLicensesAsBatchResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:fulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createLicensesAsBatchResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createLicensesAsBatchResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="createLicensesAsBatchResponse" type="impl:createLicensesAsBatchResponseType"/>
+   <element name="createLicensesAsBatchAndConsolidateRequest" type="impl:createLicensesAsBatchRequestType"/>
+   <element name="createLicensesAsBatchAndConsolidateResponse" type="impl:consolidateFulfillmentsResponseType"/>
+   <complexType name="consolidatedLicenseIdListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="consolidatedLicenseId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="emailConsolidatedLicensesRequestType">
+    <sequence>
+     <element name="consolidatedLicenseIdList" type="impl:consolidatedLicenseIdListType"/>
+     <element maxOccurs="1" minOccurs="0" name="validateEmailAddresses" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="emailIdList" type="impl:emailContactListType"/>
+     <element maxOccurs="1" minOccurs="0" name="locale" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="emailConsolidatedLicensesRequest" type="impl:emailConsolidatedLicensesRequestType"/>
+   <complexType name="emailConsolidatedLicensesResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+    </sequence>
+   </complexType>
+   <element name="emailConsolidatedLicensesResponse" type="impl:emailConsolidatedLicensesResponseType"/>
+   <complexType name="activationDataType">
+    <sequence>
+     <element name="activationData" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="trustedRequestType">
+    <sequence>
+     <element name="inputData" type="impl:activationDataType"/>
+    </sequence>
+   </complexType>
+   <element name="manualActivationRequest" type="impl:trustedRequestType"/>
+   <complexType name="trustedResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:activationDataType"/>
+    </sequence>
+   </complexType>
+   <element name="manualActivationResponse" type="impl:trustedResponseType"/>
+   <element name="manualRepairRequest" type="impl:trustedRequestType"/>
+   <element name="manualRepairResponse" type="impl:trustedResponseType"/>
+   <element name="manualReturnRequest" type="impl:trustedRequestType"/>
+   <element name="manualReturnResponse" type="impl:trustedResponseType"/>
+   <complexType name="getFulfillmentHistoryRequestType">
+    <sequence>
+     <element name="activationId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentId" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="userId" type="impl:SimpleQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="count" type="impl:NumberQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="policyOverridden" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="actionDateTime" type="impl:DateTimeQueryType"/>
+     <element maxOccurs="1" minOccurs="0" name="lifeCycleAction" type="impl:SupportLicenseType"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillmentSource" type="impl:FulfillmentSourceType"/>
+     <element maxOccurs="1" minOccurs="0" name="pageNumber" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="batchSize" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <element name="getFulfillmentHistoryRequest" type="impl:getFulfillmentHistoryRequestType"/>
+   <complexType name="fulfillmentHistoryRecordType">
+    <sequence>
+     <element name="fulfillmentId" type="xsd:string"/>
+     <element name="action" type="xsd:string"/>
+     <element name="actionDate" type="xsd:date"/>
+     <element name="actionDateTime" type="xsd:dateTime"/>
+     <element name="actionPerformedBy" type="xsd:string"/>
+     <element name="isPolicyOverridden" type="xsd:boolean"/>
+     <element name="count" type="xsd:integer"/>
+     <element name="fulfillmentSource" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="fulfillmentHistoryDetailsType">
+    <sequence>
+     <element maxOccurs="unbounded" name="record" type="impl:fulfillmentHistoryRecordType"/>
+    </sequence>
+   </complexType>
+   <complexType name="fulfillmentHistoryDataType">
+    <sequence>
+     <element name="activationId" type="xsd:string"/>
+     <element name="historyDetails" type="impl:fulfillmentHistoryDetailsType"/>
+    </sequence>
+   </complexType>
+   <complexType name="getFulfillmentHistoryResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:fulfillmentHistoryDataType"/>
+    </sequence>
+   </complexType>
+   <element name="getFulfillmentHistoryResponse" type="impl:getFulfillmentHistoryResponseType"/>
+   <complexType name="hostIdDataDetailsType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="serverHost" type="impl:ServerIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="nodeLockHost" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="countedNodeLockHostIds" type="impl:NodeIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="customHost" type="impl:CustomHostIDType"/>
+     <element maxOccurs="1" minOccurs="0" name="countFromParent" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="countFromOwn" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="parentActivationId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="hostIdDetailsType">
+    <sequence>
+     <element maxOccurs="unbounded" name="hostIdData" type="impl:hostIdDataDetailsType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createChildLineItemFulfillmentDataType">
+    <sequence>
+     <element name="activationId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="startDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="versionDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="versionStartDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="soldTo" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToEmail" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModelAttributes" type="impl:attributeDescriptorDataType"/>
+     <element name="hostIdDetails" type="impl:hostIdDetailsType"/>
+     <element maxOccurs="1" minOccurs="0" name="overridePolicy" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="owner" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="FNPTimeZoneValue" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="createChildLineItemFulfillmentRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:createChildLineItemFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <element name="createChildLineItemFulfillmentRequest" type="impl:createChildLineItemFulfillmentRequestType"/>
+   <complexType name="createdChildLIFulfillmentInfoType">
+    <sequence>
+     <element name="uniqueId" type="xsd:string"/>
+     <element name="fulfillmentId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseText" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="binaryLicense" type="xsd:base64Binary"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseFiles" type="impl:licenseFileDataListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdChildLIFulfillmentDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:integer"/>
+     <element maxOccurs="unbounded" name="fulfillmentInfo" type="impl:createdChildLIFulfillmentInfoType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createdChildLIFmtResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:createdChildLIFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedChildLIFulfillmentDataType">
+    <sequence>
+     <element name="fulfillment" type="impl:createChildLineItemFulfillmentDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedChildLIFmtResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" name="failedFulfillment" type="impl:failedChildLIFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="createChildLineItemFulfillmentResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:createdChildLIFmtResponseDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedChildLIFmtResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="createChildLineItemFulfillmentResponse" type="impl:createChildLineItemFulfillmentResponseType"/>
+   <complexType name="advancedFulfillmentLCDataType">
+    <sequence>
+     <element name="fulfillmentId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="childActivationId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="fulfillCount" type="xsd:integer"/>
+     <element maxOccurs="1" minOccurs="0" name="startDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="versionDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="versionStartDate" type="xsd:date"/>
+     <element maxOccurs="1" minOccurs="0" name="soldTo" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToEmail" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="serverHost" type="impl:ServerIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="nodeLockHost" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="countedNodeLockHostIds" type="impl:NodeIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="customHost" type="impl:CustomHostIDType"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseModelAttributes" type="impl:attributeDescriptorDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="overridePolicy" type="xsd:boolean"/>
+     <element maxOccurs="1" minOccurs="0" name="FNPTimeZoneValue" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="advancedFulfillmentLCListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:advancedFulfillmentLCDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="advancedFulfillmentLCRequestType">
+    <sequence>
+     <element name="fulfillmentList" type="impl:advancedFulfillmentLCListType"/>
+    </sequence>
+   </complexType>
+   <element name="upgradeFulfillmentRequest" type="impl:advancedFulfillmentLCRequestType"/>
+   <complexType name="advancedFulfillmentLCInfoType">
+    <sequence>
+     <element name="uniqueId" type="xsd:string"/>
+     <element name="fulfillmentId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseText" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="binaryLicense" type="xsd:base64Binary"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseFiles" type="impl:licenseFileDataListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="advancedFmtLCResponseDataType">
+    <sequence>
+     <element name="recordRefNo" type="xsd:integer"/>
+     <element maxOccurs="unbounded" name="upgradedFulfillmentInfo" type="impl:advancedFulfillmentLCInfoType"/>
+    </sequence>
+   </complexType>
+   <complexType name="advancedFmtLCResponseDataListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillment" type="impl:advancedFmtLCResponseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedAdvancedFmtLCDataType">
+    <sequence>
+     <element name="fulfillment" type="impl:advancedFulfillmentLCDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedAdvancedFmtLCResponseDataType">
+    <sequence>
+     <element maxOccurs="unbounded" name="failedFulfillment" type="impl:failedAdvancedFmtLCDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="advancedFulfillmentLCResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="responseData" type="impl:advancedFmtLCResponseDataListType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedAdvancedFmtLCResponseDataType"/>
+    </sequence>
+   </complexType>
+   <element name="upgradeFulfillmentResponse" type="impl:advancedFulfillmentLCResponseType"/>
+   <element name="upsellFulfillmentRequest" type="impl:advancedFulfillmentLCRequestType"/>
+   <element name="upsellFulfillmentResponse" type="impl:advancedFulfillmentLCResponseType"/>
+   <element name="renewFulfillmentRequest" type="impl:advancedFulfillmentLCRequestType"/>
+   <element name="renewFulfillmentResponse" type="impl:advancedFulfillmentLCResponseType"/>
+   <complexType name="onHoldFmtLicenseDataType">
+    <sequence>
+     <element name="fulfillmentId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="textLicense" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="binaryLicense" type="xsd:base64Binary"/>
+     <element maxOccurs="1" minOccurs="0" name="licenseFiles" type="impl:licenseFileDataListType"/>
+    </sequence>
+   </complexType>
+   <complexType name="onholdFulfillmentListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="onholdFmtLicenseData" type="impl:onHoldFmtLicenseDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="setLicenseRequestType">
+    <sequence>
+     <element name="onholdFulfillmentList" type="impl:onholdFulfillmentListType"/>
+    </sequence>
+   </complexType>
+   <element name="setLicenseRequest" type="impl:setLicenseRequestType"/>
+   <complexType name="failedSetLicenseOnholdFulfillmentDataType">
+    <sequence>
+     <element name="onholdFmtLicenseData" type="impl:onHoldFmtLicenseDataType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedSetLicenseOnholdFulfillmentListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="failedFmtData" type="impl:failedSetLicenseOnholdFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="setLicenseResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedSetLicenseOnholdFulfillmentListType"/>
+    </sequence>
+   </complexType>
+   <element name="setLicenseResponse" type="impl:setLicenseResponseType"/>
+   <complexType name="fulfillmentIdListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="fulfillmentIdentifier" type="impl:fulfillmentIdentifierType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteOnholdFulfillmentsRequestType">
+    <sequence>
+     <element name="fulfillmentIdList" type="impl:fulfillmentIdListType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteOnholdFulfillmentsRequest" type="impl:deleteOnholdFulfillmentsRequestType"/>
+   <complexType name="failedOnholdFulfillmentDataType">
+    <sequence>
+     <element name="fulfillmentIdentifier" type="impl:fulfillmentIdentifierType"/>
+     <element name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedOnholdFulfillmentListType">
+    <sequence>
+     <element maxOccurs="unbounded" name="failedFulfillment" type="impl:failedOnholdFulfillmentDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="deleteOnholdFulfillmentsResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedOnholdFulfillmentListType"/>
+    </sequence>
+   </complexType>
+   <element name="deleteOnholdFulfillmentsResponse" type="impl:deleteOnholdFulfillmentsResponseType"/>
+   <complexType name="DictionaryEntry">
+    <sequence>
+     <element name="Key" nillable="true" type="xsd:string"/>
+     <element name="Value" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="DictionaryEntriesCollection">
+    <sequence>
+     <element maxOccurs="unbounded" name="Entry" nillable="true" type="impl:DictionaryEntry"/>
+    </sequence>
+   </complexType>
+   <complexType name="Dictionary">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="Entries" nillable="true" type="impl:DictionaryEntriesCollection"/>
+    </sequence>
+   </complexType>
+   <complexType name="typeLineItem">
+    <sequence>
+     <element name="activationId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="Reason" nillable="true" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="Count" nillable="true" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="VendorDictionary" nillable="true" type="impl:Dictionary"/>
+    </sequence>
+   </complexType>
+   <complexType name="activateLicensesRequestType">
+    <sequence>
+     <element maxOccurs="unbounded" name="lineItem" type="impl:typeLineItem"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToEmail" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="shipToAddress" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="soldTo" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="owner" type="xsd:string"/>
+     <element name="hostInfo" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="activateLicensesRequest" type="impl:activateLicensesRequestType"/>
+   <complexType name="failedLineItem">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="activationId" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="activateLicensesResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedLineItem"/>
+     <element maxOccurs="1" minOccurs="0" name="resultData" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="activateLicensesResponse" type="impl:activateLicensesResponseType"/>
+   <complexType name="transferHostIdDataType">
+    <sequence>
+     <element name="soldTo" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="serverIds" type="impl:ServerIDsType"/>
+     <element maxOccurs="1" minOccurs="0" name="nodeId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="customHostId" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="customHostType" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="customLicenseTechnology" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="transferHostList">
+    <sequence>
+     <element maxOccurs="unbounded" name="hostIdentifier" type="impl:transferHostIdDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="transferHostRequestType">
+    <sequence>
+     <element name="sourceHosts" type="impl:transferHostList"/>
+     <element maxOccurs="1" minOccurs="0" name="soldTo" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="poolEntitlements" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <element name="transferHostRequest" type="impl:transferHostRequestType"/>
+   <complexType name="failedTransferHostDataType">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="hostIdentifier" type="impl:transferHostIdDataType"/>
+     <element maxOccurs="1" minOccurs="0" name="reason" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="failedTransferHostListDataType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="failedHost" type="impl:failedTransferHostDataType"/>
+    </sequence>
+   </complexType>
+   <complexType name="transferHostResponseType">
+    <sequence>
+     <element name="statusInfo" type="impl:StatusInfoType"/>
+     <element maxOccurs="1" minOccurs="0" name="failedData" type="impl:failedTransferHostListDataType"/>
+    </sequence>
+   </complexType>
+   <element name="transferHostResponse" type="impl:transferHostResponseType"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="activateShortCodeRequest">
+
+      <wsdl:part element="impl:activateShortCodeRequest" name="activateShortCodeRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFulfillmentHistoryResponse">
+
+      <wsdl:part element="impl:getFulfillmentHistoryResponse" name="getFulfillmentHistoryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="offlineFNPTrustedStorageActivationResponse">
+
+      <wsdl:part element="impl:activateLicensesResponse" name="activateLicensesResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="rehostLicenseResponse">
+
+      <wsdl:part element="impl:rehostLicenseResponse" name="rehostLicenseResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="repairLicenseResponse">
+
+      <wsdl:part element="impl:repairLicenseResponse" name="repairLicenseResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createLicensesAsBatchAndConsolidateRequest">
+
+      <wsdl:part element="impl:createLicensesAsBatchAndConsolidateRequest" name="createLicensesAsBatchAndConsolidateRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFulfillmentCountRequest">
+
+      <wsdl:part element="impl:getFulfillmentCountRequest" name="getFulfillmentCountRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="repairLicenseRequest">
+
+      <wsdl:part element="impl:repairLicenseRequest" name="repairLicenseRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getConsolidatedFulfillmentsQueryResponse">
+
+      <wsdl:part element="impl:getConsolidatedFulfillmentsQueryResponse" name="getConsolidatedFulfillmentsQueryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="upgradeFulfillmentResponse">
+
+      <wsdl:part element="impl:upgradeFulfillmentResponse" name="upgradeFulfillmentResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="returnShortCodeRequest">
+
+      <wsdl:part element="impl:returnShortCodeRequest" name="returnShortCodeRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="renewFulfillmentResponse">
+
+      <wsdl:part element="impl:renewFulfillmentResponse" name="renewFulfillmentResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLicenseRequest">
+
+      <wsdl:part element="impl:setLicenseRequest" name="setLicenseRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="upsellFulfillmentRequest">
+
+      <wsdl:part element="impl:upsellFulfillmentRequest" name="upsellFulfillmentRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="stopGapLicenseResponse">
+
+      <wsdl:part element="impl:stopGapLicenseResponse" name="stopGapLicenseResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHostAttributesFromLicenseTechnologyResponse">
+
+      <wsdl:part element="impl:getHostAttributesResponse" name="getHostAttributesResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="activateShortCodeResponse">
+
+      <wsdl:part element="impl:activateShortCodeResponse" name="activateShortCodeResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="emailConsolidatedLicensesRequest">
+
+      <wsdl:part element="impl:emailConsolidatedLicensesRequest" name="emailConsolidatedLicensesRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="transferHostResponse">
+
+      <wsdl:part element="impl:transferHostResponse" name="transferHostResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="manualRepairRequest">
+
+      <wsdl:part element="impl:manualRepairRequest" name="manualRepairRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="stopGapLicenseRequest">
+
+      <wsdl:part element="impl:stopGapLicenseRequest" name="stopGapLicenseRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="upsellFulfillmentResponse">
+
+      <wsdl:part element="impl:upsellFulfillmentResponse" name="upsellFulfillmentResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFulfillmentPropertiesQueryRequest">
+
+      <wsdl:part element="impl:getFulfillmentPropertiesRequest" name="getFulfillmentPropertiesRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createChildLineItemFulfillmentResponse">
+
+      <wsdl:part element="impl:createChildLineItemFulfillmentResponse" name="createChildLineItemFulfillmentResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createLicenseResponse">
+
+      <wsdl:part element="impl:createLicenseResponse" name="createLicenseResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="publisherErrorLicenseResponse">
+
+      <wsdl:part element="impl:publisherErrorLicenseResponse" name="publisherErrorLicenseResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="emailLicenseResponse">
+
+      <wsdl:part element="impl:emailLicenseResponse" name="emailLicenseResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createLicensesAsBatchAndConsolidateResponse">
+
+      <wsdl:part element="impl:createLicensesAsBatchAndConsolidateResponse" name="createLicensesAsBatchAndConsolidateResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFulfillmentsQueryResponse">
+
+      <wsdl:part element="impl:getFulfillmentsQueryResponse" name="getFulfillmentsQueryResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getConsolidatedFulfillmentCountResponse">
+
+      <wsdl:part element="impl:getConsolidatedFulfillmentCountResponse" name="getConsolidatedFulfillmentCountResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="offlineFNPTrustedStorageActivationRequest">
+
+      <wsdl:part element="impl:activateLicensesRequest" name="activateLicensesRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="publisherErrorLicenseRequest">
+
+      <wsdl:part element="impl:publisherErrorLicenseRequest" name="publisherErrorLicenseRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="manualReturnResponse">
+
+      <wsdl:part element="impl:manualReturnResponse" name="manualReturnResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="consolidateFulfillmentsResponse">
+
+      <wsdl:part element="impl:consolidateFulfillmentsResponse" name="consolidateFulfillmentsResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="verifyCreateLicenseResponse">
+
+      <wsdl:part element="impl:verifyCreateLicenseResponse" name="verifyCreateLicenseResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createChildLineItemFulfillmentRequest">
+
+      <wsdl:part element="impl:createChildLineItemFulfillmentRequest" name="createChildLineItemFulfillmentRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFulfillmentAttributesForBatchActivationResponse">
+
+      <wsdl:part element="impl:getFmtAttributesForBatchActivationResponse" name="getFmtAttributesForBatchActivationResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFulfillmentHistoryRequest">
+
+      <wsdl:part element="impl:getFulfillmentHistoryRequest" name="getFulfillmentHistoryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="emailLicenseRequest">
+
+      <wsdl:part element="impl:emailLicenseRequest" name="emailLicenseRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="manualActivationResponse">
+
+      <wsdl:part element="impl:manualActivationResponse" name="manualActivationResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFulfillmentCountResponse">
+
+      <wsdl:part element="impl:getFulfillmentCountResponse" name="getFulfillmentCountResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="repairShortCodeRequest">
+
+      <wsdl:part element="impl:repairShortCodeRequest" name="repairShortCodeRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="returnLicenseResponse">
+
+      <wsdl:part element="impl:returnLicenseResponse" name="returnLicenseResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="verifyCreateLicenseRequest">
+
+      <wsdl:part element="impl:verifyCreateLicenseRequest" name="verifyCreateLicenseRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteOnholdFulfillmentsResponse">
+
+      <wsdl:part element="impl:deleteOnholdFulfillmentsResponse" name="deleteOnholdFulfillmentsResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getConsolidatedFulfillmentsQueryRequest">
+
+      <wsdl:part element="impl:getConsolidatedFulfillmentsQueryRequest" name="getConsolidatedFulfillmentsQueryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHostAttributesFromLicenseTechnologyRequest">
+
+      <wsdl:part element="impl:getHostAttributesRequest" name="getHostAttributesRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="manualActivationRequest">
+
+      <wsdl:part element="impl:manualActivationRequest" name="manualActivationRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createLicenseRequest">
+
+      <wsdl:part element="impl:createLicenseRequest" name="createLicenseRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="rehostLicenseRequest">
+
+      <wsdl:part element="impl:rehostLicenseRequest" name="rehostLicenseRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getConsolidatedFulfillmentCountRequest">
+
+      <wsdl:part element="impl:getConsolidatedFulfillmentCountRequest" name="getConsolidatedFulfillmentCountRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="emailConsolidatedLicensesResponse">
+
+      <wsdl:part element="impl:emailConsolidatedLicensesResponse" name="emailConsolidatedLicensesResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFulfillmentAttributesFromModelResponse">
+
+      <wsdl:part element="impl:getFulfillmentAttributesResponse" name="getFulfillmentAttributesResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="emergencyLicenseResponse">
+
+      <wsdl:part element="impl:emergencyLicenseResponse" name="emergencyLicenseResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFulfillmentAttributesForBatchActivationRequest">
+
+      <wsdl:part element="impl:getFmtAttributesForBatchActivationRequest" name="getFmtAttributesForBatchActivationRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="renewFulfillmentRequest">
+
+      <wsdl:part element="impl:renewFulfillmentRequest" name="renewFulfillmentRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="returnLicenseRequest">
+
+      <wsdl:part element="impl:returnLicenseRequest" name="returnLicenseRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="emergencyLicenseRequest">
+
+      <wsdl:part element="impl:emergencyLicenseRequest" name="emergencyLicenseRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createLicensesAsBatchRequest">
+
+      <wsdl:part element="impl:createLicensesAsBatchRequest" name="createLicensesAsBatchRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="repairShortCodeResponse">
+
+      <wsdl:part element="impl:repairShortCodeResponse" name="repairShortCodeResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="returnShortCodeResponse">
+
+      <wsdl:part element="impl:returnShortCodeResponse" name="returnShortCodeResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="upgradeFulfillmentRequest">
+
+      <wsdl:part element="impl:upgradeFulfillmentRequest" name="upgradeFulfillmentRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="consolidateFulfillmentsRequest">
+
+      <wsdl:part element="impl:consolidateFulfillmentsRequest" name="consolidateFulfillmentsRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="manualReturnRequest">
+
+      <wsdl:part element="impl:manualReturnRequest" name="manualReturnRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFulfillmentAttributesFromModelRequest">
+
+      <wsdl:part element="impl:getFulfillmentAttributesRequest" name="getFulfillmentAttributesRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFulfillmentPropertiesQueryResponse">
+
+      <wsdl:part element="impl:getFulfillmentPropertiesResponse" name="getFulfillmentPropertiesResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLicenseResponse">
+
+      <wsdl:part element="impl:setLicenseResponse" name="setLicenseResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteOnholdFulfillmentsRequest">
+
+      <wsdl:part element="impl:deleteOnholdFulfillmentsRequest" name="deleteOnholdFulfillmentsRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFulfillmentsQueryRequest">
+
+      <wsdl:part element="impl:getFulfillmentsQueryRequest" name="getFulfillmentsQueryRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="transferHostRequest">
+
+      <wsdl:part element="impl:transferHostRequest" name="transferHostRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="manualRepairResponse">
+
+      <wsdl:part element="impl:manualRepairResponse" name="manualRepairResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createLicensesAsBatchResponse">
+
+      <wsdl:part element="impl:createLicensesAsBatchResponse" name="createLicensesAsBatchResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="LicenseFulfillmentServiceInterface">
+
+      <wsdl:operation name="getFulfillmentCount" parameterOrder="getFulfillmentCountRequest">
+
+         <wsdl:input message="impl:getFulfillmentCountRequest" name="getFulfillmentCountRequest"/>
+
+         <wsdl:output message="impl:getFulfillmentCountResponse" name="getFulfillmentCountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFulfillmentsQuery" parameterOrder="getFulfillmentsQueryRequest">
+
+         <wsdl:input message="impl:getFulfillmentsQueryRequest" name="getFulfillmentsQueryRequest"/>
+
+         <wsdl:output message="impl:getFulfillmentsQueryResponse" name="getFulfillmentsQueryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFulfillmentPropertiesQuery" parameterOrder="getFulfillmentPropertiesRequest">
+
+         <wsdl:input message="impl:getFulfillmentPropertiesQueryRequest" name="getFulfillmentPropertiesQueryRequest"/>
+
+         <wsdl:output message="impl:getFulfillmentPropertiesQueryResponse" name="getFulfillmentPropertiesQueryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="rehostLicense" parameterOrder="rehostLicenseRequest">
+
+         <wsdl:input message="impl:rehostLicenseRequest" name="rehostLicenseRequest"/>
+
+         <wsdl:output message="impl:rehostLicenseResponse" name="rehostLicenseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="returnLicense" parameterOrder="returnLicenseRequest">
+
+         <wsdl:input message="impl:returnLicenseRequest" name="returnLicenseRequest"/>
+
+         <wsdl:output message="impl:returnLicenseResponse" name="returnLicenseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="repairLicense" parameterOrder="repairLicenseRequest">
+
+         <wsdl:input message="impl:repairLicenseRequest" name="repairLicenseRequest"/>
+
+         <wsdl:output message="impl:repairLicenseResponse" name="repairLicenseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="emergencyLicense" parameterOrder="emergencyLicenseRequest">
+
+         <wsdl:input message="impl:emergencyLicenseRequest" name="emergencyLicenseRequest"/>
+
+         <wsdl:output message="impl:emergencyLicenseResponse" name="emergencyLicenseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="publisherErrorLicense" parameterOrder="publisherErrorLicenseRequest">
+
+         <wsdl:input message="impl:publisherErrorLicenseRequest" name="publisherErrorLicenseRequest"/>
+
+         <wsdl:output message="impl:publisherErrorLicenseResponse" name="publisherErrorLicenseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="stopGapLicense" parameterOrder="stopGapLicenseRequest">
+
+         <wsdl:input message="impl:stopGapLicenseRequest" name="stopGapLicenseRequest"/>
+
+         <wsdl:output message="impl:stopGapLicenseResponse" name="stopGapLicenseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFulfillmentAttributesFromModel" parameterOrder="getFulfillmentAttributesRequest">
+
+         <wsdl:input message="impl:getFulfillmentAttributesFromModelRequest" name="getFulfillmentAttributesFromModelRequest"/>
+
+         <wsdl:output message="impl:getFulfillmentAttributesFromModelResponse" name="getFulfillmentAttributesFromModelResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHostAttributesFromLicenseTechnology" parameterOrder="getHostAttributesRequest">
+
+         <wsdl:input message="impl:getHostAttributesFromLicenseTechnologyRequest" name="getHostAttributesFromLicenseTechnologyRequest"/>
+
+         <wsdl:output message="impl:getHostAttributesFromLicenseTechnologyResponse" name="getHostAttributesFromLicenseTechnologyResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="verifyCreateLicense" parameterOrder="verifyCreateLicenseRequest">
+
+         <wsdl:input message="impl:verifyCreateLicenseRequest" name="verifyCreateLicenseRequest"/>
+
+         <wsdl:output message="impl:verifyCreateLicenseResponse" name="verifyCreateLicenseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createLicense" parameterOrder="createLicenseRequest">
+
+         <wsdl:input message="impl:createLicenseRequest" name="createLicenseRequest"/>
+
+         <wsdl:output message="impl:createLicenseResponse" name="createLicenseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="activateShortCode" parameterOrder="activateShortCodeRequest">
+
+         <wsdl:input message="impl:activateShortCodeRequest" name="activateShortCodeRequest"/>
+
+         <wsdl:output message="impl:activateShortCodeResponse" name="activateShortCodeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="repairShortCode" parameterOrder="repairShortCodeRequest">
+
+         <wsdl:input message="impl:repairShortCodeRequest" name="repairShortCodeRequest"/>
+
+         <wsdl:output message="impl:repairShortCodeResponse" name="repairShortCodeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="returnShortCode" parameterOrder="returnShortCodeRequest">
+
+         <wsdl:input message="impl:returnShortCodeRequest" name="returnShortCodeRequest"/>
+
+         <wsdl:output message="impl:returnShortCodeResponse" name="returnShortCodeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="emailLicense" parameterOrder="emailLicenseRequest">
+
+         <wsdl:input message="impl:emailLicenseRequest" name="emailLicenseRequest"/>
+
+         <wsdl:output message="impl:emailLicenseResponse" name="emailLicenseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="consolidateFulfillments" parameterOrder="consolidateFulfillmentsRequest">
+
+         <wsdl:input message="impl:consolidateFulfillmentsRequest" name="consolidateFulfillmentsRequest"/>
+
+         <wsdl:output message="impl:consolidateFulfillmentsResponse" name="consolidateFulfillmentsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getConsolidatedFulfillmentCount" parameterOrder="getConsolidatedFulfillmentCountRequest">
+
+         <wsdl:input message="impl:getConsolidatedFulfillmentCountRequest" name="getConsolidatedFulfillmentCountRequest"/>
+
+         <wsdl:output message="impl:getConsolidatedFulfillmentCountResponse" name="getConsolidatedFulfillmentCountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getConsolidatedFulfillmentsQuery" parameterOrder="getConsolidatedFulfillmentsQueryRequest">
+
+         <wsdl:input message="impl:getConsolidatedFulfillmentsQueryRequest" name="getConsolidatedFulfillmentsQueryRequest"/>
+
+         <wsdl:output message="impl:getConsolidatedFulfillmentsQueryResponse" name="getConsolidatedFulfillmentsQueryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFulfillmentAttributesForBatchActivation" parameterOrder="getFmtAttributesForBatchActivationRequest">
+
+         <wsdl:input message="impl:getFulfillmentAttributesForBatchActivationRequest" name="getFulfillmentAttributesForBatchActivationRequest"/>
+
+         <wsdl:output message="impl:getFulfillmentAttributesForBatchActivationResponse" name="getFulfillmentAttributesForBatchActivationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createLicensesAsBatch" parameterOrder="createLicensesAsBatchRequest">
+
+         <wsdl:input message="impl:createLicensesAsBatchRequest" name="createLicensesAsBatchRequest"/>
+
+         <wsdl:output message="impl:createLicensesAsBatchResponse" name="createLicensesAsBatchResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createLicensesAsBatchAndConsolidate" parameterOrder="createLicensesAsBatchAndConsolidateRequest">
+
+         <wsdl:input message="impl:createLicensesAsBatchAndConsolidateRequest" name="createLicensesAsBatchAndConsolidateRequest"/>
+
+         <wsdl:output message="impl:createLicensesAsBatchAndConsolidateResponse" name="createLicensesAsBatchAndConsolidateResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="emailConsolidatedLicenses" parameterOrder="emailConsolidatedLicensesRequest">
+
+         <wsdl:input message="impl:emailConsolidatedLicensesRequest" name="emailConsolidatedLicensesRequest"/>
+
+         <wsdl:output message="impl:emailConsolidatedLicensesResponse" name="emailConsolidatedLicensesResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="manualActivation" parameterOrder="manualActivationRequest">
+
+         <wsdl:input message="impl:manualActivationRequest" name="manualActivationRequest"/>
+
+         <wsdl:output message="impl:manualActivationResponse" name="manualActivationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="manualRepair" parameterOrder="manualRepairRequest">
+
+         <wsdl:input message="impl:manualRepairRequest" name="manualRepairRequest"/>
+
+         <wsdl:output message="impl:manualRepairResponse" name="manualRepairResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="manualReturn" parameterOrder="manualReturnRequest">
+
+         <wsdl:input message="impl:manualReturnRequest" name="manualReturnRequest"/>
+
+         <wsdl:output message="impl:manualReturnResponse" name="manualReturnResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFulfillmentHistory" parameterOrder="getFulfillmentHistoryRequest">
+
+         <wsdl:input message="impl:getFulfillmentHistoryRequest" name="getFulfillmentHistoryRequest"/>
+
+         <wsdl:output message="impl:getFulfillmentHistoryResponse" name="getFulfillmentHistoryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createChildLineItemFulfillment" parameterOrder="createChildLineItemFulfillmentRequest">
+
+         <wsdl:input message="impl:createChildLineItemFulfillmentRequest" name="createChildLineItemFulfillmentRequest"/>
+
+         <wsdl:output message="impl:createChildLineItemFulfillmentResponse" name="createChildLineItemFulfillmentResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="upgradeFulfillment" parameterOrder="upgradeFulfillmentRequest">
+
+         <wsdl:input message="impl:upgradeFulfillmentRequest" name="upgradeFulfillmentRequest"/>
+
+         <wsdl:output message="impl:upgradeFulfillmentResponse" name="upgradeFulfillmentResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="upsellFulfillment" parameterOrder="upsellFulfillmentRequest">
+
+         <wsdl:input message="impl:upsellFulfillmentRequest" name="upsellFulfillmentRequest"/>
+
+         <wsdl:output message="impl:upsellFulfillmentResponse" name="upsellFulfillmentResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="renewFulfillment" parameterOrder="renewFulfillmentRequest">
+
+         <wsdl:input message="impl:renewFulfillmentRequest" name="renewFulfillmentRequest"/>
+
+         <wsdl:output message="impl:renewFulfillmentResponse" name="renewFulfillmentResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLicense" parameterOrder="setLicenseRequest">
+
+         <wsdl:input message="impl:setLicenseRequest" name="setLicenseRequest"/>
+
+         <wsdl:output message="impl:setLicenseResponse" name="setLicenseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteOnholdFulfillments" parameterOrder="deleteOnholdFulfillmentsRequest">
+
+         <wsdl:input message="impl:deleteOnholdFulfillmentsRequest" name="deleteOnholdFulfillmentsRequest"/>
+
+         <wsdl:output message="impl:deleteOnholdFulfillmentsResponse" name="deleteOnholdFulfillmentsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="offlineFNPTrustedStorageActivation" parameterOrder="activateLicensesRequest">
+
+         <wsdl:input message="impl:offlineFNPTrustedStorageActivationRequest" name="offlineFNPTrustedStorageActivationRequest"/>
+
+         <wsdl:output message="impl:offlineFNPTrustedStorageActivationResponse" name="offlineFNPTrustedStorageActivationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="transferHost" parameterOrder="transferHostRequest">
+
+         <wsdl:input message="impl:transferHostRequest" name="transferHostRequest"/>
+
+         <wsdl:output message="impl:transferHostResponse" name="transferHostResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="LicenseServiceSoapBinding" type="impl:LicenseFulfillmentServiceInterface">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getFulfillmentCount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFulfillmentCountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFulfillmentCountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFulfillmentsQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFulfillmentsQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFulfillmentsQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFulfillmentPropertiesQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFulfillmentPropertiesQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFulfillmentPropertiesQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="rehostLicense">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="rehostLicenseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="rehostLicenseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="returnLicense">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="returnLicenseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="returnLicenseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="repairLicense">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="repairLicenseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="repairLicenseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="emergencyLicense">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="emergencyLicenseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="emergencyLicenseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="publisherErrorLicense">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="publisherErrorLicenseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="publisherErrorLicenseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="stopGapLicense">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="stopGapLicenseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="stopGapLicenseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFulfillmentAttributesFromModel">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFulfillmentAttributesFromModelRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFulfillmentAttributesFromModelResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHostAttributesFromLicenseTechnology">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHostAttributesFromLicenseTechnologyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHostAttributesFromLicenseTechnologyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="verifyCreateLicense">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="verifyCreateLicenseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="verifyCreateLicenseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createLicense">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createLicenseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createLicenseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="activateShortCode">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="activateShortCodeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="activateShortCodeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="repairShortCode">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="repairShortCodeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="repairShortCodeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="returnShortCode">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="returnShortCodeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="returnShortCodeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="emailLicense">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="emailLicenseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="emailLicenseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="consolidateFulfillments">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="consolidateFulfillmentsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="consolidateFulfillmentsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getConsolidatedFulfillmentCount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getConsolidatedFulfillmentCountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getConsolidatedFulfillmentCountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getConsolidatedFulfillmentsQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getConsolidatedFulfillmentsQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getConsolidatedFulfillmentsQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFulfillmentAttributesForBatchActivation">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFulfillmentAttributesForBatchActivationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFulfillmentAttributesForBatchActivationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createLicensesAsBatch">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createLicensesAsBatchRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createLicensesAsBatchResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createLicensesAsBatchAndConsolidate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createLicensesAsBatchAndConsolidateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createLicensesAsBatchAndConsolidateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="emailConsolidatedLicenses">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="emailConsolidatedLicensesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="emailConsolidatedLicensesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="manualActivation">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="manualActivationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="manualActivationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="manualRepair">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="manualRepairRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="manualRepairResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="manualReturn">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="manualReturnRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="manualReturnResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFulfillmentHistory">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFulfillmentHistoryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFulfillmentHistoryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createChildLineItemFulfillment">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createChildLineItemFulfillmentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createChildLineItemFulfillmentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="upgradeFulfillment">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="upgradeFulfillmentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="upgradeFulfillmentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="upsellFulfillment">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="upsellFulfillmentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="upsellFulfillmentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="renewFulfillment">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="renewFulfillmentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="renewFulfillmentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLicense">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setLicenseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setLicenseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteOnholdFulfillments">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteOnholdFulfillmentsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteOnholdFulfillmentsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="offlineFNPTrustedStorageActivation">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="offlineFNPTrustedStorageActivationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="offlineFNPTrustedStorageActivationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="transferHost">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="transferHostRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="transferHostResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="LicenseService">
+
+      <wsdl:port binding="impl:LicenseServiceSoapBinding" name="LicenseService">
+
+         <wsdlsoap:address location="http://localhost/flexnet/services/LicenseService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
