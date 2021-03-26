@@ -13,20 +13,24 @@ foreach ($iterator as $info) {
         xml_parse_into_struct($p, file_get_contents($filePath), $elements, $index);
 
         $data = [];
-        $complexType = null;
+        $complexType = [];
 
         foreach ($elements as $element) {
-            if ($element['tag'] == 'COMPLEXTYPE' && $element['type'] == 'open' && array_key_exists('attributes', $element)) {
-                $complexType = lcfirst($element['attributes']['NAME']);
-                $data[$complexType] = [];
+            if ($element['tag'] == 'COMPLEXTYPE' && $element['type'] == 'open') {
+                if (array_key_exists('attributes', $element)) {
+                    array_push($complexType, lcfirst($element['attributes']['NAME']));
+                    $data[end($complexType)] = [];
+                } else if (end($complexType)) {
+                    array_push($complexType, 'EMPTY');
+                }
             }
 
-            if ($complexType && $element['tag'] == 'ELEMENT') {
-                $data[$complexType][$element['attributes']['NAME']] = $element;
+            if (end($complexType) && end($complexType) != 'EMPTY' && $element['tag'] == 'ELEMENT' && array_key_exists('attributes', $element)) {
+                $data[end($complexType)][$element['attributes']['NAME']] = $element;
             }
 
             if ($element['tag'] == 'COMPLEXTYPE' && $element['type'] == 'close') {
-                $complexType = null;
+                array_pop($complexType);
             }
         }
 
