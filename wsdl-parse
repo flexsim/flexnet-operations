@@ -1,0 +1,39 @@
+#!/usr/bin/env php
+<?php
+
+$directory = new \RecursiveDirectoryIterator(__DIR__ . '/wsdls', FilesystemIterator::KEY_AS_PATHNAME
+    | FilesystemIterator::CURRENT_AS_FILEINFO
+    | FilesystemIterator::SKIP_DOTS);
+$iterator = new \RecursiveIteratorIterator($directory);
+
+foreach ($iterator as $info) {
+    if (strpos($filePath = $info->getPathname(), '.wsdl') !== false) {
+        $p = xml_parser_create();
+
+        xml_parse_into_struct($p, file_get_contents($filePath), $elements, $index);
+
+        $data = [];
+        $complexType = null;
+
+        foreach ($elements as $element) {
+            if ($element['tag'] == 'COMPLEXTYPE' && $element['type'] == 'open' && array_key_exists('attributes', $element)) {
+                $complexType = lcfirst($element['attributes']['NAME']);
+                $data[$complexType] = [];
+            }
+
+            if ($complexType && $element['tag'] == 'ELEMENT') {
+                $data[$complexType][$element['attributes']['NAME']] = $element;
+            }
+
+            if ($element['tag'] == 'COMPLEXTYPE' && $element['type'] == 'close') {
+                $complexType = null;
+            }
+        }
+
+        $typeMapFileName = basename($filePath, '.wsdl') . '-typeMap.json';
+
+        $versionPath = ($versionPosition = strpos($filePath, '/v')) ? substr($filePath, $versionPosition, 3) . '/' : '';
+
+        file_put_contents(__DIR__ . '/config/soap-client/' . $versionPath . $typeMapFileName, json_encode($data));
+    }
+}

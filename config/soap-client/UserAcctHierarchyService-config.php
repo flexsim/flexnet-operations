@@ -1,5 +1,7 @@
 <?php
 
+use Flexsim\FlexnetOperations\Assembler\CustomConstructorAssembler;
+use Flexsim\FlexnetOperations\Assembler\CustomConstructorAssemblerOptions;
 use Phpro\SoapClient\CodeGenerator\Assembler;
 use Phpro\SoapClient\CodeGenerator\Rules;
 use Phpro\SoapClient\CodeGenerator\Config\Config;
@@ -20,13 +22,13 @@ return Config::create()
     ->setClassMapName('UserAcctHierarchyServiceClassmap')
     ->setClassMapNamespace('Flexsim\FlexnetOperations\Services\UserAcctHierarchyService')
     ->addRule(new Rules\AssembleRule(new Assembler\GetterAssembler(new Assembler\GetterAssemblerOptions())))
-    ->addRule(new Rules\AssembleRule(new Assembler\ImmutableSetterAssembler()))
+    ->addRule(new Rules\AssembleRule(new Assembler\FluentSetterAssembler()))
+    ->addRule(new Rules\AssembleRule(new CustomConstructorAssembler((new CustomConstructorAssemblerOptions())->withTypeHints()->withCreateMethod()->withTypeMap(json_decode(file_get_contents(str_replace('-config.php', '-typeMap.json', __FILE__)), true)))))
     ->addRule(
         new Rules\IsRequestRule(
             $engine->getMetadata(),
             new Rules\MultiRule([
                 new Rules\AssembleRule(new Assembler\RequestAssembler()),
-                new Rules\AssembleRule(new Assembler\ConstructorAssembler(new Assembler\ConstructorAssemblerOptions())),
             ])
         )
     )
