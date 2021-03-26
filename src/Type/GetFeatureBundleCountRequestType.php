@@ -1,0 +1,55 @@
+<?php
+
+namespace Flexsim\FlexnetOperations\Type;
+
+use Phpro\SoapClient\Type\RequestInterface;
+
+class GetFeatureBundleCountRequestType implements RequestInterface
+{
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType
+     */
+    private $queryParams;
+
+    /**
+     * Constructor
+     *
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
+     */
+    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = null)
+    {
+        $this->queryParams = $queryParams;
+    }
+
+    /**
+     * create a new instance of this class
+     *
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
+     */
+    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = null)
+    {
+        return new self(...func_get_args());
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType
+     */
+    public function getQueryParams()
+    {
+        return $this->queryParams;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
+     * @return $this
+     */
+    public function setQueryParams($queryParams)
+    {
+        $this->queryParams = $queryParams;
+        return $this;
+    }
+
+
+}
+

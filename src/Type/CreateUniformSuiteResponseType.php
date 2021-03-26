@@ -1,0 +1,107 @@
+<?php
+
+namespace Flexsim\FlexnetOperations\Type;
+
+use Phpro\SoapClient\Type\ResultInterface;
+
+class CreateUniformSuiteResponseType implements ResultInterface
+{
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
+     */
+    private $statusInfo;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType
+     */
+    private $failedData;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType
+     */
+    private $responseData;
+
+    /**
+     * Constructor
+     *
+     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @var \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType $failedData
+     * @var \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType $responseData
+     */
+    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType $responseData = null)
+    {
+        $this->statusInfo = $statusInfo;
+        $this->failedData = $failedData;
+        $this->responseData = $responseData;
+    }
+
+    /**
+     * create a new instance of this class
+     *
+     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @var \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType $failedData
+     * @var \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType $responseData
+     */
+    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType $responseData = null)
+    {
+        return new self(...func_get_args());
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\StatusInfoType
+     */
+    public function getStatusInfo()
+    {
+        return $this->statusInfo;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @return $this
+     */
+    public function setStatusInfo($statusInfo)
+    {
+        $this->statusInfo = $statusInfo;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType
+     */
+    public function getFailedData()
+    {
+        return $this->failedData;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType $failedData
+     * @return $this
+     */
+    public function setFailedData($failedData)
+    {
+        $this->failedData = $failedData;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType
+     */
+    public function getResponseData()
+    {
+        return $this->responseData;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType $responseData
+     * @return $this
+     */
+    public function setResponseData($responseData)
+    {
+        $this->responseData = $responseData;
+        return $this;
+    }
+
+
+}
+
