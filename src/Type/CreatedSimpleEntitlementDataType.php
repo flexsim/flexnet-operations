@@ -1,0 +1,209 @@
+<?php
+
+namespace Flexsim\FlexnetOperations\Type;
+
+class CreatedSimpleEntitlementDataType
+{
+
+    /**
+     * @var string
+     */
+    private $recordRefNo;
+
+    /**
+     * @var string
+     */
+    private $uniqueId;
+
+    /**
+     * @var string
+     */
+    private $entitlementId;
+
+    /**
+     * @var string
+     */
+    private $lineItemUniqueIds;
+
+    /**
+     * @var string
+     */
+    private $maintenanceLineItemUniqueIds;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
+     */
+    private $lineItemIdentifiers;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
+     */
+    private $maintenanceLineItemIdentifiers;
+
+    /**
+     * Constructor
+     *
+     * @var string $recordRefNo
+     * @var string $uniqueId
+     * @var string $entitlementId
+     * @var string|array $lineItemUniqueIds
+     * @var string|array $maintenanceLineItemUniqueIds
+     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array $lineItemIdentifiers
+     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array $maintenanceLineItemIdentifiers
+     */
+    public function __construct(string $recordRefNo, string $uniqueId, string $entitlementId, $lineItemUniqueIds = null, $maintenanceLineItemUniqueIds = null, $lineItemIdentifiers = null, $maintenanceLineItemIdentifiers = null)
+    {
+        $this->recordRefNo = $recordRefNo;
+        $this->uniqueId = $uniqueId;
+        $this->entitlementId = $entitlementId;
+        $this->lineItemUniqueIds = $lineItemUniqueIds;
+        $this->maintenanceLineItemUniqueIds = $maintenanceLineItemUniqueIds;
+        $this->lineItemIdentifiers = $lineItemIdentifiers;
+        $this->maintenanceLineItemIdentifiers = $maintenanceLineItemIdentifiers;
+    }
+
+    /**
+     * create a new instance of this class
+     *
+     * @var string $recordRefNo
+     * @var string $uniqueId
+     * @var string $entitlementId
+     * @var string|array $lineItemUniqueIds
+     * @var string|array $maintenanceLineItemUniqueIds
+     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array $lineItemIdentifiers
+     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array $maintenanceLineItemIdentifiers
+     */
+    public static function create(string $recordRefNo, string $uniqueId, string $entitlementId, $lineItemUniqueIds = null, $maintenanceLineItemUniqueIds = null, $lineItemIdentifiers = null, $maintenanceLineItemIdentifiers = null)
+    {
+        return new self(...func_get_args());
+    }
+
+    /**
+     * @return string
+     */
+    public function getRecordRefNo()
+    {
+        return $this->recordRefNo;
+    }
+
+    /**
+     * @param string $recordRefNo
+     * @return $this
+     */
+    public function setRecordRefNo($recordRefNo)
+    {
+        $this->recordRefNo = $recordRefNo;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUniqueId()
+    {
+        return $this->uniqueId;
+    }
+
+    /**
+     * @param string $uniqueId
+     * @return $this
+     */
+    public function setUniqueId($uniqueId)
+    {
+        $this->uniqueId = $uniqueId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEntitlementId()
+    {
+        return $this->entitlementId;
+    }
+
+    /**
+     * @param string $entitlementId
+     * @return $this
+     */
+    public function setEntitlementId($entitlementId)
+    {
+        $this->entitlementId = $entitlementId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLineItemUniqueIds()
+    {
+        return $this->lineItemUniqueIds;
+    }
+
+    /**
+     * @param string $lineItemUniqueIds
+     * @return $this
+     */
+    public function setLineItemUniqueIds($lineItemUniqueIds)
+    {
+        $this->lineItemUniqueIds = $lineItemUniqueIds;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMaintenanceLineItemUniqueIds()
+    {
+        return $this->maintenanceLineItemUniqueIds;
+    }
+
+    /**
+     * @param string $maintenanceLineItemUniqueIds
+     * @return $this
+     */
+    public function setMaintenanceLineItemUniqueIds($maintenanceLineItemUniqueIds)
+    {
+        $this->maintenanceLineItemUniqueIds = $maintenanceLineItemUniqueIds;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
+     */
+    public function getLineItemIdentifiers()
+    {
+        return $this->lineItemIdentifiers;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifiers
+     * @return $this
+     */
+    public function setLineItemIdentifiers($lineItemIdentifiers)
+    {
+        $this->lineItemIdentifiers = $lineItemIdentifiers;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
+     */
+    public function getMaintenanceLineItemIdentifiers()
+    {
+        return $this->maintenanceLineItemIdentifiers;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifiers
+     * @return $this
+     */
+    public function setMaintenanceLineItemIdentifiers($maintenanceLineItemIdentifiers)
+    {
+        $this->maintenanceLineItemIdentifiers = $maintenanceLineItemIdentifiers;
+        return $this;
+    }
+
+
+}
+
