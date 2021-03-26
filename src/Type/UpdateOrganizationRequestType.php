@@ -1,0 +1,55 @@
+<?php
+
+namespace Flexsim\FlexnetOperations\Type;
+
+use Phpro\SoapClient\Type\RequestInterface;
+
+class UpdateOrganizationRequestType implements RequestInterface
+{
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\UpdateOrgDataType
+     */
+    private $orgData;
+
+    /**
+     * Constructor
+     *
+     * @var \Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData
+     */
+    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData)
+    {
+        $this->orgData = $orgData;
+    }
+
+    /**
+     * create a new instance of this class
+     *
+     * @var \Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData
+     */
+    public static function create(\Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData)
+    {
+        return new self(...func_get_args());
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\UpdateOrgDataType
+     */
+    public function getOrgData()
+    {
+        return $this->orgData;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData
+     * @return $this
+     */
+    public function setOrgData($orgData)
+    {
+        $this->orgData = $orgData;
+        return $this;
+    }
+
+
+}
+
