@@ -21,11 +21,9 @@ foreach ($iterator as $info) {
                     array_push($complexType, lcfirst($element['attributes']['NAME']));
                     $data[end($complexType)] = [];
                 } else if ($elements[$key - 1]['tag'] == 'ELEMENT' && array_key_exists('attributes', $elements[$key - 1])) {
-                    array_push($complexType, $elements[$key - 1]['attributes']['NAME']);
-                    // print_r($elements[$key - 1]);
+                    array_push($complexType, lcfirst($elements[$key - 1]['attributes']['NAME']));
                 } else if (!end($complexType)) {
                     array_push($complexType, 'EMPTY');
-                    // print_r($elements[$key - 1]);
                 }
             }
 
