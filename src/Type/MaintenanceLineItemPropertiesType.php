@@ -51,6 +51,11 @@ class MaintenanceLineItemPropertiesType
     private $state;
 
     /**
+     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
+     */
+    private $maintenanceLineItemAttributes;
+
+    /**
      * Constructor
      *
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId
@@ -62,8 +67,9 @@ class MaintenanceLineItemPropertiesType
      * @var \DateTimeInterface $expirationDate
      * @var bool $isPermanent
      * @var string $state
+     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, string $state = null)
+    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, string $state = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes = null)
     {
         $this->activationId = $activationId;
         $this->maintenanceProduct = $maintenanceProduct;
@@ -74,6 +80,7 @@ class MaintenanceLineItemPropertiesType
         $this->expirationDate = $expirationDate;
         $this->isPermanent = $isPermanent;
         $this->state = $state;
+        $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
     }
 
     /**
@@ -88,8 +95,9 @@ class MaintenanceLineItemPropertiesType
      * @var \DateTimeInterface $expirationDate
      * @var bool $isPermanent
      * @var string $state
+     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, string $state = null)
+    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, string $state = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -253,6 +261,24 @@ class MaintenanceLineItemPropertiesType
     public function setState($state)
     {
         $this->state = $state;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
+     */
+    public function getMaintenanceLineItemAttributes()
+    {
+        return $this->maintenanceLineItemAttributes;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes
+     * @return $this
+     */
+    public function setMaintenanceLineItemAttributes($maintenanceLineItemAttributes)
+    {
+        $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
         return $this;
     }
 

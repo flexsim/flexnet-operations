@@ -221,6 +221,21 @@ class EntitlementLineItemResponseConfigRequestType
     private $lineItemAttributes;
 
     /**
+     * @var bool
+     */
+    private $maintenanceLineItemAttributes;
+
+    /**
+     * @var bool
+     */
+    private $transferredFromLineItem;
+
+    /**
+     * @var bool
+     */
+    private $splitFromLineItem;
+
+    /**
      * Constructor
      *
      * @var bool $activationId
@@ -266,8 +281,11 @@ class EntitlementLineItemResponseConfigRequestType
      * @var bool $createdOnDateTime
      * @var bool $lastModifiedDateTime
      * @var bool $lineItemAttributes
+     * @var bool $maintenanceLineItemAttributes
+     * @var bool $transferredFromLineItem
+     * @var bool $splitFromLineItem
      */
-    public function __construct(bool $activationId = null, bool $description = null, bool $state = null, bool $activatableItemType = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $allowPortalLogin = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $entitlementState = null, bool $entitlementDescription = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $parentBulkEntitlementId = null, bool $bulkEntSoldTo = null, bool $bulkEntSoldToDisplayName = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseTechnology = null, bool $licenseModel = null, bool $lineItemSupportAction = null, bool $parentLineItem = null, bool $startDate = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $fulfilledAmount = null, bool $numberOfRemainingCopies = null, bool $isTrusted = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $maintenance = null, bool $maintenancePartNumber = null, bool $FNPTimeZoneValue = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $lineItemAttributes = null)
+    public function __construct(bool $activationId = null, bool $description = null, bool $state = null, bool $activatableItemType = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $allowPortalLogin = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $entitlementState = null, bool $entitlementDescription = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $parentBulkEntitlementId = null, bool $bulkEntSoldTo = null, bool $bulkEntSoldToDisplayName = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseTechnology = null, bool $licenseModel = null, bool $lineItemSupportAction = null, bool $parentLineItem = null, bool $startDate = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $fulfilledAmount = null, bool $numberOfRemainingCopies = null, bool $isTrusted = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $maintenance = null, bool $maintenancePartNumber = null, bool $FNPTimeZoneValue = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $lineItemAttributes = null, bool $maintenanceLineItemAttributes = null, bool $transferredFromLineItem = null, bool $splitFromLineItem = null)
     {
         $this->activationId = $activationId;
         $this->description = $description;
@@ -312,6 +330,9 @@ class EntitlementLineItemResponseConfigRequestType
         $this->createdOnDateTime = $createdOnDateTime;
         $this->lastModifiedDateTime = $lastModifiedDateTime;
         $this->lineItemAttributes = $lineItemAttributes;
+        $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
+        $this->transferredFromLineItem = $transferredFromLineItem;
+        $this->splitFromLineItem = $splitFromLineItem;
     }
 
     /**
@@ -360,8 +381,11 @@ class EntitlementLineItemResponseConfigRequestType
      * @var bool $createdOnDateTime
      * @var bool $lastModifiedDateTime
      * @var bool $lineItemAttributes
+     * @var bool $maintenanceLineItemAttributes
+     * @var bool $transferredFromLineItem
+     * @var bool $splitFromLineItem
      */
-    public static function create(bool $activationId = null, bool $description = null, bool $state = null, bool $activatableItemType = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $allowPortalLogin = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $entitlementState = null, bool $entitlementDescription = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $parentBulkEntitlementId = null, bool $bulkEntSoldTo = null, bool $bulkEntSoldToDisplayName = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseTechnology = null, bool $licenseModel = null, bool $lineItemSupportAction = null, bool $parentLineItem = null, bool $startDate = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $fulfilledAmount = null, bool $numberOfRemainingCopies = null, bool $isTrusted = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $maintenance = null, bool $maintenancePartNumber = null, bool $FNPTimeZoneValue = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $lineItemAttributes = null)
+    public static function create(bool $activationId = null, bool $description = null, bool $state = null, bool $activatableItemType = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $allowPortalLogin = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $entitlementState = null, bool $entitlementDescription = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $parentBulkEntitlementId = null, bool $bulkEntSoldTo = null, bool $bulkEntSoldToDisplayName = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseTechnology = null, bool $licenseModel = null, bool $lineItemSupportAction = null, bool $parentLineItem = null, bool $startDate = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $fulfilledAmount = null, bool $numberOfRemainingCopies = null, bool $isTrusted = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $maintenance = null, bool $maintenancePartNumber = null, bool $FNPTimeZoneValue = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $lineItemAttributes = null, bool $maintenanceLineItemAttributes = null, bool $transferredFromLineItem = null, bool $splitFromLineItem = null)
     {
         return new self(...func_get_args());
     }
@@ -1137,6 +1161,60 @@ class EntitlementLineItemResponseConfigRequestType
     public function setLineItemAttributes($lineItemAttributes)
     {
         $this->lineItemAttributes = $lineItemAttributes;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getMaintenanceLineItemAttributes()
+    {
+        return $this->maintenanceLineItemAttributes;
+    }
+
+    /**
+     * @param bool $maintenanceLineItemAttributes
+     * @return $this
+     */
+    public function setMaintenanceLineItemAttributes($maintenanceLineItemAttributes)
+    {
+        $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getTransferredFromLineItem()
+    {
+        return $this->transferredFromLineItem;
+    }
+
+    /**
+     * @param bool $transferredFromLineItem
+     * @return $this
+     */
+    public function setTransferredFromLineItem($transferredFromLineItem)
+    {
+        $this->transferredFromLineItem = $transferredFromLineItem;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getSplitFromLineItem()
+    {
+        return $this->splitFromLineItem;
+    }
+
+    /**
+     * @param bool $splitFromLineItem
+     * @return $this
+     */
+    public function setSplitFromLineItem($splitFromLineItem)
+    {
+        $this->splitFromLineItem = $splitFromLineItem;
         return $this;
     }
 

@@ -56,6 +56,11 @@ class CreateMaintenanceLineItemDataType
     private $associatedLineItems;
 
     /**
+     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
+     */
+    private $maintenanceLineItemAttributes;
+
+    /**
      * Constructor
      *
      * @var \Flexsim\FlexnetOperations\Type\IdType $activationId
@@ -68,8 +73,9 @@ class CreateMaintenanceLineItemDataType
      * @var bool $isPermanent
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array $associatedLineItems
+     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\IdType $activationId, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, $associatedLineItems = null)
+    public function __construct(\Flexsim\FlexnetOperations\Type\IdType $activationId, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, $associatedLineItems = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes = null)
     {
         $this->activationId = $activationId;
         $this->maintenanceProduct = $maintenanceProduct;
@@ -81,6 +87,7 @@ class CreateMaintenanceLineItemDataType
         $this->isPermanent = $isPermanent;
         $this->parentLineItem = $parentLineItem;
         $this->associatedLineItems = $associatedLineItems;
+        $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
     }
 
     /**
@@ -96,8 +103,9 @@ class CreateMaintenanceLineItemDataType
      * @var bool $isPermanent
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array $associatedLineItems
+     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\IdType $activationId, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, $associatedLineItems = null)
+    public static function create(\Flexsim\FlexnetOperations\Type\IdType $activationId, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, $associatedLineItems = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -279,6 +287,24 @@ class CreateMaintenanceLineItemDataType
     public function setAssociatedLineItems($associatedLineItems)
     {
         $this->associatedLineItems = $associatedLineItems;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
+     */
+    public function getMaintenanceLineItemAttributes()
+    {
+        return $this->maintenanceLineItemAttributes;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes
+     * @return $this
+     */
+    public function setMaintenanceLineItemAttributes($maintenanceLineItemAttributes)
+    {
+        $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
         return $this;
     }
 
