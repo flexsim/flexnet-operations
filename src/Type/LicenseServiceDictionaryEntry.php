@@ -2,7 +2,7 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DictionaryEntry
+class LicenseServiceDictionaryEntry
 {
 
     /**
@@ -73,7 +73,4 @@ class DictionaryEntry
         $this->Value = $Value;
         return $this;
     }
-
-
 }
-

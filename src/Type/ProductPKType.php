@@ -21,7 +21,7 @@ class ProductPKType
      * @var string $name
      * @var string $version
      */
-    public function __construct(string $name, string $version)
+    public function __construct(string $name, string $version = null)
     {
         $this->name = $name;
         $this->version = $version;
@@ -33,7 +33,7 @@ class ProductPKType
      * @var string $name
      * @var string $version
      */
-    public static function create(string $name, string $version)
+    public static function create(string $name, string $version = null)
     {
         return new self(...func_get_args());
     }

@@ -6,16 +6,16 @@ class DictionaryEntriesCollection
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryEntry
+     * @var \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry
      */
     private $Entry;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryEntry $Entry
+     * @var \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DictionaryEntry $Entry)
+    public function __construct(\Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry)
     {
         $this->Entry = $Entry;
     }
@@ -23,15 +23,15 @@ class DictionaryEntriesCollection
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryEntry $Entry
+     * @var \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DictionaryEntry $Entry)
+    public static function create(\Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\DictionaryEntry
+     * @return \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry
      */
     public function getEntry()
     {
@@ -39,7 +39,7 @@ class DictionaryEntriesCollection
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryEntry $Entry
+     * @param \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry
      * @return $this
      */
     public function setEntry($Entry)
@@ -47,7 +47,4 @@ class DictionaryEntriesCollection
         $this->Entry = $Entry;
         return $this;
     }
-
-
 }
-
