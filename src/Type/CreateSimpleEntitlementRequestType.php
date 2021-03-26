@@ -13,21 +13,29 @@ class CreateSimpleEntitlementRequestType implements RequestInterface
     private $simpleEntitlement;
 
     /**
+     * @var string
+     */
+    private $opType;
+
+    /**
      * Constructor
      *
      * @var \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
+     * @var string $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement)
+    public function __construct(\Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement, string $opType = null)
     {
         $this->simpleEntitlement = $simpleEntitlement;
+        $this->opType = $opType;
     }
 
     /**
      * create a new instance of this class
      *
      * @var \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
+     * @var string $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement)
+    public static function create(\Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement, string $opType = null)
     {
         return new self(...func_get_args());
     }
@@ -47,6 +55,24 @@ class CreateSimpleEntitlementRequestType implements RequestInterface
     public function setSimpleEntitlement($simpleEntitlement)
     {
         $this->simpleEntitlement = $simpleEntitlement;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOpType()
+    {
+        return $this->opType;
+    }
+
+    /**
+     * @param string $opType
+     * @return $this
+     */
+    public function setOpType($opType)
+    {
+        $this->opType = $opType;
         return $this;
     }
 
