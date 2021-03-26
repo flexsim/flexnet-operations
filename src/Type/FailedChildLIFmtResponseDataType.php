@@ -1,0 +1,53 @@
+<?php
+
+namespace Flexsim\FlexnetOperations\Type;
+
+class FailedChildLIFmtResponseDataType
+{
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType
+     */
+    private $failedFulfillment;
+
+    /**
+     * Constructor
+     *
+     * @var \Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType $failedFulfillment
+     */
+    public function __construct(\Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType $failedFulfillment)
+    {
+        $this->failedFulfillment = $failedFulfillment;
+    }
+
+    /**
+     * create a new instance of this class
+     *
+     * @var \Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType $failedFulfillment
+     */
+    public static function create(\Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType $failedFulfillment)
+    {
+        return new self(...func_get_args());
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType
+     */
+    public function getFailedFulfillment()
+    {
+        return $this->failedFulfillment;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType $failedFulfillment
+     * @return $this
+     */
+    public function setFailedFulfillment($failedFulfillment)
+    {
+        $this->failedFulfillment = $failedFulfillment;
+        return $this;
+    }
+
+
+}
+

@@ -1,6 +1,6 @@
 <?php
 
-namespace Flexsim\FlexnetOperations\Services\EntitlementOrderService;
+namespace Flexsim\FlexnetOperations\Services\LicenseService;
 
 use Phpro\SoapClient\Middleware\BasicAuthMiddleware;
 use Symfony\Component\EventDispatcher\EventDispatcher;
@@ -8,10 +8,10 @@ use Phpro\SoapClient\Soap\Driver\ExtSoap\ExtSoapEngineFactory;
 use Phpro\SoapClient\Soap\Driver\ExtSoap\ExtSoapOptions;
 use Phpro\SoapClient\Soap\Handler\HttPlugHandle;
 
-class EntitlementOrderServiceClientFactory
+class LicenseServiceClientFactory
 {
 
-    public static function factory(string $wsdl, string $username, string $password): EntitlementOrderServiceClient
+    public static function factory(string $wsdl, string $username, string $password): LicenseServiceClient
     {
         $handler = HttPlugHandle::createWithDefaultClient();
 
@@ -19,11 +19,11 @@ class EntitlementOrderServiceClientFactory
 
         $engine = ExtSoapEngineFactory::fromOptionsWithHandler(
             ExtSoapOptions::defaults($wsdl, [])
-                ->withClassMap(EntitlementOrderServiceClassmap::getCollection()),
+                ->withClassMap(LicenseServiceClassmap::getCollection()),
             $handler
         );
         $eventDispatcher = new EventDispatcher();
 
-        return new EntitlementOrderServiceClient($engine, $eventDispatcher);
+        return new LicenseServiceClient($engine, $eventDispatcher);
     }
 }
