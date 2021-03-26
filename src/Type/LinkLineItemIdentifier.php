@@ -16,15 +16,22 @@ class LinkLineItemIdentifier
     private $count;
 
     /**
+     * @var \DateTimeInterface
+     */
+    private $expirationDateOverride;
+
+    /**
      * Constructor
      *
      * @var string $activationId
      * @var int $count
+     * @var \DateTimeInterface $expirationDateOverride
      */
-    public function __construct(string $activationId = null, int $count = null)
+    public function __construct(string $activationId = null, int $count = null, \DateTimeInterface $expirationDateOverride = null)
     {
         $this->activationId = $activationId;
         $this->count = $count;
+        $this->expirationDateOverride = $expirationDateOverride;
     }
 
     /**
@@ -32,8 +39,9 @@ class LinkLineItemIdentifier
      *
      * @var string $activationId
      * @var int $count
+     * @var \DateTimeInterface $expirationDateOverride
      */
-    public static function create(string $activationId = null, int $count = null)
+    public static function create(string $activationId = null, int $count = null, \DateTimeInterface $expirationDateOverride = null)
     {
         return new self(...func_get_args());
     }
@@ -71,6 +79,24 @@ class LinkLineItemIdentifier
     public function setCount($count)
     {
         $this->count = $count;
+        return $this;
+    }
+
+    /**
+     * @return \DateTimeInterface
+     */
+    public function getExpirationDateOverride()
+    {
+        return $this->expirationDateOverride;
+    }
+
+    /**
+     * @param \DateTimeInterface $expirationDateOverride
+     * @return $this
+     */
+    public function setExpirationDateOverride($expirationDateOverride)
+    {
+        $this->expirationDateOverride = $expirationDateOverride;
         return $this;
     }
 

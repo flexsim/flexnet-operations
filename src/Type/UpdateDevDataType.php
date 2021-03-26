@@ -56,6 +56,11 @@ class UpdateDevDataType
     private $alias;
 
     /**
+     * @var string
+     */
+    private $user;
+
+    /**
      * Constructor
      *
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
@@ -68,8 +73,9 @@ class UpdateDevDataType
      * @var \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      * @var string $alias
+     * @var string $user
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $deviceId = null, \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds = null, string $deviceIdType = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null)
+    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $deviceId = null, \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds = null, string $deviceIdType = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null)
     {
         $this->deviceIdentifier = $deviceIdentifier;
         $this->deviceId = $deviceId;
@@ -81,6 +87,7 @@ class UpdateDevDataType
         $this->updateChannelPartners = $updateChannelPartners;
         $this->customAttributes = $customAttributes;
         $this->alias = $alias;
+        $this->user = $user;
     }
 
     /**
@@ -96,8 +103,9 @@ class UpdateDevDataType
      * @var \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      * @var string $alias
+     * @var string $user
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $deviceId = null, \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds = null, string $deviceIdType = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null)
+    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $deviceId = null, \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds = null, string $deviceIdType = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null)
     {
         return new self(...func_get_args());
     }
@@ -279,6 +287,24 @@ class UpdateDevDataType
     public function setAlias($alias)
     {
         $this->alias = $alias;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param string $user
+     * @return $this
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
         return $this;
     }
 

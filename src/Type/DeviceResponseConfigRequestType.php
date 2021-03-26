@@ -111,6 +111,11 @@ class DeviceResponseConfigRequestType
     private $vendorDictionary;
 
     /**
+     * @var bool
+     */
+    private $deviceUser;
+
+    /**
      * Constructor
      *
      * @var bool $alias
@@ -134,8 +139,9 @@ class DeviceResponseConfigRequestType
      * @var bool $vmDetails
      * @var bool $vmInfo
      * @var bool $vendorDictionary
+     * @var bool $deviceUser
      */
-    public function __construct(bool $alias = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $soldTo = null, bool $channelPartners = null, bool $preBuiltProduct = null, bool $preBuiltLicense = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnLicense = null, bool $features = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null)
+    public function __construct(bool $alias = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $soldTo = null, bool $channelPartners = null, bool $preBuiltProduct = null, bool $preBuiltLicense = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnLicense = null, bool $features = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null, bool $deviceUser = null)
     {
         $this->alias = $alias;
         $this->description = $description;
@@ -158,6 +164,7 @@ class DeviceResponseConfigRequestType
         $this->vmDetails = $vmDetails;
         $this->vmInfo = $vmInfo;
         $this->vendorDictionary = $vendorDictionary;
+        $this->deviceUser = $deviceUser;
     }
 
     /**
@@ -184,8 +191,9 @@ class DeviceResponseConfigRequestType
      * @var bool $vmDetails
      * @var bool $vmInfo
      * @var bool $vendorDictionary
+     * @var bool $deviceUser
      */
-    public static function create(bool $alias = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $soldTo = null, bool $channelPartners = null, bool $preBuiltProduct = null, bool $preBuiltLicense = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnLicense = null, bool $features = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null)
+    public static function create(bool $alias = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $soldTo = null, bool $channelPartners = null, bool $preBuiltProduct = null, bool $preBuiltLicense = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnLicense = null, bool $features = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null, bool $deviceUser = null)
     {
         return new self(...func_get_args());
     }
@@ -565,6 +573,24 @@ class DeviceResponseConfigRequestType
     public function setVendorDictionary($vendorDictionary)
     {
         $this->vendorDictionary = $vendorDictionary;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getDeviceUser()
+    {
+        return $this->deviceUser;
+    }
+
+    /**
+     * @param bool $deviceUser
+     * @return $this
+     */
+    public function setDeviceUser($deviceUser)
+    {
+        $this->deviceUser = $deviceUser;
         return $this;
     }
 

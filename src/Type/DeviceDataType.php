@@ -41,6 +41,21 @@ class DeviceDataType
     private $alias;
 
     /**
+     * @var string
+     */
+    private $user;
+
+    /**
+     * @var string
+     */
+    private $deployment;
+
+    /**
+     * @var string
+     */
+    private $siteName;
+
+    /**
      * Constructor
      *
      * @var \Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier $deviceIdentifier
@@ -50,8 +65,11 @@ class DeviceDataType
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      * @var string $alias
+     * @var string $user
+     * @var string $deployment
+     * @var string $siteName
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null)
+    public function __construct(\Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null, string $deployment = null, string $siteName = null)
     {
         $this->deviceIdentifier = $deviceIdentifier;
         $this->hostTypeName = $hostTypeName;
@@ -60,6 +78,9 @@ class DeviceDataType
         $this->channelPartners = $channelPartners;
         $this->customAttributes = $customAttributes;
         $this->alias = $alias;
+        $this->user = $user;
+        $this->deployment = $deployment;
+        $this->siteName = $siteName;
     }
 
     /**
@@ -72,8 +93,11 @@ class DeviceDataType
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      * @var string $alias
+     * @var string $user
+     * @var string $deployment
+     * @var string $siteName
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null)
+    public static function create(\Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null, string $deployment = null, string $siteName = null)
     {
         return new self(...func_get_args());
     }
@@ -201,6 +225,60 @@ class DeviceDataType
     public function setAlias($alias)
     {
         $this->alias = $alias;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param string $user
+     * @return $this
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeployment()
+    {
+        return $this->deployment;
+    }
+
+    /**
+     * @param string $deployment
+     * @return $this
+     */
+    public function setDeployment($deployment)
+    {
+        $this->deployment = $deployment;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSiteName()
+    {
+        return $this->siteName;
+    }
+
+    /**
+     * @param string $siteName
+     * @return $this
+     */
+    public function setSiteName($siteName)
+    {
+        $this->siteName = $siteName;
         return $this;
     }
 

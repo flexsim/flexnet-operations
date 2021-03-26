@@ -116,6 +116,16 @@ class DeviceQueryDataType
     private $vendorDictionary;
 
     /**
+     * @var string
+     */
+    private $deviceUser;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType
+     */
+    private $deviceUserIdentifier;
+
+    /**
      * Constructor
      *
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
@@ -140,8 +150,10 @@ class DeviceQueryDataType
      * @var string $vmName
      * @var \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
      * @var \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
+     * @var string $deviceUser
+     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $deviceUserIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier = null, string $alias = null, string $description = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, string $deviceStatus = null, string $deviceServedStatus = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, \Flexsim\FlexnetOperations\Type\SoldToType $soldTo = null, \Flexsim\FlexnetOperations\Type\ProductPKType $preBuiltProduct = null, bool $hasPrebuiltLicense = null, string $prebuiltLicense = null, bool $hasAddonLicense = null, string $addonLicense = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, $addonLineItemData = null, $featureData = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $parentIdentifier = null, string $machineType = null, string $vmName = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary = null)
+    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier = null, string $alias = null, string $description = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, string $deviceStatus = null, string $deviceServedStatus = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, \Flexsim\FlexnetOperations\Type\SoldToType $soldTo = null, \Flexsim\FlexnetOperations\Type\ProductPKType $preBuiltProduct = null, bool $hasPrebuiltLicense = null, string $prebuiltLicense = null, bool $hasAddonLicense = null, string $addonLicense = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, $addonLineItemData = null, $featureData = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $parentIdentifier = null, string $machineType = null, string $vmName = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary = null, string $deviceUser = null, \Flexsim\FlexnetOperations\Type\UserIdentifierType $deviceUserIdentifier = null)
     {
         $this->deviceIdentifier = $deviceIdentifier;
         $this->alias = $alias;
@@ -165,6 +177,8 @@ class DeviceQueryDataType
         $this->vmName = $vmName;
         $this->vmInfo = $vmInfo;
         $this->vendorDictionary = $vendorDictionary;
+        $this->deviceUser = $deviceUser;
+        $this->deviceUserIdentifier = $deviceUserIdentifier;
     }
 
     /**
@@ -192,8 +206,10 @@ class DeviceQueryDataType
      * @var string $vmName
      * @var \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
      * @var \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
+     * @var string $deviceUser
+     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $deviceUserIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier = null, string $alias = null, string $description = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, string $deviceStatus = null, string $deviceServedStatus = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, \Flexsim\FlexnetOperations\Type\SoldToType $soldTo = null, \Flexsim\FlexnetOperations\Type\ProductPKType $preBuiltProduct = null, bool $hasPrebuiltLicense = null, string $prebuiltLicense = null, bool $hasAddonLicense = null, string $addonLicense = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, $addonLineItemData = null, $featureData = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $parentIdentifier = null, string $machineType = null, string $vmName = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary = null)
+    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier = null, string $alias = null, string $description = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, string $deviceStatus = null, string $deviceServedStatus = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, \Flexsim\FlexnetOperations\Type\SoldToType $soldTo = null, \Flexsim\FlexnetOperations\Type\ProductPKType $preBuiltProduct = null, bool $hasPrebuiltLicense = null, string $prebuiltLicense = null, bool $hasAddonLicense = null, string $addonLicense = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, $addonLineItemData = null, $featureData = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $parentIdentifier = null, string $machineType = null, string $vmName = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary = null, string $deviceUser = null, \Flexsim\FlexnetOperations\Type\UserIdentifierType $deviceUserIdentifier = null)
     {
         return new self(...func_get_args());
     }
@@ -591,6 +607,42 @@ class DeviceQueryDataType
     public function setVendorDictionary($vendorDictionary)
     {
         $this->vendorDictionary = $vendorDictionary;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeviceUser()
+    {
+        return $this->deviceUser;
+    }
+
+    /**
+     * @param string $deviceUser
+     * @return $this
+     */
+    public function setDeviceUser($deviceUser)
+    {
+        $this->deviceUser = $deviceUser;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\UserIdentifierType
+     */
+    public function getDeviceUserIdentifier()
+    {
+        return $this->deviceUserIdentifier;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $deviceUserIdentifier
+     * @return $this
+     */
+    public function setDeviceUserIdentifier($deviceUserIdentifier)
+    {
+        $this->deviceUserIdentifier = $deviceUserIdentifier;
         return $this;
     }
 
