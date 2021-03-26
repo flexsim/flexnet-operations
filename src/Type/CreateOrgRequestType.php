@@ -13,21 +13,29 @@ class CreateOrgRequestType implements RequestInterface
     private $organization;
 
     /**
+     * @var string
+     */
+    private $opType;
+
+    /**
      * Constructor
      *
      * @var \Flexsim\FlexnetOperations\Type\OrganizationDataType $organization
+     * @var string $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationDataType $organization)
+    public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationDataType $organization, string $opType = null)
     {
         $this->organization = $organization;
+        $this->opType = $opType;
     }
 
     /**
      * create a new instance of this class
      *
      * @var \Flexsim\FlexnetOperations\Type\OrganizationDataType $organization
+     * @var string $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OrganizationDataType $organization)
+    public static function create(\Flexsim\FlexnetOperations\Type\OrganizationDataType $organization, string $opType = null)
     {
         return new self(...func_get_args());
     }
@@ -47,6 +55,24 @@ class CreateOrgRequestType implements RequestInterface
     public function setOrganization($organization)
     {
         $this->organization = $organization;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOpType()
+    {
+        return $this->opType;
+    }
+
+    /**
+     * @param string $opType
+     * @return $this
+     */
+    public function setOpType($opType)
+    {
+        $this->opType = $opType;
         return $this;
     }
 
