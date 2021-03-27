@@ -78,6 +78,16 @@ class UserQueryParametersType
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
+    private $accountID;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
+     */
+    private $accountName;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
+     */
     private $orgName;
 
     /**
@@ -98,7 +108,17 @@ class UserQueryParametersType
     /**
      * @var string
      */
+    private $accountType;
+
+    /**
+     * @var string
+     */
     private $orgType;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\UserAccountRolesListType
+     */
+    private $roles;
 
     /**
      * Constructor
@@ -117,13 +137,14 @@ class UserQueryParametersType
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $country
      * @var bool $isActive
      * @var bool $canLogIn
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgDisplayName
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID this method is backwards compatible so you may also pass $orgName
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName this method is backwards compatible so you may also pass $orgDisplayName
      * @var \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType $customAttributes
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
-     * @var string $orgType
+     * @var string $accountType this method is backwards compatible so you may also pass $orgType
+     * @var \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $userName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $firstName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $lastName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $displayName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailAddress = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $phoneNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $faxNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $street = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $city = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $country = null, bool $isActive = null, bool $canLogIn = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgDisplayName = null, \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null, string $orgType = null)
+    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $userName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $firstName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $lastName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $displayName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailAddress = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $phoneNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $faxNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $street = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $city = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $country = null, bool $isActive = null, bool $canLogIn = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName = null, \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null, string $accountType = null, \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles = null)
     {
         $this->userName = $userName;
         $this->firstName = $firstName;
@@ -139,11 +160,15 @@ class UserQueryParametersType
         $this->country = $country;
         $this->isActive = $isActive;
         $this->canLogIn = $canLogIn;
-        $this->orgName = $orgName;
-        $this->orgDisplayName = $orgDisplayName;
+        $this->accountID = $accountID;
+        $this->orgName = $accountID;
+        $this->accountName = $accountName;
+        $this->orgDisplayName = $accountName;
         $this->customAttributes = $customAttributes;
         $this->lastModifiedDateTime = $lastModifiedDateTime;
-        $this->orgType = $orgType;
+        $this->accountType = $accountType;
+        $this->orgType = $accountType;
+        $this->roles = $roles;
     }
 
     /**
@@ -163,13 +188,14 @@ class UserQueryParametersType
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $country
      * @var bool $isActive
      * @var bool $canLogIn
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgDisplayName
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID this method is backwards compatible so you may also pass $orgName
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName this method is backwards compatible so you may also pass $orgDisplayName
      * @var \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType $customAttributes
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
-     * @var string $orgType
+     * @var string $accountType this method is backwards compatible so you may also pass $orgType
+     * @var \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $userName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $firstName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $lastName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $displayName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailAddress = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $phoneNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $faxNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $street = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $city = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $country = null, bool $isActive = null, bool $canLogIn = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgDisplayName = null, \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null, string $orgType = null)
+    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $userName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $firstName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $lastName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $displayName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailAddress = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $phoneNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $faxNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $street = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $city = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $country = null, bool $isActive = null, bool $canLogIn = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName = null, \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null, string $accountType = null, \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles = null)
     {
         return new self(...func_get_args());
     }
@@ -429,6 +455,24 @@ class UserQueryParametersType
     /**
      * @return \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
+    public function getAccountID()
+    {
+        return $this->accountID;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID
+     * @return $this
+     */
+    public function setAccountID($accountID)
+    {
+        $this->accountID = $accountID;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\SimpleQueryType
+     */
     public function getOrgName()
     {
         return $this->orgName;
@@ -441,6 +485,24 @@ class UserQueryParametersType
     public function setOrgName($orgName)
     {
         $this->orgName = $orgName;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\SimpleQueryType
+     */
+    public function getAccountName()
+    {
+        return $this->accountName;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName
+     * @return $this
+     */
+    public function setAccountName($accountName)
+    {
+        $this->accountName = $accountName;
         return $this;
     }
 
@@ -501,6 +563,24 @@ class UserQueryParametersType
     /**
      * @return string
      */
+    public function getAccountType()
+    {
+        return $this->accountType;
+    }
+
+    /**
+     * @param string $accountType
+     * @return $this
+     */
+    public function setAccountType($accountType)
+    {
+        $this->accountType = $accountType;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
     public function getOrgType()
     {
         return $this->orgType;
@@ -516,6 +596,21 @@ class UserQueryParametersType
         return $this;
     }
 
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\UserAccountRolesListType
+     */
+    public function getRoles()
+    {
+        return $this->roles;
+    }
 
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
+     * @return $this
+     */
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
+        return $this;
+    }
 }
-

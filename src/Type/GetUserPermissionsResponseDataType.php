@@ -13,6 +13,11 @@ class GetUserPermissionsResponseDataType
     /**
      * @var string
      */
+    private $accountType;
+
+    /**
+     * @var string
+     */
     private $orgType;
 
     /**
@@ -24,13 +29,14 @@ class GetUserPermissionsResponseDataType
      * Constructor
      *
      * @var string $userName
-     * @var string $orgType
+     * @var string $accountType this method is backwards compatible so you may also pass $orgType
      * @var \Flexsim\FlexnetOperations\Type\PermissionListType $permissions
      */
-    public function __construct(string $userName, string $orgType, \Flexsim\FlexnetOperations\Type\PermissionListType $permissions)
+    public function __construct(string $userName, string $accountType, \Flexsim\FlexnetOperations\Type\PermissionListType $permissions)
     {
         $this->userName = $userName;
-        $this->orgType = $orgType;
+        $this->accountType = $accountType;
+        $this->orgType = $accountType;
         $this->permissions = $permissions;
     }
 
@@ -38,10 +44,10 @@ class GetUserPermissionsResponseDataType
      * create a new instance of this class
      *
      * @var string $userName
-     * @var string $orgType
+     * @var string $accountType this method is backwards compatible so you may also pass $orgType
      * @var \Flexsim\FlexnetOperations\Type\PermissionListType $permissions
      */
-    public static function create(string $userName, string $orgType, \Flexsim\FlexnetOperations\Type\PermissionListType $permissions)
+    public static function create(string $userName, string $accountType, \Flexsim\FlexnetOperations\Type\PermissionListType $permissions)
     {
         return new self(...func_get_args());
     }
@@ -61,6 +67,24 @@ class GetUserPermissionsResponseDataType
     public function setUserName($userName)
     {
         $this->userName = $userName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAccountType()
+    {
+        return $this->accountType;
+    }
+
+    /**
+     * @param string $accountType
+     * @return $this
+     */
+    public function setAccountType($accountType)
+    {
+        $this->accountType = $accountType;
         return $this;
     }
 
@@ -99,7 +123,4 @@ class GetUserPermissionsResponseDataType
         $this->permissions = $permissions;
         return $this;
     }
-
-
 }
-

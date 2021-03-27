@@ -96,6 +96,11 @@ class CreateUserDataType
     private $shared;
 
     /**
+     * @var \Flexsim\FlexnetOperations\Type\CreateUserAccountsListType
+     */
+    private $acctRolesList;
+
+    /**
      * @var \Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType
      */
     private $orgRolesList;
@@ -126,10 +131,10 @@ class CreateUserDataType
      * @var string $status
      * @var string $timezone
      * @var bool $shared
-     * @var \Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType $orgRolesList
+     * @var \Flexsim\FlexnetOperations\Type\CreateUserAccountsListType|\Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType $acctRolesList this method is backwards compatible so you may also pass $orgRolesList
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
-    public function __construct(string $firstName, string $lastName, string $displayName = null, string $emailAddress, bool $optIn = null, string $phoneNumber = null, string $faxNumber = null, string $street = null, string $city = null, string $state = null, string $zipcode = null, string $country = null, string $locale = null, bool $canLogin, string $userName = null, string $status = null, string $timezone = null, bool $shared = null, \Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType $orgRolesList, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
+    public function __construct(string $firstName, string $lastName, string $displayName = null, string $emailAddress, bool $optIn = null, string $phoneNumber = null, string $faxNumber = null, string $street = null, string $city = null, string $state = null, string $zipcode = null, string $country = null, string $locale = null, bool $canLogin, string $userName = null, string $status = null, string $timezone = null, bool $shared = null, $acctRolesList, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
@@ -149,7 +154,8 @@ class CreateUserDataType
         $this->status = $status;
         $this->timezone = $timezone;
         $this->shared = $shared;
-        $this->orgRolesList = $orgRolesList;
+        $this->acctRolesList = $acctRolesList;
+        $this->orgRolesList = $acctRolesList;
         $this->customAttributes = $customAttributes;
     }
 
@@ -174,10 +180,10 @@ class CreateUserDataType
      * @var string $status
      * @var string $timezone
      * @var bool $shared
-     * @var \Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType $orgRolesList
+     * @var \Flexsim\FlexnetOperations\Type\CreateUserAccountsListType|\Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType $acctRolesList this method is backwards compatible so you may also pass $orgRolesList
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
-    public static function create(string $firstName, string $lastName, string $displayName = null, string $emailAddress, bool $optIn = null, string $phoneNumber = null, string $faxNumber = null, string $street = null, string $city = null, string $state = null, string $zipcode = null, string $country = null, string $locale = null, bool $canLogin, string $userName = null, string $status = null, string $timezone = null, bool $shared = null, \Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType $orgRolesList, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
+    public static function create(string $firstName, string $lastName, string $displayName = null, string $emailAddress, bool $optIn = null, string $phoneNumber = null, string $faxNumber = null, string $street = null, string $city = null, string $state = null, string $zipcode = null, string $country = null, string $locale = null, bool $canLogin, string $userName = null, string $status = null, string $timezone = null, bool $shared = null, $acctRolesList, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -507,6 +513,24 @@ class CreateUserDataType
     }
 
     /**
+     * @return \Flexsim\FlexnetOperations\Type\CreateUserAccountsListType
+     */
+    public function getAcctRolesList()
+    {
+        return $this->acctRolesList;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\CreateUserAccountsListType $acctRolesList
+     * @return $this
+     */
+    public function setAcctRolesList($acctRolesList)
+    {
+        $this->acctRolesList = $acctRolesList;
+        return $this;
+    }
+
+    /**
      * @return \Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType
      */
     public function getOrgRolesList()
@@ -541,7 +565,4 @@ class CreateUserDataType
         $this->customAttributes = $customAttributes;
         return $this;
     }
-
-
 }
-
