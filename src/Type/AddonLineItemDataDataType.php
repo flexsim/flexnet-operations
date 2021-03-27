@@ -36,6 +36,11 @@ class AddonLineItemDataDataType
     private $entitledProducts;
 
     /**
+     * @var \DateTimeInterface
+     */
+    private $expirationDateOverride;
+
+    /**
      * Constructor
      *
      * @var string $uniqueId
@@ -44,8 +49,9 @@ class AddonLineItemDataDataType
      * @var int $consumedCount
      * @var string $licenseState
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
+     * @var \DateTimeInterface $expirationDateOverride
      */
-    public function __construct(string $uniqueId = null, string $activationId = null, int $enabledCount = null, int $consumedCount = null, string $licenseState = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null)
+    public function __construct(string $uniqueId = null, string $activationId = null, int $enabledCount = null, int $consumedCount = null, string $licenseState = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \DateTimeInterface $expirationDateOverride = null)
     {
         $this->uniqueId = $uniqueId;
         $this->activationId = $activationId;
@@ -53,6 +59,7 @@ class AddonLineItemDataDataType
         $this->consumedCount = $consumedCount;
         $this->licenseState = $licenseState;
         $this->entitledProducts = $entitledProducts;
+        $this->expirationDateOverride = $expirationDateOverride;
     }
 
     /**
@@ -64,8 +71,9 @@ class AddonLineItemDataDataType
      * @var int $consumedCount
      * @var string $licenseState
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
+     * @var \DateTimeInterface $expirationDateOverride
      */
-    public static function create(string $uniqueId = null, string $activationId = null, int $enabledCount = null, int $consumedCount = null, string $licenseState = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null)
+    public static function create(string $uniqueId = null, string $activationId = null, int $enabledCount = null, int $consumedCount = null, string $licenseState = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \DateTimeInterface $expirationDateOverride = null)
     {
         return new self(...func_get_args());
     }
@@ -175,6 +183,24 @@ class AddonLineItemDataDataType
     public function setEntitledProducts($entitledProducts)
     {
         $this->entitledProducts = $entitledProducts;
+        return $this;
+    }
+
+    /**
+     * @return \DateTimeInterface
+     */
+    public function getExpirationDateOverride()
+    {
+        return $this->expirationDateOverride;
+    }
+
+    /**
+     * @param \DateTimeInterface $expirationDateOverride
+     * @return $this
+     */
+    public function setExpirationDateOverride($expirationDateOverride)
+    {
+        $this->expirationDateOverride = $expirationDateOverride;
         return $this;
     }
 

@@ -8,16 +8,16 @@ class GetDevicesCountRequestType implements RequestInterface
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\GetDevicesParametersType
+     * @var \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType
      */
     private $queryParams;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetDevicesParametersType $queryParams
+     * @var \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\GetDevicesParametersType $queryParams = null)
+    public function __construct($queryParams = null)
     {
         $this->queryParams = $queryParams;
     }
@@ -25,15 +25,15 @@ class GetDevicesCountRequestType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetDevicesParametersType $queryParams
+     * @var \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\GetDevicesParametersType $queryParams = null)
+    public static function create($queryParams = null)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\GetDevicesParametersType
+     * @return \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType
      */
     public function getQueryParams()
     {
@@ -41,7 +41,7 @@ class GetDevicesCountRequestType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetDevicesParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -49,7 +49,4 @@ class GetDevicesCountRequestType implements RequestInterface
         $this->queryParams = $queryParams;
         return $this;
     }
-
-
 }
-

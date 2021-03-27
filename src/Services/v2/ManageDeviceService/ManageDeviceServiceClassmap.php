@@ -9,7 +9,7 @@ use Phpro\SoapClient\Soap\ClassMap\ClassMap;
 class ManageDeviceServiceClassmap
 {
 
-    public static function getCollection() : \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection(): \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
     {
         return new ClassMapCollection([
             new ClassMap('ServerIdsType', Type\ServerIdsType::class),
@@ -58,8 +58,8 @@ class ManageDeviceServiceClassmap
             new ClassMap('DeviceIdTypeQueryType', Type\DeviceIdTypeQueryType::class),
             new ClassMap('DeviceStateQueryType', Type\DeviceStateQueryType::class),
             new ClassMap('deviceTypeList', Type\DeviceTypeList::class),
-            new ClassMap('getDevicesParametersType', Type\GetDevicesParametersType::class),
-            new ClassMap('deviceResponseConfigRequestType', Type\DeviceResponseConfigRequestType::class),
+            new ClassMap('getDevicesParametersType', Type\v2GetDevicesParametersType::class),
+            new ClassMap('deviceResponseConfigRequestType', Type\v2DeviceResponseConfigRequestType::class),
             new ClassMap('getDevicesRequestType', Type\GetDevicesRequestType::class),
             new ClassMap('failedGetDevicesDataType', Type\FailedGetDevicesDataType::class),
             new ClassMap('soldToType', Type\SoldToType::class),
@@ -126,7 +126,4 @@ class ManageDeviceServiceClassmap
             new ClassMap('cloneSuspects', Type\CloneSuspects::class),
         ]);
     }
-
-
 }
-
