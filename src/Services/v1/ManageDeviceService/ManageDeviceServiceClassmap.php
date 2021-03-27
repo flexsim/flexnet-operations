@@ -9,7 +9,7 @@ use Phpro\SoapClient\Soap\ClassMap\ClassMap;
 class ManageDeviceServiceClassmap
 {
 
-    public static function getCollection() : \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection(): \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
     {
         return new ClassMapCollection([
             new ClassMap('ServerIdsType', Type\ServerIdsType::class),
@@ -76,7 +76,7 @@ class ManageDeviceServiceClassmap
             new ClassMap('entitledProductDataListType', Type\EntitledProductDataListType::class),
             new ClassMap('addonLineItemDataDataType', Type\AddonLineItemDataDataType::class),
             new ClassMap('featureDataDataType', Type\FeatureDataDataType::class),
-            new ClassMap('dictionaryEntry', Type\DictionaryEntry::class),
+            new ClassMap('dictionaryEntry', Type\ManageDeviceServiceDictionaryEntry::class),
             new ClassMap('dictionaryType', Type\DictionaryType::class),
             new ClassMap('deviceQueryDataType', Type\DeviceQueryDataType::class),
             new ClassMap('getDevicesResponseDataType', Type\GetDevicesResponseDataType::class),
@@ -134,7 +134,4 @@ class ManageDeviceServiceClassmap
             new ClassMap('cloneSuspects', Type\CloneSuspects::class),
         ]);
     }
-
-
 }
-
