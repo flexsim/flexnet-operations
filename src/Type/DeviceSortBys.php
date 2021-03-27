@@ -1,0 +1,53 @@
+<?php
+
+namespace Flexsim\FlexnetOperations\Type;
+
+class DeviceSortBys
+{
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\DeviceSortBy
+     */
+    private $sortBy;
+
+    /**
+     * Constructor
+     *
+     * @var \Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy
+     */
+    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy)
+    {
+        $this->sortBy = $sortBy;
+    }
+
+    /**
+     * create a new instance of this class
+     *
+     * @var \Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy
+     */
+    public static function create(\Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy)
+    {
+        return new self(...func_get_args());
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\DeviceSortBy
+     */
+    public function getSortBy()
+    {
+        return $this->sortBy;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy
+     * @return $this
+     */
+    public function setSortBy($sortBy)
+    {
+        $this->sortBy = $sortBy;
+        return $this;
+    }
+
+
+}
+

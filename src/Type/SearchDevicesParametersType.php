@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class v2GetDevicesParametersType
+class SearchDevicesParametersType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $alias;
+    private $name;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
@@ -19,6 +19,16 @@ class v2GetDevicesParametersType
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType
      */
     private $deviceIdType;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\DeviceClassList
+     */
+    private $deviceClasses;
+
+    /**
+     * @var bool
+     */
+    private $hosted;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
@@ -43,17 +53,17 @@ class v2GetDevicesParametersType
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $soldToOrgId;
+    private $description;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\DeviceStatusQueryType
+     */
+    private $status;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $description;
-
-    /**
-     * @var \Flexsim\FlexnetOperations\Type\DeviceStateQueryType
-     */
-    private $status;
+    private $addOnEntitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
@@ -73,17 +83,12 @@ class v2GetDevicesParametersType
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
+    private $addOnPartNumber;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
+     */
     private $featureName;
-
-    /**
-     * @var bool
-     */
-    private $isServer;
-
-    /**
-     * @var \Flexsim\FlexnetOperations\Type\DeviceTypeList
-     */
-    private $deviceTypes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
@@ -93,116 +98,89 @@ class v2GetDevicesParametersType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $name
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $deviceIdType
+     * @var \Flexsim\FlexnetOperations\Type\DeviceClassList $deviceClasses
+     * @var bool $hosted
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentId
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldToAcctId this method is backwards compatible so you may also pass $soldToOrgId
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldToAcctId
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @var \Flexsim\FlexnetOperations\Type\DeviceStateQueryType $status
+     * @var \Flexsim\FlexnetOperations\Type\DeviceStatusQueryType $status
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnEntitlementId
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnActivationId
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductName
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductVersion
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnPartNumber
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName
-     * @var bool $isServer
-     * @var \Flexsim\FlexnetOperations\Type\DeviceTypeList $deviceTypes
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $userString
      */
-    public function __construct(
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId = null,
-        \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $deviceIdType = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentId = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldToAcctId = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null,
-        \Flexsim\FlexnetOperations\Type\DeviceStateQueryType $status = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnActivationId = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductName = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductVersion = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName = null,
-        bool $isServer = null,
-        \Flexsim\FlexnetOperations\Type\DeviceTypeList $deviceTypes = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $userString = null
-    ) {
-        $this->alias = $alias;
+    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $name = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId = null, \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $deviceIdType = null, \Flexsim\FlexnetOperations\Type\DeviceClassList $deviceClasses = null, bool $hosted = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldToAcctId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\DeviceStatusQueryType $status = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnEntitlementId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnActivationId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductVersion = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnPartNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $userString = null)
+    {
+        $this->name = $name;
         $this->deviceId = $deviceId;
         $this->deviceIdType = $deviceIdType;
+        $this->deviceClasses = $deviceClasses;
+        $this->hosted = $hosted;
         $this->parentId = $parentId;
         $this->hostTypeName = $hostTypeName;
         $this->soldTo = $soldTo;
         $this->soldToAcctId = $soldToAcctId;
-        $this->soldToOrgId = $soldToAcctId;
         $this->description = $description;
         $this->status = $status;
+        $this->addOnEntitlementId = $addOnEntitlementId;
         $this->addOnActivationId = $addOnActivationId;
         $this->addOnProductName = $addOnProductName;
         $this->addOnProductVersion = $addOnProductVersion;
+        $this->addOnPartNumber = $addOnPartNumber;
         $this->featureName = $featureName;
-        $this->isServer = $isServer;
-        $this->deviceTypes = $deviceTypes;
         $this->userString = $userString;
     }
 
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $name
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $deviceIdType
+     * @var \Flexsim\FlexnetOperations\Type\DeviceClassList $deviceClasses
+     * @var bool $hosted
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentId
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldToAcctId this method is backwards compatible so you may also pass $soldToOrgId
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldToAcctId
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @var \Flexsim\FlexnetOperations\Type\DeviceStateQueryType $status
+     * @var \Flexsim\FlexnetOperations\Type\DeviceStatusQueryType $status
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnEntitlementId
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnActivationId
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductName
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductVersion
+     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnPartNumber
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName
-     * @var bool $isServer
-     * @var \Flexsim\FlexnetOperations\Type\DeviceTypeList $deviceTypes
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $userString
      */
-    public static function create(
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId = null,
-        \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $deviceIdType = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentId = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldToAcctId = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null,
-        \Flexsim\FlexnetOperations\Type\DeviceStateQueryType $status = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnActivationId = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductName = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductVersion = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName = null,
-        bool $isServer = null,
-        \Flexsim\FlexnetOperations\Type\DeviceTypeList $deviceTypes = null,
-        \Flexsim\FlexnetOperations\Type\SimpleQueryType $userString = null
-    ) {
+    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $name = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId = null, \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $deviceIdType = null, \Flexsim\FlexnetOperations\Type\DeviceClassList $deviceClasses = null, bool $hosted = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldToAcctId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\DeviceStatusQueryType $status = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnEntitlementId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnActivationId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductVersion = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnPartNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $userString = null)
+    {
         return new self(...func_get_args());
     }
 
     /**
      * @return \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    public function getAlias()
+    public function getName()
     {
-        return $this->alias;
+        return $this->name;
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $name
      * @return $this
      */
-    public function setAlias($alias)
+    public function setName($name)
     {
-        $this->alias = $alias;
+        $this->name = $name;
         return $this;
     }
 
@@ -239,6 +217,42 @@ class v2GetDevicesParametersType
     public function setDeviceIdType($deviceIdType)
     {
         $this->deviceIdType = $deviceIdType;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\DeviceClassList
+     */
+    public function getDeviceClasses()
+    {
+        return $this->deviceClasses;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\DeviceClassList $deviceClasses
+     * @return $this
+     */
+    public function setDeviceClasses($deviceClasses)
+    {
+        $this->deviceClasses = $deviceClasses;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getHosted()
+    {
+        return $this->hosted;
+    }
+
+    /**
+     * @param bool $hosted
+     * @return $this
+     */
+    public function setHosted($hosted)
+    {
+        $this->hosted = $hosted;
         return $this;
     }
 
@@ -317,24 +331,6 @@ class v2GetDevicesParametersType
     /**
      * @return \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    public function getSoldToOrgId()
-    {
-        return $this->soldToOrgId;
-    }
-
-    /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldToOrgId
-     * @return $this
-     */
-    public function setSoldToOrgId($soldToOrgId)
-    {
-        $this->soldToOrgId = $soldToOrgId;
-        return $this;
-    }
-
-    /**
-     * @return \Flexsim\FlexnetOperations\Type\SimpleQueryType
-     */
     public function getDescription()
     {
         return $this->description;
@@ -351,7 +347,7 @@ class v2GetDevicesParametersType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\DeviceStateQueryType
+     * @return \Flexsim\FlexnetOperations\Type\DeviceStatusQueryType
      */
     public function getStatus()
     {
@@ -359,12 +355,30 @@ class v2GetDevicesParametersType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceStateQueryType $status
+     * @param \Flexsim\FlexnetOperations\Type\DeviceStatusQueryType $status
      * @return $this
      */
     public function setStatus($status)
     {
         $this->status = $status;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\SimpleQueryType
+     */
+    public function getAddOnEntitlementId()
+    {
+        return $this->addOnEntitlementId;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnEntitlementId
+     * @return $this
+     */
+    public function setAddOnEntitlementId($addOnEntitlementId)
+    {
+        $this->addOnEntitlementId = $addOnEntitlementId;
         return $this;
     }
 
@@ -425,6 +439,24 @@ class v2GetDevicesParametersType
     /**
      * @return \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
+    public function getAddOnPartNumber()
+    {
+        return $this->addOnPartNumber;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnPartNumber
+     * @return $this
+     */
+    public function setAddOnPartNumber($addOnPartNumber)
+    {
+        $this->addOnPartNumber = $addOnPartNumber;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\SimpleQueryType
+     */
     public function getFeatureName()
     {
         return $this->featureName;
@@ -437,42 +469,6 @@ class v2GetDevicesParametersType
     public function setFeatureName($featureName)
     {
         $this->featureName = $featureName;
-        return $this;
-    }
-
-    /**
-     * @return bool
-     */
-    public function getIsServer()
-    {
-        return $this->isServer;
-    }
-
-    /**
-     * @param bool $isServer
-     * @return $this
-     */
-    public function setIsServer($isServer)
-    {
-        $this->isServer = $isServer;
-        return $this;
-    }
-
-    /**
-     * @return \Flexsim\FlexnetOperations\Type\DeviceTypeList
-     */
-    public function getDeviceTypes()
-    {
-        return $this->deviceTypes;
-    }
-
-    /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceTypeList $deviceTypes
-     * @return $this
-     */
-    public function setDeviceTypes($deviceTypes)
-    {
-        $this->deviceTypes = $deviceTypes;
         return $this;
     }
 
@@ -493,4 +489,7 @@ class v2GetDevicesParametersType
         $this->userString = $userString;
         return $this;
     }
+
+
 }
+

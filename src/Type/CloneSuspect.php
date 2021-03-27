@@ -43,7 +43,17 @@ class CloneSuspect
     /**
      * @var string
      */
+    private $acctId;
+
+    /**
+     * @var string
+     */
     private $orgId;
+
+    /**
+     * @var string
+     */
+    private $acctName;
 
     /**
      * @var string
@@ -65,12 +75,22 @@ class CloneSuspect
      * @var string $serverId
      * @var \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
      * @var \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
-     * @var string $orgId
-     * @var string $orgName
+     * @var string $acctId this method is backwards compatible so you may also pass $orgId
+     * @var string $acctName this method is backwards compatible so you may also pass $orgName
      * @var string $enterpriseId
      */
-    public function __construct(\DateTimeInterface $timeStamp = null, string $hostClass = null, string $hostAlias = null, string $deviceId = null, string $serverId = null, \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds, \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds, string $orgId = null, string $orgName = null, string $enterpriseId = null)
-    {
+    public function __construct(
+        \DateTimeInterface $timeStamp = null,
+        string $hostClass = null,
+        string $hostAlias = null,
+        string $deviceId = null,
+        string $serverId = null,
+        \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds,
+        \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds,
+        string $acctId = null,
+        string $acctName = null,
+        string $enterpriseId = null
+    ) {
         $this->timeStamp = $timeStamp;
         $this->hostClass = $hostClass;
         $this->hostAlias = $hostAlias;
@@ -78,8 +98,10 @@ class CloneSuspect
         $this->serverId = $serverId;
         $this->lineItemActivationIds = $lineItemActivationIds;
         $this->featureIds = $featureIds;
-        $this->orgId = $orgId;
-        $this->orgName = $orgName;
+        $this->acctId = $acctId;
+        $this->orgId = $acctId;
+        $this->acctName = $acctName;
+        $this->orgName = $acctName;
         $this->enterpriseId = $enterpriseId;
     }
 
@@ -93,12 +115,22 @@ class CloneSuspect
      * @var string $serverId
      * @var \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
      * @var \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
-     * @var string $orgId
-     * @var string $orgName
+     * @var string $acctId this method is backwards compatible so you may also pass $orgId
+     * @var string $acctName this method is backwards compatible so you may also pass $orgName
      * @var string $enterpriseId
      */
-    public static function create(\DateTimeInterface $timeStamp = null, string $hostClass = null, string $hostAlias = null, string $deviceId = null, string $serverId = null, \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds, \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds, string $orgId = null, string $orgName = null, string $enterpriseId = null)
-    {
+    public static function create(
+        \DateTimeInterface $timeStamp = null,
+        string $hostClass = null,
+        string $hostAlias = null,
+        string $deviceId = null,
+        string $serverId = null,
+        \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds,
+        \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds,
+        string $acctId = null,
+        string $acctName = null,
+        string $enterpriseId = null
+    ) {
         return new self(...func_get_args());
     }
 
@@ -231,6 +263,24 @@ class CloneSuspect
     /**
      * @return string
      */
+    public function getAcctId()
+    {
+        return $this->acctId;
+    }
+
+    /**
+     * @param string $acctId
+     * @return $this
+     */
+    public function setAcctId($acctId)
+    {
+        $this->acctId = $acctId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
     public function getOrgId()
     {
         return $this->orgId;
@@ -243,6 +293,24 @@ class CloneSuspect
     public function setOrgId($orgId)
     {
         $this->orgId = $orgId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAcctName()
+    {
+        return $this->acctName;
+    }
+
+    /**
+     * @param string $acctName
+     * @return $this
+     */
+    public function setAcctName($acctName)
+    {
+        $this->acctName = $acctName;
         return $this;
     }
 
@@ -281,7 +349,4 @@ class CloneSuspect
         $this->enterpriseId = $enterpriseId;
         return $this;
     }
-
-
 }
-

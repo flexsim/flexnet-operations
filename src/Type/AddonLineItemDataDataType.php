@@ -41,6 +41,21 @@ class AddonLineItemDataDataType
     private $expirationDateOverride;
 
     /**
+     * @var \DateTimeInterface
+     */
+    private $licenseExpirationDate;
+
+    /**
+     * @var \DateTimeInterface
+     */
+    private $createdDate;
+
+    /**
+     * @var \DateTimeInterface
+     */
+    private $lastModifiedDate;
+
+    /**
      * Constructor
      *
      * @var string $uniqueId
@@ -50,9 +65,22 @@ class AddonLineItemDataDataType
      * @var string $licenseState
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
      * @var \DateTimeInterface $expirationDateOverride
+     * @var \DateTimeInterface $licenseExpirationDate
+     * @var \DateTimeInterface $createdDate
+     * @var \DateTimeInterface $lastModifiedDate
      */
-    public function __construct(string $uniqueId = null, string $activationId = null, int $enabledCount = null, int $consumedCount = null, string $licenseState = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \DateTimeInterface $expirationDateOverride = null)
-    {
+    public function __construct(
+        string $uniqueId = null,
+        string $activationId = null,
+        int $enabledCount = null,
+        int $consumedCount = null,
+        string $licenseState = null,
+        \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null,
+        \DateTimeInterface $expirationDateOverride = null,
+        \DateTimeInterface $licenseExpirationDate = null,
+        \DateTimeInterface $createdDate = null,
+        \DateTimeInterface $lastModifiedDate = null
+    ) {
         $this->uniqueId = $uniqueId;
         $this->activationId = $activationId;
         $this->enabledCount = $enabledCount;
@@ -60,6 +88,9 @@ class AddonLineItemDataDataType
         $this->licenseState = $licenseState;
         $this->entitledProducts = $entitledProducts;
         $this->expirationDateOverride = $expirationDateOverride;
+        $this->licenseExpirationDate = $licenseExpirationDate;
+        $this->createdDate = $createdDate;
+        $this->lastModifiedDate = $lastModifiedDate;
     }
 
     /**
@@ -72,9 +103,22 @@ class AddonLineItemDataDataType
      * @var string $licenseState
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
      * @var \DateTimeInterface $expirationDateOverride
+     * @var \DateTimeInterface $licenseExpirationDate
+     * @var \DateTimeInterface $createdDate
+     * @var \DateTimeInterface $lastModifiedDate
      */
-    public static function create(string $uniqueId = null, string $activationId = null, int $enabledCount = null, int $consumedCount = null, string $licenseState = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \DateTimeInterface $expirationDateOverride = null)
-    {
+    public static function create(
+        string $uniqueId = null,
+        string $activationId = null,
+        int $enabledCount = null,
+        int $consumedCount = null,
+        string $licenseState = null,
+        \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null,
+        \DateTimeInterface $expirationDateOverride = null,
+        \DateTimeInterface $licenseExpirationDate = null,
+        \DateTimeInterface $createdDate = null,
+        \DateTimeInterface $lastModifiedDate = null
+    ) {
         return new self(...func_get_args());
     }
 
@@ -204,6 +248,57 @@ class AddonLineItemDataDataType
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface
+     */
+    public function getLicenseExpirationDate()
+    {
+        return $this->licenseExpirationDate;
+    }
 
+    /**
+     * @param \DateTimeInterface $licenseExpirationDate
+     * @return $this
+     */
+    public function setLicenseExpirationDate($licenseExpirationDate)
+    {
+        $this->licenseExpirationDate = $licenseExpirationDate;
+        return $this;
+    }
+
+    /**
+     * @return \DateTimeInterface
+     */
+    public function getCreatedDate()
+    {
+        return $this->createdDate;
+    }
+
+    /**
+     * @param \DateTimeInterface $createdDate
+     * @return $this
+     */
+    public function setCreatedDate($createdDate)
+    {
+        $this->createdDate = $createdDate;
+        return $this;
+    }
+
+    /**
+     * @return \DateTimeInterface
+     */
+    public function getLastModifiedDate()
+    {
+        return $this->lastModifiedDate;
+    }
+
+    /**
+     * @param \DateTimeInterface $lastModifiedDate
+     * @return $this
+     */
+    public function setLastModifiedDate($lastModifiedDate)
+    {
+        $this->lastModifiedDate = $lastModifiedDate;
+        return $this;
+    }
 }
-

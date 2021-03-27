@@ -106,6 +106,21 @@ class v2DeviceResponseConfigRequestType
     private $deviceUser;
 
     /**
+     * @var bool
+     */
+    private $addOnCreatedDate;
+
+    /**
+     * @var bool
+     */
+    private $addOnLastModifiedDate;
+
+    /**
+     * @var bool
+     */
+    private $updates;
+
+    /**
      * Constructor
      *
      * @var bool $alias
@@ -128,9 +143,35 @@ class v2DeviceResponseConfigRequestType
      * @var bool $vmInfo
      * @var bool $vendorDictionary
      * @var bool $deviceUser
+     * @var bool $addOnCreatedDate
+     * @var bool $addOnLastModifiedDate
+     * @var bool $updates
      */
-    public function __construct(bool $alias = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $soldTo = null, bool $channelPartners = null, bool $preBuiltLicense = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnLicense = null, bool $addOnExpirationDateOverride = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null, bool $deviceUser = null)
-    {
+    public function __construct(
+        bool $alias = null,
+        bool $description = null,
+        bool $status = null,
+        bool $servedStatus = null,
+        bool $hostTypeName = null,
+        bool $soldTo = null,
+        bool $channelPartners = null,
+        bool $preBuiltLicense = null,
+        bool $addOnActivationId = null,
+        bool $addOnCounts = null,
+        bool $addOnProduct = null,
+        bool $addOnLicense = null,
+        bool $addOnExpirationDateOverride = null,
+        bool $publisherIdentity = null,
+        bool $parent = null,
+        bool $machineType = null,
+        bool $vmDetails = null,
+        bool $vmInfo = null,
+        bool $vendorDictionary = null,
+        bool $deviceUser = null,
+        bool $addOnCreatedDate = null,
+        bool $addOnLastModifiedDate = null,
+        bool $updates = null
+    ) {
         $this->alias = $alias;
         $this->description = $description;
         $this->status = $status;
@@ -151,6 +192,9 @@ class v2DeviceResponseConfigRequestType
         $this->vmInfo = $vmInfo;
         $this->vendorDictionary = $vendorDictionary;
         $this->deviceUser = $deviceUser;
+        $this->addOnCreatedDate = $addOnCreatedDate;
+        $this->addOnLastModifiedDate = $addOnLastModifiedDate;
+        $this->updates = $updates;
     }
 
     /**
@@ -176,9 +220,35 @@ class v2DeviceResponseConfigRequestType
      * @var bool $vmInfo
      * @var bool $vendorDictionary
      * @var bool $deviceUser
+     * @var bool $addOnCreatedDate
+     * @var bool $addOnLastModifiedDate
+     * @var bool $updates
      */
-    public static function create(bool $alias = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $soldTo = null, bool $channelPartners = null, bool $preBuiltLicense = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnLicense = null, bool $addOnExpirationDateOverride = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null, bool $deviceUser = null)
-    {
+    public static function create(
+        bool $alias = null,
+        bool $description = null,
+        bool $status = null,
+        bool $servedStatus = null,
+        bool $hostTypeName = null,
+        bool $soldTo = null,
+        bool $channelPartners = null,
+        bool $preBuiltLicense = null,
+        bool $addOnActivationId = null,
+        bool $addOnCounts = null,
+        bool $addOnProduct = null,
+        bool $addOnLicense = null,
+        bool $addOnExpirationDateOverride = null,
+        bool $publisherIdentity = null,
+        bool $parent = null,
+        bool $machineType = null,
+        bool $vmDetails = null,
+        bool $vmInfo = null,
+        bool $vendorDictionary = null,
+        bool $deviceUser = null,
+        bool $addOnCreatedDate = null,
+        bool $addOnLastModifiedDate = null,
+        bool $updates = null
+    ) {
         return new self(...func_get_args());
     }
 
@@ -539,6 +609,61 @@ class v2DeviceResponseConfigRequestType
     public function setDeviceUser($deviceUser)
     {
         $this->deviceUser = $deviceUser;
+        return $this;
+    }
+
+
+    /**
+     * @return bool
+     */
+    public function getAddOnCreatedDate()
+    {
+        return $this->addOnCreatedDate;
+    }
+
+    /**
+     * @param bool $addOnCreatedDate
+     * @return $this
+     */
+    public function setAddOnCreatedDate($addOnCreatedDate)
+    {
+        $this->addOnCreatedDate = $addOnCreatedDate;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getAddOnLastModifiedDate()
+    {
+        return $this->addOnLastModifiedDate;
+    }
+
+    /**
+     * @param bool $addOnLastModifiedDate
+     * @return $this
+     */
+    public function setAddOnLastModifiedDate($addOnLastModifiedDate)
+    {
+        $this->addOnLastModifiedDate = $addOnLastModifiedDate;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getUpdates()
+    {
+        return $this->updates;
+    }
+
+    /**
+     * @param bool $updates
+     * @return $this
+     */
+    public function setUpdates($updates)
+    {
+        $this->updates = $updates;
         return $this;
     }
 }

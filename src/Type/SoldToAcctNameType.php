@@ -2,8 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SoldToType
+class SoldToAcctNameType
 {
+
+    /**
+     * @var string
+     */
+    private $displayName;
 
     /**
      * @var string
@@ -16,22 +21,17 @@ class SoldToType
     private $name;
 
     /**
-     * @var string
-     */
-    private $displayName;
-
-    /**
      * Constructor
      *
      * @var string $displayName
      * @var string $id
      * @var string $name
      */
-    public function __construct(string $id, string $name, string $displayName = null)
+    public function __construct(string $displayName, string $id, string $name)
     {
+        $this->displayName = $displayName;
         $this->id = $id;
         $this->name = $name;
-        $this->displayName = $displayName;
     }
 
     /**
@@ -41,9 +41,27 @@ class SoldToType
      * @var string $id
      * @var string $name
      */
-    public static function create(string $id, string $name, string $displayName = null)
+    public static function create(string $displayName, string $id, string $name)
     {
         return new self(...func_get_args());
+    }
+
+    /**
+     * @return string
+     */
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
+
+    /**
+     * @param string $displayName
+     * @return $this
+     */
+    public function setDisplayName($displayName)
+    {
+        $this->displayName = $displayName;
+        return $this;
     }
 
     /**
@@ -83,21 +101,5 @@ class SoldToType
     }
 
 
-    /**
-     * @return string
-     */
-    public function getDisplayName()
-    {
-        return $this->displayName;
-    }
-
-    /**
-     * @param string $displayName
-     * @return $this
-     */
-    public function setDisplayName($displayName)
-    {
-        $this->displayName = $displayName;
-        return $this;
-    }
 }
+

@@ -1,0 +1,391 @@
+<?php
+
+namespace Flexsim\FlexnetOperations\Type;
+
+class AddonData
+{
+
+    /**
+     * @var string
+     */
+    private $activationId;
+
+    /**
+     * @var string
+     */
+    private $entitlementId;
+
+    /**
+     * @var int
+     */
+    private $requestedCopies;
+
+    /**
+     * @var int
+     */
+    private $consumedCopies;
+
+    /**
+     * @var int
+     */
+    private $generatedCopies;
+
+    /**
+     * @var string
+     */
+    private $licenseState;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType
+     */
+    private $productList;
+
+    /**
+     * @var string
+     */
+    private $partNumber;
+
+    /**
+     * @var \DateTimeInterface
+     */
+    private $licenseExpirationDate;
+
+    /**
+     * @var bool
+     */
+    private $licensePermanent;
+
+    /**
+     * @var \DateTimeInterface
+     */
+    private $expirationDateOverride;
+
+    /**
+     * @var string
+     */
+    private $licenseModelName;
+
+    /**
+     * @var \DateTimeInterface
+     */
+    private $createdDate;
+
+    /**
+     * @var \DateTimeInterface
+     */
+    private $lastModifiedDate;
+
+    /**
+     * Constructor
+     *
+     * @var string $activationId
+     * @var string $entitlementId
+     * @var int $requestedCopies
+     * @var int $consumedCopies
+     * @var int $generatedCopies
+     * @var string $licenseState
+     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList
+     * @var string $partNumber
+     * @var \DateTimeInterface $licenseExpirationDate
+     * @var bool $licensePermanent
+     * @var \DateTimeInterface $expirationDateOverride
+     * @var string $licenseModelName
+     * @var \DateTimeInterface $createdDate
+     * @var \DateTimeInterface $lastModifiedDate
+     */
+    public function __construct(string $activationId = null, string $entitlementId = null, int $requestedCopies = null, int $consumedCopies = null, int $generatedCopies = null, string $licenseState = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList = null, string $partNumber = null, \DateTimeInterface $licenseExpirationDate = null, bool $licensePermanent = null, \DateTimeInterface $expirationDateOverride = null, string $licenseModelName = null, \DateTimeInterface $createdDate = null, \DateTimeInterface $lastModifiedDate = null)
+    {
+        $this->activationId = $activationId;
+        $this->entitlementId = $entitlementId;
+        $this->requestedCopies = $requestedCopies;
+        $this->consumedCopies = $consumedCopies;
+        $this->generatedCopies = $generatedCopies;
+        $this->licenseState = $licenseState;
+        $this->productList = $productList;
+        $this->partNumber = $partNumber;
+        $this->licenseExpirationDate = $licenseExpirationDate;
+        $this->licensePermanent = $licensePermanent;
+        $this->expirationDateOverride = $expirationDateOverride;
+        $this->licenseModelName = $licenseModelName;
+        $this->createdDate = $createdDate;
+        $this->lastModifiedDate = $lastModifiedDate;
+    }
+
+    /**
+     * create a new instance of this class
+     *
+     * @var string $activationId
+     * @var string $entitlementId
+     * @var int $requestedCopies
+     * @var int $consumedCopies
+     * @var int $generatedCopies
+     * @var string $licenseState
+     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList
+     * @var string $partNumber
+     * @var \DateTimeInterface $licenseExpirationDate
+     * @var bool $licensePermanent
+     * @var \DateTimeInterface $expirationDateOverride
+     * @var string $licenseModelName
+     * @var \DateTimeInterface $createdDate
+     * @var \DateTimeInterface $lastModifiedDate
+     */
+    public static function create(string $activationId = null, string $entitlementId = null, int $requestedCopies = null, int $consumedCopies = null, int $generatedCopies = null, string $licenseState = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList = null, string $partNumber = null, \DateTimeInterface $licenseExpirationDate = null, bool $licensePermanent = null, \DateTimeInterface $expirationDateOverride = null, string $licenseModelName = null, \DateTimeInterface $createdDate = null, \DateTimeInterface $lastModifiedDate = null)
+    {
+        return new self(...func_get_args());
+    }
+
+    /**
+     * @return string
+     */
+    public function getActivationId()
+    {
+        return $this->activationId;
+    }
+
+    /**
+     * @param string $activationId
+     * @return $this
+     */
+    public function setActivationId($activationId)
+    {
+        $this->activationId = $activationId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEntitlementId()
+    {
+        return $this->entitlementId;
+    }
+
+    /**
+     * @param string $entitlementId
+     * @return $this
+     */
+    public function setEntitlementId($entitlementId)
+    {
+        $this->entitlementId = $entitlementId;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRequestedCopies()
+    {
+        return $this->requestedCopies;
+    }
+
+    /**
+     * @param int $requestedCopies
+     * @return $this
+     */
+    public function setRequestedCopies($requestedCopies)
+    {
+        $this->requestedCopies = $requestedCopies;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getConsumedCopies()
+    {
+        return $this->consumedCopies;
+    }
+
+    /**
+     * @param int $consumedCopies
+     * @return $this
+     */
+    public function setConsumedCopies($consumedCopies)
+    {
+        $this->consumedCopies = $consumedCopies;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getGeneratedCopies()
+    {
+        return $this->generatedCopies;
+    }
+
+    /**
+     * @param int $generatedCopies
+     * @return $this
+     */
+    public function setGeneratedCopies($generatedCopies)
+    {
+        $this->generatedCopies = $generatedCopies;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLicenseState()
+    {
+        return $this->licenseState;
+    }
+
+    /**
+     * @param string $licenseState
+     * @return $this
+     */
+    public function setLicenseState($licenseState)
+    {
+        $this->licenseState = $licenseState;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\EntitledProductDataListType
+     */
+    public function getProductList()
+    {
+        return $this->productList;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList
+     * @return $this
+     */
+    public function setProductList($productList)
+    {
+        $this->productList = $productList;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPartNumber()
+    {
+        return $this->partNumber;
+    }
+
+    /**
+     * @param string $partNumber
+     * @return $this
+     */
+    public function setPartNumber($partNumber)
+    {
+        $this->partNumber = $partNumber;
+        return $this;
+    }
+
+    /**
+     * @return \DateTimeInterface
+     */
+    public function getLicenseExpirationDate()
+    {
+        return $this->licenseExpirationDate;
+    }
+
+    /**
+     * @param \DateTimeInterface $licenseExpirationDate
+     * @return $this
+     */
+    public function setLicenseExpirationDate($licenseExpirationDate)
+    {
+        $this->licenseExpirationDate = $licenseExpirationDate;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getLicensePermanent()
+    {
+        return $this->licensePermanent;
+    }
+
+    /**
+     * @param bool $licensePermanent
+     * @return $this
+     */
+    public function setLicensePermanent($licensePermanent)
+    {
+        $this->licensePermanent = $licensePermanent;
+        return $this;
+    }
+
+    /**
+     * @return \DateTimeInterface
+     */
+    public function getExpirationDateOverride()
+    {
+        return $this->expirationDateOverride;
+    }
+
+    /**
+     * @param \DateTimeInterface $expirationDateOverride
+     * @return $this
+     */
+    public function setExpirationDateOverride($expirationDateOverride)
+    {
+        $this->expirationDateOverride = $expirationDateOverride;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLicenseModelName()
+    {
+        return $this->licenseModelName;
+    }
+
+    /**
+     * @param string $licenseModelName
+     * @return $this
+     */
+    public function setLicenseModelName($licenseModelName)
+    {
+        $this->licenseModelName = $licenseModelName;
+        return $this;
+    }
+
+    /**
+     * @return \DateTimeInterface
+     */
+    public function getCreatedDate()
+    {
+        return $this->createdDate;
+    }
+
+    /**
+     * @param \DateTimeInterface $createdDate
+     * @return $this
+     */
+    public function setCreatedDate($createdDate)
+    {
+        $this->createdDate = $createdDate;
+        return $this;
+    }
+
+    /**
+     * @return \DateTimeInterface
+     */
+    public function getLastModifiedDate()
+    {
+        return $this->lastModifiedDate;
+    }
+
+    /**
+     * @param \DateTimeInterface $lastModifiedDate
+     * @return $this
+     */
+    public function setLastModifiedDate($lastModifiedDate)
+    {
+        $this->lastModifiedDate = $lastModifiedDate;
+        return $this;
+    }
+
+
+}
+
