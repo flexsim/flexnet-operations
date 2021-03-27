@@ -8,16 +8,16 @@ class DeleteUserRequestType implements RequestInterface
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType
      */
     private $user;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @var \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType $user
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UserIdentifierType $user)
+    public function __construct($user)
     {
         $this->user = $user;
     }
@@ -25,15 +25,15 @@ class DeleteUserRequestType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @var \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType $user
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UserIdentifierType $user)
+    public static function create($user)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\UserIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType
      */
     public function getUser()
     {
@@ -41,7 +41,7 @@ class DeleteUserRequestType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @param \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType $user
      * @return $this
      */
     public function setUser($user)
@@ -49,7 +49,4 @@ class DeleteUserRequestType implements RequestInterface
         $this->user = $user;
         return $this;
     }
-
-
 }
-

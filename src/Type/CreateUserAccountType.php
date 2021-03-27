@@ -6,7 +6,7 @@ class CreateUserAccountType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     private $account;
 
@@ -23,12 +23,15 @@ class CreateUserAccountType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @var \DateTimeInterface $expiryDate
      * @var \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account, \DateTimeInterface $expiryDate = null, \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles = null)
-    {
+    public function __construct(
+        $account,
+        \DateTimeInterface $expiryDate = null,
+        \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles = null
+    ) {
         $this->account = $account;
         $this->expiryDate = $expiryDate;
         $this->roles = $roles;
@@ -37,17 +40,20 @@ class CreateUserAccountType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @var \DateTimeInterface $expiryDate
      * @var \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account, \DateTimeInterface $expiryDate = null, \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles = null)
-    {
+    public static function create(
+        $account,
+        \DateTimeInterface $expiryDate = null,
+        \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles = null
+    ) {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     public function getAccount()
     {
@@ -55,7 +61,7 @@ class CreateUserAccountType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @return $this
      */
     public function setAccount($account)
@@ -99,7 +105,4 @@ class CreateUserAccountType
         $this->roles = $roles;
         return $this;
     }
-
-
 }
-

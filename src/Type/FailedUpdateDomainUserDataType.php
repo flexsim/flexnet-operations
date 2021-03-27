@@ -2,11 +2,11 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedDeleteUserDataType
+class FailedUpdateDomainUserDataType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType
      */
     private $user;
 
@@ -18,10 +18,10 @@ class FailedDeleteUserDataType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @var \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user
      * @var string $reason
      */
-    public function __construct($user = null, string $reason = null)
+    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user = null, string $reason = null)
     {
         $this->user = $user;
         $this->reason = $reason;
@@ -30,16 +30,16 @@ class FailedDeleteUserDataType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @var \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user
      * @var string $reason
      */
-    public static function create($user = null, string $reason = null)
+    public static function create(\Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType
      */
     public function getUser()
     {
@@ -47,7 +47,7 @@ class FailedDeleteUserDataType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @param \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user
      * @return $this
      */
     public function setUser($user)
@@ -73,4 +73,7 @@ class FailedDeleteUserDataType
         $this->reason = $reason;
         return $this;
     }
+
+
 }
+

@@ -6,7 +6,7 @@ class DeleteAcctDataType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     private $account;
 
@@ -18,11 +18,13 @@ class DeleteAcctDataType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @var bool $deleteSubTree
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account, bool $deleteSubTree = null)
-    {
+    public function __construct(
+        $account,
+        bool $deleteSubTree = null
+    ) {
         $this->account = $account;
         $this->deleteSubTree = $deleteSubTree;
     }
@@ -30,16 +32,18 @@ class DeleteAcctDataType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @var bool $deleteSubTree
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account, bool $deleteSubTree = null)
-    {
+    public static function create(
+        $account,
+        bool $deleteSubTree = null
+    ) {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     public function getAccount()
     {
@@ -47,7 +51,7 @@ class DeleteAcctDataType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @return $this
      */
     public function setAccount($account)
@@ -73,7 +77,4 @@ class DeleteAcctDataType
         $this->deleteSubTree = $deleteSubTree;
         return $this;
     }
-
-
 }
-

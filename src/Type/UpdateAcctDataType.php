@@ -6,7 +6,7 @@ class UpdateAcctDataType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     private $account;
 
@@ -53,7 +53,7 @@ class UpdateAcctDataType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @var string $id
      * @var string $name
      * @var string $description
@@ -63,8 +63,17 @@ class UpdateAcctDataType
      * @var bool $visible
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account, string $id = null, string $name = null, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts = null, \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts = null, bool $visible = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
-    {
+    public function __construct(
+        $account,
+        string $id = null,
+        string $name = null,
+        string $description = null,
+        \Flexsim\FlexnetOperations\Type\AddressDataType $address = null,
+        \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts = null,
+        \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts = null,
+        bool $visible = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null
+    ) {
         $this->account = $account;
         $this->id = $id;
         $this->name = $name;
@@ -79,7 +88,7 @@ class UpdateAcctDataType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @var string $id
      * @var string $name
      * @var string $description
@@ -89,13 +98,22 @@ class UpdateAcctDataType
      * @var bool $visible
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account, string $id = null, string $name = null, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts = null, \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts = null, bool $visible = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
-    {
+    public static function create(
+        $account,
+        string $id = null,
+        string $name = null,
+        string $description = null,
+        \Flexsim\FlexnetOperations\Type\AddressDataType $address = null,
+        \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts = null,
+        \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts = null,
+        bool $visible = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null
+    ) {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     public function getAccount()
     {
@@ -103,7 +121,7 @@ class UpdateAcctDataType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @return $this
      */
     public function setAccount($account)
@@ -255,7 +273,4 @@ class UpdateAcctDataType
         $this->customAttributes = $customAttributes;
         return $this;
     }
-
-
 }
-

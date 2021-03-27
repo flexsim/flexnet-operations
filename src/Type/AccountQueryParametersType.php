@@ -66,7 +66,7 @@ class AccountQueryParametersType
     private $accountType;
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AccountTypeList
+     * @var \Flexsim\FlexnetOperations\Type\AcctTypeList|\Flexsim\FlexnetOperations\Type\AccountTypeList
      */
     private $accountTypeList;
 
@@ -95,12 +95,27 @@ class AccountQueryParametersType
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $region
      * @var bool $onlyRootAccounts
      * @var string $accountType
-     * @var \Flexsim\FlexnetOperations\Type\AccountTypeList $accountTypeList
+     * @var \Flexsim\FlexnetOperations\Type\AcctTypeList|\Flexsim\FlexnetOperations\Type\AccountTypeList $accountTypeList
      * @var \Flexsim\FlexnetOperations\Type\AcctCustomAttributesQueryListType $customAttributes
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $address1 = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $address2 = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $city = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $country = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $region = null, bool $onlyRootAccounts = null, string $accountType = null, \Flexsim\FlexnetOperations\Type\AccountTypeList $accountTypeList = null, \Flexsim\FlexnetOperations\Type\AcctCustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null)
-    {
+    public function __construct(
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $address1 = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $address2 = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $city = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $state = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $country = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $region = null,
+        bool $onlyRootAccounts = null,
+        string $accountType = null,
+        $accountTypeList = null,
+        \Flexsim\FlexnetOperations\Type\AcctCustomAttributesQueryListType $customAttributes = null,
+        \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null
+    ) {
         $this->accountID = $accountID;
         $this->accountName = $accountName;
         $this->description = $description;
@@ -133,12 +148,27 @@ class AccountQueryParametersType
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $region
      * @var bool $onlyRootAccounts
      * @var string $accountType
-     * @var \Flexsim\FlexnetOperations\Type\AccountTypeList $accountTypeList
+     * @var \Flexsim\FlexnetOperations\Type\AcctTypeList|\Flexsim\FlexnetOperations\Type\AccountTypeList $accountTypeList
      * @var \Flexsim\FlexnetOperations\Type\AcctCustomAttributesQueryListType $customAttributes
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $address1 = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $address2 = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $city = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $country = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $region = null, bool $onlyRootAccounts = null, string $accountType = null, \Flexsim\FlexnetOperations\Type\AccountTypeList $accountTypeList = null, \Flexsim\FlexnetOperations\Type\AcctCustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null)
-    {
+    public static function create(
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $address1 = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $address2 = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $city = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $state = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $country = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $region = null,
+        bool $onlyRootAccounts = null,
+        string $accountType = null,
+        $accountTypeList = null,
+        \Flexsim\FlexnetOperations\Type\AcctCustomAttributesQueryListType $customAttributes = null,
+        \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null
+    ) {
         return new self(...func_get_args());
     }
 
@@ -359,7 +389,7 @@ class AccountQueryParametersType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AccountTypeList
+     * @return \Flexsim\FlexnetOperations\Type\AcctTypeList|\Flexsim\FlexnetOperations\Type\AccountTypeList
      */
     public function getAccountTypeList()
     {
@@ -367,7 +397,7 @@ class AccountQueryParametersType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountTypeList $accountTypeList
+     * @param \Flexsim\FlexnetOperations\Type\AcctTypeList|\Flexsim\FlexnetOperations\Type\AccountTypeList $accountTypeList
      * @return $this
      */
     public function setAccountTypeList($accountTypeList)
@@ -411,7 +441,4 @@ class AccountQueryParametersType
         $this->lastModifiedDateTime = $lastModifiedDateTime;
         return $this;
     }
-
-
 }
-

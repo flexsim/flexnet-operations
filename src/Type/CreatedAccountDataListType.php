@@ -6,14 +6,14 @@ class CreatedAccountDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     private $account;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|array $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array $account
      */
     public function __construct($account = null)
     {
@@ -23,7 +23,7 @@ class CreatedAccountDataListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|array $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array $account
      */
     public static function create($account = null)
     {
@@ -31,7 +31,7 @@ class CreatedAccountDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     public function getAccount()
     {
@@ -39,7 +39,7 @@ class CreatedAccountDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @return $this
      */
     public function setAccount($account)
@@ -47,7 +47,4 @@ class CreatedAccountDataListType
         $this->account = $account;
         return $this;
     }
-
-
 }
-

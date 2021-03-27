@@ -6,7 +6,7 @@ class UpdateRelatedAccountsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     private $relatedAccount;
 
@@ -18,10 +18,10 @@ class UpdateRelatedAccountsListType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $relatedAccount
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $relatedAccount
      * @var string $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $relatedAccount, string $opType)
+    public function __construct($relatedAccount, string $opType)
     {
         $this->relatedAccount = $relatedAccount;
         $this->opType = $opType;
@@ -30,16 +30,16 @@ class UpdateRelatedAccountsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $relatedAccount
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $relatedAccount
      * @var string $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $relatedAccount, string $opType)
+    public static function create($relatedAccount, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     public function getRelatedAccount()
     {
@@ -47,7 +47,7 @@ class UpdateRelatedAccountsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $relatedAccount
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $relatedAccount
      * @return $this
      */
     public function setRelatedAccount($relatedAccount)
@@ -73,7 +73,4 @@ class UpdateRelatedAccountsListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

@@ -6,7 +6,7 @@ class AccountDetailDataType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     private $account;
 
@@ -46,9 +46,24 @@ class AccountDetailDataType
     private $dateLastModified;
 
     /**
+     * @var \DateTimeInterface
+     */
+    private $createdDate;
+
+    /**
+     * @var string
+     */
+    private $createdBy;
+
+    /**
+     * @var string
+     */
+    private $lastModifiedBy;
+
+    /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @var string $name
      * @var string $description
      * @var \Flexsim\FlexnetOperations\Type\AddressDataType $address
@@ -56,9 +71,23 @@ class AccountDetailDataType
      * @var string $accountType
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      * @var \DateTimeInterface $dateLastModified
+     * @var \DateTimeInterface $createdDate
+     * @var string $createdBy
+     * @var string $lastModifiedBy
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account, string $name, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, bool $visible = null, string $accountType = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \DateTimeInterface $dateLastModified = null)
-    {
+    public function __construct(
+        $account,
+        string $name,
+        string $description = null,
+        \Flexsim\FlexnetOperations\Type\AddressDataType $address = null,
+        bool $visible = null,
+        string $accountType = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null,
+        \DateTimeInterface $dateLastModified = null,
+        \DateTimeInterface $createdDate = null,
+        string $createdBy = null,
+        string $lastModifiedBy = null
+    ) {
         $this->account = $account;
         $this->name = $name;
         $this->description = $description;
@@ -67,12 +96,15 @@ class AccountDetailDataType
         $this->accountType = $accountType;
         $this->customAttributes = $customAttributes;
         $this->dateLastModified = $dateLastModified;
+        $this->createdDate = $createdDate;
+        $this->createdBy = $createdBy;
+        $this->lastModifiedBy = $lastModifiedBy;
     }
 
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUserZ|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @var string $name
      * @var string $description
      * @var \Flexsim\FlexnetOperations\Type\AddressDataType $address
@@ -80,14 +112,28 @@ class AccountDetailDataType
      * @var string $accountType
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      * @var \DateTimeInterface $dateLastModified
+     * @var \DateTimeInterface $createdDate
+     * @var string $createdBy
+     * @var string $lastModifiedBy
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account, string $name, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, bool $visible = null, string $accountType = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \DateTimeInterface $dateLastModified = null)
-    {
+    public static function create(
+        $account,
+        string $name,
+        string $description = null,
+        \Flexsim\FlexnetOperations\Type\AddressDataType $address = null,
+        bool $visible = null,
+        string $accountType = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null,
+        \DateTimeInterface $dateLastModified = null,
+        \DateTimeInterface $createdDate = null,
+        string $createdBy = null,
+        string $lastModifiedBy = null
+    ) {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     public function getAccount()
     {
@@ -95,7 +141,7 @@ class AccountDetailDataType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @return $this
      */
     public function setAccount($account)
@@ -230,6 +276,57 @@ class AccountDetailDataType
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface
+     */
+    public function getCreatedDate()
+    {
+        return $this->createdDate;
+    }
 
+    /**
+     * @param \DateTimeInterface $createdDate
+     * @return $this
+     */
+    public function setCreatedDate($createdDate)
+    {
+        $this->createdDate = $createdDate;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+
+    /**
+     * @param string $createdBy
+     * @return $this
+     */
+    public function setCreatedBy($createdBy)
+    {
+        $this->createdBy = $createdBy;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastModifiedBy()
+    {
+        return $this->lastModifiedBy;
+    }
+
+    /**
+     * @param string $lastModifiedBy
+     * @return $this
+     */
+    public function setLastModifiedBy($lastModifiedBy)
+    {
+        $this->lastModifiedBy = $lastModifiedBy;
+        return $this;
+    }
 }
-

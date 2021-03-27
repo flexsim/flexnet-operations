@@ -6,7 +6,7 @@ class UserAccountType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     private $account;
 
@@ -18,10 +18,10 @@ class UserAccountType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @var \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account, \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles = null)
+    public function __construct($account, \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles = null)
     {
         $this->account = $account;
         $this->roles = $roles;
@@ -30,16 +30,16 @@ class UserAccountType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @var \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account, \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles = null)
+    public static function create($account, \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles = null)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     public function getAccount()
     {
@@ -47,7 +47,7 @@ class UserAccountType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @return $this
      */
     public function setAccount($account)
@@ -73,7 +73,4 @@ class UserAccountType
         $this->roles = $roles;
         return $this;
     }
-
-
 }
-

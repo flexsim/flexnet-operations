@@ -8,16 +8,16 @@ class GetParentAccountsRequestType implements RequestInterface
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     private $account;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account)
+    public function __construct($account)
     {
         $this->account = $account;
     }
@@ -25,15 +25,15 @@ class GetParentAccountsRequestType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account)
+    public static function create($account)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     public function getAccount()
     {
@@ -41,7 +41,7 @@ class GetParentAccountsRequestType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @return $this
      */
     public function setAccount($account)
@@ -49,7 +49,4 @@ class GetParentAccountsRequestType implements RequestInterface
         $this->account = $account;
         return $this;
     }
-
-
 }
-

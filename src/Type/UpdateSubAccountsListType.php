@@ -6,7 +6,7 @@ class UpdateSubAccountsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     private $subAccount;
 
@@ -18,10 +18,10 @@ class UpdateSubAccountsListType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $subAccount
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $subAccount
      * @var string $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $subAccount, string $opType)
+    public function __construct($subAccount, string $opType)
     {
         $this->subAccount = $subAccount;
         $this->opType = $opType;
@@ -30,16 +30,16 @@ class UpdateSubAccountsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $subAccount
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $subAccount
      * @var string $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $subAccount, string $opType)
+    public static function create($subAccount, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     public function getSubAccount()
     {
@@ -47,7 +47,7 @@ class UpdateSubAccountsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $subAccount
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $subAccount
      * @return $this
      */
     public function setSubAccount($subAccount)
@@ -73,7 +73,4 @@ class UpdateSubAccountsListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

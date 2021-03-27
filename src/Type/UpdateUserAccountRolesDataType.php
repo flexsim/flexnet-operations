@@ -6,7 +6,7 @@ class UpdateUserAccountRolesDataType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     private $account;
 
@@ -18,10 +18,10 @@ class UpdateUserAccountRolesDataType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @var \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType $roles
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account, \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType $roles)
+    public function __construct($account, \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType $roles)
     {
         $this->account = $account;
         $this->roles = $roles;
@@ -30,16 +30,16 @@ class UpdateUserAccountRolesDataType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @var \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType $roles
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account, \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType $roles)
+    public static function create($account, \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType $roles)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
     public function getAccount()
     {
@@ -47,7 +47,7 @@ class UpdateUserAccountRolesDataType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
      * @return $this
      */
     public function setAccount($account)
@@ -73,7 +73,4 @@ class UpdateUserAccountRolesDataType
         $this->roles = $roles;
         return $this;
     }
-
-
 }
-

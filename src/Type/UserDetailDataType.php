@@ -111,6 +111,16 @@ class UserDetailDataType
     private $expiryDate;
 
     /**
+     * @var string
+     */
+    private $createdBy;
+
+    /**
+     * @var string
+     */
+    private $lastModifiedBy;
+
+    /**
      * Constructor
      *
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier
@@ -133,9 +143,33 @@ class UserDetailDataType
      * @var \Flexsim\FlexnetOperations\Type\UserAccountsListType|\Flexsim\FlexnetOperations\Type\UserOrganizationsListType $orgRolesList $accountRolesList this method is backwards compatible so you may also pass $orgRolesList
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      * @var \DateTimeInterface $expiryDate
+     * @var string $createdBy
+     * @var string $lastModifiedBy
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier, string $displayName = null, bool $optIn = null, string $faxNumber = null, string $street = null, string $city = null, string $state = null, string $zipcode = null, string $country = null, string $status = null, string $locale = null, string $timezone = null, bool $shared = null, string $domain = null, \DateTimeInterface $dateCreated = null, \DateTimeInterface $dateLastModified = null, \DateTimeInterface $dateLastLogin = null, $accountRolesList = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \DateTimeInterface $expiryDate = null)
-    {
+    public function __construct(
+        \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier,
+        string $displayName = null,
+        bool $optIn = null,
+        string $faxNumber = null,
+        string $street = null,
+        string $city = null,
+        string $state = null,
+        string $zipcode = null,
+        string $country = null,
+        string $status = null,
+        string $locale = null,
+        string $timezone = null,
+        bool $shared = null,
+        string $domain = null,
+        \DateTimeInterface $dateCreated = null,
+        \DateTimeInterface $dateLastModified = null,
+        \DateTimeInterface $dateLastLogin = null,
+        $accountRolesList = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null,
+        \DateTimeInterface $expiryDate = null,
+        string $createdBy = null,
+        string $lastModifiedBy = null
+    ) {
         $this->userIdentifier = $userIdentifier;
         $this->displayName = $displayName;
         $this->optIn = $optIn;
@@ -157,6 +191,8 @@ class UserDetailDataType
         $this->orgRolesList = $accountRolesList;
         $this->customAttributes = $customAttributes;
         $this->expiryDate = $expiryDate;
+        $this->createdBy = $createdBy;
+        $this->lastModifiedBy = $lastModifiedBy;
     }
 
     /**
@@ -182,9 +218,33 @@ class UserDetailDataType
      * @var \Flexsim\FlexnetOperations\Type\UserAccountsListType|\Flexsim\FlexnetOperations\Type\UserOrganizationsListType $orgRolesList $accountRolesList this method is backwards compatible so you may also pass $orgRolesList
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      * @var \DateTimeInterface $expiryDate
+     * @var string $createdBy
+     * @var string $lastModifiedBy
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier, string $displayName = null, bool $optIn = null, string $faxNumber = null, string $street = null, string $city = null, string $state = null, string $zipcode = null, string $country = null, string $status = null, string $locale = null, string $timezone = null, bool $shared = null, string $domain = null, \DateTimeInterface $dateCreated = null, \DateTimeInterface $dateLastModified = null, \DateTimeInterface $dateLastLogin = null, $accountRolesList = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \DateTimeInterface $expiryDate = null)
-    {
+    public static function create(
+        \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier,
+        string $displayName = null,
+        bool $optIn = null,
+        string $faxNumber = null,
+        string $street = null,
+        string $city = null,
+        string $state = null,
+        string $zipcode = null,
+        string $country = null,
+        string $status = null,
+        string $locale = null,
+        string $timezone = null,
+        bool $shared = null,
+        string $domain = null,
+        \DateTimeInterface $dateCreated = null,
+        \DateTimeInterface $dateLastModified = null,
+        \DateTimeInterface $dateLastLogin = null,
+        $accountRolesList = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null,
+        \DateTimeInterface $expiryDate = null,
+        string $createdBy = null,
+        string $lastModifiedBy = null
+    ) {
         return new self(...func_get_args());
     }
 
@@ -563,6 +623,42 @@ class UserDetailDataType
     public function setExpiryDate($expiryDate)
     {
         $this->expiryDate = $expiryDate;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+
+    /**
+     * @param string $createdBy
+     * @return $this
+     */
+    public function setCreatedBy($createdBy)
+    {
+        $this->createdBy = $createdBy;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastModifiedBy()
+    {
+        return $this->lastModifiedBy;
+    }
+
+    /**
+     * @param string $lastModifiedBy
+     * @return $this
+     */
+    public function setLastModifiedBy($lastModifiedBy)
+    {
+        $this->lastModifiedBy = $lastModifiedBy;
         return $this;
     }
 }
