@@ -10,7 +10,17 @@ class MergeEntitlementsRequestType implements RequestInterface
     /**
      * @var string
      */
+    private $accountFrom;
+
+    /**
+     * @var string
+     */
     private $organizationFrom;
+
+    /**
+     * @var string
+     */
+    private $accountTo;
 
     /**
      * @var string
@@ -30,15 +40,21 @@ class MergeEntitlementsRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @var string $organizationFrom
-     * @var string $organizationTo
+     * @var string $accountFrom this method is backwards compatible so you may also pass $organizationFrom
+     * @var string $accountTo this method is backwards compatible so you may also pass $organizationTo
      * @var bool $mergeUsers
      * @var bool $mergeEntitlements
      */
-    public function __construct(string $organizationFrom, string $organizationTo, bool $mergeUsers = null, bool $mergeEntitlements = null)
-    {
-        $this->organizationFrom = $organizationFrom;
-        $this->organizationTo = $organizationTo;
+    public function __construct(
+        string $accountFrom,
+        string $accountTo,
+        bool $mergeUsers = null,
+        bool $mergeEntitlements = null
+    ) {
+        $this->accountFrom = $accountFrom;
+        $this->organizationFrom = $accountFrom;
+        $this->accountTo = $accountTo;
+        $this->organizationTo = $accountTo;
         $this->mergeUsers = $mergeUsers;
         $this->mergeEntitlements = $mergeEntitlements;
     }
@@ -46,14 +62,36 @@ class MergeEntitlementsRequestType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var string $organizationFrom
-     * @var string $organizationTo
+     * @var string $accountFrom this method is backwards compatible so you may also pass $organizationFrom
+     * @var string $accountTo this method is backwards compatible so you may also pass $organizationTo
      * @var bool $mergeUsers
      * @var bool $mergeEntitlements
      */
-    public static function create(string $organizationFrom, string $organizationTo, bool $mergeUsers = null, bool $mergeEntitlements = null)
-    {
+    public static function create(
+        string $accountFrom,
+        string $accountTo,
+        bool $mergeUsers = null,
+        bool $mergeEntitlements = null
+    ) {
         return new self(...func_get_args());
+    }
+
+    /**
+     * @return string
+     */
+    public function getAccountFrom()
+    {
+        return $this->accountFrom;
+    }
+
+    /**
+     * @param string $accountFrom
+     * @return $this
+     */
+    public function setAccountFrom($accountFrom)
+    {
+        $this->accountFrom = $accountFrom;
+        return $this;
     }
 
     /**
@@ -71,6 +109,24 @@ class MergeEntitlementsRequestType implements RequestInterface
     public function setOrganizationFrom($organizationFrom)
     {
         $this->organizationFrom = $organizationFrom;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAccountTo()
+    {
+        return $this->accountTo;
+    }
+
+    /**
+     * @param string $accountTo
+     * @return $this
+     */
+    public function setAccountTo($accountTo)
+    {
+        $this->accountTo = $accountTo;
         return $this;
     }
 
@@ -127,7 +183,4 @@ class MergeEntitlementsRequestType implements RequestInterface
         $this->mergeEntitlements = $mergeEntitlements;
         return $this;
     }
-
-
 }
-

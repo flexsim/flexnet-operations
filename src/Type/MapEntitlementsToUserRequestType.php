@@ -20,6 +20,11 @@ class MapEntitlementsToUserRequestType implements RequestInterface
     /**
      * @var string
      */
+    private $userAcct;
+
+    /**
+     * @var string
+     */
     private $userOrg;
 
     /**
@@ -27,13 +32,14 @@ class MapEntitlementsToUserRequestType implements RequestInterface
      *
      * @var string $userId
      * @var \Flexsim\FlexnetOperations\Type\IdListType $idList
-     * @var string $userOrg
+     * @var string $userAcct this method is backwards compatible so you may also pass $userOrg
      */
-    public function __construct(string $userId, \Flexsim\FlexnetOperations\Type\IdListType $idList, string $userOrg = null)
+    public function __construct(string $userId, \Flexsim\FlexnetOperations\Type\IdListType $idList, string $userAcct = null)
     {
         $this->userId = $userId;
         $this->idList = $idList;
-        $this->userOrg = $userOrg;
+        $this->userAcct = $userAcct;
+        $this->userOrg = $userAcct;
     }
 
     /**
@@ -41,9 +47,9 @@ class MapEntitlementsToUserRequestType implements RequestInterface
      *
      * @var string $userId
      * @var \Flexsim\FlexnetOperations\Type\IdListType $idList
-     * @var string $userOrg
+     * @var string $userAcct this method is backwards compatible so you may also pass $userOrg
      */
-    public static function create(string $userId, \Flexsim\FlexnetOperations\Type\IdListType $idList, string $userOrg = null)
+    public static function create(string $userId, \Flexsim\FlexnetOperations\Type\IdListType $idList, string $userAcct = null)
     {
         return new self(...func_get_args());
     }
@@ -87,6 +93,24 @@ class MapEntitlementsToUserRequestType implements RequestInterface
     /**
      * @return string
      */
+    public function getUserAcct()
+    {
+        return $this->userAcct;
+    }
+
+    /**
+     * @param string $userAcct
+     * @return $this
+     */
+    public function setUserAcct($userAcct)
+    {
+        $this->userAcct = $userAcct;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
     public function getUserOrg()
     {
         return $this->userOrg;
@@ -101,7 +125,4 @@ class MapEntitlementsToUserRequestType implements RequestInterface
         $this->userOrg = $userOrg;
         return $this;
     }
-
-
 }
-

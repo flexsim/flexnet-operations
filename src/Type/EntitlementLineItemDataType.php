@@ -56,6 +56,16 @@ class EntitlementLineItemDataType
     private $remainingOverdraftCount;
 
     /**
+     * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType
+     */
+    private $productLine;
+
+    /**
+     * @var int
+     */
+    private $fulfilledCount;
+
+    /**
      * Constructor
      *
      * @var int $numberOfRemainingCopies
@@ -68,8 +78,10 @@ class EntitlementLineItemDataType
      * @var \DateTimeInterface $lastModifiedDateTime
      * @var int $overdraftMax
      * @var int $remainingOverdraftCount
+     * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine
+     * @var int $fulfilledCount
      */
-    public function __construct(int $numberOfRemainingCopies = null, int $availableExtraActivations = null, bool $isTrustedType = null, string $state = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, int $overdraftMax = null, int $remainingOverdraftCount = null)
+    public function __construct(int $numberOfRemainingCopies = null, int $availableExtraActivations = null, bool $isTrustedType = null, string $state = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, int $overdraftMax = null, int $remainingOverdraftCount = null, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine = null, int $fulfilledCount = null)
     {
         $this->numberOfRemainingCopies = $numberOfRemainingCopies;
         $this->availableExtraActivations = $availableExtraActivations;
@@ -81,6 +93,8 @@ class EntitlementLineItemDataType
         $this->lastModifiedDateTime = $lastModifiedDateTime;
         $this->overdraftMax = $overdraftMax;
         $this->remainingOverdraftCount = $remainingOverdraftCount;
+        $this->productLine = $productLine;
+        $this->fulfilledCount = $fulfilledCount;
     }
 
     /**
@@ -96,8 +110,10 @@ class EntitlementLineItemDataType
      * @var \DateTimeInterface $lastModifiedDateTime
      * @var int $overdraftMax
      * @var int $remainingOverdraftCount
+     * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine
+     * @var int $fulfilledCount
      */
-    public static function create(int $numberOfRemainingCopies = null, int $availableExtraActivations = null, bool $isTrustedType = null, string $state = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, int $overdraftMax = null, int $remainingOverdraftCount = null)
+    public static function create(int $numberOfRemainingCopies = null, int $availableExtraActivations = null, bool $isTrustedType = null, string $state = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, int $overdraftMax = null, int $remainingOverdraftCount = null, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine = null, int $fulfilledCount = null)
     {
         return new self(...func_get_args());
     }
@@ -282,6 +298,39 @@ class EntitlementLineItemDataType
         return $this;
     }
 
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\ProductCategoryDataType
+     */
+    public function getProductLine()
+    {
+        return $this->productLine;
+    }
 
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine
+     * @return $this
+     */
+    public function setProductLine($productLine)
+    {
+        $this->productLine = $productLine;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFulfilledCount()
+    {
+        return $this->fulfilledCount;
+    }
+
+    /**
+     * @param int $fulfilledCount
+     * @return $this
+     */
+    public function setFulfilledCount($fulfilledCount)
+    {
+        $this->fulfilledCount = $fulfilledCount;
+        return $this;
+    }
 }
-

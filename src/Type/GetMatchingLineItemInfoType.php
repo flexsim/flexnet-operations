@@ -16,6 +16,11 @@ class GetMatchingLineItemInfoType
     private $targetTierName;
 
     /**
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     */
+    private $targetAccountUnit;
+
+    /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
     private $targetOrganizationUnit;
@@ -25,13 +30,17 @@ class GetMatchingLineItemInfoType
      *
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
      * @var string $targetTierName
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetOrganizationUnit
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, string $targetTierName, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetOrganizationUnit)
-    {
+    public function __construct(
+        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier,
+        string $targetTierName,
+        $targetAccountUnit
+    ) {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->targetTierName = $targetTierName;
-        $this->targetOrganizationUnit = $targetOrganizationUnit;
+        $this->targetAccountUnit = $targetAccountUnit;
+        $this->targetOrganizationUnit = $targetAccountUnit;
     }
 
     /**
@@ -39,10 +48,13 @@ class GetMatchingLineItemInfoType
      *
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
      * @var string $targetTierName
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetOrganizationUnit
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, string $targetTierName, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetOrganizationUnit)
-    {
+    public static function create(
+        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier,
+        string $targetTierName,
+        $targetAccountUnit
+    ) {
         return new self(...func_get_args());
     }
 
@@ -83,6 +95,24 @@ class GetMatchingLineItemInfoType
     }
 
     /**
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     */
+    public function getTargetAccountUnit()
+    {
+        return $this->targetAccountUnit;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $targetAccountUnit
+     * @return $this
+     */
+    public function setTargetAccountUnit($targetAccountUnit)
+    {
+        $this->targetAccountUnit = $targetAccountUnit;
+        return $this;
+    }
+
+    /**
      * @return \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
     public function getTargetOrganizationUnit()
@@ -99,7 +129,4 @@ class GetMatchingLineItemInfoType
         $this->targetOrganizationUnit = $targetOrganizationUnit;
         return $this;
     }
-
-
 }
-

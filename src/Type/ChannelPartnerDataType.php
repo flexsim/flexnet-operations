@@ -11,6 +11,11 @@ class ChannelPartnerDataType
     private $tierName;
 
     /**
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     */
+    private $accountUnit;
+
+    /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
     private $organizationUnit;
@@ -29,14 +34,15 @@ class ChannelPartnerDataType
      * Constructor
      *
      * @var string $tierName
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationUnit
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $accountUnit this method is backwards compatible so you may also pass $organizationUnit
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $contact
      * @var bool $currentOwner
      */
-    public function __construct(string $tierName, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationUnit, \Flexsim\FlexnetOperations\Type\UserIdentifierType $contact = null, bool $currentOwner = null)
+    public function __construct(string $tierName, $accountUnit, \Flexsim\FlexnetOperations\Type\UserIdentifierType $contact = null, bool $currentOwner = null)
     {
         $this->tierName = $tierName;
-        $this->organizationUnit = $organizationUnit;
+        $this->accountUnit = $accountUnit;
+        $this->organizationUnit = $accountUnit;
         $this->contact = $contact;
         $this->currentOwner = $currentOwner;
     }
@@ -45,11 +51,11 @@ class ChannelPartnerDataType
      * create a new instance of this class
      *
      * @var string $tierName
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationUnit
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $accountUnit this method is backwards compatible so you may also pass $organizationUnit
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $contact
      * @var bool $currentOwner
      */
-    public static function create(string $tierName, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationUnit, \Flexsim\FlexnetOperations\Type\UserIdentifierType $contact = null, bool $currentOwner = null)
+    public static function create(string $tierName, $accountUnit, \Flexsim\FlexnetOperations\Type\UserIdentifierType $contact = null, bool $currentOwner = null)
     {
         return new self(...func_get_args());
     }
@@ -69,6 +75,24 @@ class ChannelPartnerDataType
     public function setTierName($tierName)
     {
         $this->tierName = $tierName;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     */
+    public function getAccountUnit()
+    {
+        return $this->accountUnit;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $accountUnit
+     * @return $this
+     */
+    public function setAccountUnit($accountUnit)
+    {
+        $this->accountUnit = $accountUnit;
         return $this;
     }
 
@@ -125,7 +149,4 @@ class ChannelPartnerDataType
         $this->currentOwner = $currentOwner;
         return $this;
     }
-
-
 }
-

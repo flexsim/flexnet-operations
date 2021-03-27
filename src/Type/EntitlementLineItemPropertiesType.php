@@ -41,7 +41,7 @@ class EntitlementLineItemPropertiesType
     private $entitlementId;
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
     private $soldTo;
 
@@ -81,7 +81,7 @@ class EntitlementLineItemPropertiesType
     private $parentBulkEntitlementId;
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
     private $bulkEntSoldTo;
 
@@ -255,7 +255,7 @@ class EntitlementLineItemPropertiesType
      * @var string $orderId
      * @var string $orderLineNumber
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementId
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $soldTo
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $soldTo
      * @var string $soldToDisplayName
      * @var string $entitlementState
      * @var string $entitlementDescription
@@ -263,7 +263,7 @@ class EntitlementLineItemPropertiesType
      * @var string $shipToEmail
      * @var string $shipToAddress
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentBulkEntitlementId
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $bulkEntSoldTo
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $bulkEntSoldTo
      * @var string $bulkEntSoldToDisplayName
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
      * @var string $productDescription
@@ -297,8 +297,56 @@ class EntitlementLineItemPropertiesType
      * @var string $transferredFromLineItem
      * @var string $splitFromLineItem
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId = null, string $description = null, string $state = null, string $activatableItemType = null, string $orderId = null, string $orderLineNumber = null, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementId = null, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $soldTo = null, string $soldToDisplayName = null, string $entitlementState = null, string $entitlementDescription = null, bool $allowPortalLogin = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentBulkEntitlementId = null, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $bulkEntSoldTo = null, string $bulkEntSoldToDisplayName = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, string $productDescription = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $partNumberDescription = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, string $lineItemSupportAction = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $startDate = null, string $startDateOption = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, int $numberOfCopies = null, int $fulfilledAmount = null, int $numberOfRemainingCopies = null, bool $isTrusted = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, $maintenanceLineItems = null, string $FNPTimeZoneValue = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes = null, string $transferredFromLineItem = null, string $splitFromLineItem = null)
-    {
+    public function __construct(
+        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId = null,
+        string $description = null,
+        string $state = null,
+        string $activatableItemType = null,
+        string $orderId = null,
+        string $orderLineNumber = null,
+        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementId = null,
+        $soldTo = null,
+        string $soldToDisplayName = null,
+        string $entitlementState = null,
+        string $entitlementDescription = null,
+        bool $allowPortalLogin = null,
+        string $shipToEmail = null,
+        string $shipToAddress = null,
+        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentBulkEntitlementId = null,
+        $bulkEntSoldTo = null,
+        string $bulkEntSoldToDisplayName = null,
+        \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null,
+        string $productDescription = null,
+        \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null,
+        string $partNumberDescription = null,
+        \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null,
+        \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null,
+        \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null,
+        \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null,
+        string $lineItemSupportAction = null,
+        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null,
+        \DateTimeInterface $startDate = null,
+        string $startDateOption = null,
+        bool $isPermanent = null,
+        \Flexsim\FlexnetOperations\Type\DurationType $term = null,
+        \DateTimeInterface $expirationDate = null,
+        \DateTimeInterface $versionDate = null,
+        \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null,
+        int $numberOfCopies = null,
+        int $fulfilledAmount = null,
+        int $numberOfRemainingCopies = null,
+        bool $isTrusted = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null,
+        \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null,
+        \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null,
+        $maintenanceLineItems = null,
+        string $FNPTimeZoneValue = null,
+        \DateTimeInterface $createdOnDateTime = null,
+        \DateTimeInterface $lastModifiedDateTime = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes = null,
+        string $transferredFromLineItem = null,
+        string $splitFromLineItem = null
+    ) {
         $this->activationId = $activationId;
         $this->description = $description;
         $this->state = $state;
@@ -359,7 +407,7 @@ class EntitlementLineItemPropertiesType
      * @var string $orderId
      * @var string $orderLineNumber
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementId
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $soldTo
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $soldTo
      * @var string $soldToDisplayName
      * @var string $entitlementState
      * @var string $entitlementDescription
@@ -367,7 +415,7 @@ class EntitlementLineItemPropertiesType
      * @var string $shipToEmail
      * @var string $shipToAddress
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentBulkEntitlementId
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $bulkEntSoldTo
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $bulkEntSoldTo
      * @var string $bulkEntSoldToDisplayName
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
      * @var string $productDescription
@@ -401,8 +449,56 @@ class EntitlementLineItemPropertiesType
      * @var string $transferredFromLineItem
      * @var string $splitFromLineItem
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId = null, string $description = null, string $state = null, string $activatableItemType = null, string $orderId = null, string $orderLineNumber = null, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementId = null, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $soldTo = null, string $soldToDisplayName = null, string $entitlementState = null, string $entitlementDescription = null, bool $allowPortalLogin = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentBulkEntitlementId = null, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $bulkEntSoldTo = null, string $bulkEntSoldToDisplayName = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, string $productDescription = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $partNumberDescription = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, string $lineItemSupportAction = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $startDate = null, string $startDateOption = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, int $numberOfCopies = null, int $fulfilledAmount = null, int $numberOfRemainingCopies = null, bool $isTrusted = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, $maintenanceLineItems = null, string $FNPTimeZoneValue = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes = null, string $transferredFromLineItem = null, string $splitFromLineItem = null)
-    {
+    public static function create(
+        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId = null,
+        string $description = null,
+        string $state = null,
+        string $activatableItemType = null,
+        string $orderId = null,
+        string $orderLineNumber = null,
+        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementId = null,
+        $soldTo = null,
+        string $soldToDisplayName = null,
+        string $entitlementState = null,
+        string $entitlementDescription = null,
+        bool $allowPortalLogin = null,
+        string $shipToEmail = null,
+        string $shipToAddress = null,
+        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentBulkEntitlementId = null,
+        $bulkEntSoldTo = null,
+        string $bulkEntSoldToDisplayName = null,
+        \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null,
+        string $productDescription = null,
+        \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null,
+        string $partNumberDescription = null,
+        \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null,
+        \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null,
+        \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null,
+        \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null,
+        string $lineItemSupportAction = null,
+        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null,
+        \DateTimeInterface $startDate = null,
+        string $startDateOption = null,
+        bool $isPermanent = null,
+        \Flexsim\FlexnetOperations\Type\DurationType $term = null,
+        \DateTimeInterface $expirationDate = null,
+        \DateTimeInterface $versionDate = null,
+        \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null,
+        int $numberOfCopies = null,
+        int $fulfilledAmount = null,
+        int $numberOfRemainingCopies = null,
+        bool $isTrusted = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null,
+        \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null,
+        \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null,
+        $maintenanceLineItems = null,
+        string $FNPTimeZoneValue = null,
+        \DateTimeInterface $createdOnDateTime = null,
+        \DateTimeInterface $lastModifiedDateTime = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes = null,
+        string $transferredFromLineItem = null,
+        string $splitFromLineItem = null
+    ) {
         return new self(...func_get_args());
     }
 
@@ -533,7 +629,7 @@ class EntitlementLineItemPropertiesType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
     public function getSoldTo()
     {
@@ -541,7 +637,7 @@ class EntitlementLineItemPropertiesType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -677,7 +773,7 @@ class EntitlementLineItemPropertiesType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
     public function getBulkEntSoldTo()
     {
@@ -685,7 +781,7 @@ class EntitlementLineItemPropertiesType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $bulkEntSoldTo
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $bulkEntSoldTo
      * @return $this
      */
     public function setBulkEntSoldTo($bulkEntSoldTo)
@@ -1269,7 +1365,4 @@ class EntitlementLineItemPropertiesType
         $this->splitFromLineItem = $splitFromLineItem;
         return $this;
     }
-
-
 }
-

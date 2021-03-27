@@ -21,6 +21,11 @@ class SplitBulkEntitlementInfoType
     private $targetTierName;
 
     /**
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     */
+    private $targetAccountUnit;
+
+    /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
     private $targetOrganizationUnit;
@@ -46,17 +51,25 @@ class SplitBulkEntitlementInfoType
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
      * @var int $numberOfWRKs
      * @var string $targetTierName
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetOrganizationUnit
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier, int $numberOfWRKs, string $targetTierName, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetOrganizationUnit, \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact = null, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier = null)
-    {
+    public function __construct(
+        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier,
+        int $numberOfWRKs,
+        string $targetTierName,
+        $targetAccountUnit,
+        \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact = null,
+        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier = null,
+        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier = null
+    ) {
         $this->bulkEntIdentifier = $bulkEntIdentifier;
         $this->numberOfWRKs = $numberOfWRKs;
         $this->targetTierName = $targetTierName;
-        $this->targetOrganizationUnit = $targetOrganizationUnit;
+        $this->targetAccountUnit = $targetAccountUnit;
+        $this->targetOrganizationUnit = $targetAccountUnit;
         $this->targetContact = $targetContact;
         $this->matchingBulkEntIdentifier = $matchingBulkEntIdentifier;
         $this->matchingLineItemIdentifier = $matchingLineItemIdentifier;
@@ -68,13 +81,20 @@ class SplitBulkEntitlementInfoType
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
      * @var int $numberOfWRKs
      * @var string $targetTierName
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetOrganizationUnit
+     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier, int $numberOfWRKs, string $targetTierName, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetOrganizationUnit, \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact = null, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier = null)
-    {
+    public static function create(
+        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier,
+        int $numberOfWRKs,
+        string $targetTierName,
+        $targetAccountUnit,
+        \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact = null,
+        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier = null,
+        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier = null
+    ) {
         return new self(...func_get_args());
     }
 
@@ -129,6 +149,24 @@ class SplitBulkEntitlementInfoType
     public function setTargetTierName($targetTierName)
     {
         $this->targetTierName = $targetTierName;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\AccountIdentifierType
+     */
+    public function getTargetAccountUnit()
+    {
+        return $this->targetAccountUnit;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $targetAccountUnit
+     * @return $this
+     */
+    public function setTargetAccountUnit($targetAccountUnit)
+    {
+        $this->targetAccountUnit = $targetAccountUnit;
         return $this;
     }
 
@@ -203,7 +241,4 @@ class SplitBulkEntitlementInfoType
         $this->matchingLineItemIdentifier = $matchingLineItemIdentifier;
         return $this;
     }
-
-
 }
-

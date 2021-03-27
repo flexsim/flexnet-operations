@@ -56,6 +56,11 @@ class UpdateSimpleEntitlementDataType
     private $entitlementAttributes;
 
     /**
+     * @var string
+     */
+    private $emailTemplateVariation;
+
+    /**
      * Constructor
      *
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
@@ -68,9 +73,21 @@ class UpdateSimpleEntitlementDataType
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
      * @var bool $allowPortalLogin
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
+     * @var string $emailTemplateVariation
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexsim\FlexnetOperations\Type\IdType $entitlementId = null, string $description = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, bool $autoDeploy = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null)
-    {
+    public function __construct(
+        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier,
+        \Flexsim\FlexnetOperations\Type\IdType $entitlementId = null,
+        string $description = null,
+        string $soldTo = null,
+        string $shipToEmail = null,
+        string $shipToAddress = null,
+        bool $autoDeploy = null,
+        \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null,
+        bool $allowPortalLogin = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null,
+        string $emailTemplateVariation = null
+    ) {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->entitlementId = $entitlementId;
         $this->description = $description;
@@ -81,6 +98,7 @@ class UpdateSimpleEntitlementDataType
         $this->channelPartners = $channelPartners;
         $this->allowPortalLogin = $allowPortalLogin;
         $this->entitlementAttributes = $entitlementAttributes;
+        $this->emailTemplateVariation = $emailTemplateVariation;
     }
 
     /**
@@ -96,9 +114,21 @@ class UpdateSimpleEntitlementDataType
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
      * @var bool $allowPortalLogin
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
+     * @var string $emailTemplateVariation
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexsim\FlexnetOperations\Type\IdType $entitlementId = null, string $description = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, bool $autoDeploy = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null)
-    {
+    public static function create(
+        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier,
+        \Flexsim\FlexnetOperations\Type\IdType $entitlementId = null,
+        string $description = null,
+        string $soldTo = null,
+        string $shipToEmail = null,
+        string $shipToAddress = null,
+        bool $autoDeploy = null,
+        \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null,
+        bool $allowPortalLogin = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null,
+        string $emailTemplateVariation = null
+    ) {
         return new self(...func_get_args());
     }
 
@@ -282,6 +312,21 @@ class UpdateSimpleEntitlementDataType
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getEmailTemplateVariation()
+    {
+        return $this->emailTemplateVariation;
+    }
 
+    /**
+     * @param string $emailTemplateVariation
+     * @return $this
+     */
+    public function setEmailTemplateVariation($emailTemplateVariation)
+    {
+        $this->emailTemplateVariation = $emailTemplateVariation;
+        return $this;
+    }
 }
-

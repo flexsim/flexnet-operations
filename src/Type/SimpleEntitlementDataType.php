@@ -66,6 +66,22 @@ class SimpleEntitlementDataType
     private $entitlementAttributes;
 
     /**
+     * @var \DateTimeInterface
+     */
+    private $lastModifiedDateTime;
+
+    /**
+     * @var string
+     */
+    private $soldToName;
+
+    /**
+     * @var string
+     */
+    private $emailTemplateVariation;
+
+
+    /**
      * Constructor
      *
      * @var \Flexsim\FlexnetOperations\Type\IdType $entitlementId
@@ -80,9 +96,27 @@ class SimpleEntitlementDataType
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
      * @var bool $allowPortalLogin
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
+     * @var \DateTimeInterface $lastModifiedDateTime
+     * @var string $soldToName
+     * @var string $emailTemplateVariation
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\IdType $entitlementId, string $description = null, string $soldTo, string $shipToEmail = null, string $shipToAddress = null, string $state = null, string $createdUserId = null, $lineItems = null, $maintenanceLineItems = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null)
-    {
+    public function __construct(
+        \Flexsim\FlexnetOperations\Type\IdType $entitlementId,
+        string $description = null,
+        string $soldTo,
+        string $shipToEmail = null,
+        string $shipToAddress = null,
+        string $state = null,
+        string $createdUserId = null,
+        $lineItems = null,
+        $maintenanceLineItems = null,
+        \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null,
+        bool $allowPortalLogin = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null,
+        \DateTimeInterface $lastModifiedDateTime = null,
+        string $soldToName = null,
+        string $emailTemplateVariation = null
+    ) {
         $this->entitlementId = $entitlementId;
         $this->description = $description;
         $this->soldTo = $soldTo;
@@ -95,6 +129,9 @@ class SimpleEntitlementDataType
         $this->channelPartners = $channelPartners;
         $this->allowPortalLogin = $allowPortalLogin;
         $this->entitlementAttributes = $entitlementAttributes;
+        $this->lastModifiedDateTime = $lastModifiedDateTime;
+        $this->soldToName = $soldToName;
+        $this->emailTemplateVariation = $emailTemplateVariation;
     }
 
     /**
@@ -112,9 +149,27 @@ class SimpleEntitlementDataType
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
      * @var bool $allowPortalLogin
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
+     * @var \DateTimeInterface $lastModifiedDateTime
+     * @var string $soldToName
+     * @var string $emailTemplateVariation
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\IdType $entitlementId, string $description = null, string $soldTo, string $shipToEmail = null, string $shipToAddress = null, string $state = null, string $createdUserId = null, $lineItems = null, $maintenanceLineItems = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null)
-    {
+    public static function create(
+        \Flexsim\FlexnetOperations\Type\IdType $entitlementId,
+        string $description = null,
+        string $soldTo,
+        string $shipToEmail = null,
+        string $shipToAddress = null,
+        string $state = null,
+        string $createdUserId = null,
+        $lineItems = null,
+        $maintenanceLineItems = null,
+        \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null,
+        bool $allowPortalLogin = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null,
+        \DateTimeInterface $lastModifiedDateTime = null,
+        string $soldToName = null,
+        string $emailTemplateVariation = null
+    ) {
         return new self(...func_get_args());
     }
 
@@ -334,6 +389,55 @@ class SimpleEntitlementDataType
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface
+     */
+    public function getLastModifiedDateTime()
+    {
+        return $this->lastModifiedDateTime;
+    }
 
+    /**
+     * @param \DateTimeInterface $lastModifiedDateTime
+     * @return $this
+     */
+    public function setLastModifiedDateTime($lastModifiedDateTime)
+    {
+        $this->lastModifiedDateTime = $lastModifiedDateTime;
+        return $this;
+    }
+    /**
+     * @return string
+     */
+    public function getSoldToName()
+    {
+        return $this->soldToName;
+    }
+
+    /**
+     * @param string $soldToName
+     * @return $this
+     */
+    public function setSoldToName($soldToName)
+    {
+        $this->soldToName = $soldToName;
+        return $this;
+    }
+    /**
+     * @return string
+     */
+    public function getEmailTemplateVariation()
+    {
+        return $this->emailTemplateVariation;
+    }
+
+    /**
+     * @param string $emailTemplateVariation
+     * @return $this
+     */
+    public function setEmailTemplateVariation($emailTemplateVariation)
+    {
+        $this->emailTemplateVariation = $emailTemplateVariation;
+        return $this;
+    }
 }
-

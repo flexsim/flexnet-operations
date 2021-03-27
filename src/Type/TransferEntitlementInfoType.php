@@ -13,6 +13,11 @@ class TransferEntitlementInfoType
     /**
      * @var string
      */
+    private $accountTo;
+
+    /**
+     * @var string
+     */
     private $organizationTo;
 
     /**
@@ -39,16 +44,23 @@ class TransferEntitlementInfoType
      * Constructor
      *
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @var string $organizationTo
+     * @var string $accountTo this method is backwards compatible so your may also pass $organizationTo
      * @var bool $retainExistingIds
      * @var bool $returnActiveFulfillments
      * @var bool $forceTransferEvenIfNoTargetUsers
      * @var bool $forceTransferEvenIfParentAndChildSeparated
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, string $organizationTo, bool $retainExistingIds = null, bool $returnActiveFulfillments = null, bool $forceTransferEvenIfNoTargetUsers = null, bool $forceTransferEvenIfParentAndChildSeparated = null)
-    {
+    public function __construct(
+        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier,
+        string $accountTo,
+        bool $retainExistingIds = null,
+        bool $returnActiveFulfillments = null,
+        bool $forceTransferEvenIfNoTargetUsers = null,
+        bool $forceTransferEvenIfParentAndChildSeparated = null
+    ) {
         $this->entitlementIdentifier = $entitlementIdentifier;
-        $this->organizationTo = $organizationTo;
+        $this->accountTo = $accountTo;
+        $this->organizationTo = $accountTo;
         $this->retainExistingIds = $retainExistingIds;
         $this->returnActiveFulfillments = $returnActiveFulfillments;
         $this->forceTransferEvenIfNoTargetUsers = $forceTransferEvenIfNoTargetUsers;
@@ -59,14 +71,20 @@ class TransferEntitlementInfoType
      * create a new instance of this class
      *
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @var string $organizationTo
+     * @var string $accountTo this method is backwards compatible so your may also pass $organizationTo
      * @var bool $retainExistingIds
      * @var bool $returnActiveFulfillments
      * @var bool $forceTransferEvenIfNoTargetUsers
      * @var bool $forceTransferEvenIfParentAndChildSeparated
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, string $organizationTo, bool $retainExistingIds = null, bool $returnActiveFulfillments = null, bool $forceTransferEvenIfNoTargetUsers = null, bool $forceTransferEvenIfParentAndChildSeparated = null)
-    {
+    public static function create(
+        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier,
+        string $accountTo,
+        bool $retainExistingIds = null,
+        bool $returnActiveFulfillments = null,
+        bool $forceTransferEvenIfNoTargetUsers = null,
+        bool $forceTransferEvenIfParentAndChildSeparated = null
+    ) {
         return new self(...func_get_args());
     }
 
@@ -85,6 +103,24 @@ class TransferEntitlementInfoType
     public function setEntitlementIdentifier($entitlementIdentifier)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAccountTo()
+    {
+        return $this->accountTo;
+    }
+
+    /**
+     * @param string $accountTo
+     * @return $this
+     */
+    public function setAccountTo($accountTo)
+    {
+        $this->accountTo = $accountTo;
         return $this;
     }
 
@@ -177,7 +213,4 @@ class TransferEntitlementInfoType
         $this->forceTransferEvenIfParentAndChildSeparated = $forceTransferEvenIfParentAndChildSeparated;
         return $this;
     }
-
-
 }
-

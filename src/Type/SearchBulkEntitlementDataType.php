@@ -103,6 +103,11 @@ class SearchBulkEntitlementDataType
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType
      */
+    private $accountUnitName;
+
+    /**
+     * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType
+     */
     private $organizationUnitName;
 
     /**
@@ -132,11 +137,32 @@ class SearchBulkEntitlementDataType
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $createdUserId
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
      * @var bool $allowPortalLogin
-     * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName
+     * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName this method is backwards compatible so you may also pass $organizationUnitName
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $productVersion = null, string $productType = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToEmail = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToAddress = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $createdOn = null, \Flexsim\FlexnetOperations\Type\DateQueryType $versionDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $createdUserId = null, \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes = null, bool $allowPortalLogin = null, \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName = null)
-    {
+    public function __construct(
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $productVersion = null,
+        string $productType = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToEmail = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToAddress = null,
+        bool $isPermanent = null,
+        \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate = null,
+        \Flexsim\FlexnetOperations\Type\DateQueryType $createdOn = null,
+        \Flexsim\FlexnetOperations\Type\DateQueryType $versionDate = null,
+        \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null,
+        \Flexsim\FlexnetOperations\Type\StateQueryType $state = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $createdUserId = null,
+        \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes = null,
+        bool $allowPortalLogin = null,
+        \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName = null
+    ) {
         $this->entitlementId = $entitlementId;
         $this->description = $description;
         $this->productName = $productName;
@@ -156,7 +182,8 @@ class SearchBulkEntitlementDataType
         $this->createdUserId = $createdUserId;
         $this->customAttributes = $customAttributes;
         $this->allowPortalLogin = $allowPortalLogin;
-        $this->organizationUnitName = $organizationUnitName;
+        $this->accountUnitName = $accountUnitName;
+        $this->organizationUnitName = $accountUnitName;
         $this->currentOwnerName = $currentOwnerName;
     }
 
@@ -182,11 +209,32 @@ class SearchBulkEntitlementDataType
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $createdUserId
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
      * @var bool $allowPortalLogin
-     * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName
+     * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName this method is backwards compatible so you may also pass $organizationUnitName
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $productVersion = null, string $productType = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToEmail = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToAddress = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $createdOn = null, \Flexsim\FlexnetOperations\Type\DateQueryType $versionDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $createdUserId = null, \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes = null, bool $allowPortalLogin = null, \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName = null)
-    {
+    public static function create(
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $productVersion = null,
+        string $productType = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToEmail = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToAddress = null,
+        bool $isPermanent = null,
+        \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate = null,
+        \Flexsim\FlexnetOperations\Type\DateQueryType $createdOn = null,
+        \Flexsim\FlexnetOperations\Type\DateQueryType $versionDate = null,
+        \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null,
+        \Flexsim\FlexnetOperations\Type\StateQueryType $state = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $createdUserId = null,
+        \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes = null,
+        bool $allowPortalLogin = null,
+        \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName = null,
+        \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName = null
+    ) {
         return new self(...func_get_args());
     }
 
@@ -535,6 +583,24 @@ class SearchBulkEntitlementDataType
     /**
      * @return \Flexsim\FlexnetOperations\Type\PartnerTierQueryType
      */
+    public function getAccountUnitName()
+    {
+        return $this->accountUnitName;
+    }
+
+    /**
+     * @param \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName
+     * @return $this
+     */
+    public function setAccountUnitName($accountUnitName)
+    {
+        $this->accountUnitName = $accountUnitName;
+        return $this;
+    }
+
+    /**
+     * @return \Flexsim\FlexnetOperations\Type\PartnerTierQueryType
+     */
     public function getOrganizationUnitName()
     {
         return $this->organizationUnitName;
@@ -567,7 +633,4 @@ class SearchBulkEntitlementDataType
         $this->currentOwnerName = $currentOwnerName;
         return $this;
     }
-
-
 }
-
