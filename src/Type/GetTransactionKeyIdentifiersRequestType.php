@@ -19,6 +19,7 @@ class GetTransactionKeyIdentifiersRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType $queryParams = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
     }
 
@@ -49,7 +50,4 @@ class GetTransactionKeyIdentifiersRequestType implements RequestInterface
         $this->queryParams = $queryParams;
         return $this;
     }
-
-
 }
-

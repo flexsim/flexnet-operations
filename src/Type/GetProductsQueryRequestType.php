@@ -37,6 +37,7 @@ class GetProductsQueryRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $returnContainedObjects)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -127,7 +128,4 @@ class GetProductsQueryRequestType implements RequestInterface
         $this->returnContainedObjects = $returnContainedObjects;
         return $this;
     }
-
-
 }
-

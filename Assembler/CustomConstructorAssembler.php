@@ -86,6 +86,10 @@ class CustomConstructorAssembler implements AssemblerInterface
         foreach ($type->getProperties() as $property) {
             $propertyName = $property->getName();
 
+            if ($propertyName == 'queryParams') {
+                $body[] = '$queryParams = $queryParams ?? [];';
+            }
+
             $body[] = sprintf('$this->%1$s = $%1$s;', $propertyName);
             $withTypeHints = $this->options->useTypeHints() ? ['type' => $property->getType()] : [];
 

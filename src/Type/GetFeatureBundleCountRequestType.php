@@ -19,6 +19,7 @@ class GetFeatureBundleCountRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
     }
 
@@ -49,7 +50,4 @@ class GetFeatureBundleCountRequestType implements RequestInterface
         $this->queryParams = $queryParams;
         return $this;
     }
-
-
 }
-

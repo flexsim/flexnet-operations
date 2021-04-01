@@ -19,6 +19,7 @@ class GetUserCountRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
     }
 
@@ -49,7 +50,4 @@ class GetUserCountRequestType implements RequestInterface
         $this->queryParams = $queryParams;
         return $this;
     }
-
-
 }
-

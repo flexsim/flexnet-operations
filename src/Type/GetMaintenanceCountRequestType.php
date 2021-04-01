@@ -19,6 +19,7 @@ class GetMaintenanceCountRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType $queryParams = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
     }
 
@@ -49,7 +50,4 @@ class GetMaintenanceCountRequestType implements RequestInterface
         $this->queryParams = $queryParams;
         return $this;
     }
-
-
 }
-

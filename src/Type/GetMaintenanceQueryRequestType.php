@@ -37,6 +37,7 @@ class GetMaintenanceQueryRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $returnContainedObjects)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -127,7 +128,4 @@ class GetMaintenanceQueryRequestType implements RequestInterface
         $this->returnContainedObjects = $returnContainedObjects;
         return $this;
     }
-
-
 }
-

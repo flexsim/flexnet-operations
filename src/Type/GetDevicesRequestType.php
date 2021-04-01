@@ -37,6 +37,7 @@ class GetDevicesRequestType implements RequestInterface
      */
     public function __construct($queryParams = null, $deviceResponseConfig = null, int $pageNumber, int $batchSize)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
         $this->deviceResponseConfig = $deviceResponseConfig;
         $this->pageNumber = $pageNumber;

@@ -19,6 +19,7 @@ class CountDevicesRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
     }
 
@@ -49,7 +50,4 @@ class CountDevicesRequestType implements RequestInterface
         $this->queryParams = $queryParams;
         return $this;
     }
-
-
 }
-

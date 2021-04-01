@@ -19,6 +19,7 @@ class GetAccountCountRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
     }
 
@@ -49,7 +50,4 @@ class GetAccountCountRequestType implements RequestInterface
         $this->queryParams = $queryParams;
         return $this;
     }
-
-
 }
-

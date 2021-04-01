@@ -31,6 +31,7 @@ class GetFeaturesQueryRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams = null, int $pageNumber, int $batchSize)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -101,7 +102,4 @@ class GetFeaturesQueryRequestType implements RequestInterface
         $this->batchSize = $batchSize;
         return $this;
     }
-
-
 }
-

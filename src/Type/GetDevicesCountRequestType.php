@@ -19,6 +19,7 @@ class GetDevicesCountRequestType implements RequestInterface
      */
     public function __construct($queryParams = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
     }
 

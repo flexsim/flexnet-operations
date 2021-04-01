@@ -37,6 +37,7 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams = null, int $pageNumber, int $batchSize, bool $includeLicenseText = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -127,7 +128,4 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
         $this->includeLicenseText = $includeLicenseText;
         return $this;
     }
-
-
 }
-

@@ -43,6 +43,7 @@ class GetFulfillmentsQueryRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $includeLicenseText = null, bool $includeConsolidatedHostLicense = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -153,7 +154,4 @@ class GetFulfillmentsQueryRequestType implements RequestInterface
         $this->includeConsolidatedHostLicense = $includeConsolidatedHostLicense;
         return $this;
     }
-
-
 }
-

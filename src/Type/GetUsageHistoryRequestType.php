@@ -37,6 +37,7 @@ class GetUsageHistoryRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\GetUsageHistoryParametersType $queryParams = null, \Flexsim\FlexnetOperations\Type\GetUsageHistoryConfigType $queryConfig = null, int $pageNumber, int $batchSize)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
         $this->queryConfig = $queryConfig;
         $this->pageNumber = $pageNumber;
@@ -127,7 +128,4 @@ class GetUsageHistoryRequestType implements RequestInterface
         $this->batchSize = $batchSize;
         return $this;
     }
-
-
 }
-

@@ -19,6 +19,7 @@ class GetUniformSuiteCountRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
     }
 
@@ -49,7 +50,4 @@ class GetUniformSuiteCountRequestType implements RequestInterface
         $this->queryParams = $queryParams;
         return $this;
     }
-
-
 }
-

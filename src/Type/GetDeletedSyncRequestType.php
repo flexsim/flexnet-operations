@@ -31,6 +31,7 @@ class GetDeletedSyncRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType $queryParams = null, int $pageNumber, int $batchSize)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -101,7 +102,4 @@ class GetDeletedSyncRequestType implements RequestInterface
         $this->batchSize = $batchSize;
         return $this;
     }
-
-
 }
-

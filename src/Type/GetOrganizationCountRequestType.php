@@ -19,6 +19,7 @@ class GetOrganizationCountRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
     }
 
@@ -49,7 +50,4 @@ class GetOrganizationCountRequestType implements RequestInterface
         $this->queryParams = $queryParams;
         return $this;
     }
-
-
 }
-

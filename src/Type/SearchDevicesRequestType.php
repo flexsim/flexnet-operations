@@ -43,6 +43,7 @@ class SearchDevicesRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams = null, \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType $responseConfig = null, \Flexsim\FlexnetOperations\Type\DeviceSortBys $sortBys = null, int $pageNumber = null, int $batchSize = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
         $this->responseConfig = $responseConfig;
         $this->sortBys = $sortBys;
@@ -153,7 +154,4 @@ class SearchDevicesRequestType implements RequestInterface
         $this->batchSize = $batchSize;
         return $this;
     }
-
-
 }
-

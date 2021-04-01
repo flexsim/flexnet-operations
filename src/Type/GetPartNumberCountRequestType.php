@@ -19,6 +19,7 @@ class GetPartNumberCountRequestType implements RequestInterface
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams = null)
     {
+        $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
     }
 
@@ -49,7 +50,4 @@ class GetPartNumberCountRequestType implements RequestInterface
         $this->queryParams = $queryParams;
         return $this;
     }
-
-
 }
-
