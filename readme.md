@@ -1,5 +1,6 @@
 # Flexnet Operations SDK
 
+This package is in development please do not use without testing first
 
 ## Code Generation
 You may run the following commands to generate classmaps and clients
