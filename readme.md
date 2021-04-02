@@ -17,20 +17,20 @@ find config -type f -name "*-config.php" -exec  ./vendor/bin/soap-client generat
 Type Generation requires frequent customization. Use the following command keeping the exceptions listed below in mind
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/{SERVICE}-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/{SERVICE}/{SERVICE}-config\.php
 ```
 
 
 ### Type Class Generation
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/ProductPackagingService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/ProductPackagingService/ProductPackagingService-config\.php
 ```
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/EntitlementOrderService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/EntitlementOrderService/EntitlementOrderService-config\.php
 ```
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/LicenseService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/LicenseService/LicenseService-config\.php
 ```
 
 Change src/Type/DictionaryEntry.php to LicenseServiceDictionaryEntry.php and update all references to that class in the following Files (do not update the variable names just the class name):
@@ -38,13 +38,13 @@ Change src/Type/DictionaryEntry.php to LicenseServiceDictionaryEntry.php and upd
 - src/Type/DictionaryEntriesCollection.php
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/FlexnetAuthentication-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/FlexnetAuthentication/FlexnetAuthentication-config\.php
 ```
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/UserOrgHierarchyService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/UserOrgHierarchyService/UserOrgHierarchyService-config\.php
 ```
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/ManageDeviceService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/ManageDeviceService/ManageDeviceService-config\.php
 ```
 
 Change the newly Generated src/Type/DictionaryEntry.php to ManageDeviceServiceDictionaryEntry.php and update all references to that class in the following Files (do not update the variable names just the class name):
@@ -56,16 +56,16 @@ in src/Type/SoldToType.php move the $displayName parameter to the end of the con
 Accept the changes that were made to src/Type/ProductPKType.php
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/UsageService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/UsageService/UsageService-config\.php
 ```
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v1/ProductPackagingService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/ProductPackagingService/v1/ProductPackagingService-config\.php
 ```
 
 Accept the changes to all files except for ProductPKType.php
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v1/EntitlementOrderService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/EntitlementOrderService/v1/EntitlementOrderService-config\.php
 ```
 
 add all of the new type files
@@ -73,7 +73,7 @@ accept the changes to src/Type/CreateSimpleEntitlementRequestType.php
 revert the changes to src/Type/ProductPKType.php and src/Type/UpdateBulkEntitlementDataType.php
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v1/LicenseService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/LicenseService/v1/LicenseService-config\.php
 ```
 
 remove the newly added src/Type/DictionaryEntry.php
@@ -89,13 +89,13 @@ change src/Type/FullfillmentPropertiesType.php as follows:
  - line 592: change @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $soldTo to @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $soldTo
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v1/UserOrgHierarchyService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/UserOrgHierarchyService/v1/UserOrgHierarchyService-config\.php
 ```
 
 accept the changes
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v1/ManageDeviceService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/ManageDeviceService/v1/ManageDeviceService-config\.php
 ```
 
 remove the newly added src/Type/DictionaryEntry.php
@@ -103,7 +103,7 @@ revert the changes to src/Type/DictionaryType.php and src/Type/SoldToType.php
 accept the changes to the other type files
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v1/UsageService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/UsageService/v1/UsageService-config\.php
 ```
 
 modify src/Type/GetUsageRequest.php to the following:
@@ -187,7 +187,7 @@ class GetUsageRequest implements RequestInterface
 ```
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v2/ProductPackagingService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/ProductPackagingService/v2/ProductPackagingService-config\.php
 ```
 
 add the new type files
@@ -272,7 +272,7 @@ class AccountPKType
 ```
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v2/EntitlementOrderService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/EntitlementOrderService/v2/EntitlementOrderService-config\.php
 ```
 
 add the new type files
@@ -280,7 +280,7 @@ revert the changes to src/Type/ProductPKType.php and src/Type/UpdateBulkEntitlem
 accept the changes to the other type files
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v2/UserAcctHierarchyService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/UserAcctHierarchyService/v2/UserAcctHierarchyService-config\.php
 ```
 
 accept all new type files
@@ -2834,7 +2834,7 @@ class UserQueryParametersType
 ```
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v2/ManageDeviceService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/ManageDeviceService/v2/ManageDeviceService-config\.php
 ```
 remove the newly added src/Type/DictionaryEntry.php
 revert the changes to src/Type/DictionaryType.php and src/Type/SoldToType.php
@@ -2862,7 +2862,7 @@ accept the changes to the other files
 
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v3/EntitlementOrderService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/EntitlementOrderService/v3/EntitlementOrderService-config\.php
 ```
 add the new files
 revert the changes to the following:
@@ -2895,7 +2895,7 @@ update the following with the org - account compatibility that we have done prev
 - src/Type/TransferEntitlementInfoType.php
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v3/UserAcctHierarchyService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/UserAcctHierarchyService/v3/UserAcctHierarchyService-config\.php
 ```
 add the new types
 revert the changes to the following:
@@ -2910,7 +2910,7 @@ keep the additional variables $createdBy and $lastModified by in src/Tpye/UserDe
 keep additions and add type compatibility to the rest of the files
 
 ```
-./vendor/bin/soap-client generate:types -q -o --config config/soap-client/v3/ManageDeviceService-config.php
+./vendor/bin/soap-client generate:types -q -o --config config/soap-client/ManageDeviceService/v3/ManageDeviceService-config\.php
 ```
 remove the newly added src/Type/DictionaryEntry.php
 revert the changes to the following:
