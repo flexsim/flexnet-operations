@@ -1,6 +1,6 @@
 <?php
 
-namespace Flexsim\FlexnetOperations\Services\v1\EntitlementOrderService;
+namespace Flexsim\FlexnetOperations\Services\EntitlementOrderService\v2;
 
 use Flexsim\FlexnetOperations\Type;
 use Phpro\SoapClient\Soap\ClassMap\ClassMapCollection;
@@ -9,7 +9,7 @@ use Phpro\SoapClient\Soap\ClassMap\ClassMap;
 class EntitlementOrderServiceClassmap
 {
 
-    public static function getCollection() : \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection(): \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
     {
         return new ClassMapCollection([
             new ClassMap('idType', Type\IdType::class),
@@ -145,6 +145,11 @@ class EntitlementOrderServiceClassmap
             new ClassMap('maintenanceLineItemPropertiesType', Type\MaintenanceLineItemPropertiesType::class),
             new ClassMap('entitlementLineItemPropertiesType', Type\EntitlementLineItemPropertiesType::class),
             new ClassMap('searchEntitlementLineItemPropertiesResponseType', Type\SearchEntitlementLineItemPropertiesResponseType::class),
+            new ClassMap('searchMaintenanceLineItemDataType', Type\SearchMaintenanceLineItemDataType::class),
+            new ClassMap('entitlementMaintenanceLineItemResponseConfigRequestType', Type\EntitlementMaintenanceLineItemResponseConfigRequestType::class),
+            new ClassMap('searchEntitlementMaintenanceLineItemPropertiesRequestType', Type\SearchEntitlementMaintenanceLineItemPropertiesRequestType::class),
+            new ClassMap('entitlementMaintenanceLineItemPropertiesType', Type\EntitlementMaintenanceLineItemPropertiesType::class),
+            new ClassMap('searchEntitlementMaintenanceLineItemPropertiesResponseType', Type\SearchEntitlementMaintenanceLineItemPropertiesResponseType::class),
             new ClassMap('getEntitlementCountRequestType', Type\GetEntitlementCountRequestType::class),
             new ClassMap('getEntitlementCountResponseType', Type\GetEntitlementCountResponseType::class),
             new ClassMap('getActivatableItemCountRequestType', Type\GetActivatableItemCountRequestType::class),
@@ -308,7 +313,4 @@ class EntitlementOrderServiceClassmap
             new ClassMap('unlinkMaintenanceLineItemResponseType', Type\UnlinkMaintenanceLineItemResponseType::class),
         ]);
     }
-
-
 }
-

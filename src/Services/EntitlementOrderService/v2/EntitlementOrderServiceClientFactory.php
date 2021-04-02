@@ -1,6 +1,6 @@
 <?php
 
-namespace Flexsim\FlexnetOperations\Services\v2\EntitlementOrderService;
+namespace Flexsim\FlexnetOperations\Services\EntitlementOrderService\v2;
 
 use Phpro\SoapClient\Middleware\BasicAuthMiddleware;
 use Symfony\Component\EventDispatcher\EventDispatcher;

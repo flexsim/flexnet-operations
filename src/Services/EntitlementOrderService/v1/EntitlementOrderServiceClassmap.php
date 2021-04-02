@@ -1,6 +1,6 @@
 <?php
 
-namespace Flexsim\FlexnetOperations\Services\v2\EntitlementOrderService;
+namespace Flexsim\FlexnetOperations\Services\EntitlementOrderService\v1;
 
 use Flexsim\FlexnetOperations\Type;
 use Phpro\SoapClient\Soap\ClassMap\ClassMapCollection;
@@ -145,11 +145,6 @@ class EntitlementOrderServiceClassmap
             new ClassMap('maintenanceLineItemPropertiesType', Type\MaintenanceLineItemPropertiesType::class),
             new ClassMap('entitlementLineItemPropertiesType', Type\EntitlementLineItemPropertiesType::class),
             new ClassMap('searchEntitlementLineItemPropertiesResponseType', Type\SearchEntitlementLineItemPropertiesResponseType::class),
-            new ClassMap('searchMaintenanceLineItemDataType', Type\SearchMaintenanceLineItemDataType::class),
-            new ClassMap('entitlementMaintenanceLineItemResponseConfigRequestType', Type\EntitlementMaintenanceLineItemResponseConfigRequestType::class),
-            new ClassMap('searchEntitlementMaintenanceLineItemPropertiesRequestType', Type\SearchEntitlementMaintenanceLineItemPropertiesRequestType::class),
-            new ClassMap('entitlementMaintenanceLineItemPropertiesType', Type\EntitlementMaintenanceLineItemPropertiesType::class),
-            new ClassMap('searchEntitlementMaintenanceLineItemPropertiesResponseType', Type\SearchEntitlementMaintenanceLineItemPropertiesResponseType::class),
             new ClassMap('getEntitlementCountRequestType', Type\GetEntitlementCountRequestType::class),
             new ClassMap('getEntitlementCountResponseType', Type\GetEntitlementCountResponseType::class),
             new ClassMap('getActivatableItemCountRequestType', Type\GetActivatableItemCountRequestType::class),

@@ -1,6 +1,6 @@
 <?php
 
-namespace Flexsim\FlexnetOperations\Services\v3\EntitlementOrderService;
+namespace Flexsim\FlexnetOperations\Services\EntitlementOrderService\v3;
 
 use Flexsim\FlexnetOperations\Type;
 use Phpro\SoapClient\Soap\ClassMap\ClassMapCollection;
@@ -9,7 +9,7 @@ use Phpro\SoapClient\Soap\ClassMap\ClassMap;
 class EntitlementOrderServiceClassmap
 {
 
-    public static function getCollection() : \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection(): \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
     {
         return new ClassMapCollection([
             new ClassMap('idType', Type\IdType::class),
@@ -315,7 +315,4 @@ class EntitlementOrderServiceClassmap
             new ClassMap('unlinkMaintenanceLineItemResponseType', Type\UnlinkMaintenanceLineItemResponseType::class),
         ]);
     }
-
-
 }
-
