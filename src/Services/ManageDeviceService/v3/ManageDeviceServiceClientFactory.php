@@ -2,7 +2,6 @@
 
 namespace Flexsim\FlexnetOperations\Services\ManageDeviceService\v3;
 
-use Flexsim\FlexnetOperations\Services\ManageDeviceService\v2\ManageDeviceServiceClient;
 use Phpro\SoapClient\Middleware\BasicAuthMiddleware;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Phpro\SoapClient\Soap\Driver\ExtSoap\ExtSoapEngineFactory;
