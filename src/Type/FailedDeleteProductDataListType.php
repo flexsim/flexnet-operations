@@ -6,7 +6,7 @@ class FailedDeleteProductDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedDeleteProductDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedDeleteProductDataType|array 
      */
     private $failedProduct;
 
@@ -31,7 +31,7 @@ class FailedDeleteProductDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedDeleteProductDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedDeleteProductDataType|array 
      */
     public function getFailedProduct()
     {
@@ -39,7 +39,7 @@ class FailedDeleteProductDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteProductDataType $failedProduct
+     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteProductDataType|array $failedProduct
      * @return $this
      */
     public function setFailedProduct($failedProduct)
@@ -47,7 +47,4 @@ class FailedDeleteProductDataListType
         $this->failedProduct = $failedProduct;
         return $this;
     }
-
-
 }
-

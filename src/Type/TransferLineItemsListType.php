@@ -6,16 +6,16 @@ class TransferLineItemsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType
+     * @var \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType|array 
      */
     private $lineItemInfo;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo
+     * @var \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType|array $lineItemInfo
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo)
+    public function __construct($lineItemInfo)
     {
         $this->lineItemInfo = $lineItemInfo;
     }
@@ -23,15 +23,15 @@ class TransferLineItemsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo
+     * @var \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType|array $lineItemInfo
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo)
+    public static function create($lineItemInfo)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType
+     * @return \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType|array 
      */
     public function getLineItemInfo()
     {
@@ -39,7 +39,7 @@ class TransferLineItemsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo
+     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType|array $lineItemInfo
      * @return $this
      */
     public function setLineItemInfo($lineItemInfo)
@@ -47,7 +47,4 @@ class TransferLineItemsListType
         $this->lineItemInfo = $lineItemInfo;
         return $this;
     }
-
-
 }
-

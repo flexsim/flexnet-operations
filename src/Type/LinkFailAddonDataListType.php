@@ -6,7 +6,7 @@ class LinkFailAddonDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType
+     * @var \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType|array 
      */
     private $failAddon;
 
@@ -31,7 +31,7 @@ class LinkFailAddonDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType
+     * @return \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType|array 
      */
     public function getFailAddon()
     {
@@ -39,7 +39,7 @@ class LinkFailAddonDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType $failAddon
+     * @param \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType|array $failAddon
      * @return $this
      */
     public function setFailAddon($failAddon)
@@ -47,7 +47,4 @@ class LinkFailAddonDataListType
         $this->failAddon = $failAddon;
         return $this;
     }
-
-
 }
-

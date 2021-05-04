@@ -6,7 +6,7 @@ class UpdateEntitledProductDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataType
+     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array
      */
     private $entitledProducts;
 
@@ -21,7 +21,7 @@ class UpdateEntitledProductDataListType
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProducts
      * @var string $opType
      */
-    public function __construct($entitledProducts = null, string $opType)
+    public function __construct($entitledProducts, string $opType)
     {
         $this->entitledProducts = $entitledProducts;
         $this->opType = $opType;
@@ -33,13 +33,13 @@ class UpdateEntitledProductDataListType
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProducts
      * @var string $opType
      */
-    public static function create($entitledProducts = null, string $opType)
+    public static function create($entitledProducts, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\EntitledProductDataType
+     * @return \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array
      */
     public function getEntitledProducts()
     {
@@ -47,7 +47,7 @@ class UpdateEntitledProductDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataType $entitledProducts
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProducts
      * @return $this
      */
     public function setEntitledProducts($entitledProducts)
@@ -73,7 +73,4 @@ class UpdateEntitledProductDataListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

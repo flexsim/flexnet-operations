@@ -6,7 +6,7 @@ class FailedCreateUserDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedCreateUserDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedCreateUserDataType|array 
      */
     private $failedUser;
 
@@ -31,7 +31,7 @@ class FailedCreateUserDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedCreateUserDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedCreateUserDataType|array 
      */
     public function getFailedUser()
     {
@@ -39,7 +39,7 @@ class FailedCreateUserDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedCreateUserDataType $failedUser
+     * @param \Flexsim\FlexnetOperations\Type\FailedCreateUserDataType|array $failedUser
      * @return $this
      */
     public function setFailedUser($failedUser)
@@ -47,7 +47,4 @@ class FailedCreateUserDataListType
         $this->failedUser = $failedUser;
         return $this;
     }
-
-
 }
-

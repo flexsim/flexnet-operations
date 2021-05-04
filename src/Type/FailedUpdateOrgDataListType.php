@@ -6,7 +6,7 @@ class FailedUpdateOrgDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataType|array 
      */
     private $failedOrg;
 
@@ -31,7 +31,7 @@ class FailedUpdateOrgDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataType|array 
      */
     public function getFailedOrg()
     {
@@ -39,7 +39,7 @@ class FailedUpdateOrgDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataType $failedOrg
+     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataType|array $failedOrg
      * @return $this
      */
     public function setFailedOrg($failedOrg)
@@ -47,7 +47,4 @@ class FailedUpdateOrgDataListType
         $this->failedOrg = $failedOrg;
         return $this;
     }
-
-
 }
-

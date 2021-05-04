@@ -6,7 +6,7 @@ class UpdateFeatureBundlesListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array
      */
     private $featureBundle;
 
@@ -18,10 +18,10 @@ class UpdateFeatureBundlesListType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType $featureBundle
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
      * @var string $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType $featureBundle, string $opType)
+    public function __construct($featureBundle, string $opType)
     {
         $this->featureBundle = $featureBundle;
         $this->opType = $opType;
@@ -30,16 +30,16 @@ class UpdateFeatureBundlesListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType $featureBundle
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
      * @var string $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType $featureBundle, string $opType)
+    public static function create($featureBundle, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType
+     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array
      */
     public function getFeatureBundle()
     {
@@ -47,7 +47,7 @@ class UpdateFeatureBundlesListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType $featureBundle
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
      * @return $this
      */
     public function setFeatureBundle($featureBundle)
@@ -73,7 +73,4 @@ class UpdateFeatureBundlesListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

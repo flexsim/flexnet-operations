@@ -6,7 +6,7 @@ class AddedDomainUserDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType|array 
      */
     private $user;
 
@@ -31,7 +31,7 @@ class AddedDomainUserDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType|array 
      */
     public function getUser()
     {
@@ -39,7 +39,7 @@ class AddedDomainUserDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $user
+     * @param \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType|array $user
      * @return $this
      */
     public function setUser($user)
@@ -47,7 +47,4 @@ class AddedDomainUserDataListType
         $this->user = $user;
         return $this;
     }
-
-
 }
-

@@ -6,16 +6,16 @@ class GetMatchingLineItemsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType
+     * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array 
      */
     private $lineItemInfo;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo
+     * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array $lineItemInfo
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo)
+    public function __construct($lineItemInfo)
     {
         $this->lineItemInfo = $lineItemInfo;
     }
@@ -23,15 +23,15 @@ class GetMatchingLineItemsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo
+     * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array $lineItemInfo
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo)
+    public static function create($lineItemInfo)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType
+     * @return \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array 
      */
     public function getLineItemInfo()
     {
@@ -39,7 +39,7 @@ class GetMatchingLineItemsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array $lineItemInfo
      * @return $this
      */
     public function setLineItemInfo($lineItemInfo)
@@ -47,7 +47,4 @@ class GetMatchingLineItemsListType
         $this->lineItemInfo = $lineItemInfo;
         return $this;
     }
-
-
 }
-

@@ -6,7 +6,7 @@ class FailedUpdateUserRolesDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateUserRolesDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateUserRolesDataType|array 
      */
     private $failedUser;
 
@@ -31,7 +31,7 @@ class FailedUpdateUserRolesDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateUserRolesDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateUserRolesDataType|array 
      */
     public function getFailedUser()
     {
@@ -39,7 +39,7 @@ class FailedUpdateUserRolesDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateUserRolesDataType $failedUser
+     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateUserRolesDataType|array $failedUser
      * @return $this
      */
     public function setFailedUser($failedUser)
@@ -47,7 +47,4 @@ class FailedUpdateUserRolesDataListType
         $this->failedUser = $failedUser;
         return $this;
     }
-
-
 }
-

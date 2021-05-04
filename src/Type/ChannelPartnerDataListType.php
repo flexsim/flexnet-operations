@@ -6,7 +6,7 @@ class ChannelPartnerDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType
+     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType|array
      */
     private $channelPartner;
 
@@ -31,7 +31,7 @@ class ChannelPartnerDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType
+     * @return \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType|array
      */
     public function getChannelPartner()
     {
@@ -39,7 +39,7 @@ class ChannelPartnerDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType $channelPartner
+     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType|array $channelPartner
      * @return $this
      */
     public function setChannelPartner($channelPartner)
@@ -47,7 +47,4 @@ class ChannelPartnerDataListType
         $this->channelPartner = $channelPartner;
         return $this;
     }
-
-
 }
-

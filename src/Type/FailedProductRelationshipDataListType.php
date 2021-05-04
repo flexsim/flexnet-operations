@@ -6,7 +6,7 @@ class FailedProductRelationshipDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataType|array 
      */
     private $failedRelationship;
 
@@ -31,7 +31,7 @@ class FailedProductRelationshipDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataType|array 
      */
     public function getFailedRelationship()
     {
@@ -39,7 +39,7 @@ class FailedProductRelationshipDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataType $failedRelationship
+     * @param \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataType|array $failedRelationship
      * @return $this
      */
     public function setFailedRelationship($failedRelationship)
@@ -47,7 +47,4 @@ class FailedProductRelationshipDataListType
         $this->failedRelationship = $failedRelationship;
         return $this;
     }
-
-
 }
-

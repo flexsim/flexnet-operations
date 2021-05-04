@@ -6,16 +6,16 @@ class FailedSplitLineItemListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType|array 
      */
     private $failedLineItem;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType $failedLineItem
+     * @var \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType|array $failedLineItem
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType $failedLineItem)
+    public function __construct($failedLineItem)
     {
         $this->failedLineItem = $failedLineItem;
     }
@@ -23,15 +23,15 @@ class FailedSplitLineItemListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType $failedLineItem
+     * @var \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType|array $failedLineItem
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType $failedLineItem)
+    public static function create($failedLineItem)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType|array 
      */
     public function getFailedLineItem()
     {
@@ -39,7 +39,7 @@ class FailedSplitLineItemListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType $failedLineItem
+     * @param \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType|array $failedLineItem
      * @return $this
      */
     public function setFailedLineItem($failedLineItem)
@@ -47,7 +47,4 @@ class FailedSplitLineItemListType
         $this->failedLineItem = $failedLineItem;
         return $this;
     }
-
-
 }
-

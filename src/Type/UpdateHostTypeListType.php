@@ -6,7 +6,7 @@ class UpdateHostTypeListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType
+     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array
      */
     private $hostType;
 
@@ -21,7 +21,7 @@ class UpdateHostTypeListType
      * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
      * @var string $opType
      */
-    public function __construct($hostType = null, string $opType)
+    public function __construct($hostType, string $opType)
     {
         $this->hostType = $hostType;
         $this->opType = $opType;
@@ -33,13 +33,13 @@ class UpdateHostTypeListType
      * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
      * @var string $opType
      */
-    public static function create($hostType = null, string $opType)
+    public static function create($hostType, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\HostTypePKType
+     * @return \Flexsim\FlexnetOperations\Type\HostTypePKType|array
      */
     public function getHostType()
     {
@@ -47,7 +47,7 @@ class UpdateHostTypeListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
      * @return $this
      */
     public function setHostType($hostType)
@@ -73,7 +73,4 @@ class UpdateHostTypeListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

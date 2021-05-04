@@ -6,7 +6,7 @@ class FailedUpdateDevDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateDeviceDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateDeviceDataType|array 
      */
     private $failedDevice;
 
@@ -31,7 +31,7 @@ class FailedUpdateDevDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateDeviceDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateDeviceDataType|array 
      */
     public function getFailedDevice()
     {
@@ -39,7 +39,7 @@ class FailedUpdateDevDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateDeviceDataType $failedDevice
+     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateDeviceDataType|array $failedDevice
      * @return $this
      */
     public function setFailedDevice($failedDevice)
@@ -47,7 +47,4 @@ class FailedUpdateDevDataListType
         $this->failedDevice = $failedDevice;
         return $this;
     }
-
-
 }
-

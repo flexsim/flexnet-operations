@@ -6,16 +6,16 @@ class UserOrganizationRolesListType
 {
 
     /**
-     * @var string
+     * @var string|array
      */
     private $roleName;
 
     /**
      * Constructor
      *
-     * @var string $roleName
+     * @var string|array $roleName
      */
-    public function __construct(string $roleName)
+    public function __construct($roleName)
     {
         $this->roleName = $roleName;
     }
@@ -23,15 +23,15 @@ class UserOrganizationRolesListType
     /**
      * create a new instance of this class
      *
-     * @var string $roleName
+     * @var string|array $roleName
      */
-    public static function create(string $roleName)
+    public static function create($roleName)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return string
+     * @return string|array
      */
     public function getRoleName()
     {
@@ -39,7 +39,7 @@ class UserOrganizationRolesListType
     }
 
     /**
-     * @param string $roleName
+     * @param string|array $roleName
      * @return $this
      */
     public function setRoleName($roleName)
@@ -47,7 +47,4 @@ class UserOrganizationRolesListType
         $this->roleName = $roleName;
         return $this;
     }
-
-
 }
-

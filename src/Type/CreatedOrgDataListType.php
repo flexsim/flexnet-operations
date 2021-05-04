@@ -6,7 +6,7 @@ class CreatedOrgDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreatedOrgDataType
+     * @var \Flexsim\FlexnetOperations\Type\CreatedOrgDataType|array
      */
     private $createdOrganization;
 
@@ -31,7 +31,7 @@ class CreatedOrgDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreatedOrgDataType
+     * @return \Flexsim\FlexnetOperations\Type\CreatedOrgDataType|array
      */
     public function getCreatedOrganization()
     {
@@ -39,7 +39,7 @@ class CreatedOrgDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedOrgDataType $createdOrganization
+     * @param \Flexsim\FlexnetOperations\Type\CreatedOrgDataType|array $createdOrganization
      * @return $this
      */
     public function setCreatedOrganization($createdOrganization)
@@ -47,7 +47,4 @@ class CreatedOrgDataListType
         $this->createdOrganization = $createdOrganization;
         return $this;
     }
-
-
 }
-

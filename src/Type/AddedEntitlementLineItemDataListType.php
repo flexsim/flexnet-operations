@@ -6,7 +6,7 @@ class AddedEntitlementLineItemDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType
+     * @var \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType|array 
      */
     private $addedLineItems;
 
@@ -31,7 +31,7 @@ class AddedEntitlementLineItemDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType
+     * @return \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType|array 
      */
     public function getAddedLineItems()
     {
@@ -39,7 +39,7 @@ class AddedEntitlementLineItemDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType $addedLineItems
+     * @param \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType|array $addedLineItems
      * @return $this
      */
     public function setAddedLineItems($addedLineItems)
@@ -47,7 +47,4 @@ class AddedEntitlementLineItemDataListType
         $this->addedLineItems = $addedLineItems;
         return $this;
     }
-
-
 }
-

@@ -6,7 +6,7 @@ class FailedUpdateMaintenanceDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateMaintenanceDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateMaintenanceDataType|array 
      */
     private $failedMaintenance;
 
@@ -31,7 +31,7 @@ class FailedUpdateMaintenanceDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateMaintenanceDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateMaintenanceDataType|array 
      */
     public function getFailedMaintenance()
     {
@@ -39,7 +39,7 @@ class FailedUpdateMaintenanceDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateMaintenanceDataType $failedMaintenance
+     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateMaintenanceDataType|array $failedMaintenance
      * @return $this
      */
     public function setFailedMaintenance($failedMaintenance)
@@ -47,7 +47,4 @@ class FailedUpdateMaintenanceDataListType
         $this->failedMaintenance = $failedMaintenance;
         return $this;
     }
-
-
 }
-

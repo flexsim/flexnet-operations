@@ -6,16 +6,16 @@ class LicenseModelsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array 
      */
     private $licenseModel;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModel
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel)
+    public function __construct($licenseModel)
     {
         $this->licenseModel = $licenseModel;
     }
@@ -23,15 +23,15 @@ class LicenseModelsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModel
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel)
+    public static function create($licenseModel)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array 
      */
     public function getLicenseModel()
     {
@@ -39,7 +39,7 @@ class LicenseModelsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModel
      * @return $this
      */
     public function setLicenseModel($licenseModel)
@@ -47,7 +47,4 @@ class LicenseModelsListType
         $this->licenseModel = $licenseModel;
         return $this;
     }
-
-
 }
-

@@ -6,7 +6,7 @@ class FailedDeleteDevDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedDeleteDevDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedDeleteDevDataType|array 
      */
     private $failedDevice;
 
@@ -31,7 +31,7 @@ class FailedDeleteDevDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedDeleteDevDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedDeleteDevDataType|array 
      */
     public function getFailedDevice()
     {
@@ -39,7 +39,7 @@ class FailedDeleteDevDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteDevDataType $failedDevice
+     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteDevDataType|array $failedDevice
      * @return $this
      */
     public function setFailedDevice($failedDevice)
@@ -47,7 +47,4 @@ class FailedDeleteDevDataListType
         $this->failedDevice = $failedDevice;
         return $this;
     }
-
-
 }
-

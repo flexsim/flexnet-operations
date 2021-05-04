@@ -6,7 +6,7 @@ class CreatedPartNumberDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType
+     * @var \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType|array
      */
     private $createdPartNumber;
 
@@ -31,7 +31,7 @@ class CreatedPartNumberDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType
+     * @return \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType|array
      */
     public function getCreatedPartNumber()
     {
@@ -39,7 +39,7 @@ class CreatedPartNumberDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType $createdPartNumber
+     * @param \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType|array $createdPartNumber
      * @return $this
      */
     public function setCreatedPartNumber($createdPartNumber)
@@ -47,7 +47,4 @@ class CreatedPartNumberDataListType
         $this->createdPartNumber = $createdPartNumber;
         return $this;
     }
-
-
 }
-

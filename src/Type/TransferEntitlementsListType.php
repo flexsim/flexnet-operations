@@ -6,16 +6,16 @@ class TransferEntitlementsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType
+     * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType|array 
      */
     private $entitlementInfo;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo
+     * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType|array $entitlementInfo
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo)
+    public function __construct($entitlementInfo)
     {
         $this->entitlementInfo = $entitlementInfo;
     }
@@ -23,15 +23,15 @@ class TransferEntitlementsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo
+     * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType|array $entitlementInfo
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo)
+    public static function create($entitlementInfo)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType
+     * @return \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType|array 
      */
     public function getEntitlementInfo()
     {
@@ -39,7 +39,7 @@ class TransferEntitlementsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo
+     * @param \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType|array $entitlementInfo
      * @return $this
      */
     public function setEntitlementInfo($entitlementInfo)
@@ -47,7 +47,4 @@ class TransferEntitlementsListType
         $this->entitlementInfo = $entitlementInfo;
         return $this;
     }
-
-
 }
-

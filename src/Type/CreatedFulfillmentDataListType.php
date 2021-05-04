@@ -6,12 +6,12 @@ class CreatedFulfillmentDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType
+     * @var \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array
      */
     private $createdFulfillment;
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType
+     * @var \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array
      */
     private $verifiedFulfillment;
 
@@ -39,7 +39,7 @@ class CreatedFulfillmentDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType
+     * @return \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array
      */
     public function getCreatedFulfillment()
     {
@@ -47,7 +47,7 @@ class CreatedFulfillmentDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType $createdFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array $createdFulfillment
      * @return $this
      */
     public function setCreatedFulfillment($createdFulfillment)
@@ -57,7 +57,7 @@ class CreatedFulfillmentDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType
+     * @return \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array
      */
     public function getVerifiedFulfillment()
     {
@@ -65,7 +65,7 @@ class CreatedFulfillmentDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType $verifiedFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array $verifiedFulfillment
      * @return $this
      */
     public function setVerifiedFulfillment($verifiedFulfillment)
@@ -73,7 +73,4 @@ class CreatedFulfillmentDataListType
         $this->verifiedFulfillment = $verifiedFulfillment;
         return $this;
     }
-
-
 }
-

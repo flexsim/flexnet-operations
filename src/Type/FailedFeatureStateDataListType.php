@@ -6,7 +6,7 @@ class FailedFeatureStateDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedFeatureStateDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedFeatureStateDataType|array 
      */
     private $failedFeature;
 
@@ -31,7 +31,7 @@ class FailedFeatureStateDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedFeatureStateDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedFeatureStateDataType|array 
      */
     public function getFailedFeature()
     {
@@ -39,7 +39,7 @@ class FailedFeatureStateDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedFeatureStateDataType $failedFeature
+     * @param \Flexsim\FlexnetOperations\Type\FailedFeatureStateDataType|array $failedFeature
      * @return $this
      */
     public function setFailedFeature($failedFeature)
@@ -47,7 +47,4 @@ class FailedFeatureStateDataListType
         $this->failedFeature = $failedFeature;
         return $this;
     }
-
-
 }
-

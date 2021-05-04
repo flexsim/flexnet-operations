@@ -6,16 +6,16 @@ class FeatureBundlesListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array 
      */
     private $featureBundle;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType $featureBundle
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType $featureBundle)
+    public function __construct($featureBundle)
     {
         $this->featureBundle = $featureBundle;
     }
@@ -23,15 +23,15 @@ class FeatureBundlesListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType $featureBundle
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType $featureBundle)
+    public static function create($featureBundle)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType
+     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array 
      */
     public function getFeatureBundle()
     {
@@ -39,7 +39,7 @@ class FeatureBundlesListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType $featureBundle
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
      * @return $this
      */
     public function setFeatureBundle($featureBundle)
@@ -47,7 +47,4 @@ class FeatureBundlesListType
         $this->featureBundle = $featureBundle;
         return $this;
     }
-
-
 }
-

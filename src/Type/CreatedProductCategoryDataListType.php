@@ -6,7 +6,7 @@ class CreatedProductCategoryDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataType
+     * @var \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataType|array
      */
     private $createdProductCatgory;
 
@@ -31,7 +31,7 @@ class CreatedProductCategoryDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataType
+     * @return \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataType|array
      */
     public function getCreatedProductCatgory()
     {
@@ -39,7 +39,7 @@ class CreatedProductCategoryDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataType $createdProductCatgory
+     * @param \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataType|array $createdProductCatgory
      * @return $this
      */
     public function setCreatedProductCatgory($createdProductCatgory)
@@ -47,7 +47,4 @@ class CreatedProductCategoryDataListType
         $this->createdProductCatgory = $createdProductCatgory;
         return $this;
     }
-
-
 }
-

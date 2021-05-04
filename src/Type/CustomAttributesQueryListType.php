@@ -6,7 +6,7 @@ class CustomAttributesQueryListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CustomAttributeQueryType
+     * @var \Flexsim\FlexnetOperations\Type\CustomAttributeQueryType|array
      */
     private $attribute;
 
@@ -31,7 +31,7 @@ class CustomAttributesQueryListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CustomAttributeQueryType
+     * @return \Flexsim\FlexnetOperations\Type\CustomAttributeQueryType|array
      */
     public function getAttribute()
     {
@@ -39,7 +39,7 @@ class CustomAttributesQueryListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeQueryType $attribute
+     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeQueryType|array $attribute
      * @return $this
      */
     public function setAttribute($attribute)
@@ -47,7 +47,4 @@ class CustomAttributesQueryListType
         $this->attribute = $attribute;
         return $this;
     }
-
-
 }
-

@@ -6,16 +6,16 @@ class FailedSplitBulkEntitlementListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementDataType|array 
      */
     private $failedBulkEntitlement;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementDataType $failedBulkEntitlement
+     * @var \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementDataType|array $failedBulkEntitlement
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementDataType $failedBulkEntitlement)
+    public function __construct($failedBulkEntitlement)
     {
         $this->failedBulkEntitlement = $failedBulkEntitlement;
     }
@@ -23,15 +23,15 @@ class FailedSplitBulkEntitlementListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementDataType $failedBulkEntitlement
+     * @var \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementDataType|array $failedBulkEntitlement
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementDataType $failedBulkEntitlement)
+    public static function create($failedBulkEntitlement)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementDataType|array 
      */
     public function getFailedBulkEntitlement()
     {
@@ -39,7 +39,7 @@ class FailedSplitBulkEntitlementListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementDataType $failedBulkEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementDataType|array $failedBulkEntitlement
      * @return $this
      */
     public function setFailedBulkEntitlement($failedBulkEntitlement)
@@ -47,7 +47,4 @@ class FailedSplitBulkEntitlementListType
         $this->failedBulkEntitlement = $failedBulkEntitlement;
         return $this;
     }
-
-
 }
-

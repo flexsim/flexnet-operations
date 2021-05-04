@@ -6,7 +6,7 @@ class FailedBulkEntitlementDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataType|array 
      */
     private $failedBulkEntitlement;
 
@@ -31,7 +31,7 @@ class FailedBulkEntitlementDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataType|array 
      */
     public function getFailedBulkEntitlement()
     {
@@ -39,7 +39,7 @@ class FailedBulkEntitlementDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataType $failedBulkEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataType|array $failedBulkEntitlement
      * @return $this
      */
     public function setFailedBulkEntitlement($failedBulkEntitlement)
@@ -47,7 +47,4 @@ class FailedBulkEntitlementDataListType
         $this->failedBulkEntitlement = $failedBulkEntitlement;
         return $this;
     }
-
-
 }
-

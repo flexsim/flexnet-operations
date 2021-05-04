@@ -6,7 +6,7 @@ class UpdateSubOrganizationsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array
      */
     private $subOrganization;
 
@@ -18,10 +18,10 @@ class UpdateSubOrganizationsListType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $subOrganization
+     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $subOrganization
      * @var string $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $subOrganization, string $opType)
+    public function __construct($subOrganization, string $opType)
     {
         $this->subOrganization = $subOrganization;
         $this->opType = $opType;
@@ -30,16 +30,16 @@ class UpdateSubOrganizationsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $subOrganization
+     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $subOrganization
      * @var string $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $subOrganization, string $opType)
+    public static function create($subOrganization, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array
      */
     public function getSubOrganization()
     {
@@ -47,7 +47,7 @@ class UpdateSubOrganizationsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $subOrganization
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $subOrganization
      * @return $this
      */
     public function setSubOrganization($subOrganization)
@@ -73,7 +73,4 @@ class UpdateSubOrganizationsListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

@@ -6,7 +6,7 @@ class UpdateChannelPartnerDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType
+     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array
      */
     private $channelPartners;
 
@@ -18,10 +18,10 @@ class UpdateChannelPartnerDataListType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array $channelPartners
      * @var string $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, string $opType)
+    public function __construct($channelPartners, string $opType)
     {
         $this->channelPartners = $channelPartners;
         $this->opType = $opType;
@@ -30,16 +30,16 @@ class UpdateChannelPartnerDataListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array $channelPartners
      * @var string $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, string $opType)
+    public static function create($channelPartners, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType
+     * @return \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array
      */
     public function getChannelPartners()
     {
@@ -47,7 +47,7 @@ class UpdateChannelPartnerDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array $channelPartners
      * @return $this
      */
     public function setChannelPartners($channelPartners)
@@ -73,7 +73,4 @@ class UpdateChannelPartnerDataListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

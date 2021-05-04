@@ -6,7 +6,7 @@ class FailedAddEntitlementLineItemDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedAddEntitlementLineItemDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedAddEntitlementLineItemDataType|array
      */
     private $failedLineItemData;
 
@@ -31,7 +31,7 @@ class FailedAddEntitlementLineItemDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedAddEntitlementLineItemDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedAddEntitlementLineItemDataType|array
      */
     public function getFailedLineItemData()
     {
@@ -39,7 +39,7 @@ class FailedAddEntitlementLineItemDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedAddEntitlementLineItemDataType $failedLineItemData
+     * @param \Flexsim\FlexnetOperations\Type\FailedAddEntitlementLineItemDataType|array $failedLineItemData
      * @return $this
      */
     public function setFailedLineItemData($failedLineItemData)
@@ -47,7 +47,4 @@ class FailedAddEntitlementLineItemDataListType
         $this->failedLineItemData = $failedLineItemData;
         return $this;
     }
-
-
 }
-

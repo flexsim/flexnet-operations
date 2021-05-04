@@ -6,7 +6,7 @@ class AcctCustomAttributesQueryListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AcctCustomAttributeQueryType
+     * @var \Flexsim\FlexnetOperations\Type\AcctCustomAttributeQueryType|array 
      */
     private $attribute;
 
@@ -31,7 +31,7 @@ class AcctCustomAttributesQueryListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AcctCustomAttributeQueryType
+     * @return \Flexsim\FlexnetOperations\Type\AcctCustomAttributeQueryType|array 
      */
     public function getAttribute()
     {
@@ -39,7 +39,7 @@ class AcctCustomAttributesQueryListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AcctCustomAttributeQueryType $attribute
+     * @param \Flexsim\FlexnetOperations\Type\AcctCustomAttributeQueryType|array $attribute
      * @return $this
      */
     public function setAttribute($attribute)
@@ -47,7 +47,4 @@ class AcctCustomAttributesQueryListType
         $this->attribute = $attribute;
         return $this;
     }
-
-
 }
-

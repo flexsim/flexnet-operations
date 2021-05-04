@@ -6,7 +6,7 @@ class FailedUpdateEntitlementLineItemDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateEntitlementLineItemDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateEntitlementLineItemDataType|array 
      */
     private $failedData;
 
@@ -31,7 +31,7 @@ class FailedUpdateEntitlementLineItemDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateEntitlementLineItemDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateEntitlementLineItemDataType|array 
      */
     public function getFailedData()
     {
@@ -39,7 +39,7 @@ class FailedUpdateEntitlementLineItemDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateEntitlementLineItemDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateEntitlementLineItemDataType|array $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -47,7 +47,4 @@ class FailedUpdateEntitlementLineItemDataListType
         $this->failedData = $failedData;
         return $this;
     }
-
-
 }
-

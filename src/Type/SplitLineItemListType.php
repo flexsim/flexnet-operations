@@ -6,16 +6,16 @@ class SplitLineItemListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType
+     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType|array 
      */
     private $lineItemInfo;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo
+     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType|array $lineItemInfo
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo)
+    public function __construct($lineItemInfo)
     {
         $this->lineItemInfo = $lineItemInfo;
     }
@@ -23,15 +23,15 @@ class SplitLineItemListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo
+     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType|array $lineItemInfo
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo)
+    public static function create($lineItemInfo)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType
+     * @return \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType|array 
      */
     public function getLineItemInfo()
     {
@@ -39,7 +39,7 @@ class SplitLineItemListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo
+     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType|array $lineItemInfo
      * @return $this
      */
     public function setLineItemInfo($lineItemInfo)
@@ -47,7 +47,4 @@ class SplitLineItemListType
         $this->lineItemInfo = $lineItemInfo;
         return $this;
     }
-
-
 }
-

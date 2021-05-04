@@ -6,7 +6,7 @@ class CreatedRenewEntitlementDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType
+     * @var \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType|array
      */
     private $entitlementData;
 
@@ -31,7 +31,7 @@ class CreatedRenewEntitlementDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType
+     * @return \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType|array
      */
     public function getEntitlementData()
     {
@@ -39,7 +39,7 @@ class CreatedRenewEntitlementDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType $entitlementData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType|array $entitlementData
      * @return $this
      */
     public function setEntitlementData($entitlementData)
@@ -47,7 +47,4 @@ class CreatedRenewEntitlementDataListType
         $this->entitlementData = $entitlementData;
         return $this;
     }
-
-
 }
-

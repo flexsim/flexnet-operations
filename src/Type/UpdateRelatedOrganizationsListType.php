@@ -6,7 +6,7 @@ class UpdateRelatedOrganizationsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array
      */
     private $relatedOrganization;
 
@@ -18,10 +18,10 @@ class UpdateRelatedOrganizationsListType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization
+     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $relatedOrganization
      * @var string $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization, string $opType)
+    public function __construct($relatedOrganization, string $opType)
     {
         $this->relatedOrganization = $relatedOrganization;
         $this->opType = $opType;
@@ -30,16 +30,16 @@ class UpdateRelatedOrganizationsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization
+     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $relatedOrganization
      * @var string $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization, string $opType)
+    public static function create($relatedOrganization, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array
      */
     public function getRelatedOrganization()
     {
@@ -47,7 +47,7 @@ class UpdateRelatedOrganizationsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $relatedOrganization
      * @return $this
      */
     public function setRelatedOrganization($relatedOrganization)
@@ -73,7 +73,4 @@ class UpdateRelatedOrganizationsListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

@@ -6,7 +6,7 @@ class FailedRenewEntitlementDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataType|array 
      */
     private $failedEntitlement;
 
@@ -31,7 +31,7 @@ class FailedRenewEntitlementDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataType|array 
      */
     public function getFailedEntitlement()
     {
@@ -39,7 +39,7 @@ class FailedRenewEntitlementDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataType $failedEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataType|array $failedEntitlement
      * @return $this
      */
     public function setFailedEntitlement($failedEntitlement)
@@ -47,7 +47,4 @@ class FailedRenewEntitlementDataListType
         $this->failedEntitlement = $failedEntitlement;
         return $this;
     }
-
-
 }
-

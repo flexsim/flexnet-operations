@@ -6,16 +6,16 @@ class SplitLineItemResponseListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemDataType
+     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array 
      */
     private $splitLineItem;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemDataType $splitLineItem
+     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array $splitLineItem
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SplitLineItemDataType $splitLineItem)
+    public function __construct($splitLineItem)
     {
         $this->splitLineItem = $splitLineItem;
     }
@@ -23,15 +23,15 @@ class SplitLineItemResponseListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemDataType $splitLineItem
+     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array $splitLineItem
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SplitLineItemDataType $splitLineItem)
+    public static function create($splitLineItem)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\SplitLineItemDataType
+     * @return \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array 
      */
     public function getSplitLineItem()
     {
@@ -39,7 +39,7 @@ class SplitLineItemResponseListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemDataType $splitLineItem
+     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array $splitLineItem
      * @return $this
      */
     public function setSplitLineItem($splitLineItem)
@@ -47,7 +47,4 @@ class SplitLineItemResponseListType
         $this->splitLineItem = $splitLineItem;
         return $this;
     }
-
-
 }
-

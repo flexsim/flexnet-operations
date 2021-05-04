@@ -6,7 +6,7 @@ class EntitlementStateChangeListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType
+     * @var \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType|array
      */
     private $entitlement;
 
@@ -31,7 +31,7 @@ class EntitlementStateChangeListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType
+     * @return \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType|array
      */
     public function getEntitlement()
     {
@@ -39,7 +39,7 @@ class EntitlementStateChangeListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType $entitlement
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType|array $entitlement
      * @return $this
      */
     public function setEntitlement($entitlement)
@@ -47,7 +47,4 @@ class EntitlementStateChangeListType
         $this->entitlement = $entitlement;
         return $this;
     }
-
-
 }
-

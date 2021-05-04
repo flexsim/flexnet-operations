@@ -6,16 +6,16 @@ class SplitBulkEntitlementResponseListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType
+     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType|array 
      */
     private $splitBulkEntitlement;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType $splitBulkEntitlement
+     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType|array $splitBulkEntitlement
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType $splitBulkEntitlement)
+    public function __construct($splitBulkEntitlement)
     {
         $this->splitBulkEntitlement = $splitBulkEntitlement;
     }
@@ -23,15 +23,15 @@ class SplitBulkEntitlementResponseListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType $splitBulkEntitlement
+     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType|array $splitBulkEntitlement
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType $splitBulkEntitlement)
+    public static function create($splitBulkEntitlement)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType
+     * @return \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType|array 
      */
     public function getSplitBulkEntitlement()
     {
@@ -39,7 +39,7 @@ class SplitBulkEntitlementResponseListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType $splitBulkEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType|array $splitBulkEntitlement
      * @return $this
      */
     public function setSplitBulkEntitlement($splitBulkEntitlement)
@@ -47,7 +47,4 @@ class SplitBulkEntitlementResponseListType
         $this->splitBulkEntitlement = $splitBulkEntitlement;
         return $this;
     }
-
-
 }
-

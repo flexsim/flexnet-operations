@@ -6,7 +6,7 @@ class CreatedBulkEntitlementDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType
+     * @var \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType|array
      */
     private $createdBulkEntitlement;
 
@@ -31,7 +31,7 @@ class CreatedBulkEntitlementDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType
+     * @return \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType|array
      */
     public function getCreatedBulkEntitlement()
     {
@@ -39,7 +39,7 @@ class CreatedBulkEntitlementDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType $createdBulkEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType|array $createdBulkEntitlement
      * @return $this
      */
     public function setCreatedBulkEntitlement($createdBulkEntitlement)
@@ -47,7 +47,4 @@ class CreatedBulkEntitlementDataListType
         $this->createdBulkEntitlement = $createdBulkEntitlement;
         return $this;
     }
-
-
 }
-

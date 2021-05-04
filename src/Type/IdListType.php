@@ -6,14 +6,14 @@ class IdListType
 {
 
     /**
-     * @var string
+     * @var string|array 
      */
     private $id;
 
     /**
      * Constructor
      *
-     * @var string $id
+     * @var string|array $id
      */
     public function __construct(string $id)
     {
@@ -23,7 +23,7 @@ class IdListType
     /**
      * create a new instance of this class
      *
-     * @var string $id
+     * @var string|array $id
      */
     public static function create(string $id)
     {
@@ -31,7 +31,7 @@ class IdListType
     }
 
     /**
-     * @return string
+     * @return string|array 
      */
     public function getId()
     {
@@ -39,7 +39,7 @@ class IdListType
     }
 
     /**
-     * @param string $id
+     * @param string|array $id
      * @return $this
      */
     public function setId($id)
@@ -47,7 +47,4 @@ class IdListType
         $this->id = $id;
         return $this;
     }
-
-
 }
-

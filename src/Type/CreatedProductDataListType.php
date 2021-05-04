@@ -6,7 +6,7 @@ class CreatedProductDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreatedProductDataType
+     * @var \Flexsim\FlexnetOperations\Type\CreatedProductDataType|array
      */
     private $createdProduct;
 
@@ -31,7 +31,7 @@ class CreatedProductDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreatedProductDataType
+     * @return \Flexsim\FlexnetOperations\Type\CreatedProductDataType|array
      */
     public function getCreatedProduct()
     {
@@ -39,7 +39,7 @@ class CreatedProductDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedProductDataType $createdProduct
+     * @param \Flexsim\FlexnetOperations\Type\CreatedProductDataType|array $createdProduct
      * @return $this
      */
     public function setCreatedProduct($createdProduct)
@@ -47,7 +47,4 @@ class CreatedProductDataListType
         $this->createdProduct = $createdProduct;
         return $this;
     }
-
-
 }
-

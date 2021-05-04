@@ -6,7 +6,7 @@ class FeatureBundleStateChangeListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array 
      */
     private $featureBundle;
 
@@ -31,7 +31,7 @@ class FeatureBundleStateChangeListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType
+     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array 
      */
     public function getFeatureBundle()
     {
@@ -39,7 +39,7 @@ class FeatureBundleStateChangeListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType $featureBundle
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array $featureBundle
      * @return $this
      */
     public function setFeatureBundle($featureBundle)
@@ -47,7 +47,4 @@ class FeatureBundleStateChangeListType
         $this->featureBundle = $featureBundle;
         return $this;
     }
-
-
 }
-

@@ -6,7 +6,7 @@ class FailedRelateAccountsDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedRelateAccountsDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedRelateAccountsDataType|array 
      */
     private $failedAcctData;
 
@@ -31,7 +31,7 @@ class FailedRelateAccountsDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedRelateAccountsDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedRelateAccountsDataType|array 
      */
     public function getFailedAcctData()
     {
@@ -39,7 +39,7 @@ class FailedRelateAccountsDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedRelateAccountsDataType $failedAcctData
+     * @param \Flexsim\FlexnetOperations\Type\FailedRelateAccountsDataType|array $failedAcctData
      * @return $this
      */
     public function setFailedAcctData($failedAcctData)
@@ -47,7 +47,4 @@ class FailedRelateAccountsDataListType
         $this->failedAcctData = $failedAcctData;
         return $this;
     }
-
-
 }
-

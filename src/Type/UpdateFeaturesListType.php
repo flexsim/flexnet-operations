@@ -6,7 +6,7 @@ class UpdateFeaturesListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType
+     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array
      */
     private $feature;
 
@@ -21,7 +21,7 @@ class UpdateFeaturesListType
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array $feature
      * @var string $opType
      */
-    public function __construct($feature = null, string $opType)
+    public function __construct($feature, string $opType)
     {
         $this->feature = $feature;
         $this->opType = $opType;
@@ -33,13 +33,13 @@ class UpdateFeaturesListType
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array $feature
      * @var string $opType
      */
-    public static function create($feature = null, string $opType)
+    public static function create($feature, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType
+     * @return \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array
      */
     public function getFeature()
     {
@@ -47,7 +47,7 @@ class UpdateFeaturesListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType $feature
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array $feature
      * @return $this
      */
     public function setFeature($feature)
@@ -73,7 +73,4 @@ class UpdateFeaturesListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

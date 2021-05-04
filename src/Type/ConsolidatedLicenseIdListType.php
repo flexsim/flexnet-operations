@@ -6,16 +6,16 @@ class ConsolidatedLicenseIdListType
 {
 
     /**
-     * @var string
+     * @var string|array
      */
     private $consolidatedLicenseId;
 
     /**
      * Constructor
      *
-     * @var string $consolidatedLicenseId
+     * @var string|array $consolidatedLicenseId
      */
-    public function __construct(string $consolidatedLicenseId)
+    public function __construct($consolidatedLicenseId)
     {
         $this->consolidatedLicenseId = $consolidatedLicenseId;
     }
@@ -23,15 +23,15 @@ class ConsolidatedLicenseIdListType
     /**
      * create a new instance of this class
      *
-     * @var string $consolidatedLicenseId
+     * @var string|array $consolidatedLicenseId
      */
-    public static function create(string $consolidatedLicenseId)
+    public static function create($consolidatedLicenseId)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return string
+     * @return string|array
      */
     public function getConsolidatedLicenseId()
     {
@@ -39,7 +39,7 @@ class ConsolidatedLicenseIdListType
     }
 
     /**
-     * @param string $consolidatedLicenseId
+     * @param string|array $consolidatedLicenseId
      * @return $this
      */
     public function setConsolidatedLicenseId($consolidatedLicenseId)
@@ -47,7 +47,4 @@ class ConsolidatedLicenseIdListType
         $this->consolidatedLicenseId = $consolidatedLicenseId;
         return $this;
     }
-
-
 }
-

@@ -6,16 +6,16 @@ class FeatureBundleListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType|array 
      */
     private $featureBundleIdentifier;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType|array $featureBundleIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier)
+    public function __construct($featureBundleIdentifier)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
     }
@@ -23,15 +23,15 @@ class FeatureBundleListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType|array $featureBundleIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier)
+    public static function create($featureBundleIdentifier)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType|array 
      */
     public function getFeatureBundleIdentifier()
     {
@@ -39,7 +39,7 @@ class FeatureBundleListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType|array $featureBundleIdentifier
      * @return $this
      */
     public function setFeatureBundleIdentifier($featureBundleIdentifier)
@@ -47,7 +47,4 @@ class FeatureBundleListType
         $this->featureBundleIdentifier = $featureBundleIdentifier;
         return $this;
     }
-
-
 }
-

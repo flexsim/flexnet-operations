@@ -6,7 +6,7 @@ class FailedAddWebRegKeyDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataType|array
      */
     private $failedWebRegKeyData;
 
@@ -31,7 +31,7 @@ class FailedAddWebRegKeyDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataType|array
      */
     public function getFailedWebRegKeyData()
     {
@@ -39,7 +39,7 @@ class FailedAddWebRegKeyDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataType $failedWebRegKeyData
+     * @param \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataType|array $failedWebRegKeyData
      * @return $this
      */
     public function setFailedWebRegKeyData($failedWebRegKeyData)
@@ -47,7 +47,4 @@ class FailedAddWebRegKeyDataListType
         $this->failedWebRegKeyData = $failedWebRegKeyData;
         return $this;
     }
-
-
 }
-

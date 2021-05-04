@@ -6,16 +6,16 @@ class UnlinkMaintenanceLineItemListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType
+     * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array 
      */
     private $unlinkMaintenanceLineItem;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem
+     * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem)
+    public function __construct($unlinkMaintenanceLineItem)
     {
         $this->unlinkMaintenanceLineItem = $unlinkMaintenanceLineItem;
     }
@@ -23,15 +23,15 @@ class UnlinkMaintenanceLineItemListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem
+     * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem)
+    public static function create($unlinkMaintenanceLineItem)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType
+     * @return \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array 
      */
     public function getUnlinkMaintenanceLineItem()
     {
@@ -39,7 +39,7 @@ class UnlinkMaintenanceLineItemListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem
+     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem
      * @return $this
      */
     public function setUnlinkMaintenanceLineItem($unlinkMaintenanceLineItem)
@@ -47,7 +47,4 @@ class UnlinkMaintenanceLineItemListType
         $this->unlinkMaintenanceLineItem = $unlinkMaintenanceLineItem;
         return $this;
     }
-
-
 }
-

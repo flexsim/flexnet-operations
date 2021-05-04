@@ -8,16 +8,16 @@ class SetDeviceStatusRequestListType implements RequestInterface
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\SetDeviceStatusType
+     * @var \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array 
      */
     private $devices;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SetDeviceStatusType $devices
+     * @var \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array $devices
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SetDeviceStatusType $devices)
+    public function __construct($devices)
     {
         $this->devices = $devices;
     }
@@ -25,15 +25,15 @@ class SetDeviceStatusRequestListType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SetDeviceStatusType $devices
+     * @var \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array $devices
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SetDeviceStatusType $devices)
+    public static function create($devices)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\SetDeviceStatusType
+     * @return \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array 
      */
     public function getDevices()
     {
@@ -41,7 +41,7 @@ class SetDeviceStatusRequestListType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SetDeviceStatusType $devices
+     * @param \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array $devices
      * @return $this
      */
     public function setDevices($devices)
@@ -49,7 +49,4 @@ class SetDeviceStatusRequestListType implements RequestInterface
         $this->devices = $devices;
         return $this;
     }
-
-
 }
-

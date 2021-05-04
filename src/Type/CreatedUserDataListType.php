@@ -6,7 +6,7 @@ class CreatedUserDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType|array
      */
     private $user;
 
@@ -31,7 +31,7 @@ class CreatedUserDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\UserIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\UserIdentifierType|array
      */
     public function getUser()
     {
@@ -39,7 +39,7 @@ class CreatedUserDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType|array $user
      * @return $this
      */
     public function setUser($user)
@@ -47,7 +47,4 @@ class CreatedUserDataListType
         $this->user = $user;
         return $this;
     }
-
-
 }
-

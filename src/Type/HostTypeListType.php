@@ -6,16 +6,16 @@ class HostTypeListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType
+     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array 
      */
     private $hostType;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\HostTypePKType $hostType)
+    public function __construct($hostType)
     {
         $this->hostType = $hostType;
     }
@@ -23,15 +23,15 @@ class HostTypeListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\HostTypePKType $hostType)
+    public static function create($hostType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\HostTypePKType
+     * @return \Flexsim\FlexnetOperations\Type\HostTypePKType|array 
      */
     public function getHostType()
     {
@@ -39,7 +39,7 @@ class HostTypeListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
      * @return $this
      */
     public function setHostType($hostType)
@@ -47,7 +47,4 @@ class HostTypeListType
         $this->hostType = $hostType;
         return $this;
     }
-
-
 }
-

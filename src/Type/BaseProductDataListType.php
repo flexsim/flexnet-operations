@@ -6,7 +6,7 @@ class BaseProductDataListType
 {
 
     /**
-     * @var string
+     * @var string|array
      */
     private $uniqueId;
 
@@ -31,7 +31,7 @@ class BaseProductDataListType
     }
 
     /**
-     * @return string
+     * @return string|array
      */
     public function getUniqueId()
     {
@@ -39,7 +39,7 @@ class BaseProductDataListType
     }
 
     /**
-     * @param string $uniqueId
+     * @param string|array $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -47,7 +47,4 @@ class BaseProductDataListType
         $this->uniqueId = $uniqueId;
         return $this;
     }
-
-
 }
-

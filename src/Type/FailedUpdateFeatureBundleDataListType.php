@@ -6,7 +6,7 @@ class FailedUpdateFeatureBundleDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureBundleDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureBundleDataType|array 
      */
     private $failedFeatureBundle;
 
@@ -31,7 +31,7 @@ class FailedUpdateFeatureBundleDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureBundleDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureBundleDataType|array 
      */
     public function getFailedFeatureBundle()
     {
@@ -39,7 +39,7 @@ class FailedUpdateFeatureBundleDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureBundleDataType $failedFeatureBundle
+     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureBundleDataType|array $failedFeatureBundle
      * @return $this
      */
     public function setFailedFeatureBundle($failedFeatureBundle)
@@ -47,7 +47,4 @@ class FailedUpdateFeatureBundleDataListType
         $this->failedFeatureBundle = $failedFeatureBundle;
         return $this;
     }
-
-
 }
-

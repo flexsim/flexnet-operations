@@ -6,7 +6,7 @@ class UserOrganizationsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\UserOrganizationType
+     * @var \Flexsim\FlexnetOperations\Type\UserOrganizationType|array 
      */
     private $orgRoles;
 
@@ -31,7 +31,7 @@ class UserOrganizationsListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\UserOrganizationType
+     * @return \Flexsim\FlexnetOperations\Type\UserOrganizationType|array 
      */
     public function getOrgRoles()
     {
@@ -39,7 +39,7 @@ class UserOrganizationsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserOrganizationType $orgRoles
+     * @param \Flexsim\FlexnetOperations\Type\UserOrganizationType|array $orgRoles
      * @return $this
      */
     public function setOrgRoles($orgRoles)
@@ -47,7 +47,4 @@ class UserOrganizationsListType
         $this->orgRoles = $orgRoles;
         return $this;
     }
-
-
 }
-

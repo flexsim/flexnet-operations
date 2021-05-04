@@ -6,7 +6,7 @@ class FailedUnlinkMaintenanceLineItemListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUnlinkMaintenanceLineItemDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedUnlinkMaintenanceLineItemDataType|array 
      */
     private $failedUnlinkMaintenanceLineItem;
 
@@ -31,7 +31,7 @@ class FailedUnlinkMaintenanceLineItemListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUnlinkMaintenanceLineItemDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedUnlinkMaintenanceLineItemDataType|array 
      */
     public function getFailedUnlinkMaintenanceLineItem()
     {
@@ -39,7 +39,7 @@ class FailedUnlinkMaintenanceLineItemListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUnlinkMaintenanceLineItemDataType $failedUnlinkMaintenanceLineItem
+     * @param \Flexsim\FlexnetOperations\Type\FailedUnlinkMaintenanceLineItemDataType|array $failedUnlinkMaintenanceLineItem
      * @return $this
      */
     public function setFailedUnlinkMaintenanceLineItem($failedUnlinkMaintenanceLineItem)
@@ -47,7 +47,4 @@ class FailedUnlinkMaintenanceLineItemListType
         $this->failedUnlinkMaintenanceLineItem = $failedUnlinkMaintenanceLineItem;
         return $this;
     }
-
-
 }
-

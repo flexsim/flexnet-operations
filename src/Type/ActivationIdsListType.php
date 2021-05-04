@@ -6,16 +6,16 @@ class ActivationIdsListType
 {
 
     /**
-     * @var string
+     * @var string|array
      */
     private $activationId;
 
     /**
      * Constructor
      *
-     * @var string $activationId
+     * @var string|array $activationId
      */
-    public function __construct(string $activationId)
+    public function __construct($activationId)
     {
         $this->activationId = $activationId;
     }
@@ -23,15 +23,15 @@ class ActivationIdsListType
     /**
      * create a new instance of this class
      *
-     * @var string $activationId
+     * @var string|array $activationId
      */
-    public static function create(string $activationId)
+    public static function create($activationId)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return string
+     * @return string|array
      */
     public function getActivationId()
     {
@@ -39,7 +39,7 @@ class ActivationIdsListType
     }
 
     /**
-     * @param string $activationId
+     * @param string|array $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -47,7 +47,4 @@ class ActivationIdsListType
         $this->activationId = $activationId;
         return $this;
     }
-
-
 }
-

@@ -6,7 +6,7 @@ class LicenseModelStateChangeListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType
+     * @var \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType|array 
      */
     private $licenseModel;
 
@@ -31,7 +31,7 @@ class LicenseModelStateChangeListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType
+     * @return \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType|array 
      */
     public function getLicenseModel()
     {
@@ -39,7 +39,7 @@ class LicenseModelStateChangeListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType|array $licenseModel
      * @return $this
      */
     public function setLicenseModel($licenseModel)
@@ -47,7 +47,4 @@ class LicenseModelStateChangeListType
         $this->licenseModel = $licenseModel;
         return $this;
     }
-
-
 }
-

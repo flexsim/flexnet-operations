@@ -6,16 +6,16 @@ class FailedSetLicenseOnholdFulfillmentListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array 
      */
     private $failedFmtData;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType $failedFmtData
+     * @var \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType $failedFmtData)
+    public function __construct($failedFmtData)
     {
         $this->failedFmtData = $failedFmtData;
     }
@@ -23,15 +23,15 @@ class FailedSetLicenseOnholdFulfillmentListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType $failedFmtData
+     * @var \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType $failedFmtData)
+    public static function create($failedFmtData)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array 
      */
     public function getFailedFmtData()
     {
@@ -39,7 +39,7 @@ class FailedSetLicenseOnholdFulfillmentListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType $failedFmtData
+     * @param \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData
      * @return $this
      */
     public function setFailedFmtData($failedFmtData)
@@ -47,7 +47,4 @@ class FailedSetLicenseOnholdFulfillmentListType
         $this->failedFmtData = $failedFmtData;
         return $this;
     }
-
-
 }
-

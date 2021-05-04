@@ -6,7 +6,7 @@ class CreatedSimpleEntitlementDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreatedSimpleEntitlementDataType
+     * @var \Flexsim\FlexnetOperations\Type\CreatedSimpleEntitlementDataType|array
      */
     private $createdSimpleEntitlement;
 
@@ -31,7 +31,7 @@ class CreatedSimpleEntitlementDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreatedSimpleEntitlementDataType
+     * @return \Flexsim\FlexnetOperations\Type\CreatedSimpleEntitlementDataType|array
      */
     public function getCreatedSimpleEntitlement()
     {
@@ -39,7 +39,7 @@ class CreatedSimpleEntitlementDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedSimpleEntitlementDataType $createdSimpleEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\CreatedSimpleEntitlementDataType|array $createdSimpleEntitlement
      * @return $this
      */
     public function setCreatedSimpleEntitlement($createdSimpleEntitlement)
@@ -47,7 +47,4 @@ class CreatedSimpleEntitlementDataListType
         $this->createdSimpleEntitlement = $createdSimpleEntitlement;
         return $this;
     }
-
-
 }
-

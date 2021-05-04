@@ -6,7 +6,7 @@ class CreatedMaintenanceDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType
+     * @var \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType|array
      */
     private $createdMaintenance;
 
@@ -31,7 +31,7 @@ class CreatedMaintenanceDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType
+     * @return \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType|array
      */
     public function getCreatedMaintenance()
     {
@@ -39,7 +39,7 @@ class CreatedMaintenanceDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType $createdMaintenance
+     * @param \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType|array $createdMaintenance
      * @return $this
      */
     public function setCreatedMaintenance($createdMaintenance)
@@ -47,7 +47,4 @@ class CreatedMaintenanceDataListType
         $this->createdMaintenance = $createdMaintenance;
         return $this;
     }
-
-
 }
-

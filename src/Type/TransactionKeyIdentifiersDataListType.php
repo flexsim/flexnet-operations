@@ -6,7 +6,7 @@ class TransactionKeyIdentifiersDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType|array 
      */
     private $transactionKeyIdentifier;
 
@@ -31,7 +31,7 @@ class TransactionKeyIdentifiersDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType|array 
      */
     public function getTransactionKeyIdentifier()
     {
@@ -39,7 +39,7 @@ class TransactionKeyIdentifiersDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $transactionKeyIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType|array $transactionKeyIdentifier
      * @return $this
      */
     public function setTransactionKeyIdentifier($transactionKeyIdentifier)
@@ -47,7 +47,4 @@ class TransactionKeyIdentifiersDataListType
         $this->transactionKeyIdentifier = $transactionKeyIdentifier;
         return $this;
     }
-
-
 }
-

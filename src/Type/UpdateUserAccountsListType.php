@@ -6,7 +6,7 @@ class UpdateUserAccountsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserAccountType
+     * @var \Flexsim\FlexnetOperations\Type\UpdateUserAccountType|array
      */
     private $acctRoles;
 
@@ -18,10 +18,10 @@ class UpdateUserAccountsListType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserAccountType $acctRoles
+     * @var \Flexsim\FlexnetOperations\Type\UpdateUserAccountType|array $acctRoles
      * @var string $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateUserAccountType $acctRoles, string $opType)
+    public function __construct($acctRoles, string $opType)
     {
         $this->acctRoles = $acctRoles;
         $this->opType = $opType;
@@ -30,16 +30,16 @@ class UpdateUserAccountsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserAccountType $acctRoles
+     * @var \Flexsim\FlexnetOperations\Type\UpdateUserAccountType|array $acctRoles
      * @var string $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateUserAccountType $acctRoles, string $opType)
+    public static function create($acctRoles, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\UpdateUserAccountType
+     * @return \Flexsim\FlexnetOperations\Type\UpdateUserAccountType|array
      */
     public function getAcctRoles()
     {
@@ -47,7 +47,7 @@ class UpdateUserAccountsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserAccountType $acctRoles
+     * @param \Flexsim\FlexnetOperations\Type\UpdateUserAccountType|array $acctRoles
      * @return $this
      */
     public function setAcctRoles($acctRoles)
@@ -73,7 +73,4 @@ class UpdateUserAccountsListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

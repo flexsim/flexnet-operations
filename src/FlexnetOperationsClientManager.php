@@ -294,6 +294,6 @@ abstract class FlexnetOperationsClientManager
      */
     public function __call($method, $parameters)
     {
-        return $this->serviceClient()->$method(...$parameters);
+        return $this->client()->$method(...$parameters);
     }
 }

@@ -6,7 +6,7 @@ class UpdateLicenseModelsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array
      */
     private $licenseModelIdentifiers;
 
@@ -18,10 +18,10 @@ class UpdateLicenseModelsListType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifiers
+     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers
      * @var string $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifiers, string $opType)
+    public function __construct($licenseModelIdentifiers, string $opType)
     {
         $this->licenseModelIdentifiers = $licenseModelIdentifiers;
         $this->opType = $opType;
@@ -30,16 +30,16 @@ class UpdateLicenseModelsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifiers
+     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers
      * @var string $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifiers, string $opType)
+    public static function create($licenseModelIdentifiers, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array
      */
     public function getLicenseModelIdentifiers()
     {
@@ -47,7 +47,7 @@ class UpdateLicenseModelsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifiers
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers
      * @return $this
      */
     public function setLicenseModelIdentifiers($licenseModelIdentifiers)
@@ -73,7 +73,4 @@ class UpdateLicenseModelsListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

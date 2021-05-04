@@ -6,7 +6,7 @@ class FailedUpdateDomainUserDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataType|array 
      */
     private $failedUser;
 
@@ -31,7 +31,7 @@ class FailedUpdateDomainUserDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataType|array 
      */
     public function getFailedUser()
     {
@@ -39,7 +39,7 @@ class FailedUpdateDomainUserDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataType $failedUser
+     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataType|array $failedUser
      * @return $this
      */
     public function setFailedUser($failedUser)
@@ -47,7 +47,4 @@ class FailedUpdateDomainUserDataListType
         $this->failedUser = $failedUser;
         return $this;
     }
-
-
 }
-

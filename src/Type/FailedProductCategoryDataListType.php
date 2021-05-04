@@ -6,7 +6,7 @@ class FailedProductCategoryDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataType|array 
      */
     private $failedProductCategory;
 
@@ -31,7 +31,7 @@ class FailedProductCategoryDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataType|array 
      */
     public function getFailedProductCategory()
     {
@@ -39,7 +39,7 @@ class FailedProductCategoryDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataType $failedProductCategory
+     * @param \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataType|array $failedProductCategory
      * @return $this
      */
     public function setFailedProductCategory($failedProductCategory)
@@ -47,7 +47,4 @@ class FailedProductCategoryDataListType
         $this->failedProductCategory = $failedProductCategory;
         return $this;
     }
-
-
 }
-

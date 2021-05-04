@@ -6,16 +6,16 @@ class ProductListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType|array 
      */
     private $productIdentifier;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType|array $productIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier)
+    public function __construct($productIdentifier)
     {
         $this->productIdentifier = $productIdentifier;
     }
@@ -23,15 +23,15 @@ class ProductListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType|array $productIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier)
+    public static function create($productIdentifier)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ProductIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\ProductIdentifierType|array 
      */
     public function getProductIdentifier()
     {
@@ -39,7 +39,7 @@ class ProductListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType|array $productIdentifier
      * @return $this
      */
     public function setProductIdentifier($productIdentifier)
@@ -47,7 +47,4 @@ class ProductListType
         $this->productIdentifier = $productIdentifier;
         return $this;
     }
-
-
 }
-

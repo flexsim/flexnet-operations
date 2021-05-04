@@ -6,16 +6,16 @@ class FeaturesListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType
+     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array 
      */
     private $feature;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType $feature
+     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array $feature
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType $feature)
+    public function __construct($feature)
     {
         $this->feature = $feature;
     }
@@ -23,15 +23,15 @@ class FeaturesListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType $feature
+     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array $feature
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType $feature)
+    public static function create($feature)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType
+     * @return \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array 
      */
     public function getFeature()
     {
@@ -39,7 +39,7 @@ class FeaturesListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType $feature
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array $feature
      * @return $this
      */
     public function setFeature($feature)
@@ -47,7 +47,4 @@ class FeaturesListType
         $this->feature = $feature;
         return $this;
     }
-
-
 }
-

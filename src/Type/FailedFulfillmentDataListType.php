@@ -6,7 +6,7 @@ class FailedFulfillmentDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataType|array 
      */
     private $failedFulfillment;
 
@@ -31,7 +31,7 @@ class FailedFulfillmentDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataType|array 
      */
     public function getFailedFulfillment()
     {
@@ -39,7 +39,7 @@ class FailedFulfillmentDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataType $failedFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataType|array $failedFulfillment
      * @return $this
      */
     public function setFailedFulfillment($failedFulfillment)
@@ -47,7 +47,4 @@ class FailedFulfillmentDataListType
         $this->failedFulfillment = $failedFulfillment;
         return $this;
     }
-
-
 }
-

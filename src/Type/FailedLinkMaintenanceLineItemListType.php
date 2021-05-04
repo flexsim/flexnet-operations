@@ -6,7 +6,7 @@ class FailedLinkMaintenanceLineItemListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemDataType|array 
      */
     private $failedLinkMaintenanceLineItem;
 
@@ -31,7 +31,7 @@ class FailedLinkMaintenanceLineItemListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemDataType|array 
      */
     public function getFailedLinkMaintenanceLineItem()
     {
@@ -39,7 +39,7 @@ class FailedLinkMaintenanceLineItemListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemDataType $failedLinkMaintenanceLineItem
+     * @param \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemDataType|array $failedLinkMaintenanceLineItem
      * @return $this
      */
     public function setFailedLinkMaintenanceLineItem($failedLinkMaintenanceLineItem)
@@ -47,7 +47,4 @@ class FailedLinkMaintenanceLineItemListType
         $this->failedLinkMaintenanceLineItem = $failedLinkMaintenanceLineItem;
         return $this;
     }
-
-
 }
-

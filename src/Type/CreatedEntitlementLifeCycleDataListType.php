@@ -6,7 +6,7 @@ class CreatedEntitlementLifeCycleDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataType
+     * @var \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataType|array
      */
     private $entitlementData;
 
@@ -31,7 +31,7 @@ class CreatedEntitlementLifeCycleDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataType
+     * @return \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataType|array
      */
     public function getEntitlementData()
     {
@@ -39,7 +39,7 @@ class CreatedEntitlementLifeCycleDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataType $entitlementData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataType|array $entitlementData
      * @return $this
      */
     public function setEntitlementData($entitlementData)
@@ -47,7 +47,4 @@ class CreatedEntitlementLifeCycleDataListType
         $this->entitlementData = $entitlementData;
         return $this;
     }
-
-
 }
-

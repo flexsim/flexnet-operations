@@ -6,7 +6,7 @@ class UpdatePartNumbersListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierWithModelType
+     * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierWithModelType|array
      */
     private $partNumber;
 
@@ -21,7 +21,7 @@ class UpdatePartNumbersListType
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierWithModelType|array $partNumber
      * @var string $opType
      */
-    public function __construct($partNumber = null, string $opType)
+    public function __construct($partNumber, string $opType)
     {
         $this->partNumber = $partNumber;
         $this->opType = $opType;
@@ -33,13 +33,13 @@ class UpdatePartNumbersListType
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierWithModelType|array $partNumber
      * @var string $opType
      */
-    public static function create($partNumber = null, string $opType)
+    public static function create($partNumber, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\PartNumberIdentifierWithModelType
+     * @return \Flexsim\FlexnetOperations\Type\PartNumberIdentifierWithModelType|array
      */
     public function getPartNumber()
     {
@@ -47,7 +47,7 @@ class UpdatePartNumbersListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierWithModelType $partNumber
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierWithModelType|array $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -73,7 +73,4 @@ class UpdatePartNumbersListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

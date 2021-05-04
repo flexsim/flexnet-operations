@@ -6,7 +6,7 @@ class UserAccountsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\UserAccountType
+     * @var \Flexsim\FlexnetOperations\Type\UserAccountType|array 
      */
     private $acctRoles;
 
@@ -31,7 +31,7 @@ class UserAccountsListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\UserAccountType
+     * @return \Flexsim\FlexnetOperations\Type\UserAccountType|array 
      */
     public function getAcctRoles()
     {
@@ -39,7 +39,7 @@ class UserAccountsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserAccountType $acctRoles
+     * @param \Flexsim\FlexnetOperations\Type\UserAccountType|array $acctRoles
      * @return $this
      */
     public function setAcctRoles($acctRoles)
@@ -47,7 +47,4 @@ class UserAccountsListType
         $this->acctRoles = $acctRoles;
         return $this;
     }
-
-
 }
-

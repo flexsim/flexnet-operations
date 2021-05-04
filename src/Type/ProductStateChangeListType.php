@@ -6,7 +6,7 @@ class ProductStateChangeListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType
+     * @var \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType|array 
      */
     private $product;
 
@@ -31,7 +31,7 @@ class ProductStateChangeListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType
+     * @return \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType|array 
      */
     public function getProduct()
     {
@@ -39,7 +39,7 @@ class ProductStateChangeListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType $product
+     * @param \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType|array $product
      * @return $this
      */
     public function setProduct($product)
@@ -47,7 +47,4 @@ class ProductStateChangeListType
         $this->product = $product;
         return $this;
     }
-
-
 }
-

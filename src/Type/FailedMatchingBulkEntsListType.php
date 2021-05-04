@@ -6,16 +6,16 @@ class FailedMatchingBulkEntsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array 
      */
     private $failedBulkEnt;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType $failedBulkEnt
+     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array $failedBulkEnt
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType $failedBulkEnt)
+    public function __construct($failedBulkEnt)
     {
         $this->failedBulkEnt = $failedBulkEnt;
     }
@@ -23,15 +23,15 @@ class FailedMatchingBulkEntsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType $failedBulkEnt
+     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array $failedBulkEnt
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType $failedBulkEnt)
+    public static function create($failedBulkEnt)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array 
      */
     public function getFailedBulkEnt()
     {
@@ -39,7 +39,7 @@ class FailedMatchingBulkEntsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType $failedBulkEnt
+     * @param \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array $failedBulkEnt
      * @return $this
      */
     public function setFailedBulkEnt($failedBulkEnt)
@@ -47,7 +47,4 @@ class FailedMatchingBulkEntsListType
         $this->failedBulkEnt = $failedBulkEnt;
         return $this;
     }
-
-
 }
-

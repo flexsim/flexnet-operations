@@ -6,16 +6,16 @@ class FailedOnholdFulfillmentListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array 
      */
     private $failedFulfillment;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType $failedFulfillment
+     * @var \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array $failedFulfillment
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType $failedFulfillment)
+    public function __construct($failedFulfillment)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
@@ -23,15 +23,15 @@ class FailedOnholdFulfillmentListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType $failedFulfillment
+     * @var \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array $failedFulfillment
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType $failedFulfillment)
+    public static function create($failedFulfillment)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array 
      */
     public function getFailedFulfillment()
     {
@@ -39,7 +39,7 @@ class FailedOnholdFulfillmentListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType $failedFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array $failedFulfillment
      * @return $this
      */
     public function setFailedFulfillment($failedFulfillment)
@@ -47,7 +47,4 @@ class FailedOnholdFulfillmentListType
         $this->failedFulfillment = $failedFulfillment;
         return $this;
     }
-
-
 }
-

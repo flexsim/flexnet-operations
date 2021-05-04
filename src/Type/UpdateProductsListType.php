@@ -6,7 +6,7 @@ class UpdateProductsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType
+     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array
      */
     private $productIdentifier;
 
@@ -18,10 +18,10 @@ class UpdateProductsListType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType $productIdentifier
+     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $productIdentifier
      * @var string $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType $productIdentifier, string $opType)
+    public function __construct($productIdentifier, string $opType)
     {
         $this->productIdentifier = $productIdentifier;
         $this->opType = $opType;
@@ -30,16 +30,16 @@ class UpdateProductsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType $productIdentifier
+     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $productIdentifier
      * @var string $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType $productIdentifier, string $opType)
+    public static function create($productIdentifier, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType
+     * @return \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array
      */
     public function getProductIdentifier()
     {
@@ -47,7 +47,7 @@ class UpdateProductsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType $productIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $productIdentifier
      * @return $this
      */
     public function setProductIdentifier($productIdentifier)
@@ -73,7 +73,4 @@ class UpdateProductsListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

@@ -6,7 +6,7 @@ class FailedLinkOrgDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedLinkOrgDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedLinkOrgDataType|array 
      */
     private $failedOrgData;
 
@@ -31,7 +31,7 @@ class FailedLinkOrgDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedLinkOrgDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedLinkOrgDataType|array 
      */
     public function getFailedOrgData()
     {
@@ -39,7 +39,7 @@ class FailedLinkOrgDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedLinkOrgDataType $failedOrgData
+     * @param \Flexsim\FlexnetOperations\Type\FailedLinkOrgDataType|array $failedOrgData
      * @return $this
      */
     public function setFailedOrgData($failedOrgData)
@@ -47,7 +47,4 @@ class FailedLinkOrgDataListType
         $this->failedOrgData = $failedOrgData;
         return $this;
     }
-
-
 }
-

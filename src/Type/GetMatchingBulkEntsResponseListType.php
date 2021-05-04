@@ -6,16 +6,16 @@ class GetMatchingBulkEntsResponseListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType
+     * @var \Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType|array 
      */
     private $matchingBulkEnt;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType $matchingBulkEnt
+     * @var \Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType|array $matchingBulkEnt
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType $matchingBulkEnt)
+    public function __construct($matchingBulkEnt)
     {
         $this->matchingBulkEnt = $matchingBulkEnt;
     }
@@ -23,15 +23,15 @@ class GetMatchingBulkEntsResponseListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType $matchingBulkEnt
+     * @var \Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType|array $matchingBulkEnt
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType $matchingBulkEnt)
+    public static function create($matchingBulkEnt)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType
+     * @return \Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType|array 
      */
     public function getMatchingBulkEnt()
     {
@@ -39,7 +39,7 @@ class GetMatchingBulkEntsResponseListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType $matchingBulkEnt
+     * @param \Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType|array $matchingBulkEnt
      * @return $this
      */
     public function setMatchingBulkEnt($matchingBulkEnt)
@@ -47,7 +47,4 @@ class GetMatchingBulkEntsResponseListType
         $this->matchingBulkEnt = $matchingBulkEnt;
         return $this;
     }
-
-
 }
-

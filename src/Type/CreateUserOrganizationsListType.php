@@ -6,16 +6,16 @@ class CreateUserOrganizationsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreateUserOrganizationType
+     * @var \Flexsim\FlexnetOperations\Type\CreateUserOrganizationType|array
      */
     private $orgRoles;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateUserOrganizationType $orgRoles
+     * @var \Flexsim\FlexnetOperations\Type\CreateUserOrganizationType|array $orgRoles
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreateUserOrganizationType $orgRoles)
+    public function __construct($orgRoles)
     {
         $this->orgRoles = $orgRoles;
     }
@@ -23,15 +23,15 @@ class CreateUserOrganizationsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateUserOrganizationType $orgRoles
+     * @var \Flexsim\FlexnetOperations\Type\CreateUserOrganizationType|array $orgRoles
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreateUserOrganizationType $orgRoles)
+    public static function create($orgRoles)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreateUserOrganizationType
+     * @return \Flexsim\FlexnetOperations\Type\CreateUserOrganizationType|array
      */
     public function getOrgRoles()
     {
@@ -39,7 +39,7 @@ class CreateUserOrganizationsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserOrganizationType $orgRoles
+     * @param \Flexsim\FlexnetOperations\Type\CreateUserOrganizationType|array $orgRoles
      * @return $this
      */
     public function setOrgRoles($orgRoles)
@@ -47,7 +47,4 @@ class CreateUserOrganizationsListType
         $this->orgRoles = $orgRoles;
         return $this;
     }
-
-
 }
-

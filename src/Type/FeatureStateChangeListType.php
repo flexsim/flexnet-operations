@@ -6,7 +6,7 @@ class FeatureStateChangeListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType
+     * @var \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType|array 
      */
     private $feature;
 
@@ -31,7 +31,7 @@ class FeatureStateChangeListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType
+     * @return \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType|array 
      */
     public function getFeature()
     {
@@ -39,7 +39,7 @@ class FeatureStateChangeListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType $feature
+     * @param \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType|array $feature
      * @return $this
      */
     public function setFeature($feature)
@@ -47,7 +47,4 @@ class FeatureStateChangeListType
         $this->feature = $feature;
         return $this;
     }
-
-
 }
-

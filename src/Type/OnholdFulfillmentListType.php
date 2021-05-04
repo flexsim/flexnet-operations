@@ -6,16 +6,16 @@ class OnholdFulfillmentListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType
+     * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array 
      */
     private $onholdFmtLicenseData;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType $onholdFmtLicenseData
+     * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array $onholdFmtLicenseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType $onholdFmtLicenseData)
+    public function __construct($onholdFmtLicenseData)
     {
         $this->onholdFmtLicenseData = $onholdFmtLicenseData;
     }
@@ -23,15 +23,15 @@ class OnholdFulfillmentListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType $onholdFmtLicenseData
+     * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array $onholdFmtLicenseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType $onholdFmtLicenseData)
+    public static function create($onholdFmtLicenseData)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType
+     * @return \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array 
      */
     public function getOnholdFmtLicenseData()
     {
@@ -39,7 +39,7 @@ class OnholdFulfillmentListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType $onholdFmtLicenseData
+     * @param \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array $onholdFmtLicenseData
      * @return $this
      */
     public function setOnholdFmtLicenseData($onholdFmtLicenseData)
@@ -47,7 +47,4 @@ class OnholdFulfillmentListType
         $this->onholdFmtLicenseData = $onholdFmtLicenseData;
         return $this;
     }
-
-
 }
-

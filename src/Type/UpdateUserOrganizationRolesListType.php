@@ -6,16 +6,16 @@ class UpdateUserOrganizationRolesListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\RoleIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\RoleIdentifierType|array 
      */
     private $role;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\RoleIdentifierType $role
+     * @var \Flexsim\FlexnetOperations\Type\RoleIdentifierType|array $role
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\RoleIdentifierType $role)
+    public function __construct($role)
     {
         $this->role = $role;
     }
@@ -23,15 +23,15 @@ class UpdateUserOrganizationRolesListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\RoleIdentifierType $role
+     * @var \Flexsim\FlexnetOperations\Type\RoleIdentifierType|array $role
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\RoleIdentifierType $role)
+    public static function create($role)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\RoleIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\RoleIdentifierType|array 
      */
     public function getRole()
     {
@@ -39,7 +39,7 @@ class UpdateUserOrganizationRolesListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\RoleIdentifierType $role
+     * @param \Flexsim\FlexnetOperations\Type\RoleIdentifierType|array $role
      * @return $this
      */
     public function setRole($role)
@@ -47,7 +47,4 @@ class UpdateUserOrganizationRolesListType
         $this->role = $role;
         return $this;
     }
-
-
 }
-

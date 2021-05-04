@@ -6,7 +6,7 @@ class EmailContactListType
 {
 
     /**
-     * @var string
+     * @var string|array
      */
     private $emailId;
 
@@ -31,7 +31,7 @@ class EmailContactListType
     }
 
     /**
-     * @return string
+     * @return string|array
      */
     public function getEmailId()
     {
@@ -39,7 +39,7 @@ class EmailContactListType
     }
 
     /**
-     * @param string $emailId
+     * @param string|array $emailId
      * @return $this
      */
     public function setEmailId($emailId)

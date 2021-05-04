@@ -6,16 +6,16 @@ class LinkMaintenanceLineItemListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType
+     * @var \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType|array 
      */
     private $linkMaintenanceLineItem;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType $linkMaintenanceLineItem
+     * @var \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType $linkMaintenanceLineItem)
+    public function __construct($linkMaintenanceLineItem)
     {
         $this->linkMaintenanceLineItem = $linkMaintenanceLineItem;
     }
@@ -23,15 +23,15 @@ class LinkMaintenanceLineItemListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType $linkMaintenanceLineItem
+     * @var \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType $linkMaintenanceLineItem)
+    public static function create($linkMaintenanceLineItem)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType
+     * @return \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType|array 
      */
     public function getLinkMaintenanceLineItem()
     {
@@ -39,7 +39,7 @@ class LinkMaintenanceLineItemListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType $linkMaintenanceLineItem
+     * @param \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem
      * @return $this
      */
     public function setLinkMaintenanceLineItem($linkMaintenanceLineItem)
@@ -47,7 +47,4 @@ class LinkMaintenanceLineItemListType
         $this->linkMaintenanceLineItem = $linkMaintenanceLineItem;
         return $this;
     }
-
-
 }
-

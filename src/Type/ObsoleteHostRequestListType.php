@@ -8,16 +8,16 @@ class ObsoleteHostRequestListType implements RequestInterface
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ObsoleteHostType
+     * @var \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array 
      */
     private $host;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ObsoleteHostType $host
+     * @var \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array $host
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ObsoleteHostType $host)
+    public function __construct($host)
     {
         $this->host = $host;
     }
@@ -25,15 +25,15 @@ class ObsoleteHostRequestListType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ObsoleteHostType $host
+     * @var \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array $host
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ObsoleteHostType $host)
+    public static function create($host)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ObsoleteHostType
+     * @return \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array 
      */
     public function getHost()
     {
@@ -41,7 +41,7 @@ class ObsoleteHostRequestListType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ObsoleteHostType $host
+     * @param \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array $host
      * @return $this
      */
     public function setHost($host)
@@ -49,7 +49,4 @@ class ObsoleteHostRequestListType implements RequestInterface
         $this->host = $host;
         return $this;
     }
-
-
 }
-

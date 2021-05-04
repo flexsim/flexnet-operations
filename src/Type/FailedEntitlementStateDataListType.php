@@ -6,7 +6,7 @@ class FailedEntitlementStateDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedEntitlementStateDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedEntitlementStateDataType|array 
      */
     private $failedEntitlement;
 
@@ -31,7 +31,7 @@ class FailedEntitlementStateDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedEntitlementStateDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedEntitlementStateDataType|array 
      */
     public function getFailedEntitlement()
     {
@@ -39,7 +39,7 @@ class FailedEntitlementStateDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedEntitlementStateDataType $failedEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\FailedEntitlementStateDataType|array $failedEntitlement
      * @return $this
      */
     public function setFailedEntitlement($failedEntitlement)
@@ -47,7 +47,4 @@ class FailedEntitlementStateDataListType
         $this->failedEntitlement = $failedEntitlement;
         return $this;
     }
-
-
 }
-

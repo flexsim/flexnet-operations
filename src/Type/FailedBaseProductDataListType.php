@@ -6,7 +6,7 @@ class FailedBaseProductDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array 
      */
     private $failedBaseProduct;
 
@@ -31,7 +31,7 @@ class FailedBaseProductDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array 
      */
     public function getFailedBaseProduct()
     {
@@ -39,7 +39,7 @@ class FailedBaseProductDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType $failedBaseProduct
+     * @param \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array $failedBaseProduct
      * @return $this
      */
     public function setFailedBaseProduct($failedBaseProduct)
@@ -47,7 +47,4 @@ class FailedBaseProductDataListType
         $this->failedBaseProduct = $failedBaseProduct;
         return $this;
     }
-
-
 }
-

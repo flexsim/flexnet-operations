@@ -6,16 +6,16 @@ class ProductsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType
+     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array 
      */
     private $product;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType $product
+     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $product
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType $product)
+    public function __construct($product)
     {
         $this->product = $product;
     }
@@ -23,15 +23,15 @@ class ProductsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType $product
+     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $product
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType $product)
+    public static function create($product)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType
+     * @return \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array 
      */
     public function getProduct()
     {
@@ -39,7 +39,7 @@ class ProductsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType $product
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $product
      * @return $this
      */
     public function setProduct($product)
@@ -47,7 +47,4 @@ class ProductsListType
         $this->product = $product;
         return $this;
     }
-
-
 }
-

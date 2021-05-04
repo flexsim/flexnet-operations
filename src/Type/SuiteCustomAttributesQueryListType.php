@@ -6,7 +6,7 @@ class SuiteCustomAttributesQueryListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\SuiteCustomAttributeQueryType
+     * @var \Flexsim\FlexnetOperations\Type\SuiteCustomAttributeQueryType|array 
      */
     private $attribute;
 
@@ -31,7 +31,7 @@ class SuiteCustomAttributesQueryListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\SuiteCustomAttributeQueryType
+     * @return \Flexsim\FlexnetOperations\Type\SuiteCustomAttributeQueryType|array 
      */
     public function getAttribute()
     {
@@ -39,7 +39,7 @@ class SuiteCustomAttributesQueryListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SuiteCustomAttributeQueryType $attribute
+     * @param \Flexsim\FlexnetOperations\Type\SuiteCustomAttributeQueryType|array $attribute
      * @return $this
      */
     public function setAttribute($attribute)
@@ -47,7 +47,4 @@ class SuiteCustomAttributesQueryListType
         $this->attribute = $attribute;
         return $this;
     }
-
-
 }
-

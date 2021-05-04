@@ -6,7 +6,7 @@ class EntCustomAttributesQueryListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\EntCustomAttributeQueryType
+     * @var \Flexsim\FlexnetOperations\Type\EntCustomAttributeQueryType|array
      */
     private $attribute;
 
@@ -31,7 +31,7 @@ class EntCustomAttributesQueryListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\EntCustomAttributeQueryType
+     * @return \Flexsim\FlexnetOperations\Type\EntCustomAttributeQueryType|array
      */
     public function getAttribute()
     {
@@ -39,7 +39,7 @@ class EntCustomAttributesQueryListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntCustomAttributeQueryType $attribute
+     * @param \Flexsim\FlexnetOperations\Type\EntCustomAttributeQueryType|array $attribute
      * @return $this
      */
     public function setAttribute($attribute)
@@ -47,7 +47,4 @@ class EntCustomAttributesQueryListType
         $this->attribute = $attribute;
         return $this;
     }
-
-
 }
-

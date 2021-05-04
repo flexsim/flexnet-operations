@@ -6,7 +6,7 @@ class DeleteFailAddonDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType
+     * @var \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType|array
      */
     private $failAddon;
 
@@ -31,7 +31,7 @@ class DeleteFailAddonDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType
+     * @return \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType|array
      */
     public function getFailAddon()
     {
@@ -39,7 +39,7 @@ class DeleteFailAddonDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType $failAddon
+     * @param \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType|array $failAddon
      * @return $this
      */
     public function setFailAddon($failAddon)
@@ -47,7 +47,4 @@ class DeleteFailAddonDataListType
         $this->failAddon = $failAddon;
         return $this;
     }
-
-
 }
-

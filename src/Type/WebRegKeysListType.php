@@ -6,7 +6,7 @@ class WebRegKeysListType
 {
 
     /**
-     * @var string
+     * @var string|array
      */
     private $webRegKey;
 
@@ -15,7 +15,7 @@ class WebRegKeysListType
      *
      * @var string|array $webRegKey
      */
-    public function __construct($webRegKey = null)
+    public function __construct($webRegKey)
     {
         $this->webRegKey = $webRegKey;
     }
@@ -25,13 +25,13 @@ class WebRegKeysListType
      *
      * @var string|array $webRegKey
      */
-    public static function create($webRegKey = null)
+    public static function create($webRegKey)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return string
+     * @return string|array
      */
     public function getWebRegKey()
     {
@@ -39,7 +39,7 @@ class WebRegKeysListType
     }
 
     /**
-     * @param string $webRegKey
+     * @param string|array $webRegKey
      * @return $this
      */
     public function setWebRegKey($webRegKey)
@@ -47,7 +47,4 @@ class WebRegKeysListType
         $this->webRegKey = $webRegKey;
         return $this;
     }
-
-
 }
-

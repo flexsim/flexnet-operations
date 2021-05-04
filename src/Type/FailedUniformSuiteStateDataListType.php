@@ -6,7 +6,7 @@ class FailedUniformSuiteStateDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUniformSuiteStateDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedUniformSuiteStateDataType|array 
      */
     private $failedUniformSuite;
 
@@ -31,7 +31,7 @@ class FailedUniformSuiteStateDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUniformSuiteStateDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedUniformSuiteStateDataType|array 
      */
     public function getFailedUniformSuite()
     {
@@ -39,7 +39,7 @@ class FailedUniformSuiteStateDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUniformSuiteStateDataType $failedUniformSuite
+     * @param \Flexsim\FlexnetOperations\Type\FailedUniformSuiteStateDataType|array $failedUniformSuite
      * @return $this
      */
     public function setFailedUniformSuite($failedUniformSuite)
@@ -47,7 +47,4 @@ class FailedUniformSuiteStateDataListType
         $this->failedUniformSuite = $failedUniformSuite;
         return $this;
     }
-
-
 }
-

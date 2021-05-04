@@ -6,16 +6,16 @@ class WebRegKeyDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType
+     * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType|array 
      */
     private $webRegKeyData;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
+     * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType|array $webRegKeyData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData)
+    public function __construct($webRegKeyData)
     {
         $this->webRegKeyData = $webRegKeyData;
     }
@@ -23,15 +23,15 @@ class WebRegKeyDataListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
+     * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType|array $webRegKeyData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData)
+    public static function create($webRegKeyData)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType
+     * @return \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType|array 
      */
     public function getWebRegKeyData()
     {
@@ -39,7 +39,7 @@ class WebRegKeyDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
+     * @param \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType|array $webRegKeyData
      * @return $this
      */
     public function setWebRegKeyData($webRegKeyData)
@@ -47,7 +47,4 @@ class WebRegKeyDataListType
         $this->webRegKeyData = $webRegKeyData;
         return $this;
     }
-
-
 }
-

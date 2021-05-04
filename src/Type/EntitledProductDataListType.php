@@ -6,7 +6,7 @@ class EntitledProductDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataType
+     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array
      */
     private $entitledProduct;
 
@@ -31,7 +31,7 @@ class EntitledProductDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\EntitledProductDataType
+     * @return \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array
      */
     public function getEntitledProduct()
     {
@@ -39,7 +39,7 @@ class EntitledProductDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataType $entitledProduct
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProduct
      * @return $this
      */
     public function setEntitledProduct($entitledProduct)
@@ -47,7 +47,4 @@ class EntitledProductDataListType
         $this->entitledProduct = $entitledProduct;
         return $this;
     }
-
-
 }
-

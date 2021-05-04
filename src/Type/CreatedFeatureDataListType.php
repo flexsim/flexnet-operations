@@ -6,7 +6,7 @@ class CreatedFeatureDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType
+     * @var \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType|array
      */
     private $createdFeature;
 
@@ -31,7 +31,7 @@ class CreatedFeatureDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType
+     * @return \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType|array
      */
     public function getCreatedFeature()
     {
@@ -39,7 +39,7 @@ class CreatedFeatureDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType $createdFeature
+     * @param \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType|array $createdFeature
      * @return $this
      */
     public function setCreatedFeature($createdFeature)
@@ -47,7 +47,4 @@ class CreatedFeatureDataListType
         $this->createdFeature = $createdFeature;
         return $this;
     }
-
-
 }
-

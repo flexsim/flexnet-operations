@@ -6,7 +6,7 @@ class FailedSetDeviceStatusDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedSetDeviceStatusDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedSetDeviceStatusDataType|array 
      */
     private $failedDevice;
 
@@ -31,7 +31,7 @@ class FailedSetDeviceStatusDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedSetDeviceStatusDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedSetDeviceStatusDataType|array 
      */
     public function getFailedDevice()
     {
@@ -39,7 +39,7 @@ class FailedSetDeviceStatusDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedSetDeviceStatusDataType $failedDevice
+     * @param \Flexsim\FlexnetOperations\Type\FailedSetDeviceStatusDataType|array $failedDevice
      * @return $this
      */
     public function setFailedDevice($failedDevice)
@@ -47,7 +47,4 @@ class FailedSetDeviceStatusDataListType
         $this->failedDevice = $failedDevice;
         return $this;
     }
-
-
 }
-

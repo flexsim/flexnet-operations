@@ -6,16 +6,16 @@ class FailedMapEntitlementsToUserDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedIdDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedIdDataType|array 
      */
     private $failedId;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedIdDataType $failedId
+     * @var \Flexsim\FlexnetOperations\Type\FailedIdDataType|array $failedId
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FailedIdDataType $failedId)
+    public function __construct($failedId)
     {
         $this->failedId = $failedId;
     }
@@ -23,15 +23,15 @@ class FailedMapEntitlementsToUserDataListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedIdDataType $failedId
+     * @var \Flexsim\FlexnetOperations\Type\FailedIdDataType|array $failedId
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FailedIdDataType $failedId)
+    public static function create($failedId)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedIdDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedIdDataType|array 
      */
     public function getFailedId()
     {
@@ -39,7 +39,7 @@ class FailedMapEntitlementsToUserDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedIdDataType $failedId
+     * @param \Flexsim\FlexnetOperations\Type\FailedIdDataType|array $failedId
      * @return $this
      */
     public function setFailedId($failedId)
@@ -47,7 +47,4 @@ class FailedMapEntitlementsToUserDataListType
         $this->failedId = $failedId;
         return $this;
     }
-
-
 }
-

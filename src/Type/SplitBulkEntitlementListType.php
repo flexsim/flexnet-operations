@@ -6,16 +6,16 @@ class SplitBulkEntitlementListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType
+     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType|array 
      */
     private $bulkEntitlementInfo;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo
+     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType|array $bulkEntitlementInfo
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo)
+    public function __construct($bulkEntitlementInfo)
     {
         $this->bulkEntitlementInfo = $bulkEntitlementInfo;
     }
@@ -23,15 +23,15 @@ class SplitBulkEntitlementListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo
+     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType|array $bulkEntitlementInfo
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo)
+    public static function create($bulkEntitlementInfo)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType
+     * @return \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType|array 
      */
     public function getBulkEntitlementInfo()
     {
@@ -39,7 +39,7 @@ class SplitBulkEntitlementListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo
+     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType|array $bulkEntitlementInfo
      * @return $this
      */
     public function setBulkEntitlementInfo($bulkEntitlementInfo)
@@ -47,7 +47,4 @@ class SplitBulkEntitlementListType
         $this->bulkEntitlementInfo = $bulkEntitlementInfo;
         return $this;
     }
-
-
 }
-

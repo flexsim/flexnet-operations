@@ -6,7 +6,7 @@ class SuccessAddonDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
+     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array 
      */
     private $deviceIdentifier;
 
@@ -31,7 +31,7 @@ class SuccessAddonDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\DeviceIdentifier
+     * @return \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array 
      */
     public function getDeviceIdentifier()
     {
@@ -39,7 +39,7 @@ class SuccessAddonDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array $deviceIdentifier
      * @return $this
      */
     public function setDeviceIdentifier($deviceIdentifier)
@@ -47,7 +47,4 @@ class SuccessAddonDataListType
         $this->deviceIdentifier = $deviceIdentifier;
         return $this;
     }
-
-
 }
-

@@ -6,7 +6,7 @@ class FailedGeneratePrebuiltLicenseDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataType|array 
      */
     private $failedDevice;
 
@@ -31,7 +31,7 @@ class FailedGeneratePrebuiltLicenseDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataType|array 
      */
     public function getFailedDevice()
     {
@@ -39,7 +39,7 @@ class FailedGeneratePrebuiltLicenseDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataType $failedDevice
+     * @param \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataType|array $failedDevice
      * @return $this
      */
     public function setFailedDevice($failedDevice)
@@ -47,7 +47,4 @@ class FailedGeneratePrebuiltLicenseDataListType
         $this->failedDevice = $failedDevice;
         return $this;
     }
-
-
 }
-

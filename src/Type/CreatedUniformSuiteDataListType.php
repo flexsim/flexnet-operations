@@ -6,7 +6,7 @@ class CreatedUniformSuiteDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataType
+     * @var \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataType|array
      */
     private $createdUniformSuite;
 
@@ -31,7 +31,7 @@ class CreatedUniformSuiteDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataType
+     * @return \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataType|array
      */
     public function getCreatedUniformSuite()
     {
@@ -39,7 +39,7 @@ class CreatedUniformSuiteDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataType $createdUniformSuite
+     * @param \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataType|array $createdUniformSuite
      * @return $this
      */
     public function setCreatedUniformSuite($createdUniformSuite)
@@ -47,7 +47,4 @@ class CreatedUniformSuiteDataListType
         $this->createdUniformSuite = $createdUniformSuite;
         return $this;
     }
-
-
 }
-

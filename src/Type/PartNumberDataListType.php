@@ -6,7 +6,7 @@ class PartNumberDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberDataType
+     * @var \Flexsim\FlexnetOperations\Type\PartNumberDataType|array 
      */
     private $partNumber;
 
@@ -31,7 +31,7 @@ class PartNumberDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\PartNumberDataType
+     * @return \Flexsim\FlexnetOperations\Type\PartNumberDataType|array 
      */
     public function getPartNumber()
     {
@@ -39,7 +39,7 @@ class PartNumberDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberDataType $partNumber
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberDataType|array $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -47,7 +47,4 @@ class PartNumberDataListType
         $this->partNumber = $partNumber;
         return $this;
     }
-
-
 }
-

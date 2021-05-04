@@ -6,16 +6,16 @@ class FeatureListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType|array 
      */
     private $featureIdentifier;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType|array $featureIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier)
+    public function __construct($featureIdentifier)
     {
         $this->featureIdentifier = $featureIdentifier;
     }
@@ -23,15 +23,15 @@ class FeatureListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType|array $featureIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier)
+    public static function create($featureIdentifier)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FeatureIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\FeatureIdentifierType|array 
      */
     public function getFeatureIdentifier()
     {
@@ -39,7 +39,7 @@ class FeatureListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType|array $featureIdentifier
      * @return $this
      */
     public function setFeatureIdentifier($featureIdentifier)
@@ -47,7 +47,4 @@ class FeatureListType
         $this->featureIdentifier = $featureIdentifier;
         return $this;
     }
-
-
 }
-

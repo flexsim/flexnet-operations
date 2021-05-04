@@ -6,14 +6,14 @@ class PermissionListType
 {
 
     /**
-     * @var string
+     * @var string|array 
      */
     private $permission;
 
     /**
      * Constructor
      *
-     * @var string $permission
+     * @var string|array $permission
      */
     public function __construct(string $permission)
     {
@@ -23,7 +23,7 @@ class PermissionListType
     /**
      * create a new instance of this class
      *
-     * @var string $permission
+     * @var string|array $permission
      */
     public static function create(string $permission)
     {
@@ -31,7 +31,7 @@ class PermissionListType
     }
 
     /**
-     * @return string
+     * @return string|array 
      */
     public function getPermission()
     {
@@ -39,7 +39,7 @@ class PermissionListType
     }
 
     /**
-     * @param string $permission
+     * @param string|array $permission
      * @return $this
      */
     public function setPermission($permission)
@@ -47,7 +47,4 @@ class PermissionListType
         $this->permission = $permission;
         return $this;
     }
-
-
 }
-

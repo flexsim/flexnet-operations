@@ -6,7 +6,7 @@ class FailedDeletePartNumberDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedDeletePartNumberDataType
+     * @var \Flexsim\FlexnetOperations\Type\FailedDeletePartNumberDataType|array 
      */
     private $failedPartNumber;
 
@@ -31,7 +31,7 @@ class FailedDeletePartNumberDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedDeletePartNumberDataType
+     * @return \Flexsim\FlexnetOperations\Type\FailedDeletePartNumberDataType|array 
      */
     public function getFailedPartNumber()
     {
@@ -39,7 +39,7 @@ class FailedDeletePartNumberDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeletePartNumberDataType $failedPartNumber
+     * @param \Flexsim\FlexnetOperations\Type\FailedDeletePartNumberDataType|array $failedPartNumber
      * @return $this
      */
     public function setFailedPartNumber($failedPartNumber)
@@ -47,7 +47,4 @@ class FailedDeletePartNumberDataListType
         $this->failedPartNumber = $failedPartNumber;
         return $this;
     }
-
-
 }
-

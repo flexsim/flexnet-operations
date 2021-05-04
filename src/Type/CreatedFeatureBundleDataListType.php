@@ -6,7 +6,7 @@ class CreatedFeatureBundleDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\CorrelationDataType
+     * @var \Flexsim\FlexnetOperations\Type\CorrelationDataType|array
      */
     private $createdFeatureBundle;
 
@@ -31,7 +31,7 @@ class CreatedFeatureBundleDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\CorrelationDataType
+     * @return \Flexsim\FlexnetOperations\Type\CorrelationDataType|array
      */
     public function getCreatedFeatureBundle()
     {
@@ -39,7 +39,7 @@ class CreatedFeatureBundleDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CorrelationDataType $createdFeatureBundle
+     * @param \Flexsim\FlexnetOperations\Type\CorrelationDataType|array $createdFeatureBundle
      * @return $this
      */
     public function setCreatedFeatureBundle($createdFeatureBundle)
@@ -47,7 +47,4 @@ class CreatedFeatureBundleDataListType
         $this->createdFeatureBundle = $createdFeatureBundle;
         return $this;
     }
-
-
 }
-

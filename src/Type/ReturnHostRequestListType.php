@@ -8,16 +8,16 @@ class ReturnHostRequestListType implements RequestInterface
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ReturnHostType
+     * @var \Flexsim\FlexnetOperations\Type\ReturnHostType|array 
      */
     private $returnHosts;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ReturnHostType $returnHosts
+     * @var \Flexsim\FlexnetOperations\Type\ReturnHostType|array $returnHosts
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ReturnHostType $returnHosts)
+    public function __construct($returnHosts)
     {
         $this->returnHosts = $returnHosts;
     }
@@ -25,15 +25,15 @@ class ReturnHostRequestListType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ReturnHostType $returnHosts
+     * @var \Flexsim\FlexnetOperations\Type\ReturnHostType|array $returnHosts
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ReturnHostType $returnHosts)
+    public static function create($returnHosts)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ReturnHostType
+     * @return \Flexsim\FlexnetOperations\Type\ReturnHostType|array 
      */
     public function getReturnHosts()
     {
@@ -41,7 +41,7 @@ class ReturnHostRequestListType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ReturnHostType $returnHosts
+     * @param \Flexsim\FlexnetOperations\Type\ReturnHostType|array $returnHosts
      * @return $this
      */
     public function setReturnHosts($returnHosts)
@@ -49,7 +49,4 @@ class ReturnHostRequestListType implements RequestInterface
         $this->returnHosts = $returnHosts;
         return $this;
     }
-
-
 }
-

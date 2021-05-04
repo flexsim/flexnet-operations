@@ -6,16 +6,16 @@ class OverDraftDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType
+     * @var \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array 
      */
     private $activationIdMap;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType $activationIdMap
+     * @var \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array $activationIdMap
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType $activationIdMap)
+    public function __construct($activationIdMap)
     {
         $this->activationIdMap = $activationIdMap;
     }
@@ -23,15 +23,15 @@ class OverDraftDataListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType $activationIdMap
+     * @var \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array $activationIdMap
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType $activationIdMap)
+    public static function create($activationIdMap)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType
+     * @return \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array 
      */
     public function getActivationIdMap()
     {
@@ -39,7 +39,7 @@ class OverDraftDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType $activationIdMap
+     * @param \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array $activationIdMap
      * @return $this
      */
     public function setActivationIdMap($activationIdMap)
@@ -47,7 +47,4 @@ class OverDraftDataListType
         $this->activationIdMap = $activationIdMap;
         return $this;
     }
-
-
 }
-

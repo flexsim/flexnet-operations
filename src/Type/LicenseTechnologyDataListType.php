@@ -6,7 +6,7 @@ class LicenseTechnologyDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType
+     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array 
      */
     private $licenseTechnology;
 
@@ -31,7 +31,7 @@ class LicenseTechnologyDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType
+     * @return \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array 
      */
     public function getLicenseTechnology()
     {
@@ -39,7 +39,7 @@ class LicenseTechnologyDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType $licenseTechnology
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array $licenseTechnology
      * @return $this
      */
     public function setLicenseTechnology($licenseTechnology)
@@ -47,7 +47,4 @@ class LicenseTechnologyDataListType
         $this->licenseTechnology = $licenseTechnology;
         return $this;
     }
-
-
 }
-

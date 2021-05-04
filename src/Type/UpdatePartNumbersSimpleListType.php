@@ -6,7 +6,7 @@ class UpdatePartNumbersSimpleListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array
      */
     private $partNumber;
 
@@ -21,7 +21,7 @@ class UpdatePartNumbersSimpleListType
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array $partNumber
      * @var string $opType
      */
-    public function __construct($partNumber = null, string $opType)
+    public function __construct($partNumber, string $opType)
     {
         $this->partNumber = $partNumber;
         $this->opType = $opType;
@@ -33,13 +33,13 @@ class UpdatePartNumbersSimpleListType
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array $partNumber
      * @var string $opType
      */
-    public static function create($partNumber = null, string $opType)
+    public static function create($partNumber, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array
      */
     public function getPartNumber()
     {
@@ -47,7 +47,7 @@ class UpdatePartNumbersSimpleListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -73,7 +73,4 @@ class UpdatePartNumbersSimpleListType
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

@@ -6,16 +6,16 @@ class EntitlementListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
+     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType|array
      */
     private $entitlementIdentifier;
 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType|array $entitlementIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier)
+    public function __construct($entitlementIdentifier)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
     }
@@ -23,15 +23,15 @@ class EntitlementListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType|array $entitlementIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier)
+    public static function create($entitlementIdentifier)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
+     * @return \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType|array
      */
     public function getEntitlementIdentifier()
     {
@@ -39,7 +39,7 @@ class EntitlementListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType|array $entitlementIdentifier
      * @return $this
      */
     public function setEntitlementIdentifier($entitlementIdentifier)
@@ -47,7 +47,4 @@ class EntitlementListType
         $this->entitlementIdentifier = $entitlementIdentifier;
         return $this;
     }
-
-
 }
-

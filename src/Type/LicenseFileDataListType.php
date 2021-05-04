@@ -6,7 +6,7 @@ class LicenseFileDataListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataType
+     * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array 
      */
     private $licenseFile;
 
@@ -31,7 +31,7 @@ class LicenseFileDataListType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LicenseFileDataType
+     * @return \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array 
      */
     public function getLicenseFile()
     {
@@ -39,7 +39,7 @@ class LicenseFileDataListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataType $licenseFile
+     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array $licenseFile
      * @return $this
      */
     public function setLicenseFile($licenseFile)
@@ -47,7 +47,4 @@ class LicenseFileDataListType
         $this->licenseFile = $licenseFile;
         return $this;
     }
-
-
 }
-

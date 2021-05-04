@@ -6,7 +6,7 @@ class UpdateUserOrganizationsListType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationType
+     * @var \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationType|array
      */
     private $orgRoles;
 
@@ -18,10 +18,10 @@ class UpdateUserOrganizationsListType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationType $orgRoles
+     * @var \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationType|array $orgRoles
      * @var string $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateUserOrganizationType $orgRoles, string $opType)
+    public function __construct($orgRoles, string $opType)
     {
         $this->orgRoles = $orgRoles;
         $this->opType = $opType;
@@ -30,16 +30,16 @@ class UpdateUserOrganizationsListType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationType $orgRoles
+     * @var \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationType|array $orgRoles
      * @var string $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateUserOrganizationType $orgRoles, string $opType)
+    public static function create($orgRoles, string $opType)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationType
+     * @return \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationType|array
      */
     public function getOrgRoles()
     {
@@ -47,7 +47,7 @@ class UpdateUserOrganizationsListType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationType $orgRoles
+     * @param \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationType|array $orgRoles
      * @return $this
      */
     public function setOrgRoles($orgRoles)

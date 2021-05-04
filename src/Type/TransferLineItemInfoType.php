@@ -45,14 +45,14 @@ class TransferLineItemInfoType
      * @var bool $generateActivationId
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, bool $useSameActivationId = null, string $customActivationId = null, bool $generateActivationId = null, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo)
+    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo, bool $useSameActivationId = null, string $customActivationId = null, bool $generateActivationId = null)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->numberOfCopies = $numberOfCopies;
+        $this->entitlementBelongsTo = $entitlementBelongsTo;
         $this->useSameActivationId = $useSameActivationId;
         $this->customActivationId = $customActivationId;
         $this->generateActivationId = $generateActivationId;
-        $this->entitlementBelongsTo = $entitlementBelongsTo;
     }
 
     /**
@@ -65,7 +65,7 @@ class TransferLineItemInfoType
      * @var bool $generateActivationId
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, bool $useSameActivationId = null, string $customActivationId = null, bool $generateActivationId = null, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo)
+    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo, bool $useSameActivationId = null, string $customActivationId = null, bool $generateActivationId = null)
     {
         return new self(...func_get_args());
     }
@@ -177,7 +177,4 @@ class TransferLineItemInfoType
         $this->entitlementBelongsTo = $entitlementBelongsTo;
         return $this;
     }
-
-
 }
-
