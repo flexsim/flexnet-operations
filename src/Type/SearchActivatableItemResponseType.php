@@ -59,7 +59,7 @@ class SearchActivatableItemResponseType implements ResultInterface
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ActivatableItemDetailType
+     * @return array<\Flexsim\FlexnetOperations\Type\ActivatableItemDetailType>
      */
     public function getActivatableItem()
     {
@@ -67,7 +67,7 @@ class SearchActivatableItemResponseType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ActivatableItemDetailType $activatableItem
+     * @param array<\Flexsim\FlexnetOperations\Type\ActivatableItemDetailType> $activatableItem
      * @return $this
      */
     public function setActivatableItem($activatableItem)
@@ -75,7 +75,4 @@ class SearchActivatableItemResponseType implements ResultInterface
         $this->activatableItem = $activatableItem;
         return $this;
     }
-
-
 }
-

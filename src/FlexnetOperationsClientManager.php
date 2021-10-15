@@ -5,7 +5,7 @@ namespace Flexsim\FlexnetOperations;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 
-abstract class FlexnetOperationsClientManager
+class FlexnetOperationsClientManager
 {
     /**
      * The application instance.
@@ -17,23 +17,30 @@ abstract class FlexnetOperationsClientManager
     /**
      * The active client instances.
      *
-     * @var array
+     * @var array<\Phpro\SoapClient\Client>
      */
     protected $clients = [];
 
     /**
      * The connection that is currently in use
-     * 
+     *
      * @var string
      */
     protected $activeConnection;
 
     /**
      * The service version that is currently in use
-     * 
+     *
      * @var string
      */
     protected $activeVersion;
+
+    /**
+     * The namespace of the services client and factory
+     *
+     * @var string
+     */
+    protected $serviceNamespace;
 
     /**
      * Create a new database manager instance.
@@ -41,15 +48,17 @@ abstract class FlexnetOperationsClientManager
      * @param  \Illuminate\Contracts\Foundation\Application  $app
      * @return void
      */
-    public function __construct($app)
+    public function __construct($app, $serviceNamespace)
     {
         $this->app = $app;
+
+        $this->serviceNamespace = $serviceNamespace;
     }
 
     /**
-     * Return the service client 
-     * 
-     * @return mixed
+     * Return the service client
+     *
+     * @return \Phpro\SoapClient\Client
      */
     public function client()
     {
@@ -69,7 +78,7 @@ abstract class FlexnetOperationsClientManager
 
     /**
      * retrieve the connection for the current call to client()
-     * 
+     *
      * @return string
      */
     protected function activeConnection()
@@ -79,7 +88,7 @@ abstract class FlexnetOperationsClientManager
 
     /**
      * retrieve the version for the current call to client()
-     * 
+     *
      * @return string
      */
     protected function activeVersion()
@@ -89,7 +98,7 @@ abstract class FlexnetOperationsClientManager
 
     /**
      * create a new service client for the specified connection and version
-     * 
+     *
      * @param string $connection the name of the connection to use
      * @param string $version the version of the service to use
      */
@@ -134,11 +143,11 @@ abstract class FlexnetOperationsClientManager
         return $config;
     }
 
-    /** 
+    /**
      * Validate the configuration for the connection
-     * 
+     *
      * @param array $config
-     * 
+     *
      * @throws \InvalidArgumentException
      */
     protected function validateConfig($config, $connection)
@@ -154,9 +163,9 @@ abstract class FlexnetOperationsClientManager
 
     /**
      * return the wsdl path generated from the config
-     * 
+     *
      * @param array $config the configuration for a specific connection
-     * 
+     *
      * @return string
      */
     protected function createWsdlPath($config)
@@ -170,14 +179,14 @@ abstract class FlexnetOperationsClientManager
 
     /**
      * return the path to the service client factory for a specific version of a service
-     * 
+     *
      * @param string $version the version of the service to use
-     * 
+     *
      * @return string
      */
     protected function getFactoryClass($version)
     {
-        $class = $this->getServiceNamespace() .
+        $class = $this->serviceNamespace .
             ($version == 'base'
                 ? ''
                 : '\\' . $version)
@@ -260,20 +269,13 @@ abstract class FlexnetOperationsClientManager
     /**
      * get the service client name
      *
-     * @return string 
+     * @return string
      */
     protected function getServiceName()
     {
-        $serviceNamespaceArray = explode('\\', $this->getServiceNamespace());
+        $serviceNamespaceArray = explode('\\', $this->serviceNamespace);
         return end($serviceNamespaceArray);
     }
-
-    /**
-     * get the service client namespace
-     *
-     * @return string 
-     */
-    abstract protected function getServiceNamespace();
 
     /**
      * Return all of the created clients.
