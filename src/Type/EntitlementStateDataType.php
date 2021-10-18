@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitlementStateDataType
+class EntitlementStateDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementIdentifier;
+    protected $entitlementIdentifier;
 
     /**
      * @var string
      */
-    private $stateToSet;
+    protected $stateToSet;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class EntitlementStateDataType
         $this->stateToSet = $stateToSet;
         return $this;
     }
-
-
 }
-

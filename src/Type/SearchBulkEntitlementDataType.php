@@ -2,118 +2,118 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SearchBulkEntitlementDataType
+class SearchBulkEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $productName;
+    protected $productName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $productVersion;
+    protected $productVersion;
 
     /**
      * @var string
      */
-    private $productType;
+    protected $productType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $createdOn;
+    protected $createdOn;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $lastModifiedDate;
+    protected $lastModifiedDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StateQueryType
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $createdUserId;
+    protected $createdUserId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var bool
      */
-    private $allowPortalLogin;
+    protected $allowPortalLogin;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType
      */
-    private $accountUnitName;
+    protected $accountUnitName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType
      */
-    private $organizationUnitName;
+    protected $organizationUnitName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $currentOwnerName;
+    protected $currentOwnerName;
 
     /**
      * Constructor

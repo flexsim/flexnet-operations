@@ -2,88 +2,88 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitlementMaintenanceLineItemPropertiesType
+class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var string
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var string
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $maintenanceProduct;
+    protected $maintenanceProduct;
 
     /**
      * @var string
      */
-    private $maintenanceProductDescription;
+    protected $maintenanceProductDescription;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
      */
-    private $maintenancePartNumber;
+    protected $maintenancePartNumber;
 
     /**
      * @var string
      */
-    private $maintenancePartNumberDescription;
+    protected $maintenancePartNumberDescription;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $createdOnDateTime;
+    protected $createdOnDateTime;
 
     /**
      * @var \DateTimeInterface
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * @var string
      */
-    private $linkedLineItemActivationId;
+    protected $linkedLineItemActivationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $maintenanceLineItemAttributes;
+    protected $maintenanceLineItemAttributes;
 
     /**
      * Constructor
@@ -437,7 +437,4 @@ class EntitlementMaintenanceLineItemPropertiesType
         $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
         return $this;
     }
-
-
 }
-

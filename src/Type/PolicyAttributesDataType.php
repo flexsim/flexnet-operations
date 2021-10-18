@@ -2,73 +2,73 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PolicyAttributesDataType
+class PolicyAttributesDataType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $needRehostsPolicy;
+    protected $needRehostsPolicy;
 
     /**
      * @var bool
      */
-    private $needReturnsPolicy;
+    protected $needReturnsPolicy;
 
     /**
      * @var bool
      */
-    private $needRepairsPolicy;
+    protected $needRepairsPolicy;
 
     /**
      * @var bool
      */
-    private $needExtraActivationsPolicy;
+    protected $needExtraActivationsPolicy;
 
     /**
      * @var bool
      */
-    private $needCancelLicensePolicy;
+    protected $needCancelLicensePolicy;
 
     /**
      * @var bool
      */
-    private $needVirtualLicensePolicy;
+    protected $needVirtualLicensePolicy;
 
     /**
      * @var bool
      */
-    private $needReinstallPolicy;
+    protected $needReinstallPolicy;
 
     /**
      * @var bool
      */
-    private $needServerHostIdPolicy;
+    protected $needServerHostIdPolicy;
 
     /**
      * @var bool
      */
-    private $needNodelockedHostIdPolicy;
+    protected $needNodelockedHostIdPolicy;
 
     /**
      * @var bool
      */
-    private $needPortalServerHostIdPolicy;
+    protected $needPortalServerHostIdPolicy;
 
     /**
      * @var bool
      */
-    private $needPortalNodelockedHostIdPolicy;
+    protected $needPortalNodelockedHostIdPolicy;
 
     /**
      * @var bool
      */
-    private $needRedundantServerPolicy;
+    protected $needRedundantServerPolicy;
 
     /**
      * @var bool
      */
-    private $needACPIGenerationIdLicensePolicy;
+    protected $needACPIGenerationIdLicensePolicy;
 
     /**
      * Constructor
@@ -359,7 +359,4 @@ class PolicyAttributesDataType
         $this->needACPIGenerationIdLicensePolicy = $needACPIGenerationIdLicensePolicy;
         return $this;
     }
-
-
 }
-

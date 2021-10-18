@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class OrganizationBasicDataType
+class OrganizationBasicDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $orgUnitId;
+    protected $orgUnitId;
 
     /**
      * @var string
      */
-    private $displayName;
+    protected $displayName;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class OrganizationBasicDataType
         $this->displayName = $displayName;
         return $this;
     }
-
-
 }
-

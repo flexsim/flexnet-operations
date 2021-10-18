@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class HostTypeIdentifier
+class HostTypeIdentifier extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class HostTypeIdentifier
         $this->name = $name;
         return $this;
     }
-
-
 }
-

@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CapabilityResponseDataType
+class CapabilityResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * @var string
      */
-    private $addonLicense;
+    protected $addonLicense;
 
     /**
      * @var bool
      */
-    private $bufferLicense;
+    protected $bufferLicense;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class CapabilityResponseDataType
         $this->bufferLicense = $bufferLicense;
         return $this;
     }
-
-
 }
-

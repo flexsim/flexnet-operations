@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AdvancedFmtLCResponseDataType
+class AdvancedFmtLCResponseDataType extends FlexnetType
 {
 
     /**
      * @var int
      */
-    private $recordRefNo;
+    protected $recordRefNo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType
      */
-    private $upgradedFulfillmentInfo;
+    protected $upgradedFulfillmentInfo;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class AdvancedFmtLCResponseDataType
         $this->upgradedFulfillmentInfo = $upgradedFulfillmentInfo;
         return $this;
     }
-
-
 }
-

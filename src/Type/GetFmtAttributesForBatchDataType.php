@@ -2,73 +2,73 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetFmtAttributesForBatchDataType
+class GetFmtAttributesForBatchDataType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $needStartDate;
+    protected $needStartDate;
 
     /**
      * @var bool
      */
-    private $needVersionDate;
+    protected $needVersionDate;
 
     /**
      * @var bool
      */
-    private $needVersionStartDate;
+    protected $needVersionStartDate;
 
     /**
      * @var bool
      */
-    private $needServerId;
+    protected $needServerId;
 
     /**
      * @var bool
      */
-    private $needNodeLockId;
+    protected $needNodeLockId;
 
     /**
      * @var bool
      */
-    private $needCustomHost;
+    protected $needCustomHost;
 
     /**
      * @var bool
      */
-    private $needCount;
+    protected $needCount;
 
     /**
      * @var bool
      */
-    private $needSoldTo;
+    protected $needSoldTo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OverDraftDataListType
      */
-    private $overDraftData;
+    protected $overDraftData;
 
     /**
      * @var string
      */
-    private $modelType;
+    protected $modelType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType
      */
-    private $modelAttributes;
+    protected $modelAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType
      */
-    private $hostAttributes;
+    protected $hostAttributes;
 
     /**
      * @var bool
      */
-    private $needTimeZone;
+    protected $needTimeZone;
 
     /**
      * Constructor
@@ -359,7 +359,4 @@ class GetFmtAttributesForBatchDataType
         $this->needTimeZone = $needTimeZone;
         return $this;
     }
-
-
 }
-

@@ -4,28 +4,28 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class MapEntitlementsToUserRequestType implements RequestInterface
+class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var string
      */
-    private $userId;
+    protected $userId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\IdListType
      */
-    private $idList;
+    protected $idList;
 
     /**
      * @var string
      */
-    private $userAcct;
+    protected $userAcct;
 
     /**
      * @var string
      */
-    private $userOrg;
+    protected $userOrg;
 
     /**
      * Constructor

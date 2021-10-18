@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class LinkMaintenanceLineItemRequestType implements RequestInterface
+class LinkMaintenanceLineItemRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemListType
      */
-    private $linkMaintenanceLineItemList;
+    protected $linkMaintenanceLineItemList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class LinkMaintenanceLineItemRequestType implements RequestInterface
         $this->linkMaintenanceLineItemList = $linkMaintenanceLineItemList;
         return $this;
     }
-
-
 }
-

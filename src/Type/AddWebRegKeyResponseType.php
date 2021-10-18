@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class AddWebRegKeyResponseType implements ResultInterface
+class AddWebRegKeyResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\WebRegKeyDataListType
      */
-    private $responseData;
+    protected $responseData;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataListType
      */
-    private $failedData;
+    protected $failedData;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class AddWebRegKeyResponseType implements ResultInterface
         $this->failedData = $failedData;
         return $this;
     }
-
-
 }
-

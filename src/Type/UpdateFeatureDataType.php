@@ -2,38 +2,38 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateFeatureDataType
+class UpdateFeatureDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType
      */
-    private $featureIdentifier;
+    protected $featureIdentifier;
 
     /**
      * @var string
      */
-    private $featureName;
+    protected $featureName;
 
     /**
      * @var string
      */
-    private $versionFormat;
+    protected $versionFormat;
 
     /**
      * @var string
      */
-    private $version;
+    protected $version;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType
      */
-    private $featureOverrideParams;
+    protected $featureOverrideParams;
 
     /**
      * Constructor
@@ -177,7 +177,4 @@ class UpdateFeatureDataType
         $this->featureOverrideParams = $featureOverrideParams;
         return $this;
     }
-
-
 }
-

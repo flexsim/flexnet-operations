@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetConsolidatedFulfillmentCountRequestType implements RequestInterface
+class GetConsolidatedFulfillmentCountRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * Constructor

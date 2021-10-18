@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class SplitBulkEntitlementRequestType implements RequestInterface
+class SplitBulkEntitlementRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementListType
      */
-    private $bulkEntitlementList;
+    protected $bulkEntitlementList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class SplitBulkEntitlementRequestType implements RequestInterface
         $this->bulkEntitlementList = $bulkEntitlementList;
         return $this;
     }
-
-
 }
-

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedEmergencyResponseDataType
+class FailedEmergencyResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedEmergencyResponseDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

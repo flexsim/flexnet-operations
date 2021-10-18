@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedUniformSuiteDataListType
+class FailedUniformSuiteDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataType|array 
      */
-    private $failedUniformSuite;
+    protected $failedUniformSuite;
 
     /**
      * Constructor

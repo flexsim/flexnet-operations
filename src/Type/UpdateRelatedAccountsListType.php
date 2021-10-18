@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateRelatedAccountsListType
+class UpdateRelatedAccountsListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array
      */
-    private $relatedAccount;
+    protected $relatedAccount;
 
     /**
      * @var string
      */
-    private $opType;
+    protected $opType;
 
     /**
      * Constructor

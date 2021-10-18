@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LinkAccountsDataType
+class LinkAccountsDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
-    private $parentAcct;
+    protected $parentAcct;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
-    private $subAcct;
+    protected $subAcct;
 
     /**
      * Constructor

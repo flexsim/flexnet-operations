@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedTransferLineItemDataType
+class FailedTransferLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType
      */
-    private $lineItemInfo;
+    protected $lineItemInfo;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedTransferLineItemDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

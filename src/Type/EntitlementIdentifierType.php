@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitlementIdentifierType
+class EntitlementIdentifierType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementPKType
      */
-    private $primaryKeys;
+    protected $primaryKeys;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class EntitlementIdentifierType
         $this->primaryKeys = $primaryKeys;
         return $this;
     }
-
-
 }
-

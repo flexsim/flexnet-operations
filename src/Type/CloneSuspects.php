@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CloneSuspects
+class CloneSuspects extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CloneSuspect
      */
-    private $cloneSuspect;
+    protected $cloneSuspect;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class CloneSuspects
         $this->cloneSuspect = $cloneSuspect;
         return $this;
     }
-
-
 }
-

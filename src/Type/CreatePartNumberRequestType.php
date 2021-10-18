@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class CreatePartNumberRequestType implements RequestInterface
+class CreatePartNumberRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var bool
      */
-    private $processSync;
+    protected $processSync;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class CreatePartNumberRequestType implements RequestInterface
         $this->processSync = $processSync;
         return $this;
     }
-
-
 }
-

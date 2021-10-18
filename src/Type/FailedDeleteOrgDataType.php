@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedDeleteOrgDataType
+class FailedDeleteOrgDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteOrgDataType
      */
-    private $orgData;
+    protected $orgData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedDeleteOrgDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class AddWebRegKeyRequestType implements RequestInterface
+class AddWebRegKeyRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType
      */
-    private $webRegKeyData;
+    protected $webRegKeyData;
 
     /**
      * @var bool
      */
-    private $processSync;
+    protected $processSync;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class AddWebRegKeyRequestType implements RequestInterface
         $this->processSync = $processSync;
         return $this;
     }
-
-
 }
-

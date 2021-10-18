@@ -2,78 +2,78 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AddonData
+class AddonData extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var string
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var int
      */
-    private $requestedCopies;
+    protected $requestedCopies;
 
     /**
      * @var int
      */
-    private $consumedCopies;
+    protected $consumedCopies;
 
     /**
      * @var int
      */
-    private $generatedCopies;
+    protected $generatedCopies;
 
     /**
      * @var string
      */
-    private $licenseState;
+    protected $licenseState;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType
      */
-    private $productList;
+    protected $productList;
 
     /**
      * @var string
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var \DateTimeInterface
      */
-    private $licenseExpirationDate;
+    protected $licenseExpirationDate;
 
     /**
      * @var bool
      */
-    private $licensePermanent;
+    protected $licensePermanent;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expirationDateOverride;
+    protected $expirationDateOverride;
 
     /**
      * @var string
      */
-    private $licenseModelName;
+    protected $licenseModelName;
 
     /**
      * @var \DateTimeInterface
      */
-    private $createdDate;
+    protected $createdDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $lastModifiedDate;
+    protected $lastModifiedDate;
 
     /**
      * Constructor
@@ -385,7 +385,4 @@ class AddonData
         $this->lastModifiedDate = $lastModifiedDate;
         return $this;
     }
-
-
 }
-

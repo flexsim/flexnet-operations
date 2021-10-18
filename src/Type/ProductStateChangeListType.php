@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ProductStateChangeListType
+class ProductStateChangeListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType|array 
      */
-    private $product;
+    protected $product;
 
     /**
      * Constructor

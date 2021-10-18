@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AddedEntitlementLineItemDataListType
+class AddedEntitlementLineItemDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType|array 
      */
-    private $addedLineItems;
+    protected $addedLineItems;
 
     /**
      * Constructor

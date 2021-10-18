@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedProductCategoryDataType
+class CreatedProductCategoryDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $recordRefNo;
+    protected $recordRefNo;
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class CreatedProductCategoryDataType
         $this->uniqueId = $uniqueId;
         return $this;
     }
-
-
 }
-

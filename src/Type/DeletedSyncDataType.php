@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeletedSyncDataType
+class DeletedSyncDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $serverIdentifier;
+    protected $serverIdentifier;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startTime;
+    protected $startTime;
 
     /**
      * @var \DateTimeInterface
      */
-    private $endTime;
+    protected $endTime;
 
     /**
      * @var int
      */
-    private $count;
+    protected $count;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class DeletedSyncDataType
         $this->count = $count;
         return $this;
     }
-
-
 }
-

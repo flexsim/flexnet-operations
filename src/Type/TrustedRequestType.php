@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class TrustedRequestType implements RequestInterface
+class TrustedRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ActivationDataType
      */
-    private $inputData;
+    protected $inputData;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class TrustedRequestType implements RequestInterface
         $this->inputData = $inputData;
         return $this;
     }
-
-
 }
-

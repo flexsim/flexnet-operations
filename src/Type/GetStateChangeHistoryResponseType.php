@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetStateChangeHistoryResponseType implements ResultInterface
+class GetStateChangeHistoryResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StateChangeResponseType
      */
-    private $responseData;
+    protected $responseData;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetStateChangeHistoryResponseType implements ResultInterface
         $this->responseData = $responseData;
         return $this;
     }
-
-
 }
-

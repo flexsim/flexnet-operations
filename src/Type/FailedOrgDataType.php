@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedOrgDataType
+class FailedOrgDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationBasicDataType
      */
-    private $organization;
+    protected $organization;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedOrgDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

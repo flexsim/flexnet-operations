@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class TransferredEntitlementDataType
+class TransferredEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementIdentifier;
+    protected $entitlementIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferredLineItemMapType
      */
-    private $lineItemIdentifierMap;
+    protected $lineItemIdentifierMap;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class TransferredEntitlementDataType
         $this->lineItemIdentifierMap = $lineItemIdentifierMap;
         return $this;
     }
-
-
 }
-

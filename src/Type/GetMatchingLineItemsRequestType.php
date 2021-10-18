@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetMatchingLineItemsRequestType implements RequestInterface
+class GetMatchingLineItemsRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemsListType
      */
-    private $lineItemList;
+    protected $lineItemList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class GetMatchingLineItemsRequestType implements RequestInterface
         $this->lineItemList = $lineItemList;
         return $this;
     }
-
-
 }
-

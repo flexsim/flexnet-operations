@@ -2,33 +2,33 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class RenewLineItemDataType
+class RenewLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $parentLineItemIdentifier;
+    protected $parentLineItemIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\RenewParametersDataType
      */
-    private $renewParameters;
+    protected $renewParameters;
 
     /**
      * @var bool
      */
-    private $isFull;
+    protected $isFull;
 
     /**
      * @var bool
      */
-    private $allowActivationsOnParent;
+    protected $allowActivationsOnParent;
 
     /**
      * @var bool
      */
-    private $autoDeploy;
+    protected $autoDeploy;
 
     /**
      * Constructor
@@ -151,7 +151,4 @@ class RenewLineItemDataType
         $this->autoDeploy = $autoDeploy;
         return $this;
     }
-
-
 }
-

@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetDeviceRequestType implements RequestInterface
+class GetDeviceRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceId
      */
-    private $deviceId;
+    protected $deviceId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType
      */
-    private $responseConfig;
+    protected $responseConfig;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetDeviceRequestType implements RequestInterface
         $this->responseConfig = $responseConfig;
         return $this;
     }
-
-
 }
-

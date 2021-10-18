@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class EntitlementLifeCycleRequestType implements RequestInterface
+class EntitlementLifeCycleRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType
      */
-    private $entitlementData;
+    protected $entitlementData;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class EntitlementLifeCycleRequestType implements RequestInterface
         $this->entitlementData = $entitlementData;
         return $this;
     }
-
-
 }
-

@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetUserPermissionsResponseDataType
+class GetUserPermissionsResponseDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $userName;
+    protected $userName;
 
     /**
      * @var string
      */
-    private $accountType;
+    protected $accountType;
 
     /**
      * @var string
      */
-    private $orgType;
+    protected $orgType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PermissionListType
      */
-    private $permissions;
+    protected $permissions;
 
     /**
      * Constructor

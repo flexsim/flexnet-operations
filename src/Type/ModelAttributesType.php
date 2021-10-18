@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ModelAttributesType
+class ModelAttributesType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $needServerId;
+    protected $needServerId;
 
     /**
      * @var bool
      */
-    private $needNodeLockId;
+    protected $needNodeLockId;
 
     /**
      * @var bool
      */
-    private $needCount;
+    protected $needCount;
 
     /**
      * @var bool
      */
-    private $needOverdraftCount;
+    protected $needOverdraftCount;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class ModelAttributesType
         $this->needOverdraftCount = $needOverdraftCount;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedMapEntitlementsToUserDataListType
+class FailedMapEntitlementsToUserDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedIdDataType|array 
      */
-    private $failedId;
+    protected $failedId;
 
     /**
      * Constructor

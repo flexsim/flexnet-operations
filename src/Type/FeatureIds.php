@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureIds
+class FeatureIds extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $featureId;
+    protected $featureId;
 
     /**
      * @var string
      */
-    private $featureName;
+    protected $featureName;
 
     /**
      * @var int
      */
-    private $count;
+    protected $count;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class FeatureIds
         $this->count = $count;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeleteProductDataType
+class DeleteProductDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $productIdentifier;
+    protected $productIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class DeleteProductDataType
         $this->productIdentifier = $productIdentifier;
         return $this;
     }
-
-
 }
-

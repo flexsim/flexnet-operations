@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class UpdateOrganizationResponseType implements ResultInterface
+class UpdateOrganizationResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataListType
      */
-    private $failedData;
+    protected $failedData;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class UpdateOrganizationResponseType implements ResultInterface
         $this->failedData = $failedData;
         return $this;
     }
-
-
 }
-

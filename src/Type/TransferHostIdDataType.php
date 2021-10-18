@@ -2,38 +2,38 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class TransferHostIdDataType
+class TransferHostIdDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ServerIDsType
      */
-    private $serverIds;
+    protected $serverIds;
 
     /**
      * @var string
      */
-    private $nodeId;
+    protected $nodeId;
 
     /**
      * @var string
      */
-    private $customHostId;
+    protected $customHostId;
 
     /**
      * @var string
      */
-    private $customHostType;
+    protected $customHostType;
 
     /**
      * @var string
      */
-    private $customLicenseTechnology;
+    protected $customLicenseTechnology;
 
     /**
      * Constructor
@@ -177,7 +177,4 @@ class TransferHostIdDataType
         $this->customLicenseTechnology = $customLicenseTechnology;
         return $this;
     }
-
-
 }
-

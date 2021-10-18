@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class ReturnHostRequestListType implements RequestInterface
+class ReturnHostRequestListType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ReturnHostType|array 
      */
-    private $returnHosts;
+    protected $returnHosts;
 
     /**
      * Constructor

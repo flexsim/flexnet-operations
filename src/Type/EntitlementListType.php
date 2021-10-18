@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitlementListType
+class EntitlementListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType|array
      */
-    private $entitlementIdentifier;
+    protected $entitlementIdentifier;
 
     /**
      * Constructor

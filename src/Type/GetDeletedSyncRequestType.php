@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetDeletedSyncRequestType implements RequestInterface
+class GetDeletedSyncRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * @var int
      */
-    private $pageNumber;
+    protected $pageNumber;
 
     /**
      * @var int
      */
-    private $batchSize;
+    protected $batchSize;
 
     /**
      * Constructor

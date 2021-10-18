@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedRemoveEntitlementLineItemDataListType
+class FailedRemoveEntitlementLineItemDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedRemoveEntitlementLineItemDataType|array 
      */
-    private $failedData;
+    protected $failedData;
 
     /**
      * Constructor

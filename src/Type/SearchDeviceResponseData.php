@@ -2,128 +2,128 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SearchDeviceResponseData
+class SearchDeviceResponseData extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceId
      */
-    private $deviceId;
+    protected $deviceId;
 
     /**
      * @var string
      */
-    private $backupDeviceId;
+    protected $backupDeviceId;
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var string
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var string
      */
-    private $status;
+    protected $status;
 
     /**
      * @var string
      */
-    private $servedStatus;
+    protected $servedStatus;
 
     /**
      * @var bool
      */
-    private $hosted;
+    protected $hosted;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SoldToType
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var bool
      */
-    private $hasBufferLicense;
+    protected $hasBufferLicense;
 
     /**
      * @var string
      */
-    private $bufferLicense;
+    protected $bufferLicense;
 
     /**
      * @var bool
      */
-    private $hasAddonLicense;
+    protected $hasAddonLicense;
 
     /**
      * @var string
      */
-    private $addonLicense;
+    protected $addonLicense;
 
     /**
      * @var string
      */
-    private $publisherIdName;
+    protected $publisherIdName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceId
      */
-    private $parentIdentifier;
+    protected $parentIdentifier;
 
     /**
      * @var string
      */
-    private $machineType;
+    protected $machineType;
 
     /**
      * @var string
      */
-    private $vmName;
+    protected $vmName;
 
     /**
      * @var string
      */
-    private $userString;
+    protected $userString;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType
      */
-    private $userIdentifier;
+    protected $userIdentifier;
 
     /**
      * @var \DateTimeInterface
      */
-    private $lastModified;
+    protected $lastModified;
 
     /**
      * @var \DateTimeInterface
      */
-    private $lastSyncTime;
+    protected $lastSyncTime;
 
     /**
      * @var \DateTimeInterface
      */
-    private $lastRequestTime;
+    protected $lastRequestTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddonData
      */
-    private $addon;
+    protected $addon;
 
     /**
      * @var bool
      */
-    private $hasUpdates;
+    protected $hasUpdates;
 
     /**
      * Constructor
@@ -645,7 +645,4 @@ class SearchDeviceResponseData
         $this->hasUpdates = $hasUpdates;
         return $this;
     }
-
-
 }
-

@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetFeatureBundlesQueryResponseType implements ResultInterface
+class GetFeatureBundlesQueryResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType
      */
-    private $responseData;
+    protected $responseData;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetFeatureBundlesQueryResponseType implements ResultInterface
         $this->responseData = $responseData;
         return $this;
     }
-
-
 }
-

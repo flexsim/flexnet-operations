@@ -4,28 +4,28 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class MoveDeviceRequestType implements RequestInterface
+class MoveDeviceRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\MoveDeviceList
      */
-    private $sourceDevices;
+    protected $sourceDevices;
 
     /**
      * @var string
      */
-    private $soldToUniqueId;
+    protected $soldToUniqueId;
 
     /**
      * @var string
      */
-    private $soldToName;
+    protected $soldToName;
 
     /**
      * @var bool
      */
-    private $poolEntitlements;
+    protected $poolEntitlements;
 
     /**
      * Constructor
@@ -127,7 +127,4 @@ class MoveDeviceRequestType implements RequestInterface
         $this->poolEntitlements = $poolEntitlements;
         return $this;
     }
-
-
 }
-

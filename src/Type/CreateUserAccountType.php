@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateUserAccountType
+class CreateUserAccountType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
-    private $account;
+    protected $account;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expiryDate;
+    protected $expiryDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType
      */
-    private $roles;
+    protected $roles;
 
     /**
      * Constructor

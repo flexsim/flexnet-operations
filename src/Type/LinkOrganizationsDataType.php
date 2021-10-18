@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LinkOrganizationsDataType
+class LinkOrganizationsDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $parentOrg;
+    protected $parentOrg;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $subOrg;
+    protected $subOrg;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class LinkOrganizationsDataType
         $this->subOrg = $subOrg;
         return $this;
     }
-
-
 }
-

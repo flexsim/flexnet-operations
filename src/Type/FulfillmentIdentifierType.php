@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FulfillmentIdentifierType
+class FulfillmentIdentifierType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentPKType
      */
-    private $primaryKeys;
+    protected $primaryKeys;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FulfillmentIdentifierType
         $this->primaryKeys = $primaryKeys;
         return $this;
     }
-
-
 }
-

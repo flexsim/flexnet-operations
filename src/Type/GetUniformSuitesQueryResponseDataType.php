@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetUniformSuitesQueryResponseDataType
+class GetUniformSuitesQueryResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UniformSuiteQueryDataType
      */
-    private $uniformSuite;
+    protected $uniformSuite;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetUniformSuitesQueryResponseDataType
         $this->uniformSuite = $uniformSuite;
         return $this;
     }
-
-
 }
-

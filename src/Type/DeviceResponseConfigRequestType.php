@@ -2,118 +2,118 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeviceResponseConfigRequestType
+class DeviceResponseConfigRequestType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $alias;
+    protected $alias;
 
     /**
      * @var bool
      */
-    private $description;
+    protected $description;
 
     /**
      * @var bool
      */
-    private $status;
+    protected $status;
 
     /**
      * @var bool
      */
-    private $servedStatus;
+    protected $servedStatus;
 
     /**
      * @var bool
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var bool
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var bool
      */
-    private $channelPartners;
+    protected $channelPartners;
 
     /**
      * @var bool
      */
-    private $preBuiltProduct;
+    protected $preBuiltProduct;
 
     /**
      * @var bool
      */
-    private $preBuiltLicense;
+    protected $preBuiltLicense;
 
     /**
      * @var bool
      */
-    private $addOnActivationId;
+    protected $addOnActivationId;
 
     /**
      * @var bool
      */
-    private $addOnCounts;
+    protected $addOnCounts;
 
     /**
      * @var bool
      */
-    private $addOnProduct;
+    protected $addOnProduct;
 
     /**
      * @var bool
      */
-    private $addOnLicense;
+    protected $addOnLicense;
 
     /**
      * @var bool
      */
-    private $features;
+    protected $features;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var bool
      */
-    private $publisherIdentity;
+    protected $publisherIdentity;
 
     /**
      * @var bool
      */
-    private $parent;
+    protected $parent;
 
     /**
      * @var bool
      */
-    private $machineType;
+    protected $machineType;
 
     /**
      * @var bool
      */
-    private $vmDetails;
+    protected $vmDetails;
 
     /**
      * @var bool
      */
-    private $vmInfo;
+    protected $vmInfo;
 
     /**
      * @var bool
      */
-    private $vendorDictionary;
+    protected $vendorDictionary;
 
     /**
      * @var bool
      */
-    private $deviceUser;
+    protected $deviceUser;
 
     /**
      * Constructor
@@ -593,7 +593,4 @@ class DeviceResponseConfigRequestType
         $this->deviceUser = $deviceUser;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PublisherErrorResponseDataType
+class PublisherErrorResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentResponseDataType
      */
-    private $fulfillmentData;
+    protected $fulfillmentData;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class PublisherErrorResponseDataType
         $this->fulfillmentData = $fulfillmentData;
         return $this;
     }
-
-
 }
-

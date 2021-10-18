@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class RehostFulfillmentRequestType implements RequestInterface
+class RehostFulfillmentRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\RehostFulfillmentDataType
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class RehostFulfillmentRequestType implements RequestInterface
         $this->fulfillment = $fulfillment;
         return $this;
     }
-
-
 }
-

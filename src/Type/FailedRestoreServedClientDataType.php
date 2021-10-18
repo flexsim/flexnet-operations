@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedRestoreServedClientDataType
+class FailedRestoreServedClientDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FailedRestoreServedClientDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

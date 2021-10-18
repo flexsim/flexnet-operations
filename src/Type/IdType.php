@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class IdType
+class IdType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $id;
+    protected $id;
 
     /**
      * @var bool
      */
-    private $autoGenerate;
+    protected $autoGenerate;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class IdType
         $this->autoGenerate = $autoGenerate;
         return $this;
     }
-
-
 }
-

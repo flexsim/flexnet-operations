@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SplitBulkEntitlementDataType
+class SplitBulkEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $bulkEntIdentifier;
+    protected $bulkEntIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $newBulkEntIdentifier;
+    protected $newBulkEntIdentifier;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class SplitBulkEntitlementDataType
         $this->newBulkEntIdentifier = $newBulkEntIdentifier;
         return $this;
     }
-
-
 }
-

@@ -2,98 +2,98 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class RenewParametersDataType
+class RenewParametersDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\IdType
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ExpirationTermsDataType
      */
-    private $expirationTerms;
+    protected $expirationTerms;
 
     /**
      * @var int
      */
-    private $numberOfCopies;
+    protected $numberOfCopies;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var string
      */
-    private $startDateOption;
+    protected $startDateOption;
 
     /**
      * @var \DateTimeInterface
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\VersionDateAttributesType
      */
-    private $versionDateAttributes;
+    protected $versionDateAttributes;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var string
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var string
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $alternateLicenseModel1;
+    protected $alternateLicenseModel1;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $alternateLicenseModel2;
+    protected $alternateLicenseModel2;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $licenseModelAttributes;
+    protected $licenseModelAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PolicyAttributesListType
      */
-    private $policyAttributes;
+    protected $policyAttributes;
 
     /**
      * @var string
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $lineItemAttributes;
+    protected $lineItemAttributes;
 
     /**
      * Constructor
@@ -489,7 +489,4 @@ class RenewParametersDataType
         $this->lineItemAttributes = $lineItemAttributes;
         return $this;
     }
-
-
 }
-

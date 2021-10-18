@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class UpdateDomainUserResponseType implements ResultInterface
+class UpdateDomainUserResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataListType
      */
-    private $failedData;
+    protected $failedData;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdatedDomainUserDataListType
      */
-    private $responseData;
+    protected $responseData;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class UpdateDomainUserResponseType implements ResultInterface
         $this->responseData = $responseData;
         return $this;
     }
-
-
 }
-

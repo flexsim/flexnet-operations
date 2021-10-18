@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedOnholdFulfillmentDataType
+class FailedOnholdFulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $fulfillmentIdentifier;
+    protected $fulfillmentIdentifier;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedOnholdFulfillmentDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

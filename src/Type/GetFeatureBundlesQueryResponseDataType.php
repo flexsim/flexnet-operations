@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetFeatureBundlesQueryResponseDataType
+class GetFeatureBundlesQueryResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleQueryDataType
      */
-    private $featureBundle;
+    protected $featureBundle;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetFeatureBundlesQueryResponseDataType
         $this->featureBundle = $featureBundle;
         return $this;
     }
-
-
 }
-

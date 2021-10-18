@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetHostAttributesRequestType implements RequestInterface
+class GetHostAttributesRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType
      */
-    private $licenseTechnologyIdentifier;
+    protected $licenseTechnologyIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypePKType
      */
-    private $hostType;
+    protected $hostType;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetHostAttributesRequestType implements RequestInterface
         $this->hostType = $hostType;
         return $this;
     }
-
-
 }
-

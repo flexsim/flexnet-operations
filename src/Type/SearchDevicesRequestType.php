@@ -4,33 +4,33 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class SearchDevicesRequestType implements RequestInterface
+class SearchDevicesRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType
      */
-    private $responseConfig;
+    protected $responseConfig;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceSortBys
      */
-    private $sortBys;
+    protected $sortBys;
 
     /**
      * @var int
      */
-    private $pageNumber;
+    protected $pageNumber;
 
     /**
      * @var int
      */
-    private $batchSize;
+    protected $batchSize;
 
     /**
      * Constructor

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class OverDraftDataListType
+class OverDraftDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array 
      */
-    private $activationIdMap;
+    protected $activationIdMap;
 
     /**
      * Constructor

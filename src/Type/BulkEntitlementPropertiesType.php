@@ -2,163 +2,163 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class BulkEntitlementPropertiesType
+class BulkEntitlementPropertiesType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var bool
      */
-    private $allowPortalLogin;
+    protected $allowPortalLogin;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var string
      */
-    private $soldToDisplayName;
+    protected $soldToDisplayName;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var string
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var string
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $product;
+    protected $product;
 
     /**
      * @var string
      */
-    private $productDescription;
+    protected $productDescription;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var string
      */
-    private $partNumberDescription;
+    protected $partNumberDescription;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $alternateLicenseModel1;
+    protected $alternateLicenseModel1;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $alternateLicenseModel2;
+    protected $alternateLicenseModel2;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var string
      */
-    private $startDateOption;
+    protected $startDateOption;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DurationType
      */
-    private $term;
+    protected $term;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\VersionDateAttributesType
      */
-    private $versionDateAttributes;
+    protected $versionDateAttributes;
 
     /**
      * @var int
      */
-    private $numberOfCopies;
+    protected $numberOfCopies;
 
     /**
      * @var string
      */
-    private $bulkEntitlementType;
+    protected $bulkEntitlementType;
 
     /**
      * @var string
      */
-    private $createdUserId;
+    protected $createdUserId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType
      */
-    private $entitledProducts;
+    protected $entitledProducts;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType
      */
-    private $channelPartners;
+    protected $channelPartners;
 
     /**
      * @var string
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * Constructor

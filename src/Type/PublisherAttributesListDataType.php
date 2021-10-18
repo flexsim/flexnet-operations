@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PublisherAttributesListDataType
+class PublisherAttributesListDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleAttributeDataType
      */
-    private $attribute;
+    protected $attribute;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class PublisherAttributesListDataType
         $this->attribute = $attribute;
         return $this;
     }
-
-
 }
-

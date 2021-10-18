@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LicenseModelStateChangeListType
+class LicenseModelStateChangeListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType|array 
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * Constructor

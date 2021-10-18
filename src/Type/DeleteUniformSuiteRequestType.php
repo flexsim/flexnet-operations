@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteUniformSuiteRequestType implements RequestInterface
+class DeleteUniformSuiteRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteUniformSuiteDataType
      */
-    private $uniformSuite;
+    protected $uniformSuite;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteUniformSuiteRequestType implements RequestInterface
         $this->uniformSuite = $uniformSuite;
         return $this;
     }
-
-
 }
-

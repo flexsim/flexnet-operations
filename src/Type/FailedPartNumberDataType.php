@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedPartNumberDataType
+class FailedPartNumberDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedPartNumberDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

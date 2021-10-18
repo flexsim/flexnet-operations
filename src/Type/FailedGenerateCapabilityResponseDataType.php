@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedGenerateCapabilityResponseDataType
+class FailedGenerateCapabilityResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedCapabilityResponseDataType
      */
-    private $failedDevice;
+    protected $failedDevice;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FailedGenerateCapabilityResponseDataType
         $this->failedDevice = $failedDevice;
         return $this;
     }
-
-
 }
-

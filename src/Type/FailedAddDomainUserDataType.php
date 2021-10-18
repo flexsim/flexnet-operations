@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedAddDomainUserDataType
+class FailedAddDomainUserDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddDomainUserDataType
      */
-    private $user;
+    protected $user;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedAddDomainUserDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

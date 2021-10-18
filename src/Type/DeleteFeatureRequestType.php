@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteFeatureRequestType implements RequestInterface
+class DeleteFeatureRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteFeatureDataType
      */
-    private $feature;
+    protected $feature;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteFeatureRequestType implements RequestInterface
         $this->feature = $feature;
         return $this;
     }
-
-
 }
-

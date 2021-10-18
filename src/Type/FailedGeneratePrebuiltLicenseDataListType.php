@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedGeneratePrebuiltLicenseDataListType
+class FailedGeneratePrebuiltLicenseDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataType|array 
      */
-    private $failedDevice;
+    protected $failedDevice;
 
     /**
      * Constructor

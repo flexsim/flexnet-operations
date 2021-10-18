@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class TransferredLineItemsListType
+class TransferredLineItemsListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferredLineItemDataType|array 
      */
-    private $transferredLineItem;
+    protected $transferredLineItem;
 
     /**
      * Constructor

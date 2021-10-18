@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetUserAccountsExpiryQueryResponseDataType
+class GetUserAccountsExpiryQueryResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserAccountExpiryType
      */
-    private $userAccountExpiryData;
+    protected $userAccountExpiryData;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetUserAccountsExpiryQueryResponseDataType
         $this->userAccountExpiryData = $userAccountExpiryData;
         return $this;
     }
-
-
 }
-

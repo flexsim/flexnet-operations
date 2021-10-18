@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedRemoveEntitlementLineItemDataType
+class FailedRemoveEntitlementLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\RemoveEntitlementLineItemDataType
      */
-    private $failedData;
+    protected $failedData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedRemoveEntitlementLineItemDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

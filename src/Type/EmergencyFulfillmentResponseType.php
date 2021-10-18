@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class EmergencyFulfillmentResponseType implements ResultInterface
+class EmergencyFulfillmentResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EmergencyResponseDataType
      */
-    private $responseData;
+    protected $responseData;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedEmergencyResponselistDataType
      */
-    private $failedData;
+    protected $failedData;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class EmergencyFulfillmentResponseType implements ResultInterface
         $this->failedData = $failedData;
         return $this;
     }
-
-
 }
-

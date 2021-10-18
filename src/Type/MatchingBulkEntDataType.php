@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class MatchingBulkEntDataType
+class MatchingBulkEntDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $matchingBulkEntIdentifier;
+    protected $matchingBulkEntIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class MatchingBulkEntDataType
         $this->matchingBulkEntIdentifier = $matchingBulkEntIdentifier;
         return $this;
     }
-
-
 }
-

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class NewEntitlementLineItemDataType
+class NewEntitlementLineItemDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class NewEntitlementLineItemDataType
         $this->activationId = $activationId;
         return $this;
     }
-
-
 }
-

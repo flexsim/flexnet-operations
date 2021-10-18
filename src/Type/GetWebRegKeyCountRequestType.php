@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetWebRegKeyCountRequestType implements RequestInterface
+class GetWebRegKeyCountRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $bulkEntitlementIdentifier;
+    protected $bulkEntitlementIdentifier;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class GetWebRegKeyCountRequestType implements RequestInterface
         $this->bulkEntitlementIdentifier = $bulkEntitlementIdentifier;
         return $this;
     }
-
-
 }
-

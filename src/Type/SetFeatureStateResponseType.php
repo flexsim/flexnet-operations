@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class SetFeatureStateResponseType implements ResultInterface
+class SetFeatureStateResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedFeatureStateDataListType
      */
-    private $failedData;
+    protected $failedData;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class SetFeatureStateResponseType implements ResultInterface
         $this->failedData = $failedData;
         return $this;
     }
-
-
 }
-

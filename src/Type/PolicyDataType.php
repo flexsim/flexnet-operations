@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PolicyDataType
+class PolicyDataType extends FlexnetType
 {
 
     /**
      * @var int
      */
-    private $allowedCount;
+    protected $allowedCount;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PolicyTermType
      */
-    private $policyTerm;
+    protected $policyTerm;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class PolicyDataType
         $this->policyTerm = $policyTerm;
         return $this;
     }
-
-
 }
-

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CountDataType
+class CountDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CountForHostsType
      */
-    private $countForHosts;
+    protected $countForHosts;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class CountDataType
         $this->countForHosts = $countForHosts;
         return $this;
     }
-
-
 }
-

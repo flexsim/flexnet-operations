@@ -2,68 +2,68 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateDevDataType
+class UpdateDevDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * @var string
      */
-    private $deviceId;
+    protected $deviceId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ServerIdsType
      */
-    private $serverIds;
+    protected $serverIds;
 
     /**
      * @var string
      */
-    private $deviceIdType;
+    protected $deviceIdType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypeIdentifier
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PublisherIdentifier
      */
-    private $publisherIdName;
+    protected $publisherIdName;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType
      */
-    private $updateChannelPartners;
+    protected $updateChannelPartners;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var string
      */
-    private $alias;
+    protected $alias;
 
     /**
      * @var string
      */
-    private $user;
+    protected $user;
 
     /**
      * @var string
      */
-    private $siteName;
+    protected $siteName;
 
     /**
      * Constructor
@@ -333,7 +333,4 @@ class UpdateDevDataType
         $this->siteName = $siteName;
         return $this;
     }
-
-
 }
-

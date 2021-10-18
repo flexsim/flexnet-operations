@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class Dictionary
+class Dictionary extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection
      */
-    private $Entries;
+    protected $Entries;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class Dictionary
         $this->Entries = $Entries;
         return $this;
     }
-
-
 }
-

@@ -2,58 +2,58 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AddonLineItemDataDataType
+class AddonLineItemDataDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var int
      */
-    private $enabledCount;
+    protected $enabledCount;
 
     /**
      * @var int
      */
-    private $consumedCount;
+    protected $consumedCount;
 
     /**
      * @var string
      */
-    private $licenseState;
+    protected $licenseState;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType
      */
-    private $entitledProducts;
+    protected $entitledProducts;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expirationDateOverride;
+    protected $expirationDateOverride;
 
     /**
      * @var \DateTimeInterface
      */
-    private $licenseExpirationDate;
+    protected $licenseExpirationDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $createdDate;
+    protected $createdDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $lastModifiedDate;
+    protected $lastModifiedDate;
 
     /**
      * Constructor

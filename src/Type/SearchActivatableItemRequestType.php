@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class SearchActivatableItemRequestType implements RequestInterface
+class SearchActivatableItemRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType
      */
-    private $activatableItemSearchCriteria;
+    protected $activatableItemSearchCriteria;
 
     /**
      * @var int
      */
-    private $batchSize;
+    protected $batchSize;
 
     /**
      * @var int
      */
-    private $pageNumber;
+    protected $pageNumber;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class SearchActivatableItemRequestType implements RequestInterface
         $this->pageNumber = $pageNumber;
         return $this;
     }
-
-
 }
-

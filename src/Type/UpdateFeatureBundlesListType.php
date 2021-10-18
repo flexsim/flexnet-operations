@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateFeatureBundlesListType
+class UpdateFeatureBundlesListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array
      */
-    private $featureBundle;
+    protected $featureBundle;
 
     /**
      * @var string
      */
-    private $opType;
+    protected $opType;
 
     /**
      * Constructor

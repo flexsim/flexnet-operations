@@ -2,38 +2,38 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class TransferLineItemInfoType
+class TransferLineItemInfoType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $lineItemIdentifier;
+    protected $lineItemIdentifier;
 
     /**
      * @var int
      */
-    private $numberOfCopies;
+    protected $numberOfCopies;
 
     /**
      * @var bool
      */
-    private $useSameActivationId;
+    protected $useSameActivationId;
 
     /**
      * @var string
      */
-    private $customActivationId;
+    protected $customActivationId;
 
     /**
      * @var bool
      */
-    private $generateActivationId;
+    protected $generateActivationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementBelongsTo;
+    protected $entitlementBelongsTo;
 
     /**
      * Constructor

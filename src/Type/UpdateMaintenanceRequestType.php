@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class UpdateMaintenanceRequestType implements RequestInterface
+class UpdateMaintenanceRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType
      */
-    private $maintenance;
+    protected $maintenance;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class UpdateMaintenanceRequestType implements RequestInterface
         $this->maintenance = $maintenance;
         return $this;
     }
-
-
 }
-

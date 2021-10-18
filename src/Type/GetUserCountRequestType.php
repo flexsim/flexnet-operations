@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetUserCountRequestType implements RequestInterface
+class GetUserCountRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserQueryParametersType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * Constructor

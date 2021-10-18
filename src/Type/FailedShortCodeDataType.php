@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedShortCodeDataType
+class FailedShortCodeDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateShortCodeDataType
      */
-    private $shortCodeData;
+    protected $shortCodeData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DuplicateFulfillmentRecordListDataType
      */
-    private $duplicateFulfillmentRecords;
+    protected $duplicateFulfillmentRecords;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class FailedShortCodeDataType
         $this->duplicateFulfillmentRecords = $duplicateFulfillmentRecords;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureBundlesListType
+class FeatureBundlesListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array 
      */
-    private $featureBundle;
+    protected $featureBundle;
 
     /**
      * Constructor

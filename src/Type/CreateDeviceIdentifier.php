@@ -2,33 +2,33 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateDeviceIdentifier
+class CreateDeviceIdentifier extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $deviceType;
+    protected $deviceType;
 
     /**
      * @var string
      */
-    private $deviceId;
+    protected $deviceId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ServerIdsType
      */
-    private $serverIds;
+    protected $serverIds;
 
     /**
      * @var string
      */
-    private $deviceIdType;
+    protected $deviceIdType;
 
     /**
      * @var string
      */
-    private $publisherName;
+    protected $publisherName;
 
     /**
      * Constructor
@@ -151,7 +151,4 @@ class CreateDeviceIdentifier
         $this->publisherName = $publisherName;
         return $this;
     }
-
-
 }
-

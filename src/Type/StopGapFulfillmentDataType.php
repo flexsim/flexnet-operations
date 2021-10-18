@@ -2,33 +2,33 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class StopGapFulfillmentDataType
+class StopGapFulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $fulfillmentIdentifier;
+    protected $fulfillmentIdentifier;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $endDate;
+    protected $endDate;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * Constructor
@@ -151,7 +151,4 @@ class StopGapFulfillmentDataType
         $this->shipToAddress = $shipToAddress;
         return $this;
     }
-
-
 }
-

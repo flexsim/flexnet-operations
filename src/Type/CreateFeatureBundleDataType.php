@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateFeatureBundleDataType
+class CreateFeatureBundleDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeaturesListType
      */
-    private $features;
+    protected $features;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class CreateFeatureBundleDataType
         $this->features = $features;
         return $this;
     }
-
-
 }
-

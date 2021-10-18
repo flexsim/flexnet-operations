@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetFmtAttributesForBatchActivationResponseType implements ResultInterface
+class GetFmtAttributesForBatchActivationResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetFmtAttributesForBatchDataType
      */
-    private $responseData;
+    protected $responseData;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetFmtAttributesForBatchActivationResponseType implements ResultInterface
         $this->responseData = $responseData;
         return $this;
     }
-
-
 }
-

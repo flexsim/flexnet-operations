@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedUpdateOrgDataType
+class FailedUpdateOrgDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateOrgDataType
      */
-    private $orgData;
+    protected $orgData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedUpdateOrgDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

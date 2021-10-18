@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class RestoreServedClientDataType
+class RestoreServedClientDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $servedClientResponse;
+    protected $servedClientResponse;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class RestoreServedClientDataType
         $this->servedClientResponse = $servedClientResponse;
         return $this;
     }
-
-
 }
-

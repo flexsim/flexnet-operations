@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SimpleAttributeDataType
+class SimpleAttributeDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $attributeName;
+    protected $attributeName;
 
     /**
      * @var string
      */
-    private $attributeValue;
+    protected $attributeValue;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class SimpleAttributeDataType
         $this->attributeValue = $attributeValue;
         return $this;
     }
-
-
 }
-

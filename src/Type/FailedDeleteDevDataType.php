@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedDeleteDevDataType
+class FailedDeleteDevDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedDeleteDevDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

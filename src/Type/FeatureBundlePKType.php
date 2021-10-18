@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureBundlePKType
+class FeatureBundlePKType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FeatureBundlePKType
         $this->name = $name;
         return $this;
     }
-
-
 }
-

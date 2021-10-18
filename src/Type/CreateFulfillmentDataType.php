@@ -2,88 +2,88 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateFulfillmentDataType
+class CreateFulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var int
      */
-    private $fulfillCount;
+    protected $fulfillCount;
 
     /**
      * @var int
      */
-    private $overDraftCount;
+    protected $overDraftCount;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $versionStartDate;
+    protected $versionStartDate;
 
     /**
      * @var string
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ServerIDsType
      */
-    private $serverIds;
+    protected $serverIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NodeIDsType
      */
-    private $nodeIds;
+    protected $nodeIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType
      */
-    private $customHost;
+    protected $customHost;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $licenseModelAttributes;
+    protected $licenseModelAttributes;
 
     /**
      * @var bool
      */
-    private $overridePolicy;
+    protected $overridePolicy;
 
     /**
      * @var string
      */
-    private $owner;
+    protected $owner;
 
     /**
      * @var string
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * Constructor
@@ -437,7 +437,4 @@ class CreateFulfillmentDataType
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
         return $this;
     }
-
-
 }
-

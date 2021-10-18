@@ -2,33 +2,33 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureBundleQueryParametersType
+class FeatureBundleQueryParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $name;
+    protected $name;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StateQueryType
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $creationDate;
+    protected $creationDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $lastModifiedDate;
+    protected $lastModifiedDate;
 
     /**
      * Constructor
@@ -151,7 +151,4 @@ class FeatureBundleQueryParametersType
         $this->lastModifiedDate = $lastModifiedDate;
         return $this;
     }
-
-
 }
-

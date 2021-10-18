@@ -2,68 +2,68 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SearchMaintenanceLineItemDataType
+class SearchMaintenanceLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $maintenanceProductName;
+    protected $maintenanceProductName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $maintenanceProductVersion;
+    protected $maintenanceProductVersion;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * @var bool
      */
-    private $withNoOrderId;
+    protected $withNoOrderId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType
      */
-    private $maintenanceLineItemAttributes;
+    protected $maintenanceLineItemAttributes;
 
     /**
      * Constructor
@@ -333,7 +333,4 @@ class SearchMaintenanceLineItemDataType
         $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
         return $this;
     }
-
-
 }
-

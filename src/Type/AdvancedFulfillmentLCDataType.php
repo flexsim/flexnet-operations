@@ -2,88 +2,88 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AdvancedFulfillmentLCDataType
+class AdvancedFulfillmentLCDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $fulfillmentId;
+    protected $fulfillmentId;
 
     /**
      * @var string
      */
-    private $childActivationId;
+    protected $childActivationId;
 
     /**
      * @var int
      */
-    private $fulfillCount;
+    protected $fulfillCount;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $versionStartDate;
+    protected $versionStartDate;
 
     /**
      * @var string
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ServerIDsType
      */
-    private $serverHost;
+    protected $serverHost;
 
     /**
      * @var string
      */
-    private $nodeLockHost;
+    protected $nodeLockHost;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NodeIDsType
      */
-    private $countedNodeLockHostIds;
+    protected $countedNodeLockHostIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType
      */
-    private $customHost;
+    protected $customHost;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $licenseModelAttributes;
+    protected $licenseModelAttributes;
 
     /**
      * @var bool
      */
-    private $overridePolicy;
+    protected $overridePolicy;
 
     /**
      * @var string
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * Constructor
@@ -437,7 +437,4 @@ class AdvancedFulfillmentLCDataType
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
         return $this;
     }
-
-
 }
-

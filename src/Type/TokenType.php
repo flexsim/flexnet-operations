@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class TokenType implements RequestInterface
+class TokenType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\IdentityType
      */
-    private $identity;
+    protected $identity;
 
     /**
      * @var string
      */
-    private $token;
+    protected $token;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class TokenType implements RequestInterface
         $this->token = $token;
         return $this;
     }
-
-
 }
-

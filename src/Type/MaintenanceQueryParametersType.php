@@ -2,43 +2,43 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class MaintenanceQueryParametersType
+class MaintenanceQueryParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $maintenanceName;
+    protected $maintenanceName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $version;
+    protected $version;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StateQueryType
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $creationDate;
+    protected $creationDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $lastModifiedDate;
+    protected $lastModifiedDate;
 
     /**
      * Constructor
@@ -203,7 +203,4 @@ class MaintenanceQueryParametersType
         $this->lastModifiedDate = $lastModifiedDate;
         return $this;
     }
-
-
 }
-

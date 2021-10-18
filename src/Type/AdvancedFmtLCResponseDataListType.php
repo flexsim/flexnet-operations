@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AdvancedFmtLCResponseDataListType
+class AdvancedFmtLCResponseDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataType|array
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * Constructor

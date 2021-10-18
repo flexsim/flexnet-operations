@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitledProductDataType
+class EntitledProductDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $product;
+    protected $product;
 
     /**
      * @var int
      */
-    private $quantity;
+    protected $quantity;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class EntitledProductDataType
         $this->quantity = $quantity;
         return $this;
     }
-
-
 }
-

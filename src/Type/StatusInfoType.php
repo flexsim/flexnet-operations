@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class StatusInfoType
+class StatusInfoType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $status;
+    protected $status;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class StatusInfoType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

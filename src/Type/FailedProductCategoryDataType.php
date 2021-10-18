@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedProductCategoryDataType
+class FailedProductCategoryDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType
      */
-    private $productCategory;
+    protected $productCategory;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedProductCategoryDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

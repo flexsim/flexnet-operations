@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class IdentityType implements RequestInterface
+class IdentityType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var string
      */
-    private $userId;
+    protected $userId;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class IdentityType implements RequestInterface
         $this->userId = $userId;
         return $this;
     }
-
-
 }
-

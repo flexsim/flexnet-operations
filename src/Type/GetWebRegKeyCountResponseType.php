@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetWebRegKeyCountResponseType implements ResultInterface
+class GetWebRegKeyCountResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\WebRegKeyCountDataType
      */
-    private $responseData;
+    protected $responseData;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetWebRegKeyCountResponseType implements ResultInterface
         $this->responseData = $responseData;
         return $this;
     }
-
-
 }
-

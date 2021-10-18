@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GenerateCapabilityResponseDictionary
+class GenerateCapabilityResponseDictionary extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionaryEntry
      */
-    private $entry;
+    protected $entry;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GenerateCapabilityResponseDictionary
         $this->entry = $entry;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ActivationIdsListType
+class ActivationIdsListType extends FlexnetType
 {
 
     /**
      * @var string|array
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * Constructor

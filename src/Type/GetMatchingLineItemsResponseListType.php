@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetMatchingLineItemsResponseListType
+class GetMatchingLineItemsResponseListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\MatchingLineItemDataType|array 
      */
-    private $matchingLineItem;
+    protected $matchingLineItem;
 
     /**
      * Constructor

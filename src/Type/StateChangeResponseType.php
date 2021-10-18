@@ -2,38 +2,38 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class StateChangeResponseType
+class StateChangeResponseType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureStateChangeListType
      */
-    private $featureList;
+    protected $featureList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeListType
      */
-    private $featureBundleList;
+    protected $featureBundleList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductStateChangeListType
      */
-    private $productList;
+    protected $productList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeListType
      */
-    private $licenseModelList;
+    protected $licenseModelList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType
      */
-    private $simpleEntitlementList;
+    protected $simpleEntitlementList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType
      */
-    private $bulkEntitlementList;
+    protected $bulkEntitlementList;
 
     /**
      * Constructor
@@ -177,7 +177,4 @@ class StateChangeResponseType
         $this->bulkEntitlementList = $bulkEntitlementList;
         return $this;
     }
-
-
 }
-

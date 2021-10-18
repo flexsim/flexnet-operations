@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class TransferEntitlementsResponseType implements ResultInterface
+class TransferEntitlementsResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferredEntitlementsListType
      */
-    private $responseData;
+    protected $responseData;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedTransferEntitlementListType
      */
-    private $failedData;
+    protected $failedData;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class TransferEntitlementsResponseType implements ResultInterface
         $this->failedData = $failedData;
         return $this;
     }
-
-
 }
-

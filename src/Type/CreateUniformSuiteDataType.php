@@ -2,98 +2,98 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateUniformSuiteDataType
+class CreateUniformSuiteDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $suiteName;
+    protected $suiteName;
 
     /**
      * @var string
      */
-    private $version;
+    protected $version;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType
      */
-    private $licenseGenerator;
+    protected $licenseGenerator;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType
      */
-    private $packageProperties;
+    protected $packageProperties;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductsListType
      */
-    private $products;
+    protected $products;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelsListType
      */
-    private $licenseModels;
+    protected $licenseModels;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType
      */
-    private $trustedKey;
+    protected $trustedKey;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType
      */
-    private $virtualTrustedKey;
+    protected $virtualTrustedKey;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumbersListType
      */
-    private $partNumbers;
+    protected $partNumbers;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypePKType
      */
-    private $hostType;
+    protected $hostType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypeListType
      */
-    private $hostTypes;
+    protected $hostTypes;
 
     /**
      * @var bool
      */
-    private $usedOnDevice;
+    protected $usedOnDevice;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var bool
      */
-    private $allowDownloadObsoleteFrInAdmin;
+    protected $allowDownloadObsoleteFrInAdmin;
 
     /**
      * @var bool
      */
-    private $allowDownloadObsoleteFrInPortal;
+    protected $allowDownloadObsoleteFrInPortal;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $productAttributes;
+    protected $productAttributes;
 
     /**
      * Constructor
@@ -489,7 +489,4 @@ class CreateUniformSuiteDataType
         $this->productAttributes = $productAttributes;
         return $this;
     }
-
-
 }
-

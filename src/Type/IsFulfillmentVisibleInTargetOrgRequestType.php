@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class IsFulfillmentVisibleInTargetOrgRequestType implements RequestInterface
+class IsFulfillmentVisibleInTargetOrgRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var string
      */
-    private $ActivationID;
+    protected $ActivationID;
 
     /**
      * @var string
      */
-    private $targetOrgID;
+    protected $targetOrgID;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class IsFulfillmentVisibleInTargetOrgRequestType implements RequestInterface
         $this->targetOrgID = $targetOrgID;
         return $this;
     }
-
-
 }
-

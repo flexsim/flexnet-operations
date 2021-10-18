@@ -2,113 +2,113 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateUserDataType
+class CreateUserDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $firstName;
+    protected $firstName;
 
     /**
      * @var string
      */
-    private $lastName;
+    protected $lastName;
 
     /**
      * @var string
      */
-    private $displayName;
+    protected $displayName;
 
     /**
      * @var string
      */
-    private $emailAddress;
+    protected $emailAddress;
 
     /**
      * @var bool
      */
-    private $optIn;
+    protected $optIn;
 
     /**
      * @var string
      */
-    private $phoneNumber;
+    protected $phoneNumber;
 
     /**
      * @var string
      */
-    private $faxNumber;
+    protected $faxNumber;
 
     /**
      * @var string
      */
-    private $street;
+    protected $street;
 
     /**
      * @var string
      */
-    private $city;
+    protected $city;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var string
      */
-    private $zipcode;
+    protected $zipcode;
 
     /**
      * @var string
      */
-    private $country;
+    protected $country;
 
     /**
      * @var string
      */
-    private $locale;
+    protected $locale;
 
     /**
      * @var bool
      */
-    private $canLogin;
+    protected $canLogin;
 
     /**
      * @var string
      */
-    private $userName;
+    protected $userName;
 
     /**
      * @var string
      */
-    private $status;
+    protected $status;
 
     /**
      * @var string
      */
-    private $timezone;
+    protected $timezone;
 
     /**
      * @var bool
      */
-    private $shared;
+    protected $shared;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateUserAccountsListType
      */
-    private $acctRolesList;
+    protected $acctRolesList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType
      */
-    private $orgRolesList;
+    protected $orgRolesList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * Constructor

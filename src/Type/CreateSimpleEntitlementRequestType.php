@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class CreateSimpleEntitlementRequestType implements RequestInterface
+class CreateSimpleEntitlementRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType
      */
-    private $simpleEntitlement;
+    protected $simpleEntitlement;
 
     /**
      * @var string
      */
-    private $opType;
+    protected $opType;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class CreateSimpleEntitlementRequestType implements RequestInterface
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

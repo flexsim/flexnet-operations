@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateSubOrganizationsListType
+class UpdateSubOrganizationsListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array
      */
-    private $subOrganization;
+    protected $subOrganization;
 
     /**
      * @var string
      */
-    private $opType;
+    protected $opType;
 
     /**
      * Constructor

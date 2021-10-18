@@ -4,28 +4,28 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class RestoreServedClientRequestType implements RequestInterface
+class RestoreServedClientRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var string
      */
-    private $servedClientHostId;
+    protected $servedClientHostId;
 
     /**
      * @var string
      */
-    private $servedClientIdType;
+    protected $servedClientIdType;
 
     /**
      * @var string
      */
-    private $newHostID;
+    protected $newHostID;
 
     /**
      * @var string
      */
-    private $serverHostIdTypes;
+    protected $serverHostIdTypes;
 
     /**
      * Constructor
@@ -127,7 +127,4 @@ class RestoreServedClientRequestType implements RequestInterface
         $this->serverHostIdTypes = $serverHostIdTypes;
         return $this;
     }
-
-
 }
-

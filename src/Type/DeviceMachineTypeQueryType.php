@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeviceMachineTypeQueryType
+class DeviceMachineTypeQueryType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $value;
+    protected $value;
 
     /**
      * @var string
      */
-    private $searchType;
+    protected $searchType;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class DeviceMachineTypeQueryType
         $this->searchType = $searchType;
         return $this;
     }
-
-
 }
-

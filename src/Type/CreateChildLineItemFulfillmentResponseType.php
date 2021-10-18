@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class CreateChildLineItemFulfillmentResponseType implements ResultInterface
+class CreateChildLineItemFulfillmentResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedChildLIFmtResponseDataType
      */
-    private $responseData;
+    protected $responseData;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedChildLIFmtResponseDataType
      */
-    private $failedData;
+    protected $failedData;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class CreateChildLineItemFulfillmentResponseType implements ResultInterface
         $this->failedData = $failedData;
         return $this;
     }
-
-
 }
-

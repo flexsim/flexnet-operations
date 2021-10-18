@@ -4,28 +4,28 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
+class GetConsolidatedFulfillmentsQueryRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * @var int
      */
-    private $pageNumber;
+    protected $pageNumber;
 
     /**
      * @var int
      */
-    private $batchSize;
+    protected $batchSize;
 
     /**
      * @var bool
      */
-    private $includeLicenseText;
+    protected $includeLicenseText;
 
     /**
      * Constructor

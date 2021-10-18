@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedTransferEntitlementDataType
+class FailedTransferEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType
      */
-    private $entitlementInfo;
+    protected $entitlementInfo;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedTransferEntitlementDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

@@ -2,68 +2,68 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitlementLineItemDataType
+class EntitlementLineItemDataType extends FlexnetType
 {
 
     /**
      * @var int
      */
-    private $numberOfRemainingCopies;
+    protected $numberOfRemainingCopies;
 
     /**
      * @var int
      */
-    private $availableExtraActivations;
+    protected $availableExtraActivations;
 
     /**
      * @var bool
      */
-    private $isTrustedType;
+    protected $isTrustedType;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $parentLineItem;
+    protected $parentLineItem;
 
     /**
      * @var \DateTimeInterface
      */
-    private $createdOnDateTime;
+    protected $createdOnDateTime;
 
     /**
      * @var \DateTimeInterface
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * @var int
      */
-    private $overdraftMax;
+    protected $overdraftMax;
 
     /**
      * @var int
      */
-    private $remainingOverdraftCount;
+    protected $remainingOverdraftCount;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType
      */
-    private $productLine;
+    protected $productLine;
 
     /**
      * @var int
      */
-    private $fulfilledCount;
+    protected $fulfilledCount;
 
     /**
      * Constructor

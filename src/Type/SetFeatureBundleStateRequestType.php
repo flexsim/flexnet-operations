@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class SetFeatureBundleStateRequestType implements RequestInterface
+class SetFeatureBundleStateRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType
      */
-    private $featureBundle;
+    protected $featureBundle;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class SetFeatureBundleStateRequestType implements RequestInterface
         $this->featureBundle = $featureBundle;
         return $this;
     }
-
-
 }
-

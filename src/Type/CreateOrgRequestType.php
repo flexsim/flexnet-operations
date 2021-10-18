@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class CreateOrgRequestType implements RequestInterface
+class CreateOrgRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationDataType
      */
-    private $organization;
+    protected $organization;
 
     /**
      * @var string
      */
-    private $opType;
+    protected $opType;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class CreateOrgRequestType implements RequestInterface
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

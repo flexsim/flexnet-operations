@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class MaintenanceLineItemDataType
+class MaintenanceLineItemDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class MaintenanceLineItemDataType
         $this->state = $state;
         return $this;
     }
-
-
 }
-

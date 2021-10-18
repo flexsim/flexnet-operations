@@ -2,63 +2,63 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ProductQueryParametersType
+class ProductQueryParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $productName;
+    protected $productName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $version;
+    protected $version;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StateQueryType
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $creationDate;
+    protected $creationDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $lastModifiedDate;
+    protected $lastModifiedDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $hostType;
+    protected $hostType;
 
     /**
      * @var bool
      */
-    private $usedOnDevice;
+    protected $usedOnDevice;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProdCustomAttributesQueryListType
      */
-    private $productAttributes;
+    protected $productAttributes;
 
     /**
      * Constructor
@@ -307,7 +307,4 @@ class ProductQueryParametersType
         $this->productAttributes = $productAttributes;
         return $this;
     }
-
-
 }
-

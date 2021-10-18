@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedRelateAccountsDataType
+class FailedRelateAccountsDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\RelateAccountsDataType
      */
-    private $acctData;
+    protected $acctData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedRelateAccountsDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

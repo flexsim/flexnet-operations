@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CustomHostIDType
+class CustomHostIDType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $hostId;
+    protected $hostId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $hostAttributes;
+    protected $hostAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypePKType
      */
-    private $hostType;
+    protected $hostType;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class CustomHostIDType
         $this->hostType = $hostType;
         return $this;
     }
-
-
 }
-

@@ -2,48 +2,48 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ConsolidatedLicenseDataType
+class ConsolidatedLicenseDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $consolidatedLicenseId;
+    protected $consolidatedLicenseId;
 
     /**
      * @var string
      */
-    private $licenseText;
+    protected $licenseText;
 
     /**
      * @var string
      */
-    private $binaryLicense;
+    protected $binaryLicense;
 
     /**
      * @var string
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var string
      */
-    private $criteria;
+    protected $criteria;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType
      */
-    private $consolidatedFulfillments;
+    protected $consolidatedFulfillments;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataListType
      */
-    private $licenseFiles;
+    protected $licenseFiles;
 
     /**
      * Constructor
@@ -229,7 +229,4 @@ class ConsolidatedLicenseDataType
         $this->licenseFiles = $licenseFiles;
         return $this;
     }
-
-
 }
-

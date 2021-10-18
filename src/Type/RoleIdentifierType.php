@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class RoleIdentifierType
+class RoleIdentifierType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\RolePKType
      */
-    private $primaryKeys;
+    protected $primaryKeys;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class RoleIdentifierType
         $this->primaryKeys = $primaryKeys;
         return $this;
     }
-
-
 }
-

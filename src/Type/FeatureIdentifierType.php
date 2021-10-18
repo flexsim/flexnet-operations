@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureIdentifierType
+class FeatureIdentifierType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeaturePKType
      */
-    private $primaryKeys;
+    protected $primaryKeys;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FeatureIdentifierType
         $this->primaryKeys = $primaryKeys;
         return $this;
     }
-
-
 }
-

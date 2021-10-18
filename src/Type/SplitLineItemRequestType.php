@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class SplitLineItemRequestType implements RequestInterface
+class SplitLineItemRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SplitLineItemListType
      */
-    private $lineItemList;
+    protected $lineItemList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class SplitLineItemRequestType implements RequestInterface
         $this->lineItemList = $lineItemList;
         return $this;
     }
-
-
 }
-

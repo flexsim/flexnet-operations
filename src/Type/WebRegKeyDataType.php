@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class WebRegKeyDataType
+class WebRegKeyDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $webRegKey;
+    protected $webRegKey;
 
     /**
      * @var bool
      */
-    private $autoGenerate;
+    protected $autoGenerate;
 
     /**
      * @var int
      */
-    private $numAutoGenerate;
+    protected $numAutoGenerate;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class WebRegKeyDataType
         $this->numAutoGenerate = $numAutoGenerate;
         return $this;
     }
-
-
 }
-

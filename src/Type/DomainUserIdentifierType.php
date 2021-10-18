@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DomainUserIdentifierType
+class DomainUserIdentifierType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DomainUserPKType
      */
-    private $primaryKeys;
+    protected $primaryKeys;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class DomainUserIdentifierType
         $this->primaryKeys = $primaryKeys;
         return $this;
     }
-
-
 }
-

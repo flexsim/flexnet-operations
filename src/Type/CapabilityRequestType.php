@@ -2,38 +2,38 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CapabilityRequestType
+class CapabilityRequestType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * @var int
      */
-    private $lastUpdateTime;
+    protected $lastUpdateTime;
 
     /**
      * @var bool
      */
-    private $force;
+    protected $force;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary
      */
-    private $vendorDictionary;
+    protected $vendorDictionary;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkLineItemDataType
      */
-    private $lineItem;
+    protected $lineItem;
 
     /**
      * @var bool
      */
-    private $bufferLicense;
+    protected $bufferLicense;
 
     /**
      * Constructor
@@ -177,7 +177,4 @@ class CapabilityRequestType
         $this->bufferLicense = $bufferLicense;
         return $this;
     }
-
-
 }
-

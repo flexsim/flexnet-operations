@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateUserOrganizationsListType
+class CreateUserOrganizationsListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateUserOrganizationType|array
      */
-    private $orgRoles;
+    protected $orgRoles;
 
     /**
      * Constructor

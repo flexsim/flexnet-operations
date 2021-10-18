@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedDeleteAcctDataType
+class FailedDeleteAcctDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteAcctDataType
      */
-    private $acctData;
+    protected $acctData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedDeleteAcctDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

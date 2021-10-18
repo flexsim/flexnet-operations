@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class IsEntitlementVisibleInTargetOrgRequestType implements RequestInterface
+class IsEntitlementVisibleInTargetOrgRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var string
      */
-    private $entitlementID;
+    protected $entitlementID;
 
     /**
      * @var string
      */
-    private $targetOrgID;
+    protected $targetOrgID;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class IsEntitlementVisibleInTargetOrgRequestType implements RequestInterface
         $this->targetOrgID = $targetOrgID;
         return $this;
     }
-
-
 }
-

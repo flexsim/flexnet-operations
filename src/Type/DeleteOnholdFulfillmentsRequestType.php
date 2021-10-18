@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteOnholdFulfillmentsRequestType implements RequestInterface
+class DeleteOnholdFulfillmentsRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdListType
      */
-    private $fulfillmentIdList;
+    protected $fulfillmentIdList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteOnholdFulfillmentsRequestType implements RequestInterface
         $this->fulfillmentIdList = $fulfillmentIdList;
         return $this;
     }
-
-
 }
-

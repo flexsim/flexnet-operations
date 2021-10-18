@@ -2,143 +2,143 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class BulkEntitlementResponseConfigRequestType
+class BulkEntitlementResponseConfigRequestType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var bool
      */
-    private $allowPortalLogin;
+    protected $allowPortalLogin;
 
     /**
      * @var bool
      */
-    private $description;
+    protected $description;
 
     /**
      * @var bool
      */
-    private $state;
+    protected $state;
 
     /**
      * @var bool
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var bool
      */
-    private $soldToDisplayName;
+    protected $soldToDisplayName;
 
     /**
      * @var bool
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var bool
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var bool
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var bool
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * @var bool
      */
-    private $product;
+    protected $product;
 
     /**
      * @var bool
      */
-    private $productDescription;
+    protected $productDescription;
 
     /**
      * @var bool
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var bool
      */
-    private $partNumberDescription;
+    protected $partNumberDescription;
 
     /**
      * @var bool
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * @var bool
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var bool
      */
-    private $startDateOption;
+    protected $startDateOption;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var bool
      */
-    private $term;
+    protected $term;
 
     /**
      * @var bool
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var bool
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var bool
      */
-    private $versionDateAttributes;
+    protected $versionDateAttributes;
 
     /**
      * @var bool
      */
-    private $numberOfCopies;
+    protected $numberOfCopies;
 
     /**
      * @var bool
      */
-    private $bulkEntitlementType;
+    protected $bulkEntitlementType;
 
     /**
      * @var bool
      */
-    private $createdUserId;
+    protected $createdUserId;
 
     /**
      * @var bool
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * Constructor
@@ -723,7 +723,4 @@ class BulkEntitlementResponseConfigRequestType
         $this->customAttributes = $customAttributes;
         return $this;
     }
-
-
 }
-

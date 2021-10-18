@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetFulfillmentsQueryResponseDataType
+class GetFulfillmentsQueryResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentDataType
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetFulfillmentsQueryResponseDataType
         $this->fulfillment = $fulfillment;
         return $this;
     }
-
-
 }
-

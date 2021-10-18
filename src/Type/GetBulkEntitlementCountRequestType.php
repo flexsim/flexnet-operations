@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetBulkEntitlementCountRequestType implements RequestInterface
+class GetBulkEntitlementCountRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType
      */
-    private $bulkEntitlementSearchCriteria;
+    protected $bulkEntitlementSearchCriteria;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class GetBulkEntitlementCountRequestType implements RequestInterface
         $this->bulkEntitlementSearchCriteria = $bulkEntitlementSearchCriteria;
         return $this;
     }
-
-
 }
-

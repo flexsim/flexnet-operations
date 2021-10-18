@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class MatchingLineItemDataType
+class MatchingLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $matchingLineItemIdentifier;
+    protected $matchingLineItemIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class MatchingLineItemDataType
         $this->matchingLineItemIdentifier = $matchingLineItemIdentifier;
         return $this;
     }
-
-
 }
-

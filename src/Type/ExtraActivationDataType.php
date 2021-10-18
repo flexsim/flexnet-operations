@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ExtraActivationDataType
+class ExtraActivationDataType extends FlexnetType
 {
 
     /**
      * @var int
      */
-    private $allowedCount;
+    protected $allowedCount;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class ExtraActivationDataType
         $this->allowedCount = $allowedCount;
         return $this;
     }
-
-
 }
-

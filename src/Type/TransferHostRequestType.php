@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class TransferHostRequestType implements RequestInterface
+class TransferHostRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferHostList
      */
-    private $sourceHosts;
+    protected $sourceHosts;
 
     /**
      * @var string
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var bool
      */
-    private $poolEntitlements;
+    protected $poolEntitlements;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class TransferHostRequestType implements RequestInterface
         $this->poolEntitlements = $poolEntitlements;
         return $this;
     }
-
-
 }
-

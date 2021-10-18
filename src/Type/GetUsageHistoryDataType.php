@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetUsageHistoryDataType
+class GetUsageHistoryDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UsageHistoryDataType
      */
-    private $deviceUpdate;
+    protected $deviceUpdate;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetUsageHistoryDataType
         $this->deviceUpdate = $deviceUpdate;
         return $this;
     }
-
-
 }
-

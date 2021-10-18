@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SearchDevicesResponseData
+class SearchDevicesResponseData extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchDeviceResponseData
      */
-    private $device;
+    protected $device;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class SearchDevicesResponseData
         $this->device = $device;
         return $this;
     }
-
-
 }
-

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AccountIdentifierTypeUser
+class AccountIdentifierTypeUser extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountPKTypeUser
      */
-    private $primaryKeys;
+    protected $primaryKeys;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class AccountIdentifierTypeUser
         $this->primaryKeys = $primaryKeys;
         return $this;
     }
-
-
 }
-

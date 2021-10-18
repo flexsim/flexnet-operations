@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ProdCustomAttributeQueryType
+class ProdCustomAttributeQueryType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $attributeName;
+    protected $attributeName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $stringValue;
+    protected $stringValue;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class ProdCustomAttributeQueryType
         $this->stringValue = $stringValue;
         return $this;
     }
-
-
 }
-

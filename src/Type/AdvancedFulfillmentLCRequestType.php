@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class AdvancedFulfillmentLCRequestType implements RequestInterface
+class AdvancedFulfillmentLCRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCListType
      */
-    private $fulfillmentList;
+    protected $fulfillmentList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class AdvancedFulfillmentLCRequestType implements RequestInterface
         $this->fulfillmentList = $fulfillmentList;
         return $this;
     }
-
-
 }
-

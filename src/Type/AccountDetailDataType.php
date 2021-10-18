@@ -2,63 +2,63 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AccountDetailDataType
+class AccountDetailDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
-    private $account;
+    protected $account;
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddressDataType
      */
-    private $address;
+    protected $address;
 
     /**
      * @var bool
      */
-    private $visible;
+    protected $visible;
 
     /**
      * @var string
      */
-    private $accountType;
+    protected $accountType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \DateTimeInterface
      */
-    private $dateLastModified;
+    protected $dateLastModified;
 
     /**
      * @var \DateTimeInterface
      */
-    private $createdDate;
+    protected $createdDate;
 
     /**
      * @var string
      */
-    private $createdBy;
+    protected $createdBy;
 
     /**
      * @var string
      */
-    private $lastModifiedBy;
+    protected $lastModifiedBy;
 
     /**
      * Constructor

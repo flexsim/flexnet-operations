@@ -4,28 +4,28 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
+class SearchEntitlementLineItemPropertiesRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemResponseConfigRequestType
      */
-    private $entitlementLineItemResponseConfig;
+    protected $entitlementLineItemResponseConfig;
 
     /**
      * @var int
      */
-    private $batchSize;
+    protected $batchSize;
 
     /**
      * @var int
      */
-    private $pageNumber;
+    protected $pageNumber;
 
     /**
      * Constructor
@@ -127,7 +127,4 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
         $this->pageNumber = $pageNumber;
         return $this;
     }
-
-
 }
-

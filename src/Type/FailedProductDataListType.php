@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedProductDataListType
+class FailedProductDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedProductDataType|array 
      */
-    private $failedProduct;
+    protected $failedProduct;
 
     /**
      * Constructor

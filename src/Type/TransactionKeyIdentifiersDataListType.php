@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class TransactionKeyIdentifiersDataListType
+class TransactionKeyIdentifiersDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType|array 
      */
-    private $transactionKeyIdentifier;
+    protected $transactionKeyIdentifier;
 
     /**
      * Constructor

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class Period
+class Period extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var string
      */
-    private $endDate;
+    protected $endDate;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class Period
         $this->endDate = $endDate;
         return $this;
     }
-
-
 }
-

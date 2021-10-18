@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CountForHostsType
+class CountForHostsType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $hostDataRefId;
+    protected $hostDataRefId;
 
     /**
      * @var int
      */
-    private $fulfillCount;
+    protected $fulfillCount;
 
     /**
      * @var int
      */
-    private $overDraftCount;
+    protected $overDraftCount;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class CountForHostsType
         $this->overDraftCount = $overDraftCount;
         return $this;
     }
-
-
 }
-

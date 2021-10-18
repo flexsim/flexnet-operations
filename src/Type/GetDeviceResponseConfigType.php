@@ -2,178 +2,178 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetDeviceResponseConfigType
+class GetDeviceResponseConfigType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $name;
+    protected $name;
 
     /**
      * @var bool
      */
-    private $description;
+    protected $description;
 
     /**
      * @var bool
      */
-    private $status;
+    protected $status;
 
     /**
      * @var bool
      */
-    private $servedStatus;
+    protected $servedStatus;
 
     /**
      * @var bool
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var bool
      */
-    private $hosted;
+    protected $hosted;
 
     /**
      * @var bool
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var bool
      */
-    private $baseProduct;
+    protected $baseProduct;
 
     /**
      * @var bool
      */
-    private $hasLicense;
+    protected $hasLicense;
 
     /**
      * @var bool
      */
-    private $bufferLicense;
+    protected $bufferLicense;
 
     /**
      * @var bool
      */
-    private $addOnActivationId;
+    protected $addOnActivationId;
 
     /**
      * @var bool
      */
-    private $addOnCounts;
+    protected $addOnCounts;
 
     /**
      * @var bool
      */
-    private $addOnProduct;
+    protected $addOnProduct;
 
     /**
      * @var bool
      */
-    private $addOnProductLine;
+    protected $addOnProductLine;
 
     /**
      * @var bool
      */
-    private $addOnPartNumber;
+    protected $addOnPartNumber;
 
     /**
      * @var bool
      */
-    private $addOnLicense;
+    protected $addOnLicense;
 
     /**
      * @var bool
      */
-    private $addOnExpirationDateOverride;
+    protected $addOnExpirationDateOverride;
 
     /**
      * @var bool
      */
-    private $addOnEntitlementExpirationDate;
+    protected $addOnEntitlementExpirationDate;
 
     /**
      * @var bool
      */
-    private $addOnCreatedDate;
+    protected $addOnCreatedDate;
 
     /**
      * @var bool
      */
-    private $addOnLastModifiedDate;
+    protected $addOnLastModifiedDate;
 
     /**
      * @var bool
      */
-    private $addOnEntitlementId;
+    protected $addOnEntitlementId;
 
     /**
      * @var bool
      */
-    private $addOnState;
+    protected $addOnState;
 
     /**
      * @var bool
      */
-    private $addOnLicenseModel;
+    protected $addOnLicenseModel;
 
     /**
      * @var bool
      */
-    private $features;
+    protected $features;
 
     /**
      * @var bool
      */
-    private $publisherIdentity;
+    protected $publisherIdentity;
 
     /**
      * @var bool
      */
-    private $parent;
+    protected $parent;
 
     /**
      * @var bool
      */
-    private $machineType;
+    protected $machineType;
 
     /**
      * @var bool
      */
-    private $vmDetails;
+    protected $vmDetails;
 
     /**
      * @var bool
      */
-    private $vmInfo;
+    protected $vmInfo;
 
     /**
      * @var bool
      */
-    private $vendorDictionary;
+    protected $vendorDictionary;
 
     /**
      * @var bool
      */
-    private $updates;
+    protected $updates;
 
     /**
      * @var bool
      */
-    private $userInfo;
+    protected $userInfo;
 
     /**
      * @var bool
      */
-    private $lastRequestTime;
+    protected $lastRequestTime;
 
     /**
      * @var bool
      */
-    private $lastSyncTime;
+    protected $lastSyncTime;
 
     /**
      * Constructor
@@ -905,7 +905,4 @@ class GetDeviceResponseConfigType
         $this->lastSyncTime = $lastSyncTime;
         return $this;
     }
-
-
 }
-

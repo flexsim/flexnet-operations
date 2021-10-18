@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ForceDeleteUserIdentifierType
+class ForceDeleteUserIdentifierType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $forceDelete;
+    protected $forceDelete;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class ForceDeleteUserIdentifierType
         $this->forceDelete = $forceDelete;
         return $this;
     }
-
-
 }
-

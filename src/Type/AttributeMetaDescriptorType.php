@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AttributeMetaDescriptorType
+class AttributeMetaDescriptorType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $attributeName;
+    protected $attributeName;
 
     /**
      * @var string
      */
-    private $attributeDataType;
+    protected $attributeDataType;
 
     /**
      * @var string
      */
-    private $namespace;
+    protected $namespace;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ValueType
      */
-    private $validValues;
+    protected $validValues;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class AttributeMetaDescriptorType
         $this->validValues = $validValues;
         return $this;
     }
-
-
 }
-

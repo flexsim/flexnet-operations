@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteFeatureBundleRequestType implements RequestInterface
+class DeleteFeatureBundleRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteFeatureBundleDataType
      */
-    private $featureBundle;
+    protected $featureBundle;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteFeatureBundleRequestType implements RequestInterface
         $this->featureBundle = $featureBundle;
         return $this;
     }
-
-
 }
-

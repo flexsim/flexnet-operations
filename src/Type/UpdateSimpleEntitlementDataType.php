@@ -2,63 +2,63 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateSimpleEntitlementDataType
+class UpdateSimpleEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementIdentifier;
+    protected $entitlementIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\IdType
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var string
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var bool
      */
-    private $autoDeploy;
+    protected $autoDeploy;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType
      */
-    private $channelPartners;
+    protected $channelPartners;
 
     /**
      * @var bool
      */
-    private $allowPortalLogin;
+    protected $allowPortalLogin;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $entitlementAttributes;
+    protected $entitlementAttributes;
 
     /**
      * @var string
      */
-    private $emailTemplateVariation;
+    protected $emailTemplateVariation;
 
     /**
      * Constructor

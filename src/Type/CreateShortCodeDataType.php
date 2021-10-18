@@ -2,43 +2,43 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateShortCodeDataType
+class CreateShortCodeDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $bulkEntitlementId;
+    protected $bulkEntitlementId;
 
     /**
      * @var string
      */
-    private $webRegkey;
+    protected $webRegkey;
 
     /**
      * @var string
      */
-    private $shortCode;
+    protected $shortCode;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType
      */
-    private $publisherAttributes;
+    protected $publisherAttributes;
 
     /**
      * @var bool
      */
-    private $overridePolicy;
+    protected $overridePolicy;
 
     /**
      * @var string
      */
-    private $shortCodeActivationType;
+    protected $shortCodeActivationType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $reinstallFulfillment;
+    protected $reinstallFulfillment;
 
     /**
      * Constructor
@@ -203,7 +203,4 @@ class CreateShortCodeDataType
         $this->reinstallFulfillment = $reinstallFulfillment;
         return $this;
     }
-
-
 }
-

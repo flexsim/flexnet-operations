@@ -2,98 +2,98 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SearchDevicesParametersType
+class SearchDevicesParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $name;
+    protected $name;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $deviceId;
+    protected $deviceId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType
      */
-    private $deviceIdType;
+    protected $deviceIdType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceClassList
      */
-    private $deviceClasses;
+    protected $deviceClasses;
 
     /**
      * @var bool
      */
-    private $hosted;
+    protected $hosted;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $parentId;
+    protected $parentId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $soldToAcctId;
+    protected $soldToAcctId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceStatusQueryType
      */
-    private $status;
+    protected $status;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $addOnEntitlementId;
+    protected $addOnEntitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $addOnActivationId;
+    protected $addOnActivationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $addOnProductName;
+    protected $addOnProductName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $addOnProductVersion;
+    protected $addOnProductVersion;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $addOnPartNumber;
+    protected $addOnPartNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $featureName;
+    protected $featureName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $userString;
+    protected $userString;
 
     /**
      * Constructor
@@ -489,7 +489,4 @@ class SearchDevicesParametersType
         $this->userString = $userString;
         return $this;
     }
-
-
 }
-

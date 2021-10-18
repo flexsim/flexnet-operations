@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetFulfillmentPropertiesResponseType implements ResultInterface
+class GetFulfillmentPropertiesResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetFulfillmentPropertiesResponseType implements ResultInterface
         $this->fulfillment = $fulfillment;
         return $this;
     }
-
-
 }
-

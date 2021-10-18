@@ -2,43 +2,43 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SplitLineItemInfoType
+class SplitLineItemInfoType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $lineItemIdentifier;
+    protected $lineItemIdentifier;
 
     /**
      * @var int
      */
-    private $numberOfCopies;
+    protected $numberOfCopies;
 
     /**
      * @var string
      */
-    private $targetTierName;
+    protected $targetTierName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
-    private $targetAccountUnit;
+    protected $targetAccountUnit;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $targetOrganizationUnit;
+    protected $targetOrganizationUnit;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType
      */
-    private $targetContact;
+    protected $targetContact;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $matchingLineItemIdentifier;
+    protected $matchingLineItemIdentifier;
 
     /**
      * Constructor

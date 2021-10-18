@@ -2,68 +2,68 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetUsageHistoryParametersType
+class GetUsageHistoryParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
-    private $updateTime;
+    protected $updateTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ExternalIdQueryType
      */
-    private $serverUniqueId;
+    protected $serverUniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $serverId;
+    protected $serverId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ExternalIdQueryType
      */
-    private $deviceUniqueId;
+    protected $deviceUniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $deviceId;
+    protected $deviceId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $alias;
+    protected $alias;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $featureName;
+    protected $featureName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $featureVersion;
+    protected $featureVersion;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NumberQueryType
      */
-    private $featureCount;
+    protected $featureCount;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NumberQueryType
      */
-    private $featureOverage;
+    protected $featureOverage;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType
      */
-    private $machineType;
+    protected $machineType;
 
     /**
      * Constructor
@@ -333,7 +333,4 @@ class GetUsageHistoryParametersType
         $this->machineType = $machineType;
         return $this;
     }
-
-
 }
-

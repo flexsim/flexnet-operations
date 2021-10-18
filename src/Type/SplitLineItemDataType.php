@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SplitLineItemDataType
+class SplitLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $lineItemIdentifier;
+    protected $lineItemIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementIdentifier;
+    protected $entitlementIdentifier;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class SplitLineItemDataType
         $this->entitlementIdentifier = $entitlementIdentifier;
         return $this;
     }
-
-
 }
-

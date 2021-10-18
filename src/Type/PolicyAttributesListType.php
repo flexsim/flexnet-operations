@@ -2,48 +2,48 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PolicyAttributesListType
+class PolicyAttributesListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PolicyDataType
      */
-    private $rehostsPolicy;
+    protected $rehostsPolicy;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PolicyDataType
      */
-    private $returnsPolicy;
+    protected $returnsPolicy;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PolicyDataType
      */
-    private $repairsPolicy;
+    protected $repairsPolicy;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ExtraActivationDataType
      */
-    private $extraActivationsPolicy;
+    protected $extraActivationsPolicy;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CancelLicensePolicyDataType
      */
-    private $cancelLicensePolicy;
+    protected $cancelLicensePolicy;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\VirtualLicensePolicyDataType
      */
-    private $virtualLicensePolicy;
+    protected $virtualLicensePolicy;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ReinstallPolicyDataType
      */
-    private $reinstallPolicy;
+    protected $reinstallPolicy;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AcpiGenerationIdLicensePolicyDataType
      */
-    private $acpiGenerationIdLicensePolicy;
+    protected $acpiGenerationIdLicensePolicy;
 
     /**
      * Constructor
@@ -229,7 +229,4 @@ class PolicyAttributesListType
         $this->acpiGenerationIdLicensePolicy = $acpiGenerationIdLicensePolicy;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ReturnedShortCodeDataType
+class ReturnedShortCodeDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $shortCode;
+    protected $shortCode;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class ReturnedShortCodeDataType
         $this->shortCode = $shortCode;
         return $this;
     }
-
-
 }
-

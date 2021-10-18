@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DurationType
+class DurationType extends FlexnetType
 {
 
     /**
      * @var int
      */
-    private $numDuration;
+    protected $numDuration;
 
     /**
      * @var string
      */
-    private $durationUnit;
+    protected $durationUnit;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class DurationType
         $this->durationUnit = $durationUnit;
         return $this;
     }
-
-
 }
-

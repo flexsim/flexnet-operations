@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetDeletedSyncParametersType
+class GetDeletedSyncParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
-    private $startTime;
+    protected $startTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
-    private $endTime;
+    protected $endTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ExternalIdQueryType
      */
-    private $serverUniqueId;
+    protected $serverUniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $serverId;
+    protected $serverId;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class GetDeletedSyncParametersType
         $this->serverId = $serverId;
         return $this;
     }
-
-
 }
-

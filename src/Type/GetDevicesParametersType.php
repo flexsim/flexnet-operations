@@ -2,143 +2,143 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetDevicesParametersType
+class GetDevicesParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $alias;
+    protected $alias;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $deviceId;
+    protected $deviceId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType
      */
-    private $deviceIdType;
+    protected $deviceIdType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $parentId;
+    protected $parentId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType
      */
-    private $parentIdType;
+    protected $parentIdType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $currentOwnerName;
+    protected $currentOwnerName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType
      */
-    private $organizationUnitName;
+    protected $organizationUnitName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceStateQueryType
      */
-    private $status;
+    protected $status;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceServedStateQueryType
      */
-    private $servedStatus;
+    protected $servedStatus;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $preBuiltProductName;
+    protected $preBuiltProductName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $preBuiltProductVersion;
+    protected $preBuiltProductVersion;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $addOnActivationId;
+    protected $addOnActivationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $addOnProductName;
+    protected $addOnProductName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $addOnProductVersion;
+    protected $addOnProductVersion;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $featureName;
+    protected $featureName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $featureVersion;
+    protected $featureVersion;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NumberQueryType
      */
-    private $featureCount;
+    protected $featureCount;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NumberQueryType
      */
-    private $featureOverage;
+    protected $featureOverage;
 
     /**
      * @var bool
      */
-    private $isServer;
+    protected $isServer;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceTypeList
      */
-    private $deviceTypes;
+    protected $deviceTypes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType
      */
-    private $machineType;
+    protected $machineType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $vmName;
+    protected $vmName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $userString;
+    protected $userString;
 
     /**
      * Constructor
@@ -723,7 +723,4 @@ class GetDevicesParametersType
         $this->userString = $userString;
         return $this;
     }
-
-
 }
-

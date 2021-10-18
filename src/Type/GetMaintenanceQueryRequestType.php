@@ -4,28 +4,28 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetMaintenanceQueryRequestType implements RequestInterface
+class GetMaintenanceQueryRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * @var int
      */
-    private $pageNumber;
+    protected $pageNumber;
 
     /**
      * @var int
      */
-    private $batchSize;
+    protected $batchSize;
 
     /**
      * @var bool
      */
-    private $returnContainedObjects;
+    protected $returnContainedObjects;
 
     /**
      * Constructor

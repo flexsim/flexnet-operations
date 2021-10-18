@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetOrganizationsQueryResponseDataType
+class GetOrganizationsQueryResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationDetailDataType
      */
-    private $orgData;
+    protected $orgData;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetOrganizationsQueryResponseDataType
         $this->orgData = $orgData;
         return $this;
     }
-
-
 }
-

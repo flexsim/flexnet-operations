@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class LinkAccountsRequestType implements RequestInterface
+class LinkAccountsRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkAccountsDataType
      */
-    private $acctData;
+    protected $acctData;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class LinkAccountsRequestType implements RequestInterface
         $this->acctData = $acctData;
         return $this;
     }
-
-
 }
-

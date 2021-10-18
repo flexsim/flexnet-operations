@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateEntitlementLineItemDataType
+class UpdateEntitlementLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementIdentifier;
+    protected $entitlementIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateLineItemDataType
      */
-    private $lineItemData;
+    protected $lineItemData;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateMaintenanceLineItemDataType
      */
-    private $maintenanceLineItemData;
+    protected $maintenanceLineItemData;
 
     /**
      * @var bool
      */
-    private $autoDeploy;
+    protected $autoDeploy;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class UpdateEntitlementLineItemDataType
         $this->autoDeploy = $autoDeploy;
         return $this;
     }
-
-
 }
-

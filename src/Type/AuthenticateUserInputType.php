@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class AuthenticateUserInputType implements RequestInterface
+class AuthenticateUserInputType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var string
      */
-    private $userName;
+    protected $userName;
 
     /**
      * @var string
      */
-    private $password;
+    protected $password;
 
     /**
      * @var string
      */
-    private $domainName;
+    protected $domainName;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class AuthenticateUserInputType implements RequestInterface
         $this->domainName = $domainName;
         return $this;
     }
-
-
 }
-

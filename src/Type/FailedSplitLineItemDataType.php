@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedSplitLineItemDataType
+class FailedSplitLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType
      */
-    private $lineItemInfo;
+    protected $lineItemInfo;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedSplitLineItemDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetMatchingBulkEntsResponseListType
+class GetMatchingBulkEntsResponseListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\MatchingBulkEntDataType|array 
      */
-    private $matchingBulkEnt;
+    protected $matchingBulkEnt;
 
     /**
      * Constructor

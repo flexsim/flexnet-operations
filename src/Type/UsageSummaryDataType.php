@@ -2,83 +2,83 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UsageSummaryDataType
+class UsageSummaryDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $summaryTimeUniqueId;
+    protected $summaryTimeUniqueId;
 
     /**
      * @var \DateTimeInterface
      */
-    private $summaryTime;
+    protected $summaryTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $server;
+    protected $server;
 
     /**
      * @var string
      */
-    private $serverAlias;
+    protected $serverAlias;
 
     /**
      * @var \DateTimeInterface
      */
-    private $serverLastSyncTime;
+    protected $serverLastSyncTime;
 
     /**
      * @var string
      */
-    private $entitlementUniqueId;
+    protected $entitlementUniqueId;
 
     /**
      * @var string
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var string
      */
-    private $activationUniqueId;
+    protected $activationUniqueId;
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var string
      */
-    private $featureUniqueId;
+    protected $featureUniqueId;
 
     /**
      * @var string
      */
-    private $featureName;
+    protected $featureName;
 
     /**
      * @var string
      */
-    private $featureVersion;
+    protected $featureVersion;
 
     /**
      * @var int
      */
-    private $orderedCount;
+    protected $orderedCount;
 
     /**
      * @var int
      */
-    private $usedCount;
+    protected $usedCount;
 
     /**
      * @var int
      */
-    private $provisionedCount;
+    protected $provisionedCount;
 
     /**
      * Constructor
@@ -411,7 +411,4 @@ class UsageSummaryDataType
         $this->provisionedCount = $provisionedCount;
         return $this;
     }
-
-
 }
-

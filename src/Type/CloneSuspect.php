@@ -2,68 +2,68 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CloneSuspect
+class CloneSuspect extends FlexnetType 
 {
 
     /**
      * @var \DateTimeInterface
      */
-    private $timeStamp;
+    protected $timeStamp;
 
     /**
      * @var string
      */
-    private $hostClass;
+    protected $hostClass;
 
     /**
      * @var string
      */
-    private $hostAlias;
+    protected $hostAlias;
 
     /**
      * @var string
      */
-    private $deviceId;
+    protected $deviceId;
 
     /**
      * @var string
      */
-    private $serverId;
+    protected $serverId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LineItemActivationIds
      */
-    private $lineItemActivationIds;
+    protected $lineItemActivationIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureIds
      */
-    private $featureIds;
+    protected $featureIds;
 
     /**
      * @var string
      */
-    private $acctId;
+    protected $acctId;
 
     /**
      * @var string
      */
-    private $orgId;
+    protected $orgId;
 
     /**
      * @var string
      */
-    private $acctName;
+    protected $acctName;
 
     /**
      * @var string
      */
-    private $orgName;
+    protected $orgName;
 
     /**
      * @var string
      */
-    private $enterpriseId;
+    protected $enterpriseId;
 
     /**
      * Constructor
@@ -81,7 +81,7 @@ class CloneSuspect
      */
     public function __construct(
         \DateTimeInterface $timeStamp = null,
-        string $hostClass = null,
+        string $hostclass = extends FlexnetType null, extends FlexnetType 
         string $hostAlias = null,
         string $deviceId = null,
         string $serverId = null,
@@ -92,7 +92,7 @@ class CloneSuspect
         string $enterpriseId = null
     ) {
         $this->timeStamp = $timeStamp;
-        $this->hostClass = $hostClass;
+        $this->hostclass = extends FlexnetType $hostClass; extends FlexnetType 
         $this->hostAlias = $hostAlias;
         $this->deviceId = $deviceId;
         $this->serverId = $serverId;
@@ -121,7 +121,7 @@ class CloneSuspect
      */
     public static function create(
         \DateTimeInterface $timeStamp = null,
-        string $hostClass = null,
+        string $hostclass = extends FlexnetType null, extends FlexnetType 
         string $hostAlias = null,
         string $deviceId = null,
         string $serverId = null,
@@ -166,7 +166,7 @@ class CloneSuspect
      */
     public function setHostClass($hostClass)
     {
-        $this->hostClass = $hostClass;
+        $this->hostclass = extends FlexnetType $hostClass; extends FlexnetType 
         return $this;
     }
 

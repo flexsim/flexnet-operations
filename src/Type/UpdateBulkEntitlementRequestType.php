@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class UpdateBulkEntitlementRequestType implements RequestInterface
+class UpdateBulkEntitlementRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType
      */
-    private $bulkEntitlement;
+    protected $bulkEntitlement;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class UpdateBulkEntitlementRequestType implements RequestInterface
         $this->bulkEntitlement = $bulkEntitlement;
         return $this;
     }
-
-
 }
-

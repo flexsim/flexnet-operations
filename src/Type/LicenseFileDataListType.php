@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LicenseFileDataListType
+class LicenseFileDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array 
      */
-    private $licenseFile;
+    protected $licenseFile;
 
     /**
      * Constructor

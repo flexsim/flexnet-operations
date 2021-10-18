@@ -2,228 +2,228 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FulfillmentResponseConfigRequestType
+class FulfillmentResponseConfigRequestType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $fulfillmentId;
+    protected $fulfillmentId;
 
     /**
      * @var bool
      */
-    private $fulfillmentType;
+    protected $fulfillmentType;
 
     /**
      * @var bool
      */
-    private $state;
+    protected $state;
 
     /**
      * @var bool
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var bool
      */
-    private $lineitemId;
+    protected $lineitemId;
 
     /**
      * @var bool
      */
-    private $product;
+    protected $product;
 
     /**
      * @var bool
      */
-    private $productDescription;
+    protected $productDescription;
 
     /**
      * @var bool
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var bool
      */
-    private $partNumberDescription;
+    protected $partNumberDescription;
 
     /**
      * @var bool
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var bool
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * @var bool
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var bool
      */
-    private $soldToDisplayName;
+    protected $soldToDisplayName;
 
     /**
      * @var bool
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var bool
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var bool
      */
-    private $licenseHost;
+    protected $licenseHost;
 
     /**
      * @var bool
      */
-    private $fulfilledCount;
+    protected $fulfilledCount;
 
     /**
      * @var bool
      */
-    private $overDraftCount;
+    protected $overDraftCount;
 
     /**
      * @var bool
      */
-    private $fulfillDate;
+    protected $fulfillDate;
 
     /**
      * @var bool
      */
-    private $fulfillDateTime;
+    protected $fulfillDateTime;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var bool
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var bool
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var bool
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var bool
      */
-    private $licenseFileType;
+    protected $licenseFileType;
 
     /**
      * @var bool
      */
-    private $licenseText;
+    protected $licenseText;
 
     /**
      * @var bool
      */
-    private $binaryLicense;
+    protected $binaryLicense;
 
     /**
      * @var bool
      */
-    private $supportAction;
+    protected $supportAction;
 
     /**
      * @var bool
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * @var bool
      */
-    private $parentFulfillmentId;
+    protected $parentFulfillmentId;
 
     /**
      * @var bool
      */
-    private $fulfillmentSource;
+    protected $fulfillmentSource;
 
     /**
      * @var bool
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var bool
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * @var bool
      */
-    private $lineitemDescription;
+    protected $lineitemDescription;
 
     /**
      * @var bool
      */
-    private $totalCopies;
+    protected $totalCopies;
 
     /**
      * @var bool
      */
-    private $numberOfRemainingCopies;
+    protected $numberOfRemainingCopies;
 
     /**
      * @var bool
      */
-    private $isTrusted;
+    protected $isTrusted;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType
      */
-    private $customHostAttributes;
+    protected $customHostAttributes;
 
     /**
      * @var bool
      */
-    private $migrationId;
+    protected $migrationId;
 
     /**
      * @var bool
      */
-    private $vendorDaemonName;
+    protected $vendorDaemonName;
 
     /**
      * @var bool
      */
-    private $licenseFiles;
+    protected $licenseFiles;
 
     /**
      * @var bool
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * @var bool
      */
-    private $activationType;
+    protected $activationType;
 
     /**
      * Constructor
@@ -1165,7 +1165,4 @@ class FulfillmentResponseConfigRequestType
         $this->activationType = $activationType;
         return $this;
     }
-
-
 }
-

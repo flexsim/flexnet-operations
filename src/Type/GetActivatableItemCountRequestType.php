@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetActivatableItemCountRequestType implements RequestInterface
+class GetActivatableItemCountRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * @var bool
      */
-    private $restrictToItemsReadyToActivate;
+    protected $restrictToItemsReadyToActivate;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetActivatableItemCountRequestType implements RequestInterface
         $this->restrictToItemsReadyToActivate = $restrictToItemsReadyToActivate;
         return $this;
     }
-
-
 }
-

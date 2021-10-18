@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UserAccountRolesListType
+class UserAccountRolesListType extends FlexnetType
 {
 
     /**
      * @var string|array
      */
-    private $roleName;
+    protected $roleName;
 
     /**
      * Constructor

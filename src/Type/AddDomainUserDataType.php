@@ -2,48 +2,48 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AddDomainUserDataType
+class AddDomainUserDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $userId;
+    protected $userId;
 
     /**
      * @var string
      */
-    private $domain;
+    protected $domain;
 
     /**
      * @var string
      */
-    private $roles;
+    protected $roles;
 
     /**
      * @var bool
      */
-    private $optIn;
+    protected $optIn;
 
     /**
      * @var string
      */
-    private $locale;
+    protected $locale;
 
     /**
      * @var string
      */
-    private $timeZone;
+    protected $timeZone;
 
     /**
      * @var string
      */
-    private $status;
+    protected $status;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * Constructor
@@ -229,7 +229,4 @@ class AddDomainUserDataType
         $this->customAttributes = $customAttributes;
         return $this;
     }
-
-
 }
-

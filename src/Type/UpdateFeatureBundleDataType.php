@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateFeatureBundleDataType
+class UpdateFeatureBundleDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType
      */
-    private $featureBundleIdentifier;
+    protected $featureBundleIdentifier;
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType
      */
-    private $features;
+    protected $features;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class UpdateFeatureBundleDataType
         $this->features = $features;
         return $this;
     }
-
-
 }
-

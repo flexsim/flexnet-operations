@@ -2,38 +2,38 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AttributeDescriptorType
+class AttributeDescriptorType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $attributeName;
+    protected $attributeName;
 
     /**
      * @var string
      */
-    private $stringValue;
+    protected $stringValue;
 
     /**
      * @var \DateTimeInterface
      */
-    private $dateValue;
+    protected $dateValue;
 
     /**
      * @var bool
      */
-    private $booleanValue;
+    protected $booleanValue;
 
     /**
      * @var int
      */
-    private $integerValue;
+    protected $integerValue;
 
     /**
      * @var string
      */
-    private $arrayValue;
+    protected $arrayValue;
 
     /**
      * Constructor
@@ -177,7 +177,4 @@ class AttributeDescriptorType
         $this->arrayValue = $arrayValue;
         return $this;
     }
-
-
 }
-

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedLinkMaintenanceLineItemDataType
+class FailedLinkMaintenanceLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType
      */
-    private $linkMaintenanceLineItem;
+    protected $linkMaintenanceLineItem;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedLinkMaintenanceLineItemDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

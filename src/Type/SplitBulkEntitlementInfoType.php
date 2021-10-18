@@ -2,48 +2,48 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SplitBulkEntitlementInfoType
+class SplitBulkEntitlementInfoType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $bulkEntIdentifier;
+    protected $bulkEntIdentifier;
 
     /**
      * @var int
      */
-    private $numberOfWRKs;
+    protected $numberOfWRKs;
 
     /**
      * @var string
      */
-    private $targetTierName;
+    protected $targetTierName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
-    private $targetAccountUnit;
+    protected $targetAccountUnit;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $targetOrganizationUnit;
+    protected $targetOrganizationUnit;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType
      */
-    private $targetContact;
+    protected $targetContact;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $matchingBulkEntIdentifier;
+    protected $matchingBulkEntIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $matchingLineItemIdentifier;
+    protected $matchingLineItemIdentifier;
 
     /**
      * Constructor

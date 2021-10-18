@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class SetProductStateRequestType implements RequestInterface
+class SetProductStateRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductStateDataType
      */
-    private $product;
+    protected $product;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class SetProductStateRequestType implements RequestInterface
         $this->product = $product;
         return $this;
     }
-
-
 }
-

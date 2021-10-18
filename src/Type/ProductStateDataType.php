@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ProductStateDataType
+class ProductStateDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $productIdentifier;
+    protected $productIdentifier;
 
     /**
      * @var string
      */
-    private $stateToSet;
+    protected $stateToSet;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class ProductStateDataType
         $this->stateToSet = $stateToSet;
         return $this;
     }
-
-
 }
-

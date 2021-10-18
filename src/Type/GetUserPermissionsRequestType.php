@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetUserPermissionsRequestType implements RequestInterface
+class GetUserPermissionsRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var string
      */
-    private $userName;
+    protected $userName;
 
     /**
      * @var string
      */
-    private $domainName;
+    protected $domainName;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetUserPermissionsRequestType implements RequestInterface
         $this->domainName = $domainName;
         return $this;
     }
-
-
 }
-

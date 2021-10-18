@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedDeleteWebRegKeyDataType
+class FailedDeleteWebRegKeyDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $webRegKey;
+    protected $webRegKey;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedDeleteWebRegKeyDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedUpdateAcctDataType
+class FailedUpdateAcctDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateAcctDataType
      */
-    private $acctData;
+    protected $acctData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedUpdateAcctDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

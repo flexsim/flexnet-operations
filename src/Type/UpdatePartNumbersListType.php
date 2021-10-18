@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdatePartNumbersListType
+class UpdatePartNumbersListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierWithModelType|array
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var string
      */
-    private $opType;
+    protected $opType;
 
     /**
      * Constructor

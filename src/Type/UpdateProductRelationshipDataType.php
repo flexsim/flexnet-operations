@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateProductRelationshipDataType
+class UpdateProductRelationshipDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $newRelation;
+    protected $newRelation;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class UpdateProductRelationshipDataType
         $this->newRelation = $newRelation;
         return $this;
     }
-
-
 }
-

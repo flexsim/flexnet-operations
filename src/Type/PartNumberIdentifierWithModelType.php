@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PartNumberIdentifierWithModelType
+class PartNumberIdentifierWithModelType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberPKType
      */
-    private $primaryKeys;
+    protected $primaryKeys;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class PartNumberIdentifierWithModelType
         $this->licenseModel = $licenseModel;
         return $this;
     }
-
-
 }
-

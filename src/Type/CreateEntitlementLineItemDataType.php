@@ -2,123 +2,123 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateEntitlementLineItemDataType
+class CreateEntitlementLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\IdType
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $product;
+    protected $product;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $alternateLicenseModel1;
+    protected $alternateLicenseModel1;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $alternateLicenseModel2;
+    protected $alternateLicenseModel2;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $licenseModelAttributes;
+    protected $licenseModelAttributes;
 
     /**
      * @var string
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PolicyAttributesListType
      */
-    private $policyAttributes;
+    protected $policyAttributes;
 
     /**
      * @var string
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var string
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * @var int
      */
-    private $numberOfCopies;
+    protected $numberOfCopies;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var string
      */
-    private $startDateOption;
+    protected $startDateOption;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DurationType
      */
-    private $term;
+    protected $term;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\VersionDateAttributesType
      */
-    private $versionDateAttributes;
+    protected $versionDateAttributes;
 
     /**
      * @var string
      */
-    private $lineItemType;
+    protected $lineItemType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType
      */
-    private $entitledProducts;
+    protected $entitledProducts;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $lineItemAttributes;
+    protected $lineItemAttributes;
 
     /**
      * Constructor
@@ -619,7 +619,4 @@ class CreateEntitlementLineItemDataType
         $this->lineItemAttributes = $lineItemAttributes;
         return $this;
     }
-
-
 }
-

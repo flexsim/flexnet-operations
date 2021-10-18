@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class VersionDateAttributesType
+class VersionDateAttributesType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $versionOption;
+    protected $versionOption;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DurationType
      */
-    private $duration;
+    protected $duration;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class VersionDateAttributesType
         $this->duration = $duration;
         return $this;
     }
-
-
 }
-

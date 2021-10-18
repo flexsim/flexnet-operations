@@ -2,48 +2,48 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GeneratePrebuiltLicenseDataType
+class GeneratePrebuiltLicenseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $product;
+    protected $product;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $licenseModelAttributes;
+    protected $licenseModelAttributes;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DurationType
      */
-    private $term;
+    protected $term;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * Constructor
@@ -229,7 +229,4 @@ class GeneratePrebuiltLicenseDataType
         $this->expirationDate = $expirationDate;
         return $this;
     }
-
-
 }
-

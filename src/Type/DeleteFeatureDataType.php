@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeleteFeatureDataType
+class DeleteFeatureDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType
      */
-    private $featureIdentifier;
+    protected $featureIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class DeleteFeatureDataType
         $this->featureIdentifier = $featureIdentifier;
         return $this;
     }
-
-
 }
-

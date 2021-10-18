@@ -2,138 +2,138 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeviceQueryDataType
+class DeviceQueryDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * @var string
      */
-    private $alias;
+    protected $alias;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypeIdentifier
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var string
      */
-    private $deviceStatus;
+    protected $deviceStatus;
 
     /**
      * @var string
      */
-    private $deviceServedStatus;
+    protected $deviceServedStatus;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType
      */
-    private $channelPartners;
+    protected $channelPartners;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SoldToType
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductPKType
      */
-    private $preBuiltProduct;
+    protected $preBuiltProduct;
 
     /**
      * @var bool
      */
-    private $hasPrebuiltLicense;
+    protected $hasPrebuiltLicense;
 
     /**
      * @var string
      */
-    private $prebuiltLicense;
+    protected $prebuiltLicense;
 
     /**
      * @var bool
      */
-    private $hasAddonLicense;
+    protected $hasAddonLicense;
 
     /**
      * @var string
      */
-    private $addonLicense;
+    protected $addonLicense;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PublisherIdentifier
      */
-    private $publisherIdName;
+    protected $publisherIdName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddonLineItemDataDataType
      */
-    private $addonLineItemData;
+    protected $addonLineItemData;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureDataDataType
      */
-    private $featureData;
+    protected $featureData;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $parentIdentifier;
+    protected $parentIdentifier;
 
     /**
      * @var string
      */
-    private $machineType;
+    protected $machineType;
 
     /**
      * @var string
      */
-    private $vmName;
+    protected $vmName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DictionaryType
      */
-    private $vmInfo;
+    protected $vmInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DictionaryType
      */
-    private $vendorDictionary;
+    protected $vendorDictionary;
 
     /**
      * @var string
      */
-    private $deviceUser;
+    protected $deviceUser;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType
      */
-    private $deviceUserIdentifier;
+    protected $deviceUserIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SoldToAcctNameType
      */
-    private $soldToAcctName;
+    protected $soldToAcctName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SoldToOrgNameType
      */
-    private $soldToOrgName;
+    protected $soldToOrgName;
 
     /**
      * Constructor

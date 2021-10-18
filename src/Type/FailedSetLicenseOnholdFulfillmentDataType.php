@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedSetLicenseOnholdFulfillmentDataType
+class FailedSetLicenseOnholdFulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType
      */
-    private $onholdFmtLicenseData;
+    protected $onholdFmtLicenseData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedSetLicenseOnholdFulfillmentDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

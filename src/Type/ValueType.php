@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ValueType
+class ValueType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $value;
+    protected $value;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class ValueType
         $this->value = $value;
         return $this;
     }
-
-
 }
-

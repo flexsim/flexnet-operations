@@ -2,63 +2,63 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UsageHistoryDataType
+class UsageHistoryDataType extends FlexnetType
 {
 
     /**
      * @var \DateTimeInterface
      */
-    private $updateTime;
+    protected $updateTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $serverIdentifier;
+    protected $serverIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * @var string
      */
-    private $alias;
+    protected $alias;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypeIdentifier
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var string
      */
-    private $deviceServedStatus;
+    protected $deviceServedStatus;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureDataDataType
      */
-    private $featureData;
+    protected $featureData;
 
     /**
      * @var string
      */
-    private $machineType;
+    protected $machineType;
 
     /**
      * @var string
      */
-    private $vmName;
+    protected $vmName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DictionaryType
      */
-    private $vmInfo;
+    protected $vmInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DictionaryType
      */
-    private $vendorDictionary;
+    protected $vendorDictionary;
 
     /**
      * Constructor
@@ -307,7 +307,4 @@ class UsageHistoryDataType
         $this->vendorDictionary = $vendorDictionary;
         return $this;
     }
-
-
 }
-

@@ -4,38 +4,38 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class ActivateLicensesRequestType implements RequestInterface
+class ActivateLicensesRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TypeLineItem
      */
-    private $lineItem;
+    protected $lineItem;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var string
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var string
      */
-    private $owner;
+    protected $owner;
 
     /**
      * @var string
      */
-    private $hostInfo;
+    protected $hostInfo;
 
     /**
      * Constructor
@@ -179,7 +179,4 @@ class ActivateLicensesRequestType implements RequestInterface
         $this->hostInfo = $hostInfo;
         return $this;
     }
-
-
 }
-

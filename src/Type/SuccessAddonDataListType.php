@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SuccessAddonDataListType
+class SuccessAddonDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array 
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * Constructor

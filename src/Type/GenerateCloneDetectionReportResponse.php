@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GenerateCloneDetectionReportResponse implements ResultInterface
+class GenerateCloneDetectionReportResponse extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CloneSuspects
      */
-    private $cloneSuspects;
+    protected $cloneSuspects;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GenerateCloneDetectionReportResponse implements ResultInterface
         $this->cloneSuspects = $cloneSuspects;
         return $this;
     }
-
-
 }
-

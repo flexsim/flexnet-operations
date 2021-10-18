@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedAdvancedFmtLCResponseDataType
+class FailedAdvancedFmtLCResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedAdvancedFmtLCDataType
      */
-    private $failedFulfillment;
+    protected $failedFulfillment;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FailedAdvancedFmtLCResponseDataType
         $this->failedFulfillment = $failedFulfillment;
         return $this;
     }
-
-
 }
-

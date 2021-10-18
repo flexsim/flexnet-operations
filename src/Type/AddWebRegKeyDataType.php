@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AddWebRegKeyDataType
+class AddWebRegKeyDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $bulkEntitlement;
+    protected $bulkEntitlement;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\WebRegKeyDataType
      */
-    private $webRegKeys;
+    protected $webRegKeys;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class AddWebRegKeyDataType
         $this->webRegKeys = $webRegKeys;
         return $this;
     }
-
-
 }
-

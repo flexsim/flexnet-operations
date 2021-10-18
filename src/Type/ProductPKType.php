@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ProductPKType
+class ProductPKType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $version;
+    protected $version;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class ProductPKType
         $this->version = $version;
         return $this;
     }
-
-
 }
-

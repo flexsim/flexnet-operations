@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeleteLineItemIdentifier
+class DeleteLineItemIdentifier extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class DeleteLineItemIdentifier
         $this->activationId = $activationId;
         return $this;
     }
-
-
 }
-

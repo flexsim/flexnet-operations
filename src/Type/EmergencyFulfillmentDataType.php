@@ -2,58 +2,58 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EmergencyFulfillmentDataType
+class EmergencyFulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $fulfillmentIdentifier;
+    protected $fulfillmentIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $licenseModelAttributes;
+    protected $licenseModelAttributes;
 
     /**
      * @var string
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $endDate;
+    protected $endDate;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ServerIDsType
      */
-    private $serverIds;
+    protected $serverIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NodeIDsType
      */
-    private $nodeIds;
+    protected $nodeIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType
      */
-    private $customHost;
+    protected $customHost;
 
     /**
      * Constructor
@@ -281,7 +281,4 @@ class EmergencyFulfillmentDataType
         $this->customHost = $customHost;
         return $this;
     }
-
-
 }
-

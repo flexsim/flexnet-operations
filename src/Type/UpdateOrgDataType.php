@@ -2,53 +2,53 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateOrgDataType
+class UpdateOrgDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $organization;
+    protected $organization;
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $displayName;
+    protected $displayName;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddressDataType
      */
-    private $address;
+    protected $address;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType
      */
-    private $subOrganizations;
+    protected $subOrganizations;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType
      */
-    private $relatedOrganizations;
+    protected $relatedOrganizations;
 
     /**
      * @var bool
      */
-    private $visible;
+    protected $visible;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * Constructor
@@ -255,7 +255,4 @@ class UpdateOrgDataType
         $this->customAttributes = $customAttributes;
         return $this;
     }
-
-
 }
-

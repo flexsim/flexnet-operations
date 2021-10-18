@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedDeleteUniformSuiteDataType
+class FailedDeleteUniformSuiteDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SuiteIdentifierType
      */
-    private $suiteIdentifier;
+    protected $suiteIdentifier;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedDeleteUniformSuiteDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

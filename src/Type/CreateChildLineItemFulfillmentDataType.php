@@ -2,68 +2,68 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateChildLineItemFulfillmentDataType
+class CreateChildLineItemFulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $versionStartDate;
+    protected $versionStartDate;
 
     /**
      * @var string
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $licenseModelAttributes;
+    protected $licenseModelAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostIdDetailsType
      */
-    private $hostIdDetails;
+    protected $hostIdDetails;
 
     /**
      * @var bool
      */
-    private $overridePolicy;
+    protected $overridePolicy;
 
     /**
      * @var string
      */
-    private $owner;
+    protected $owner;
 
     /**
      * @var string
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * Constructor
@@ -333,7 +333,4 @@ class CreateChildLineItemFulfillmentDataType
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
         return $this;
     }
-
-
 }
-

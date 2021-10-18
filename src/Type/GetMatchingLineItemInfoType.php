@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetMatchingLineItemInfoType
+class GetMatchingLineItemInfoType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $lineItemIdentifier;
+    protected $lineItemIdentifier;
 
     /**
      * @var string
      */
-    private $targetTierName;
+    protected $targetTierName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
-    private $targetAccountUnit;
+    protected $targetAccountUnit;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $targetOrganizationUnit;
+    protected $targetOrganizationUnit;
 
     /**
      * Constructor

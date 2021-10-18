@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetEntitlementCountRequestType implements RequestInterface
+class GetEntitlementCountRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class GetEntitlementCountRequestType implements RequestInterface
         $this->queryParams = $queryParams;
         return $this;
     }
-
-
 }
-

@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteMaintenanceRequestType implements RequestInterface
+class DeleteMaintenanceRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteMaintenanceDataType
      */
-    private $maintenance;
+    protected $maintenance;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteMaintenanceRequestType implements RequestInterface
         $this->maintenance = $maintenance;
         return $this;
     }
-
-
 }
-

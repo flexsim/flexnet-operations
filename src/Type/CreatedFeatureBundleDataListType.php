@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedFeatureBundleDataListType
+class CreatedFeatureBundleDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CorrelationDataType|array
      */
-    private $createdFeatureBundle;
+    protected $createdFeatureBundle;
 
     /**
      * Constructor

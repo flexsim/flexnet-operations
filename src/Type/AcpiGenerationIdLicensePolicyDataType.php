@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AcpiGenerationIdLicensePolicyDataType
+class AcpiGenerationIdLicensePolicyDataType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $useACPIGenerationId;
+    protected $useACPIGenerationId;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class AcpiGenerationIdLicensePolicyDataType
         $this->useACPIGenerationId = $useACPIGenerationId;
         return $this;
     }
-
-
 }
-

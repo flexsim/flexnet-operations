@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetFmtAttributesForBatchActivationRequestType implements RequestInterface
+class GetFmtAttributesForBatchActivationRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ActivationIdsListType
      */
-    private $activationIds;
+    protected $activationIds;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class GetFmtAttributesForBatchActivationRequestType implements RequestInterface
         $this->activationIds = $activationIds;
         return $this;
     }
-
-
 }
-

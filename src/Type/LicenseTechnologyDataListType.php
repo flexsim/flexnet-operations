@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LicenseTechnologyDataListType
+class LicenseTechnologyDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array 
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * Constructor

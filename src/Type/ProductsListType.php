@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ProductsListType
+class ProductsListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array 
      */
-    private $product;
+    protected $product;
 
     /**
      * Constructor

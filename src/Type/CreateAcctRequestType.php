@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class CreateAcctRequestType implements RequestInterface
+class CreateAcctRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountDataType
      */
-    private $account;
+    protected $account;
 
     /**
      * @var string
      */
-    private $opType;
+    protected $opType;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class CreateAcctRequestType implements RequestInterface
         $this->opType = $opType;
         return $this;
     }
-
-
 }
-

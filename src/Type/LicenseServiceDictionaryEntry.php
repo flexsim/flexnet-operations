@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LicenseServiceDictionaryEntry
+class LicenseServiceDictionaryEntry extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $Key;
+    protected $Key;
 
     /**
      * @var string
      */
-    private $Value;
+    protected $Value;
 
     /**
      * Constructor

@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LicenseFileDataType
+class LicenseFileDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $licenseFileDefinitionName;
+    protected $licenseFileDefinitionName;
 
     /**
      * @var string
      */
-    private $licenseText;
+    protected $licenseText;
 
     /**
      * @var string
      */
-    private $binaryLicense;
+    protected $binaryLicense;
 
     /**
      * @var string
      */
-    private $fileName;
+    protected $fileName;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class LicenseFileDataType
         $this->fileName = $fileName;
         return $this;
     }
-
-
 }
-

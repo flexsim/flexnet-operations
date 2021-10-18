@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class OrganizationPKType
+class OrganizationPKType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class OrganizationPKType
         $this->name = $name;
         return $this;
     }
-
-
 }
-

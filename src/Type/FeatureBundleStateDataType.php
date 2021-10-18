@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureBundleStateDataType
+class FeatureBundleStateDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType
      */
-    private $featureBundleIdentifier;
+    protected $featureBundleIdentifier;
 
     /**
      * @var string
      */
-    private $stateToSet;
+    protected $stateToSet;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FeatureBundleStateDataType
         $this->stateToSet = $stateToSet;
         return $this;
     }
-
-
 }
-

@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteUsageHistoryRequestType implements RequestInterface
+class DeleteUsageHistoryRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \DateTimeInterface
      */
-    private $beforeUpdateTime;
+    protected $beforeUpdateTime;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteUsageHistoryRequestType implements RequestInterface
         $this->beforeUpdateTime = $beforeUpdateTime;
         return $this;
     }
-
-
 }
-

@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class StopGapFulfillmentRequestType implements RequestInterface
+class StopGapFulfillmentRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class StopGapFulfillmentRequestType implements RequestInterface
         $this->fulfillment = $fulfillment;
         return $this;
     }
-
-
 }
-

@@ -2,43 +2,43 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureQueryDataType
+class FeatureQueryDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var string
      */
-    private $featureName;
+    protected $featureName;
 
     /**
      * @var string
      */
-    private $versionFormat;
+    protected $versionFormat;
 
     /**
      * @var string
      */
-    private $version;
+    protected $version;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType
      */
-    private $featureOverrideParams;
+    protected $featureOverrideParams;
 
     /**
      * Constructor
@@ -203,7 +203,4 @@ class FeatureQueryDataType
         $this->featureOverrideParams = $featureOverrideParams;
         return $this;
     }
-
-
 }
-

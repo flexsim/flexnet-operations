@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AdvancedFulfillmentLCListType
+class AdvancedFulfillmentLCListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType|array
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * Constructor

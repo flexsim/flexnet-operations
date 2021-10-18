@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeleteFailAddonDataType
+class DeleteFailAddonDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType
      */
-    private $lineItem;
+    protected $lineItem;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class DeleteFailAddonDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

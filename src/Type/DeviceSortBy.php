@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeviceSortBy
+class DeviceSortBy extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $sortKey;
+    protected $sortKey;
 
     /**
      * @var bool
      */
-    private $ascending;
+    protected $ascending;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class DeviceSortBy
         $this->ascending = $ascending;
         return $this;
     }
-
-
 }
-

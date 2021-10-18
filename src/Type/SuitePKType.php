@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SuitePKType
+class SuitePKType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $version;
+    protected $version;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class SuitePKType
         $this->version = $version;
         return $this;
     }
-
-
 }
-

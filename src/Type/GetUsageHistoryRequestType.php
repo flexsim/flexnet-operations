@@ -4,28 +4,28 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetUsageHistoryRequestType implements RequestInterface
+class GetUsageHistoryRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetUsageHistoryParametersType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetUsageHistoryConfigType
      */
-    private $queryConfig;
+    protected $queryConfig;
 
     /**
      * @var int
      */
-    private $pageNumber;
+    protected $pageNumber;
 
     /**
      * @var int
      */
-    private $batchSize;
+    protected $batchSize;
 
     /**
      * Constructor

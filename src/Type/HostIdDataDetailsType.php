@@ -2,43 +2,43 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class HostIdDataDetailsType
+class HostIdDataDetailsType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ServerIDsType
      */
-    private $serverHost;
+    protected $serverHost;
 
     /**
      * @var string
      */
-    private $nodeLockHost;
+    protected $nodeLockHost;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NodeIDsType
      */
-    private $countedNodeLockHostIds;
+    protected $countedNodeLockHostIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType
      */
-    private $customHost;
+    protected $customHost;
 
     /**
      * @var int
      */
-    private $countFromParent;
+    protected $countFromParent;
 
     /**
      * @var int
      */
-    private $countFromOwn;
+    protected $countFromOwn;
 
     /**
      * @var string
      */
-    private $parentActivationId;
+    protected $parentActivationId;
 
     /**
      * Constructor
@@ -203,7 +203,4 @@ class HostIdDataDetailsType
         $this->parentActivationId = $parentActivationId;
         return $this;
     }
-
-
 }
-

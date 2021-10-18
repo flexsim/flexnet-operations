@@ -2,58 +2,58 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeviceDataType
+class DeviceDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypeIdentifier
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PublisherIdentifier
      */
-    private $publisherIdName;
+    protected $publisherIdName;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType
      */
-    private $channelPartners;
+    protected $channelPartners;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var string
      */
-    private $alias;
+    protected $alias;
 
     /**
      * @var string
      */
-    private $user;
+    protected $user;
 
     /**
      * @var string
      */
-    private $deployment;
+    protected $deployment;
 
     /**
      * @var string
      */
-    private $siteName;
+    protected $siteName;
 
     /**
      * Constructor
@@ -281,7 +281,4 @@ class DeviceDataType
         $this->siteName = $siteName;
         return $this;
     }
-
-
 }
-

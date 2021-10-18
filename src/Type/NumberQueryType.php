@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class NumberQueryType
+class NumberQueryType extends FlexnetType
 {
 
     /**
      * @var int
      */
-    private $value;
+    protected $value;
 
     /**
      * @var string
      */
-    private $searchType;
+    protected $searchType;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class NumberQueryType
         $this->searchType = $searchType;
         return $this;
     }
-
-
 }
-

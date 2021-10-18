@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class StateChangeDataType
+class StateChangeDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $eventName;
+    protected $eventName;
 
     /**
      * @var \DateTimeInterface
      */
-    private $eventDate;
+    protected $eventDate;
 
     /**
      * @var string
      */
-    private $userId;
+    protected $userId;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class StateChangeDataType
         $this->description = $description;
         return $this;
     }
-
-
 }
-

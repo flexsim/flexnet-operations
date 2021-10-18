@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteWebRegKeyRequestType implements RequestInterface
+class DeleteWebRegKeyRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\WebRegKeysListType
      */
-    private $webRegKeyList;
+    protected $webRegKeyList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteWebRegKeyRequestType implements RequestInterface
         $this->webRegKeyList = $webRegKeyList;
         return $this;
     }
-
-
 }
-

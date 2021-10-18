@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class RehostResponseDataType
+class RehostResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\RehostFulfillmentResponseDataType
      */
-    private $fulfillmentData;
+    protected $fulfillmentData;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class RehostResponseDataType
         $this->fulfillmentData = $fulfillmentData;
         return $this;
     }
-
-
 }
-

@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedRenewEntitlementDataType
+class CreatedRenewEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $entitlementRecordRefNo;
+    protected $entitlementRecordRefNo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $parentEntitlementIdentifier;
+    protected $parentEntitlementIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\RenewedEntitlementLineItemDataType
      */
-    private $renewedLineItem;
+    protected $renewedLineItem;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class CreatedRenewEntitlementDataType
         $this->renewedLineItem = $renewedLineItem;
         return $this;
     }
-
-
 }
-

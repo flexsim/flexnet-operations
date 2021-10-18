@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetOrganizationCountRequestType implements RequestInterface
+class GetOrganizationCountRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * Constructor

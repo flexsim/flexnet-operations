@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FulfillmentHistoryDataType
+class FulfillmentHistoryDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType
      */
-    private $historyDetails;
+    protected $historyDetails;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FulfillmentHistoryDataType
         $this->historyDetails = $historyDetails;
         return $this;
     }
-
-
 }
-

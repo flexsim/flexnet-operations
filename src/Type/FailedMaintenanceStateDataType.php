@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedMaintenanceStateDataType
+class FailedMaintenanceStateDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceStateDataType
      */
-    private $maintenance;
+    protected $maintenance;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedMaintenanceStateDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

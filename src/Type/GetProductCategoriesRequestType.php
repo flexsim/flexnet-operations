@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetProductCategoriesRequestType implements RequestInterface
+class GetProductCategoriesRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var int
      */
-    private $pageNumber;
+    protected $pageNumber;
 
     /**
      * @var int
      */
-    private $batchSize;
+    protected $batchSize;
 
     /**
      * @var bool
      */
-    private $returnContainedObjects;
+    protected $returnContainedObjects;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class GetProductCategoriesRequestType implements RequestInterface
         $this->returnContainedObjects = $returnContainedObjects;
         return $this;
     }
-
-
 }
-

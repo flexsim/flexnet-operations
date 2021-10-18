@@ -2,43 +2,43 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureDataDataType
+class FeatureDataDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $version;
+    protected $version;
 
     /**
      * @var int
      */
-    private $count;
+    protected $count;
 
     /**
      * @var int
      */
-    private $overage;
+    protected $overage;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expiration;
+    protected $expiration;
 
     /**
      * @var string
      */
-    private $lineItemUniqueId;
+    protected $lineItemUniqueId;
 
     /**
      * @var string
      */
-    private $lineItemActivationId;
+    protected $lineItemActivationId;
 
     /**
      * Constructor
@@ -203,7 +203,4 @@ class FeatureDataDataType
         $this->lineItemActivationId = $lineItemActivationId;
         return $this;
     }
-
-
 }
-

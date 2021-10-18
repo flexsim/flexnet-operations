@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetUsersForProductCategoryResponseDataType
+class GetUsersForProductCategoryResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType
      */
-    private $user;
+    protected $user;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetUsersForProductCategoryResponseDataType
         $this->user = $user;
         return $this;
     }
-
-
 }
-

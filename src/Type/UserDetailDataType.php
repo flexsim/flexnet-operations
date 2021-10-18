@@ -2,123 +2,123 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UserDetailDataType
+class UserDetailDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType
      */
-    private $userIdentifier;
+    protected $userIdentifier;
 
     /**
      * @var string
      */
-    private $displayName;
+    protected $displayName;
 
     /**
      * @var bool
      */
-    private $optIn;
+    protected $optIn;
 
     /**
      * @var string
      */
-    private $faxNumber;
+    protected $faxNumber;
 
     /**
      * @var string
      */
-    private $street;
+    protected $street;
 
     /**
      * @var string
      */
-    private $city;
+    protected $city;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var string
      */
-    private $zipcode;
+    protected $zipcode;
 
     /**
      * @var string
      */
-    private $country;
+    protected $country;
 
     /**
      * @var string
      */
-    private $status;
+    protected $status;
 
     /**
      * @var string
      */
-    private $locale;
+    protected $locale;
 
     /**
      * @var string
      */
-    private $timezone;
+    protected $timezone;
 
     /**
      * @var bool
      */
-    private $shared;
+    protected $shared;
 
     /**
      * @var string
      */
-    private $domain;
+    protected $domain;
 
     /**
      * @var \DateTimeInterface
      */
-    private $dateCreated;
+    protected $dateCreated;
 
     /**
      * @var \DateTimeInterface
      */
-    private $dateLastModified;
+    protected $dateLastModified;
 
     /**
      * @var \DateTimeInterface
      */
-    private $dateLastLogin;
+    protected $dateLastLogin;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserAccountsListType
      */
-    private $accountRolesList;
+    protected $accountRolesList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserOrganizationsListType
      */
-    private $orgRolesList;
+    protected $orgRolesList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expiryDate;
+    protected $expiryDate;
 
     /**
      * @var string
      */
-    private $createdBy;
+    protected $createdBy;
 
     /**
      * @var string
      */
-    private $lastModifiedBy;
+    protected $lastModifiedBy;
 
     /**
      * Constructor

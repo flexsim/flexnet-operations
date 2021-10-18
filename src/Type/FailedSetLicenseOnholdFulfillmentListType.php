@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedSetLicenseOnholdFulfillmentListType
+class FailedSetLicenseOnholdFulfillmentListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array 
      */
-    private $failedFmtData;
+    protected $failedFmtData;
 
     /**
      * Constructor

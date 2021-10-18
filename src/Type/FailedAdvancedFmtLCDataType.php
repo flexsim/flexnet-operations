@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedAdvancedFmtLCDataType
+class FailedAdvancedFmtLCDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedAdvancedFmtLCDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

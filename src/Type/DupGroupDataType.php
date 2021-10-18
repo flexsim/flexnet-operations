@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DupGroupDataType
+class DupGroupDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $dupGroupOption;
+    protected $dupGroupOption;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GroupMaskDataType
      */
-    private $groupMask;
+    protected $groupMask;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class DupGroupDataType
         $this->groupMask = $groupMask;
         return $this;
     }
-
-
 }
-

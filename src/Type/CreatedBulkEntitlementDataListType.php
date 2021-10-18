@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedBulkEntitlementDataListType
+class CreatedBulkEntitlementDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType|array
      */
-    private $createdBulkEntitlement;
+    protected $createdBulkEntitlement;
 
     /**
      * Constructor

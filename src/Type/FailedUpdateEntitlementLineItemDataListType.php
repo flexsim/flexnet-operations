@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedUpdateEntitlementLineItemDataListType
+class FailedUpdateEntitlementLineItemDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedUpdateEntitlementLineItemDataType|array 
      */
-    private $failedData;
+    protected $failedData;
 
     /**
      * Constructor

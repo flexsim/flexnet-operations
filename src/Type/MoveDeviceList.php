@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class MoveDeviceList
+class MoveDeviceList extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class MoveDeviceList
         $this->deviceIdentifier = $deviceIdentifier;
         return $this;
     }
-
-
 }
-

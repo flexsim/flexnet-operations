@@ -2,38 +2,38 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedFulfillmentDataType
+class CreatedFulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $recordRefNo;
+    protected $recordRefNo;
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var string
      */
-    private $fulfillmentId;
+    protected $fulfillmentId;
 
     /**
      * @var string
      */
-    private $licenseText;
+    protected $licenseText;
 
     /**
      * @var string
      */
-    private $binaryLicense;
+    protected $binaryLicense;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataListType
      */
-    private $licenseFiles;
+    protected $licenseFiles;
 
     /**
      * Constructor
@@ -177,7 +177,4 @@ class CreatedFulfillmentDataType
         $this->licenseFiles = $licenseFiles;
         return $this;
     }
-
-
 }
-

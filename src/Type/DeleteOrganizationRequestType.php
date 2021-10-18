@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteOrganizationRequestType implements RequestInterface
+class DeleteOrganizationRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteOrgDataType
      */
-    private $orgData;
+    protected $orgData;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteOrganizationRequestType implements RequestInterface
         $this->orgData = $orgData;
         return $this;
     }
-
-
 }
-

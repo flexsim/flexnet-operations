@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CountDataSetType
+class CountDataSetType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CountDataType
      */
-    private $countData;
+    protected $countData;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class CountDataSetType
         $this->countData = $countData;
         return $this;
     }
-
-
 }
-

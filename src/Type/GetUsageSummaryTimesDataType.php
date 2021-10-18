@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetUsageSummaryTimesDataType
+class GetUsageSummaryTimesDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UsageSummaryTimesDataType
      */
-    private $usageSummaryTime;
+    protected $usageSummaryTime;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetUsageSummaryTimesDataType
         $this->usageSummaryTime = $usageSummaryTime;
         return $this;
     }
-
-
 }
-

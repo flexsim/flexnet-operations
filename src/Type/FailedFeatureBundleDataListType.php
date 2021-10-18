@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedFeatureBundleDataListType
+class FailedFeatureBundleDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedFeatureBundleDataType|array 
      */
-    private $failedFeatureBundle;
+    protected $failedFeatureBundle;
 
     /**
      * Constructor

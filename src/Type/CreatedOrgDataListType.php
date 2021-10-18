@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedOrgDataListType
+class CreatedOrgDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedOrgDataType|array
      */
-    private $createdOrganization;
+    protected $createdOrganization;
 
     /**
      * Constructor

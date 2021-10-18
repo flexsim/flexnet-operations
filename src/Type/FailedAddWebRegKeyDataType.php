@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedAddWebRegKeyDataType
+class FailedAddWebRegKeyDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType
      */
-    private $webRegKeyData;
+    protected $webRegKeyData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedAddWebRegKeyDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

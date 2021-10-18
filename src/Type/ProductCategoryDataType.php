@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ProductCategoryDataType
+class ProductCategoryDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType
      */
-    private $categoryAttributes;
+    protected $categoryAttributes;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class ProductCategoryDataType
         $this->categoryAttributes = $categoryAttributes;
         return $this;
     }
-
-
 }
-

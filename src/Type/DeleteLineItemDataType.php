@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeleteLineItemDataType
+class DeleteLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteLineItemIdentifier
      */
-    private $lineItemIdentifier;
+    protected $lineItemIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class DeleteLineItemDataType
         $this->lineItemIdentifier = $lineItemIdentifier;
         return $this;
     }
-
-
 }
-

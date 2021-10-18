@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CustomAttributeDescriptorDataType
+class CustomAttributeDescriptorDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorType
      */
-    private $attribute;
+    protected $attribute;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class CustomAttributeDescriptorDataType
         $this->attribute = $attribute;
         return $this;
     }
-
-
 }
-

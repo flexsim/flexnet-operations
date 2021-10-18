@@ -2,43 +2,43 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AddressDataType
+class AddressDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $address1;
+    protected $address1;
 
     /**
      * @var string
      */
-    private $address2;
+    protected $address2;
 
     /**
      * @var string
      */
-    private $city;
+    protected $city;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var string
      */
-    private $zipcode;
+    protected $zipcode;
 
     /**
      * @var string
      */
-    private $country;
+    protected $country;
 
     /**
      * @var string
      */
-    private $region;
+    protected $region;
 
     /**
      * Constructor
@@ -203,7 +203,4 @@ class AddressDataType
         $this->region = $region;
         return $this;
     }
-
-
 }
-

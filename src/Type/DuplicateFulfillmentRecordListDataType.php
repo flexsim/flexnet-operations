@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DuplicateFulfillmentRecordListDataType
+class DuplicateFulfillmentRecordListDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class DuplicateFulfillmentRecordListDataType
         $this->fulfillment = $fulfillment;
         return $this;
     }
-
-
 }
-

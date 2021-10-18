@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UserOrganizationType
+class UserOrganizationType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $organization;
+    protected $organization;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserOrganizationRolesListType
      */
-    private $roles;
+    protected $roles;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class UserOrganizationType
         $this->roles = $roles;
         return $this;
     }
-
-
 }
-

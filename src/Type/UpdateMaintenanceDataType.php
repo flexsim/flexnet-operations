@@ -2,48 +2,48 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateMaintenanceDataType
+class UpdateMaintenanceDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType
      */
-    private $maintenanceIdentifier;
+    protected $maintenanceIdentifier;
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $version;
+    protected $version;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var bool
      */
-    private $allowUpgrades;
+    protected $allowUpgrades;
 
     /**
      * @var bool
      */
-    private $allowUpsells;
+    protected $allowUpsells;
 
     /**
      * @var bool
      */
-    private $allowRenewals;
+    protected $allowRenewals;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdatePartNumbersSimpleListType
      */
-    private $partNumbers;
+    protected $partNumbers;
 
     /**
      * Constructor
@@ -229,7 +229,4 @@ class UpdateMaintenanceDataType
         $this->partNumbers = $partNumbers;
         return $this;
     }
-
-
 }
-

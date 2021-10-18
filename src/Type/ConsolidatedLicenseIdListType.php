@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ConsolidatedLicenseIdListType
+class ConsolidatedLicenseIdListType extends FlexnetType
 {
 
     /**
      * @var string|array
      */
-    private $consolidatedLicenseId;
+    protected $consolidatedLicenseId;
 
     /**
      * Constructor

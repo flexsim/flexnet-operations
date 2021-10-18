@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedSimpleEntitlementDataListType
+class FailedSimpleEntitlementDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedSimpleEntitlementDataType|array 
      */
-    private $failedSimpleEntitlement;
+    protected $failedSimpleEntitlement;
 
     /**
      * Constructor

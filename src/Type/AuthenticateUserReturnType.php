@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class AuthenticateUserReturnType implements ResultInterface
+class AuthenticateUserReturnType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var bool
      */
-    private $Success;
+    protected $Success;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class AuthenticateUserReturnType implements ResultInterface
         $this->Success = $Success;
         return $this;
     }
-
-
 }
-

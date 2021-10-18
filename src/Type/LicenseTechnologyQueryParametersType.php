@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LicenseTechnologyQueryParametersType
+class LicenseTechnologyQueryParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $name;
+    protected $name;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class LicenseTechnologyQueryParametersType
         $this->name = $name;
         return $this;
     }
-
-
 }
-

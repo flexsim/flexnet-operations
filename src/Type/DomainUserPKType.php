@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DomainUserPKType
+class DomainUserPKType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $userName;
+    protected $userName;
 
     /**
      * @var string
      */
-    private $domainName;
+    protected $domainName;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class DomainUserPKType
         $this->domainName = $domainName;
         return $this;
     }
-
-
 }
-

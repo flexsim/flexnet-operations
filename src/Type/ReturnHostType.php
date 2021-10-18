@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ReturnHostType
+class ReturnHostType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $hostIdentifier;
+    protected $hostIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $targetHostIdentifier;
+    protected $targetHostIdentifier;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class ReturnHostType
         $this->targetHostIdentifier = $targetHostIdentifier;
         return $this;
     }
-
-
 }
-

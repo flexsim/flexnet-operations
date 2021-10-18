@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SetDeviceStatusType
+class SetDeviceStatusType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * @var string
      */
-    private $status;
+    protected $status;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class SetDeviceStatusType
         $this->status = $status;
         return $this;
     }
-
-
 }
-

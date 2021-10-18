@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LicenseModelDetailsType
+class LicenseModelDetailsType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $licenseModelIdentifier;
+    protected $licenseModelIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ModelAttributesType
      */
-    private $attributeDetails;
+    protected $attributeDetails;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class LicenseModelDetailsType
         $this->attributeDetails = $attributeDetails;
         return $this;
     }
-
-
 }
-

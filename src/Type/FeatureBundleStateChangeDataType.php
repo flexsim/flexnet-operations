@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureBundleStateChangeDataType
+class FeatureBundleStateChangeDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType
      */
-    private $featureBundleIdentifier;
+    protected $featureBundleIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StateChangeDataType
      */
-    private $stateChangeRecord;
+    protected $stateChangeRecord;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FeatureBundleStateChangeDataType
         $this->stateChangeRecord = $stateChangeRecord;
         return $this;
     }
-
-
 }
-

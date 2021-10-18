@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetDeviceResponseType implements ResultInterface
+class GetDeviceResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedGetDeviceDataType
      */
-    private $failedDevice;
+    protected $failedDevice;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetDeviceResponseData
      */
-    private $device;
+    protected $device;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class GetDeviceResponseType implements ResultInterface
         $this->device = $device;
         return $this;
     }
-
-
 }
-

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedFeatureDataType
+class CreatedFeatureDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $recordRefNo;
+    protected $recordRefNo;
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class CreatedFeatureDataType
         $this->uniqueId = $uniqueId;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class VerifiedFulfillmentDataType
+class VerifiedFulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $recordRefNo;
+    protected $recordRefNo;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class VerifiedFulfillmentDataType
         $this->recordRefNo = $recordRefNo;
         return $this;
     }
-
-
 }
-

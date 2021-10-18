@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CancelLicensePolicyDataType
+class CancelLicensePolicyDataType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $isCancelLicense;
+    protected $isCancelLicense;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class CancelLicensePolicyDataType
         $this->isCancelLicense = $isCancelLicense;
         return $this;
     }
-
-
 }
-

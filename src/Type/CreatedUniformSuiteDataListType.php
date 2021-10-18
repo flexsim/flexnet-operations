@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedUniformSuiteDataListType
+class CreatedUniformSuiteDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataType|array
      */
-    private $createdUniformSuite;
+    protected $createdUniformSuite;
 
     /**
      * Constructor

@@ -2,38 +2,38 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PartNumberDataType
+class PartNumberDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
      */
-    private $partNumberIdentifier;
+    protected $partNumberIdentifier;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \DateTimeInterface
      */
-    private $creationDate;
+    protected $creationDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $lastModifiedDate;
+    protected $lastModifiedDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $mappedProduct;
+    protected $mappedProduct;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $mappedLicenseModel;
+    protected $mappedLicenseModel;
 
     /**
      * Constructor
@@ -177,7 +177,4 @@ class PartNumberDataType
         $this->mappedLicenseModel = $mappedLicenseModel;
         return $this;
     }
-
-
 }
-

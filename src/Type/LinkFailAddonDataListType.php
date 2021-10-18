@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LinkFailAddonDataListType
+class LinkFailAddonDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType|array 
      */
-    private $failAddon;
+    protected $failAddon;
 
     /**
      * Constructor

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PolicyTermType
+class PolicyTermType extends FlexnetType
 {
 
     /**
      * @var int
      */
-    private $duration;
+    protected $duration;
 
     /**
      * @var string
      */
-    private $durationUnit;
+    protected $durationUnit;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class PolicyTermType
         $this->durationUnit = $durationUnit;
         return $this;
     }
-
-
 }
-

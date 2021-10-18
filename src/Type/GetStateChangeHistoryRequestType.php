@@ -4,38 +4,38 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetStateChangeHistoryRequestType implements RequestInterface
+class GetStateChangeHistoryRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureListType
      */
-    private $featureList;
+    protected $featureList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleListType
      */
-    private $featureBundleList;
+    protected $featureBundleList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductListType
      */
-    private $productList;
+    protected $productList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelListType
      */
-    private $licenseModelList;
+    protected $licenseModelList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementListType
      */
-    private $simpleEntitlementList;
+    protected $simpleEntitlementList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementListType
      */
-    private $bulkEntitlementList;
+    protected $bulkEntitlementList;
 
     /**
      * Constructor
@@ -179,7 +179,4 @@ class GetStateChangeHistoryRequestType implements RequestInterface
         $this->bulkEntitlementList = $bulkEntitlementList;
         return $this;
     }
-
-
 }
-

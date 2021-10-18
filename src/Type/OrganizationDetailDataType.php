@@ -2,48 +2,48 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class OrganizationDetailDataType
+class OrganizationDetailDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $organization;
+    protected $organization;
 
     /**
      * @var string
      */
-    private $displayName;
+    protected $displayName;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddressDataType
      */
-    private $address;
+    protected $address;
 
     /**
      * @var bool
      */
-    private $visible;
+    protected $visible;
 
     /**
      * @var string
      */
-    private $orgType;
+    protected $orgType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \DateTimeInterface
      */
-    private $dateLastModified;
+    protected $dateLastModified;
 
     /**
      * Constructor
@@ -229,7 +229,4 @@ class OrganizationDetailDataType
         $this->dateLastModified = $dateLastModified;
         return $this;
     }
-
-
 }
-

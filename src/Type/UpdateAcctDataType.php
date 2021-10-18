@@ -2,53 +2,53 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateAcctDataType
+class UpdateAcctDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
-    private $account;
+    protected $account;
 
     /**
      * @var string
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddressDataType
      */
-    private $address;
+    protected $address;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType
      */
-    private $subAccounts;
+    protected $subAccounts;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType
      */
-    private $relatedAccounts;
+    protected $relatedAccounts;
 
     /**
      * @var bool
      */
-    private $visible;
+    protected $visible;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * Constructor

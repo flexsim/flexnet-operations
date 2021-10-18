@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateProductCategoryDataType
+class CreateProductCategoryDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class CreateProductCategoryDataType
         $this->description = $description;
         return $this;
     }
-
-
 }
-

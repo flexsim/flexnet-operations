@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ReturnFulfillmentResponseDataType
+class ReturnFulfillmentResponseDataType extends FlexnetType
 {
 
     /**
      * @var int
      */
-    private $recordRefNo;
+    protected $recordRefNo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentDataType
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class ReturnFulfillmentResponseDataType
         $this->fulfillment = $fulfillment;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class HostIdDataSetType
+class HostIdDataSetType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostIdDataType
      */
-    private $hostIdData;
+    protected $hostIdData;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class HostIdDataSetType
         $this->hostIdData = $hostIdData;
         return $this;
     }
-
-
 }
-

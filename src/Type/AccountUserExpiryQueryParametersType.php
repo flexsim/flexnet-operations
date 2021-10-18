@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AccountUserExpiryQueryParametersType
+class AccountUserExpiryQueryParametersType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $accountID;
+    protected $accountID;
 
     /**
      * @var string
      */
-    private $accountType;
+    protected $accountType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $expiryDate;
+    protected $expiryDate;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class AccountUserExpiryQueryParametersType
         $this->expiryDate = $expiryDate;
         return $this;
     }
-
-
 }
-

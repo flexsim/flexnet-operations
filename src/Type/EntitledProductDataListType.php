@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitledProductDataListType
+class EntitledProductDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array
      */
-    private $entitledProduct;
+    protected $entitledProduct;
 
     /**
      * Constructor

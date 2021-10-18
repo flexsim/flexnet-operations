@@ -2,103 +2,103 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FulfillmentsQueryParametersType
+class FulfillmentsQueryParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $fulfillmentId;
+    protected $fulfillmentId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $product;
+    protected $product;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $hostId;
+    protected $hostId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $nodeLockHostId;
+    protected $nodeLockHostId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $fulfillDate;
+    protected $fulfillDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
-    private $fulfillDateTime;
+    protected $fulfillDateTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StateQueryType
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var string
      */
-    private $userId;
+    protected $userId;
 
     /**
      * @var string
      */
-    private $fulfillmentSource;
+    protected $fulfillmentSource;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType
      */
-    private $customHostAttributes;
+    protected $customHostAttributes;
 
     /**
      * @var string
      */
-    private $activationType;
+    protected $activationType;
 
     /**
      * Constructor
@@ -515,7 +515,4 @@ class FulfillmentsQueryParametersType
         $this->activationType = $activationType;
         return $this;
     }
-
-
 }
-

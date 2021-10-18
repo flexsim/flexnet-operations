@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedUpdateFeatureDataType
+class FailedUpdateFeatureDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType
      */
-    private $featureIdentifier;
+    protected $featureIdentifier;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedUpdateFeatureDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

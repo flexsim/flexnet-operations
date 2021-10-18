@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SplitBulkEntitlementResponseListType
+class SplitBulkEntitlementResponseListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType|array 
      */
-    private $splitBulkEntitlement;
+    protected $splitBulkEntitlement;
 
     /**
      * Constructor

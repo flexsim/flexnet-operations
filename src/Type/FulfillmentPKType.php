@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FulfillmentPKType
+class FulfillmentPKType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $fulfillmentId;
+    protected $fulfillmentId;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FulfillmentPKType
         $this->fulfillmentId = $fulfillmentId;
         return $this;
     }
-
-
 }
-

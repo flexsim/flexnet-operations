@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ProductRelationshipDataType
+class ProductRelationshipDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $productToRelate;
+    protected $productToRelate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $relatedProduct;
+    protected $relatedProduct;
 
     /**
      * @var string
      */
-    private $relation;
+    protected $relation;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class ProductRelationshipDataType
         $this->relation = $relation;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedDeleteWebRegKeyListType
+class FailedDeleteWebRegKeyListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedDeleteWebRegKeyDataType|array 
      */
-    private $failedWebRegKey;
+    protected $failedWebRegKey;
 
     /**
      * Constructor

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ActivationDataType
+class ActivationDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activationData;
+    protected $activationData;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class ActivationDataType
         $this->activationData = $activationData;
         return $this;
     }
-
-
 }
-

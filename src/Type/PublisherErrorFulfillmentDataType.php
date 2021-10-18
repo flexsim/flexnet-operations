@@ -2,58 +2,58 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PublisherErrorFulfillmentDataType
+class PublisherErrorFulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $fulfillmentIdentifier;
+    protected $fulfillmentIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $licenseModelAttributes;
+    protected $licenseModelAttributes;
 
     /**
      * @var string
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ServerIDsType
      */
-    private $serverIds;
+    protected $serverIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NodeIDsType
      */
-    private $nodeIds;
+    protected $nodeIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType
      */
-    private $customHost;
+    protected $customHost;
 
     /**
      * @var int
      */
-    private $fulfillCount;
+    protected $fulfillCount;
 
     /**
      * @var bool
      */
-    private $overridePolicy;
+    protected $overridePolicy;
 
     /**
      * Constructor
@@ -281,7 +281,4 @@ class PublisherErrorFulfillmentDataType
         $this->overridePolicy = $overridePolicy;
         return $this;
     }
-
-
 }
-

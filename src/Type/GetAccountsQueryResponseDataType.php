@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetAccountsQueryResponseDataType
+class GetAccountsQueryResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountDetailDataType
      */
-    private $acctData;
+    protected $acctData;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetAccountsQueryResponseDataType
         $this->acctData = $acctData;
         return $this;
     }
-
-
 }
-

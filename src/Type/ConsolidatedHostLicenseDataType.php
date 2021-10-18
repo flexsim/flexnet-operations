@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ConsolidatedHostLicenseDataType
+class ConsolidatedHostLicenseDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $license;
+    protected $license;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class ConsolidatedHostLicenseDataType
         $this->license = $license;
         return $this;
     }
-
-
 }
-

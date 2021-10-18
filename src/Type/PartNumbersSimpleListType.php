@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PartNumbersSimpleListType
+class PartNumbersSimpleListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array 
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * Constructor

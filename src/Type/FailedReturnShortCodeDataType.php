@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedReturnShortCodeDataType
+class FailedReturnShortCodeDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType
      */
-    private $shortCodeData;
+    protected $shortCodeData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedReturnShortCodeDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

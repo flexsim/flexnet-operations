@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class BaseProductDataListType
+class BaseProductDataListType extends FlexnetType
 {
 
     /**
      * @var string|array
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * Constructor

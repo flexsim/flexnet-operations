@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EnterpriseIds
+class EnterpriseIds extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $enterpriseId;
+    protected $enterpriseId;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class EnterpriseIds
         $this->enterpriseId = $enterpriseId;
         return $this;
     }
-
-
 }
-

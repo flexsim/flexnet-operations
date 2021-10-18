@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetAutoProvisionedServerResponse implements ResultInterface
+class GetAutoProvisionedServerResponse extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $cloudLicenseServer;
+    protected $cloudLicenseServer;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetAutoProvisionedServerResponse implements ResultInterface
         $this->cloudLicenseServer = $cloudLicenseServer;
         return $this;
     }
-
-
 }
-

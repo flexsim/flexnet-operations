@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetWebRegKeysQueryRequestType implements RequestInterface
+class GetWebRegKeysQueryRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $bulkEntitlementIdentifier;
+    protected $bulkEntitlementIdentifier;
 
     /**
      * @var int
      */
-    private $batchSize;
+    protected $batchSize;
 
     /**
      * @var int
      */
-    private $pageNumber;
+    protected $pageNumber;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
         $this->pageNumber = $pageNumber;
         return $this;
     }
-
-
 }
-

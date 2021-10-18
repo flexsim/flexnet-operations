@@ -2,43 +2,43 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureQueryParametersType
+class FeatureQueryParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $featureName;
+    protected $featureName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $version;
+    protected $version;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\VersionFormatQueryType
      */
-    private $versionFormat;
+    protected $versionFormat;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StateQueryType
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $creationDate;
+    protected $creationDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $lastModifiedDate;
+    protected $lastModifiedDate;
 
     /**
      * Constructor
@@ -203,7 +203,4 @@ class FeatureQueryParametersType
         $this->lastModifiedDate = $lastModifiedDate;
         return $this;
     }
-
-
 }
-

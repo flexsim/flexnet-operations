@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedEntitlementLifeCycleDataListType
+class CreatedEntitlementLifeCycleDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataType|array
      */
-    private $entitlementData;
+    protected $entitlementData;
 
     /**
      * Constructor

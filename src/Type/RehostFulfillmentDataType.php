@@ -2,43 +2,43 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class RehostFulfillmentDataType
+class RehostFulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $fulfillmentIdentifier;
+    protected $fulfillmentIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ServerIDsType
      */
-    private $serverIds;
+    protected $serverIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NodeIDsType
      */
-    private $nodeIds;
+    protected $nodeIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType
      */
-    private $customHost;
+    protected $customHost;
 
     /**
      * @var int
      */
-    private $partialCount;
+    protected $partialCount;
 
     /**
      * @var int
      */
-    private $overDraftCount;
+    protected $overDraftCount;
 
     /**
      * @var bool
      */
-    private $overridePolicy;
+    protected $overridePolicy;
 
     /**
      * Constructor
@@ -203,7 +203,4 @@ class RehostFulfillmentDataType
         $this->overridePolicy = $overridePolicy;
         return $this;
     }
-
-
 }
-

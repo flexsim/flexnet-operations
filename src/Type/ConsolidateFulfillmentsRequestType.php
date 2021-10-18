@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class ConsolidateFulfillmentsRequestType implements RequestInterface
+class ConsolidateFulfillmentsRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType
      */
-    private $fulfillments;
+    protected $fulfillments;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class ConsolidateFulfillmentsRequestType implements RequestInterface
         $this->fulfillments = $fulfillments;
         return $this;
     }
-
-
 }
-

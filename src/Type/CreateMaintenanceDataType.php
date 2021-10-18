@@ -2,43 +2,43 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateMaintenanceDataType
+class CreateMaintenanceDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $maintenanceName;
+    protected $maintenanceName;
 
     /**
      * @var string
      */
-    private $version;
+    protected $version;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var bool
      */
-    private $allowUpgrades;
+    protected $allowUpgrades;
 
     /**
      * @var bool
      */
-    private $allowUpsells;
+    protected $allowUpsells;
 
     /**
      * @var bool
      */
-    private $allowRenewals;
+    protected $allowRenewals;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType
      */
-    private $partNumbers;
+    protected $partNumbers;
 
     /**
      * Constructor
@@ -203,7 +203,4 @@ class CreateMaintenanceDataType
         $this->partNumbers = $partNumbers;
         return $this;
     }
-
-
 }
-

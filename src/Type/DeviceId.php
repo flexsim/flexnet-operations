@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeviceId
+class DeviceId extends FlexnetType 
 {
 
     /**
      * @var string
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      */
-    private $idType;
+    protected $idType;
 
     /**
      * @var string
      */
-    private $publisherName;
+    protected $publisherName;
 
     /**
      * @var string
      */
-    private $deviceClass;
+    protected $deviceClass;
 
     /**
      * Constructor
@@ -38,7 +38,7 @@ class DeviceId
         $this->id = $id;
         $this->idType = $idType;
         $this->publisherName = $publisherName;
-        $this->deviceClass = $deviceClass;
+        $this->deviceclass = extends FlexnetType $deviceClass; extends FlexnetType 
     }
 
     /**
@@ -122,7 +122,7 @@ class DeviceId
      */
     public function setDeviceClass($deviceClass)
     {
-        $this->deviceClass = $deviceClass;
+        $this->deviceclass = extends FlexnetType $deviceClass; extends FlexnetType 
         return $this;
     }
 

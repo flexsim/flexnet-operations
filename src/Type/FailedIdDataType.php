@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedIdDataType
+class FailedIdDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedIdDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

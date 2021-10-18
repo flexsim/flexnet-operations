@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class CreateChildLineItemFulfillmentRequestType implements RequestInterface
+class CreateChildLineItemFulfillmentRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class CreateChildLineItemFulfillmentRequestType implements RequestInterface
         $this->fulfillment = $fulfillment;
         return $this;
     }
-
-
 }
-

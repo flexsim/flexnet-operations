@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteAddonLineItemsRequestType implements RequestInterface
+class DeleteAddonLineItemsRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteAddonLineItemDataType
      */
-    private $requestList;
+    protected $requestList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteAddonLineItemsRequestType implements RequestInterface
         $this->requestList = $requestList;
         return $this;
     }
-
-
 }
-

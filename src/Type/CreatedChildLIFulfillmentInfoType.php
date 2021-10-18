@@ -2,33 +2,33 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedChildLIFulfillmentInfoType
+class CreatedChildLIFulfillmentInfoType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var string
      */
-    private $fulfillmentId;
+    protected $fulfillmentId;
 
     /**
      * @var string
      */
-    private $licenseText;
+    protected $licenseText;
 
     /**
      * @var string
      */
-    private $binaryLicense;
+    protected $binaryLicense;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataListType
      */
-    private $licenseFiles;
+    protected $licenseFiles;
 
     /**
      * Constructor
@@ -151,7 +151,4 @@ class CreatedChildLIFulfillmentInfoType
         $this->licenseFiles = $licenseFiles;
         return $this;
     }
-
-
 }
-

@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetUsageResponse implements ResultInterface
+class GetUsageResponse extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfoType;
+    protected $statusInfoType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\Usage
      */
-    private $usages;
+    protected $usages;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetUsageResponse implements ResultInterface
         $this->usages = $usages;
         return $this;
     }
-
-
 }
-

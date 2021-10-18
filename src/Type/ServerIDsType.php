@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ServerIDsType
+class ServerIDsType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $server1;
+    protected $server1;
 
     /**
      * @var string
      */
-    private $server2;
+    protected $server2;
 
     /**
      * @var string
      */
-    private $server3;
+    protected $server3;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class ServerIDsType
         $this->server3 = $server3;
         return $this;
     }
-
-
 }
-

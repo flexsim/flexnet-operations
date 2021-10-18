@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedLinkMaintenanceLineItemListType
+class FailedLinkMaintenanceLineItemListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemDataType|array 
      */
-    private $failedLinkMaintenanceLineItem;
+    protected $failedLinkMaintenanceLineItem;
 
     /**
      * Constructor

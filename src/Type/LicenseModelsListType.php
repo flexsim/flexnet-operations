@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LicenseModelsListType
+class LicenseModelsListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array 
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * Constructor

@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetActivatableItemCountResponseType implements ResultInterface
+class GetActivatableItemCountResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var int
      */
-    private $count;
+    protected $count;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetActivatableItemCountResponseType implements ResultInterface
         $this->count = $count;
         return $this;
     }
-
-
 }
-

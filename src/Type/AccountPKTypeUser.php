@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AccountPKTypeUser
+class AccountPKTypeUser extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $id;
+    protected $id;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class AccountPKTypeUser
         $this->id = $id;
         return $this;
     }
-
-
 }
-

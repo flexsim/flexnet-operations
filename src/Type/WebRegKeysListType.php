@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class WebRegKeysListType
+class WebRegKeysListType extends FlexnetType
 {
 
     /**
      * @var string|array
      */
-    private $webRegKey;
+    protected $webRegKey;
 
     /**
      * Constructor

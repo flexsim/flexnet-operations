@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class VirtualLicensePolicyDataType
+class VirtualLicensePolicyDataType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $isVirtualLicense;
+    protected $isVirtualLicense;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class VirtualLicensePolicyDataType
         $this->isVirtualLicense = $isVirtualLicense;
         return $this;
     }
-
-
 }
-

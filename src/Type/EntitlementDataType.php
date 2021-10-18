@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitlementDataType
+class EntitlementDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType
      */
-    private $simpleEntitlement;
+    protected $simpleEntitlement;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType
      */
-    private $bulkEntitlement;
+    protected $bulkEntitlement;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class EntitlementDataType
         $this->bulkEntitlement = $bulkEntitlement;
         return $this;
     }
-
-
 }
-

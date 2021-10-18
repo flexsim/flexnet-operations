@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeleteOrgDataType
+class DeleteOrgDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $organization;
+    protected $organization;
 
     /**
      * @var bool
      */
-    private $deleteSubTree;
+    protected $deleteSubTree;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class DeleteOrgDataType
         $this->deleteSubTree = $deleteSubTree;
         return $this;
     }
-
-
 }
-

@@ -4,33 +4,33 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class EmailActivatableItemRequestType implements RequestInterface
+class EmailActivatableItemRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var bool
      */
-    private $ignoreExistingEmailList;
+    protected $ignoreExistingEmailList;
 
     /**
      * @var bool
      */
-    private $validateEmailAddresses;
+    protected $validateEmailAddresses;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EmailContactListType
      */
-    private $emailIdList;
+    protected $emailIdList;
 
     /**
      * @var string
      */
-    private $locale;
+    protected $locale;
 
     /**
      * Constructor
@@ -153,7 +153,4 @@ class EmailActivatableItemRequestType implements RequestInterface
         $this->locale = $locale;
         return $this;
     }
-
-
 }
-

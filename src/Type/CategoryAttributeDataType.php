@@ -2,33 +2,33 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CategoryAttributeDataType
+class CategoryAttributeDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $attributeName;
+    protected $attributeName;
 
     /**
      * @var bool
      */
-    private $isRequired;
+    protected $isRequired;
 
     /**
      * @var string
      */
-    private $dataType;
+    protected $dataType;
 
     /**
      * @var string
      */
-    private $maxLength;
+    protected $maxLength;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ValueType
      */
-    private $validValues;
+    protected $validValues;
 
     /**
      * Constructor
@@ -151,7 +151,4 @@ class CategoryAttributeDataType
         $this->validValues = $validValues;
         return $this;
     }
-
-
 }
-

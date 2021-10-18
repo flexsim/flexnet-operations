@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class UnlinkMaintenanceLineItemRequestType implements RequestInterface
+class UnlinkMaintenanceLineItemRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemListType
      */
-    private $unlinkMaintenanceLineItemList;
+    protected $unlinkMaintenanceLineItemList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class UnlinkMaintenanceLineItemRequestType implements RequestInterface
         $this->unlinkMaintenanceLineItemList = $unlinkMaintenanceLineItemList;
         return $this;
     }
-
-
 }
-

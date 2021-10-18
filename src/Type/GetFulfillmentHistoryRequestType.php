@@ -4,58 +4,58 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetFulfillmentHistoryRequestType implements RequestInterface
+class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $fulfillmentId;
+    protected $fulfillmentId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $userId;
+    protected $userId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NumberQueryType
      */
-    private $count;
+    protected $count;
 
     /**
      * @var bool
      */
-    private $policyOverridden;
+    protected $policyOverridden;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
-    private $actionDateTime;
+    protected $actionDateTime;
 
     /**
      * @var string
      */
-    private $lifeCycleAction;
+    protected $lifeCycleAction;
 
     /**
      * @var string
      */
-    private $fulfillmentSource;
+    protected $fulfillmentSource;
 
     /**
      * @var int
      */
-    private $pageNumber;
+    protected $pageNumber;
 
     /**
      * @var int
      */
-    private $batchSize;
+    protected $batchSize;
 
     /**
      * Constructor
@@ -283,7 +283,4 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
         $this->batchSize = $batchSize;
         return $this;
     }
-
-
 }
-

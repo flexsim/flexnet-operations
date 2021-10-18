@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateHostTypeListType
+class UpdateHostTypeListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array
      */
-    private $hostType;
+    protected $hostType;
 
     /**
      * @var string
      */
-    private $opType;
+    protected $opType;
 
     /**
      * Constructor

@@ -2,33 +2,33 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ReturnFulfillmentDataType
+class ReturnFulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $fulfillmentIdentifier;
+    protected $fulfillmentIdentifier;
 
     /**
      * @var int
      */
-    private $partialCount;
+    protected $partialCount;
 
     /**
      * @var int
      */
-    private $overDraftCount;
+    protected $overDraftCount;
 
     /**
      * @var bool
      */
-    private $overridePolicy;
+    protected $overridePolicy;
 
     /**
      * @var bool
      */
-    private $forceReturnOfThisTrustedFulfillment;
+    protected $forceReturnOfThisTrustedFulfillment;
 
     /**
      * Constructor
@@ -151,7 +151,4 @@ class ReturnFulfillmentDataType
         $this->forceReturnOfThisTrustedFulfillment = $forceReturnOfThisTrustedFulfillment;
         return $this;
     }
-
-
 }
-

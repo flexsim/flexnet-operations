@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedDeletePartNumberDataType
+class FailedDeletePartNumberDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedDeletePartNumberDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class SearchActivatableItemResponseType implements ResultInterface
+class SearchActivatableItemResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ActivatableItemDetailType
      */
-    private $activatableItem;
+    protected $activatableItem;
 
     /**
      * Constructor

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class StopGapResponseDataType
+class StopGapResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StopGapFulfillmentResponseDataType
      */
-    private $fulfillmentData;
+    protected $fulfillmentData;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class StopGapResponseDataType
         $this->fulfillmentData = $fulfillmentData;
         return $this;
     }
-
-
 }
-

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureIdentifierWithCountDataType
+class FeatureIdentifierWithCountDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType
      */
-    private $featureIdentifier;
+    protected $featureIdentifier;
 
     /**
      * @var int
      */
-    private $count;
+    protected $count;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FeatureIdentifierWithCountDataType
         $this->count = $count;
         return $this;
     }
-
-
 }
-

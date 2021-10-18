@@ -2,233 +2,233 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FulfillmentPropertiesType
+class FulfillmentPropertiesType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $fulfillmentId;
+    protected $fulfillmentId;
 
     /**
      * @var string
      */
-    private $fulfillmentType;
+    protected $fulfillmentType;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $lineitemId;
+    protected $lineitemId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $product;
+    protected $product;
 
     /**
      * @var string
      */
-    private $productDescription;
+    protected $productDescription;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var string
      */
-    private $partNumberDescription;
+    protected $partNumberDescription;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var string
      */
-    private $soldToDisplayName;
+    protected $soldToDisplayName;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var string
      */
-    private $licenseHost;
+    protected $licenseHost;
 
     /**
      * @var int
      */
-    private $fulfilledCount;
+    protected $fulfilledCount;
 
     /**
      * @var int
      */
-    private $overDraftCount;
+    protected $overDraftCount;
 
     /**
      * @var \DateTimeInterface
      */
-    private $fulfillDate;
+    protected $fulfillDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $fulfillDateTime;
+    protected $fulfillDateTime;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var string
      */
-    private $licenseFileType;
+    protected $licenseFileType;
 
     /**
      * @var string
      */
-    private $licenseText;
+    protected $licenseText;
 
     /**
      * @var string
      */
-    private $binaryLicense;
+    protected $binaryLicense;
 
     /**
      * @var string
      */
-    private $supportAction;
+    protected $supportAction;
 
     /**
      * @var \DateTimeInterface
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $parentFulfillmentId;
+    protected $parentFulfillmentId;
 
     /**
      * @var string
      */
-    private $fulfillmentSource;
+    protected $fulfillmentSource;
 
     /**
      * @var string
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var string
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * @var string
      */
-    private $lineitemDescription;
+    protected $lineitemDescription;
 
     /**
      * @var int
      */
-    private $totalCopies;
+    protected $totalCopies;
 
     /**
      * @var int
      */
-    private $numberOfRemainingCopies;
+    protected $numberOfRemainingCopies;
 
     /**
      * @var bool
      */
-    private $isTrusted;
+    protected $isTrusted;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customHostAttributes;
+    protected $customHostAttributes;
 
     /**
      * @var string
      */
-    private $migrationId;
+    protected $migrationId;
 
     /**
      * @var string
      */
-    private $vendorDaemonName;
+    protected $vendorDaemonName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataListType
      */
-    private $licenseFiles;
+    protected $licenseFiles;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType
      */
-    private $entitledProducts;
+    protected $entitledProducts;
 
     /**
      * @var string
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * @var string
      */
-    private $activationType;
+    protected $activationType;
 
     /**
      * Constructor

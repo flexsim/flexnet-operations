@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedCountDevicesData
+class FailedCountDevicesData extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FailedCountDevicesData
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

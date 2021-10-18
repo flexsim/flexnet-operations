@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class UpdateEntitlementLineItemRequestType implements RequestInterface
+class UpdateEntitlementLineItemRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType
      */
-    private $lineItemData;
+    protected $lineItemData;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class UpdateEntitlementLineItemRequestType implements RequestInterface
         $this->lineItemData = $lineItemData;
         return $this;
     }
-
-
 }
-

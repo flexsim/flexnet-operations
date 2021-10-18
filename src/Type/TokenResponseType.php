@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class TokenResponseType implements ResultInterface
+class TokenResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var string
      */
-    private $token;
+    protected $token;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class TokenResponseType implements ResultInterface
         $this->token = $token;
         return $this;
     }
-
-
 }
-

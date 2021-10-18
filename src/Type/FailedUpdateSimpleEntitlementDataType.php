@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedUpdateSimpleEntitlementDataType
+class FailedUpdateSimpleEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType
      */
-    private $simpleEntitlement;
+    protected $simpleEntitlement;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedUpdateSimpleEntitlementDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

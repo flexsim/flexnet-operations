@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedTransferHostDataType
+class FailedTransferHostDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferHostIdDataType
      */
-    private $hostIdentifier;
+    protected $hostIdentifier;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedTransferHostDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

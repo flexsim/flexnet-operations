@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeleteEntitlementDataType
+class DeleteEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementIdentifier;
+    protected $entitlementIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class DeleteEntitlementDataType
         $this->entitlementIdentifier = $entitlementIdentifier;
         return $this;
     }
-
-
 }
-

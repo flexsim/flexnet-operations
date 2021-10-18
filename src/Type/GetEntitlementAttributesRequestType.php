@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetEntitlementAttributesRequestType implements RequestInterface
+class GetEntitlementAttributesRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $licenseModelIdentifier;
+    protected $licenseModelIdentifier;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class GetEntitlementAttributesRequestType implements RequestInterface
         $this->licenseModelIdentifier = $licenseModelIdentifier;
         return $this;
     }
-
-
 }
-

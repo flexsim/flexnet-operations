@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedProductCategoryDataListType
+class CreatedProductCategoryDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataType|array
      */
-    private $createdProductCatgory;
+    protected $createdProductCatgory;
 
     /**
      * Constructor

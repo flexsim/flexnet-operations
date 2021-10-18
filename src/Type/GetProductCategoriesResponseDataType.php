@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetProductCategoriesResponseDataType
+class GetProductCategoriesResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType
      */
-    private $productCategory;
+    protected $productCategory;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetProductCategoriesResponseDataType
         $this->productCategory = $productCategory;
         return $this;
     }
-
-
 }
-

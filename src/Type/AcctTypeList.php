@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AcctTypeList
+class AcctTypeList extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $acctType;
+    protected $acctType;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class AcctTypeList
         $this->acctType = $acctType;
         return $this;
     }
-
-
 }
-

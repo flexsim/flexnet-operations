@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetMatchingBulkEntsRequestType implements RequestInterface
+class GetMatchingBulkEntsRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsListType
      */
-    private $bulkEntList;
+    protected $bulkEntList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class GetMatchingBulkEntsRequestType implements RequestInterface
         $this->bulkEntList = $bulkEntList;
         return $this;
     }
-
-
 }
-

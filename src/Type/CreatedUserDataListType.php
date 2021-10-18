@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedUserDataListType
+class CreatedUserDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType|array
      */
-    private $user;
+    protected $user;
 
     /**
      * Constructor

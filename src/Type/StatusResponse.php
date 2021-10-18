@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class StatusResponse implements ResultInterface
+class StatusResponse extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var string
      */
-    private $statusCorelation;
+    protected $statusCorelation;
 
     /**
      * @var string
      */
-    private $statusCode;
+    protected $statusCode;
 
     /**
      * @var string
      */
-    private $statusMessage;
+    protected $statusMessage;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class StatusResponse implements ResultInterface
         $this->statusMessage = $statusMessage;
         return $this;
     }
-
-
 }
-

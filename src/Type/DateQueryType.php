@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DateQueryType
+class DateQueryType extends FlexnetType
 {
 
     /**
      * @var \DateTimeInterface
      */
-    private $value;
+    protected $value;
 
     /**
      * @var string
      */
-    private $searchType;
+    protected $searchType;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class DateQueryType
         $this->searchType = $searchType;
         return $this;
     }
-
-
 }
-

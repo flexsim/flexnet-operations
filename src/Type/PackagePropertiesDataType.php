@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PackagePropertiesDataType
+class PackagePropertiesDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $version;
+    protected $version;
 
     /**
      * @var string
      */
-    private $versionFormat;
+    protected $versionFormat;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class PackagePropertiesDataType
         $this->versionFormat = $versionFormat;
         return $this;
     }
-
-
 }
-

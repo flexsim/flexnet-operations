@@ -2,33 +2,33 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureBundleQueryDataType
+class FeatureBundleQueryDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeaturesListType
      */
-    private $features;
+    protected $features;
 
     /**
      * Constructor
@@ -151,7 +151,4 @@ class FeatureBundleQueryDataType
         $this->features = $features;
         return $this;
     }
-
-
 }
-

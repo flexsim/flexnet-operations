@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ExpirationTermsDataType
+class ExpirationTermsDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DurationType
      */
-    private $term;
+    protected $term;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class ExpirationTermsDataType
         $this->expirationDate = $expirationDate;
         return $this;
     }
-
-
 }
-

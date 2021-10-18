@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UserAccountExpiryType
+class UserAccountExpiryType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserDetailDataType
      */
-    private $userData;
+    protected $userData;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountExpiryType
      */
-    private $accountExpiryData;
+    protected $accountExpiryData;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class UserAccountExpiryType
         $this->accountExpiryData = $accountExpiryData;
         return $this;
     }
-
-
 }
-

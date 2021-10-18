@@ -2,48 +2,48 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PartNumberQueryParametersType
+class PartNumberQueryParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $partId;
+    protected $partId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $productName;
+    protected $productName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $creationDate;
+    protected $creationDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $lastModifiedDate;
+    protected $lastModifiedDate;
 
     /**
      * @var bool
      */
-    private $unmappedWithProduct;
+    protected $unmappedWithProduct;
 
     /**
      * @var bool
      */
-    private $unmappedWithLicenseModel;
+    protected $unmappedWithLicenseModel;
 
     /**
      * Constructor
@@ -229,7 +229,4 @@ class PartNumberQueryParametersType
         $this->unmappedWithLicenseModel = $unmappedWithLicenseModel;
         return $this;
     }
-
-
 }
-

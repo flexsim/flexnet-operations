@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedUniformSuiteDataType
+class FailedUniformSuiteDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateUniformSuiteDataType
      */
-    private $uniformSuite;
+    protected $uniformSuite;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedUniformSuiteDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

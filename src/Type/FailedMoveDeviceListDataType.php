@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedMoveDeviceListDataType
+class FailedMoveDeviceListDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedMoveDeviceDataType
      */
-    private $failedDevice;
+    protected $failedDevice;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FailedMoveDeviceListDataType
         $this->failedDevice = $failedDevice;
         return $this;
     }
-
-
 }
-

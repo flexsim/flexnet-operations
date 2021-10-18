@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class SetUniformSuiteStateRequestType implements RequestInterface
+class SetUniformSuiteStateRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType
      */
-    private $suite;
+    protected $suite;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class SetUniformSuiteStateRequestType implements RequestInterface
         $this->suite = $suite;
         return $this;
     }
-
-
 }
-

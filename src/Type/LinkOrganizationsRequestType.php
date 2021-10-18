@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class LinkOrganizationsRequestType implements RequestInterface
+class LinkOrganizationsRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkOrganizationsDataType
      */
-    private $orgData;
+    protected $orgData;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class LinkOrganizationsRequestType implements RequestInterface
         $this->orgData = $orgData;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class TransferHostList
+class TransferHostList extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferHostIdDataType
      */
-    private $hostIdentifier;
+    protected $hostIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class TransferHostList
         $this->hostIdentifier = $hostIdentifier;
         return $this;
     }
-
-
 }
-

@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteBaseProductRequestType implements RequestInterface
+class DeleteBaseProductRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteBaseProductRequestType implements RequestInterface
         $this->uniqueId = $uniqueId;
         return $this;
     }
-
-
 }
-

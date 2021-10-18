@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteAccountRequestType implements RequestInterface
+class DeleteAccountRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteAcctDataType
      */
-    private $acctData;
+    protected $acctData;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteAccountRequestType implements RequestInterface
         $this->acctData = $acctData;
         return $this;
     }
-
-
 }
-

@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class CountDevicesRequestType implements RequestInterface
+class CountDevicesRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * Constructor

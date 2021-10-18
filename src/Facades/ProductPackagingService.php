@@ -5,22 +5,14 @@ namespace Flexsim\FlexnetOperations\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static client()
- * @method static activeConnection()
- * @method static activeVersion()
- * @method static createClient( $connection,  $version)
- * @method static configuration( $connection)
- * @method static validateConfig( $config,  $connection)
- * @method static createWsdlPath( $config)
- * @method static getFactoryClass( $version)
- * @method static connection( $name = NULL)
- * @method static version( $version = NULL)
- * @method static getDefaultConnection()
+ * @method static \Phpro\SoapClient\Client client()
+ * @method static self connection( $name = NULL)
+ * @method static self version( $version = NULL)
+ * @method static string getDefaultConnection()
  * @method static setDefaultConnection( $name)
- * @method static getDefaultVersion( $connection = NULL)
+ * @method static string getDefaultVersion( $connection = NULL)
  * @method static setDefaultVersion( $version,  $connection = NULL)
- * @method static getServiceName()
- * @method static getClients()
+ * @method static array getClients()
  *
  * @method static \Flexsim\FlexnetOperations\Type\CreateFeatureResponseType createFeature(Flexsim\FlexnetOperations\Type\CreateFeatureRequestType $createFeatureRequest) 
  * @method static \Flexsim\FlexnetOperations\Type\UpdateFeatureResponseType updateFeature(Flexsim\FlexnetOperations\Type\UpdateFeatureRequestType $updateFeatureRequest) 

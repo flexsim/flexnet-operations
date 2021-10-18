@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class WebRegKeyType
+class WebRegKeyType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $webRegKey;
+    protected $webRegKey;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class WebRegKeyType
         $this->webRegKey = $webRegKey;
         return $this;
     }
-
-
 }
-

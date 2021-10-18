@@ -2,128 +2,128 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class Usage
+class Usage extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $productLine;
+    protected $productLine;
 
     /**
      * @var string
      */
-    private $meter;
+    protected $meter;
 
     /**
      * @var string
      */
-    private $usageUnitName;
+    protected $usageUnitName;
 
     /**
      * @var float
      */
-    private $usageSinceReset;
+    protected $usageSinceReset;
 
     /**
      * @var float
      */
-    private $entitled;
+    protected $entitled;
 
     /**
      * @var float
      */
-    private $overageSinceStatement;
+    protected $overageSinceStatement;
 
     /**
      * @var float
      */
-    private $overageSinceReset;
+    protected $overageSinceReset;
 
     /**
      * @var float
      */
-    private $percentSinceReset;
+    protected $percentSinceReset;
 
     /**
      * @var string
      */
-    private $resetIntervalUnitName;
+    protected $resetIntervalUnitName;
 
     /**
      * @var int
      */
-    private $resetInterval;
+    protected $resetInterval;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\Period
      */
-    private $period;
+    protected $period;
 
     /**
      * @var float
      */
-    private $entitledScaled;
+    protected $entitledScaled;
 
     /**
      * @var string
      */
-    private $friendlyName;
+    protected $friendlyName;
 
     /**
      * @var int
      */
-    private $gracePeriod;
+    protected $gracePeriod;
 
     /**
      * @var string
      */
-    private $gracePeriodUnitName;
+    protected $gracePeriodUnitName;
 
     /**
      * @var float
      */
-    private $overageSinceResetScaled;
+    protected $overageSinceResetScaled;
 
     /**
      * @var float
      */
-    private $overageSinceStatementScaled;
+    protected $overageSinceStatementScaled;
 
     /**
      * @var float
      */
-    private $percentSinceStatement;
+    protected $percentSinceStatement;
 
     /**
      * @var string
      */
-    private $reconciliationTimeZone;
+    protected $reconciliationTimeZone;
 
     /**
      * @var float
      */
-    private $scale;
+    protected $scale;
 
     /**
      * @var int
      */
-    private $statementInterval;
+    protected $statementInterval;
 
     /**
      * @var string
      */
-    private $statementIntervalUnitName;
+    protected $statementIntervalUnitName;
 
     /**
      * @var float
      */
-    private $usageSinceResetScaled;
+    protected $usageSinceResetScaled;
 
     /**
      * @var float
      */
-    private $usageSinceStatement;
+    protected $usageSinceStatement;
 
     /**
      * Constructor
@@ -645,7 +645,4 @@ class Usage
         $this->usageSinceStatement = $usageSinceStatement;
         return $this;
     }
-
-
 }
-

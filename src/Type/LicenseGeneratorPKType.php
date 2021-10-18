@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LicenseGeneratorPKType
+class LicenseGeneratorPKType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class LicenseGeneratorPKType
         $this->name = $name;
         return $this;
     }
-
-
 }
-

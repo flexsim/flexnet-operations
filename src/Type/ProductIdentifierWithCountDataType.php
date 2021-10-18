@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ProductIdentifierWithCountDataType
+class ProductIdentifierWithCountDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $productIdentifier;
+    protected $productIdentifier;
 
     /**
      * @var int
      */
-    private $count;
+    protected $count;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class ProductIdentifierWithCountDataType
         $this->count = $count;
         return $this;
     }
-
-
 }
-

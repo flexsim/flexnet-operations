@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedDeleteMaintenanceLineItemDataType
+class FailedDeleteMaintenanceLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType
      */
-    private $failedData;
+    protected $failedData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedDeleteMaintenanceLineItemDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

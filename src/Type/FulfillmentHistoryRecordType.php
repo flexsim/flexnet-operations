@@ -2,48 +2,48 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FulfillmentHistoryRecordType
+class FulfillmentHistoryRecordType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $fulfillmentId;
+    protected $fulfillmentId;
 
     /**
      * @var string
      */
-    private $action;
+    protected $action;
 
     /**
      * @var \DateTimeInterface
      */
-    private $actionDate;
+    protected $actionDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $actionDateTime;
+    protected $actionDateTime;
 
     /**
      * @var string
      */
-    private $actionPerformedBy;
+    protected $actionPerformedBy;
 
     /**
      * @var bool
      */
-    private $isPolicyOverridden;
+    protected $isPolicyOverridden;
 
     /**
      * @var int
      */
-    private $count;
+    protected $count;
 
     /**
      * @var string
      */
-    private $fulfillmentSource;
+    protected $fulfillmentSource;
 
     /**
      * Constructor
@@ -229,7 +229,4 @@ class FulfillmentHistoryRecordType
         $this->fulfillmentSource = $fulfillmentSource;
         return $this;
     }
-
-
 }
-

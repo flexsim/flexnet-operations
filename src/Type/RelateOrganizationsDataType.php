@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class RelateOrganizationsDataType
+class RelateOrganizationsDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $organizationToRelate;
+    protected $organizationToRelate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $relatedOrganization;
+    protected $relatedOrganization;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class RelateOrganizationsDataType
         $this->relatedOrganization = $relatedOrganization;
         return $this;
     }
-
-
 }
-

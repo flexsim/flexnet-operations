@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class OnholdFulfillmentListType
+class OnholdFulfillmentListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array 
      */
-    private $onholdFmtLicenseData;
+    protected $onholdFmtLicenseData;
 
     /**
      * Constructor

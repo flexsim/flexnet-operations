@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LinkLineItemIdentifier
+class LinkLineItemIdentifier extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var int
      */
-    private $count;
+    protected $count;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expirationDateOverride;
+    protected $expirationDateOverride;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class LinkLineItemIdentifier
         $this->expirationDateOverride = $expirationDateOverride;
         return $this;
     }
-
-
 }
-

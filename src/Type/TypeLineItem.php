@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class TypeLineItem
+class TypeLineItem extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var string
      */
-    private $Reason;
+    protected $Reason;
 
     /**
      * @var string
      */
-    private $Count;
+    protected $Count;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\Dictionary
      */
-    private $VendorDictionary;
+    protected $VendorDictionary;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class TypeLineItem
         $this->VendorDictionary = $VendorDictionary;
         return $this;
     }
-
-
 }
-

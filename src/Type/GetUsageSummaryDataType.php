@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetUsageSummaryDataType
+class GetUsageSummaryDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UsageSummaryDataType
      */
-    private $usageSummary;
+    protected $usageSummary;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetUsageSummaryDataType
         $this->usageSummary = $usageSummary;
         return $this;
     }
-
-
 }
-

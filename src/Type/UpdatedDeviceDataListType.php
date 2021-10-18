@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdatedDeviceDataListType
+class UpdatedDeviceDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array 
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * Constructor

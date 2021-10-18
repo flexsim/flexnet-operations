@@ -2,123 +2,123 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UserQueryParametersType
+class UserQueryParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $userName;
+    protected $userName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $firstName;
+    protected $firstName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $lastName;
+    protected $lastName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $displayName;
+    protected $displayName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $emailAddress;
+    protected $emailAddress;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $phoneNumber;
+    protected $phoneNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $faxNumber;
+    protected $faxNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $street;
+    protected $street;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $city;
+    protected $city;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $zipcode;
+    protected $zipcode;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $country;
+    protected $country;
 
     /**
      * @var bool
      */
-    private $isActive;
+    protected $isActive;
 
     /**
      * @var bool
      */
-    private $canLogIn;
+    protected $canLogIn;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $accountID;
+    protected $accountID;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $accountName;
+    protected $accountName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $orgName;
+    protected $orgName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $orgDisplayName;
+    protected $orgDisplayName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * @var string
      */
-    private $accountType;
+    protected $accountType;
 
     /**
      * @var string
      */
-    private $orgType;
+    protected $orgType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserAccountRolesListType
      */
-    private $roles;
+    protected $roles;
 
     /**
      * Constructor

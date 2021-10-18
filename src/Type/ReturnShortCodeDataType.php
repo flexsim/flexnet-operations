@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ReturnShortCodeDataType
+class ReturnShortCodeDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $shortCode;
+    protected $shortCode;
 
     /**
      * @var string
      */
-    private $webRegKey;
+    protected $webRegKey;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType
      */
-    private $publisherAttributes;
+    protected $publisherAttributes;
 
     /**
      * @var bool
      */
-    private $overridePolicy;
+    protected $overridePolicy;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class ReturnShortCodeDataType
         $this->overridePolicy = $overridePolicy;
         return $this;
     }
-
-
 }
-

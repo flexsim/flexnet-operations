@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetExactAvailableCountResponseType implements ResultInterface
+class GetExactAvailableCountResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var int
      */
-    private $count;
+    protected $count;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetExactAvailableCountResponseType implements ResultInterface
         $this->count = $count;
         return $this;
     }
-
-
 }
-

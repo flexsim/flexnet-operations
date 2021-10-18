@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetHostAttributesDataType
+class GetHostAttributesDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType
      */
-    private $hostAttributes;
+    protected $hostAttributes;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetHostAttributesDataType
         $this->hostAttributes = $hostAttributes;
         return $this;
     }
-
-
 }
-

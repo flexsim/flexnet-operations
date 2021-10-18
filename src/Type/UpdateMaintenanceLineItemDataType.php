@@ -2,63 +2,63 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateMaintenanceLineItemDataType
+class UpdateMaintenanceLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $lineItemIdentifier;
+    protected $lineItemIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\IdType
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $maintenanceProduct;
+    protected $maintenanceProduct;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var string
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var string
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $parentLineItem;
+    protected $parentLineItem;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $maintenanceLineItemAttributes;
+    protected $maintenanceLineItemAttributes;
 
     /**
      * Constructor
@@ -307,7 +307,4 @@ class UpdateMaintenanceLineItemDataType
         $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
         return $this;
     }
-
-
 }
-

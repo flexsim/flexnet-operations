@@ -2,58 +2,58 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ActivatableItemDetailType
+class ActivatableItemDetailType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activatableItemType;
+    protected $activatableItemType;
 
     /**
      * @var string
      */
-    private $parentBulkEntitlementId;
+    protected $parentBulkEntitlementId;
 
     /**
      * @var string
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var string
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var string
      */
-    private $entitlementState;
+    protected $entitlementState;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType
      */
-    private $activatableItemData;
+    protected $activatableItemData;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType
      */
-    private $channelPartners;
+    protected $channelPartners;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $entitlementAttributes;
+    protected $entitlementAttributes;
 
     /**
      * Constructor
@@ -281,7 +281,4 @@ class ActivatableItemDetailType
         $this->entitlementAttributes = $entitlementAttributes;
         return $this;
     }
-
-
 }
-

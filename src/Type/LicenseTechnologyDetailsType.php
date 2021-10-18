@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LicenseTechnologyDetailsType
+class LicenseTechnologyDetailsType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType
      */
-    private $licenseTechnologyIdentifier;
+    protected $licenseTechnologyIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType
      */
-    private $licenseGenerators;
+    protected $licenseGenerators;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypeListType
      */
-    private $hostTypes;
+    protected $hostTypes;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class LicenseTechnologyDetailsType
         $this->state = $state;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SplitLineItemResponseListType
+class SplitLineItemResponseListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array 
      */
-    private $splitLineItem;
+    protected $splitLineItem;
 
     /**
      * Constructor

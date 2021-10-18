@@ -2,33 +2,33 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LineItemLifeCycleDataType
+class LineItemLifeCycleDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $parentLineItemIdentifier;
+    protected $parentLineItemIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType
      */
-    private $lineItem;
+    protected $lineItem;
 
     /**
      * @var bool
      */
-    private $isFull;
+    protected $isFull;
 
     /**
      * @var bool
      */
-    private $allowActivationsOnParent;
+    protected $allowActivationsOnParent;
 
     /**
      * @var bool
      */
-    private $autoDeploy;
+    protected $autoDeploy;
 
     /**
      * Constructor
@@ -151,7 +151,4 @@ class LineItemLifeCycleDataType
         $this->autoDeploy = $autoDeploy;
         return $this;
     }
-
-
 }
-

@@ -2,123 +2,123 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateProductDataType
+class UpdateProductDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $productIdentifier;
+    protected $productIdentifier;
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $version;
+    protected $version;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType
      */
-    private $licenseGenerator;
+    protected $licenseGenerator;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType
      */
-    private $packageProperties;
+    protected $packageProperties;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType
      */
-    private $features;
+    protected $features;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateFeatureBundlesListType
      */
-    private $featureBundles;
+    protected $featureBundles;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdatePartNumbersListType
      */
-    private $partNumbers;
+    protected $partNumbers;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateLicenseModelsListType
      */
-    private $licenseModels;
+    protected $licenseModels;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType
      */
-    private $trustedKey;
+    protected $trustedKey;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType
      */
-    private $virtualTrustedKey;
+    protected $virtualTrustedKey;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypePKType
      */
-    private $hostType;
+    protected $hostType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateHostTypeListType
      */
-    private $hostTypes;
+    protected $hostTypes;
 
     /**
      * @var bool
      */
-    private $usedOnDevice;
+    protected $usedOnDevice;
 
     /**
      * @var string
      */
-    private $productCategory;
+    protected $productCategory;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var bool
      */
-    private $allowDownloadObsoleteFrInAdmin;
+    protected $allowDownloadObsoleteFrInAdmin;
 
     /**
      * @var bool
      */
-    private $allowDownloadObsoleteFrInPortal;
+    protected $allowDownloadObsoleteFrInPortal;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $productAttributes;
+    protected $productAttributes;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $endDate;
+    protected $endDate;
 
     /**
      * @var string
      */
-    private $upgradeEmailTemplateVarName;
+    protected $upgradeEmailTemplateVarName;
 
     /**
      * Constructor
@@ -619,7 +619,4 @@ class UpdateProductDataType
         $this->upgradeEmailTemplateVarName = $upgradeEmailTemplateVarName;
         return $this;
     }
-
-
 }
-

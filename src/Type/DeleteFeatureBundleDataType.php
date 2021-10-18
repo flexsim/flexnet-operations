@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeleteFeatureBundleDataType
+class DeleteFeatureBundleDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType
      */
-    private $featureBundleIdentifier;
+    protected $featureBundleIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class DeleteFeatureBundleDataType
         $this->featureBundleIdentifier = $featureBundleIdentifier;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ObsoleteHostType
+class ObsoleteHostType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $hostIdentifier;
+    protected $hostIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class ObsoleteHostType
         $this->hostIdentifier = $hostIdentifier;
         return $this;
     }
-
-
 }
-

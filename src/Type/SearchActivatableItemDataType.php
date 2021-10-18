@@ -2,158 +2,158 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SearchActivatableItemDataType
+class SearchActivatableItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $parentBulkEntitlementId;
+    protected $parentBulkEntitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $productName;
+    protected $productName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $productVersion;
+    protected $productVersion;
 
     /**
      * @var string
      */
-    private $productType;
+    protected $productType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var bool
      */
-    private $withNoOrderId;
+    protected $withNoOrderId;
 
     /**
      * @var bool
      */
-    private $restrictToItemsWithCount;
+    protected $restrictToItemsWithCount;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NumberQueryType
      */
-    private $fulfilledAmount;
+    protected $fulfilledAmount;
 
     /**
      * @var string
      */
-    private $userId;
+    protected $userId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $parentBulkEntSoldTo;
+    protected $parentBulkEntSoldTo;
 
     /**
      * @var string
      */
-    private $activatableItemType;
+    protected $activatableItemType;
 
     /**
      * @var bool
      */
-    private $allowPortalLogin;
+    protected $allowPortalLogin;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType
      */
-    private $accountUnitName;
+    protected $accountUnitName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType
      */
-    private $organizationUnitName;
+    protected $organizationUnitName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $currentOwnerName;
+    protected $currentOwnerName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $lineItemParentLineItemId;
+    protected $lineItemParentLineItemId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
-    private $createdOnDateTime;
+    protected $createdOnDateTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LineItemCustomAttributesQueryListType
      */
-    private $lineItemAttributes;
+    protected $lineItemAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * Constructor

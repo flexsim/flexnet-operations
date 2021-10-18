@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetProductRelationshipsResponseType implements ResultInterface
+class GetProductRelationshipsResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType
      */
-    private $relationship;
+    protected $relationship;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetProductRelationshipsResponseType implements ResultInterface
         $this->relationship = $relationship;
         return $this;
     }
-
-
 }
-

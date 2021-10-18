@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedReturnResponselistDataType
+class FailedReturnResponselistDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedReturnResponseDataType
      */
-    private $failedFulfillment;
+    protected $failedFulfillment;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FailedReturnResponselistDataType
         $this->failedFulfillment = $failedFulfillment;
         return $this;
     }
-
-
 }
-

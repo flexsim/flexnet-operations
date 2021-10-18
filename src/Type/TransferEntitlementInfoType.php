@@ -2,43 +2,43 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class TransferEntitlementInfoType
+class TransferEntitlementInfoType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementIdentifier;
+    protected $entitlementIdentifier;
 
     /**
      * @var string
      */
-    private $accountTo;
+    protected $accountTo;
 
     /**
      * @var string
      */
-    private $organizationTo;
+    protected $organizationTo;
 
     /**
      * @var bool
      */
-    private $retainExistingIds;
+    protected $retainExistingIds;
 
     /**
      * @var bool
      */
-    private $returnActiveFulfillments;
+    protected $returnActiveFulfillments;
 
     /**
      * @var bool
      */
-    private $forceTransferEvenIfNoTargetUsers;
+    protected $forceTransferEvenIfNoTargetUsers;
 
     /**
      * @var bool
      */
-    private $forceTransferEvenIfParentAndChildSeparated;
+    protected $forceTransferEvenIfParentAndChildSeparated;
 
     /**
      * Constructor

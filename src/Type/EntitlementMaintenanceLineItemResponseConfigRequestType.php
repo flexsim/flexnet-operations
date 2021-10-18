@@ -2,83 +2,83 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitlementMaintenanceLineItemResponseConfigRequestType
+class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var bool
      */
-    private $state;
+    protected $state;
 
     /**
      * @var bool
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var bool
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * @var bool
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var bool
      */
-    private $maintenanceProduct;
+    protected $maintenanceProduct;
 
     /**
      * @var bool
      */
-    private $maintenancePartNumber;
+    protected $maintenancePartNumber;
 
     /**
      * @var bool
      */
-    private $maintenancePartNumberDescription;
+    protected $maintenancePartNumberDescription;
 
     /**
      * @var bool
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var bool
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var bool
      */
-    private $createdOnDateTime;
+    protected $createdOnDateTime;
 
     /**
      * @var bool
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * @var bool
      */
-    private $maintenanceLineItemAttributes;
+    protected $maintenanceLineItemAttributes;
 
     /**
      * @var bool
      */
-    private $linkedEntitlementLineItem;
+    protected $linkedEntitlementLineItem;
 
     /**
      * Constructor
@@ -411,7 +411,4 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         $this->linkedEntitlementLineItem = $linkedEntitlementLineItem;
         return $this;
     }
-
-
 }
-

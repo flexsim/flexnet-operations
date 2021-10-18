@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LicenseGeneratorsDetailsType
+class LicenseGeneratorsDetailsType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType
      */
-    private $licenseGeneratorIdentifier;
+    protected $licenseGeneratorIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class LicenseGeneratorsDetailsType
         $this->licenseGeneratorIdentifier = $licenseGeneratorIdentifier;
         return $this;
     }
-
-
 }
-

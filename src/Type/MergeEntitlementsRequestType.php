@@ -4,38 +4,38 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class MergeEntitlementsRequestType implements RequestInterface
+class MergeEntitlementsRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var string
      */
-    private $accountFrom;
+    protected $accountFrom;
 
     /**
      * @var string
      */
-    private $organizationFrom;
+    protected $organizationFrom;
 
     /**
      * @var string
      */
-    private $accountTo;
+    protected $accountTo;
 
     /**
      * @var string
      */
-    private $organizationTo;
+    protected $organizationTo;
 
     /**
      * @var bool
      */
-    private $mergeUsers;
+    protected $mergeUsers;
 
     /**
      * @var bool
      */
-    private $mergeEntitlements;
+    protected $mergeEntitlements;
 
     /**
      * Constructor

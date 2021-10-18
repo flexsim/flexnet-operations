@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ConsolidatedResponseDataType
+class ConsolidatedResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType
      */
-    private $consolidatedLicense;
+    protected $consolidatedLicense;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class ConsolidatedResponseDataType
         $this->consolidatedLicense = $consolidatedLicense;
         return $this;
     }
-
-
 }
-

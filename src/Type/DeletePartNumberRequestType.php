@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeletePartNumberRequestType implements RequestInterface
+class DeletePartNumberRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeletePartNumberDataType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeletePartNumberRequestType implements RequestInterface
         $this->partNumber = $partNumber;
         return $this;
     }
-
-
 }
-

@@ -4,28 +4,28 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class EmailConsolidatedLicensesRequestType implements RequestInterface
+class EmailConsolidatedLicensesRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseIdListType
      */
-    private $consolidatedLicenseIdList;
+    protected $consolidatedLicenseIdList;
 
     /**
      * @var bool
      */
-    private $validateEmailAddresses;
+    protected $validateEmailAddresses;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EmailContactListType
      */
-    private $emailIdList;
+    protected $emailIdList;
 
     /**
      * @var string
      */
-    private $locale;
+    protected $locale;
 
     /**
      * Constructor
@@ -127,7 +127,4 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
         $this->locale = $locale;
         return $this;
     }
-
-
 }
-

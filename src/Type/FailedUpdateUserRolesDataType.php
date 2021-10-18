@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedUpdateUserRolesDataType
+class FailedUpdateUserRolesDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType
      */
-    private $userData;
+    protected $userData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedUpdateUserRolesDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

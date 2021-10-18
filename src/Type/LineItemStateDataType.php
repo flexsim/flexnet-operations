@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LineItemStateDataType
+class LineItemStateDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $lineItemIdentifier;
+    protected $lineItemIdentifier;
 
     /**
      * @var string
      */
-    private $stateToSet;
+    protected $stateToSet;
 
     /**
      * @var bool
      */
-    private $includeChildItems;
+    protected $includeChildItems;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class LineItemStateDataType
         $this->includeChildItems = $includeChildItems;
         return $this;
     }
-
-
 }
-

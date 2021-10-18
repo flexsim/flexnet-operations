@@ -2,238 +2,238 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitlementLineItemResponseConfigRequestType
+class EntitlementLineItemResponseConfigRequestType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var bool
      */
-    private $description;
+    protected $description;
 
     /**
      * @var bool
      */
-    private $state;
+    protected $state;
 
     /**
      * @var bool
      */
-    private $activatableItemType;
+    protected $activatableItemType;
 
     /**
      * @var bool
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var bool
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * @var bool
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var bool
      */
-    private $allowPortalLogin;
+    protected $allowPortalLogin;
 
     /**
      * @var bool
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var bool
      */
-    private $soldToDisplayName;
+    protected $soldToDisplayName;
 
     /**
      * @var bool
      */
-    private $entitlementState;
+    protected $entitlementState;
 
     /**
      * @var bool
      */
-    private $entitlementDescription;
+    protected $entitlementDescription;
 
     /**
      * @var bool
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var bool
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var bool
      */
-    private $parentBulkEntitlementId;
+    protected $parentBulkEntitlementId;
 
     /**
      * @var bool
      */
-    private $bulkEntSoldTo;
+    protected $bulkEntSoldTo;
 
     /**
      * @var bool
      */
-    private $bulkEntSoldToDisplayName;
+    protected $bulkEntSoldToDisplayName;
 
     /**
      * @var bool
      */
-    private $product;
+    protected $product;
 
     /**
      * @var bool
      */
-    private $productDescription;
+    protected $productDescription;
 
     /**
      * @var bool
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var bool
      */
-    private $partNumberDescription;
+    protected $partNumberDescription;
 
     /**
      * @var bool
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var bool
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * @var bool
      */
-    private $lineItemSupportAction;
+    protected $lineItemSupportAction;
 
     /**
      * @var bool
      */
-    private $parentLineItem;
+    protected $parentLineItem;
 
     /**
      * @var bool
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var bool
      */
-    private $startDateOption;
+    protected $startDateOption;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var bool
      */
-    private $term;
+    protected $term;
 
     /**
      * @var bool
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var bool
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var bool
      */
-    private $versionDateAttributes;
+    protected $versionDateAttributes;
 
     /**
      * @var bool
      */
-    private $numberOfCopies;
+    protected $numberOfCopies;
 
     /**
      * @var bool
      */
-    private $fulfilledAmount;
+    protected $fulfilledAmount;
 
     /**
      * @var bool
      */
-    private $numberOfRemainingCopies;
+    protected $numberOfRemainingCopies;
 
     /**
      * @var bool
      */
-    private $isTrusted;
+    protected $isTrusted;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var bool
      */
-    private $maintenance;
+    protected $maintenance;
 
     /**
      * @var bool
      */
-    private $maintenancePartNumber;
+    protected $maintenancePartNumber;
 
     /**
      * @var bool
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * @var bool
      */
-    private $createdOnDateTime;
+    protected $createdOnDateTime;
 
     /**
      * @var bool
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * @var bool
      */
-    private $lineItemAttributes;
+    protected $lineItemAttributes;
 
     /**
      * @var bool
      */
-    private $maintenanceLineItemAttributes;
+    protected $maintenanceLineItemAttributes;
 
     /**
      * @var bool
      */
-    private $transferredFromLineItem;
+    protected $transferredFromLineItem;
 
     /**
      * @var bool
      */
-    private $splitFromLineItem;
+    protected $splitFromLineItem;
 
     /**
      * Constructor
@@ -1217,7 +1217,4 @@ class EntitlementLineItemResponseConfigRequestType
         $this->splitFromLineItem = $splitFromLineItem;
         return $this;
     }
-
-
 }
-

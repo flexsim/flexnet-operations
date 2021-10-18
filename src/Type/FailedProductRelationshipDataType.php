@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedProductRelationshipDataType
+class FailedProductRelationshipDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType
      */
-    private $relationship;
+    protected $relationship;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedProductRelationshipDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

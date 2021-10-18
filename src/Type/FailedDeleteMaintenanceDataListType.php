@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedDeleteMaintenanceDataListType
+class FailedDeleteMaintenanceDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedDeleteMaintenanceDataType|array 
      */
-    private $failedMaintenance;
+    protected $failedMaintenance;
 
     /**
      * Constructor

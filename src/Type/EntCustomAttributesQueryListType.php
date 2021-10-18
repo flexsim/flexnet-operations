@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntCustomAttributesQueryListType
+class EntCustomAttributesQueryListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntCustomAttributeQueryType|array
      */
-    private $attribute;
+    protected $attribute;
 
     /**
      * Constructor

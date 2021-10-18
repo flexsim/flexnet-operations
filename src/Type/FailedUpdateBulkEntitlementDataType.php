@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedUpdateBulkEntitlementDataType
+class FailedUpdateBulkEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType
      */
-    private $bulkEntitlement;
+    protected $bulkEntitlement;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedUpdateBulkEntitlementDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

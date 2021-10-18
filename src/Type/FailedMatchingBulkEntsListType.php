@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedMatchingBulkEntsListType
+class FailedMatchingBulkEntsListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array 
      */
-    private $failedBulkEnt;
+    protected $failedBulkEnt;
 
     /**
      * Constructor

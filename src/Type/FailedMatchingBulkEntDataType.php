@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedMatchingBulkEntDataType
+class FailedMatchingBulkEntDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType
      */
-    private $bulkEntInfo;
+    protected $bulkEntInfo;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedMatchingBulkEntDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

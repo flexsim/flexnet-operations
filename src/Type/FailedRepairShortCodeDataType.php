@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedRepairShortCodeDataType
+class FailedRepairShortCodeDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType
      */
-    private $shortCodeData;
+    protected $shortCodeData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedRepairShortCodeDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

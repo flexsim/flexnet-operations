@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeleteUniformSuiteDataType
+class DeleteUniformSuiteDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SuiteIdentifierType
      */
-    private $suiteIdentifier;
+    protected $suiteIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class DeleteUniformSuiteDataType
         $this->suiteIdentifier = $suiteIdentifier;
         return $this;
     }
-
-
 }
-

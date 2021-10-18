@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LinkMaintenanceLineItemDataType
+class LinkMaintenanceLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $lineItemIdentifier;
+    protected $lineItemIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $maintenanceLineItemIdentifier;
+    protected $maintenanceLineItemIdentifier;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class LinkMaintenanceLineItemDataType
         $this->maintenanceLineItemIdentifier = $maintenanceLineItemIdentifier;
         return $this;
     }
-
-
 }
-

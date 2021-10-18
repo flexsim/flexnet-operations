@@ -2,83 +2,83 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class OrganizationQueryParametersType
+class OrganizationQueryParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $orgName;
+    protected $orgName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $orgDisplayName;
+    protected $orgDisplayName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $address1;
+    protected $address1;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $address2;
+    protected $address2;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $city;
+    protected $city;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $zipcode;
+    protected $zipcode;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $country;
+    protected $country;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $region;
+    protected $region;
 
     /**
      * @var bool
      */
-    private $onlyRootOrgs;
+    protected $onlyRootOrgs;
 
     /**
      * @var string
      */
-    private $orgType;
+    protected $orgType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrgTypeList
      */
-    private $orgTypeList;
+    protected $orgTypeList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrgCustomAttributesQueryListType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * Constructor
@@ -411,7 +411,4 @@ class OrganizationQueryParametersType
         $this->lastModifiedDateTime = $lastModifiedDateTime;
         return $this;
     }
-
-
 }
-

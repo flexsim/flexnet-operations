@@ -4,28 +4,28 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetFulfillmentPropertiesRequestType implements RequestInterface
+class GetFulfillmentPropertiesRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType
      */
-    private $queryParams;
+    protected $queryParams;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentResponseConfigRequestType
      */
-    private $fulfillmentResponseConfig;
+    protected $fulfillmentResponseConfig;
 
     /**
      * @var int
      */
-    private $batchSize;
+    protected $batchSize;
 
     /**
      * @var int
      */
-    private $pageNumber;
+    protected $pageNumber;
 
     /**
      * Constructor
@@ -127,7 +127,4 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
         $this->pageNumber = $pageNumber;
         return $this;
     }
-
-
 }
-

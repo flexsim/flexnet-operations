@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeleteFailAddonDataListType
+class DeleteFailAddonDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType|array
      */
-    private $failAddon;
+    protected $failAddon;
 
     /**
      * Constructor

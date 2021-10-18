@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeviceTypeList
+class DeviceTypeList extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $deviceType;
+    protected $deviceType;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class DeviceTypeList
         $this->deviceType = $deviceType;
         return $this;
     }
-
-
 }
-

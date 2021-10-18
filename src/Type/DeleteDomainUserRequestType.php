@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteDomainUserRequestType implements RequestInterface
+class DeleteDomainUserRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType
      */
-    private $user;
+    protected $user;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteDomainUserRequestType implements RequestInterface
         $this->user = $user;
         return $this;
     }
-
-
 }
-

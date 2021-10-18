@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedObsoleteHostDataType
+class FailedObsoleteHostDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $hostIdentifier;
+    protected $hostIdentifier;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedObsoleteHostDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

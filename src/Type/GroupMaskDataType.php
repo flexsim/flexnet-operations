@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GroupMaskDataType
+class GroupMaskDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $option;
+    protected $option;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GroupMaskDataType
         $this->option = $option;
         return $this;
     }
-
-
 }
-

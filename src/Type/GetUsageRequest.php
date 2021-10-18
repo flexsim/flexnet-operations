@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetUsageRequest implements RequestInterface
+class GetUsageRequest extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var string
      */
-    private $accountId;
+    protected $accountId;
 
     /**
      * @var string
      */
-    private $orgName;
+    protected $orgName;
 
     /**
      * Constructor

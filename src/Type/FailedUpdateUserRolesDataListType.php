@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedUpdateUserRolesDataListType
+class FailedUpdateUserRolesDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedUpdateUserRolesDataType|array 
      */
-    private $failedUser;
+    protected $failedUser;
 
     /**
      * Constructor

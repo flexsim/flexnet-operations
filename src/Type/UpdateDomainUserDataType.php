@@ -2,53 +2,53 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateDomainUserDataType
+class UpdateDomainUserDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType
      */
-    private $domainUser;
+    protected $domainUser;
 
     /**
      * @var string
      */
-    private $email;
+    protected $email;
 
     /**
      * @var string
      */
-    private $organization;
+    protected $organization;
 
     /**
      * @var string
      */
-    private $roles;
+    protected $roles;
 
     /**
      * @var bool
      */
-    private $optIn;
+    protected $optIn;
 
     /**
      * @var string
      */
-    private $locale;
+    protected $locale;
 
     /**
      * @var string
      */
-    private $timeZone;
+    protected $timeZone;
 
     /**
      * @var string
      */
-    private $status;
+    protected $status;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * Constructor
@@ -255,7 +255,4 @@ class UpdateDomainUserDataType
         $this->customAttributes = $customAttributes;
         return $this;
     }
-
-
 }
-

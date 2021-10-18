@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class UpdateDomainUserRequestType implements RequestInterface
+class UpdateDomainUserRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType
      */
-    private $user;
+    protected $user;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class UpdateDomainUserRequestType implements RequestInterface
         $this->user = $user;
         return $this;
     }
-
-
 }
-

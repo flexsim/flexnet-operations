@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedGetUsageHistoryDataType
+class FailedGetUsageHistoryDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FailedGetUsageHistoryDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

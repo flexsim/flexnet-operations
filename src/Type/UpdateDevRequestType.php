@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class UpdateDevRequestType implements RequestInterface
+class UpdateDevRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateDevDataType
      */
-    private $device;
+    protected $device;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class UpdateDevRequestType implements RequestInterface
         $this->device = $device;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LineItemCustomAttributesQueryListType
+class LineItemCustomAttributesQueryListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LineItemCustomAttributeQueryType|array 
      */
-    private $attribute;
+    protected $attribute;
 
     /**
      * Constructor

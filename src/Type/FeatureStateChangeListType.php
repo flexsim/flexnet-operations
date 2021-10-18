@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureStateChangeListType
+class FeatureStateChangeListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType|array 
      */
-    private $feature;
+    protected $feature;
 
     /**
      * Constructor

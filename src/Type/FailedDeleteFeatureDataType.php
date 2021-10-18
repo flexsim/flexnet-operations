@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedDeleteFeatureDataType
+class FailedDeleteFeatureDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType
      */
-    private $featureIdentifier;
+    protected $featureIdentifier;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedDeleteFeatureDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

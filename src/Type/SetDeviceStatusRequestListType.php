@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class SetDeviceStatusRequestListType implements RequestInterface
+class SetDeviceStatusRequestListType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array 
      */
-    private $devices;
+    protected $devices;
 
     /**
      * Constructor

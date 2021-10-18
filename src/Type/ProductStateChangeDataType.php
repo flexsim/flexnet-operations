@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ProductStateChangeDataType
+class ProductStateChangeDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $productIdentifier;
+    protected $productIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StateChangeDataType
      */
-    private $stateChangeRecord;
+    protected $stateChangeRecord;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class ProductStateChangeDataType
         $this->stateChangeRecord = $stateChangeRecord;
         return $this;
     }
-
-
 }
-

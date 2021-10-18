@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CategoryAttributesDataType
+class CategoryAttributesDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CategoryAttributeDataType
      */
-    private $categoryAttribute;
+    protected $categoryAttribute;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class CategoryAttributesDataType
         $this->categoryAttribute = $categoryAttribute;
         return $this;
     }
-
-
 }
-

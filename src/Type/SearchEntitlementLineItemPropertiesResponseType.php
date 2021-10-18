@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class SearchEntitlementLineItemPropertiesResponseType implements ResultInterface
+class SearchEntitlementLineItemPropertiesResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemPropertiesType
      */
-    private $entitlementLineItem;
+    protected $entitlementLineItem;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class SearchEntitlementLineItemPropertiesResponseType implements ResultInterface
         $this->entitlementLineItem = $entitlementLineItem;
         return $this;
     }
-
-
 }
-

@@ -2,83 +2,83 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AccountQueryParametersType
+class AccountQueryParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $accountID;
+    protected $accountID;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $accountName;
+    protected $accountName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $address1;
+    protected $address1;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $address2;
+    protected $address2;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $city;
+    protected $city;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $state;
+    protected $state;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $zipcode;
+    protected $zipcode;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $country;
+    protected $country;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $region;
+    protected $region;
 
     /**
      * @var bool
      */
-    private $onlyRootAccounts;
+    protected $onlyRootAccounts;
 
     /**
      * @var string
      */
-    private $accountType;
+    protected $accountType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AcctTypeList|\Flexsim\FlexnetOperations\Type\AccountTypeList
      */
-    private $accountTypeList;
+    protected $accountTypeList;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AcctCustomAttributesQueryListType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * Constructor

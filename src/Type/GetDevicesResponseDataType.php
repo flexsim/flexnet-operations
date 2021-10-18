@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetDevicesResponseDataType
+class GetDevicesResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceQueryDataType
      */
-    private $device;
+    protected $device;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetDevicesResponseDataType
         $this->device = $device;
         return $this;
     }
-
-
 }
-

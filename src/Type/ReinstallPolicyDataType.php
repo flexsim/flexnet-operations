@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ReinstallPolicyDataType
+class ReinstallPolicyDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PolicyDataType
      */
-    private $defaultPolicy;
+    protected $defaultPolicy;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType
      */
-    private $advancedPolicy;
+    protected $advancedPolicy;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class ReinstallPolicyDataType
         $this->advancedPolicy = $advancedPolicy;
         return $this;
     }
-
-
 }
-

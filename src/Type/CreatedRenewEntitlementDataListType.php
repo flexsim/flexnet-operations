@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedRenewEntitlementDataListType
+class CreatedRenewEntitlementDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType|array
      */
-    private $entitlementData;
+    protected $entitlementData;
 
     /**
      * Constructor

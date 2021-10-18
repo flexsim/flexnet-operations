@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PartnerTierQueryType
+class PartnerTierQueryType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $value;
+    protected $value;
 
     /**
      * @var string
      */
-    private $searchType;
+    protected $searchType;
 
     /**
      * @var string
      */
-    private $partnerTier;
+    protected $partnerTier;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class PartnerTierQueryType
         $this->partnerTier = $partnerTier;
         return $this;
     }
-
-
 }
-

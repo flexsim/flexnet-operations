@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitlementPKType
+class EntitlementPKType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class EntitlementPKType
         $this->entitlementId = $entitlementId;
         return $this;
     }
-
-
 }
-

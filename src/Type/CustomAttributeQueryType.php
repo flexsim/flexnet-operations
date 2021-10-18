@@ -2,33 +2,33 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CustomAttributeQueryType
+class CustomAttributeQueryType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $attributeName;
+    protected $attributeName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $stringValue;
+    protected $stringValue;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NumberQueryType
      */
-    private $numberValue;
+    protected $numberValue;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateQueryType
      */
-    private $dateValue;
+    protected $dateValue;
 
     /**
      * @var bool
      */
-    private $booleanValue;
+    protected $booleanValue;
 
     /**
      * Constructor
@@ -151,7 +151,4 @@ class CustomAttributeQueryType
         $this->booleanValue = $booleanValue;
         return $this;
     }
-
-
 }
-

@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class ReturnShortCodeRequestType implements RequestInterface
+class ReturnShortCodeRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType
      */
-    private $shortCodeData;
+    protected $shortCodeData;
 
     /**
      * @var string
      */
-    private $returnReason;
+    protected $returnReason;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class ReturnShortCodeRequestType implements RequestInterface
         $this->returnReason = $returnReason;
         return $this;
     }
-
-
 }
-

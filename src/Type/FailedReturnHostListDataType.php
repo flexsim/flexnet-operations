@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedReturnHostListDataType
+class FailedReturnHostListDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedReturnHostDataType
      */
-    private $failedHost;
+    protected $failedHost;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FailedReturnHostListDataType
         $this->failedHost = $failedHost;
         return $this;
     }
-
-
 }
-

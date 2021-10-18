@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureOverrideParamsType
+class FeatureOverrideParamsType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $vendorString;
+    protected $vendorString;
 
     /**
      * @var string
      */
-    private $notice;
+    protected $notice;
 
     /**
      * @var string
      */
-    private $serialNumber;
+    protected $serialNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DupGroupDataType
      */
-    private $dupGroup;
+    protected $dupGroup;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class FeatureOverrideParamsType
         $this->dupGroup = $dupGroup;
         return $this;
     }
-
-
 }
-

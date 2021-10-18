@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class CreateProductRelationshipRequestType implements RequestInterface
+class CreateProductRelationshipRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType
      */
-    private $relationship;
+    protected $relationship;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class CreateProductRelationshipRequestType implements RequestInterface
         $this->relationship = $relationship;
         return $this;
     }
-
-
 }
-

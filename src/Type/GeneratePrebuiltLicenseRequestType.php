@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GeneratePrebuiltLicenseRequestType implements RequestInterface
+class GeneratePrebuiltLicenseRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataType
      */
-    private $requestDataList;
+    protected $requestDataList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class GeneratePrebuiltLicenseRequestType implements RequestInterface
         $this->requestDataList = $requestDataList;
         return $this;
     }
-
-
 }
-

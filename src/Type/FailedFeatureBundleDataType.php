@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedFeatureBundleDataType
+class FailedFeatureBundleDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateFeatureBundleDataType
      */
-    private $featureBundle;
+    protected $featureBundle;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedFeatureBundleDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

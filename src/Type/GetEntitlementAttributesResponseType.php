@@ -4,28 +4,28 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetEntitlementAttributesResponseType implements ResultInterface
+class GetEntitlementAttributesResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType
      */
-    private $entitlementAttributes;
+    protected $entitlementAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType
      */
-    private $policyAttributes;
+    protected $policyAttributes;
 
     /**
      * @var bool
      */
-    private $needTimeZone;
+    protected $needTimeZone;
 
     /**
      * Constructor
@@ -127,7 +127,4 @@ class GetEntitlementAttributesResponseType implements ResultInterface
         $this->needTimeZone = $needTimeZone;
         return $this;
     }
-
-
 }
-

@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class SetLicenseRequestType implements RequestInterface
+class SetLicenseRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OnholdFulfillmentListType
      */
-    private $onholdFulfillmentList;
+    protected $onholdFulfillmentList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class SetLicenseRequestType implements RequestInterface
         $this->onholdFulfillmentList = $onholdFulfillmentList;
         return $this;
     }
-
-
 }
-

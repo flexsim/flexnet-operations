@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ChannelPartnerDataListType
+class ChannelPartnerDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType|array
      */
-    private $channelPartner;
+    protected $channelPartner;
 
     /**
      * Constructor

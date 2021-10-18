@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedFeatureDataListType
+class CreatedFeatureDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType|array
      */
-    private $createdFeature;
+    protected $createdFeature;
 
     /**
      * Constructor

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class TransferredLineItemMapType
+class TransferredLineItemMapType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var string
      */
-    private $transferredFromId;
+    protected $transferredFromId;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class TransferredLineItemMapType
         $this->transferredFromId = $transferredFromId;
         return $this;
     }
-
-
 }
-

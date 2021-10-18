@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class CreateProductCategoryRequestType implements RequestInterface
+class CreateProductCategoryRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType
      */
-    private $productCategory;
+    protected $productCategory;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class CreateProductCategoryRequestType implements RequestInterface
         $this->productCategory = $productCategory;
         return $this;
     }
-
-
 }
-

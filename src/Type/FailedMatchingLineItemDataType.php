@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedMatchingLineItemDataType
+class FailedMatchingLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType
      */
-    private $lineItemInfo;
+    protected $lineItemInfo;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedMatchingLineItemDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class SetMaintenanceLineItemStateRequestType implements RequestInterface
+class SetMaintenanceLineItemStateRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType
      */
-    private $maintenanceLineItem;
+    protected $maintenanceLineItem;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class SetMaintenanceLineItemStateRequestType implements RequestInterface
         $this->maintenanceLineItem = $maintenanceLineItem;
         return $this;
     }
-
-
 }
-

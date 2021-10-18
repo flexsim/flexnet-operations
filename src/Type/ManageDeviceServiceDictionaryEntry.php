@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ManageDeviceServiceDictionaryEntry
+class ManageDeviceServiceDictionaryEntry extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $stringValue;
+    protected $stringValue;
 
     /**
      * @var int
      */
-    private $numberValue;
+    protected $numberValue;
 
     /**
      * Constructor

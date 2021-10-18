@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class OnHoldFmtLicenseDataType
+class OnHoldFmtLicenseDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $fulfillmentId;
+    protected $fulfillmentId;
 
     /**
      * @var string
      */
-    private $textLicense;
+    protected $textLicense;
 
     /**
      * @var string
      */
-    private $binaryLicense;
+    protected $binaryLicense;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataListType
      */
-    private $licenseFiles;
+    protected $licenseFiles;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class OnHoldFmtLicenseDataType
         $this->licenseFiles = $licenseFiles;
         return $this;
     }
-
-
 }
-

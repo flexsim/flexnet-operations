@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatePartNumberDataType
+class CreatePartNumberDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $partId;
+    protected $partId;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class CreatePartNumberDataType
         $this->description = $description;
         return $this;
     }
-
-
 }
-

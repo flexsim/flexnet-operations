@@ -4,23 +4,23 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class ActivateLicensesResponseType implements ResultInterface
+class ActivateLicensesResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedLineItem
      */
-    private $failedData;
+    protected $failedData;
 
     /**
      * @var string
      */
-    private $resultData;
+    protected $resultData;
 
     /**
      * Constructor
@@ -101,7 +101,4 @@ class ActivateLicensesResponseType implements ResultInterface
         $this->resultData = $resultData;
         return $this;
     }
-
-
 }
-

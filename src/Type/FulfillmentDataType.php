@@ -2,163 +2,163 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FulfillmentDataType
+class FulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementIdentifier;
+    protected $entitlementIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $fulfillmentIdentifier;
+    protected $fulfillmentIdentifier;
 
     /**
      * @var string
      */
-    private $fulfillmentType;
+    protected $fulfillmentType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $lineItem;
+    protected $lineItem;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $product;
+    protected $product;
 
     /**
      * @var string
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ServerIDsType
      */
-    private $serverIds;
+    protected $serverIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NodeIDsType
      */
-    private $nodeIds;
+    protected $nodeIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType
      */
-    private $customHost;
+    protected $customHost;
 
     /**
      * @var string
      */
-    private $fulfilledCount;
+    protected $fulfilledCount;
 
     /**
      * @var string
      */
-    private $overDraftCount;
+    protected $overDraftCount;
 
     /**
      * @var \DateTimeInterface
      */
-    private $fulfillDate;
+    protected $fulfillDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $fulfillDateTime;
+    protected $fulfillDateTime;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var string
      */
-    private $licenseText;
+    protected $licenseText;
 
     /**
      * @var string
      */
-    private $binaryLicense;
+    protected $binaryLicense;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ConsolidatedHostLicenseDataType
      */
-    private $consolidatedHostLicense;
+    protected $consolidatedHostLicense;
 
     /**
      * @var string
      */
-    private $supportAction;
+    protected $supportAction;
 
     /**
      * @var \DateTimeInterface
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $parentFulfillmentId;
+    protected $parentFulfillmentId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $licenseModelAttributes;
+    protected $licenseModelAttributes;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var string
      */
-    private $fulfillmentSource;
+    protected $fulfillmentSource;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataListType
      */
-    private $licenseFiles;
+    protected $licenseFiles;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType
      */
-    private $entitledProducts;
+    protected $entitledProducts;
 
     /**
      * @var string
      */
-    private $activationType;
+    protected $activationType;
 
     /**
      * Constructor
@@ -827,7 +827,4 @@ class FulfillmentDataType
         $this->activationType = $activationType;
         return $this;
     }
-
-
 }
-

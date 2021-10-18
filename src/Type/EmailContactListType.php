@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EmailContactListType
+class EmailContactListType extends FlexnetType
 {
 
     /**
      * @var string|array
      */
-    private $emailId;
+    protected $emailId;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class EmailContactListType
         $this->emailId = $emailId;
         return $this;
     }
-
-
 }
-

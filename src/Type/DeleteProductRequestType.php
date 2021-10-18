@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteProductRequestType implements RequestInterface
+class DeleteProductRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteProductDataType
      */
-    private $product;
+    protected $product;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteProductRequestType implements RequestInterface
         $this->product = $product;
         return $this;
     }
-
-
 }
-

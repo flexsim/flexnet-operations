@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedCreateDeviceDataType
+class FailedCreateDeviceDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceDataType
      */
-    private $device;
+    protected $device;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedCreateDeviceDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

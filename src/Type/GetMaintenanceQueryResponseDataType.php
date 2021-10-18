@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetMaintenanceQueryResponseDataType
+class GetMaintenanceQueryResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceQueryDataType
      */
-    private $maintenance;
+    protected $maintenance;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetMaintenanceQueryResponseDataType
         $this->maintenance = $maintenance;
         return $this;
     }
-
-
 }
-

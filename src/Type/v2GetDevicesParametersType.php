@@ -2,93 +2,93 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class v2GetDevicesParametersType
+class v2GetDevicesParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $alias;
+    protected $alias;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $deviceId;
+    protected $deviceId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType
      */
-    private $deviceIdType;
+    protected $deviceIdType;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $parentId;
+    protected $parentId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $soldToAcctId;
+    protected $soldToAcctId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $soldToOrgId;
+    protected $soldToOrgId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $description;
+    protected $description;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceStateQueryType
      */
-    private $status;
+    protected $status;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $addOnActivationId;
+    protected $addOnActivationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $addOnProductName;
+    protected $addOnProductName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $addOnProductVersion;
+    protected $addOnProductVersion;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $featureName;
+    protected $featureName;
 
     /**
      * @var bool
      */
-    private $isServer;
+    protected $isServer;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceTypeList
      */
-    private $deviceTypes;
+    protected $deviceTypes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $userString;
+    protected $userString;
 
     /**
      * Constructor

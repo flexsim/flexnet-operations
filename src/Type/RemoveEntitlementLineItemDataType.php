@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class RemoveEntitlementLineItemDataType
+class RemoveEntitlementLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementIdentifier;
+    protected $entitlementIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $lineItemIdentifier;
+    protected $lineItemIdentifier;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class RemoveEntitlementLineItemDataType
         $this->lineItemIdentifier = $lineItemIdentifier;
         return $this;
     }
-
-
 }
-

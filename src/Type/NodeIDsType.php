@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class NodeIDsType
+class NodeIDsType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $nodeId;
+    protected $nodeId;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class NodeIDsType
         $this->nodeId = $nodeId;
         return $this;
     }
-
-
 }
-

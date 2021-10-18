@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedSetDeviceStatusDataListType
+class FailedSetDeviceStatusDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedSetDeviceStatusDataType|array 
      */
-    private $failedDevice;
+    protected $failedDevice;
 
     /**
      * Constructor

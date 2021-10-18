@@ -2,53 +2,53 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class MaintenanceQueryDataType
+class MaintenanceQueryDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var string
      */
-    private $maintenanceName;
+    protected $maintenanceName;
 
     /**
      * @var string
      */
-    private $version;
+    protected $version;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var bool
      */
-    private $allowUpgrades;
+    protected $allowUpgrades;
 
     /**
      * @var bool
      */
-    private $allowUpsells;
+    protected $allowUpsells;
 
     /**
      * @var bool
      */
-    private $allowRenewals;
+    protected $allowRenewals;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType
      */
-    private $partNumbers;
+    protected $partNumbers;
 
     /**
      * Constructor
@@ -255,7 +255,4 @@ class MaintenanceQueryDataType
         $this->partNumbers = $partNumbers;
         return $this;
     }
-
-
 }
-

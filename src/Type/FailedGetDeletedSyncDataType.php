@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedGetDeletedSyncDataType
+class FailedGetDeletedSyncDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FailedGetDeletedSyncDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

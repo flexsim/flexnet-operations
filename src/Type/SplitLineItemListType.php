@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SplitLineItemListType
+class SplitLineItemListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType|array 
      */
-    private $lineItemInfo;
+    protected $lineItemInfo;
 
     /**
      * Constructor

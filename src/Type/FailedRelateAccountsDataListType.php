@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedRelateAccountsDataListType
+class FailedRelateAccountsDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedRelateAccountsDataType|array 
      */
-    private $failedAcctData;
+    protected $failedAcctData;
 
     /**
      * Constructor

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LinkLineItemDataType
+class LinkLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier
      */
-    private $lineItemIdentifier;
+    protected $lineItemIdentifier;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class LinkLineItemDataType
         $this->lineItemIdentifier = $lineItemIdentifier;
         return $this;
     }
-
-
 }
-

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ActivationIdOverDraftMapType
+class ActivationIdOverDraftMapType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var bool
      */
-    private $overDraftAllowed;
+    protected $overDraftAllowed;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class ActivationIdOverDraftMapType
         $this->overDraftAllowed = $overDraftAllowed;
         return $this;
     }
-
-
 }
-

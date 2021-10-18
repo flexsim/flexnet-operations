@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LinkAddonLineItemDataType
+class LinkAddonLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkLineItemDataType
      */
-    private $lineItem;
+    protected $lineItem;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class LinkAddonLineItemDataType
         $this->lineItem = $lineItem;
         return $this;
     }
-
-
 }
-

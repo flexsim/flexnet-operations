@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedFulfillmentDataListType
+class CreatedFulfillmentDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array
      */
-    private $createdFulfillment;
+    protected $createdFulfillment;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array
      */
-    private $verifiedFulfillment;
+    protected $verifiedFulfillment;
 
     /**
      * Constructor

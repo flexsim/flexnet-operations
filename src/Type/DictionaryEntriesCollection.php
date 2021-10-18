@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DictionaryEntriesCollection
+class DictionaryEntriesCollection extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry
      */
-    private $Entry;
+    protected $Entry;
 
     /**
      * Constructor

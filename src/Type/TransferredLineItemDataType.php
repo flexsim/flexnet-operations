@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class TransferredLineItemDataType
+class TransferredLineItemDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $lineItemIdentifier;
+    protected $lineItemIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $transferredFromId;
+    protected $transferredFromId;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class TransferredLineItemDataType
         $this->transferredFromId = $transferredFromId;
         return $this;
     }
-
-
 }
-

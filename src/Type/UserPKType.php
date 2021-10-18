@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UserPKType
+class UserPKType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $firstName;
+    protected $firstName;
 
     /**
      * @var string
      */
-    private $lastName;
+    protected $lastName;
 
     /**
      * @var string
      */
-    private $emailAddress;
+    protected $emailAddress;
 
     /**
      * @var string
      */
-    private $phoneNumber;
+    protected $phoneNumber;
 
     /**
      * Constructor
@@ -125,7 +125,4 @@ class UserPKType
         $this->phoneNumber = $phoneNumber;
         return $this;
     }
-
-
 }
-

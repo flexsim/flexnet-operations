@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedLineItem
+class FailedLineItem extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FailedLineItem
         $this->activationId = $activationId;
         return $this;
     }
-
-
 }
-

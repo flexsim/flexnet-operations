@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedUpdateProductRelationshipDataType
+class FailedUpdateProductRelationshipDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType
      */
-    private $relationship;
+    protected $relationship;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedUpdateProductRelationshipDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class OrgTypeList
+class OrgTypeList extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $orgType;
+    protected $orgType;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class OrgTypeList
         $this->orgType = $orgType;
         return $this;
     }
-
-
 }
-

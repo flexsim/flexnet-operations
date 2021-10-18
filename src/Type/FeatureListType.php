@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FeatureListType
+class FeatureListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType|array 
      */
-    private $featureIdentifier;
+    protected $featureIdentifier;
 
     /**
      * Constructor

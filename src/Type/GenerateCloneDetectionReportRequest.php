@@ -4,33 +4,33 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GenerateCloneDetectionReportRequest implements RequestInterface
+class GenerateCloneDetectionReportRequest extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EnterpriseIds
      */
-    private $enterpriseIds;
+    protected $enterpriseIds;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $endDate;
+    protected $endDate;
 
     /**
      * @var int
      */
-    private $pageNumber;
+    protected $pageNumber;
 
     /**
      * @var int
      */
-    private $batchSize;
+    protected $batchSize;
 
     /**
      * Constructor
@@ -153,7 +153,4 @@ class GenerateCloneDetectionReportRequest implements RequestInterface
         $this->batchSize = $batchSize;
         return $this;
     }
-
-
 }
-

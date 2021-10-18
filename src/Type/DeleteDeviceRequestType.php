@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class DeleteDeviceRequestType implements RequestInterface
+class DeleteDeviceRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class DeleteDeviceRequestType implements RequestInterface
         $this->deviceIdentifier = $deviceIdentifier;
         return $this;
     }
-
-
 }
-

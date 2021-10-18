@@ -4,28 +4,28 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class CreateLicensesAsBatchRequestType implements RequestInterface
+class CreateLicensesAsBatchRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ActivationIdsListType
      */
-    private $activationIds;
+    protected $activationIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostIdDataSetType
      */
-    private $hostIdDataSet;
+    protected $hostIdDataSet;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CountDataSetType
      */
-    private $countDataSet;
+    protected $countDataSet;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType
      */
-    private $commonBatchDataSet;
+    protected $commonBatchDataSet;
 
     /**
      * Constructor
@@ -127,7 +127,4 @@ class CreateLicensesAsBatchRequestType implements RequestInterface
         $this->commonBatchDataSet = $commonBatchDataSet;
         return $this;
     }
-
-
 }
-

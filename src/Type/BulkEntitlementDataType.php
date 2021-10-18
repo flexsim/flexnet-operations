@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class BulkEntitlementDataType
+class BulkEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var string
      */
-    private $createdUserId;
+    protected $createdUserId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class BulkEntitlementDataType
         $this->licenseTechnology = $licenseTechnology;
         return $this;
     }
-
-
 }
-

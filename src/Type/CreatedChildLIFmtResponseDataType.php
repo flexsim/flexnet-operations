@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedChildLIFmtResponseDataType
+class CreatedChildLIFmtResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentDataType
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class CreatedChildLIFmtResponseDataType
         $this->fulfillment = $fulfillment;
         return $this;
     }
-
-
 }
-

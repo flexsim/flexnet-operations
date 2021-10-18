@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LineItemActivationIds
+class LineItemActivationIds extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $lineItemActivationId;
+    protected $lineItemActivationId;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class LineItemActivationIds
         $this->lineItemActivationId = $lineItemActivationId;
         return $this;
     }
-
-
 }
-

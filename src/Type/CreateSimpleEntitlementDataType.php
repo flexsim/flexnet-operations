@@ -2,68 +2,68 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateSimpleEntitlementDataType
+class CreateSimpleEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\IdType
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var string
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType
      */
-    private $lineItems;
+    protected $lineItems;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateMaintenanceLineItemDataType
      */
-    private $maintenanceLineItems;
+    protected $maintenanceLineItems;
 
     /**
      * @var bool
      */
-    private $autoDeploy;
+    protected $autoDeploy;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType
      */
-    private $channelPartners;
+    protected $channelPartners;
 
     /**
      * @var bool
      */
-    private $allowPortalLogin;
+    protected $allowPortalLogin;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $entitlementAttributes;
+    protected $entitlementAttributes;
 
     /**
      * @var string
      */
-    private $emailTemplateVariation;
+    protected $emailTemplateVariation;
 
     /**
      * Constructor

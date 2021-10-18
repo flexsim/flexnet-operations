@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DictionaryType
+class DictionaryType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry
      */
-    private $entry;
+    protected $entry;
 
     /**
      * Constructor

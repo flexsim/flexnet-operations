@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class HostTypeListType
+class HostTypeListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array 
      */
-    private $hostType;
+    protected $hostType;
 
     /**
      * Constructor

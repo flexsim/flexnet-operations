@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class TransferEntitlementsListType
+class TransferEntitlementsListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType|array 
      */
-    private $entitlementInfo;
+    protected $entitlementInfo;
 
     /**
      * Constructor

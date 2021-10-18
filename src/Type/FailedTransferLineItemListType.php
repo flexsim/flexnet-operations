@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedTransferLineItemListType
+class FailedTransferLineItemListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedTransferLineItemDataType|array 
      */
-    private $failedLineItem;
+    protected $failedLineItem;
 
     /**
      * Constructor

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class TrustedKeyPKType
+class TrustedKeyPKType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $keyName;
+    protected $keyName;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class TrustedKeyPKType
         $this->keyName = $keyName;
         return $this;
     }
-
-
 }
-

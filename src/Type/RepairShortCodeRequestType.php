@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class RepairShortCodeRequestType implements RequestInterface
+class RepairShortCodeRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType
      */
-    private $shortCodeData;
+    protected $shortCodeData;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class RepairShortCodeRequestType implements RequestInterface
         $this->shortCodeData = $shortCodeData;
         return $this;
     }
-
-
 }
-

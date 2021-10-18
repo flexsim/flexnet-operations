@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AccountTypeList
+class AccountTypeList extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $accountType;
+    protected $accountType;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class AccountTypeList
         $this->accountType = $accountType;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PartNumberPKType
+class PartNumberPKType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $partId;
+    protected $partId;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class PartNumberPKType
         $this->partId = $partId;
         return $this;
     }
-
-
 }
-

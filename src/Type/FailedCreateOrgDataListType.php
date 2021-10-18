@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedCreateOrgDataListType
+class FailedCreateOrgDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedCreateOrgDataType|array 
      */
-    private $failedOrg;
+    protected $failedOrg;
 
     /**
      * Constructor

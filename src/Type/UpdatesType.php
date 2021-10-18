@@ -2,38 +2,38 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdatesType
+class UpdatesType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $updateId;
+    protected $updateId;
 
     /**
      * @var string
      */
-    private $downloadPackageId;
+    protected $downloadPackageId;
 
     /**
      * @var string
      */
-    private $platform;
+    protected $platform;
 
     /**
      * @var string
      */
-    private $language;
+    protected $language;
 
     /**
      * @var int
      */
-    private $status;
+    protected $status;
 
     /**
      * @var string
      */
-    private $statusReason;
+    protected $statusReason;
 
     /**
      * Constructor
@@ -177,7 +177,4 @@ class UpdatesType
         $this->statusReason = $statusReason;
         return $this;
     }
-
-
 }
-

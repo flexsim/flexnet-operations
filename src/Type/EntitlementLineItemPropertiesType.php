@@ -2,248 +2,248 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitlementLineItemPropertiesType
+class EntitlementLineItemPropertiesType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * @var string
      */
-    private $state;
+    protected $state;
 
     /**
      * @var string
      */
-    private $activatableItemType;
+    protected $activatableItemType;
 
     /**
      * @var string
      */
-    private $orderId;
+    protected $orderId;
 
     /**
      * @var string
      */
-    private $orderLineNumber;
+    protected $orderLineNumber;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var string
      */
-    private $soldToDisplayName;
+    protected $soldToDisplayName;
 
     /**
      * @var string
      */
-    private $entitlementState;
+    protected $entitlementState;
 
     /**
      * @var string
      */
-    private $entitlementDescription;
+    protected $entitlementDescription;
 
     /**
      * @var bool
      */
-    private $allowPortalLogin;
+    protected $allowPortalLogin;
 
     /**
      * @var string
      */
-    private $shipToEmail;
+    protected $shipToEmail;
 
     /**
      * @var string
      */
-    private $shipToAddress;
+    protected $shipToAddress;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $parentBulkEntitlementId;
+    protected $parentBulkEntitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $bulkEntSoldTo;
+    protected $bulkEntSoldTo;
 
     /**
      * @var string
      */
-    private $bulkEntSoldToDisplayName;
+    protected $bulkEntSoldToDisplayName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
-    private $product;
+    protected $product;
 
     /**
      * @var string
      */
-    private $productDescription;
+    protected $productDescription;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
      */
-    private $partNumber;
+    protected $partNumber;
 
     /**
      * @var string
      */
-    private $partNumberDescription;
+    protected $partNumberDescription;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType
      */
-    private $licenseTechnology;
+    protected $licenseTechnology;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $licenseModel;
+    protected $licenseModel;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $alternateLicenseModel1;
+    protected $alternateLicenseModel1;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
-    private $alternateLicenseModel2;
+    protected $alternateLicenseModel2;
 
     /**
      * @var string
      */
-    private $lineItemSupportAction;
+    protected $lineItemSupportAction;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $parentLineItem;
+    protected $parentLineItem;
 
     /**
      * @var \DateTimeInterface
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var string
      */
-    private $startDateOption;
+    protected $startDateOption;
 
     /**
      * @var bool
      */
-    private $isPermanent;
+    protected $isPermanent;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DurationType
      */
-    private $term;
+    protected $term;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expirationDate;
+    protected $expirationDate;
 
     /**
      * @var \DateTimeInterface
      */
-    private $versionDate;
+    protected $versionDate;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\VersionDateAttributesType
      */
-    private $versionDateAttributes;
+    protected $versionDateAttributes;
 
     /**
      * @var int
      */
-    private $numberOfCopies;
+    protected $numberOfCopies;
 
     /**
      * @var int
      */
-    private $fulfilledAmount;
+    protected $fulfilledAmount;
 
     /**
      * @var int
      */
-    private $numberOfRemainingCopies;
+    protected $numberOfRemainingCopies;
 
     /**
      * @var bool
      */
-    private $isTrusted;
+    protected $isTrusted;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $customAttributes;
+    protected $customAttributes;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType
      */
-    private $entitledProducts;
+    protected $entitledProducts;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType
      */
-    private $channelPartners;
+    protected $channelPartners;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceLineItemPropertiesType
      */
-    private $maintenanceLineItems;
+    protected $maintenanceLineItems;
 
     /**
      * @var string
      */
-    private $FNPTimeZoneValue;
+    protected $FNPTimeZoneValue;
 
     /**
      * @var \DateTimeInterface
      */
-    private $createdOnDateTime;
+    protected $createdOnDateTime;
 
     /**
      * @var \DateTimeInterface
      */
-    private $lastModifiedDateTime;
+    protected $lastModifiedDateTime;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType
      */
-    private $lineItemAttributes;
+    protected $lineItemAttributes;
 
     /**
      * @var string
      */
-    private $transferredFromLineItem;
+    protected $transferredFromLineItem;
 
     /**
      * @var string
      */
-    private $splitFromLineItem;
+    protected $splitFromLineItem;
 
     /**
      * Constructor

@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedBulkEntitlementDataType
+class CreatedBulkEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $recordRefNo;
+    protected $recordRefNo;
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var string
      */
-    private $bulkEntitlementId;
+    protected $bulkEntitlementId;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class CreatedBulkEntitlementDataType
         $this->bulkEntitlementId = $bulkEntitlementId;
         return $this;
     }
-
-
 }
-

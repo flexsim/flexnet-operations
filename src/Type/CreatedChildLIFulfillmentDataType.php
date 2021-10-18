@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedChildLIFulfillmentDataType
+class CreatedChildLIFulfillmentDataType extends FlexnetType
 {
 
     /**
      * @var int
      */
-    private $recordRefNo;
+    protected $recordRefNo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType
      */
-    private $fulfillmentInfo;
+    protected $fulfillmentInfo;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class CreatedChildLIFulfillmentDataType
         $this->fulfillmentInfo = $fulfillmentInfo;
         return $this;
     }
-
-
 }
-

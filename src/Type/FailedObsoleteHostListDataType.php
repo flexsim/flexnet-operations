@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedObsoleteHostListDataType
+class FailedObsoleteHostListDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedObsoleteHostDataType
      */
-    private $failedHost;
+    protected $failedHost;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FailedObsoleteHostListDataType
         $this->failedHost = $failedHost;
         return $this;
     }
-
-
 }
-

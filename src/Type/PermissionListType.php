@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class PermissionListType
+class PermissionListType extends FlexnetType
 {
 
     /**
      * @var string|array 
      */
-    private $permission;
+    protected $permission;
 
     /**
      * Constructor

@@ -2,38 +2,38 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetUsageHistoryConfigType
+class GetUsageHistoryConfigType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $server;
+    protected $server;
 
     /**
      * @var bool
      */
-    private $features;
+    protected $features;
 
     /**
      * @var bool
      */
-    private $machineType;
+    protected $machineType;
 
     /**
      * @var bool
      */
-    private $vmDetails;
+    protected $vmDetails;
 
     /**
      * @var bool
      */
-    private $vmInfo;
+    protected $vmInfo;
 
     /**
      * @var bool
      */
-    private $vendorDictionary;
+    protected $vendorDictionary;
 
     /**
      * Constructor
@@ -177,7 +177,4 @@ class GetUsageHistoryConfigType
         $this->vendorDictionary = $vendorDictionary;
         return $this;
     }
-
-
 }
-

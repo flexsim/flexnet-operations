@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class LinkAddonLineItemsRequestType implements RequestInterface
+class LinkAddonLineItemsRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkAddonLineItemDataType
      */
-    private $requestList;
+    protected $requestList;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class LinkAddonLineItemsRequestType implements RequestInterface
         $this->requestList = $requestList;
         return $this;
     }
-
-
 }
-

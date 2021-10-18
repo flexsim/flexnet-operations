@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SoldToAcctNameType
+class SoldToAcctNameType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $displayName;
+    protected $displayName;
 
     /**
      * @var string
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class SoldToAcctNameType
         $this->name = $name;
         return $this;
     }
-
-
 }
-

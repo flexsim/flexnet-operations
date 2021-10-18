@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreateLicensesAsBatchResponseDataType
+class CreateLicensesAsBatchResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentDataType
      */
-    private $fulfillment;
+    protected $fulfillment;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class CreateLicensesAsBatchResponseDataType
         $this->fulfillment = $fulfillment;
         return $this;
     }
-
-
 }
-

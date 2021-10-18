@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetExactAvailableCountRequestType implements RequestInterface
+class GetExactAvailableCountRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class GetExactAvailableCountRequestType implements RequestInterface
         $this->activationId = $activationId;
         return $this;
     }
-
-
 }
-

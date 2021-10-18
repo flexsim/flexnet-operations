@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class AccountExpiryType
+class AccountExpiryType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $accountID;
+    protected $accountID;
 
     /**
      * @var \DateTimeInterface
      */
-    private $expiryDate;
+    protected $expiryDate;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class AccountExpiryType
         $this->expiryDate = $expiryDate;
         return $this;
     }
-
-
 }
-

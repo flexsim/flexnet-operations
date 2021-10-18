@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetUsersQueryResponseDataType
+class GetUsersQueryResponseDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserDetailDataType
      */
-    private $user;
+    protected $user;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class GetUsersQueryResponseDataType
         $this->user = $user;
         return $this;
     }
-
-
 }
-

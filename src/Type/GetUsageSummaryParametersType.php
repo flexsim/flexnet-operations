@@ -2,98 +2,98 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetUsageSummaryParametersType
+class GetUsageSummaryParametersType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ExternalIdQueryType
      */
-    private $activationUniqueId;
+    protected $activationUniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $activationId;
+    protected $activationId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ExternalIdQueryType
      */
-    private $entitlementUniqueId;
+    protected $entitlementUniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NumberQueryType
      */
-    private $usedCount;
+    protected $usedCount;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NumberQueryType
      */
-    private $usedExceedsOrderedBy;
+    protected $usedExceedsOrderedBy;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\NumberQueryType
      */
-    private $usedExceedsProvisionedBy;
+    protected $usedExceedsProvisionedBy;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType
      */
-    private $organizationUnitName;
+    protected $organizationUnitName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ExternalIdQueryType
      */
-    private $soldToUniqueId;
+    protected $soldToUniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ExternalIdQueryType
      */
-    private $orderableUniqueId;
+    protected $orderableUniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $orderableName;
+    protected $orderableName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $orderableVersion;
+    protected $orderableVersion;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ExternalIdQueryType
      */
-    private $serverUniqueId;
+    protected $serverUniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $serverId;
+    protected $serverId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
-    private $serverAlias;
+    protected $serverAlias;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\ExternalIdQueryType
      */
-    private $summaryTimeUniqueId;
+    protected $summaryTimeUniqueId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
-    private $summaryTime;
+    protected $summaryTime;
 
     /**
      * @var string
      */
-    private $groupBy;
+    protected $groupBy;
 
     /**
      * Constructor
@@ -489,7 +489,4 @@ class GetUsageSummaryParametersType
         $this->groupBy = $groupBy;
         return $this;
     }
-
-
 }
-

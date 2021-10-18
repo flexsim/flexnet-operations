@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedMaintenanceDataListType
+class CreatedMaintenanceDataListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType|array
      */
-    private $createdMaintenance;
+    protected $createdMaintenance;
 
     /**
      * Constructor

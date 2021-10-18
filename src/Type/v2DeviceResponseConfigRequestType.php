@@ -2,123 +2,123 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class v2DeviceResponseConfigRequestType
+class v2DeviceResponseConfigRequestType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $alias;
+    protected $alias;
 
     /**
      * @var bool
      */
-    private $description;
+    protected $description;
 
     /**
      * @var bool
      */
-    private $status;
+    protected $status;
 
     /**
      * @var bool
      */
-    private $servedStatus;
+    protected $servedStatus;
 
     /**
      * @var bool
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var bool
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var bool
      */
-    private $channelPartners;
+    protected $channelPartners;
 
     /**
      * @var bool
      */
-    private $preBuiltLicense;
+    protected $preBuiltLicense;
 
     /**
      * @var bool
      */
-    private $addOnActivationId;
+    protected $addOnActivationId;
 
     /**
      * @var bool
      */
-    private $addOnCounts;
+    protected $addOnCounts;
 
     /**
      * @var bool
      */
-    private $addOnProduct;
+    protected $addOnProduct;
 
     /**
      * @var bool
      */
-    private $addOnLicense;
+    protected $addOnLicense;
 
     /**
      * @var bool
      */
-    private $addOnExpirationDateOverride;
+    protected $addOnExpirationDateOverride;
 
     /**
      * @var bool
      */
-    private $publisherIdentity;
+    protected $publisherIdentity;
 
     /**
      * @var bool
      */
-    private $parent;
+    protected $parent;
 
     /**
      * @var bool
      */
-    private $machineType;
+    protected $machineType;
 
     /**
      * @var bool
      */
-    private $vmDetails;
+    protected $vmDetails;
 
     /**
      * @var bool
      */
-    private $vmInfo;
+    protected $vmInfo;
 
     /**
      * @var bool
      */
-    private $vendorDictionary;
+    protected $vendorDictionary;
 
     /**
      * @var bool
      */
-    private $deviceUser;
+    protected $deviceUser;
 
     /**
      * @var bool
      */
-    private $addOnCreatedDate;
+    protected $addOnCreatedDate;
 
     /**
      * @var bool
      */
-    private $addOnLastModifiedDate;
+    protected $addOnLastModifiedDate;
 
     /**
      * @var bool
      */
-    private $updates;
+    protected $updates;
 
     /**
      * Constructor

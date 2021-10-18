@@ -2,28 +2,28 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class GetMatchingBulkEntInfoType
+class GetMatchingBulkEntInfoType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $bulkEntIdentifier;
+    protected $bulkEntIdentifier;
 
     /**
      * @var string
      */
-    private $targetTierName;
+    protected $targetTierName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
-    private $targetAccountUnit;
+    protected $targetAccountUnit;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $targetOrganizationUnit;
+    protected $targetOrganizationUnit;
 
     /**
      * Constructor

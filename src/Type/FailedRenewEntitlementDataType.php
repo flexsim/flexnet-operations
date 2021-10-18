@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FailedRenewEntitlementDataType
+class FailedRenewEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\RenewEntitlementDataType
      */
-    private $entitlementData;
+    protected $entitlementData;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class FailedRenewEntitlementDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

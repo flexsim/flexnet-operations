@@ -4,33 +4,33 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class EmailLicenseRequestType implements RequestInterface
+class EmailLicenseRequestType extends FlexnetType implements RequestInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
-    private $fulfillmentIdentifier;
+    protected $fulfillmentIdentifier;
 
     /**
      * @var bool
      */
-    private $ignoreExistingEmailList;
+    protected $ignoreExistingEmailList;
 
     /**
      * @var bool
      */
-    private $validateEmailAddresses;
+    protected $validateEmailAddresses;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EmailContactListType
      */
-    private $emailIdList;
+    protected $emailIdList;
 
     /**
      * @var string
      */
-    private $locale;
+    protected $locale;
 
     /**
      * Constructor
@@ -153,7 +153,4 @@ class EmailLicenseRequestType implements RequestInterface
         $this->locale = $locale;
         return $this;
     }
-
-
 }
-

@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class MaintenanceStateDataType
+class MaintenanceStateDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType
      */
-    private $maintenanceIdentifier;
+    protected $maintenanceIdentifier;
 
     /**
      * @var string
      */
-    private $stateToSet;
+    protected $stateToSet;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class MaintenanceStateDataType
         $this->stateToSet = $stateToSet;
         return $this;
     }
-
-
 }
-

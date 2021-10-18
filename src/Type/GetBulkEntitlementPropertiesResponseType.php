@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetBulkEntitlementPropertiesResponseType implements ResultInterface
+class GetBulkEntitlementPropertiesResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\BulkEntitlementPropertiesType
      */
-    private $bulkEntitlement;
+    protected $bulkEntitlement;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetBulkEntitlementPropertiesResponseType implements ResultInterface
         $this->bulkEntitlement = $bulkEntitlement;
         return $this;
     }
-
-
 }
-

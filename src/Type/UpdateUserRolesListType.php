@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class UpdateUserRolesListType
+class UpdateUserRolesListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\RoleIdentifierType|array
      */
-    private $role;
+    protected $role;
 
     /**
      * @var string
      */
-    private $opType;
+    protected $opType;
 
     /**
      * Constructor

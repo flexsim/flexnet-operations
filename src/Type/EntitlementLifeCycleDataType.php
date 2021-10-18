@@ -2,18 +2,18 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitlementLifeCycleDataType
+class EntitlementLifeCycleDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
-    private $parentEntitlementIdentifier;
+    protected $parentEntitlementIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType
      */
-    private $lineItemData;
+    protected $lineItemData;
 
     /**
      * Constructor
@@ -73,7 +73,4 @@ class EntitlementLifeCycleDataType
         $this->lineItemData = $lineItemData;
         return $this;
     }
-
-
 }
-

@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class IdListType
+class IdListType extends FlexnetType
 {
 
     /**
      * @var string|array 
      */
-    private $id;
+    protected $id;
 
     /**
      * Constructor

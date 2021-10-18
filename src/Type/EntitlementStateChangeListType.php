@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class EntitlementStateChangeListType
+class EntitlementStateChangeListType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType|array
      */
-    private $entitlement;
+    protected $entitlement;
 
     /**
      * Constructor

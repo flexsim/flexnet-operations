@@ -4,13 +4,13 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class IsEntitlementVisibleInTargetOrgResponseType implements ResultInterface
+class IsEntitlementVisibleInTargetOrgResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * Constructor
@@ -49,7 +49,4 @@ class IsEntitlementVisibleInTargetOrgResponseType implements ResultInterface
         $this->statusInfo = $statusInfo;
         return $this;
     }
-
-
 }
-

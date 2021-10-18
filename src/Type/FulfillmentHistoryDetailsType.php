@@ -2,13 +2,13 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class FulfillmentHistoryDetailsType
+class FulfillmentHistoryDetailsType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType
      */
-    private $record;
+    protected $record;
 
     /**
      * Constructor
@@ -47,7 +47,4 @@ class FulfillmentHistoryDetailsType
         $this->record = $record;
         return $this;
     }
-
-
 }
-

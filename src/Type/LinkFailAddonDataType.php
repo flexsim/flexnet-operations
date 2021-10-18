@@ -2,23 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class LinkFailAddonDataType
+class LinkFailAddonDataType extends FlexnetType
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
-    private $deviceIdentifier;
+    protected $deviceIdentifier;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkLineItemDataType
      */
-    private $lineItem;
+    protected $lineItem;
 
     /**
      * @var string
      */
-    private $reason;
+    protected $reason;
 
     /**
      * Constructor
@@ -99,7 +99,4 @@ class LinkFailAddonDataType
         $this->reason = $reason;
         return $this;
     }
-
-
 }
-

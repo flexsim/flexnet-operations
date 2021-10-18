@@ -2,128 +2,128 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class SearchDeviceResponseConfigType
+class SearchDeviceResponseConfigType extends FlexnetType
 {
 
     /**
      * @var bool
      */
-    private $name;
+    protected $name;
 
     /**
      * @var bool
      */
-    private $description;
+    protected $description;
 
     /**
      * @var bool
      */
-    private $status;
+    protected $status;
 
     /**
      * @var bool
      */
-    private $servedStatus;
+    protected $servedStatus;
 
     /**
      * @var bool
      */
-    private $hostTypeName;
+    protected $hostTypeName;
 
     /**
      * @var bool
      */
-    private $hosted;
+    protected $hosted;
 
     /**
      * @var bool
      */
-    private $soldTo;
+    protected $soldTo;
 
     /**
      * @var bool
      */
-    private $hasLicense;
+    protected $hasLicense;
 
     /**
      * @var bool
      */
-    private $bufferLicense;
+    protected $bufferLicense;
 
     /**
      * @var bool
      */
-    private $addOnLicense;
+    protected $addOnLicense;
 
     /**
      * @var bool
      */
-    private $publisherIdentity;
+    protected $publisherIdentity;
 
     /**
      * @var bool
      */
-    private $parent;
+    protected $parent;
 
     /**
      * @var bool
      */
-    private $machineType;
+    protected $machineType;
 
     /**
      * @var bool
      */
-    private $vmDetails;
+    protected $vmDetails;
 
     /**
      * @var bool
      */
-    private $userInfo;
+    protected $userInfo;
 
     /**
      * @var bool
      */
-    private $lastRequestTime;
+    protected $lastRequestTime;
 
     /**
      * @var bool
      */
-    private $lastSyncTime;
+    protected $lastSyncTime;
 
     /**
      * @var bool
      */
-    private $addOnActivationId;
+    protected $addOnActivationId;
 
     /**
      * @var bool
      */
-    private $addOnCounts;
+    protected $addOnCounts;
 
     /**
      * @var bool
      */
-    private $addOnProduct;
+    protected $addOnProduct;
 
     /**
      * @var bool
      */
-    private $addOnProductLine;
+    protected $addOnProductLine;
 
     /**
      * @var bool
      */
-    private $addOnPartNumber;
+    protected $addOnPartNumber;
 
     /**
      * @var bool
      */
-    private $addOnEntitlementId;
+    protected $addOnEntitlementId;
 
     /**
      * @var bool
      */
-    private $hasUpdates;
+    protected $hasUpdates;
 
     /**
      * Constructor
@@ -645,7 +645,4 @@ class SearchDeviceResponseConfigType
         $this->hasUpdates = $hasUpdates;
         return $this;
     }
-
-
 }
-

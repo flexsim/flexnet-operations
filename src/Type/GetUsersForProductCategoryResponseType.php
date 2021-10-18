@@ -4,18 +4,18 @@ namespace Flexsim\FlexnetOperations\Type;
 
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetUsersForProductCategoryResponseType implements ResultInterface
+class GetUsersForProductCategoryResponseType extends FlexnetType implements ResultInterface
 {
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
-    private $statusInfo;
+    protected $statusInfo;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType
      */
-    private $userData;
+    protected $userData;
 
     /**
      * Constructor
@@ -75,7 +75,4 @@ class GetUsersForProductCategoryResponseType implements ResultInterface
         $this->userData = $userData;
         return $this;
     }
-
-
 }
-

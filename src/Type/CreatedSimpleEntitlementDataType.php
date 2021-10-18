@@ -2,43 +2,43 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CreatedSimpleEntitlementDataType
+class CreatedSimpleEntitlementDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $recordRefNo;
+    protected $recordRefNo;
 
     /**
      * @var string
      */
-    private $uniqueId;
+    protected $uniqueId;
 
     /**
      * @var string
      */
-    private $entitlementId;
+    protected $entitlementId;
 
     /**
      * @var string
      */
-    private $lineItemUniqueIds;
+    protected $lineItemUniqueIds;
 
     /**
      * @var string
      */
-    private $maintenanceLineItemUniqueIds;
+    protected $maintenanceLineItemUniqueIds;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $lineItemIdentifiers;
+    protected $lineItemIdentifiers;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
-    private $maintenanceLineItemIdentifiers;
+    protected $maintenanceLineItemIdentifiers;
 
     /**
      * Constructor
@@ -203,7 +203,4 @@ class CreatedSimpleEntitlementDataType
         $this->maintenanceLineItemIdentifiers = $maintenanceLineItemIdentifiers;
         return $this;
     }
-
-
 }
-

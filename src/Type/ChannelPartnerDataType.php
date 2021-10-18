@@ -2,33 +2,33 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class ChannelPartnerDataType
+class ChannelPartnerDataType extends FlexnetType
 {
 
     /**
      * @var string
      */
-    private $tierName;
+    protected $tierName;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
-    private $accountUnit;
+    protected $accountUnit;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
-    private $organizationUnit;
+    protected $organizationUnit;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType
      */
-    private $contact;
+    protected $contact;
 
     /**
      * @var bool
      */
-    private $currentOwner;
+    protected $currentOwner;
 
     /**
      * Constructor
