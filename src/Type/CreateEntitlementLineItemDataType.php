@@ -124,6 +124,7 @@ class CreateEntitlementLineItemDataType extends FlexnetType
      * Constructor
      *
      * @param \Flexsim\FlexnetOperations\Type\IdType $activationId
+     * @param int $numberOfCopies
      * @param string $description
      * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
      * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
@@ -135,7 +136,6 @@ class CreateEntitlementLineItemDataType extends FlexnetType
      * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes
      * @param string $orderId
      * @param string $orderLineNumber
-     * @param int $numberOfCopies
      * @param \DateTimeInterface $startDate
      * @param string $startDateOption
      * @param bool $isPermanent
@@ -147,9 +147,10 @@ class CreateEntitlementLineItemDataType extends FlexnetType
      * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
      * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\IdType $activationId, string $description = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes = null, string $orderId = null, string $orderLineNumber = null, int $numberOfCopies, \DateTimeInterface $startDate = null, string $startDateOption = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, string $lineItemType = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes = null)
+    public function __construct(\Flexsim\FlexnetOperations\Type\IdType $activationId, int $numberOfCopies, string $description = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, string $startDateOption = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, string $lineItemType = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes = null)
     {
         $this->activationId = $activationId;
+        $this->numberOfCopies = $numberOfCopies;
         $this->description = $description;
         $this->product = $product;
         $this->partNumber = $partNumber;
@@ -161,7 +162,6 @@ class CreateEntitlementLineItemDataType extends FlexnetType
         $this->policyAttributes = $policyAttributes;
         $this->orderId = $orderId;
         $this->orderLineNumber = $orderLineNumber;
-        $this->numberOfCopies = $numberOfCopies;
         $this->startDate = $startDate;
         $this->startDateOption = $startDateOption;
         $this->isPermanent = $isPermanent;
@@ -178,6 +178,7 @@ class CreateEntitlementLineItemDataType extends FlexnetType
      * create a new instance of this class
      *
      * @param \Flexsim\FlexnetOperations\Type\IdType $activationId
+     * @param int $numberOfCopies
      * @param string $description
      * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
      * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
@@ -189,7 +190,6 @@ class CreateEntitlementLineItemDataType extends FlexnetType
      * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes
      * @param string $orderId
      * @param string $orderLineNumber
-     * @param int $numberOfCopies
      * @param \DateTimeInterface $startDate
      * @param string $startDateOption
      * @param bool $isPermanent
@@ -201,7 +201,7 @@ class CreateEntitlementLineItemDataType extends FlexnetType
      * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
      * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\IdType $activationId, string $description = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes = null, string $orderId = null, string $orderLineNumber = null, int $numberOfCopies, \DateTimeInterface $startDate = null, string $startDateOption = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, string $lineItemType = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes = null)
+    public static function create(\Flexsim\FlexnetOperations\Type\IdType $activationId, int $numberOfCopies, string $description = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, string $startDateOption = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, string $lineItemType = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes = null)
     {
         return new self(...func_get_args());
     }

@@ -25,27 +25,32 @@ class GetUsersQueryRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams = null, int $pageNumber, int $batchSize)
-    {
-        $queryParams = $queryParams ?? [];
-        $this->queryParams = $queryParams;
+    public function __construct(
+        int $pageNumber,
+        int $batchSize,
+        \Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams = []
+    ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
+        $this->queryParams = $queryParams;
     }
 
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams = null, int $pageNumber, int $batchSize)
-    {
+    public static function create(
+        int $pageNumber,
+        int $batchSize,
+        \Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams = []
+    ) {
         return new self(...func_get_args());
     }
 

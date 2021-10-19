@@ -35,18 +35,22 @@ class GetFulfillmentsQueryRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
      * @param bool $includeLicenseText
      * @param bool $includeConsolidatedHostLicense
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $includeLicenseText = null, bool $includeConsolidatedHostLicense = null)
-    {
-        $queryParams = $queryParams ?? [];
-        $this->queryParams = $queryParams;
+    public function __construct(
+        int $pageNumber,
+        int $batchSize,
+        \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = [],
+        bool $includeLicenseText = null,
+        bool $includeConsolidatedHostLicense = null
+    ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
+        $this->queryParams = $queryParams;
         $this->includeLicenseText = $includeLicenseText;
         $this->includeConsolidatedHostLicense = $includeConsolidatedHostLicense;
     }
@@ -54,14 +58,19 @@ class GetFulfillmentsQueryRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
      * @param bool $includeLicenseText
      * @param bool $includeConsolidatedHostLicense
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $includeLicenseText = null, bool $includeConsolidatedHostLicense = null)
-    {
+    public static function create(
+        int $pageNumber,
+        int $batchSize,
+        \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = [],
+        bool $includeLicenseText = null,
+        bool $includeConsolidatedHostLicense = null
+    ) {
         return new self(...func_get_args());
     }
 

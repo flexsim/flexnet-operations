@@ -24,24 +24,24 @@ class PackagePropertiesDataType extends FlexnetType
      * Constructor
      *
      * @param string $name
-     * @param string $version
      * @param string $versionFormat
+     * @param string $version
      */
-    public function __construct(string $name, string $version = null, string $versionFormat)
+    public function __construct(string $name, string $versionFormat, string $version = null)
     {
         $this->name = $name;
-        $this->version = $version;
         $this->versionFormat = $versionFormat;
+        $this->version = $version;
     }
 
     /**
      * create a new instance of this class
      *
      * @param string $name
-     * @param string $version
      * @param string $versionFormat
+     * @param string $version
      */
-    public static function create(string $name, string $version = null, string $versionFormat)
+    public static function create(string $name, string $versionFormat, string $version = null)
     {
         return new self(...func_get_args());
     }

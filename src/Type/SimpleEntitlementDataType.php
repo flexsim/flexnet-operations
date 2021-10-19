@@ -103,7 +103,7 @@ class SimpleEntitlementDataType extends FlexnetType
     public function __construct(
         \Flexsim\FlexnetOperations\Type\IdType $entitlementId,
         string $description = null,
-        string $soldTo,
+        string $soldTo = null,
         string $shipToEmail = null,
         string $shipToAddress = null,
         string $state = null,
@@ -156,7 +156,7 @@ class SimpleEntitlementDataType extends FlexnetType
     public static function create(
         \Flexsim\FlexnetOperations\Type\IdType $entitlementId,
         string $description = null,
-        string $soldTo,
+        string $soldTo = null,
         string $shipToEmail = null,
         string $shipToAddress = null,
         string $state = null,

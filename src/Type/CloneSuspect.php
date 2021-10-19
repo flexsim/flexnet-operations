@@ -2,7 +2,7 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class CloneSuspect extends FlexnetType 
+class CloneSuspect extends FlexnetType
 {
 
     /**
@@ -68,36 +68,36 @@ class CloneSuspect extends FlexnetType
     /**
      * Constructor
      *
+     * @param \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
      * @param \DateTimeInterface $timeStamp
      * @param string $hostClass
      * @param string $hostAlias
      * @param string $deviceId
      * @param string $serverId
-     * @param \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
      * @param string $acctId this method is backwards compatible so you may also pass $orgId
      * @param string $acctName this method is backwards compatible so you may also pass $orgName
      * @param string $enterpriseId
      */
     public function __construct(
+        \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds,
+        \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds,
         \DateTimeInterface $timeStamp = null,
-        string $hostclass = extends FlexnetType null, extends FlexnetType 
+        string $hostClass = null,
         string $hostAlias = null,
         string $deviceId = null,
         string $serverId = null,
-        \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds,
-        \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds,
         string $acctId = null,
         string $acctName = null,
         string $enterpriseId = null
     ) {
+        $this->lineItemActivationIds = $lineItemActivationIds;
+        $this->featureIds = $featureIds;
         $this->timeStamp = $timeStamp;
-        $this->hostclass = extends FlexnetType $hostClass; extends FlexnetType 
+        $this->hostClass =  $hostClass;
         $this->hostAlias = $hostAlias;
         $this->deviceId = $deviceId;
         $this->serverId = $serverId;
-        $this->lineItemActivationIds = $lineItemActivationIds;
-        $this->featureIds = $featureIds;
         $this->acctId = $acctId;
         $this->orgId = $acctId;
         $this->acctName = $acctName;
@@ -108,25 +108,25 @@ class CloneSuspect extends FlexnetType
     /**
      * create a new instance of this class
      *
+     * @param \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
      * @param \DateTimeInterface $timeStamp
      * @param string $hostClass
      * @param string $hostAlias
      * @param string $deviceId
      * @param string $serverId
-     * @param \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
      * @param string $acctId this method is backwards compatible so you may also pass $orgId
      * @param string $acctName this method is backwards compatible so you may also pass $orgName
      * @param string $enterpriseId
      */
     public static function create(
+        \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds,
+        \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds,
         \DateTimeInterface $timeStamp = null,
-        string $hostclass = extends FlexnetType null, extends FlexnetType 
+        string $hostClass =  null,
         string $hostAlias = null,
         string $deviceId = null,
         string $serverId = null,
-        \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds,
-        \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds,
         string $acctId = null,
         string $acctName = null,
         string $enterpriseId = null
@@ -166,7 +166,7 @@ class CloneSuspect extends FlexnetType
      */
     public function setHostClass($hostClass)
     {
-        $this->hostclass = extends FlexnetType $hostClass; extends FlexnetType 
+        $this->hostClass = $hostClass;
         return $this;
     }
 

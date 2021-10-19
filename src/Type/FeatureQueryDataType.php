@@ -45,20 +45,27 @@ class FeatureQueryDataType extends FlexnetType
      *
      * @param string $uniqueId
      * @param string $featureName
+     * @param string $state
      * @param string $versionFormat
      * @param string $version
      * @param string $description
-     * @param string $state
      * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
      */
-    public function __construct(string $uniqueId, string $featureName, string $versionFormat, string $version = null, string $description = null, string $state, \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null)
-    {
+    public function __construct(
+        string $uniqueId,
+        string $featureName,
+        string $state,
+        string $versionFormat,
+        string $version = null,
+        string $description = null,
+        \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null
+    ) {
         $this->uniqueId = $uniqueId;
         $this->featureName = $featureName;
+        $this->state = $state;
         $this->versionFormat = $versionFormat;
         $this->version = $version;
         $this->description = $description;
-        $this->state = $state;
         $this->featureOverrideParams = $featureOverrideParams;
     }
 
@@ -67,14 +74,21 @@ class FeatureQueryDataType extends FlexnetType
      *
      * @param string $uniqueId
      * @param string $featureName
+     * @param string $state
      * @param string $versionFormat
      * @param string $version
      * @param string $description
-     * @param string $state
      * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
      */
-    public static function create(string $uniqueId, string $featureName, string $versionFormat, string $version = null, string $description = null, string $state, \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null)
-    {
+    public static function create(
+        string $uniqueId,
+        string $featureName,
+        string $state,
+        string $versionFormat,
+        string $version = null,
+        string $description = null,
+        \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null
+    ) {
         return new self(...func_get_args());
     }
 

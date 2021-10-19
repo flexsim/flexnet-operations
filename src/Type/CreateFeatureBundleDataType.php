@@ -24,24 +24,24 @@ class CreateFeatureBundleDataType extends FlexnetType
      * Constructor
      *
      * @param string $name
-     * @param string $description
      * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
+     * @param string $description
      */
-    public function __construct(string $name, string $description = null, \Flexsim\FlexnetOperations\Type\FeaturesListType $features)
+    public function __construct(string $name, \Flexsim\FlexnetOperations\Type\FeaturesListType $features, string $description = null)
     {
         $this->name = $name;
-        $this->description = $description;
         $this->features = $features;
+        $this->description = $description;
     }
 
     /**
      * create a new instance of this class
      *
      * @param string $name
-     * @param string $description
      * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
+     * @param string $description
      */
-    public static function create(string $name, string $description = null, \Flexsim\FlexnetOperations\Type\FeaturesListType $features)
+    public static function create(string $name, \Flexsim\FlexnetOperations\Type\FeaturesListType $features, string $description = null)
     {
         return new self(...func_get_args());
     }

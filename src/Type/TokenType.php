@@ -20,22 +20,22 @@ class TokenType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\IdentityType $identity
      * @param string $token
+     * @param \Flexsim\FlexnetOperations\Type\IdentityType $identity
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\IdentityType $identity = null, string $token)
+    public function __construct(string $token, \Flexsim\FlexnetOperations\Type\IdentityType $identity = null)
     {
-        $this->identity = $identity;
         $this->token = $token;
+        $this->identity = $identity;
     }
 
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\IdentityType $identity
      * @param string $token
+     * @param \Flexsim\FlexnetOperations\Type\IdentityType $identity
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\IdentityType $identity = null, string $token)
+    public static function create(string $token, \Flexsim\FlexnetOperations\Type\IdentityType $identity = null)
     {
         return new self(...func_get_args());
     }

@@ -35,17 +35,22 @@ class GenerateCloneDetectionReportRequest extends FlexnetType implements Request
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds
      * @param \DateTimeInterface $startDate
      * @param \DateTimeInterface $endDate
+     * @param \Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds
      * @param int $pageNumber
      * @param int $batchSize
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds = null, \DateTimeInterface $startDate, \DateTimeInterface $endDate, int $pageNumber = null, int $batchSize = null)
-    {
-        $this->enterpriseIds = $enterpriseIds;
+    public function __construct(
+        \DateTimeInterface $startDate,
+        \DateTimeInterface $endDate,
+        \Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds = null,
+        int $pageNumber = null,
+        int $batchSize = null
+    ) {
         $this->startDate = $startDate;
         $this->endDate = $endDate;
+        $this->enterpriseIds = $enterpriseIds;
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
     }
@@ -53,14 +58,19 @@ class GenerateCloneDetectionReportRequest extends FlexnetType implements Request
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds
      * @param \DateTimeInterface $startDate
      * @param \DateTimeInterface $endDate
+     * @param \Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds
      * @param int $pageNumber
      * @param int $batchSize
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds = null, \DateTimeInterface $startDate, \DateTimeInterface $endDate, int $pageNumber = null, int $batchSize = null)
-    {
+    public static function create(
+        \DateTimeInterface $startDate,
+        \DateTimeInterface $endDate,
+        \Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds = null,
+        int $pageNumber = null,
+        int $batchSize = null
+    ) {
         return new self(...func_get_args());
     }
 

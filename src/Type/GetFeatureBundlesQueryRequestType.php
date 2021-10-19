@@ -30,30 +30,37 @@ class GetFeatureBundlesQueryRequestType extends FlexnetType implements RequestIn
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
      * @param bool $returnContainedObjects
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $returnContainedObjects)
-    {
-        $queryParams = $queryParams ?? [];
-        $this->queryParams = $queryParams;
+    public function __construct(
+        int $pageNumber,
+        int $batchSize,
+        \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = [],
+        bool $returnContainedObjects
+    ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
+        $this->queryParams = $queryParams;
         $this->returnContainedObjects = $returnContainedObjects;
     }
 
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
      * @param bool $returnContainedObjects
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $returnContainedObjects)
-    {
+    public static function create(
+        int $pageNumber,
+        int $batchSize,
+        \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = [],
+        bool $returnContainedObjects
+    ) {
         return new self(...func_get_args());
     }
 

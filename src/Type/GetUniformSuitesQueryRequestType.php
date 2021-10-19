@@ -30,30 +30,37 @@ class GetUniformSuitesQueryRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
      * @param bool $returnContainedObjects
+     * @param \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $returnContainedObjects)
-    {
-        $queryParams = $queryParams ?? [];
-        $this->queryParams = $queryParams;
+    public function __construct(
+        int $pageNumber,
+        int $batchSize,
+        bool $returnContainedObjects,
+        \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams = []
+    ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
         $this->returnContainedObjects = $returnContainedObjects;
+        $this->queryParams = $queryParams;
     }
 
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
      * @param bool $returnContainedObjects
+     * @param \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $returnContainedObjects)
-    {
+    public static function create(
+        int $pageNumber,
+        int $batchSize,
+        bool $returnContainedObjects,
+        \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams = []
+    ) {
         return new self(...func_get_args());
     }
 

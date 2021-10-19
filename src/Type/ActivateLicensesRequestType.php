@@ -41,33 +41,33 @@ class ActivateLicensesRequestType extends FlexnetType implements RequestInterfac
      * Constructor
      *
      * @param \Flexsim\FlexnetOperations\Type\TypeLineItem $lineItem
+     * @param string $hostInfo
      * @param string $shipToEmail
      * @param string $shipToAddress
      * @param string $soldTo
      * @param string $owner
-     * @param string $hostInfo
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\TypeLineItem $lineItem, string $shipToEmail = null, string $shipToAddress = null, string $soldTo = null, string $owner = null, string $hostInfo)
+    public function __construct(\Flexsim\FlexnetOperations\Type\TypeLineItem $lineItem, string $hostInfo, string $shipToEmail = null, string $shipToAddress = null, string $soldTo = null, string $owner = null)
     {
         $this->lineItem = $lineItem;
+        $this->hostInfo = $hostInfo;
         $this->shipToEmail = $shipToEmail;
         $this->shipToAddress = $shipToAddress;
         $this->soldTo = $soldTo;
         $this->owner = $owner;
-        $this->hostInfo = $hostInfo;
     }
 
     /**
      * create a new instance of this class
      *
      * @param \Flexsim\FlexnetOperations\Type\TypeLineItem $lineItem
+     * @param string $hostInfo
      * @param string $shipToEmail
      * @param string $shipToAddress
      * @param string $soldTo
      * @param string $owner
-     * @param string $hostInfo
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\TypeLineItem $lineItem, string $shipToEmail = null, string $shipToAddress = null, string $soldTo = null, string $owner = null, string $hostInfo)
+    public static function create(\Flexsim\FlexnetOperations\Type\TypeLineItem $lineItem, string $hostInfo, string $shipToEmail = null, string $shipToAddress = null, string $soldTo = null, string $owner = null)
     {
         return new self(...func_get_args());
     }

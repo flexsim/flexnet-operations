@@ -29,23 +29,28 @@ class GetUsageSummaryRequestType extends FlexnetType implements RequestInterface
      * @param int $pageNumber
      * @param int $batchSize
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\GetUsageSummaryParametersType $queryParams = null, int $pageNumber, int $batchSize)
-    {
-        $queryParams = $queryParams ?? [];
-        $this->queryParams = $queryParams;
+    public function __construct(
+        int $pageNumber,
+        int $batchSize,
+        \Flexsim\FlexnetOperations\Type\GetUsageSummaryParametersType $queryParams = []
+    ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
+        $this->queryParams = $queryParams;
     }
 
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\GetUsageSummaryParametersType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\GetUsageSummaryParametersType $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\GetUsageSummaryParametersType $queryParams = null, int $pageNumber, int $batchSize)
-    {
+    public static function create(
+        int $pageNumber,
+        int $batchSize,
+        \Flexsim\FlexnetOperations\Type\GetUsageSummaryParametersType $queryParams = []
+    ) {
         return new self(...func_get_args());
     }
 

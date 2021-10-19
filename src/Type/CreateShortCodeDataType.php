@@ -8,17 +8,17 @@ class CreateShortCodeDataType extends FlexnetType
     /**
      * @var string
      */
-    protected $bulkEntitlementId;
-
-    /**
-     * @var string
-     */
     protected $webRegkey;
 
     /**
      * @var string
      */
     protected $shortCode;
+
+    /**
+     * @var string
+     */
+    protected $bulkEntitlementId;
 
     /**
      * @var \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType
@@ -43,19 +43,26 @@ class CreateShortCodeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $bulkEntitlementId
      * @param string $webRegkey
      * @param string $shortCode
+     * @param string $bulkEntitlementId
      * @param \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
      * @param bool $overridePolicy
      * @param string $shortCodeActivationType
      * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $reinstallFulfillment
      */
-    public function __construct(string $bulkEntitlementId = null, string $webRegkey, string $shortCode, \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null, string $shortCodeActivationType = null, \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $reinstallFulfillment = null)
-    {
-        $this->bulkEntitlementId = $bulkEntitlementId;
+    public function __construct(
+        string $webRegkey,
+        string $shortCode,
+        string $bulkEntitlementId = null,
+        \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes = null,
+        bool $overridePolicy = null,
+        string $shortCodeActivationType = null,
+        \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $reinstallFulfillment = null
+    ) {
         $this->webRegkey = $webRegkey;
         $this->shortCode = $shortCode;
+        $this->bulkEntitlementId = $bulkEntitlementId;
         $this->publisherAttributes = $publisherAttributes;
         $this->overridePolicy = $overridePolicy;
         $this->shortCodeActivationType = $shortCodeActivationType;
@@ -65,16 +72,23 @@ class CreateShortCodeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $bulkEntitlementId
      * @param string $webRegkey
      * @param string $shortCode
+     * @param string $bulkEntitlementId
      * @param \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
      * @param bool $overridePolicy
      * @param string $shortCodeActivationType
      * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $reinstallFulfillment
      */
-    public static function create(string $bulkEntitlementId = null, string $webRegkey, string $shortCode, \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null, string $shortCodeActivationType = null, \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $reinstallFulfillment = null)
-    {
+    public static function create(
+        string $webRegkey,
+        string $shortCode,
+        string $bulkEntitlementId = null,
+        \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes = null,
+        bool $overridePolicy = null,
+        string $shortCodeActivationType = null,
+        \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $reinstallFulfillment = null
+    ) {
         return new self(...func_get_args());
     }
 

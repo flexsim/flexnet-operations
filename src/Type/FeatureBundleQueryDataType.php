@@ -35,16 +35,21 @@ class FeatureBundleQueryDataType extends FlexnetType
      *
      * @param string $uniqueId
      * @param string $name
-     * @param string $description
      * @param string $state
+     * @param string $description
      * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
      */
-    public function __construct(string $uniqueId, string $name, string $description = null, string $state, \Flexsim\FlexnetOperations\Type\FeaturesListType $features = null)
-    {
+    public function __construct(
+        string $uniqueId,
+        string $name,
+        string $state,
+        string $description = null,
+        \Flexsim\FlexnetOperations\Type\FeaturesListType $features = null
+    ) {
         $this->uniqueId = $uniqueId;
         $this->name = $name;
-        $this->description = $description;
         $this->state = $state;
+        $this->description = $description;
         $this->features = $features;
     }
 
@@ -53,12 +58,17 @@ class FeatureBundleQueryDataType extends FlexnetType
      *
      * @param string $uniqueId
      * @param string $name
-     * @param string $description
      * @param string $state
+     * @param string $description
      * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
      */
-    public static function create(string $uniqueId, string $name, string $description = null, string $state, \Flexsim\FlexnetOperations\Type\FeaturesListType $features = null)
-    {
+    public static function create(
+        string $uniqueId,
+        string $name,
+        string $state,
+        string $description = null,
+        \Flexsim\FlexnetOperations\Type\FeaturesListType $features = null
+    ) {
         return new self(...func_get_args());
     }
 

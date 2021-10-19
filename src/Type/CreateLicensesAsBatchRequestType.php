@@ -32,15 +32,15 @@ class CreateLicensesAsBatchRequestType extends FlexnetType implements RequestInt
      *
      * @param \Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds
      * @param \Flexsim\FlexnetOperations\Type\HostIdDataSetType $hostIdDataSet
-     * @param \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet
      * @param \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType $commonBatchDataSet
+     * @param \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds, \Flexsim\FlexnetOperations\Type\HostIdDataSetType $hostIdDataSet, \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet = null, \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType $commonBatchDataSet)
+    public function __construct(\Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds, \Flexsim\FlexnetOperations\Type\HostIdDataSetType $hostIdDataSet, \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType $commonBatchDataSet, \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet = null)
     {
         $this->activationIds = $activationIds;
         $this->hostIdDataSet = $hostIdDataSet;
-        $this->countDataSet = $countDataSet;
         $this->commonBatchDataSet = $commonBatchDataSet;
+        $this->countDataSet = $countDataSet;
     }
 
     /**
@@ -48,10 +48,10 @@ class CreateLicensesAsBatchRequestType extends FlexnetType implements RequestInt
      *
      * @param \Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds
      * @param \Flexsim\FlexnetOperations\Type\HostIdDataSetType $hostIdDataSet
-     * @param \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet
      * @param \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType $commonBatchDataSet
+     * @param \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds, \Flexsim\FlexnetOperations\Type\HostIdDataSetType $hostIdDataSet, \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet = null, \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType $commonBatchDataSet)
+    public static function create(\Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds, \Flexsim\FlexnetOperations\Type\HostIdDataSetType $hostIdDataSet, \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType $commonBatchDataSet, \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet = null)
     {
         return new self(...func_get_args());
     }

@@ -30,30 +30,37 @@ class GetConsolidatedFulfillmentsQueryRequestType extends FlexnetType implements
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams
      * @param bool $includeLicenseText
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams = null, int $pageNumber, int $batchSize, bool $includeLicenseText = null)
-    {
-        $queryParams = $queryParams ?? [];
-        $this->queryParams = $queryParams;
+    public function __construct(
+        int $pageNumber,
+        int $batchSize,
+        \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams = [],
+        bool $includeLicenseText = null
+    ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
+        $this->queryParams = $queryParams;
         $this->includeLicenseText = $includeLicenseText;
     }
 
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams
      * @param bool $includeLicenseText
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams = null, int $pageNumber, int $batchSize, bool $includeLicenseText = null)
-    {
+    public static function create(
+        int $pageNumber,
+        int $batchSize,
+        \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams = [],
+        bool $includeLicenseText = null
+    ) {
         return new self(...func_get_args());
     }
 

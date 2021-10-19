@@ -25,27 +25,32 @@ class GetFeaturesQueryRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams = null, int $pageNumber, int $batchSize)
-    {
-        $queryParams = $queryParams ?? [];
-        $this->queryParams = $queryParams;
+    public function __construct(
+        int $pageNumber,
+        int $batchSize,
+        \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams = []
+    ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
+        $this->queryParams = $queryParams;
     }
 
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams = null, int $pageNumber, int $batchSize)
-    {
+    public static function create(
+        int $pageNumber,
+        int $batchSize,
+        \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams = []
+    ) {
         return new self(...func_get_args());
     }
 

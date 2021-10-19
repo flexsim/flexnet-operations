@@ -55,21 +55,30 @@ class MaintenanceQueryDataType extends FlexnetType
      *
      * @param string $uniqueId
      * @param string $maintenanceName
+     * @param string $state
      * @param string $version
      * @param string $description
-     * @param string $state
      * @param bool $allowUpgrades
      * @param bool $allowUpsells
      * @param bool $allowRenewals
      * @param \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers
      */
-    public function __construct(string $uniqueId, string $maintenanceName, string $version = null, string $description = null, string $state, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers = null)
-    {
+    public function __construct(
+        string $uniqueId,
+        string $maintenanceName,
+        string $state,
+        string $version = null,
+        string $description = null,
+        bool $allowUpgrades = null,
+        bool $allowUpsells = null,
+        bool $allowRenewals = null,
+        \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers = null
+    ) {
         $this->uniqueId = $uniqueId;
         $this->maintenanceName = $maintenanceName;
+        $this->state = $state;
         $this->version = $version;
         $this->description = $description;
-        $this->state = $state;
         $this->allowUpgrades = $allowUpgrades;
         $this->allowUpsells = $allowUpsells;
         $this->allowRenewals = $allowRenewals;
@@ -81,16 +90,25 @@ class MaintenanceQueryDataType extends FlexnetType
      *
      * @param string $uniqueId
      * @param string $maintenanceName
+     * @param string $state
      * @param string $version
      * @param string $description
-     * @param string $state
      * @param bool $allowUpgrades
      * @param bool $allowUpsells
      * @param bool $allowRenewals
      * @param \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers
      */
-    public static function create(string $uniqueId, string $maintenanceName, string $version = null, string $description = null, string $state, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers = null)
-    {
+    public static function create(
+        string $uniqueId,
+        string $maintenanceName,
+        string $state,
+        string $version = null,
+        string $description = null,
+        bool $allowUpgrades = null,
+        bool $allowUpsells = null,
+        bool $allowRenewals = null,
+        \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers = null
+    ) {
         return new self(...func_get_args());
     }
 

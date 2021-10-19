@@ -25,26 +25,32 @@ class GetProductCategoriesRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @param int $pageNumber
-     * @param int $batchSize
      * @param bool $returnContainedObjects
+     * @param int $batchSize
+     * @param int $pageNumber
      */
-    public function __construct(int $pageNumber = null, int $batchSize, bool $returnContainedObjects)
-    {
-        $this->pageNumber = $pageNumber;
-        $this->batchSize = $batchSize;
+    public function __construct(
+        bool $returnContainedObjects,
+        int $batchSize,
+        int $pageNumber = null,
+    ) {
         $this->returnContainedObjects = $returnContainedObjects;
+        $this->batchSize = $batchSize;
+        $this->pageNumber = $pageNumber;
     }
 
     /**
      * create a new instance of this class
      *
-     * @param int $pageNumber
-     * @param int $batchSize
      * @param bool $returnContainedObjects
+     * @param int $batchSize
+     * @param int $pageNumber
      */
-    public static function create(int $pageNumber = null, int $batchSize, bool $returnContainedObjects)
-    {
+    public static function create(
+        bool $returnContainedObjects,
+        int $batchSize,
+        int $pageNumber = null,
+    ) {
         return new self(...func_get_args());
     }
 

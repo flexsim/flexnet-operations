@@ -83,6 +83,8 @@ class UsageSummaryDataType extends FlexnetType
     /**
      * Constructor
      *
+     * @param int $usedCount
+     * @param int $provisionedCount
      * @param string $summaryTimeUniqueId
      * @param \DateTimeInterface $summaryTime
      * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server
@@ -96,11 +98,26 @@ class UsageSummaryDataType extends FlexnetType
      * @param string $featureName
      * @param string $featureVersion
      * @param int $orderedCount
-     * @param int $usedCount
-     * @param int $provisionedCount
      */
-    public function __construct(string $summaryTimeUniqueId = null, \DateTimeInterface $summaryTime = null, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server = null, string $serverAlias = null, \DateTimeInterface $serverLastSyncTime = null, string $entitlementUniqueId = null, string $entitlementId = null, string $activationUniqueId = null, string $activationId = null, string $featureUniqueId = null, string $featureName = null, string $featureVersion = null, int $orderedCount = null, int $usedCount, int $provisionedCount)
-    {
+    public function __construct(
+        int $usedCount,
+        int $provisionedCount,
+        string $summaryTimeUniqueId = null,
+        \DateTimeInterface $summaryTime = null,
+        \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server = null,
+        string $serverAlias = null,
+        \DateTimeInterface $serverLastSyncTime = null,
+        string $entitlementUniqueId = null,
+        string $entitlementId = null,
+        string $activationUniqueId = null,
+        string $activationId = null,
+        string $featureUniqueId = null,
+        string $featureName = null,
+        string $featureVersion = null,
+        int $orderedCount = null
+    ) {
+        $this->usedCount = $usedCount;
+        $this->provisionedCount = $provisionedCount;
         $this->summaryTimeUniqueId = $summaryTimeUniqueId;
         $this->summaryTime = $summaryTime;
         $this->server = $server;
@@ -114,13 +131,13 @@ class UsageSummaryDataType extends FlexnetType
         $this->featureName = $featureName;
         $this->featureVersion = $featureVersion;
         $this->orderedCount = $orderedCount;
-        $this->usedCount = $usedCount;
-        $this->provisionedCount = $provisionedCount;
     }
 
     /**
      * create a new instance of this class
      *
+     * @param int $usedCount
+     * @param int $provisionedCount
      * @param string $summaryTimeUniqueId
      * @param \DateTimeInterface $summaryTime
      * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server
@@ -134,11 +151,24 @@ class UsageSummaryDataType extends FlexnetType
      * @param string $featureName
      * @param string $featureVersion
      * @param int $orderedCount
-     * @param int $usedCount
-     * @param int $provisionedCount
      */
-    public static function create(string $summaryTimeUniqueId = null, \DateTimeInterface $summaryTime = null, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server = null, string $serverAlias = null, \DateTimeInterface $serverLastSyncTime = null, string $entitlementUniqueId = null, string $entitlementId = null, string $activationUniqueId = null, string $activationId = null, string $featureUniqueId = null, string $featureName = null, string $featureVersion = null, int $orderedCount = null, int $usedCount, int $provisionedCount)
-    {
+    public static function create(
+        int $usedCount,
+        int $provisionedCount,
+        string $summaryTimeUniqueId = null,
+        \DateTimeInterface $summaryTime = null,
+        \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server = null,
+        string $serverAlias = null,
+        \DateTimeInterface $serverLastSyncTime = null,
+        string $entitlementUniqueId = null,
+        string $entitlementId = null,
+        string $activationUniqueId = null,
+        string $activationId = null,
+        string $featureUniqueId = null,
+        string $featureName = null,
+        string $featureVersion = null,
+        int $orderedCount = null
+    ) {
         return new self(...func_get_args());
     }
 

@@ -18,22 +18,22 @@ class RenewEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
      * @param \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null, \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData)
+    public function __construct(\Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null)
     {
-        $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
         $this->renewLineItemData = $renewLineItemData;
+        $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
     }
 
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
      * @param \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null, \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData)
+    public static function create(\Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null)
     {
         return new self(...func_get_args());
     }

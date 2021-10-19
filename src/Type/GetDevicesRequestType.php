@@ -30,30 +30,37 @@ class GetDevicesRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType $queryParams
-     * @param \Flexsim\FlexnetOperations\Type\DeviceResponseConfigRequestType|\Flexsim\FlexnetOperations\Type\v2DeviceResponseConfigRequestType $deviceResponseConfig
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\DeviceResponseConfigRequestType|\Flexsim\FlexnetOperations\Type\v2DeviceResponseConfigRequestType $deviceResponseConfig
      */
-    public function __construct($queryParams = null, $deviceResponseConfig = null, int $pageNumber, int $batchSize)
-    {
-        $queryParams = $queryParams ?? [];
-        $this->queryParams = $queryParams;
-        $this->deviceResponseConfig = $deviceResponseConfig;
+    public function __construct(
+        int $pageNumber,
+        int $batchSize,
+        $queryParams = [],
+        $deviceResponseConfig = null,
+    ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
+        $this->queryParams = $queryParams;
+        $this->deviceResponseConfig = $deviceResponseConfig;
     }
 
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType $queryParams
-     * @param \Flexsim\FlexnetOperations\Type\DeviceResponseConfigRequestType|\Flexsim\FlexnetOperations\Type\v2DeviceResponseConfigRequestType $deviceResponseConfig
      * @param int $pageNumber
      * @param int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\DeviceResponseConfigRequestType|\Flexsim\FlexnetOperations\Type\v2DeviceResponseConfigRequestType $deviceResponseConfig
      */
-    public static function create($queryParams = null, $deviceResponseConfig = null, int $pageNumber, int $batchSize)
-    {
+    public static function create(
+        int $pageNumber,
+        int $batchSize,
+        $queryParams = [],
+        $deviceResponseConfig = null,
+    ) {
         return new self(...func_get_args());
     }
 

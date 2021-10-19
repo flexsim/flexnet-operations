@@ -69,6 +69,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
      * Constructor
      *
      * @param string $activationId
+     * @param \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails
      * @param \DateTimeInterface $startDate
      * @param \DateTimeInterface $versionDate
      * @param \DateTimeInterface $versionStartDate
@@ -76,14 +77,26 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
      * @param string $shipToEmail
      * @param string $shipToAddress
      * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails
      * @param bool $overridePolicy
      * @param string $owner
      * @param string $FNPTimeZoneValue
      */
-    public function __construct(string $activationId, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails, bool $overridePolicy = null, string $owner = null, string $FNPTimeZoneValue = null)
-    {
+    public function __construct(
+        string $activationId,
+        \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails,
+        \DateTimeInterface $startDate = null,
+        \DateTimeInterface $versionDate = null,
+        \DateTimeInterface $versionStartDate = null,
+        string $soldTo = null,
+        string $shipToEmail = null,
+        string $shipToAddress = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null,
+        bool $overridePolicy = null,
+        string $owner = null,
+        string $FNPTimeZoneValue = null
+    ) {
         $this->activationId = $activationId;
+        $this->hostIdDetails = $hostIdDetails;
         $this->startDate = $startDate;
         $this->versionDate = $versionDate;
         $this->versionStartDate = $versionStartDate;
@@ -91,7 +104,6 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
         $this->shipToEmail = $shipToEmail;
         $this->shipToAddress = $shipToAddress;
         $this->licenseModelAttributes = $licenseModelAttributes;
-        $this->hostIdDetails = $hostIdDetails;
         $this->overridePolicy = $overridePolicy;
         $this->owner = $owner;
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
@@ -101,6 +113,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
      * create a new instance of this class
      *
      * @param string $activationId
+     * @param \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails
      * @param \DateTimeInterface $startDate
      * @param \DateTimeInterface $versionDate
      * @param \DateTimeInterface $versionStartDate
@@ -108,13 +121,24 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
      * @param string $shipToEmail
      * @param string $shipToAddress
      * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails
      * @param bool $overridePolicy
      * @param string $owner
      * @param string $FNPTimeZoneValue
      */
-    public static function create(string $activationId, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails, bool $overridePolicy = null, string $owner = null, string $FNPTimeZoneValue = null)
-    {
+    public static function create(
+        string $activationId,
+        \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails,
+        \DateTimeInterface $startDate = null,
+        \DateTimeInterface $versionDate = null,
+        \DateTimeInterface $versionStartDate = null,
+        string $soldTo = null,
+        string $shipToEmail = null,
+        string $shipToAddress = null,
+        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null,
+        bool $overridePolicy = null,
+        string $owner = null,
+        string $FNPTimeZoneValue = null
+    ) {
         return new self(...func_get_args());
     }
 
