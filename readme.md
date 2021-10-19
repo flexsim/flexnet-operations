@@ -2930,3 +2930,7 @@ copy the changes of src/Type/DeviceResponseConfigRequestType.php into src/Type/v
 copy the changes of src/Type/GetDevicesParametersType.php into src/Type/v2GetDevicesParametersType.php and revert the changes to the original file. Update the classmap and references to that class accordingly
 
 follow similar steps as previous services to make the other changed files compatible
+
+
+
+## Make all types extend FlexnetType abstract class

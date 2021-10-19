@@ -60,7 +60,7 @@ class FlexnetOperationsClientManager
      *
      * @return \Phpro\SoapClient\Client
      */
-    public function client()
+    public function client(): \Phpro\SoapClient\Client
     {
         $connection = $this->activeConnection();
 
@@ -81,7 +81,7 @@ class FlexnetOperationsClientManager
      *
      * @return string
      */
-    protected function activeConnection()
+    protected function activeConnection(): string
     {
         return $this->activeConnection ?? $this->getDefaultConnection();
     }
@@ -91,7 +91,7 @@ class FlexnetOperationsClientManager
      *
      * @return string
      */
-    protected function activeVersion()
+    protected function activeVersion(): string
     {
         return $this->activeVersion ?? $this->getDefaultVersion($this->activeConnection());
     }
@@ -123,7 +123,7 @@ class FlexnetOperationsClientManager
      *
      * @throws \InvalidArgumentException
      */
-    protected function configuration($connection)
+    protected function configuration($connection): array
     {
         $connection = $connection ?: $this->getDefaultConnection();
 
@@ -168,7 +168,7 @@ class FlexnetOperationsClientManager
      *
      * @return string
      */
-    protected function createWsdlPath($config)
+    protected function createWsdlPath($config): string
     {
         return ($config['scheme'] ? $config['scheme'] . '://' : '') . $config['domain'] . $config['uri'] .
             (($activeVersion = $this->activeVersion()) == 'base'
@@ -184,7 +184,7 @@ class FlexnetOperationsClientManager
      *
      * @return string
      */
-    protected function getFactoryClass($version)
+    protected function getFactoryClass($version): string
     {
         $class = $this->serviceNamespace .
             ($version == 'base'
@@ -198,9 +198,9 @@ class FlexnetOperationsClientManager
      * Set the upcoming flexnet operation instance
      *
      * @param  string|null  $name
-     * @return \Flexsim\FlexnetOperations\FlexnetOperationsManager
+     * @return self
      */
-    public function connection($name = null)
+    public function connection($name = null): self
     {
         $this->activeConnection = $name;
 
@@ -211,9 +211,9 @@ class FlexnetOperationsClientManager
      * Set the upcoming flexnet operation service version
      *
      * @param  string|null  $version
-     * @return \Flexsim\FlexnetOperations\FlexnetOperationsManager
+     * @return self
      */
-    public function version($version = null)
+    public function version($version = null): self
     {
         $this->activeVersion = $version;
 
@@ -225,7 +225,7 @@ class FlexnetOperationsClientManager
      *
      * @return string
      */
-    public function getDefaultConnection()
+    public function getDefaultConnection(): string
     {
         return $this->app['config']['flexnet-operations.default'];
     }
@@ -234,7 +234,6 @@ class FlexnetOperationsClientManager
      * Set the default connection name.
      *
      * @param  string  $name
-     * @return void
      */
     public function setDefaultConnection($name)
     {
@@ -246,7 +245,7 @@ class FlexnetOperationsClientManager
      *
      * @return string
      */
-    public function getDefaultVersion($connection = null)
+    public function getDefaultVersion($connection = null): string
     {
         $connection = $connection ?? $this->getDefaultConnection();
 
@@ -257,7 +256,6 @@ class FlexnetOperationsClientManager
      * Set the default version of this service
      *
      * @param  string  $name
-     * @return void
      */
     public function setDefaultVersion($version, $connection = null)
     {
@@ -271,7 +269,7 @@ class FlexnetOperationsClientManager
      *
      * @return string
      */
-    protected function getServiceName()
+    protected function getServiceName(): string
     {
         $serviceNamespaceArray = explode('\\', $this->serviceNamespace);
         return end($serviceNamespaceArray);
@@ -280,9 +278,9 @@ class FlexnetOperationsClientManager
     /**
      * Return all of the created clients.
      *
-     * @return array
+     * @return array<\Phpro\SoapClient\Client>
      */
-    public function getClients()
+    public function getClients(): array
     {
         return $this->clients;
     }

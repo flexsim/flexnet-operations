@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static setDefaultVersion( $version,  $connection = NULL)
  * @method static array getClients()
  *
- * @method static \Flexsim\FlexnetOperations\Type\GetUsageResponse getUsage(Flexsim\FlexnetOperations\Type\GetUsageRequest $GetUsageRequest)
+ * @method static \Flexsim\FlexnetOperations\Type\GetUsageResponse getUsage(\Flexsim\FlexnetOperations\Type\GetUsageRequest $GetUsageRequest)
  *
  * @see \Flexsim\FlexnetOperations\FlexnetOperationsClientManager
  * @see \Flexsim\FlexnetOperations\Services\UsageService
