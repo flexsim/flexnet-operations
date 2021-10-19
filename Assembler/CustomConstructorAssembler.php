@@ -112,7 +112,7 @@ class CustomConstructorAssembler implements AssemblerInterface
 
             if ($this->options->useDocBlocks()) {
                 $docblock->setTag([
-                    'name' => 'var',
+                    'name' => 'param',
                     'description' => sprintf('%s $%s', $property->getType() . $extraTypeDescriptorDocBlocks, $propertyName)
                 ]);
             }
@@ -173,7 +173,7 @@ class CustomConstructorAssembler implements AssemblerInterface
 
             if ($this->options->useDocBlocks()) {
                 $docblock->setTag([
-                    'name' => 'var',
+                    'name' => 'param',
                     'description' => sprintf('%s $%s', $property->getType() . $extraTypeDescriptorDocBlocks, $propertyName)
                 ]);
             }
