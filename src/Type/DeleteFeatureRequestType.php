@@ -15,7 +15,7 @@ class DeleteFeatureRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteFeatureDataType $feature
+     * @param \Flexsim\FlexnetOperations\Type\DeleteFeatureDataType $feature
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeleteFeatureDataType $feature)
     {
@@ -25,7 +25,7 @@ class DeleteFeatureRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteFeatureDataType $feature
+     * @param \Flexsim\FlexnetOperations\Type\DeleteFeatureDataType $feature
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeleteFeatureDataType $feature)
     {

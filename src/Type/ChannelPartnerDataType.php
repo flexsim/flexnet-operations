@@ -33,10 +33,10 @@ class ChannelPartnerDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $tierName
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $accountUnit this method is backwards compatible so you may also pass $organizationUnit
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $contact
-     * @var bool $currentOwner
+     * @param string $tierName
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $accountUnit this method is backwards compatible so you may also pass $organizationUnit
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $contact
+     * @param bool $currentOwner
      */
     public function __construct(string $tierName, $accountUnit, \Flexsim\FlexnetOperations\Type\UserIdentifierType $contact = null, bool $currentOwner = null)
     {
@@ -50,10 +50,10 @@ class ChannelPartnerDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $tierName
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $accountUnit this method is backwards compatible so you may also pass $organizationUnit
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $contact
-     * @var bool $currentOwner
+     * @param string $tierName
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $accountUnit this method is backwards compatible so you may also pass $organizationUnit
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $contact
+     * @param bool $currentOwner
      */
     public static function create(string $tierName, $accountUnit, \Flexsim\FlexnetOperations\Type\UserIdentifierType $contact = null, bool $currentOwner = null)
     {

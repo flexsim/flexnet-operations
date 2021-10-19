@@ -15,7 +15,7 @@ class LinkAccountsRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LinkAccountsDataType $acctData
+     * @param \Flexsim\FlexnetOperations\Type\LinkAccountsDataType $acctData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\LinkAccountsDataType $acctData)
     {
@@ -25,7 +25,7 @@ class LinkAccountsRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LinkAccountsDataType $acctData
+     * @param \Flexsim\FlexnetOperations\Type\LinkAccountsDataType $acctData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\LinkAccountsDataType $acctData)
     {

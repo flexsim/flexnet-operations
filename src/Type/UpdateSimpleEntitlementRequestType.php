@@ -15,7 +15,7 @@ class UpdateSimpleEntitlementRequestType extends FlexnetType implements RequestI
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType $simpleEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType $simpleEntitlement
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType $simpleEntitlement)
     {
@@ -25,7 +25,7 @@ class UpdateSimpleEntitlementRequestType extends FlexnetType implements RequestI
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType $simpleEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType $simpleEntitlement
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType $simpleEntitlement)
     {

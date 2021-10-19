@@ -48,14 +48,14 @@ class PartNumberQueryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $partId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseModel
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
-     * @var bool $unmappedWithProduct
-     * @var bool $unmappedWithLicenseModel
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param bool $unmappedWithProduct
+     * @param bool $unmappedWithLicenseModel
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $partId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseModel = null, \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null, bool $unmappedWithProduct = null, bool $unmappedWithLicenseModel = null)
     {
@@ -72,14 +72,14 @@ class PartNumberQueryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $partId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseModel
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
-     * @var bool $unmappedWithProduct
-     * @var bool $unmappedWithLicenseModel
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param bool $unmappedWithProduct
+     * @param bool $unmappedWithLicenseModel
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $partId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseModel = null, \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null, bool $unmappedWithProduct = null, bool $unmappedWithLicenseModel = null)
     {

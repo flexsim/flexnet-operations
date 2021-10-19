@@ -28,10 +28,10 @@ class UpdateFeatureBundleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
-     * @var string $name
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType $features
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param string $name
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType $features
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier, string $name = null, string $description = null, \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType $features = null)
     {
@@ -44,10 +44,10 @@ class UpdateFeatureBundleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
-     * @var string $name
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType $features
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param string $name
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType $features
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier, string $name = null, string $description = null, \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType $features = null)
     {

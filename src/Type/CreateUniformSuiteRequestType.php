@@ -15,7 +15,7 @@ class CreateUniformSuiteRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateUniformSuiteDataType $uniformSuite
+     * @param \Flexsim\FlexnetOperations\Type\CreateUniformSuiteDataType $uniformSuite
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CreateUniformSuiteDataType $uniformSuite)
     {
@@ -25,7 +25,7 @@ class CreateUniformSuiteRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateUniformSuiteDataType $uniformSuite
+     * @param \Flexsim\FlexnetOperations\Type\CreateUniformSuiteDataType $uniformSuite
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CreateUniformSuiteDataType $uniformSuite)
     {

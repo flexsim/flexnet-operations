@@ -13,7 +13,7 @@ class Dictionary extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection $Entries
+     * @param \Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection $Entries
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection $Entries = null)
     {
@@ -23,7 +23,7 @@ class Dictionary extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection $Entries
+     * @param \Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection $Entries
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection $Entries = null)
     {

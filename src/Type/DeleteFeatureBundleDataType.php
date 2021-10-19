@@ -13,7 +13,7 @@ class DeleteFeatureBundleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier)
     {
@@ -23,7 +23,7 @@ class DeleteFeatureBundleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier)
     {

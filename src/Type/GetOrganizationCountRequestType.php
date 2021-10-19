@@ -15,7 +15,7 @@ class GetOrganizationCountRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams = null)
     {
@@ -26,7 +26,7 @@ class GetOrganizationCountRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams = null)
     {

@@ -13,7 +13,7 @@ class GetUserAccountsExpiryQueryResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserAccountExpiryType|array $userAccountExpiryData
+     * @param \Flexsim\FlexnetOperations\Type\UserAccountExpiryType|array $userAccountExpiryData
      */
     public function __construct($userAccountExpiryData = null)
     {
@@ -23,7 +23,7 @@ class GetUserAccountsExpiryQueryResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserAccountExpiryType|array $userAccountExpiryData
+     * @param \Flexsim\FlexnetOperations\Type\UserAccountExpiryType|array $userAccountExpiryData
      */
     public static function create($userAccountExpiryData = null)
     {

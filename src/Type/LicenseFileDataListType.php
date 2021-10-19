@@ -13,7 +13,7 @@ class LicenseFileDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array $licenseFile
+     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array $licenseFile
      */
     public function __construct($licenseFile = null)
     {
@@ -23,7 +23,7 @@ class LicenseFileDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array $licenseFile
+     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array $licenseFile
      */
     public static function create($licenseFile = null)
     {

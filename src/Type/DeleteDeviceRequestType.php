@@ -15,7 +15,7 @@ class DeleteDeviceRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier)
     {
@@ -25,7 +25,7 @@ class DeleteDeviceRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier)
     {

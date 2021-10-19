@@ -15,7 +15,7 @@ class GetAccountCountRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams = null)
     {
@@ -26,7 +26,7 @@ class GetAccountCountRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams
      */
     public static function create(\Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams = null)
     {

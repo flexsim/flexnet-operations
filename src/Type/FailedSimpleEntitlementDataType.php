@@ -18,8 +18,8 @@ class FailedSimpleEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedSimpleEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement = null, string $reason = null)
     {

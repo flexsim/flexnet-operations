@@ -18,8 +18,8 @@ class SplitBulkEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $newBulkEntIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $newBulkEntIdentifier
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $newBulkEntIdentifier = null)
     {
@@ -30,8 +30,8 @@ class SplitBulkEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $newBulkEntIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $newBulkEntIdentifier
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $newBulkEntIdentifier = null)
     {

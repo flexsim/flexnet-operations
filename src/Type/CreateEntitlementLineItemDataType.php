@@ -123,29 +123,29 @@ class CreateEntitlementLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\IdType $activationId
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @var string $FNPTimeZoneValue
-     * @var \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes
-     * @var string $orderId
-     * @var string $orderLineNumber
-     * @var int $numberOfCopies
-     * @var \DateTimeInterface $startDate
-     * @var string $startDateOption
-     * @var bool $isPermanent
-     * @var \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @var \DateTimeInterface $expirationDate
-     * @var \DateTimeInterface $versionDate
-     * @var \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
-     * @var string $lineItemType
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes
+     * @param \Flexsim\FlexnetOperations\Type\IdType $activationId
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param string $FNPTimeZoneValue
+     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes
+     * @param string $orderId
+     * @param string $orderLineNumber
+     * @param int $numberOfCopies
+     * @param \DateTimeInterface $startDate
+     * @param string $startDateOption
+     * @param bool $isPermanent
+     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
+     * @param \DateTimeInterface $expirationDate
+     * @param \DateTimeInterface $versionDate
+     * @param \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
+     * @param string $lineItemType
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\IdType $activationId, string $description = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes = null, string $orderId = null, string $orderLineNumber = null, int $numberOfCopies, \DateTimeInterface $startDate = null, string $startDateOption = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, string $lineItemType = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes = null)
     {
@@ -177,29 +177,29 @@ class CreateEntitlementLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\IdType $activationId
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @var string $FNPTimeZoneValue
-     * @var \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes
-     * @var string $orderId
-     * @var string $orderLineNumber
-     * @var int $numberOfCopies
-     * @var \DateTimeInterface $startDate
-     * @var string $startDateOption
-     * @var bool $isPermanent
-     * @var \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @var \DateTimeInterface $expirationDate
-     * @var \DateTimeInterface $versionDate
-     * @var \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
-     * @var string $lineItemType
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes
+     * @param \Flexsim\FlexnetOperations\Type\IdType $activationId
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param string $FNPTimeZoneValue
+     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes
+     * @param string $orderId
+     * @param string $orderLineNumber
+     * @param int $numberOfCopies
+     * @param \DateTimeInterface $startDate
+     * @param string $startDateOption
+     * @param bool $isPermanent
+     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
+     * @param \DateTimeInterface $expirationDate
+     * @param \DateTimeInterface $versionDate
+     * @param \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
+     * @param string $lineItemType
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes
      */
     public static function create(\Flexsim\FlexnetOperations\Type\IdType $activationId, string $description = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes = null, string $orderId = null, string $orderLineNumber = null, int $numberOfCopies, \DateTimeInterface $startDate = null, string $startDateOption = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, string $lineItemType = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes = null)
     {

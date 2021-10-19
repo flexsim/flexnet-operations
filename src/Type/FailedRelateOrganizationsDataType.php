@@ -18,8 +18,8 @@ class FailedRelateOrganizationsDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType $orgData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType $orgData
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType $orgData = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedRelateOrganizationsDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType $orgData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType $orgData
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType $orgData = null, string $reason = null)
     {

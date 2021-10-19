@@ -23,9 +23,9 @@ class CustomHostIDType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $hostId
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $hostAttributes
-     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param string $hostId
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $hostAttributes
+     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
      */
     public function __construct(string $hostId = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $hostAttributes = null, \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType = null)
     {
@@ -37,9 +37,9 @@ class CustomHostIDType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $hostId
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $hostAttributes
-     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param string $hostId
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $hostAttributes
+     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
      */
     public static function create(string $hostId = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $hostAttributes = null, \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType = null)
     {

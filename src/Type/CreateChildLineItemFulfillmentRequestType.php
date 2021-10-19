@@ -15,7 +15,7 @@ class CreateChildLineItemFulfillmentRequestType extends FlexnetType implements R
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment)
     {
@@ -25,7 +25,7 @@ class CreateChildLineItemFulfillmentRequestType extends FlexnetType implements R
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment)
     {

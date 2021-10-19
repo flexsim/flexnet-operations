@@ -158,35 +158,35 @@ class SearchActivatableItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentBulkEntitlementId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $productVersion
-     * @var string $productType
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
-     * @var bool $isPermanent
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $versionDate
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderId
-     * @var bool $withNoOrderId
-     * @var bool $restrictToItemsWithCount
-     * @var \Flexsim\FlexnetOperations\Type\NumberQueryType $fulfilledAmount
-     * @var string $userId
-     * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentBulkEntSoldTo
-     * @var string $activatableItemType
-     * @var bool $allowPortalLogin
-     * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName this method is backwards compatible so you may also pass $organizationUnitName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $lineItemParentLineItemId
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $createdOnDateTime
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
-     * @var \Flexsim\FlexnetOperations\Type\LineItemCustomAttributesQueryListType $lineItemAttributes
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderLineNumber
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentBulkEntitlementId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productVersion
+     * @param string $productType
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
+     * @param bool $isPermanent
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $versionDate
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderId
+     * @param bool $withNoOrderId
+     * @param bool $restrictToItemsWithCount
+     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $fulfilledAmount
+     * @param string $userId
+     * @param \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentBulkEntSoldTo
+     * @param string $activatableItemType
+     * @param bool $allowPortalLogin
+     * @param \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName this method is backwards compatible so you may also pass $organizationUnitName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $lineItemParentLineItemId
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $createdOnDateTime
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
+     * @param \Flexsim\FlexnetOperations\Type\LineItemCustomAttributesQueryListType $lineItemAttributes
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderLineNumber
      */
     public function __construct(
         \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentBulkEntitlementId = null,
@@ -254,35 +254,35 @@ class SearchActivatableItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentBulkEntitlementId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $productVersion
-     * @var string $productType
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
-     * @var bool $isPermanent
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $versionDate
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderId
-     * @var bool $withNoOrderId
-     * @var bool $restrictToItemsWithCount
-     * @var \Flexsim\FlexnetOperations\Type\NumberQueryType $fulfilledAmount
-     * @var string $userId
-     * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentBulkEntSoldTo
-     * @var string $activatableItemType
-     * @var bool $allowPortalLogin
-     * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName this method is backwards compatible so you may also pass $organizationUnitName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $lineItemParentLineItemId
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $createdOnDateTime
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
-     * @var \Flexsim\FlexnetOperations\Type\LineItemCustomAttributesQueryListType $lineItemAttributes
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderLineNumber
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentBulkEntitlementId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productVersion
+     * @param string $productType
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
+     * @param bool $isPermanent
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $versionDate
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderId
+     * @param bool $withNoOrderId
+     * @param bool $restrictToItemsWithCount
+     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $fulfilledAmount
+     * @param string $userId
+     * @param \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentBulkEntSoldTo
+     * @param string $activatableItemType
+     * @param bool $allowPortalLogin
+     * @param \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName this method is backwards compatible so you may also pass $organizationUnitName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $lineItemParentLineItemId
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $createdOnDateTime
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
+     * @param \Flexsim\FlexnetOperations\Type\LineItemCustomAttributesQueryListType $lineItemAttributes
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderLineNumber
      */
     public static function create(
         \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentBulkEntitlementId = null,

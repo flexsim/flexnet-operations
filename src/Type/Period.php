@@ -18,8 +18,8 @@ class Period extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $startDate
-     * @var string $endDate
+     * @param string $startDate
+     * @param string $endDate
      */
     public function __construct(string $startDate, string $endDate)
     {
@@ -30,8 +30,8 @@ class Period extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $startDate
-     * @var string $endDate
+     * @param string $startDate
+     * @param string $endDate
      */
     public static function create(string $startDate, string $endDate)
     {

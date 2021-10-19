@@ -13,7 +13,7 @@ class EmailContactListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string|array $emailId
+     * @param string|array $emailId
      */
     public function __construct($emailId = null)
     {
@@ -23,7 +23,7 @@ class EmailContactListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string|array $emailId
+     * @param string|array $emailId
      */
     public static function create($emailId = null)
     {

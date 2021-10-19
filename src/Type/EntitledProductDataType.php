@@ -18,8 +18,8 @@ class EntitledProductDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @var int $quantity
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
+     * @param int $quantity
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, int $quantity)
     {
@@ -30,8 +30,8 @@ class EntitledProductDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @var int $quantity
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
+     * @param int $quantity
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, int $quantity)
     {

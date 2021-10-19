@@ -23,9 +23,9 @@ class RenewedEntitlementLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $lineItemRecordRefNo
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType $newLineItem
+     * @param string $lineItemRecordRefNo
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType $newLineItem
      */
     public function __construct(string $lineItemRecordRefNo, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier, \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType $newLineItem)
     {
@@ -37,9 +37,9 @@ class RenewedEntitlementLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $lineItemRecordRefNo
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType $newLineItem
+     * @param string $lineItemRecordRefNo
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType $newLineItem
      */
     public static function create(string $lineItemRecordRefNo, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier, \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType $newLineItem)
     {

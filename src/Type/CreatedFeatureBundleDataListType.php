@@ -13,7 +13,7 @@ class CreatedFeatureBundleDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CorrelationDataType|array $createdFeatureBundle
+     * @param \Flexsim\FlexnetOperations\Type\CorrelationDataType|array $createdFeatureBundle
      */
     public function __construct($createdFeatureBundle = null)
     {
@@ -23,7 +23,7 @@ class CreatedFeatureBundleDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CorrelationDataType|array $createdFeatureBundle
+     * @param \Flexsim\FlexnetOperations\Type\CorrelationDataType|array $createdFeatureBundle
      */
     public static function create($createdFeatureBundle = null)
     {

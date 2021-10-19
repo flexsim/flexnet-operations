@@ -15,7 +15,7 @@ class TransferEntitlementsRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementsListType $entitlementList
+     * @param \Flexsim\FlexnetOperations\Type\TransferEntitlementsListType $entitlementList
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\TransferEntitlementsListType $entitlementList)
     {
@@ -25,7 +25,7 @@ class TransferEntitlementsRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementsListType $entitlementList
+     * @param \Flexsim\FlexnetOperations\Type\TransferEntitlementsListType $entitlementList
      */
     public static function create(\Flexsim\FlexnetOperations\Type\TransferEntitlementsListType $entitlementList)
     {

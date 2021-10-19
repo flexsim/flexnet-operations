@@ -18,8 +18,8 @@ class LicenseModelIdentifierType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelPKType $primaryKeys
+     * @param string $uniqueId
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelPKType $primaryKeys
      */
     public function __construct(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\LicenseModelPKType $primaryKeys = null)
     {
@@ -30,8 +30,8 @@ class LicenseModelIdentifierType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelPKType $primaryKeys
+     * @param string $uniqueId
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelPKType $primaryKeys
      */
     public static function create(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\LicenseModelPKType $primaryKeys = null)
     {

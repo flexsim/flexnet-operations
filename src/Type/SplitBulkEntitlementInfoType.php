@@ -48,13 +48,13 @@ class SplitBulkEntitlementInfoType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
-     * @var int $numberOfWRKs
-     * @var string $targetTierName
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
+     * @param int $numberOfWRKs
+     * @param string $targetTierName
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier
      */
     public function __construct(
         \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier,
@@ -78,13 +78,13 @@ class SplitBulkEntitlementInfoType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
-     * @var int $numberOfWRKs
-     * @var string $targetTierName
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
+     * @param int $numberOfWRKs
+     * @param string $targetTierName
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier
      */
     public static function create(
         \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier,

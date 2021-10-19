@@ -23,9 +23,9 @@ class UserIdentifierType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var string $userName
-     * @var \Flexsim\FlexnetOperations\Type\UserPKType $primaryKeys
+     * @param string $uniqueId
+     * @param string $userName
+     * @param \Flexsim\FlexnetOperations\Type\UserPKType $primaryKeys
      */
     public function __construct(string $uniqueId = null, string $userName = null, \Flexsim\FlexnetOperations\Type\UserPKType $primaryKeys = null)
     {
@@ -37,9 +37,9 @@ class UserIdentifierType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var string $userName
-     * @var \Flexsim\FlexnetOperations\Type\UserPKType $primaryKeys
+     * @param string $uniqueId
+     * @param string $userName
+     * @param \Flexsim\FlexnetOperations\Type\UserPKType $primaryKeys
      */
     public static function create(string $uniqueId = null, string $userName = null, \Flexsim\FlexnetOperations\Type\UserPKType $primaryKeys = null)
     {

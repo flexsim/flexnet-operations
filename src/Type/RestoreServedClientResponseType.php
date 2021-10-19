@@ -25,9 +25,9 @@ class RestoreServedClientResponseType extends FlexnetType implements ResultInter
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedRestoreServedClientDataType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\RestoreServedClientDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedRestoreServedClientDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\RestoreServedClientDataType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedRestoreServedClientDataType $failedData = null, \Flexsim\FlexnetOperations\Type\RestoreServedClientDataType $responseData = null)
     {
@@ -39,9 +39,9 @@ class RestoreServedClientResponseType extends FlexnetType implements ResultInter
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedRestoreServedClientDataType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\RestoreServedClientDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedRestoreServedClientDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\RestoreServedClientDataType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedRestoreServedClientDataType $failedData = null, \Flexsim\FlexnetOperations\Type\RestoreServedClientDataType $responseData = null)
     {

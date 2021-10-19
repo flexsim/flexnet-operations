@@ -23,9 +23,9 @@ class CapabilityResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var string $addonLicense
-     * @var bool $bufferLicense
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param string $addonLicense
+     * @param bool $bufferLicense
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $addonLicense, bool $bufferLicense = null)
     {
@@ -37,9 +37,9 @@ class CapabilityResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var string $addonLicense
-     * @var bool $bufferLicense
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param string $addonLicense
+     * @param bool $bufferLicense
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $addonLicense, bool $bufferLicense = null)
     {

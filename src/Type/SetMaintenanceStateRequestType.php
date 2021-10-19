@@ -15,7 +15,7 @@ class SetMaintenanceStateRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\MaintenanceStateDataType $maintenance
+     * @param \Flexsim\FlexnetOperations\Type\MaintenanceStateDataType $maintenance
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\MaintenanceStateDataType $maintenance)
     {
@@ -25,7 +25,7 @@ class SetMaintenanceStateRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\MaintenanceStateDataType $maintenance
+     * @param \Flexsim\FlexnetOperations\Type\MaintenanceStateDataType $maintenance
      */
     public static function create(\Flexsim\FlexnetOperations\Type\MaintenanceStateDataType $maintenance)
     {

@@ -13,7 +13,7 @@ class CreatedEntitlementLifeCycleDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataType|array $entitlementData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataType|array $entitlementData
      */
     public function __construct($entitlementData = null)
     {
@@ -23,7 +23,7 @@ class CreatedEntitlementLifeCycleDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataType|array $entitlementData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataType|array $entitlementData
      */
     public static function create($entitlementData = null)
     {

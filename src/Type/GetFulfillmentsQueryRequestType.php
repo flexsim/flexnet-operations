@@ -35,11 +35,11 @@ class GetFulfillmentsQueryRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
-     * @var bool $includeLicenseText
-     * @var bool $includeConsolidatedHostLicense
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
+     * @param bool $includeLicenseText
+     * @param bool $includeConsolidatedHostLicense
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $includeLicenseText = null, bool $includeConsolidatedHostLicense = null)
     {
@@ -54,11 +54,11 @@ class GetFulfillmentsQueryRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
-     * @var bool $includeLicenseText
-     * @var bool $includeConsolidatedHostLicense
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
+     * @param bool $includeLicenseText
+     * @param bool $includeConsolidatedHostLicense
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $includeLicenseText = null, bool $includeConsolidatedHostLicense = null)
     {

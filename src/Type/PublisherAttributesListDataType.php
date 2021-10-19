@@ -13,7 +13,7 @@ class PublisherAttributesListDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleAttributeDataType $attribute
+     * @param \Flexsim\FlexnetOperations\Type\SimpleAttributeDataType $attribute
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SimpleAttributeDataType $attribute)
     {
@@ -23,7 +23,7 @@ class PublisherAttributesListDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleAttributeDataType $attribute
+     * @param \Flexsim\FlexnetOperations\Type\SimpleAttributeDataType $attribute
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SimpleAttributeDataType $attribute)
     {

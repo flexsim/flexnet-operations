@@ -163,37 +163,37 @@ class BulkEntitlementPropertiesType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementId
-     * @var bool $allowPortalLogin
-     * @var string $description
-     * @var string $state
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $soldTo this method is backwards compatible so you may also pass an organization $soldTo
-     * @var string $soldToDisplayName
-     * @var string $shipToEmail
-     * @var string $shipToAddress
-     * @var string $orderId
-     * @var string $orderLineNumber
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @var string $productDescription
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
-     * @var string $partNumberDescription
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @var string $startDateOption
-     * @var bool $isPermanent
-     * @var \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @var \DateTimeInterface $expirationDate
-     * @var \DateTimeInterface $versionDate
-     * @var \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
-     * @var int $numberOfCopies
-     * @var string $bulkEntitlementType
-     * @var string $createdUserId
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
-     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @var string $FNPTimeZoneValue
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementId
+     * @param bool $allowPortalLogin
+     * @param string $description
+     * @param string $state
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $soldTo this method is backwards compatible so you may also pass an organization $soldTo
+     * @param string $soldToDisplayName
+     * @param string $shipToEmail
+     * @param string $shipToAddress
+     * @param string $orderId
+     * @param string $orderLineNumber
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
+     * @param string $productDescription
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
+     * @param string $partNumberDescription
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param string $startDateOption
+     * @param bool $isPermanent
+     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
+     * @param \DateTimeInterface $expirationDate
+     * @param \DateTimeInterface $versionDate
+     * @param \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
+     * @param int $numberOfCopies
+     * @param string $bulkEntitlementType
+     * @param string $createdUserId
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
+     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @param string $FNPTimeZoneValue
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementId = null, bool $allowPortalLogin = null, string $description = null, string $state = null, $soldTo = null, string $soldToDisplayName = null, string $shipToEmail = null, string $shipToAddress = null, string $orderId = null, string $orderLineNumber = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, string $productDescription = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $partNumberDescription = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, string $startDateOption = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, int $numberOfCopies = null, string $bulkEntitlementType = null, string $createdUserId = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, string $FNPTimeZoneValue = null)
     {
@@ -233,37 +233,37 @@ class BulkEntitlementPropertiesType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementId
-     * @var bool $allowPortalLogin
-     * @var string $description
-     * @var string $state
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $soldTo this method is backwards compatible so you may also pass an organization $soldTo
-     * @var string $soldToDisplayName
-     * @var string $shipToEmail
-     * @var string $shipToAddress
-     * @var string $orderId
-     * @var string $orderLineNumber
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @var string $productDescription
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
-     * @var string $partNumberDescription
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @var string $startDateOption
-     * @var bool $isPermanent
-     * @var \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @var \DateTimeInterface $expirationDate
-     * @var \DateTimeInterface $versionDate
-     * @var \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
-     * @var int $numberOfCopies
-     * @var string $bulkEntitlementType
-     * @var string $createdUserId
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
-     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @var string $FNPTimeZoneValue
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementId
+     * @param bool $allowPortalLogin
+     * @param string $description
+     * @param string $state
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $soldTo this method is backwards compatible so you may also pass an organization $soldTo
+     * @param string $soldToDisplayName
+     * @param string $shipToEmail
+     * @param string $shipToAddress
+     * @param string $orderId
+     * @param string $orderLineNumber
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
+     * @param string $productDescription
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
+     * @param string $partNumberDescription
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param string $startDateOption
+     * @param bool $isPermanent
+     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
+     * @param \DateTimeInterface $expirationDate
+     * @param \DateTimeInterface $versionDate
+     * @param \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
+     * @param int $numberOfCopies
+     * @param string $bulkEntitlementType
+     * @param string $createdUserId
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
+     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @param string $FNPTimeZoneValue
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementId = null, bool $allowPortalLogin = null, string $description = null, string $state = null, $soldTo = null, string $soldToDisplayName = null, string $shipToEmail = null, string $shipToAddress = null, string $orderId = null, string $orderLineNumber = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, string $productDescription = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $partNumberDescription = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, string $startDateOption = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, int $numberOfCopies = null, string $bulkEntitlementType = null, string $createdUserId = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, string $FNPTimeZoneValue = null)
     {

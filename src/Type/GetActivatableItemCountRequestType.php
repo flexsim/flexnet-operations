@@ -20,8 +20,8 @@ class GetActivatableItemCountRequestType extends FlexnetType implements RequestI
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams
-     * @var bool $restrictToItemsReadyToActivate
+     * @param \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams
+     * @param bool $restrictToItemsReadyToActivate
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams, bool $restrictToItemsReadyToActivate = null)
     {
@@ -32,8 +32,8 @@ class GetActivatableItemCountRequestType extends FlexnetType implements RequestI
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams
-     * @var bool $restrictToItemsReadyToActivate
+     * @param \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams
+     * @param bool $restrictToItemsReadyToActivate
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams, bool $restrictToItemsReadyToActivate = null)
     {

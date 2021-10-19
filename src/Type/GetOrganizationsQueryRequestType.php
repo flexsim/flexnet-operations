@@ -25,9 +25,9 @@ class GetOrganizationsQueryRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams = null, int $pageNumber, int $batchSize)
     {
@@ -40,9 +40,9 @@ class GetOrganizationsQueryRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams = null, int $pageNumber, int $batchSize)
     {

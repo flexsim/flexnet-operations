@@ -18,8 +18,8 @@ class FailedPartNumberDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedPartNumberDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber = null, string $reason = null)
     {

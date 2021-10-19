@@ -28,10 +28,10 @@ class GetDeletedSyncParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $startTime
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $endTime
-     * @var \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $startTime
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $endTime
+     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DateTimeQueryType $startTime = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $endTime = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId = null)
     {
@@ -44,10 +44,10 @@ class GetDeletedSyncParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $startTime
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $endTime
-     * @var \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $startTime
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $endTime
+     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DateTimeQueryType $startTime = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $endTime = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId = null)
     {

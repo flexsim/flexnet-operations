@@ -53,15 +53,15 @@ class UpdateDomainUserDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $domainUser
-     * @var string $email
-     * @var string $organization
-     * @var string|array $roles
-     * @var bool $optIn
-     * @var string $locale
-     * @var string $timeZone
-     * @var string $status
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $domainUser
+     * @param string $email
+     * @param string $organization
+     * @param string|array $roles
+     * @param bool $optIn
+     * @param string $locale
+     * @param string $timeZone
+     * @param string $status
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $domainUser, string $email = null, string $organization = null, $roles = null, bool $optIn = null, string $locale = null, string $timeZone = null, string $status = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {
@@ -79,15 +79,15 @@ class UpdateDomainUserDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $domainUser
-     * @var string $email
-     * @var string $organization
-     * @var string|array $roles
-     * @var bool $optIn
-     * @var string $locale
-     * @var string $timeZone
-     * @var string $status
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $domainUser
+     * @param string $email
+     * @param string $organization
+     * @param string|array $roles
+     * @param bool $optIn
+     * @param string $locale
+     * @param string $timeZone
+     * @param string $status
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $domainUser, string $email = null, string $organization = null, $roles = null, bool $optIn = null, string $locale = null, string $timeZone = null, string $status = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {

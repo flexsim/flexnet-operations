@@ -13,7 +13,7 @@ class LineItemActivationIds extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $lineItemActivationId
+     * @param string $lineItemActivationId
      */
     public function __construct(string $lineItemActivationId)
     {
@@ -23,7 +23,7 @@ class LineItemActivationIds extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $lineItemActivationId
+     * @param string $lineItemActivationId
      */
     public static function create(string $lineItemActivationId)
     {

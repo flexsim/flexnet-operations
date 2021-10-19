@@ -13,7 +13,7 @@ class GetFeatureBundlesQueryResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleQueryDataType|array $featureBundle
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryDataType|array $featureBundle
      */
     public function __construct($featureBundle = null)
     {
@@ -23,7 +23,7 @@ class GetFeatureBundlesQueryResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleQueryDataType|array $featureBundle
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryDataType|array $featureBundle
      */
     public static function create($featureBundle = null)
     {

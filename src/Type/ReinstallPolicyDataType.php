@@ -18,8 +18,8 @@ class ReinstallPolicyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\PolicyDataType $defaultPolicy
-     * @var \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType $advancedPolicy
+     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $defaultPolicy
+     * @param \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType $advancedPolicy
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\PolicyDataType $defaultPolicy = null, \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType $advancedPolicy = null)
     {
@@ -30,8 +30,8 @@ class ReinstallPolicyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\PolicyDataType $defaultPolicy
-     * @var \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType $advancedPolicy
+     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $defaultPolicy
+     * @param \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType $advancedPolicy
      */
     public static function create(\Flexsim\FlexnetOperations\Type\PolicyDataType $defaultPolicy = null, \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType $advancedPolicy = null)
     {

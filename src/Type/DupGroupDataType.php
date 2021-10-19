@@ -18,8 +18,8 @@ class DupGroupDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $dupGroupOption
-     * @var \Flexsim\FlexnetOperations\Type\GroupMaskDataType $groupMask
+     * @param string $dupGroupOption
+     * @param \Flexsim\FlexnetOperations\Type\GroupMaskDataType $groupMask
      */
     public function __construct(string $dupGroupOption, \Flexsim\FlexnetOperations\Type\GroupMaskDataType $groupMask = null)
     {
@@ -30,8 +30,8 @@ class DupGroupDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $dupGroupOption
-     * @var \Flexsim\FlexnetOperations\Type\GroupMaskDataType $groupMask
+     * @param string $dupGroupOption
+     * @param \Flexsim\FlexnetOperations\Type\GroupMaskDataType $groupMask
      */
     public static function create(string $dupGroupOption, \Flexsim\FlexnetOperations\Type\GroupMaskDataType $groupMask = null)
     {

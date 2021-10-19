@@ -15,7 +15,7 @@ class DeleteUniformSuiteRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteUniformSuiteDataType $uniformSuite
+     * @param \Flexsim\FlexnetOperations\Type\DeleteUniformSuiteDataType $uniformSuite
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeleteUniformSuiteDataType $uniformSuite)
     {
@@ -25,7 +25,7 @@ class DeleteUniformSuiteRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteUniformSuiteDataType $uniformSuite
+     * @param \Flexsim\FlexnetOperations\Type\DeleteUniformSuiteDataType $uniformSuite
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeleteUniformSuiteDataType $uniformSuite)
     {

@@ -18,8 +18,8 @@ class CreatePartNumberDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $partId
-     * @var string $description
+     * @param string $partId
+     * @param string $description
      */
     public function __construct(string $partId, string $description = null)
     {
@@ -30,8 +30,8 @@ class CreatePartNumberDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $partId
-     * @var string $description
+     * @param string $partId
+     * @param string $description
      */
     public static function create(string $partId, string $description = null)
     {

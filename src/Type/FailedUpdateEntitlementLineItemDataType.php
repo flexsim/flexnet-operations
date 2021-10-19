@@ -18,8 +18,8 @@ class FailedUpdateEntitlementLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $failedData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $failedData
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $failedData = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedUpdateEntitlementLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $failedData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $failedData
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $failedData = null, string $reason = null)
     {

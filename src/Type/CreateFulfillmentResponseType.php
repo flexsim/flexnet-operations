@@ -25,9 +25,9 @@ class CreateFulfillmentResponseType extends FlexnetType implements ResultInterfa
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataListType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataListType $responseData = null)
     {
@@ -39,9 +39,9 @@ class CreateFulfillmentResponseType extends FlexnetType implements ResultInterfa
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataListType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataListType $responseData = null)
     {

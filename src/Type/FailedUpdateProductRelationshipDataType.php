@@ -18,8 +18,8 @@ class FailedUpdateProductRelationshipDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType $relationship
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType $relationship
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType $relationship, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedUpdateProductRelationshipDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType $relationship
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType $relationship
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType $relationship, string $reason)
     {

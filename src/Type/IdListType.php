@@ -13,7 +13,7 @@ class IdListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string|array $id
+     * @param string|array $id
      */
     public function __construct(string $id)
     {
@@ -23,7 +23,7 @@ class IdListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string|array $id
+     * @param string|array $id
      */
     public static function create(string $id)
     {

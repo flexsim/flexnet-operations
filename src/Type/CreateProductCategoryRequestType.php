@@ -15,7 +15,7 @@ class CreateProductCategoryRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType $productCategory
+     * @param \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType $productCategory
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType $productCategory)
     {
@@ -25,7 +25,7 @@ class CreateProductCategoryRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType $productCategory
+     * @param \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType $productCategory
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType $productCategory)
     {

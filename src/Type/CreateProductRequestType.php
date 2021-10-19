@@ -15,7 +15,7 @@ class CreateProductRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateProductDataType $product
+     * @param \Flexsim\FlexnetOperations\Type\CreateProductDataType $product
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CreateProductDataType $product)
     {
@@ -25,7 +25,7 @@ class CreateProductRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateProductDataType $product
+     * @param \Flexsim\FlexnetOperations\Type\CreateProductDataType $product
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CreateProductDataType $product)
     {

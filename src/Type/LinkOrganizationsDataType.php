@@ -18,8 +18,8 @@ class LinkOrganizationsDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $parentOrg
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $subOrg
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $parentOrg
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $subOrg
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $parentOrg, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $subOrg)
     {
@@ -30,8 +30,8 @@ class LinkOrganizationsDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $parentOrg
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $subOrg
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $parentOrg
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $subOrg
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $parentOrg, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $subOrg)
     {

@@ -18,8 +18,8 @@ class UserAccountExpiryType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserDetailDataType $userData
-     * @var \Flexsim\FlexnetOperations\Type\AccountExpiryType $accountExpiryData
+     * @param \Flexsim\FlexnetOperations\Type\UserDetailDataType $userData
+     * @param \Flexsim\FlexnetOperations\Type\AccountExpiryType $accountExpiryData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UserDetailDataType $userData = null, \Flexsim\FlexnetOperations\Type\AccountExpiryType $accountExpiryData = null)
     {
@@ -30,8 +30,8 @@ class UserAccountExpiryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserDetailDataType $userData
-     * @var \Flexsim\FlexnetOperations\Type\AccountExpiryType $accountExpiryData
+     * @param \Flexsim\FlexnetOperations\Type\UserDetailDataType $userData
+     * @param \Flexsim\FlexnetOperations\Type\AccountExpiryType $accountExpiryData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UserDetailDataType $userData = null, \Flexsim\FlexnetOperations\Type\AccountExpiryType $accountExpiryData = null)
     {

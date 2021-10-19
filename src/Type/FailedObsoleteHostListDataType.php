@@ -13,7 +13,7 @@ class FailedObsoleteHostListDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedObsoleteHostDataType|array $failedHost
+     * @param \Flexsim\FlexnetOperations\Type\FailedObsoleteHostDataType|array $failedHost
      */
     public function __construct($failedHost = null)
     {
@@ -23,7 +23,7 @@ class FailedObsoleteHostListDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedObsoleteHostDataType|array $failedHost
+     * @param \Flexsim\FlexnetOperations\Type\FailedObsoleteHostDataType|array $failedHost
      */
     public static function create($failedHost = null)
     {

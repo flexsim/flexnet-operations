@@ -15,7 +15,7 @@ class LinkAddonLineItemsRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LinkAddonLineItemDataType $requestList
+     * @param \Flexsim\FlexnetOperations\Type\LinkAddonLineItemDataType $requestList
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\LinkAddonLineItemDataType $requestList)
     {
@@ -25,7 +25,7 @@ class LinkAddonLineItemsRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LinkAddonLineItemDataType $requestList
+     * @param \Flexsim\FlexnetOperations\Type\LinkAddonLineItemDataType $requestList
      */
     public static function create(\Flexsim\FlexnetOperations\Type\LinkAddonLineItemDataType $requestList)
     {

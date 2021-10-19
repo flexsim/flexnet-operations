@@ -18,8 +18,8 @@ class FailedEmergencyResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType $fulfillment
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType $fulfillment
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType $fulfillment, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedEmergencyResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType $fulfillment
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType $fulfillment
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType $fulfillment, string $reason)
     {

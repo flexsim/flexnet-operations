@@ -18,8 +18,8 @@ class FailedMaintenanceDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType $maintenance
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType $maintenance
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType $maintenance = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedMaintenanceDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType $maintenance
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType $maintenance
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType $maintenance = null, string $reason = null)
     {

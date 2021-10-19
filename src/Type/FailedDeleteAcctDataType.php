@@ -18,8 +18,8 @@ class FailedDeleteAcctDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedDeleteAcctDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData = null, string $reason = null)
     {

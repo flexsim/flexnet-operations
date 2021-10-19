@@ -25,9 +25,9 @@ class StopGapFulfillmentResponseType extends FlexnetType implements ResultInterf
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\StopGapResponseDataType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedStopGapResponselistDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\StopGapResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedStopGapResponselistDataType $failedData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\StopGapResponseDataType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedStopGapResponselistDataType $failedData = null)
     {
@@ -39,9 +39,9 @@ class StopGapFulfillmentResponseType extends FlexnetType implements ResultInterf
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\StopGapResponseDataType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedStopGapResponselistDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\StopGapResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedStopGapResponselistDataType $failedData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\StopGapResponseDataType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedStopGapResponselistDataType $failedData = null)
     {

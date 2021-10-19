@@ -18,8 +18,8 @@ class FailedUpdateAcctDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateAcctDataType $acctData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\UpdateAcctDataType $acctData
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UpdateAcctDataType $acctData = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedUpdateAcctDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateAcctDataType $acctData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\UpdateAcctDataType $acctData
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UpdateAcctDataType $acctData = null, string $reason = null)
     {

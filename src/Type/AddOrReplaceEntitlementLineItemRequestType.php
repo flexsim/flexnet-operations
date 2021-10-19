@@ -15,7 +15,7 @@ class AddOrReplaceEntitlementLineItemRequestType extends FlexnetType implements 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem
+     * @param \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem)
     {
@@ -25,7 +25,7 @@ class AddOrReplaceEntitlementLineItemRequestType extends FlexnetType implements 
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem
+     * @param \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem
      */
     public static function create(\Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem)
     {

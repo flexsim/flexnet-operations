@@ -23,9 +23,9 @@ class PartNumberIdentifierWithModelType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberPKType $primaryKeys
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param string $uniqueId
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberPKType $primaryKeys
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
      */
     public function __construct(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\PartNumberPKType $primaryKeys = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null)
     {
@@ -37,9 +37,9 @@ class PartNumberIdentifierWithModelType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberPKType $primaryKeys
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param string $uniqueId
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberPKType $primaryKeys
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
      */
     public static function create(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\PartNumberPKType $primaryKeys = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null)
     {

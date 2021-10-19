@@ -128,30 +128,30 @@ class Usage extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $productLine
-     * @var string $meter
-     * @var string $usageUnitName
-     * @var float $usageSinceReset
-     * @var float $entitled
-     * @var float $overageSinceStatement
-     * @var float $overageSinceReset
-     * @var float $percentSinceReset
-     * @var string $resetIntervalUnitName
-     * @var int $resetInterval
-     * @var \Flexsim\FlexnetOperations\Type\Period $period
-     * @var float $entitledScaled
-     * @var string $friendlyName
-     * @var int $gracePeriod
-     * @var string $gracePeriodUnitName
-     * @var float $overageSinceResetScaled
-     * @var float $overageSinceStatementScaled
-     * @var float $percentSinceStatement
-     * @var string $reconciliationTimeZone
-     * @var float $scale
-     * @var int $statementInterval
-     * @var string $statementIntervalUnitName
-     * @var float $usageSinceResetScaled
-     * @var float $usageSinceStatement
+     * @param string $productLine
+     * @param string $meter
+     * @param string $usageUnitName
+     * @param float $usageSinceReset
+     * @param float $entitled
+     * @param float $overageSinceStatement
+     * @param float $overageSinceReset
+     * @param float $percentSinceReset
+     * @param string $resetIntervalUnitName
+     * @param int $resetInterval
+     * @param \Flexsim\FlexnetOperations\Type\Period $period
+     * @param float $entitledScaled
+     * @param string $friendlyName
+     * @param int $gracePeriod
+     * @param string $gracePeriodUnitName
+     * @param float $overageSinceResetScaled
+     * @param float $overageSinceStatementScaled
+     * @param float $percentSinceStatement
+     * @param string $reconciliationTimeZone
+     * @param float $scale
+     * @param int $statementInterval
+     * @param string $statementIntervalUnitName
+     * @param float $usageSinceResetScaled
+     * @param float $usageSinceStatement
      */
     public function __construct(string $productLine, string $meter, string $usageUnitName, float $usageSinceReset, float $entitled, float $overageSinceStatement, float $overageSinceReset, float $percentSinceReset, string $resetIntervalUnitName, int $resetInterval, \Flexsim\FlexnetOperations\Type\Period $period, float $entitledScaled, string $friendlyName, int $gracePeriod, string $gracePeriodUnitName, float $overageSinceResetScaled, float $overageSinceStatementScaled, float $percentSinceStatement, string $reconciliationTimeZone, float $scale, int $statementInterval, string $statementIntervalUnitName, float $usageSinceResetScaled, float $usageSinceStatement)
     {
@@ -184,30 +184,30 @@ class Usage extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $productLine
-     * @var string $meter
-     * @var string $usageUnitName
-     * @var float $usageSinceReset
-     * @var float $entitled
-     * @var float $overageSinceStatement
-     * @var float $overageSinceReset
-     * @var float $percentSinceReset
-     * @var string $resetIntervalUnitName
-     * @var int $resetInterval
-     * @var \Flexsim\FlexnetOperations\Type\Period $period
-     * @var float $entitledScaled
-     * @var string $friendlyName
-     * @var int $gracePeriod
-     * @var string $gracePeriodUnitName
-     * @var float $overageSinceResetScaled
-     * @var float $overageSinceStatementScaled
-     * @var float $percentSinceStatement
-     * @var string $reconciliationTimeZone
-     * @var float $scale
-     * @var int $statementInterval
-     * @var string $statementIntervalUnitName
-     * @var float $usageSinceResetScaled
-     * @var float $usageSinceStatement
+     * @param string $productLine
+     * @param string $meter
+     * @param string $usageUnitName
+     * @param float $usageSinceReset
+     * @param float $entitled
+     * @param float $overageSinceStatement
+     * @param float $overageSinceReset
+     * @param float $percentSinceReset
+     * @param string $resetIntervalUnitName
+     * @param int $resetInterval
+     * @param \Flexsim\FlexnetOperations\Type\Period $period
+     * @param float $entitledScaled
+     * @param string $friendlyName
+     * @param int $gracePeriod
+     * @param string $gracePeriodUnitName
+     * @param float $overageSinceResetScaled
+     * @param float $overageSinceStatementScaled
+     * @param float $percentSinceStatement
+     * @param string $reconciliationTimeZone
+     * @param float $scale
+     * @param int $statementInterval
+     * @param string $statementIntervalUnitName
+     * @param float $usageSinceResetScaled
+     * @param float $usageSinceStatement
      */
     public static function create(string $productLine, string $meter, string $usageUnitName, float $usageSinceReset, float $entitled, float $overageSinceStatement, float $overageSinceReset, float $percentSinceReset, string $resetIntervalUnitName, int $resetInterval, \Flexsim\FlexnetOperations\Type\Period $period, float $entitledScaled, string $friendlyName, int $gracePeriod, string $gracePeriodUnitName, float $overageSinceResetScaled, float $overageSinceStatementScaled, float $percentSinceStatement, string $reconciliationTimeZone, float $scale, int $statementInterval, string $statementIntervalUnitName, float $usageSinceResetScaled, float $usageSinceStatement)
     {

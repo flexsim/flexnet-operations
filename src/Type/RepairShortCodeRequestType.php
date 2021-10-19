@@ -15,7 +15,7 @@ class RepairShortCodeRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData
+     * @param \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData = null)
     {
@@ -25,7 +25,7 @@ class RepairShortCodeRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData
+     * @param \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData = null)
     {

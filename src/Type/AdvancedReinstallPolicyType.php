@@ -28,10 +28,10 @@ class AdvancedReinstallPolicyType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\PolicyDataType $umn1Policy
-     * @var \Flexsim\FlexnetOperations\Type\PolicyDataType $umn2Policy
-     * @var \Flexsim\FlexnetOperations\Type\PolicyDataType $umn3Policy
-     * @var \Flexsim\FlexnetOperations\Type\PolicyDataType $midPolicy
+     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $umn1Policy
+     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $umn2Policy
+     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $umn3Policy
+     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $midPolicy
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\PolicyDataType $umn1Policy, \Flexsim\FlexnetOperations\Type\PolicyDataType $umn2Policy, \Flexsim\FlexnetOperations\Type\PolicyDataType $umn3Policy, \Flexsim\FlexnetOperations\Type\PolicyDataType $midPolicy)
     {
@@ -44,10 +44,10 @@ class AdvancedReinstallPolicyType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\PolicyDataType $umn1Policy
-     * @var \Flexsim\FlexnetOperations\Type\PolicyDataType $umn2Policy
-     * @var \Flexsim\FlexnetOperations\Type\PolicyDataType $umn3Policy
-     * @var \Flexsim\FlexnetOperations\Type\PolicyDataType $midPolicy
+     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $umn1Policy
+     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $umn2Policy
+     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $umn3Policy
+     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $midPolicy
      */
     public static function create(\Flexsim\FlexnetOperations\Type\PolicyDataType $umn1Policy, \Flexsim\FlexnetOperations\Type\PolicyDataType $umn2Policy, \Flexsim\FlexnetOperations\Type\PolicyDataType $umn3Policy, \Flexsim\FlexnetOperations\Type\PolicyDataType $midPolicy)
     {

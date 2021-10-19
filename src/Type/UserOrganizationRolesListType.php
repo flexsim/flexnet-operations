@@ -13,7 +13,7 @@ class UserOrganizationRolesListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string|array $roleName
+     * @param string|array $roleName
      */
     public function __construct($roleName)
     {
@@ -23,7 +23,7 @@ class UserOrganizationRolesListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string|array $roleName
+     * @param string|array $roleName
      */
     public static function create($roleName)
     {

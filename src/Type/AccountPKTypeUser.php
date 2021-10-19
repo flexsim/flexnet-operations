@@ -13,7 +13,7 @@ class AccountPKTypeUser extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $id
+     * @param string $id
      */
     public function __construct(string $id)
     {
@@ -23,7 +23,7 @@ class AccountPKTypeUser extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $id
+     * @param string $id
      */
     public static function create(string $id)
     {

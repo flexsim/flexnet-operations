@@ -48,14 +48,14 @@ class UpdateMaintenanceDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier
-     * @var string $name
-     * @var string $version
-     * @var string $description
-     * @var bool $allowUpgrades
-     * @var bool $allowUpsells
-     * @var bool $allowRenewals
-     * @var \Flexsim\FlexnetOperations\Type\UpdatePartNumbersSimpleListType $partNumbers
+     * @param \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier
+     * @param string $name
+     * @param string $version
+     * @param string $description
+     * @param bool $allowUpgrades
+     * @param bool $allowUpsells
+     * @param bool $allowRenewals
+     * @param \Flexsim\FlexnetOperations\Type\UpdatePartNumbersSimpleListType $partNumbers
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier, string $name = null, string $version = null, string $description = null, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, \Flexsim\FlexnetOperations\Type\UpdatePartNumbersSimpleListType $partNumbers = null)
     {
@@ -72,14 +72,14 @@ class UpdateMaintenanceDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier
-     * @var string $name
-     * @var string $version
-     * @var string $description
-     * @var bool $allowUpgrades
-     * @var bool $allowUpsells
-     * @var bool $allowRenewals
-     * @var \Flexsim\FlexnetOperations\Type\UpdatePartNumbersSimpleListType $partNumbers
+     * @param \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier
+     * @param string $name
+     * @param string $version
+     * @param string $description
+     * @param bool $allowUpgrades
+     * @param bool $allowUpsells
+     * @param bool $allowRenewals
+     * @param \Flexsim\FlexnetOperations\Type\UpdatePartNumbersSimpleListType $partNumbers
      */
     public static function create(\Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier, string $name = null, string $version = null, string $description = null, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, \Flexsim\FlexnetOperations\Type\UpdatePartNumbersSimpleListType $partNumbers = null)
     {

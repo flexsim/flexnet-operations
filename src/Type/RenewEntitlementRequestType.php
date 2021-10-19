@@ -15,7 +15,7 @@ class RenewEntitlementRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\RenewEntitlementDataType|array $entitlementData
+     * @param \Flexsim\FlexnetOperations\Type\RenewEntitlementDataType|array $entitlementData
      */
     public function __construct($entitlementData = null)
     {
@@ -25,7 +25,7 @@ class RenewEntitlementRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\RenewEntitlementDataType|array $entitlementData
+     * @param \Flexsim\FlexnetOperations\Type\RenewEntitlementDataType|array $entitlementData
      */
     public static function create($entitlementData = null)
     {

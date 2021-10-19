@@ -20,8 +20,8 @@ class CreateSimpleEntitlementRequestType extends FlexnetType implements RequestI
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
+     * @param string $opType
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement, string $opType = null)
     {
@@ -32,8 +32,8 @@ class CreateSimpleEntitlementRequestType extends FlexnetType implements RequestI
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
+     * @param string $opType
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement, string $opType = null)
     {

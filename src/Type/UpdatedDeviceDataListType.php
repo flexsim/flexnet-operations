@@ -13,7 +13,7 @@ class UpdatedDeviceDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array $deviceIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array $deviceIdentifier
      */
     public function __construct($deviceIdentifier = null)
     {
@@ -23,7 +23,7 @@ class UpdatedDeviceDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array $deviceIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array $deviceIdentifier
      */
     public static function create($deviceIdentifier = null)
     {

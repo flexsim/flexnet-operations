@@ -20,8 +20,8 @@ class AddWebRegKeyRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
-     * @var bool $processSync
+     * @param \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
+     * @param bool $processSync
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData, bool $processSync = null)
     {
@@ -32,8 +32,8 @@ class AddWebRegKeyRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
-     * @var bool $processSync
+     * @param \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
+     * @param bool $processSync
      */
     public static function create(\Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData, bool $processSync = null)
     {

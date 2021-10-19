@@ -30,10 +30,10 @@ class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements Req
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria
-     * @var \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig
-     * @var int $batchSize
-     * @var int $pageNumber
+     * @param \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria
+     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig
+     * @param int $batchSize
+     * @param int $pageNumber
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int $pageNumber = null)
     {
@@ -46,10 +46,10 @@ class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements Req
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria
-     * @var \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig
-     * @var int $batchSize
-     * @var int $pageNumber
+     * @param \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria
+     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig
+     * @param int $batchSize
+     * @param int $pageNumber
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int $pageNumber = null)
     {

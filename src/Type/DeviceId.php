@@ -28,10 +28,10 @@ class DeviceId extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $id
-     * @var string $idType
-     * @var string $publisherName
-     * @var string $deviceClass
+     * @param string $id
+     * @param string $idType
+     * @param string $publisherName
+     * @param string $deviceClass
      */
     public function __construct(string $id, string $idType, string $publisherName, string $deviceClass)
     {
@@ -44,10 +44,10 @@ class DeviceId extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $id
-     * @var string $idType
-     * @var string $publisherName
-     * @var string $deviceClass
+     * @param string $id
+     * @param string $idType
+     * @param string $publisherName
+     * @param string $deviceClass
      */
     public static function create(string $id, string $idType, string $publisherName, string $deviceClass)
     {

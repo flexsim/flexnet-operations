@@ -63,17 +63,17 @@ class AccountDetailDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @var string $name
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @var bool $visible
-     * @var string $accountType
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @var \DateTimeInterface $dateLastModified
-     * @var \DateTimeInterface $createdDate
-     * @var string $createdBy
-     * @var string $lastModifiedBy
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param string $name
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param bool $visible
+     * @param string $accountType
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \DateTimeInterface $dateLastModified
+     * @param \DateTimeInterface $createdDate
+     * @param string $createdBy
+     * @param string $lastModifiedBy
      */
     public function __construct(
         $account,
@@ -104,17 +104,17 @@ class AccountDetailDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUserZ|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @var string $name
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @var bool $visible
-     * @var string $accountType
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @var \DateTimeInterface $dateLastModified
-     * @var \DateTimeInterface $createdDate
-     * @var string $createdBy
-     * @var string $lastModifiedBy
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUserZ|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param string $name
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param bool $visible
+     * @param string $accountType
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \DateTimeInterface $dateLastModified
+     * @param \DateTimeInterface $createdDate
+     * @param string $createdBy
+     * @param string $lastModifiedBy
      */
     public static function create(
         $account,

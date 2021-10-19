@@ -18,8 +18,8 @@ class CreatedChildLIFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var int $recordRefNo
-     * @var \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType $fulfillmentInfo
+     * @param int $recordRefNo
+     * @param \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType $fulfillmentInfo
      */
     public function __construct(int $recordRefNo, \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType $fulfillmentInfo)
     {
@@ -30,8 +30,8 @@ class CreatedChildLIFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var int $recordRefNo
-     * @var \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType $fulfillmentInfo
+     * @param int $recordRefNo
+     * @param \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType $fulfillmentInfo
      */
     public static function create(int $recordRefNo, \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType $fulfillmentInfo)
     {

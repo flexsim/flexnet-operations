@@ -20,7 +20,7 @@ class GetUsageRequest extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var string $accountId this method is backwards compatible so you may also pass orgName
+     * @param string $accountId this method is backwards compatible so you may also pass orgName
      */
     public function __construct(string $accountId)
     {
@@ -31,7 +31,7 @@ class GetUsageRequest extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var string $accountId this method is backwards compatible so you may also pass orgName
+     * @param string $accountId this method is backwards compatible so you may also pass orgName
      */
     public static function create(string $accountId)
     {

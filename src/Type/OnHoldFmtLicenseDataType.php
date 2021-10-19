@@ -28,10 +28,10 @@ class OnHoldFmtLicenseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $fulfillmentId
-     * @var string $textLicense
-     * @var string $binaryLicense
-     * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param string $fulfillmentId
+     * @param string $textLicense
+     * @param string $binaryLicense
+     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
      */
     public function __construct(string $fulfillmentId, string $textLicense = null, string $binaryLicense = null, \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null)
     {
@@ -44,10 +44,10 @@ class OnHoldFmtLicenseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $fulfillmentId
-     * @var string $textLicense
-     * @var string $binaryLicense
-     * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param string $fulfillmentId
+     * @param string $textLicense
+     * @param string $binaryLicense
+     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
      */
     public static function create(string $fulfillmentId, string $textLicense = null, string $binaryLicense = null, \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null)
     {

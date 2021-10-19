@@ -20,8 +20,8 @@ class GetFmtAttributesForBatchActivationResponseType extends FlexnetType impleme
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\GetFmtAttributesForBatchDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetFmtAttributesForBatchDataType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetFmtAttributesForBatchDataType $responseData = null)
     {
@@ -32,8 +32,8 @@ class GetFmtAttributesForBatchActivationResponseType extends FlexnetType impleme
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\GetFmtAttributesForBatchDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetFmtAttributesForBatchDataType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetFmtAttributesForBatchDataType $responseData = null)
     {

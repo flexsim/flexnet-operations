@@ -18,8 +18,8 @@ class TransferredLineItemMapType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $activationId
-     * @var string $transferredFromId
+     * @param string $activationId
+     * @param string $transferredFromId
      */
     public function __construct(string $activationId, string $transferredFromId = null)
     {
@@ -30,8 +30,8 @@ class TransferredLineItemMapType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $activationId
-     * @var string $transferredFromId
+     * @param string $activationId
+     * @param string $transferredFromId
      */
     public static function create(string $activationId, string $transferredFromId = null)
     {

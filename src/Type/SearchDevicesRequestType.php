@@ -35,11 +35,11 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams
-     * @var \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType $responseConfig
-     * @var \Flexsim\FlexnetOperations\Type\DeviceSortBys $sortBys
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType $responseConfig
+     * @param \Flexsim\FlexnetOperations\Type\DeviceSortBys $sortBys
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams = null, \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType $responseConfig = null, \Flexsim\FlexnetOperations\Type\DeviceSortBys $sortBys = null, int $pageNumber = null, int $batchSize = null)
     {
@@ -54,11 +54,11 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams
-     * @var \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType $responseConfig
-     * @var \Flexsim\FlexnetOperations\Type\DeviceSortBys $sortBys
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType $responseConfig
+     * @param \Flexsim\FlexnetOperations\Type\DeviceSortBys $sortBys
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams = null, \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType $responseConfig = null, \Flexsim\FlexnetOperations\Type\DeviceSortBys $sortBys = null, int $pageNumber = null, int $batchSize = null)
     {

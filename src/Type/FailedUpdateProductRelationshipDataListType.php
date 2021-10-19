@@ -13,7 +13,7 @@ class FailedUpdateProductRelationshipDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateProductRelationshipDataType|array $failedRelationship
+     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateProductRelationshipDataType|array $failedRelationship
      */
     public function __construct($failedRelationship = null)
     {
@@ -23,7 +23,7 @@ class FailedUpdateProductRelationshipDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateProductRelationshipDataType|array $failedRelationship
+     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateProductRelationshipDataType|array $failedRelationship
      */
     public static function create($failedRelationship = null)
     {

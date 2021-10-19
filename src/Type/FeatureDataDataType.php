@@ -43,13 +43,13 @@ class FeatureDataDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $name
-     * @var string $version
-     * @var int $count
-     * @var int $overage
-     * @var \DateTimeInterface $expiration
-     * @var string $lineItemUniqueId
-     * @var string $lineItemActivationId
+     * @param string $name
+     * @param string $version
+     * @param int $count
+     * @param int $overage
+     * @param \DateTimeInterface $expiration
+     * @param string $lineItemUniqueId
+     * @param string $lineItemActivationId
      */
     public function __construct(string $name = null, string $version = null, int $count = null, int $overage = null, \DateTimeInterface $expiration = null, string $lineItemUniqueId = null, string $lineItemActivationId = null)
     {
@@ -65,13 +65,13 @@ class FeatureDataDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $name
-     * @var string $version
-     * @var int $count
-     * @var int $overage
-     * @var \DateTimeInterface $expiration
-     * @var string $lineItemUniqueId
-     * @var string $lineItemActivationId
+     * @param string $name
+     * @param string $version
+     * @param int $count
+     * @param int $overage
+     * @param \DateTimeInterface $expiration
+     * @param string $lineItemUniqueId
+     * @param string $lineItemActivationId
      */
     public static function create(string $name = null, string $version = null, int $count = null, int $overage = null, \DateTimeInterface $expiration = null, string $lineItemUniqueId = null, string $lineItemActivationId = null)
     {

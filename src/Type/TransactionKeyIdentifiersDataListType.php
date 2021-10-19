@@ -13,7 +13,7 @@ class TransactionKeyIdentifiersDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType|array $transactionKeyIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType|array $transactionKeyIdentifier
      */
     public function __construct($transactionKeyIdentifier = null)
     {
@@ -23,7 +23,7 @@ class TransactionKeyIdentifiersDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType|array $transactionKeyIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType|array $transactionKeyIdentifier
      */
     public static function create($transactionKeyIdentifier = null)
     {

@@ -18,8 +18,8 @@ class ExpirationTermsDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @var \DateTimeInterface $expirationDate
+     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
+     * @param \DateTimeInterface $expirationDate
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null)
     {
@@ -30,8 +30,8 @@ class ExpirationTermsDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @var \DateTimeInterface $expirationDate
+     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
+     * @param \DateTimeInterface $expirationDate
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null)
     {

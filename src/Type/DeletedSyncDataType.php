@@ -28,10 +28,10 @@ class DeletedSyncDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
-     * @var \DateTimeInterface $startTime
-     * @var \DateTimeInterface $endTime
-     * @var int $count
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
+     * @param \DateTimeInterface $startTime
+     * @param \DateTimeInterface $endTime
+     * @param int $count
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier, \DateTimeInterface $startTime, \DateTimeInterface $endTime, int $count)
     {
@@ -44,10 +44,10 @@ class DeletedSyncDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
-     * @var \DateTimeInterface $startTime
-     * @var \DateTimeInterface $endTime
-     * @var int $count
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
+     * @param \DateTimeInterface $startTime
+     * @param \DateTimeInterface $endTime
+     * @param int $count
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier, \DateTimeInterface $startTime, \DateTimeInterface $endTime, int $count)
     {

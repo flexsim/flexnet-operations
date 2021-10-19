@@ -60,16 +60,16 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @var string $activationId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $userId
-     * @var \Flexsim\FlexnetOperations\Type\NumberQueryType $count
-     * @var bool $policyOverridden
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $actionDateTime
-     * @var string $lifeCycleAction
-     * @var string $fulfillmentSource
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param string $activationId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $userId
+     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $count
+     * @param bool $policyOverridden
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $actionDateTime
+     * @param string $lifeCycleAction
+     * @param string $fulfillmentSource
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public function __construct(string $activationId, \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $userId = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $count = null, bool $policyOverridden = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $actionDateTime = null, string $lifeCycleAction = null, string $fulfillmentSource = null, int $pageNumber = null, int $batchSize = null)
     {
@@ -88,16 +88,16 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @var string $activationId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $userId
-     * @var \Flexsim\FlexnetOperations\Type\NumberQueryType $count
-     * @var bool $policyOverridden
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $actionDateTime
-     * @var string $lifeCycleAction
-     * @var string $fulfillmentSource
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param string $activationId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $userId
+     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $count
+     * @param bool $policyOverridden
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $actionDateTime
+     * @param string $lifeCycleAction
+     * @param string $fulfillmentSource
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public static function create(string $activationId, \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $userId = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $count = null, bool $policyOverridden = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $actionDateTime = null, string $lifeCycleAction = null, string $fulfillmentSource = null, int $pageNumber = null, int $batchSize = null)
     {

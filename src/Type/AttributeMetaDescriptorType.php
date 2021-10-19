@@ -28,10 +28,10 @@ class AttributeMetaDescriptorType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $attributeName
-     * @var string $attributeDataType
-     * @var string $namespace
-     * @var \Flexsim\FlexnetOperations\Type\ValueType $validValues
+     * @param string $attributeName
+     * @param string $attributeDataType
+     * @param string $namespace
+     * @param \Flexsim\FlexnetOperations\Type\ValueType $validValues
      */
     public function __construct(string $attributeName, string $attributeDataType, string $namespace, \Flexsim\FlexnetOperations\Type\ValueType $validValues = null)
     {
@@ -44,10 +44,10 @@ class AttributeMetaDescriptorType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $attributeName
-     * @var string $attributeDataType
-     * @var string $namespace
-     * @var \Flexsim\FlexnetOperations\Type\ValueType $validValues
+     * @param string $attributeName
+     * @param string $attributeDataType
+     * @param string $namespace
+     * @param \Flexsim\FlexnetOperations\Type\ValueType $validValues
      */
     public static function create(string $attributeName, string $attributeDataType, string $namespace, \Flexsim\FlexnetOperations\Type\ValueType $validValues = null)
     {

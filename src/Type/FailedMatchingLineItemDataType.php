@@ -18,8 +18,8 @@ class FailedMatchingLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedMatchingLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo, string $reason)
     {

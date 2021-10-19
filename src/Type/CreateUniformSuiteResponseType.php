@@ -25,9 +25,9 @@ class CreateUniformSuiteResponseType extends FlexnetType implements ResultInterf
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType $responseData = null)
     {
@@ -39,9 +39,9 @@ class CreateUniformSuiteResponseType extends FlexnetType implements ResultInterf
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataListType $responseData = null)
     {

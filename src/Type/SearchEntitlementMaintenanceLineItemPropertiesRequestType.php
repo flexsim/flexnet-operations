@@ -30,10 +30,10 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetT
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType $queryParams
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig
-     * @var int $batchSize
-     * @var int $pageNumber
+     * @param \Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig
+     * @param int $batchSize
+     * @param int $pageNumber
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType $queryParams, \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int $pageNumber = null)
     {
@@ -46,10 +46,10 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetT
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType $queryParams
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig
-     * @var int $batchSize
-     * @var int $pageNumber
+     * @param \Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig
+     * @param int $batchSize
+     * @param int $pageNumber
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType $queryParams, \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int $pageNumber = null)
     {

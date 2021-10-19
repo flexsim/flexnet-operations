@@ -20,8 +20,8 @@ class GetFulfillmentPropertiesResponseType extends FlexnetType implements Result
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType|array $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType|array $fulfillment
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $fulfillment = null)
     {
@@ -32,8 +32,8 @@ class GetFulfillmentPropertiesResponseType extends FlexnetType implements Result
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType|array $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType|array $fulfillment
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $fulfillment = null)
     {

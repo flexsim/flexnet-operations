@@ -18,8 +18,8 @@ class UpdateUserOrganizationType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationRolesListType $roles
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationRolesListType $roles
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationRolesListType $roles = null)
     {
@@ -30,8 +30,8 @@ class UpdateUserOrganizationType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationRolesListType $roles
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationRolesListType $roles
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, \Flexsim\FlexnetOperations\Type\UpdateUserOrganizationRolesListType $roles = null)
     {

@@ -13,7 +13,7 @@ class ObsoleteHostType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier)
     {
@@ -23,7 +23,7 @@ class ObsoleteHostType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier)
     {

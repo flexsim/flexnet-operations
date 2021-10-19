@@ -20,8 +20,8 @@ class GetBulkEntitlementPropertiesResponseType extends FlexnetType implements Re
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\BulkEntitlementPropertiesType|array $bulkEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementPropertiesType|array $bulkEntitlement
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $bulkEntitlement = null)
     {
@@ -32,8 +32,8 @@ class GetBulkEntitlementPropertiesResponseType extends FlexnetType implements Re
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\BulkEntitlementPropertiesType|array $bulkEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementPropertiesType|array $bulkEntitlement
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $bulkEntitlement = null)
     {

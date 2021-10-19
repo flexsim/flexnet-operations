@@ -38,12 +38,12 @@ class StateChangeResponseType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureStateChangeListType $featureList
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeListType $featureBundleList
-     * @var \Flexsim\FlexnetOperations\Type\ProductStateChangeListType $productList
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeListType $licenseModelList
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType $simpleEntitlementList
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType $bulkEntitlementList
+     * @param \Flexsim\FlexnetOperations\Type\FeatureStateChangeListType $featureList
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeListType $featureBundleList
+     * @param \Flexsim\FlexnetOperations\Type\ProductStateChangeListType $productList
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeListType $licenseModelList
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType $simpleEntitlementList
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType $bulkEntitlementList
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureStateChangeListType $featureList = null, \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeListType $featureBundleList = null, \Flexsim\FlexnetOperations\Type\ProductStateChangeListType $productList = null, \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeListType $licenseModelList = null, \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType $simpleEntitlementList = null, \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType $bulkEntitlementList = null)
     {
@@ -58,12 +58,12 @@ class StateChangeResponseType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureStateChangeListType $featureList
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeListType $featureBundleList
-     * @var \Flexsim\FlexnetOperations\Type\ProductStateChangeListType $productList
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeListType $licenseModelList
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType $simpleEntitlementList
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType $bulkEntitlementList
+     * @param \Flexsim\FlexnetOperations\Type\FeatureStateChangeListType $featureList
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeListType $featureBundleList
+     * @param \Flexsim\FlexnetOperations\Type\ProductStateChangeListType $productList
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeListType $licenseModelList
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType $simpleEntitlementList
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType $bulkEntitlementList
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureStateChangeListType $featureList = null, \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeListType $featureBundleList = null, \Flexsim\FlexnetOperations\Type\ProductStateChangeListType $productList = null, \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeListType $licenseModelList = null, \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType $simpleEntitlementList = null, \Flexsim\FlexnetOperations\Type\EntitlementStateChangeListType $bulkEntitlementList = null)
     {

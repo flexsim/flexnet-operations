@@ -13,7 +13,7 @@ class EntitlementLineItemPKType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $activationId
+     * @param string $activationId
      */
     public function __construct(string $activationId)
     {
@@ -23,7 +23,7 @@ class EntitlementLineItemPKType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $activationId
+     * @param string $activationId
      */
     public static function create(string $activationId)
     {

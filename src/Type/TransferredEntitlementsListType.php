@@ -13,7 +13,7 @@ class TransferredEntitlementsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferredEntitlementDataType|array $transferredEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\TransferredEntitlementDataType|array $transferredEntitlement
      */
     public function __construct($transferredEntitlement)
     {
@@ -23,7 +23,7 @@ class TransferredEntitlementsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferredEntitlementDataType|array $transferredEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\TransferredEntitlementDataType|array $transferredEntitlement
      */
     public static function create($transferredEntitlement)
     {

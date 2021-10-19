@@ -18,8 +18,8 @@ class AccountIdentifierTypeUser extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var \Flexsim\FlexnetOperations\Type\AccountPKTypeUser $primaryKeys
+     * @param string $uniqueId
+     * @param \Flexsim\FlexnetOperations\Type\AccountPKTypeUser $primaryKeys
      */
     public function __construct(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\AccountPKTypeUser $primaryKeys = null)
     {
@@ -30,8 +30,8 @@ class AccountIdentifierTypeUser extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var \Flexsim\FlexnetOperations\Type\AccountPKTypeUser $primaryKeys
+     * @param string $uniqueId
+     * @param \Flexsim\FlexnetOperations\Type\AccountPKTypeUser $primaryKeys
      */
     public static function create(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\AccountPKTypeUser $primaryKeys = null)
     {

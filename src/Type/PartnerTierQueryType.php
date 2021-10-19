@@ -23,9 +23,9 @@ class PartnerTierQueryType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $value
-     * @var string $searchType
-     * @var string $partnerTier
+     * @param string $value
+     * @param string $searchType
+     * @param string $partnerTier
      */
     public function __construct(string $value, string $searchType, string $partnerTier = null)
     {
@@ -37,9 +37,9 @@ class PartnerTierQueryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $value
-     * @var string $searchType
-     * @var string $partnerTier
+     * @param string $value
+     * @param string $searchType
+     * @param string $partnerTier
      */
     public static function create(string $value, string $searchType, string $partnerTier = null)
     {

@@ -30,10 +30,10 @@ class GetEntitlementAttributesResponseType extends FlexnetType implements Result
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $entitlementAttributes
-     * @var \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType $policyAttributes
-     * @var bool $needTimeZone
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $entitlementAttributes
+     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType $policyAttributes
+     * @param bool $needTimeZone
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $entitlementAttributes = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType $policyAttributes = null, bool $needTimeZone = null)
     {
@@ -46,10 +46,10 @@ class GetEntitlementAttributesResponseType extends FlexnetType implements Result
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $entitlementAttributes
-     * @var \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType $policyAttributes
-     * @var bool $needTimeZone
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $entitlementAttributes
+     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType $policyAttributes
+     * @param bool $needTimeZone
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $entitlementAttributes = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType $policyAttributes = null, bool $needTimeZone = null)
     {

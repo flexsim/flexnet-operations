@@ -15,7 +15,7 @@ class GetEntitlementAttributesRequestType extends FlexnetType implements Request
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier)
     {
@@ -25,7 +25,7 @@ class GetEntitlementAttributesRequestType extends FlexnetType implements Request
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
      */
     public static function create(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier)
     {

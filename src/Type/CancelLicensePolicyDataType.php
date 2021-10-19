@@ -13,7 +13,7 @@ class CancelLicensePolicyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var bool $isCancelLicense
+     * @param bool $isCancelLicense
      */
     public function __construct(bool $isCancelLicense)
     {
@@ -23,7 +23,7 @@ class CancelLicensePolicyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var bool $isCancelLicense
+     * @param bool $isCancelLicense
      */
     public static function create(bool $isCancelLicense)
     {

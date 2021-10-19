@@ -20,8 +20,8 @@ class ReturnShortCodeRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType $shortCodeData
-     * @var string $returnReason
+     * @param \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType $shortCodeData
+     * @param string $returnReason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType $shortCodeData = null, string $returnReason = null)
     {
@@ -32,8 +32,8 @@ class ReturnShortCodeRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType $shortCodeData
-     * @var string $returnReason
+     * @param \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType $shortCodeData
+     * @param string $returnReason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType $shortCodeData = null, string $returnReason = null)
     {

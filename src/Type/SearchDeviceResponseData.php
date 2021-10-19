@@ -128,30 +128,30 @@ class SearchDeviceResponseData extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
-     * @var string $backupDeviceId
-     * @var string $name
-     * @var string $description
-     * @var string $hostTypeName
-     * @var string $status
-     * @var string $servedStatus
-     * @var bool $hosted
-     * @var \Flexsim\FlexnetOperations\Type\SoldToType $soldTo
-     * @var bool $hasBufferLicense
-     * @var string $bufferLicense
-     * @var bool $hasAddonLicense
-     * @var string $addonLicense
-     * @var string $publisherIdName
-     * @var \Flexsim\FlexnetOperations\Type\DeviceId $parentIdentifier
-     * @var string $machineType
-     * @var string $vmName
-     * @var string $userString
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier
-     * @var \DateTimeInterface $lastModified
-     * @var \DateTimeInterface $lastSyncTime
-     * @var \DateTimeInterface $lastRequestTime
-     * @var \Flexsim\FlexnetOperations\Type\AddonData|array $addon
-     * @var bool $hasUpdates
+     * @param \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
+     * @param string $backupDeviceId
+     * @param string $name
+     * @param string $description
+     * @param string $hostTypeName
+     * @param string $status
+     * @param string $servedStatus
+     * @param bool $hosted
+     * @param \Flexsim\FlexnetOperations\Type\SoldToType $soldTo
+     * @param bool $hasBufferLicense
+     * @param string $bufferLicense
+     * @param bool $hasAddonLicense
+     * @param string $addonLicense
+     * @param string $publisherIdName
+     * @param \Flexsim\FlexnetOperations\Type\DeviceId $parentIdentifier
+     * @param string $machineType
+     * @param string $vmName
+     * @param string $userString
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier
+     * @param \DateTimeInterface $lastModified
+     * @param \DateTimeInterface $lastSyncTime
+     * @param \DateTimeInterface $lastRequestTime
+     * @param \Flexsim\FlexnetOperations\Type\AddonData|array $addon
+     * @param bool $hasUpdates
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceId $deviceId = null, string $backupDeviceId = null, string $name = null, string $description = null, string $hostTypeName = null, string $status = null, string $servedStatus = null, bool $hosted = null, \Flexsim\FlexnetOperations\Type\SoldToType $soldTo = null, bool $hasBufferLicense = null, string $bufferLicense = null, bool $hasAddonLicense = null, string $addonLicense = null, string $publisherIdName = null, \Flexsim\FlexnetOperations\Type\DeviceId $parentIdentifier = null, string $machineType = null, string $vmName = null, string $userString = null, \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier = null, \DateTimeInterface $lastModified = null, \DateTimeInterface $lastSyncTime = null, \DateTimeInterface $lastRequestTime = null, $addon = null, bool $hasUpdates = null)
     {
@@ -184,30 +184,30 @@ class SearchDeviceResponseData extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
-     * @var string $backupDeviceId
-     * @var string $name
-     * @var string $description
-     * @var string $hostTypeName
-     * @var string $status
-     * @var string $servedStatus
-     * @var bool $hosted
-     * @var \Flexsim\FlexnetOperations\Type\SoldToType $soldTo
-     * @var bool $hasBufferLicense
-     * @var string $bufferLicense
-     * @var bool $hasAddonLicense
-     * @var string $addonLicense
-     * @var string $publisherIdName
-     * @var \Flexsim\FlexnetOperations\Type\DeviceId $parentIdentifier
-     * @var string $machineType
-     * @var string $vmName
-     * @var string $userString
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier
-     * @var \DateTimeInterface $lastModified
-     * @var \DateTimeInterface $lastSyncTime
-     * @var \DateTimeInterface $lastRequestTime
-     * @var \Flexsim\FlexnetOperations\Type\AddonData|array $addon
-     * @var bool $hasUpdates
+     * @param \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
+     * @param string $backupDeviceId
+     * @param string $name
+     * @param string $description
+     * @param string $hostTypeName
+     * @param string $status
+     * @param string $servedStatus
+     * @param bool $hosted
+     * @param \Flexsim\FlexnetOperations\Type\SoldToType $soldTo
+     * @param bool $hasBufferLicense
+     * @param string $bufferLicense
+     * @param bool $hasAddonLicense
+     * @param string $addonLicense
+     * @param string $publisherIdName
+     * @param \Flexsim\FlexnetOperations\Type\DeviceId $parentIdentifier
+     * @param string $machineType
+     * @param string $vmName
+     * @param string $userString
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier
+     * @param \DateTimeInterface $lastModified
+     * @param \DateTimeInterface $lastSyncTime
+     * @param \DateTimeInterface $lastRequestTime
+     * @param \Flexsim\FlexnetOperations\Type\AddonData|array $addon
+     * @param bool $hasUpdates
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceId $deviceId = null, string $backupDeviceId = null, string $name = null, string $description = null, string $hostTypeName = null, string $status = null, string $servedStatus = null, bool $hosted = null, \Flexsim\FlexnetOperations\Type\SoldToType $soldTo = null, bool $hasBufferLicense = null, string $bufferLicense = null, bool $hasAddonLicense = null, string $addonLicense = null, string $publisherIdName = null, \Flexsim\FlexnetOperations\Type\DeviceId $parentIdentifier = null, string $machineType = null, string $vmName = null, string $userString = null, \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier = null, \DateTimeInterface $lastModified = null, \DateTimeInterface $lastSyncTime = null, \DateTimeInterface $lastRequestTime = null, $addon = null, bool $hasUpdates = null)
     {

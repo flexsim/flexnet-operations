@@ -18,8 +18,8 @@ class FeaturePKType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $name
-     * @var string $version
+     * @param string $name
+     * @param string $version
      */
     public function __construct(string $name, string $version = null)
     {
@@ -30,8 +30,8 @@ class FeaturePKType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $name
-     * @var string $version
+     * @param string $name
+     * @param string $version
      */
     public static function create(string $name, string $version = null)
     {

@@ -83,21 +83,21 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     /**
      * Constructor
      *
-     * @var bool $activationId
-     * @var bool $state
-     * @var bool $orderId
-     * @var bool $orderLineNumber
-     * @var bool $entitlementId
-     * @var bool $maintenanceProduct
-     * @var bool $maintenancePartNumber
-     * @var bool $maintenancePartNumberDescription
-     * @var bool $startDate
-     * @var bool $isPermanent
-     * @var bool $expirationDate
-     * @var bool $createdOnDateTime
-     * @var bool $lastModifiedDateTime
-     * @var bool $maintenanceLineItemAttributes
-     * @var bool $linkedEntitlementLineItem
+     * @param bool $activationId
+     * @param bool $state
+     * @param bool $orderId
+     * @param bool $orderLineNumber
+     * @param bool $entitlementId
+     * @param bool $maintenanceProduct
+     * @param bool $maintenancePartNumber
+     * @param bool $maintenancePartNumberDescription
+     * @param bool $startDate
+     * @param bool $isPermanent
+     * @param bool $expirationDate
+     * @param bool $createdOnDateTime
+     * @param bool $lastModifiedDateTime
+     * @param bool $maintenanceLineItemAttributes
+     * @param bool $linkedEntitlementLineItem
      */
     public function __construct(bool $activationId = null, bool $state = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $maintenanceProduct = null, bool $maintenancePartNumber = null, bool $maintenancePartNumberDescription = null, bool $startDate = null, bool $isPermanent = null, bool $expirationDate = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $maintenanceLineItemAttributes = null, bool $linkedEntitlementLineItem = null)
     {
@@ -121,21 +121,21 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     /**
      * create a new instance of this class
      *
-     * @var bool $activationId
-     * @var bool $state
-     * @var bool $orderId
-     * @var bool $orderLineNumber
-     * @var bool $entitlementId
-     * @var bool $maintenanceProduct
-     * @var bool $maintenancePartNumber
-     * @var bool $maintenancePartNumberDescription
-     * @var bool $startDate
-     * @var bool $isPermanent
-     * @var bool $expirationDate
-     * @var bool $createdOnDateTime
-     * @var bool $lastModifiedDateTime
-     * @var bool $maintenanceLineItemAttributes
-     * @var bool $linkedEntitlementLineItem
+     * @param bool $activationId
+     * @param bool $state
+     * @param bool $orderId
+     * @param bool $orderLineNumber
+     * @param bool $entitlementId
+     * @param bool $maintenanceProduct
+     * @param bool $maintenancePartNumber
+     * @param bool $maintenancePartNumberDescription
+     * @param bool $startDate
+     * @param bool $isPermanent
+     * @param bool $expirationDate
+     * @param bool $createdOnDateTime
+     * @param bool $lastModifiedDateTime
+     * @param bool $maintenanceLineItemAttributes
+     * @param bool $linkedEntitlementLineItem
      */
     public static function create(bool $activationId = null, bool $state = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $maintenanceProduct = null, bool $maintenancePartNumber = null, bool $maintenancePartNumberDescription = null, bool $startDate = null, bool $isPermanent = null, bool $expirationDate = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $maintenanceLineItemAttributes = null, bool $linkedEntitlementLineItem = null)
     {

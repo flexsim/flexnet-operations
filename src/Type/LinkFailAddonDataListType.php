@@ -13,7 +13,7 @@ class LinkFailAddonDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType|array $failAddon
+     * @param \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType|array $failAddon
      */
     public function __construct($failAddon = null)
     {
@@ -23,7 +23,7 @@ class LinkFailAddonDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType|array $failAddon
+     * @param \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType|array $failAddon
      */
     public static function create($failAddon = null)
     {

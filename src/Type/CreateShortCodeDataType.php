@@ -43,13 +43,13 @@ class CreateShortCodeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $bulkEntitlementId
-     * @var string $webRegkey
-     * @var string $shortCode
-     * @var \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
-     * @var bool $overridePolicy
-     * @var string $shortCodeActivationType
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $reinstallFulfillment
+     * @param string $bulkEntitlementId
+     * @param string $webRegkey
+     * @param string $shortCode
+     * @param \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
+     * @param bool $overridePolicy
+     * @param string $shortCodeActivationType
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $reinstallFulfillment
      */
     public function __construct(string $bulkEntitlementId = null, string $webRegkey, string $shortCode, \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null, string $shortCodeActivationType = null, \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $reinstallFulfillment = null)
     {
@@ -65,13 +65,13 @@ class CreateShortCodeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $bulkEntitlementId
-     * @var string $webRegkey
-     * @var string $shortCode
-     * @var \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
-     * @var bool $overridePolicy
-     * @var string $shortCodeActivationType
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $reinstallFulfillment
+     * @param string $bulkEntitlementId
+     * @param string $webRegkey
+     * @param string $shortCode
+     * @param \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
+     * @param bool $overridePolicy
+     * @param string $shortCodeActivationType
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $reinstallFulfillment
      */
     public static function create(string $bulkEntitlementId = null, string $webRegkey, string $shortCode, \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null, string $shortCodeActivationType = null, \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $reinstallFulfillment = null)
     {

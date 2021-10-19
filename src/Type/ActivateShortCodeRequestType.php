@@ -15,7 +15,7 @@ class ActivateShortCodeRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateShortCodeDataType $shortCodeData
+     * @param \Flexsim\FlexnetOperations\Type\CreateShortCodeDataType $shortCodeData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CreateShortCodeDataType $shortCodeData = null)
     {
@@ -25,7 +25,7 @@ class ActivateShortCodeRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateShortCodeDataType $shortCodeData
+     * @param \Flexsim\FlexnetOperations\Type\CreateShortCodeDataType $shortCodeData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CreateShortCodeDataType $shortCodeData = null)
     {

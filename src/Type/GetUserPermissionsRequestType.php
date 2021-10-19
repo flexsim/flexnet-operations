@@ -20,8 +20,8 @@ class GetUserPermissionsRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @var string $userName
-     * @var string $domainName
+     * @param string $userName
+     * @param string $domainName
      */
     public function __construct(string $userName, string $domainName = null)
     {
@@ -32,8 +32,8 @@ class GetUserPermissionsRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @var string $userName
-     * @var string $domainName
+     * @param string $userName
+     * @param string $domainName
      */
     public static function create(string $userName, string $domainName = null)
     {

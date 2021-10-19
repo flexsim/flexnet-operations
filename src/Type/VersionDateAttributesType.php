@@ -18,8 +18,8 @@ class VersionDateAttributesType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $versionOption
-     * @var \Flexsim\FlexnetOperations\Type\DurationType $duration
+     * @param string $versionOption
+     * @param \Flexsim\FlexnetOperations\Type\DurationType $duration
      */
     public function __construct(string $versionOption, \Flexsim\FlexnetOperations\Type\DurationType $duration = null)
     {
@@ -30,8 +30,8 @@ class VersionDateAttributesType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $versionOption
-     * @var \Flexsim\FlexnetOperations\Type\DurationType $duration
+     * @param string $versionOption
+     * @param \Flexsim\FlexnetOperations\Type\DurationType $duration
      */
     public static function create(string $versionOption, \Flexsim\FlexnetOperations\Type\DurationType $duration = null)
     {

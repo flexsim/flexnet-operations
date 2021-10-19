@@ -20,8 +20,8 @@ class LinkMaintenanceLineItemResponseType extends FlexnetType implements ResultI
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemListType $failedData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemListType $failedData = null)
     {
@@ -32,8 +32,8 @@ class LinkMaintenanceLineItemResponseType extends FlexnetType implements ResultI
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemListType $failedData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemListType $failedData = null)
     {

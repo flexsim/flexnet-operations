@@ -20,8 +20,8 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship)
     {
@@ -32,8 +32,8 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship)
     {

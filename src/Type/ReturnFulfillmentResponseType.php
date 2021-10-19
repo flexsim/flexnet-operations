@@ -25,9 +25,9 @@ class ReturnFulfillmentResponseType extends FlexnetType implements ResultInterfa
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\ReturnResponseDataType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedReturnResponselistDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\ReturnResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedReturnResponselistDataType $failedData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ReturnResponseDataType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedReturnResponselistDataType $failedData = null)
     {
@@ -39,9 +39,9 @@ class ReturnFulfillmentResponseType extends FlexnetType implements ResultInterfa
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\ReturnResponseDataType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedReturnResponselistDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\ReturnResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedReturnResponselistDataType $failedData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ReturnResponseDataType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedReturnResponselistDataType $failedData = null)
     {

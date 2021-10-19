@@ -43,13 +43,13 @@ class FeatureQueryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $version
-     * @var \Flexsim\FlexnetOperations\Type\VersionFormatQueryType $versionFormat
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @var \Flexsim\FlexnetOperations\Type\StateQueryType $state
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $version
+     * @param \Flexsim\FlexnetOperations\Type\VersionFormatQueryType $versionFormat
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
+     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $version = null, \Flexsim\FlexnetOperations\Type\VersionFormatQueryType $versionFormat = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null, \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null)
     {
@@ -65,13 +65,13 @@ class FeatureQueryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $version
-     * @var \Flexsim\FlexnetOperations\Type\VersionFormatQueryType $versionFormat
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @var \Flexsim\FlexnetOperations\Type\StateQueryType $state
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $version
+     * @param \Flexsim\FlexnetOperations\Type\VersionFormatQueryType $versionFormat
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
+     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $version = null, \Flexsim\FlexnetOperations\Type\VersionFormatQueryType $versionFormat = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null, \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null)
     {

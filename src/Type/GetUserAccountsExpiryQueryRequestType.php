@@ -25,9 +25,9 @@ class GetUserAccountsExpiryQueryRequestType extends FlexnetType implements Reque
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType $queryParams, int $pageNumber, int $batchSize)
     {
@@ -39,9 +39,9 @@ class GetUserAccountsExpiryQueryRequestType extends FlexnetType implements Reque
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public static function create(\Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType $queryParams, int $pageNumber, int $batchSize)
     {

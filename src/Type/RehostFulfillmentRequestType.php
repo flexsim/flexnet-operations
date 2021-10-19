@@ -15,7 +15,7 @@ class RehostFulfillmentRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\RehostFulfillmentDataType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\RehostFulfillmentDataType $fulfillment
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\RehostFulfillmentDataType $fulfillment)
     {
@@ -25,7 +25,7 @@ class RehostFulfillmentRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\RehostFulfillmentDataType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\RehostFulfillmentDataType $fulfillment
      */
     public static function create(\Flexsim\FlexnetOperations\Type\RehostFulfillmentDataType $fulfillment)
     {

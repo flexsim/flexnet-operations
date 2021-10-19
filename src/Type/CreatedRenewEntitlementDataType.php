@@ -23,9 +23,9 @@ class CreatedRenewEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $entitlementRecordRefNo
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\RenewedEntitlementLineItemDataType|array $renewedLineItem
+     * @param string $entitlementRecordRefNo
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\RenewedEntitlementLineItemDataType|array $renewedLineItem
      */
     public function __construct(string $entitlementRecordRefNo, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier, $renewedLineItem = null)
     {
@@ -37,9 +37,9 @@ class CreatedRenewEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $entitlementRecordRefNo
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\RenewedEntitlementLineItemDataType|array $renewedLineItem
+     * @param string $entitlementRecordRefNo
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\RenewedEntitlementLineItemDataType|array $renewedLineItem
      */
     public static function create(string $entitlementRecordRefNo, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier, $renewedLineItem = null)
     {

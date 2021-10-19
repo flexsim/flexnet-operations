@@ -15,7 +15,7 @@ class StopGapFulfillmentRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType $fulfillment
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType $fulfillment)
     {
@@ -25,7 +25,7 @@ class StopGapFulfillmentRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType $fulfillment
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType $fulfillment)
     {

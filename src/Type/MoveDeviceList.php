@@ -13,7 +13,7 @@ class MoveDeviceList extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier)
     {
@@ -23,7 +23,7 @@ class MoveDeviceList extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier)
     {

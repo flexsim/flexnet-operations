@@ -23,9 +23,9 @@ class DeleteFailAddonDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier = null, \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem = null, string $reason = null)
     {
@@ -37,9 +37,9 @@ class DeleteFailAddonDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier = null, \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem = null, string $reason = null)
     {

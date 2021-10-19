@@ -13,7 +13,7 @@ class UpdateProductRelationshipDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $newRelation
+     * @param string $newRelation
      */
     public function __construct(string $newRelation)
     {
@@ -23,7 +23,7 @@ class UpdateProductRelationshipDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $newRelation
+     * @param string $newRelation
      */
     public static function create(string $newRelation)
     {

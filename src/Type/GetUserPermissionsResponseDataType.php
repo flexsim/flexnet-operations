@@ -28,9 +28,9 @@ class GetUserPermissionsResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $userName
-     * @var string $accountType this method is backwards compatible so you may also pass $orgType
-     * @var \Flexsim\FlexnetOperations\Type\PermissionListType $permissions
+     * @param string $userName
+     * @param string $accountType this method is backwards compatible so you may also pass $orgType
+     * @param \Flexsim\FlexnetOperations\Type\PermissionListType $permissions
      */
     public function __construct(string $userName, string $accountType, \Flexsim\FlexnetOperations\Type\PermissionListType $permissions)
     {
@@ -43,9 +43,9 @@ class GetUserPermissionsResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $userName
-     * @var string $accountType this method is backwards compatible so you may also pass $orgType
-     * @var \Flexsim\FlexnetOperations\Type\PermissionListType $permissions
+     * @param string $userName
+     * @param string $accountType this method is backwards compatible so you may also pass $orgType
+     * @param \Flexsim\FlexnetOperations\Type\PermissionListType $permissions
      */
     public static function create(string $userName, string $accountType, \Flexsim\FlexnetOperations\Type\PermissionListType $permissions)
     {

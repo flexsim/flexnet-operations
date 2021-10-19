@@ -48,14 +48,14 @@ class FulfillmentHistoryRecordType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $fulfillmentId
-     * @var string $action
-     * @var \DateTimeInterface $actionDate
-     * @var \DateTimeInterface $actionDateTime
-     * @var string $actionPerformedBy
-     * @var bool $isPolicyOverridden
-     * @var int $count
-     * @var string $fulfillmentSource
+     * @param string $fulfillmentId
+     * @param string $action
+     * @param \DateTimeInterface $actionDate
+     * @param \DateTimeInterface $actionDateTime
+     * @param string $actionPerformedBy
+     * @param bool $isPolicyOverridden
+     * @param int $count
+     * @param string $fulfillmentSource
      */
     public function __construct(string $fulfillmentId, string $action, \DateTimeInterface $actionDate, \DateTimeInterface $actionDateTime, string $actionPerformedBy, bool $isPolicyOverridden, int $count, string $fulfillmentSource)
     {
@@ -72,14 +72,14 @@ class FulfillmentHistoryRecordType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $fulfillmentId
-     * @var string $action
-     * @var \DateTimeInterface $actionDate
-     * @var \DateTimeInterface $actionDateTime
-     * @var string $actionPerformedBy
-     * @var bool $isPolicyOverridden
-     * @var int $count
-     * @var string $fulfillmentSource
+     * @param string $fulfillmentId
+     * @param string $action
+     * @param \DateTimeInterface $actionDate
+     * @param \DateTimeInterface $actionDateTime
+     * @param string $actionPerformedBy
+     * @param bool $isPolicyOverridden
+     * @param int $count
+     * @param string $fulfillmentSource
      */
     public static function create(string $fulfillmentId, string $action, \DateTimeInterface $actionDate, \DateTimeInterface $actionDateTime, string $actionPerformedBy, bool $isPolicyOverridden, int $count, string $fulfillmentSource)
     {

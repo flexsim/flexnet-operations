@@ -143,33 +143,33 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     /**
      * Constructor
      *
-     * @var bool $entitlementId
-     * @var bool $allowPortalLogin
-     * @var bool $description
-     * @var bool $state
-     * @var bool $soldTo
-     * @var bool $soldToDisplayName
-     * @var bool $shipToEmail
-     * @var bool $shipToAddress
-     * @var bool $orderId
-     * @var bool $orderLineNumber
-     * @var bool $product
-     * @var bool $productDescription
-     * @var bool $partNumber
-     * @var bool $partNumberDescription
-     * @var bool $licenseModel
-     * @var bool $licenseTechnology
-     * @var bool $startDateOption
-     * @var bool $isPermanent
-     * @var bool $term
-     * @var bool $expirationDate
-     * @var bool $versionDate
-     * @var bool $versionDateAttributes
-     * @var bool $numberOfCopies
-     * @var bool $bulkEntitlementType
-     * @var bool $createdUserId
-     * @var bool $FNPTimeZoneValue
-     * @var \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
+     * @param bool $entitlementId
+     * @param bool $allowPortalLogin
+     * @param bool $description
+     * @param bool $state
+     * @param bool $soldTo
+     * @param bool $soldToDisplayName
+     * @param bool $shipToEmail
+     * @param bool $shipToAddress
+     * @param bool $orderId
+     * @param bool $orderLineNumber
+     * @param bool $product
+     * @param bool $productDescription
+     * @param bool $partNumber
+     * @param bool $partNumberDescription
+     * @param bool $licenseModel
+     * @param bool $licenseTechnology
+     * @param bool $startDateOption
+     * @param bool $isPermanent
+     * @param bool $term
+     * @param bool $expirationDate
+     * @param bool $versionDate
+     * @param bool $versionDateAttributes
+     * @param bool $numberOfCopies
+     * @param bool $bulkEntitlementType
+     * @param bool $createdUserId
+     * @param bool $FNPTimeZoneValue
+     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
      */
     public function __construct(bool $entitlementId = null, bool $allowPortalLogin = null, bool $description = null, bool $state = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $orderId = null, bool $orderLineNumber = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseModel = null, bool $licenseTechnology = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $bulkEntitlementType = null, bool $createdUserId = null, bool $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null)
     {
@@ -205,33 +205,33 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var bool $entitlementId
-     * @var bool $allowPortalLogin
-     * @var bool $description
-     * @var bool $state
-     * @var bool $soldTo
-     * @var bool $soldToDisplayName
-     * @var bool $shipToEmail
-     * @var bool $shipToAddress
-     * @var bool $orderId
-     * @var bool $orderLineNumber
-     * @var bool $product
-     * @var bool $productDescription
-     * @var bool $partNumber
-     * @var bool $partNumberDescription
-     * @var bool $licenseModel
-     * @var bool $licenseTechnology
-     * @var bool $startDateOption
-     * @var bool $isPermanent
-     * @var bool $term
-     * @var bool $expirationDate
-     * @var bool $versionDate
-     * @var bool $versionDateAttributes
-     * @var bool $numberOfCopies
-     * @var bool $bulkEntitlementType
-     * @var bool $createdUserId
-     * @var bool $FNPTimeZoneValue
-     * @var \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
+     * @param bool $entitlementId
+     * @param bool $allowPortalLogin
+     * @param bool $description
+     * @param bool $state
+     * @param bool $soldTo
+     * @param bool $soldToDisplayName
+     * @param bool $shipToEmail
+     * @param bool $shipToAddress
+     * @param bool $orderId
+     * @param bool $orderLineNumber
+     * @param bool $product
+     * @param bool $productDescription
+     * @param bool $partNumber
+     * @param bool $partNumberDescription
+     * @param bool $licenseModel
+     * @param bool $licenseTechnology
+     * @param bool $startDateOption
+     * @param bool $isPermanent
+     * @param bool $term
+     * @param bool $expirationDate
+     * @param bool $versionDate
+     * @param bool $versionDateAttributes
+     * @param bool $numberOfCopies
+     * @param bool $bulkEntitlementType
+     * @param bool $createdUserId
+     * @param bool $FNPTimeZoneValue
+     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
      */
     public static function create(bool $entitlementId = null, bool $allowPortalLogin = null, bool $description = null, bool $state = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $orderId = null, bool $orderLineNumber = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseModel = null, bool $licenseTechnology = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $bulkEntitlementType = null, bool $createdUserId = null, bool $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null)
     {

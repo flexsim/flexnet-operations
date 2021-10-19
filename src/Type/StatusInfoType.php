@@ -18,8 +18,8 @@ class StatusInfoType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $status
-     * @var string $reason
+     * @param string $status
+     * @param string $reason
      */
     public function __construct(string $status, string $reason = null)
     {
@@ -30,8 +30,8 @@ class StatusInfoType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $status
-     * @var string $reason
+     * @param string $status
+     * @param string $reason
      */
     public static function create(string $status, string $reason = null)
     {

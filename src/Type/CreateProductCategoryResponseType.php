@@ -25,9 +25,9 @@ class CreateProductCategoryResponseType extends FlexnetType implements ResultInt
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataListType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataListType $responseData = null)
     {
@@ -39,9 +39,9 @@ class CreateProductCategoryResponseType extends FlexnetType implements ResultInt
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataListType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataListType $responseData = null)
     {

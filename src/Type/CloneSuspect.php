@@ -68,16 +68,16 @@ class CloneSuspect extends FlexnetType
     /**
      * Constructor
      *
-     * @var \DateTimeInterface $timeStamp
-     * @var string $hostClass
-     * @var string $hostAlias
-     * @var string $deviceId
-     * @var string $serverId
-     * @var \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
-     * @var string $acctId this method is backwards compatible so you may also pass $orgId
-     * @var string $acctName this method is backwards compatible so you may also pass $orgName
-     * @var string $enterpriseId
+     * @param \DateTimeInterface $timeStamp
+     * @param string $hostClass
+     * @param string $hostAlias
+     * @param string $deviceId
+     * @param string $serverId
+     * @param \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
+     * @param string $acctId this method is backwards compatible so you may also pass $orgId
+     * @param string $acctName this method is backwards compatible so you may also pass $orgName
+     * @param string $enterpriseId
      */
     public function __construct(
         \DateTimeInterface $timeStamp = null,
@@ -108,16 +108,16 @@ class CloneSuspect extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \DateTimeInterface $timeStamp
-     * @var string $hostClass
-     * @var string $hostAlias
-     * @var string $deviceId
-     * @var string $serverId
-     * @var \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
-     * @var string $acctId this method is backwards compatible so you may also pass $orgId
-     * @var string $acctName this method is backwards compatible so you may also pass $orgName
-     * @var string $enterpriseId
+     * @param \DateTimeInterface $timeStamp
+     * @param string $hostClass
+     * @param string $hostAlias
+     * @param string $deviceId
+     * @param string $serverId
+     * @param \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
+     * @param string $acctId this method is backwards compatible so you may also pass $orgId
+     * @param string $acctName this method is backwards compatible so you may also pass $orgName
+     * @param string $enterpriseId
      */
     public static function create(
         \DateTimeInterface $timeStamp = null,

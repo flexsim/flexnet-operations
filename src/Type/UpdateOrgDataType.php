@@ -53,15 +53,15 @@ class UpdateOrgDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @var string $name
-     * @var string $displayName
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @var \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType $subOrganizations
-     * @var \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType $relatedOrganizations
-     * @var bool $visible
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param string $name
+     * @param string $displayName
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType $subOrganizations
+     * @param \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType $relatedOrganizations
+     * @param bool $visible
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, string $name = null, string $displayName = null, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType $subOrganizations = null, \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType $relatedOrganizations = null, bool $visible = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {
@@ -79,15 +79,15 @@ class UpdateOrgDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @var string $name
-     * @var string $displayName
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @var \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType $subOrganizations
-     * @var \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType $relatedOrganizations
-     * @var bool $visible
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param string $name
+     * @param string $displayName
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType $subOrganizations
+     * @param \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType $relatedOrganizations
+     * @param bool $visible
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, string $name = null, string $displayName = null, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType $subOrganizations = null, \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType $relatedOrganizations = null, bool $visible = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {

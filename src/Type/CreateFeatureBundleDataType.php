@@ -23,9 +23,9 @@ class CreateFeatureBundleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $name
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\FeaturesListType $features
+     * @param string $name
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
      */
     public function __construct(string $name, string $description = null, \Flexsim\FlexnetOperations\Type\FeaturesListType $features)
     {
@@ -37,9 +37,9 @@ class CreateFeatureBundleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $name
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\FeaturesListType $features
+     * @param string $name
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
      */
     public static function create(string $name, string $description = null, \Flexsim\FlexnetOperations\Type\FeaturesListType $features)
     {

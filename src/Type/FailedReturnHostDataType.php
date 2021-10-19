@@ -18,8 +18,8 @@ class FailedReturnHostDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedReturnHostDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier = null, string $reason = null)
     {

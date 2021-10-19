@@ -13,7 +13,7 @@ class DuplicateFulfillmentRecordListDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillment
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillment)
     {
@@ -23,7 +23,7 @@ class DuplicateFulfillmentRecordListDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillment
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillment)
     {

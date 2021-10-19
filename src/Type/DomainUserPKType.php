@@ -18,8 +18,8 @@ class DomainUserPKType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $userName
-     * @var string $domainName
+     * @param string $userName
+     * @param string $domainName
      */
     public function __construct(string $userName, string $domainName)
     {
@@ -30,8 +30,8 @@ class DomainUserPKType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $userName
-     * @var string $domainName
+     * @param string $userName
+     * @param string $domainName
      */
     public static function create(string $userName, string $domainName)
     {

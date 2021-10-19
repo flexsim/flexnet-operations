@@ -33,11 +33,11 @@ class StopGapFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @var \DateTimeInterface $startDate
-     * @var \DateTimeInterface $endDate
-     * @var string $shipToEmail
-     * @var string $shipToAddress
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $endDate
+     * @param string $shipToEmail
+     * @param string $shipToAddress
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, string $shipToEmail = null, string $shipToAddress = null)
     {
@@ -51,11 +51,11 @@ class StopGapFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @var \DateTimeInterface $startDate
-     * @var \DateTimeInterface $endDate
-     * @var string $shipToEmail
-     * @var string $shipToAddress
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $endDate
+     * @param string $shipToEmail
+     * @param string $shipToAddress
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, string $shipToEmail = null, string $shipToAddress = null)
     {

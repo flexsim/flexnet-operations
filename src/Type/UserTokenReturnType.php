@@ -15,7 +15,7 @@ class UserTokenReturnType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @var string $Token
+     * @param string $Token
      */
     public function __construct(string $Token)
     {
@@ -25,7 +25,7 @@ class UserTokenReturnType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @var string $Token
+     * @param string $Token
      */
     public static function create(string $Token)
     {

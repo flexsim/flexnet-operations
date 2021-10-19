@@ -13,7 +13,7 @@ class TransferredLineItemsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferredLineItemDataType|array $transferredLineItem
+     * @param \Flexsim\FlexnetOperations\Type\TransferredLineItemDataType|array $transferredLineItem
      */
     public function __construct($transferredLineItem)
     {
@@ -23,7 +23,7 @@ class TransferredLineItemsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferredLineItemDataType|array $transferredLineItem
+     * @param \Flexsim\FlexnetOperations\Type\TransferredLineItemDataType|array $transferredLineItem
      */
     public static function create($transferredLineItem)
     {

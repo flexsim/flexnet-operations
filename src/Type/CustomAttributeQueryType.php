@@ -33,11 +33,11 @@ class CustomAttributeQueryType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $attributeName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue
-     * @var \Flexsim\FlexnetOperations\Type\NumberQueryType $numberValue
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $dateValue
-     * @var bool $booleanValue
+     * @param string $attributeName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue
+     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $numberValue
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $dateValue
+     * @param bool $booleanValue
      */
     public function __construct(string $attributeName, \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $numberValue = null, \Flexsim\FlexnetOperations\Type\DateQueryType $dateValue = null, bool $booleanValue = null)
     {
@@ -51,11 +51,11 @@ class CustomAttributeQueryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $attributeName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue
-     * @var \Flexsim\FlexnetOperations\Type\NumberQueryType $numberValue
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $dateValue
-     * @var bool $booleanValue
+     * @param string $attributeName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue
+     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $numberValue
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $dateValue
+     * @param bool $booleanValue
      */
     public static function create(string $attributeName, \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $numberValue = null, \Flexsim\FlexnetOperations\Type\DateQueryType $dateValue = null, bool $booleanValue = null)
     {

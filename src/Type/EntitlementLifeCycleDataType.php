@@ -18,8 +18,8 @@ class EntitlementLifeCycleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType $lineItemData
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType $lineItemData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null, \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType $lineItemData)
     {
@@ -30,8 +30,8 @@ class EntitlementLifeCycleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType $lineItemData
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType $lineItemData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null, \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType $lineItemData)
     {

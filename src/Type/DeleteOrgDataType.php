@@ -18,8 +18,8 @@ class DeleteOrgDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @var bool $deleteSubTree
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param bool $deleteSubTree
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, bool $deleteSubTree = null)
     {
@@ -30,8 +30,8 @@ class DeleteOrgDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @var bool $deleteSubTree
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param bool $deleteSubTree
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, bool $deleteSubTree = null)
     {

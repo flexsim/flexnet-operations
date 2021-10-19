@@ -18,8 +18,8 @@ class NewEntitlementLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var string $activationId
+     * @param string $uniqueId
+     * @param string $activationId
      */
     public function __construct(string $uniqueId, string $activationId)
     {
@@ -30,8 +30,8 @@ class NewEntitlementLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var string $activationId
+     * @param string $uniqueId
+     * @param string $activationId
      */
     public static function create(string $uniqueId, string $activationId)
     {

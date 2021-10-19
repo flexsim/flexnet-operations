@@ -25,9 +25,9 @@ class ActivateShortCodeResponseType extends FlexnetType implements ResultInterfa
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedShortCodeDataType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedShortCodeDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedShortCodeDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedShortCodeDataType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedShortCodeDataType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedShortCodeDataType $responseData = null)
     {
@@ -39,9 +39,9 @@ class ActivateShortCodeResponseType extends FlexnetType implements ResultInterfa
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedShortCodeDataType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedShortCodeDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedShortCodeDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedShortCodeDataType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedShortCodeDataType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedShortCodeDataType $responseData = null)
     {

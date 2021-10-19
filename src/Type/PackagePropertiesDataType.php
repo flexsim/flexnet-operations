@@ -23,9 +23,9 @@ class PackagePropertiesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $name
-     * @var string $version
-     * @var string $versionFormat
+     * @param string $name
+     * @param string $version
+     * @param string $versionFormat
      */
     public function __construct(string $name, string $version = null, string $versionFormat)
     {
@@ -37,9 +37,9 @@ class PackagePropertiesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $name
-     * @var string $version
-     * @var string $versionFormat
+     * @param string $name
+     * @param string $version
+     * @param string $versionFormat
      */
     public static function create(string $name, string $version = null, string $versionFormat)
     {

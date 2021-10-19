@@ -18,8 +18,8 @@ class UsageSummaryTimesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $summaryTimeId
-     * @var \DateTimeInterface $summaryTime
+     * @param string $summaryTimeId
+     * @param \DateTimeInterface $summaryTime
      */
     public function __construct(string $summaryTimeId, \DateTimeInterface $summaryTime)
     {
@@ -30,8 +30,8 @@ class UsageSummaryTimesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $summaryTimeId
-     * @var \DateTimeInterface $summaryTime
+     * @param string $summaryTimeId
+     * @param \DateTimeInterface $summaryTime
      */
     public static function create(string $summaryTimeId, \DateTimeInterface $summaryTime)
     {

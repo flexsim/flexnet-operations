@@ -20,8 +20,8 @@ class HandleProductCategoryToAcctRequestType extends FlexnetType implements Requ
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $acct
-     * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $acct
+     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $acct, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory)
     {
@@ -32,8 +32,8 @@ class HandleProductCategoryToAcctRequestType extends FlexnetType implements Requ
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType $acct
-     * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $acct
+     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
      */
     public static function create(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $acct, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory)
     {

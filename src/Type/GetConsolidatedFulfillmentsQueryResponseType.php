@@ -20,8 +20,8 @@ class GetConsolidatedFulfillmentsQueryResponseType extends FlexnetType implement
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\GetConsolidatedFulfillmentsQueryResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetConsolidatedFulfillmentsQueryResponseDataType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetConsolidatedFulfillmentsQueryResponseDataType $responseData = null)
     {
@@ -32,8 +32,8 @@ class GetConsolidatedFulfillmentsQueryResponseType extends FlexnetType implement
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\GetConsolidatedFulfillmentsQueryResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetConsolidatedFulfillmentsQueryResponseDataType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetConsolidatedFulfillmentsQueryResponseDataType $responseData = null)
     {

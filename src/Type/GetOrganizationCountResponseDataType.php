@@ -13,7 +13,7 @@ class GetOrganizationCountResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var int $count
+     * @param int $count
      */
     public function __construct(int $count)
     {
@@ -23,7 +23,7 @@ class GetOrganizationCountResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var int $count
+     * @param int $count
      */
     public static function create(int $count)
     {

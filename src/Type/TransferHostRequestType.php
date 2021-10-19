@@ -25,9 +25,9 @@ class TransferHostRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferHostList $sourceHosts
-     * @var string $soldTo
-     * @var bool $poolEntitlements
+     * @param \Flexsim\FlexnetOperations\Type\TransferHostList $sourceHosts
+     * @param string $soldTo
+     * @param bool $poolEntitlements
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\TransferHostList $sourceHosts, string $soldTo = null, bool $poolEntitlements = null)
     {
@@ -39,9 +39,9 @@ class TransferHostRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferHostList $sourceHosts
-     * @var string $soldTo
-     * @var bool $poolEntitlements
+     * @param \Flexsim\FlexnetOperations\Type\TransferHostList $sourceHosts
+     * @param string $soldTo
+     * @param bool $poolEntitlements
      */
     public static function create(\Flexsim\FlexnetOperations\Type\TransferHostList $sourceHosts, string $soldTo = null, bool $poolEntitlements = null)
     {

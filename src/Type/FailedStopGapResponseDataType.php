@@ -18,8 +18,8 @@ class FailedStopGapResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType $fulfillment
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType $fulfillment
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType $fulfillment, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedStopGapResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType $fulfillment
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType $fulfillment
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType $fulfillment, string $reason)
     {

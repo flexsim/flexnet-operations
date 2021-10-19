@@ -23,9 +23,9 @@ class WebRegKeyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string|array $webRegKey
-     * @var bool $autoGenerate
-     * @var int $numAutoGenerate
+     * @param string|array $webRegKey
+     * @param bool $autoGenerate
+     * @param int $numAutoGenerate
      */
     public function __construct($webRegKey = null, bool $autoGenerate = null, int $numAutoGenerate = null)
     {
@@ -37,9 +37,9 @@ class WebRegKeyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string|array $webRegKey
-     * @var bool $autoGenerate
-     * @var int $numAutoGenerate
+     * @param string|array $webRegKey
+     * @param bool $autoGenerate
+     * @param int $numAutoGenerate
      */
     public static function create($webRegKey = null, bool $autoGenerate = null, int $numAutoGenerate = null)
     {

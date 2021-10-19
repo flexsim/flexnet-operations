@@ -18,8 +18,8 @@ class UserAccountType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @var \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
      */
     public function __construct($account, \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles = null)
     {
@@ -30,8 +30,8 @@ class UserAccountType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @var \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
      */
     public static function create($account, \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles = null)
     {

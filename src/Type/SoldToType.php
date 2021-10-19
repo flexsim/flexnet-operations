@@ -23,9 +23,9 @@ class SoldToType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $displayName
-     * @var string $id
-     * @var string $name
+     * @param string $displayName
+     * @param string $id
+     * @param string $name
      */
     public function __construct(string $id, string $name, string $displayName = null)
     {
@@ -37,9 +37,9 @@ class SoldToType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $displayName
-     * @var string $id
-     * @var string $name
+     * @param string $displayName
+     * @param string $id
+     * @param string $name
      */
     public static function create(string $id, string $name, string $displayName = null)
     {

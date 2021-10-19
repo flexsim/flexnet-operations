@@ -13,7 +13,7 @@ class SuiteCustomAttributesQueryListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SuiteCustomAttributeQueryType|array $attribute
+     * @param \Flexsim\FlexnetOperations\Type\SuiteCustomAttributeQueryType|array $attribute
      */
     public function __construct($attribute = null)
     {
@@ -23,7 +23,7 @@ class SuiteCustomAttributesQueryListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SuiteCustomAttributeQueryType|array $attribute
+     * @param \Flexsim\FlexnetOperations\Type\SuiteCustomAttributeQueryType|array $attribute
      */
     public static function create($attribute = null)
     {

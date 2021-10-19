@@ -23,9 +23,9 @@ class FailedShortCodeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateShortCodeDataType $shortCodeData
-     * @var string $reason
-     * @var \Flexsim\FlexnetOperations\Type\DuplicateFulfillmentRecordListDataType $duplicateFulfillmentRecords
+     * @param \Flexsim\FlexnetOperations\Type\CreateShortCodeDataType $shortCodeData
+     * @param string $reason
+     * @param \Flexsim\FlexnetOperations\Type\DuplicateFulfillmentRecordListDataType $duplicateFulfillmentRecords
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CreateShortCodeDataType $shortCodeData, string $reason, \Flexsim\FlexnetOperations\Type\DuplicateFulfillmentRecordListDataType $duplicateFulfillmentRecords = null)
     {
@@ -37,9 +37,9 @@ class FailedShortCodeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateShortCodeDataType $shortCodeData
-     * @var string $reason
-     * @var \Flexsim\FlexnetOperations\Type\DuplicateFulfillmentRecordListDataType $duplicateFulfillmentRecords
+     * @param \Flexsim\FlexnetOperations\Type\CreateShortCodeDataType $shortCodeData
+     * @param string $reason
+     * @param \Flexsim\FlexnetOperations\Type\DuplicateFulfillmentRecordListDataType $duplicateFulfillmentRecords
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CreateShortCodeDataType $shortCodeData, string $reason, \Flexsim\FlexnetOperations\Type\DuplicateFulfillmentRecordListDataType $duplicateFulfillmentRecords = null)
     {

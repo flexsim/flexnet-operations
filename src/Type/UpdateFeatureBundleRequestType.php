@@ -15,7 +15,7 @@ class UpdateFeatureBundleRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateFeatureBundleDataType $featureBundle
+     * @param \Flexsim\FlexnetOperations\Type\UpdateFeatureBundleDataType $featureBundle
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UpdateFeatureBundleDataType $featureBundle)
     {
@@ -25,7 +25,7 @@ class UpdateFeatureBundleRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateFeatureBundleDataType $featureBundle
+     * @param \Flexsim\FlexnetOperations\Type\UpdateFeatureBundleDataType $featureBundle
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UpdateFeatureBundleDataType $featureBundle)
     {

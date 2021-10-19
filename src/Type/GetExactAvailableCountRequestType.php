@@ -15,7 +15,7 @@ class GetExactAvailableCountRequestType extends FlexnetType implements RequestIn
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId = null)
     {
@@ -25,7 +25,7 @@ class GetExactAvailableCountRequestType extends FlexnetType implements RequestIn
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $activationId = null)
     {

@@ -33,11 +33,11 @@ class LineItemLifeCycleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType $lineItem
-     * @var bool $isFull
-     * @var bool $allowActivationsOnParent
-     * @var bool $autoDeploy
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType $lineItem
+     * @param bool $isFull
+     * @param bool $allowActivationsOnParent
+     * @param bool $autoDeploy
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier, \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType $lineItem, bool $isFull = null, bool $allowActivationsOnParent = null, bool $autoDeploy = null)
     {
@@ -51,11 +51,11 @@ class LineItemLifeCycleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType $lineItem
-     * @var bool $isFull
-     * @var bool $allowActivationsOnParent
-     * @var bool $autoDeploy
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType $lineItem
+     * @param bool $isFull
+     * @param bool $allowActivationsOnParent
+     * @param bool $autoDeploy
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier, \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType $lineItem, bool $isFull = null, bool $allowActivationsOnParent = null, bool $autoDeploy = null)
     {

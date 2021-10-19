@@ -18,8 +18,8 @@ class FeatureBundleStateChangeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier, $stateChangeRecord = null)
     {
@@ -30,8 +30,8 @@ class FeatureBundleStateChangeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier, $stateChangeRecord = null)
     {

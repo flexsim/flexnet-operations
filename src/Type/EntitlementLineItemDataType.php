@@ -68,18 +68,18 @@ class EntitlementLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var int $numberOfRemainingCopies
-     * @var int $availableExtraActivations
-     * @var bool $isTrustedType
-     * @var string $state
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem
-     * @var \DateTimeInterface $createdOnDateTime
-     * @var \DateTimeInterface $lastModifiedDateTime
-     * @var int $overdraftMax
-     * @var int $remainingOverdraftCount
-     * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine
-     * @var int $fulfilledCount
+     * @param int $numberOfRemainingCopies
+     * @param int $availableExtraActivations
+     * @param bool $isTrustedType
+     * @param string $state
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem
+     * @param \DateTimeInterface $createdOnDateTime
+     * @param \DateTimeInterface $lastModifiedDateTime
+     * @param int $overdraftMax
+     * @param int $remainingOverdraftCount
+     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine
+     * @param int $fulfilledCount
      */
     public function __construct(int $numberOfRemainingCopies = null, int $availableExtraActivations = null, bool $isTrustedType = null, string $state = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, int $overdraftMax = null, int $remainingOverdraftCount = null, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine = null, int $fulfilledCount = null)
     {
@@ -100,18 +100,18 @@ class EntitlementLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var int $numberOfRemainingCopies
-     * @var int $availableExtraActivations
-     * @var bool $isTrustedType
-     * @var string $state
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem
-     * @var \DateTimeInterface $createdOnDateTime
-     * @var \DateTimeInterface $lastModifiedDateTime
-     * @var int $overdraftMax
-     * @var int $remainingOverdraftCount
-     * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine
-     * @var int $fulfilledCount
+     * @param int $numberOfRemainingCopies
+     * @param int $availableExtraActivations
+     * @param bool $isTrustedType
+     * @param string $state
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem
+     * @param \DateTimeInterface $createdOnDateTime
+     * @param \DateTimeInterface $lastModifiedDateTime
+     * @param int $overdraftMax
+     * @param int $remainingOverdraftCount
+     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine
+     * @param int $fulfilledCount
      */
     public static function create(int $numberOfRemainingCopies = null, int $availableExtraActivations = null, bool $isTrustedType = null, string $state = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, int $overdraftMax = null, int $remainingOverdraftCount = null, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine = null, int $fulfilledCount = null)
     {

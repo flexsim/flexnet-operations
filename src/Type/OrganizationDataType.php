@@ -43,13 +43,13 @@ class OrganizationDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $name
-     * @var string $displayName
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @var bool $visible
-     * @var string $orgType
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param string $name
+     * @param string $displayName
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param bool $visible
+     * @param string $orgType
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public function __construct(string $name, string $displayName, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, bool $visible = null, string $orgType = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {
@@ -65,13 +65,13 @@ class OrganizationDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $name
-     * @var string $displayName
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @var bool $visible
-     * @var string $orgType
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param string $name
+     * @param string $displayName
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param bool $visible
+     * @param string $orgType
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public static function create(string $name, string $displayName, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, bool $visible = null, string $orgType = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {

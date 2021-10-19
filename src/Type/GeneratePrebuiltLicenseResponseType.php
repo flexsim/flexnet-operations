@@ -25,9 +25,9 @@ class GeneratePrebuiltLicenseResponseType extends FlexnetType implements ResultI
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataListType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataListType $responseData = null)
     {
@@ -39,9 +39,9 @@ class GeneratePrebuiltLicenseResponseType extends FlexnetType implements ResultI
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataListType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataListType $responseData = null)
     {

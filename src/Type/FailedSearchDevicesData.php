@@ -13,7 +13,7 @@ class FailedSearchDevicesData extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $reason
+     * @param string $reason
      */
     public function __construct(string $reason = null)
     {
@@ -23,7 +23,7 @@ class FailedSearchDevicesData extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $reason
+     * @param string $reason
      */
     public static function create(string $reason = null)
     {

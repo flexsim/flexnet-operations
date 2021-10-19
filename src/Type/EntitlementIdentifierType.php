@@ -18,8 +18,8 @@ class EntitlementIdentifierType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementPKType $primaryKeys
+     * @param string $uniqueId
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementPKType $primaryKeys
      */
     public function __construct(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\EntitlementPKType $primaryKeys = null)
     {
@@ -30,8 +30,8 @@ class EntitlementIdentifierType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementPKType $primaryKeys
+     * @param string $uniqueId
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementPKType $primaryKeys
      */
     public static function create(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\EntitlementPKType $primaryKeys = null)
     {

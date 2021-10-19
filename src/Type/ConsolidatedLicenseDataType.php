@@ -48,14 +48,14 @@ class ConsolidatedLicenseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $consolidatedLicenseId
-     * @var string $licenseText
-     * @var string $binaryLicense
-     * @var string $soldTo
-     * @var string $criteria
-     * @var string $state
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $consolidatedFulfillments
-     * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param string $consolidatedLicenseId
+     * @param string $licenseText
+     * @param string $binaryLicense
+     * @param string $soldTo
+     * @param string $criteria
+     * @param string $state
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $consolidatedFulfillments
+     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
      */
     public function __construct(string $consolidatedLicenseId, string $licenseText = null, string $binaryLicense = null, string $soldTo, string $criteria, string $state = null, \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $consolidatedFulfillments, \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null)
     {
@@ -72,14 +72,14 @@ class ConsolidatedLicenseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $consolidatedLicenseId
-     * @var string $licenseText
-     * @var string $binaryLicense
-     * @var string $soldTo
-     * @var string $criteria
-     * @var string $state
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $consolidatedFulfillments
-     * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param string $consolidatedLicenseId
+     * @param string $licenseText
+     * @param string $binaryLicense
+     * @param string $soldTo
+     * @param string $criteria
+     * @param string $state
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $consolidatedFulfillments
+     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
      */
     public static function create(string $consolidatedLicenseId, string $licenseText = null, string $binaryLicense = null, string $soldTo, string $criteria, string $state = null, \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $consolidatedFulfillments, \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null)
     {

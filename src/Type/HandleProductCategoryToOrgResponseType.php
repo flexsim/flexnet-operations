@@ -15,7 +15,7 @@ class HandleProductCategoryToOrgResponseType extends FlexnetType implements Resu
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo)
     {
@@ -25,7 +25,7 @@ class HandleProductCategoryToOrgResponseType extends FlexnetType implements Resu
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo)
     {

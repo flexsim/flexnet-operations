@@ -30,10 +30,10 @@ class MoveDeviceRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\MoveDeviceList $sourceDevices
-     * @var string $soldToUniqueId
-     * @var string $soldToName
-     * @var bool $poolEntitlements
+     * @param \Flexsim\FlexnetOperations\Type\MoveDeviceList $sourceDevices
+     * @param string $soldToUniqueId
+     * @param string $soldToName
+     * @param bool $poolEntitlements
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\MoveDeviceList $sourceDevices, string $soldToUniqueId = null, string $soldToName = null, bool $poolEntitlements = null)
     {
@@ -46,10 +46,10 @@ class MoveDeviceRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\MoveDeviceList $sourceDevices
-     * @var string $soldToUniqueId
-     * @var string $soldToName
-     * @var bool $poolEntitlements
+     * @param \Flexsim\FlexnetOperations\Type\MoveDeviceList $sourceDevices
+     * @param string $soldToUniqueId
+     * @param string $soldToName
+     * @param bool $poolEntitlements
      */
     public static function create(\Flexsim\FlexnetOperations\Type\MoveDeviceList $sourceDevices, string $soldToUniqueId = null, string $soldToName = null, bool $poolEntitlements = null)
     {

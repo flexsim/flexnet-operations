@@ -18,8 +18,8 @@ class FulfillmentIdentifierType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentPKType $primaryKeys
+     * @param string $uniqueId
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentPKType $primaryKeys
      */
     public function __construct(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\FulfillmentPKType $primaryKeys = null)
     {
@@ -30,8 +30,8 @@ class FulfillmentIdentifierType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentPKType $primaryKeys
+     * @param string $uniqueId
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentPKType $primaryKeys
      */
     public static function create(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\FulfillmentPKType $primaryKeys = null)
     {

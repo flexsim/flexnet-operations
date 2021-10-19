@@ -123,26 +123,26 @@ class UserQueryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $userName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $firstName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $lastName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $displayName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailAddress
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $phoneNumber
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $faxNumber
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $street
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $city
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $state
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $country
-     * @var bool $isActive
-     * @var bool $canLogIn
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID this method is backwards compatible so you may also pass $orgName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName this method is backwards compatible so you may also pass $orgDisplayName
-     * @var \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType $customAttributes
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
-     * @var string $accountType this method is backwards compatible so you may also pass $orgType
-     * @var \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $userName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $firstName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $lastName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $displayName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailAddress
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $phoneNumber
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $faxNumber
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $street
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $city
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $state
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $country
+     * @param bool $isActive
+     * @param bool $canLogIn
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID this method is backwards compatible so you may also pass $orgName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName this method is backwards compatible so you may also pass $orgDisplayName
+     * @param \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
+     * @param string $accountType this method is backwards compatible so you may also pass $orgType
+     * @param \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $userName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $firstName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $lastName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $displayName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailAddress = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $phoneNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $faxNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $street = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $city = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $country = null, bool $isActive = null, bool $canLogIn = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName = null, \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null, string $accountType = null, \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles = null)
     {
@@ -174,26 +174,26 @@ class UserQueryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $userName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $firstName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $lastName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $displayName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailAddress
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $phoneNumber
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $faxNumber
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $street
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $city
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $state
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $country
-     * @var bool $isActive
-     * @var bool $canLogIn
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID this method is backwards compatible so you may also pass $orgName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName this method is backwards compatible so you may also pass $orgDisplayName
-     * @var \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType $customAttributes
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
-     * @var string $accountType this method is backwards compatible so you may also pass $orgType
-     * @var \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $userName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $firstName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $lastName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $displayName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailAddress
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $phoneNumber
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $faxNumber
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $street
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $city
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $state
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $country
+     * @param bool $isActive
+     * @param bool $canLogIn
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID this method is backwards compatible so you may also pass $orgName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName this method is backwards compatible so you may also pass $orgDisplayName
+     * @param \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
+     * @param string $accountType this method is backwards compatible so you may also pass $orgType
+     * @param \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $userName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $firstName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $lastName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $displayName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailAddress = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $phoneNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $faxNumber = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $street = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $city = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $country = null, bool $isActive = null, bool $canLogIn = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountID = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $accountName = null, \Flexsim\FlexnetOperations\Type\UserCustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null, string $accountType = null, \Flexsim\FlexnetOperations\Type\UserAccountRolesListType $roles = null)
     {

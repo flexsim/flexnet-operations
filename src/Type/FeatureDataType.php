@@ -33,11 +33,11 @@ class FeatureDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $featureName
-     * @var string $versionFormat
-     * @var string $version
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param string $featureName
+     * @param string $versionFormat
+     * @param string $version
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
      */
     public function __construct(string $featureName, string $versionFormat, string $version = null, string $description = null, \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null)
     {
@@ -51,11 +51,11 @@ class FeatureDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $featureName
-     * @var string $versionFormat
-     * @var string $version
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param string $featureName
+     * @param string $versionFormat
+     * @param string $version
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
      */
     public static function create(string $featureName, string $versionFormat, string $version = null, string $description = null, \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null)
     {

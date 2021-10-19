@@ -43,13 +43,13 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $consolidatedLicenseId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $criteria
-     * @var \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $consolidatedLicenseId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $criteria
+     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $consolidatedLicenseId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $criteria = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null)
     {
@@ -65,13 +65,13 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $consolidatedLicenseId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $criteria
-     * @var \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $consolidatedLicenseId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $criteria
+     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $consolidatedLicenseId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $criteria = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null)
     {

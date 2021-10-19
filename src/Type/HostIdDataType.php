@@ -23,9 +23,9 @@ class HostIdDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
-     * @var \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
-     * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
+     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
+     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds = null, \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds = null, \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null)
     {
@@ -37,9 +37,9 @@ class HostIdDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
-     * @var \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
-     * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
+     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
+     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds = null, \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds = null, \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null)
     {

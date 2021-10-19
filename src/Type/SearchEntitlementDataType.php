@@ -148,33 +148,33 @@ class SearchEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $entDescription
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $productVersion
-     * @var string $productType
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
-     * @var bool $isBulk
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToEmail
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToAddress
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
-     * @var bool $isPermanent
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $createdOn
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $versionDate
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @var \Flexsim\FlexnetOperations\Type\StateQueryType $state
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $createdUserId
-     * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName this method is backwards compatible so you may also pass $organizationUnitName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $maintStartDate
-     * @var bool $maintIsPermanent
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $maintExpirationDate
-     * @var \Flexsim\FlexnetOperations\Type\EntCustomAttributesQueryListType $entitlementAttributes
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailTemplateVariation
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entDescription
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productVersion
+     * @param string $productType
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
+     * @param bool $isBulk
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToEmail
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToAddress
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
+     * @param bool $isPermanent
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $createdOn
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $versionDate
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
+     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $createdUserId
+     * @param \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName this method is backwards compatible so you may also pass $organizationUnitName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $maintStartDate
+     * @param bool $maintIsPermanent
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $maintExpirationDate
+     * @param \Flexsim\FlexnetOperations\Type\EntCustomAttributesQueryListType $entitlementAttributes
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailTemplateVariation
      */
     public function __construct(
         \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null,
@@ -238,33 +238,33 @@ class SearchEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $entDescription
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $productVersion
-     * @var string $productType
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
-     * @var bool $isBulk
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToEmail
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToAddress
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
-     * @var bool $isPermanent
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $createdOn
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $versionDate
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @var \Flexsim\FlexnetOperations\Type\StateQueryType $state
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $createdUserId
-     * @var \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName this method is backwards compatible so you may also pass $organizationUnitName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $maintStartDate
-     * @var bool $maintIsPermanent
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $maintExpirationDate
-     * @var \Flexsim\FlexnetOperations\Type\EntCustomAttributesQueryListType $entitlementAttributes
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailTemplateVariation
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entDescription
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productVersion
+     * @param string $productType
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
+     * @param bool $isBulk
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToEmail
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $shipToAddress
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
+     * @param bool $isPermanent
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $createdOn
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $versionDate
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
+     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $createdUserId
+     * @param \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $accountUnitName this method is backwards compatible so you may also pass $organizationUnitName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $maintStartDate
+     * @param bool $maintIsPermanent
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $maintExpirationDate
+     * @param \Flexsim\FlexnetOperations\Type\EntCustomAttributesQueryListType $entitlementAttributes
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $emailTemplateVariation
      */
     public static function create(
         \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null,

@@ -25,9 +25,9 @@ class TransferLineItemsResponseType extends FlexnetType implements ResultInterfa
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\TransferredLineItemsListType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedTransferLineItemListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\TransferredLineItemsListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedTransferLineItemListType $failedData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\TransferredLineItemsListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedTransferLineItemListType $failedData = null)
     {
@@ -39,9 +39,9 @@ class TransferLineItemsResponseType extends FlexnetType implements ResultInterfa
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\TransferredLineItemsListType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedTransferLineItemListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\TransferredLineItemsListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedTransferLineItemListType $failedData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\TransferredLineItemsListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedTransferLineItemListType $failedData = null)
     {

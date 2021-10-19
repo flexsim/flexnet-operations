@@ -13,7 +13,7 @@ class FulfillmentPKType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $fulfillmentId
+     * @param string $fulfillmentId
      */
     public function __construct(string $fulfillmentId)
     {
@@ -23,7 +23,7 @@ class FulfillmentPKType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $fulfillmentId
+     * @param string $fulfillmentId
      */
     public static function create(string $fulfillmentId)
     {

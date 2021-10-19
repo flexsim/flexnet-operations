@@ -20,8 +20,8 @@ class GenerateCloneDetectionReportResponse extends FlexnetType implements Result
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\CloneSuspects $cloneSuspects
+     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\CloneSuspects $cloneSuspects
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\CloneSuspects $cloneSuspects)
     {
@@ -32,8 +32,8 @@ class GenerateCloneDetectionReportResponse extends FlexnetType implements Result
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\CloneSuspects $cloneSuspects
+     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\CloneSuspects $cloneSuspects
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\CloneSuspects $cloneSuspects)
     {

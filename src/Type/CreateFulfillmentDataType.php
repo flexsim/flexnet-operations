@@ -88,22 +88,22 @@ class CreateFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $activationId
-     * @var int $fulfillCount
-     * @var int $overDraftCount
-     * @var \DateTimeInterface $startDate
-     * @var \DateTimeInterface $versionDate
-     * @var \DateTimeInterface $versionStartDate
-     * @var string $soldTo
-     * @var string $shipToEmail
-     * @var string $shipToAddress
-     * @var \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
-     * @var \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
-     * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @var bool $overridePolicy
-     * @var string $owner
-     * @var string $FNPTimeZoneValue
+     * @param string $activationId
+     * @param int $fulfillCount
+     * @param int $overDraftCount
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $versionDate
+     * @param \DateTimeInterface $versionStartDate
+     * @param string $soldTo
+     * @param string $shipToEmail
+     * @param string $shipToAddress
+     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
+     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
+     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param bool $overridePolicy
+     * @param string $owner
+     * @param string $FNPTimeZoneValue
      */
     public function __construct(string $activationId, int $fulfillCount = null, int $overDraftCount = null, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds = null, \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds = null, \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $owner = null, string $FNPTimeZoneValue = null)
     {
@@ -128,22 +128,22 @@ class CreateFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $activationId
-     * @var int $fulfillCount
-     * @var int $overDraftCount
-     * @var \DateTimeInterface $startDate
-     * @var \DateTimeInterface $versionDate
-     * @var \DateTimeInterface $versionStartDate
-     * @var string $soldTo
-     * @var string $shipToEmail
-     * @var string $shipToAddress
-     * @var \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
-     * @var \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
-     * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @var bool $overridePolicy
-     * @var string $owner
-     * @var string $FNPTimeZoneValue
+     * @param string $activationId
+     * @param int $fulfillCount
+     * @param int $overDraftCount
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $versionDate
+     * @param \DateTimeInterface $versionStartDate
+     * @param string $soldTo
+     * @param string $shipToEmail
+     * @param string $shipToAddress
+     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
+     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
+     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param bool $overridePolicy
+     * @param string $owner
+     * @param string $FNPTimeZoneValue
      */
     public static function create(string $activationId, int $fulfillCount = null, int $overDraftCount = null, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds = null, \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds = null, \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $owner = null, string $FNPTimeZoneValue = null)
     {

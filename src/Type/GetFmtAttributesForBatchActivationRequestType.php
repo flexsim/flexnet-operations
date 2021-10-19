@@ -15,7 +15,7 @@ class GetFmtAttributesForBatchActivationRequestType extends FlexnetType implemen
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds
+     * @param \Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds)
     {
@@ -25,7 +25,7 @@ class GetFmtAttributesForBatchActivationRequestType extends FlexnetType implemen
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds
+     * @param \Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds)
     {

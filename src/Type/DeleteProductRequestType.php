@@ -15,7 +15,7 @@ class DeleteProductRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteProductDataType $product
+     * @param \Flexsim\FlexnetOperations\Type\DeleteProductDataType $product
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeleteProductDataType $product)
     {
@@ -25,7 +25,7 @@ class DeleteProductRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteProductDataType $product
+     * @param \Flexsim\FlexnetOperations\Type\DeleteProductDataType $product
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeleteProductDataType $product)
     {

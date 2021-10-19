@@ -13,7 +13,7 @@ class DeleteFeatureDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier)
     {
@@ -23,7 +23,7 @@ class DeleteFeatureDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier)
     {

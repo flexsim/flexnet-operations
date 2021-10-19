@@ -18,8 +18,8 @@ class FeatureStateChangeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, $stateChangeRecord = null)
     {
@@ -30,8 +30,8 @@ class FeatureStateChangeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, $stateChangeRecord = null)
     {

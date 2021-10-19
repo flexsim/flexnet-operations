@@ -53,15 +53,15 @@ class UpdateAcctDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @var string $id
-     * @var string $name
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @var \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts
-     * @var \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts
-     * @var bool $visible
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param string $id
+     * @param string $name
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts
+     * @param \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts
+     * @param bool $visible
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public function __construct(
         $account,
@@ -88,15 +88,15 @@ class UpdateAcctDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @var string $id
-     * @var string $name
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @var \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts
-     * @var \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts
-     * @var bool $visible
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param string $id
+     * @param string $name
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts
+     * @param \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts
+     * @param bool $visible
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public static function create(
         $account,

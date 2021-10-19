@@ -58,16 +58,16 @@ class AddonLineItemDataDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var string $activationId
-     * @var int $enabledCount
-     * @var int $consumedCount
-     * @var string $licenseState
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
-     * @var \DateTimeInterface $expirationDateOverride
-     * @var \DateTimeInterface $licenseExpirationDate
-     * @var \DateTimeInterface $createdDate
-     * @var \DateTimeInterface $lastModifiedDate
+     * @param string $uniqueId
+     * @param string $activationId
+     * @param int $enabledCount
+     * @param int $consumedCount
+     * @param string $licenseState
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
+     * @param \DateTimeInterface $expirationDateOverride
+     * @param \DateTimeInterface $licenseExpirationDate
+     * @param \DateTimeInterface $createdDate
+     * @param \DateTimeInterface $lastModifiedDate
      */
     public function __construct(
         string $uniqueId = null,
@@ -96,16 +96,16 @@ class AddonLineItemDataDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var string $activationId
-     * @var int $enabledCount
-     * @var int $consumedCount
-     * @var string $licenseState
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
-     * @var \DateTimeInterface $expirationDateOverride
-     * @var \DateTimeInterface $licenseExpirationDate
-     * @var \DateTimeInterface $createdDate
-     * @var \DateTimeInterface $lastModifiedDate
+     * @param string $uniqueId
+     * @param string $activationId
+     * @param int $enabledCount
+     * @param int $consumedCount
+     * @param string $licenseState
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
+     * @param \DateTimeInterface $expirationDateOverride
+     * @param \DateTimeInterface $licenseExpirationDate
+     * @param \DateTimeInterface $createdDate
+     * @param \DateTimeInterface $lastModifiedDate
      */
     public static function create(
         string $uniqueId = null,

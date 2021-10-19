@@ -13,7 +13,7 @@ class LicenseModelStateChangeListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType|array $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType|array $licenseModel
      */
     public function __construct($licenseModel = null)
     {
@@ -23,7 +23,7 @@ class LicenseModelStateChangeListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType|array $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType|array $licenseModel
      */
     public static function create($licenseModel = null)
     {

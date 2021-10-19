@@ -13,7 +13,7 @@ class FailedMatchingBulkEntsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array $failedBulkEnt
+     * @param \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array $failedBulkEnt
      */
     public function __construct($failedBulkEnt)
     {
@@ -23,7 +23,7 @@ class FailedMatchingBulkEntsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array $failedBulkEnt
+     * @param \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array $failedBulkEnt
      */
     public static function create($failedBulkEnt)
     {

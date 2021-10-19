@@ -18,8 +18,8 @@ class FailedUnlinkMaintenanceLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedUnlinkMaintenanceLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem = null, string $reason = null)
     {

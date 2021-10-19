@@ -13,7 +13,7 @@ class ProductsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $product
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $product
      */
     public function __construct($product)
     {
@@ -23,7 +23,7 @@ class ProductsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $product
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $product
      */
     public static function create($product)
     {

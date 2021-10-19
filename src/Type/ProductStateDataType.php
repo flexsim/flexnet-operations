@@ -18,8 +18,8 @@ class ProductStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @var string $stateToSet
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param string $stateToSet
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, string $stateToSet)
     {
@@ -30,8 +30,8 @@ class ProductStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @var string $stateToSet
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param string $stateToSet
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, string $stateToSet)
     {

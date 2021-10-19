@@ -23,9 +23,9 @@ class LicenseModelDetailsType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @var \Flexsim\FlexnetOperations\Type\ModelAttributesType $attributeDetails
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param \Flexsim\FlexnetOperations\Type\ModelAttributesType $attributeDetails
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology, \Flexsim\FlexnetOperations\Type\ModelAttributesType $attributeDetails)
     {
@@ -37,9 +37,9 @@ class LicenseModelDetailsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @var \Flexsim\FlexnetOperations\Type\ModelAttributesType $attributeDetails
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param \Flexsim\FlexnetOperations\Type\ModelAttributesType $attributeDetails
      */
     public static function create(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology, \Flexsim\FlexnetOperations\Type\ModelAttributesType $attributeDetails)
     {

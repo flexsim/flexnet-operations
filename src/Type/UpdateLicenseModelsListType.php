@@ -18,8 +18,8 @@ class UpdateLicenseModelsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers
+     * @param string $opType
      */
     public function __construct($licenseModelIdentifiers, string $opType)
     {
@@ -30,8 +30,8 @@ class UpdateLicenseModelsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers
+     * @param string $opType
      */
     public static function create($licenseModelIdentifiers, string $opType)
     {

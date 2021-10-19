@@ -20,8 +20,8 @@ class GetFeatureBundlesQueryResponseType extends FlexnetType implements ResultIn
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType $responseData = null)
     {
@@ -32,8 +32,8 @@ class GetFeatureBundlesQueryResponseType extends FlexnetType implements ResultIn
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType $responseData = null)
     {

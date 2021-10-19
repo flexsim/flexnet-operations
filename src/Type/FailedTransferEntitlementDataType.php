@@ -18,8 +18,8 @@ class FailedTransferEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedTransferEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo, string $reason)
     {

@@ -18,8 +18,8 @@ class UpdateHostTypeListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
+     * @param string $opType
      */
     public function __construct($hostType, string $opType)
     {
@@ -30,8 +30,8 @@ class UpdateHostTypeListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
+     * @param string $opType
      */
     public static function create($hostType, string $opType)
     {

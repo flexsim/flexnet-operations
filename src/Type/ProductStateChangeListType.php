@@ -13,7 +13,7 @@ class ProductStateChangeListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType|array $product
+     * @param \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType|array $product
      */
     public function __construct($product = null)
     {
@@ -23,7 +23,7 @@ class ProductStateChangeListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType|array $product
+     * @param \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType|array $product
      */
     public static function create($product = null)
     {

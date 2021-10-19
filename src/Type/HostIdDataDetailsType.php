@@ -43,13 +43,13 @@ class HostIdDataDetailsType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ServerIDsType $serverHost
-     * @var string $nodeLockHost
-     * @var \Flexsim\FlexnetOperations\Type\NodeIDsType $countedNodeLockHostIds
-     * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
-     * @var int $countFromParent
-     * @var int $countFromOwn
-     * @var string $parentActivationId
+     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverHost
+     * @param string $nodeLockHost
+     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $countedNodeLockHostIds
+     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param int $countFromParent
+     * @param int $countFromOwn
+     * @param string $parentActivationId
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ServerIDsType $serverHost = null, string $nodeLockHost = null, \Flexsim\FlexnetOperations\Type\NodeIDsType $countedNodeLockHostIds = null, \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null, int $countFromParent = null, int $countFromOwn = null, string $parentActivationId = null)
     {
@@ -65,13 +65,13 @@ class HostIdDataDetailsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ServerIDsType $serverHost
-     * @var string $nodeLockHost
-     * @var \Flexsim\FlexnetOperations\Type\NodeIDsType $countedNodeLockHostIds
-     * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
-     * @var int $countFromParent
-     * @var int $countFromOwn
-     * @var string $parentActivationId
+     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverHost
+     * @param string $nodeLockHost
+     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $countedNodeLockHostIds
+     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param int $countFromParent
+     * @param int $countFromOwn
+     * @param string $parentActivationId
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ServerIDsType $serverHost = null, string $nodeLockHost = null, \Flexsim\FlexnetOperations\Type\NodeIDsType $countedNodeLockHostIds = null, \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null, int $countFromParent = null, int $countFromOwn = null, string $parentActivationId = null)
     {

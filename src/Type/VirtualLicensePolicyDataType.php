@@ -13,7 +13,7 @@ class VirtualLicensePolicyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var bool $isVirtualLicense
+     * @param bool $isVirtualLicense
      */
     public function __construct(bool $isVirtualLicense)
     {
@@ -23,7 +23,7 @@ class VirtualLicensePolicyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var bool $isVirtualLicense
+     * @param bool $isVirtualLicense
      */
     public static function create(bool $isVirtualLicense)
     {

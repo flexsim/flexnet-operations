@@ -18,8 +18,8 @@ class FailedFeatureDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureDataType $feature
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\FeatureDataType $feature
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureDataType $feature = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedFeatureDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureDataType $feature
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\FeatureDataType $feature
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureDataType $feature = null, string $reason = null)
     {

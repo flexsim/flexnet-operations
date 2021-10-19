@@ -18,8 +18,8 @@ class FailedUpdateFeatureDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedUpdateFeatureDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, string $reason = null)
     {

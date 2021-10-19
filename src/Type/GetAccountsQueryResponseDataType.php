@@ -13,7 +13,7 @@ class GetAccountsQueryResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountDetailDataType|array $acctData
+     * @param \Flexsim\FlexnetOperations\Type\AccountDetailDataType|array $acctData
      */
     public function __construct($acctData = null)
     {
@@ -23,7 +23,7 @@ class GetAccountsQueryResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountDetailDataType|array $acctData
+     * @param \Flexsim\FlexnetOperations\Type\AccountDetailDataType|array $acctData
      */
     public static function create($acctData = null)
     {

@@ -18,8 +18,8 @@ class UpdateRelatedAccountsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array $relatedAccount
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array $relatedAccount
+     * @param string $opType
      */
     public function __construct($relatedAccount, string $opType)
     {
@@ -30,8 +30,8 @@ class UpdateRelatedAccountsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array $relatedAccount
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array $relatedAccount
+     * @param string $opType
      */
     public static function create($relatedAccount, string $opType)
     {

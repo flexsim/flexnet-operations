@@ -18,8 +18,8 @@ class SimpleAttributeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $attributeName
-     * @var string $attributeValue
+     * @param string $attributeName
+     * @param string $attributeValue
      */
     public function __construct(string $attributeName, string $attributeValue)
     {
@@ -30,8 +30,8 @@ class SimpleAttributeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $attributeName
-     * @var string $attributeValue
+     * @param string $attributeName
+     * @param string $attributeValue
      */
     public static function create(string $attributeName, string $attributeValue)
     {

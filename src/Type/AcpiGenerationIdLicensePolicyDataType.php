@@ -13,7 +13,7 @@ class AcpiGenerationIdLicensePolicyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var bool $useACPIGenerationId
+     * @param bool $useACPIGenerationId
      */
     public function __construct(bool $useACPIGenerationId)
     {
@@ -23,7 +23,7 @@ class AcpiGenerationIdLicensePolicyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var bool $useACPIGenerationId
+     * @param bool $useACPIGenerationId
      */
     public static function create(bool $useACPIGenerationId)
     {

@@ -13,7 +13,7 @@ class CategoryAttributesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CategoryAttributeDataType $categoryAttribute
+     * @param \Flexsim\FlexnetOperations\Type\CategoryAttributeDataType $categoryAttribute
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CategoryAttributeDataType $categoryAttribute)
     {
@@ -23,7 +23,7 @@ class CategoryAttributesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CategoryAttributeDataType $categoryAttribute
+     * @param \Flexsim\FlexnetOperations\Type\CategoryAttributeDataType $categoryAttribute
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CategoryAttributeDataType $categoryAttribute)
     {

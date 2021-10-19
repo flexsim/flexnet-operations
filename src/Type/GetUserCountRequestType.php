@@ -15,7 +15,7 @@ class GetUserCountRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams = null)
     {
@@ -26,7 +26,7 @@ class GetUserCountRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UserQueryParametersType $queryParams = null)
     {

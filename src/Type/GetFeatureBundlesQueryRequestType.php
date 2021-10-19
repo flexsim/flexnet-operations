@@ -30,10 +30,10 @@ class GetFeatureBundlesQueryRequestType extends FlexnetType implements RequestIn
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
-     * @var bool $returnContainedObjects
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
+     * @param bool $returnContainedObjects
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $returnContainedObjects)
     {
@@ -47,10 +47,10 @@ class GetFeatureBundlesQueryRequestType extends FlexnetType implements RequestIn
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
-     * @var bool $returnContainedObjects
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
+     * @param bool $returnContainedObjects
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $returnContainedObjects)
     {

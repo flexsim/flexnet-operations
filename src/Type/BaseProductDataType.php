@@ -48,14 +48,14 @@ class BaseProductDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @var \DateTimeInterface $startDate
-     * @var bool $isPermanent
-     * @var \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @var \DateTimeInterface $expirationDate
+     * @param string $uniqueId
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param \DateTimeInterface $startDate
+     * @param bool $isPermanent
+     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
+     * @param \DateTimeInterface $expirationDate
      */
     public function __construct(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, \DateTimeInterface $startDate = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null)
     {
@@ -72,14 +72,14 @@ class BaseProductDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @var \DateTimeInterface $startDate
-     * @var bool $isPermanent
-     * @var \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @var \DateTimeInterface $expirationDate
+     * @param string $uniqueId
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param \DateTimeInterface $startDate
+     * @param bool $isPermanent
+     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
+     * @param \DateTimeInterface $expirationDate
      */
     public static function create(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, \DateTimeInterface $startDate = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null)
     {

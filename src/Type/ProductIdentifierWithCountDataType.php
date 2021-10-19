@@ -18,8 +18,8 @@ class ProductIdentifierWithCountDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @var int $count
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param int $count
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, int $count)
     {
@@ -30,8 +30,8 @@ class ProductIdentifierWithCountDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @var int $count
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param int $count
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, int $count)
     {

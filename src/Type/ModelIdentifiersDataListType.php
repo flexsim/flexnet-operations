@@ -13,7 +13,7 @@ class ModelIdentifiersDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelDetailsType|array $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelDetailsType|array $licenseModel
      */
     public function __construct($licenseModel = null)
     {
@@ -23,7 +23,7 @@ class ModelIdentifiersDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelDetailsType|array $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelDetailsType|array $licenseModel
      */
     public static function create($licenseModel = null)
     {

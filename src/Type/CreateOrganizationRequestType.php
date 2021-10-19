@@ -15,7 +15,7 @@ class CreateOrganizationRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationBasicDataType $organization
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationBasicDataType $organization
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationBasicDataType $organization)
     {
@@ -25,7 +25,7 @@ class CreateOrganizationRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationBasicDataType $organization
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationBasicDataType $organization
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OrganizationBasicDataType $organization)
     {

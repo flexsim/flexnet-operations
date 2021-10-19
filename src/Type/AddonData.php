@@ -78,20 +78,20 @@ class AddonData extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $activationId
-     * @var string $entitlementId
-     * @var int $requestedCopies
-     * @var int $consumedCopies
-     * @var int $generatedCopies
-     * @var string $licenseState
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList
-     * @var string $partNumber
-     * @var \DateTimeInterface $licenseExpirationDate
-     * @var bool $licensePermanent
-     * @var \DateTimeInterface $expirationDateOverride
-     * @var string $licenseModelName
-     * @var \DateTimeInterface $createdDate
-     * @var \DateTimeInterface $lastModifiedDate
+     * @param string $activationId
+     * @param string $entitlementId
+     * @param int $requestedCopies
+     * @param int $consumedCopies
+     * @param int $generatedCopies
+     * @param string $licenseState
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList
+     * @param string $partNumber
+     * @param \DateTimeInterface $licenseExpirationDate
+     * @param bool $licensePermanent
+     * @param \DateTimeInterface $expirationDateOverride
+     * @param string $licenseModelName
+     * @param \DateTimeInterface $createdDate
+     * @param \DateTimeInterface $lastModifiedDate
      */
     public function __construct(string $activationId = null, string $entitlementId = null, int $requestedCopies = null, int $consumedCopies = null, int $generatedCopies = null, string $licenseState = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList = null, string $partNumber = null, \DateTimeInterface $licenseExpirationDate = null, bool $licensePermanent = null, \DateTimeInterface $expirationDateOverride = null, string $licenseModelName = null, \DateTimeInterface $createdDate = null, \DateTimeInterface $lastModifiedDate = null)
     {
@@ -114,20 +114,20 @@ class AddonData extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $activationId
-     * @var string $entitlementId
-     * @var int $requestedCopies
-     * @var int $consumedCopies
-     * @var int $generatedCopies
-     * @var string $licenseState
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList
-     * @var string $partNumber
-     * @var \DateTimeInterface $licenseExpirationDate
-     * @var bool $licensePermanent
-     * @var \DateTimeInterface $expirationDateOverride
-     * @var string $licenseModelName
-     * @var \DateTimeInterface $createdDate
-     * @var \DateTimeInterface $lastModifiedDate
+     * @param string $activationId
+     * @param string $entitlementId
+     * @param int $requestedCopies
+     * @param int $consumedCopies
+     * @param int $generatedCopies
+     * @param string $licenseState
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList
+     * @param string $partNumber
+     * @param \DateTimeInterface $licenseExpirationDate
+     * @param bool $licensePermanent
+     * @param \DateTimeInterface $expirationDateOverride
+     * @param string $licenseModelName
+     * @param \DateTimeInterface $createdDate
+     * @param \DateTimeInterface $lastModifiedDate
      */
     public static function create(string $activationId = null, string $entitlementId = null, int $requestedCopies = null, int $consumedCopies = null, int $generatedCopies = null, string $licenseState = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList = null, string $partNumber = null, \DateTimeInterface $licenseExpirationDate = null, bool $licensePermanent = null, \DateTimeInterface $expirationDateOverride = null, string $licenseModelName = null, \DateTimeInterface $createdDate = null, \DateTimeInterface $lastModifiedDate = null)
     {

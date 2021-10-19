@@ -18,8 +18,8 @@ class ReturnHostType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $targetHostIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $targetHostIdentifier
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $targetHostIdentifier = null)
     {
@@ -30,8 +30,8 @@ class ReturnHostType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $targetHostIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $targetHostIdentifier
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $targetHostIdentifier = null)
     {

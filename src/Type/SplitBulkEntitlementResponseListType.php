@@ -13,7 +13,7 @@ class SplitBulkEntitlementResponseListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType|array $splitBulkEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType|array $splitBulkEntitlement
      */
     public function __construct($splitBulkEntitlement)
     {
@@ -23,7 +23,7 @@ class SplitBulkEntitlementResponseListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType|array $splitBulkEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementDataType|array $splitBulkEntitlement
      */
     public static function create($splitBulkEntitlement)
     {

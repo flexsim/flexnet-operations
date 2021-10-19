@@ -25,9 +25,9 @@ class GetWebRegKeysQueryRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier
-     * @var int $batchSize
-     * @var int $pageNumber
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier
+     * @param int $batchSize
+     * @param int $pageNumber
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
     {
@@ -39,9 +39,9 @@ class GetWebRegKeysQueryRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier
-     * @var int $batchSize
-     * @var int $pageNumber
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier
+     * @param int $batchSize
+     * @param int $pageNumber
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
     {

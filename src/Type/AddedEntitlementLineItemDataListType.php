@@ -13,7 +13,7 @@ class AddedEntitlementLineItemDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType|array $addedLineItems
+     * @param \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType|array $addedLineItems
      */
     public function __construct($addedLineItems = null)
     {
@@ -23,7 +23,7 @@ class AddedEntitlementLineItemDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType|array $addedLineItems
+     * @param \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType|array $addedLineItems
      */
     public static function create($addedLineItems = null)
     {

@@ -25,9 +25,9 @@ class CreateAcctResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedCreateAcctDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedAccountDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedCreateAcctDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedAccountDataListType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedCreateAcctDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedAccountDataListType $responseData = null)
     {
@@ -39,9 +39,9 @@ class CreateAcctResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedCreateAcctDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedAccountDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedCreateAcctDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedAccountDataListType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedCreateAcctDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedAccountDataListType $responseData = null)
     {

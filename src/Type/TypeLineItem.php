@@ -28,10 +28,10 @@ class TypeLineItem extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $activationId
-     * @var string $Reason
-     * @var string $Count
-     * @var \Flexsim\FlexnetOperations\Type\Dictionary $VendorDictionary
+     * @param string $activationId
+     * @param string $Reason
+     * @param string $Count
+     * @param \Flexsim\FlexnetOperations\Type\Dictionary $VendorDictionary
      */
     public function __construct(string $activationId, string $Reason = null, string $Count = null, \Flexsim\FlexnetOperations\Type\Dictionary $VendorDictionary = null)
     {
@@ -44,10 +44,10 @@ class TypeLineItem extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $activationId
-     * @var string $Reason
-     * @var string $Count
-     * @var \Flexsim\FlexnetOperations\Type\Dictionary $VendorDictionary
+     * @param string $activationId
+     * @param string $Reason
+     * @param string $Count
+     * @param \Flexsim\FlexnetOperations\Type\Dictionary $VendorDictionary
      */
     public static function create(string $activationId, string $Reason = null, string $Count = null, \Flexsim\FlexnetOperations\Type\Dictionary $VendorDictionary = null)
     {

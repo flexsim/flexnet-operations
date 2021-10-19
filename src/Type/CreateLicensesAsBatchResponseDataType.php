@@ -13,7 +13,7 @@ class CreateLicensesAsBatchResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment)
     {
@@ -23,7 +23,7 @@ class CreateLicensesAsBatchResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment)
     {

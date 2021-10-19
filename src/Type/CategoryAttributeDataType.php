@@ -33,11 +33,11 @@ class CategoryAttributeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $attributeName
-     * @var bool $isRequired
-     * @var string $dataType
-     * @var string $maxLength
-     * @var \Flexsim\FlexnetOperations\Type\ValueType $validValues
+     * @param string $attributeName
+     * @param bool $isRequired
+     * @param string $dataType
+     * @param string $maxLength
+     * @param \Flexsim\FlexnetOperations\Type\ValueType $validValues
      */
     public function __construct(string $attributeName, bool $isRequired, string $dataType, string $maxLength = null, \Flexsim\FlexnetOperations\Type\ValueType $validValues = null)
     {
@@ -51,11 +51,11 @@ class CategoryAttributeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $attributeName
-     * @var bool $isRequired
-     * @var string $dataType
-     * @var string $maxLength
-     * @var \Flexsim\FlexnetOperations\Type\ValueType $validValues
+     * @param string $attributeName
+     * @param bool $isRequired
+     * @param string $dataType
+     * @param string $maxLength
+     * @param \Flexsim\FlexnetOperations\Type\ValueType $validValues
      */
     public static function create(string $attributeName, bool $isRequired, string $dataType, string $maxLength = null, \Flexsim\FlexnetOperations\Type\ValueType $validValues = null)
     {

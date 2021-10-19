@@ -15,7 +15,7 @@ class DeleteFeatureBundleRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteFeatureBundleDataType $featureBundle
+     * @param \Flexsim\FlexnetOperations\Type\DeleteFeatureBundleDataType $featureBundle
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeleteFeatureBundleDataType $featureBundle)
     {
@@ -25,7 +25,7 @@ class DeleteFeatureBundleRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteFeatureBundleDataType $featureBundle
+     * @param \Flexsim\FlexnetOperations\Type\DeleteFeatureBundleDataType $featureBundle
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeleteFeatureBundleDataType $featureBundle)
     {

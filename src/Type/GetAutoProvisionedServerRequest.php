@@ -20,7 +20,7 @@ class GetAutoProvisionedServerRequest extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @var string $acctName this method is backwards compatible so you may also pass $orgName
+     * @param string $acctName this method is backwards compatible so you may also pass $orgName
      */
     public function __construct(string $acctName)
     {
@@ -31,7 +31,7 @@ class GetAutoProvisionedServerRequest extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @var string $acctName this method is backwards compatible so you may also pass $orgName
+     * @param string $acctName this method is backwards compatible so you may also pass $orgName
      */
     public static function create(string $acctName)
     {

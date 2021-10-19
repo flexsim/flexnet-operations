@@ -18,8 +18,8 @@ class FailedPublisherErrorResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedPublisherErrorResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment, string $reason)
     {

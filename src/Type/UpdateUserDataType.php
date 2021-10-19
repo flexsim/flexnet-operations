@@ -108,25 +108,25 @@ class UpdateUserDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
-     * @var string $firstName
-     * @var string $lastName
-     * @var string $displayName
-     * @var string $emailAddress
-     * @var bool $optIn
-     * @var string $phoneNumber
-     * @var string $faxNumber
-     * @var string $street
-     * @var string $city
-     * @var string $state
-     * @var string $zipcode
-     * @var string $country
-     * @var string $status
-     * @var string $locale
-     * @var string $timezone
-     * @var bool $shared
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserAccountsListType|\Flexsim\FlexnetOperations\Type\UpdateUserOrganizationsListType $acctRolesList this method is backwards compatible so you can also pass $orgRolesList
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @param string $firstName
+     * @param string $lastName
+     * @param string $displayName
+     * @param string $emailAddress
+     * @param bool $optIn
+     * @param string $phoneNumber
+     * @param string $faxNumber
+     * @param string $street
+     * @param string $city
+     * @param string $state
+     * @param string $zipcode
+     * @param string $country
+     * @param string $status
+     * @param string $locale
+     * @param string $timezone
+     * @param bool $shared
+     * @param \Flexsim\FlexnetOperations\Type\UpdateUserAccountsListType|\Flexsim\FlexnetOperations\Type\UpdateUserOrganizationsListType $acctRolesList this method is backwards compatible so you can also pass $orgRolesList
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UserIdentifierType $user, string $firstName = null, string $lastName = null, string $displayName = null, string $emailAddress = null, bool $optIn = null, string $phoneNumber = null, string $faxNumber = null, string $street = null, string $city = null, string $state = null, string $zipcode = null, string $country = null, string $status = null, string $locale = null, string $timezone = null, bool $shared = null, $acctRolesList = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {
@@ -155,25 +155,25 @@ class UpdateUserDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
-     * @var string $firstName
-     * @var string $lastName
-     * @var string $displayName
-     * @var string $emailAddress
-     * @var bool $optIn
-     * @var string $phoneNumber
-     * @var string $faxNumber
-     * @var string $street
-     * @var string $city
-     * @var string $state
-     * @var string $zipcode
-     * @var string $country
-     * @var string $status
-     * @var string $locale
-     * @var string $timezone
-     * @var bool $shared
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserAccountsListType|\Flexsim\FlexnetOperations\Type\UpdateUserOrganizationsListType $acctRolesList this method is backwards compatible so you can also pass $orgRolesList
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @param string $firstName
+     * @param string $lastName
+     * @param string $displayName
+     * @param string $emailAddress
+     * @param bool $optIn
+     * @param string $phoneNumber
+     * @param string $faxNumber
+     * @param string $street
+     * @param string $city
+     * @param string $state
+     * @param string $zipcode
+     * @param string $country
+     * @param string $status
+     * @param string $locale
+     * @param string $timezone
+     * @param bool $shared
+     * @param \Flexsim\FlexnetOperations\Type\UpdateUserAccountsListType|\Flexsim\FlexnetOperations\Type\UpdateUserOrganizationsListType $acctRolesList this method is backwards compatible so you can also pass $orgRolesList
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UserIdentifierType $user, string $firstName = null, string $lastName = null, string $displayName = null, string $emailAddress = null, bool $optIn = null, string $phoneNumber = null, string $faxNumber = null, string $street = null, string $city = null, string $state = null, string $zipcode = null, string $country = null, string $status = null, string $locale = null, string $timezone = null, bool $shared = null, $acctRolesList = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {

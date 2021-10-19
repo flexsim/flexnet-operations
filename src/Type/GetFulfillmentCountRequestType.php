@@ -15,7 +15,7 @@ class GetFulfillmentCountRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = null)
     {
@@ -26,7 +26,7 @@ class GetFulfillmentCountRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = null)
     {

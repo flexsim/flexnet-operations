@@ -43,13 +43,13 @@ class AccountDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $id
-     * @var string $name
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @var bool $visible
-     * @var string $accountType
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param string $id
+     * @param string $name
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param bool $visible
+     * @param string $accountType
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public function __construct(string $id, string $name, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, bool $visible = null, string $accountType = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {
@@ -65,13 +65,13 @@ class AccountDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $id
-     * @var string $name
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @var bool $visible
-     * @var string $accountType
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param string $id
+     * @param string $name
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param bool $visible
+     * @param string $accountType
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public static function create(string $id, string $name, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, bool $visible = null, string $accountType = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {

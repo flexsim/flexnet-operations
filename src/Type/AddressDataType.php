@@ -43,13 +43,13 @@ class AddressDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $address1
-     * @var string $address2
-     * @var string $city
-     * @var string $state
-     * @var string $zipcode
-     * @var string $country
-     * @var string $region
+     * @param string $address1
+     * @param string $address2
+     * @param string $city
+     * @param string $state
+     * @param string $zipcode
+     * @param string $country
+     * @param string $region
      */
     public function __construct(string $address1 = null, string $address2 = null, string $city = null, string $state = null, string $zipcode = null, string $country = null, string $region = null)
     {
@@ -65,13 +65,13 @@ class AddressDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $address1
-     * @var string $address2
-     * @var string $city
-     * @var string $state
-     * @var string $zipcode
-     * @var string $country
-     * @var string $region
+     * @param string $address1
+     * @param string $address2
+     * @param string $city
+     * @param string $state
+     * @param string $zipcode
+     * @param string $country
+     * @param string $region
      */
     public static function create(string $address1 = null, string $address2 = null, string $city = null, string $state = null, string $zipcode = null, string $country = null, string $region = null)
     {

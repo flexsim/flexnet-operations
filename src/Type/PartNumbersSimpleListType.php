@@ -13,7 +13,7 @@ class PartNumbersSimpleListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array $partNumber
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array $partNumber
      */
     public function __construct($partNumber)
     {
@@ -23,7 +23,7 @@ class PartNumbersSimpleListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array $partNumber
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array $partNumber
      */
     public static function create($partNumber)
     {

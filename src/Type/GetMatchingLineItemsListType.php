@@ -13,7 +13,7 @@ class GetMatchingLineItemsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array $lineItemInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array $lineItemInfo
      */
     public function __construct($lineItemInfo)
     {
@@ -23,7 +23,7 @@ class GetMatchingLineItemsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array $lineItemInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array $lineItemInfo
      */
     public static function create($lineItemInfo)
     {

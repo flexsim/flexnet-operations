@@ -28,10 +28,10 @@ class LicenseTechnologyDetailsType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType $licenseGenerators
-     * @var \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
-     * @var string $state
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType $licenseGenerators
+     * @param \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
+     * @param string $state
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType $licenseGenerators, \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes, string $state)
     {
@@ -44,10 +44,10 @@ class LicenseTechnologyDetailsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType $licenseGenerators
-     * @var \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
-     * @var string $state
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType $licenseGenerators
+     * @param \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
+     * @param string $state
      */
     public static function create(\Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType $licenseGenerators, \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes, string $state)
     {

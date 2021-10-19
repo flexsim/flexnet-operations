@@ -138,31 +138,31 @@ class DeviceQueryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var string $alias
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
-     * @var string $deviceStatus
-     * @var string $deviceServedStatus
-     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @var \Flexsim\FlexnetOperations\Type\SoldToType $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\ProductPKType $preBuiltProduct
-     * @var bool $hasPrebuiltLicense
-     * @var string $prebuiltLicense
-     * @var bool $hasAddonLicense
-     * @var string $addonLicense
-     * @var \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
-     * @var \Flexsim\FlexnetOperations\Type\AddonLineItemDataDataType|array $addonLineItemData
-     * @var \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array $featureData
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $parentIdentifier
-     * @var string $machineType
-     * @var string $vmName
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
-     * @var string $deviceUser
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $deviceUserIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\SoldToAcctNameType|\Flexsim\FlexnetOperations\Type\SoldToOrgNameType $soldToAcctName this method is backwards compatible so you may also pass $soldToOrgName
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param string $alias
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
+     * @param string $deviceStatus
+     * @param string $deviceServedStatus
+     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @param \Flexsim\FlexnetOperations\Type\SoldToType $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\ProductPKType $preBuiltProduct
+     * @param bool $hasPrebuiltLicense
+     * @param string $prebuiltLicense
+     * @param bool $hasAddonLicense
+     * @param string $addonLicense
+     * @param \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
+     * @param \Flexsim\FlexnetOperations\Type\AddonLineItemDataDataType|array $addonLineItemData
+     * @param \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array $featureData
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $parentIdentifier
+     * @param string $machineType
+     * @param string $vmName
+     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
+     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
+     * @param string $deviceUser
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $deviceUserIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\SoldToAcctNameType|\Flexsim\FlexnetOperations\Type\SoldToOrgNameType $soldToAcctName this method is backwards compatible so you may also pass $soldToOrgName
      */
     public function __construct(
         \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier = null,
@@ -222,31 +222,31 @@ class DeviceQueryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var string $alias
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
-     * @var string $deviceStatus
-     * @var string $deviceServedStatus
-     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @var \Flexsim\FlexnetOperations\Type\SoldToType $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\ProductPKType $preBuiltProduct
-     * @var bool $hasPrebuiltLicense
-     * @var string $prebuiltLicense
-     * @var bool $hasAddonLicense
-     * @var string $addonLicense
-     * @var \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
-     * @var \Flexsim\FlexnetOperations\Type\AddonLineItemDataDataType|array $addonLineItemData
-     * @var \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array $featureData
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $parentIdentifier
-     * @var string $machineType
-     * @var string $vmName
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
-     * @var string $deviceUser
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $deviceUserIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\SoldToAcctNameType|\Flexsim\FlexnetOperations\Type\SoldToOrgNameType $soldToAcctName this method is backwards compatible so you may also pass $soldToOrgName
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param string $alias
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
+     * @param string $deviceStatus
+     * @param string $deviceServedStatus
+     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @param \Flexsim\FlexnetOperations\Type\SoldToType $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\ProductPKType $preBuiltProduct
+     * @param bool $hasPrebuiltLicense
+     * @param string $prebuiltLicense
+     * @param bool $hasAddonLicense
+     * @param string $addonLicense
+     * @param \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
+     * @param \Flexsim\FlexnetOperations\Type\AddonLineItemDataDataType|array $addonLineItemData
+     * @param \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array $featureData
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $parentIdentifier
+     * @param string $machineType
+     * @param string $vmName
+     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
+     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
+     * @param string $deviceUser
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $deviceUserIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\SoldToAcctNameType|\Flexsim\FlexnetOperations\Type\SoldToOrgNameType $soldToAcctName this method is backwards compatible so you may also pass $soldToOrgName
      */
     public static function create(
         \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier = null,

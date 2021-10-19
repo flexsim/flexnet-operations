@@ -18,7 +18,7 @@ class AccountPKType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $id this method is backwards compatible so you may also pass $name
+     * @param string $id this method is backwards compatible so you may also pass $name
      */
     public function __construct(string $id)
     {
@@ -29,7 +29,7 @@ class AccountPKType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $id this method is backwards compatible so you may also pass $name
+     * @param string $id this method is backwards compatible so you may also pass $name
      */
     public static function create(string $id)
     {

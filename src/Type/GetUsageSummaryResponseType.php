@@ -25,9 +25,9 @@ class GetUsageSummaryResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedGetUsageSummaryDataType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\GetUsageSummaryDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedGetUsageSummaryDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\GetUsageSummaryDataType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedGetUsageSummaryDataType $failedData = null, \Flexsim\FlexnetOperations\Type\GetUsageSummaryDataType $responseData = null)
     {
@@ -39,9 +39,9 @@ class GetUsageSummaryResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedGetUsageSummaryDataType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\GetUsageSummaryDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedGetUsageSummaryDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\GetUsageSummaryDataType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedGetUsageSummaryDataType $failedData = null, \Flexsim\FlexnetOperations\Type\GetUsageSummaryDataType $responseData = null)
     {

@@ -20,8 +20,8 @@ class GetActivatableItemCountResponseType extends FlexnetType implements ResultI
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var int $count
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param int $count
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, int $count = null)
     {
@@ -32,8 +32,8 @@ class GetActivatableItemCountResponseType extends FlexnetType implements ResultI
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var int $count
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param int $count
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, int $count = null)
     {

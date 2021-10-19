@@ -18,8 +18,8 @@ class FailedMatchingBulkEntDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType $bulkEntInfo
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType $bulkEntInfo
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType $bulkEntInfo, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedMatchingBulkEntDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType $bulkEntInfo
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType $bulkEntInfo
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType $bulkEntInfo, string $reason)
     {

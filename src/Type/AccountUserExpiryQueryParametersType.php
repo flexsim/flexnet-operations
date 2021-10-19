@@ -23,9 +23,9 @@ class AccountUserExpiryQueryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $accountID
-     * @var string $accountType
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $expiryDate
+     * @param string $accountID
+     * @param string $accountType
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expiryDate
      */
     public function __construct(string $accountID, string $accountType = null, \Flexsim\FlexnetOperations\Type\DateQueryType $expiryDate = null)
     {
@@ -37,9 +37,9 @@ class AccountUserExpiryQueryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $accountID
-     * @var string $accountType
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $expiryDate
+     * @param string $accountID
+     * @param string $accountType
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expiryDate
      */
     public static function create(string $accountID, string $accountType = null, \Flexsim\FlexnetOperations\Type\DateQueryType $expiryDate = null)
     {

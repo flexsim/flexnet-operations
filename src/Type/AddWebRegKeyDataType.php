@@ -18,8 +18,8 @@ class AddWebRegKeyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlement
-     * @var \Flexsim\FlexnetOperations\Type\WebRegKeyDataType $webRegKeys
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\WebRegKeyDataType $webRegKeys
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlement, \Flexsim\FlexnetOperations\Type\WebRegKeyDataType $webRegKeys)
     {
@@ -30,8 +30,8 @@ class AddWebRegKeyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlement
-     * @var \Flexsim\FlexnetOperations\Type\WebRegKeyDataType $webRegKeys
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\WebRegKeyDataType $webRegKeys
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlement, \Flexsim\FlexnetOperations\Type\WebRegKeyDataType $webRegKeys)
     {

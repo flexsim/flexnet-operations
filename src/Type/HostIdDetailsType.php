@@ -13,7 +13,7 @@ class HostIdDetailsType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\HostIdDataDetailsType $hostIdData
+     * @param \Flexsim\FlexnetOperations\Type\HostIdDataDetailsType $hostIdData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\HostIdDataDetailsType $hostIdData)
     {
@@ -23,7 +23,7 @@ class HostIdDetailsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\HostIdDataDetailsType $hostIdData
+     * @param \Flexsim\FlexnetOperations\Type\HostIdDataDetailsType $hostIdData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\HostIdDataDetailsType $hostIdData)
     {

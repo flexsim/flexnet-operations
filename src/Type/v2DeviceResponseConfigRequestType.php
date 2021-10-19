@@ -123,29 +123,29 @@ class v2DeviceResponseConfigRequestType extends FlexnetType
     /**
      * Constructor
      *
-     * @var bool $alias
-     * @var bool $description
-     * @var bool $status
-     * @var bool $servedStatus
-     * @var bool $hostTypeName
-     * @var bool $soldTo
-     * @var bool $channelPartners
-     * @var bool $preBuiltLicense
-     * @var bool $addOnActivationId
-     * @var bool $addOnCounts
-     * @var bool $addOnProduct
-     * @var bool $addOnLicense
-     * @var bool $addOnExpirationDateOverride
-     * @var bool $publisherIdentity
-     * @var bool $parent
-     * @var bool $machineType
-     * @var bool $vmDetails
-     * @var bool $vmInfo
-     * @var bool $vendorDictionary
-     * @var bool $deviceUser
-     * @var bool $addOnCreatedDate
-     * @var bool $addOnLastModifiedDate
-     * @var bool $updates
+     * @param bool $alias
+     * @param bool $description
+     * @param bool $status
+     * @param bool $servedStatus
+     * @param bool $hostTypeName
+     * @param bool $soldTo
+     * @param bool $channelPartners
+     * @param bool $preBuiltLicense
+     * @param bool $addOnActivationId
+     * @param bool $addOnCounts
+     * @param bool $addOnProduct
+     * @param bool $addOnLicense
+     * @param bool $addOnExpirationDateOverride
+     * @param bool $publisherIdentity
+     * @param bool $parent
+     * @param bool $machineType
+     * @param bool $vmDetails
+     * @param bool $vmInfo
+     * @param bool $vendorDictionary
+     * @param bool $deviceUser
+     * @param bool $addOnCreatedDate
+     * @param bool $addOnLastModifiedDate
+     * @param bool $updates
      */
     public function __construct(
         bool $alias = null,
@@ -200,29 +200,29 @@ class v2DeviceResponseConfigRequestType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var bool $alias
-     * @var bool $description
-     * @var bool $status
-     * @var bool $servedStatus
-     * @var bool $hostTypeName
-     * @var bool $soldTo
-     * @var bool $channelPartners
-     * @var bool $preBuiltLicense
-     * @var bool $addOnActivationId
-     * @var bool $addOnCounts
-     * @var bool $addOnProduct
-     * @var bool $addOnLicense
-     * @var bool $addOnExpirationDateOverride
-     * @var bool $publisherIdentity
-     * @var bool $parent
-     * @var bool $machineType
-     * @var bool $vmDetails
-     * @var bool $vmInfo
-     * @var bool $vendorDictionary
-     * @var bool $deviceUser
-     * @var bool $addOnCreatedDate
-     * @var bool $addOnLastModifiedDate
-     * @var bool $updates
+     * @param bool $alias
+     * @param bool $description
+     * @param bool $status
+     * @param bool $servedStatus
+     * @param bool $hostTypeName
+     * @param bool $soldTo
+     * @param bool $channelPartners
+     * @param bool $preBuiltLicense
+     * @param bool $addOnActivationId
+     * @param bool $addOnCounts
+     * @param bool $addOnProduct
+     * @param bool $addOnLicense
+     * @param bool $addOnExpirationDateOverride
+     * @param bool $publisherIdentity
+     * @param bool $parent
+     * @param bool $machineType
+     * @param bool $vmDetails
+     * @param bool $vmInfo
+     * @param bool $vendorDictionary
+     * @param bool $deviceUser
+     * @param bool $addOnCreatedDate
+     * @param bool $addOnLastModifiedDate
+     * @param bool $updates
      */
     public static function create(
         bool $alias = null,

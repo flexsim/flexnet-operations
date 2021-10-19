@@ -38,12 +38,12 @@ class CapabilityRequestType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var int $lastUpdateTime
-     * @var bool $force
-     * @var \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary $vendorDictionary
-     * @var \Flexsim\FlexnetOperations\Type\LinkLineItemDataType|array $lineItem
-     * @var bool $bufferLicense
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param int $lastUpdateTime
+     * @param bool $force
+     * @param \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary $vendorDictionary
+     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemDataType|array $lineItem
+     * @param bool $bufferLicense
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, int $lastUpdateTime = null, bool $force = null, \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary $vendorDictionary = null, $lineItem = null, bool $bufferLicense = null)
     {
@@ -58,12 +58,12 @@ class CapabilityRequestType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var int $lastUpdateTime
-     * @var bool $force
-     * @var \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary $vendorDictionary
-     * @var \Flexsim\FlexnetOperations\Type\LinkLineItemDataType|array $lineItem
-     * @var bool $bufferLicense
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param int $lastUpdateTime
+     * @param bool $force
+     * @param \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary $vendorDictionary
+     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemDataType|array $lineItem
+     * @param bool $bufferLicense
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, int $lastUpdateTime = null, bool $force = null, \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary $vendorDictionary = null, $lineItem = null, bool $bufferLicense = null)
     {

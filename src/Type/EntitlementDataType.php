@@ -18,8 +18,8 @@ class EntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType $simpleEntitlement
-     * @var \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType $bulkEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType $simpleEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType $bulkEntitlement
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType $simpleEntitlement = null, \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType $bulkEntitlement = null)
     {
@@ -30,8 +30,8 @@ class EntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType $simpleEntitlement
-     * @var \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType $bulkEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType $simpleEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType $bulkEntitlement
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType $simpleEntitlement = null, \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType $bulkEntitlement = null)
     {

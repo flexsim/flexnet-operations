@@ -128,30 +128,30 @@ class SearchDeviceResponseConfigType extends FlexnetType
     /**
      * Constructor
      *
-     * @var bool $name
-     * @var bool $description
-     * @var bool $status
-     * @var bool $servedStatus
-     * @var bool $hostTypeName
-     * @var bool $hosted
-     * @var bool $soldTo
-     * @var bool $hasLicense
-     * @var bool $bufferLicense
-     * @var bool $addOnLicense
-     * @var bool $publisherIdentity
-     * @var bool $parent
-     * @var bool $machineType
-     * @var bool $vmDetails
-     * @var bool $userInfo
-     * @var bool $lastRequestTime
-     * @var bool $lastSyncTime
-     * @var bool $addOnActivationId
-     * @var bool $addOnCounts
-     * @var bool $addOnProduct
-     * @var bool $addOnProductLine
-     * @var bool $addOnPartNumber
-     * @var bool $addOnEntitlementId
-     * @var bool $hasUpdates
+     * @param bool $name
+     * @param bool $description
+     * @param bool $status
+     * @param bool $servedStatus
+     * @param bool $hostTypeName
+     * @param bool $hosted
+     * @param bool $soldTo
+     * @param bool $hasLicense
+     * @param bool $bufferLicense
+     * @param bool $addOnLicense
+     * @param bool $publisherIdentity
+     * @param bool $parent
+     * @param bool $machineType
+     * @param bool $vmDetails
+     * @param bool $userInfo
+     * @param bool $lastRequestTime
+     * @param bool $lastSyncTime
+     * @param bool $addOnActivationId
+     * @param bool $addOnCounts
+     * @param bool $addOnProduct
+     * @param bool $addOnProductLine
+     * @param bool $addOnPartNumber
+     * @param bool $addOnEntitlementId
+     * @param bool $hasUpdates
      */
     public function __construct(bool $name = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $hosted = null, bool $soldTo = null, bool $hasLicense = null, bool $bufferLicense = null, bool $addOnLicense = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $userInfo = null, bool $lastRequestTime = null, bool $lastSyncTime = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnProductLine = null, bool $addOnPartNumber = null, bool $addOnEntitlementId = null, bool $hasUpdates = null)
     {
@@ -184,30 +184,30 @@ class SearchDeviceResponseConfigType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var bool $name
-     * @var bool $description
-     * @var bool $status
-     * @var bool $servedStatus
-     * @var bool $hostTypeName
-     * @var bool $hosted
-     * @var bool $soldTo
-     * @var bool $hasLicense
-     * @var bool $bufferLicense
-     * @var bool $addOnLicense
-     * @var bool $publisherIdentity
-     * @var bool $parent
-     * @var bool $machineType
-     * @var bool $vmDetails
-     * @var bool $userInfo
-     * @var bool $lastRequestTime
-     * @var bool $lastSyncTime
-     * @var bool $addOnActivationId
-     * @var bool $addOnCounts
-     * @var bool $addOnProduct
-     * @var bool $addOnProductLine
-     * @var bool $addOnPartNumber
-     * @var bool $addOnEntitlementId
-     * @var bool $hasUpdates
+     * @param bool $name
+     * @param bool $description
+     * @param bool $status
+     * @param bool $servedStatus
+     * @param bool $hostTypeName
+     * @param bool $hosted
+     * @param bool $soldTo
+     * @param bool $hasLicense
+     * @param bool $bufferLicense
+     * @param bool $addOnLicense
+     * @param bool $publisherIdentity
+     * @param bool $parent
+     * @param bool $machineType
+     * @param bool $vmDetails
+     * @param bool $userInfo
+     * @param bool $lastRequestTime
+     * @param bool $lastSyncTime
+     * @param bool $addOnActivationId
+     * @param bool $addOnCounts
+     * @param bool $addOnProduct
+     * @param bool $addOnProductLine
+     * @param bool $addOnPartNumber
+     * @param bool $addOnEntitlementId
+     * @param bool $hasUpdates
      */
     public static function create(bool $name = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $hosted = null, bool $soldTo = null, bool $hasLicense = null, bool $bufferLicense = null, bool $addOnLicense = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $userInfo = null, bool $lastRequestTime = null, bool $lastSyncTime = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnProductLine = null, bool $addOnPartNumber = null, bool $addOnEntitlementId = null, bool $hasUpdates = null)
     {

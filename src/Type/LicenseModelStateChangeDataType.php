@@ -18,8 +18,8 @@ class LicenseModelStateChangeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier, $stateChangeRecord = null)
     {
@@ -30,8 +30,8 @@ class LicenseModelStateChangeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
      */
     public static function create(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier, $stateChangeRecord = null)
     {

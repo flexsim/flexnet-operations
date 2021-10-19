@@ -20,8 +20,8 @@ class CreatePartNumberRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
-     * @var bool $processSync
+     * @param \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
+     * @param bool $processSync
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber, bool $processSync = null)
     {
@@ -32,8 +32,8 @@ class CreatePartNumberRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
-     * @var bool $processSync
+     * @param \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
+     * @param bool $processSync
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber, bool $processSync = null)
     {

@@ -13,7 +13,7 @@ class AcctTypeList extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $acctType
+     * @param string $acctType
      */
     public function __construct(string $acctType)
     {
@@ -23,7 +23,7 @@ class AcctTypeList extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $acctType
+     * @param string $acctType
      */
     public static function create(string $acctType)
     {

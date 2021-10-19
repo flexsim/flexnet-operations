@@ -20,8 +20,8 @@ class GetUsersForProductCategoryResponseType extends FlexnetType implements Resu
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType $userData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType $userData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType $userData = null)
     {
@@ -32,8 +32,8 @@ class GetUsersForProductCategoryResponseType extends FlexnetType implements Resu
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType $userData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType $userData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType $userData = null)
     {

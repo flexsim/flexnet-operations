@@ -18,8 +18,8 @@ class ProductStateChangeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, $stateChangeRecord = null)
     {
@@ -30,8 +30,8 @@ class ProductStateChangeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, $stateChangeRecord = null)
     {

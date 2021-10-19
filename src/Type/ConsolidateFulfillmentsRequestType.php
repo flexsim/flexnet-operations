@@ -15,7 +15,7 @@ class ConsolidateFulfillmentsRequestType extends FlexnetType implements RequestI
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $fulfillments
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $fulfillments
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $fulfillments)
     {
@@ -25,7 +25,7 @@ class ConsolidateFulfillmentsRequestType extends FlexnetType implements RequestI
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $fulfillments
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $fulfillments
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $fulfillments)
     {

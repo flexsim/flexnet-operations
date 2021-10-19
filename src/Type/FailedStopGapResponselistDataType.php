@@ -13,7 +13,7 @@ class FailedStopGapResponselistDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedStopGapResponseDataType|array $failedFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FailedStopGapResponseDataType|array $failedFulfillment
      */
     public function __construct($failedFulfillment = null)
     {
@@ -23,7 +23,7 @@ class FailedStopGapResponselistDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedStopGapResponseDataType|array $failedFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FailedStopGapResponseDataType|array $failedFulfillment
      */
     public static function create($failedFulfillment = null)
     {

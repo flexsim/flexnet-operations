@@ -18,8 +18,8 @@ class AdvancedFmtLCResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var int $recordRefNo
-     * @var \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo
+     * @param int $recordRefNo
+     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo
      */
     public function __construct(int $recordRefNo, \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo)
     {
@@ -30,8 +30,8 @@ class AdvancedFmtLCResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var int $recordRefNo
-     * @var \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo
+     * @param int $recordRefNo
+     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo
      */
     public static function create(int $recordRefNo, \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo)
     {

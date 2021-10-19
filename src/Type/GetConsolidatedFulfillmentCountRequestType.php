@@ -15,7 +15,7 @@ class GetConsolidatedFulfillmentCountRequestType extends FlexnetType implements 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams = null)
     {
@@ -26,7 +26,7 @@ class GetConsolidatedFulfillmentCountRequestType extends FlexnetType implements 
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams = null)
     {

@@ -13,7 +13,7 @@ class FailedSplitLineItemListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType|array $failedLineItem
+     * @param \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType|array $failedLineItem
      */
     public function __construct($failedLineItem)
     {
@@ -23,7 +23,7 @@ class FailedSplitLineItemListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType|array $failedLineItem
+     * @param \Flexsim\FlexnetOperations\Type\FailedSplitLineItemDataType|array $failedLineItem
      */
     public static function create($failedLineItem)
     {

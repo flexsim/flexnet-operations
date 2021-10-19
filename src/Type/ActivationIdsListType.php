@@ -13,7 +13,7 @@ class ActivationIdsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string|array $activationId
+     * @param string|array $activationId
      */
     public function __construct($activationId)
     {
@@ -23,7 +23,7 @@ class ActivationIdsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string|array $activationId
+     * @param string|array $activationId
      */
     public static function create($activationId)
     {

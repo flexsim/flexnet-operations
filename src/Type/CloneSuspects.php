@@ -13,7 +13,7 @@ class CloneSuspects extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CloneSuspect $cloneSuspect
+     * @param \Flexsim\FlexnetOperations\Type\CloneSuspect $cloneSuspect
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CloneSuspect $cloneSuspect)
     {
@@ -23,7 +23,7 @@ class CloneSuspects extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CloneSuspect $cloneSuspect
+     * @param \Flexsim\FlexnetOperations\Type\CloneSuspect $cloneSuspect
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CloneSuspect $cloneSuspect)
     {

@@ -18,8 +18,8 @@ class UpdateFeatureBundlesListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
+     * @param string $opType
      */
     public function __construct($featureBundle, string $opType)
     {
@@ -30,8 +30,8 @@ class UpdateFeatureBundlesListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
+     * @param string $opType
      */
     public static function create($featureBundle, string $opType)
     {

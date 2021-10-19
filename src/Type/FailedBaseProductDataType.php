@@ -18,8 +18,8 @@ class FailedBaseProductDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var string $reason
+     * @param string $uniqueId
+     * @param string $reason
      */
     public function __construct(string $uniqueId = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedBaseProductDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var string $reason
+     * @param string $uniqueId
+     * @param string $reason
      */
     public static function create(string $uniqueId = null, string $reason = null)
     {

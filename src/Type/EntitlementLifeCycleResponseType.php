@@ -25,9 +25,9 @@ class EntitlementLifeCycleResponseType extends FlexnetType implements ResultInte
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedEntitlementLifeCycleDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedEntitlementLifeCycleDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataListType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedEntitlementLifeCycleDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataListType $responseData = null)
     {
@@ -39,9 +39,9 @@ class EntitlementLifeCycleResponseType extends FlexnetType implements ResultInte
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedEntitlementLifeCycleDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedEntitlementLifeCycleDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataListType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedEntitlementLifeCycleDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedEntitlementLifeCycleDataListType $responseData = null)
     {

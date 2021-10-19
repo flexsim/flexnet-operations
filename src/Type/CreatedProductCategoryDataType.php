@@ -18,8 +18,8 @@ class CreatedProductCategoryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $recordRefNo
-     * @var string $uniqueId
+     * @param string $recordRefNo
+     * @param string $uniqueId
      */
     public function __construct(string $recordRefNo, string $uniqueId)
     {
@@ -30,8 +30,8 @@ class CreatedProductCategoryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $recordRefNo
-     * @var string $uniqueId
+     * @param string $recordRefNo
+     * @param string $uniqueId
      */
     public static function create(string $recordRefNo, string $uniqueId)
     {

@@ -43,12 +43,12 @@ class TransferEntitlementInfoType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @var string $accountTo this method is backwards compatible so your may also pass $organizationTo
-     * @var bool $retainExistingIds
-     * @var bool $returnActiveFulfillments
-     * @var bool $forceTransferEvenIfNoTargetUsers
-     * @var bool $forceTransferEvenIfParentAndChildSeparated
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param string $accountTo this method is backwards compatible so your may also pass $organizationTo
+     * @param bool $retainExistingIds
+     * @param bool $returnActiveFulfillments
+     * @param bool $forceTransferEvenIfNoTargetUsers
+     * @param bool $forceTransferEvenIfParentAndChildSeparated
      */
     public function __construct(
         \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier,
@@ -70,12 +70,12 @@ class TransferEntitlementInfoType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @var string $accountTo this method is backwards compatible so your may also pass $organizationTo
-     * @var bool $retainExistingIds
-     * @var bool $returnActiveFulfillments
-     * @var bool $forceTransferEvenIfNoTargetUsers
-     * @var bool $forceTransferEvenIfParentAndChildSeparated
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param string $accountTo this method is backwards compatible so your may also pass $organizationTo
+     * @param bool $retainExistingIds
+     * @param bool $returnActiveFulfillments
+     * @param bool $forceTransferEvenIfNoTargetUsers
+     * @param bool $forceTransferEvenIfParentAndChildSeparated
      */
     public static function create(
         \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier,

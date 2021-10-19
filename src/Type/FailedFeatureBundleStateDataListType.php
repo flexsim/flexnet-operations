@@ -13,7 +13,7 @@ class FailedFeatureBundleStateDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedFeatureBundleStateDataType|array $failedFeatureBundle
+     * @param \Flexsim\FlexnetOperations\Type\FailedFeatureBundleStateDataType|array $failedFeatureBundle
      */
     public function __construct($failedFeatureBundle = null)
     {
@@ -23,7 +23,7 @@ class FailedFeatureBundleStateDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedFeatureBundleStateDataType|array $failedFeatureBundle
+     * @param \Flexsim\FlexnetOperations\Type\FailedFeatureBundleStateDataType|array $failedFeatureBundle
      */
     public static function create($failedFeatureBundle = null)
     {

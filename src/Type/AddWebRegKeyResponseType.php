@@ -25,9 +25,9 @@ class AddWebRegKeyResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\WebRegKeyDataListType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\WebRegKeyDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataListType $failedData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\WebRegKeyDataListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataListType $failedData = null)
     {
@@ -39,9 +39,9 @@ class AddWebRegKeyResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\WebRegKeyDataListType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\WebRegKeyDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataListType $failedData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\WebRegKeyDataListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedAddWebRegKeyDataListType $failedData = null)
     {

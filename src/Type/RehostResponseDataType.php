@@ -13,7 +13,7 @@ class RehostResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\RehostFulfillmentResponseDataType|array $fulfillmentData
+     * @param \Flexsim\FlexnetOperations\Type\RehostFulfillmentResponseDataType|array $fulfillmentData
      */
     public function __construct($fulfillmentData = null)
     {
@@ -23,7 +23,7 @@ class RehostResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\RehostFulfillmentResponseDataType|array $fulfillmentData
+     * @param \Flexsim\FlexnetOperations\Type\RehostFulfillmentResponseDataType|array $fulfillmentData
      */
     public static function create($fulfillmentData = null)
     {

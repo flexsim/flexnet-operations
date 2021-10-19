@@ -25,9 +25,9 @@ class GenerateCapabilityResponseResponseType extends FlexnetType implements Resu
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedGenerateCapabilityResponseDataType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedGenerateCapabilityResponseDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDataType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedGenerateCapabilityResponseDataType $failedData = null, \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDataType $responseData = null)
     {
@@ -39,9 +39,9 @@ class GenerateCapabilityResponseResponseType extends FlexnetType implements Resu
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedGenerateCapabilityResponseDataType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedGenerateCapabilityResponseDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDataType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedGenerateCapabilityResponseDataType $failedData = null, \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDataType $responseData = null)
     {

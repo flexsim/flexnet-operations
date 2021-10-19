@@ -20,8 +20,8 @@ class SearchActivatableItemResponseType extends FlexnetType implements ResultInt
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\ActivatableItemDetailType|array $activatableItem
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\ActivatableItemDetailType|array $activatableItem
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $activatableItem = null)
     {
@@ -32,8 +32,8 @@ class SearchActivatableItemResponseType extends FlexnetType implements ResultInt
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\ActivatableItemDetailType|array $activatableItem
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\ActivatableItemDetailType|array $activatableItem
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $activatableItem = null)
     {

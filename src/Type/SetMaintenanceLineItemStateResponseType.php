@@ -20,8 +20,8 @@ class SetMaintenanceLineItemStateResponseType extends FlexnetType implements Res
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedMaintenanceLineItemStateDataListType $failedMaintenanceData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedMaintenanceLineItemStateDataListType $failedMaintenanceData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedMaintenanceLineItemStateDataListType $failedMaintenanceData = null)
     {
@@ -32,8 +32,8 @@ class SetMaintenanceLineItemStateResponseType extends FlexnetType implements Res
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedMaintenanceLineItemStateDataListType $failedMaintenanceData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedMaintenanceLineItemStateDataListType $failedMaintenanceData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedMaintenanceLineItemStateDataListType $failedMaintenanceData = null)
     {

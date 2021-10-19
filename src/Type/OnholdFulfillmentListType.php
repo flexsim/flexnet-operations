@@ -13,7 +13,7 @@ class OnholdFulfillmentListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array $onholdFmtLicenseData
+     * @param \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array $onholdFmtLicenseData
      */
     public function __construct($onholdFmtLicenseData)
     {
@@ -23,7 +23,7 @@ class OnholdFulfillmentListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array $onholdFmtLicenseData
+     * @param \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array $onholdFmtLicenseData
      */
     public static function create($onholdFmtLicenseData)
     {

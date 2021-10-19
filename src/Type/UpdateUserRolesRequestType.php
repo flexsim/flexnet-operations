@@ -15,7 +15,7 @@ class UpdateUserRolesRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType $userData
+     * @param \Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType $userData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType $userData)
     {
@@ -25,7 +25,7 @@ class UpdateUserRolesRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType $userData
+     * @param \Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType $userData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType $userData)
     {

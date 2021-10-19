@@ -13,7 +13,7 @@ class ConsolidatedLicenseIdListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string|array $consolidatedLicenseId
+     * @param string|array $consolidatedLicenseId
      */
     public function __construct($consolidatedLicenseId)
     {
@@ -23,7 +23,7 @@ class ConsolidatedLicenseIdListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string|array $consolidatedLicenseId
+     * @param string|array $consolidatedLicenseId
      */
     public static function create($consolidatedLicenseId)
     {

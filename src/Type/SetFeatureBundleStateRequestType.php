@@ -15,7 +15,7 @@ class SetFeatureBundleStateRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle)
     {
@@ -25,7 +25,7 @@ class SetFeatureBundleStateRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle)
     {

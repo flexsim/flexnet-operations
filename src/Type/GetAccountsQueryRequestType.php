@@ -25,9 +25,9 @@ class GetAccountsQueryRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams = null, int $pageNumber, int $batchSize)
     {
@@ -40,9 +40,9 @@ class GetAccountsQueryRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public static function create(\Flexsim\FlexnetOperations\Type\AccountQueryParametersType $queryParams = null, int $pageNumber, int $batchSize)
     {

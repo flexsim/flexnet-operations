@@ -18,8 +18,8 @@ class FailedOrgDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationBasicDataType $organization
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationBasicDataType $organization
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationBasicDataType $organization = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedOrgDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationBasicDataType $organization
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationBasicDataType $organization
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OrganizationBasicDataType $organization = null, string $reason = null)
     {

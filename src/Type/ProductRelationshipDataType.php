@@ -23,9 +23,9 @@ class ProductRelationshipDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productToRelate
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $relatedProduct
-     * @var string $relation
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productToRelate
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $relatedProduct
+     * @param string $relation
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productToRelate, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $relatedProduct, string $relation)
     {
@@ -37,9 +37,9 @@ class ProductRelationshipDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productToRelate
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $relatedProduct
-     * @var string $relation
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productToRelate
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $relatedProduct
+     * @param string $relation
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productToRelate, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $relatedProduct, string $relation)
     {

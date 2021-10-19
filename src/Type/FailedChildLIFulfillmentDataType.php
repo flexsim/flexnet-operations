@@ -18,8 +18,8 @@ class FailedChildLIFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedChildLIFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment, string $reason)
     {

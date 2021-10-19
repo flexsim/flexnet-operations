@@ -15,7 +15,7 @@ class DeleteWebRegKeyRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\WebRegKeysListType $webRegKeyList
+     * @param \Flexsim\FlexnetOperations\Type\WebRegKeysListType $webRegKeyList
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\WebRegKeysListType $webRegKeyList)
     {
@@ -25,7 +25,7 @@ class DeleteWebRegKeyRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\WebRegKeysListType $webRegKeyList
+     * @param \Flexsim\FlexnetOperations\Type\WebRegKeysListType $webRegKeyList
      */
     public static function create(\Flexsim\FlexnetOperations\Type\WebRegKeysListType $webRegKeyList)
     {

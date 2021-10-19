@@ -13,7 +13,7 @@ class FailedLinkMaintenanceLineItemListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemDataType|array $failedLinkMaintenanceLineItem
+     * @param \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemDataType|array $failedLinkMaintenanceLineItem
      */
     public function __construct($failedLinkMaintenanceLineItem = null)
     {
@@ -23,7 +23,7 @@ class FailedLinkMaintenanceLineItemListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemDataType|array $failedLinkMaintenanceLineItem
+     * @param \Flexsim\FlexnetOperations\Type\FailedLinkMaintenanceLineItemDataType|array $failedLinkMaintenanceLineItem
      */
     public static function create($failedLinkMaintenanceLineItem = null)
     {

@@ -18,8 +18,8 @@ class TransferredEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\TransferredLineItemMapType|array $lineItemIdentifierMap
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\TransferredLineItemMapType|array $lineItemIdentifierMap
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, $lineItemIdentifierMap = null)
     {
@@ -30,8 +30,8 @@ class TransferredEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\TransferredLineItemMapType|array $lineItemIdentifierMap
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\TransferredLineItemMapType|array $lineItemIdentifierMap
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, $lineItemIdentifierMap = null)
     {

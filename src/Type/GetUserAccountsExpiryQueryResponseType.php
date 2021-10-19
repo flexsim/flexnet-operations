@@ -20,8 +20,8 @@ class GetUserAccountsExpiryQueryResponseType extends FlexnetType implements Resu
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\GetUserAccountsExpiryQueryResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetUserAccountsExpiryQueryResponseDataType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetUserAccountsExpiryQueryResponseDataType $responseData = null)
     {
@@ -32,8 +32,8 @@ class GetUserAccountsExpiryQueryResponseType extends FlexnetType implements Resu
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\GetUserAccountsExpiryQueryResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetUserAccountsExpiryQueryResponseDataType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetUserAccountsExpiryQueryResponseDataType $responseData = null)
     {

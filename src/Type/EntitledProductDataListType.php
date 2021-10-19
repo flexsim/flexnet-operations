@@ -13,7 +13,7 @@ class EntitledProductDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProduct
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProduct
      */
     public function __construct($entitledProduct = null)
     {
@@ -23,7 +23,7 @@ class EntitledProductDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProduct
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProduct
      */
     public static function create($entitledProduct = null)
     {

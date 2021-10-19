@@ -18,8 +18,8 @@ class RelateOrganizationsDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationToRelate
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationToRelate
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationToRelate, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization)
     {
@@ -30,8 +30,8 @@ class RelateOrganizationsDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationToRelate
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationToRelate
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationToRelate, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization)
     {

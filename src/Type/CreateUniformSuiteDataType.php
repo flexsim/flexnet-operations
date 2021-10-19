@@ -98,24 +98,24 @@ class CreateUniformSuiteDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $suiteName
-     * @var string $version
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @var \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType $licenseGenerator
-     * @var \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType $packageProperties
-     * @var \Flexsim\FlexnetOperations\Type\ProductsListType $products
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelsListType $licenseModels
-     * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $trustedKey
-     * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $virtualTrustedKey
-     * @var \Flexsim\FlexnetOperations\Type\PartNumbersListType $partNumbers
-     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
-     * @var \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
-     * @var bool $usedOnDevice
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @var bool $allowDownloadObsoleteFrInAdmin
-     * @var bool $allowDownloadObsoleteFrInPortal
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $productAttributes
+     * @param string $suiteName
+     * @param string $version
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType $licenseGenerator
+     * @param \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType $packageProperties
+     * @param \Flexsim\FlexnetOperations\Type\ProductsListType $products
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelsListType $licenseModels
+     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $trustedKey
+     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $virtualTrustedKey
+     * @param \Flexsim\FlexnetOperations\Type\PartNumbersListType $partNumbers
+     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
+     * @param bool $usedOnDevice
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param bool $allowDownloadObsoleteFrInAdmin
+     * @param bool $allowDownloadObsoleteFrInPortal
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $productAttributes
      */
     public function __construct(string $suiteName, string $version = null, string $description = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType $packageProperties = null, \Flexsim\FlexnetOperations\Type\ProductsListType $products = null, \Flexsim\FlexnetOperations\Type\LicenseModelsListType $licenseModels = null, \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $trustedKey = null, \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, \Flexsim\FlexnetOperations\Type\PartNumbersListType $partNumbers = null, \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType = null, \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes = null, bool $usedOnDevice = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, bool $allowDownloadObsoleteFrInAdmin = null, bool $allowDownloadObsoleteFrInPortal = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $productAttributes = null)
     {
@@ -142,24 +142,24 @@ class CreateUniformSuiteDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $suiteName
-     * @var string $version
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @var \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType $licenseGenerator
-     * @var \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType $packageProperties
-     * @var \Flexsim\FlexnetOperations\Type\ProductsListType $products
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelsListType $licenseModels
-     * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $trustedKey
-     * @var \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $virtualTrustedKey
-     * @var \Flexsim\FlexnetOperations\Type\PartNumbersListType $partNumbers
-     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
-     * @var \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
-     * @var bool $usedOnDevice
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @var bool $allowDownloadObsoleteFrInAdmin
-     * @var bool $allowDownloadObsoleteFrInPortal
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $productAttributes
+     * @param string $suiteName
+     * @param string $version
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType $licenseGenerator
+     * @param \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType $packageProperties
+     * @param \Flexsim\FlexnetOperations\Type\ProductsListType $products
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelsListType $licenseModels
+     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $trustedKey
+     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $virtualTrustedKey
+     * @param \Flexsim\FlexnetOperations\Type\PartNumbersListType $partNumbers
+     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
+     * @param bool $usedOnDevice
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param bool $allowDownloadObsoleteFrInAdmin
+     * @param bool $allowDownloadObsoleteFrInPortal
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $productAttributes
      */
     public static function create(string $suiteName, string $version = null, string $description = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType $packageProperties = null, \Flexsim\FlexnetOperations\Type\ProductsListType $products = null, \Flexsim\FlexnetOperations\Type\LicenseModelsListType $licenseModels = null, \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $trustedKey = null, \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, \Flexsim\FlexnetOperations\Type\PartNumbersListType $partNumbers = null, \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType = null, \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes = null, bool $usedOnDevice = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, bool $allowDownloadObsoleteFrInAdmin = null, bool $allowDownloadObsoleteFrInPortal = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $productAttributes = null)
     {

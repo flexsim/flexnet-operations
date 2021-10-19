@@ -15,7 +15,7 @@ class UpdateDomainUserRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user
+     * @param \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user)
     {
@@ -25,7 +25,7 @@ class UpdateDomainUserRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user
+     * @param \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user)
     {

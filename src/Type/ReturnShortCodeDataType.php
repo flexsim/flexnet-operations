@@ -28,10 +28,10 @@ class ReturnShortCodeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $shortCode
-     * @var string $webRegKey
-     * @var \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
-     * @var bool $overridePolicy
+     * @param string $shortCode
+     * @param string $webRegKey
+     * @param \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
+     * @param bool $overridePolicy
      */
     public function __construct(string $shortCode, string $webRegKey, \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null)
     {
@@ -44,10 +44,10 @@ class ReturnShortCodeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $shortCode
-     * @var string $webRegKey
-     * @var \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
-     * @var bool $overridePolicy
+     * @param string $shortCode
+     * @param string $webRegKey
+     * @param \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
+     * @param bool $overridePolicy
      */
     public static function create(string $shortCode, string $webRegKey, \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null)
     {

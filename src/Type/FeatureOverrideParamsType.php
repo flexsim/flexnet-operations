@@ -28,10 +28,10 @@ class FeatureOverrideParamsType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $vendorString
-     * @var string $notice
-     * @var string $serialNumber
-     * @var \Flexsim\FlexnetOperations\Type\DupGroupDataType $dupGroup
+     * @param string $vendorString
+     * @param string $notice
+     * @param string $serialNumber
+     * @param \Flexsim\FlexnetOperations\Type\DupGroupDataType $dupGroup
      */
     public function __construct(string $vendorString = null, string $notice = null, string $serialNumber = null, \Flexsim\FlexnetOperations\Type\DupGroupDataType $dupGroup = null)
     {
@@ -44,10 +44,10 @@ class FeatureOverrideParamsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $vendorString
-     * @var string $notice
-     * @var string $serialNumber
-     * @var \Flexsim\FlexnetOperations\Type\DupGroupDataType $dupGroup
+     * @param string $vendorString
+     * @param string $notice
+     * @param string $serialNumber
+     * @param \Flexsim\FlexnetOperations\Type\DupGroupDataType $dupGroup
      */
     public static function create(string $vendorString = null, string $notice = null, string $serialNumber = null, \Flexsim\FlexnetOperations\Type\DupGroupDataType $dupGroup = null)
     {

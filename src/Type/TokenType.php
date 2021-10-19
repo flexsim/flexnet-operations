@@ -20,8 +20,8 @@ class TokenType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\IdentityType $identity
-     * @var string $token
+     * @param \Flexsim\FlexnetOperations\Type\IdentityType $identity
+     * @param string $token
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\IdentityType $identity = null, string $token)
     {
@@ -32,8 +32,8 @@ class TokenType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\IdentityType $identity
-     * @var string $token
+     * @param \Flexsim\FlexnetOperations\Type\IdentityType $identity
+     * @param string $token
      */
     public static function create(\Flexsim\FlexnetOperations\Type\IdentityType $identity = null, string $token)
     {

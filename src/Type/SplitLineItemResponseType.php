@@ -25,9 +25,9 @@ class SplitLineItemResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemResponseListType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedSplitLineItemListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemResponseListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedSplitLineItemListType $failedData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\SplitLineItemResponseListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedSplitLineItemListType $failedData = null)
     {
@@ -39,9 +39,9 @@ class SplitLineItemResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemResponseListType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedSplitLineItemListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemResponseListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedSplitLineItemListType $failedData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\SplitLineItemResponseListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedSplitLineItemListType $failedData = null)
     {

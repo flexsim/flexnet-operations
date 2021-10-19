@@ -23,9 +23,9 @@ class FeatureIds extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $featureId
-     * @var string $featureName
-     * @var int $count
+     * @param string $featureId
+     * @param string $featureName
+     * @param int $count
      */
     public function __construct(string $featureId, string $featureName, int $count)
     {
@@ -37,9 +37,9 @@ class FeatureIds extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $featureId
-     * @var string $featureName
-     * @var int $count
+     * @param string $featureId
+     * @param string $featureName
+     * @param int $count
      */
     public static function create(string $featureId, string $featureName, int $count)
     {

@@ -13,7 +13,7 @@ class FailedRenewEntitlementDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataType|array $failedEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataType|array $failedEntitlement
      */
     public function __construct($failedEntitlement = null)
     {
@@ -23,7 +23,7 @@ class FailedRenewEntitlementDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataType|array $failedEntitlement
+     * @param \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataType|array $failedEntitlement
      */
     public static function create($failedEntitlement = null)
     {

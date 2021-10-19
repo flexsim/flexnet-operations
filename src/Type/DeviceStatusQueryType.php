@@ -18,8 +18,8 @@ class DeviceStatusQueryType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $value
-     * @var string $searchType
+     * @param string $value
+     * @param string $searchType
      */
     public function __construct(string $value, string $searchType)
     {
@@ -30,8 +30,8 @@ class DeviceStatusQueryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $value
-     * @var string $searchType
+     * @param string $value
+     * @param string $searchType
      */
     public static function create(string $value, string $searchType)
     {

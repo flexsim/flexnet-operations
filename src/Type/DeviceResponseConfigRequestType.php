@@ -118,28 +118,28 @@ class DeviceResponseConfigRequestType extends FlexnetType
     /**
      * Constructor
      *
-     * @var bool $alias
-     * @var bool $description
-     * @var bool $status
-     * @var bool $servedStatus
-     * @var bool $hostTypeName
-     * @var bool $soldTo
-     * @var bool $channelPartners
-     * @var bool $preBuiltProduct
-     * @var bool $preBuiltLicense
-     * @var bool $addOnActivationId
-     * @var bool $addOnCounts
-     * @var bool $addOnProduct
-     * @var bool $addOnLicense
-     * @var bool $features
-     * @var \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
-     * @var bool $publisherIdentity
-     * @var bool $parent
-     * @var bool $machineType
-     * @var bool $vmDetails
-     * @var bool $vmInfo
-     * @var bool $vendorDictionary
-     * @var bool $deviceUser
+     * @param bool $alias
+     * @param bool $description
+     * @param bool $status
+     * @param bool $servedStatus
+     * @param bool $hostTypeName
+     * @param bool $soldTo
+     * @param bool $channelPartners
+     * @param bool $preBuiltProduct
+     * @param bool $preBuiltLicense
+     * @param bool $addOnActivationId
+     * @param bool $addOnCounts
+     * @param bool $addOnProduct
+     * @param bool $addOnLicense
+     * @param bool $features
+     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
+     * @param bool $publisherIdentity
+     * @param bool $parent
+     * @param bool $machineType
+     * @param bool $vmDetails
+     * @param bool $vmInfo
+     * @param bool $vendorDictionary
+     * @param bool $deviceUser
      */
     public function __construct(bool $alias = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $soldTo = null, bool $channelPartners = null, bool $preBuiltProduct = null, bool $preBuiltLicense = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnLicense = null, bool $features = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null, bool $deviceUser = null)
     {
@@ -170,28 +170,28 @@ class DeviceResponseConfigRequestType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var bool $alias
-     * @var bool $description
-     * @var bool $status
-     * @var bool $servedStatus
-     * @var bool $hostTypeName
-     * @var bool $soldTo
-     * @var bool $channelPartners
-     * @var bool $preBuiltProduct
-     * @var bool $preBuiltLicense
-     * @var bool $addOnActivationId
-     * @var bool $addOnCounts
-     * @var bool $addOnProduct
-     * @var bool $addOnLicense
-     * @var bool $features
-     * @var \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
-     * @var bool $publisherIdentity
-     * @var bool $parent
-     * @var bool $machineType
-     * @var bool $vmDetails
-     * @var bool $vmInfo
-     * @var bool $vendorDictionary
-     * @var bool $deviceUser
+     * @param bool $alias
+     * @param bool $description
+     * @param bool $status
+     * @param bool $servedStatus
+     * @param bool $hostTypeName
+     * @param bool $soldTo
+     * @param bool $channelPartners
+     * @param bool $preBuiltProduct
+     * @param bool $preBuiltLicense
+     * @param bool $addOnActivationId
+     * @param bool $addOnCounts
+     * @param bool $addOnProduct
+     * @param bool $addOnLicense
+     * @param bool $features
+     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
+     * @param bool $publisherIdentity
+     * @param bool $parent
+     * @param bool $machineType
+     * @param bool $vmDetails
+     * @param bool $vmInfo
+     * @param bool $vendorDictionary
+     * @param bool $deviceUser
      */
     public static function create(bool $alias = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $soldTo = null, bool $channelPartners = null, bool $preBuiltProduct = null, bool $preBuiltLicense = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnLicense = null, bool $features = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null, bool $deviceUser = null)
     {

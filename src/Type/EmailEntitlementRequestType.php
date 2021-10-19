@@ -35,11 +35,11 @@ class EmailEntitlementRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @var bool $ignoreExistingEmailList
-     * @var bool $validateEmailAddresses
-     * @var \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
-     * @var string $locale
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param bool $ignoreExistingEmailList
+     * @param bool $validateEmailAddresses
+     * @param \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
+     * @param string $locale
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList = null, string $locale = null)
     {
@@ -53,11 +53,11 @@ class EmailEntitlementRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @var bool $ignoreExistingEmailList
-     * @var bool $validateEmailAddresses
-     * @var \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
-     * @var string $locale
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param bool $ignoreExistingEmailList
+     * @param bool $validateEmailAddresses
+     * @param \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
+     * @param string $locale
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList = null, string $locale = null)
     {

@@ -13,7 +13,7 @@ class GroupMaskDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string|array $option
+     * @param string|array $option
      */
     public function __construct($option = null)
     {
@@ -23,7 +23,7 @@ class GroupMaskDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string|array $option
+     * @param string|array $option
      */
     public static function create($option = null)
     {

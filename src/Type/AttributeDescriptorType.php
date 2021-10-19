@@ -38,12 +38,12 @@ class AttributeDescriptorType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $attributeName
-     * @var string $stringValue
-     * @var \DateTimeInterface $dateValue
-     * @var bool $booleanValue
-     * @var int $integerValue
-     * @var string|array $arrayValue
+     * @param string $attributeName
+     * @param string $stringValue
+     * @param \DateTimeInterface $dateValue
+     * @param bool $booleanValue
+     * @param int $integerValue
+     * @param string|array $arrayValue
      */
     public function __construct(string $attributeName, string $stringValue = null, \DateTimeInterface $dateValue = null, bool $booleanValue = null, int $integerValue = null, $arrayValue = null)
     {
@@ -58,12 +58,12 @@ class AttributeDescriptorType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $attributeName
-     * @var string $stringValue
-     * @var \DateTimeInterface $dateValue
-     * @var bool $booleanValue
-     * @var int $integerValue
-     * @var string|array $arrayValue
+     * @param string $attributeName
+     * @param string $stringValue
+     * @param \DateTimeInterface $dateValue
+     * @param bool $booleanValue
+     * @param int $integerValue
+     * @param string|array $arrayValue
      */
     public static function create(string $attributeName, string $stringValue = null, \DateTimeInterface $dateValue = null, bool $booleanValue = null, int $integerValue = null, $arrayValue = null)
     {

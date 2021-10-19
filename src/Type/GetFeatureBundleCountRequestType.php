@@ -15,7 +15,7 @@ class GetFeatureBundleCountRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = null)
     {
@@ -26,7 +26,7 @@ class GetFeatureBundleCountRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = null)
     {

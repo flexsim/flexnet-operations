@@ -13,7 +13,7 @@ class GetMatchingBulkEntsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType|array $bulkEntInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType|array $bulkEntInfo
      */
     public function __construct($bulkEntInfo)
     {
@@ -23,7 +23,7 @@ class GetMatchingBulkEntsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType|array $bulkEntInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType|array $bulkEntInfo
      */
     public static function create($bulkEntInfo)
     {

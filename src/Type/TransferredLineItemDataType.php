@@ -18,8 +18,8 @@ class TransferredLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $transferredFromId
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $transferredFromId
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $transferredFromId)
     {
@@ -30,8 +30,8 @@ class TransferredLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $transferredFromId
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $transferredFromId
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $transferredFromId)
     {

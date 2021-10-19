@@ -15,7 +15,7 @@ class GetPartNumberCountRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams = null)
     {
@@ -26,7 +26,7 @@ class GetPartNumberCountRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams
      */
     public static function create(\Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams = null)
     {

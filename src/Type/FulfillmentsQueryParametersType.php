@@ -103,25 +103,25 @@ class FulfillmentsQueryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $product
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $nodeLockHostId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $fulfillDate
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $fulfillDateTime
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
-     * @var \Flexsim\FlexnetOperations\Type\StateQueryType $state
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
-     * @var string $userId
-     * @var string $fulfillmentSource
-     * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
-     * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customHostAttributes
-     * @var string $activationType
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $product
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $nodeLockHostId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $fulfillDate
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $fulfillDateTime
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
+     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
+     * @param string $userId
+     * @param string $fulfillmentSource
+     * @param \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customHostAttributes
+     * @param string $activationType
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $product = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $nodeLockHostId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null, \Flexsim\FlexnetOperations\Type\DateQueryType $fulfillDate = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $fulfillDateTime = null, \Flexsim\FlexnetOperations\Type\DateQueryType $startDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology = null, string $userId = null, string $fulfillmentSource = null, \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customHostAttributes = null, string $activationType = null)
     {
@@ -149,25 +149,25 @@ class FulfillmentsQueryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $product
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $nodeLockHostId
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $fulfillDate
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $fulfillDateTime
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
-     * @var \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
-     * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
-     * @var \Flexsim\FlexnetOperations\Type\StateQueryType $state
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
-     * @var string $userId
-     * @var string $fulfillmentSource
-     * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
-     * @var \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customHostAttributes
-     * @var string $activationType
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $product
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $nodeLockHostId
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $fulfillDate
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $fulfillDateTime
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
+     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
+     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
+     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
+     * @param string $userId
+     * @param string $fulfillmentSource
+     * @param \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
+     * @param \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customHostAttributes
+     * @param string $activationType
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $product = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $nodeLockHostId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null, \Flexsim\FlexnetOperations\Type\DateQueryType $fulfillDate = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $fulfillDateTime = null, \Flexsim\FlexnetOperations\Type\DateQueryType $startDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology = null, string $userId = null, string $fulfillmentSource = null, \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customHostAttributes = null, string $activationType = null)
     {

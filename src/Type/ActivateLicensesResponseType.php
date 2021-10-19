@@ -25,9 +25,9 @@ class ActivateLicensesResponseType extends FlexnetType implements ResultInterfac
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedLineItem $failedData
-     * @var string $resultData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedLineItem $failedData
+     * @param string $resultData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedLineItem $failedData = null, string $resultData = null)
     {
@@ -39,9 +39,9 @@ class ActivateLicensesResponseType extends FlexnetType implements ResultInterfac
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedLineItem $failedData
-     * @var string $resultData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedLineItem $failedData
+     * @param string $resultData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedLineItem $failedData = null, string $resultData = null)
     {

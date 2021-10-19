@@ -18,8 +18,8 @@ class DeleteAddonLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem)
     {
@@ -30,8 +30,8 @@ class DeleteAddonLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem)
     {

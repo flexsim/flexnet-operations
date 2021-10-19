@@ -18,8 +18,8 @@ class UpdateChannelPartnerDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array $channelPartners
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array $channelPartners
+     * @param string $opType
      */
     public function __construct($channelPartners, string $opType)
     {
@@ -30,8 +30,8 @@ class UpdateChannelPartnerDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array $channelPartners
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array $channelPartners
+     * @param string $opType
      */
     public static function create($channelPartners, string $opType)
     {

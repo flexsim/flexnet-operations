@@ -13,7 +13,7 @@ class ConsolidatedResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType $consolidatedLicense
+     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType $consolidatedLicense
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType $consolidatedLicense)
     {
@@ -23,7 +23,7 @@ class ConsolidatedResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType $consolidatedLicense
+     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType $consolidatedLicense
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType $consolidatedLicense)
     {

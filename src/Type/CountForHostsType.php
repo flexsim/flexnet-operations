@@ -23,9 +23,9 @@ class CountForHostsType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $hostDataRefId
-     * @var int $fulfillCount
-     * @var int $overDraftCount
+     * @param string $hostDataRefId
+     * @param int $fulfillCount
+     * @param int $overDraftCount
      */
     public function __construct(string $hostDataRefId, int $fulfillCount, int $overDraftCount = null)
     {
@@ -37,9 +37,9 @@ class CountForHostsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $hostDataRefId
-     * @var int $fulfillCount
-     * @var int $overDraftCount
+     * @param string $hostDataRefId
+     * @param int $fulfillCount
+     * @param int $overDraftCount
      */
     public static function create(string $hostDataRefId, int $fulfillCount, int $overDraftCount = null)
     {

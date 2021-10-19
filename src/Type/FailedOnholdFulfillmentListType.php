@@ -13,7 +13,7 @@ class FailedOnholdFulfillmentListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array $failedFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array $failedFulfillment
      */
     public function __construct($failedFulfillment)
     {
@@ -23,7 +23,7 @@ class FailedOnholdFulfillmentListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array $failedFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array $failedFulfillment
      */
     public static function create($failedFulfillment)
     {

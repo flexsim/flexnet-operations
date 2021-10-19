@@ -13,7 +13,7 @@ class FailedMapEntitlementsToUserDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedIdDataType|array $failedId
+     * @param \Flexsim\FlexnetOperations\Type\FailedIdDataType|array $failedId
      */
     public function __construct($failedId)
     {
@@ -23,7 +23,7 @@ class FailedMapEntitlementsToUserDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedIdDataType|array $failedId
+     * @param \Flexsim\FlexnetOperations\Type\FailedIdDataType|array $failedId
      */
     public static function create($failedId)
     {

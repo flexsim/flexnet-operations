@@ -13,7 +13,7 @@ class FailedRehostResponselistDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedRehostResponseDataType|array $failedFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FailedRehostResponseDataType|array $failedFulfillment
      */
     public function __construct($failedFulfillment = null)
     {
@@ -23,7 +23,7 @@ class FailedRehostResponselistDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedRehostResponseDataType|array $failedFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FailedRehostResponseDataType|array $failedFulfillment
      */
     public static function create($failedFulfillment = null)
     {

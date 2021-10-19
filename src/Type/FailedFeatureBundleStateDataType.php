@@ -18,8 +18,8 @@ class FailedFeatureBundleStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedFeatureBundleStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle, string $reason)
     {

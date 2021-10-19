@@ -15,7 +15,7 @@ class SetLineItemStateRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem
+     * @param \Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem)
     {
@@ -25,7 +25,7 @@ class SetLineItemStateRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem
+     * @param \Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem
      */
     public static function create(\Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem)
     {

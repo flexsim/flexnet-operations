@@ -48,14 +48,14 @@ class AddDomainUserDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $userId
-     * @var string $domain
-     * @var string $roles
-     * @var bool $optIn
-     * @var string $locale
-     * @var string $timeZone
-     * @var string $status
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param string $userId
+     * @param string $domain
+     * @param string $roles
+     * @param bool $optIn
+     * @param string $locale
+     * @param string $timeZone
+     * @param string $status
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public function __construct(string $userId, string $domain, string $roles, bool $optIn = null, string $locale = null, string $timeZone = null, string $status = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {
@@ -72,14 +72,14 @@ class AddDomainUserDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $userId
-     * @var string $domain
-     * @var string $roles
-     * @var bool $optIn
-     * @var string $locale
-     * @var string $timeZone
-     * @var string $status
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param string $userId
+     * @param string $domain
+     * @param string $roles
+     * @param bool $optIn
+     * @param string $locale
+     * @param string $timeZone
+     * @param string $status
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
      */
     public static function create(string $userId, string $domain, string $roles, bool $optIn = null, string $locale = null, string $timeZone = null, string $status = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
     {

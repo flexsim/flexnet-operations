@@ -25,9 +25,9 @@ class PublisherErrorFulfillmentResponseType extends FlexnetType implements Resul
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType $failedData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType $failedData = null)
     {
@@ -39,9 +39,9 @@ class PublisherErrorFulfillmentResponseType extends FlexnetType implements Resul
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType $failedData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType $failedData = null)
     {

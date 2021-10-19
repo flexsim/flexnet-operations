@@ -83,21 +83,21 @@ class UsageSummaryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $summaryTimeUniqueId
-     * @var \DateTimeInterface $summaryTime
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server
-     * @var string $serverAlias
-     * @var \DateTimeInterface $serverLastSyncTime
-     * @var string $entitlementUniqueId
-     * @var string $entitlementId
-     * @var string $activationUniqueId
-     * @var string $activationId
-     * @var string $featureUniqueId
-     * @var string $featureName
-     * @var string $featureVersion
-     * @var int $orderedCount
-     * @var int $usedCount
-     * @var int $provisionedCount
+     * @param string $summaryTimeUniqueId
+     * @param \DateTimeInterface $summaryTime
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server
+     * @param string $serverAlias
+     * @param \DateTimeInterface $serverLastSyncTime
+     * @param string $entitlementUniqueId
+     * @param string $entitlementId
+     * @param string $activationUniqueId
+     * @param string $activationId
+     * @param string $featureUniqueId
+     * @param string $featureName
+     * @param string $featureVersion
+     * @param int $orderedCount
+     * @param int $usedCount
+     * @param int $provisionedCount
      */
     public function __construct(string $summaryTimeUniqueId = null, \DateTimeInterface $summaryTime = null, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server = null, string $serverAlias = null, \DateTimeInterface $serverLastSyncTime = null, string $entitlementUniqueId = null, string $entitlementId = null, string $activationUniqueId = null, string $activationId = null, string $featureUniqueId = null, string $featureName = null, string $featureVersion = null, int $orderedCount = null, int $usedCount, int $provisionedCount)
     {
@@ -121,21 +121,21 @@ class UsageSummaryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $summaryTimeUniqueId
-     * @var \DateTimeInterface $summaryTime
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server
-     * @var string $serverAlias
-     * @var \DateTimeInterface $serverLastSyncTime
-     * @var string $entitlementUniqueId
-     * @var string $entitlementId
-     * @var string $activationUniqueId
-     * @var string $activationId
-     * @var string $featureUniqueId
-     * @var string $featureName
-     * @var string $featureVersion
-     * @var int $orderedCount
-     * @var int $usedCount
-     * @var int $provisionedCount
+     * @param string $summaryTimeUniqueId
+     * @param \DateTimeInterface $summaryTime
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server
+     * @param string $serverAlias
+     * @param \DateTimeInterface $serverLastSyncTime
+     * @param string $entitlementUniqueId
+     * @param string $entitlementId
+     * @param string $activationUniqueId
+     * @param string $activationId
+     * @param string $featureUniqueId
+     * @param string $featureName
+     * @param string $featureVersion
+     * @param int $orderedCount
+     * @param int $usedCount
+     * @param int $provisionedCount
      */
     public static function create(string $summaryTimeUniqueId = null, \DateTimeInterface $summaryTime = null, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server = null, string $serverAlias = null, \DateTimeInterface $serverLastSyncTime = null, string $entitlementUniqueId = null, string $entitlementId = null, string $activationUniqueId = null, string $activationId = null, string $featureUniqueId = null, string $featureName = null, string $featureVersion = null, int $orderedCount = null, int $usedCount, int $provisionedCount)
     {

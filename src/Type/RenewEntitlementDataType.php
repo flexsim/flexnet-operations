@@ -18,8 +18,8 @@ class RenewEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null, \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData)
     {
@@ -30,8 +30,8 @@ class RenewEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null, \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData)
     {

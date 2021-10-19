@@ -25,9 +25,9 @@ class CreateUserResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedCreateUserDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedUserDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedCreateUserDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedUserDataListType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedCreateUserDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedUserDataListType $responseData = null)
     {
@@ -39,9 +39,9 @@ class CreateUserResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedCreateUserDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CreatedUserDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedCreateUserDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CreatedUserDataListType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedCreateUserDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedUserDataListType $responseData = null)
     {

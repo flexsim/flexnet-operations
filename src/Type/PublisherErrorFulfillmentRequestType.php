@@ -15,7 +15,7 @@ class PublisherErrorFulfillmentRequestType extends FlexnetType implements Reques
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment)
     {
@@ -25,7 +25,7 @@ class PublisherErrorFulfillmentRequestType extends FlexnetType implements Reques
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment
      */
     public static function create(\Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment)
     {

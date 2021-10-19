@@ -40,12 +40,12 @@ class ActivateLicensesRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\TypeLineItem $lineItem
-     * @var string $shipToEmail
-     * @var string $shipToAddress
-     * @var string $soldTo
-     * @var string $owner
-     * @var string $hostInfo
+     * @param \Flexsim\FlexnetOperations\Type\TypeLineItem $lineItem
+     * @param string $shipToEmail
+     * @param string $shipToAddress
+     * @param string $soldTo
+     * @param string $owner
+     * @param string $hostInfo
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\TypeLineItem $lineItem, string $shipToEmail = null, string $shipToAddress = null, string $soldTo = null, string $owner = null, string $hostInfo)
     {
@@ -60,12 +60,12 @@ class ActivateLicensesRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\TypeLineItem $lineItem
-     * @var string $shipToEmail
-     * @var string $shipToAddress
-     * @var string $soldTo
-     * @var string $owner
-     * @var string $hostInfo
+     * @param \Flexsim\FlexnetOperations\Type\TypeLineItem $lineItem
+     * @param string $shipToEmail
+     * @param string $shipToAddress
+     * @param string $soldTo
+     * @param string $owner
+     * @param string $hostInfo
      */
     public static function create(\Flexsim\FlexnetOperations\Type\TypeLineItem $lineItem, string $shipToEmail = null, string $shipToAddress = null, string $soldTo = null, string $owner = null, string $hostInfo)
     {

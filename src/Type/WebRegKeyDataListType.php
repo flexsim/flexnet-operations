@@ -13,7 +13,7 @@ class WebRegKeyDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType|array $webRegKeyData
+     * @param \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType|array $webRegKeyData
      */
     public function __construct($webRegKeyData)
     {
@@ -23,7 +23,7 @@ class WebRegKeyDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType|array $webRegKeyData
+     * @param \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType|array $webRegKeyData
      */
     public static function create($webRegKeyData)
     {

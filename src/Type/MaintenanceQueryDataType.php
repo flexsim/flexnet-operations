@@ -53,15 +53,15 @@ class MaintenanceQueryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var string $maintenanceName
-     * @var string $version
-     * @var string $description
-     * @var string $state
-     * @var bool $allowUpgrades
-     * @var bool $allowUpsells
-     * @var bool $allowRenewals
-     * @var \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers
+     * @param string $uniqueId
+     * @param string $maintenanceName
+     * @param string $version
+     * @param string $description
+     * @param string $state
+     * @param bool $allowUpgrades
+     * @param bool $allowUpsells
+     * @param bool $allowRenewals
+     * @param \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers
      */
     public function __construct(string $uniqueId, string $maintenanceName, string $version = null, string $description = null, string $state, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers = null)
     {
@@ -79,15 +79,15 @@ class MaintenanceQueryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var string $maintenanceName
-     * @var string $version
-     * @var string $description
-     * @var string $state
-     * @var bool $allowUpgrades
-     * @var bool $allowUpsells
-     * @var bool $allowRenewals
-     * @var \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers
+     * @param string $uniqueId
+     * @param string $maintenanceName
+     * @param string $version
+     * @param string $description
+     * @param string $state
+     * @param bool $allowUpgrades
+     * @param bool $allowUpsells
+     * @param bool $allowRenewals
+     * @param \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers
      */
     public static function create(string $uniqueId, string $maintenanceName, string $version = null, string $description = null, string $state, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers = null)
     {

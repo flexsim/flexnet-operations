@@ -15,7 +15,7 @@ class RelateAccountsRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData
+     * @param \Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData)
     {
@@ -25,7 +25,7 @@ class RelateAccountsRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData
+     * @param \Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData)
     {

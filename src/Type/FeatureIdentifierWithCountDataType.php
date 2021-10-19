@@ -18,8 +18,8 @@ class FeatureIdentifierWithCountDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @var int $count
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param int $count
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, int $count)
     {
@@ -30,8 +30,8 @@ class FeatureIdentifierWithCountDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @var int $count
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param int $count
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, int $count)
     {

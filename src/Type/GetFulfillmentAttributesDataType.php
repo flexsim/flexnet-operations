@@ -18,8 +18,8 @@ class GetFulfillmentAttributesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $fulfillmentAttributes
-     * @var bool $needTimeZone
+     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $fulfillmentAttributes
+     * @param bool $needTimeZone
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $fulfillmentAttributes = null, bool $needTimeZone = null)
     {
@@ -30,8 +30,8 @@ class GetFulfillmentAttributesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $fulfillmentAttributes
-     * @var bool $needTimeZone
+     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $fulfillmentAttributes
+     * @param bool $needTimeZone
      */
     public static function create(\Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $fulfillmentAttributes = null, bool $needTimeZone = null)
     {

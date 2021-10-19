@@ -25,9 +25,9 @@ class AuthenticateUserInputType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var string $userName
-     * @var string $password
-     * @var string $domainName
+     * @param string $userName
+     * @param string $password
+     * @param string $domainName
      */
     public function __construct(string $userName, string $password, string $domainName)
     {
@@ -39,9 +39,9 @@ class AuthenticateUserInputType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var string $userName
-     * @var string $password
-     * @var string $domainName
+     * @param string $userName
+     * @param string $password
+     * @param string $domainName
      */
     public static function create(string $userName, string $password, string $domainName)
     {

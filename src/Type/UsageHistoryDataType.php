@@ -63,17 +63,17 @@ class UsageHistoryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \DateTimeInterface $updateTime
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var string $alias
-     * @var \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
-     * @var string $deviceServedStatus
-     * @var \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array $featureData
-     * @var string $machineType
-     * @var string $vmName
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
+     * @param \DateTimeInterface $updateTime
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param string $alias
+     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
+     * @param string $deviceServedStatus
+     * @param \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array $featureData
+     * @param string $machineType
+     * @param string $vmName
+     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
+     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
      */
     public function __construct(\DateTimeInterface $updateTime, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier = null, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier = null, string $alias = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, string $deviceServedStatus = null, $featureData = null, string $machineType = null, string $vmName = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary = null)
     {
@@ -93,17 +93,17 @@ class UsageHistoryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \DateTimeInterface $updateTime
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var string $alias
-     * @var \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
-     * @var string $deviceServedStatus
-     * @var \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array $featureData
-     * @var string $machineType
-     * @var string $vmName
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
-     * @var \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
+     * @param \DateTimeInterface $updateTime
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param string $alias
+     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
+     * @param string $deviceServedStatus
+     * @param \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array $featureData
+     * @param string $machineType
+     * @param string $vmName
+     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
+     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
      */
     public static function create(\DateTimeInterface $updateTime, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier = null, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier = null, string $alias = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, string $deviceServedStatus = null, $featureData = null, string $machineType = null, string $vmName = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary = null)
     {

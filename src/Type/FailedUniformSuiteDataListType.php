@@ -13,7 +13,7 @@ class FailedUniformSuiteDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataType|array $failedUniformSuite
+     * @param \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataType|array $failedUniformSuite
      */
     public function __construct($failedUniformSuite = null)
     {
@@ -23,7 +23,7 @@ class FailedUniformSuiteDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataType|array $failedUniformSuite
+     * @param \Flexsim\FlexnetOperations\Type\FailedUniformSuiteDataType|array $failedUniformSuite
      */
     public static function create($failedUniformSuite = null)
     {

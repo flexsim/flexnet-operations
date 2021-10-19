@@ -18,8 +18,8 @@ class FailedAddWebRegKeyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedAddWebRegKeyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData = null, string $reason = null)
     {

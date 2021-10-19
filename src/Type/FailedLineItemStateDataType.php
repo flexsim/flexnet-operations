@@ -18,8 +18,8 @@ class FailedLineItemStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedLineItemStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem, string $reason)
     {

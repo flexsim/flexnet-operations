@@ -68,18 +68,18 @@ class UpdateDevDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var string $deviceId
-     * @var \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds
-     * @var string $deviceIdType
-     * @var \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
-     * @var \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @var string $alias
-     * @var string $user
-     * @var string $siteName
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param string $deviceId
+     * @param \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds
+     * @param string $deviceIdType
+     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
+     * @param \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param string $alias
+     * @param string $user
+     * @param string $siteName
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $deviceId = null, \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds = null, string $deviceIdType = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null, string $siteName = null)
     {
@@ -100,18 +100,18 @@ class UpdateDevDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @var string $deviceId
-     * @var \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds
-     * @var string $deviceIdType
-     * @var \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
-     * @var \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @var string $alias
-     * @var string $user
-     * @var string $siteName
+     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param string $deviceId
+     * @param \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds
+     * @param string $deviceIdType
+     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
+     * @param \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param string $alias
+     * @param string $user
+     * @param string $siteName
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $deviceId = null, \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds = null, string $deviceIdType = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null, string $siteName = null)
     {

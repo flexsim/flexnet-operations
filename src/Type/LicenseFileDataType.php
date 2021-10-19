@@ -28,10 +28,10 @@ class LicenseFileDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $licenseFileDefinitionName
-     * @var string $licenseText
-     * @var string $binaryLicense
-     * @var string $fileName
+     * @param string $licenseFileDefinitionName
+     * @param string $licenseText
+     * @param string $binaryLicense
+     * @param string $fileName
      */
     public function __construct(string $licenseFileDefinitionName, string $licenseText = null, string $binaryLicense = null, string $fileName = null)
     {
@@ -44,10 +44,10 @@ class LicenseFileDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $licenseFileDefinitionName
-     * @var string $licenseText
-     * @var string $binaryLicense
-     * @var string $fileName
+     * @param string $licenseFileDefinitionName
+     * @param string $licenseText
+     * @param string $binaryLicense
+     * @param string $fileName
      */
     public static function create(string $licenseFileDefinitionName, string $licenseText = null, string $binaryLicense = null, string $fileName = null)
     {

@@ -15,7 +15,7 @@ class DeleteAddonLineItemsRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteAddonLineItemDataType $requestList
+     * @param \Flexsim\FlexnetOperations\Type\DeleteAddonLineItemDataType $requestList
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeleteAddonLineItemDataType $requestList)
     {
@@ -25,7 +25,7 @@ class DeleteAddonLineItemsRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteAddonLineItemDataType $requestList
+     * @param \Flexsim\FlexnetOperations\Type\DeleteAddonLineItemDataType $requestList
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeleteAddonLineItemDataType $requestList)
     {

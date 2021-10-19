@@ -18,8 +18,8 @@ class UpdateSubOrganizationsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $subOrganization
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $subOrganization
+     * @param string $opType
      */
     public function __construct($subOrganization, string $opType)
     {
@@ -30,8 +30,8 @@ class UpdateSubOrganizationsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $subOrganization
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $subOrganization
+     * @param string $opType
      */
     public static function create($subOrganization, string $opType)
     {

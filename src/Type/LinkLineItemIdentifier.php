@@ -23,9 +23,9 @@ class LinkLineItemIdentifier extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $activationId
-     * @var int $count
-     * @var \DateTimeInterface $expirationDateOverride
+     * @param string $activationId
+     * @param int $count
+     * @param \DateTimeInterface $expirationDateOverride
      */
     public function __construct(string $activationId = null, int $count = null, \DateTimeInterface $expirationDateOverride = null)
     {
@@ -37,9 +37,9 @@ class LinkLineItemIdentifier extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $activationId
-     * @var int $count
-     * @var \DateTimeInterface $expirationDateOverride
+     * @param string $activationId
+     * @param int $count
+     * @param \DateTimeInterface $expirationDateOverride
      */
     public static function create(string $activationId = null, int $count = null, \DateTimeInterface $expirationDateOverride = null)
     {

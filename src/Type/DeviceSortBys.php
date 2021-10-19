@@ -13,7 +13,7 @@ class DeviceSortBys extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy
+     * @param \Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy)
     {
@@ -23,7 +23,7 @@ class DeviceSortBys extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy
+     * @param \Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy)
     {

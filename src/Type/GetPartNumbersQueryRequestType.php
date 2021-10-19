@@ -25,9 +25,9 @@ class GetPartNumbersQueryRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams = null, int $pageNumber, int $batchSize)
     {
@@ -40,9 +40,9 @@ class GetPartNumbersQueryRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public static function create(\Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType $queryParams = null, int $pageNumber, int $batchSize)
     {

@@ -68,18 +68,18 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\IdType $entitlementId
-     * @var string $description
-     * @var string $soldTo
-     * @var string $shipToEmail
-     * @var string $shipToAddress
-     * @var \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType|array $lineItems
-     * @var \Flexsim\FlexnetOperations\Type\CreateMaintenanceLineItemDataType|array $maintenanceLineItems
-     * @var bool $autoDeploy
-     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @var bool $allowPortalLogin
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
-     * @var string $emailTemplateVariation
+     * @param \Flexsim\FlexnetOperations\Type\IdType $entitlementId
+     * @param string $description
+     * @param string $soldTo
+     * @param string $shipToEmail
+     * @param string $shipToAddress
+     * @param \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType|array $lineItems
+     * @param \Flexsim\FlexnetOperations\Type\CreateMaintenanceLineItemDataType|array $maintenanceLineItems
+     * @param bool $autoDeploy
+     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @param bool $allowPortalLogin
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
+     * @param string $emailTemplateVariation
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\IdType $entitlementId, string $description = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, $lineItems = null, $maintenanceLineItems = null, bool $autoDeploy = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null, string $emailTemplateVariation = null)
     {
@@ -100,18 +100,18 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\IdType $entitlementId
-     * @var string $description
-     * @var string $soldTo
-     * @var string $shipToEmail
-     * @var string $shipToAddress
-     * @var \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType|array $lineItems
-     * @var \Flexsim\FlexnetOperations\Type\CreateMaintenanceLineItemDataType|array $maintenanceLineItems
-     * @var bool $autoDeploy
-     * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @var bool $allowPortalLogin
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
-     * @var string $emailTemplateVariation
+     * @param \Flexsim\FlexnetOperations\Type\IdType $entitlementId
+     * @param string $description
+     * @param string $soldTo
+     * @param string $shipToEmail
+     * @param string $shipToAddress
+     * @param \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType|array $lineItems
+     * @param \Flexsim\FlexnetOperations\Type\CreateMaintenanceLineItemDataType|array $maintenanceLineItems
+     * @param bool $autoDeploy
+     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @param bool $allowPortalLogin
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
+     * @param string $emailTemplateVariation
      */
     public static function create(\Flexsim\FlexnetOperations\Type\IdType $entitlementId, string $description = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, $lineItems = null, $maintenanceLineItems = null, bool $autoDeploy = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null, string $emailTemplateVariation = null)
     {

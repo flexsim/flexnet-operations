@@ -28,10 +28,10 @@ class UserPKType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $firstName
-     * @var string $lastName
-     * @var string $emailAddress
-     * @var string $phoneNumber
+     * @param string $firstName
+     * @param string $lastName
+     * @param string $emailAddress
+     * @param string $phoneNumber
      */
     public function __construct(string $firstName, string $lastName, string $emailAddress, string $phoneNumber = null)
     {
@@ -44,10 +44,10 @@ class UserPKType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $firstName
-     * @var string $lastName
-     * @var string $emailAddress
-     * @var string $phoneNumber
+     * @param string $firstName
+     * @param string $lastName
+     * @param string $emailAddress
+     * @param string $phoneNumber
      */
     public static function create(string $firstName, string $lastName, string $emailAddress, string $phoneNumber = null)
     {

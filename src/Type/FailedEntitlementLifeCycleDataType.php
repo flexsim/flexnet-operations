@@ -18,8 +18,8 @@ class FailedEntitlementLifeCycleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType $entitlementData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType $entitlementData
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType $entitlementData, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedEntitlementLifeCycleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType $entitlementData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType $entitlementData
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType $entitlementData, string $reason)
     {

@@ -15,7 +15,7 @@ class DeleteDomainUserRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $user
+     * @param \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $user
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $user)
     {
@@ -25,7 +25,7 @@ class DeleteDomainUserRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $user
+     * @param \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $user
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $user)
     {

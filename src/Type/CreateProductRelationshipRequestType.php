@@ -15,7 +15,7 @@ class CreateProductRelationshipRequestType extends FlexnetType implements Reques
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
+     * @param \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship)
     {
@@ -25,7 +25,7 @@ class CreateProductRelationshipRequestType extends FlexnetType implements Reques
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
+     * @param \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship)
     {

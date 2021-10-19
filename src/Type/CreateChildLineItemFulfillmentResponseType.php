@@ -25,9 +25,9 @@ class CreateChildLineItemFulfillmentResponseType extends FlexnetType implements 
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\CreatedChildLIFmtResponseDataType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedChildLIFmtResponseDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\CreatedChildLIFmtResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedChildLIFmtResponseDataType $failedData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\CreatedChildLIFmtResponseDataType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedChildLIFmtResponseDataType $failedData = null)
     {
@@ -39,9 +39,9 @@ class CreateChildLineItemFulfillmentResponseType extends FlexnetType implements 
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\CreatedChildLIFmtResponseDataType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedChildLIFmtResponseDataType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\CreatedChildLIFmtResponseDataType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedChildLIFmtResponseDataType $failedData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\CreatedChildLIFmtResponseDataType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedChildLIFmtResponseDataType $failedData = null)
     {

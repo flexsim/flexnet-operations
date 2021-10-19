@@ -18,8 +18,8 @@ class FulfillmentHistoryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $activationId
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType $historyDetails
+     * @param string $activationId
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType $historyDetails
      */
     public function __construct(string $activationId, \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType $historyDetails)
     {
@@ -30,8 +30,8 @@ class FulfillmentHistoryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $activationId
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType $historyDetails
+     * @param string $activationId
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType $historyDetails
      */
     public static function create(string $activationId, \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType $historyDetails)
     {

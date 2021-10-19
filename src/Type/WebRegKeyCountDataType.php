@@ -18,8 +18,8 @@ class WebRegKeyCountDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var int $totalCount
-     * @var int $redeemedCount
+     * @param int $totalCount
+     * @param int $redeemedCount
      */
     public function __construct(int $totalCount, int $redeemedCount)
     {
@@ -30,8 +30,8 @@ class WebRegKeyCountDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var int $totalCount
-     * @var int $redeemedCount
+     * @param int $totalCount
+     * @param int $redeemedCount
      */
     public static function create(int $totalCount, int $redeemedCount)
     {

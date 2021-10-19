@@ -18,8 +18,8 @@ class FailedRelateAccountsDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedRelateAccountsDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData = null, string $reason = null)
     {

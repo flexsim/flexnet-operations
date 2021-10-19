@@ -30,10 +30,10 @@ class CreateLicensesAsBatchRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds
-     * @var \Flexsim\FlexnetOperations\Type\HostIdDataSetType $hostIdDataSet
-     * @var \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet
-     * @var \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType $commonBatchDataSet
+     * @param \Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds
+     * @param \Flexsim\FlexnetOperations\Type\HostIdDataSetType $hostIdDataSet
+     * @param \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet
+     * @param \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType $commonBatchDataSet
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds, \Flexsim\FlexnetOperations\Type\HostIdDataSetType $hostIdDataSet, \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet = null, \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType $commonBatchDataSet)
     {
@@ -46,10 +46,10 @@ class CreateLicensesAsBatchRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds
-     * @var \Flexsim\FlexnetOperations\Type\HostIdDataSetType $hostIdDataSet
-     * @var \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet
-     * @var \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType $commonBatchDataSet
+     * @param \Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds
+     * @param \Flexsim\FlexnetOperations\Type\HostIdDataSetType $hostIdDataSet
+     * @param \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet
+     * @param \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType $commonBatchDataSet
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ActivationIdsListType $activationIds, \Flexsim\FlexnetOperations\Type\HostIdDataSetType $hostIdDataSet, \Flexsim\FlexnetOperations\Type\CountDataSetType $countDataSet = null, \Flexsim\FlexnetOperations\Type\CommonBatchDataSetType $commonBatchDataSet)
     {

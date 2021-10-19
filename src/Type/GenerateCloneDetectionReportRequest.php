@@ -35,11 +35,11 @@ class GenerateCloneDetectionReportRequest extends FlexnetType implements Request
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds
-     * @var \DateTimeInterface $startDate
-     * @var \DateTimeInterface $endDate
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $endDate
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds = null, \DateTimeInterface $startDate, \DateTimeInterface $endDate, int $pageNumber = null, int $batchSize = null)
     {
@@ -53,11 +53,11 @@ class GenerateCloneDetectionReportRequest extends FlexnetType implements Request
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds
-     * @var \DateTimeInterface $startDate
-     * @var \DateTimeInterface $endDate
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $endDate
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EnterpriseIds $enterpriseIds = null, \DateTimeInterface $startDate, \DateTimeInterface $endDate, int $pageNumber = null, int $batchSize = null)
     {

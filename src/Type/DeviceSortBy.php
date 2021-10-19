@@ -18,8 +18,8 @@ class DeviceSortBy extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $sortKey
-     * @var bool $ascending
+     * @param string $sortKey
+     * @param bool $ascending
      */
     public function __construct(string $sortKey, bool $ascending)
     {
@@ -30,8 +30,8 @@ class DeviceSortBy extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $sortKey
-     * @var bool $ascending
+     * @param string $sortKey
+     * @param bool $ascending
      */
     public static function create(string $sortKey, bool $ascending)
     {

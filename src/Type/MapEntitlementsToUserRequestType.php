@@ -30,9 +30,9 @@ class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @var string $userId
-     * @var \Flexsim\FlexnetOperations\Type\IdListType $idList
-     * @var string $userAcct this method is backwards compatible so you may also pass $userOrg
+     * @param string $userId
+     * @param \Flexsim\FlexnetOperations\Type\IdListType $idList
+     * @param string $userAcct this method is backwards compatible so you may also pass $userOrg
      */
     public function __construct(string $userId, \Flexsim\FlexnetOperations\Type\IdListType $idList, string $userAcct = null)
     {
@@ -45,9 +45,9 @@ class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @var string $userId
-     * @var \Flexsim\FlexnetOperations\Type\IdListType $idList
-     * @var string $userAcct this method is backwards compatible so you may also pass $userOrg
+     * @param string $userId
+     * @param \Flexsim\FlexnetOperations\Type\IdListType $idList
+     * @param string $userAcct this method is backwards compatible so you may also pass $userOrg
      */
     public static function create(string $userId, \Flexsim\FlexnetOperations\Type\IdListType $idList, string $userAcct = null)
     {

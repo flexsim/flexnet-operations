@@ -18,8 +18,8 @@ class UniformSuiteStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
-     * @var string $stateToSet
+     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
+     * @param string $stateToSet
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier, string $stateToSet)
     {
@@ -30,8 +30,8 @@ class UniformSuiteStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
-     * @var string $stateToSet
+     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
+     * @param string $stateToSet
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier, string $stateToSet)
     {

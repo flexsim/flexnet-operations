@@ -13,7 +13,7 @@ class LicenseModelsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModel
      */
     public function __construct($licenseModel)
     {
@@ -23,7 +23,7 @@ class LicenseModelsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModel
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModel
      */
     public static function create($licenseModel)
     {

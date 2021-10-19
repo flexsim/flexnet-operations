@@ -123,28 +123,28 @@ class UserDetailDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier
-     * @var string $displayName
-     * @var bool $optIn
-     * @var string $faxNumber
-     * @var string $street
-     * @var string $city
-     * @var string $state
-     * @var string $zipcode
-     * @var string $country
-     * @var string $status
-     * @var string $locale
-     * @var string $timezone
-     * @var bool $shared
-     * @var string $domain
-     * @var \DateTimeInterface $dateCreated
-     * @var \DateTimeInterface $dateLastModified
-     * @var \DateTimeInterface $dateLastLogin
-     * @var \Flexsim\FlexnetOperations\Type\UserAccountsListType|\Flexsim\FlexnetOperations\Type\UserOrganizationsListType $orgRolesList $accountRolesList this method is backwards compatible so you may also pass $orgRolesList
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @var \DateTimeInterface $expiryDate
-     * @var string $createdBy
-     * @var string $lastModifiedBy
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier
+     * @param string $displayName
+     * @param bool $optIn
+     * @param string $faxNumber
+     * @param string $street
+     * @param string $city
+     * @param string $state
+     * @param string $zipcode
+     * @param string $country
+     * @param string $status
+     * @param string $locale
+     * @param string $timezone
+     * @param bool $shared
+     * @param string $domain
+     * @param \DateTimeInterface $dateCreated
+     * @param \DateTimeInterface $dateLastModified
+     * @param \DateTimeInterface $dateLastLogin
+     * @param \Flexsim\FlexnetOperations\Type\UserAccountsListType|\Flexsim\FlexnetOperations\Type\UserOrganizationsListType $orgRolesList $accountRolesList this method is backwards compatible so you may also pass $orgRolesList
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \DateTimeInterface $expiryDate
+     * @param string $createdBy
+     * @param string $lastModifiedBy
      */
     public function __construct(
         \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier,
@@ -198,28 +198,28 @@ class UserDetailDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier
-     * @var string $displayName
-     * @var bool $optIn
-     * @var string $faxNumber
-     * @var string $street
-     * @var string $city
-     * @var string $state
-     * @var string $zipcode
-     * @var string $country
-     * @var string $status
-     * @var string $locale
-     * @var string $timezone
-     * @var bool $shared
-     * @var string $domain
-     * @var \DateTimeInterface $dateCreated
-     * @var \DateTimeInterface $dateLastModified
-     * @var \DateTimeInterface $dateLastLogin
-     * @var \Flexsim\FlexnetOperations\Type\UserAccountsListType|\Flexsim\FlexnetOperations\Type\UserOrganizationsListType $orgRolesList $accountRolesList this method is backwards compatible so you may also pass $orgRolesList
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @var \DateTimeInterface $expiryDate
-     * @var string $createdBy
-     * @var string $lastModifiedBy
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier
+     * @param string $displayName
+     * @param bool $optIn
+     * @param string $faxNumber
+     * @param string $street
+     * @param string $city
+     * @param string $state
+     * @param string $zipcode
+     * @param string $country
+     * @param string $status
+     * @param string $locale
+     * @param string $timezone
+     * @param bool $shared
+     * @param string $domain
+     * @param \DateTimeInterface $dateCreated
+     * @param \DateTimeInterface $dateLastModified
+     * @param \DateTimeInterface $dateLastLogin
+     * @param \Flexsim\FlexnetOperations\Type\UserAccountsListType|\Flexsim\FlexnetOperations\Type\UserOrganizationsListType $orgRolesList $accountRolesList this method is backwards compatible so you may also pass $orgRolesList
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param \DateTimeInterface $expiryDate
+     * @param string $createdBy
+     * @param string $lastModifiedBy
      */
     public static function create(
         \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier,

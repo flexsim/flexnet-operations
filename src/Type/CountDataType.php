@@ -18,8 +18,8 @@ class CountDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $activationId
-     * @var \Flexsim\FlexnetOperations\Type\CountForHostsType $countForHosts
+     * @param string $activationId
+     * @param \Flexsim\FlexnetOperations\Type\CountForHostsType $countForHosts
      */
     public function __construct(string $activationId, \Flexsim\FlexnetOperations\Type\CountForHostsType $countForHosts)
     {
@@ -30,8 +30,8 @@ class CountDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $activationId
-     * @var \Flexsim\FlexnetOperations\Type\CountForHostsType $countForHosts
+     * @param string $activationId
+     * @param \Flexsim\FlexnetOperations\Type\CountForHostsType $countForHosts
      */
     public static function create(string $activationId, \Flexsim\FlexnetOperations\Type\CountForHostsType $countForHosts)
     {

@@ -40,12 +40,12 @@ class GetStateChangeHistoryRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureListType $featureList
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleListType $featureBundleList
-     * @var \Flexsim\FlexnetOperations\Type\ProductListType $productList
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelListType $licenseModelList
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementListType $simpleEntitlementList
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementListType $bulkEntitlementList
+     * @param \Flexsim\FlexnetOperations\Type\FeatureListType $featureList
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleListType $featureBundleList
+     * @param \Flexsim\FlexnetOperations\Type\ProductListType $productList
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelListType $licenseModelList
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementListType $simpleEntitlementList
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementListType $bulkEntitlementList
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureListType $featureList = null, \Flexsim\FlexnetOperations\Type\FeatureBundleListType $featureBundleList = null, \Flexsim\FlexnetOperations\Type\ProductListType $productList = null, \Flexsim\FlexnetOperations\Type\LicenseModelListType $licenseModelList = null, \Flexsim\FlexnetOperations\Type\EntitlementListType $simpleEntitlementList = null, \Flexsim\FlexnetOperations\Type\EntitlementListType $bulkEntitlementList = null)
     {
@@ -60,12 +60,12 @@ class GetStateChangeHistoryRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureListType $featureList
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleListType $featureBundleList
-     * @var \Flexsim\FlexnetOperations\Type\ProductListType $productList
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelListType $licenseModelList
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementListType $simpleEntitlementList
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementListType $bulkEntitlementList
+     * @param \Flexsim\FlexnetOperations\Type\FeatureListType $featureList
+     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleListType $featureBundleList
+     * @param \Flexsim\FlexnetOperations\Type\ProductListType $productList
+     * @param \Flexsim\FlexnetOperations\Type\LicenseModelListType $licenseModelList
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementListType $simpleEntitlementList
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementListType $bulkEntitlementList
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureListType $featureList = null, \Flexsim\FlexnetOperations\Type\FeatureBundleListType $featureBundleList = null, \Flexsim\FlexnetOperations\Type\ProductListType $productList = null, \Flexsim\FlexnetOperations\Type\LicenseModelListType $licenseModelList = null, \Flexsim\FlexnetOperations\Type\EntitlementListType $simpleEntitlementList = null, \Flexsim\FlexnetOperations\Type\EntitlementListType $bulkEntitlementList = null)
     {

@@ -30,10 +30,10 @@ class GetUsageHistoryRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetUsageHistoryParametersType $queryParams
-     * @var \Flexsim\FlexnetOperations\Type\GetUsageHistoryConfigType $queryConfig
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\GetUsageHistoryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\GetUsageHistoryConfigType $queryConfig
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\GetUsageHistoryParametersType $queryParams = null, \Flexsim\FlexnetOperations\Type\GetUsageHistoryConfigType $queryConfig = null, int $pageNumber, int $batchSize)
     {
@@ -47,10 +47,10 @@ class GetUsageHistoryRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetUsageHistoryParametersType $queryParams
-     * @var \Flexsim\FlexnetOperations\Type\GetUsageHistoryConfigType $queryConfig
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\GetUsageHistoryParametersType $queryParams
+     * @param \Flexsim\FlexnetOperations\Type\GetUsageHistoryConfigType $queryConfig
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public static function create(\Flexsim\FlexnetOperations\Type\GetUsageHistoryParametersType $queryParams = null, \Flexsim\FlexnetOperations\Type\GetUsageHistoryConfigType $queryConfig = null, int $pageNumber, int $batchSize)
     {

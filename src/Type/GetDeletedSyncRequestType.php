@@ -25,9 +25,9 @@ class GetDeletedSyncRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType $queryParams = null, int $pageNumber, int $batchSize)
     {
@@ -40,9 +40,9 @@ class GetDeletedSyncRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
+     * @param \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
      */
     public static function create(\Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType $queryParams = null, int $pageNumber, int $batchSize)
     {

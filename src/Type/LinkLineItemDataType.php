@@ -13,7 +13,7 @@ class LinkLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier $lineItemIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier $lineItemIdentifier
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier $lineItemIdentifier)
     {
@@ -23,7 +23,7 @@ class LinkLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier $lineItemIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier $lineItemIdentifier
      */
     public static function create(\Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier $lineItemIdentifier)
     {

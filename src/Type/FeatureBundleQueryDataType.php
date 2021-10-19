@@ -33,11 +33,11 @@ class FeatureBundleQueryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var string $name
-     * @var string $description
-     * @var string $state
-     * @var \Flexsim\FlexnetOperations\Type\FeaturesListType $features
+     * @param string $uniqueId
+     * @param string $name
+     * @param string $description
+     * @param string $state
+     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
      */
     public function __construct(string $uniqueId, string $name, string $description = null, string $state, \Flexsim\FlexnetOperations\Type\FeaturesListType $features = null)
     {
@@ -51,11 +51,11 @@ class FeatureBundleQueryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var string $name
-     * @var string $description
-     * @var string $state
-     * @var \Flexsim\FlexnetOperations\Type\FeaturesListType $features
+     * @param string $uniqueId
+     * @param string $name
+     * @param string $description
+     * @param string $state
+     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
      */
     public static function create(string $uniqueId, string $name, string $description = null, string $state, \Flexsim\FlexnetOperations\Type\FeaturesListType $features = null)
     {

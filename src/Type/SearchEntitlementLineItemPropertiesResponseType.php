@@ -20,8 +20,8 @@ class SearchEntitlementLineItemPropertiesResponseType extends FlexnetType implem
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemPropertiesType|array $entitlementLineItem
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemPropertiesType|array $entitlementLineItem
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $entitlementLineItem = null)
     {
@@ -32,8 +32,8 @@ class SearchEntitlementLineItemPropertiesResponseType extends FlexnetType implem
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemPropertiesType|array $entitlementLineItem
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemPropertiesType|array $entitlementLineItem
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $entitlementLineItem = null)
     {

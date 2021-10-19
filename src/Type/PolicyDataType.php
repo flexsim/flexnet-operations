@@ -18,8 +18,8 @@ class PolicyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var int $allowedCount
-     * @var \Flexsim\FlexnetOperations\Type\PolicyTermType $policyTerm
+     * @param int $allowedCount
+     * @param \Flexsim\FlexnetOperations\Type\PolicyTermType $policyTerm
      */
     public function __construct(int $allowedCount, \Flexsim\FlexnetOperations\Type\PolicyTermType $policyTerm)
     {
@@ -30,8 +30,8 @@ class PolicyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var int $allowedCount
-     * @var \Flexsim\FlexnetOperations\Type\PolicyTermType $policyTerm
+     * @param int $allowedCount
+     * @param \Flexsim\FlexnetOperations\Type\PolicyTermType $policyTerm
      */
     public static function create(int $allowedCount, \Flexsim\FlexnetOperations\Type\PolicyTermType $policyTerm)
     {

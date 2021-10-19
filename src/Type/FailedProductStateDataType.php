@@ -18,8 +18,8 @@ class FailedProductStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductStateDataType $product
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\ProductStateDataType $product
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ProductStateDataType $product, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedProductStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductStateDataType $product
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\ProductStateDataType $product
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ProductStateDataType $product, string $reason)
     {

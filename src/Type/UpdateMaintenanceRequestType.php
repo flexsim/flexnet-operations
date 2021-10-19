@@ -15,7 +15,7 @@ class UpdateMaintenanceRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType $maintenance
+     * @param \Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType $maintenance
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType $maintenance)
     {
@@ -25,7 +25,7 @@ class UpdateMaintenanceRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType $maintenance
+     * @param \Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType $maintenance
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType $maintenance)
     {

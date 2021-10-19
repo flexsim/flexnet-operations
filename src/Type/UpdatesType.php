@@ -38,12 +38,12 @@ class UpdatesType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $updateId
-     * @var string $downloadPackageId
-     * @var string $platform
-     * @var string $language
-     * @var int $status
-     * @var string $statusReason
+     * @param string $updateId
+     * @param string $downloadPackageId
+     * @param string $platform
+     * @param string $language
+     * @param int $status
+     * @param string $statusReason
      */
     public function __construct(string $updateId = null, string $downloadPackageId = null, string $platform = null, string $language = null, int $status = null, string $statusReason = null)
     {
@@ -58,12 +58,12 @@ class UpdatesType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $updateId
-     * @var string $downloadPackageId
-     * @var string $platform
-     * @var string $language
-     * @var int $status
-     * @var string $statusReason
+     * @param string $updateId
+     * @param string $downloadPackageId
+     * @param string $platform
+     * @param string $language
+     * @param int $status
+     * @param string $statusReason
      */
     public static function create(string $updateId = null, string $downloadPackageId = null, string $platform = null, string $language = null, int $status = null, string $statusReason = null)
     {

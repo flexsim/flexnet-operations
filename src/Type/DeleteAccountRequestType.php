@@ -15,7 +15,7 @@ class DeleteAccountRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData
+     * @param \Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData)
     {
@@ -25,7 +25,7 @@ class DeleteAccountRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData
+     * @param \Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData)
     {

@@ -18,8 +18,8 @@ class UpdateEntitledProductDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProducts
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProducts
+     * @param string $opType
      */
     public function __construct($entitledProducts, string $opType)
     {
@@ -30,8 +30,8 @@ class UpdateEntitledProductDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProducts
-     * @var string $opType
+     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProducts
+     * @param string $opType
      */
     public static function create($entitledProducts, string $opType)
     {

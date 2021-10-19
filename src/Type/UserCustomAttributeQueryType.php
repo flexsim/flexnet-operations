@@ -18,8 +18,8 @@ class UserCustomAttributeQueryType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $attributeName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue
+     * @param string $attributeName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue
      */
     public function __construct(string $attributeName, \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue = null)
     {
@@ -30,8 +30,8 @@ class UserCustomAttributeQueryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $attributeName
-     * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue
+     * @param string $attributeName
+     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue
      */
     public static function create(string $attributeName, \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue = null)
     {

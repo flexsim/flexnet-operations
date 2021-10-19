@@ -18,8 +18,8 @@ class OrganizationBasicDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $orgUnitId
-     * @var string $displayName
+     * @param string $orgUnitId
+     * @param string $displayName
      */
     public function __construct(string $orgUnitId, string $displayName)
     {
@@ -30,8 +30,8 @@ class OrganizationBasicDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $orgUnitId
-     * @var string $displayName
+     * @param string $orgUnitId
+     * @param string $displayName
      */
     public static function create(string $orgUnitId, string $displayName)
     {

@@ -13,7 +13,7 @@ class FailedProductCategoryDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataType|array $failedProductCategory
+     * @param \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataType|array $failedProductCategory
      */
     public function __construct($failedProductCategory = null)
     {
@@ -23,7 +23,7 @@ class FailedProductCategoryDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataType|array $failedProductCategory
+     * @param \Flexsim\FlexnetOperations\Type\FailedProductCategoryDataType|array $failedProductCategory
      */
     public static function create($failedProductCategory = null)
     {

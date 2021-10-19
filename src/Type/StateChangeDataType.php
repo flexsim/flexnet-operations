@@ -28,10 +28,10 @@ class StateChangeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $eventName
-     * @var \DateTimeInterface $eventDate
-     * @var string $userId
-     * @var string $description
+     * @param string $eventName
+     * @param \DateTimeInterface $eventDate
+     * @param string $userId
+     * @param string $description
      */
     public function __construct(string $eventName, \DateTimeInterface $eventDate, string $userId, string $description = null)
     {
@@ -44,10 +44,10 @@ class StateChangeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $eventName
-     * @var \DateTimeInterface $eventDate
-     * @var string $userId
-     * @var string $description
+     * @param string $eventName
+     * @param \DateTimeInterface $eventDate
+     * @param string $userId
+     * @param string $description
      */
     public static function create(string $eventName, \DateTimeInterface $eventDate, string $userId, string $description = null)
     {

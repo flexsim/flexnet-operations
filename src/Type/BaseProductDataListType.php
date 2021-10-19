@@ -13,7 +13,7 @@ class BaseProductDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string|array $uniqueId
+     * @param string|array $uniqueId
      */
     public function __construct($uniqueId = null)
     {
@@ -23,7 +23,7 @@ class BaseProductDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string|array $uniqueId
+     * @param string|array $uniqueId
      */
     public static function create($uniqueId = null)
     {

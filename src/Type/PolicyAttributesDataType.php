@@ -73,19 +73,19 @@ class PolicyAttributesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var bool $needRehostsPolicy
-     * @var bool $needReturnsPolicy
-     * @var bool $needRepairsPolicy
-     * @var bool $needExtraActivationsPolicy
-     * @var bool $needCancelLicensePolicy
-     * @var bool $needVirtualLicensePolicy
-     * @var bool $needReinstallPolicy
-     * @var bool $needServerHostIdPolicy
-     * @var bool $needNodelockedHostIdPolicy
-     * @var bool $needPortalServerHostIdPolicy
-     * @var bool $needPortalNodelockedHostIdPolicy
-     * @var bool $needRedundantServerPolicy
-     * @var bool $needACPIGenerationIdLicensePolicy
+     * @param bool $needRehostsPolicy
+     * @param bool $needReturnsPolicy
+     * @param bool $needRepairsPolicy
+     * @param bool $needExtraActivationsPolicy
+     * @param bool $needCancelLicensePolicy
+     * @param bool $needVirtualLicensePolicy
+     * @param bool $needReinstallPolicy
+     * @param bool $needServerHostIdPolicy
+     * @param bool $needNodelockedHostIdPolicy
+     * @param bool $needPortalServerHostIdPolicy
+     * @param bool $needPortalNodelockedHostIdPolicy
+     * @param bool $needRedundantServerPolicy
+     * @param bool $needACPIGenerationIdLicensePolicy
      */
     public function __construct(bool $needRehostsPolicy, bool $needReturnsPolicy, bool $needRepairsPolicy, bool $needExtraActivationsPolicy, bool $needCancelLicensePolicy, bool $needVirtualLicensePolicy, bool $needReinstallPolicy, bool $needServerHostIdPolicy, bool $needNodelockedHostIdPolicy, bool $needPortalServerHostIdPolicy, bool $needPortalNodelockedHostIdPolicy, bool $needRedundantServerPolicy, bool $needACPIGenerationIdLicensePolicy)
     {
@@ -107,19 +107,19 @@ class PolicyAttributesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var bool $needRehostsPolicy
-     * @var bool $needReturnsPolicy
-     * @var bool $needRepairsPolicy
-     * @var bool $needExtraActivationsPolicy
-     * @var bool $needCancelLicensePolicy
-     * @var bool $needVirtualLicensePolicy
-     * @var bool $needReinstallPolicy
-     * @var bool $needServerHostIdPolicy
-     * @var bool $needNodelockedHostIdPolicy
-     * @var bool $needPortalServerHostIdPolicy
-     * @var bool $needPortalNodelockedHostIdPolicy
-     * @var bool $needRedundantServerPolicy
-     * @var bool $needACPIGenerationIdLicensePolicy
+     * @param bool $needRehostsPolicy
+     * @param bool $needReturnsPolicy
+     * @param bool $needRepairsPolicy
+     * @param bool $needExtraActivationsPolicy
+     * @param bool $needCancelLicensePolicy
+     * @param bool $needVirtualLicensePolicy
+     * @param bool $needReinstallPolicy
+     * @param bool $needServerHostIdPolicy
+     * @param bool $needNodelockedHostIdPolicy
+     * @param bool $needPortalServerHostIdPolicy
+     * @param bool $needPortalNodelockedHostIdPolicy
+     * @param bool $needRedundantServerPolicy
+     * @param bool $needACPIGenerationIdLicensePolicy
      */
     public static function create(bool $needRehostsPolicy, bool $needReturnsPolicy, bool $needRepairsPolicy, bool $needExtraActivationsPolicy, bool $needCancelLicensePolicy, bool $needVirtualLicensePolicy, bool $needReinstallPolicy, bool $needServerHostIdPolicy, bool $needNodelockedHostIdPolicy, bool $needPortalServerHostIdPolicy, bool $needPortalNodelockedHostIdPolicy, bool $needRedundantServerPolicy, bool $needACPIGenerationIdLicensePolicy)
     {

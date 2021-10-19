@@ -53,15 +53,15 @@ class CommonBatchDataSetType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \DateTimeInterface $startDate
-     * @var \DateTimeInterface $versionDate
-     * @var \DateTimeInterface $versionStartDate
-     * @var string $soldTo
-     * @var string $shipToEmail
-     * @var string $shipToAddress
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @var bool $overridePolicy
-     * @var string $FNPTimeZoneValue
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $versionDate
+     * @param \DateTimeInterface $versionStartDate
+     * @param string $soldTo
+     * @param string $shipToEmail
+     * @param string $shipToAddress
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param bool $overridePolicy
+     * @param string $FNPTimeZoneValue
      */
     public function __construct(\DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
     {
@@ -79,15 +79,15 @@ class CommonBatchDataSetType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \DateTimeInterface $startDate
-     * @var \DateTimeInterface $versionDate
-     * @var \DateTimeInterface $versionStartDate
-     * @var string $soldTo
-     * @var string $shipToEmail
-     * @var string $shipToAddress
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @var bool $overridePolicy
-     * @var string $FNPTimeZoneValue
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $versionDate
+     * @param \DateTimeInterface $versionStartDate
+     * @param string $soldTo
+     * @param string $shipToEmail
+     * @param string $shipToAddress
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param bool $overridePolicy
+     * @param string $FNPTimeZoneValue
      */
     public static function create(\DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
     {

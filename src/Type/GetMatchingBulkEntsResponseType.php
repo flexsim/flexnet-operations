@@ -25,9 +25,9 @@ class GetMatchingBulkEntsResponseType extends FlexnetType implements ResultInter
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsResponseListType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntsListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsResponseListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntsListType $failedData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsResponseListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntsListType $failedData = null)
     {
@@ -39,9 +39,9 @@ class GetMatchingBulkEntsResponseType extends FlexnetType implements ResultInter
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsResponseListType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntsListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsResponseListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntsListType $failedData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsResponseListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntsListType $failedData = null)
     {

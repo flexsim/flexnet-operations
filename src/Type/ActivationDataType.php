@@ -13,7 +13,7 @@ class ActivationDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $activationData
+     * @param string $activationData
      */
     public function __construct(string $activationData)
     {
@@ -23,7 +23,7 @@ class ActivationDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $activationData
+     * @param string $activationData
      */
     public static function create(string $activationData)
     {

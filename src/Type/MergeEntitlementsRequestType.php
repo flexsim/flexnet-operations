@@ -40,10 +40,10 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @var string $accountFrom this method is backwards compatible so you may also pass $organizationFrom
-     * @var string $accountTo this method is backwards compatible so you may also pass $organizationTo
-     * @var bool $mergeUsers
-     * @var bool $mergeEntitlements
+     * @param string $accountFrom this method is backwards compatible so you may also pass $organizationFrom
+     * @param string $accountTo this method is backwards compatible so you may also pass $organizationTo
+     * @param bool $mergeUsers
+     * @param bool $mergeEntitlements
      */
     public function __construct(
         string $accountFrom,
@@ -62,10 +62,10 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @var string $accountFrom this method is backwards compatible so you may also pass $organizationFrom
-     * @var string $accountTo this method is backwards compatible so you may also pass $organizationTo
-     * @var bool $mergeUsers
-     * @var bool $mergeEntitlements
+     * @param string $accountFrom this method is backwards compatible so you may also pass $organizationFrom
+     * @param string $accountTo this method is backwards compatible so you may also pass $organizationTo
+     * @param bool $mergeUsers
+     * @param bool $mergeEntitlements
      */
     public static function create(
         string $accountFrom,

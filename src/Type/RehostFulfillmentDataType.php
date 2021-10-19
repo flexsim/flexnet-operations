@@ -43,13 +43,13 @@ class RehostFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
-     * @var \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
-     * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
-     * @var int $partialCount
-     * @var int $overDraftCount
-     * @var bool $overridePolicy
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
+     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
+     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param int $partialCount
+     * @param int $overDraftCount
+     * @param bool $overridePolicy
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds = null, \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds = null, \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null, int $partialCount = null, int $overDraftCount = null, bool $overridePolicy = null)
     {
@@ -65,13 +65,13 @@ class RehostFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @var \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
-     * @var \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
-     * @var \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
-     * @var int $partialCount
-     * @var int $overDraftCount
-     * @var bool $overridePolicy
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
+     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
+     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param int $partialCount
+     * @param int $overDraftCount
+     * @param bool $overridePolicy
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds = null, \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds = null, \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null, int $partialCount = null, int $overDraftCount = null, bool $overridePolicy = null)
     {

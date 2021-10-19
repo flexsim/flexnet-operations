@@ -15,7 +15,7 @@ class GetProductRelationshipsRequestType extends FlexnetType implements RequestI
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier)
     {
@@ -25,7 +25,7 @@ class GetProductRelationshipsRequestType extends FlexnetType implements RequestI
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier)
     {

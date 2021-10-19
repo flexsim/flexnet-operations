@@ -13,7 +13,7 @@ class DictionaryEntriesCollection extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry
+     * @param \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry)
     {
@@ -23,7 +23,7 @@ class DictionaryEntriesCollection extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry
+     * @param \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry
      */
     public static function create(\Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry)
     {

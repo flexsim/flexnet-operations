@@ -20,8 +20,8 @@ class SearchEntitlementResponseType extends FlexnetType implements ResultInterfa
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementDataType|array $entitlement
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementDataType|array $entitlement
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $entitlement = null)
     {
@@ -32,8 +32,8 @@ class SearchEntitlementResponseType extends FlexnetType implements ResultInterfa
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementDataType|array $entitlement
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementDataType|array $entitlement
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $entitlement = null)
     {

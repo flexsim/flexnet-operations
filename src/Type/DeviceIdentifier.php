@@ -38,12 +38,12 @@ class DeviceIdentifier extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $deviceType
-     * @var string $uniqueId
-     * @var string $deviceId
-     * @var \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds
-     * @var string $deviceIdType
-     * @var string $publisherName
+     * @param string $deviceType
+     * @param string $uniqueId
+     * @param string $deviceId
+     * @param \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds
+     * @param string $deviceIdType
+     * @param string $publisherName
      */
     public function __construct(string $deviceType, string $uniqueId = null, string $deviceId = null, \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds = null, string $deviceIdType = null, string $publisherName = null)
     {
@@ -58,12 +58,12 @@ class DeviceIdentifier extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $deviceType
-     * @var string $uniqueId
-     * @var string $deviceId
-     * @var \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds
-     * @var string $deviceIdType
-     * @var string $publisherName
+     * @param string $deviceType
+     * @param string $uniqueId
+     * @param string $deviceId
+     * @param \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds
+     * @param string $deviceIdType
+     * @param string $publisherName
      */
     public static function create(string $deviceType, string $uniqueId = null, string $deviceId = null, \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds = null, string $deviceIdType = null, string $publisherName = null)
     {

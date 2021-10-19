@@ -13,7 +13,7 @@ class GetProductCategoriesResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType|array $productCategory
+     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType|array $productCategory
      */
     public function __construct($productCategory = null)
     {
@@ -23,7 +23,7 @@ class GetProductCategoriesResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType|array $productCategory
+     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType|array $productCategory
      */
     public static function create($productCategory = null)
     {

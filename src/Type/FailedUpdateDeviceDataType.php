@@ -18,8 +18,8 @@ class FailedUpdateDeviceDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateDevDataType $device
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\UpdateDevDataType $device
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UpdateDevDataType $device = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedUpdateDeviceDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateDevDataType $device
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\UpdateDevDataType $device
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UpdateDevDataType $device = null, string $reason = null)
     {

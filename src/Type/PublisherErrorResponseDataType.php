@@ -13,7 +13,7 @@ class PublisherErrorResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentResponseDataType|array $fulfillmentData
+     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentResponseDataType|array $fulfillmentData
      */
     public function __construct($fulfillmentData = null)
     {
@@ -23,7 +23,7 @@ class PublisherErrorResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentResponseDataType|array $fulfillmentData
+     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentResponseDataType|array $fulfillmentData
      */
     public static function create($fulfillmentData = null)
     {

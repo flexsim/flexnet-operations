@@ -30,10 +30,10 @@ class GetUniformSuitesQueryRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
-     * @var bool $returnContainedObjects
+     * @param \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
+     * @param bool $returnContainedObjects
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $returnContainedObjects)
     {
@@ -47,10 +47,10 @@ class GetUniformSuitesQueryRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
-     * @var bool $returnContainedObjects
+     * @param \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
+     * @param bool $returnContainedObjects
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $returnContainedObjects)
     {

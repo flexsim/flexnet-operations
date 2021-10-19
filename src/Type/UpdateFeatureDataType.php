@@ -38,12 +38,12 @@ class UpdateFeatureDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @var string $featureName
-     * @var string $versionFormat
-     * @var string $version
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param string $featureName
+     * @param string $versionFormat
+     * @param string $version
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, string $featureName = null, string $versionFormat = null, string $version = null, string $description = null, \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null)
     {
@@ -58,12 +58,12 @@ class UpdateFeatureDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @var string $featureName
-     * @var string $versionFormat
-     * @var string $version
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param string $featureName
+     * @param string $versionFormat
+     * @param string $version
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
      */
     public static function create(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, string $featureName = null, string $versionFormat = null, string $version = null, string $description = null, \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null)
     {

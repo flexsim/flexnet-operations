@@ -38,12 +38,12 @@ class TransferLineItemInfoType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @var int $numberOfCopies
-     * @var bool $useSameActivationId
-     * @var string $customActivationId
-     * @var bool $generateActivationId
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
+     * @param int $numberOfCopies
+     * @param bool $useSameActivationId
+     * @param string $customActivationId
+     * @param bool $generateActivationId
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo, bool $useSameActivationId = null, string $customActivationId = null, bool $generateActivationId = null)
     {
@@ -58,12 +58,12 @@ class TransferLineItemInfoType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @var int $numberOfCopies
-     * @var bool $useSameActivationId
-     * @var string $customActivationId
-     * @var bool $generateActivationId
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
+     * @param int $numberOfCopies
+     * @param bool $useSameActivationId
+     * @param string $customActivationId
+     * @param bool $generateActivationId
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo, bool $useSameActivationId = null, string $customActivationId = null, bool $generateActivationId = null)
     {

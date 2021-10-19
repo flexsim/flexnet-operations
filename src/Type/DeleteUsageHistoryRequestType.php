@@ -15,7 +15,7 @@ class DeleteUsageHistoryRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @var \DateTimeInterface $beforeUpdateTime
+     * @param \DateTimeInterface $beforeUpdateTime
      */
     public function __construct(\DateTimeInterface $beforeUpdateTime)
     {
@@ -25,7 +25,7 @@ class DeleteUsageHistoryRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @var \DateTimeInterface $beforeUpdateTime
+     * @param \DateTimeInterface $beforeUpdateTime
      */
     public static function create(\DateTimeInterface $beforeUpdateTime)
     {

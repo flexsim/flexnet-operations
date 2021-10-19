@@ -23,9 +23,9 @@ class GenerateCapabilityResponseDictionaryEntry extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $name
-     * @var string $stringValue
-     * @var int $numberValue
+     * @param string $name
+     * @param string $stringValue
+     * @param int $numberValue
      */
     public function __construct(string $name, string $stringValue = null, int $numberValue = null)
     {
@@ -37,9 +37,9 @@ class GenerateCapabilityResponseDictionaryEntry extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $name
-     * @var string $stringValue
-     * @var int $numberValue
+     * @param string $name
+     * @param string $stringValue
+     * @param int $numberValue
      */
     public static function create(string $name, string $stringValue = null, int $numberValue = null)
     {

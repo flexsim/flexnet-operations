@@ -13,7 +13,7 @@ class GetMaintenanceQueryResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\MaintenanceQueryDataType|array $maintenance
+     * @param \Flexsim\FlexnetOperations\Type\MaintenanceQueryDataType|array $maintenance
      */
     public function __construct($maintenance = null)
     {
@@ -23,7 +23,7 @@ class GetMaintenanceQueryResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\MaintenanceQueryDataType|array $maintenance
+     * @param \Flexsim\FlexnetOperations\Type\MaintenanceQueryDataType|array $maintenance
      */
     public static function create($maintenance = null)
     {

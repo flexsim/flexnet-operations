@@ -23,9 +23,9 @@ class CreateUserAccountType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @var \DateTimeInterface $expiryDate
-     * @var \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \DateTimeInterface $expiryDate
+     * @param \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles
      */
     public function __construct(
         $account,
@@ -40,9 +40,9 @@ class CreateUserAccountType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @var \DateTimeInterface $expiryDate
-     * @var \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \DateTimeInterface $expiryDate
+     * @param \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles
      */
     public static function create(
         $account,

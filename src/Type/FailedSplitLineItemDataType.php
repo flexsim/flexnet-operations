@@ -18,8 +18,8 @@ class FailedSplitLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedSplitLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo, string $reason)
     {

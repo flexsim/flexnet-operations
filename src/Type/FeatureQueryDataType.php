@@ -43,13 +43,13 @@ class FeatureQueryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var string $featureName
-     * @var string $versionFormat
-     * @var string $version
-     * @var string $description
-     * @var string $state
-     * @var \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param string $uniqueId
+     * @param string $featureName
+     * @param string $versionFormat
+     * @param string $version
+     * @param string $description
+     * @param string $state
+     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
      */
     public function __construct(string $uniqueId, string $featureName, string $versionFormat, string $version = null, string $description = null, string $state, \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null)
     {
@@ -65,13 +65,13 @@ class FeatureQueryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var string $featureName
-     * @var string $versionFormat
-     * @var string $version
-     * @var string $description
-     * @var string $state
-     * @var \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param string $uniqueId
+     * @param string $featureName
+     * @param string $versionFormat
+     * @param string $version
+     * @param string $description
+     * @param string $state
+     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
      */
     public static function create(string $uniqueId, string $featureName, string $versionFormat, string $version = null, string $description = null, string $state, \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null)
     {

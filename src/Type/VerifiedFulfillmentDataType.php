@@ -13,7 +13,7 @@ class VerifiedFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $recordRefNo
+     * @param string $recordRefNo
      */
     public function __construct(string $recordRefNo)
     {
@@ -23,7 +23,7 @@ class VerifiedFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $recordRefNo
+     * @param string $recordRefNo
      */
     public static function create(string $recordRefNo)
     {

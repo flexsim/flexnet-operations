@@ -18,8 +18,8 @@ class FailedTransferLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedTransferLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo, string $reason)
     {

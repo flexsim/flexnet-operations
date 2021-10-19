@@ -13,7 +13,7 @@ class GetUsageSummaryTimesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UsageSummaryTimesDataType|array $usageSummaryTime
+     * @param \Flexsim\FlexnetOperations\Type\UsageSummaryTimesDataType|array $usageSummaryTime
      */
     public function __construct($usageSummaryTime = null)
     {
@@ -23,7 +23,7 @@ class GetUsageSummaryTimesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UsageSummaryTimesDataType|array $usageSummaryTime
+     * @param \Flexsim\FlexnetOperations\Type\UsageSummaryTimesDataType|array $usageSummaryTime
      */
     public static function create($usageSummaryTime = null)
     {

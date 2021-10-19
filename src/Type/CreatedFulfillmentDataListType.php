@@ -18,8 +18,8 @@ class CreatedFulfillmentDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array $createdFulfillment
-     * @var \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array $verifiedFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array $createdFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array $verifiedFulfillment
      */
     public function __construct($createdFulfillment = null, $verifiedFulfillment = null)
     {
@@ -30,8 +30,8 @@ class CreatedFulfillmentDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array $createdFulfillment
-     * @var \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array $verifiedFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array $createdFulfillment
+     * @param \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array $verifiedFulfillment
      */
     public static function create($createdFulfillment = null, $verifiedFulfillment = null)
     {

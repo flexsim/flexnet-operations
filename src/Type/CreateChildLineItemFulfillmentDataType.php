@@ -68,18 +68,18 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $activationId
-     * @var \DateTimeInterface $startDate
-     * @var \DateTimeInterface $versionDate
-     * @var \DateTimeInterface $versionStartDate
-     * @var string $soldTo
-     * @var string $shipToEmail
-     * @var string $shipToAddress
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @var \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails
-     * @var bool $overridePolicy
-     * @var string $owner
-     * @var string $FNPTimeZoneValue
+     * @param string $activationId
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $versionDate
+     * @param \DateTimeInterface $versionStartDate
+     * @param string $soldTo
+     * @param string $shipToEmail
+     * @param string $shipToAddress
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails
+     * @param bool $overridePolicy
+     * @param string $owner
+     * @param string $FNPTimeZoneValue
      */
     public function __construct(string $activationId, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails, bool $overridePolicy = null, string $owner = null, string $FNPTimeZoneValue = null)
     {
@@ -100,18 +100,18 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $activationId
-     * @var \DateTimeInterface $startDate
-     * @var \DateTimeInterface $versionDate
-     * @var \DateTimeInterface $versionStartDate
-     * @var string $soldTo
-     * @var string $shipToEmail
-     * @var string $shipToAddress
-     * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @var \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails
-     * @var bool $overridePolicy
-     * @var string $owner
-     * @var string $FNPTimeZoneValue
+     * @param string $activationId
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $versionDate
+     * @param \DateTimeInterface $versionStartDate
+     * @param string $soldTo
+     * @param string $shipToEmail
+     * @param string $shipToAddress
+     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails
+     * @param bool $overridePolicy
+     * @param string $owner
+     * @param string $FNPTimeZoneValue
      */
     public static function create(string $activationId, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails, bool $overridePolicy = null, string $owner = null, string $FNPTimeZoneValue = null)
     {

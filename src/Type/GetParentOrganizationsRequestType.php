@@ -15,7 +15,7 @@ class GetParentOrganizationsRequestType extends FlexnetType implements RequestIn
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization)
     {
@@ -25,7 +25,7 @@ class GetParentOrganizationsRequestType extends FlexnetType implements RequestIn
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization)
     {

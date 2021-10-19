@@ -28,10 +28,10 @@ class ProductCategoryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $uniqueId
-     * @var string $name
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType $categoryAttributes
+     * @param string $uniqueId
+     * @param string $name
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType $categoryAttributes
      */
     public function __construct(string $uniqueId = null, string $name = null, string $description = null, \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType $categoryAttributes = null)
     {
@@ -44,10 +44,10 @@ class ProductCategoryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $uniqueId
-     * @var string $name
-     * @var string $description
-     * @var \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType $categoryAttributes
+     * @param string $uniqueId
+     * @param string $name
+     * @param string $description
+     * @param \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType $categoryAttributes
      */
     public static function create(string $uniqueId = null, string $name = null, string $description = null, \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType $categoryAttributes = null)
     {

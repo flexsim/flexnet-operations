@@ -18,8 +18,8 @@ class FailedTransferHostDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier = null, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedTransferHostDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier = null, string $reason = null)
     {

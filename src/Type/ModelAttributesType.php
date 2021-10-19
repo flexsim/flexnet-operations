@@ -28,10 +28,10 @@ class ModelAttributesType extends FlexnetType
     /**
      * Constructor
      *
-     * @var bool $needServerId
-     * @var bool $needNodeLockId
-     * @var bool $needCount
-     * @var bool $needOverdraftCount
+     * @param bool $needServerId
+     * @param bool $needNodeLockId
+     * @param bool $needCount
+     * @param bool $needOverdraftCount
      */
     public function __construct(bool $needServerId, bool $needNodeLockId, bool $needCount, bool $needOverdraftCount)
     {
@@ -44,10 +44,10 @@ class ModelAttributesType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var bool $needServerId
-     * @var bool $needNodeLockId
-     * @var bool $needCount
-     * @var bool $needOverdraftCount
+     * @param bool $needServerId
+     * @param bool $needNodeLockId
+     * @param bool $needCount
+     * @param bool $needOverdraftCount
      */
     public static function create(bool $needServerId, bool $needNodeLockId, bool $needCount, bool $needOverdraftCount)
     {

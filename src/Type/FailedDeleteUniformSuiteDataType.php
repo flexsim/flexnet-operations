@@ -18,8 +18,8 @@ class FailedDeleteUniformSuiteDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier, string $reason = null)
     {
@@ -30,8 +30,8 @@ class FailedDeleteUniformSuiteDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier, string $reason = null)
     {

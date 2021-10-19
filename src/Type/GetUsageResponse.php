@@ -20,8 +20,8 @@ class GetUsageResponse extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfoType
-     * @var \Flexsim\FlexnetOperations\Type\Usage $usages
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfoType
+     * @param \Flexsim\FlexnetOperations\Type\Usage $usages
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfoType, \Flexsim\FlexnetOperations\Type\Usage $usages)
     {
@@ -32,8 +32,8 @@ class GetUsageResponse extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfoType
-     * @var \Flexsim\FlexnetOperations\Type\Usage $usages
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfoType
+     * @param \Flexsim\FlexnetOperations\Type\Usage $usages
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfoType, \Flexsim\FlexnetOperations\Type\Usage $usages)
     {

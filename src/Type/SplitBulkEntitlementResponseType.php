@@ -25,9 +25,9 @@ class SplitBulkEntitlementResponseType extends FlexnetType implements ResultInte
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementResponseListType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementResponseListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementListType $failedData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementResponseListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementListType $failedData = null)
     {
@@ -39,9 +39,9 @@ class SplitBulkEntitlementResponseType extends FlexnetType implements ResultInte
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementResponseListType $responseData
-     * @var \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementResponseListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementListType $failedData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementResponseListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedSplitBulkEntitlementListType $failedData = null)
     {

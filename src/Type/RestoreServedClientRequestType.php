@@ -30,10 +30,10 @@ class RestoreServedClientRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @var string $servedClientHostId
-     * @var string $servedClientIdType
-     * @var string $newHostID
-     * @var string|array $serverHostIdTypes
+     * @param string $servedClientHostId
+     * @param string $servedClientIdType
+     * @param string $newHostID
+     * @param string|array $serverHostIdTypes
      */
     public function __construct(string $servedClientHostId, string $servedClientIdType, string $newHostID = null, $serverHostIdTypes = null)
     {
@@ -46,10 +46,10 @@ class RestoreServedClientRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @var string $servedClientHostId
-     * @var string $servedClientIdType
-     * @var string $newHostID
-     * @var string|array $serverHostIdTypes
+     * @param string $servedClientHostId
+     * @param string $servedClientIdType
+     * @param string $newHostID
+     * @param string|array $serverHostIdTypes
      */
     public static function create(string $servedClientHostId, string $servedClientIdType, string $newHostID = null, $serverHostIdTypes = null)
     {

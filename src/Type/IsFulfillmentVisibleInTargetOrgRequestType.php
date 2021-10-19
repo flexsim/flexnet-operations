@@ -20,8 +20,8 @@ class IsFulfillmentVisibleInTargetOrgRequestType extends FlexnetType implements 
     /**
      * Constructor
      *
-     * @var string $ActivationID
-     * @var string $targetOrgID
+     * @param string $ActivationID
+     * @param string $targetOrgID
      */
     public function __construct(string $ActivationID, string $targetOrgID)
     {
@@ -32,8 +32,8 @@ class IsFulfillmentVisibleInTargetOrgRequestType extends FlexnetType implements 
     /**
      * create a new instance of this class
      *
-     * @var string $ActivationID
-     * @var string $targetOrgID
+     * @param string $ActivationID
+     * @param string $targetOrgID
      */
     public static function create(string $ActivationID, string $targetOrgID)
     {

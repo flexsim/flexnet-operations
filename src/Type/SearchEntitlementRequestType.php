@@ -25,9 +25,9 @@ class SearchEntitlementRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $entitlementSearchCriteria
-     * @var int $batchSize
-     * @var int $pageNumber
+     * @param \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $entitlementSearchCriteria
+     * @param int $batchSize
+     * @param int $pageNumber
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int $pageNumber = null)
     {
@@ -39,9 +39,9 @@ class SearchEntitlementRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $entitlementSearchCriteria
-     * @var int $batchSize
-     * @var int $pageNumber
+     * @param \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $entitlementSearchCriteria
+     * @param int $batchSize
+     * @param int $pageNumber
      */
     public static function create(\Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int $pageNumber = null)
     {

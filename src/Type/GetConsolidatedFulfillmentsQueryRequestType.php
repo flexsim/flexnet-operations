@@ -30,10 +30,10 @@ class GetConsolidatedFulfillmentsQueryRequestType extends FlexnetType implements
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
-     * @var bool $includeLicenseText
+     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
+     * @param bool $includeLicenseText
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams = null, int $pageNumber, int $batchSize, bool $includeLicenseText = null)
     {
@@ -47,10 +47,10 @@ class GetConsolidatedFulfillmentsQueryRequestType extends FlexnetType implements
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
-     * @var bool $includeLicenseText
+     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
+     * @param bool $includeLicenseText
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType $queryParams = null, int $pageNumber, int $batchSize, bool $includeLicenseText = null)
     {

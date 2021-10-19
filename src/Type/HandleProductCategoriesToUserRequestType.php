@@ -20,8 +20,8 @@ class HandleProductCategoriesToUserRequestType extends FlexnetType implements Re
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
-     * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UserIdentifierType $user, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory)
     {
@@ -32,8 +32,8 @@ class HandleProductCategoriesToUserRequestType extends FlexnetType implements Re
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
-     * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UserIdentifierType $user, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory)
     {

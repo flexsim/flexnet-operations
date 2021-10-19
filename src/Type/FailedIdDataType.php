@@ -18,8 +18,8 @@ class FailedIdDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $id
-     * @var string $reason
+     * @param string $id
+     * @param string $reason
      */
     public function __construct(string $id, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedIdDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $id
-     * @var string $reason
+     * @param string $id
+     * @param string $reason
      */
     public static function create(string $id, string $reason)
     {

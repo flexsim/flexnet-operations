@@ -15,7 +15,7 @@ class ReturnHostRequestListType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ReturnHostType|array $returnHosts
+     * @param \Flexsim\FlexnetOperations\Type\ReturnHostType|array $returnHosts
      */
     public function __construct($returnHosts)
     {
@@ -25,7 +25,7 @@ class ReturnHostRequestListType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ReturnHostType|array $returnHosts
+     * @param \Flexsim\FlexnetOperations\Type\ReturnHostType|array $returnHosts
      */
     public static function create($returnHosts)
     {

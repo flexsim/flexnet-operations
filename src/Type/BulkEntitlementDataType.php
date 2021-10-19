@@ -23,9 +23,9 @@ class BulkEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $state
-     * @var string $createdUserId
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param string $state
+     * @param string $createdUserId
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
      */
     public function __construct(string $state = null, string $createdUserId = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null)
     {
@@ -37,9 +37,9 @@ class BulkEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $state
-     * @var string $createdUserId
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param string $state
+     * @param string $createdUserId
+     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
      */
     public static function create(string $state = null, string $createdUserId = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null)
     {

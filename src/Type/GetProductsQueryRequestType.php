@@ -30,10 +30,10 @@ class GetProductsQueryRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
-     * @var bool $returnContainedObjects
+     * @param \Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
+     * @param bool $returnContainedObjects
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $returnContainedObjects)
     {
@@ -47,10 +47,10 @@ class GetProductsQueryRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams
-     * @var int $pageNumber
-     * @var int $batchSize
-     * @var bool $returnContainedObjects
+     * @param \Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams
+     * @param int $pageNumber
+     * @param int $batchSize
+     * @param bool $returnContainedObjects
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams = null, int $pageNumber, int $batchSize, bool $returnContainedObjects)
     {

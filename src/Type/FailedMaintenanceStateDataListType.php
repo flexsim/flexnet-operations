@@ -13,7 +13,7 @@ class FailedMaintenanceStateDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedMaintenanceStateDataType|array $failedMaintenance
+     * @param \Flexsim\FlexnetOperations\Type\FailedMaintenanceStateDataType|array $failedMaintenance
      */
     public function __construct($failedMaintenance = null)
     {
@@ -23,7 +23,7 @@ class FailedMaintenanceStateDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\FailedMaintenanceStateDataType|array $failedMaintenance
+     * @param \Flexsim\FlexnetOperations\Type\FailedMaintenanceStateDataType|array $failedMaintenance
      */
     public static function create($failedMaintenance = null)
     {

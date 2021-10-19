@@ -38,12 +38,12 @@ class GetUsageHistoryConfigType extends FlexnetType
     /**
      * Constructor
      *
-     * @var bool $server
-     * @var bool $features
-     * @var bool $machineType
-     * @var bool $vmDetails
-     * @var bool $vmInfo
-     * @var bool $vendorDictionary
+     * @param bool $server
+     * @param bool $features
+     * @param bool $machineType
+     * @param bool $vmDetails
+     * @param bool $vmInfo
+     * @param bool $vendorDictionary
      */
     public function __construct(bool $server = null, bool $features = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null)
     {
@@ -58,12 +58,12 @@ class GetUsageHistoryConfigType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var bool $server
-     * @var bool $features
-     * @var bool $machineType
-     * @var bool $vmDetails
-     * @var bool $vmInfo
-     * @var bool $vendorDictionary
+     * @param bool $server
+     * @param bool $features
+     * @param bool $machineType
+     * @param bool $vmDetails
+     * @param bool $vmInfo
+     * @param bool $vendorDictionary
      */
     public static function create(bool $server = null, bool $features = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null)
     {

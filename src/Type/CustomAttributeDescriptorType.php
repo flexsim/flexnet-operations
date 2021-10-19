@@ -13,7 +13,7 @@ class CustomAttributeDescriptorType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $attributeName
+     * @param string $attributeName
      */
     public function __construct(string $attributeName)
     {
@@ -23,7 +23,7 @@ class CustomAttributeDescriptorType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $attributeName
+     * @param string $attributeName
      */
     public static function create(string $attributeName)
     {

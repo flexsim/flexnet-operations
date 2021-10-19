@@ -25,9 +25,9 @@ class AddDomainUserResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\AddedDomainUserDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\AddedDomainUserDataListType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\AddedDomainUserDataListType $responseData = null)
     {
@@ -39,9 +39,9 @@ class AddDomainUserResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\AddedDomainUserDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\AddedDomainUserDataListType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\AddedDomainUserDataListType $responseData = null)
     {

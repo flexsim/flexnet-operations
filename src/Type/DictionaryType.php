@@ -13,7 +13,7 @@ class DictionaryType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry $entry
+     * @param \Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry $entry
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry $entry)
     {
@@ -23,7 +23,7 @@ class DictionaryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry $entry
+     * @param \Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry $entry
      */
     public static function create(\Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry $entry)
     {

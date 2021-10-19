@@ -25,9 +25,9 @@ class UpdateDomainUserResponseType extends FlexnetType implements ResultInterfac
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\UpdatedDomainUserDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\UpdatedDomainUserDataListType $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\UpdatedDomainUserDataListType $responseData = null)
     {
@@ -39,9 +39,9 @@ class UpdateDomainUserResponseType extends FlexnetType implements ResultInterfac
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataListType $failedData
-     * @var \Flexsim\FlexnetOperations\Type\UpdatedDomainUserDataListType $responseData
+     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataListType $failedData
+     * @param \Flexsim\FlexnetOperations\Type\UpdatedDomainUserDataListType $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUpdateDomainUserDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\UpdatedDomainUserDataListType $responseData = null)
     {

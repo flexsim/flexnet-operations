@@ -13,7 +13,7 @@ class GetUsersForProductCategoryResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType|array $user
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType|array $user
      */
     public function __construct($user = null)
     {
@@ -23,7 +23,7 @@ class GetUsersForProductCategoryResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType|array $user
+     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType|array $user
      */
     public static function create($user = null)
     {

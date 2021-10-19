@@ -18,8 +18,8 @@ class PolicyTermType extends FlexnetType
     /**
      * Constructor
      *
-     * @var int $duration
-     * @var string $durationUnit
+     * @param int $duration
+     * @param string $durationUnit
      */
     public function __construct(int $duration, string $durationUnit)
     {
@@ -30,8 +30,8 @@ class PolicyTermType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var int $duration
-     * @var string $durationUnit
+     * @param int $duration
+     * @param string $durationUnit
      */
     public static function create(int $duration, string $durationUnit)
     {

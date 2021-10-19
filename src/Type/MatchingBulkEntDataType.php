@@ -13,7 +13,7 @@ class MatchingBulkEntDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier)
     {
@@ -23,7 +23,7 @@ class MatchingBulkEntDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier
+     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier
      */
     public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $matchingBulkEntIdentifier)
     {

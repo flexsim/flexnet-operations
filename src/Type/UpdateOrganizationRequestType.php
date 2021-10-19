@@ -15,7 +15,7 @@ class UpdateOrganizationRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData
+     * @param \Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData)
     {
@@ -25,7 +25,7 @@ class UpdateOrganizationRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData
+     * @param \Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData)
     {

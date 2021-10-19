@@ -20,8 +20,8 @@ class GetDeviceRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
-     * @var \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType $responseConfig
+     * @param \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
+     * @param \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType $responseConfig
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\DeviceId $deviceId, \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType $responseConfig = null)
     {
@@ -32,8 +32,8 @@ class GetDeviceRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
-     * @var \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType $responseConfig
+     * @param \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
+     * @param \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType $responseConfig
      */
     public static function create(\Flexsim\FlexnetOperations\Type\DeviceId $deviceId, \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType $responseConfig = null)
     {

@@ -18,8 +18,8 @@ class FailedAdvancedFmtLCDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType $fulfillment
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType $fulfillment
+     * @param string $reason
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType $fulfillment, string $reason)
     {
@@ -30,8 +30,8 @@ class FailedAdvancedFmtLCDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType $fulfillment
-     * @var string $reason
+     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType $fulfillment
+     * @param string $reason
      */
     public static function create(\Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType $fulfillment, string $reason)
     {

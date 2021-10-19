@@ -38,12 +38,12 @@ class TransferHostIdDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @var string $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
-     * @var string $nodeId
-     * @var string $customHostId
-     * @var string $customHostType
-     * @var string $customLicenseTechnology
+     * @param string $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
+     * @param string $nodeId
+     * @param string $customHostId
+     * @param string $customHostType
+     * @param string $customLicenseTechnology
      */
     public function __construct(string $soldTo, \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds = null, string $nodeId = null, string $customHostId = null, string $customHostType = null, string $customLicenseTechnology = null)
     {
@@ -58,12 +58,12 @@ class TransferHostIdDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var string $soldTo
-     * @var \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
-     * @var string $nodeId
-     * @var string $customHostId
-     * @var string $customHostType
-     * @var string $customLicenseTechnology
+     * @param string $soldTo
+     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
+     * @param string $nodeId
+     * @param string $customHostId
+     * @param string $customHostType
+     * @param string $customLicenseTechnology
      */
     public static function create(string $soldTo, \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds = null, string $nodeId = null, string $customHostId = null, string $customHostType = null, string $customLicenseTechnology = null)
     {

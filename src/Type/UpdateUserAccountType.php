@@ -23,9 +23,9 @@ class UpdateUserAccountType extends FlexnetType
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @var \DateTimeInterface $expiryDate
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserRolesAccountListType $roles
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \DateTimeInterface $expiryDate
+     * @param \Flexsim\FlexnetOperations\Type\UpdateUserRolesAccountListType $roles
      */
     public function __construct($account, \DateTimeInterface $expiryDate = null, \Flexsim\FlexnetOperations\Type\UpdateUserRolesAccountListType $roles = null)
     {
@@ -37,9 +37,9 @@ class UpdateUserAccountType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @var \DateTimeInterface $expiryDate
-     * @var \Flexsim\FlexnetOperations\Type\UpdateUserRolesAccountListType $roles
+     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param \DateTimeInterface $expiryDate
+     * @param \Flexsim\FlexnetOperations\Type\UpdateUserRolesAccountListType $roles
      */
     public static function create($account, \DateTimeInterface $expiryDate = null, \Flexsim\FlexnetOperations\Type\UpdateUserRolesAccountListType $roles = null)
     {

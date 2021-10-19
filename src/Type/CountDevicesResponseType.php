@@ -25,9 +25,9 @@ class CountDevicesResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedCountDevicesData $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CountDevicesResponseData $responseData
+     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedCountDevicesData $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CountDevicesResponseData $responseData
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedCountDevicesData $failedData = null, \Flexsim\FlexnetOperations\Type\CountDevicesResponseData $responseData = null)
     {
@@ -39,9 +39,9 @@ class CountDevicesResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @var \Flexsim\FlexnetOperations\Type\FailedCountDevicesData $failedData
-     * @var \Flexsim\FlexnetOperations\Type\CountDevicesResponseData $responseData
+     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param \Flexsim\FlexnetOperations\Type\FailedCountDevicesData $failedData
+     * @param \Flexsim\FlexnetOperations\Type\CountDevicesResponseData $responseData
      */
     public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedCountDevicesData $failedData = null, \Flexsim\FlexnetOperations\Type\CountDevicesResponseData $responseData = null)
     {

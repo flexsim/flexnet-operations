@@ -20,8 +20,8 @@ class IsEntitlementVisibleInTargetOrgRequestType extends FlexnetType implements 
     /**
      * Constructor
      *
-     * @var string $entitlementID
-     * @var string $targetOrgID
+     * @param string $entitlementID
+     * @param string $targetOrgID
      */
     public function __construct(string $entitlementID, string $targetOrgID)
     {
@@ -32,8 +32,8 @@ class IsEntitlementVisibleInTargetOrgRequestType extends FlexnetType implements 
     /**
      * create a new instance of this class
      *
-     * @var string $entitlementID
-     * @var string $targetOrgID
+     * @param string $entitlementID
+     * @param string $targetOrgID
      */
     public static function create(string $entitlementID, string $targetOrgID)
     {
