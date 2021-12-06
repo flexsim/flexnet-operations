@@ -39,12 +39,12 @@ class GetProductsQueryRequestType extends FlexnetType implements RequestInterfac
         int $pageNumber,
         int $batchSize,
         bool $returnContainedObjects,
-        \Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams = []
+        ?\Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams = null
     ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
         $this->returnContainedObjects = $returnContainedObjects;
-        $this->queryParams = $queryParams;
+        $this->queryParams = $queryParams ?? [];
     }
 
     /**
@@ -59,7 +59,7 @@ class GetProductsQueryRequestType extends FlexnetType implements RequestInterfac
         int $pageNumber,
         int $batchSize,
         bool $returnContainedObjects,
-        \Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams = []
+        ?\Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams = null
     ) {
         return new self(...func_get_args());
     }

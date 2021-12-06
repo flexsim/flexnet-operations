@@ -44,13 +44,13 @@ class GetFulfillmentsQueryRequestType extends FlexnetType implements RequestInte
     public function __construct(
         int $pageNumber,
         int $batchSize,
-        \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = [],
+        \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = null,
         bool $includeLicenseText = null,
         bool $includeConsolidatedHostLicense = null
     ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
-        $this->queryParams = $queryParams;
+        $this->queryParams = $queryParams ?? [];
         $this->includeLicenseText = $includeLicenseText;
         $this->includeConsolidatedHostLicense = $includeConsolidatedHostLicense;
     }
@@ -67,7 +67,7 @@ class GetFulfillmentsQueryRequestType extends FlexnetType implements RequestInte
     public static function create(
         int $pageNumber,
         int $batchSize,
-        \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = [],
+        \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams = null,
         bool $includeLicenseText = null,
         bool $includeConsolidatedHostLicense = null
     ) {
