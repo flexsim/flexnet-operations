@@ -13,7 +13,7 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
     protected $statusInfo;
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType
+     * @var array<\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType>|\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType
      */
     protected $relationship;
 
@@ -21,9 +21,9 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
      * Constructor
      *
      * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
+     * @param array<\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType>|\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship)
+    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType|array $relationship)
     {
         $this->statusInfo = $statusInfo;
         $this->relationship = $relationship;
@@ -33,9 +33,9 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
      * create a new instance of this class
      *
      * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
+     * @param array<\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType>|\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship)
+    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType|array $relationship)
     {
         return new self(...func_get_args());
     }
@@ -59,7 +59,7 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType
+     * @return array<\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType>|\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType
      */
     public function getRelationship()
     {
@@ -67,7 +67,7 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
+     * @param array<\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType>|\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
      * @return $this
      */
     public function setRelationship($relationship)
