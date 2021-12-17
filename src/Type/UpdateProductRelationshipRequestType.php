@@ -8,16 +8,16 @@ class UpdateProductRelationshipRequestType extends FlexnetType implements Reques
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType
+     * @var \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array<\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType>
      */
     protected $relationship;
 
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType $relationship
+     * @param \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array<\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType> $relationship
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType $relationship)
+    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array $relationship)
     {
         $this->relationship = $relationship;
     }
@@ -25,15 +25,15 @@ class UpdateProductRelationshipRequestType extends FlexnetType implements Reques
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType $relationship
+     * @param \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array<\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType> $relationship
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType $relationship)
+    public static function create(\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array $relationship)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType
+     * @return \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataTyp|array<\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType>e
      */
     public function getRelationship()
     {
@@ -41,7 +41,7 @@ class UpdateProductRelationshipRequestType extends FlexnetType implements Reques
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType $relationship
+     * @param \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array<\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType> $relationship
      * @return $this
      */
     public function setRelationship($relationship)
