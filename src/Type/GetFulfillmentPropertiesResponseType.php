@@ -13,7 +13,7 @@ class GetFulfillmentPropertiesResponseType extends FlexnetType implements Result
     protected $statusInfo;
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType
+     * @var \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType|array<\Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType>
      */
     protected $fulfillment;
 
@@ -21,7 +21,7 @@ class GetFulfillmentPropertiesResponseType extends FlexnetType implements Result
      * Constructor
      *
      * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType|array $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType|array<\Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType> $fulfillment
      */
     public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $fulfillment = null)
     {
@@ -33,7 +33,7 @@ class GetFulfillmentPropertiesResponseType extends FlexnetType implements Result
      * create a new instance of this class
      *
      * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType|array $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType|array<\Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType> $fulfillment
      */
     public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $fulfillment = null)
     {
@@ -59,7 +59,7 @@ class GetFulfillmentPropertiesResponseType extends FlexnetType implements Result
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType
+     * @return \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType|array<\Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType>
      */
     public function getFulfillment()
     {
@@ -67,7 +67,7 @@ class GetFulfillmentPropertiesResponseType extends FlexnetType implements Result
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType $fulfillment
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType|array<\Flexsim\FlexnetOperations\Type\FulfillmentPropertiesType> $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)
