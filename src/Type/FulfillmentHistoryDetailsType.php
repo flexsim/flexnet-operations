@@ -6,16 +6,16 @@ class FulfillmentHistoryDetailsType extends FlexnetType
 {
 
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType
+     * @var \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array<\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType>
      */
     protected $record;
 
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType $record
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array<\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType> $record
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType $record)
+    public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array $record)
     {
         $this->record = $record;
     }
@@ -23,15 +23,15 @@ class FulfillmentHistoryDetailsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType $record
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array<\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType> $record
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType $record)
+    public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array $record)
     {
         return new self(...func_get_args());
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType
+     * @return \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array<\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType>
      */
     public function getRecord()
     {
@@ -39,7 +39,7 @@ class FulfillmentHistoryDetailsType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType $record
+     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array<\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType> $record
      * @return $this
      */
     public function setRecord($record)
