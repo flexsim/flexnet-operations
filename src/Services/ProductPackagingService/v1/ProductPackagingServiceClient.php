@@ -2,22 +2,32 @@
 
 namespace Flexsim\FlexnetOperations\Services\ProductPackagingService\v1;
 
+use Phpro\SoapClient\Caller\Caller;
 use Phpro\SoapClient\Type\ResultInterface;
 use Phpro\SoapClient\Exception\SoapException;
 use Phpro\SoapClient\Type\RequestInterface;
 use Flexsim\FlexnetOperations\Type;
 
-class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
+class ProductPackagingServiceClient
 {
+    /**
+     * @var Caller
+     */
+    private $caller;
+
+    public function __construct(\Phpro\SoapClient\Caller\Caller $caller)
+    {
+        $this->caller = $caller;
+    }
 
     /**
      * @param RequestInterface|Type\CreateFeatureRequestType $createFeatureRequest
      * @return ResultInterface|Type\CreateFeatureResponseType
      * @throws SoapException
      */
-    public function createFeature(\Flexsim\FlexnetOperations\Type\CreateFeatureRequestType $createFeatureRequest): \Flexsim\FlexnetOperations\Type\CreateFeatureResponseType
+    public function createFeature(\Flexsim\FlexnetOperations\Type\CreateFeatureRequestType $createFeatureRequest) : \Flexsim\FlexnetOperations\Type\CreateFeatureResponseType
     {
-        return $this->call('createFeature', $createFeatureRequest);
+        return ($this->caller)('createFeature', $createFeatureRequest);
     }
 
     /**
@@ -25,9 +35,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\UpdateFeatureResponseType
      * @throws SoapException
      */
-    public function updateFeature(\Flexsim\FlexnetOperations\Type\UpdateFeatureRequestType $updateFeatureRequest): \Flexsim\FlexnetOperations\Type\UpdateFeatureResponseType
+    public function updateFeature(\Flexsim\FlexnetOperations\Type\UpdateFeatureRequestType $updateFeatureRequest) : \Flexsim\FlexnetOperations\Type\UpdateFeatureResponseType
     {
-        return $this->call('updateFeature', $updateFeatureRequest);
+        return ($this->caller)('updateFeature', $updateFeatureRequest);
     }
 
     /**
@@ -35,9 +45,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\DeleteFeatureResponseType
      * @throws SoapException
      */
-    public function deleteFeature(\Flexsim\FlexnetOperations\Type\DeleteFeatureRequestType $deleteFeatureRequest): \Flexsim\FlexnetOperations\Type\DeleteFeatureResponseType
+    public function deleteFeature(\Flexsim\FlexnetOperations\Type\DeleteFeatureRequestType $deleteFeatureRequest) : \Flexsim\FlexnetOperations\Type\DeleteFeatureResponseType
     {
-        return $this->call('deleteFeature', $deleteFeatureRequest);
+        return ($this->caller)('deleteFeature', $deleteFeatureRequest);
     }
 
     /**
@@ -45,9 +55,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetFeatureCountResponseType
      * @throws SoapException
      */
-    public function getFeatureCount(\Flexsim\FlexnetOperations\Type\GetFeatureCountRequestType $getFeatureCountRequest): \Flexsim\FlexnetOperations\Type\GetFeatureCountResponseType
+    public function getFeatureCount(\Flexsim\FlexnetOperations\Type\GetFeatureCountRequestType $getFeatureCountRequest) : \Flexsim\FlexnetOperations\Type\GetFeatureCountResponseType
     {
-        return $this->call('getFeatureCount', $getFeatureCountRequest);
+        return ($this->caller)('getFeatureCount', $getFeatureCountRequest);
     }
 
     /**
@@ -55,9 +65,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetFeaturesQueryResponseType
      * @throws SoapException
      */
-    public function getFeaturesQuery(\Flexsim\FlexnetOperations\Type\GetFeaturesQueryRequestType $getFeaturesQueryRequest): \Flexsim\FlexnetOperations\Type\GetFeaturesQueryResponseType
+    public function getFeaturesQuery(\Flexsim\FlexnetOperations\Type\GetFeaturesQueryRequestType $getFeaturesQueryRequest) : \Flexsim\FlexnetOperations\Type\GetFeaturesQueryResponseType
     {
-        return $this->call('getFeaturesQuery', $getFeaturesQueryRequest);
+        return ($this->caller)('getFeaturesQuery', $getFeaturesQueryRequest);
     }
 
     /**
@@ -65,9 +75,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\SetFeatureStateResponseType
      * @throws SoapException
      */
-    public function setFeatureState(\Flexsim\FlexnetOperations\Type\SetFeatureStateRequestType $setFeatureStateRequest): \Flexsim\FlexnetOperations\Type\SetFeatureStateResponseType
+    public function setFeatureState(\Flexsim\FlexnetOperations\Type\SetFeatureStateRequestType $setFeatureStateRequest) : \Flexsim\FlexnetOperations\Type\SetFeatureStateResponseType
     {
-        return $this->call('setFeatureState', $setFeatureStateRequest);
+        return ($this->caller)('setFeatureState', $setFeatureStateRequest);
     }
 
     /**
@@ -75,9 +85,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\CreateFeatureBundleResponseType
      * @throws SoapException
      */
-    public function createFeatureBundle(\Flexsim\FlexnetOperations\Type\CreateFeatureBundleRequestType $createFeatureBundleRequest): \Flexsim\FlexnetOperations\Type\CreateFeatureBundleResponseType
+    public function createFeatureBundle(\Flexsim\FlexnetOperations\Type\CreateFeatureBundleRequestType $createFeatureBundleRequest) : \Flexsim\FlexnetOperations\Type\CreateFeatureBundleResponseType
     {
-        return $this->call('createFeatureBundle', $createFeatureBundleRequest);
+        return ($this->caller)('createFeatureBundle', $createFeatureBundleRequest);
     }
 
     /**
@@ -85,9 +95,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\UpdateFeatureBundleResponseType
      * @throws SoapException
      */
-    public function updateFeatureBundle(\Flexsim\FlexnetOperations\Type\UpdateFeatureBundleRequestType $updateFeatureBundleRequest): \Flexsim\FlexnetOperations\Type\UpdateFeatureBundleResponseType
+    public function updateFeatureBundle(\Flexsim\FlexnetOperations\Type\UpdateFeatureBundleRequestType $updateFeatureBundleRequest) : \Flexsim\FlexnetOperations\Type\UpdateFeatureBundleResponseType
     {
-        return $this->call('updateFeatureBundle', $updateFeatureBundleRequest);
+        return ($this->caller)('updateFeatureBundle', $updateFeatureBundleRequest);
     }
 
     /**
@@ -95,9 +105,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\DeleteFeatureBundleResponseType
      * @throws SoapException
      */
-    public function deleteFeatureBundle(\Flexsim\FlexnetOperations\Type\DeleteFeatureBundleRequestType $deleteFeatureBundleRequest): \Flexsim\FlexnetOperations\Type\DeleteFeatureBundleResponseType
+    public function deleteFeatureBundle(\Flexsim\FlexnetOperations\Type\DeleteFeatureBundleRequestType $deleteFeatureBundleRequest) : \Flexsim\FlexnetOperations\Type\DeleteFeatureBundleResponseType
     {
-        return $this->call('deleteFeatureBundle', $deleteFeatureBundleRequest);
+        return ($this->caller)('deleteFeatureBundle', $deleteFeatureBundleRequest);
     }
 
     /**
@@ -105,9 +115,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetFeatureBundleCountResponseType
      * @throws SoapException
      */
-    public function getFeatureBundleCount(\Flexsim\FlexnetOperations\Type\GetFeatureBundleCountRequestType $getFeatureBundleCountRequest): \Flexsim\FlexnetOperations\Type\GetFeatureBundleCountResponseType
+    public function getFeatureBundleCount(\Flexsim\FlexnetOperations\Type\GetFeatureBundleCountRequestType $getFeatureBundleCountRequest) : \Flexsim\FlexnetOperations\Type\GetFeatureBundleCountResponseType
     {
-        return $this->call('getFeatureBundleCount', $getFeatureBundleCountRequest);
+        return ($this->caller)('getFeatureBundleCount', $getFeatureBundleCountRequest);
     }
 
     /**
@@ -115,9 +125,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetFeatureBundlesQueryResponseType
      * @throws SoapException
      */
-    public function getFeatureBundlesQuery(\Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryRequestType $getFeatureBundlesQueryRequest): \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseType
+    public function getFeatureBundlesQuery(\Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryRequestType $getFeatureBundlesQueryRequest) : \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseType
     {
-        return $this->call('getFeatureBundlesQuery', $getFeatureBundlesQueryRequest);
+        return ($this->caller)('getFeatureBundlesQuery', $getFeatureBundlesQueryRequest);
     }
 
     /**
@@ -125,9 +135,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\SetFeatureBundleStateResponseType
      * @throws SoapException
      */
-    public function setFeatureBundleState(\Flexsim\FlexnetOperations\Type\SetFeatureBundleStateRequestType $setFeatureBundleStateRequest): \Flexsim\FlexnetOperations\Type\SetFeatureBundleStateResponseType
+    public function setFeatureBundleState(\Flexsim\FlexnetOperations\Type\SetFeatureBundleStateRequestType $setFeatureBundleStateRequest) : \Flexsim\FlexnetOperations\Type\SetFeatureBundleStateResponseType
     {
-        return $this->call('setFeatureBundleState', $setFeatureBundleStateRequest);
+        return ($this->caller)('setFeatureBundleState', $setFeatureBundleStateRequest);
     }
 
     /**
@@ -135,9 +145,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\CreateProductResponseType
      * @throws SoapException
      */
-    public function createProduct(\Flexsim\FlexnetOperations\Type\CreateProductRequestType $createProductRequest): \Flexsim\FlexnetOperations\Type\CreateProductResponseType
+    public function createProduct(\Flexsim\FlexnetOperations\Type\CreateProductRequestType $createProductRequest) : \Flexsim\FlexnetOperations\Type\CreateProductResponseType
     {
-        return $this->call('createProduct', $createProductRequest);
+        return ($this->caller)('createProduct', $createProductRequest);
     }
 
     /**
@@ -145,9 +155,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\UpdateProductResponseType
      * @throws SoapException
      */
-    public function updateProduct(\Flexsim\FlexnetOperations\Type\UpdateProductRequestType $updateProductRequest): \Flexsim\FlexnetOperations\Type\UpdateProductResponseType
+    public function updateProduct(\Flexsim\FlexnetOperations\Type\UpdateProductRequestType $updateProductRequest) : \Flexsim\FlexnetOperations\Type\UpdateProductResponseType
     {
-        return $this->call('updateProduct', $updateProductRequest);
+        return ($this->caller)('updateProduct', $updateProductRequest);
     }
 
     /**
@@ -155,9 +165,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\DeleteProductResponseType
      * @throws SoapException
      */
-    public function deleteProduct(\Flexsim\FlexnetOperations\Type\DeleteProductRequestType $deleteProductRequest): \Flexsim\FlexnetOperations\Type\DeleteProductResponseType
+    public function deleteProduct(\Flexsim\FlexnetOperations\Type\DeleteProductRequestType $deleteProductRequest) : \Flexsim\FlexnetOperations\Type\DeleteProductResponseType
     {
-        return $this->call('deleteProduct', $deleteProductRequest);
+        return ($this->caller)('deleteProduct', $deleteProductRequest);
     }
 
     /**
@@ -165,9 +175,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetProductCountResponseType
      * @throws SoapException
      */
-    public function getProductCount(\Flexsim\FlexnetOperations\Type\GetProductCountRequestType $getProductCountRequest): \Flexsim\FlexnetOperations\Type\GetProductCountResponseType
+    public function getProductCount(\Flexsim\FlexnetOperations\Type\GetProductCountRequestType $getProductCountRequest) : \Flexsim\FlexnetOperations\Type\GetProductCountResponseType
     {
-        return $this->call('getProductCount', $getProductCountRequest);
+        return ($this->caller)('getProductCount', $getProductCountRequest);
     }
 
     /**
@@ -175,9 +185,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetProductsQueryResponseType
      * @throws SoapException
      */
-    public function getProductsQuery(\Flexsim\FlexnetOperations\Type\GetProductsQueryRequestType $getProductsQueryRequest): \Flexsim\FlexnetOperations\Type\GetProductsQueryResponseType
+    public function getProductsQuery(\Flexsim\FlexnetOperations\Type\GetProductsQueryRequestType $getProductsQueryRequest) : \Flexsim\FlexnetOperations\Type\GetProductsQueryResponseType
     {
-        return $this->call('getProductsQuery', $getProductsQueryRequest);
+        return ($this->caller)('getProductsQuery', $getProductsQueryRequest);
     }
 
     /**
@@ -185,9 +195,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\CreateProductCategoryResponseType
      * @throws SoapException
      */
-    public function createProductCategory(\Flexsim\FlexnetOperations\Type\CreateProductCategoryRequestType $createProductCategoryRequest): \Flexsim\FlexnetOperations\Type\CreateProductCategoryResponseType
+    public function createProductCategory(\Flexsim\FlexnetOperations\Type\CreateProductCategoryRequestType $createProductCategoryRequest) : \Flexsim\FlexnetOperations\Type\CreateProductCategoryResponseType
     {
-        return $this->call('createProductCategory', $createProductCategoryRequest);
+        return ($this->caller)('createProductCategory', $createProductCategoryRequest);
     }
 
     /**
@@ -195,9 +205,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetProductCategoriesResponseType
      * @throws SoapException
      */
-    public function getProductCategories(\Flexsim\FlexnetOperations\Type\GetProductCategoriesRequestType $getProductCategoriesRequest): \Flexsim\FlexnetOperations\Type\GetProductCategoriesResponseType
+    public function getProductCategories(\Flexsim\FlexnetOperations\Type\GetProductCategoriesRequestType $getProductCategoriesRequest) : \Flexsim\FlexnetOperations\Type\GetProductCategoriesResponseType
     {
-        return $this->call('getProductCategories', $getProductCategoriesRequest);
+        return ($this->caller)('getProductCategories', $getProductCategoriesRequest);
     }
 
     /**
@@ -205,9 +215,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\HandleProductCategoriesToUserResponseType
      * @throws SoapException
      */
-    public function assignProductCategoriesToUser(\Flexsim\FlexnetOperations\Type\HandleProductCategoriesToUserRequestType $assignProductCategoriesToUserRequest): \Flexsim\FlexnetOperations\Type\HandleProductCategoriesToUserResponseType
+    public function assignProductCategoriesToUser(\Flexsim\FlexnetOperations\Type\HandleProductCategoriesToUserRequestType $assignProductCategoriesToUserRequest) : \Flexsim\FlexnetOperations\Type\HandleProductCategoriesToUserResponseType
     {
-        return $this->call('assignProductCategoriesToUser', $assignProductCategoriesToUserRequest);
+        return ($this->caller)('assignProductCategoriesToUser', $assignProductCategoriesToUserRequest);
     }
 
     /**
@@ -215,9 +225,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\HandleProductCategoriesToUserResponseType
      * @throws SoapException
      */
-    public function removeProductCategoriesFromUser(\Flexsim\FlexnetOperations\Type\HandleProductCategoriesToUserRequestType $removeProductCategoriesFromUserRequest): \Flexsim\FlexnetOperations\Type\HandleProductCategoriesToUserResponseType
+    public function removeProductCategoriesFromUser(\Flexsim\FlexnetOperations\Type\HandleProductCategoriesToUserRequestType $removeProductCategoriesFromUserRequest) : \Flexsim\FlexnetOperations\Type\HandleProductCategoriesToUserResponseType
     {
-        return $this->call('removeProductCategoriesFromUser', $removeProductCategoriesFromUserRequest);
+        return ($this->caller)('removeProductCategoriesFromUser', $removeProductCategoriesFromUserRequest);
     }
 
     /**
@@ -225,9 +235,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetUsersForProductCategoryResponseType
      * @throws SoapException
      */
-    public function getUsersForProductCategory(\Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryRequestType $getUsersForProductCategoryRequest): \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseType
+    public function getUsersForProductCategory(\Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryRequestType $getUsersForProductCategoryRequest) : \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseType
     {
-        return $this->call('getUsersForProductCategory', $getUsersForProductCategoryRequest);
+        return ($this->caller)('getUsersForProductCategory', $getUsersForProductCategoryRequest);
     }
 
     /**
@@ -235,9 +245,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\HandleProductCategoryToOrgResponseType
      * @throws SoapException
      */
-    public function assignProductCategoriesToOrg(\Flexsim\FlexnetOperations\Type\HandleProductCategoryToOrgRequestType $assignProductCategoriesToOrgRequest): \Flexsim\FlexnetOperations\Type\HandleProductCategoryToOrgResponseType
+    public function assignProductCategoriesToOrg(\Flexsim\FlexnetOperations\Type\HandleProductCategoryToOrgRequestType $assignProductCategoriesToOrgRequest) : \Flexsim\FlexnetOperations\Type\HandleProductCategoryToOrgResponseType
     {
-        return $this->call('assignProductCategoriesToOrg', $assignProductCategoriesToOrgRequest);
+        return ($this->caller)('assignProductCategoriesToOrg', $assignProductCategoriesToOrgRequest);
     }
 
     /**
@@ -245,9 +255,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\HandleProductCategoryToOrgResponseType
      * @throws SoapException
      */
-    public function removeProductCategoriesFromOrg(\Flexsim\FlexnetOperations\Type\HandleProductCategoryToOrgRequestType $removeProductCategoriesFromOrgRequest): \Flexsim\FlexnetOperations\Type\HandleProductCategoryToOrgResponseType
+    public function removeProductCategoriesFromOrg(\Flexsim\FlexnetOperations\Type\HandleProductCategoryToOrgRequestType $removeProductCategoriesFromOrgRequest) : \Flexsim\FlexnetOperations\Type\HandleProductCategoryToOrgResponseType
     {
-        return $this->call('removeProductCategoriesFromOrg', $removeProductCategoriesFromOrgRequest);
+        return ($this->caller)('removeProductCategoriesFromOrg', $removeProductCategoriesFromOrgRequest);
     }
 
     /**
@@ -255,9 +265,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\SetProductStateResponseType
      * @throws SoapException
      */
-    public function setProductState(\Flexsim\FlexnetOperations\Type\SetProductStateRequestType $setProductStateRequest): \Flexsim\FlexnetOperations\Type\SetProductStateResponseType
+    public function setProductState(\Flexsim\FlexnetOperations\Type\SetProductStateRequestType $setProductStateRequest) : \Flexsim\FlexnetOperations\Type\SetProductStateResponseType
     {
-        return $this->call('setProductState', $setProductStateRequest);
+        return ($this->caller)('setProductState', $setProductStateRequest);
     }
 
     /**
@@ -265,9 +275,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\CreateMaintenanceResponseType
      * @throws SoapException
      */
-    public function createMaintenance(\Flexsim\FlexnetOperations\Type\CreateMaintenanceRequestType $createMaintenanceRequest): \Flexsim\FlexnetOperations\Type\CreateMaintenanceResponseType
+    public function createMaintenance(\Flexsim\FlexnetOperations\Type\CreateMaintenanceRequestType $createMaintenanceRequest) : \Flexsim\FlexnetOperations\Type\CreateMaintenanceResponseType
     {
-        return $this->call('createMaintenance', $createMaintenanceRequest);
+        return ($this->caller)('createMaintenance', $createMaintenanceRequest);
     }
 
     /**
@@ -275,9 +285,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\UpdateMaintenanceResponseType
      * @throws SoapException
      */
-    public function updateMaintenance(\Flexsim\FlexnetOperations\Type\UpdateMaintenanceRequestType $updateMaintenanceRequest): \Flexsim\FlexnetOperations\Type\UpdateMaintenanceResponseType
+    public function updateMaintenance(\Flexsim\FlexnetOperations\Type\UpdateMaintenanceRequestType $updateMaintenanceRequest) : \Flexsim\FlexnetOperations\Type\UpdateMaintenanceResponseType
     {
-        return $this->call('updateMaintenance', $updateMaintenanceRequest);
+        return ($this->caller)('updateMaintenance', $updateMaintenanceRequest);
     }
 
     /**
@@ -285,9 +295,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\DeleteMaintenanceResponseType
      * @throws SoapException
      */
-    public function deleteMaintenance(\Flexsim\FlexnetOperations\Type\DeleteMaintenanceRequestType $deleteMaintenanceRequest): \Flexsim\FlexnetOperations\Type\DeleteMaintenanceResponseType
+    public function deleteMaintenance(\Flexsim\FlexnetOperations\Type\DeleteMaintenanceRequestType $deleteMaintenanceRequest) : \Flexsim\FlexnetOperations\Type\DeleteMaintenanceResponseType
     {
-        return $this->call('deleteMaintenance', $deleteMaintenanceRequest);
+        return ($this->caller)('deleteMaintenance', $deleteMaintenanceRequest);
     }
 
     /**
@@ -295,9 +305,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetMaintenanceCountResponseType
      * @throws SoapException
      */
-    public function getMaintenanceCount(\Flexsim\FlexnetOperations\Type\GetMaintenanceCountRequestType $getMaintenanceCountRequest): \Flexsim\FlexnetOperations\Type\GetMaintenanceCountResponseType
+    public function getMaintenanceCount(\Flexsim\FlexnetOperations\Type\GetMaintenanceCountRequestType $getMaintenanceCountRequest) : \Flexsim\FlexnetOperations\Type\GetMaintenanceCountResponseType
     {
-        return $this->call('getMaintenanceCount', $getMaintenanceCountRequest);
+        return ($this->caller)('getMaintenanceCount', $getMaintenanceCountRequest);
     }
 
     /**
@@ -305,9 +315,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetMaintenanceQueryResponseType
      * @throws SoapException
      */
-    public function getMaintenanceQuery(\Flexsim\FlexnetOperations\Type\GetMaintenanceQueryRequestType $getMaintenanceQueryRequest): \Flexsim\FlexnetOperations\Type\GetMaintenanceQueryResponseType
+    public function getMaintenanceQuery(\Flexsim\FlexnetOperations\Type\GetMaintenanceQueryRequestType $getMaintenanceQueryRequest) : \Flexsim\FlexnetOperations\Type\GetMaintenanceQueryResponseType
     {
-        return $this->call('getMaintenanceQuery', $getMaintenanceQueryRequest);
+        return ($this->caller)('getMaintenanceQuery', $getMaintenanceQueryRequest);
     }
 
     /**
@@ -315,9 +325,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\SetMaintenanceStateResponseType
      * @throws SoapException
      */
-    public function setMaintenanceState(\Flexsim\FlexnetOperations\Type\SetMaintenanceStateRequestType $setMaintenanceStateRequest): \Flexsim\FlexnetOperations\Type\SetMaintenanceStateResponseType
+    public function setMaintenanceState(\Flexsim\FlexnetOperations\Type\SetMaintenanceStateRequestType $setMaintenanceStateRequest) : \Flexsim\FlexnetOperations\Type\SetMaintenanceStateResponseType
     {
-        return $this->call('setMaintenanceState', $setMaintenanceStateRequest);
+        return ($this->caller)('setMaintenanceState', $setMaintenanceStateRequest);
     }
 
     /**
@@ -325,9 +335,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\CreateUniformSuiteResponseType
      * @throws SoapException
      */
-    public function createUniformSuite(\Flexsim\FlexnetOperations\Type\CreateUniformSuiteRequestType $createUniformSuiteRequest): \Flexsim\FlexnetOperations\Type\CreateUniformSuiteResponseType
+    public function createUniformSuite(\Flexsim\FlexnetOperations\Type\CreateUniformSuiteRequestType $createUniformSuiteRequest) : \Flexsim\FlexnetOperations\Type\CreateUniformSuiteResponseType
     {
-        return $this->call('createUniformSuite', $createUniformSuiteRequest);
+        return ($this->caller)('createUniformSuite', $createUniformSuiteRequest);
     }
 
     /**
@@ -335,9 +345,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\UpdateUniformSuiteResponseType
      * @throws SoapException
      */
-    public function updateUniformSuite(\Flexsim\FlexnetOperations\Type\UpdateUniformSuiteRequestType $updateUniformSuiteRequest): \Flexsim\FlexnetOperations\Type\UpdateUniformSuiteResponseType
+    public function updateUniformSuite(\Flexsim\FlexnetOperations\Type\UpdateUniformSuiteRequestType $updateUniformSuiteRequest) : \Flexsim\FlexnetOperations\Type\UpdateUniformSuiteResponseType
     {
-        return $this->call('updateUniformSuite', $updateUniformSuiteRequest);
+        return ($this->caller)('updateUniformSuite', $updateUniformSuiteRequest);
     }
 
     /**
@@ -345,9 +355,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\DeleteUniformSuiteResponseType
      * @throws SoapException
      */
-    public function deleteUniformSuite(\Flexsim\FlexnetOperations\Type\DeleteUniformSuiteRequestType $deleteUniformSuiteRequest): \Flexsim\FlexnetOperations\Type\DeleteUniformSuiteResponseType
+    public function deleteUniformSuite(\Flexsim\FlexnetOperations\Type\DeleteUniformSuiteRequestType $deleteUniformSuiteRequest) : \Flexsim\FlexnetOperations\Type\DeleteUniformSuiteResponseType
     {
-        return $this->call('deleteUniformSuite', $deleteUniformSuiteRequest);
+        return ($this->caller)('deleteUniformSuite', $deleteUniformSuiteRequest);
     }
 
     /**
@@ -355,9 +365,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetUniformSuiteCountResponseType
      * @throws SoapException
      */
-    public function getUniformSuiteCount(\Flexsim\FlexnetOperations\Type\GetUniformSuiteCountRequestType $getUniformSuiteCountRequest): \Flexsim\FlexnetOperations\Type\GetUniformSuiteCountResponseType
+    public function getUniformSuiteCount(\Flexsim\FlexnetOperations\Type\GetUniformSuiteCountRequestType $getUniformSuiteCountRequest) : \Flexsim\FlexnetOperations\Type\GetUniformSuiteCountResponseType
     {
-        return $this->call('getUniformSuiteCount', $getUniformSuiteCountRequest);
+        return ($this->caller)('getUniformSuiteCount', $getUniformSuiteCountRequest);
     }
 
     /**
@@ -365,9 +375,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetUniformSuitesQueryResponseType
      * @throws SoapException
      */
-    public function getUniformSuiteQuery(\Flexsim\FlexnetOperations\Type\GetUniformSuitesQueryRequestType $getUniformSuitesQueryRequest): \Flexsim\FlexnetOperations\Type\GetUniformSuitesQueryResponseType
+    public function getUniformSuiteQuery(\Flexsim\FlexnetOperations\Type\GetUniformSuitesQueryRequestType $getUniformSuitesQueryRequest) : \Flexsim\FlexnetOperations\Type\GetUniformSuitesQueryResponseType
     {
-        return $this->call('getUniformSuiteQuery', $getUniformSuitesQueryRequest);
+        return ($this->caller)('getUniformSuiteQuery', $getUniformSuitesQueryRequest);
     }
 
     /**
@@ -375,9 +385,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\SetUniformSuiteStateResponseType
      * @throws SoapException
      */
-    public function setUniformSuiteState(\Flexsim\FlexnetOperations\Type\SetUniformSuiteStateRequestType $setUniformSuiteStateRequest): \Flexsim\FlexnetOperations\Type\SetUniformSuiteStateResponseType
+    public function setUniformSuiteState(\Flexsim\FlexnetOperations\Type\SetUniformSuiteStateRequestType $setUniformSuiteStateRequest) : \Flexsim\FlexnetOperations\Type\SetUniformSuiteStateResponseType
     {
-        return $this->call('setUniformSuiteState', $setUniformSuiteStateRequest);
+        return ($this->caller)('setUniformSuiteState', $setUniformSuiteStateRequest);
     }
 
     /**
@@ -385,9 +395,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\CreatePartNumberResponseType
      * @throws SoapException
      */
-    public function createPartNumber(\Flexsim\FlexnetOperations\Type\CreatePartNumberRequestType $createPartNumberRequest): \Flexsim\FlexnetOperations\Type\CreatePartNumberResponseType
+    public function createPartNumber(\Flexsim\FlexnetOperations\Type\CreatePartNumberRequestType $createPartNumberRequest) : \Flexsim\FlexnetOperations\Type\CreatePartNumberResponseType
     {
-        return $this->call('createPartNumber', $createPartNumberRequest);
+        return ($this->caller)('createPartNumber', $createPartNumberRequest);
     }
 
     /**
@@ -395,9 +405,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\DeletePartNumberResponseType
      * @throws SoapException
      */
-    public function deletePartNumber(\Flexsim\FlexnetOperations\Type\DeletePartNumberRequestType $deletePartNumberRequest): \Flexsim\FlexnetOperations\Type\DeletePartNumberResponseType
+    public function deletePartNumber(\Flexsim\FlexnetOperations\Type\DeletePartNumberRequestType $deletePartNumberRequest) : \Flexsim\FlexnetOperations\Type\DeletePartNumberResponseType
     {
-        return $this->call('deletePartNumber', $deletePartNumberRequest);
+        return ($this->caller)('deletePartNumber', $deletePartNumberRequest);
     }
 
     /**
@@ -405,9 +415,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetPartNumberCountResponseType
      * @throws SoapException
      */
-    public function getPartNumberCount(\Flexsim\FlexnetOperations\Type\GetPartNumberCountRequestType $getPartNumberCountRequest): \Flexsim\FlexnetOperations\Type\GetPartNumberCountResponseType
+    public function getPartNumberCount(\Flexsim\FlexnetOperations\Type\GetPartNumberCountRequestType $getPartNumberCountRequest) : \Flexsim\FlexnetOperations\Type\GetPartNumberCountResponseType
     {
-        return $this->call('getPartNumberCount', $getPartNumberCountRequest);
+        return ($this->caller)('getPartNumberCount', $getPartNumberCountRequest);
     }
 
     /**
@@ -415,9 +425,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetPartNumbersQueryResponseType
      * @throws SoapException
      */
-    public function getPartNumbersQuery(\Flexsim\FlexnetOperations\Type\GetPartNumbersQueryRequestType $getPartNumbersQueryRequest): \Flexsim\FlexnetOperations\Type\GetPartNumbersQueryResponseType
+    public function getPartNumbersQuery(\Flexsim\FlexnetOperations\Type\GetPartNumbersQueryRequestType $getPartNumbersQueryRequest) : \Flexsim\FlexnetOperations\Type\GetPartNumbersQueryResponseType
     {
-        return $this->call('getPartNumbersQuery', $getPartNumbersQueryRequest);
+        return ($this->caller)('getPartNumbersQuery', $getPartNumbersQueryRequest);
     }
 
     /**
@@ -425,9 +435,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\CreateProductRelationshipResponseType
      * @throws SoapException
      */
-    public function createProductRelationship(\Flexsim\FlexnetOperations\Type\CreateProductRelationshipRequestType $createProductRelationshipRequest): \Flexsim\FlexnetOperations\Type\CreateProductRelationshipResponseType
+    public function createProductRelationship(\Flexsim\FlexnetOperations\Type\CreateProductRelationshipRequestType $createProductRelationshipRequest) : \Flexsim\FlexnetOperations\Type\CreateProductRelationshipResponseType
     {
-        return $this->call('createProductRelationship', $createProductRelationshipRequest);
+        return ($this->caller)('createProductRelationship', $createProductRelationshipRequest);
     }
 
     /**
@@ -435,9 +445,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\UpdateProductRelationshipResponseType
      * @throws SoapException
      */
-    public function updateProductRelationship(\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipRequestType $updateProductRelationshipRequest): \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipResponseType
+    public function updateProductRelationship(\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipRequestType $updateProductRelationshipRequest) : \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipResponseType
     {
-        return $this->call('updateProductRelationship', $updateProductRelationshipRequest);
+        return ($this->caller)('updateProductRelationship', $updateProductRelationshipRequest);
     }
 
     /**
@@ -445,9 +455,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\DeleteProductRelationshipResponseType
      * @throws SoapException
      */
-    public function deleteProductRelationship(\Flexsim\FlexnetOperations\Type\DeleteProductRelationshipRequestType $deleteProductRelationshipRequest): \Flexsim\FlexnetOperations\Type\DeleteProductRelationshipResponseType
+    public function deleteProductRelationship(\Flexsim\FlexnetOperations\Type\DeleteProductRelationshipRequestType $deleteProductRelationshipRequest) : \Flexsim\FlexnetOperations\Type\DeleteProductRelationshipResponseType
     {
-        return $this->call('deleteProductRelationship', $deleteProductRelationshipRequest);
+        return ($this->caller)('deleteProductRelationship', $deleteProductRelationshipRequest);
     }
 
     /**
@@ -455,9 +465,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetProductRelationshipsResponseType
      * @throws SoapException
      */
-    public function getProductRelationships(\Flexsim\FlexnetOperations\Type\GetProductRelationshipsRequestType $getProductRelationshipsRequest): \Flexsim\FlexnetOperations\Type\GetProductRelationshipsResponseType
+    public function getProductRelationships(\Flexsim\FlexnetOperations\Type\GetProductRelationshipsRequestType $getProductRelationshipsRequest) : \Flexsim\FlexnetOperations\Type\GetProductRelationshipsResponseType
     {
-        return $this->call('getProductRelationships', $getProductRelationshipsRequest);
+        return ($this->caller)('getProductRelationships', $getProductRelationshipsRequest);
     }
 
     /**
@@ -465,9 +475,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetModelIdentifiersResponseType
      * @throws SoapException
      */
-    public function getLicenseModelIdentifiers(\Flexsim\FlexnetOperations\Type\GetModelIdentifiersRequestType $getModelIdentifiersRequest): \Flexsim\FlexnetOperations\Type\GetModelIdentifiersResponseType
+    public function getLicenseModelIdentifiers(\Flexsim\FlexnetOperations\Type\GetModelIdentifiersRequestType $getModelIdentifiersRequest) : \Flexsim\FlexnetOperations\Type\GetModelIdentifiersResponseType
     {
-        return $this->call('getLicenseModelIdentifiers', $getModelIdentifiersRequest);
+        return ($this->caller)('getLicenseModelIdentifiers', $getModelIdentifiersRequest);
     }
 
     /**
@@ -475,9 +485,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetTransactionKeyIdentifiersResponseType
      * @throws SoapException
      */
-    public function getTransactionKeyIdentifiers(\Flexsim\FlexnetOperations\Type\GetTransactionKeyIdentifiersRequestType $getTransactionKeyIdentifiersRequest): \Flexsim\FlexnetOperations\Type\GetTransactionKeyIdentifiersResponseType
+    public function getTransactionKeyIdentifiers(\Flexsim\FlexnetOperations\Type\GetTransactionKeyIdentifiersRequestType $getTransactionKeyIdentifiersRequest) : \Flexsim\FlexnetOperations\Type\GetTransactionKeyIdentifiersResponseType
     {
-        return $this->call('getTransactionKeyIdentifiers', $getTransactionKeyIdentifiersRequest);
+        return ($this->caller)('getTransactionKeyIdentifiers', $getTransactionKeyIdentifiersRequest);
     }
 
     /**
@@ -485,9 +495,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\CreateOrganizationResponseType
      * @throws SoapException
      */
-    public function createOrganization(\Flexsim\FlexnetOperations\Type\CreateOrganizationRequestType $createOrganizationRequest): \Flexsim\FlexnetOperations\Type\CreateOrganizationResponseType
+    public function createOrganization(\Flexsim\FlexnetOperations\Type\CreateOrganizationRequestType $createOrganizationRequest) : \Flexsim\FlexnetOperations\Type\CreateOrganizationResponseType
     {
-        return $this->call('createOrganization', $createOrganizationRequest);
+        return ($this->caller)('createOrganization', $createOrganizationRequest);
     }
 
     /**
@@ -495,8 +505,9 @@ class ProductPackagingServiceClient extends \Phpro\SoapClient\Client
      * @return ResultInterface|Type\GetLicenseTechnologyQueryResponseType
      * @throws SoapException
      */
-    public function getLicenseTechnologiesQuery(\Flexsim\FlexnetOperations\Type\GetLicenseTechnologyQueryRequestType $getLicenseTechnologyQueryRequest): \Flexsim\FlexnetOperations\Type\GetLicenseTechnologyQueryResponseType
+    public function getLicenseTechnologiesQuery(\Flexsim\FlexnetOperations\Type\GetLicenseTechnologyQueryRequestType $getLicenseTechnologyQueryRequest) : \Flexsim\FlexnetOperations\Type\GetLicenseTechnologyQueryResponseType
     {
-        return $this->call('getLicenseTechnologiesQuery', $getLicenseTechnologyQueryRequest);
+        return ($this->caller)('getLicenseTechnologiesQuery', $getLicenseTechnologyQueryRequest);
     }
 }
+

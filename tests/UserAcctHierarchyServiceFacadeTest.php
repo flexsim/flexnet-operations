@@ -1,6 +1,6 @@
 <?php
 
-namespace Flexsim\FlexnetOperations\Tests\Feature;
+namespace Flexsim\FlexnetOperations\Tests;
 
 use Flexsim\FlexnetOperations\Facades\UserAcctHierarchyService;
 use Flexsim\FlexnetOperations\Services\UserAcctHierarchyService\v2\UserAcctHierarchyServiceClient as v2UserAcctHierarchyServiceClient;

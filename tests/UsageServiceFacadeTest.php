@@ -1,6 +1,6 @@
 <?php
 
-namespace Flexsim\FlexnetOperations\Tests\Feature;
+namespace Flexsim\FlexnetOperations\Tests;
 
 use Flexsim\FlexnetOperations\Facades\UsageService;
 use Flexsim\FlexnetOperations\Services\UsageService\UsageServiceClient;

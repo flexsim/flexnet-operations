@@ -10,8 +10,6 @@ use Phpro\SoapClient\Exception\AssemblerException;
 use Laminas\Code\Generator\MethodGenerator;
 use Phpro\SoapClient\CodeGenerator\Assembler\AssemblerInterface;
 
-use function PHPUnit\Framework\isNull;
-
 /**
  * Class CustomConstructorAssembler
  *

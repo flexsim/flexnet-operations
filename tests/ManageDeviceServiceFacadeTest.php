@@ -1,6 +1,6 @@
 <?php
 
-namespace Flexsim\FlexnetOperations\Tests\Feature;
+namespace Flexsim\FlexnetOperations\Tests;
 
 use Flexsim\FlexnetOperations\Facades\ManageDeviceService;
 use Flexsim\FlexnetOperations\Services\ManageDeviceService\ManageDeviceServiceClient;

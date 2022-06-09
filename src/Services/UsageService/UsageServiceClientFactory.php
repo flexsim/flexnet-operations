@@ -2,28 +2,39 @@
 
 namespace Flexsim\FlexnetOperations\Services\UsageService;
 
-use Phpro\SoapClient\Middleware\BasicAuthMiddleware;
+use Flexsim\FlexnetOperations\Services\UsageService\UsageServiceClient;
+use Flexsim\FlexnetOperations\Services\UsageService\UsageServiceClassmap;
+use Http\Client\Common\Plugin\AuthenticationPlugin;
+use Http\Client\Common\PluginClient;
+use Http\Discovery\Psr18ClientDiscovery;
+use Http\Message\Authentication\BasicAuth;
 use Symfony\Component\EventDispatcher\EventDispatcher;
-use Phpro\SoapClient\Soap\Driver\ExtSoap\ExtSoapEngineFactory;
-use Phpro\SoapClient\Soap\Driver\ExtSoap\ExtSoapOptions;
-use Phpro\SoapClient\Soap\Handler\HttPlugHandle;
+use Phpro\SoapClient\Soap\DefaultEngineFactory;
+use Soap\ExtSoapEngine\ExtSoapOptions;
+use Phpro\SoapClient\Caller\EventDispatchingCaller;
+use Phpro\SoapClient\Caller\EngineCaller;
+use Soap\Psr18Transport\Psr18Transport;
 
 class UsageServiceClientFactory
 {
-
-    public static function factory(string $wsdl, string $username, string $password): UsageServiceClient
+    public static function factory(string $wsdl, string $username, string $password): \Flexsim\FlexnetOperations\Services\UsageService\UsageServiceClient
     {
-        $handler = HttPlugHandle::createWithDefaultClient();
-
-        $handler->addMiddleware(new BasicAuthMiddleware($username, $password));
-
-        $engine = ExtSoapEngineFactory::fromOptionsWithHandler(
+        $engine = DefaultEngineFactory::create(
             ExtSoapOptions::defaults($wsdl, [])
                 ->withClassMap(UsageServiceClassmap::getCollection()),
-            $handler
+            Psr18Transport::createForClient(
+                new PluginClient(
+                    Psr18ClientDiscovery::find(),
+                    [
+                        new AuthenticationPlugin(new BasicAuth($username, $password)),
+                    ]
+                )
+            )
         );
-        $eventDispatcher = new EventDispatcher();
 
-        return new UsageServiceClient($engine, $eventDispatcher);
+        $eventDispatcher = new EventDispatcher();
+        $caller = new EventDispatchingCaller(new EngineCaller($engine), $eventDispatcher);
+
+        return new UsageServiceClient($caller);
     }
 }

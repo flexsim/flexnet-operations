@@ -3,15 +3,14 @@
 namespace Flexsim\FlexnetOperations\Services\EntitlementOrderService\v1;
 
 use Flexsim\FlexnetOperations\Type;
-use Phpro\SoapClient\Soap\ClassMap\ClassMapCollection;
-use Phpro\SoapClient\Soap\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
 
 class EntitlementOrderServiceClassmap
 {
-
-    public static function getCollection() : \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
-        return new ClassMapCollection([
+        return new ClassMapCollection(
             new ClassMap('idType', Type\IdType::class),
             new ClassMap('productPKType', Type\ProductPKType::class),
             new ClassMap('productIdentifierType', Type\ProductIdentifierType::class),
@@ -306,9 +305,7 @@ class EntitlementOrderServiceClassmap
             new ClassMap('failedUnlinkMaintenanceLineItemDataType', Type\FailedUnlinkMaintenanceLineItemDataType::class),
             new ClassMap('failedUnlinkMaintenanceLineItemListType', Type\FailedUnlinkMaintenanceLineItemListType::class),
             new ClassMap('unlinkMaintenanceLineItemResponseType', Type\UnlinkMaintenanceLineItemResponseType::class),
-        ]);
+        );
     }
-
-
 }
 

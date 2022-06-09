@@ -2,13 +2,23 @@
 
 namespace Flexsim\FlexnetOperations\Services\LicenseService;
 
+use Phpro\SoapClient\Caller\Caller;
 use Phpro\SoapClient\Type\ResultInterface;
 use Phpro\SoapClient\Exception\SoapException;
 use Phpro\SoapClient\Type\RequestInterface;
 use Flexsim\FlexnetOperations\Type;
 
-class LicenseServiceClient extends \Phpro\SoapClient\Client
+class LicenseServiceClient
 {
+    /**
+     * @var Caller
+     */
+    private $caller;
+
+    public function __construct(\Phpro\SoapClient\Caller\Caller $caller)
+    {
+        $this->caller = $caller;
+    }
 
     /**
      * @param RequestInterface|Type\GetFulfillmentCountRequestType $getFulfillmentCountRequest
@@ -17,7 +27,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function getFulfillmentCount(\Flexsim\FlexnetOperations\Type\GetFulfillmentCountRequestType $getFulfillmentCountRequest) : \Flexsim\FlexnetOperations\Type\GetFulfillmentCountResponseType
     {
-        return $this->call('getFulfillmentCount', $getFulfillmentCountRequest);
+        return ($this->caller)('getFulfillmentCount', $getFulfillmentCountRequest);
     }
 
     /**
@@ -27,7 +37,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function getFulfillmentsQuery(\Flexsim\FlexnetOperations\Type\GetFulfillmentsQueryRequestType $getFulfillmentsQueryRequest) : \Flexsim\FlexnetOperations\Type\GetFulfillmentsQueryResponseType
     {
-        return $this->call('getFulfillmentsQuery', $getFulfillmentsQueryRequest);
+        return ($this->caller)('getFulfillmentsQuery', $getFulfillmentsQueryRequest);
     }
 
     /**
@@ -37,7 +47,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function getFulfillmentPropertiesQuery(\Flexsim\FlexnetOperations\Type\GetFulfillmentPropertiesRequestType $getFulfillmentPropertiesRequest) : \Flexsim\FlexnetOperations\Type\GetFulfillmentPropertiesResponseType
     {
-        return $this->call('getFulfillmentPropertiesQuery', $getFulfillmentPropertiesRequest);
+        return ($this->caller)('getFulfillmentPropertiesQuery', $getFulfillmentPropertiesRequest);
     }
 
     /**
@@ -47,7 +57,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function rehostLicense(\Flexsim\FlexnetOperations\Type\RehostFulfillmentRequestType $rehostLicenseRequest) : \Flexsim\FlexnetOperations\Type\RehostFulfillmentResponseType
     {
-        return $this->call('rehostLicense', $rehostLicenseRequest);
+        return ($this->caller)('rehostLicense', $rehostLicenseRequest);
     }
 
     /**
@@ -57,7 +67,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function returnLicense(\Flexsim\FlexnetOperations\Type\ReturnFulfillmentRequestType $returnLicenseRequest) : \Flexsim\FlexnetOperations\Type\ReturnFulfillmentResponseType
     {
-        return $this->call('returnLicense', $returnLicenseRequest);
+        return ($this->caller)('returnLicense', $returnLicenseRequest);
     }
 
     /**
@@ -67,7 +77,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function repairLicense(\Flexsim\FlexnetOperations\Type\RepairFulfillmentRequestType $repairLicenseRequest) : \Flexsim\FlexnetOperations\Type\RepairFulfillmentResponseType
     {
-        return $this->call('repairLicense', $repairLicenseRequest);
+        return ($this->caller)('repairLicense', $repairLicenseRequest);
     }
 
     /**
@@ -77,7 +87,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function emergencyLicense(\Flexsim\FlexnetOperations\Type\EmergencyFulfillmentRequestType $emergencyLicenseRequest) : \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentResponseType
     {
-        return $this->call('emergencyLicense', $emergencyLicenseRequest);
+        return ($this->caller)('emergencyLicense', $emergencyLicenseRequest);
     }
 
     /**
@@ -87,7 +97,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function publisherErrorLicense(\Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentRequestType $publisherErrorLicenseRequest) : \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentResponseType
     {
-        return $this->call('publisherErrorLicense', $publisherErrorLicenseRequest);
+        return ($this->caller)('publisherErrorLicense', $publisherErrorLicenseRequest);
     }
 
     /**
@@ -97,7 +107,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function stopGapLicense(\Flexsim\FlexnetOperations\Type\StopGapFulfillmentRequestType $stopGapLicenseRequest) : \Flexsim\FlexnetOperations\Type\StopGapFulfillmentResponseType
     {
-        return $this->call('stopGapLicense', $stopGapLicenseRequest);
+        return ($this->caller)('stopGapLicense', $stopGapLicenseRequest);
     }
 
     /**
@@ -107,7 +117,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function getFulfillmentAttributesFromModel(\Flexsim\FlexnetOperations\Type\GetFulfillmentAttributesRequestType $getFulfillmentAttributesRequest) : \Flexsim\FlexnetOperations\Type\GetFulfillmentAttributesResponseType
     {
-        return $this->call('getFulfillmentAttributesFromModel', $getFulfillmentAttributesRequest);
+        return ($this->caller)('getFulfillmentAttributesFromModel', $getFulfillmentAttributesRequest);
     }
 
     /**
@@ -117,7 +127,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function getHostAttributesFromLicenseTechnology(\Flexsim\FlexnetOperations\Type\GetHostAttributesRequestType $getHostAttributesRequest) : \Flexsim\FlexnetOperations\Type\GetHostAttributesResponseType
     {
-        return $this->call('getHostAttributesFromLicenseTechnology', $getHostAttributesRequest);
+        return ($this->caller)('getHostAttributesFromLicenseTechnology', $getHostAttributesRequest);
     }
 
     /**
@@ -127,7 +137,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function verifyCreateLicense(\Flexsim\FlexnetOperations\Type\CreateFulfillmentRequestType $verifyCreateLicenseRequest) : \Flexsim\FlexnetOperations\Type\CreateFulfillmentResponseType
     {
-        return $this->call('verifyCreateLicense', $verifyCreateLicenseRequest);
+        return ($this->caller)('verifyCreateLicense', $verifyCreateLicenseRequest);
     }
 
     /**
@@ -137,7 +147,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function createLicense(\Flexsim\FlexnetOperations\Type\CreateFulfillmentRequestType $createLicenseRequest) : \Flexsim\FlexnetOperations\Type\CreateFulfillmentResponseType
     {
-        return $this->call('createLicense', $createLicenseRequest);
+        return ($this->caller)('createLicense', $createLicenseRequest);
     }
 
     /**
@@ -147,7 +157,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function activateShortCode(\Flexsim\FlexnetOperations\Type\ActivateShortCodeRequestType $activateShortCodeRequest) : \Flexsim\FlexnetOperations\Type\ActivateShortCodeResponseType
     {
-        return $this->call('activateShortCode', $activateShortCodeRequest);
+        return ($this->caller)('activateShortCode', $activateShortCodeRequest);
     }
 
     /**
@@ -157,7 +167,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function repairShortCode(\Flexsim\FlexnetOperations\Type\RepairShortCodeRequestType $repairShortCodeRequest) : \Flexsim\FlexnetOperations\Type\RepairShortCodeResponseType
     {
-        return $this->call('repairShortCode', $repairShortCodeRequest);
+        return ($this->caller)('repairShortCode', $repairShortCodeRequest);
     }
 
     /**
@@ -167,7 +177,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function returnShortCode(\Flexsim\FlexnetOperations\Type\ReturnShortCodeRequestType $returnShortCodeRequest) : \Flexsim\FlexnetOperations\Type\ReturnShortCodeResponseType
     {
-        return $this->call('returnShortCode', $returnShortCodeRequest);
+        return ($this->caller)('returnShortCode', $returnShortCodeRequest);
     }
 
     /**
@@ -177,7 +187,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function emailLicense(\Flexsim\FlexnetOperations\Type\EmailLicenseRequestType $emailLicenseRequest) : \Flexsim\FlexnetOperations\Type\EmailLicenseResponseType
     {
-        return $this->call('emailLicense', $emailLicenseRequest);
+        return ($this->caller)('emailLicense', $emailLicenseRequest);
     }
 
     /**
@@ -187,7 +197,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function consolidateFulfillments(\Flexsim\FlexnetOperations\Type\ConsolidateFulfillmentsRequestType $consolidateFulfillmentsRequest) : \Flexsim\FlexnetOperations\Type\ConsolidateFulfillmentsResponseType
     {
-        return $this->call('consolidateFulfillments', $consolidateFulfillmentsRequest);
+        return ($this->caller)('consolidateFulfillments', $consolidateFulfillmentsRequest);
     }
 
     /**
@@ -197,7 +207,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function getConsolidatedFulfillmentCount(\Flexsim\FlexnetOperations\Type\GetConsolidatedFulfillmentCountRequestType $getConsolidatedFulfillmentCountRequest) : \Flexsim\FlexnetOperations\Type\GetConsolidatedFulfillmentCountResponseType
     {
-        return $this->call('getConsolidatedFulfillmentCount', $getConsolidatedFulfillmentCountRequest);
+        return ($this->caller)('getConsolidatedFulfillmentCount', $getConsolidatedFulfillmentCountRequest);
     }
 
     /**
@@ -207,7 +217,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function getConsolidatedFulfillmentsQuery(\Flexsim\FlexnetOperations\Type\GetConsolidatedFulfillmentsQueryRequestType $getConsolidatedFulfillmentsQueryRequest) : \Flexsim\FlexnetOperations\Type\GetConsolidatedFulfillmentsQueryResponseType
     {
-        return $this->call('getConsolidatedFulfillmentsQuery', $getConsolidatedFulfillmentsQueryRequest);
+        return ($this->caller)('getConsolidatedFulfillmentsQuery', $getConsolidatedFulfillmentsQueryRequest);
     }
 
     /**
@@ -217,7 +227,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function getFulfillmentAttributesForBatchActivation(\Flexsim\FlexnetOperations\Type\GetFmtAttributesForBatchActivationRequestType $getFmtAttributesForBatchActivationRequest) : \Flexsim\FlexnetOperations\Type\GetFmtAttributesForBatchActivationResponseType
     {
-        return $this->call('getFulfillmentAttributesForBatchActivation', $getFmtAttributesForBatchActivationRequest);
+        return ($this->caller)('getFulfillmentAttributesForBatchActivation', $getFmtAttributesForBatchActivationRequest);
     }
 
     /**
@@ -227,7 +237,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function createLicensesAsBatch(\Flexsim\FlexnetOperations\Type\CreateLicensesAsBatchRequestType $createLicensesAsBatchRequest) : \Flexsim\FlexnetOperations\Type\CreateLicensesAsBatchResponseType
     {
-        return $this->call('createLicensesAsBatch', $createLicensesAsBatchRequest);
+        return ($this->caller)('createLicensesAsBatch', $createLicensesAsBatchRequest);
     }
 
     /**
@@ -237,7 +247,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function createLicensesAsBatchAndConsolidate(\Flexsim\FlexnetOperations\Type\CreateLicensesAsBatchRequestType $createLicensesAsBatchAndConsolidateRequest) : \Flexsim\FlexnetOperations\Type\ConsolidateFulfillmentsResponseType
     {
-        return $this->call('createLicensesAsBatchAndConsolidate', $createLicensesAsBatchAndConsolidateRequest);
+        return ($this->caller)('createLicensesAsBatchAndConsolidate', $createLicensesAsBatchAndConsolidateRequest);
     }
 
     /**
@@ -247,7 +257,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function emailConsolidatedLicenses(\Flexsim\FlexnetOperations\Type\EmailConsolidatedLicensesRequestType $emailConsolidatedLicensesRequest) : \Flexsim\FlexnetOperations\Type\EmailConsolidatedLicensesResponseType
     {
-        return $this->call('emailConsolidatedLicenses', $emailConsolidatedLicensesRequest);
+        return ($this->caller)('emailConsolidatedLicenses', $emailConsolidatedLicensesRequest);
     }
 
     /**
@@ -257,7 +267,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function manualActivation(\Flexsim\FlexnetOperations\Type\TrustedRequestType $manualActivationRequest) : \Flexsim\FlexnetOperations\Type\TrustedResponseType
     {
-        return $this->call('manualActivation', $manualActivationRequest);
+        return ($this->caller)('manualActivation', $manualActivationRequest);
     }
 
     /**
@@ -267,7 +277,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function manualRepair(\Flexsim\FlexnetOperations\Type\TrustedRequestType $manualRepairRequest) : \Flexsim\FlexnetOperations\Type\TrustedResponseType
     {
-        return $this->call('manualRepair', $manualRepairRequest);
+        return ($this->caller)('manualRepair', $manualRepairRequest);
     }
 
     /**
@@ -277,7 +287,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function manualReturn(\Flexsim\FlexnetOperations\Type\TrustedRequestType $manualReturnRequest) : \Flexsim\FlexnetOperations\Type\TrustedResponseType
     {
-        return $this->call('manualReturn', $manualReturnRequest);
+        return ($this->caller)('manualReturn', $manualReturnRequest);
     }
 
     /**
@@ -287,7 +297,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function getFulfillmentHistory(\Flexsim\FlexnetOperations\Type\GetFulfillmentHistoryRequestType $getFulfillmentHistoryRequest) : \Flexsim\FlexnetOperations\Type\GetFulfillmentHistoryResponseType
     {
-        return $this->call('getFulfillmentHistory', $getFulfillmentHistoryRequest);
+        return ($this->caller)('getFulfillmentHistory', $getFulfillmentHistoryRequest);
     }
 
     /**
@@ -297,7 +307,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function createChildLineItemFulfillment(\Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentRequestType $createChildLineItemFulfillmentRequest) : \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentResponseType
     {
-        return $this->call('createChildLineItemFulfillment', $createChildLineItemFulfillmentRequest);
+        return ($this->caller)('createChildLineItemFulfillment', $createChildLineItemFulfillmentRequest);
     }
 
     /**
@@ -307,7 +317,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function upgradeFulfillment(\Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCRequestType $upgradeFulfillmentRequest) : \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCResponseType
     {
-        return $this->call('upgradeFulfillment', $upgradeFulfillmentRequest);
+        return ($this->caller)('upgradeFulfillment', $upgradeFulfillmentRequest);
     }
 
     /**
@@ -317,7 +327,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function upsellFulfillment(\Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCRequestType $upsellFulfillmentRequest) : \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCResponseType
     {
-        return $this->call('upsellFulfillment', $upsellFulfillmentRequest);
+        return ($this->caller)('upsellFulfillment', $upsellFulfillmentRequest);
     }
 
     /**
@@ -327,7 +337,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function renewFulfillment(\Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCRequestType $renewFulfillmentRequest) : \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCResponseType
     {
-        return $this->call('renewFulfillment', $renewFulfillmentRequest);
+        return ($this->caller)('renewFulfillment', $renewFulfillmentRequest);
     }
 
     /**
@@ -337,7 +347,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function setLicense(\Flexsim\FlexnetOperations\Type\SetLicenseRequestType $setLicenseRequest) : \Flexsim\FlexnetOperations\Type\SetLicenseResponseType
     {
-        return $this->call('setLicense', $setLicenseRequest);
+        return ($this->caller)('setLicense', $setLicenseRequest);
     }
 
     /**
@@ -347,7 +357,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function deleteOnholdFulfillments(\Flexsim\FlexnetOperations\Type\DeleteOnholdFulfillmentsRequestType $deleteOnholdFulfillmentsRequest) : \Flexsim\FlexnetOperations\Type\DeleteOnholdFulfillmentsResponseType
     {
-        return $this->call('deleteOnholdFulfillments', $deleteOnholdFulfillmentsRequest);
+        return ($this->caller)('deleteOnholdFulfillments', $deleteOnholdFulfillmentsRequest);
     }
 
     /**
@@ -357,7 +367,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function offlineFNPTrustedStorageActivation(\Flexsim\FlexnetOperations\Type\ActivateLicensesRequestType $activateLicensesRequest) : \Flexsim\FlexnetOperations\Type\ActivateLicensesResponseType
     {
-        return $this->call('offlineFNPTrustedStorageActivation', $activateLicensesRequest);
+        return ($this->caller)('offlineFNPTrustedStorageActivation', $activateLicensesRequest);
     }
 
     /**
@@ -367,9 +377,7 @@ class LicenseServiceClient extends \Phpro\SoapClient\Client
      */
     public function transferHost(\Flexsim\FlexnetOperations\Type\TransferHostRequestType $transferHostRequest) : \Flexsim\FlexnetOperations\Type\TransferHostResponseType
     {
-        return $this->call('transferHost', $transferHostRequest);
+        return ($this->caller)('transferHost', $transferHostRequest);
     }
-
-
 }
 

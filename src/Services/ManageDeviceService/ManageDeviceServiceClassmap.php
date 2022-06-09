@@ -3,15 +3,14 @@
 namespace Flexsim\FlexnetOperations\Services\ManageDeviceService;
 
 use Flexsim\FlexnetOperations\Type;
-use Phpro\SoapClient\Soap\ClassMap\ClassMapCollection;
-use Phpro\SoapClient\Soap\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
 
 class ManageDeviceServiceClassmap
 {
-
-    public static function getCollection(): \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
-        return new ClassMapCollection([
+        return new ClassMapCollection(
             new ClassMap('productPKType', Type\ProductPKType::class),
             new ClassMap('productIdentifierType', Type\ProductIdentifierType::class),
             new ClassMap('licenseModelPKType', Type\LicenseModelPKType::class),
@@ -83,7 +82,7 @@ class ManageDeviceServiceClassmap
             new ClassMap('entitledProductDataListType', Type\EntitledProductDataListType::class),
             new ClassMap('addonLineItemDataDataType', Type\AddonLineItemDataDataType::class),
             new ClassMap('featureDataDataType', Type\FeatureDataDataType::class),
-            new ClassMap('dictionaryEntry', Type\ManageDeviceServiceDictionaryEntry::class),
+            new ClassMap('dictionaryEntry', Type\DictionaryEntry::class),
             new ClassMap('dictionaryType', Type\DictionaryType::class),
             new ClassMap('deviceQueryDataType', Type\DeviceQueryDataType::class),
             new ClassMap('getDevicesResponseDataType', Type\GetDevicesResponseDataType::class),
@@ -177,6 +176,7 @@ class ManageDeviceServiceClassmap
             new ClassMap('lineItemActivationIds', Type\LineItemActivationIds::class),
             new ClassMap('generateCloneDetectionReportResponse', Type\GenerateCloneDetectionReportResponse::class),
             new ClassMap('cloneSuspects', Type\CloneSuspects::class),
-        ]);
+        );
     }
 }
+

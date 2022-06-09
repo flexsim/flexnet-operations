@@ -3,15 +3,14 @@
 namespace Flexsim\FlexnetOperations\Services\ManageDeviceService\v3;
 
 use Flexsim\FlexnetOperations\Type;
-use Phpro\SoapClient\Soap\ClassMap\ClassMapCollection;
-use Phpro\SoapClient\Soap\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
 
 class ManageDeviceServiceClassmap
 {
-
-    public static function getCollection(): \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
-        return new ClassMapCollection([
+        return new ClassMapCollection(
             new ClassMap('ServerIdsType', Type\ServerIdsType::class),
             new ClassMap('createDeviceIdentifier', Type\CreateDeviceIdentifier::class),
             new ClassMap('hostTypeIdentifier', Type\HostTypeIdentifier::class),
@@ -58,8 +57,8 @@ class ManageDeviceServiceClassmap
             new ClassMap('DeviceIdTypeQueryType', Type\DeviceIdTypeQueryType::class),
             new ClassMap('DeviceStateQueryType', Type\DeviceStateQueryType::class),
             new ClassMap('deviceTypeList', Type\DeviceTypeList::class),
-            new ClassMap('getDevicesParametersType', Type\v2GetDevicesParametersType::class),
-            new ClassMap('deviceResponseConfigRequestType', Type\v2DeviceResponseConfigRequestType::class),
+            new ClassMap('getDevicesParametersType', Type\GetDevicesParametersType::class),
+            new ClassMap('deviceResponseConfigRequestType', Type\DeviceResponseConfigRequestType::class),
             new ClassMap('getDevicesRequestType', Type\GetDevicesRequestType::class),
             new ClassMap('failedGetDevicesDataType', Type\FailedGetDevicesDataType::class),
             new ClassMap('soldToType', Type\SoldToType::class),
@@ -68,7 +67,7 @@ class ManageDeviceServiceClassmap
             new ClassMap('entitledProductDataListType', Type\EntitledProductDataListType::class),
             new ClassMap('addonLineItemDataDataType', Type\AddonLineItemDataDataType::class),
             new ClassMap('featureDataDataType', Type\FeatureDataDataType::class),
-            new ClassMap('dictionaryEntry', Type\ManageDeviceServiceDictionaryEntry::class),
+            new ClassMap('dictionaryEntry', Type\DictionaryEntry::class),
             new ClassMap('dictionaryType', Type\DictionaryType::class),
             new ClassMap('deviceQueryDataType', Type\DeviceQueryDataType::class),
             new ClassMap('getDevicesResponseDataType', Type\GetDevicesResponseDataType::class),
@@ -147,6 +146,7 @@ class ManageDeviceServiceClassmap
             new ClassMap('lineItemActivationIds', Type\LineItemActivationIds::class),
             new ClassMap('generateCloneDetectionReportResponse', Type\GenerateCloneDetectionReportResponse::class),
             new ClassMap('cloneSuspects', Type\CloneSuspects::class),
-        ]);
+        );
     }
 }
+

@@ -3,15 +3,14 @@
 namespace Flexsim\FlexnetOperations\Services\ProductPackagingService;
 
 use Flexsim\FlexnetOperations\Type;
-use Phpro\SoapClient\Soap\ClassMap\ClassMapCollection;
-use Phpro\SoapClient\Soap\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
 
 class ProductPackagingServiceClassmap
 {
-
-    public static function getCollection() : \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
-        return new ClassMapCollection([
+        return new ClassMapCollection(
             new ClassMap('groupMaskDataType', Type\GroupMaskDataType::class),
             new ClassMap('dupGroupDataType', Type\DupGroupDataType::class),
             new ClassMap('featureOverrideParamsType', Type\FeatureOverrideParamsType::class),
@@ -297,9 +296,7 @@ class ProductPackagingServiceClassmap
             new ClassMap('licenseTechnologyDetailsType', Type\LicenseTechnologyDetailsType::class),
             new ClassMap('licenseTechnologyDataListType', Type\LicenseTechnologyDataListType::class),
             new ClassMap('getLicenseTechnologyQueryResponseType', Type\GetLicenseTechnologyQueryResponseType::class),
-        ]);
+        );
     }
-
-
 }
 

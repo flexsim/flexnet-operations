@@ -3,15 +3,14 @@
 namespace Flexsim\FlexnetOperations\Services\FlexnetAuthentication;
 
 use Flexsim\FlexnetOperations\Type;
-use Phpro\SoapClient\Soap\ClassMap\ClassMapCollection;
-use Phpro\SoapClient\Soap\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
 
 class FlexnetAuthenticationClassmap
 {
-
-    public static function getCollection() : \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
-        return new ClassMapCollection([
+        return new ClassMapCollection(
             new ClassMap('UserTokenReturnType', Type\UserTokenReturnType::class),
             new ClassMap('IdentityType', Type\IdentityType::class),
             new ClassMap('TokenResponseType', Type\TokenResponseType::class),
@@ -19,9 +18,7 @@ class FlexnetAuthenticationClassmap
             new ClassMap('AuthenticateUserReturnType', Type\AuthenticateUserReturnType::class),
             new ClassMap('TokenType', Type\TokenType::class),
             new ClassMap('StatusResponse', Type\StatusResponse::class),
-        ]);
+        );
     }
-
-
 }
 

@@ -3,15 +3,14 @@
 namespace Flexsim\FlexnetOperations\Services\UserAcctHierarchyService\v2;
 
 use Flexsim\FlexnetOperations\Type;
-use Phpro\SoapClient\Soap\ClassMap\ClassMapCollection;
-use Phpro\SoapClient\Soap\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
 
 class UserAcctHierarchyServiceClassmap
 {
-
-    public static function getCollection(): \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
-        return new ClassMapCollection([
+        return new ClassMapCollection(
             new ClassMap('addressDataType', Type\AddressDataType::class),
             new ClassMap('attributeDescriptorType', Type\AttributeDescriptorType::class),
             new ClassMap('attributeDescriptorDataType', Type\AttributeDescriptorDataType::class),
@@ -121,6 +120,7 @@ class UserAcctHierarchyServiceClassmap
             new ClassMap('permissionListType', Type\PermissionListType::class),
             new ClassMap('getUserPermissionsResponseDataType', Type\GetUserPermissionsResponseDataType::class),
             new ClassMap('getUserPermissionsResponseType', Type\GetUserPermissionsResponseType::class),
-        ]);
+        );
     }
 }
+

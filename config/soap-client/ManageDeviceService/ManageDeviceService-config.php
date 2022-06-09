@@ -6,11 +6,11 @@ use Phpro\SoapClient\CodeGenerator\Assembler;
 use Phpro\SoapClient\CodeGenerator\Rules;
 use Phpro\SoapClient\CodeGenerator\Config\Config;
 use Phpro\SoapClient\CodeGenerator\Rules\RuleSet;
-use Phpro\SoapClient\Soap\Driver\ExtSoap\ExtSoapOptions;
-use Phpro\SoapClient\Soap\Driver\ExtSoap\ExtSoapEngineFactory;
+use Phpro\SoapClient\Soap\DefaultEngineFactory;
+use Soap\ExtSoapEngine\ExtSoapOptions;
 
 return Config::create()
-    ->setEngine($engine = ExtSoapEngineFactory::fromOptions(
+    ->setEngine($engine = DefaultEngineFactory::create(
         ExtSoapOptions::defaults('wsdls/ManageDeviceService.wsdl', [])
             ->disableWsdlCache()
     ))
@@ -22,11 +22,10 @@ return Config::create()
     ->setClassMapDestination('src/Services/ManageDeviceService')
     ->setClassMapName('ManageDeviceServiceClassmap')
     ->setClassMapNamespace('Flexsim\FlexnetOperations\Services\ManageDeviceService')
-    ->setRuleSet(new RuleSet([
-        new Rules\AssembleRule(new Assembler\PropertyAssembler(\Laminas\Code\Generator\PropertyGenerator::VISIBILITY_PROTECTED)),
-        new Rules\AssembleRule(new Assembler\ClassMapAssembler()),
-        new Rules\AssembleRule(new Assembler\ClientMethodAssembler())
-    ]))
+    ->addRule(new Rules\AssembleRule(new Assembler\GetterAssembler(new Assembler\GetterAssemblerOptions())))
+    ->addRule(new Rules\AssembleRule(new Assembler\ImmutableSetterAssembler(
+        new Assembler\ImmutableSetterAssemblerOptions()
+    )))
     ->addRule(new Rules\AssembleRule(new Assembler\GetterAssembler(new Assembler\GetterAssemblerOptions())))
     ->addRule(new Rules\AssembleRule(new Assembler\FluentSetterAssembler()))
     ->addRule(new Rules\AssembleRule(new CustomConstructorAssembler((new CustomConstructorAssemblerOptions())->withTypeHints()->withCreateMethod()->withTypeMap(json_decode(file_get_contents(str_replace('-config.php', '-typeMap.json', __FILE__)), true)))))

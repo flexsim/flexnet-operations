@@ -1,6 +1,6 @@
 <?php
 
-namespace Flexsim\FlexnetOperations\Tests\Feature;
+namespace Flexsim\FlexnetOperations\Tests;
 
 use Flexsim\FlexnetOperations\Facades\EntitlementOrderService;
 use Flexsim\FlexnetOperations\Services\EntitlementOrderService\EntitlementOrderServiceClient;

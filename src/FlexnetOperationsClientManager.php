@@ -60,7 +60,7 @@ class FlexnetOperationsClientManager
      *
      * @return \Phpro\SoapClient\Client
      */
-    public function client(): \Phpro\SoapClient\Client
+    public function client()
     {
         $connection = $this->activeConnection();
 

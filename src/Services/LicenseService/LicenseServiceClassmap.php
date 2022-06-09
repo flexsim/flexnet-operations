@@ -3,15 +3,14 @@
 namespace Flexsim\FlexnetOperations\Services\LicenseService;
 
 use Flexsim\FlexnetOperations\Type;
-use Phpro\SoapClient\Soap\ClassMap\ClassMapCollection;
-use Phpro\SoapClient\Soap\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
 
 class LicenseServiceClassmap
 {
-
-    public static function getCollection(): \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
-        return new ClassMapCollection([
+        return new ClassMapCollection(
             new ClassMap('SimpleQueryType', Type\SimpleQueryType::class),
             new ClassMap('DateQueryType', Type\DateQueryType::class),
             new ClassMap('DateTimeQueryType', Type\DateTimeQueryType::class),
@@ -209,7 +208,7 @@ class LicenseServiceClassmap
             new ClassMap('failedOnholdFulfillmentDataType', Type\FailedOnholdFulfillmentDataType::class),
             new ClassMap('failedOnholdFulfillmentListType', Type\FailedOnholdFulfillmentListType::class),
             new ClassMap('deleteOnholdFulfillmentsResponseType', Type\DeleteOnholdFulfillmentsResponseType::class),
-            new ClassMap('DictionaryEntry', Type\LicenseServiceDictionaryEntry::class),
+            new ClassMap('DictionaryEntry', Type\DictionaryEntry::class),
             new ClassMap('DictionaryEntriesCollection', Type\DictionaryEntriesCollection::class),
             new ClassMap('Dictionary', Type\Dictionary::class),
             new ClassMap('typeLineItem', Type\TypeLineItem::class),
@@ -222,6 +221,7 @@ class LicenseServiceClassmap
             new ClassMap('failedTransferHostDataType', Type\FailedTransferHostDataType::class),
             new ClassMap('failedTransferHostListDataType', Type\FailedTransferHostListDataType::class),
             new ClassMap('transferHostResponseType', Type\TransferHostResponseType::class),
-        ]);
+        );
     }
 }
+
