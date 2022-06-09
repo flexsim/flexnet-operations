@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedMaintenanceStateDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceStateDataType
      */
@@ -53,6 +52,7 @@ class FailedMaintenanceStateDataType extends FlexnetType
     public function setMaintenance($maintenance)
     {
         $this->maintenance = $maintenance;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedMaintenanceStateDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

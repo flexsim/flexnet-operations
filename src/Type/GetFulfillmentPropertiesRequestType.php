@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetFulfillmentPropertiesRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType
      */
@@ -71,6 +70,7 @@ class GetFulfillmentPropertiesRequestType extends FlexnetType implements Request
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 
@@ -89,6 +89,7 @@ class GetFulfillmentPropertiesRequestType extends FlexnetType implements Request
     public function setFulfillmentResponseConfig($fulfillmentResponseConfig)
     {
         $this->fulfillmentResponseConfig = $fulfillmentResponseConfig;
+
         return $this;
     }
 
@@ -107,6 +108,7 @@ class GetFulfillmentPropertiesRequestType extends FlexnetType implements Request
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 
@@ -125,6 +127,7 @@ class GetFulfillmentPropertiesRequestType extends FlexnetType implements Request
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 }

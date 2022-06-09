@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeviceSortBys extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceSortBy
      */
@@ -45,6 +44,7 @@ class DeviceSortBys extends FlexnetType
     public function setSortBy($sortBy)
     {
         $this->sortBy = $sortBy;
+
         return $this;
     }
 }

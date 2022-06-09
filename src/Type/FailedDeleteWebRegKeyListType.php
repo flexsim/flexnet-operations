@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedDeleteWebRegKeyListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedDeleteWebRegKeyDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedDeleteWebRegKeyDataType|array
      */
     protected $failedWebRegKey;
 
@@ -31,7 +30,7 @@ class FailedDeleteWebRegKeyListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedDeleteWebRegKeyDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedDeleteWebRegKeyDataType|array
      */
     public function getFailedWebRegKey()
     {
@@ -45,6 +44,7 @@ class FailedDeleteWebRegKeyListType extends FlexnetType
     public function setFailedWebRegKey($failedWebRegKey)
     {
         $this->failedWebRegKey = $failedWebRegKey;
+
         return $this;
     }
 }

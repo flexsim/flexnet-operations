@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LinkFailAddonDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType|array
      */
     protected $failAddon;
 
@@ -31,7 +30,7 @@ class LinkFailAddonDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\LinkFailAddonDataType|array
      */
     public function getFailAddon()
     {
@@ -45,6 +44,7 @@ class LinkFailAddonDataListType extends FlexnetType
     public function setFailAddon($failAddon)
     {
         $this->failAddon = $failAddon;
+
         return $this;
     }
 }

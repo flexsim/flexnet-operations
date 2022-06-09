@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SplitLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
@@ -53,6 +52,7 @@ class SplitLineItemDataType extends FlexnetType
     public function setLineItemIdentifier($lineItemIdentifier)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class SplitLineItemDataType extends FlexnetType
     public function setEntitlementIdentifier($entitlementIdentifier)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
+
         return $this;
     }
 }

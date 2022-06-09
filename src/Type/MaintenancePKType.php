@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class MaintenancePKType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class MaintenancePKType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class MaintenancePKType extends FlexnetType
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 }

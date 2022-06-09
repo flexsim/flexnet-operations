@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetFulfillmentAttributesRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
@@ -47,6 +46,7 @@ class GetFulfillmentAttributesRequestType extends FlexnetType implements Request
     public function setLicenseModelIdentifier($licenseModelIdentifier)
     {
         $this->licenseModelIdentifier = $licenseModelIdentifier;
+
         return $this;
     }
 }

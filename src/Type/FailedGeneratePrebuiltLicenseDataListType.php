@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedGeneratePrebuiltLicenseDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataType|array
      */
     protected $failedDevice;
 
@@ -31,7 +30,7 @@ class FailedGeneratePrebuiltLicenseDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedGeneratePrebuiltLicenseDataType|array
      */
     public function getFailedDevice()
     {
@@ -45,6 +44,7 @@ class FailedGeneratePrebuiltLicenseDataListType extends FlexnetType
     public function setFailedDevice($failedDevice)
     {
         $this->failedDevice = $failedDevice;
+
         return $this;
     }
 }

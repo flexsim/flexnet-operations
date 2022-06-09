@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class MaintenanceLineItemPropertiesType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
@@ -117,6 +116,7 @@ class MaintenanceLineItemPropertiesType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -135,6 +135,7 @@ class MaintenanceLineItemPropertiesType extends FlexnetType
     public function setMaintenanceProduct($maintenanceProduct)
     {
         $this->maintenanceProduct = $maintenanceProduct;
+
         return $this;
     }
 
@@ -153,6 +154,7 @@ class MaintenanceLineItemPropertiesType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -171,6 +173,7 @@ class MaintenanceLineItemPropertiesType extends FlexnetType
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -189,6 +192,7 @@ class MaintenanceLineItemPropertiesType extends FlexnetType
     public function setOrderLineNumber($orderLineNumber)
     {
         $this->orderLineNumber = $orderLineNumber;
+
         return $this;
     }
 
@@ -207,6 +211,7 @@ class MaintenanceLineItemPropertiesType extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -225,6 +230,7 @@ class MaintenanceLineItemPropertiesType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -243,6 +249,7 @@ class MaintenanceLineItemPropertiesType extends FlexnetType
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -261,6 +268,7 @@ class MaintenanceLineItemPropertiesType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -279,6 +287,7 @@ class MaintenanceLineItemPropertiesType extends FlexnetType
     public function setMaintenanceLineItemAttributes($maintenanceLineItemAttributes)
     {
         $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
+
         return $this;
     }
 }

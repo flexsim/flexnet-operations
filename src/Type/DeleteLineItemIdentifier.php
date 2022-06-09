@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeleteLineItemIdentifier extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class DeleteLineItemIdentifier extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 }

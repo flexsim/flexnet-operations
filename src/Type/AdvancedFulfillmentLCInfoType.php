@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AdvancedFulfillmentLCInfoType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -77,6 +76,7 @@ class AdvancedFulfillmentLCInfoType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -95,6 +95,7 @@ class AdvancedFulfillmentLCInfoType extends FlexnetType
     public function setFulfillmentId($fulfillmentId)
     {
         $this->fulfillmentId = $fulfillmentId;
+
         return $this;
     }
 
@@ -113,6 +114,7 @@ class AdvancedFulfillmentLCInfoType extends FlexnetType
     public function setLicenseText($licenseText)
     {
         $this->licenseText = $licenseText;
+
         return $this;
     }
 
@@ -131,6 +133,7 @@ class AdvancedFulfillmentLCInfoType extends FlexnetType
     public function setBinaryLicense($binaryLicense)
     {
         $this->binaryLicense = $binaryLicense;
+
         return $this;
     }
 
@@ -149,6 +152,7 @@ class AdvancedFulfillmentLCInfoType extends FlexnetType
     public function setLicenseFiles($licenseFiles)
     {
         $this->licenseFiles = $licenseFiles;
+
         return $this;
     }
 }

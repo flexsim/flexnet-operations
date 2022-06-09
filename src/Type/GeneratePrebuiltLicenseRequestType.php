@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GeneratePrebuiltLicenseRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataType
      */
@@ -47,6 +46,7 @@ class GeneratePrebuiltLicenseRequestType extends FlexnetType implements RequestI
     public function setRequestDataList($requestDataList)
     {
         $this->requestDataList = $requestDataList;
+
         return $this;
     }
 }

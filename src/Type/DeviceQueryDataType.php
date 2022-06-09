@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeviceQueryDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
@@ -293,6 +292,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setDeviceIdentifier($deviceIdentifier)
     {
         $this->deviceIdentifier = $deviceIdentifier;
+
         return $this;
     }
 
@@ -311,6 +311,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setAlias($alias)
     {
         $this->alias = $alias;
+
         return $this;
     }
 
@@ -329,6 +330,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -347,6 +349,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setHostTypeName($hostTypeName)
     {
         $this->hostTypeName = $hostTypeName;
+
         return $this;
     }
 
@@ -365,6 +368,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setDeviceStatus($deviceStatus)
     {
         $this->deviceStatus = $deviceStatus;
+
         return $this;
     }
 
@@ -383,6 +387,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setDeviceServedStatus($deviceServedStatus)
     {
         $this->deviceServedStatus = $deviceServedStatus;
+
         return $this;
     }
 
@@ -401,6 +406,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setChannelPartners($channelPartners)
     {
         $this->channelPartners = $channelPartners;
+
         return $this;
     }
 
@@ -419,6 +425,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -437,6 +444,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setPreBuiltProduct($preBuiltProduct)
     {
         $this->preBuiltProduct = $preBuiltProduct;
+
         return $this;
     }
 
@@ -455,6 +463,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setHasPrebuiltLicense($hasPrebuiltLicense)
     {
         $this->hasPrebuiltLicense = $hasPrebuiltLicense;
+
         return $this;
     }
 
@@ -473,6 +482,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setPrebuiltLicense($prebuiltLicense)
     {
         $this->prebuiltLicense = $prebuiltLicense;
+
         return $this;
     }
 
@@ -491,6 +501,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setHasAddonLicense($hasAddonLicense)
     {
         $this->hasAddonLicense = $hasAddonLicense;
+
         return $this;
     }
 
@@ -509,6 +520,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setAddonLicense($addonLicense)
     {
         $this->addonLicense = $addonLicense;
+
         return $this;
     }
 
@@ -527,6 +539,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setPublisherIdName($publisherIdName)
     {
         $this->publisherIdName = $publisherIdName;
+
         return $this;
     }
 
@@ -545,6 +558,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setAddonLineItemData($addonLineItemData)
     {
         $this->addonLineItemData = $addonLineItemData;
+
         return $this;
     }
 
@@ -563,6 +577,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setFeatureData($featureData)
     {
         $this->featureData = $featureData;
+
         return $this;
     }
 
@@ -581,6 +596,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -599,6 +615,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setParentIdentifier($parentIdentifier)
     {
         $this->parentIdentifier = $parentIdentifier;
+
         return $this;
     }
 
@@ -617,6 +634,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setMachineType($machineType)
     {
         $this->machineType = $machineType;
+
         return $this;
     }
 
@@ -635,6 +653,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setVmName($vmName)
     {
         $this->vmName = $vmName;
+
         return $this;
     }
 
@@ -653,6 +672,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setVmInfo($vmInfo)
     {
         $this->vmInfo = $vmInfo;
+
         return $this;
     }
 
@@ -671,6 +691,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setVendorDictionary($vendorDictionary)
     {
         $this->vendorDictionary = $vendorDictionary;
+
         return $this;
     }
 
@@ -689,6 +710,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setDeviceUser($deviceUser)
     {
         $this->deviceUser = $deviceUser;
+
         return $this;
     }
 
@@ -707,6 +729,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setDeviceUserIdentifier($deviceUserIdentifier)
     {
         $this->deviceUserIdentifier = $deviceUserIdentifier;
+
         return $this;
     }
 
@@ -725,6 +748,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setSoldToAcctName($soldToAcctName)
     {
         $this->soldToAcctName = $soldToAcctName;
+
         return $this;
     }
 
@@ -743,6 +767,7 @@ class DeviceQueryDataType extends FlexnetType
     public function setSoldToOrgName($soldToOrgName)
     {
         $this->soldToOrgName = $soldToOrgName;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class UnlinkMaintenanceLineItemRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemListType
      */
@@ -47,6 +46,7 @@ class UnlinkMaintenanceLineItemRequestType extends FlexnetType implements Reques
     public function setUnlinkMaintenanceLineItemList($unlinkMaintenanceLineItemList)
     {
         $this->unlinkMaintenanceLineItemList = $unlinkMaintenanceLineItemList;
+
         return $this;
     }
 }

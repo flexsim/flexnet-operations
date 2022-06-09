@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PartNumbersSimpleListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array 
+     * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array
      */
     protected $partNumber;
 
@@ -31,7 +30,7 @@ class PartNumbersSimpleListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array 
+     * @return \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array
      */
     public function getPartNumber()
     {
@@ -45,6 +44,7 @@ class PartNumbersSimpleListType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 }

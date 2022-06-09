@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedDeleteFeatureDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType
      */
@@ -53,6 +52,7 @@ class FailedDeleteFeatureDataType extends FlexnetType
     public function setFeatureIdentifier($featureIdentifier)
     {
         $this->featureIdentifier = $featureIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedDeleteFeatureDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

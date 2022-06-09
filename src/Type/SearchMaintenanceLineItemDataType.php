@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SearchMaintenanceLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -133,6 +132,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -151,6 +151,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -169,6 +170,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     public function setMaintenanceProductName($maintenanceProductName)
     {
         $this->maintenanceProductName = $maintenanceProductName;
+
         return $this;
     }
 
@@ -187,6 +189,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     public function setMaintenanceProductVersion($maintenanceProductVersion)
     {
         $this->maintenanceProductVersion = $maintenanceProductVersion;
+
         return $this;
     }
 
@@ -205,6 +208,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -223,6 +227,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -241,6 +246,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -259,6 +265,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -277,6 +284,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -295,6 +303,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     public function setOrderLineNumber($orderLineNumber)
     {
         $this->orderLineNumber = $orderLineNumber;
+
         return $this;
     }
 
@@ -313,6 +322,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     public function setWithNoOrderId($withNoOrderId)
     {
         $this->withNoOrderId = $withNoOrderId;
+
         return $this;
     }
 
@@ -331,6 +341,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     public function setMaintenanceLineItemAttributes($maintenanceLineItemAttributes)
     {
         $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
+
         return $this;
     }
 }

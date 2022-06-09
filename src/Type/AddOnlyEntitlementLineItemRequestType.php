@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class AddOnlyEntitlementLineItemRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType
      */
@@ -55,6 +54,7 @@ class AddOnlyEntitlementLineItemRequestType extends FlexnetType implements Reque
     public function setLineItem($lineItem)
     {
         $this->lineItem = $lineItem;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class AddOnlyEntitlementLineItemRequestType extends FlexnetType implements Reque
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class MaintenanceQueryParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -93,6 +92,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     public function setMaintenanceName($maintenanceName)
     {
         $this->maintenanceName = $maintenanceName;
+
         return $this;
     }
 
@@ -111,6 +111,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -129,6 +130,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -147,6 +149,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -165,6 +168,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -183,6 +187,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     public function setCreationDate($creationDate)
     {
         $this->creationDate = $creationDate;
+
         return $this;
     }
 
@@ -201,6 +206,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     public function setLastModifiedDate($lastModifiedDate)
     {
         $this->lastModifiedDate = $lastModifiedDate;
+
         return $this;
     }
 }

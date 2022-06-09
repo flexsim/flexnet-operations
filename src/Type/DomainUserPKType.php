@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DomainUserPKType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class DomainUserPKType extends FlexnetType
     public function setUserName($userName)
     {
         $this->userName = $userName;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class DomainUserPKType extends FlexnetType
     public function setDomainName($domainName)
     {
         $this->domainName = $domainName;
+
         return $this;
     }
 }

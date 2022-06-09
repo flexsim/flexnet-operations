@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LicenseGeneratorsDetailsType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType
      */
@@ -45,6 +44,7 @@ class LicenseGeneratorsDetailsType extends FlexnetType
     public function setLicenseGeneratorIdentifier($licenseGeneratorIdentifier)
     {
         $this->licenseGeneratorIdentifier = $licenseGeneratorIdentifier;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class RelateOrganizationsDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
@@ -53,6 +52,7 @@ class RelateOrganizationsDataType extends FlexnetType
     public function setOrganizationToRelate($organizationToRelate)
     {
         $this->organizationToRelate = $organizationToRelate;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class RelateOrganizationsDataType extends FlexnetType
     public function setRelatedOrganization($relatedOrganization)
     {
         $this->relatedOrganization = $relatedOrganization;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SuiteCustomAttributeQueryType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class SuiteCustomAttributeQueryType extends FlexnetType
     public function setAttributeName($attributeName)
     {
         $this->attributeName = $attributeName;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class SuiteCustomAttributeQueryType extends FlexnetType
     public function setStringValue($stringValue)
     {
         $this->stringValue = $stringValue;
+
         return $this;
     }
 }

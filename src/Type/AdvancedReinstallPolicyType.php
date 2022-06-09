@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AdvancedReinstallPolicyType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\PolicyDataType
      */
@@ -69,6 +68,7 @@ class AdvancedReinstallPolicyType extends FlexnetType
     public function setUmn1Policy($umn1Policy)
     {
         $this->umn1Policy = $umn1Policy;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class AdvancedReinstallPolicyType extends FlexnetType
     public function setUmn2Policy($umn2Policy)
     {
         $this->umn2Policy = $umn2Policy;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class AdvancedReinstallPolicyType extends FlexnetType
     public function setUmn3Policy($umn3Policy)
     {
         $this->umn3Policy = $umn3Policy;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class AdvancedReinstallPolicyType extends FlexnetType
     public function setMidPolicy($midPolicy)
     {
         $this->midPolicy = $midPolicy;
+
         return $this;
     }
 }

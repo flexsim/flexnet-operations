@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class TransferEntitlementsListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType|array 
+     * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType|array
      */
     protected $entitlementInfo;
 
@@ -31,7 +30,7 @@ class TransferEntitlementsListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType|array 
+     * @return \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType|array
      */
     public function getEntitlementInfo()
     {
@@ -45,6 +44,7 @@ class TransferEntitlementsListType extends FlexnetType
     public function setEntitlementInfo($entitlementInfo)
     {
         $this->entitlementInfo = $entitlementInfo;
+
         return $this;
     }
 }

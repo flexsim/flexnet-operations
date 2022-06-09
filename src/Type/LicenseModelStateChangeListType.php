@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LicenseModelStateChangeListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType|array
      */
     protected $licenseModel;
 
@@ -31,7 +30,7 @@ class LicenseModelStateChangeListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\LicenseModelStateChangeDataType|array
      */
     public function getLicenseModel()
     {
@@ -45,6 +44,7 @@ class LicenseModelStateChangeListType extends FlexnetType
     public function setLicenseModel($licenseModel)
     {
         $this->licenseModel = $licenseModel;
+
         return $this;
     }
 }

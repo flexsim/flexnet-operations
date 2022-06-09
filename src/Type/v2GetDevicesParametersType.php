@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class v2GetDevicesParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -203,6 +202,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setAlias($alias)
     {
         $this->alias = $alias;
+
         return $this;
     }
 
@@ -221,6 +221,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
+
         return $this;
     }
 
@@ -239,6 +240,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setDeviceIdType($deviceIdType)
     {
         $this->deviceIdType = $deviceIdType;
+
         return $this;
     }
 
@@ -257,6 +259,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setParentId($parentId)
     {
         $this->parentId = $parentId;
+
         return $this;
     }
 
@@ -275,6 +278,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setHostTypeName($hostTypeName)
     {
         $this->hostTypeName = $hostTypeName;
+
         return $this;
     }
 
@@ -293,6 +297,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -311,6 +316,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setSoldToAcctId($soldToAcctId)
     {
         $this->soldToAcctId = $soldToAcctId;
+
         return $this;
     }
 
@@ -329,6 +335,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setSoldToOrgId($soldToOrgId)
     {
         $this->soldToOrgId = $soldToOrgId;
+
         return $this;
     }
 
@@ -347,6 +354,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -365,6 +373,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -383,6 +392,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setAddOnActivationId($addOnActivationId)
     {
         $this->addOnActivationId = $addOnActivationId;
+
         return $this;
     }
 
@@ -401,6 +411,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setAddOnProductName($addOnProductName)
     {
         $this->addOnProductName = $addOnProductName;
+
         return $this;
     }
 
@@ -419,6 +430,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setAddOnProductVersion($addOnProductVersion)
     {
         $this->addOnProductVersion = $addOnProductVersion;
+
         return $this;
     }
 
@@ -437,6 +449,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setFeatureName($featureName)
     {
         $this->featureName = $featureName;
+
         return $this;
     }
 
@@ -455,6 +468,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setIsServer($isServer)
     {
         $this->isServer = $isServer;
+
         return $this;
     }
 
@@ -473,6 +487,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setDeviceTypes($deviceTypes)
     {
         $this->deviceTypes = $deviceTypes;
+
         return $this;
     }
 
@@ -491,6 +506,7 @@ class v2GetDevicesParametersType extends FlexnetType
     public function setUserString($userString)
     {
         $this->userString = $userString;
+
         return $this;
     }
 }

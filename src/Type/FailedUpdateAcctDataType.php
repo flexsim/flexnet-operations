@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUpdateAcctDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateAcctDataType
      */
@@ -53,6 +52,7 @@ class FailedUpdateAcctDataType extends FlexnetType
     public function setAcctData($acctData)
     {
         $this->acctData = $acctData;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedUpdateAcctDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

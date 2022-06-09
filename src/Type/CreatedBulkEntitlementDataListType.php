@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedBulkEntitlementDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType|array
      */
@@ -45,6 +44,7 @@ class CreatedBulkEntitlementDataListType extends FlexnetType
     public function setCreatedBulkEntitlement($createdBulkEntitlement)
     {
         $this->createdBulkEntitlement = $createdBulkEntitlement;
+
         return $this;
     }
 }

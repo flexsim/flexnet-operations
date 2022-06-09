@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DuplicateFulfillmentRecordListDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
@@ -45,6 +44,7 @@ class DuplicateFulfillmentRecordListDataType extends FlexnetType
     public function setFulfillment($fulfillment)
     {
         $this->fulfillment = $fulfillment;
+
         return $this;
     }
 }

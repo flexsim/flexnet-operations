@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdatedDomainUserDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType|array 
+     * @var \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType|array
      */
     protected $user;
 
@@ -31,7 +30,7 @@ class UpdatedDomainUserDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType|array 
+     * @return \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType|array
      */
     public function getUser()
     {
@@ -45,6 +44,7 @@ class UpdatedDomainUserDataListType extends FlexnetType
     public function setUser($user)
     {
         $this->user = $user;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeviceMachineTypeQueryType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class DeviceMachineTypeQueryType extends FlexnetType
     public function setValue($value)
     {
         $this->value = $value;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class DeviceMachineTypeQueryType extends FlexnetType
     public function setSearchType($searchType)
     {
         $this->searchType = $searchType;
+
         return $this;
     }
 }

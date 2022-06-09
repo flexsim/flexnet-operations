@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class RepairShortCodeRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType
      */
@@ -47,6 +46,7 @@ class RepairShortCodeRequestType extends FlexnetType implements RequestInterface
     public function setShortCodeData($shortCodeData)
     {
         $this->shortCodeData = $shortCodeData;
+
         return $this;
     }
 }

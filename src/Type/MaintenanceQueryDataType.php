@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class MaintenanceQueryDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -127,6 +126,7 @@ class MaintenanceQueryDataType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -145,6 +145,7 @@ class MaintenanceQueryDataType extends FlexnetType
     public function setMaintenanceName($maintenanceName)
     {
         $this->maintenanceName = $maintenanceName;
+
         return $this;
     }
 
@@ -163,6 +164,7 @@ class MaintenanceQueryDataType extends FlexnetType
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -181,6 +183,7 @@ class MaintenanceQueryDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -199,6 +202,7 @@ class MaintenanceQueryDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -217,6 +221,7 @@ class MaintenanceQueryDataType extends FlexnetType
     public function setAllowUpgrades($allowUpgrades)
     {
         $this->allowUpgrades = $allowUpgrades;
+
         return $this;
     }
 
@@ -235,6 +240,7 @@ class MaintenanceQueryDataType extends FlexnetType
     public function setAllowUpsells($allowUpsells)
     {
         $this->allowUpsells = $allowUpsells;
+
         return $this;
     }
 
@@ -253,6 +259,7 @@ class MaintenanceQueryDataType extends FlexnetType
     public function setAllowRenewals($allowRenewals)
     {
         $this->allowRenewals = $allowRenewals;
+
         return $this;
     }
 
@@ -271,6 +278,7 @@ class MaintenanceQueryDataType extends FlexnetType
     public function setPartNumbers($partNumbers)
     {
         $this->partNumbers = $partNumbers;
+
         return $this;
     }
 }

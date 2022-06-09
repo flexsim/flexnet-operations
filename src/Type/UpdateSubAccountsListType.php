@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateSubAccountsListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array
      */
@@ -53,6 +52,7 @@ class UpdateSubAccountsListType extends FlexnetType
     public function setSubAccount($subAccount)
     {
         $this->subAccount = $subAccount;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class UpdateSubAccountsListType extends FlexnetType
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

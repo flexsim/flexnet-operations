@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedSimpleEntitlementDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedSimpleEntitlementDataType|array
      */
@@ -45,6 +44,7 @@ class CreatedSimpleEntitlementDataListType extends FlexnetType
     public function setCreatedSimpleEntitlement($createdSimpleEntitlement)
     {
         $this->createdSimpleEntitlement = $createdSimpleEntitlement;
+
         return $this;
     }
 }

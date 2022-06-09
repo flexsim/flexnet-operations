@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class RehostFulfillmentDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
@@ -93,6 +92,7 @@ class RehostFulfillmentDataType extends FlexnetType
     public function setFulfillmentIdentifier($fulfillmentIdentifier)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
+
         return $this;
     }
 
@@ -111,6 +111,7 @@ class RehostFulfillmentDataType extends FlexnetType
     public function setServerIds($serverIds)
     {
         $this->serverIds = $serverIds;
+
         return $this;
     }
 
@@ -129,6 +130,7 @@ class RehostFulfillmentDataType extends FlexnetType
     public function setNodeIds($nodeIds)
     {
         $this->nodeIds = $nodeIds;
+
         return $this;
     }
 
@@ -147,6 +149,7 @@ class RehostFulfillmentDataType extends FlexnetType
     public function setCustomHost($customHost)
     {
         $this->customHost = $customHost;
+
         return $this;
     }
 
@@ -165,6 +168,7 @@ class RehostFulfillmentDataType extends FlexnetType
     public function setPartialCount($partialCount)
     {
         $this->partialCount = $partialCount;
+
         return $this;
     }
 
@@ -183,6 +187,7 @@ class RehostFulfillmentDataType extends FlexnetType
     public function setOverDraftCount($overDraftCount)
     {
         $this->overDraftCount = $overDraftCount;
+
         return $this;
     }
 
@@ -201,6 +206,7 @@ class RehostFulfillmentDataType extends FlexnetType
     public function setOverridePolicy($overridePolicy)
     {
         $this->overridePolicy = $overridePolicy;
+
         return $this;
     }
 }

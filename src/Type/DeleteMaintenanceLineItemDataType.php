@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeleteMaintenanceLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
@@ -45,6 +44,7 @@ class DeleteMaintenanceLineItemDataType extends FlexnetType
     public function setMaintenanceLineItemIdentifier($maintenanceLineItemIdentifier)
     {
         $this->maintenanceLineItemIdentifier = $maintenanceLineItemIdentifier;
+
         return $this;
     }
 }

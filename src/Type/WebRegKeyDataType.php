@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class WebRegKeyDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class WebRegKeyDataType extends FlexnetType
     public function setWebRegKey($webRegKey)
     {
         $this->webRegKey = $webRegKey;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class WebRegKeyDataType extends FlexnetType
     public function setAutoGenerate($autoGenerate)
     {
         $this->autoGenerate = $autoGenerate;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class WebRegKeyDataType extends FlexnetType
     public function setNumAutoGenerate($numAutoGenerate)
     {
         $this->numAutoGenerate = $numAutoGenerate;
+
         return $this;
     }
 }

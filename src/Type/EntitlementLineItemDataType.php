@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EntitlementLineItemDataType extends FlexnetType
 {
-
     /**
      * @var int
      */
@@ -133,6 +132,7 @@ class EntitlementLineItemDataType extends FlexnetType
     public function setNumberOfRemainingCopies($numberOfRemainingCopies)
     {
         $this->numberOfRemainingCopies = $numberOfRemainingCopies;
+
         return $this;
     }
 
@@ -151,6 +151,7 @@ class EntitlementLineItemDataType extends FlexnetType
     public function setAvailableExtraActivations($availableExtraActivations)
     {
         $this->availableExtraActivations = $availableExtraActivations;
+
         return $this;
     }
 
@@ -169,6 +170,7 @@ class EntitlementLineItemDataType extends FlexnetType
     public function setIsTrustedType($isTrustedType)
     {
         $this->isTrustedType = $isTrustedType;
+
         return $this;
     }
 
@@ -187,6 +189,7 @@ class EntitlementLineItemDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -205,6 +208,7 @@ class EntitlementLineItemDataType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 
@@ -223,6 +227,7 @@ class EntitlementLineItemDataType extends FlexnetType
     public function setParentLineItem($parentLineItem)
     {
         $this->parentLineItem = $parentLineItem;
+
         return $this;
     }
 
@@ -241,6 +246,7 @@ class EntitlementLineItemDataType extends FlexnetType
     public function setCreatedOnDateTime($createdOnDateTime)
     {
         $this->createdOnDateTime = $createdOnDateTime;
+
         return $this;
     }
 
@@ -259,6 +265,7 @@ class EntitlementLineItemDataType extends FlexnetType
     public function setLastModifiedDateTime($lastModifiedDateTime)
     {
         $this->lastModifiedDateTime = $lastModifiedDateTime;
+
         return $this;
     }
 
@@ -277,6 +284,7 @@ class EntitlementLineItemDataType extends FlexnetType
     public function setOverdraftMax($overdraftMax)
     {
         $this->overdraftMax = $overdraftMax;
+
         return $this;
     }
 
@@ -295,6 +303,7 @@ class EntitlementLineItemDataType extends FlexnetType
     public function setRemainingOverdraftCount($remainingOverdraftCount)
     {
         $this->remainingOverdraftCount = $remainingOverdraftCount;
+
         return $this;
     }
 
@@ -313,6 +322,7 @@ class EntitlementLineItemDataType extends FlexnetType
     public function setProductLine($productLine)
     {
         $this->productLine = $productLine;
+
         return $this;
     }
 
@@ -331,6 +341,7 @@ class EntitlementLineItemDataType extends FlexnetType
     public function setFulfilledCount($fulfilledCount)
     {
         $this->fulfilledCount = $fulfilledCount;
+
         return $this;
     }
 }

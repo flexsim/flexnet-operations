@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeleteAcctDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
@@ -57,6 +56,7 @@ class DeleteAcctDataType extends FlexnetType
     public function setAccount($account)
     {
         $this->account = $account;
+
         return $this;
     }
 
@@ -75,6 +75,7 @@ class DeleteAcctDataType extends FlexnetType
     public function setDeleteSubTree($deleteSubTree)
     {
         $this->deleteSubTree = $deleteSubTree;
+
         return $this;
     }
 }

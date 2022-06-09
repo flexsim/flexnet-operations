@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class DeleteUniformSuiteRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteUniformSuiteDataType
      */
@@ -47,6 +46,7 @@ class DeleteUniformSuiteRequestType extends FlexnetType implements RequestInterf
     public function setUniformSuite($uniformSuite)
     {
         $this->uniformSuite = $uniformSuite;
+
         return $this;
     }
 }

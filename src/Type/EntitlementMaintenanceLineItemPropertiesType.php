@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
@@ -165,6 +164,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -183,6 +183,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -201,6 +202,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -219,6 +221,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setOrderLineNumber($orderLineNumber)
     {
         $this->orderLineNumber = $orderLineNumber;
+
         return $this;
     }
 
@@ -237,6 +240,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -255,6 +259,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setMaintenanceProduct($maintenanceProduct)
     {
         $this->maintenanceProduct = $maintenanceProduct;
+
         return $this;
     }
 
@@ -273,6 +278,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setMaintenanceProductDescription($maintenanceProductDescription)
     {
         $this->maintenanceProductDescription = $maintenanceProductDescription;
+
         return $this;
     }
 
@@ -291,6 +297,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setMaintenancePartNumber($maintenancePartNumber)
     {
         $this->maintenancePartNumber = $maintenancePartNumber;
+
         return $this;
     }
 
@@ -309,6 +316,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setMaintenancePartNumberDescription($maintenancePartNumberDescription)
     {
         $this->maintenancePartNumberDescription = $maintenancePartNumberDescription;
+
         return $this;
     }
 
@@ -327,6 +335,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -345,6 +354,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -363,6 +373,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -381,6 +392,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setCreatedOnDateTime($createdOnDateTime)
     {
         $this->createdOnDateTime = $createdOnDateTime;
+
         return $this;
     }
 
@@ -399,6 +411,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setLastModifiedDateTime($lastModifiedDateTime)
     {
         $this->lastModifiedDateTime = $lastModifiedDateTime;
+
         return $this;
     }
 
@@ -417,6 +430,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setLinkedLineItemActivationId($linkedLineItemActivationId)
     {
         $this->linkedLineItemActivationId = $linkedLineItemActivationId;
+
         return $this;
     }
 
@@ -435,6 +449,7 @@ class EntitlementMaintenanceLineItemPropertiesType extends FlexnetType
     public function setMaintenanceLineItemAttributes($maintenanceLineItemAttributes)
     {
         $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
+
         return $this;
     }
 }

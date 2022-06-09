@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetUserPermissionsResponseDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -67,6 +66,7 @@ class GetUserPermissionsResponseDataType extends FlexnetType
     public function setUserName($userName)
     {
         $this->userName = $userName;
+
         return $this;
     }
 
@@ -85,6 +85,7 @@ class GetUserPermissionsResponseDataType extends FlexnetType
     public function setAccountType($accountType)
     {
         $this->accountType = $accountType;
+
         return $this;
     }
 
@@ -103,6 +104,7 @@ class GetUserPermissionsResponseDataType extends FlexnetType
     public function setOrgType($orgType)
     {
         $this->orgType = $orgType;
+
         return $this;
     }
 
@@ -121,6 +123,7 @@ class GetUserPermissionsResponseDataType extends FlexnetType
     public function setPermissions($permissions)
     {
         $this->permissions = $permissions;
+
         return $this;
     }
 }

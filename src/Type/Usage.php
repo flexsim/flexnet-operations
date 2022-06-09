@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class Usage extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -229,6 +228,7 @@ class Usage extends FlexnetType
     public function setProductLine($productLine)
     {
         $this->productLine = $productLine;
+
         return $this;
     }
 
@@ -247,6 +247,7 @@ class Usage extends FlexnetType
     public function setMeter($meter)
     {
         $this->meter = $meter;
+
         return $this;
     }
 
@@ -265,6 +266,7 @@ class Usage extends FlexnetType
     public function setUsageUnitName($usageUnitName)
     {
         $this->usageUnitName = $usageUnitName;
+
         return $this;
     }
 
@@ -283,6 +285,7 @@ class Usage extends FlexnetType
     public function setUsageSinceReset($usageSinceReset)
     {
         $this->usageSinceReset = $usageSinceReset;
+
         return $this;
     }
 
@@ -301,6 +304,7 @@ class Usage extends FlexnetType
     public function setEntitled($entitled)
     {
         $this->entitled = $entitled;
+
         return $this;
     }
 
@@ -319,6 +323,7 @@ class Usage extends FlexnetType
     public function setOverageSinceStatement($overageSinceStatement)
     {
         $this->overageSinceStatement = $overageSinceStatement;
+
         return $this;
     }
 
@@ -337,6 +342,7 @@ class Usage extends FlexnetType
     public function setOverageSinceReset($overageSinceReset)
     {
         $this->overageSinceReset = $overageSinceReset;
+
         return $this;
     }
 
@@ -355,6 +361,7 @@ class Usage extends FlexnetType
     public function setPercentSinceReset($percentSinceReset)
     {
         $this->percentSinceReset = $percentSinceReset;
+
         return $this;
     }
 
@@ -373,6 +380,7 @@ class Usage extends FlexnetType
     public function setResetIntervalUnitName($resetIntervalUnitName)
     {
         $this->resetIntervalUnitName = $resetIntervalUnitName;
+
         return $this;
     }
 
@@ -391,6 +399,7 @@ class Usage extends FlexnetType
     public function setResetInterval($resetInterval)
     {
         $this->resetInterval = $resetInterval;
+
         return $this;
     }
 
@@ -409,6 +418,7 @@ class Usage extends FlexnetType
     public function setPeriod($period)
     {
         $this->period = $period;
+
         return $this;
     }
 
@@ -427,6 +437,7 @@ class Usage extends FlexnetType
     public function setEntitledScaled($entitledScaled)
     {
         $this->entitledScaled = $entitledScaled;
+
         return $this;
     }
 
@@ -445,6 +456,7 @@ class Usage extends FlexnetType
     public function setFriendlyName($friendlyName)
     {
         $this->friendlyName = $friendlyName;
+
         return $this;
     }
 
@@ -463,6 +475,7 @@ class Usage extends FlexnetType
     public function setGracePeriod($gracePeriod)
     {
         $this->gracePeriod = $gracePeriod;
+
         return $this;
     }
 
@@ -481,6 +494,7 @@ class Usage extends FlexnetType
     public function setGracePeriodUnitName($gracePeriodUnitName)
     {
         $this->gracePeriodUnitName = $gracePeriodUnitName;
+
         return $this;
     }
 
@@ -499,6 +513,7 @@ class Usage extends FlexnetType
     public function setOverageSinceResetScaled($overageSinceResetScaled)
     {
         $this->overageSinceResetScaled = $overageSinceResetScaled;
+
         return $this;
     }
 
@@ -517,6 +532,7 @@ class Usage extends FlexnetType
     public function setOverageSinceStatementScaled($overageSinceStatementScaled)
     {
         $this->overageSinceStatementScaled = $overageSinceStatementScaled;
+
         return $this;
     }
 
@@ -535,6 +551,7 @@ class Usage extends FlexnetType
     public function setPercentSinceStatement($percentSinceStatement)
     {
         $this->percentSinceStatement = $percentSinceStatement;
+
         return $this;
     }
 
@@ -553,6 +570,7 @@ class Usage extends FlexnetType
     public function setReconciliationTimeZone($reconciliationTimeZone)
     {
         $this->reconciliationTimeZone = $reconciliationTimeZone;
+
         return $this;
     }
 
@@ -571,6 +589,7 @@ class Usage extends FlexnetType
     public function setScale($scale)
     {
         $this->scale = $scale;
+
         return $this;
     }
 
@@ -589,6 +608,7 @@ class Usage extends FlexnetType
     public function setStatementInterval($statementInterval)
     {
         $this->statementInterval = $statementInterval;
+
         return $this;
     }
 
@@ -607,6 +627,7 @@ class Usage extends FlexnetType
     public function setStatementIntervalUnitName($statementIntervalUnitName)
     {
         $this->statementIntervalUnitName = $statementIntervalUnitName;
+
         return $this;
     }
 
@@ -625,6 +646,7 @@ class Usage extends FlexnetType
     public function setUsageSinceResetScaled($usageSinceResetScaled)
     {
         $this->usageSinceResetScaled = $usageSinceResetScaled;
+
         return $this;
     }
 
@@ -643,6 +665,7 @@ class Usage extends FlexnetType
     public function setUsageSinceStatement($usageSinceStatement)
     {
         $this->usageSinceStatement = $usageSinceStatement;
+
         return $this;
     }
 }

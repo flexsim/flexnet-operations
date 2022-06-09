@@ -2,11 +2,11 @@
 
 namespace Flexsim\FlexnetOperations\Services\UserOrgHierarchyService;
 
+use Flexsim\FlexnetOperations\Type;
 use Phpro\SoapClient\Caller\Caller;
-use Phpro\SoapClient\Type\ResultInterface;
 use Phpro\SoapClient\Exception\SoapException;
 use Phpro\SoapClient\Type\RequestInterface;
-use Flexsim\FlexnetOperations\Type;
+use Phpro\SoapClient\Type\ResultInterface;
 
 class UserOrgHierarchyServiceClient
 {
@@ -25,7 +25,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\CreateOrgResponseType
      * @throws SoapException
      */
-    public function createOrganization(\Flexsim\FlexnetOperations\Type\CreateOrgRequestType $createOrgRequest) : \Flexsim\FlexnetOperations\Type\CreateOrgResponseType
+    public function createOrganization(\Flexsim\FlexnetOperations\Type\CreateOrgRequestType $createOrgRequest): \Flexsim\FlexnetOperations\Type\CreateOrgResponseType
     {
         return ($this->caller)('createOrganization', $createOrgRequest);
     }
@@ -35,7 +35,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\LinkOrganizationsResponseType
      * @throws SoapException
      */
-    public function linkOrganizations(\Flexsim\FlexnetOperations\Type\LinkOrganizationsRequestType $linkOrganizationsRequest) : \Flexsim\FlexnetOperations\Type\LinkOrganizationsResponseType
+    public function linkOrganizations(\Flexsim\FlexnetOperations\Type\LinkOrganizationsRequestType $linkOrganizationsRequest): \Flexsim\FlexnetOperations\Type\LinkOrganizationsResponseType
     {
         return ($this->caller)('linkOrganizations', $linkOrganizationsRequest);
     }
@@ -45,7 +45,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\UpdateOrganizationResponseType
      * @throws SoapException
      */
-    public function updateOrganization(\Flexsim\FlexnetOperations\Type\UpdateOrganizationRequestType $updateOrganizationRequest) : \Flexsim\FlexnetOperations\Type\UpdateOrganizationResponseType
+    public function updateOrganization(\Flexsim\FlexnetOperations\Type\UpdateOrganizationRequestType $updateOrganizationRequest): \Flexsim\FlexnetOperations\Type\UpdateOrganizationResponseType
     {
         return ($this->caller)('updateOrganization', $updateOrganizationRequest);
     }
@@ -55,7 +55,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\DeleteOrganizationResponseType
      * @throws SoapException
      */
-    public function deleteOrganization(\Flexsim\FlexnetOperations\Type\DeleteOrganizationRequestType $deleteOrganizationRequest) : \Flexsim\FlexnetOperations\Type\DeleteOrganizationResponseType
+    public function deleteOrganization(\Flexsim\FlexnetOperations\Type\DeleteOrganizationRequestType $deleteOrganizationRequest): \Flexsim\FlexnetOperations\Type\DeleteOrganizationResponseType
     {
         return ($this->caller)('deleteOrganization', $deleteOrganizationRequest);
     }
@@ -65,7 +65,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\GetOrganizationsQueryResponseType
      * @throws SoapException
      */
-    public function getOrganizationsQuery(\Flexsim\FlexnetOperations\Type\GetOrganizationsQueryRequestType $getOrganizationsQueryRequest) : \Flexsim\FlexnetOperations\Type\GetOrganizationsQueryResponseType
+    public function getOrganizationsQuery(\Flexsim\FlexnetOperations\Type\GetOrganizationsQueryRequestType $getOrganizationsQueryRequest): \Flexsim\FlexnetOperations\Type\GetOrganizationsQueryResponseType
     {
         return ($this->caller)('getOrganizationsQuery', $getOrganizationsQueryRequest);
     }
@@ -75,7 +75,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\GetOrganizationCountResponseType
      * @throws SoapException
      */
-    public function getOrganizationCount(\Flexsim\FlexnetOperations\Type\GetOrganizationCountRequestType $getOrganizationCountRequest) : \Flexsim\FlexnetOperations\Type\GetOrganizationCountResponseType
+    public function getOrganizationCount(\Flexsim\FlexnetOperations\Type\GetOrganizationCountRequestType $getOrganizationCountRequest): \Flexsim\FlexnetOperations\Type\GetOrganizationCountResponseType
     {
         return ($this->caller)('getOrganizationCount', $getOrganizationCountRequest);
     }
@@ -85,7 +85,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\GetParentOrganizationsResponseType
      * @throws SoapException
      */
-    public function getParentOrganizations(\Flexsim\FlexnetOperations\Type\GetParentOrganizationsRequestType $getParentOrganizationsRequest) : \Flexsim\FlexnetOperations\Type\GetParentOrganizationsResponseType
+    public function getParentOrganizations(\Flexsim\FlexnetOperations\Type\GetParentOrganizationsRequestType $getParentOrganizationsRequest): \Flexsim\FlexnetOperations\Type\GetParentOrganizationsResponseType
     {
         return ($this->caller)('getParentOrganizations', $getParentOrganizationsRequest);
     }
@@ -95,7 +95,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\GetSubOrganizationsResponseType
      * @throws SoapException
      */
-    public function getSubOrganizations(\Flexsim\FlexnetOperations\Type\GetSubOrganizationsRequestType $getSubOrganizationsRequest) : \Flexsim\FlexnetOperations\Type\GetSubOrganizationsResponseType
+    public function getSubOrganizations(\Flexsim\FlexnetOperations\Type\GetSubOrganizationsRequestType $getSubOrganizationsRequest): \Flexsim\FlexnetOperations\Type\GetSubOrganizationsResponseType
     {
         return ($this->caller)('getSubOrganizations', $getSubOrganizationsRequest);
     }
@@ -105,7 +105,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\GetUsersQueryResponseType
      * @throws SoapException
      */
-    public function getUsersQuery(\Flexsim\FlexnetOperations\Type\GetUsersQueryRequestType $getUsersQueryRequest) : \Flexsim\FlexnetOperations\Type\GetUsersQueryResponseType
+    public function getUsersQuery(\Flexsim\FlexnetOperations\Type\GetUsersQueryRequestType $getUsersQueryRequest): \Flexsim\FlexnetOperations\Type\GetUsersQueryResponseType
     {
         return ($this->caller)('getUsersQuery', $getUsersQueryRequest);
     }
@@ -115,7 +115,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\GetUserCountResponseType
      * @throws SoapException
      */
-    public function getUserCount(\Flexsim\FlexnetOperations\Type\GetUserCountRequestType $getUserCountRequest) : \Flexsim\FlexnetOperations\Type\GetUserCountResponseType
+    public function getUserCount(\Flexsim\FlexnetOperations\Type\GetUserCountRequestType $getUserCountRequest): \Flexsim\FlexnetOperations\Type\GetUserCountResponseType
     {
         return ($this->caller)('getUserCount', $getUserCountRequest);
     }
@@ -125,7 +125,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\CreateUserResponseType
      * @throws SoapException
      */
-    public function createUser(\Flexsim\FlexnetOperations\Type\CreateUserRequestType $createUserRequest) : \Flexsim\FlexnetOperations\Type\CreateUserResponseType
+    public function createUser(\Flexsim\FlexnetOperations\Type\CreateUserRequestType $createUserRequest): \Flexsim\FlexnetOperations\Type\CreateUserResponseType
     {
         return ($this->caller)('createUser', $createUserRequest);
     }
@@ -135,7 +135,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\UpdateUserResponseType
      * @throws SoapException
      */
-    public function updateUser(\Flexsim\FlexnetOperations\Type\UpdateUserRequestType $updateUserRequest) : \Flexsim\FlexnetOperations\Type\UpdateUserResponseType
+    public function updateUser(\Flexsim\FlexnetOperations\Type\UpdateUserRequestType $updateUserRequest): \Flexsim\FlexnetOperations\Type\UpdateUserResponseType
     {
         return ($this->caller)('updateUser', $updateUserRequest);
     }
@@ -145,7 +145,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\UpdateUserRolesResponseType
      * @throws SoapException
      */
-    public function updateUserRoles(\Flexsim\FlexnetOperations\Type\UpdateUserRolesRequestType $updateUserRolesRequest) : \Flexsim\FlexnetOperations\Type\UpdateUserRolesResponseType
+    public function updateUserRoles(\Flexsim\FlexnetOperations\Type\UpdateUserRolesRequestType $updateUserRolesRequest): \Flexsim\FlexnetOperations\Type\UpdateUserRolesResponseType
     {
         return ($this->caller)('updateUserRoles', $updateUserRolesRequest);
     }
@@ -155,7 +155,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\DeleteUserResponseType
      * @throws SoapException
      */
-    public function deleteUser(\Flexsim\FlexnetOperations\Type\DeleteUserRequestType $deleteUserRequest) : \Flexsim\FlexnetOperations\Type\DeleteUserResponseType
+    public function deleteUser(\Flexsim\FlexnetOperations\Type\DeleteUserRequestType $deleteUserRequest): \Flexsim\FlexnetOperations\Type\DeleteUserResponseType
     {
         return ($this->caller)('deleteUser', $deleteUserRequest);
     }
@@ -165,7 +165,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\RelateOrganizationsResponseType
      * @throws SoapException
      */
-    public function relateOrganizations(\Flexsim\FlexnetOperations\Type\RelateOrganizationsRequestType $relateOrganizationsRequest) : \Flexsim\FlexnetOperations\Type\RelateOrganizationsResponseType
+    public function relateOrganizations(\Flexsim\FlexnetOperations\Type\RelateOrganizationsRequestType $relateOrganizationsRequest): \Flexsim\FlexnetOperations\Type\RelateOrganizationsResponseType
     {
         return ($this->caller)('relateOrganizations', $relateOrganizationsRequest);
     }
@@ -175,7 +175,7 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\GetRelatedOrganizationsResponseType
      * @throws SoapException
      */
-    public function getRelatedOrganizations(\Flexsim\FlexnetOperations\Type\GetRelatedOrganizationsRequestType $getRelatedOrganizationsRequest) : \Flexsim\FlexnetOperations\Type\GetRelatedOrganizationsResponseType
+    public function getRelatedOrganizations(\Flexsim\FlexnetOperations\Type\GetRelatedOrganizationsRequestType $getRelatedOrganizationsRequest): \Flexsim\FlexnetOperations\Type\GetRelatedOrganizationsResponseType
     {
         return ($this->caller)('getRelatedOrganizations', $getRelatedOrganizationsRequest);
     }
@@ -185,9 +185,8 @@ class UserOrgHierarchyServiceClient
      * @return ResultInterface|Type\GetUserPermissionsResponseType
      * @throws SoapException
      */
-    public function getUserPermissions(\Flexsim\FlexnetOperations\Type\GetUserPermissionsRequestType $getUserPermissionsRequest) : \Flexsim\FlexnetOperations\Type\GetUserPermissionsResponseType
+    public function getUserPermissions(\Flexsim\FlexnetOperations\Type\GetUserPermissionsRequestType $getUserPermissionsRequest): \Flexsim\FlexnetOperations\Type\GetUserPermissionsResponseType
     {
         return ($this->caller)('getUserPermissions', $getUserPermissionsRequest);
     }
 }
-

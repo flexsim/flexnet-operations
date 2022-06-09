@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AdvancedFmtLCResponseDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataType|array
      */
@@ -45,6 +44,7 @@ class AdvancedFmtLCResponseDataListType extends FlexnetType
     public function setFulfillment($fulfillment)
     {
         $this->fulfillment = $fulfillment;
+
         return $this;
     }
 }

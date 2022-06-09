@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class CreateBulkEntitlementRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateBulkEntitlementDataType
      */
@@ -47,6 +46,7 @@ class CreateBulkEntitlementRequestType extends FlexnetType implements RequestInt
     public function setBulkEntitlement($bulkEntitlement)
     {
         $this->bulkEntitlement = $bulkEntitlement;
+
         return $this;
     }
 }

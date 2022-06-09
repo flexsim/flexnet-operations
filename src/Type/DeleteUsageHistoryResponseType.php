@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class DeleteUsageHistoryResponseType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType
      */
@@ -55,6 +54,7 @@ class DeleteUsageHistoryResponseType extends FlexnetType implements ResultInterf
     public function setStatusInfo($statusInfo)
     {
         $this->statusInfo = $statusInfo;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class DeleteUsageHistoryResponseType extends FlexnetType implements ResultInterf
     public function setFailedData($failedData)
     {
         $this->failedData = $failedData;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DupGroupDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class DupGroupDataType extends FlexnetType
     public function setDupGroupOption($dupGroupOption)
     {
         $this->dupGroupOption = $dupGroupOption;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class DupGroupDataType extends FlexnetType
     public function setGroupMask($groupMask)
     {
         $this->groupMask = $groupMask;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ModelAttributesType extends FlexnetType
 {
-
     /**
      * @var bool
      */
@@ -69,6 +68,7 @@ class ModelAttributesType extends FlexnetType
     public function setNeedServerId($needServerId)
     {
         $this->needServerId = $needServerId;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class ModelAttributesType extends FlexnetType
     public function setNeedNodeLockId($needNodeLockId)
     {
         $this->needNodeLockId = $needNodeLockId;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class ModelAttributesType extends FlexnetType
     public function setNeedCount($needCount)
     {
         $this->needCount = $needCount;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class ModelAttributesType extends FlexnetType
     public function setNeedOverdraftCount($needOverdraftCount)
     {
         $this->needOverdraftCount = $needOverdraftCount;
+
         return $this;
     }
 }

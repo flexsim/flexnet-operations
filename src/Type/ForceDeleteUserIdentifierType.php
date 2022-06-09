@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ForceDeleteUserIdentifierType extends FlexnetType
 {
-
     /**
      * @var bool
      */
@@ -45,6 +44,7 @@ class ForceDeleteUserIdentifierType extends FlexnetType
     public function setForceDelete($forceDelete)
     {
         $this->forceDelete = $forceDelete;
+
         return $this;
     }
 }

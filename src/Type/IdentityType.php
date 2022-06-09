@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class IdentityType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -47,6 +46,7 @@ class IdentityType extends FlexnetType implements RequestInterface
     public function setUserId($userId)
     {
         $this->userId = $userId;
+
         return $this;
     }
 }

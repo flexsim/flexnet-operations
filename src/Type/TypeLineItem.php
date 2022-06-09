@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class TypeLineItem extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -69,6 +68,7 @@ class TypeLineItem extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class TypeLineItem extends FlexnetType
     public function setReason($Reason)
     {
         $this->Reason = $Reason;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class TypeLineItem extends FlexnetType
     public function setCount($Count)
     {
         $this->Count = $Count;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class TypeLineItem extends FlexnetType
     public function setVendorDictionary($VendorDictionary)
     {
         $this->VendorDictionary = $VendorDictionary;
+
         return $this;
     }
 }

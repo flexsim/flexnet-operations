@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedDeleteMaintenanceDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType
      */
@@ -53,6 +52,7 @@ class FailedDeleteMaintenanceDataType extends FlexnetType
     public function setMaintenanceIdentifier($maintenanceIdentifier)
     {
         $this->maintenanceIdentifier = $maintenanceIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedDeleteMaintenanceDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

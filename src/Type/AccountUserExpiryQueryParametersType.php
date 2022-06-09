@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AccountUserExpiryQueryParametersType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class AccountUserExpiryQueryParametersType extends FlexnetType
     public function setAccountID($accountID)
     {
         $this->accountID = $accountID;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class AccountUserExpiryQueryParametersType extends FlexnetType
     public function setAccountType($accountType)
     {
         $this->accountType = $accountType;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class AccountUserExpiryQueryParametersType extends FlexnetType
     public function setExpiryDate($expiryDate)
     {
         $this->expiryDate = $expiryDate;
+
         return $this;
     }
 }

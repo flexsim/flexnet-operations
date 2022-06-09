@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetWebRegKeyCountRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -47,6 +46,7 @@ class GetWebRegKeyCountRequestType extends FlexnetType implements RequestInterfa
     public function setBulkEntitlementIdentifier($bulkEntitlementIdentifier)
     {
         $this->bulkEntitlementIdentifier = $bulkEntitlementIdentifier;
+
         return $this;
     }
 }

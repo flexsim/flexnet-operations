@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class HostTypeListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array 
+     * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array
      */
     protected $hostType;
 
@@ -31,7 +30,7 @@ class HostTypeListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\HostTypePKType|array 
+     * @return \Flexsim\FlexnetOperations\Type\HostTypePKType|array
      */
     public function getHostType()
     {
@@ -45,6 +44,7 @@ class HostTypeListType extends FlexnetType
     public function setHostType($hostType)
     {
         $this->hostType = $hostType;
+
         return $this;
     }
 }

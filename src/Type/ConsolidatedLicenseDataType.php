@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ConsolidatedLicenseDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -117,6 +116,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     public function setConsolidatedLicenseId($consolidatedLicenseId)
     {
         $this->consolidatedLicenseId = $consolidatedLicenseId;
+
         return $this;
     }
 
@@ -135,6 +135,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     public function setLicenseText($licenseText)
     {
         $this->licenseText = $licenseText;
+
         return $this;
     }
 
@@ -153,6 +154,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     public function setBinaryLicense($binaryLicense)
     {
         $this->binaryLicense = $binaryLicense;
+
         return $this;
     }
 
@@ -171,6 +173,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -189,6 +192,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     public function setCriteria($criteria)
     {
         $this->criteria = $criteria;
+
         return $this;
     }
 
@@ -207,6 +211,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -225,6 +230,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     public function setConsolidatedFulfillments($consolidatedFulfillments)
     {
         $this->consolidatedFulfillments = $consolidatedFulfillments;
+
         return $this;
     }
 
@@ -243,6 +249,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     public function setLicenseFiles($licenseFiles)
     {
         $this->licenseFiles = $licenseFiles;
+
         return $this;
     }
 }

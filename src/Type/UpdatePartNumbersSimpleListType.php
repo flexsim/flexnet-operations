@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdatePartNumbersSimpleListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType|array
      */
@@ -53,6 +52,7 @@ class UpdatePartNumbersSimpleListType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class UpdatePartNumbersSimpleListType extends FlexnetType
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

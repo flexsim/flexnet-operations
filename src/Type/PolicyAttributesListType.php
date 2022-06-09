@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PolicyAttributesListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\PolicyDataType
      */
@@ -101,6 +100,7 @@ class PolicyAttributesListType extends FlexnetType
     public function setRehostsPolicy($rehostsPolicy)
     {
         $this->rehostsPolicy = $rehostsPolicy;
+
         return $this;
     }
 
@@ -119,6 +119,7 @@ class PolicyAttributesListType extends FlexnetType
     public function setReturnsPolicy($returnsPolicy)
     {
         $this->returnsPolicy = $returnsPolicy;
+
         return $this;
     }
 
@@ -137,6 +138,7 @@ class PolicyAttributesListType extends FlexnetType
     public function setRepairsPolicy($repairsPolicy)
     {
         $this->repairsPolicy = $repairsPolicy;
+
         return $this;
     }
 
@@ -155,6 +157,7 @@ class PolicyAttributesListType extends FlexnetType
     public function setExtraActivationsPolicy($extraActivationsPolicy)
     {
         $this->extraActivationsPolicy = $extraActivationsPolicy;
+
         return $this;
     }
 
@@ -173,6 +176,7 @@ class PolicyAttributesListType extends FlexnetType
     public function setCancelLicensePolicy($cancelLicensePolicy)
     {
         $this->cancelLicensePolicy = $cancelLicensePolicy;
+
         return $this;
     }
 
@@ -191,6 +195,7 @@ class PolicyAttributesListType extends FlexnetType
     public function setVirtualLicensePolicy($virtualLicensePolicy)
     {
         $this->virtualLicensePolicy = $virtualLicensePolicy;
+
         return $this;
     }
 
@@ -209,6 +214,7 @@ class PolicyAttributesListType extends FlexnetType
     public function setReinstallPolicy($reinstallPolicy)
     {
         $this->reinstallPolicy = $reinstallPolicy;
+
         return $this;
     }
 
@@ -227,6 +233,7 @@ class PolicyAttributesListType extends FlexnetType
     public function setAcpiGenerationIdLicensePolicy($acpiGenerationIdLicensePolicy)
     {
         $this->acpiGenerationIdLicensePolicy = $acpiGenerationIdLicensePolicy;
+
         return $this;
     }
 }

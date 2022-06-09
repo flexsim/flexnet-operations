@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ExpirationTermsDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DurationType
      */
@@ -53,6 +52,7 @@ class ExpirationTermsDataType extends FlexnetType
     public function setTerm($term)
     {
         $this->term = $term;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class ExpirationTermsDataType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 }

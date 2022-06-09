@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FeatureStateDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType
      */
@@ -53,6 +52,7 @@ class FeatureStateDataType extends FlexnetType
     public function setFeatureIdentifier($featureIdentifier)
     {
         $this->featureIdentifier = $featureIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FeatureStateDataType extends FlexnetType
     public function setStateToSet($stateToSet)
     {
         $this->stateToSet = $stateToSet;
+
         return $this;
     }
 }

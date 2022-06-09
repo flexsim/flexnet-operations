@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetType
 {
-
     /**
      * @var bool
      */
@@ -157,6 +156,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -175,6 +175,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -193,6 +194,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -211,6 +213,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setOrderLineNumber($orderLineNumber)
     {
         $this->orderLineNumber = $orderLineNumber;
+
         return $this;
     }
 
@@ -229,6 +232,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -247,6 +251,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setMaintenanceProduct($maintenanceProduct)
     {
         $this->maintenanceProduct = $maintenanceProduct;
+
         return $this;
     }
 
@@ -265,6 +270,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setMaintenancePartNumber($maintenancePartNumber)
     {
         $this->maintenancePartNumber = $maintenancePartNumber;
+
         return $this;
     }
 
@@ -283,6 +289,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setMaintenancePartNumberDescription($maintenancePartNumberDescription)
     {
         $this->maintenancePartNumberDescription = $maintenancePartNumberDescription;
+
         return $this;
     }
 
@@ -301,6 +308,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -319,6 +327,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -337,6 +346,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -355,6 +365,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setCreatedOnDateTime($createdOnDateTime)
     {
         $this->createdOnDateTime = $createdOnDateTime;
+
         return $this;
     }
 
@@ -373,6 +384,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setLastModifiedDateTime($lastModifiedDateTime)
     {
         $this->lastModifiedDateTime = $lastModifiedDateTime;
+
         return $this;
     }
 
@@ -391,6 +403,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setMaintenanceLineItemAttributes($maintenanceLineItemAttributes)
     {
         $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
+
         return $this;
     }
 
@@ -409,6 +422,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     public function setLinkedEntitlementLineItem($linkedEntitlementLineItem)
     {
         $this->linkedEntitlementLineItem = $linkedEntitlementLineItem;
+
         return $this;
     }
 }

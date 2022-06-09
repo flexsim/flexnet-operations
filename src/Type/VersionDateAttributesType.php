@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class VersionDateAttributesType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class VersionDateAttributesType extends FlexnetType
     public function setVersionOption($versionOption)
     {
         $this->versionOption = $versionOption;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class VersionDateAttributesType extends FlexnetType
     public function setDuration($duration)
     {
         $this->duration = $duration;
+
         return $this;
     }
 }

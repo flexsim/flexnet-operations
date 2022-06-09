@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EntitlementDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType
      */
@@ -53,6 +52,7 @@ class EntitlementDataType extends FlexnetType
     public function setSimpleEntitlement($simpleEntitlement)
     {
         $this->simpleEntitlement = $simpleEntitlement;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class EntitlementDataType extends FlexnetType
     public function setBulkEntitlement($bulkEntitlement)
     {
         $this->bulkEntitlement = $bulkEntitlement;
+
         return $this;
     }
 }

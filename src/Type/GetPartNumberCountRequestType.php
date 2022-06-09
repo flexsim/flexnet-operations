@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetPartNumberCountRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType
      */
@@ -48,6 +47,7 @@ class GetPartNumberCountRequestType extends FlexnetType implements RequestInterf
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 }

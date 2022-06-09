@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EmergencyResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentResponseDataType
      */
@@ -45,6 +44,7 @@ class EmergencyResponseDataType extends FlexnetType
     public function setFulfillmentData($fulfillmentData)
     {
         $this->fulfillmentData = $fulfillmentData;
+
         return $this;
     }
 }

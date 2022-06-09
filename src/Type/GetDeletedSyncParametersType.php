@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetDeletedSyncParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
@@ -69,6 +68,7 @@ class GetDeletedSyncParametersType extends FlexnetType
     public function setStartTime($startTime)
     {
         $this->startTime = $startTime;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class GetDeletedSyncParametersType extends FlexnetType
     public function setEndTime($endTime)
     {
         $this->endTime = $endTime;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class GetDeletedSyncParametersType extends FlexnetType
     public function setServerUniqueId($serverUniqueId)
     {
         $this->serverUniqueId = $serverUniqueId;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class GetDeletedSyncParametersType extends FlexnetType
     public function setServerId($serverId)
     {
         $this->serverId = $serverId;
+
         return $this;
     }
 }

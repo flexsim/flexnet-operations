@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CountDataSetType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CountDataType
      */
@@ -45,6 +44,7 @@ class CountDataSetType extends FlexnetType
     public function setCountData($countData)
     {
         $this->countData = $countData;
+
         return $this;
     }
 }

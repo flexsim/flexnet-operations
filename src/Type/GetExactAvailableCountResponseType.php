@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetExactAvailableCountResponseType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
@@ -55,6 +54,7 @@ class GetExactAvailableCountResponseType extends FlexnetType implements ResultIn
     public function setStatusInfo($statusInfo)
     {
         $this->statusInfo = $statusInfo;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class GetExactAvailableCountResponseType extends FlexnetType implements ResultIn
     public function setCount($count)
     {
         $this->count = $count;
+
         return $this;
     }
 }

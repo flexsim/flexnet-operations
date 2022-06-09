@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedBulkEntitlementDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class CreatedBulkEntitlementDataType extends FlexnetType
     public function setRecordRefNo($recordRefNo)
     {
         $this->recordRefNo = $recordRefNo;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class CreatedBulkEntitlementDataType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class CreatedBulkEntitlementDataType extends FlexnetType
     public function setBulkEntitlementId($bulkEntitlementId)
     {
         $this->bulkEntitlementId = $bulkEntitlementId;
+
         return $this;
     }
 }

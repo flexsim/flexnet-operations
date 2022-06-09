@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class UpdateDevRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateDevDataType
      */
@@ -47,6 +46,7 @@ class UpdateDevRequestType extends FlexnetType implements RequestInterface
     public function setDevice($device)
     {
         $this->device = $device;
+
         return $this;
     }
 }

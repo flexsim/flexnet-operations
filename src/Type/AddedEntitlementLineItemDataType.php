@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AddedEntitlementLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -77,6 +76,7 @@ class AddedEntitlementLineItemDataType extends FlexnetType
     public function setEntitlementIdentifier($entitlementIdentifier)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
+
         return $this;
     }
 
@@ -95,6 +95,7 @@ class AddedEntitlementLineItemDataType extends FlexnetType
     public function setLineItemUniqueIds($lineItemUniqueIds)
     {
         $this->lineItemUniqueIds = $lineItemUniqueIds;
+
         return $this;
     }
 
@@ -113,6 +114,7 @@ class AddedEntitlementLineItemDataType extends FlexnetType
     public function setMaintenanceLineItemUniqueIds($maintenanceLineItemUniqueIds)
     {
         $this->maintenanceLineItemUniqueIds = $maintenanceLineItemUniqueIds;
+
         return $this;
     }
 
@@ -131,6 +133,7 @@ class AddedEntitlementLineItemDataType extends FlexnetType
     public function setLineItemIdentifiers($lineItemIdentifiers)
     {
         $this->lineItemIdentifiers = $lineItemIdentifiers;
+
         return $this;
     }
 
@@ -149,6 +152,7 @@ class AddedEntitlementLineItemDataType extends FlexnetType
     public function setMaintenanceLineItemIdentifiers($maintenanceLineItemIdentifiers)
     {
         $this->maintenanceLineItemIdentifiers = $maintenanceLineItemIdentifiers;
+
         return $this;
     }
 }

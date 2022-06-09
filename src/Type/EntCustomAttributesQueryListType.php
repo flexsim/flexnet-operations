@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EntCustomAttributesQueryListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntCustomAttributeQueryType|array
      */
@@ -45,6 +44,7 @@ class EntCustomAttributesQueryListType extends FlexnetType
     public function setAttribute($attribute)
     {
         $this->attribute = $attribute;
+
         return $this;
     }
 }

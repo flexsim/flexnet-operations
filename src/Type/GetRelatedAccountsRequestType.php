@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetRelatedAccountsRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
@@ -47,6 +46,7 @@ class GetRelatedAccountsRequestType extends FlexnetType implements RequestInterf
     public function setAccount($account)
     {
         $this->account = $account;
+
         return $this;
     }
 }

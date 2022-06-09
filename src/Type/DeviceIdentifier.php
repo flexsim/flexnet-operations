@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeviceIdentifier extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -85,6 +84,7 @@ class DeviceIdentifier extends FlexnetType
     public function setDeviceType($deviceType)
     {
         $this->deviceType = $deviceType;
+
         return $this;
     }
 
@@ -103,6 +103,7 @@ class DeviceIdentifier extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -121,6 +122,7 @@ class DeviceIdentifier extends FlexnetType
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
+
         return $this;
     }
 
@@ -139,6 +141,7 @@ class DeviceIdentifier extends FlexnetType
     public function setServerIds($serverIds)
     {
         $this->serverIds = $serverIds;
+
         return $this;
     }
 
@@ -157,6 +160,7 @@ class DeviceIdentifier extends FlexnetType
     public function setDeviceIdType($deviceIdType)
     {
         $this->deviceIdType = $deviceIdType;
+
         return $this;
     }
 
@@ -175,6 +179,7 @@ class DeviceIdentifier extends FlexnetType
     public function setPublisherName($publisherName)
     {
         $this->publisherName = $publisherName;
+
         return $this;
     }
 }

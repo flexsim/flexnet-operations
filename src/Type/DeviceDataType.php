@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeviceDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier
      */
@@ -117,6 +116,7 @@ class DeviceDataType extends FlexnetType
     public function setDeviceIdentifier($deviceIdentifier)
     {
         $this->deviceIdentifier = $deviceIdentifier;
+
         return $this;
     }
 
@@ -135,6 +135,7 @@ class DeviceDataType extends FlexnetType
     public function setHostTypeName($hostTypeName)
     {
         $this->hostTypeName = $hostTypeName;
+
         return $this;
     }
 
@@ -153,6 +154,7 @@ class DeviceDataType extends FlexnetType
     public function setPublisherIdName($publisherIdName)
     {
         $this->publisherIdName = $publisherIdName;
+
         return $this;
     }
 
@@ -171,6 +173,7 @@ class DeviceDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -189,6 +192,7 @@ class DeviceDataType extends FlexnetType
     public function setChannelPartners($channelPartners)
     {
         $this->channelPartners = $channelPartners;
+
         return $this;
     }
 
@@ -207,6 +211,7 @@ class DeviceDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -225,6 +230,7 @@ class DeviceDataType extends FlexnetType
     public function setAlias($alias)
     {
         $this->alias = $alias;
+
         return $this;
     }
 
@@ -243,6 +249,7 @@ class DeviceDataType extends FlexnetType
     public function setUser($user)
     {
         $this->user = $user;
+
         return $this;
     }
 
@@ -261,6 +268,7 @@ class DeviceDataType extends FlexnetType
     public function setDeployment($deployment)
     {
         $this->deployment = $deployment;
+
         return $this;
     }
 
@@ -279,6 +287,7 @@ class DeviceDataType extends FlexnetType
     public function setSiteName($siteName)
     {
         $this->siteName = $siteName;
+
         return $this;
     }
 }

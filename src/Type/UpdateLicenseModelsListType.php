@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateLicenseModelsListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array
      */
@@ -53,6 +52,7 @@ class UpdateLicenseModelsListType extends FlexnetType
     public function setLicenseModelIdentifiers($licenseModelIdentifiers)
     {
         $this->licenseModelIdentifiers = $licenseModelIdentifiers;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class UpdateLicenseModelsListType extends FlexnetType
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

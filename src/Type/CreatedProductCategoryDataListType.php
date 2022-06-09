@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedProductCategoryDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedProductCategoryDataType|array
      */
@@ -45,6 +44,7 @@ class CreatedProductCategoryDataListType extends FlexnetType
     public function setCreatedProductCatgory($createdProductCatgory)
     {
         $this->createdProductCatgory = $createdProductCatgory;
+
         return $this;
     }
 }

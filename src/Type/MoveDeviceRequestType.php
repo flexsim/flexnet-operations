@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class MoveDeviceRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\MoveDeviceList
      */
@@ -71,6 +70,7 @@ class MoveDeviceRequestType extends FlexnetType implements RequestInterface
     public function setSourceDevices($sourceDevices)
     {
         $this->sourceDevices = $sourceDevices;
+
         return $this;
     }
 
@@ -89,6 +89,7 @@ class MoveDeviceRequestType extends FlexnetType implements RequestInterface
     public function setSoldToUniqueId($soldToUniqueId)
     {
         $this->soldToUniqueId = $soldToUniqueId;
+
         return $this;
     }
 
@@ -107,6 +108,7 @@ class MoveDeviceRequestType extends FlexnetType implements RequestInterface
     public function setSoldToName($soldToName)
     {
         $this->soldToName = $soldToName;
+
         return $this;
     }
 
@@ -125,6 +127,7 @@ class MoveDeviceRequestType extends FlexnetType implements RequestInterface
     public function setPoolEntitlements($poolEntitlements)
     {
         $this->poolEntitlements = $poolEntitlements;
+
         return $this;
     }
 }

@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class OrgCustomAttributesQueryListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\OrgCustomAttributeQueryType|array 
+     * @var \Flexsim\FlexnetOperations\Type\OrgCustomAttributeQueryType|array
      */
     protected $attribute;
 
@@ -31,7 +30,7 @@ class OrgCustomAttributesQueryListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\OrgCustomAttributeQueryType|array 
+     * @return \Flexsim\FlexnetOperations\Type\OrgCustomAttributeQueryType|array
      */
     public function getAttribute()
     {
@@ -45,6 +44,7 @@ class OrgCustomAttributesQueryListType extends FlexnetType
     public function setAttribute($attribute)
     {
         $this->attribute = $attribute;
+
         return $this;
     }
 }

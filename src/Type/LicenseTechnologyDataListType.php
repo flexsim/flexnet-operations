@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LicenseTechnologyDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array 
+     * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array
      */
     protected $licenseTechnology;
 
@@ -31,7 +30,7 @@ class LicenseTechnologyDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array 
+     * @return \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array
      */
     public function getLicenseTechnology()
     {
@@ -45,6 +44,7 @@ class LicenseTechnologyDataListType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 }

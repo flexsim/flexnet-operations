@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedPartNumberDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedPartNumberDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedPartNumberDataType|array
      */
     protected $failedPartNumber;
 
@@ -31,7 +30,7 @@ class FailedPartNumberDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedPartNumberDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedPartNumberDataType|array
      */
     public function getFailedPartNumber()
     {
@@ -45,6 +44,7 @@ class FailedPartNumberDataListType extends FlexnetType
     public function setFailedPartNumber($failedPartNumber)
     {
         $this->failedPartNumber = $failedPartNumber;
+
         return $this;
     }
 }

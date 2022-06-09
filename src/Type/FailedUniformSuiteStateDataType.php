@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUniformSuiteStateDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType
      */
@@ -53,6 +52,7 @@ class FailedUniformSuiteStateDataType extends FlexnetType
     public function setSuite($suite)
     {
         $this->suite = $suite;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedUniformSuiteStateDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

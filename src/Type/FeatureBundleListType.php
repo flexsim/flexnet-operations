@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FeatureBundleListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType|array
      */
     protected $featureBundleIdentifier;
 
@@ -31,7 +30,7 @@ class FeatureBundleListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType|array
      */
     public function getFeatureBundleIdentifier()
     {
@@ -45,6 +44,7 @@ class FeatureBundleListType extends FlexnetType
     public function setFeatureBundleIdentifier($featureBundleIdentifier)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
+
         return $this;
     }
 }

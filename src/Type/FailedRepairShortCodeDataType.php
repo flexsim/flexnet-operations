@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedRepairShortCodeDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType
      */
@@ -53,6 +52,7 @@ class FailedRepairShortCodeDataType extends FlexnetType
     public function setShortCodeData($shortCodeData)
     {
         $this->shortCodeData = $shortCodeData;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedRepairShortCodeDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

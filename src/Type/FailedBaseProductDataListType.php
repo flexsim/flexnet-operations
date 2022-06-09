@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedBaseProductDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array
      */
     protected $failedBaseProduct;
 
@@ -31,7 +30,7 @@ class FailedBaseProductDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array
      */
     public function getFailedBaseProduct()
     {
@@ -45,6 +44,7 @@ class FailedBaseProductDataListType extends FlexnetType
     public function setFailedBaseProduct($failedBaseProduct)
     {
         $this->failedBaseProduct = $failedBaseProduct;
+
         return $this;
     }
 }

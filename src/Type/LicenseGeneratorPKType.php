@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LicenseGeneratorPKType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class LicenseGeneratorPKType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 }

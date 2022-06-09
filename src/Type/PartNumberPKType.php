@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PartNumberPKType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class PartNumberPKType extends FlexnetType
     public function setPartId($partId)
     {
         $this->partId = $partId;
+
         return $this;
     }
 }

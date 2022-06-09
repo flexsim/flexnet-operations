@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class UpdateOrganizationRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateOrgDataType
      */
@@ -47,6 +46,7 @@ class UpdateOrganizationRequestType extends FlexnetType implements RequestInterf
     public function setOrgData($orgData)
     {
         $this->orgData = $orgData;
+
         return $this;
     }
 }

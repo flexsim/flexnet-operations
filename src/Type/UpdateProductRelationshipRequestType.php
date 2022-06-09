@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class UpdateProductRelationshipRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array<\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType>
      */
@@ -47,6 +46,7 @@ class UpdateProductRelationshipRequestType extends FlexnetType implements Reques
     public function setRelationship($relationship)
     {
         $this->relationship = $relationship;
+
         return $this;
     }
 }

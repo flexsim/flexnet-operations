@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class NumberQueryType extends FlexnetType
 {
-
     /**
      * @var int
      */
@@ -53,6 +52,7 @@ class NumberQueryType extends FlexnetType
     public function setValue($value)
     {
         $this->value = $value;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class NumberQueryType extends FlexnetType
     public function setSearchType($searchType)
     {
         $this->searchType = $searchType;
+
         return $this;
     }
 }

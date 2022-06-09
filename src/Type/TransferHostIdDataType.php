@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class TransferHostIdDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -85,6 +84,7 @@ class TransferHostIdDataType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -103,6 +103,7 @@ class TransferHostIdDataType extends FlexnetType
     public function setServerIds($serverIds)
     {
         $this->serverIds = $serverIds;
+
         return $this;
     }
 
@@ -121,6 +122,7 @@ class TransferHostIdDataType extends FlexnetType
     public function setNodeId($nodeId)
     {
         $this->nodeId = $nodeId;
+
         return $this;
     }
 
@@ -139,6 +141,7 @@ class TransferHostIdDataType extends FlexnetType
     public function setCustomHostId($customHostId)
     {
         $this->customHostId = $customHostId;
+
         return $this;
     }
 
@@ -157,6 +160,7 @@ class TransferHostIdDataType extends FlexnetType
     public function setCustomHostType($customHostType)
     {
         $this->customHostType = $customHostType;
+
         return $this;
     }
 
@@ -175,6 +179,7 @@ class TransferHostIdDataType extends FlexnetType
     public function setCustomLicenseTechnology($customLicenseTechnology)
     {
         $this->customLicenseTechnology = $customLicenseTechnology;
+
         return $this;
     }
 }

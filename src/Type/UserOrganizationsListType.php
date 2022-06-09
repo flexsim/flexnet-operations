@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UserOrganizationsListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\UserOrganizationType|array 
+     * @var \Flexsim\FlexnetOperations\Type\UserOrganizationType|array
      */
     protected $orgRoles;
 
@@ -31,7 +30,7 @@ class UserOrganizationsListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\UserOrganizationType|array 
+     * @return \Flexsim\FlexnetOperations\Type\UserOrganizationType|array
      */
     public function getOrgRoles()
     {
@@ -45,6 +44,7 @@ class UserOrganizationsListType extends FlexnetType
     public function setOrgRoles($orgRoles)
     {
         $this->orgRoles = $orgRoles;
+
         return $this;
     }
 }

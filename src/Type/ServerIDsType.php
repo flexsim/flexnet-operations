@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ServerIDsType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class ServerIDsType extends FlexnetType
     public function setServer1($server1)
     {
         $this->server1 = $server1;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class ServerIDsType extends FlexnetType
     public function setServer2($server2)
     {
         $this->server2 = $server2;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class ServerIDsType extends FlexnetType
     public function setServer3($server3)
     {
         $this->server3 = $server3;
+
         return $this;
     }
 }

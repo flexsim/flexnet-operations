@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class DeleteAddonLineItemsRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteAddonLineItemDataType
      */
@@ -47,6 +46,7 @@ class DeleteAddonLineItemsRequestType extends FlexnetType implements RequestInte
     public function setRequestList($requestList)
     {
         $this->requestList = $requestList;
+
         return $this;
     }
 }

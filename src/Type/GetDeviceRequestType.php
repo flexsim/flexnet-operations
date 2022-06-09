@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetDeviceRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceId
      */
@@ -55,6 +54,7 @@ class GetDeviceRequestType extends FlexnetType implements RequestInterface
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class GetDeviceRequestType extends FlexnetType implements RequestInterface
     public function setResponseConfig($responseConfig)
     {
         $this->responseConfig = $responseConfig;
+
         return $this;
     }
 }

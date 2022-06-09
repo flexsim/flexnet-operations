@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class HandleProductCategoryToOrgRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
@@ -55,6 +54,7 @@ class HandleProductCategoryToOrgRequestType extends FlexnetType implements Reque
     public function setOrg($org)
     {
         $this->org = $org;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class HandleProductCategoryToOrgRequestType extends FlexnetType implements Reque
     public function setProductCategory($productCategory)
     {
         $this->productCategory = $productCategory;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreateUserDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -243,6 +242,7 @@ class CreateUserDataType extends FlexnetType
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
+
         return $this;
     }
 
@@ -261,6 +261,7 @@ class CreateUserDataType extends FlexnetType
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+
         return $this;
     }
 
@@ -279,6 +280,7 @@ class CreateUserDataType extends FlexnetType
     public function setDisplayName($displayName)
     {
         $this->displayName = $displayName;
+
         return $this;
     }
 
@@ -297,6 +299,7 @@ class CreateUserDataType extends FlexnetType
     public function setEmailAddress($emailAddress)
     {
         $this->emailAddress = $emailAddress;
+
         return $this;
     }
 
@@ -315,6 +318,7 @@ class CreateUserDataType extends FlexnetType
     public function setOptIn($optIn)
     {
         $this->optIn = $optIn;
+
         return $this;
     }
 
@@ -333,6 +337,7 @@ class CreateUserDataType extends FlexnetType
     public function setPhoneNumber($phoneNumber)
     {
         $this->phoneNumber = $phoneNumber;
+
         return $this;
     }
 
@@ -351,6 +356,7 @@ class CreateUserDataType extends FlexnetType
     public function setFaxNumber($faxNumber)
     {
         $this->faxNumber = $faxNumber;
+
         return $this;
     }
 
@@ -369,6 +375,7 @@ class CreateUserDataType extends FlexnetType
     public function setStreet($street)
     {
         $this->street = $street;
+
         return $this;
     }
 
@@ -387,6 +394,7 @@ class CreateUserDataType extends FlexnetType
     public function setCity($city)
     {
         $this->city = $city;
+
         return $this;
     }
 
@@ -405,6 +413,7 @@ class CreateUserDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -423,6 +432,7 @@ class CreateUserDataType extends FlexnetType
     public function setZipcode($zipcode)
     {
         $this->zipcode = $zipcode;
+
         return $this;
     }
 
@@ -441,6 +451,7 @@ class CreateUserDataType extends FlexnetType
     public function setCountry($country)
     {
         $this->country = $country;
+
         return $this;
     }
 
@@ -459,6 +470,7 @@ class CreateUserDataType extends FlexnetType
     public function setLocale($locale)
     {
         $this->locale = $locale;
+
         return $this;
     }
 
@@ -477,6 +489,7 @@ class CreateUserDataType extends FlexnetType
     public function setCanLogin($canLogin)
     {
         $this->canLogin = $canLogin;
+
         return $this;
     }
 
@@ -495,6 +508,7 @@ class CreateUserDataType extends FlexnetType
     public function setUserName($userName)
     {
         $this->userName = $userName;
+
         return $this;
     }
 
@@ -513,6 +527,7 @@ class CreateUserDataType extends FlexnetType
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -531,6 +546,7 @@ class CreateUserDataType extends FlexnetType
     public function setTimezone($timezone)
     {
         $this->timezone = $timezone;
+
         return $this;
     }
 
@@ -549,6 +565,7 @@ class CreateUserDataType extends FlexnetType
     public function setShared($shared)
     {
         $this->shared = $shared;
+
         return $this;
     }
 
@@ -567,6 +584,7 @@ class CreateUserDataType extends FlexnetType
     public function setAcctRolesList($acctRolesList)
     {
         $this->acctRolesList = $acctRolesList;
+
         return $this;
     }
 
@@ -585,6 +603,7 @@ class CreateUserDataType extends FlexnetType
     public function setOrgRolesList($orgRolesList)
     {
         $this->orgRolesList = $orgRolesList;
+
         return $this;
     }
 
@@ -603,6 +622,7 @@ class CreateUserDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 }

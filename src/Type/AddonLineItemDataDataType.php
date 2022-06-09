@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AddonLineItemDataDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -137,6 +136,7 @@ class AddonLineItemDataDataType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -155,6 +155,7 @@ class AddonLineItemDataDataType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -173,6 +174,7 @@ class AddonLineItemDataDataType extends FlexnetType
     public function setEnabledCount($enabledCount)
     {
         $this->enabledCount = $enabledCount;
+
         return $this;
     }
 
@@ -191,6 +193,7 @@ class AddonLineItemDataDataType extends FlexnetType
     public function setConsumedCount($consumedCount)
     {
         $this->consumedCount = $consumedCount;
+
         return $this;
     }
 
@@ -209,6 +212,7 @@ class AddonLineItemDataDataType extends FlexnetType
     public function setLicenseState($licenseState)
     {
         $this->licenseState = $licenseState;
+
         return $this;
     }
 
@@ -227,6 +231,7 @@ class AddonLineItemDataDataType extends FlexnetType
     public function setEntitledProducts($entitledProducts)
     {
         $this->entitledProducts = $entitledProducts;
+
         return $this;
     }
 
@@ -245,6 +250,7 @@ class AddonLineItemDataDataType extends FlexnetType
     public function setExpirationDateOverride($expirationDateOverride)
     {
         $this->expirationDateOverride = $expirationDateOverride;
+
         return $this;
     }
 
@@ -263,6 +269,7 @@ class AddonLineItemDataDataType extends FlexnetType
     public function setLicenseExpirationDate($licenseExpirationDate)
     {
         $this->licenseExpirationDate = $licenseExpirationDate;
+
         return $this;
     }
 
@@ -281,6 +288,7 @@ class AddonLineItemDataDataType extends FlexnetType
     public function setCreatedDate($createdDate)
     {
         $this->createdDate = $createdDate;
+
         return $this;
     }
 
@@ -299,6 +307,7 @@ class AddonLineItemDataDataType extends FlexnetType
     public function setLastModifiedDate($lastModifiedDate)
     {
         $this->lastModifiedDate = $lastModifiedDate;
+
         return $this;
     }
 }

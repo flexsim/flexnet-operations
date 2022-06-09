@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetLicenseTechnologyQueryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyQueryParametersType
      */
@@ -48,6 +47,7 @@ class GetLicenseTechnologyQueryRequestType extends FlexnetType implements Reques
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 }

@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetMatchingLineItemsResponseListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\MatchingLineItemDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\MatchingLineItemDataType|array
      */
     protected $matchingLineItem;
 
@@ -31,7 +30,7 @@ class GetMatchingLineItemsResponseListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\MatchingLineItemDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\MatchingLineItemDataType|array
      */
     public function getMatchingLineItem()
     {
@@ -45,6 +44,7 @@ class GetMatchingLineItemsResponseListType extends FlexnetType
     public function setMatchingLineItem($matchingLineItem)
     {
         $this->matchingLineItem = $matchingLineItem;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedShortCodeDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateShortCodeDataType
      */
@@ -61,6 +60,7 @@ class FailedShortCodeDataType extends FlexnetType
     public function setShortCodeData($shortCodeData)
     {
         $this->shortCodeData = $shortCodeData;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class FailedShortCodeDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class FailedShortCodeDataType extends FlexnetType
     public function setDuplicateFulfillmentRecords($duplicateFulfillmentRecords)
     {
         $this->duplicateFulfillmentRecords = $duplicateFulfillmentRecords;
+
         return $this;
     }
 }

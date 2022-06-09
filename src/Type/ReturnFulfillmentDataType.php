@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ReturnFulfillmentDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
@@ -77,6 +76,7 @@ class ReturnFulfillmentDataType extends FlexnetType
     public function setFulfillmentIdentifier($fulfillmentIdentifier)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
+
         return $this;
     }
 
@@ -95,6 +95,7 @@ class ReturnFulfillmentDataType extends FlexnetType
     public function setPartialCount($partialCount)
     {
         $this->partialCount = $partialCount;
+
         return $this;
     }
 
@@ -113,6 +114,7 @@ class ReturnFulfillmentDataType extends FlexnetType
     public function setOverDraftCount($overDraftCount)
     {
         $this->overDraftCount = $overDraftCount;
+
         return $this;
     }
 
@@ -131,6 +133,7 @@ class ReturnFulfillmentDataType extends FlexnetType
     public function setOverridePolicy($overridePolicy)
     {
         $this->overridePolicy = $overridePolicy;
+
         return $this;
     }
 
@@ -149,6 +152,7 @@ class ReturnFulfillmentDataType extends FlexnetType
     public function setForceReturnOfThisTrustedFulfillment($forceReturnOfThisTrustedFulfillment)
     {
         $this->forceReturnOfThisTrustedFulfillment = $forceReturnOfThisTrustedFulfillment;
+
         return $this;
     }
 }

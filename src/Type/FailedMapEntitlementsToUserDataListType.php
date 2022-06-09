@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedMapEntitlementsToUserDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedIdDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedIdDataType|array
      */
     protected $failedId;
 
@@ -31,7 +30,7 @@ class FailedMapEntitlementsToUserDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedIdDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedIdDataType|array
      */
     public function getFailedId()
     {
@@ -45,6 +44,7 @@ class FailedMapEntitlementsToUserDataListType extends FlexnetType
     public function setFailedId($failedId)
     {
         $this->failedId = $failedId;
+
         return $this;
     }
 }

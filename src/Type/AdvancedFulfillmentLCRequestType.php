@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class AdvancedFulfillmentLCRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCListType
      */
@@ -47,6 +46,7 @@ class AdvancedFulfillmentLCRequestType extends FlexnetType implements RequestInt
     public function setFulfillmentList($fulfillmentList)
     {
         $this->fulfillmentList = $fulfillmentList;
+
         return $this;
     }
 }

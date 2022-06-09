@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class TrustedRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ActivationDataType
      */
@@ -47,6 +46,7 @@ class TrustedRequestType extends FlexnetType implements RequestInterface
     public function setInputData($inputData)
     {
         $this->inputData = $inputData;
+
         return $this;
     }
 }

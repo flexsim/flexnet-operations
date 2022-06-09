@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ManageDeviceServiceDictionaryEntry extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class ManageDeviceServiceDictionaryEntry extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class ManageDeviceServiceDictionaryEntry extends FlexnetType
     public function setStringValue($stringValue)
     {
         $this->stringValue = $stringValue;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class ManageDeviceServiceDictionaryEntry extends FlexnetType
     public function setNumberValue($numberValue)
     {
         $this->numberValue = $numberValue;
+
         return $this;
     }
 }

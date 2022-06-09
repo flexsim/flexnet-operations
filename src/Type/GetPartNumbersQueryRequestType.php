@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetPartNumbersQueryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberQueryParametersType
      */
@@ -69,6 +68,7 @@ class GetPartNumbersQueryRequestType extends FlexnetType implements RequestInter
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class GetPartNumbersQueryRequestType extends FlexnetType implements RequestInter
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class GetPartNumbersQueryRequestType extends FlexnetType implements RequestInter
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 }

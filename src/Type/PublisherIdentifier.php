@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PublisherIdentifier extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class PublisherIdentifier extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 }

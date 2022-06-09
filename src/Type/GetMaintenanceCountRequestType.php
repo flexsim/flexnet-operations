@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetMaintenanceCountRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType
      */
@@ -48,6 +47,7 @@ class GetMaintenanceCountRequestType extends FlexnetType implements RequestInter
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 }

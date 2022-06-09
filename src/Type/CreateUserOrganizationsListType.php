@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreateUserOrganizationsListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateUserOrganizationType|array
      */
@@ -45,6 +44,7 @@ class CreateUserOrganizationsListType extends FlexnetType
     public function setOrgRoles($orgRoles)
     {
         $this->orgRoles = $orgRoles;
+
         return $this;
     }
 }

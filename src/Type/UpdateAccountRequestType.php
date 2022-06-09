@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class UpdateAccountRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateAcctDataType
      */
@@ -47,6 +46,7 @@ class UpdateAccountRequestType extends FlexnetType implements RequestInterface
     public function setAcctData($acctData)
     {
         $this->acctData = $acctData;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class OrganizationDetailDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
@@ -101,6 +100,7 @@ class OrganizationDetailDataType extends FlexnetType
     public function setOrganization($organization)
     {
         $this->organization = $organization;
+
         return $this;
     }
 
@@ -119,6 +119,7 @@ class OrganizationDetailDataType extends FlexnetType
     public function setDisplayName($displayName)
     {
         $this->displayName = $displayName;
+
         return $this;
     }
 
@@ -137,6 +138,7 @@ class OrganizationDetailDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -155,6 +157,7 @@ class OrganizationDetailDataType extends FlexnetType
     public function setAddress($address)
     {
         $this->address = $address;
+
         return $this;
     }
 
@@ -173,6 +176,7 @@ class OrganizationDetailDataType extends FlexnetType
     public function setVisible($visible)
     {
         $this->visible = $visible;
+
         return $this;
     }
 
@@ -191,6 +195,7 @@ class OrganizationDetailDataType extends FlexnetType
     public function setOrgType($orgType)
     {
         $this->orgType = $orgType;
+
         return $this;
     }
 
@@ -209,6 +214,7 @@ class OrganizationDetailDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -227,6 +233,7 @@ class OrganizationDetailDataType extends FlexnetType
     public function setDateLastModified($dateLastModified)
     {
         $this->dateLastModified = $dateLastModified;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ReturnedShortCodeDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class ReturnedShortCodeDataType extends FlexnetType
     public function setShortCode($shortCode)
     {
         $this->shortCode = $shortCode;
+
         return $this;
     }
 }

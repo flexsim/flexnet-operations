@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedChildLIFulfillmentDataType extends FlexnetType
 {
-
     /**
      * @var int
      */
@@ -53,6 +52,7 @@ class CreatedChildLIFulfillmentDataType extends FlexnetType
     public function setRecordRefNo($recordRefNo)
     {
         $this->recordRefNo = $recordRefNo;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class CreatedChildLIFulfillmentDataType extends FlexnetType
     public function setFulfillmentInfo($fulfillmentInfo)
     {
         $this->fulfillmentInfo = $fulfillmentInfo;
+
         return $this;
     }
 }

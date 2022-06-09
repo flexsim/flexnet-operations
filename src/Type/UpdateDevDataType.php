@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateDevDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
@@ -133,6 +132,7 @@ class UpdateDevDataType extends FlexnetType
     public function setDeviceIdentifier($deviceIdentifier)
     {
         $this->deviceIdentifier = $deviceIdentifier;
+
         return $this;
     }
 
@@ -151,6 +151,7 @@ class UpdateDevDataType extends FlexnetType
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
+
         return $this;
     }
 
@@ -169,6 +170,7 @@ class UpdateDevDataType extends FlexnetType
     public function setServerIds($serverIds)
     {
         $this->serverIds = $serverIds;
+
         return $this;
     }
 
@@ -187,6 +189,7 @@ class UpdateDevDataType extends FlexnetType
     public function setDeviceIdType($deviceIdType)
     {
         $this->deviceIdType = $deviceIdType;
+
         return $this;
     }
 
@@ -205,6 +208,7 @@ class UpdateDevDataType extends FlexnetType
     public function setHostTypeName($hostTypeName)
     {
         $this->hostTypeName = $hostTypeName;
+
         return $this;
     }
 
@@ -223,6 +227,7 @@ class UpdateDevDataType extends FlexnetType
     public function setPublisherIdName($publisherIdName)
     {
         $this->publisherIdName = $publisherIdName;
+
         return $this;
     }
 
@@ -241,6 +246,7 @@ class UpdateDevDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -259,6 +265,7 @@ class UpdateDevDataType extends FlexnetType
     public function setUpdateChannelPartners($updateChannelPartners)
     {
         $this->updateChannelPartners = $updateChannelPartners;
+
         return $this;
     }
 
@@ -277,6 +284,7 @@ class UpdateDevDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -295,6 +303,7 @@ class UpdateDevDataType extends FlexnetType
     public function setAlias($alias)
     {
         $this->alias = $alias;
+
         return $this;
     }
 
@@ -313,6 +322,7 @@ class UpdateDevDataType extends FlexnetType
     public function setUser($user)
     {
         $this->user = $user;
+
         return $this;
     }
 
@@ -331,6 +341,7 @@ class UpdateDevDataType extends FlexnetType
     public function setSiteName($siteName)
     {
         $this->siteName = $siteName;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetAccountsQueryResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountDetailDataType
      */
@@ -45,6 +44,7 @@ class GetAccountsQueryResponseDataType extends FlexnetType
     public function setAcctData($acctData)
     {
         $this->acctData = $acctData;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedOrgDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedOrgDataType|array
      */
@@ -45,6 +44,7 @@ class CreatedOrgDataListType extends FlexnetType
     public function setCreatedOrganization($createdOrganization)
     {
         $this->createdOrganization = $createdOrganization;
+
         return $this;
     }
 }

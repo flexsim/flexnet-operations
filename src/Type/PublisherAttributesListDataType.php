@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PublisherAttributesListDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleAttributeDataType
      */
@@ -45,6 +44,7 @@ class PublisherAttributesListDataType extends FlexnetType
     public function setAttribute($attribute)
     {
         $this->attribute = $attribute;
+
         return $this;
     }
 }

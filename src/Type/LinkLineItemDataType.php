@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LinkLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier
      */
@@ -45,6 +44,7 @@ class LinkLineItemDataType extends FlexnetType
     public function setLineItemIdentifier($lineItemIdentifier)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
+
         return $this;
     }
 }

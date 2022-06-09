@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class MatchingLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
@@ -45,6 +44,7 @@ class MatchingLineItemDataType extends FlexnetType
     public function setMatchingLineItemIdentifier($matchingLineItemIdentifier)
     {
         $this->matchingLineItemIdentifier = $matchingLineItemIdentifier;
+
         return $this;
     }
 }

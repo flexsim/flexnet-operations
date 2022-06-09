@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PublisherErrorFulfillmentDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
@@ -117,6 +116,7 @@ class PublisherErrorFulfillmentDataType extends FlexnetType
     public function setFulfillmentIdentifier($fulfillmentIdentifier)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
+
         return $this;
     }
 
@@ -135,6 +135,7 @@ class PublisherErrorFulfillmentDataType extends FlexnetType
     public function setLicenseModelAttributes($licenseModelAttributes)
     {
         $this->licenseModelAttributes = $licenseModelAttributes;
+
         return $this;
     }
 
@@ -153,6 +154,7 @@ class PublisherErrorFulfillmentDataType extends FlexnetType
     public function setFNPTimeZoneValue($FNPTimeZoneValue)
     {
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
+
         return $this;
     }
 
@@ -171,6 +173,7 @@ class PublisherErrorFulfillmentDataType extends FlexnetType
     public function setShipToEmail($shipToEmail)
     {
         $this->shipToEmail = $shipToEmail;
+
         return $this;
     }
 
@@ -189,6 +192,7 @@ class PublisherErrorFulfillmentDataType extends FlexnetType
     public function setShipToAddress($shipToAddress)
     {
         $this->shipToAddress = $shipToAddress;
+
         return $this;
     }
 
@@ -207,6 +211,7 @@ class PublisherErrorFulfillmentDataType extends FlexnetType
     public function setServerIds($serverIds)
     {
         $this->serverIds = $serverIds;
+
         return $this;
     }
 
@@ -225,6 +230,7 @@ class PublisherErrorFulfillmentDataType extends FlexnetType
     public function setNodeIds($nodeIds)
     {
         $this->nodeIds = $nodeIds;
+
         return $this;
     }
 
@@ -243,6 +249,7 @@ class PublisherErrorFulfillmentDataType extends FlexnetType
     public function setCustomHost($customHost)
     {
         $this->customHost = $customHost;
+
         return $this;
     }
 
@@ -261,6 +268,7 @@ class PublisherErrorFulfillmentDataType extends FlexnetType
     public function setFulfillCount($fulfillCount)
     {
         $this->fulfillCount = $fulfillCount;
+
         return $this;
     }
 
@@ -279,6 +287,7 @@ class PublisherErrorFulfillmentDataType extends FlexnetType
     public function setOverridePolicy($overridePolicy)
     {
         $this->overridePolicy = $overridePolicy;
+
         return $this;
     }
 }

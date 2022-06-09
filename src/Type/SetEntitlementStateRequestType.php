@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class SetEntitlementStateRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementStateDataType
      */
@@ -47,6 +46,7 @@ class SetEntitlementStateRequestType extends FlexnetType implements RequestInter
     public function setEntitlement($entitlement)
     {
         $this->entitlement = $entitlement;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class RelateAccountsDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
@@ -53,6 +52,7 @@ class RelateAccountsDataType extends FlexnetType
     public function setAccountToRelate($accountToRelate)
     {
         $this->accountToRelate = $accountToRelate;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class RelateAccountsDataType extends FlexnetType
     public function setRelatedAccount($relatedAccount)
     {
         $this->relatedAccount = $relatedAccount;
+
         return $this;
     }
 }

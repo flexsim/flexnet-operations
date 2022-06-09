@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ChannelPartnerDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType|array
      */
@@ -45,6 +44,7 @@ class ChannelPartnerDataListType extends FlexnetType
     public function setChannelPartner($channelPartner)
     {
         $this->channelPartner = $channelPartner;
+
         return $this;
     }
 }

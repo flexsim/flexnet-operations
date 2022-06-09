@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PublisherErrorFulfillmentResponseDataType extends FlexnetType
 {
-
     /**
      * @var int
      */
@@ -53,6 +52,7 @@ class PublisherErrorFulfillmentResponseDataType extends FlexnetType
     public function setRecordRefNo($recordRefNo)
     {
         $this->recordRefNo = $recordRefNo;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class PublisherErrorFulfillmentResponseDataType extends FlexnetType
     public function setFulfillment($fulfillment)
     {
         $this->fulfillment = $fulfillment;
+
         return $this;
     }
 }

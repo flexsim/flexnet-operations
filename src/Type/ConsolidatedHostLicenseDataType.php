@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ConsolidatedHostLicenseDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class ConsolidatedHostLicenseDataType extends FlexnetType
     public function setLicense($license)
     {
         $this->license = $license;
+
         return $this;
     }
 }

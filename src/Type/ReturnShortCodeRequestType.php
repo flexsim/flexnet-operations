@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class ReturnShortCodeRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType
      */
@@ -55,6 +54,7 @@ class ReturnShortCodeRequestType extends FlexnetType implements RequestInterface
     public function setShortCodeData($shortCodeData)
     {
         $this->shortCodeData = $shortCodeData;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class ReturnShortCodeRequestType extends FlexnetType implements RequestInterface
     public function setReturnReason($returnReason)
     {
         $this->returnReason = $returnReason;
+
         return $this;
     }
 }

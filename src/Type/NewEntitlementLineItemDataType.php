@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class NewEntitlementLineItemDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class NewEntitlementLineItemDataType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class NewEntitlementLineItemDataType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 }

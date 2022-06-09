@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeviceTypeList extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class DeviceTypeList extends FlexnetType
     public function setDeviceType($deviceType)
     {
         $this->deviceType = $deviceType;
+
         return $this;
     }
 }

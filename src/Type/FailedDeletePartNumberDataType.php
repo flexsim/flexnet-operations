@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedDeletePartNumberDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
      */
@@ -53,6 +52,7 @@ class FailedDeletePartNumberDataType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedDeletePartNumberDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

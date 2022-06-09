@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class ActivateLicensesRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\TypeLineItem
      */
@@ -87,6 +86,7 @@ class ActivateLicensesRequestType extends FlexnetType implements RequestInterfac
     public function setLineItem($lineItem)
     {
         $this->lineItem = $lineItem;
+
         return $this;
     }
 
@@ -105,6 +105,7 @@ class ActivateLicensesRequestType extends FlexnetType implements RequestInterfac
     public function setShipToEmail($shipToEmail)
     {
         $this->shipToEmail = $shipToEmail;
+
         return $this;
     }
 
@@ -123,6 +124,7 @@ class ActivateLicensesRequestType extends FlexnetType implements RequestInterfac
     public function setShipToAddress($shipToAddress)
     {
         $this->shipToAddress = $shipToAddress;
+
         return $this;
     }
 
@@ -141,6 +143,7 @@ class ActivateLicensesRequestType extends FlexnetType implements RequestInterfac
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -159,6 +162,7 @@ class ActivateLicensesRequestType extends FlexnetType implements RequestInterfac
     public function setOwner($owner)
     {
         $this->owner = $owner;
+
         return $this;
     }
 
@@ -177,6 +181,7 @@ class ActivateLicensesRequestType extends FlexnetType implements RequestInterfac
     public function setHostInfo($hostInfo)
     {
         $this->hostInfo = $hostInfo;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ValueType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class ValueType extends FlexnetType
     public function setValue($value)
     {
         $this->value = $value;
+
         return $this;
     }
 }

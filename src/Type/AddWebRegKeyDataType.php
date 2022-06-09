@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AddWebRegKeyDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -53,6 +52,7 @@ class AddWebRegKeyDataType extends FlexnetType
     public function setBulkEntitlement($bulkEntitlement)
     {
         $this->bulkEntitlement = $bulkEntitlement;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class AddWebRegKeyDataType extends FlexnetType
     public function setWebRegKeys($webRegKeys)
     {
         $this->webRegKeys = $webRegKeys;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PublisherErrorResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentResponseDataType
      */
@@ -45,6 +44,7 @@ class PublisherErrorResponseDataType extends FlexnetType
     public function setFulfillmentData($fulfillmentData)
     {
         $this->fulfillmentData = $fulfillmentData;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetMatchingBulkEntsRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsListType
      */
@@ -47,6 +46,7 @@ class GetMatchingBulkEntsRequestType extends FlexnetType implements RequestInter
     public function setBulkEntList($bulkEntList)
     {
         $this->bulkEntList = $bulkEntList;
+
         return $this;
     }
 }

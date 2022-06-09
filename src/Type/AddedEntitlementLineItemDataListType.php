@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AddedEntitlementLineItemDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType|array
      */
     protected $addedLineItems;
 
@@ -31,7 +30,7 @@ class AddedEntitlementLineItemDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\AddedEntitlementLineItemDataType|array
      */
     public function getAddedLineItems()
     {
@@ -45,6 +44,7 @@ class AddedEntitlementLineItemDataListType extends FlexnetType
     public function setAddedLineItems($addedLineItems)
     {
         $this->addedLineItems = $addedLineItems;
+
         return $this;
     }
 }

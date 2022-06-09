@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FeatureDataDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -93,6 +92,7 @@ class FeatureDataDataType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -111,6 +111,7 @@ class FeatureDataDataType extends FlexnetType
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -129,6 +130,7 @@ class FeatureDataDataType extends FlexnetType
     public function setCount($count)
     {
         $this->count = $count;
+
         return $this;
     }
 
@@ -147,6 +149,7 @@ class FeatureDataDataType extends FlexnetType
     public function setOverage($overage)
     {
         $this->overage = $overage;
+
         return $this;
     }
 
@@ -165,6 +168,7 @@ class FeatureDataDataType extends FlexnetType
     public function setExpiration($expiration)
     {
         $this->expiration = $expiration;
+
         return $this;
     }
 
@@ -183,6 +187,7 @@ class FeatureDataDataType extends FlexnetType
     public function setLineItemUniqueId($lineItemUniqueId)
     {
         $this->lineItemUniqueId = $lineItemUniqueId;
+
         return $this;
     }
 
@@ -201,6 +206,7 @@ class FeatureDataDataType extends FlexnetType
     public function setLineItemActivationId($lineItemActivationId)
     {
         $this->lineItemActivationId = $lineItemActivationId;
+
         return $this;
     }
 }

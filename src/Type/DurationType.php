@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DurationType extends FlexnetType
 {
-
     /**
      * @var int
      */
@@ -53,6 +52,7 @@ class DurationType extends FlexnetType
     public function setNumDuration($numDuration)
     {
         $this->numDuration = $numDuration;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class DurationType extends FlexnetType
     public function setDurationUnit($durationUnit)
     {
         $this->durationUnit = $durationUnit;
+
         return $this;
     }
 }

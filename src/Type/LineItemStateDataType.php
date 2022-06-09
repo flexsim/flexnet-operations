@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LineItemStateDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
@@ -61,6 +60,7 @@ class LineItemStateDataType extends FlexnetType
     public function setLineItemIdentifier($lineItemIdentifier)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class LineItemStateDataType extends FlexnetType
     public function setStateToSet($stateToSet)
     {
         $this->stateToSet = $stateToSet;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class LineItemStateDataType extends FlexnetType
     public function setIncludeChildItems($includeChildItems)
     {
         $this->includeChildItems = $includeChildItems;
+
         return $this;
     }
 }

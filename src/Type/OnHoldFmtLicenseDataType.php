@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class OnHoldFmtLicenseDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -69,6 +68,7 @@ class OnHoldFmtLicenseDataType extends FlexnetType
     public function setFulfillmentId($fulfillmentId)
     {
         $this->fulfillmentId = $fulfillmentId;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class OnHoldFmtLicenseDataType extends FlexnetType
     public function setTextLicense($textLicense)
     {
         $this->textLicense = $textLicense;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class OnHoldFmtLicenseDataType extends FlexnetType
     public function setBinaryLicense($binaryLicense)
     {
         $this->binaryLicense = $binaryLicense;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class OnHoldFmtLicenseDataType extends FlexnetType
     public function setLicenseFiles($licenseFiles)
     {
         $this->licenseFiles = $licenseFiles;
+
         return $this;
     }
 }

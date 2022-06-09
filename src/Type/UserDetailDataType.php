@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UserDetailDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserIdentifierType
      */
@@ -263,6 +262,7 @@ class UserDetailDataType extends FlexnetType
     public function setUserIdentifier($userIdentifier)
     {
         $this->userIdentifier = $userIdentifier;
+
         return $this;
     }
 
@@ -281,6 +281,7 @@ class UserDetailDataType extends FlexnetType
     public function setDisplayName($displayName)
     {
         $this->displayName = $displayName;
+
         return $this;
     }
 
@@ -299,6 +300,7 @@ class UserDetailDataType extends FlexnetType
     public function setOptIn($optIn)
     {
         $this->optIn = $optIn;
+
         return $this;
     }
 
@@ -317,6 +319,7 @@ class UserDetailDataType extends FlexnetType
     public function setFaxNumber($faxNumber)
     {
         $this->faxNumber = $faxNumber;
+
         return $this;
     }
 
@@ -335,6 +338,7 @@ class UserDetailDataType extends FlexnetType
     public function setStreet($street)
     {
         $this->street = $street;
+
         return $this;
     }
 
@@ -353,6 +357,7 @@ class UserDetailDataType extends FlexnetType
     public function setCity($city)
     {
         $this->city = $city;
+
         return $this;
     }
 
@@ -371,6 +376,7 @@ class UserDetailDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -389,6 +395,7 @@ class UserDetailDataType extends FlexnetType
     public function setZipcode($zipcode)
     {
         $this->zipcode = $zipcode;
+
         return $this;
     }
 
@@ -407,6 +414,7 @@ class UserDetailDataType extends FlexnetType
     public function setCountry($country)
     {
         $this->country = $country;
+
         return $this;
     }
 
@@ -425,6 +433,7 @@ class UserDetailDataType extends FlexnetType
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -443,6 +452,7 @@ class UserDetailDataType extends FlexnetType
     public function setLocale($locale)
     {
         $this->locale = $locale;
+
         return $this;
     }
 
@@ -461,6 +471,7 @@ class UserDetailDataType extends FlexnetType
     public function setTimezone($timezone)
     {
         $this->timezone = $timezone;
+
         return $this;
     }
 
@@ -479,6 +490,7 @@ class UserDetailDataType extends FlexnetType
     public function setShared($shared)
     {
         $this->shared = $shared;
+
         return $this;
     }
 
@@ -497,6 +509,7 @@ class UserDetailDataType extends FlexnetType
     public function setDomain($domain)
     {
         $this->domain = $domain;
+
         return $this;
     }
 
@@ -515,6 +528,7 @@ class UserDetailDataType extends FlexnetType
     public function setDateCreated($dateCreated)
     {
         $this->dateCreated = $dateCreated;
+
         return $this;
     }
 
@@ -533,6 +547,7 @@ class UserDetailDataType extends FlexnetType
     public function setDateLastModified($dateLastModified)
     {
         $this->dateLastModified = $dateLastModified;
+
         return $this;
     }
 
@@ -551,6 +566,7 @@ class UserDetailDataType extends FlexnetType
     public function setDateLastLogin($dateLastLogin)
     {
         $this->dateLastLogin = $dateLastLogin;
+
         return $this;
     }
 
@@ -569,6 +585,7 @@ class UserDetailDataType extends FlexnetType
     public function setAccountRolesList($accountRolesList)
     {
         $this->accountRolesList = $accountRolesList;
+
         return $this;
     }
 
@@ -587,6 +604,7 @@ class UserDetailDataType extends FlexnetType
     public function setOrgRolesList($orgRolesList)
     {
         $this->orgRolesList = $orgRolesList;
+
         return $this;
     }
 
@@ -605,6 +623,7 @@ class UserDetailDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -623,6 +642,7 @@ class UserDetailDataType extends FlexnetType
     public function setExpiryDate($expiryDate)
     {
         $this->expiryDate = $expiryDate;
+
         return $this;
     }
 
@@ -641,6 +661,7 @@ class UserDetailDataType extends FlexnetType
     public function setCreatedBy($createdBy)
     {
         $this->createdBy = $createdBy;
+
         return $this;
     }
 
@@ -659,6 +680,7 @@ class UserDetailDataType extends FlexnetType
     public function setLastModifiedBy($lastModifiedBy)
     {
         $this->lastModifiedBy = $lastModifiedBy;
+
         return $this;
     }
 }

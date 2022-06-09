@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedDeleteEntitlementDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedDeleteEntitlementDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedDeleteEntitlementDataType|array
      */
     protected $failedEntitlement;
 
@@ -31,7 +30,7 @@ class FailedDeleteEntitlementDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedDeleteEntitlementDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedDeleteEntitlementDataType|array
      */
     public function getFailedEntitlement()
     {
@@ -45,6 +44,7 @@ class FailedDeleteEntitlementDataListType extends FlexnetType
     public function setFailedEntitlement($failedEntitlement)
     {
         $this->failedEntitlement = $failedEntitlement;
+
         return $this;
     }
 }

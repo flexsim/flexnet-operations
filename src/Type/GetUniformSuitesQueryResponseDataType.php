@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetUniformSuitesQueryResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UniformSuiteQueryDataType
      */
@@ -45,6 +44,7 @@ class GetUniformSuitesQueryResponseDataType extends FlexnetType
     public function setUniformSuite($uniformSuite)
     {
         $this->uniformSuite = $uniformSuite;
+
         return $this;
     }
 }

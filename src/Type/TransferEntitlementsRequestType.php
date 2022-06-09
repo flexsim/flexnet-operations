@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class TransferEntitlementsRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferEntitlementsListType
      */
@@ -47,6 +46,7 @@ class TransferEntitlementsRequestType extends FlexnetType implements RequestInte
     public function setEntitlementList($entitlementList)
     {
         $this->entitlementList = $entitlementList;
+
         return $this;
     }
 }

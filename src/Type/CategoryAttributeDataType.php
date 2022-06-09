@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CategoryAttributeDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -77,6 +76,7 @@ class CategoryAttributeDataType extends FlexnetType
     public function setAttributeName($attributeName)
     {
         $this->attributeName = $attributeName;
+
         return $this;
     }
 
@@ -95,6 +95,7 @@ class CategoryAttributeDataType extends FlexnetType
     public function setIsRequired($isRequired)
     {
         $this->isRequired = $isRequired;
+
         return $this;
     }
 
@@ -113,6 +114,7 @@ class CategoryAttributeDataType extends FlexnetType
     public function setDataType($dataType)
     {
         $this->dataType = $dataType;
+
         return $this;
     }
 
@@ -131,6 +133,7 @@ class CategoryAttributeDataType extends FlexnetType
     public function setMaxLength($maxLength)
     {
         $this->maxLength = $maxLength;
+
         return $this;
     }
 
@@ -149,6 +152,7 @@ class CategoryAttributeDataType extends FlexnetType
     public function setValidValues($validValues)
     {
         $this->validValues = $validValues;
+
         return $this;
     }
 }

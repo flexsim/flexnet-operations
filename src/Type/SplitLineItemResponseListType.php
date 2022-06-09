@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SplitLineItemResponseListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array
      */
     protected $splitLineItem;
 
@@ -31,7 +30,7 @@ class SplitLineItemResponseListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array
      */
     public function getSplitLineItem()
     {
@@ -45,6 +44,7 @@ class SplitLineItemResponseListType extends FlexnetType
     public function setSplitLineItem($splitLineItem)
     {
         $this->splitLineItem = $splitLineItem;
+
         return $this;
     }
 }

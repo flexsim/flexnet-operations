@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AttributeDescriptorType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -85,6 +84,7 @@ class AttributeDescriptorType extends FlexnetType
     public function setAttributeName($attributeName)
     {
         $this->attributeName = $attributeName;
+
         return $this;
     }
 
@@ -103,6 +103,7 @@ class AttributeDescriptorType extends FlexnetType
     public function setStringValue($stringValue)
     {
         $this->stringValue = $stringValue;
+
         return $this;
     }
 
@@ -121,6 +122,7 @@ class AttributeDescriptorType extends FlexnetType
     public function setDateValue($dateValue)
     {
         $this->dateValue = $dateValue;
+
         return $this;
     }
 
@@ -139,6 +141,7 @@ class AttributeDescriptorType extends FlexnetType
     public function setBooleanValue($booleanValue)
     {
         $this->booleanValue = $booleanValue;
+
         return $this;
     }
 
@@ -157,6 +160,7 @@ class AttributeDescriptorType extends FlexnetType
     public function setIntegerValue($integerValue)
     {
         $this->integerValue = $integerValue;
+
         return $this;
     }
 
@@ -175,6 +179,7 @@ class AttributeDescriptorType extends FlexnetType
     public function setArrayValue($arrayValue)
     {
         $this->arrayValue = $arrayValue;
+
         return $this;
     }
 }

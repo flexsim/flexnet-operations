@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUpdateProductRelationshipDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateProductRelationshipDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateProductRelationshipDataType|array
      */
     protected $failedRelationship;
 
@@ -31,7 +30,7 @@ class FailedUpdateProductRelationshipDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateProductRelationshipDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateProductRelationshipDataType|array
      */
     public function getFailedRelationship()
     {
@@ -45,6 +44,7 @@ class FailedUpdateProductRelationshipDataListType extends FlexnetType
     public function setFailedRelationship($failedRelationship)
     {
         $this->failedRelationship = $failedRelationship;
+
         return $this;
     }
 }

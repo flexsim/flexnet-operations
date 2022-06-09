@@ -6,9 +6,8 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class ReturnHostRequestListType extends FlexnetType implements RequestInterface
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ReturnHostType|array 
+     * @var \Flexsim\FlexnetOperations\Type\ReturnHostType|array
      */
     protected $returnHosts;
 
@@ -33,7 +32,7 @@ class ReturnHostRequestListType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ReturnHostType|array 
+     * @return \Flexsim\FlexnetOperations\Type\ReturnHostType|array
      */
     public function getReturnHosts()
     {
@@ -47,6 +46,7 @@ class ReturnHostRequestListType extends FlexnetType implements RequestInterface
     public function setReturnHosts($returnHosts)
     {
         $this->returnHosts = $returnHosts;
+
         return $this;
     }
 }

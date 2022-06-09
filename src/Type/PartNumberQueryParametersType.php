@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PartNumberQueryParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -101,6 +100,7 @@ class PartNumberQueryParametersType extends FlexnetType
     public function setPartId($partId)
     {
         $this->partId = $partId;
+
         return $this;
     }
 
@@ -119,6 +119,7 @@ class PartNumberQueryParametersType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -137,6 +138,7 @@ class PartNumberQueryParametersType extends FlexnetType
     public function setProductName($productName)
     {
         $this->productName = $productName;
+
         return $this;
     }
 
@@ -155,6 +157,7 @@ class PartNumberQueryParametersType extends FlexnetType
     public function setLicenseModel($licenseModel)
     {
         $this->licenseModel = $licenseModel;
+
         return $this;
     }
 
@@ -173,6 +176,7 @@ class PartNumberQueryParametersType extends FlexnetType
     public function setCreationDate($creationDate)
     {
         $this->creationDate = $creationDate;
+
         return $this;
     }
 
@@ -191,6 +195,7 @@ class PartNumberQueryParametersType extends FlexnetType
     public function setLastModifiedDate($lastModifiedDate)
     {
         $this->lastModifiedDate = $lastModifiedDate;
+
         return $this;
     }
 
@@ -209,6 +214,7 @@ class PartNumberQueryParametersType extends FlexnetType
     public function setUnmappedWithProduct($unmappedWithProduct)
     {
         $this->unmappedWithProduct = $unmappedWithProduct;
+
         return $this;
     }
 
@@ -227,6 +233,7 @@ class PartNumberQueryParametersType extends FlexnetType
     public function setUnmappedWithLicenseModel($unmappedWithLicenseModel)
     {
         $this->unmappedWithLicenseModel = $unmappedWithLicenseModel;
+
         return $this;
     }
 }

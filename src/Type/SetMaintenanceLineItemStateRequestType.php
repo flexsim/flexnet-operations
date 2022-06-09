@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class SetMaintenanceLineItemStateRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType
      */
@@ -47,6 +46,7 @@ class SetMaintenanceLineItemStateRequestType extends FlexnetType implements Requ
     public function setMaintenanceLineItem($maintenanceLineItem)
     {
         $this->maintenanceLineItem = $maintenanceLineItem;
+
         return $this;
     }
 }

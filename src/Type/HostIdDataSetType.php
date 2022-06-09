@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class HostIdDataSetType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostIdDataType
      */
@@ -45,6 +44,7 @@ class HostIdDataSetType extends FlexnetType
     public function setHostIdData($hostIdData)
     {
         $this->hostIdData = $hostIdData;
+
         return $this;
     }
 }

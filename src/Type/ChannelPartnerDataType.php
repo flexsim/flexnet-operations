@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ChannelPartnerDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -75,6 +74,7 @@ class ChannelPartnerDataType extends FlexnetType
     public function setTierName($tierName)
     {
         $this->tierName = $tierName;
+
         return $this;
     }
 
@@ -93,6 +93,7 @@ class ChannelPartnerDataType extends FlexnetType
     public function setAccountUnit($accountUnit)
     {
         $this->accountUnit = $accountUnit;
+
         return $this;
     }
 
@@ -111,6 +112,7 @@ class ChannelPartnerDataType extends FlexnetType
     public function setOrganizationUnit($organizationUnit)
     {
         $this->organizationUnit = $organizationUnit;
+
         return $this;
     }
 
@@ -129,6 +131,7 @@ class ChannelPartnerDataType extends FlexnetType
     public function setContact($contact)
     {
         $this->contact = $contact;
+
         return $this;
     }
 
@@ -147,6 +150,7 @@ class ChannelPartnerDataType extends FlexnetType
     public function setCurrentOwner($currentOwner)
     {
         $this->currentOwner = $currentOwner;
+
         return $this;
     }
 }

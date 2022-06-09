@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetUsageHistoryConfigType extends FlexnetType
 {
-
     /**
      * @var bool
      */
@@ -85,6 +84,7 @@ class GetUsageHistoryConfigType extends FlexnetType
     public function setServer($server)
     {
         $this->server = $server;
+
         return $this;
     }
 
@@ -103,6 +103,7 @@ class GetUsageHistoryConfigType extends FlexnetType
     public function setFeatures($features)
     {
         $this->features = $features;
+
         return $this;
     }
 
@@ -121,6 +122,7 @@ class GetUsageHistoryConfigType extends FlexnetType
     public function setMachineType($machineType)
     {
         $this->machineType = $machineType;
+
         return $this;
     }
 
@@ -139,6 +141,7 @@ class GetUsageHistoryConfigType extends FlexnetType
     public function setVmDetails($vmDetails)
     {
         $this->vmDetails = $vmDetails;
+
         return $this;
     }
 
@@ -157,6 +160,7 @@ class GetUsageHistoryConfigType extends FlexnetType
     public function setVmInfo($vmInfo)
     {
         $this->vmInfo = $vmInfo;
+
         return $this;
     }
 
@@ -175,6 +179,7 @@ class GetUsageHistoryConfigType extends FlexnetType
     public function setVendorDictionary($vendorDictionary)
     {
         $this->vendorDictionary = $vendorDictionary;
+
         return $this;
     }
 }

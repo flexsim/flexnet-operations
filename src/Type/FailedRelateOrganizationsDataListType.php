@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedRelateOrganizationsDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedRelateOrganizationsDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedRelateOrganizationsDataType|array
      */
     protected $failedOrgData;
 
@@ -31,7 +30,7 @@ class FailedRelateOrganizationsDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedRelateOrganizationsDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedRelateOrganizationsDataType|array
      */
     public function getFailedOrgData()
     {
@@ -45,6 +44,7 @@ class FailedRelateOrganizationsDataListType extends FlexnetType
     public function setFailedOrgData($failedOrgData)
     {
         $this->failedOrgData = $failedOrgData;
+
         return $this;
     }
 }

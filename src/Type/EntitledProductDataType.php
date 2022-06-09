@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EntitledProductDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
@@ -53,6 +52,7 @@ class EntitledProductDataType extends FlexnetType
     public function setProduct($product)
     {
         $this->product = $product;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class EntitledProductDataType extends FlexnetType
     public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
+
         return $this;
     }
 }

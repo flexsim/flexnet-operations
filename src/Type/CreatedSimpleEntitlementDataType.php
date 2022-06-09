@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedSimpleEntitlementDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -93,6 +92,7 @@ class CreatedSimpleEntitlementDataType extends FlexnetType
     public function setRecordRefNo($recordRefNo)
     {
         $this->recordRefNo = $recordRefNo;
+
         return $this;
     }
 
@@ -111,6 +111,7 @@ class CreatedSimpleEntitlementDataType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -129,6 +130,7 @@ class CreatedSimpleEntitlementDataType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -147,6 +149,7 @@ class CreatedSimpleEntitlementDataType extends FlexnetType
     public function setLineItemUniqueIds($lineItemUniqueIds)
     {
         $this->lineItemUniqueIds = $lineItemUniqueIds;
+
         return $this;
     }
 
@@ -165,6 +168,7 @@ class CreatedSimpleEntitlementDataType extends FlexnetType
     public function setMaintenanceLineItemUniqueIds($maintenanceLineItemUniqueIds)
     {
         $this->maintenanceLineItemUniqueIds = $maintenanceLineItemUniqueIds;
+
         return $this;
     }
 
@@ -183,6 +187,7 @@ class CreatedSimpleEntitlementDataType extends FlexnetType
     public function setLineItemIdentifiers($lineItemIdentifiers)
     {
         $this->lineItemIdentifiers = $lineItemIdentifiers;
+
         return $this;
     }
 
@@ -201,6 +206,7 @@ class CreatedSimpleEntitlementDataType extends FlexnetType
     public function setMaintenanceLineItemIdentifiers($maintenanceLineItemIdentifiers)
     {
         $this->maintenanceLineItemIdentifiers = $maintenanceLineItemIdentifiers;
+
         return $this;
     }
 }

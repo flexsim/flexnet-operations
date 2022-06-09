@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class TransferHostList extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferHostIdDataType
      */
@@ -45,6 +44,7 @@ class TransferHostList extends FlexnetType
     public function setHostIdentifier($hostIdentifier)
     {
         $this->hostIdentifier = $hostIdentifier;
+
         return $this;
     }
 }

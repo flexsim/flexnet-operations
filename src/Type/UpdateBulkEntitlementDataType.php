@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateBulkEntitlementDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -261,6 +260,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setEntitlementIdentifier($entitlementIdentifier)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
+
         return $this;
     }
 
@@ -279,6 +279,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -297,6 +298,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -315,6 +317,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setProduct($product)
     {
         $this->product = $product;
+
         return $this;
     }
 
@@ -333,6 +336,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -351,6 +355,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setLicenseModel($licenseModel)
     {
         $this->licenseModel = $licenseModel;
+
         return $this;
     }
 
@@ -369,6 +374,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setAlternateLicenseModel1($alternateLicenseModel1)
     {
         $this->alternateLicenseModel1 = $alternateLicenseModel1;
+
         return $this;
     }
 
@@ -387,6 +393,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setAlternateLicenseModel2($alternateLicenseModel2)
     {
         $this->alternateLicenseModel2 = $alternateLicenseModel2;
+
         return $this;
     }
 
@@ -405,6 +412,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setLicenseModelAttributes($licenseModelAttributes)
     {
         $this->licenseModelAttributes = $licenseModelAttributes;
+
         return $this;
     }
 
@@ -423,6 +431,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setFNPTimeZoneValue($FNPTimeZoneValue)
     {
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
+
         return $this;
     }
 
@@ -441,6 +450,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setPolicyAttributes($policyAttributes)
     {
         $this->policyAttributes = $policyAttributes;
+
         return $this;
     }
 
@@ -459,6 +469,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setShipToEmail($shipToEmail)
     {
         $this->shipToEmail = $shipToEmail;
+
         return $this;
     }
 
@@ -477,6 +488,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setShipToAddress($shipToAddress)
     {
         $this->shipToAddress = $shipToAddress;
+
         return $this;
     }
 
@@ -495,6 +507,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -513,6 +526,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setOrderLineNumber($orderLineNumber)
     {
         $this->orderLineNumber = $orderLineNumber;
+
         return $this;
     }
 
@@ -531,6 +545,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setStartDateOption($startDateOption)
     {
         $this->startDateOption = $startDateOption;
+
         return $this;
     }
 
@@ -549,6 +564,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -567,6 +583,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setTerm($term)
     {
         $this->term = $term;
+
         return $this;
     }
 
@@ -585,6 +602,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -603,6 +621,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setVersionDate($versionDate)
     {
         $this->versionDate = $versionDate;
+
         return $this;
     }
 
@@ -621,6 +640,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setVersionDateAttributes($versionDateAttributes)
     {
         $this->versionDateAttributes = $versionDateAttributes;
+
         return $this;
     }
 
@@ -639,6 +659,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setNumberOfCopies($numberOfCopies)
     {
         $this->numberOfCopies = $numberOfCopies;
+
         return $this;
     }
 
@@ -657,6 +678,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -675,6 +697,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setAutoDeploy($autoDeploy)
     {
         $this->autoDeploy = $autoDeploy;
+
         return $this;
     }
 
@@ -693,6 +716,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setUpdatedEntitledProducts($updatedEntitledProducts)
     {
         $this->updatedEntitledProducts = $updatedEntitledProducts;
+
         return $this;
     }
 
@@ -711,6 +735,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setEntitledProducts($entitledProducts)
     {
         $this->entitledProducts = $entitledProducts;
+
         return $this;
     }
 
@@ -729,6 +754,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setChannelPartners($channelPartners)
     {
         $this->channelPartners = $channelPartners;
+
         return $this;
     }
 
@@ -747,6 +773,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     public function setAllowPortalLogin($allowPortalLogin)
     {
         $this->allowPortalLogin = $allowPortalLogin;
+
         return $this;
     }
 }

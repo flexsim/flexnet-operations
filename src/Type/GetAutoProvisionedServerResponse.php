@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetAutoProvisionedServerResponse extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType
      */
@@ -55,6 +54,7 @@ class GetAutoProvisionedServerResponse extends FlexnetType implements ResultInte
     public function setStatusInfo($statusInfo)
     {
         $this->statusInfo = $statusInfo;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class GetAutoProvisionedServerResponse extends FlexnetType implements ResultInte
     public function setCloudLicenseServer($cloudLicenseServer)
     {
         $this->cloudLicenseServer = $cloudLicenseServer;
+
         return $this;
     }
 }

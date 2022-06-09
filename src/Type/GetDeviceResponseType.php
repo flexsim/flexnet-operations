@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetDeviceResponseType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType
      */
@@ -63,6 +62,7 @@ class GetDeviceResponseType extends FlexnetType implements ResultInterface
     public function setStatusInfo($statusInfo)
     {
         $this->statusInfo = $statusInfo;
+
         return $this;
     }
 
@@ -81,6 +81,7 @@ class GetDeviceResponseType extends FlexnetType implements ResultInterface
     public function setFailedDevice($failedDevice)
     {
         $this->failedDevice = $failedDevice;
+
         return $this;
     }
 
@@ -99,6 +100,7 @@ class GetDeviceResponseType extends FlexnetType implements ResultInterface
     public function setDevice($device)
     {
         $this->device = $device;
+
         return $this;
     }
 }

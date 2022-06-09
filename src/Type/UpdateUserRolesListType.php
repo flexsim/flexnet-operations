@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateUserRolesListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\RoleIdentifierType|array
      */
@@ -53,6 +52,7 @@ class UpdateUserRolesListType extends FlexnetType
     public function setRole($role)
     {
         $this->role = $role;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class UpdateUserRolesListType extends FlexnetType
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class CreateFeatureBundleResponseType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
@@ -63,6 +62,7 @@ class CreateFeatureBundleResponseType extends FlexnetType implements ResultInter
     public function setStatusInfo($statusInfo)
     {
         $this->statusInfo = $statusInfo;
+
         return $this;
     }
 
@@ -81,6 +81,7 @@ class CreateFeatureBundleResponseType extends FlexnetType implements ResultInter
     public function setFailedData($failedData)
     {
         $this->failedData = $failedData;
+
         return $this;
     }
 
@@ -99,6 +100,7 @@ class CreateFeatureBundleResponseType extends FlexnetType implements ResultInter
     public function setResponseData($responseData)
     {
         $this->responseData = $responseData;
+
         return $this;
     }
 }

@@ -2,18 +2,16 @@
 
 namespace Flexsim\FlexnetOperations\Services\ProductPackagingService;
 
-use Flexsim\FlexnetOperations\Services\ProductPackagingService\ProductPackagingServiceClient;
-use Flexsim\FlexnetOperations\Services\ProductPackagingService\ProductPackagingServiceClassmap;
 use Http\Client\Common\Plugin\AuthenticationPlugin;
 use Http\Client\Common\PluginClient;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\Authentication\BasicAuth;
-use Symfony\Component\EventDispatcher\EventDispatcher;
+use Phpro\SoapClient\Caller\EngineCaller;
+use Phpro\SoapClient\Caller\EventDispatchingCaller;
 use Phpro\SoapClient\Soap\DefaultEngineFactory;
 use Soap\ExtSoapEngine\ExtSoapOptions;
-use Phpro\SoapClient\Caller\EventDispatchingCaller;
-use Phpro\SoapClient\Caller\EngineCaller;
 use Soap\Psr18Transport\Psr18Transport;
+use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class ProductPackagingServiceClientFactory
 {

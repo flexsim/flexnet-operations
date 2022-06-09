@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetMatchingBulkEntInfoType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -67,6 +66,7 @@ class GetMatchingBulkEntInfoType extends FlexnetType
     public function setBulkEntIdentifier($bulkEntIdentifier)
     {
         $this->bulkEntIdentifier = $bulkEntIdentifier;
+
         return $this;
     }
 
@@ -85,6 +85,7 @@ class GetMatchingBulkEntInfoType extends FlexnetType
     public function setTargetTierName($targetTierName)
     {
         $this->targetTierName = $targetTierName;
+
         return $this;
     }
 
@@ -103,6 +104,7 @@ class GetMatchingBulkEntInfoType extends FlexnetType
     public function setTargetAccountUnit($targetAccountUnit)
     {
         $this->targetAccountUnit = $targetAccountUnit;
+
         return $this;
     }
 
@@ -121,6 +123,7 @@ class GetMatchingBulkEntInfoType extends FlexnetType
     public function setTargetOrganizationUnit($targetOrganizationUnit)
     {
         $this->targetOrganizationUnit = $targetOrganizationUnit;
+
         return $this;
     }
 }

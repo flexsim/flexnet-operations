@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class PublisherErrorFulfillmentRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType
      */
@@ -47,6 +46,7 @@ class PublisherErrorFulfillmentRequestType extends FlexnetType implements Reques
     public function setFulfillment($fulfillment)
     {
         $this->fulfillment = $fulfillment;
+
         return $this;
     }
 }

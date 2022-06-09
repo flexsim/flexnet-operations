@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LicenseModelStateChangeDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
@@ -53,6 +52,7 @@ class LicenseModelStateChangeDataType extends FlexnetType
     public function setLicenseModelIdentifier($licenseModelIdentifier)
     {
         $this->licenseModelIdentifier = $licenseModelIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class LicenseModelStateChangeDataType extends FlexnetType
     public function setStateChangeRecord($stateChangeRecord)
     {
         $this->stateChangeRecord = $stateChangeRecord;
+
         return $this;
     }
 }

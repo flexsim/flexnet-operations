@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetDeletedSyncDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeletedSyncDataType
      */
@@ -45,6 +44,7 @@ class GetDeletedSyncDataType extends FlexnetType
     public function setDeletedSync($deletedSync)
     {
         $this->deletedSync = $deletedSync;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class MergeEntitlementsRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -91,6 +90,7 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     public function setAccountFrom($accountFrom)
     {
         $this->accountFrom = $accountFrom;
+
         return $this;
     }
 
@@ -109,6 +109,7 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     public function setOrganizationFrom($organizationFrom)
     {
         $this->organizationFrom = $organizationFrom;
+
         return $this;
     }
 
@@ -127,6 +128,7 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     public function setAccountTo($accountTo)
     {
         $this->accountTo = $accountTo;
+
         return $this;
     }
 
@@ -145,6 +147,7 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     public function setOrganizationTo($organizationTo)
     {
         $this->organizationTo = $organizationTo;
+
         return $this;
     }
 
@@ -163,6 +166,7 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     public function setMergeUsers($mergeUsers)
     {
         $this->mergeUsers = $mergeUsers;
+
         return $this;
     }
 
@@ -181,6 +185,7 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     public function setMergeEntitlements($mergeEntitlements)
     {
         $this->mergeEntitlements = $mergeEntitlements;
+
         return $this;
     }
 }

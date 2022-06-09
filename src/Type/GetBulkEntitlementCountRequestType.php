@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetBulkEntitlementCountRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType
      */
@@ -47,6 +46,7 @@ class GetBulkEntitlementCountRequestType extends FlexnetType implements RequestI
     public function setBulkEntitlementSearchCriteria($bulkEntitlementSearchCriteria)
     {
         $this->bulkEntitlementSearchCriteria = $bulkEntitlementSearchCriteria;
+
         return $this;
     }
 }

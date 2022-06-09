@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ObsoleteHostType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
@@ -45,6 +44,7 @@ class ObsoleteHostType extends FlexnetType
     public function setHostIdentifier($hostIdentifier)
     {
         $this->hostIdentifier = $hostIdentifier;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LicenseServiceDictionaryEntry extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class LicenseServiceDictionaryEntry extends FlexnetType
     public function setKey($Key)
     {
         $this->Key = $Key;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class LicenseServiceDictionaryEntry extends FlexnetType
     public function setValue($Value)
     {
         $this->Value = $Value;
+
         return $this;
     }
 }

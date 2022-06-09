@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateRelatedOrganizationsListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array
      */
@@ -53,6 +52,7 @@ class UpdateRelatedOrganizationsListType extends FlexnetType
     public function setRelatedOrganization($relatedOrganization)
     {
         $this->relatedOrganization = $relatedOrganization;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class UpdateRelatedOrganizationsListType extends FlexnetType
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

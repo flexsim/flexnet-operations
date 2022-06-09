@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ActivationIdOverDraftMapType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class ActivationIdOverDraftMapType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class ActivationIdOverDraftMapType extends FlexnetType
     public function setOverDraftAllowed($overDraftAllowed)
     {
         $this->overDraftAllowed = $overDraftAllowed;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class OrganizationQueryParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -157,6 +156,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setOrgName($orgName)
     {
         $this->orgName = $orgName;
+
         return $this;
     }
 
@@ -175,6 +175,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setOrgDisplayName($orgDisplayName)
     {
         $this->orgDisplayName = $orgDisplayName;
+
         return $this;
     }
 
@@ -193,6 +194,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -211,6 +213,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setAddress1($address1)
     {
         $this->address1 = $address1;
+
         return $this;
     }
 
@@ -229,6 +232,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setAddress2($address2)
     {
         $this->address2 = $address2;
+
         return $this;
     }
 
@@ -247,6 +251,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setCity($city)
     {
         $this->city = $city;
+
         return $this;
     }
 
@@ -265,6 +270,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -283,6 +289,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setZipcode($zipcode)
     {
         $this->zipcode = $zipcode;
+
         return $this;
     }
 
@@ -301,6 +308,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setCountry($country)
     {
         $this->country = $country;
+
         return $this;
     }
 
@@ -319,6 +327,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setRegion($region)
     {
         $this->region = $region;
+
         return $this;
     }
 
@@ -337,6 +346,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setOnlyRootOrgs($onlyRootOrgs)
     {
         $this->onlyRootOrgs = $onlyRootOrgs;
+
         return $this;
     }
 
@@ -355,6 +365,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setOrgType($orgType)
     {
         $this->orgType = $orgType;
+
         return $this;
     }
 
@@ -373,6 +384,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setOrgTypeList($orgTypeList)
     {
         $this->orgTypeList = $orgTypeList;
+
         return $this;
     }
 
@@ -391,6 +403,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -409,6 +422,7 @@ class OrganizationQueryParametersType extends FlexnetType
     public function setLastModifiedDateTime($lastModifiedDateTime)
     {
         $this->lastModifiedDateTime = $lastModifiedDateTime;
+
         return $this;
     }
 }

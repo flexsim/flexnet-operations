@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedMatchingBulkEntDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType
      */
@@ -53,6 +52,7 @@ class FailedMatchingBulkEntDataType extends FlexnetType
     public function setBulkEntInfo($bulkEntInfo)
     {
         $this->bulkEntInfo = $bulkEntInfo;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedMatchingBulkEntDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

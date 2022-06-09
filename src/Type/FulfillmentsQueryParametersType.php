@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FulfillmentsQueryParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -189,6 +188,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -207,6 +207,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -225,6 +226,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setFulfillmentId($fulfillmentId)
     {
         $this->fulfillmentId = $fulfillmentId;
+
         return $this;
     }
 
@@ -243,6 +245,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setProduct($product)
     {
         $this->product = $product;
+
         return $this;
     }
 
@@ -261,6 +264,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setHostId($hostId)
     {
         $this->hostId = $hostId;
+
         return $this;
     }
 
@@ -279,6 +283,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setNodeLockHostId($nodeLockHostId)
     {
         $this->nodeLockHostId = $nodeLockHostId;
+
         return $this;
     }
 
@@ -297,6 +302,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -315,6 +321,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setFulfillDate($fulfillDate)
     {
         $this->fulfillDate = $fulfillDate;
+
         return $this;
     }
 
@@ -333,6 +340,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setFulfillDateTime($fulfillDateTime)
     {
         $this->fulfillDateTime = $fulfillDateTime;
+
         return $this;
     }
 
@@ -351,6 +359,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -369,6 +378,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -387,6 +397,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setLastModifiedDateTime($lastModifiedDateTime)
     {
         $this->lastModifiedDateTime = $lastModifiedDateTime;
+
         return $this;
     }
 
@@ -405,6 +416,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -423,6 +435,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 
@@ -441,6 +454,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setUserId($userId)
     {
         $this->userId = $userId;
+
         return $this;
     }
 
@@ -459,6 +473,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setFulfillmentSource($fulfillmentSource)
     {
         $this->fulfillmentSource = $fulfillmentSource;
+
         return $this;
     }
 
@@ -477,6 +492,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -495,6 +511,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setCustomHostAttributes($customHostAttributes)
     {
         $this->customHostAttributes = $customHostAttributes;
+
         return $this;
     }
 
@@ -513,6 +530,7 @@ class FulfillmentsQueryParametersType extends FlexnetType
     public function setActivationType($activationType)
     {
         $this->activationType = $activationType;
+
         return $this;
     }
 }

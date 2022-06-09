@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedEntitlementStateDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementStateDataType
      */
@@ -53,6 +52,7 @@ class FailedEntitlementStateDataType extends FlexnetType
     public function setEntitlement($entitlement)
     {
         $this->entitlement = $entitlement;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedEntitlementStateDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

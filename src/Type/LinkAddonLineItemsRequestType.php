@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class LinkAddonLineItemsRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkAddonLineItemDataType
      */
@@ -47,6 +46,7 @@ class LinkAddonLineItemsRequestType extends FlexnetType implements RequestInterf
     public function setRequestList($requestList)
     {
         $this->requestList = $requestList;
+
         return $this;
     }
 }

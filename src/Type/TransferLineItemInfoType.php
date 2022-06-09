@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class TransferLineItemInfoType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
@@ -85,6 +84,7 @@ class TransferLineItemInfoType extends FlexnetType
     public function setLineItemIdentifier($lineItemIdentifier)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
+
         return $this;
     }
 
@@ -103,6 +103,7 @@ class TransferLineItemInfoType extends FlexnetType
     public function setNumberOfCopies($numberOfCopies)
     {
         $this->numberOfCopies = $numberOfCopies;
+
         return $this;
     }
 
@@ -121,6 +122,7 @@ class TransferLineItemInfoType extends FlexnetType
     public function setUseSameActivationId($useSameActivationId)
     {
         $this->useSameActivationId = $useSameActivationId;
+
         return $this;
     }
 
@@ -139,6 +141,7 @@ class TransferLineItemInfoType extends FlexnetType
     public function setCustomActivationId($customActivationId)
     {
         $this->customActivationId = $customActivationId;
+
         return $this;
     }
 
@@ -157,6 +160,7 @@ class TransferLineItemInfoType extends FlexnetType
     public function setGenerateActivationId($generateActivationId)
     {
         $this->generateActivationId = $generateActivationId;
+
         return $this;
     }
 
@@ -175,6 +179,7 @@ class TransferLineItemInfoType extends FlexnetType
     public function setEntitlementBelongsTo($entitlementBelongsTo)
     {
         $this->entitlementBelongsTo = $entitlementBelongsTo;
+
         return $this;
     }
 }

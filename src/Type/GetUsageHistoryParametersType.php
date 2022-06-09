@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetUsageHistoryParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DateTimeQueryType
      */
@@ -133,6 +132,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     public function setUpdateTime($updateTime)
     {
         $this->updateTime = $updateTime;
+
         return $this;
     }
 
@@ -151,6 +151,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     public function setServerUniqueId($serverUniqueId)
     {
         $this->serverUniqueId = $serverUniqueId;
+
         return $this;
     }
 
@@ -169,6 +170,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     public function setServerId($serverId)
     {
         $this->serverId = $serverId;
+
         return $this;
     }
 
@@ -187,6 +189,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     public function setDeviceUniqueId($deviceUniqueId)
     {
         $this->deviceUniqueId = $deviceUniqueId;
+
         return $this;
     }
 
@@ -205,6 +208,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
+
         return $this;
     }
 
@@ -223,6 +227,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     public function setAlias($alias)
     {
         $this->alias = $alias;
+
         return $this;
     }
 
@@ -241,6 +246,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     public function setHostTypeName($hostTypeName)
     {
         $this->hostTypeName = $hostTypeName;
+
         return $this;
     }
 
@@ -259,6 +265,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     public function setFeatureName($featureName)
     {
         $this->featureName = $featureName;
+
         return $this;
     }
 
@@ -277,6 +284,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     public function setFeatureVersion($featureVersion)
     {
         $this->featureVersion = $featureVersion;
+
         return $this;
     }
 
@@ -295,6 +303,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     public function setFeatureCount($featureCount)
     {
         $this->featureCount = $featureCount;
+
         return $this;
     }
 
@@ -313,6 +322,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     public function setFeatureOverage($featureOverage)
     {
         $this->featureOverage = $featureOverage;
+
         return $this;
     }
 
@@ -331,6 +341,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     public function setMachineType($machineType)
     {
         $this->machineType = $machineType;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -69,6 +68,7 @@ class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInt
     public function setUserId($userId)
     {
         $this->userId = $userId;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInt
     public function setIdList($idList)
     {
         $this->idList = $idList;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInt
     public function setUserAcct($userAcct)
     {
         $this->userAcct = $userAcct;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInt
     public function setUserOrg($userOrg)
     {
         $this->userOrg = $userOrg;
+
         return $this;
     }
 }

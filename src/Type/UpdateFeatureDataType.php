@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateFeatureDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType
      */
@@ -85,6 +84,7 @@ class UpdateFeatureDataType extends FlexnetType
     public function setFeatureIdentifier($featureIdentifier)
     {
         $this->featureIdentifier = $featureIdentifier;
+
         return $this;
     }
 
@@ -103,6 +103,7 @@ class UpdateFeatureDataType extends FlexnetType
     public function setFeatureName($featureName)
     {
         $this->featureName = $featureName;
+
         return $this;
     }
 
@@ -121,6 +122,7 @@ class UpdateFeatureDataType extends FlexnetType
     public function setVersionFormat($versionFormat)
     {
         $this->versionFormat = $versionFormat;
+
         return $this;
     }
 
@@ -139,6 +141,7 @@ class UpdateFeatureDataType extends FlexnetType
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -157,6 +160,7 @@ class UpdateFeatureDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -175,6 +179,7 @@ class UpdateFeatureDataType extends FlexnetType
     public function setFeatureOverrideParams($featureOverrideParams)
     {
         $this->featureOverrideParams = $featureOverrideParams;
+
         return $this;
     }
 }

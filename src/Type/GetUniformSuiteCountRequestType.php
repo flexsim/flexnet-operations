@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetUniformSuiteCountRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType
      */
@@ -48,6 +47,7 @@ class GetUniformSuiteCountRequestType extends FlexnetType implements RequestInte
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 }

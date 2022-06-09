@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class TransferredLineItemsListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\TransferredLineItemDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\TransferredLineItemDataType|array
      */
     protected $transferredLineItem;
 
@@ -31,7 +30,7 @@ class TransferredLineItemsListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\TransferredLineItemDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\TransferredLineItemDataType|array
      */
     public function getTransferredLineItem()
     {
@@ -45,6 +44,7 @@ class TransferredLineItemsListType extends FlexnetType
     public function setTransferredLineItem($transferredLineItem)
     {
         $this->transferredLineItem = $transferredLineItem;
+
         return $this;
     }
 }

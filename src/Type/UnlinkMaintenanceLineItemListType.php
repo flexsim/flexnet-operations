@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UnlinkMaintenanceLineItemListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array
      */
     protected $unlinkMaintenanceLineItem;
 
@@ -31,7 +30,7 @@ class UnlinkMaintenanceLineItemListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array
      */
     public function getUnlinkMaintenanceLineItem()
     {
@@ -45,6 +44,7 @@ class UnlinkMaintenanceLineItemListType extends FlexnetType
     public function setUnlinkMaintenanceLineItem($unlinkMaintenanceLineItem)
     {
         $this->unlinkMaintenanceLineItem = $unlinkMaintenanceLineItem;
+
         return $this;
     }
 }

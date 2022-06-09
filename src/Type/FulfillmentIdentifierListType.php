@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FulfillmentIdentifierListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType|array
      */
     protected $fulfillmentIdentifier;
 
@@ -31,7 +30,7 @@ class FulfillmentIdentifierListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType|array
      */
     public function getFulfillmentIdentifier()
     {
@@ -45,6 +44,7 @@ class FulfillmentIdentifierListType extends FlexnetType
     public function setFulfillmentIdentifier($fulfillmentIdentifier)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
+
         return $this;
     }
 }

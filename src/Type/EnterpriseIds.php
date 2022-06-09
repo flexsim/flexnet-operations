@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EnterpriseIds extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class EnterpriseIds extends FlexnetType
     public function setEnterpriseId($enterpriseId)
     {
         $this->enterpriseId = $enterpriseId;
+
         return $this;
     }
 }

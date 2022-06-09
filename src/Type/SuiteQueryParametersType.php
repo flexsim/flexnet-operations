@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SuiteQueryParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -125,6 +124,7 @@ class SuiteQueryParametersType extends FlexnetType
     public function setSuiteName($suiteName)
     {
         $this->suiteName = $suiteName;
+
         return $this;
     }
 
@@ -143,6 +143,7 @@ class SuiteQueryParametersType extends FlexnetType
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -161,6 +162,7 @@ class SuiteQueryParametersType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -179,6 +181,7 @@ class SuiteQueryParametersType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -197,6 +200,7 @@ class SuiteQueryParametersType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -215,6 +219,7 @@ class SuiteQueryParametersType extends FlexnetType
     public function setCreationDate($creationDate)
     {
         $this->creationDate = $creationDate;
+
         return $this;
     }
 
@@ -233,6 +238,7 @@ class SuiteQueryParametersType extends FlexnetType
     public function setLastModifiedDate($lastModifiedDate)
     {
         $this->lastModifiedDate = $lastModifiedDate;
+
         return $this;
     }
 
@@ -251,6 +257,7 @@ class SuiteQueryParametersType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 
@@ -269,6 +276,7 @@ class SuiteQueryParametersType extends FlexnetType
     public function setHostType($hostType)
     {
         $this->hostType = $hostType;
+
         return $this;
     }
 
@@ -287,6 +295,7 @@ class SuiteQueryParametersType extends FlexnetType
     public function setUsedOnDevice($usedOnDevice)
     {
         $this->usedOnDevice = $usedOnDevice;
+
         return $this;
     }
 
@@ -305,6 +314,7 @@ class SuiteQueryParametersType extends FlexnetType
     public function setProductAttributes($productAttributes)
     {
         $this->productAttributes = $productAttributes;
+
         return $this;
     }
 }

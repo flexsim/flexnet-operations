@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetAccountsQueryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountQueryParametersType
      */
@@ -69,6 +68,7 @@ class GetAccountsQueryRequestType extends FlexnetType implements RequestInterfac
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class GetAccountsQueryRequestType extends FlexnetType implements RequestInterfac
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class GetAccountsQueryRequestType extends FlexnetType implements RequestInterfac
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 }

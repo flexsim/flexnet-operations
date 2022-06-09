@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DictionaryEntriesCollection extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry
      */
@@ -45,6 +44,7 @@ class DictionaryEntriesCollection extends FlexnetType
     public function setEntry($Entry)
     {
         $this->Entry = $Entry;
+
         return $this;
     }
 }

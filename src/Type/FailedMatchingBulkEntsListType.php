@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedMatchingBulkEntsListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array
      */
     protected $failedBulkEnt;
 
@@ -31,7 +30,7 @@ class FailedMatchingBulkEntsListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array
      */
     public function getFailedBulkEnt()
     {
@@ -45,6 +44,7 @@ class FailedMatchingBulkEntsListType extends FlexnetType
     public function setFailedBulkEnt($failedBulkEnt)
     {
         $this->failedBulkEnt = $failedBulkEnt;
+
         return $this;
     }
 }

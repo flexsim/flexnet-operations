@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class AddWebRegKeyRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType
      */
@@ -55,6 +54,7 @@ class AddWebRegKeyRequestType extends FlexnetType implements RequestInterface
     public function setWebRegKeyData($webRegKeyData)
     {
         $this->webRegKeyData = $webRegKeyData;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class AddWebRegKeyRequestType extends FlexnetType implements RequestInterface
     public function setProcessSync($processSync)
     {
         $this->processSync = $processSync;
+
         return $this;
     }
 }

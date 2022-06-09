@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ReinstallPolicyDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\PolicyDataType
      */
@@ -53,6 +52,7 @@ class ReinstallPolicyDataType extends FlexnetType
     public function setDefaultPolicy($defaultPolicy)
     {
         $this->defaultPolicy = $defaultPolicy;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class ReinstallPolicyDataType extends FlexnetType
     public function setAdvancedPolicy($advancedPolicy)
     {
         $this->advancedPolicy = $advancedPolicy;
+
         return $this;
     }
 }

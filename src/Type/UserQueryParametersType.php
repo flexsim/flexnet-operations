@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UserQueryParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -215,6 +214,7 @@ class UserQueryParametersType extends FlexnetType
     public function setUserName($userName)
     {
         $this->userName = $userName;
+
         return $this;
     }
 
@@ -233,6 +233,7 @@ class UserQueryParametersType extends FlexnetType
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
+
         return $this;
     }
 
@@ -251,6 +252,7 @@ class UserQueryParametersType extends FlexnetType
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+
         return $this;
     }
 
@@ -269,6 +271,7 @@ class UserQueryParametersType extends FlexnetType
     public function setDisplayName($displayName)
     {
         $this->displayName = $displayName;
+
         return $this;
     }
 
@@ -287,6 +290,7 @@ class UserQueryParametersType extends FlexnetType
     public function setEmailAddress($emailAddress)
     {
         $this->emailAddress = $emailAddress;
+
         return $this;
     }
 
@@ -305,6 +309,7 @@ class UserQueryParametersType extends FlexnetType
     public function setPhoneNumber($phoneNumber)
     {
         $this->phoneNumber = $phoneNumber;
+
         return $this;
     }
 
@@ -323,6 +328,7 @@ class UserQueryParametersType extends FlexnetType
     public function setFaxNumber($faxNumber)
     {
         $this->faxNumber = $faxNumber;
+
         return $this;
     }
 
@@ -341,6 +347,7 @@ class UserQueryParametersType extends FlexnetType
     public function setStreet($street)
     {
         $this->street = $street;
+
         return $this;
     }
 
@@ -359,6 +366,7 @@ class UserQueryParametersType extends FlexnetType
     public function setCity($city)
     {
         $this->city = $city;
+
         return $this;
     }
 
@@ -377,6 +385,7 @@ class UserQueryParametersType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -395,6 +404,7 @@ class UserQueryParametersType extends FlexnetType
     public function setZipcode($zipcode)
     {
         $this->zipcode = $zipcode;
+
         return $this;
     }
 
@@ -413,6 +423,7 @@ class UserQueryParametersType extends FlexnetType
     public function setCountry($country)
     {
         $this->country = $country;
+
         return $this;
     }
 
@@ -431,6 +442,7 @@ class UserQueryParametersType extends FlexnetType
     public function setIsActive($isActive)
     {
         $this->isActive = $isActive;
+
         return $this;
     }
 
@@ -449,6 +461,7 @@ class UserQueryParametersType extends FlexnetType
     public function setCanLogIn($canLogIn)
     {
         $this->canLogIn = $canLogIn;
+
         return $this;
     }
 
@@ -467,6 +480,7 @@ class UserQueryParametersType extends FlexnetType
     public function setAccountID($accountID)
     {
         $this->accountID = $accountID;
+
         return $this;
     }
 
@@ -485,6 +499,7 @@ class UserQueryParametersType extends FlexnetType
     public function setOrgName($orgName)
     {
         $this->orgName = $orgName;
+
         return $this;
     }
 
@@ -503,6 +518,7 @@ class UserQueryParametersType extends FlexnetType
     public function setAccountName($accountName)
     {
         $this->accountName = $accountName;
+
         return $this;
     }
 
@@ -521,6 +537,7 @@ class UserQueryParametersType extends FlexnetType
     public function setOrgDisplayName($orgDisplayName)
     {
         $this->orgDisplayName = $orgDisplayName;
+
         return $this;
     }
 
@@ -539,6 +556,7 @@ class UserQueryParametersType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -557,6 +575,7 @@ class UserQueryParametersType extends FlexnetType
     public function setLastModifiedDateTime($lastModifiedDateTime)
     {
         $this->lastModifiedDateTime = $lastModifiedDateTime;
+
         return $this;
     }
 
@@ -575,6 +594,7 @@ class UserQueryParametersType extends FlexnetType
     public function setAccountType($accountType)
     {
         $this->accountType = $accountType;
+
         return $this;
     }
 
@@ -593,6 +613,7 @@ class UserQueryParametersType extends FlexnetType
     public function setOrgType($orgType)
     {
         $this->orgType = $orgType;
+
         return $this;
     }
 
@@ -611,6 +632,7 @@ class UserQueryParametersType extends FlexnetType
     public function setRoles($roles)
     {
         $this->roles = $roles;
+
         return $this;
     }
 }

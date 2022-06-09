@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetProductRelationshipsResponseType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
@@ -55,6 +54,7 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
     public function setStatusInfo($statusInfo)
     {
         $this->statusInfo = $statusInfo;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
     public function setRelationship($relationship)
     {
         $this->relationship = $relationship;
+
         return $this;
     }
 }

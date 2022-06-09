@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreateFulfillmentDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -165,6 +164,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -183,6 +183,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setFulfillCount($fulfillCount)
     {
         $this->fulfillCount = $fulfillCount;
+
         return $this;
     }
 
@@ -201,6 +202,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setOverDraftCount($overDraftCount)
     {
         $this->overDraftCount = $overDraftCount;
+
         return $this;
     }
 
@@ -219,6 +221,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -237,6 +240,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setVersionDate($versionDate)
     {
         $this->versionDate = $versionDate;
+
         return $this;
     }
 
@@ -255,6 +259,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setVersionStartDate($versionStartDate)
     {
         $this->versionStartDate = $versionStartDate;
+
         return $this;
     }
 
@@ -273,6 +278,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -291,6 +297,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setShipToEmail($shipToEmail)
     {
         $this->shipToEmail = $shipToEmail;
+
         return $this;
     }
 
@@ -309,6 +316,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setShipToAddress($shipToAddress)
     {
         $this->shipToAddress = $shipToAddress;
+
         return $this;
     }
 
@@ -327,6 +335,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setServerIds($serverIds)
     {
         $this->serverIds = $serverIds;
+
         return $this;
     }
 
@@ -345,6 +354,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setNodeIds($nodeIds)
     {
         $this->nodeIds = $nodeIds;
+
         return $this;
     }
 
@@ -363,6 +373,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setCustomHost($customHost)
     {
         $this->customHost = $customHost;
+
         return $this;
     }
 
@@ -381,6 +392,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setLicenseModelAttributes($licenseModelAttributes)
     {
         $this->licenseModelAttributes = $licenseModelAttributes;
+
         return $this;
     }
 
@@ -399,6 +411,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setOverridePolicy($overridePolicy)
     {
         $this->overridePolicy = $overridePolicy;
+
         return $this;
     }
 
@@ -417,6 +430,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setOwner($owner)
     {
         $this->owner = $owner;
+
         return $this;
     }
 
@@ -435,6 +449,7 @@ class CreateFulfillmentDataType extends FlexnetType
     public function setFNPTimeZoneValue($FNPTimeZoneValue)
     {
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
+
         return $this;
     }
 }

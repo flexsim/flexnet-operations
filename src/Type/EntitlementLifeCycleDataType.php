@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EntitlementLifeCycleDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -53,6 +52,7 @@ class EntitlementLifeCycleDataType extends FlexnetType
     public function setParentEntitlementIdentifier($parentEntitlementIdentifier)
     {
         $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class EntitlementLifeCycleDataType extends FlexnetType
     public function setLineItemData($lineItemData)
     {
         $this->lineItemData = $lineItemData;
+
         return $this;
     }
 }

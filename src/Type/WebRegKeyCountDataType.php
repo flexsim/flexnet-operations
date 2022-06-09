@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class WebRegKeyCountDataType extends FlexnetType
 {
-
     /**
      * @var int
      */
@@ -53,6 +52,7 @@ class WebRegKeyCountDataType extends FlexnetType
     public function setTotalCount($totalCount)
     {
         $this->totalCount = $totalCount;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class WebRegKeyCountDataType extends FlexnetType
     public function setRedeemedCount($redeemedCount)
     {
         $this->redeemedCount = $redeemedCount;
+
         return $this;
     }
 }

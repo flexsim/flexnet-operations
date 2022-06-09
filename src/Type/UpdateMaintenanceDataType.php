@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateMaintenanceDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType
      */
@@ -101,6 +100,7 @@ class UpdateMaintenanceDataType extends FlexnetType
     public function setMaintenanceIdentifier($maintenanceIdentifier)
     {
         $this->maintenanceIdentifier = $maintenanceIdentifier;
+
         return $this;
     }
 
@@ -119,6 +119,7 @@ class UpdateMaintenanceDataType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -137,6 +138,7 @@ class UpdateMaintenanceDataType extends FlexnetType
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -155,6 +157,7 @@ class UpdateMaintenanceDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -173,6 +176,7 @@ class UpdateMaintenanceDataType extends FlexnetType
     public function setAllowUpgrades($allowUpgrades)
     {
         $this->allowUpgrades = $allowUpgrades;
+
         return $this;
     }
 
@@ -191,6 +195,7 @@ class UpdateMaintenanceDataType extends FlexnetType
     public function setAllowUpsells($allowUpsells)
     {
         $this->allowUpsells = $allowUpsells;
+
         return $this;
     }
 
@@ -209,6 +214,7 @@ class UpdateMaintenanceDataType extends FlexnetType
     public function setAllowRenewals($allowRenewals)
     {
         $this->allowRenewals = $allowRenewals;
+
         return $this;
     }
 
@@ -227,6 +233,7 @@ class UpdateMaintenanceDataType extends FlexnetType
     public function setPartNumbers($partNumbers)
     {
         $this->partNumbers = $partNumbers;
+
         return $this;
     }
 }

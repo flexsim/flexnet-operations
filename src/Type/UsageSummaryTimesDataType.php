@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UsageSummaryTimesDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class UsageSummaryTimesDataType extends FlexnetType
     public function setSummaryTimeId($summaryTimeId)
     {
         $this->summaryTimeId = $summaryTimeId;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class UsageSummaryTimesDataType extends FlexnetType
     public function setSummaryTime($summaryTime)
     {
         $this->summaryTime = $summaryTime;
+
         return $this;
     }
 }

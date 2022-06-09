@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class OverDraftDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array 
+     * @var \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array
      */
     protected $activationIdMap;
 
@@ -31,7 +30,7 @@ class OverDraftDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array 
+     * @return \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array
      */
     public function getActivationIdMap()
     {
@@ -45,6 +44,7 @@ class OverDraftDataListType extends FlexnetType
     public function setActivationIdMap($activationIdMap)
     {
         $this->activationIdMap = $activationIdMap;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class DeleteBaseProductRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -47,6 +46,7 @@ class DeleteBaseProductRequestType extends FlexnetType implements RequestInterfa
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 }

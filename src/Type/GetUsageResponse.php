@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetUsageResponse extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
@@ -55,6 +54,7 @@ class GetUsageResponse extends FlexnetType implements ResultInterface
     public function setStatusInfoType($statusInfoType)
     {
         $this->statusInfoType = $statusInfoType;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class GetUsageResponse extends FlexnetType implements ResultInterface
     public function setUsages($usages)
     {
         $this->usages = $usages;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UserPKType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -69,6 +68,7 @@ class UserPKType extends FlexnetType
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class UserPKType extends FlexnetType
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class UserPKType extends FlexnetType
     public function setEmailAddress($emailAddress)
     {
         $this->emailAddress = $emailAddress;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class UserPKType extends FlexnetType
     public function setPhoneNumber($phoneNumber)
     {
         $this->phoneNumber = $phoneNumber;
+
         return $this;
     }
 }

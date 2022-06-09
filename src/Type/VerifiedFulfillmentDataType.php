@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class VerifiedFulfillmentDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class VerifiedFulfillmentDataType extends FlexnetType
     public function setRecordRefNo($recordRefNo)
     {
         $this->recordRefNo = $recordRefNo;
+
         return $this;
     }
 }

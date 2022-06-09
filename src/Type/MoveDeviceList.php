@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class MoveDeviceList extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
@@ -45,6 +44,7 @@ class MoveDeviceList extends FlexnetType
     public function setDeviceIdentifier($deviceIdentifier)
     {
         $this->deviceIdentifier = $deviceIdentifier;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CountDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class CountDataType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class CountDataType extends FlexnetType
     public function setCountForHosts($countForHosts)
     {
         $this->countForHosts = $countForHosts;
+
         return $this;
     }
 }

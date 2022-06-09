@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedFeatureBundleStateDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedFeatureBundleStateDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedFeatureBundleStateDataType|array
      */
     protected $failedFeatureBundle;
 
@@ -31,7 +30,7 @@ class FailedFeatureBundleStateDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedFeatureBundleStateDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedFeatureBundleStateDataType|array
      */
     public function getFailedFeatureBundle()
     {
@@ -45,6 +44,7 @@ class FailedFeatureBundleStateDataListType extends FlexnetType
     public function setFailedFeatureBundle($failedFeatureBundle)
     {
         $this->failedFeatureBundle = $failedFeatureBundle;
+
         return $this;
     }
 }

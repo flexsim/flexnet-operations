@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DictionaryType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry
      */
@@ -45,6 +44,7 @@ class DictionaryType extends FlexnetType
     public function setEntry($entry)
     {
         $this->entry = $entry;
+
         return $this;
     }
 }

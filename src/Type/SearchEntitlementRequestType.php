@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class SearchEntitlementRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType
      */
@@ -63,6 +62,7 @@ class SearchEntitlementRequestType extends FlexnetType implements RequestInterfa
     public function setEntitlementSearchCriteria($entitlementSearchCriteria)
     {
         $this->entitlementSearchCriteria = $entitlementSearchCriteria;
+
         return $this;
     }
 
@@ -81,6 +81,7 @@ class SearchEntitlementRequestType extends FlexnetType implements RequestInterfa
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 
@@ -99,6 +100,7 @@ class SearchEntitlementRequestType extends FlexnetType implements RequestInterfa
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 }

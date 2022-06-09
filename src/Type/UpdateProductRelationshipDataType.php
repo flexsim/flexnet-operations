@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateProductRelationshipDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
@@ -69,6 +68,7 @@ class UpdateProductRelationshipDataType extends FlexnetType
     public function setProductToRelate($productToRelate)
     {
         $this->productToRelate = $productToRelate;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class UpdateProductRelationshipDataType extends FlexnetType
     public function setRelatedProduct($relatedProduct)
     {
         $this->relatedProduct = $relatedProduct;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class UpdateProductRelationshipDataType extends FlexnetType
     public function setRelation($relation)
     {
         $this->relation = $relation;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class UpdateProductRelationshipDataType extends FlexnetType
     public function setNewRelation($newRelation)
     {
         $this->newRelation = $newRelation;
+
         return $this;
     }
 }

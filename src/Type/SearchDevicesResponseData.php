@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SearchDevicesResponseData extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchDeviceResponseData
      */
@@ -45,6 +44,7 @@ class SearchDevicesResponseData extends FlexnetType
     public function setDevice($device)
     {
         $this->device = $device;
+
         return $this;
     }
 }

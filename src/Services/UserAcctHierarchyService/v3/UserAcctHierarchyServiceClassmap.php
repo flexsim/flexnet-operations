@@ -3,12 +3,12 @@
 namespace Flexsim\FlexnetOperations\Services\UserAcctHierarchyService\v3;
 
 use Flexsim\FlexnetOperations\Type;
-use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 
 class UserAcctHierarchyServiceClassmap
 {
-    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
+    public static function getCollection(): \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
         return new ClassMapCollection(
             new ClassMap('addressDataType', Type\AddressDataType::class),
@@ -142,4 +142,3 @@ class UserAcctHierarchyServiceClassmap
         );
     }
 }
-

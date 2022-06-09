@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUpdateSimpleEntitlementDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType
      */
@@ -53,6 +52,7 @@ class FailedUpdateSimpleEntitlementDataType extends FlexnetType
     public function setSimpleEntitlement($simpleEntitlement)
     {
         $this->simpleEntitlement = $simpleEntitlement;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedUpdateSimpleEntitlementDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

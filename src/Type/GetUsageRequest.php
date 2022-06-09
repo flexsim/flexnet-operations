@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetUsageRequest extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class GetUsageRequest extends FlexnetType implements RequestInterface
     public function setAccountId($accountId)
     {
         $this->accountId = $accountId;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class GetUsageRequest extends FlexnetType implements RequestInterface
     public function setOrgName($orgName)
     {
         $this->orgName = $orgName;
+
         return $this;
     }
 }

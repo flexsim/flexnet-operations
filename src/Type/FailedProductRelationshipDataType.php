@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedProductRelationshipDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType
      */
@@ -53,6 +52,7 @@ class FailedProductRelationshipDataType extends FlexnetType
     public function setRelationship($relationship)
     {
         $this->relationship = $relationship;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedProductRelationshipDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

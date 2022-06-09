@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FeatureIds extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class FeatureIds extends FlexnetType
     public function setFeatureId($featureId)
     {
         $this->featureId = $featureId;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class FeatureIds extends FlexnetType
     public function setFeatureName($featureName)
     {
         $this->featureName = $featureName;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class FeatureIds extends FlexnetType
     public function setCount($count)
     {
         $this->count = $count;
+
         return $this;
     }
 }

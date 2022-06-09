@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AttributeMetaDescriptorType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -69,6 +68,7 @@ class AttributeMetaDescriptorType extends FlexnetType
     public function setAttributeName($attributeName)
     {
         $this->attributeName = $attributeName;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class AttributeMetaDescriptorType extends FlexnetType
     public function setAttributeDataType($attributeDataType)
     {
         $this->attributeDataType = $attributeDataType;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class AttributeMetaDescriptorType extends FlexnetType
     public function setNamespace($namespace)
     {
         $this->namespace = $namespace;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class AttributeMetaDescriptorType extends FlexnetType
     public function setValidValues($validValues)
     {
         $this->validValues = $validValues;
+
         return $this;
     }
 }

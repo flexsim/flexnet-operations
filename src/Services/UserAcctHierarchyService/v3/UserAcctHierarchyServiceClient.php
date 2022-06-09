@@ -2,11 +2,11 @@
 
 namespace Flexsim\FlexnetOperations\Services\UserAcctHierarchyService\v3;
 
+use Flexsim\FlexnetOperations\Type;
 use Phpro\SoapClient\Caller\Caller;
-use Phpro\SoapClient\Type\ResultInterface;
 use Phpro\SoapClient\Exception\SoapException;
 use Phpro\SoapClient\Type\RequestInterface;
-use Flexsim\FlexnetOperations\Type;
+use Phpro\SoapClient\Type\ResultInterface;
 
 class UserAcctHierarchyServiceClient
 {
@@ -25,7 +25,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\CreateAcctResponseType
      * @throws SoapException
      */
-    public function createAccount(\Flexsim\FlexnetOperations\Type\CreateAcctRequestType $createAcctRequest) : \Flexsim\FlexnetOperations\Type\CreateAcctResponseType
+    public function createAccount(\Flexsim\FlexnetOperations\Type\CreateAcctRequestType $createAcctRequest): \Flexsim\FlexnetOperations\Type\CreateAcctResponseType
     {
         return ($this->caller)('createAccount', $createAcctRequest);
     }
@@ -35,7 +35,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\LinkAccountsResponseType
      * @throws SoapException
      */
-    public function linkAccounts(\Flexsim\FlexnetOperations\Type\LinkAccountsRequestType $linkAccountsRequest) : \Flexsim\FlexnetOperations\Type\LinkAccountsResponseType
+    public function linkAccounts(\Flexsim\FlexnetOperations\Type\LinkAccountsRequestType $linkAccountsRequest): \Flexsim\FlexnetOperations\Type\LinkAccountsResponseType
     {
         return ($this->caller)('linkAccounts', $linkAccountsRequest);
     }
@@ -45,7 +45,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\UpdateAccountResponseType
      * @throws SoapException
      */
-    public function updateAccount(\Flexsim\FlexnetOperations\Type\UpdateAccountRequestType $updateAccountRequest) : \Flexsim\FlexnetOperations\Type\UpdateAccountResponseType
+    public function updateAccount(\Flexsim\FlexnetOperations\Type\UpdateAccountRequestType $updateAccountRequest): \Flexsim\FlexnetOperations\Type\UpdateAccountResponseType
     {
         return ($this->caller)('updateAccount', $updateAccountRequest);
     }
@@ -55,7 +55,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\DeleteAccountResponseType
      * @throws SoapException
      */
-    public function deleteAccount(\Flexsim\FlexnetOperations\Type\DeleteAccountRequestType $deleteAccountRequest) : \Flexsim\FlexnetOperations\Type\DeleteAccountResponseType
+    public function deleteAccount(\Flexsim\FlexnetOperations\Type\DeleteAccountRequestType $deleteAccountRequest): \Flexsim\FlexnetOperations\Type\DeleteAccountResponseType
     {
         return ($this->caller)('deleteAccount', $deleteAccountRequest);
     }
@@ -65,7 +65,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\GetAccountsQueryResponseType
      * @throws SoapException
      */
-    public function getAccountsQuery(\Flexsim\FlexnetOperations\Type\GetAccountsQueryRequestType $getAccountsQueryRequest) : \Flexsim\FlexnetOperations\Type\GetAccountsQueryResponseType
+    public function getAccountsQuery(\Flexsim\FlexnetOperations\Type\GetAccountsQueryRequestType $getAccountsQueryRequest): \Flexsim\FlexnetOperations\Type\GetAccountsQueryResponseType
     {
         return ($this->caller)('getAccountsQuery', $getAccountsQueryRequest);
     }
@@ -75,7 +75,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\GetUserAccountsExpiryQueryResponseType
      * @throws SoapException
      */
-    public function getUserAccountsExpiryQuery(\Flexsim\FlexnetOperations\Type\GetUserAccountsExpiryQueryRequestType $getUserAccountsExpiryQueryRequest) : \Flexsim\FlexnetOperations\Type\GetUserAccountsExpiryQueryResponseType
+    public function getUserAccountsExpiryQuery(\Flexsim\FlexnetOperations\Type\GetUserAccountsExpiryQueryRequestType $getUserAccountsExpiryQueryRequest): \Flexsim\FlexnetOperations\Type\GetUserAccountsExpiryQueryResponseType
     {
         return ($this->caller)('getUserAccountsExpiryQuery', $getUserAccountsExpiryQueryRequest);
     }
@@ -85,7 +85,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\GetAccountCountResponseType
      * @throws SoapException
      */
-    public function getAccountCount(\Flexsim\FlexnetOperations\Type\GetAccountCountRequestType $getAccountCountRequest) : \Flexsim\FlexnetOperations\Type\GetAccountCountResponseType
+    public function getAccountCount(\Flexsim\FlexnetOperations\Type\GetAccountCountRequestType $getAccountCountRequest): \Flexsim\FlexnetOperations\Type\GetAccountCountResponseType
     {
         return ($this->caller)('getAccountCount', $getAccountCountRequest);
     }
@@ -95,7 +95,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\GetParentAccountsResponseType
      * @throws SoapException
      */
-    public function getParentAccounts(\Flexsim\FlexnetOperations\Type\GetParentAccountsRequestType $getParentAccountsRequest) : \Flexsim\FlexnetOperations\Type\GetParentAccountsResponseType
+    public function getParentAccounts(\Flexsim\FlexnetOperations\Type\GetParentAccountsRequestType $getParentAccountsRequest): \Flexsim\FlexnetOperations\Type\GetParentAccountsResponseType
     {
         return ($this->caller)('getParentAccounts', $getParentAccountsRequest);
     }
@@ -105,7 +105,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\GetSubAccountsResponseType
      * @throws SoapException
      */
-    public function getSubAccounts(\Flexsim\FlexnetOperations\Type\GetSubAccountsRequestType $getSubAccountsRequest) : \Flexsim\FlexnetOperations\Type\GetSubAccountsResponseType
+    public function getSubAccounts(\Flexsim\FlexnetOperations\Type\GetSubAccountsRequestType $getSubAccountsRequest): \Flexsim\FlexnetOperations\Type\GetSubAccountsResponseType
     {
         return ($this->caller)('getSubAccounts', $getSubAccountsRequest);
     }
@@ -115,7 +115,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\GetUsersQueryResponseType
      * @throws SoapException
      */
-    public function getUsersQuery(\Flexsim\FlexnetOperations\Type\GetUsersQueryRequestType $getUsersQueryRequest) : \Flexsim\FlexnetOperations\Type\GetUsersQueryResponseType
+    public function getUsersQuery(\Flexsim\FlexnetOperations\Type\GetUsersQueryRequestType $getUsersQueryRequest): \Flexsim\FlexnetOperations\Type\GetUsersQueryResponseType
     {
         return ($this->caller)('getUsersQuery', $getUsersQueryRequest);
     }
@@ -125,7 +125,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\GetUserCountResponseType
      * @throws SoapException
      */
-    public function getUserCount(\Flexsim\FlexnetOperations\Type\GetUserCountRequestType $getUserCountRequest) : \Flexsim\FlexnetOperations\Type\GetUserCountResponseType
+    public function getUserCount(\Flexsim\FlexnetOperations\Type\GetUserCountRequestType $getUserCountRequest): \Flexsim\FlexnetOperations\Type\GetUserCountResponseType
     {
         return ($this->caller)('getUserCount', $getUserCountRequest);
     }
@@ -135,7 +135,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\CreateUserResponseType
      * @throws SoapException
      */
-    public function createUser(\Flexsim\FlexnetOperations\Type\CreateUserRequestType $createUserRequest) : \Flexsim\FlexnetOperations\Type\CreateUserResponseType
+    public function createUser(\Flexsim\FlexnetOperations\Type\CreateUserRequestType $createUserRequest): \Flexsim\FlexnetOperations\Type\CreateUserResponseType
     {
         return ($this->caller)('createUser', $createUserRequest);
     }
@@ -145,7 +145,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\UpdateUserResponseType
      * @throws SoapException
      */
-    public function updateUser(\Flexsim\FlexnetOperations\Type\UpdateUserRequestType $updateUserRequest) : \Flexsim\FlexnetOperations\Type\UpdateUserResponseType
+    public function updateUser(\Flexsim\FlexnetOperations\Type\UpdateUserRequestType $updateUserRequest): \Flexsim\FlexnetOperations\Type\UpdateUserResponseType
     {
         return ($this->caller)('updateUser', $updateUserRequest);
     }
@@ -155,7 +155,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\UpdateUserRolesResponseType
      * @throws SoapException
      */
-    public function updateUserRoles(\Flexsim\FlexnetOperations\Type\UpdateUserRolesRequestType $updateUserRolesRequest) : \Flexsim\FlexnetOperations\Type\UpdateUserRolesResponseType
+    public function updateUserRoles(\Flexsim\FlexnetOperations\Type\UpdateUserRolesRequestType $updateUserRolesRequest): \Flexsim\FlexnetOperations\Type\UpdateUserRolesResponseType
     {
         return ($this->caller)('updateUserRoles', $updateUserRolesRequest);
     }
@@ -165,7 +165,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\DeleteUserResponseType
      * @throws SoapException
      */
-    public function deleteUser(\Flexsim\FlexnetOperations\Type\DeleteUserRequestType $deleteUserRequest) : \Flexsim\FlexnetOperations\Type\DeleteUserResponseType
+    public function deleteUser(\Flexsim\FlexnetOperations\Type\DeleteUserRequestType $deleteUserRequest): \Flexsim\FlexnetOperations\Type\DeleteUserResponseType
     {
         return ($this->caller)('deleteUser', $deleteUserRequest);
     }
@@ -175,7 +175,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\RelateAccountsResponseType
      * @throws SoapException
      */
-    public function relateAccounts(\Flexsim\FlexnetOperations\Type\RelateAccountsRequestType $relateAccountsRequest) : \Flexsim\FlexnetOperations\Type\RelateAccountsResponseType
+    public function relateAccounts(\Flexsim\FlexnetOperations\Type\RelateAccountsRequestType $relateAccountsRequest): \Flexsim\FlexnetOperations\Type\RelateAccountsResponseType
     {
         return ($this->caller)('relateAccounts', $relateAccountsRequest);
     }
@@ -185,7 +185,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\GetRelatedAccountsResponseType
      * @throws SoapException
      */
-    public function getRelatedAccounts(\Flexsim\FlexnetOperations\Type\GetRelatedAccountsRequestType $getRelatedAccountsRequest) : \Flexsim\FlexnetOperations\Type\GetRelatedAccountsResponseType
+    public function getRelatedAccounts(\Flexsim\FlexnetOperations\Type\GetRelatedAccountsRequestType $getRelatedAccountsRequest): \Flexsim\FlexnetOperations\Type\GetRelatedAccountsResponseType
     {
         return ($this->caller)('getRelatedAccounts', $getRelatedAccountsRequest);
     }
@@ -195,7 +195,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\GetUserPermissionsResponseType
      * @throws SoapException
      */
-    public function getUserPermissions(\Flexsim\FlexnetOperations\Type\GetUserPermissionsRequestType $getUserPermissionsRequest) : \Flexsim\FlexnetOperations\Type\GetUserPermissionsResponseType
+    public function getUserPermissions(\Flexsim\FlexnetOperations\Type\GetUserPermissionsRequestType $getUserPermissionsRequest): \Flexsim\FlexnetOperations\Type\GetUserPermissionsResponseType
     {
         return ($this->caller)('getUserPermissions', $getUserPermissionsRequest);
     }
@@ -205,7 +205,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\AddDomainUserResponseType
      * @throws SoapException
      */
-    public function addDomainUsers(\Flexsim\FlexnetOperations\Type\AddDomainUserRequestType $addDomainUserRequest) : \Flexsim\FlexnetOperations\Type\AddDomainUserResponseType
+    public function addDomainUsers(\Flexsim\FlexnetOperations\Type\AddDomainUserRequestType $addDomainUserRequest): \Flexsim\FlexnetOperations\Type\AddDomainUserResponseType
     {
         return ($this->caller)('addDomainUsers', $addDomainUserRequest);
     }
@@ -215,7 +215,7 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\UpdateDomainUserResponseType
      * @throws SoapException
      */
-    public function updateDomainUsers(\Flexsim\FlexnetOperations\Type\UpdateDomainUserRequestType $updateDomainUserRequest) : \Flexsim\FlexnetOperations\Type\UpdateDomainUserResponseType
+    public function updateDomainUsers(\Flexsim\FlexnetOperations\Type\UpdateDomainUserRequestType $updateDomainUserRequest): \Flexsim\FlexnetOperations\Type\UpdateDomainUserResponseType
     {
         return ($this->caller)('updateDomainUsers', $updateDomainUserRequest);
     }
@@ -225,9 +225,8 @@ class UserAcctHierarchyServiceClient
      * @return ResultInterface|Type\DeleteDomainUserResponseType
      * @throws SoapException
      */
-    public function deleteDomainUsers(\Flexsim\FlexnetOperations\Type\DeleteDomainUserRequestType $deleteDomainUserRequest) : \Flexsim\FlexnetOperations\Type\DeleteDomainUserResponseType
+    public function deleteDomainUsers(\Flexsim\FlexnetOperations\Type\DeleteDomainUserRequestType $deleteDomainUserRequest): \Flexsim\FlexnetOperations\Type\DeleteDomainUserResponseType
     {
         return ($this->caller)('deleteDomainUsers', $deleteDomainUserRequest);
     }
 }
-

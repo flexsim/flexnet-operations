@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetWebRegKeysQueryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -63,6 +62,7 @@ class GetWebRegKeysQueryRequestType extends FlexnetType implements RequestInterf
     public function setBulkEntitlementIdentifier($bulkEntitlementIdentifier)
     {
         $this->bulkEntitlementIdentifier = $bulkEntitlementIdentifier;
+
         return $this;
     }
 
@@ -81,6 +81,7 @@ class GetWebRegKeysQueryRequestType extends FlexnetType implements RequestInterf
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 
@@ -99,6 +100,7 @@ class GetWebRegKeysQueryRequestType extends FlexnetType implements RequestInterf
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 }

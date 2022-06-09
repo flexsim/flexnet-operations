@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AttributeDescriptorDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeDescriptorType
      */
@@ -45,6 +44,7 @@ class AttributeDescriptorDataType extends FlexnetType
     public function setAttribute($attribute)
     {
         $this->attribute = $attribute;
+
         return $this;
     }
 }

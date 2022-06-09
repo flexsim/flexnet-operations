@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DomainUserIdentifierType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class DomainUserIdentifierType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class DomainUserIdentifierType extends FlexnetType
     public function setPrimaryKeys($primaryKeys)
     {
         $this->primaryKeys = $primaryKeys;
+
         return $this;
     }
 }

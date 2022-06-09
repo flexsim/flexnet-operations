@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FeatureOverrideParamsType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -69,6 +68,7 @@ class FeatureOverrideParamsType extends FlexnetType
     public function setVendorString($vendorString)
     {
         $this->vendorString = $vendorString;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class FeatureOverrideParamsType extends FlexnetType
     public function setNotice($notice)
     {
         $this->notice = $notice;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class FeatureOverrideParamsType extends FlexnetType
     public function setSerialNumber($serialNumber)
     {
         $this->serialNumber = $serialNumber;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class FeatureOverrideParamsType extends FlexnetType
     public function setDupGroup($dupGroup)
     {
         $this->dupGroup = $dupGroup;
+
         return $this;
     }
 }

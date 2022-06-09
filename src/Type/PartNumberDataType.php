@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PartNumberDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
      */
@@ -85,6 +84,7 @@ class PartNumberDataType extends FlexnetType
     public function setPartNumberIdentifier($partNumberIdentifier)
     {
         $this->partNumberIdentifier = $partNumberIdentifier;
+
         return $this;
     }
 
@@ -103,6 +103,7 @@ class PartNumberDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -121,6 +122,7 @@ class PartNumberDataType extends FlexnetType
     public function setCreationDate($creationDate)
     {
         $this->creationDate = $creationDate;
+
         return $this;
     }
 
@@ -139,6 +141,7 @@ class PartNumberDataType extends FlexnetType
     public function setLastModifiedDate($lastModifiedDate)
     {
         $this->lastModifiedDate = $lastModifiedDate;
+
         return $this;
     }
 
@@ -157,6 +160,7 @@ class PartNumberDataType extends FlexnetType
     public function setMappedProduct($mappedProduct)
     {
         $this->mappedProduct = $mappedProduct;
+
         return $this;
     }
 
@@ -175,6 +179,7 @@ class PartNumberDataType extends FlexnetType
     public function setMappedLicenseModel($mappedLicenseModel)
     {
         $this->mappedLicenseModel = $mappedLicenseModel;
+
         return $this;
     }
 }

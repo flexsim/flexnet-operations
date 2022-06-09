@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AdvancedFmtLCResponseDataType extends FlexnetType
 {
-
     /**
      * @var int
      */
@@ -53,6 +52,7 @@ class AdvancedFmtLCResponseDataType extends FlexnetType
     public function setRecordRefNo($recordRefNo)
     {
         $this->recordRefNo = $recordRefNo;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class AdvancedFmtLCResponseDataType extends FlexnetType
     public function setUpgradedFulfillmentInfo($upgradedFulfillmentInfo)
     {
         $this->upgradedFulfillmentInfo = $upgradedFulfillmentInfo;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetUsageSummaryTimesRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var int
      */
@@ -55,6 +54,7 @@ class GetUsageSummaryTimesRequestType extends FlexnetType implements RequestInte
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class GetUsageSummaryTimesRequestType extends FlexnetType implements RequestInte
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class CreateUserRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateUserDataType
      */
@@ -55,6 +54,7 @@ class CreateUserRequestType extends FlexnetType implements RequestInterface
     public function setUser($user)
     {
         $this->user = $user;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class CreateUserRequestType extends FlexnetType implements RequestInterface
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

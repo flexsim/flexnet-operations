@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class SplitBulkEntitlementRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementListType
      */
@@ -47,6 +46,7 @@ class SplitBulkEntitlementRequestType extends FlexnetType implements RequestInte
     public function setBulkEntitlementList($bulkEntitlementList)
     {
         $this->bulkEntitlementList = $bulkEntitlementList;
+
         return $this;
     }
 }

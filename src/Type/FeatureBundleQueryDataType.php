@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FeatureBundleQueryDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -87,6 +86,7 @@ class FeatureBundleQueryDataType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -105,6 +105,7 @@ class FeatureBundleQueryDataType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -123,6 +124,7 @@ class FeatureBundleQueryDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -141,6 +143,7 @@ class FeatureBundleQueryDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -159,6 +162,7 @@ class FeatureBundleQueryDataType extends FlexnetType
     public function setFeatures($features)
     {
         $this->features = $features;
+
         return $this;
     }
 }

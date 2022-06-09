@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedUniformSuiteDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedUniformSuiteDataType|array
      */
@@ -45,6 +44,7 @@ class CreatedUniformSuiteDataListType extends FlexnetType
     public function setCreatedUniformSuite($createdUniformSuite)
     {
         $this->createdUniformSuite = $createdUniformSuite;
+
         return $this;
     }
 }

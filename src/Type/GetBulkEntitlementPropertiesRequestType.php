@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType
      */
@@ -71,6 +70,7 @@ class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements Req
     public function setBulkEntitlementSearchCriteria($bulkEntitlementSearchCriteria)
     {
         $this->bulkEntitlementSearchCriteria = $bulkEntitlementSearchCriteria;
+
         return $this;
     }
 
@@ -89,6 +89,7 @@ class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements Req
     public function setBulkEntitlementResponseConfig($bulkEntitlementResponseConfig)
     {
         $this->bulkEntitlementResponseConfig = $bulkEntitlementResponseConfig;
+
         return $this;
     }
 
@@ -107,6 +108,7 @@ class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements Req
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 
@@ -125,6 +127,7 @@ class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements Req
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 }

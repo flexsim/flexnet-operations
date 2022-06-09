@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedMaintenanceDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType|array
      */
@@ -45,6 +44,7 @@ class CreatedMaintenanceDataListType extends FlexnetType
     public function setCreatedMaintenance($createdMaintenance)
     {
         $this->createdMaintenance = $createdMaintenance;
+
         return $this;
     }
 }

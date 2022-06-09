@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class LinkOrganizationsRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkOrganizationsDataType
      */
@@ -47,6 +46,7 @@ class LinkOrganizationsRequestType extends FlexnetType implements RequestInterfa
     public function setOrgData($orgData)
     {
         $this->orgData = $orgData;
+
         return $this;
     }
 }

@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUpdateBulkEntitlementDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateBulkEntitlementDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateBulkEntitlementDataType|array
      */
     protected $failedBulkEntitlement;
 
@@ -31,7 +30,7 @@ class FailedUpdateBulkEntitlementDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateBulkEntitlementDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateBulkEntitlementDataType|array
      */
     public function getFailedBulkEntitlement()
     {
@@ -45,6 +44,7 @@ class FailedUpdateBulkEntitlementDataListType extends FlexnetType
     public function setFailedBulkEntitlement($failedBulkEntitlement)
     {
         $this->failedBulkEntitlement = $failedBulkEntitlement;
+
         return $this;
     }
 }

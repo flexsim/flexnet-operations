@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedFeatureBundleDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CorrelationDataType|array
      */
@@ -45,6 +44,7 @@ class CreatedFeatureBundleDataListType extends FlexnetType
     public function setCreatedFeatureBundle($createdFeatureBundle)
     {
         $this->createdFeatureBundle = $createdFeatureBundle;
+
         return $this;
     }
 }

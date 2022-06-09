@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SplitBulkEntitlementInfoType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -113,6 +112,7 @@ class SplitBulkEntitlementInfoType extends FlexnetType
     public function setBulkEntIdentifier($bulkEntIdentifier)
     {
         $this->bulkEntIdentifier = $bulkEntIdentifier;
+
         return $this;
     }
 
@@ -131,6 +131,7 @@ class SplitBulkEntitlementInfoType extends FlexnetType
     public function setNumberOfWRKs($numberOfWRKs)
     {
         $this->numberOfWRKs = $numberOfWRKs;
+
         return $this;
     }
 
@@ -149,6 +150,7 @@ class SplitBulkEntitlementInfoType extends FlexnetType
     public function setTargetTierName($targetTierName)
     {
         $this->targetTierName = $targetTierName;
+
         return $this;
     }
 
@@ -167,6 +169,7 @@ class SplitBulkEntitlementInfoType extends FlexnetType
     public function setTargetAccountUnit($targetAccountUnit)
     {
         $this->targetAccountUnit = $targetAccountUnit;
+
         return $this;
     }
 
@@ -185,6 +188,7 @@ class SplitBulkEntitlementInfoType extends FlexnetType
     public function setTargetOrganizationUnit($targetOrganizationUnit)
     {
         $this->targetOrganizationUnit = $targetOrganizationUnit;
+
         return $this;
     }
 
@@ -203,6 +207,7 @@ class SplitBulkEntitlementInfoType extends FlexnetType
     public function setTargetContact($targetContact)
     {
         $this->targetContact = $targetContact;
+
         return $this;
     }
 
@@ -221,6 +226,7 @@ class SplitBulkEntitlementInfoType extends FlexnetType
     public function setMatchingBulkEntIdentifier($matchingBulkEntIdentifier)
     {
         $this->matchingBulkEntIdentifier = $matchingBulkEntIdentifier;
+
         return $this;
     }
 
@@ -239,6 +245,7 @@ class SplitBulkEntitlementInfoType extends FlexnetType
     public function setMatchingLineItemIdentifier($matchingLineItemIdentifier)
     {
         $this->matchingLineItemIdentifier = $matchingLineItemIdentifier;
+
         return $this;
     }
 }

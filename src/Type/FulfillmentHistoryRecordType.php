@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FulfillmentHistoryRecordType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -101,6 +100,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     public function setFulfillmentId($fulfillmentId)
     {
         $this->fulfillmentId = $fulfillmentId;
+
         return $this;
     }
 
@@ -119,6 +119,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     public function setAction($action)
     {
         $this->action = $action;
+
         return $this;
     }
 
@@ -137,6 +138,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     public function setActionDate($actionDate)
     {
         $this->actionDate = $actionDate;
+
         return $this;
     }
 
@@ -155,6 +157,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     public function setActionDateTime($actionDateTime)
     {
         $this->actionDateTime = $actionDateTime;
+
         return $this;
     }
 
@@ -173,6 +176,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     public function setActionPerformedBy($actionPerformedBy)
     {
         $this->actionPerformedBy = $actionPerformedBy;
+
         return $this;
     }
 
@@ -191,6 +195,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     public function setIsPolicyOverridden($isPolicyOverridden)
     {
         $this->isPolicyOverridden = $isPolicyOverridden;
+
         return $this;
     }
 
@@ -209,6 +214,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     public function setCount($count)
     {
         $this->count = $count;
+
         return $this;
     }
 
@@ -227,6 +233,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     public function setFulfillmentSource($fulfillmentSource)
     {
         $this->fulfillmentSource = $fulfillmentSource;
+
         return $this;
     }
 }

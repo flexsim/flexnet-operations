@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GenerateCapabilityResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CapabilityResponseDataType
      */
@@ -45,6 +44,7 @@ class GenerateCapabilityResponseDataType extends FlexnetType
     public function setDevice($device)
     {
         $this->device = $device;
+
         return $this;
     }
 }

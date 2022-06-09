@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class ConsolidateFulfillmentsRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType
      */
@@ -47,6 +46,7 @@ class ConsolidateFulfillmentsRequestType extends FlexnetType implements RequestI
     public function setFulfillments($fulfillments)
     {
         $this->fulfillments = $fulfillments;
+
         return $this;
     }
 }

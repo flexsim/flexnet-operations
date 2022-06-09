@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class StopGapResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\StopGapFulfillmentResponseDataType
      */
@@ -45,6 +44,7 @@ class StopGapResponseDataType extends FlexnetType
     public function setFulfillmentData($fulfillmentData)
     {
         $this->fulfillmentData = $fulfillmentData;
+
         return $this;
     }
 }

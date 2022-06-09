@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UniformSuiteStateDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SuiteIdentifierType
      */
@@ -53,6 +52,7 @@ class UniformSuiteStateDataType extends FlexnetType
     public function setSuiteIdentifier($suiteIdentifier)
     {
         $this->suiteIdentifier = $suiteIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class UniformSuiteStateDataType extends FlexnetType
     public function setStateToSet($stateToSet)
     {
         $this->stateToSet = $stateToSet;
+
         return $this;
     }
 }

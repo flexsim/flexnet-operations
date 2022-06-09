@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetMatchingLineItemsListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array 
+     * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array
      */
     protected $lineItemInfo;
 
@@ -31,7 +30,7 @@ class GetMatchingLineItemsListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array 
+     * @return \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType|array
      */
     public function getLineItemInfo()
     {
@@ -45,6 +44,7 @@ class GetMatchingLineItemsListType extends FlexnetType
     public function setLineItemInfo($lineItemInfo)
     {
         $this->lineItemInfo = $lineItemInfo;
+
         return $this;
     }
 }

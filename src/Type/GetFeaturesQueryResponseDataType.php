@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetFeaturesQueryResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureQueryDataType
      */
@@ -45,6 +44,7 @@ class GetFeaturesQueryResponseDataType extends FlexnetType
     public function setFeature($feature)
     {
         $this->feature = $feature;
+
         return $this;
     }
 }

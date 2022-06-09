@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SearchDevicesParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -181,6 +180,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -199,6 +199,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
+
         return $this;
     }
 
@@ -217,6 +218,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setDeviceIdType($deviceIdType)
     {
         $this->deviceIdType = $deviceIdType;
+
         return $this;
     }
 
@@ -235,6 +237,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setDeviceClasses($deviceClasses)
     {
         $this->deviceClasses = $deviceClasses;
+
         return $this;
     }
 
@@ -253,6 +256,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setHosted($hosted)
     {
         $this->hosted = $hosted;
+
         return $this;
     }
 
@@ -271,6 +275,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setParentId($parentId)
     {
         $this->parentId = $parentId;
+
         return $this;
     }
 
@@ -289,6 +294,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setHostTypeName($hostTypeName)
     {
         $this->hostTypeName = $hostTypeName;
+
         return $this;
     }
 
@@ -307,6 +313,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -325,6 +332,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setSoldToAcctId($soldToAcctId)
     {
         $this->soldToAcctId = $soldToAcctId;
+
         return $this;
     }
 
@@ -343,6 +351,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -361,6 +370,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -379,6 +389,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setAddOnEntitlementId($addOnEntitlementId)
     {
         $this->addOnEntitlementId = $addOnEntitlementId;
+
         return $this;
     }
 
@@ -397,6 +408,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setAddOnActivationId($addOnActivationId)
     {
         $this->addOnActivationId = $addOnActivationId;
+
         return $this;
     }
 
@@ -415,6 +427,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setAddOnProductName($addOnProductName)
     {
         $this->addOnProductName = $addOnProductName;
+
         return $this;
     }
 
@@ -433,6 +446,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setAddOnProductVersion($addOnProductVersion)
     {
         $this->addOnProductVersion = $addOnProductVersion;
+
         return $this;
     }
 
@@ -451,6 +465,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setAddOnPartNumber($addOnPartNumber)
     {
         $this->addOnPartNumber = $addOnPartNumber;
+
         return $this;
     }
 
@@ -469,6 +484,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setFeatureName($featureName)
     {
         $this->featureName = $featureName;
+
         return $this;
     }
 
@@ -487,6 +503,7 @@ class SearchDevicesParametersType extends FlexnetType
     public function setUserString($userString)
     {
         $this->userString = $userString;
+
         return $this;
     }
 }

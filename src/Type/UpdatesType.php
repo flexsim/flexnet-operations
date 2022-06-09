@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdatesType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -85,6 +84,7 @@ class UpdatesType extends FlexnetType
     public function setUpdateId($updateId)
     {
         $this->updateId = $updateId;
+
         return $this;
     }
 
@@ -103,6 +103,7 @@ class UpdatesType extends FlexnetType
     public function setDownloadPackageId($downloadPackageId)
     {
         $this->downloadPackageId = $downloadPackageId;
+
         return $this;
     }
 
@@ -121,6 +122,7 @@ class UpdatesType extends FlexnetType
     public function setPlatform($platform)
     {
         $this->platform = $platform;
+
         return $this;
     }
 
@@ -139,6 +141,7 @@ class UpdatesType extends FlexnetType
     public function setLanguage($language)
     {
         $this->language = $language;
+
         return $this;
     }
 
@@ -157,6 +160,7 @@ class UpdatesType extends FlexnetType
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -175,6 +179,7 @@ class UpdatesType extends FlexnetType
     public function setStatusReason($statusReason)
     {
         $this->statusReason = $statusReason;
+
         return $this;
     }
 }

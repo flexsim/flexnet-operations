@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class EmailConsolidatedLicensesRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseIdListType
      */
@@ -71,6 +70,7 @@ class EmailConsolidatedLicensesRequestType extends FlexnetType implements Reques
     public function setConsolidatedLicenseIdList($consolidatedLicenseIdList)
     {
         $this->consolidatedLicenseIdList = $consolidatedLicenseIdList;
+
         return $this;
     }
 
@@ -89,6 +89,7 @@ class EmailConsolidatedLicensesRequestType extends FlexnetType implements Reques
     public function setValidateEmailAddresses($validateEmailAddresses)
     {
         $this->validateEmailAddresses = $validateEmailAddresses;
+
         return $this;
     }
 
@@ -107,6 +108,7 @@ class EmailConsolidatedLicensesRequestType extends FlexnetType implements Reques
     public function setEmailIdList($emailIdList)
     {
         $this->emailIdList = $emailIdList;
+
         return $this;
     }
 
@@ -125,6 +127,7 @@ class EmailConsolidatedLicensesRequestType extends FlexnetType implements Reques
     public function setLocale($locale)
     {
         $this->locale = $locale;
+
         return $this;
     }
 }

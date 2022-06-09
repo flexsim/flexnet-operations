@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FeaturesListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array
      */
     protected $feature;
 
@@ -31,7 +30,7 @@ class FeaturesListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array
      */
     public function getFeature()
     {
@@ -45,6 +44,7 @@ class FeaturesListType extends FlexnetType
     public function setFeature($feature)
     {
         $this->feature = $feature;
+
         return $this;
     }
 }

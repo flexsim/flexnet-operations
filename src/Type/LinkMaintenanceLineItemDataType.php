@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LinkMaintenanceLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
@@ -53,6 +52,7 @@ class LinkMaintenanceLineItemDataType extends FlexnetType
     public function setLineItemIdentifier($lineItemIdentifier)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class LinkMaintenanceLineItemDataType extends FlexnetType
     public function setMaintenanceLineItemIdentifier($maintenanceLineItemIdentifier)
     {
         $this->maintenanceLineItemIdentifier = $maintenanceLineItemIdentifier;
+
         return $this;
     }
 }

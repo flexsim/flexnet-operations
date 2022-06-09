@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetConsolidatedFulfillmentsQueryResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType
      */
@@ -45,6 +44,7 @@ class GetConsolidatedFulfillmentsQueryResponseDataType extends FlexnetType
     public function setConsolidatedLicense($consolidatedLicense)
     {
         $this->consolidatedLicense = $consolidatedLicense;
+
         return $this;
     }
 }

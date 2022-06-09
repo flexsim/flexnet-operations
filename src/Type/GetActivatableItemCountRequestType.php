@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetActivatableItemCountRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType
      */
@@ -55,6 +54,7 @@ class GetActivatableItemCountRequestType extends FlexnetType implements RequestI
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class GetActivatableItemCountRequestType extends FlexnetType implements RequestI
     public function setRestrictToItemsReadyToActivate($restrictToItemsReadyToActivate)
     {
         $this->restrictToItemsReadyToActivate = $restrictToItemsReadyToActivate;
+
         return $this;
     }
 }

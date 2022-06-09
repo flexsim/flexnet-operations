@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CloneSuspect extends FlexnetType
 {
-
     /**
      * @var \DateTimeInterface
      */
@@ -94,7 +93,7 @@ class CloneSuspect extends FlexnetType
         $this->lineItemActivationIds = $lineItemActivationIds;
         $this->featureIds = $featureIds;
         $this->timeStamp = $timeStamp;
-        $this->hostClass =  $hostClass;
+        $this->hostClass = $hostClass;
         $this->hostAlias = $hostAlias;
         $this->deviceId = $deviceId;
         $this->serverId = $serverId;
@@ -123,7 +122,7 @@ class CloneSuspect extends FlexnetType
         \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds,
         \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds,
         \DateTimeInterface $timeStamp = null,
-        string $hostClass =  null,
+        string $hostClass = null,
         string $hostAlias = null,
         string $deviceId = null,
         string $serverId = null,
@@ -149,6 +148,7 @@ class CloneSuspect extends FlexnetType
     public function setTimeStamp($timeStamp)
     {
         $this->timeStamp = $timeStamp;
+
         return $this;
     }
 
@@ -167,6 +167,7 @@ class CloneSuspect extends FlexnetType
     public function setHostClass($hostClass)
     {
         $this->hostClass = $hostClass;
+
         return $this;
     }
 
@@ -185,6 +186,7 @@ class CloneSuspect extends FlexnetType
     public function setHostAlias($hostAlias)
     {
         $this->hostAlias = $hostAlias;
+
         return $this;
     }
 
@@ -203,6 +205,7 @@ class CloneSuspect extends FlexnetType
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
+
         return $this;
     }
 
@@ -221,6 +224,7 @@ class CloneSuspect extends FlexnetType
     public function setServerId($serverId)
     {
         $this->serverId = $serverId;
+
         return $this;
     }
 
@@ -239,6 +243,7 @@ class CloneSuspect extends FlexnetType
     public function setLineItemActivationIds($lineItemActivationIds)
     {
         $this->lineItemActivationIds = $lineItemActivationIds;
+
         return $this;
     }
 
@@ -257,6 +262,7 @@ class CloneSuspect extends FlexnetType
     public function setFeatureIds($featureIds)
     {
         $this->featureIds = $featureIds;
+
         return $this;
     }
 
@@ -275,6 +281,7 @@ class CloneSuspect extends FlexnetType
     public function setAcctId($acctId)
     {
         $this->acctId = $acctId;
+
         return $this;
     }
 
@@ -293,6 +300,7 @@ class CloneSuspect extends FlexnetType
     public function setOrgId($orgId)
     {
         $this->orgId = $orgId;
+
         return $this;
     }
 
@@ -311,6 +319,7 @@ class CloneSuspect extends FlexnetType
     public function setAcctName($acctName)
     {
         $this->acctName = $acctName;
+
         return $this;
     }
 
@@ -329,6 +338,7 @@ class CloneSuspect extends FlexnetType
     public function setOrgName($orgName)
     {
         $this->orgName = $orgName;
+
         return $this;
     }
 
@@ -347,6 +357,7 @@ class CloneSuspect extends FlexnetType
     public function setEnterpriseId($enterpriseId)
     {
         $this->enterpriseId = $enterpriseId;
+
         return $this;
     }
 }

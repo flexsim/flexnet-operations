@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUnlinkMaintenanceLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType
      */
@@ -53,6 +52,7 @@ class FailedUnlinkMaintenanceLineItemDataType extends FlexnetType
     public function setUnlinkMaintenanceLineItem($unlinkMaintenanceLineItem)
     {
         $this->unlinkMaintenanceLineItem = $unlinkMaintenanceLineItem;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedUnlinkMaintenanceLineItemDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

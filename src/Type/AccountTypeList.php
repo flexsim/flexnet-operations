@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AccountTypeList extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class AccountTypeList extends FlexnetType
     public function setAccountType($accountType)
     {
         $this->accountType = $accountType;
+
         return $this;
     }
 }

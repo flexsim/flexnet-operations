@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedRelateAccountsDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedRelateAccountsDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedRelateAccountsDataType|array
      */
     protected $failedAcctData;
 
@@ -31,7 +30,7 @@ class FailedRelateAccountsDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedRelateAccountsDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedRelateAccountsDataType|array
      */
     public function getFailedAcctData()
     {
@@ -45,6 +44,7 @@ class FailedRelateAccountsDataListType extends FlexnetType
     public function setFailedAcctData($failedAcctData)
     {
         $this->failedAcctData = $failedAcctData;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatePartNumberDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class CreatePartNumberDataType extends FlexnetType
     public function setPartId($partId)
     {
         $this->partId = $partId;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class CreatePartNumberDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 }

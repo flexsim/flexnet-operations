@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetUserPermissionsRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -55,6 +54,7 @@ class GetUserPermissionsRequestType extends FlexnetType implements RequestInterf
     public function setUserName($userName)
     {
         $this->userName = $userName;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class GetUserPermissionsRequestType extends FlexnetType implements RequestInterf
     public function setDomainName($domainName)
     {
         $this->domainName = $domainName;
+
         return $this;
     }
 }

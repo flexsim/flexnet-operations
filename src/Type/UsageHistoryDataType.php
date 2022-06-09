@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UsageHistoryDataType extends FlexnetType
 {
-
     /**
      * @var \DateTimeInterface
      */
@@ -125,6 +124,7 @@ class UsageHistoryDataType extends FlexnetType
     public function setUpdateTime($updateTime)
     {
         $this->updateTime = $updateTime;
+
         return $this;
     }
 
@@ -143,6 +143,7 @@ class UsageHistoryDataType extends FlexnetType
     public function setServerIdentifier($serverIdentifier)
     {
         $this->serverIdentifier = $serverIdentifier;
+
         return $this;
     }
 
@@ -161,6 +162,7 @@ class UsageHistoryDataType extends FlexnetType
     public function setDeviceIdentifier($deviceIdentifier)
     {
         $this->deviceIdentifier = $deviceIdentifier;
+
         return $this;
     }
 
@@ -179,6 +181,7 @@ class UsageHistoryDataType extends FlexnetType
     public function setAlias($alias)
     {
         $this->alias = $alias;
+
         return $this;
     }
 
@@ -197,6 +200,7 @@ class UsageHistoryDataType extends FlexnetType
     public function setHostTypeName($hostTypeName)
     {
         $this->hostTypeName = $hostTypeName;
+
         return $this;
     }
 
@@ -215,6 +219,7 @@ class UsageHistoryDataType extends FlexnetType
     public function setDeviceServedStatus($deviceServedStatus)
     {
         $this->deviceServedStatus = $deviceServedStatus;
+
         return $this;
     }
 
@@ -233,6 +238,7 @@ class UsageHistoryDataType extends FlexnetType
     public function setFeatureData($featureData)
     {
         $this->featureData = $featureData;
+
         return $this;
     }
 
@@ -251,6 +257,7 @@ class UsageHistoryDataType extends FlexnetType
     public function setMachineType($machineType)
     {
         $this->machineType = $machineType;
+
         return $this;
     }
 
@@ -269,6 +276,7 @@ class UsageHistoryDataType extends FlexnetType
     public function setVmName($vmName)
     {
         $this->vmName = $vmName;
+
         return $this;
     }
 
@@ -287,6 +295,7 @@ class UsageHistoryDataType extends FlexnetType
     public function setVmInfo($vmInfo)
     {
         $this->vmInfo = $vmInfo;
+
         return $this;
     }
 
@@ -305,6 +314,7 @@ class UsageHistoryDataType extends FlexnetType
     public function setVendorDictionary($vendorDictionary)
     {
         $this->vendorDictionary = $vendorDictionary;
+
         return $this;
     }
 }

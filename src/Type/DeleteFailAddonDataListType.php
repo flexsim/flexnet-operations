@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeleteFailAddonDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType|array
      */
@@ -45,6 +44,7 @@ class DeleteFailAddonDataListType extends FlexnetType
     public function setFailAddon($failAddon)
     {
         $this->failAddon = $failAddon;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetStateChangeHistoryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureListType
      */
@@ -87,6 +86,7 @@ class GetStateChangeHistoryRequestType extends FlexnetType implements RequestInt
     public function setFeatureList($featureList)
     {
         $this->featureList = $featureList;
+
         return $this;
     }
 
@@ -105,6 +105,7 @@ class GetStateChangeHistoryRequestType extends FlexnetType implements RequestInt
     public function setFeatureBundleList($featureBundleList)
     {
         $this->featureBundleList = $featureBundleList;
+
         return $this;
     }
 
@@ -123,6 +124,7 @@ class GetStateChangeHistoryRequestType extends FlexnetType implements RequestInt
     public function setProductList($productList)
     {
         $this->productList = $productList;
+
         return $this;
     }
 
@@ -141,6 +143,7 @@ class GetStateChangeHistoryRequestType extends FlexnetType implements RequestInt
     public function setLicenseModelList($licenseModelList)
     {
         $this->licenseModelList = $licenseModelList;
+
         return $this;
     }
 
@@ -159,6 +162,7 @@ class GetStateChangeHistoryRequestType extends FlexnetType implements RequestInt
     public function setSimpleEntitlementList($simpleEntitlementList)
     {
         $this->simpleEntitlementList = $simpleEntitlementList;
+
         return $this;
     }
 
@@ -177,6 +181,7 @@ class GetStateChangeHistoryRequestType extends FlexnetType implements RequestInt
     public function setBulkEntitlementList($bulkEntitlementList)
     {
         $this->bulkEntitlementList = $bulkEntitlementList;
+
         return $this;
     }
 }
