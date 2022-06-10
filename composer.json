@@ -49,6 +49,16 @@
             "pestphp/pest-plugin": true
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Flexsim\\FlexnetOperations\\FlexnetOperationsServiceProvider"
+            ],
+            "aliases": {
+                "Flexnet": "Flexsim\\FlexnetOperations\\Facades\\Flexnet"
+            }
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
