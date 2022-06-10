@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class SetMaintenanceStateRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceStateDataType
      */
@@ -47,6 +46,7 @@ class SetMaintenanceStateRequestType extends FlexnetType implements RequestInter
     public function setMaintenance($maintenance)
     {
         $this->maintenance = $maintenance;
+
         return $this;
     }
 }

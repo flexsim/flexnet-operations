@@ -2,11 +2,11 @@
 
 namespace Flexsim\FlexnetOperations\Services\ManageDeviceService\v2;
 
+use Flexsim\FlexnetOperations\Type;
 use Phpro\SoapClient\Caller\Caller;
-use Phpro\SoapClient\Type\ResultInterface;
 use Phpro\SoapClient\Exception\SoapException;
 use Phpro\SoapClient\Type\RequestInterface;
-use Flexsim\FlexnetOperations\Type;
+use Phpro\SoapClient\Type\ResultInterface;
 
 class ManageDeviceServiceClient
 {
@@ -25,7 +25,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\CreateDevResponseType
      * @throws SoapException
      */
-    public function createDevice(\Flexsim\FlexnetOperations\Type\CreateDevRequestType $createDeviceRequest) : \Flexsim\FlexnetOperations\Type\CreateDevResponseType
+    public function createDevice(\Flexsim\FlexnetOperations\Type\CreateDevRequestType $createDeviceRequest): \Flexsim\FlexnetOperations\Type\CreateDevResponseType
     {
         return ($this->caller)('createDevice', $createDeviceRequest);
     }
@@ -35,7 +35,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\DeleteDeviceResponseType
      * @throws SoapException
      */
-    public function deleteDevice(\Flexsim\FlexnetOperations\Type\DeleteDeviceRequestType $deleteDeviceRequest) : \Flexsim\FlexnetOperations\Type\DeleteDeviceResponseType
+    public function deleteDevice(\Flexsim\FlexnetOperations\Type\DeleteDeviceRequestType $deleteDeviceRequest): \Flexsim\FlexnetOperations\Type\DeleteDeviceResponseType
     {
         return ($this->caller)('deleteDevice', $deleteDeviceRequest);
     }
@@ -45,7 +45,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\UpdateDevResponseType
      * @throws SoapException
      */
-    public function updateDevice(\Flexsim\FlexnetOperations\Type\UpdateDevRequestType $updateDeviceRequest) : \Flexsim\FlexnetOperations\Type\UpdateDevResponseType
+    public function updateDevice(\Flexsim\FlexnetOperations\Type\UpdateDevRequestType $updateDeviceRequest): \Flexsim\FlexnetOperations\Type\UpdateDevResponseType
     {
         return ($this->caller)('updateDevice', $updateDeviceRequest);
     }
@@ -55,7 +55,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\GeneratePrebuiltLicenseResponseType
      * @throws SoapException
      */
-    public function generatePrebuiltLicense(\Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseRequestType $generatePrebuiltLicenseRequest) : \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseResponseType
+    public function generatePrebuiltLicense(\Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseRequestType $generatePrebuiltLicenseRequest): \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseResponseType
     {
         return ($this->caller)('generatePrebuiltLicense', $generatePrebuiltLicenseRequest);
     }
@@ -65,7 +65,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\GetDevicesResponseType
      * @throws SoapException
      */
-    public function getDevicesQuery(\Flexsim\FlexnetOperations\Type\GetDevicesRequestType $getDevicesRequest) : \Flexsim\FlexnetOperations\Type\GetDevicesResponseType
+    public function getDevicesQuery(\Flexsim\FlexnetOperations\Type\GetDevicesRequestType $getDevicesRequest): \Flexsim\FlexnetOperations\Type\GetDevicesResponseType
     {
         return ($this->caller)('getDevicesQuery', $getDevicesRequest);
     }
@@ -75,7 +75,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\GetDeviceCountResponseType
      * @throws SoapException
      */
-    public function getDeviceCount(\Flexsim\FlexnetOperations\Type\GetDevicesCountRequestType $getDeviceCountRequest) : \Flexsim\FlexnetOperations\Type\GetDeviceCountResponseType
+    public function getDeviceCount(\Flexsim\FlexnetOperations\Type\GetDevicesCountRequestType $getDeviceCountRequest): \Flexsim\FlexnetOperations\Type\GetDeviceCountResponseType
     {
         return ($this->caller)('getDeviceCount', $getDeviceCountRequest);
     }
@@ -85,7 +85,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\LinkAddonLineItemsResponseType
      * @throws SoapException
      */
-    public function linkAddonLineItems(\Flexsim\FlexnetOperations\Type\LinkAddonLineItemsRequestType $linkAddonLineItemsRequest) : \Flexsim\FlexnetOperations\Type\LinkAddonLineItemsResponseType
+    public function linkAddonLineItems(\Flexsim\FlexnetOperations\Type\LinkAddonLineItemsRequestType $linkAddonLineItemsRequest): \Flexsim\FlexnetOperations\Type\LinkAddonLineItemsResponseType
     {
         return ($this->caller)('linkAddonLineItems', $linkAddonLineItemsRequest);
     }
@@ -95,7 +95,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\DeleteAddonLineItemsResponseType
      * @throws SoapException
      */
-    public function deleteAddonLineItems(\Flexsim\FlexnetOperations\Type\DeleteAddonLineItemsRequestType $deleteAddonLineItemsRequest) : \Flexsim\FlexnetOperations\Type\DeleteAddonLineItemsResponseType
+    public function deleteAddonLineItems(\Flexsim\FlexnetOperations\Type\DeleteAddonLineItemsRequestType $deleteAddonLineItemsRequest): \Flexsim\FlexnetOperations\Type\DeleteAddonLineItemsResponseType
     {
         return ($this->caller)('deleteAddonLineItems', $deleteAddonLineItemsRequest);
     }
@@ -105,7 +105,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\LinkAddonLineItemsResponseType
      * @throws SoapException
      */
-    public function incrementAddonLineItems(\Flexsim\FlexnetOperations\Type\LinkAddonLineItemsRequestType $incrementAddonLineItemsRequest) : \Flexsim\FlexnetOperations\Type\LinkAddonLineItemsResponseType
+    public function incrementAddonLineItems(\Flexsim\FlexnetOperations\Type\LinkAddonLineItemsRequestType $incrementAddonLineItemsRequest): \Flexsim\FlexnetOperations\Type\LinkAddonLineItemsResponseType
     {
         return ($this->caller)('incrementAddonLineItems', $incrementAddonLineItemsRequest);
     }
@@ -115,7 +115,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\LinkAddonLineItemsResponseType
      * @throws SoapException
      */
-    public function decrementAddonLineItems(\Flexsim\FlexnetOperations\Type\LinkAddonLineItemsRequestType $decrementAddonLineItemsRequest) : \Flexsim\FlexnetOperations\Type\LinkAddonLineItemsResponseType
+    public function decrementAddonLineItems(\Flexsim\FlexnetOperations\Type\LinkAddonLineItemsRequestType $decrementAddonLineItemsRequest): \Flexsim\FlexnetOperations\Type\LinkAddonLineItemsResponseType
     {
         return ($this->caller)('decrementAddonLineItems', $decrementAddonLineItemsRequest);
     }
@@ -125,7 +125,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\GenerateCapabilityResponseResponseType
      * @throws SoapException
      */
-    public function generateCapabilityResponse(\Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseRequestType $generateCapabilityResponseRequest) : \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseResponseType
+    public function generateCapabilityResponse(\Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseRequestType $generateCapabilityResponseRequest): \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseResponseType
     {
         return ($this->caller)('generateCapabilityResponse', $generateCapabilityResponseRequest);
     }
@@ -135,7 +135,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\MoveDeviceResponseType
      * @throws SoapException
      */
-    public function moveDevice(\Flexsim\FlexnetOperations\Type\MoveDeviceRequestType $moveDeviceRequest) : \Flexsim\FlexnetOperations\Type\MoveDeviceResponseType
+    public function moveDevice(\Flexsim\FlexnetOperations\Type\MoveDeviceRequestType $moveDeviceRequest): \Flexsim\FlexnetOperations\Type\MoveDeviceResponseType
     {
         return ($this->caller)('moveDevice', $moveDeviceRequest);
     }
@@ -145,7 +145,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\ReturnHostResponseType
      * @throws SoapException
      */
-    public function returnHost(\Flexsim\FlexnetOperations\Type\ReturnHostRequestListType $returnHostRequest) : \Flexsim\FlexnetOperations\Type\ReturnHostResponseType
+    public function returnHost(\Flexsim\FlexnetOperations\Type\ReturnHostRequestListType $returnHostRequest): \Flexsim\FlexnetOperations\Type\ReturnHostResponseType
     {
         return ($this->caller)('returnHost', $returnHostRequest);
     }
@@ -155,7 +155,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\ObsoleteHostResponseType
      * @throws SoapException
      */
-    public function obsoleteHost(\Flexsim\FlexnetOperations\Type\ObsoleteHostRequestListType $obsoleteHostRequest) : \Flexsim\FlexnetOperations\Type\ObsoleteHostResponseType
+    public function obsoleteHost(\Flexsim\FlexnetOperations\Type\ObsoleteHostRequestListType $obsoleteHostRequest): \Flexsim\FlexnetOperations\Type\ObsoleteHostResponseType
     {
         return ($this->caller)('obsoleteHost', $obsoleteHostRequest);
     }
@@ -165,7 +165,7 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\GetAutoProvisionedServerResponse
      * @throws SoapException
      */
-    public function getAutoProvisionedServer(\Flexsim\FlexnetOperations\Type\GetAutoProvisionedServerRequest $getAutoProvisionedServerRequest) : \Flexsim\FlexnetOperations\Type\GetAutoProvisionedServerResponse
+    public function getAutoProvisionedServer(\Flexsim\FlexnetOperations\Type\GetAutoProvisionedServerRequest $getAutoProvisionedServerRequest): \Flexsim\FlexnetOperations\Type\GetAutoProvisionedServerResponse
     {
         return ($this->caller)('getAutoProvisionedServer', $getAutoProvisionedServerRequest);
     }
@@ -175,9 +175,8 @@ class ManageDeviceServiceClient
      * @return ResultInterface|Type\GenerateCloneDetectionReportResponse
      * @throws SoapException
      */
-    public function generateCloneDetectionReport(\Flexsim\FlexnetOperations\Type\GenerateCloneDetectionReportRequest $generateCloneDetectionReportRequest) : \Flexsim\FlexnetOperations\Type\GenerateCloneDetectionReportResponse
+    public function generateCloneDetectionReport(\Flexsim\FlexnetOperations\Type\GenerateCloneDetectionReportRequest $generateCloneDetectionReportRequest): \Flexsim\FlexnetOperations\Type\GenerateCloneDetectionReportResponse
     {
         return ($this->caller)('generateCloneDetectionReport', $generateCloneDetectionReportRequest);
     }
 }
-

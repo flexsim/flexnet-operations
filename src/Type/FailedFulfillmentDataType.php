@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedFulfillmentDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateFulfillmentDataType
      */
@@ -53,6 +52,7 @@ class FailedFulfillmentDataType extends FlexnetType
     public function setFulfillment($fulfillment)
     {
         $this->fulfillment = $fulfillment;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedFulfillmentDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

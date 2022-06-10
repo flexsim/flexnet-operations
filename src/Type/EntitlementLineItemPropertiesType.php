@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EntitlementLineItemPropertiesType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
@@ -517,6 +516,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -535,6 +535,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -553,6 +554,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -571,6 +573,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setActivatableItemType($activatableItemType)
     {
         $this->activatableItemType = $activatableItemType;
+
         return $this;
     }
 
@@ -589,6 +592,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -607,6 +611,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setOrderLineNumber($orderLineNumber)
     {
         $this->orderLineNumber = $orderLineNumber;
+
         return $this;
     }
 
@@ -625,6 +630,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -643,6 +649,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -661,6 +668,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setSoldToDisplayName($soldToDisplayName)
     {
         $this->soldToDisplayName = $soldToDisplayName;
+
         return $this;
     }
 
@@ -679,6 +687,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setEntitlementState($entitlementState)
     {
         $this->entitlementState = $entitlementState;
+
         return $this;
     }
 
@@ -697,6 +706,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setEntitlementDescription($entitlementDescription)
     {
         $this->entitlementDescription = $entitlementDescription;
+
         return $this;
     }
 
@@ -715,6 +725,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setAllowPortalLogin($allowPortalLogin)
     {
         $this->allowPortalLogin = $allowPortalLogin;
+
         return $this;
     }
 
@@ -733,6 +744,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setShipToEmail($shipToEmail)
     {
         $this->shipToEmail = $shipToEmail;
+
         return $this;
     }
 
@@ -751,6 +763,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setShipToAddress($shipToAddress)
     {
         $this->shipToAddress = $shipToAddress;
+
         return $this;
     }
 
@@ -769,6 +782,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setParentBulkEntitlementId($parentBulkEntitlementId)
     {
         $this->parentBulkEntitlementId = $parentBulkEntitlementId;
+
         return $this;
     }
 
@@ -787,6 +801,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setBulkEntSoldTo($bulkEntSoldTo)
     {
         $this->bulkEntSoldTo = $bulkEntSoldTo;
+
         return $this;
     }
 
@@ -805,6 +820,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setBulkEntSoldToDisplayName($bulkEntSoldToDisplayName)
     {
         $this->bulkEntSoldToDisplayName = $bulkEntSoldToDisplayName;
+
         return $this;
     }
 
@@ -823,6 +839,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setProduct($product)
     {
         $this->product = $product;
+
         return $this;
     }
 
@@ -841,6 +858,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setProductDescription($productDescription)
     {
         $this->productDescription = $productDescription;
+
         return $this;
     }
 
@@ -859,6 +877,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -877,6 +896,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setPartNumberDescription($partNumberDescription)
     {
         $this->partNumberDescription = $partNumberDescription;
+
         return $this;
     }
 
@@ -895,6 +915,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 
@@ -913,6 +934,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setLicenseModel($licenseModel)
     {
         $this->licenseModel = $licenseModel;
+
         return $this;
     }
 
@@ -931,6 +953,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setAlternateLicenseModel1($alternateLicenseModel1)
     {
         $this->alternateLicenseModel1 = $alternateLicenseModel1;
+
         return $this;
     }
 
@@ -949,6 +972,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setAlternateLicenseModel2($alternateLicenseModel2)
     {
         $this->alternateLicenseModel2 = $alternateLicenseModel2;
+
         return $this;
     }
 
@@ -967,6 +991,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setLineItemSupportAction($lineItemSupportAction)
     {
         $this->lineItemSupportAction = $lineItemSupportAction;
+
         return $this;
     }
 
@@ -985,6 +1010,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setParentLineItem($parentLineItem)
     {
         $this->parentLineItem = $parentLineItem;
+
         return $this;
     }
 
@@ -1003,6 +1029,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -1021,6 +1048,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setStartDateOption($startDateOption)
     {
         $this->startDateOption = $startDateOption;
+
         return $this;
     }
 
@@ -1039,6 +1067,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -1057,6 +1086,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setTerm($term)
     {
         $this->term = $term;
+
         return $this;
     }
 
@@ -1075,6 +1105,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -1093,6 +1124,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setVersionDate($versionDate)
     {
         $this->versionDate = $versionDate;
+
         return $this;
     }
 
@@ -1111,6 +1143,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setVersionDateAttributes($versionDateAttributes)
     {
         $this->versionDateAttributes = $versionDateAttributes;
+
         return $this;
     }
 
@@ -1129,6 +1162,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setNumberOfCopies($numberOfCopies)
     {
         $this->numberOfCopies = $numberOfCopies;
+
         return $this;
     }
 
@@ -1147,6 +1181,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setFulfilledAmount($fulfilledAmount)
     {
         $this->fulfilledAmount = $fulfilledAmount;
+
         return $this;
     }
 
@@ -1165,6 +1200,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setNumberOfRemainingCopies($numberOfRemainingCopies)
     {
         $this->numberOfRemainingCopies = $numberOfRemainingCopies;
+
         return $this;
     }
 
@@ -1183,6 +1219,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setIsTrusted($isTrusted)
     {
         $this->isTrusted = $isTrusted;
+
         return $this;
     }
 
@@ -1201,6 +1238,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -1219,6 +1257,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setEntitledProducts($entitledProducts)
     {
         $this->entitledProducts = $entitledProducts;
+
         return $this;
     }
 
@@ -1237,6 +1276,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setChannelPartners($channelPartners)
     {
         $this->channelPartners = $channelPartners;
+
         return $this;
     }
 
@@ -1255,6 +1295,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setMaintenanceLineItems($maintenanceLineItems)
     {
         $this->maintenanceLineItems = $maintenanceLineItems;
+
         return $this;
     }
 
@@ -1273,6 +1314,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setFNPTimeZoneValue($FNPTimeZoneValue)
     {
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
+
         return $this;
     }
 
@@ -1291,6 +1333,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setCreatedOnDateTime($createdOnDateTime)
     {
         $this->createdOnDateTime = $createdOnDateTime;
+
         return $this;
     }
 
@@ -1309,6 +1352,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setLastModifiedDateTime($lastModifiedDateTime)
     {
         $this->lastModifiedDateTime = $lastModifiedDateTime;
+
         return $this;
     }
 
@@ -1327,6 +1371,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setLineItemAttributes($lineItemAttributes)
     {
         $this->lineItemAttributes = $lineItemAttributes;
+
         return $this;
     }
 
@@ -1345,6 +1390,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setTransferredFromLineItem($transferredFromLineItem)
     {
         $this->transferredFromLineItem = $transferredFromLineItem;
+
         return $this;
     }
 
@@ -1363,6 +1409,7 @@ class EntitlementLineItemPropertiesType extends FlexnetType
     public function setSplitFromLineItem($splitFromLineItem)
     {
         $this->splitFromLineItem = $splitFromLineItem;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreateSimpleEntitlementDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\IdType
      */
@@ -133,6 +132,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -151,6 +151,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -169,6 +170,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -187,6 +189,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     public function setShipToEmail($shipToEmail)
     {
         $this->shipToEmail = $shipToEmail;
+
         return $this;
     }
 
@@ -205,6 +208,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     public function setShipToAddress($shipToAddress)
     {
         $this->shipToAddress = $shipToAddress;
+
         return $this;
     }
 
@@ -223,6 +227,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     public function setLineItems($lineItems)
     {
         $this->lineItems = $lineItems;
+
         return $this;
     }
 
@@ -241,6 +246,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     public function setMaintenanceLineItems($maintenanceLineItems)
     {
         $this->maintenanceLineItems = $maintenanceLineItems;
+
         return $this;
     }
 
@@ -259,6 +265,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     public function setAutoDeploy($autoDeploy)
     {
         $this->autoDeploy = $autoDeploy;
+
         return $this;
     }
 
@@ -277,6 +284,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     public function setChannelPartners($channelPartners)
     {
         $this->channelPartners = $channelPartners;
+
         return $this;
     }
 
@@ -295,6 +303,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     public function setAllowPortalLogin($allowPortalLogin)
     {
         $this->allowPortalLogin = $allowPortalLogin;
+
         return $this;
     }
 
@@ -313,6 +322,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     public function setEntitlementAttributes($entitlementAttributes)
     {
         $this->entitlementAttributes = $entitlementAttributes;
+
         return $this;
     }
 
@@ -331,6 +341,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     public function setEmailTemplateVariation($emailTemplateVariation)
     {
         $this->emailTemplateVariation = $emailTemplateVariation;
+
         return $this;
     }
 }

@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FeatureBundleStateChangeListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array
      */
     protected $featureBundle;
 
@@ -31,7 +30,7 @@ class FeatureBundleStateChangeListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array
      */
     public function getFeatureBundle()
     {
@@ -45,6 +44,7 @@ class FeatureBundleStateChangeListType extends FlexnetType
     public function setFeatureBundle($featureBundle)
     {
         $this->featureBundle = $featureBundle;
+
         return $this;
     }
 }

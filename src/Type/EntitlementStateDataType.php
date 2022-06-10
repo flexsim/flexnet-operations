@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EntitlementStateDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -53,6 +52,7 @@ class EntitlementStateDataType extends FlexnetType
     public function setEntitlementIdentifier($entitlementIdentifier)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class EntitlementStateDataType extends FlexnetType
     public function setStateToSet($stateToSet)
     {
         $this->stateToSet = $stateToSet;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class SearchActivatableItemRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType
      */
@@ -63,6 +62,7 @@ class SearchActivatableItemRequestType extends FlexnetType implements RequestInt
     public function setActivatableItemSearchCriteria($activatableItemSearchCriteria)
     {
         $this->activatableItemSearchCriteria = $activatableItemSearchCriteria;
+
         return $this;
     }
 
@@ -81,6 +81,7 @@ class SearchActivatableItemRequestType extends FlexnetType implements RequestInt
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 
@@ -99,6 +100,7 @@ class SearchActivatableItemRequestType extends FlexnetType implements RequestInt
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 }

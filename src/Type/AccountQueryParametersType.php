@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AccountQueryParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -187,6 +186,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setAccountID($accountID)
     {
         $this->accountID = $accountID;
+
         return $this;
     }
 
@@ -205,6 +205,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setAccountName($accountName)
     {
         $this->accountName = $accountName;
+
         return $this;
     }
 
@@ -223,6 +224,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -241,6 +243,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setAddress1($address1)
     {
         $this->address1 = $address1;
+
         return $this;
     }
 
@@ -259,6 +262,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setAddress2($address2)
     {
         $this->address2 = $address2;
+
         return $this;
     }
 
@@ -277,6 +281,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setCity($city)
     {
         $this->city = $city;
+
         return $this;
     }
 
@@ -295,6 +300,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -313,6 +319,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setZipcode($zipcode)
     {
         $this->zipcode = $zipcode;
+
         return $this;
     }
 
@@ -331,6 +338,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setCountry($country)
     {
         $this->country = $country;
+
         return $this;
     }
 
@@ -349,6 +357,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setRegion($region)
     {
         $this->region = $region;
+
         return $this;
     }
 
@@ -367,6 +376,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setOnlyRootAccounts($onlyRootAccounts)
     {
         $this->onlyRootAccounts = $onlyRootAccounts;
+
         return $this;
     }
 
@@ -385,6 +395,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setAccountType($accountType)
     {
         $this->accountType = $accountType;
+
         return $this;
     }
 
@@ -403,6 +414,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setAccountTypeList($accountTypeList)
     {
         $this->accountTypeList = $accountTypeList;
+
         return $this;
     }
 
@@ -421,6 +433,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -439,6 +452,7 @@ class AccountQueryParametersType extends FlexnetType
     public function setLastModifiedDateTime($lastModifiedDateTime)
     {
         $this->lastModifiedDateTime = $lastModifiedDateTime;
+
         return $this;
     }
 }

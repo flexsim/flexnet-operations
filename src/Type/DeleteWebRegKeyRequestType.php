@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class DeleteWebRegKeyRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\WebRegKeysListType
      */
@@ -47,6 +46,7 @@ class DeleteWebRegKeyRequestType extends FlexnetType implements RequestInterface
     public function setWebRegKeyList($webRegKeyList)
     {
         $this->webRegKeyList = $webRegKeyList;
+
         return $this;
     }
 }

@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class WebRegKeysDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\WebRegKeyType|array 
+     * @var \Flexsim\FlexnetOperations\Type\WebRegKeyType|array
      */
     protected $webRegKeys;
 
@@ -31,7 +30,7 @@ class WebRegKeysDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\WebRegKeyType|array 
+     * @return \Flexsim\FlexnetOperations\Type\WebRegKeyType|array
      */
     public function getWebRegKeys()
     {
@@ -45,6 +44,7 @@ class WebRegKeysDataListType extends FlexnetType
     public function setWebRegKeys($webRegKeys)
     {
         $this->webRegKeys = $webRegKeys;
+
         return $this;
     }
 }

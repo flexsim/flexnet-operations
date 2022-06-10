@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class BaseProductRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\BaseProductDataType
      */
@@ -47,6 +46,7 @@ class BaseProductRequestType extends FlexnetType implements RequestInterface
     public function setBaseProduct($baseProduct)
     {
         $this->baseProduct = $baseProduct;
+
         return $this;
     }
 }

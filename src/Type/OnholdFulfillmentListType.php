@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class OnholdFulfillmentListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array
      */
     protected $onholdFmtLicenseData;
 
@@ -31,7 +30,7 @@ class OnholdFulfillmentListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType|array
      */
     public function getOnholdFmtLicenseData()
     {
@@ -45,6 +44,7 @@ class OnholdFulfillmentListType extends FlexnetType
     public function setOnholdFmtLicenseData($onholdFmtLicenseData)
     {
         $this->onholdFmtLicenseData = $onholdFmtLicenseData;
+
         return $this;
     }
 }

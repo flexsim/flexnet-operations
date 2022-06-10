@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateFeatureBundleDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType
      */
@@ -69,6 +68,7 @@ class UpdateFeatureBundleDataType extends FlexnetType
     public function setFeatureBundleIdentifier($featureBundleIdentifier)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class UpdateFeatureBundleDataType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class UpdateFeatureBundleDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class UpdateFeatureBundleDataType extends FlexnetType
     public function setFeatures($features)
     {
         $this->features = $features;
+
         return $this;
     }
 }

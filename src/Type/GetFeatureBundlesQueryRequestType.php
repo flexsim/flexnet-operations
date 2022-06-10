@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetFeatureBundlesQueryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType
      */
@@ -79,6 +78,7 @@ class GetFeatureBundlesQueryRequestType extends FlexnetType implements RequestIn
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 
@@ -97,6 +97,7 @@ class GetFeatureBundlesQueryRequestType extends FlexnetType implements RequestIn
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -115,6 +116,7 @@ class GetFeatureBundlesQueryRequestType extends FlexnetType implements RequestIn
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 
@@ -133,6 +135,7 @@ class GetFeatureBundlesQueryRequestType extends FlexnetType implements RequestIn
     public function setReturnContainedObjects($returnContainedObjects)
     {
         $this->returnContainedObjects = $returnContainedObjects;
+
         return $this;
     }
 }

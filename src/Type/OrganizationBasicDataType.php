@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class OrganizationBasicDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class OrganizationBasicDataType extends FlexnetType
     public function setOrgUnitId($orgUnitId)
     {
         $this->orgUnitId = $orgUnitId;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class OrganizationBasicDataType extends FlexnetType
     public function setDisplayName($displayName)
     {
         $this->displayName = $displayName;
+
         return $this;
     }
 }

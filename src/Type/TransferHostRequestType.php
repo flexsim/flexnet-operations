@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class TransferHostRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferHostList
      */
@@ -63,6 +62,7 @@ class TransferHostRequestType extends FlexnetType implements RequestInterface
     public function setSourceHosts($sourceHosts)
     {
         $this->sourceHosts = $sourceHosts;
+
         return $this;
     }
 
@@ -81,6 +81,7 @@ class TransferHostRequestType extends FlexnetType implements RequestInterface
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -99,6 +100,7 @@ class TransferHostRequestType extends FlexnetType implements RequestInterface
     public function setPoolEntitlements($poolEntitlements)
     {
         $this->poolEntitlements = $poolEntitlements;
+
         return $this;
     }
 }

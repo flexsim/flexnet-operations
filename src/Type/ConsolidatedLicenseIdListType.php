@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ConsolidatedLicenseIdListType extends FlexnetType
 {
-
     /**
      * @var string|array
      */
@@ -45,6 +44,7 @@ class ConsolidatedLicenseIdListType extends FlexnetType
     public function setConsolidatedLicenseId($consolidatedLicenseId)
     {
         $this->consolidatedLicenseId = $consolidatedLicenseId;
+
         return $this;
     }
 }

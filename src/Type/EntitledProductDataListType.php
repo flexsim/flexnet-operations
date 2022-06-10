@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EntitledProductDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array
      */
@@ -45,6 +44,7 @@ class EntitledProductDataListType extends FlexnetType
     public function setEntitledProduct($entitledProduct)
     {
         $this->entitledProduct = $entitledProduct;
+
         return $this;
     }
 }

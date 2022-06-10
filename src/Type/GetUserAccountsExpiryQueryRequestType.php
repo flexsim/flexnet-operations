@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetUserAccountsExpiryQueryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType
      */
@@ -63,6 +62,7 @@ class GetUserAccountsExpiryQueryRequestType extends FlexnetType implements Reque
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 
@@ -81,6 +81,7 @@ class GetUserAccountsExpiryQueryRequestType extends FlexnetType implements Reque
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -99,6 +100,7 @@ class GetUserAccountsExpiryQueryRequestType extends FlexnetType implements Reque
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 }

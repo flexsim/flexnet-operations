@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CapabilityRequestType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
@@ -85,6 +84,7 @@ class CapabilityRequestType extends FlexnetType
     public function setDeviceIdentifier($deviceIdentifier)
     {
         $this->deviceIdentifier = $deviceIdentifier;
+
         return $this;
     }
 
@@ -103,6 +103,7 @@ class CapabilityRequestType extends FlexnetType
     public function setLastUpdateTime($lastUpdateTime)
     {
         $this->lastUpdateTime = $lastUpdateTime;
+
         return $this;
     }
 
@@ -121,6 +122,7 @@ class CapabilityRequestType extends FlexnetType
     public function setForce($force)
     {
         $this->force = $force;
+
         return $this;
     }
 
@@ -139,6 +141,7 @@ class CapabilityRequestType extends FlexnetType
     public function setVendorDictionary($vendorDictionary)
     {
         $this->vendorDictionary = $vendorDictionary;
+
         return $this;
     }
 
@@ -157,6 +160,7 @@ class CapabilityRequestType extends FlexnetType
     public function setLineItem($lineItem)
     {
         $this->lineItem = $lineItem;
+
         return $this;
     }
 
@@ -175,6 +179,7 @@ class CapabilityRequestType extends FlexnetType
     public function setBufferLicense($bufferLicense)
     {
         $this->bufferLicense = $bufferLicense;
+
         return $this;
     }
 }

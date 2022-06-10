@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedSplitLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType
      */
@@ -53,6 +52,7 @@ class FailedSplitLineItemDataType extends FlexnetType
     public function setLineItemInfo($lineItemInfo)
     {
         $this->lineItemInfo = $lineItemInfo;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedSplitLineItemDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class NodeIDsType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class NodeIDsType extends FlexnetType
     public function setNodeId($nodeId)
     {
         $this->nodeId = $nodeId;
+
         return $this;
     }
 }

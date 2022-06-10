@@ -6,9 +6,8 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class SetDeviceStatusRequestListType extends FlexnetType implements RequestInterface
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array 
+     * @var \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array
      */
     protected $devices;
 
@@ -33,7 +32,7 @@ class SetDeviceStatusRequestListType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array 
+     * @return \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array
      */
     public function getDevices()
     {
@@ -47,6 +46,7 @@ class SetDeviceStatusRequestListType extends FlexnetType implements RequestInter
     public function setDevices($devices)
     {
         $this->devices = $devices;
+
         return $this;
     }
 }

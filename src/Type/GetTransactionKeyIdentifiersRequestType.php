@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetTransactionKeyIdentifiersRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType
      */
@@ -48,6 +47,7 @@ class GetTransactionKeyIdentifiersRequestType extends FlexnetType implements Req
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 }

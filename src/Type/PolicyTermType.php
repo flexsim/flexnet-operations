@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PolicyTermType extends FlexnetType
 {
-
     /**
      * @var int
      */
@@ -53,6 +52,7 @@ class PolicyTermType extends FlexnetType
     public function setDuration($duration)
     {
         $this->duration = $duration;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class PolicyTermType extends FlexnetType
     public function setDurationUnit($durationUnit)
     {
         $this->durationUnit = $durationUnit;
+
         return $this;
     }
 }

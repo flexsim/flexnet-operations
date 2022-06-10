@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetRelatedOrganizationsRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
@@ -47,6 +46,7 @@ class GetRelatedOrganizationsRequestType extends FlexnetType implements RequestI
     public function setOrganization($organization)
     {
         $this->organization = $organization;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class TrustedKeyPKType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class TrustedKeyPKType extends FlexnetType
     public function setKeyName($keyName)
     {
         $this->keyName = $keyName;
+
         return $this;
     }
 }

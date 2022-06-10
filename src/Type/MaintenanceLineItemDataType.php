@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class MaintenanceLineItemDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class MaintenanceLineItemDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 }

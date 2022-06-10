@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedGetDevicesDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class FailedGetDevicesDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

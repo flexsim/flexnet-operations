@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedFeatureDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureDataType
      */
@@ -53,6 +52,7 @@ class FailedFeatureDataType extends FlexnetType
     public function setFeature($feature)
     {
         $this->feature = $feature;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedFeatureDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

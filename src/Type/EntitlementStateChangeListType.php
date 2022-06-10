@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EntitlementStateChangeListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType|array
      */
@@ -45,6 +44,7 @@ class EntitlementStateChangeListType extends FlexnetType
     public function setEntitlement($entitlement)
     {
         $this->entitlement = $entitlement;
+
         return $this;
     }
 }

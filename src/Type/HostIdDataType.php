@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class HostIdDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ServerIDsType
      */
@@ -61,6 +60,7 @@ class HostIdDataType extends FlexnetType
     public function setServerIds($serverIds)
     {
         $this->serverIds = $serverIds;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class HostIdDataType extends FlexnetType
     public function setNodeIds($nodeIds)
     {
         $this->nodeIds = $nodeIds;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class HostIdDataType extends FlexnetType
     public function setCustomHost($customHost)
     {
         $this->customHost = $customHost;
+
         return $this;
     }
 }

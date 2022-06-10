@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FeatureBundleIdentifierWithCountDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType
      */
@@ -53,6 +52,7 @@ class FeatureBundleIdentifierWithCountDataType extends FlexnetType
     public function setFeatureBundleIdentifier($featureBundleIdentifier)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FeatureBundleIdentifierWithCountDataType extends FlexnetType
     public function setCount($count)
     {
         $this->count = $count;
+
         return $this;
     }
 }

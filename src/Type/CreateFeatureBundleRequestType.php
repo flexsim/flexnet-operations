@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class CreateFeatureBundleRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateFeatureBundleDataType
      */
@@ -47,6 +46,7 @@ class CreateFeatureBundleRequestType extends FlexnetType implements RequestInter
     public function setFeatureBundle($featureBundle)
     {
         $this->featureBundle = $featureBundle;
+
         return $this;
     }
 }

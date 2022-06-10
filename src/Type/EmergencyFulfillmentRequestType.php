@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class EmergencyFulfillmentRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType
      */
@@ -47,6 +46,7 @@ class EmergencyFulfillmentRequestType extends FlexnetType implements RequestInte
     public function setFulfillment($fulfillment)
     {
         $this->fulfillment = $fulfillment;
+
         return $this;
     }
 }

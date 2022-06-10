@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class SearchDevicesRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType
      */
@@ -80,6 +79,7 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 
@@ -98,6 +98,7 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     public function setResponseConfig($responseConfig)
     {
         $this->responseConfig = $responseConfig;
+
         return $this;
     }
 
@@ -116,6 +117,7 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     public function setSortBys($sortBys)
     {
         $this->sortBys = $sortBys;
+
         return $this;
     }
 
@@ -134,6 +136,7 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -152,6 +155,7 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 }

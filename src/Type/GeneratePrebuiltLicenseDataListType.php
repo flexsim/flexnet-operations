@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GeneratePrebuiltLicenseDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array 
+     * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array
      */
     protected $deviceIdentifier;
 
@@ -31,7 +30,7 @@ class GeneratePrebuiltLicenseDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array 
+     * @return \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array
      */
     public function getDeviceIdentifier()
     {
@@ -45,6 +44,7 @@ class GeneratePrebuiltLicenseDataListType extends FlexnetType
     public function setDeviceIdentifier($deviceIdentifier)
     {
         $this->deviceIdentifier = $deviceIdentifier;
+
         return $this;
     }
 }

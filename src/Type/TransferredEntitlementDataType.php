@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class TransferredEntitlementDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -53,6 +52,7 @@ class TransferredEntitlementDataType extends FlexnetType
     public function setEntitlementIdentifier($entitlementIdentifier)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class TransferredEntitlementDataType extends FlexnetType
     public function setLineItemIdentifierMap($lineItemIdentifierMap)
     {
         $this->lineItemIdentifierMap = $lineItemIdentifierMap;
+
         return $this;
     }
 }

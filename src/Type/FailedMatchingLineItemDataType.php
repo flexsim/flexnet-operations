@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedMatchingLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType
      */
@@ -53,6 +52,7 @@ class FailedMatchingLineItemDataType extends FlexnetType
     public function setLineItemInfo($lineItemInfo)
     {
         $this->lineItemInfo = $lineItemInfo;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedMatchingLineItemDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

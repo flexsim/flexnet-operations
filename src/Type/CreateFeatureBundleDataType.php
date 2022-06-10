@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreateFeatureBundleDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class CreateFeatureBundleDataType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class CreateFeatureBundleDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class CreateFeatureBundleDataType extends FlexnetType
     public function setFeatures($features)
     {
         $this->features = $features;
+
         return $this;
     }
 }

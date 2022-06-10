@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ProductStateChangeDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
@@ -53,6 +52,7 @@ class ProductStateChangeDataType extends FlexnetType
     public function setProductIdentifier($productIdentifier)
     {
         $this->productIdentifier = $productIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class ProductStateChangeDataType extends FlexnetType
     public function setStateChangeRecord($stateChangeRecord)
     {
         $this->stateChangeRecord = $stateChangeRecord;
+
         return $this;
     }
 }

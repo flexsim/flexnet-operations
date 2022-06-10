@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class TokenResponseType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var string
      */
@@ -47,6 +46,7 @@ class TokenResponseType extends FlexnetType implements ResultInterface
     public function setToken($token)
     {
         $this->token = $token;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedProductCategoryDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType
      */
@@ -53,6 +52,7 @@ class FailedProductCategoryDataType extends FlexnetType
     public function setProductCategory($productCategory)
     {
         $this->productCategory = $productCategory;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedProductCategoryDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LicenseTechnologyDetailsType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType
      */
@@ -69,6 +68,7 @@ class LicenseTechnologyDetailsType extends FlexnetType
     public function setLicenseTechnologyIdentifier($licenseTechnologyIdentifier)
     {
         $this->licenseTechnologyIdentifier = $licenseTechnologyIdentifier;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class LicenseTechnologyDetailsType extends FlexnetType
     public function setLicenseGenerators($licenseGenerators)
     {
         $this->licenseGenerators = $licenseGenerators;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class LicenseTechnologyDetailsType extends FlexnetType
     public function setHostTypes($hostTypes)
     {
         $this->hostTypes = $hostTypes;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class LicenseTechnologyDetailsType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 }

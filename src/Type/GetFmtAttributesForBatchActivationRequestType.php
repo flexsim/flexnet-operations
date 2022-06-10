@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetFmtAttributesForBatchActivationRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ActivationIdsListType
      */
@@ -47,6 +46,7 @@ class GetFmtAttributesForBatchActivationRequestType extends FlexnetType implemen
     public function setActivationIds($activationIds)
     {
         $this->activationIds = $activationIds;
+
         return $this;
     }
 }

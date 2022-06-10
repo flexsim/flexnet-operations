@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class DeleteUserRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType
      */
@@ -47,6 +46,7 @@ class DeleteUserRequestType extends FlexnetType implements RequestInterface
     public function setUser($user)
     {
         $this->user = $user;
+
         return $this;
     }
 }

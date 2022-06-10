@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedFulfillmentDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array
      */
@@ -53,6 +52,7 @@ class CreatedFulfillmentDataListType extends FlexnetType
     public function setCreatedFulfillment($createdFulfillment)
     {
         $this->createdFulfillment = $createdFulfillment;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class CreatedFulfillmentDataListType extends FlexnetType
     public function setVerifiedFulfillment($verifiedFulfillment)
     {
         $this->verifiedFulfillment = $verifiedFulfillment;
+
         return $this;
     }
 }

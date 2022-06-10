@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedOrgDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationBasicDataType
      */
@@ -53,6 +52,7 @@ class FailedOrgDataType extends FlexnetType
     public function setOrganization($organization)
     {
         $this->organization = $organization;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedOrgDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

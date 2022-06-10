@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class RepairResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\RepairFulfillmentResponseDataType
      */
@@ -45,6 +44,7 @@ class RepairResponseDataType extends FlexnetType
     public function setFulfillmentData($fulfillmentData)
     {
         $this->fulfillmentData = $fulfillmentData;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SoldToOrgNameType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class SoldToOrgNameType extends FlexnetType
     public function setDisplayName($displayName)
     {
         $this->displayName = $displayName;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class SoldToOrgNameType extends FlexnetType
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class SoldToOrgNameType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class AuthenticateUserInputType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -63,6 +62,7 @@ class AuthenticateUserInputType extends FlexnetType implements RequestInterface
     public function setUserName($userName)
     {
         $this->userName = $userName;
+
         return $this;
     }
 
@@ -81,6 +81,7 @@ class AuthenticateUserInputType extends FlexnetType implements RequestInterface
     public function setPassword($password)
     {
         $this->password = $password;
+
         return $this;
     }
 
@@ -99,6 +100,7 @@ class AuthenticateUserInputType extends FlexnetType implements RequestInterface
     public function setDomainName($domainName)
     {
         $this->domainName = $domainName;
+
         return $this;
     }
 }

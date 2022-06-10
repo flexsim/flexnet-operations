@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ProductStateChangeListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType|array
      */
     protected $product;
 
@@ -31,7 +30,7 @@ class ProductStateChangeListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\ProductStateChangeDataType|array
      */
     public function getProduct()
     {
@@ -45,6 +44,7 @@ class ProductStateChangeListType extends FlexnetType
     public function setProduct($product)
     {
         $this->product = $product;
+
         return $this;
     }
 }

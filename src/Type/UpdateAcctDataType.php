@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateAcctDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
@@ -127,6 +126,7 @@ class UpdateAcctDataType extends FlexnetType
     public function setAccount($account)
     {
         $this->account = $account;
+
         return $this;
     }
 
@@ -145,6 +145,7 @@ class UpdateAcctDataType extends FlexnetType
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -163,6 +164,7 @@ class UpdateAcctDataType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -181,6 +183,7 @@ class UpdateAcctDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -199,6 +202,7 @@ class UpdateAcctDataType extends FlexnetType
     public function setAddress($address)
     {
         $this->address = $address;
+
         return $this;
     }
 
@@ -217,6 +221,7 @@ class UpdateAcctDataType extends FlexnetType
     public function setSubAccounts($subAccounts)
     {
         $this->subAccounts = $subAccounts;
+
         return $this;
     }
 
@@ -235,6 +240,7 @@ class UpdateAcctDataType extends FlexnetType
     public function setRelatedAccounts($relatedAccounts)
     {
         $this->relatedAccounts = $relatedAccounts;
+
         return $this;
     }
 
@@ -253,6 +259,7 @@ class UpdateAcctDataType extends FlexnetType
     public function setVisible($visible)
     {
         $this->visible = $visible;
+
         return $this;
     }
 
@@ -271,6 +278,7 @@ class UpdateAcctDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 }

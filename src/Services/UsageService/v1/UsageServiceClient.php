@@ -2,11 +2,11 @@
 
 namespace Flexsim\FlexnetOperations\Services\UsageService\v1;
 
+use Flexsim\FlexnetOperations\Type;
 use Phpro\SoapClient\Caller\Caller;
-use Phpro\SoapClient\Type\ResultInterface;
 use Phpro\SoapClient\Exception\SoapException;
 use Phpro\SoapClient\Type\RequestInterface;
-use Flexsim\FlexnetOperations\Type;
+use Phpro\SoapClient\Type\ResultInterface;
 
 class UsageServiceClient
 {
@@ -25,9 +25,8 @@ class UsageServiceClient
      * @return ResultInterface|Type\GetUsageResponse
      * @throws SoapException
      */
-    public function getUsage(\Flexsim\FlexnetOperations\Type\GetUsageRequest $GetUsageRequest) : \Flexsim\FlexnetOperations\Type\GetUsageResponse
+    public function getUsage(\Flexsim\FlexnetOperations\Type\GetUsageRequest $GetUsageRequest): \Flexsim\FlexnetOperations\Type\GetUsageResponse
     {
         return ($this->caller)('getUsage', $GetUsageRequest);
     }
 }
-

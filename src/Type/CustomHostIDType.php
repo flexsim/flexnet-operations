@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CustomHostIDType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class CustomHostIDType extends FlexnetType
     public function setHostId($hostId)
     {
         $this->hostId = $hostId;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class CustomHostIDType extends FlexnetType
     public function setHostAttributes($hostAttributes)
     {
         $this->hostAttributes = $hostAttributes;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class CustomHostIDType extends FlexnetType
     public function setHostType($hostType)
     {
         $this->hostType = $hostType;
+
         return $this;
     }
 }

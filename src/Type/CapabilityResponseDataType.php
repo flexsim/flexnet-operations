@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CapabilityResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
@@ -61,6 +60,7 @@ class CapabilityResponseDataType extends FlexnetType
     public function setDeviceIdentifier($deviceIdentifier)
     {
         $this->deviceIdentifier = $deviceIdentifier;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class CapabilityResponseDataType extends FlexnetType
     public function setAddonLicense($addonLicense)
     {
         $this->addonLicense = $addonLicense;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class CapabilityResponseDataType extends FlexnetType
     public function setBufferLicense($bufferLicense)
     {
         $this->bufferLicense = $bufferLicense;
+
         return $this;
     }
 }

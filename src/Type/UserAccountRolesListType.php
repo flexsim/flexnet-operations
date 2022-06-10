@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UserAccountRolesListType extends FlexnetType
 {
-
     /**
      * @var string|array
      */
@@ -45,6 +44,7 @@ class UserAccountRolesListType extends FlexnetType
     public function setRoleName($roleName)
     {
         $this->roleName = $roleName;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GenerateCapabilityResponseRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CapabilityRequestType
      */
@@ -55,6 +54,7 @@ class GenerateCapabilityResponseRequestType extends FlexnetType implements Reque
     public function setDevice($device)
     {
         $this->device = $device;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class GenerateCapabilityResponseRequestType extends FlexnetType implements Reque
     public function setRequest($request)
     {
         $this->request = $request;
+
         return $this;
     }
 }

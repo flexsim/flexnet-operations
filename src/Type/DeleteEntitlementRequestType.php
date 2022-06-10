@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class DeleteEntitlementRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteEntitlementDataType
      */
@@ -47,6 +46,7 @@ class DeleteEntitlementRequestType extends FlexnetType implements RequestInterfa
     public function setEntitlement($entitlement)
     {
         $this->entitlement = $entitlement;
+
         return $this;
     }
 }

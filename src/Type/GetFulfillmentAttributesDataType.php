@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetFulfillmentAttributesDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType
      */
@@ -53,6 +52,7 @@ class GetFulfillmentAttributesDataType extends FlexnetType
     public function setFulfillmentAttributes($fulfillmentAttributes)
     {
         $this->fulfillmentAttributes = $fulfillmentAttributes;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class GetFulfillmentAttributesDataType extends FlexnetType
     public function setNeedTimeZone($needTimeZone)
     {
         $this->needTimeZone = $needTimeZone;
+
         return $this;
     }
 }

@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class IdListType extends FlexnetType
 {
-
     /**
-     * @var string|array 
+     * @var string|array
      */
     protected $id;
 
@@ -31,7 +30,7 @@ class IdListType extends FlexnetType
     }
 
     /**
-     * @return string|array 
+     * @return string|array
      */
     public function getId()
     {
@@ -45,6 +44,7 @@ class IdListType extends FlexnetType
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AdvancedFulfillmentLCListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType|array
      */
@@ -45,6 +44,7 @@ class AdvancedFulfillmentLCListType extends FlexnetType
     public function setFulfillment($fulfillment)
     {
         $this->fulfillment = $fulfillment;
+
         return $this;
     }
 }

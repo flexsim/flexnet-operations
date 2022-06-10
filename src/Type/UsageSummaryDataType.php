@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UsageSummaryDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -187,6 +186,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setSummaryTimeUniqueId($summaryTimeUniqueId)
     {
         $this->summaryTimeUniqueId = $summaryTimeUniqueId;
+
         return $this;
     }
 
@@ -205,6 +205,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setSummaryTime($summaryTime)
     {
         $this->summaryTime = $summaryTime;
+
         return $this;
     }
 
@@ -223,6 +224,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setServer($server)
     {
         $this->server = $server;
+
         return $this;
     }
 
@@ -241,6 +243,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setServerAlias($serverAlias)
     {
         $this->serverAlias = $serverAlias;
+
         return $this;
     }
 
@@ -259,6 +262,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setServerLastSyncTime($serverLastSyncTime)
     {
         $this->serverLastSyncTime = $serverLastSyncTime;
+
         return $this;
     }
 
@@ -277,6 +281,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setEntitlementUniqueId($entitlementUniqueId)
     {
         $this->entitlementUniqueId = $entitlementUniqueId;
+
         return $this;
     }
 
@@ -295,6 +300,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -313,6 +319,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setActivationUniqueId($activationUniqueId)
     {
         $this->activationUniqueId = $activationUniqueId;
+
         return $this;
     }
 
@@ -331,6 +338,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -349,6 +357,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setFeatureUniqueId($featureUniqueId)
     {
         $this->featureUniqueId = $featureUniqueId;
+
         return $this;
     }
 
@@ -367,6 +376,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setFeatureName($featureName)
     {
         $this->featureName = $featureName;
+
         return $this;
     }
 
@@ -385,6 +395,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setFeatureVersion($featureVersion)
     {
         $this->featureVersion = $featureVersion;
+
         return $this;
     }
 
@@ -403,6 +414,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setOrderedCount($orderedCount)
     {
         $this->orderedCount = $orderedCount;
+
         return $this;
     }
 
@@ -421,6 +433,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setUsedCount($usedCount)
     {
         $this->usedCount = $usedCount;
+
         return $this;
     }
 
@@ -439,6 +452,7 @@ class UsageSummaryDataType extends FlexnetType
     public function setProvisionedCount($provisionedCount)
     {
         $this->provisionedCount = $provisionedCount;
+
         return $this;
     }
 }

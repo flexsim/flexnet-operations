@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CancelLicensePolicyDataType extends FlexnetType
 {
-
     /**
      * @var bool
      */
@@ -45,6 +44,7 @@ class CancelLicensePolicyDataType extends FlexnetType
     public function setIsCancelLicense($isCancelLicense)
     {
         $this->isCancelLicense = $isCancelLicense;
+
         return $this;
     }
 }

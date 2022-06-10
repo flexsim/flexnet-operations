@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedFeatureDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType|array
      */
@@ -45,6 +44,7 @@ class CreatedFeatureDataListType extends FlexnetType
     public function setCreatedFeature($createdFeature)
     {
         $this->createdFeature = $createdFeature;
+
         return $this;
     }
 }

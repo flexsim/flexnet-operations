@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateHostTypeListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\HostTypePKType|array
      */
@@ -53,6 +52,7 @@ class UpdateHostTypeListType extends FlexnetType
     public function setHostType($hostType)
     {
         $this->hostType = $hostType;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class UpdateHostTypeListType extends FlexnetType
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

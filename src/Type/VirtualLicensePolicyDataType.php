@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class VirtualLicensePolicyDataType extends FlexnetType
 {
-
     /**
      * @var bool
      */
@@ -45,6 +44,7 @@ class VirtualLicensePolicyDataType extends FlexnetType
     public function setIsVirtualLicense($isVirtualLicense)
     {
         $this->isVirtualLicense = $isVirtualLicense;
+
         return $this;
     }
 }

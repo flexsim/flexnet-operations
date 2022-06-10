@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ExtraActivationDataType extends FlexnetType
 {
-
     /**
      * @var int
      */
@@ -45,6 +44,7 @@ class ExtraActivationDataType extends FlexnetType
     public function setAllowedCount($allowedCount)
     {
         $this->allowedCount = $allowedCount;
+
         return $this;
     }
 }

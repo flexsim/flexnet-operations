@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class HostIdDataDetailsType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ServerIDsType
      */
@@ -93,6 +92,7 @@ class HostIdDataDetailsType extends FlexnetType
     public function setServerHost($serverHost)
     {
         $this->serverHost = $serverHost;
+
         return $this;
     }
 
@@ -111,6 +111,7 @@ class HostIdDataDetailsType extends FlexnetType
     public function setNodeLockHost($nodeLockHost)
     {
         $this->nodeLockHost = $nodeLockHost;
+
         return $this;
     }
 
@@ -129,6 +130,7 @@ class HostIdDataDetailsType extends FlexnetType
     public function setCountedNodeLockHostIds($countedNodeLockHostIds)
     {
         $this->countedNodeLockHostIds = $countedNodeLockHostIds;
+
         return $this;
     }
 
@@ -147,6 +149,7 @@ class HostIdDataDetailsType extends FlexnetType
     public function setCustomHost($customHost)
     {
         $this->customHost = $customHost;
+
         return $this;
     }
 
@@ -165,6 +168,7 @@ class HostIdDataDetailsType extends FlexnetType
     public function setCountFromParent($countFromParent)
     {
         $this->countFromParent = $countFromParent;
+
         return $this;
     }
 
@@ -183,6 +187,7 @@ class HostIdDataDetailsType extends FlexnetType
     public function setCountFromOwn($countFromOwn)
     {
         $this->countFromOwn = $countFromOwn;
+
         return $this;
     }
 
@@ -201,6 +206,7 @@ class HostIdDataDetailsType extends FlexnetType
     public function setParentActivationId($parentActivationId)
     {
         $this->parentActivationId = $parentActivationId;
+
         return $this;
     }
 }

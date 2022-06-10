@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class EmailContactListType extends FlexnetType
 {
-
     /**
      * @var string|array
      */
@@ -45,6 +44,7 @@ class EmailContactListType extends FlexnetType
     public function setEmailId($emailId)
     {
         $this->emailId = $emailId;
+
         return $this;
     }
 }

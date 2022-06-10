@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PartnerTierQueryType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class PartnerTierQueryType extends FlexnetType
     public function setValue($value)
     {
         $this->value = $value;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class PartnerTierQueryType extends FlexnetType
     public function setSearchType($searchType)
     {
         $this->searchType = $searchType;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class PartnerTierQueryType extends FlexnetType
     public function setPartnerTier($partnerTier)
     {
         $this->partnerTier = $partnerTier;
+
         return $this;
     }
 }

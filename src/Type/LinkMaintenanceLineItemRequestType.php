@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class LinkMaintenanceLineItemRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemListType
      */
@@ -47,6 +46,7 @@ class LinkMaintenanceLineItemRequestType extends FlexnetType implements RequestI
     public function setLinkMaintenanceLineItemList($linkMaintenanceLineItemList)
     {
         $this->linkMaintenanceLineItemList = $linkMaintenanceLineItemList;
+
         return $this;
     }
 }

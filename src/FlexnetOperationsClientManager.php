@@ -66,7 +66,7 @@ class FlexnetOperationsClientManager
 
         $version = $this->activeVersion();
 
-        if (!Arr::has($this->clients, $clientDot = implode('.', [$connection, $version]))) {
+        if (! Arr::has($this->clients, $clientDot = implode('.', [$connection, $version]))) {
             $this->createClient($connection, $version);
         }
 
@@ -191,6 +191,7 @@ class FlexnetOperationsClientManager
                 ? ''
                 : '\\' . $version)
             . '\\' . $this->getServiceName() . 'ClientFactory';
+
         return $class;
     }
 
@@ -272,6 +273,7 @@ class FlexnetOperationsClientManager
     protected function getServiceName(): string
     {
         $serviceNamespaceArray = explode('\\', $this->serviceNamespace);
+
         return end($serviceNamespaceArray);
     }
 

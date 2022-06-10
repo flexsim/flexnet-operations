@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedBaseProductDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class FailedBaseProductDataType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedBaseProductDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

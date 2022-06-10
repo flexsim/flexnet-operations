@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SearchEntitlementDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -313,6 +312,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -331,6 +331,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setEntDescription($entDescription)
     {
         $this->entDescription = $entDescription;
+
         return $this;
     }
 
@@ -349,6 +350,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setProductName($productName)
     {
         $this->productName = $productName;
+
         return $this;
     }
 
@@ -367,6 +369,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setProductVersion($productVersion)
     {
         $this->productVersion = $productVersion;
+
         return $this;
     }
 
@@ -385,6 +388,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setProductType($productType)
     {
         $this->productType = $productType;
+
         return $this;
     }
 
@@ -403,6 +407,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -421,6 +426,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setIsBulk($isBulk)
     {
         $this->isBulk = $isBulk;
+
         return $this;
     }
 
@@ -439,6 +445,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -457,6 +464,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setShipToEmail($shipToEmail)
     {
         $this->shipToEmail = $shipToEmail;
+
         return $this;
     }
 
@@ -475,6 +483,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setShipToAddress($shipToAddress)
     {
         $this->shipToAddress = $shipToAddress;
+
         return $this;
     }
 
@@ -493,6 +502,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -511,6 +521,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -529,6 +540,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -547,6 +559,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setCreatedOn($createdOn)
     {
         $this->createdOn = $createdOn;
+
         return $this;
     }
 
@@ -565,6 +578,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setVersionDate($versionDate)
     {
         $this->versionDate = $versionDate;
+
         return $this;
     }
 
@@ -583,6 +597,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setLastModifiedDate($lastModifiedDate)
     {
         $this->lastModifiedDate = $lastModifiedDate;
+
         return $this;
     }
 
@@ -601,6 +616,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -619,6 +635,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -637,6 +654,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 
@@ -655,6 +673,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setCreatedUserId($createdUserId)
     {
         $this->createdUserId = $createdUserId;
+
         return $this;
     }
 
@@ -673,6 +692,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setAccountUnitName($accountUnitName)
     {
         $this->accountUnitName = $accountUnitName;
+
         return $this;
     }
 
@@ -691,6 +711,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setOrganizationUnitName($organizationUnitName)
     {
         $this->organizationUnitName = $organizationUnitName;
+
         return $this;
     }
 
@@ -709,6 +730,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setCurrentOwnerName($currentOwnerName)
     {
         $this->currentOwnerName = $currentOwnerName;
+
         return $this;
     }
 
@@ -727,6 +749,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setMaintStartDate($maintStartDate)
     {
         $this->maintStartDate = $maintStartDate;
+
         return $this;
     }
 
@@ -745,6 +768,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setMaintIsPermanent($maintIsPermanent)
     {
         $this->maintIsPermanent = $maintIsPermanent;
+
         return $this;
     }
 
@@ -763,6 +787,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setMaintExpirationDate($maintExpirationDate)
     {
         $this->maintExpirationDate = $maintExpirationDate;
+
         return $this;
     }
 
@@ -781,6 +806,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setEntitlementAttributes($entitlementAttributes)
     {
         $this->entitlementAttributes = $entitlementAttributes;
+
         return $this;
     }
 
@@ -799,6 +825,7 @@ class SearchEntitlementDataType extends FlexnetType
     public function setEmailTemplateVariation($emailTemplateVariation)
     {
         $this->emailTemplateVariation = $emailTemplateVariation;
+
         return $this;
     }
 }

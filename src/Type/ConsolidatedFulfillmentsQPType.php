@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ConsolidatedFulfillmentsQPType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -93,6 +92,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     public function setConsolidatedLicenseId($consolidatedLicenseId)
     {
         $this->consolidatedLicenseId = $consolidatedLicenseId;
+
         return $this;
     }
 
@@ -111,6 +111,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     public function setFulfillmentId($fulfillmentId)
     {
         $this->fulfillmentId = $fulfillmentId;
+
         return $this;
     }
 
@@ -129,6 +130,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -147,6 +149,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -165,6 +168,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -183,6 +187,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     public function setCriteria($criteria)
     {
         $this->criteria = $criteria;
+
         return $this;
     }
 
@@ -201,6 +206,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 }

@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedDeleteUniformSuiteDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedDeleteUniformSuiteDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedDeleteUniformSuiteDataType|array
      */
     protected $failedUniformSuite;
 
@@ -31,7 +30,7 @@ class FailedDeleteUniformSuiteDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedDeleteUniformSuiteDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedDeleteUniformSuiteDataType|array
      */
     public function getFailedUniformSuite()
     {
@@ -45,6 +44,7 @@ class FailedDeleteUniformSuiteDataListType extends FlexnetType
     public function setFailedUniformSuite($failedUniformSuite)
     {
         $this->failedUniformSuite = $failedUniformSuite;
+
         return $this;
     }
 }

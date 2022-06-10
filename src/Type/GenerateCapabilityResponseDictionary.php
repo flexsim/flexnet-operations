@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GenerateCapabilityResponseDictionary extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionaryEntry
      */
@@ -45,6 +44,7 @@ class GenerateCapabilityResponseDictionary extends FlexnetType
     public function setEntry($entry)
     {
         $this->entry = $entry;
+
         return $this;
     }
 }

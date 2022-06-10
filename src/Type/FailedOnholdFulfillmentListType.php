@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedOnholdFulfillmentListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array
      */
     protected $failedFulfillment;
 
@@ -31,7 +30,7 @@ class FailedOnholdFulfillmentListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentDataType|array
      */
     public function getFailedFulfillment()
     {
@@ -45,6 +44,7 @@ class FailedOnholdFulfillmentListType extends FlexnetType
     public function setFailedFulfillment($failedFulfillment)
     {
         $this->failedFulfillment = $failedFulfillment;
+
         return $this;
     }
 }

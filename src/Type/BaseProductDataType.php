@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class BaseProductDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -101,6 +100,7 @@ class BaseProductDataType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -119,6 +119,7 @@ class BaseProductDataType extends FlexnetType
     public function setProduct($product)
     {
         $this->product = $product;
+
         return $this;
     }
 
@@ -137,6 +138,7 @@ class BaseProductDataType extends FlexnetType
     public function setLicenseModel($licenseModel)
     {
         $this->licenseModel = $licenseModel;
+
         return $this;
     }
 
@@ -155,6 +157,7 @@ class BaseProductDataType extends FlexnetType
     public function setLicenseModelAttributes($licenseModelAttributes)
     {
         $this->licenseModelAttributes = $licenseModelAttributes;
+
         return $this;
     }
 
@@ -173,6 +176,7 @@ class BaseProductDataType extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -191,6 +195,7 @@ class BaseProductDataType extends FlexnetType
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -209,6 +214,7 @@ class BaseProductDataType extends FlexnetType
     public function setTerm($term)
     {
         $this->term = $term;
+
         return $this;
     }
 
@@ -227,6 +233,7 @@ class BaseProductDataType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateUserAccountsListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateUserAccountType|array
      */
@@ -53,6 +52,7 @@ class UpdateUserAccountsListType extends FlexnetType
     public function setAcctRoles($acctRoles)
     {
         $this->acctRoles = $acctRoles;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class UpdateUserAccountsListType extends FlexnetType
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

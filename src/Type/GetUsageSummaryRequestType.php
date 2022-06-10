@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetUsageSummaryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetUsageSummaryParametersType
      */
@@ -69,6 +68,7 @@ class GetUsageSummaryRequestType extends FlexnetType implements RequestInterface
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class GetUsageSummaryRequestType extends FlexnetType implements RequestInterface
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class GetUsageSummaryRequestType extends FlexnetType implements RequestInterface
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 }

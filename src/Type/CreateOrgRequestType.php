@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class CreateOrgRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationDataType
      */
@@ -55,6 +54,7 @@ class CreateOrgRequestType extends FlexnetType implements RequestInterface
     public function setOrganization($organization)
     {
         $this->organization = $organization;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class CreateOrgRequestType extends FlexnetType implements RequestInterface
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedLinkMaintenanceLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType
      */
@@ -53,6 +52,7 @@ class FailedLinkMaintenanceLineItemDataType extends FlexnetType
     public function setLinkMaintenanceLineItem($linkMaintenanceLineItem)
     {
         $this->linkMaintenanceLineItem = $linkMaintenanceLineItem;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedLinkMaintenanceLineItemDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

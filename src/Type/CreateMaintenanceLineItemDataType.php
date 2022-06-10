@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreateMaintenanceLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\IdType
      */
@@ -125,6 +124,7 @@ class CreateMaintenanceLineItemDataType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -143,6 +143,7 @@ class CreateMaintenanceLineItemDataType extends FlexnetType
     public function setMaintenanceProduct($maintenanceProduct)
     {
         $this->maintenanceProduct = $maintenanceProduct;
+
         return $this;
     }
 
@@ -161,6 +162,7 @@ class CreateMaintenanceLineItemDataType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -179,6 +181,7 @@ class CreateMaintenanceLineItemDataType extends FlexnetType
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -197,6 +200,7 @@ class CreateMaintenanceLineItemDataType extends FlexnetType
     public function setOrderLineNumber($orderLineNumber)
     {
         $this->orderLineNumber = $orderLineNumber;
+
         return $this;
     }
 
@@ -215,6 +219,7 @@ class CreateMaintenanceLineItemDataType extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -233,6 +238,7 @@ class CreateMaintenanceLineItemDataType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -251,6 +257,7 @@ class CreateMaintenanceLineItemDataType extends FlexnetType
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -269,6 +276,7 @@ class CreateMaintenanceLineItemDataType extends FlexnetType
     public function setParentLineItem($parentLineItem)
     {
         $this->parentLineItem = $parentLineItem;
+
         return $this;
     }
 
@@ -287,6 +295,7 @@ class CreateMaintenanceLineItemDataType extends FlexnetType
     public function setAssociatedLineItems($associatedLineItems)
     {
         $this->associatedLineItems = $associatedLineItems;
+
         return $this;
     }
 
@@ -305,6 +314,7 @@ class CreateMaintenanceLineItemDataType extends FlexnetType
     public function setMaintenanceLineItemAttributes($maintenanceLineItemAttributes)
     {
         $this->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ReturnHostType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
@@ -53,6 +52,7 @@ class ReturnHostType extends FlexnetType
     public function setHostIdentifier($hostIdentifier)
     {
         $this->hostIdentifier = $hostIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class ReturnHostType extends FlexnetType
     public function setTargetHostIdentifier($targetHostIdentifier)
     {
         $this->targetHostIdentifier = $targetHostIdentifier;
+
         return $this;
     }
 }

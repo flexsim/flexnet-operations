@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUpdateUserDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateUserDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateUserDataType|array
      */
     protected $failedUser;
 
@@ -31,7 +30,7 @@ class FailedUpdateUserDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateUserDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateUserDataType|array
      */
     public function getFailedUser()
     {
@@ -45,6 +44,7 @@ class FailedUpdateUserDataListType extends FlexnetType
     public function setFailedUser($failedUser)
     {
         $this->failedUser = $failedUser;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetUsageHistoryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\GetUsageHistoryParametersType
      */
@@ -79,6 +78,7 @@ class GetUsageHistoryRequestType extends FlexnetType implements RequestInterface
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 
@@ -97,6 +97,7 @@ class GetUsageHistoryRequestType extends FlexnetType implements RequestInterface
     public function setQueryConfig($queryConfig)
     {
         $this->queryConfig = $queryConfig;
+
         return $this;
     }
 
@@ -115,6 +116,7 @@ class GetUsageHistoryRequestType extends FlexnetType implements RequestInterface
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -133,6 +135,7 @@ class GetUsageHistoryRequestType extends FlexnetType implements RequestInterface
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 }

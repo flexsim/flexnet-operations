@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FulfillmentPKType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class FulfillmentPKType extends FlexnetType
     public function setFulfillmentId($fulfillmentId)
     {
         $this->fulfillmentId = $fulfillmentId;
+
         return $this;
     }
 }

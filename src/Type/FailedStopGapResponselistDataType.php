@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedStopGapResponselistDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedStopGapResponseDataType
      */
@@ -45,6 +44,7 @@ class FailedStopGapResponselistDataType extends FlexnetType
     public function setFailedFulfillment($failedFulfillment)
     {
         $this->failedFulfillment = $failedFulfillment;
+
         return $this;
     }
 }

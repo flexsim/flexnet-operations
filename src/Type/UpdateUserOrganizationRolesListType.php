@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateUserOrganizationRolesListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\RoleIdentifierType|array 
+     * @var \Flexsim\FlexnetOperations\Type\RoleIdentifierType|array
      */
     protected $role;
 
@@ -31,7 +30,7 @@ class UpdateUserOrganizationRolesListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\RoleIdentifierType|array 
+     * @return \Flexsim\FlexnetOperations\Type\RoleIdentifierType|array
      */
     public function getRole()
     {
@@ -45,6 +44,7 @@ class UpdateUserOrganizationRolesListType extends FlexnetType
     public function setRole($role)
     {
         $this->role = $role;
+
         return $this;
     }
 }

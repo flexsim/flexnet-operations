@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AcctTypeList extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class AcctTypeList extends FlexnetType
     public function setAcctType($acctType)
     {
         $this->acctType = $acctType;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreateUniformSuiteDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -181,6 +180,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setSuiteName($suiteName)
     {
         $this->suiteName = $suiteName;
+
         return $this;
     }
 
@@ -199,6 +199,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -217,6 +218,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -235,6 +237,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 
@@ -253,6 +256,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setLicenseGenerator($licenseGenerator)
     {
         $this->licenseGenerator = $licenseGenerator;
+
         return $this;
     }
 
@@ -271,6 +275,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setPackageProperties($packageProperties)
     {
         $this->packageProperties = $packageProperties;
+
         return $this;
     }
 
@@ -289,6 +294,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setProducts($products)
     {
         $this->products = $products;
+
         return $this;
     }
 
@@ -307,6 +313,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setLicenseModels($licenseModels)
     {
         $this->licenseModels = $licenseModels;
+
         return $this;
     }
 
@@ -325,6 +332,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setTrustedKey($trustedKey)
     {
         $this->trustedKey = $trustedKey;
+
         return $this;
     }
 
@@ -343,6 +351,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setVirtualTrustedKey($virtualTrustedKey)
     {
         $this->virtualTrustedKey = $virtualTrustedKey;
+
         return $this;
     }
 
@@ -361,6 +370,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setPartNumbers($partNumbers)
     {
         $this->partNumbers = $partNumbers;
+
         return $this;
     }
 
@@ -379,6 +389,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setHostType($hostType)
     {
         $this->hostType = $hostType;
+
         return $this;
     }
 
@@ -397,6 +408,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setHostTypes($hostTypes)
     {
         $this->hostTypes = $hostTypes;
+
         return $this;
     }
 
@@ -415,6 +427,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setUsedOnDevice($usedOnDevice)
     {
         $this->usedOnDevice = $usedOnDevice;
+
         return $this;
     }
 
@@ -433,6 +446,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -451,6 +465,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setAllowDownloadObsoleteFrInAdmin($allowDownloadObsoleteFrInAdmin)
     {
         $this->allowDownloadObsoleteFrInAdmin = $allowDownloadObsoleteFrInAdmin;
+
         return $this;
     }
 
@@ -469,6 +484,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setAllowDownloadObsoleteFrInPortal($allowDownloadObsoleteFrInPortal)
     {
         $this->allowDownloadObsoleteFrInPortal = $allowDownloadObsoleteFrInPortal;
+
         return $this;
     }
 
@@ -487,6 +503,7 @@ class CreateUniformSuiteDataType extends FlexnetType
     public function setProductAttributes($productAttributes)
     {
         $this->productAttributes = $productAttributes;
+
         return $this;
     }
 }

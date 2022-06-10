@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class StatusResponse extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var string
      */
@@ -63,6 +62,7 @@ class StatusResponse extends FlexnetType implements ResultInterface
     public function setStatusCorelation($statusCorelation)
     {
         $this->statusCorelation = $statusCorelation;
+
         return $this;
     }
 
@@ -81,6 +81,7 @@ class StatusResponse extends FlexnetType implements ResultInterface
     public function setStatusCode($statusCode)
     {
         $this->statusCode = $statusCode;
+
         return $this;
     }
 
@@ -99,6 +100,7 @@ class StatusResponse extends FlexnetType implements ResultInterface
     public function setStatusMessage($statusMessage)
     {
         $this->statusMessage = $statusMessage;
+
         return $this;
     }
 }

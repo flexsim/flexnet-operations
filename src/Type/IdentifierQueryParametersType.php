@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class IdentifierQueryParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -45,6 +44,7 @@ class IdentifierQueryParametersType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 }

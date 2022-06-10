@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetHostAttributesRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType
      */
@@ -55,6 +54,7 @@ class GetHostAttributesRequestType extends FlexnetType implements RequestInterfa
     public function setLicenseTechnologyIdentifier($licenseTechnologyIdentifier)
     {
         $this->licenseTechnologyIdentifier = $licenseTechnologyIdentifier;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class GetHostAttributesRequestType extends FlexnetType implements RequestInterfa
     public function setHostType($hostType)
     {
         $this->hostType = $hostType;
+
         return $this;
     }
 }

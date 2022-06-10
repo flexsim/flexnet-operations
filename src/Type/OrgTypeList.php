@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class OrgTypeList extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class OrgTypeList extends FlexnetType
     public function setOrgType($orgType)
     {
         $this->orgType = $orgType;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class UpdateUserRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateUserDataType
      */
@@ -47,6 +46,7 @@ class UpdateUserRequestType extends FlexnetType implements RequestInterface
     public function setUserData($userData)
     {
         $this->userData = $userData;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetAutoProvisionedServerRequest extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class GetAutoProvisionedServerRequest extends FlexnetType implements RequestInte
     public function setAcctName($acctName)
     {
         $this->acctName = $acctName;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class GetAutoProvisionedServerRequest extends FlexnetType implements RequestInte
     public function setOrgName($orgName)
     {
         $this->orgName = $orgName;
+
         return $this;
     }
 }

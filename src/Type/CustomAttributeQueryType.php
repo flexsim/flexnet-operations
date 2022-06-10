@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CustomAttributeQueryType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -77,6 +76,7 @@ class CustomAttributeQueryType extends FlexnetType
     public function setAttributeName($attributeName)
     {
         $this->attributeName = $attributeName;
+
         return $this;
     }
 
@@ -95,6 +95,7 @@ class CustomAttributeQueryType extends FlexnetType
     public function setStringValue($stringValue)
     {
         $this->stringValue = $stringValue;
+
         return $this;
     }
 
@@ -113,6 +114,7 @@ class CustomAttributeQueryType extends FlexnetType
     public function setNumberValue($numberValue)
     {
         $this->numberValue = $numberValue;
+
         return $this;
     }
 
@@ -131,6 +133,7 @@ class CustomAttributeQueryType extends FlexnetType
     public function setDateValue($dateValue)
     {
         $this->dateValue = $dateValue;
+
         return $this;
     }
 
@@ -149,6 +152,7 @@ class CustomAttributeQueryType extends FlexnetType
     public function setBooleanValue($booleanValue)
     {
         $this->booleanValue = $booleanValue;
+
         return $this;
     }
 }

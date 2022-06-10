@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreateUserOrganizationType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
@@ -53,6 +52,7 @@ class CreateUserOrganizationType extends FlexnetType
     public function setOrganization($organization)
     {
         $this->organization = $organization;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class CreateUserOrganizationType extends FlexnetType
     public function setRoles($roles)
     {
         $this->roles = $roles;
+
         return $this;
     }
 }

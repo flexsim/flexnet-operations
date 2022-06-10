@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FeatureBundleQueryParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -77,6 +76,7 @@ class FeatureBundleQueryParametersType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -95,6 +95,7 @@ class FeatureBundleQueryParametersType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -113,6 +114,7 @@ class FeatureBundleQueryParametersType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -131,6 +133,7 @@ class FeatureBundleQueryParametersType extends FlexnetType
     public function setCreationDate($creationDate)
     {
         $this->creationDate = $creationDate;
+
         return $this;
     }
 
@@ -149,6 +152,7 @@ class FeatureBundleQueryParametersType extends FlexnetType
     public function setLastModifiedDate($lastModifiedDate)
     {
         $this->lastModifiedDate = $lastModifiedDate;
+
         return $this;
     }
 }

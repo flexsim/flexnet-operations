@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedAdvancedFmtLCDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType
      */
@@ -53,6 +52,7 @@ class FailedAdvancedFmtLCDataType extends FlexnetType
     public function setFulfillment($fulfillment)
     {
         $this->fulfillment = $fulfillment;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedAdvancedFmtLCDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ProductsListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array
      */
     protected $product;
 
@@ -31,7 +30,7 @@ class ProductsListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array
      */
     public function getProduct()
     {
@@ -45,6 +44,7 @@ class ProductsListType extends FlexnetType
     public function setProduct($product)
     {
         $this->product = $product;
+
         return $this;
     }
 }

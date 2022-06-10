@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SetDeviceStatusType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
@@ -53,6 +52,7 @@ class SetDeviceStatusType extends FlexnetType
     public function setDeviceIdentifier($deviceIdentifier)
     {
         $this->deviceIdentifier = $deviceIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class SetDeviceStatusType extends FlexnetType
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 }

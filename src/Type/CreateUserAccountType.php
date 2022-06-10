@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreateUserAccountType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
@@ -67,6 +66,7 @@ class CreateUserAccountType extends FlexnetType
     public function setAccount($account)
     {
         $this->account = $account;
+
         return $this;
     }
 
@@ -85,6 +85,7 @@ class CreateUserAccountType extends FlexnetType
     public function setExpiryDate($expiryDate)
     {
         $this->expiryDate = $expiryDate;
+
         return $this;
     }
 
@@ -103,6 +104,7 @@ class CreateUserAccountType extends FlexnetType
     public function setRoles($roles)
     {
         $this->roles = $roles;
+
         return $this;
     }
 }

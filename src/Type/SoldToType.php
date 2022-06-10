@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SoldToType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class SoldToType extends FlexnetType
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -79,9 +79,9 @@ class SoldToType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
-
 
     /**
      * @return string
@@ -98,6 +98,7 @@ class SoldToType extends FlexnetType
     public function setDisplayName($displayName)
     {
         $this->displayName = $displayName;
+
         return $this;
     }
 }

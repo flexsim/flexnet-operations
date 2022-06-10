@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PartNumberIdentifierWithModelType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class PartNumberIdentifierWithModelType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class PartNumberIdentifierWithModelType extends FlexnetType
     public function setPrimaryKeys($primaryKeys)
     {
         $this->primaryKeys = $primaryKeys;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class PartNumberIdentifierWithModelType extends FlexnetType
     public function setLicenseModel($licenseModel)
     {
         $this->licenseModel = $licenseModel;
+
         return $this;
     }
 }

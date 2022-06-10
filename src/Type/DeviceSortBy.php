@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeviceSortBy extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class DeviceSortBy extends FlexnetType
     public function setSortKey($sortKey)
     {
         $this->sortKey = $sortKey;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class DeviceSortBy extends FlexnetType
     public function setAscending($ascending)
     {
         $this->ascending = $ascending;
+
         return $this;
     }
 }

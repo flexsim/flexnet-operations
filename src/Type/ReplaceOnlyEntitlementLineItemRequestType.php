@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class ReplaceOnlyEntitlementLineItemRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType
      */
@@ -47,6 +46,7 @@ class ReplaceOnlyEntitlementLineItemRequestType extends FlexnetType implements R
     public function setLineItem($lineItem)
     {
         $this->lineItem = $lineItem;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class RepairFulfillmentDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
@@ -69,6 +68,7 @@ class RepairFulfillmentDataType extends FlexnetType
     public function setFulfillmentIdentifier($fulfillmentIdentifier)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class RepairFulfillmentDataType extends FlexnetType
     public function setLicenseModelAttributes($licenseModelAttributes)
     {
         $this->licenseModelAttributes = $licenseModelAttributes;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class RepairFulfillmentDataType extends FlexnetType
     public function setOverridePolicy($overridePolicy)
     {
         $this->overridePolicy = $overridePolicy;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class RepairFulfillmentDataType extends FlexnetType
     public function setFNPTimeZoneValue($FNPTimeZoneValue)
     {
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
+
         return $this;
     }
 }

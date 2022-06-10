@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LineItemActivationIds extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class LineItemActivationIds extends FlexnetType
     public function setLineItemActivationId($lineItemActivationId)
     {
         $this->lineItemActivationId = $lineItemActivationId;
+
         return $this;
     }
 }

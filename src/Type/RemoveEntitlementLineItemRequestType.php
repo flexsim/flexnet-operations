@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class RemoveEntitlementLineItemRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\RemoveEntitlementLineItemDataType
      */
@@ -47,6 +46,7 @@ class RemoveEntitlementLineItemRequestType extends FlexnetType implements Reques
     public function setLineItemData($lineItemData)
     {
         $this->lineItemData = $lineItemData;
+
         return $this;
     }
 }

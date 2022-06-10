@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeletedSyncDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceIdentifier
      */
@@ -69,6 +68,7 @@ class DeletedSyncDataType extends FlexnetType
     public function setServerIdentifier($serverIdentifier)
     {
         $this->serverIdentifier = $serverIdentifier;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class DeletedSyncDataType extends FlexnetType
     public function setStartTime($startTime)
     {
         $this->startTime = $startTime;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class DeletedSyncDataType extends FlexnetType
     public function setEndTime($endTime)
     {
         $this->endTime = $endTime;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class DeletedSyncDataType extends FlexnetType
     public function setCount($count)
     {
         $this->count = $count;
+
         return $this;
     }
 }

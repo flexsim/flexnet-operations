@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class CreateProductCategoryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType
      */
@@ -47,6 +46,7 @@ class CreateProductCategoryRequestType extends FlexnetType implements RequestInt
     public function setProductCategory($productCategory)
     {
         $this->productCategory = $productCategory;
+
         return $this;
     }
 }

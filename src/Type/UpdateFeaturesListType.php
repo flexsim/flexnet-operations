@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateFeaturesListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array
      */
@@ -53,6 +52,7 @@ class UpdateFeaturesListType extends FlexnetType
     public function setFeature($feature)
     {
         $this->feature = $feature;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class UpdateFeaturesListType extends FlexnetType
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

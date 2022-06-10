@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class AuthenticateUserReturnType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var bool
      */
@@ -47,6 +46,7 @@ class AuthenticateUserReturnType extends FlexnetType implements ResultInterface
     public function setSuccess($Success)
     {
         $this->Success = $Success;
+
         return $this;
     }
 }

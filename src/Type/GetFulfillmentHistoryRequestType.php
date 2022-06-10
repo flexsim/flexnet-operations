@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -119,6 +118,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -137,6 +137,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     public function setFulfillmentId($fulfillmentId)
     {
         $this->fulfillmentId = $fulfillmentId;
+
         return $this;
     }
 
@@ -155,6 +156,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     public function setUserId($userId)
     {
         $this->userId = $userId;
+
         return $this;
     }
 
@@ -173,6 +175,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     public function setCount($count)
     {
         $this->count = $count;
+
         return $this;
     }
 
@@ -191,6 +194,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     public function setPolicyOverridden($policyOverridden)
     {
         $this->policyOverridden = $policyOverridden;
+
         return $this;
     }
 
@@ -209,6 +213,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     public function setActionDateTime($actionDateTime)
     {
         $this->actionDateTime = $actionDateTime;
+
         return $this;
     }
 
@@ -227,6 +232,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     public function setLifeCycleAction($lifeCycleAction)
     {
         $this->lifeCycleAction = $lifeCycleAction;
+
         return $this;
     }
 
@@ -245,6 +251,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     public function setFulfillmentSource($fulfillmentSource)
     {
         $this->fulfillmentSource = $fulfillmentSource;
+
         return $this;
     }
 
@@ -263,6 +270,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -281,6 +289,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 }

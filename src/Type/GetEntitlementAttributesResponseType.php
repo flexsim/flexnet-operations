@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetEntitlementAttributesResponseType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
@@ -71,6 +70,7 @@ class GetEntitlementAttributesResponseType extends FlexnetType implements Result
     public function setStatusInfo($statusInfo)
     {
         $this->statusInfo = $statusInfo;
+
         return $this;
     }
 
@@ -89,6 +89,7 @@ class GetEntitlementAttributesResponseType extends FlexnetType implements Result
     public function setEntitlementAttributes($entitlementAttributes)
     {
         $this->entitlementAttributes = $entitlementAttributes;
+
         return $this;
     }
 
@@ -107,6 +108,7 @@ class GetEntitlementAttributesResponseType extends FlexnetType implements Result
     public function setPolicyAttributes($policyAttributes)
     {
         $this->policyAttributes = $policyAttributes;
+
         return $this;
     }
 
@@ -125,6 +127,7 @@ class GetEntitlementAttributesResponseType extends FlexnetType implements Result
     public function setNeedTimeZone($needTimeZone)
     {
         $this->needTimeZone = $needTimeZone;
+
         return $this;
     }
 }

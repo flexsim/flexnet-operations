@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateDomainUserDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType
      */
@@ -109,6 +108,7 @@ class UpdateDomainUserDataType extends FlexnetType
     public function setDomainUser($domainUser)
     {
         $this->domainUser = $domainUser;
+
         return $this;
     }
 
@@ -127,6 +127,7 @@ class UpdateDomainUserDataType extends FlexnetType
     public function setEmail($email)
     {
         $this->email = $email;
+
         return $this;
     }
 
@@ -145,6 +146,7 @@ class UpdateDomainUserDataType extends FlexnetType
     public function setOrganization($organization)
     {
         $this->organization = $organization;
+
         return $this;
     }
 
@@ -163,6 +165,7 @@ class UpdateDomainUserDataType extends FlexnetType
     public function setRoles($roles)
     {
         $this->roles = $roles;
+
         return $this;
     }
 
@@ -181,6 +184,7 @@ class UpdateDomainUserDataType extends FlexnetType
     public function setOptIn($optIn)
     {
         $this->optIn = $optIn;
+
         return $this;
     }
 
@@ -199,6 +203,7 @@ class UpdateDomainUserDataType extends FlexnetType
     public function setLocale($locale)
     {
         $this->locale = $locale;
+
         return $this;
     }
 
@@ -217,6 +222,7 @@ class UpdateDomainUserDataType extends FlexnetType
     public function setTimeZone($timeZone)
     {
         $this->timeZone = $timeZone;
+
         return $this;
     }
 
@@ -235,6 +241,7 @@ class UpdateDomainUserDataType extends FlexnetType
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -253,6 +260,7 @@ class UpdateDomainUserDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 }

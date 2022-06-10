@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class BulkEntitlementDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class BulkEntitlementDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class BulkEntitlementDataType extends FlexnetType
     public function setCreatedUserId($createdUserId)
     {
         $this->createdUserId = $createdUserId;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class BulkEntitlementDataType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 }

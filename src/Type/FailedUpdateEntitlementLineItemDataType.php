@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUpdateEntitlementLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType
      */
@@ -53,6 +52,7 @@ class FailedUpdateEntitlementLineItemDataType extends FlexnetType
     public function setFailedData($failedData)
     {
         $this->failedData = $failedData;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedUpdateEntitlementLineItemDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

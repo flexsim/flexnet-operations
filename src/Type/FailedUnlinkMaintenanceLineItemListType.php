@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUnlinkMaintenanceLineItemListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUnlinkMaintenanceLineItemDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedUnlinkMaintenanceLineItemDataType|array
      */
     protected $failedUnlinkMaintenanceLineItem;
 
@@ -31,7 +30,7 @@ class FailedUnlinkMaintenanceLineItemListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUnlinkMaintenanceLineItemDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedUnlinkMaintenanceLineItemDataType|array
      */
     public function getFailedUnlinkMaintenanceLineItem()
     {
@@ -45,6 +44,7 @@ class FailedUnlinkMaintenanceLineItemListType extends FlexnetType
     public function setFailedUnlinkMaintenanceLineItem($failedUnlinkMaintenanceLineItem)
     {
         $this->failedUnlinkMaintenanceLineItem = $failedUnlinkMaintenanceLineItem;
+
         return $this;
     }
 }

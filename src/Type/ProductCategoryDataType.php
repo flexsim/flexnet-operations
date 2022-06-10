@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ProductCategoryDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -69,6 +68,7 @@ class ProductCategoryDataType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class ProductCategoryDataType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class ProductCategoryDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class ProductCategoryDataType extends FlexnetType
     public function setCategoryAttributes($categoryAttributes)
     {
         $this->categoryAttributes = $categoryAttributes;
+
         return $this;
     }
 }

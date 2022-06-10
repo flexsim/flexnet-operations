@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class BulkEntitlementPropertiesType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -285,6 +284,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -303,6 +303,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setAllowPortalLogin($allowPortalLogin)
     {
         $this->allowPortalLogin = $allowPortalLogin;
+
         return $this;
     }
 
@@ -321,6 +322,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -339,6 +341,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -357,6 +360,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -375,6 +379,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setSoldToDisplayName($soldToDisplayName)
     {
         $this->soldToDisplayName = $soldToDisplayName;
+
         return $this;
     }
 
@@ -393,6 +398,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setShipToEmail($shipToEmail)
     {
         $this->shipToEmail = $shipToEmail;
+
         return $this;
     }
 
@@ -411,6 +417,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setShipToAddress($shipToAddress)
     {
         $this->shipToAddress = $shipToAddress;
+
         return $this;
     }
 
@@ -429,6 +436,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -447,6 +455,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setOrderLineNumber($orderLineNumber)
     {
         $this->orderLineNumber = $orderLineNumber;
+
         return $this;
     }
 
@@ -465,6 +474,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setProduct($product)
     {
         $this->product = $product;
+
         return $this;
     }
 
@@ -483,6 +493,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setProductDescription($productDescription)
     {
         $this->productDescription = $productDescription;
+
         return $this;
     }
 
@@ -501,6 +512,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -519,6 +531,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setPartNumberDescription($partNumberDescription)
     {
         $this->partNumberDescription = $partNumberDescription;
+
         return $this;
     }
 
@@ -537,6 +550,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setLicenseModel($licenseModel)
     {
         $this->licenseModel = $licenseModel;
+
         return $this;
     }
 
@@ -555,6 +569,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setAlternateLicenseModel1($alternateLicenseModel1)
     {
         $this->alternateLicenseModel1 = $alternateLicenseModel1;
+
         return $this;
     }
 
@@ -573,6 +588,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setAlternateLicenseModel2($alternateLicenseModel2)
     {
         $this->alternateLicenseModel2 = $alternateLicenseModel2;
+
         return $this;
     }
 
@@ -591,6 +607,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 
@@ -609,6 +626,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setStartDateOption($startDateOption)
     {
         $this->startDateOption = $startDateOption;
+
         return $this;
     }
 
@@ -627,6 +645,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -645,6 +664,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setTerm($term)
     {
         $this->term = $term;
+
         return $this;
     }
 
@@ -663,6 +683,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -681,6 +702,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setVersionDate($versionDate)
     {
         $this->versionDate = $versionDate;
+
         return $this;
     }
 
@@ -699,6 +721,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setVersionDateAttributes($versionDateAttributes)
     {
         $this->versionDateAttributes = $versionDateAttributes;
+
         return $this;
     }
 
@@ -717,6 +740,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setNumberOfCopies($numberOfCopies)
     {
         $this->numberOfCopies = $numberOfCopies;
+
         return $this;
     }
 
@@ -735,6 +759,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setBulkEntitlementType($bulkEntitlementType)
     {
         $this->bulkEntitlementType = $bulkEntitlementType;
+
         return $this;
     }
 
@@ -753,6 +778,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setCreatedUserId($createdUserId)
     {
         $this->createdUserId = $createdUserId;
+
         return $this;
     }
 
@@ -771,6 +797,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -789,6 +816,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setEntitledProducts($entitledProducts)
     {
         $this->entitledProducts = $entitledProducts;
+
         return $this;
     }
 
@@ -807,6 +835,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setChannelPartners($channelPartners)
     {
         $this->channelPartners = $channelPartners;
+
         return $this;
     }
 
@@ -825,6 +854,7 @@ class BulkEntitlementPropertiesType extends FlexnetType
     public function setFNPTimeZoneValue($FNPTimeZoneValue)
     {
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
+
         return $this;
     }
 }

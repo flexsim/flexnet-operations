@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class DeleteFeatureRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeleteFeatureDataType
      */
@@ -47,6 +46,7 @@ class DeleteFeatureRequestType extends FlexnetType implements RequestInterface
     public function setFeature($feature)
     {
         $this->feature = $feature;
+
         return $this;
     }
 }

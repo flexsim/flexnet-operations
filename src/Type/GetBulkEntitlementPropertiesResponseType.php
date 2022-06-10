@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetBulkEntitlementPropertiesResponseType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
@@ -55,6 +54,7 @@ class GetBulkEntitlementPropertiesResponseType extends FlexnetType implements Re
     public function setStatusInfo($statusInfo)
     {
         $this->statusInfo = $statusInfo;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class GetBulkEntitlementPropertiesResponseType extends FlexnetType implements Re
     public function setBulkEntitlement($bulkEntitlement)
     {
         $this->bulkEntitlement = $bulkEntitlement;
+
         return $this;
     }
 }

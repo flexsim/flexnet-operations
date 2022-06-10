@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedPublisherErrorResponselistDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponseDataType
      */
@@ -45,6 +44,7 @@ class FailedPublisherErrorResponselistDataType extends FlexnetType
     public function setFailedFulfillment($failedFulfillment)
     {
         $this->failedFulfillment = $failedFulfillment;
+
         return $this;
     }
 }

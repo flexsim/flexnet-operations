@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class IsFulfillmentVisibleInTargetOrgRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -55,6 +54,7 @@ class IsFulfillmentVisibleInTargetOrgRequestType extends FlexnetType implements 
     public function setActivationID($ActivationID)
     {
         $this->ActivationID = $ActivationID;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class IsFulfillmentVisibleInTargetOrgRequestType extends FlexnetType implements 
     public function setTargetOrgID($targetOrgID)
     {
         $this->targetOrgID = $targetOrgID;
+
         return $this;
     }
 }

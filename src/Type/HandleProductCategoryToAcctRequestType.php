@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class HandleProductCategoryToAcctRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
@@ -55,6 +54,7 @@ class HandleProductCategoryToAcctRequestType extends FlexnetType implements Requ
     public function setAcct($acct)
     {
         $this->acct = $acct;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class HandleProductCategoryToAcctRequestType extends FlexnetType implements Requ
     public function setProductCategory($productCategory)
     {
         $this->productCategory = $productCategory;
+
         return $this;
     }
 }

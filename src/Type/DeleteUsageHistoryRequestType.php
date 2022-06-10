@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class DeleteUsageHistoryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \DateTimeInterface
      */
@@ -47,6 +46,7 @@ class DeleteUsageHistoryRequestType extends FlexnetType implements RequestInterf
     public function setBeforeUpdateTime($beforeUpdateTime)
     {
         $this->beforeUpdateTime = $beforeUpdateTime;
+
         return $this;
     }
 }

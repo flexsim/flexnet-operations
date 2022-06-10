@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class SetLicenseRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OnholdFulfillmentListType
      */
@@ -47,6 +46,7 @@ class SetLicenseRequestType extends FlexnetType implements RequestInterface
     public function setOnholdFulfillmentList($onholdFulfillmentList)
     {
         $this->onholdFulfillmentList = $onholdFulfillmentList;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ActivatableItemDetailType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -137,6 +136,7 @@ class ActivatableItemDetailType extends FlexnetType
     public function setActivatableItemType($activatableItemType)
     {
         $this->activatableItemType = $activatableItemType;
+
         return $this;
     }
 
@@ -155,6 +155,7 @@ class ActivatableItemDetailType extends FlexnetType
     public function setParentBulkEntitlementId($parentBulkEntitlementId)
     {
         $this->parentBulkEntitlementId = $parentBulkEntitlementId;
+
         return $this;
     }
 
@@ -173,6 +174,7 @@ class ActivatableItemDetailType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -191,6 +193,7 @@ class ActivatableItemDetailType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -209,6 +212,7 @@ class ActivatableItemDetailType extends FlexnetType
     public function setShipToEmail($shipToEmail)
     {
         $this->shipToEmail = $shipToEmail;
+
         return $this;
     }
 
@@ -227,6 +231,7 @@ class ActivatableItemDetailType extends FlexnetType
     public function setShipToAddress($shipToAddress)
     {
         $this->shipToAddress = $shipToAddress;
+
         return $this;
     }
 
@@ -245,6 +250,7 @@ class ActivatableItemDetailType extends FlexnetType
     public function setEntitlementState($entitlementState)
     {
         $this->entitlementState = $entitlementState;
+
         return $this;
     }
 
@@ -263,6 +269,7 @@ class ActivatableItemDetailType extends FlexnetType
     public function setActivatableItemData($activatableItemData)
     {
         $this->activatableItemData = $activatableItemData;
+
         return $this;
     }
 
@@ -281,6 +288,7 @@ class ActivatableItemDetailType extends FlexnetType
     public function setChannelPartners($channelPartners)
     {
         $this->channelPartners = $channelPartners;
+
         return $this;
     }
 
@@ -299,6 +307,7 @@ class ActivatableItemDetailType extends FlexnetType
     public function setEntitlementAttributes($entitlementAttributes)
     {
         $this->entitlementAttributes = $entitlementAttributes;
+
         return $this;
     }
 }

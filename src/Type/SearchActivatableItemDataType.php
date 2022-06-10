@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SearchActivatableItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -333,6 +332,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setParentBulkEntitlementId($parentBulkEntitlementId)
     {
         $this->parentBulkEntitlementId = $parentBulkEntitlementId;
+
         return $this;
     }
 
@@ -351,6 +351,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -369,6 +370,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -387,6 +389,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setProductName($productName)
     {
         $this->productName = $productName;
+
         return $this;
     }
 
@@ -405,6 +408,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setProductVersion($productVersion)
     {
         $this->productVersion = $productVersion;
+
         return $this;
     }
 
@@ -423,6 +427,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setProductType($productType)
     {
         $this->productType = $productType;
+
         return $this;
     }
 
@@ -441,6 +446,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -459,6 +465,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -477,6 +484,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -495,6 +503,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -513,6 +522,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setVersionDate($versionDate)
     {
         $this->versionDate = $versionDate;
+
         return $this;
     }
 
@@ -531,6 +541,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 
@@ -549,6 +560,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -567,6 +579,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setWithNoOrderId($withNoOrderId)
     {
         $this->withNoOrderId = $withNoOrderId;
+
         return $this;
     }
 
@@ -585,6 +598,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setRestrictToItemsWithCount($restrictToItemsWithCount)
     {
         $this->restrictToItemsWithCount = $restrictToItemsWithCount;
+
         return $this;
     }
 
@@ -603,6 +617,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setFulfilledAmount($fulfilledAmount)
     {
         $this->fulfilledAmount = $fulfilledAmount;
+
         return $this;
     }
 
@@ -621,6 +636,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setUserId($userId)
     {
         $this->userId = $userId;
+
         return $this;
     }
 
@@ -639,6 +655,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -657,6 +674,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -675,6 +693,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setParentBulkEntSoldTo($parentBulkEntSoldTo)
     {
         $this->parentBulkEntSoldTo = $parentBulkEntSoldTo;
+
         return $this;
     }
 
@@ -693,6 +712,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setActivatableItemType($activatableItemType)
     {
         $this->activatableItemType = $activatableItemType;
+
         return $this;
     }
 
@@ -711,6 +731,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setAllowPortalLogin($allowPortalLogin)
     {
         $this->allowPortalLogin = $allowPortalLogin;
+
         return $this;
     }
 
@@ -729,6 +750,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setAccountUnitName($accountUnitName)
     {
         $this->accountUnitName = $accountUnitName;
+
         return $this;
     }
 
@@ -747,6 +769,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setOrganizationUnitName($organizationUnitName)
     {
         $this->organizationUnitName = $organizationUnitName;
+
         return $this;
     }
 
@@ -765,6 +788,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setCurrentOwnerName($currentOwnerName)
     {
         $this->currentOwnerName = $currentOwnerName;
+
         return $this;
     }
 
@@ -783,6 +807,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setLineItemParentLineItemId($lineItemParentLineItemId)
     {
         $this->lineItemParentLineItemId = $lineItemParentLineItemId;
+
         return $this;
     }
 
@@ -801,6 +826,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setCreatedOnDateTime($createdOnDateTime)
     {
         $this->createdOnDateTime = $createdOnDateTime;
+
         return $this;
     }
 
@@ -819,6 +845,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setLastModifiedDateTime($lastModifiedDateTime)
     {
         $this->lastModifiedDateTime = $lastModifiedDateTime;
+
         return $this;
     }
 
@@ -837,6 +864,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setLineItemAttributes($lineItemAttributes)
     {
         $this->lineItemAttributes = $lineItemAttributes;
+
         return $this;
     }
 
@@ -855,6 +883,7 @@ class SearchActivatableItemDataType extends FlexnetType
     public function setOrderLineNumber($orderLineNumber)
     {
         $this->orderLineNumber = $orderLineNumber;
+
         return $this;
     }
 }

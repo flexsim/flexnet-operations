@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class TransferLineItemsRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\TransferLineItemsListType
      */
@@ -47,6 +46,7 @@ class TransferLineItemsRequestType extends FlexnetType implements RequestInterfa
     public function setLineItemList($lineItemList)
     {
         $this->lineItemList = $lineItemList;
+
         return $this;
     }
 }

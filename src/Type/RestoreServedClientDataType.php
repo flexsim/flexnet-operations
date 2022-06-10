@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class RestoreServedClientDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class RestoreServedClientDataType extends FlexnetType
     public function setServedClientResponse($servedClientResponse)
     {
         $this->servedClientResponse = $servedClientResponse;
+
         return $this;
     }
 }

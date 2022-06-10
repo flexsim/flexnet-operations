@@ -3,12 +3,12 @@
 namespace Flexsim\FlexnetOperations\Services\EntitlementOrderService\v3;
 
 use Flexsim\FlexnetOperations\Type;
-use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 
 class EntitlementOrderServiceClassmap
 {
-    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
+    public static function getCollection(): \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
         return new ClassMapCollection(
             new ClassMap('idType', Type\IdType::class),
@@ -315,4 +315,3 @@ class EntitlementOrderServiceClassmap
         );
     }
 }
-

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CustomAttributeDescriptorType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class CustomAttributeDescriptorType extends FlexnetType
     public function setAttributeName($attributeName)
     {
         $this->attributeName = $attributeName;
+
         return $this;
     }
 }

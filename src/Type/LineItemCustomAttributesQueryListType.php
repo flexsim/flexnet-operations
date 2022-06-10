@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LineItemCustomAttributesQueryListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LineItemCustomAttributeQueryType|array 
+     * @var \Flexsim\FlexnetOperations\Type\LineItemCustomAttributeQueryType|array
      */
     protected $attribute;
 
@@ -31,7 +30,7 @@ class LineItemCustomAttributesQueryListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LineItemCustomAttributeQueryType|array 
+     * @return \Flexsim\FlexnetOperations\Type\LineItemCustomAttributeQueryType|array
      */
     public function getAttribute()
     {
@@ -45,6 +44,7 @@ class LineItemCustomAttributesQueryListType extends FlexnetType
     public function setAttribute($attribute)
     {
         $this->attribute = $attribute;
+
         return $this;
     }
 }

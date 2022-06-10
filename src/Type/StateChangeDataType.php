@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class StateChangeDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -69,6 +68,7 @@ class StateChangeDataType extends FlexnetType
     public function setEventName($eventName)
     {
         $this->eventName = $eventName;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class StateChangeDataType extends FlexnetType
     public function setEventDate($eventDate)
     {
         $this->eventDate = $eventDate;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class StateChangeDataType extends FlexnetType
     public function setUserId($userId)
     {
         $this->userId = $userId;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class StateChangeDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 }

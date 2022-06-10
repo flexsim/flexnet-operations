@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetMaintenanceQueryResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceQueryDataType
      */
@@ -45,6 +44,7 @@ class GetMaintenanceQueryResponseDataType extends FlexnetType
     public function setMaintenance($maintenance)
     {
         $this->maintenance = $maintenance;
+
         return $this;
     }
 }

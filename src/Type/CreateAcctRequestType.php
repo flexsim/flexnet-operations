@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class CreateAcctRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountDataType
      */
@@ -55,6 +54,7 @@ class CreateAcctRequestType extends FlexnetType implements RequestInterface
     public function setAccount($account)
     {
         $this->account = $account;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class CreateAcctRequestType extends FlexnetType implements RequestInterface
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

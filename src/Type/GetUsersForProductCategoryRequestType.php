@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetUsersForProductCategoryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductCategoryDataType
      */
@@ -47,6 +46,7 @@ class GetUsersForProductCategoryRequestType extends FlexnetType implements Reque
     public function setProductCategory($productCategory)
     {
         $this->productCategory = $productCategory;
+
         return $this;
     }
 }

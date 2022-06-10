@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetProductCategoriesRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var int
      */
@@ -69,6 +68,7 @@ class GetProductCategoriesRequestType extends FlexnetType implements RequestInte
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class GetProductCategoriesRequestType extends FlexnetType implements RequestInte
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class GetProductCategoriesRequestType extends FlexnetType implements RequestInte
     public function setReturnContainedObjects($returnContainedObjects)
     {
         $this->returnContainedObjects = $returnContainedObjects;
+
         return $this;
     }
 }

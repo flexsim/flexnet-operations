@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetAccountCountResponseDataType extends FlexnetType
 {
-
     /**
      * @var int
      */
@@ -45,6 +44,7 @@ class GetAccountCountResponseDataType extends FlexnetType
     public function setCount($count)
     {
         $this->count = $count;
+
         return $this;
     }
 }

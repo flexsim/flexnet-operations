@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class MaintenanceStateDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType
      */
@@ -53,6 +52,7 @@ class MaintenanceStateDataType extends FlexnetType
     public function setMaintenanceIdentifier($maintenanceIdentifier)
     {
         $this->maintenanceIdentifier = $maintenanceIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class MaintenanceStateDataType extends FlexnetType
     public function setStateToSet($stateToSet)
     {
         $this->stateToSet = $stateToSet;
+
         return $this;
     }
 }

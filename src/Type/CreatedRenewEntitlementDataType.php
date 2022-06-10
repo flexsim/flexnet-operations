@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedRenewEntitlementDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class CreatedRenewEntitlementDataType extends FlexnetType
     public function setEntitlementRecordRefNo($entitlementRecordRefNo)
     {
         $this->entitlementRecordRefNo = $entitlementRecordRefNo;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class CreatedRenewEntitlementDataType extends FlexnetType
     public function setParentEntitlementIdentifier($parentEntitlementIdentifier)
     {
         $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class CreatedRenewEntitlementDataType extends FlexnetType
     public function setRenewedLineItem($renewedLineItem)
     {
         $this->renewedLineItem = $renewedLineItem;
+
         return $this;
     }
 }

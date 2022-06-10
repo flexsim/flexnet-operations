@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class RestoreServedClientRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -71,6 +70,7 @@ class RestoreServedClientRequestType extends FlexnetType implements RequestInter
     public function setServedClientHostId($servedClientHostId)
     {
         $this->servedClientHostId = $servedClientHostId;
+
         return $this;
     }
 
@@ -89,6 +89,7 @@ class RestoreServedClientRequestType extends FlexnetType implements RequestInter
     public function setServedClientIdType($servedClientIdType)
     {
         $this->servedClientIdType = $servedClientIdType;
+
         return $this;
     }
 
@@ -107,6 +108,7 @@ class RestoreServedClientRequestType extends FlexnetType implements RequestInter
     public function setNewHostID($newHostID)
     {
         $this->newHostID = $newHostID;
+
         return $this;
     }
 
@@ -125,6 +127,7 @@ class RestoreServedClientRequestType extends FlexnetType implements RequestInter
     public function setServerHostIdTypes($serverHostIdTypes)
     {
         $this->serverHostIdTypes = $serverHostIdTypes;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class CreateLicensesAsBatchRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ActivationIdsListType
      */
@@ -71,6 +70,7 @@ class CreateLicensesAsBatchRequestType extends FlexnetType implements RequestInt
     public function setActivationIds($activationIds)
     {
         $this->activationIds = $activationIds;
+
         return $this;
     }
 
@@ -89,6 +89,7 @@ class CreateLicensesAsBatchRequestType extends FlexnetType implements RequestInt
     public function setHostIdDataSet($hostIdDataSet)
     {
         $this->hostIdDataSet = $hostIdDataSet;
+
         return $this;
     }
 
@@ -107,6 +108,7 @@ class CreateLicensesAsBatchRequestType extends FlexnetType implements RequestInt
     public function setCountDataSet($countDataSet)
     {
         $this->countDataSet = $countDataSet;
+
         return $this;
     }
 
@@ -125,6 +127,7 @@ class CreateLicensesAsBatchRequestType extends FlexnetType implements RequestInt
     public function setCommonBatchDataSet($commonBatchDataSet)
     {
         $this->commonBatchDataSet = $commonBatchDataSet;
+
         return $this;
     }
 }

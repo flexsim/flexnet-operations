@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedSetLicenseOnholdFulfillmentListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array
      */
     protected $failedFmtData;
 
@@ -31,7 +30,7 @@ class FailedSetLicenseOnholdFulfillmentListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array
      */
     public function getFailedFmtData()
     {
@@ -45,6 +44,7 @@ class FailedSetLicenseOnholdFulfillmentListType extends FlexnetType
     public function setFailedFmtData($failedFmtData)
     {
         $this->failedFmtData = $failedFmtData;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GroupMaskDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class GroupMaskDataType extends FlexnetType
     public function setOption($option)
     {
         $this->option = $option;
+
         return $this;
     }
 }

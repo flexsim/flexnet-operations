@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CloneSuspects extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CloneSuspect
      */
@@ -45,6 +44,7 @@ class CloneSuspects extends FlexnetType
     public function setCloneSuspect($cloneSuspect)
     {
         $this->cloneSuspect = $cloneSuspect;
+
         return $this;
     }
 }

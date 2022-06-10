@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeleteMaintenanceDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType
      */
@@ -45,6 +44,7 @@ class DeleteMaintenanceDataType extends FlexnetType
     public function setMaintenanceIdentifier($maintenanceIdentifier)
     {
         $this->maintenanceIdentifier = $maintenanceIdentifier;
+
         return $this;
     }
 }

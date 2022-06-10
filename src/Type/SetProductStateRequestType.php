@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class SetProductStateRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductStateDataType
      */
@@ -47,6 +46,7 @@ class SetProductStateRequestType extends FlexnetType implements RequestInterface
     public function setProduct($product)
     {
         $this->product = $product;
+
         return $this;
     }
 }

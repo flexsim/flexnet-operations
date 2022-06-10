@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class IdType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class IdType extends FlexnetType
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class IdType extends FlexnetType
     public function setAutoGenerate($autoGenerate)
     {
         $this->autoGenerate = $autoGenerate;
+
         return $this;
     }
 }

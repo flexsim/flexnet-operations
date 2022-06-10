@@ -6,9 +6,8 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class ObsoleteHostRequestListType extends FlexnetType implements RequestInterface
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array 
+     * @var \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array
      */
     protected $host;
 
@@ -33,7 +32,7 @@ class ObsoleteHostRequestListType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array 
+     * @return \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array
      */
     public function getHost()
     {
@@ -47,6 +46,7 @@ class ObsoleteHostRequestListType extends FlexnetType implements RequestInterfac
     public function setHost($host)
     {
         $this->host = $host;
+
         return $this;
     }
 }

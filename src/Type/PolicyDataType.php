@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PolicyDataType extends FlexnetType
 {
-
     /**
      * @var int
      */
@@ -53,6 +52,7 @@ class PolicyDataType extends FlexnetType
     public function setAllowedCount($allowedCount)
     {
         $this->allowedCount = $allowedCount;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class PolicyDataType extends FlexnetType
     public function setPolicyTerm($policyTerm)
     {
         $this->policyTerm = $policyTerm;
+
         return $this;
     }
 }

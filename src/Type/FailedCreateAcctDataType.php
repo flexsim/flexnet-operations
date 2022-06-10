@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedCreateAcctDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountDataType
      */
@@ -53,6 +52,7 @@ class FailedCreateAcctDataType extends FlexnetType
     public function setAccount($account)
     {
         $this->account = $account;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedCreateAcctDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

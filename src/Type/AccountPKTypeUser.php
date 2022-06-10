@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AccountPKTypeUser extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class AccountPKTypeUser extends FlexnetType
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 }

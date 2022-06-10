@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class Period extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class Period extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class Period extends FlexnetType
     public function setEndDate($endDate)
     {
         $this->endDate = $endDate;
+
         return $this;
     }
 }

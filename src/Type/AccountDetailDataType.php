@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AccountDetailDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
@@ -147,6 +146,7 @@ class AccountDetailDataType extends FlexnetType
     public function setAccount($account)
     {
         $this->account = $account;
+
         return $this;
     }
 
@@ -165,6 +165,7 @@ class AccountDetailDataType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -183,6 +184,7 @@ class AccountDetailDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -201,6 +203,7 @@ class AccountDetailDataType extends FlexnetType
     public function setAddress($address)
     {
         $this->address = $address;
+
         return $this;
     }
 
@@ -219,6 +222,7 @@ class AccountDetailDataType extends FlexnetType
     public function setVisible($visible)
     {
         $this->visible = $visible;
+
         return $this;
     }
 
@@ -237,6 +241,7 @@ class AccountDetailDataType extends FlexnetType
     public function setAccountType($accountType)
     {
         $this->accountType = $accountType;
+
         return $this;
     }
 
@@ -255,6 +260,7 @@ class AccountDetailDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -273,6 +279,7 @@ class AccountDetailDataType extends FlexnetType
     public function setDateLastModified($dateLastModified)
     {
         $this->dateLastModified = $dateLastModified;
+
         return $this;
     }
 
@@ -291,6 +298,7 @@ class AccountDetailDataType extends FlexnetType
     public function setCreatedDate($createdDate)
     {
         $this->createdDate = $createdDate;
+
         return $this;
     }
 
@@ -309,6 +317,7 @@ class AccountDetailDataType extends FlexnetType
     public function setCreatedBy($createdBy)
     {
         $this->createdBy = $createdBy;
+
         return $this;
     }
 
@@ -327,6 +336,7 @@ class AccountDetailDataType extends FlexnetType
     public function setLastModifiedBy($lastModifiedBy)
     {
         $this->lastModifiedBy = $lastModifiedBy;
+
         return $this;
     }
 }

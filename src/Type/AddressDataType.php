@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AddressDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -93,6 +92,7 @@ class AddressDataType extends FlexnetType
     public function setAddress1($address1)
     {
         $this->address1 = $address1;
+
         return $this;
     }
 
@@ -111,6 +111,7 @@ class AddressDataType extends FlexnetType
     public function setAddress2($address2)
     {
         $this->address2 = $address2;
+
         return $this;
     }
 
@@ -129,6 +130,7 @@ class AddressDataType extends FlexnetType
     public function setCity($city)
     {
         $this->city = $city;
+
         return $this;
     }
 
@@ -147,6 +149,7 @@ class AddressDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -165,6 +168,7 @@ class AddressDataType extends FlexnetType
     public function setZipcode($zipcode)
     {
         $this->zipcode = $zipcode;
+
         return $this;
     }
 
@@ -183,6 +187,7 @@ class AddressDataType extends FlexnetType
     public function setCountry($country)
     {
         $this->country = $country;
+
         return $this;
     }
 
@@ -201,6 +206,7 @@ class AddressDataType extends FlexnetType
     public function setRegion($region)
     {
         $this->region = $region;
+
         return $this;
     }
 }

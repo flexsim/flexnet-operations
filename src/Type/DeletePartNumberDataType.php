@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeletePartNumberDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType
      */
@@ -45,6 +44,7 @@ class DeletePartNumberDataType extends FlexnetType
     public function setPartNumberIdentifier($partNumberIdentifier)
     {
         $this->partNumberIdentifier = $partNumberIdentifier;
+
         return $this;
     }
 }

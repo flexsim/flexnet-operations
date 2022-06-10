@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LineItemLifeCycleDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
@@ -77,6 +76,7 @@ class LineItemLifeCycleDataType extends FlexnetType
     public function setParentLineItemIdentifier($parentLineItemIdentifier)
     {
         $this->parentLineItemIdentifier = $parentLineItemIdentifier;
+
         return $this;
     }
 
@@ -95,6 +95,7 @@ class LineItemLifeCycleDataType extends FlexnetType
     public function setLineItem($lineItem)
     {
         $this->lineItem = $lineItem;
+
         return $this;
     }
 
@@ -113,6 +114,7 @@ class LineItemLifeCycleDataType extends FlexnetType
     public function setIsFull($isFull)
     {
         $this->isFull = $isFull;
+
         return $this;
     }
 
@@ -131,6 +133,7 @@ class LineItemLifeCycleDataType extends FlexnetType
     public function setAllowActivationsOnParent($allowActivationsOnParent)
     {
         $this->allowActivationsOnParent = $allowActivationsOnParent;
+
         return $this;
     }
 
@@ -149,6 +152,7 @@ class LineItemLifeCycleDataType extends FlexnetType
     public function setAutoDeploy($autoDeploy)
     {
         $this->autoDeploy = $autoDeploy;
+
         return $this;
     }
 }

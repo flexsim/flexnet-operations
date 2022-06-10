@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateUserAccountRolesDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
@@ -53,6 +52,7 @@ class UpdateUserAccountRolesDataType extends FlexnetType
     public function setAccount($account)
     {
         $this->account = $account;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class UpdateUserAccountRolesDataType extends FlexnetType
     public function setRoles($roles)
     {
         $this->roles = $roles;
+
         return $this;
     }
 }

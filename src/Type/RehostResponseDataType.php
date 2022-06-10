@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class RehostResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\RehostFulfillmentResponseDataType
      */
@@ -45,6 +44,7 @@ class RehostResponseDataType extends FlexnetType
     public function setFulfillmentData($fulfillmentData)
     {
         $this->fulfillmentData = $fulfillmentData;
+
         return $this;
     }
 }

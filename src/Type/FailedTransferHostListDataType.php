@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedTransferHostListDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedTransferHostDataType
      */
@@ -45,6 +44,7 @@ class FailedTransferHostListDataType extends FlexnetType
     public function setFailedHost($failedHost)
     {
         $this->failedHost = $failedHost;
+
         return $this;
     }
 }

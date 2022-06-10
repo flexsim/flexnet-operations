@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetMatchingLineItemInfoType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
@@ -73,6 +72,7 @@ class GetMatchingLineItemInfoType extends FlexnetType
     public function setLineItemIdentifier($lineItemIdentifier)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
+
         return $this;
     }
 
@@ -91,6 +91,7 @@ class GetMatchingLineItemInfoType extends FlexnetType
     public function setTargetTierName($targetTierName)
     {
         $this->targetTierName = $targetTierName;
+
         return $this;
     }
 
@@ -109,6 +110,7 @@ class GetMatchingLineItemInfoType extends FlexnetType
     public function setTargetAccountUnit($targetAccountUnit)
     {
         $this->targetAccountUnit = $targetAccountUnit;
+
         return $this;
     }
 
@@ -127,6 +129,7 @@ class GetMatchingLineItemInfoType extends FlexnetType
     public function setTargetOrganizationUnit($targetOrganizationUnit)
     {
         $this->targetOrganizationUnit = $targetOrganizationUnit;
+
         return $this;
     }
 }

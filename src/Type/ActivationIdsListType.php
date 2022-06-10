@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ActivationIdsListType extends FlexnetType
 {
-
     /**
      * @var string|array
      */
@@ -45,6 +44,7 @@ class ActivationIdsListType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetEntitlementCountRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType
      */
@@ -47,6 +46,7 @@ class GetEntitlementCountRequestType extends FlexnetType implements RequestInter
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 }

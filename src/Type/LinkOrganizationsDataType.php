@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LinkOrganizationsDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
@@ -53,6 +52,7 @@ class LinkOrganizationsDataType extends FlexnetType
     public function setParentOrg($parentOrg)
     {
         $this->parentOrg = $parentOrg;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class LinkOrganizationsDataType extends FlexnetType
     public function setSubOrg($subOrg)
     {
         $this->subOrg = $subOrg;
+
         return $this;
     }
 }

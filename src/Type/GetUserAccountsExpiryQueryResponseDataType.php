@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetUserAccountsExpiryQueryResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UserAccountExpiryType
      */
@@ -45,6 +44,7 @@ class GetUserAccountsExpiryQueryResponseDataType extends FlexnetType
     public function setUserAccountExpiryData($userAccountExpiryData)
     {
         $this->userAccountExpiryData = $userAccountExpiryData;
+
         return $this;
     }
 }

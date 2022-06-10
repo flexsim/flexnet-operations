@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Facade;
  * @method static setDefaultVersion( $version,  $connection = NULL)
  * @method static array getClients()
  *
- * @method static \Flexsim\FlexnetOperations\Type\TokenResponseType getSecureToken(\Flexsim\FlexnetOperations\Type\IdentityType $secureTokenRequest) 
- * @method static \Flexsim\FlexnetOperations\Type\AuthenticateUserReturnType authenticateUser(\Flexsim\FlexnetOperations\Type\AuthenticateUserInputType $AuthenticateUserInput) 
- * @method static \Flexsim\FlexnetOperations\Type\StatusResponse validateToken(\Flexsim\FlexnetOperations\Type\TokenType $validateTokenRequest) 
+ * @method static \Flexsim\FlexnetOperations\Type\TokenResponseType getSecureToken(\Flexsim\FlexnetOperations\Type\IdentityType $secureTokenRequest)
+ * @method static \Flexsim\FlexnetOperations\Type\AuthenticateUserReturnType authenticateUser(\Flexsim\FlexnetOperations\Type\AuthenticateUserInputType $AuthenticateUserInput)
+ * @method static \Flexsim\FlexnetOperations\Type\StatusResponse validateToken(\Flexsim\FlexnetOperations\Type\TokenType $validateTokenRequest)
  *
  * @see \Flexsim\FlexnetOperations\FlexnetOperationsClientManager
  * @see \Flexsim\FlexnetOperations\Services\FlexnetAuthenticationService

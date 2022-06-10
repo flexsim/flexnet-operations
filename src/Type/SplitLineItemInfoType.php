@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SplitLineItemInfoType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType
      */
@@ -103,6 +102,7 @@ class SplitLineItemInfoType extends FlexnetType
     public function setLineItemIdentifier($lineItemIdentifier)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
+
         return $this;
     }
 
@@ -121,6 +121,7 @@ class SplitLineItemInfoType extends FlexnetType
     public function setNumberOfCopies($numberOfCopies)
     {
         $this->numberOfCopies = $numberOfCopies;
+
         return $this;
     }
 
@@ -139,6 +140,7 @@ class SplitLineItemInfoType extends FlexnetType
     public function setTargetTierName($targetTierName)
     {
         $this->targetTierName = $targetTierName;
+
         return $this;
     }
 
@@ -157,6 +159,7 @@ class SplitLineItemInfoType extends FlexnetType
     public function setTargetAccountUnit($targetAccountUnit)
     {
         $this->targetAccountUnit = $targetAccountUnit;
+
         return $this;
     }
 
@@ -175,6 +178,7 @@ class SplitLineItemInfoType extends FlexnetType
     public function setTargetOrganizationUnit($targetOrganizationUnit)
     {
         $this->targetOrganizationUnit = $targetOrganizationUnit;
+
         return $this;
     }
 
@@ -193,6 +197,7 @@ class SplitLineItemInfoType extends FlexnetType
     public function setTargetContact($targetContact)
     {
         $this->targetContact = $targetContact;
+
         return $this;
     }
 
@@ -211,6 +216,7 @@ class SplitLineItemInfoType extends FlexnetType
     public function setMatchingLineItemIdentifier($matchingLineItemIdentifier)
     {
         $this->matchingLineItemIdentifier = $matchingLineItemIdentifier;
+
         return $this;
     }
 }

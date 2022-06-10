@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FulfillmentHistoryDetailsType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array<\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType>
      */
@@ -45,6 +44,7 @@ class FulfillmentHistoryDetailsType extends FlexnetType
     public function setRecord($record)
     {
         $this->record = $record;
+
         return $this;
     }
 }

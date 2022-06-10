@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetModelIdentifiersRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType
      */
@@ -48,6 +47,7 @@ class GetModelIdentifiersRequestType extends FlexnetType implements RequestInter
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 }

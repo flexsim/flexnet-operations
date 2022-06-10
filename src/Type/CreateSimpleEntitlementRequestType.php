@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class CreateSimpleEntitlementRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType
      */
@@ -55,6 +54,7 @@ class CreateSimpleEntitlementRequestType extends FlexnetType implements RequestI
     public function setSimpleEntitlement($simpleEntitlement)
     {
         $this->simpleEntitlement = $simpleEntitlement;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class CreateSimpleEntitlementRequestType extends FlexnetType implements RequestI
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

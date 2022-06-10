@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedDeleteDomainUserDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType
      */
@@ -53,6 +52,7 @@ class FailedDeleteDomainUserDataType extends FlexnetType
     public function setUser($user)
     {
         $this->user = $user;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedDeleteDomainUserDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

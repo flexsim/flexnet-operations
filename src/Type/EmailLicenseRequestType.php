@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class EmailLicenseRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType
      */
@@ -79,6 +78,7 @@ class EmailLicenseRequestType extends FlexnetType implements RequestInterface
     public function setFulfillmentIdentifier($fulfillmentIdentifier)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
+
         return $this;
     }
 
@@ -97,6 +97,7 @@ class EmailLicenseRequestType extends FlexnetType implements RequestInterface
     public function setIgnoreExistingEmailList($ignoreExistingEmailList)
     {
         $this->ignoreExistingEmailList = $ignoreExistingEmailList;
+
         return $this;
     }
 
@@ -115,6 +116,7 @@ class EmailLicenseRequestType extends FlexnetType implements RequestInterface
     public function setValidateEmailAddresses($validateEmailAddresses)
     {
         $this->validateEmailAddresses = $validateEmailAddresses;
+
         return $this;
     }
 
@@ -133,6 +135,7 @@ class EmailLicenseRequestType extends FlexnetType implements RequestInterface
     public function setEmailIdList($emailIdList)
     {
         $this->emailIdList = $emailIdList;
+
         return $this;
     }
 
@@ -151,6 +154,7 @@ class EmailLicenseRequestType extends FlexnetType implements RequestInterface
     public function setLocale($locale)
     {
         $this->locale = $locale;
+
         return $this;
     }
 }

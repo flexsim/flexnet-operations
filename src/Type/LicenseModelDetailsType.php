@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LicenseModelDetailsType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType
      */
@@ -61,6 +60,7 @@ class LicenseModelDetailsType extends FlexnetType
     public function setLicenseModelIdentifier($licenseModelIdentifier)
     {
         $this->licenseModelIdentifier = $licenseModelIdentifier;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class LicenseModelDetailsType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class LicenseModelDetailsType extends FlexnetType
     public function setAttributeDetails($attributeDetails)
     {
         $this->attributeDetails = $attributeDetails;
+
         return $this;
     }
 }

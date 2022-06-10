@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GenerateCloneDetectionReportRequest extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EnterpriseIds
      */
@@ -89,6 +88,7 @@ class GenerateCloneDetectionReportRequest extends FlexnetType implements Request
     public function setEnterpriseIds($enterpriseIds)
     {
         $this->enterpriseIds = $enterpriseIds;
+
         return $this;
     }
 
@@ -107,6 +107,7 @@ class GenerateCloneDetectionReportRequest extends FlexnetType implements Request
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -125,6 +126,7 @@ class GenerateCloneDetectionReportRequest extends FlexnetType implements Request
     public function setEndDate($endDate)
     {
         $this->endDate = $endDate;
+
         return $this;
     }
 
@@ -143,6 +145,7 @@ class GenerateCloneDetectionReportRequest extends FlexnetType implements Request
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -161,6 +164,7 @@ class GenerateCloneDetectionReportRequest extends FlexnetType implements Request
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 }

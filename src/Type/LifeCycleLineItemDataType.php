@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LifeCycleLineItemDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class LifeCycleLineItemDataType extends FlexnetType
     public function setLineItemRecordRefNo($lineItemRecordRefNo)
     {
         $this->lineItemRecordRefNo = $lineItemRecordRefNo;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class LifeCycleLineItemDataType extends FlexnetType
     public function setParentLineItemIdentifier($parentLineItemIdentifier)
     {
         $this->parentLineItemIdentifier = $parentLineItemIdentifier;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class LifeCycleLineItemDataType extends FlexnetType
     public function setNewLineItem($newLineItem)
     {
         $this->newLineItem = $newLineItem;
+
         return $this;
     }
 }

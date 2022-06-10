@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedCreateDeviceDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeviceDataType
      */
@@ -53,6 +52,7 @@ class FailedCreateDeviceDataType extends FlexnetType
     public function setDevice($device)
     {
         $this->device = $device;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedCreateDeviceDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

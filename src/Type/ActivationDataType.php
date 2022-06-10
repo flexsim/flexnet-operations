@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ActivationDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -45,6 +44,7 @@ class ActivationDataType extends FlexnetType
     public function setActivationData($activationData)
     {
         $this->activationData = $activationData;
+
         return $this;
     }
 }

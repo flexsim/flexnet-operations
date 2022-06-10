@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PackagePropertiesDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class PackagePropertiesDataType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class PackagePropertiesDataType extends FlexnetType
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class PackagePropertiesDataType extends FlexnetType
     public function setVersionFormat($versionFormat)
     {
         $this->versionFormat = $versionFormat;
+
         return $this;
     }
 }

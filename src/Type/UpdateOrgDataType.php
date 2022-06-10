@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateOrgDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
@@ -109,6 +108,7 @@ class UpdateOrgDataType extends FlexnetType
     public function setOrganization($organization)
     {
         $this->organization = $organization;
+
         return $this;
     }
 
@@ -127,6 +127,7 @@ class UpdateOrgDataType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -145,6 +146,7 @@ class UpdateOrgDataType extends FlexnetType
     public function setDisplayName($displayName)
     {
         $this->displayName = $displayName;
+
         return $this;
     }
 
@@ -163,6 +165,7 @@ class UpdateOrgDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -181,6 +184,7 @@ class UpdateOrgDataType extends FlexnetType
     public function setAddress($address)
     {
         $this->address = $address;
+
         return $this;
     }
 
@@ -199,6 +203,7 @@ class UpdateOrgDataType extends FlexnetType
     public function setSubOrganizations($subOrganizations)
     {
         $this->subOrganizations = $subOrganizations;
+
         return $this;
     }
 
@@ -217,6 +222,7 @@ class UpdateOrgDataType extends FlexnetType
     public function setRelatedOrganizations($relatedOrganizations)
     {
         $this->relatedOrganizations = $relatedOrganizations;
+
         return $this;
     }
 
@@ -235,6 +241,7 @@ class UpdateOrgDataType extends FlexnetType
     public function setVisible($visible)
     {
         $this->visible = $visible;
+
         return $this;
     }
 
@@ -253,6 +260,7 @@ class UpdateOrgDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 }

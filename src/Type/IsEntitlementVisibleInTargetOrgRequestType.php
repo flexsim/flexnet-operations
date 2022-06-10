@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class IsEntitlementVisibleInTargetOrgRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -55,6 +54,7 @@ class IsEntitlementVisibleInTargetOrgRequestType extends FlexnetType implements 
     public function setEntitlementID($entitlementID)
     {
         $this->entitlementID = $entitlementID;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class IsEntitlementVisibleInTargetOrgRequestType extends FlexnetType implements 
     public function setTargetOrgID($targetOrgID)
     {
         $this->targetOrgID = $targetOrgID;
+
         return $this;
     }
 }

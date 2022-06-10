@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UniformSuiteQueryDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -267,6 +266,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -285,6 +285,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setSuiteName($suiteName)
     {
         $this->suiteName = $suiteName;
+
         return $this;
     }
 
@@ -303,6 +304,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -321,6 +323,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -339,6 +342,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -357,6 +361,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 
@@ -375,6 +380,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setLicenseGenerator($licenseGenerator)
     {
         $this->licenseGenerator = $licenseGenerator;
+
         return $this;
     }
 
@@ -393,6 +399,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setPackageProperties($packageProperties)
     {
         $this->packageProperties = $packageProperties;
+
         return $this;
     }
 
@@ -411,6 +418,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setProducts($products)
     {
         $this->products = $products;
+
         return $this;
     }
 
@@ -429,6 +437,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setLicenseModels($licenseModels)
     {
         $this->licenseModels = $licenseModels;
+
         return $this;
     }
 
@@ -447,6 +456,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setTrustedKey($trustedKey)
     {
         $this->trustedKey = $trustedKey;
+
         return $this;
     }
 
@@ -465,6 +475,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setVirtualTrustedKey($virtualTrustedKey)
     {
         $this->virtualTrustedKey = $virtualTrustedKey;
+
         return $this;
     }
 
@@ -483,6 +494,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setPartNumbers($partNumbers)
     {
         $this->partNumbers = $partNumbers;
+
         return $this;
     }
 
@@ -501,6 +513,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setHostType($hostType)
     {
         $this->hostType = $hostType;
+
         return $this;
     }
 
@@ -519,6 +532,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setHostTypes($hostTypes)
     {
         $this->hostTypes = $hostTypes;
+
         return $this;
     }
 
@@ -537,6 +551,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setUsedOnDevice($usedOnDevice)
     {
         $this->usedOnDevice = $usedOnDevice;
+
         return $this;
     }
 
@@ -555,6 +570,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setProductCategory($productCategory)
     {
         $this->productCategory = $productCategory;
+
         return $this;
     }
 
@@ -573,6 +589,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -591,6 +608,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setAllowDownloadObsoleteFrInAdmin($allowDownloadObsoleteFrInAdmin)
     {
         $this->allowDownloadObsoleteFrInAdmin = $allowDownloadObsoleteFrInAdmin;
+
         return $this;
     }
 
@@ -609,6 +627,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setAllowDownloadObsoleteFrInPortal($allowDownloadObsoleteFrInPortal)
     {
         $this->allowDownloadObsoleteFrInPortal = $allowDownloadObsoleteFrInPortal;
+
         return $this;
     }
 
@@ -627,6 +646,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setCreationDate($creationDate)
     {
         $this->creationDate = $creationDate;
+
         return $this;
     }
 
@@ -645,6 +665,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setLastModifiedDate($lastModifiedDate)
     {
         $this->lastModifiedDate = $lastModifiedDate;
+
         return $this;
     }
 
@@ -663,6 +684,7 @@ class UniformSuiteQueryDataType extends FlexnetType
     public function setProductAttributes($productAttributes)
     {
         $this->productAttributes = $productAttributes;
+
         return $this;
     }
 }

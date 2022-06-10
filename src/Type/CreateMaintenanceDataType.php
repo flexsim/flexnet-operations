@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreateMaintenanceDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -93,6 +92,7 @@ class CreateMaintenanceDataType extends FlexnetType
     public function setMaintenanceName($maintenanceName)
     {
         $this->maintenanceName = $maintenanceName;
+
         return $this;
     }
 
@@ -111,6 +111,7 @@ class CreateMaintenanceDataType extends FlexnetType
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -129,6 +130,7 @@ class CreateMaintenanceDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -147,6 +149,7 @@ class CreateMaintenanceDataType extends FlexnetType
     public function setAllowUpgrades($allowUpgrades)
     {
         $this->allowUpgrades = $allowUpgrades;
+
         return $this;
     }
 
@@ -165,6 +168,7 @@ class CreateMaintenanceDataType extends FlexnetType
     public function setAllowUpsells($allowUpsells)
     {
         $this->allowUpsells = $allowUpsells;
+
         return $this;
     }
 
@@ -183,6 +187,7 @@ class CreateMaintenanceDataType extends FlexnetType
     public function setAllowRenewals($allowRenewals)
     {
         $this->allowRenewals = $allowRenewals;
+
         return $this;
     }
 
@@ -201,6 +206,7 @@ class CreateMaintenanceDataType extends FlexnetType
     public function setPartNumbers($partNumbers)
     {
         $this->partNumbers = $partNumbers;
+
         return $this;
     }
 }

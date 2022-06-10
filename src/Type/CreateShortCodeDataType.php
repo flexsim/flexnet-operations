@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreateShortCodeDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -107,6 +106,7 @@ class CreateShortCodeDataType extends FlexnetType
     public function setBulkEntitlementId($bulkEntitlementId)
     {
         $this->bulkEntitlementId = $bulkEntitlementId;
+
         return $this;
     }
 
@@ -125,6 +125,7 @@ class CreateShortCodeDataType extends FlexnetType
     public function setWebRegkey($webRegkey)
     {
         $this->webRegkey = $webRegkey;
+
         return $this;
     }
 
@@ -143,6 +144,7 @@ class CreateShortCodeDataType extends FlexnetType
     public function setShortCode($shortCode)
     {
         $this->shortCode = $shortCode;
+
         return $this;
     }
 
@@ -161,6 +163,7 @@ class CreateShortCodeDataType extends FlexnetType
     public function setPublisherAttributes($publisherAttributes)
     {
         $this->publisherAttributes = $publisherAttributes;
+
         return $this;
     }
 
@@ -179,6 +182,7 @@ class CreateShortCodeDataType extends FlexnetType
     public function setOverridePolicy($overridePolicy)
     {
         $this->overridePolicy = $overridePolicy;
+
         return $this;
     }
 
@@ -197,6 +201,7 @@ class CreateShortCodeDataType extends FlexnetType
     public function setShortCodeActivationType($shortCodeActivationType)
     {
         $this->shortCodeActivationType = $shortCodeActivationType;
+
         return $this;
     }
 
@@ -215,6 +220,7 @@ class CreateShortCodeDataType extends FlexnetType
     public function setReinstallFulfillment($reinstallFulfillment)
     {
         $this->reinstallFulfillment = $reinstallFulfillment;
+
         return $this;
     }
 }

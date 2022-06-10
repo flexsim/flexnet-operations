@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class StopGapFulfillmentRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\StopGapFulfillmentDataType
      */
@@ -47,6 +46,7 @@ class StopGapFulfillmentRequestType extends FlexnetType implements RequestInterf
     public function setFulfillment($fulfillment)
     {
         $this->fulfillment = $fulfillment;
+
         return $this;
     }
 }

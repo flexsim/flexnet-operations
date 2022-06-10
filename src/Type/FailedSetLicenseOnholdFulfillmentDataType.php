@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedSetLicenseOnholdFulfillmentDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OnHoldFmtLicenseDataType
      */
@@ -53,6 +52,7 @@ class FailedSetLicenseOnholdFulfillmentDataType extends FlexnetType
     public function setOnholdFmtLicenseData($onholdFmtLicenseData)
     {
         $this->onholdFmtLicenseData = $onholdFmtLicenseData;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedSetLicenseOnholdFulfillmentDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedMatchingLineItemsListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingLineItemDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedMatchingLineItemDataType|array
      */
     protected $failedLineItem;
 
@@ -31,7 +30,7 @@ class FailedMatchingLineItemsListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedMatchingLineItemDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedMatchingLineItemDataType|array
      */
     public function getFailedLineItem()
     {
@@ -45,6 +44,7 @@ class FailedMatchingLineItemsListType extends FlexnetType
     public function setFailedLineItem($failedLineItem)
     {
         $this->failedLineItem = $failedLineItem;
+
         return $this;
     }
 }

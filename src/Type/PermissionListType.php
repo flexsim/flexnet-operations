@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PermissionListType extends FlexnetType
 {
-
     /**
-     * @var string|array 
+     * @var string|array
      */
     protected $permission;
 
@@ -31,7 +30,7 @@ class PermissionListType extends FlexnetType
     }
 
     /**
-     * @return string|array 
+     * @return string|array
      */
     public function getPermission()
     {
@@ -45,6 +44,7 @@ class PermissionListType extends FlexnetType
     public function setPermission($permission)
     {
         $this->permission = $permission;
+
         return $this;
     }
 }

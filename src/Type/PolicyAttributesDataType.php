@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class PolicyAttributesDataType extends FlexnetType
 {
-
     /**
      * @var bool
      */
@@ -141,6 +140,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedRehostsPolicy($needRehostsPolicy)
     {
         $this->needRehostsPolicy = $needRehostsPolicy;
+
         return $this;
     }
 
@@ -159,6 +159,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedReturnsPolicy($needReturnsPolicy)
     {
         $this->needReturnsPolicy = $needReturnsPolicy;
+
         return $this;
     }
 
@@ -177,6 +178,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedRepairsPolicy($needRepairsPolicy)
     {
         $this->needRepairsPolicy = $needRepairsPolicy;
+
         return $this;
     }
 
@@ -195,6 +197,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedExtraActivationsPolicy($needExtraActivationsPolicy)
     {
         $this->needExtraActivationsPolicy = $needExtraActivationsPolicy;
+
         return $this;
     }
 
@@ -213,6 +216,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedCancelLicensePolicy($needCancelLicensePolicy)
     {
         $this->needCancelLicensePolicy = $needCancelLicensePolicy;
+
         return $this;
     }
 
@@ -231,6 +235,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedVirtualLicensePolicy($needVirtualLicensePolicy)
     {
         $this->needVirtualLicensePolicy = $needVirtualLicensePolicy;
+
         return $this;
     }
 
@@ -249,6 +254,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedReinstallPolicy($needReinstallPolicy)
     {
         $this->needReinstallPolicy = $needReinstallPolicy;
+
         return $this;
     }
 
@@ -267,6 +273,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedServerHostIdPolicy($needServerHostIdPolicy)
     {
         $this->needServerHostIdPolicy = $needServerHostIdPolicy;
+
         return $this;
     }
 
@@ -285,6 +292,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedNodelockedHostIdPolicy($needNodelockedHostIdPolicy)
     {
         $this->needNodelockedHostIdPolicy = $needNodelockedHostIdPolicy;
+
         return $this;
     }
 
@@ -303,6 +311,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedPortalServerHostIdPolicy($needPortalServerHostIdPolicy)
     {
         $this->needPortalServerHostIdPolicy = $needPortalServerHostIdPolicy;
+
         return $this;
     }
 
@@ -321,6 +330,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedPortalNodelockedHostIdPolicy($needPortalNodelockedHostIdPolicy)
     {
         $this->needPortalNodelockedHostIdPolicy = $needPortalNodelockedHostIdPolicy;
+
         return $this;
     }
 
@@ -339,6 +349,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedRedundantServerPolicy($needRedundantServerPolicy)
     {
         $this->needRedundantServerPolicy = $needRedundantServerPolicy;
+
         return $this;
     }
 
@@ -357,6 +368,7 @@ class PolicyAttributesDataType extends FlexnetType
     public function setNeedACPIGenerationIdLicensePolicy($needACPIGenerationIdLicensePolicy)
     {
         $this->needACPIGenerationIdLicensePolicy = $needACPIGenerationIdLicensePolicy;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetConsolidatedFulfillmentCountRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ConsolidatedFulfillmentsQPType
      */
@@ -48,6 +47,7 @@ class GetConsolidatedFulfillmentCountRequestType extends FlexnetType implements 
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 }

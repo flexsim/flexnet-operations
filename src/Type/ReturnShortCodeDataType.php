@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ReturnShortCodeDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -69,6 +68,7 @@ class ReturnShortCodeDataType extends FlexnetType
     public function setShortCode($shortCode)
     {
         $this->shortCode = $shortCode;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class ReturnShortCodeDataType extends FlexnetType
     public function setWebRegKey($webRegKey)
     {
         $this->webRegKey = $webRegKey;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class ReturnShortCodeDataType extends FlexnetType
     public function setPublisherAttributes($publisherAttributes)
     {
         $this->publisherAttributes = $publisherAttributes;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class ReturnShortCodeDataType extends FlexnetType
     public function setOverridePolicy($overridePolicy)
     {
         $this->overridePolicy = $overridePolicy;
+
         return $this;
     }
 }

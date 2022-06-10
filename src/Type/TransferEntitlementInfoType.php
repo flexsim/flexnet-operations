@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class TransferEntitlementInfoType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -103,6 +102,7 @@ class TransferEntitlementInfoType extends FlexnetType
     public function setEntitlementIdentifier($entitlementIdentifier)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
+
         return $this;
     }
 
@@ -121,6 +121,7 @@ class TransferEntitlementInfoType extends FlexnetType
     public function setAccountTo($accountTo)
     {
         $this->accountTo = $accountTo;
+
         return $this;
     }
 
@@ -139,6 +140,7 @@ class TransferEntitlementInfoType extends FlexnetType
     public function setOrganizationTo($organizationTo)
     {
         $this->organizationTo = $organizationTo;
+
         return $this;
     }
 
@@ -157,6 +159,7 @@ class TransferEntitlementInfoType extends FlexnetType
     public function setRetainExistingIds($retainExistingIds)
     {
         $this->retainExistingIds = $retainExistingIds;
+
         return $this;
     }
 
@@ -175,6 +178,7 @@ class TransferEntitlementInfoType extends FlexnetType
     public function setReturnActiveFulfillments($returnActiveFulfillments)
     {
         $this->returnActiveFulfillments = $returnActiveFulfillments;
+
         return $this;
     }
 
@@ -193,6 +197,7 @@ class TransferEntitlementInfoType extends FlexnetType
     public function setForceTransferEvenIfNoTargetUsers($forceTransferEvenIfNoTargetUsers)
     {
         $this->forceTransferEvenIfNoTargetUsers = $forceTransferEvenIfNoTargetUsers;
+
         return $this;
     }
 
@@ -211,6 +216,7 @@ class TransferEntitlementInfoType extends FlexnetType
     public function setForceTransferEvenIfParentAndChildSeparated($forceTransferEvenIfParentAndChildSeparated)
     {
         $this->forceTransferEvenIfParentAndChildSeparated = $forceTransferEvenIfParentAndChildSeparated;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AddDomainUserDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -101,6 +100,7 @@ class AddDomainUserDataType extends FlexnetType
     public function setUserId($userId)
     {
         $this->userId = $userId;
+
         return $this;
     }
 
@@ -119,6 +119,7 @@ class AddDomainUserDataType extends FlexnetType
     public function setDomain($domain)
     {
         $this->domain = $domain;
+
         return $this;
     }
 
@@ -137,6 +138,7 @@ class AddDomainUserDataType extends FlexnetType
     public function setRoles($roles)
     {
         $this->roles = $roles;
+
         return $this;
     }
 
@@ -155,6 +157,7 @@ class AddDomainUserDataType extends FlexnetType
     public function setOptIn($optIn)
     {
         $this->optIn = $optIn;
+
         return $this;
     }
 
@@ -173,6 +176,7 @@ class AddDomainUserDataType extends FlexnetType
     public function setLocale($locale)
     {
         $this->locale = $locale;
+
         return $this;
     }
 
@@ -191,6 +195,7 @@ class AddDomainUserDataType extends FlexnetType
     public function setTimeZone($timeZone)
     {
         $this->timeZone = $timeZone;
+
         return $this;
     }
 
@@ -209,6 +214,7 @@ class AddDomainUserDataType extends FlexnetType
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -227,6 +233,7 @@ class AddDomainUserDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 }

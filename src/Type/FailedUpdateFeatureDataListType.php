@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUpdateFeatureDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureDataType|array
      */
     protected $failedFeature;
 
@@ -31,7 +30,7 @@ class FailedUpdateFeatureDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureDataType|array
      */
     public function getFailedFeature()
     {
@@ -45,6 +44,7 @@ class FailedUpdateFeatureDataListType extends FlexnetType
     public function setFailedFeature($failedFeature)
     {
         $this->failedFeature = $failedFeature;
+
         return $this;
     }
 }

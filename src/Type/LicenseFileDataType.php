@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LicenseFileDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -69,6 +68,7 @@ class LicenseFileDataType extends FlexnetType
     public function setLicenseFileDefinitionName($licenseFileDefinitionName)
     {
         $this->licenseFileDefinitionName = $licenseFileDefinitionName;
+
         return $this;
     }
 
@@ -87,6 +87,7 @@ class LicenseFileDataType extends FlexnetType
     public function setLicenseText($licenseText)
     {
         $this->licenseText = $licenseText;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class LicenseFileDataType extends FlexnetType
     public function setBinaryLicense($binaryLicense)
     {
         $this->binaryLicense = $binaryLicense;
+
         return $this;
     }
 
@@ -123,6 +125,7 @@ class LicenseFileDataType extends FlexnetType
     public function setFileName($fileName)
     {
         $this->fileName = $fileName;
+
         return $this;
     }
 }

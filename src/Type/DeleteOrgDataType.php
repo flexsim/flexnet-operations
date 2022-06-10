@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeleteOrgDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType
      */
@@ -53,6 +52,7 @@ class DeleteOrgDataType extends FlexnetType
     public function setOrganization($organization)
     {
         $this->organization = $organization;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class DeleteOrgDataType extends FlexnetType
     public function setDeleteSubTree($deleteSubTree)
     {
         $this->deleteSubTree = $deleteSubTree;
+
         return $this;
     }
 }

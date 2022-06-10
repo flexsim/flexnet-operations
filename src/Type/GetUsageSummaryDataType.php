@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetUsageSummaryDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UsageSummaryDataType
      */
@@ -45,6 +44,7 @@ class GetUsageSummaryDataType extends FlexnetType
     public function setUsageSummary($usageSummary)
     {
         $this->usageSummary = $usageSummary;
+
         return $this;
     }
 }

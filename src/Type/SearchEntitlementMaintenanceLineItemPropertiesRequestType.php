@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType
      */
@@ -71,6 +70,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetT
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 
@@ -89,6 +89,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetT
     public function setEntitlementMaintenanceLineItemResponseConfig($entitlementMaintenanceLineItemResponseConfig)
     {
         $this->entitlementMaintenanceLineItemResponseConfig = $entitlementMaintenanceLineItemResponseConfig;
+
         return $this;
     }
 
@@ -107,6 +108,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetT
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 
@@ -125,6 +127,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetT
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 }

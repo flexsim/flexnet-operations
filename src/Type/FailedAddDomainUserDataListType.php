@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedAddDomainUserDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataType|array
      */
@@ -45,6 +44,7 @@ class FailedAddDomainUserDataListType extends FlexnetType
     public function setFailedUser($failedUser)
     {
         $this->failedUser = $failedUser;
+
         return $this;
     }
 }

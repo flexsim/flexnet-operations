@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetDeviceResponseConfigType extends FlexnetType
 {
-
     /**
      * @var bool
      */
@@ -309,6 +308,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -327,6 +327,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -345,6 +346,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -363,6 +365,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setServedStatus($servedStatus)
     {
         $this->servedStatus = $servedStatus;
+
         return $this;
     }
 
@@ -381,6 +384,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setHostTypeName($hostTypeName)
     {
         $this->hostTypeName = $hostTypeName;
+
         return $this;
     }
 
@@ -399,6 +403,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setHosted($hosted)
     {
         $this->hosted = $hosted;
+
         return $this;
     }
 
@@ -417,6 +422,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -435,6 +441,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setBaseProduct($baseProduct)
     {
         $this->baseProduct = $baseProduct;
+
         return $this;
     }
 
@@ -453,6 +460,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setHasLicense($hasLicense)
     {
         $this->hasLicense = $hasLicense;
+
         return $this;
     }
 
@@ -471,6 +479,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setBufferLicense($bufferLicense)
     {
         $this->bufferLicense = $bufferLicense;
+
         return $this;
     }
 
@@ -489,6 +498,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnActivationId($addOnActivationId)
     {
         $this->addOnActivationId = $addOnActivationId;
+
         return $this;
     }
 
@@ -507,6 +517,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnCounts($addOnCounts)
     {
         $this->addOnCounts = $addOnCounts;
+
         return $this;
     }
 
@@ -525,6 +536,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnProduct($addOnProduct)
     {
         $this->addOnProduct = $addOnProduct;
+
         return $this;
     }
 
@@ -543,6 +555,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnProductLine($addOnProductLine)
     {
         $this->addOnProductLine = $addOnProductLine;
+
         return $this;
     }
 
@@ -561,6 +574,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnPartNumber($addOnPartNumber)
     {
         $this->addOnPartNumber = $addOnPartNumber;
+
         return $this;
     }
 
@@ -579,6 +593,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnLicense($addOnLicense)
     {
         $this->addOnLicense = $addOnLicense;
+
         return $this;
     }
 
@@ -597,6 +612,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnExpirationDateOverride($addOnExpirationDateOverride)
     {
         $this->addOnExpirationDateOverride = $addOnExpirationDateOverride;
+
         return $this;
     }
 
@@ -615,6 +631,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnEntitlementExpirationDate($addOnEntitlementExpirationDate)
     {
         $this->addOnEntitlementExpirationDate = $addOnEntitlementExpirationDate;
+
         return $this;
     }
 
@@ -633,6 +650,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnCreatedDate($addOnCreatedDate)
     {
         $this->addOnCreatedDate = $addOnCreatedDate;
+
         return $this;
     }
 
@@ -651,6 +669,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnLastModifiedDate($addOnLastModifiedDate)
     {
         $this->addOnLastModifiedDate = $addOnLastModifiedDate;
+
         return $this;
     }
 
@@ -669,6 +688,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnEntitlementId($addOnEntitlementId)
     {
         $this->addOnEntitlementId = $addOnEntitlementId;
+
         return $this;
     }
 
@@ -687,6 +707,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnState($addOnState)
     {
         $this->addOnState = $addOnState;
+
         return $this;
     }
 
@@ -705,6 +726,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setAddOnLicenseModel($addOnLicenseModel)
     {
         $this->addOnLicenseModel = $addOnLicenseModel;
+
         return $this;
     }
 
@@ -723,6 +745,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setFeatures($features)
     {
         $this->features = $features;
+
         return $this;
     }
 
@@ -741,6 +764,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setPublisherIdentity($publisherIdentity)
     {
         $this->publisherIdentity = $publisherIdentity;
+
         return $this;
     }
 
@@ -759,6 +783,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setParent($parent)
     {
         $this->parent = $parent;
+
         return $this;
     }
 
@@ -777,6 +802,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setMachineType($machineType)
     {
         $this->machineType = $machineType;
+
         return $this;
     }
 
@@ -795,6 +821,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setVmDetails($vmDetails)
     {
         $this->vmDetails = $vmDetails;
+
         return $this;
     }
 
@@ -813,6 +840,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setVmInfo($vmInfo)
     {
         $this->vmInfo = $vmInfo;
+
         return $this;
     }
 
@@ -831,6 +859,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setVendorDictionary($vendorDictionary)
     {
         $this->vendorDictionary = $vendorDictionary;
+
         return $this;
     }
 
@@ -849,6 +878,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setUpdates($updates)
     {
         $this->updates = $updates;
+
         return $this;
     }
 
@@ -867,6 +897,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setUserInfo($userInfo)
     {
         $this->userInfo = $userInfo;
+
         return $this;
     }
 
@@ -885,6 +916,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setLastRequestTime($lastRequestTime)
     {
         $this->lastRequestTime = $lastRequestTime;
+
         return $this;
     }
 
@@ -903,6 +935,7 @@ class GetDeviceResponseConfigType extends FlexnetType
     public function setLastSyncTime($lastSyncTime)
     {
         $this->lastSyncTime = $lastSyncTime;
+
         return $this;
     }
 }

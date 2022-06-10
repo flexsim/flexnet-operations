@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class TokenType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\IdentityType
      */
@@ -55,6 +54,7 @@ class TokenType extends FlexnetType implements RequestInterface
     public function setIdentity($identity)
     {
         $this->identity = $identity;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class TokenType extends FlexnetType implements RequestInterface
     public function setToken($token)
     {
         $this->token = $token;
+
         return $this;
     }
 }

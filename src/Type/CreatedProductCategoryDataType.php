@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedProductCategoryDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class CreatedProductCategoryDataType extends FlexnetType
     public function setRecordRefNo($recordRefNo)
     {
         $this->recordRefNo = $recordRefNo;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class CreatedProductCategoryDataType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 }

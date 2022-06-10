@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class StateChangeResponseType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureStateChangeListType
      */
@@ -85,6 +84,7 @@ class StateChangeResponseType extends FlexnetType
     public function setFeatureList($featureList)
     {
         $this->featureList = $featureList;
+
         return $this;
     }
 
@@ -103,6 +103,7 @@ class StateChangeResponseType extends FlexnetType
     public function setFeatureBundleList($featureBundleList)
     {
         $this->featureBundleList = $featureBundleList;
+
         return $this;
     }
 
@@ -121,6 +122,7 @@ class StateChangeResponseType extends FlexnetType
     public function setProductList($productList)
     {
         $this->productList = $productList;
+
         return $this;
     }
 
@@ -139,6 +141,7 @@ class StateChangeResponseType extends FlexnetType
     public function setLicenseModelList($licenseModelList)
     {
         $this->licenseModelList = $licenseModelList;
+
         return $this;
     }
 
@@ -157,6 +160,7 @@ class StateChangeResponseType extends FlexnetType
     public function setSimpleEntitlementList($simpleEntitlementList)
     {
         $this->simpleEntitlementList = $simpleEntitlementList;
+
         return $this;
     }
 
@@ -175,6 +179,7 @@ class StateChangeResponseType extends FlexnetType
     public function setBulkEntitlementList($bulkEntitlementList)
     {
         $this->bulkEntitlementList = $bulkEntitlementList;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class TransferredLineItemMapType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class TransferredLineItemMapType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class TransferredLineItemMapType extends FlexnetType
     public function setTransferredFromId($transferredFromId)
     {
         $this->transferredFromId = $transferredFromId;
+
         return $this;
     }
 }

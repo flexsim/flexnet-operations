@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FeatureQueryDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -107,6 +106,7 @@ class FeatureQueryDataType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 
@@ -125,6 +125,7 @@ class FeatureQueryDataType extends FlexnetType
     public function setFeatureName($featureName)
     {
         $this->featureName = $featureName;
+
         return $this;
     }
 
@@ -143,6 +144,7 @@ class FeatureQueryDataType extends FlexnetType
     public function setVersionFormat($versionFormat)
     {
         $this->versionFormat = $versionFormat;
+
         return $this;
     }
 
@@ -161,6 +163,7 @@ class FeatureQueryDataType extends FlexnetType
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -179,6 +182,7 @@ class FeatureQueryDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -197,6 +201,7 @@ class FeatureQueryDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -215,6 +220,7 @@ class FeatureQueryDataType extends FlexnetType
     public function setFeatureOverrideParams($featureOverrideParams)
     {
         $this->featureOverrideParams = $featureOverrideParams;
+
         return $this;
     }
 }

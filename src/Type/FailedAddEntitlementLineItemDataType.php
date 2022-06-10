@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedAddEntitlementLineItemDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType
      */
@@ -53,6 +52,7 @@ class FailedAddEntitlementLineItemDataType extends FlexnetType
     public function setLineItem($lineItem)
     {
         $this->lineItem = $lineItem;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedAddEntitlementLineItemDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class OpsEmbeddedStatusInfoType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class OpsEmbeddedStatusInfoType extends FlexnetType
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class OpsEmbeddedStatusInfoType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

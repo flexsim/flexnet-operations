@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class SetFeatureStateRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureStateDataType
      */
@@ -47,6 +46,7 @@ class SetFeatureStateRequestType extends FlexnetType implements RequestInterface
     public function setFeature($feature)
     {
         $this->feature = $feature;
+
         return $this;
     }
 }

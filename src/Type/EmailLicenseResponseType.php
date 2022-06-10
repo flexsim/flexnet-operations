@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class EmailLicenseResponseType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
@@ -47,6 +46,7 @@ class EmailLicenseResponseType extends FlexnetType implements ResultInterface
     public function setStatusInfo($statusInfo)
     {
         $this->statusInfo = $statusInfo;
+
         return $this;
     }
 }

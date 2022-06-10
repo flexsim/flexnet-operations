@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetOrganizationsQueryResponseDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\OrganizationDetailDataType
      */
@@ -45,6 +44,7 @@ class GetOrganizationsQueryResponseDataType extends FlexnetType
     public function setOrgData($orgData)
     {
         $this->orgData = $orgData;
+
         return $this;
     }
 }

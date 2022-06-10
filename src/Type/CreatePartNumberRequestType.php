@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class CreatePartNumberRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType
      */
@@ -55,6 +54,7 @@ class CreatePartNumberRequestType extends FlexnetType implements RequestInterfac
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class CreatePartNumberRequestType extends FlexnetType implements RequestInterfac
     public function setProcessSync($processSync)
     {
         $this->processSync = $processSync;
+
         return $this;
     }
 }

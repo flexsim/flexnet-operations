@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LicenseFileDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array
      */
     protected $licenseFile;
 
@@ -31,7 +30,7 @@ class LicenseFileDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array
      */
     public function getLicenseFile()
     {
@@ -45,6 +44,7 @@ class LicenseFileDataListType extends FlexnetType
     public function setLicenseFile($licenseFile)
     {
         $this->licenseFile = $licenseFile;
+
         return $this;
     }
 }

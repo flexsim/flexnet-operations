@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedLineItemStateDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\LineItemStateDataType
      */
@@ -53,6 +52,7 @@ class FailedLineItemStateDataType extends FlexnetType
     public function setLineItem($lineItem)
     {
         $this->lineItem = $lineItem;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedLineItemStateDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

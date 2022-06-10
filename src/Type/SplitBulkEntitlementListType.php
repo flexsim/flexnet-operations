@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SplitBulkEntitlementListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType|array 
+     * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType|array
      */
     protected $bulkEntitlementInfo;
 
@@ -31,7 +30,7 @@ class SplitBulkEntitlementListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType|array 
+     * @return \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType|array
      */
     public function getBulkEntitlementInfo()
     {
@@ -45,6 +44,7 @@ class SplitBulkEntitlementListType extends FlexnetType
     public function setBulkEntitlementInfo($bulkEntitlementInfo)
     {
         $this->bulkEntitlementInfo = $bulkEntitlementInfo;
+
         return $this;
     }
 }

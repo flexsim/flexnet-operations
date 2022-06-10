@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LinkLineItemIdentifier extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -61,6 +60,7 @@ class LinkLineItemIdentifier extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -79,6 +79,7 @@ class LinkLineItemIdentifier extends FlexnetType
     public function setCount($count)
     {
         $this->count = $count;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class LinkLineItemIdentifier extends FlexnetType
     public function setExpirationDateOverride($expirationDateOverride)
     {
         $this->expirationDateOverride = $expirationDateOverride;
+
         return $this;
     }
 }

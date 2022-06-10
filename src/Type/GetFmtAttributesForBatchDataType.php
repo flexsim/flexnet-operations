@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetFmtAttributesForBatchDataType extends FlexnetType
 {
-
     /**
      * @var bool
      */
@@ -141,6 +140,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setNeedStartDate($needStartDate)
     {
         $this->needStartDate = $needStartDate;
+
         return $this;
     }
 
@@ -159,6 +159,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setNeedVersionDate($needVersionDate)
     {
         $this->needVersionDate = $needVersionDate;
+
         return $this;
     }
 
@@ -177,6 +178,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setNeedVersionStartDate($needVersionStartDate)
     {
         $this->needVersionStartDate = $needVersionStartDate;
+
         return $this;
     }
 
@@ -195,6 +197,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setNeedServerId($needServerId)
     {
         $this->needServerId = $needServerId;
+
         return $this;
     }
 
@@ -213,6 +216,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setNeedNodeLockId($needNodeLockId)
     {
         $this->needNodeLockId = $needNodeLockId;
+
         return $this;
     }
 
@@ -231,6 +235,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setNeedCustomHost($needCustomHost)
     {
         $this->needCustomHost = $needCustomHost;
+
         return $this;
     }
 
@@ -249,6 +254,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setNeedCount($needCount)
     {
         $this->needCount = $needCount;
+
         return $this;
     }
 
@@ -267,6 +273,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setNeedSoldTo($needSoldTo)
     {
         $this->needSoldTo = $needSoldTo;
+
         return $this;
     }
 
@@ -285,6 +292,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setOverDraftData($overDraftData)
     {
         $this->overDraftData = $overDraftData;
+
         return $this;
     }
 
@@ -303,6 +311,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setModelType($modelType)
     {
         $this->modelType = $modelType;
+
         return $this;
     }
 
@@ -321,6 +330,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setModelAttributes($modelAttributes)
     {
         $this->modelAttributes = $modelAttributes;
+
         return $this;
     }
 
@@ -339,6 +349,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setHostAttributes($hostAttributes)
     {
         $this->hostAttributes = $hostAttributes;
+
         return $this;
     }
 
@@ -357,6 +368,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     public function setNeedTimeZone($needTimeZone)
     {
         $this->needTimeZone = $needTimeZone;
+
         return $this;
     }
 }

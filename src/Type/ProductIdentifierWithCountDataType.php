@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ProductIdentifierWithCountDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
@@ -53,6 +52,7 @@ class ProductIdentifierWithCountDataType extends FlexnetType
     public function setProductIdentifier($productIdentifier)
     {
         $this->productIdentifier = $productIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class ProductIdentifierWithCountDataType extends FlexnetType
     public function setCount($count)
     {
         $this->count = $count;
+
         return $this;
     }
 }

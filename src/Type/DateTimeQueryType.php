@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DateTimeQueryType extends FlexnetType
 {
-
     /**
      * @var \DateTimeInterface
      */
@@ -53,6 +52,7 @@ class DateTimeQueryType extends FlexnetType
     public function setValue($value)
     {
         $this->value = $value;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class DateTimeQueryType extends FlexnetType
     public function setSearchType($searchType)
     {
         $this->searchType = $searchType;
+
         return $this;
     }
 }

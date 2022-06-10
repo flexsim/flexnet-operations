@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class DeleteOnholdFulfillmentsRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentIdListType
      */
@@ -47,6 +46,7 @@ class DeleteOnholdFulfillmentsRequestType extends FlexnetType implements Request
     public function setFulfillmentIdList($fulfillmentIdList)
     {
         $this->fulfillmentIdList = $fulfillmentIdList;
+
         return $this;
     }
 }

@@ -3,12 +3,12 @@
 namespace Flexsim\FlexnetOperations\Services\UsageService\v1;
 
 use Flexsim\FlexnetOperations\Type;
-use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 
 class UsageServiceClassmap
 {
-    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
+    public static function getCollection(): \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
         return new ClassMapCollection(
             new ClassMap('GetUsageRequest', Type\GetUsageRequest::class),
@@ -19,4 +19,3 @@ class UsageServiceClassmap
         );
     }
 }
-

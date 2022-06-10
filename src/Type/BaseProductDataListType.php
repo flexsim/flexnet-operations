@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class BaseProductDataListType extends FlexnetType
 {
-
     /**
      * @var string|array
      */
@@ -45,6 +44,7 @@ class BaseProductDataListType extends FlexnetType
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+
         return $this;
     }
 }

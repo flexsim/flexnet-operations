@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetUniformSuitesQueryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType
      */
@@ -79,6 +78,7 @@ class GetUniformSuitesQueryRequestType extends FlexnetType implements RequestInt
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 
@@ -97,6 +97,7 @@ class GetUniformSuitesQueryRequestType extends FlexnetType implements RequestInt
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -115,6 +116,7 @@ class GetUniformSuitesQueryRequestType extends FlexnetType implements RequestInt
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 
@@ -133,6 +135,7 @@ class GetUniformSuitesQueryRequestType extends FlexnetType implements RequestInt
     public function setReturnContainedObjects($returnContainedObjects)
     {
         $this->returnContainedObjects = $returnContainedObjects;
+
         return $this;
     }
 }

@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetMatchingBulkEntsListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType|array 
+     * @var \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType|array
      */
     protected $bulkEntInfo;
 
@@ -31,7 +30,7 @@ class GetMatchingBulkEntsListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType|array 
+     * @return \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType|array
      */
     public function getBulkEntInfo()
     {
@@ -45,6 +44,7 @@ class GetMatchingBulkEntsListType extends FlexnetType
     public function setBulkEntInfo($bulkEntInfo)
     {
         $this->bulkEntInfo = $bulkEntInfo;
+
         return $this;
     }
 }

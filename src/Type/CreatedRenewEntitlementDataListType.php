@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedRenewEntitlementDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType|array
      */
@@ -45,6 +44,7 @@ class CreatedRenewEntitlementDataListType extends FlexnetType
     public function setEntitlementData($entitlementData)
     {
         $this->entitlementData = $entitlementData;
+
         return $this;
     }
 }

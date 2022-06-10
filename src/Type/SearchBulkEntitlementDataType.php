@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SearchBulkEntitlementDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SimpleQueryType
      */
@@ -253,6 +252,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -271,6 +271,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -289,6 +290,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setProductName($productName)
     {
         $this->productName = $productName;
+
         return $this;
     }
 
@@ -307,6 +309,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setProductVersion($productVersion)
     {
         $this->productVersion = $productVersion;
+
         return $this;
     }
 
@@ -325,6 +328,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setProductType($productType)
     {
         $this->productType = $productType;
+
         return $this;
     }
 
@@ -343,6 +347,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -361,6 +366,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -379,6 +385,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setShipToEmail($shipToEmail)
     {
         $this->shipToEmail = $shipToEmail;
+
         return $this;
     }
 
@@ -397,6 +404,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setShipToAddress($shipToAddress)
     {
         $this->shipToAddress = $shipToAddress;
+
         return $this;
     }
 
@@ -415,6 +423,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -433,6 +442,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -451,6 +461,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setCreatedOn($createdOn)
     {
         $this->createdOn = $createdOn;
+
         return $this;
     }
 
@@ -469,6 +480,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setVersionDate($versionDate)
     {
         $this->versionDate = $versionDate;
+
         return $this;
     }
 
@@ -487,6 +499,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setLastModifiedDate($lastModifiedDate)
     {
         $this->lastModifiedDate = $lastModifiedDate;
+
         return $this;
     }
 
@@ -505,6 +518,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -523,6 +537,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 
@@ -541,6 +556,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setCreatedUserId($createdUserId)
     {
         $this->createdUserId = $createdUserId;
+
         return $this;
     }
 
@@ -559,6 +575,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setCustomAttributes($customAttributes)
     {
         $this->customAttributes = $customAttributes;
+
         return $this;
     }
 
@@ -577,6 +594,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setAllowPortalLogin($allowPortalLogin)
     {
         $this->allowPortalLogin = $allowPortalLogin;
+
         return $this;
     }
 
@@ -595,6 +613,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setAccountUnitName($accountUnitName)
     {
         $this->accountUnitName = $accountUnitName;
+
         return $this;
     }
 
@@ -613,6 +632,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setOrganizationUnitName($organizationUnitName)
     {
         $this->organizationUnitName = $organizationUnitName;
+
         return $this;
     }
 
@@ -631,6 +651,7 @@ class SearchBulkEntitlementDataType extends FlexnetType
     public function setCurrentOwnerName($currentOwnerName)
     {
         $this->currentOwnerName = $currentOwnerName;
+
         return $this;
     }
 }

@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedDeleteFeatureBundleDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType
      */
@@ -53,6 +52,7 @@ class FailedDeleteFeatureBundleDataType extends FlexnetType
     public function setFeatureBundleIdentifier($featureBundleIdentifier)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedDeleteFeatureBundleDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

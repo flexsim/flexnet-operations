@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CommonBatchDataSetType extends FlexnetType
 {
-
     /**
      * @var \DateTimeInterface
      */
@@ -109,6 +108,7 @@ class CommonBatchDataSetType extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -127,6 +127,7 @@ class CommonBatchDataSetType extends FlexnetType
     public function setVersionDate($versionDate)
     {
         $this->versionDate = $versionDate;
+
         return $this;
     }
 
@@ -145,6 +146,7 @@ class CommonBatchDataSetType extends FlexnetType
     public function setVersionStartDate($versionStartDate)
     {
         $this->versionStartDate = $versionStartDate;
+
         return $this;
     }
 
@@ -163,6 +165,7 @@ class CommonBatchDataSetType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -181,6 +184,7 @@ class CommonBatchDataSetType extends FlexnetType
     public function setShipToEmail($shipToEmail)
     {
         $this->shipToEmail = $shipToEmail;
+
         return $this;
     }
 
@@ -199,6 +203,7 @@ class CommonBatchDataSetType extends FlexnetType
     public function setShipToAddress($shipToAddress)
     {
         $this->shipToAddress = $shipToAddress;
+
         return $this;
     }
 
@@ -217,6 +222,7 @@ class CommonBatchDataSetType extends FlexnetType
     public function setLicenseModelAttributes($licenseModelAttributes)
     {
         $this->licenseModelAttributes = $licenseModelAttributes;
+
         return $this;
     }
 
@@ -235,6 +241,7 @@ class CommonBatchDataSetType extends FlexnetType
     public function setOverridePolicy($overridePolicy)
     {
         $this->overridePolicy = $overridePolicy;
+
         return $this;
     }
 
@@ -253,6 +260,7 @@ class CommonBatchDataSetType extends FlexnetType
     public function setFNPTimeZoneValue($FNPTimeZoneValue)
     {
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
+
         return $this;
     }
 }

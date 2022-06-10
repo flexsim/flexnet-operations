@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetFeatureBundleCountRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType
      */
@@ -48,6 +47,7 @@ class GetFeatureBundleCountRequestType extends FlexnetType implements RequestInt
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 }

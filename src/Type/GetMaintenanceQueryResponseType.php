@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetMaintenanceQueryResponseType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
@@ -55,6 +54,7 @@ class GetMaintenanceQueryResponseType extends FlexnetType implements ResultInter
     public function setStatusInfo($statusInfo)
     {
         $this->statusInfo = $statusInfo;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class GetMaintenanceQueryResponseType extends FlexnetType implements ResultInter
     public function setResponseData($responseData)
     {
         $this->responseData = $responseData;
+
         return $this;
     }
 }

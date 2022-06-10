@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeleteProductDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierType
      */
@@ -45,6 +44,7 @@ class DeleteProductDataType extends FlexnetType
     public function setProductIdentifier($productIdentifier)
     {
         $this->productIdentifier = $productIdentifier;
+
         return $this;
     }
 }

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class DeletePartNumberRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\DeletePartNumberDataType
      */
@@ -47,6 +46,7 @@ class DeletePartNumberRequestType extends FlexnetType implements RequestInterfac
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 }

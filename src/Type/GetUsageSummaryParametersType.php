@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetUsageSummaryParametersType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ExternalIdQueryType
      */
@@ -181,6 +180,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setActivationUniqueId($activationUniqueId)
     {
         $this->activationUniqueId = $activationUniqueId;
+
         return $this;
     }
 
@@ -199,6 +199,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -217,6 +218,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setEntitlementUniqueId($entitlementUniqueId)
     {
         $this->entitlementUniqueId = $entitlementUniqueId;
+
         return $this;
     }
 
@@ -235,6 +237,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -253,6 +256,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setUsedCount($usedCount)
     {
         $this->usedCount = $usedCount;
+
         return $this;
     }
 
@@ -271,6 +275,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setUsedExceedsOrderedBy($usedExceedsOrderedBy)
     {
         $this->usedExceedsOrderedBy = $usedExceedsOrderedBy;
+
         return $this;
     }
 
@@ -289,6 +294,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setUsedExceedsProvisionedBy($usedExceedsProvisionedBy)
     {
         $this->usedExceedsProvisionedBy = $usedExceedsProvisionedBy;
+
         return $this;
     }
 
@@ -307,6 +313,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setOrganizationUnitName($organizationUnitName)
     {
         $this->organizationUnitName = $organizationUnitName;
+
         return $this;
     }
 
@@ -325,6 +332,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setSoldToUniqueId($soldToUniqueId)
     {
         $this->soldToUniqueId = $soldToUniqueId;
+
         return $this;
     }
 
@@ -343,6 +351,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setOrderableUniqueId($orderableUniqueId)
     {
         $this->orderableUniqueId = $orderableUniqueId;
+
         return $this;
     }
 
@@ -361,6 +370,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setOrderableName($orderableName)
     {
         $this->orderableName = $orderableName;
+
         return $this;
     }
 
@@ -379,6 +389,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setOrderableVersion($orderableVersion)
     {
         $this->orderableVersion = $orderableVersion;
+
         return $this;
     }
 
@@ -397,6 +408,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setServerUniqueId($serverUniqueId)
     {
         $this->serverUniqueId = $serverUniqueId;
+
         return $this;
     }
 
@@ -415,6 +427,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setServerId($serverId)
     {
         $this->serverId = $serverId;
+
         return $this;
     }
 
@@ -433,6 +446,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setServerAlias($serverAlias)
     {
         $this->serverAlias = $serverAlias;
+
         return $this;
     }
 
@@ -451,6 +465,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setSummaryTimeUniqueId($summaryTimeUniqueId)
     {
         $this->summaryTimeUniqueId = $summaryTimeUniqueId;
+
         return $this;
     }
 
@@ -469,6 +484,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setSummaryTime($summaryTime)
     {
         $this->summaryTime = $summaryTime;
+
         return $this;
     }
 
@@ -487,6 +503,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     public function setGroupBy($groupBy)
     {
         $this->groupBy = $groupBy;
+
         return $this;
     }
 }

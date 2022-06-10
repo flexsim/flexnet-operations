@@ -6,7 +6,6 @@ use Illuminate\Support\ServiceProvider;
 
 class FlexnetOperationsServiceProvider extends ServiceProvider
 {
-
     public function boot()
     {
         if ($this->app->runningInConsole()) {

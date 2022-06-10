@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FeatureBundleStateChangeDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType
      */
@@ -53,6 +52,7 @@ class FeatureBundleStateChangeDataType extends FlexnetType
     public function setFeatureBundleIdentifier($featureBundleIdentifier)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FeatureBundleStateChangeDataType extends FlexnetType
     public function setStateChangeRecord($stateChangeRecord)
     {
         $this->stateChangeRecord = $stateChangeRecord;
+
         return $this;
     }
 }

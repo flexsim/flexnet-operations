@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CategoryAttributesDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CategoryAttributeDataType
      */
@@ -45,6 +44,7 @@ class CategoryAttributesDataType extends FlexnetType
     public function setCategoryAttribute($categoryAttribute)
     {
         $this->categoryAttribute = $categoryAttribute;
+
         return $this;
     }
 }

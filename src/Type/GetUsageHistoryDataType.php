@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class GetUsageHistoryDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UsageHistoryDataType
      */
@@ -45,6 +44,7 @@ class GetUsageHistoryDataType extends FlexnetType
     public function setDeviceUpdate($deviceUpdate)
     {
         $this->deviceUpdate = $deviceUpdate;
+
         return $this;
     }
 }

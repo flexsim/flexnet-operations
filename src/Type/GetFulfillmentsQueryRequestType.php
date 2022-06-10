@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetFulfillmentsQueryRequestType extends FlexnetType implements RequestInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType
      */
@@ -89,6 +88,7 @@ class GetFulfillmentsQueryRequestType extends FlexnetType implements RequestInte
     public function setQueryParams($queryParams)
     {
         $this->queryParams = $queryParams;
+
         return $this;
     }
 
@@ -107,6 +107,7 @@ class GetFulfillmentsQueryRequestType extends FlexnetType implements RequestInte
     public function setPageNumber($pageNumber)
     {
         $this->pageNumber = $pageNumber;
+
         return $this;
     }
 
@@ -125,6 +126,7 @@ class GetFulfillmentsQueryRequestType extends FlexnetType implements RequestInte
     public function setBatchSize($batchSize)
     {
         $this->batchSize = $batchSize;
+
         return $this;
     }
 
@@ -143,6 +145,7 @@ class GetFulfillmentsQueryRequestType extends FlexnetType implements RequestInte
     public function setIncludeLicenseText($includeLicenseText)
     {
         $this->includeLicenseText = $includeLicenseText;
+
         return $this;
     }
 
@@ -161,6 +164,7 @@ class GetFulfillmentsQueryRequestType extends FlexnetType implements RequestInte
     public function setIncludeConsolidatedHostLicense($includeConsolidatedHostLicense)
     {
         $this->includeConsolidatedHostLicense = $includeConsolidatedHostLicense;
+
         return $this;
     }
 }

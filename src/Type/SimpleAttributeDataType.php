@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class SimpleAttributeDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class SimpleAttributeDataType extends FlexnetType
     public function setAttributeName($attributeName)
     {
         $this->attributeName = $attributeName;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class SimpleAttributeDataType extends FlexnetType
     public function setAttributeValue($attributeValue)
     {
         $this->attributeValue = $attributeValue;
+
         return $this;
     }
 }

@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUpdateDevDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateDeviceDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateDeviceDataType|array
      */
     protected $failedDevice;
 
@@ -31,7 +30,7 @@ class FailedUpdateDevDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateDeviceDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateDeviceDataType|array
      */
     public function getFailedDevice()
     {
@@ -45,6 +44,7 @@ class FailedUpdateDevDataListType extends FlexnetType
     public function setFailedDevice($failedDevice)
     {
         $this->failedDevice = $failedDevice;
+
         return $this;
     }
 }

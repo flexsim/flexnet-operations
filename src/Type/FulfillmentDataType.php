@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FulfillmentDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType
      */
@@ -347,6 +346,7 @@ class FulfillmentDataType extends FlexnetType
     public function setEntitlementIdentifier($entitlementIdentifier)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
+
         return $this;
     }
 
@@ -365,6 +365,7 @@ class FulfillmentDataType extends FlexnetType
     public function setFulfillmentIdentifier($fulfillmentIdentifier)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
+
         return $this;
     }
 
@@ -383,6 +384,7 @@ class FulfillmentDataType extends FlexnetType
     public function setFulfillmentType($fulfillmentType)
     {
         $this->fulfillmentType = $fulfillmentType;
+
         return $this;
     }
 
@@ -401,6 +403,7 @@ class FulfillmentDataType extends FlexnetType
     public function setLineItem($lineItem)
     {
         $this->lineItem = $lineItem;
+
         return $this;
     }
 
@@ -419,6 +422,7 @@ class FulfillmentDataType extends FlexnetType
     public function setProduct($product)
     {
         $this->product = $product;
+
         return $this;
     }
 
@@ -437,6 +441,7 @@ class FulfillmentDataType extends FlexnetType
     public function setSoldTo($soldTo)
     {
         $this->soldTo = $soldTo;
+
         return $this;
     }
 
@@ -455,6 +460,7 @@ class FulfillmentDataType extends FlexnetType
     public function setShipToEmail($shipToEmail)
     {
         $this->shipToEmail = $shipToEmail;
+
         return $this;
     }
 
@@ -473,6 +479,7 @@ class FulfillmentDataType extends FlexnetType
     public function setShipToAddress($shipToAddress)
     {
         $this->shipToAddress = $shipToAddress;
+
         return $this;
     }
 
@@ -491,6 +498,7 @@ class FulfillmentDataType extends FlexnetType
     public function setServerIds($serverIds)
     {
         $this->serverIds = $serverIds;
+
         return $this;
     }
 
@@ -509,6 +517,7 @@ class FulfillmentDataType extends FlexnetType
     public function setNodeIds($nodeIds)
     {
         $this->nodeIds = $nodeIds;
+
         return $this;
     }
 
@@ -527,6 +536,7 @@ class FulfillmentDataType extends FlexnetType
     public function setCustomHost($customHost)
     {
         $this->customHost = $customHost;
+
         return $this;
     }
 
@@ -545,6 +555,7 @@ class FulfillmentDataType extends FlexnetType
     public function setFulfilledCount($fulfilledCount)
     {
         $this->fulfilledCount = $fulfilledCount;
+
         return $this;
     }
 
@@ -563,6 +574,7 @@ class FulfillmentDataType extends FlexnetType
     public function setOverDraftCount($overDraftCount)
     {
         $this->overDraftCount = $overDraftCount;
+
         return $this;
     }
 
@@ -581,6 +593,7 @@ class FulfillmentDataType extends FlexnetType
     public function setFulfillDate($fulfillDate)
     {
         $this->fulfillDate = $fulfillDate;
+
         return $this;
     }
 
@@ -599,6 +612,7 @@ class FulfillmentDataType extends FlexnetType
     public function setFulfillDateTime($fulfillDateTime)
     {
         $this->fulfillDateTime = $fulfillDateTime;
+
         return $this;
     }
 
@@ -617,6 +631,7 @@ class FulfillmentDataType extends FlexnetType
     public function setIsPermanent($isPermanent)
     {
         $this->isPermanent = $isPermanent;
+
         return $this;
     }
 
@@ -635,6 +650,7 @@ class FulfillmentDataType extends FlexnetType
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -653,6 +669,7 @@ class FulfillmentDataType extends FlexnetType
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+
         return $this;
     }
 
@@ -671,6 +688,7 @@ class FulfillmentDataType extends FlexnetType
     public function setLicenseText($licenseText)
     {
         $this->licenseText = $licenseText;
+
         return $this;
     }
 
@@ -689,6 +707,7 @@ class FulfillmentDataType extends FlexnetType
     public function setBinaryLicense($binaryLicense)
     {
         $this->binaryLicense = $binaryLicense;
+
         return $this;
     }
 
@@ -707,6 +726,7 @@ class FulfillmentDataType extends FlexnetType
     public function setConsolidatedHostLicense($consolidatedHostLicense)
     {
         $this->consolidatedHostLicense = $consolidatedHostLicense;
+
         return $this;
     }
 
@@ -725,6 +745,7 @@ class FulfillmentDataType extends FlexnetType
     public function setSupportAction($supportAction)
     {
         $this->supportAction = $supportAction;
+
         return $this;
     }
 
@@ -743,6 +764,7 @@ class FulfillmentDataType extends FlexnetType
     public function setLastModifiedDateTime($lastModifiedDateTime)
     {
         $this->lastModifiedDateTime = $lastModifiedDateTime;
+
         return $this;
     }
 
@@ -761,6 +783,7 @@ class FulfillmentDataType extends FlexnetType
     public function setParentFulfillmentId($parentFulfillmentId)
     {
         $this->parentFulfillmentId = $parentFulfillmentId;
+
         return $this;
     }
 
@@ -779,6 +802,7 @@ class FulfillmentDataType extends FlexnetType
     public function setLicenseTechnology($licenseTechnology)
     {
         $this->licenseTechnology = $licenseTechnology;
+
         return $this;
     }
 
@@ -797,6 +821,7 @@ class FulfillmentDataType extends FlexnetType
     public function setLicenseModelAttributes($licenseModelAttributes)
     {
         $this->licenseModelAttributes = $licenseModelAttributes;
+
         return $this;
     }
 
@@ -815,6 +840,7 @@ class FulfillmentDataType extends FlexnetType
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -833,6 +859,7 @@ class FulfillmentDataType extends FlexnetType
     public function setFulfillmentSource($fulfillmentSource)
     {
         $this->fulfillmentSource = $fulfillmentSource;
+
         return $this;
     }
 
@@ -851,6 +878,7 @@ class FulfillmentDataType extends FlexnetType
     public function setLicenseFiles($licenseFiles)
     {
         $this->licenseFiles = $licenseFiles;
+
         return $this;
     }
 
@@ -869,6 +897,7 @@ class FulfillmentDataType extends FlexnetType
     public function setEntitledProducts($entitledProducts)
     {
         $this->entitledProducts = $entitledProducts;
+
         return $this;
     }
 
@@ -887,6 +916,7 @@ class FulfillmentDataType extends FlexnetType
     public function setActivationType($activationType)
     {
         $this->activationType = $activationType;
+
         return $this;
     }
 }

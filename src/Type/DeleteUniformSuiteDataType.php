@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeleteUniformSuiteDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SuiteIdentifierType
      */
@@ -45,6 +44,7 @@ class DeleteUniformSuiteDataType extends FlexnetType
     public function setSuiteIdentifier($suiteIdentifier)
     {
         $this->suiteIdentifier = $suiteIdentifier;
+
         return $this;
     }
 }

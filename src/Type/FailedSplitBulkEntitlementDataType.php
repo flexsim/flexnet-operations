@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedSplitBulkEntitlementDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType
      */
@@ -53,6 +52,7 @@ class FailedSplitBulkEntitlementDataType extends FlexnetType
     public function setBulkEntitlementInfo($bulkEntitlementInfo)
     {
         $this->bulkEntitlementInfo = $bulkEntitlementInfo;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedSplitBulkEntitlementDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

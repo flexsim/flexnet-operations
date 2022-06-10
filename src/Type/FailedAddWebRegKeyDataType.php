@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedAddWebRegKeyDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType
      */
@@ -53,6 +52,7 @@ class FailedAddWebRegKeyDataType extends FlexnetType
     public function setWebRegKeyData($webRegKeyData)
     {
         $this->webRegKeyData = $webRegKeyData;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedAddWebRegKeyDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

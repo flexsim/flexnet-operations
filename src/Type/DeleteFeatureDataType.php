@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class DeleteFeatureDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\FeatureIdentifierType
      */
@@ -45,6 +44,7 @@ class DeleteFeatureDataType extends FlexnetType
     public function setFeatureIdentifier($featureIdentifier)
     {
         $this->featureIdentifier = $featureIdentifier;
+
         return $this;
     }
 }

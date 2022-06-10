@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class UpdateProductsListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array
      */
@@ -53,6 +52,7 @@ class UpdateProductsListType extends FlexnetType
     public function setProductIdentifier($productIdentifier)
     {
         $this->productIdentifier = $productIdentifier;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class UpdateProductsListType extends FlexnetType
     public function setOpType($opType)
     {
         $this->opType = $opType;
+
         return $this;
     }
 }

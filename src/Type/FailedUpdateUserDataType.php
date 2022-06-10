@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUpdateUserDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\UpdateUserDataType
      */
@@ -53,6 +52,7 @@ class FailedUpdateUserDataType extends FlexnetType
     public function setUserData($userData)
     {
         $this->userData = $userData;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FailedUpdateUserDataType extends FlexnetType
     public function setReason($reason)
     {
         $this->reason = $reason;
+
         return $this;
     }
 }

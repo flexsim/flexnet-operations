@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FulfillmentHistoryDataType extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -53,6 +52,7 @@ class FulfillmentHistoryDataType extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class FulfillmentHistoryDataType extends FlexnetType
     public function setHistoryDetails($historyDetails)
     {
         $this->historyDetails = $historyDetails;
+
         return $this;
     }
 }

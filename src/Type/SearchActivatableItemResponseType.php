@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class SearchActivatableItemResponseType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
@@ -55,6 +54,7 @@ class SearchActivatableItemResponseType extends FlexnetType implements ResultInt
     public function setStatusInfo($statusInfo)
     {
         $this->statusInfo = $statusInfo;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class SearchActivatableItemResponseType extends FlexnetType implements ResultInt
     public function setActivatableItem($activatableItem)
     {
         $this->activatableItem = $activatableItem;
+
         return $this;
     }
 }

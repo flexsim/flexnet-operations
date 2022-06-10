@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class DeleteDomainUserResponseType extends FlexnetType implements ResultInterface
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\StatusInfoType
      */
@@ -55,6 +54,7 @@ class DeleteDomainUserResponseType extends FlexnetType implements ResultInterfac
     public function setStatusInfo($statusInfo)
     {
         $this->statusInfo = $statusInfo;
+
         return $this;
     }
 
@@ -73,6 +73,7 @@ class DeleteDomainUserResponseType extends FlexnetType implements ResultInterfac
     public function setFailedData($failedData)
     {
         $this->failedData = $failedData;
+
         return $this;
     }
 }

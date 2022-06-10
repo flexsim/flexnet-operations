@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class ModelIdentifiersDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\LicenseModelDetailsType|array 
+     * @var \Flexsim\FlexnetOperations\Type\LicenseModelDetailsType|array
      */
     protected $licenseModel;
 
@@ -31,7 +30,7 @@ class ModelIdentifiersDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\LicenseModelDetailsType|array 
+     * @return \Flexsim\FlexnetOperations\Type\LicenseModelDetailsType|array
      */
     public function getLicenseModel()
     {
@@ -45,6 +44,7 @@ class ModelIdentifiersDataListType extends FlexnetType
     public function setLicenseModel($licenseModel)
     {
         $this->licenseModel = $licenseModel;
+
         return $this;
     }
 }

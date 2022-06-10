@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class CreatedPartNumberDataListType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType|array
      */
@@ -45,6 +44,7 @@ class CreatedPartNumberDataListType extends FlexnetType
     public function setCreatedPartNumber($createdPartNumber)
     {
         $this->createdPartNumber = $createdPartNumber;
+
         return $this;
     }
 }

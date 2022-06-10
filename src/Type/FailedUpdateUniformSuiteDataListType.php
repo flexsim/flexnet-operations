@@ -4,9 +4,8 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class FailedUpdateUniformSuiteDataListType extends FlexnetType
 {
-
     /**
-     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateUniformSuiteDataType|array 
+     * @var \Flexsim\FlexnetOperations\Type\FailedUpdateUniformSuiteDataType|array
      */
     protected $failedUniformSuite;
 
@@ -31,7 +30,7 @@ class FailedUpdateUniformSuiteDataListType extends FlexnetType
     }
 
     /**
-     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateUniformSuiteDataType|array 
+     * @return \Flexsim\FlexnetOperations\Type\FailedUpdateUniformSuiteDataType|array
      */
     public function getFailedUniformSuite()
     {
@@ -45,6 +44,7 @@ class FailedUpdateUniformSuiteDataListType extends FlexnetType
     public function setFailedUniformSuite($failedUniformSuite)
     {
         $this->failedUniformSuite = $failedUniformSuite;
+
         return $this;
     }
 }

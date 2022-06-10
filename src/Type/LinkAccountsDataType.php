@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class LinkAccountsDataType extends FlexnetType
 {
-
     /**
      * @var \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType
      */
@@ -53,6 +52,7 @@ class LinkAccountsDataType extends FlexnetType
     public function setParentAcct($parentAcct)
     {
         $this->parentAcct = $parentAcct;
+
         return $this;
     }
 
@@ -71,6 +71,7 @@ class LinkAccountsDataType extends FlexnetType
     public function setSubAcct($subAcct)
     {
         $this->subAcct = $subAcct;
+
         return $this;
     }
 }

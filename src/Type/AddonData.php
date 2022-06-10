@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class AddonData extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -149,6 +148,7 @@ class AddonData extends FlexnetType
     public function setActivationId($activationId)
     {
         $this->activationId = $activationId;
+
         return $this;
     }
 
@@ -167,6 +167,7 @@ class AddonData extends FlexnetType
     public function setEntitlementId($entitlementId)
     {
         $this->entitlementId = $entitlementId;
+
         return $this;
     }
 
@@ -185,6 +186,7 @@ class AddonData extends FlexnetType
     public function setRequestedCopies($requestedCopies)
     {
         $this->requestedCopies = $requestedCopies;
+
         return $this;
     }
 
@@ -203,6 +205,7 @@ class AddonData extends FlexnetType
     public function setConsumedCopies($consumedCopies)
     {
         $this->consumedCopies = $consumedCopies;
+
         return $this;
     }
 
@@ -221,6 +224,7 @@ class AddonData extends FlexnetType
     public function setGeneratedCopies($generatedCopies)
     {
         $this->generatedCopies = $generatedCopies;
+
         return $this;
     }
 
@@ -239,6 +243,7 @@ class AddonData extends FlexnetType
     public function setLicenseState($licenseState)
     {
         $this->licenseState = $licenseState;
+
         return $this;
     }
 
@@ -257,6 +262,7 @@ class AddonData extends FlexnetType
     public function setProductList($productList)
     {
         $this->productList = $productList;
+
         return $this;
     }
 
@@ -275,6 +281,7 @@ class AddonData extends FlexnetType
     public function setPartNumber($partNumber)
     {
         $this->partNumber = $partNumber;
+
         return $this;
     }
 
@@ -293,6 +300,7 @@ class AddonData extends FlexnetType
     public function setLicenseExpirationDate($licenseExpirationDate)
     {
         $this->licenseExpirationDate = $licenseExpirationDate;
+
         return $this;
     }
 
@@ -311,6 +319,7 @@ class AddonData extends FlexnetType
     public function setLicensePermanent($licensePermanent)
     {
         $this->licensePermanent = $licensePermanent;
+
         return $this;
     }
 
@@ -329,6 +338,7 @@ class AddonData extends FlexnetType
     public function setExpirationDateOverride($expirationDateOverride)
     {
         $this->expirationDateOverride = $expirationDateOverride;
+
         return $this;
     }
 
@@ -347,6 +357,7 @@ class AddonData extends FlexnetType
     public function setLicenseModelName($licenseModelName)
     {
         $this->licenseModelName = $licenseModelName;
+
         return $this;
     }
 
@@ -365,6 +376,7 @@ class AddonData extends FlexnetType
     public function setCreatedDate($createdDate)
     {
         $this->createdDate = $createdDate;
+
         return $this;
     }
 
@@ -383,6 +395,7 @@ class AddonData extends FlexnetType
     public function setLastModifiedDate($lastModifiedDate)
     {
         $this->lastModifiedDate = $lastModifiedDate;
+
         return $this;
     }
 }

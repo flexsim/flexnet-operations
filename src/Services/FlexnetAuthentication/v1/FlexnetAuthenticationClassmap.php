@@ -3,12 +3,12 @@
 namespace Flexsim\FlexnetOperations\Services\FlexnetAuthentication\v1;
 
 use Flexsim\FlexnetOperations\Type;
-use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 
 class FlexnetAuthenticationClassmap
 {
-    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
+    public static function getCollection(): \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
         return new ClassMapCollection(
             new ClassMap('IdentityType', Type\IdentityType::class),
@@ -20,4 +20,3 @@ class FlexnetAuthenticationClassmap
         );
     }
 }
-

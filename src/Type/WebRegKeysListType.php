@@ -4,7 +4,6 @@ namespace Flexsim\FlexnetOperations\Type;
 
 class WebRegKeysListType extends FlexnetType
 {
-
     /**
      * @var string|array
      */
@@ -45,6 +44,7 @@ class WebRegKeysListType extends FlexnetType
     public function setWebRegKey($webRegKey)
     {
         $this->webRegKey = $webRegKey;
+
         return $this;
     }
 }
