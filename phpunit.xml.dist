@@ -9,6 +9,10 @@
         <server name="PROJECT_ROOT" value="./"/>
         <server name="APP_ENV" value="testing"/>
         <server name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
+        <server name="FLEXNET_OPERATIONS_USER" value="admin"/>
+        <server name="FLEXNET_OPERATIONS_PASSWORD" value="password"/>
+        <server name="FLEXNET_OPERATIONS_DOMAIN" value="licenseserver.test"/>
+        <server name="FLEXNET_OPERATIONS_SCHEME" value="http"/>
     </php>
     <coverage>
         <include>
