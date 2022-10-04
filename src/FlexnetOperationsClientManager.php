@@ -66,7 +66,7 @@ class FlexnetOperationsClientManager
 
         $version = $this->activeVersion();
 
-        if (!Arr::has($this->clients, $clientDot = implode('.', [$connection, $version]))) {
+        if (! Arr::has($this->clients, $clientDot = implode('.', [$connection, $version]))) {
             $this->createClient($connection, $version);
         }
 
