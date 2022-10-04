@@ -170,7 +170,7 @@ class FlexnetOperationsClientManager
      */
     protected function createWsdlPath($config): string
     {
-        $baseUrl = $config['url'] ?? ($config['scheme'] ? $config['scheme'] . '://' : '') . $config['domain'] . $config['uri'];
+        $baseUrl = $config['url'] . '/services' ?? ($config['scheme'] ? $config['scheme'] . '://' : '') . $config['domain'] . $config['uri'];
 
         return $baseUrl .
             (($activeVersion = $this->activeVersion()) == 'base'
