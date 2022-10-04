@@ -66,7 +66,7 @@ class FlexnetOperationsClientManager
 
         $version = $this->activeVersion();
 
-        if (! Arr::has($this->clients, $clientDot = implode('.', [$connection, $version]))) {
+        if (!Arr::has($this->clients, $clientDot = implode('.', [$connection, $version]))) {
             $this->createClient($connection, $version);
         }
 
@@ -170,7 +170,9 @@ class FlexnetOperationsClientManager
      */
     protected function createWsdlPath($config): string
     {
-        return ($config['scheme'] ? $config['scheme'] . '://' : '') . $config['domain'] . $config['uri'] .
+        $baseUrl = $config['url'] ?? ($config['scheme'] ? $config['scheme'] . '://' : '') . $config['domain'] . $config['uri'];
+
+        return $baseUrl .
             (($activeVersion = $this->activeVersion()) == 'base'
                 ? ''
                 : '/' . $activeVersion)

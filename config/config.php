@@ -24,6 +24,8 @@ return [
 
     'connections' => [
         'flexnet' => [
+            'url' => env('FLEXNET_OPERATIONS_URL'),
+
             'user' => env('FLEXNET_OPERATIONS_USER'),
             'password' => env('FLEXNET_OPERATIONS_PASSWORD'),
             'domain' => env('FLEXNET_OPERATIONS_DOMAIN'),
@@ -35,11 +37,11 @@ return [
 
     /**
      * Define the default versions to use for each service
-     * 
+     *
      * You may also specify these options for a specific connection above
-     * by configuring the "services" key in that connection. For each 
-     * service the following options are available (see your FlexNet 
-     * Operations documentation for which versions are available for a 
+     * by configuring the "services" key in that connection. For each
+     * service the following options are available (see your FlexNet
+     * Operations documentation for which versions are available for a
      * specific service)
      * options: base, v1, v2, v3
      */
