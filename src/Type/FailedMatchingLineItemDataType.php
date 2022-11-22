@@ -17,10 +17,10 @@ class FailedMatchingLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType  $lineItemInfo
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo, string $reason)
+    public function __construct(GetMatchingLineItemInfoType $lineItemInfo, string $reason)
     {
         $this->lineItemInfo = $lineItemInfo;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedMatchingLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType  $lineItemInfo
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo, string $reason)
+    public static function create(GetMatchingLineItemInfoType $lineItemInfo, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedMatchingLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType $lineItemInfo
+     * @param  \Flexsim\FlexnetOperations\Type\GetMatchingLineItemInfoType  $lineItemInfo
      * @return $this
      */
     public function setLineItemInfo($lineItemInfo)
@@ -65,7 +65,7 @@ class FailedMatchingLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

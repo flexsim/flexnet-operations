@@ -17,10 +17,10 @@ class FailedPartNumberDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType  $partNumber
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber = null, string $reason = null)
+    public function __construct(CreatePartNumberDataType $partNumber = null, string $reason = null)
     {
         $this->partNumber = $partNumber;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedPartNumberDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType  $partNumber
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber = null, string $reason = null)
+    public static function create(CreatePartNumberDataType $partNumber = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedPartNumberDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType  $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -65,7 +65,7 @@ class FailedPartNumberDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

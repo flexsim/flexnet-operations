@@ -42,15 +42,15 @@ class TransferEntitlementInfoType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param string $accountTo this method is backwards compatible so your may also pass $organizationTo
-     * @param bool $retainExistingIds
-     * @param bool $returnActiveFulfillments
-     * @param bool $forceTransferEvenIfNoTargetUsers
-     * @param bool $forceTransferEvenIfParentAndChildSeparated
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  string  $accountTo this method is backwards compatible so your may also pass $organizationTo
+     * @param  bool  $retainExistingIds
+     * @param  bool  $returnActiveFulfillments
+     * @param  bool  $forceTransferEvenIfNoTargetUsers
+     * @param  bool  $forceTransferEvenIfParentAndChildSeparated
      */
     public function __construct(
-        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier,
+        EntitlementIdentifierType $entitlementIdentifier,
         string $accountTo,
         bool $retainExistingIds = null,
         bool $returnActiveFulfillments = null,
@@ -69,15 +69,15 @@ class TransferEntitlementInfoType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param string $accountTo this method is backwards compatible so your may also pass $organizationTo
-     * @param bool $retainExistingIds
-     * @param bool $returnActiveFulfillments
-     * @param bool $forceTransferEvenIfNoTargetUsers
-     * @param bool $forceTransferEvenIfParentAndChildSeparated
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  string  $accountTo this method is backwards compatible so your may also pass $organizationTo
+     * @param  bool  $retainExistingIds
+     * @param  bool  $returnActiveFulfillments
+     * @param  bool  $forceTransferEvenIfNoTargetUsers
+     * @param  bool  $forceTransferEvenIfParentAndChildSeparated
      */
     public static function create(
-        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier,
+        EntitlementIdentifierType $entitlementIdentifier,
         string $accountTo,
         bool $retainExistingIds = null,
         bool $returnActiveFulfillments = null,
@@ -96,7 +96,7 @@ class TransferEntitlementInfoType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
      * @return $this
      */
     public function setEntitlementIdentifier($entitlementIdentifier)
@@ -115,7 +115,7 @@ class TransferEntitlementInfoType extends FlexnetType
     }
 
     /**
-     * @param string $accountTo
+     * @param  string  $accountTo
      * @return $this
      */
     public function setAccountTo($accountTo)
@@ -134,7 +134,7 @@ class TransferEntitlementInfoType extends FlexnetType
     }
 
     /**
-     * @param string $organizationTo
+     * @param  string  $organizationTo
      * @return $this
      */
     public function setOrganizationTo($organizationTo)
@@ -153,7 +153,7 @@ class TransferEntitlementInfoType extends FlexnetType
     }
 
     /**
-     * @param bool $retainExistingIds
+     * @param  bool  $retainExistingIds
      * @return $this
      */
     public function setRetainExistingIds($retainExistingIds)
@@ -172,7 +172,7 @@ class TransferEntitlementInfoType extends FlexnetType
     }
 
     /**
-     * @param bool $returnActiveFulfillments
+     * @param  bool  $returnActiveFulfillments
      * @return $this
      */
     public function setReturnActiveFulfillments($returnActiveFulfillments)
@@ -191,7 +191,7 @@ class TransferEntitlementInfoType extends FlexnetType
     }
 
     /**
-     * @param bool $forceTransferEvenIfNoTargetUsers
+     * @param  bool  $forceTransferEvenIfNoTargetUsers
      * @return $this
      */
     public function setForceTransferEvenIfNoTargetUsers($forceTransferEvenIfNoTargetUsers)
@@ -210,7 +210,7 @@ class TransferEntitlementInfoType extends FlexnetType
     }
 
     /**
-     * @param bool $forceTransferEvenIfParentAndChildSeparated
+     * @param  bool  $forceTransferEvenIfParentAndChildSeparated
      * @return $this
      */
     public function setForceTransferEvenIfParentAndChildSeparated($forceTransferEvenIfParentAndChildSeparated)

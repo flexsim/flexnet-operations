@@ -17,8 +17,8 @@ class NumberQueryType extends FlexnetType
     /**
      * Constructor
      *
-     * @param int $value
-     * @param string $searchType
+     * @param  int  $value
+     * @param  string  $searchType
      */
     public function __construct(int $value, string $searchType)
     {
@@ -29,8 +29,8 @@ class NumberQueryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param int $value
-     * @param string $searchType
+     * @param  int  $value
+     * @param  string  $searchType
      */
     public static function create(int $value, string $searchType)
     {
@@ -46,7 +46,7 @@ class NumberQueryType extends FlexnetType
     }
 
     /**
-     * @param int $value
+     * @param  int  $value
      * @return $this
      */
     public function setValue($value)
@@ -65,7 +65,7 @@ class NumberQueryType extends FlexnetType
     }
 
     /**
-     * @param string $searchType
+     * @param  string  $searchType
      * @return $this
      */
     public function setSearchType($searchType)

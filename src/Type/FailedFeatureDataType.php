@@ -17,10 +17,10 @@ class FailedFeatureDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureDataType $feature
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureDataType  $feature
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureDataType $feature = null, string $reason = null)
+    public function __construct(FeatureDataType $feature = null, string $reason = null)
     {
         $this->feature = $feature;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedFeatureDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureDataType $feature
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureDataType  $feature
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureDataType $feature = null, string $reason = null)
+    public static function create(FeatureDataType $feature = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedFeatureDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureDataType $feature
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureDataType  $feature
      * @return $this
      */
     public function setFeature($feature)
@@ -65,7 +65,7 @@ class FailedFeatureDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

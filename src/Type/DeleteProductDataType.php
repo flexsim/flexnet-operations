@@ -12,9 +12,9 @@ class DeleteProductDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier)
+    public function __construct(ProductIdentifierType $productIdentifier)
     {
         $this->productIdentifier = $productIdentifier;
     }
@@ -22,9 +22,9 @@ class DeleteProductDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier)
+    public static function create(ProductIdentifierType $productIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class DeleteProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
      * @return $this
      */
     public function setProductIdentifier($productIdentifier)

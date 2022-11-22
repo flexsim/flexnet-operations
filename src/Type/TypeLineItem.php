@@ -27,12 +27,12 @@ class TypeLineItem extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $activationId
-     * @param string $Reason
-     * @param string $Count
-     * @param \Flexsim\FlexnetOperations\Type\Dictionary $VendorDictionary
+     * @param  string  $activationId
+     * @param  string  $Reason
+     * @param  string  $Count
+     * @param  \Flexsim\FlexnetOperations\Type\Dictionary  $VendorDictionary
      */
-    public function __construct(string $activationId, string $Reason = null, string $Count = null, \Flexsim\FlexnetOperations\Type\Dictionary $VendorDictionary = null)
+    public function __construct(string $activationId, string $Reason = null, string $Count = null, Dictionary $VendorDictionary = null)
     {
         $this->activationId = $activationId;
         $this->Reason = $Reason;
@@ -43,12 +43,12 @@ class TypeLineItem extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $activationId
-     * @param string $Reason
-     * @param string $Count
-     * @param \Flexsim\FlexnetOperations\Type\Dictionary $VendorDictionary
+     * @param  string  $activationId
+     * @param  string  $Reason
+     * @param  string  $Count
+     * @param  \Flexsim\FlexnetOperations\Type\Dictionary  $VendorDictionary
      */
-    public static function create(string $activationId, string $Reason = null, string $Count = null, \Flexsim\FlexnetOperations\Type\Dictionary $VendorDictionary = null)
+    public static function create(string $activationId, string $Reason = null, string $Count = null, Dictionary $VendorDictionary = null)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class TypeLineItem extends FlexnetType
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -81,7 +81,7 @@ class TypeLineItem extends FlexnetType
     }
 
     /**
-     * @param string $Reason
+     * @param  string  $Reason
      * @return $this
      */
     public function setReason($Reason)
@@ -100,7 +100,7 @@ class TypeLineItem extends FlexnetType
     }
 
     /**
-     * @param string $Count
+     * @param  string  $Count
      * @return $this
      */
     public function setCount($Count)
@@ -119,7 +119,7 @@ class TypeLineItem extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\Dictionary $VendorDictionary
+     * @param  \Flexsim\FlexnetOperations\Type\Dictionary  $VendorDictionary
      * @return $this
      */
     public function setVendorDictionary($VendorDictionary)

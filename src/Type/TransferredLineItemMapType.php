@@ -17,8 +17,8 @@ class TransferredLineItemMapType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $activationId
-     * @param string $transferredFromId
+     * @param  string  $activationId
+     * @param  string  $transferredFromId
      */
     public function __construct(string $activationId, string $transferredFromId = null)
     {
@@ -29,8 +29,8 @@ class TransferredLineItemMapType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $activationId
-     * @param string $transferredFromId
+     * @param  string  $activationId
+     * @param  string  $transferredFromId
      */
     public static function create(string $activationId, string $transferredFromId = null)
     {
@@ -46,7 +46,7 @@ class TransferredLineItemMapType extends FlexnetType
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -65,7 +65,7 @@ class TransferredLineItemMapType extends FlexnetType
     }
 
     /**
-     * @param string $transferredFromId
+     * @param  string  $transferredFromId
      * @return $this
      */
     public function setTransferredFromId($transferredFromId)

@@ -12,7 +12,7 @@ class NodeIDsType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $nodeId
+     * @param  string  $nodeId
      */
     public function __construct(string $nodeId)
     {
@@ -22,7 +22,7 @@ class NodeIDsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $nodeId
+     * @param  string  $nodeId
      */
     public static function create(string $nodeId)
     {
@@ -38,7 +38,7 @@ class NodeIDsType extends FlexnetType
     }
 
     /**
-     * @param string $nodeId
+     * @param  string  $nodeId
      * @return $this
      */
     public function setNodeId($nodeId)

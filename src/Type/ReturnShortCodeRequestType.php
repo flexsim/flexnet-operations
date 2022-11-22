@@ -19,10 +19,10 @@ class ReturnShortCodeRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType $shortCodeData
-     * @param string $returnReason
+     * @param  \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType  $shortCodeData
+     * @param  string  $returnReason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType $shortCodeData = null, string $returnReason = null)
+    public function __construct(ReturnShortCodeDataType $shortCodeData = null, string $returnReason = null)
     {
         $this->shortCodeData = $shortCodeData;
         $this->returnReason = $returnReason;
@@ -31,10 +31,10 @@ class ReturnShortCodeRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType $shortCodeData
-     * @param string $returnReason
+     * @param  \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType  $shortCodeData
+     * @param  string  $returnReason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType $shortCodeData = null, string $returnReason = null)
+    public static function create(ReturnShortCodeDataType $shortCodeData = null, string $returnReason = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class ReturnShortCodeRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType $shortCodeData
+     * @param  \Flexsim\FlexnetOperations\Type\ReturnShortCodeDataType  $shortCodeData
      * @return $this
      */
     public function setShortCodeData($shortCodeData)
@@ -67,7 +67,7 @@ class ReturnShortCodeRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param string $returnReason
+     * @param  string  $returnReason
      * @return $this
      */
     public function setReturnReason($returnReason)

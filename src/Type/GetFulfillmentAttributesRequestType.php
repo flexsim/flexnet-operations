@@ -14,9 +14,9 @@ class GetFulfillmentAttributesRequestType extends FlexnetType implements Request
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModelIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier)
+    public function __construct(LicenseModelIdentifierType $licenseModelIdentifier)
     {
         $this->licenseModelIdentifier = $licenseModelIdentifier;
     }
@@ -24,9 +24,9 @@ class GetFulfillmentAttributesRequestType extends FlexnetType implements Request
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModelIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier)
+    public static function create(LicenseModelIdentifierType $licenseModelIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class GetFulfillmentAttributesRequestType extends FlexnetType implements Request
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModelIdentifier
      * @return $this
      */
     public function setLicenseModelIdentifier($licenseModelIdentifier)

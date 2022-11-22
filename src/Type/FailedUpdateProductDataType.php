@@ -17,10 +17,10 @@ class FailedUpdateProductDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateProductDataType $product
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateProductDataType  $product
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateProductDataType $product, string $reason = null)
+    public function __construct(UpdateProductDataType $product, string $reason = null)
     {
         $this->product = $product;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedUpdateProductDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateProductDataType $product
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateProductDataType  $product
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateProductDataType $product, string $reason = null)
+    public static function create(UpdateProductDataType $product, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedUpdateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateProductDataType $product
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateProductDataType  $product
      * @return $this
      */
     public function setProduct($product)
@@ -65,7 +65,7 @@ class FailedUpdateProductDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

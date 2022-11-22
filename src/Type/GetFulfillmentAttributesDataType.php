@@ -17,10 +17,10 @@ class GetFulfillmentAttributesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $fulfillmentAttributes
-     * @param bool $needTimeZone
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $fulfillmentAttributes
+     * @param  bool  $needTimeZone
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $fulfillmentAttributes = null, bool $needTimeZone = null)
+    public function __construct(AttributeMetaDescriptorDataType $fulfillmentAttributes = null, bool $needTimeZone = null)
     {
         $this->fulfillmentAttributes = $fulfillmentAttributes;
         $this->needTimeZone = $needTimeZone;
@@ -29,10 +29,10 @@ class GetFulfillmentAttributesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $fulfillmentAttributes
-     * @param bool $needTimeZone
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $fulfillmentAttributes
+     * @param  bool  $needTimeZone
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $fulfillmentAttributes = null, bool $needTimeZone = null)
+    public static function create(AttributeMetaDescriptorDataType $fulfillmentAttributes = null, bool $needTimeZone = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class GetFulfillmentAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $fulfillmentAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $fulfillmentAttributes
      * @return $this
      */
     public function setFulfillmentAttributes($fulfillmentAttributes)
@@ -65,7 +65,7 @@ class GetFulfillmentAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needTimeZone
+     * @param  bool  $needTimeZone
      * @return $this
      */
     public function setNeedTimeZone($needTimeZone)

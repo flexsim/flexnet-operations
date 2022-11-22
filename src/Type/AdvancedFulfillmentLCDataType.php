@@ -87,24 +87,24 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $fulfillmentId
-     * @param string $childActivationId
-     * @param int $fulfillCount
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $versionDate
-     * @param \DateTimeInterface $versionStartDate
-     * @param string $soldTo
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverHost
-     * @param string $nodeLockHost
-     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $countedNodeLockHostIds
-     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param bool $overridePolicy
-     * @param string $FNPTimeZoneValue
+     * @param  string  $fulfillmentId
+     * @param  string  $childActivationId
+     * @param  int  $fulfillCount
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $versionDate
+     * @param  \DateTimeInterface  $versionStartDate
+     * @param  string  $soldTo
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  \Flexsim\FlexnetOperations\Type\ServerIDsType  $serverHost
+     * @param  string  $nodeLockHost
+     * @param  \Flexsim\FlexnetOperations\Type\NodeIDsType  $countedNodeLockHostIds
+     * @param  \Flexsim\FlexnetOperations\Type\CustomHostIDType  $customHost
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  bool  $overridePolicy
+     * @param  string  $FNPTimeZoneValue
      */
-    public function __construct(string $fulfillmentId, string $childActivationId = null, int $fulfillCount = null, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\ServerIDsType $serverHost = null, string $nodeLockHost = null, \Flexsim\FlexnetOperations\Type\NodeIDsType $countedNodeLockHostIds = null, \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
+    public function __construct(string $fulfillmentId, string $childActivationId = null, int $fulfillCount = null, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, ServerIDsType $serverHost = null, string $nodeLockHost = null, NodeIDsType $countedNodeLockHostIds = null, CustomHostIDType $customHost = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
     {
         $this->fulfillmentId = $fulfillmentId;
         $this->childActivationId = $childActivationId;
@@ -127,24 +127,24 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $fulfillmentId
-     * @param string $childActivationId
-     * @param int $fulfillCount
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $versionDate
-     * @param \DateTimeInterface $versionStartDate
-     * @param string $soldTo
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverHost
-     * @param string $nodeLockHost
-     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $countedNodeLockHostIds
-     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param bool $overridePolicy
-     * @param string $FNPTimeZoneValue
+     * @param  string  $fulfillmentId
+     * @param  string  $childActivationId
+     * @param  int  $fulfillCount
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $versionDate
+     * @param  \DateTimeInterface  $versionStartDate
+     * @param  string  $soldTo
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  \Flexsim\FlexnetOperations\Type\ServerIDsType  $serverHost
+     * @param  string  $nodeLockHost
+     * @param  \Flexsim\FlexnetOperations\Type\NodeIDsType  $countedNodeLockHostIds
+     * @param  \Flexsim\FlexnetOperations\Type\CustomHostIDType  $customHost
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  bool  $overridePolicy
+     * @param  string  $FNPTimeZoneValue
      */
-    public static function create(string $fulfillmentId, string $childActivationId = null, int $fulfillCount = null, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\ServerIDsType $serverHost = null, string $nodeLockHost = null, \Flexsim\FlexnetOperations\Type\NodeIDsType $countedNodeLockHostIds = null, \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
+    public static function create(string $fulfillmentId, string $childActivationId = null, int $fulfillCount = null, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, ServerIDsType $serverHost = null, string $nodeLockHost = null, NodeIDsType $countedNodeLockHostIds = null, CustomHostIDType $customHost = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
     {
         return new self(...func_get_args());
     }
@@ -158,7 +158,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param string $fulfillmentId
+     * @param  string  $fulfillmentId
      * @return $this
      */
     public function setFulfillmentId($fulfillmentId)
@@ -177,7 +177,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param string $childActivationId
+     * @param  string  $childActivationId
      * @return $this
      */
     public function setChildActivationId($childActivationId)
@@ -196,7 +196,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param int $fulfillCount
+     * @param  int  $fulfillCount
      * @return $this
      */
     public function setFulfillCount($fulfillCount)
@@ -215,7 +215,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $startDate
+     * @param  \DateTimeInterface  $startDate
      * @return $this
      */
     public function setStartDate($startDate)
@@ -234,7 +234,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $versionDate
+     * @param  \DateTimeInterface  $versionDate
      * @return $this
      */
     public function setVersionDate($versionDate)
@@ -253,7 +253,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $versionStartDate
+     * @param  \DateTimeInterface  $versionStartDate
      * @return $this
      */
     public function setVersionStartDate($versionStartDate)
@@ -272,7 +272,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param string $soldTo
+     * @param  string  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -291,7 +291,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToEmail
+     * @param  string  $shipToEmail
      * @return $this
      */
     public function setShipToEmail($shipToEmail)
@@ -310,7 +310,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToAddress
+     * @param  string  $shipToAddress
      * @return $this
      */
     public function setShipToAddress($shipToAddress)
@@ -329,7 +329,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverHost
+     * @param  \Flexsim\FlexnetOperations\Type\ServerIDsType  $serverHost
      * @return $this
      */
     public function setServerHost($serverHost)
@@ -348,7 +348,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param string $nodeLockHost
+     * @param  string  $nodeLockHost
      * @return $this
      */
     public function setNodeLockHost($nodeLockHost)
@@ -367,7 +367,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $countedNodeLockHostIds
+     * @param  \Flexsim\FlexnetOperations\Type\NodeIDsType  $countedNodeLockHostIds
      * @return $this
      */
     public function setCountedNodeLockHostIds($countedNodeLockHostIds)
@@ -386,7 +386,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param  \Flexsim\FlexnetOperations\Type\CustomHostIDType  $customHost
      * @return $this
      */
     public function setCustomHost($customHost)
@@ -405,7 +405,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
      * @return $this
      */
     public function setLicenseModelAttributes($licenseModelAttributes)
@@ -424,7 +424,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param bool $overridePolicy
+     * @param  bool  $overridePolicy
      * @return $this
      */
     public function setOverridePolicy($overridePolicy)
@@ -443,7 +443,7 @@ class AdvancedFulfillmentLCDataType extends FlexnetType
     }
 
     /**
-     * @param string $FNPTimeZoneValue
+     * @param  string  $FNPTimeZoneValue
      * @return $this
      */
     public function setFNPTimeZoneValue($FNPTimeZoneValue)

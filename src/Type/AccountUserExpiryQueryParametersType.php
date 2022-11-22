@@ -22,11 +22,11 @@ class AccountUserExpiryQueryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $accountID
-     * @param string $accountType
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expiryDate
+     * @param  string  $accountID
+     * @param  string  $accountType
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $expiryDate
      */
-    public function __construct(string $accountID, string $accountType = null, \Flexsim\FlexnetOperations\Type\DateQueryType $expiryDate = null)
+    public function __construct(string $accountID, string $accountType = null, DateQueryType $expiryDate = null)
     {
         $this->accountID = $accountID;
         $this->accountType = $accountType;
@@ -36,11 +36,11 @@ class AccountUserExpiryQueryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $accountID
-     * @param string $accountType
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expiryDate
+     * @param  string  $accountID
+     * @param  string  $accountType
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $expiryDate
      */
-    public static function create(string $accountID, string $accountType = null, \Flexsim\FlexnetOperations\Type\DateQueryType $expiryDate = null)
+    public static function create(string $accountID, string $accountType = null, DateQueryType $expiryDate = null)
     {
         return new self(...func_get_args());
     }
@@ -54,7 +54,7 @@ class AccountUserExpiryQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param string $accountID
+     * @param  string  $accountID
      * @return $this
      */
     public function setAccountID($accountID)
@@ -73,7 +73,7 @@ class AccountUserExpiryQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param string $accountType
+     * @param  string  $accountType
      * @return $this
      */
     public function setAccountType($accountType)
@@ -92,7 +92,7 @@ class AccountUserExpiryQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expiryDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $expiryDate
      * @return $this
      */
     public function setExpiryDate($expiryDate)

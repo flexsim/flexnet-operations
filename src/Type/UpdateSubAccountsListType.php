@@ -17,8 +17,8 @@ class UpdateSubAccountsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array $subAccount
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array  $subAccount
+     * @param  string  $opType
      */
     public function __construct($subAccount, string $opType)
     {
@@ -29,8 +29,8 @@ class UpdateSubAccountsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array $subAccount
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array  $subAccount
+     * @param  string  $opType
      */
     public static function create($subAccount, string $opType)
     {
@@ -46,7 +46,7 @@ class UpdateSubAccountsListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array $subAccount
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType|array  $subAccount
      * @return $this
      */
     public function setSubAccount($subAccount)
@@ -65,7 +65,7 @@ class UpdateSubAccountsListType extends FlexnetType
     }
 
     /**
-     * @param string $opType
+     * @param  string  $opType
      * @return $this
      */
     public function setOpType($opType)

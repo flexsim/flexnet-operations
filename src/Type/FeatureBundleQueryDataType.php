@@ -32,18 +32,18 @@ class FeatureBundleQueryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $uniqueId
-     * @param string $name
-     * @param string $state
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
+     * @param  string  $uniqueId
+     * @param  string  $name
+     * @param  string  $state
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\FeaturesListType  $features
      */
     public function __construct(
         string $uniqueId,
         string $name,
         string $state,
         string $description = null,
-        \Flexsim\FlexnetOperations\Type\FeaturesListType $features = null
+        FeaturesListType $features = null
     ) {
         $this->uniqueId = $uniqueId;
         $this->name = $name;
@@ -55,18 +55,18 @@ class FeatureBundleQueryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
-     * @param string $name
-     * @param string $state
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
+     * @param  string  $uniqueId
+     * @param  string  $name
+     * @param  string  $state
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\FeaturesListType  $features
      */
     public static function create(
         string $uniqueId,
         string $name,
         string $state,
         string $description = null,
-        \Flexsim\FlexnetOperations\Type\FeaturesListType $features = null
+        FeaturesListType $features = null
     ) {
         return new self(...func_get_args());
     }
@@ -80,7 +80,7 @@ class FeatureBundleQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -99,7 +99,7 @@ class FeatureBundleQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -118,7 +118,7 @@ class FeatureBundleQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -137,7 +137,7 @@ class FeatureBundleQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $state
+     * @param  string  $state
      * @return $this
      */
     public function setState($state)
@@ -156,7 +156,7 @@ class FeatureBundleQueryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
+     * @param  \Flexsim\FlexnetOperations\Type\FeaturesListType  $features
      * @return $this
      */
     public function setFeatures($features)

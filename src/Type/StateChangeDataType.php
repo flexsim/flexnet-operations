@@ -27,10 +27,10 @@ class StateChangeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $eventName
-     * @param \DateTimeInterface $eventDate
-     * @param string $userId
-     * @param string $description
+     * @param  string  $eventName
+     * @param  \DateTimeInterface  $eventDate
+     * @param  string  $userId
+     * @param  string  $description
      */
     public function __construct(string $eventName, \DateTimeInterface $eventDate, string $userId, string $description = null)
     {
@@ -43,10 +43,10 @@ class StateChangeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $eventName
-     * @param \DateTimeInterface $eventDate
-     * @param string $userId
-     * @param string $description
+     * @param  string  $eventName
+     * @param  \DateTimeInterface  $eventDate
+     * @param  string  $userId
+     * @param  string  $description
      */
     public static function create(string $eventName, \DateTimeInterface $eventDate, string $userId, string $description = null)
     {
@@ -62,7 +62,7 @@ class StateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param string $eventName
+     * @param  string  $eventName
      * @return $this
      */
     public function setEventName($eventName)
@@ -81,7 +81,7 @@ class StateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $eventDate
+     * @param  \DateTimeInterface  $eventDate
      * @return $this
      */
     public function setEventDate($eventDate)
@@ -100,7 +100,7 @@ class StateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param string $userId
+     * @param  string  $userId
      * @return $this
      */
     public function setUserId($userId)
@@ -119,7 +119,7 @@ class StateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)

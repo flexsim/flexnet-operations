@@ -14,9 +14,9 @@ class GetBulkEntitlementCountRequestType extends FlexnetType implements RequestI
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria
+     * @param  \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria)
+    public function __construct(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria)
     {
         $this->bulkEntitlementSearchCriteria = $bulkEntitlementSearchCriteria;
     }
@@ -24,9 +24,9 @@ class GetBulkEntitlementCountRequestType extends FlexnetType implements RequestI
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria
+     * @param  \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria)
+    public static function create(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class GetBulkEntitlementCountRequestType extends FlexnetType implements RequestI
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria
+     * @param  \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
      * @return $this
      */
     public function setBulkEntitlementSearchCriteria($bulkEntitlementSearchCriteria)

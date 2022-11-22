@@ -12,9 +12,9 @@ class DeleteFeatureBundleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier)
+    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
     }
@@ -22,9 +22,9 @@ class DeleteFeatureBundleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier)
+    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class DeleteFeatureBundleDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
      * @return $this
      */
     public function setFeatureBundleIdentifier($featureBundleIdentifier)

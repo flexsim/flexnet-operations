@@ -17,10 +17,10 @@ class MaintenanceLineItemStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @param string $stateToSet
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @param  string  $stateToSet
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet)
+    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->stateToSet = $stateToSet;
@@ -29,10 +29,10 @@ class MaintenanceLineItemStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @param string $stateToSet
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @param  string  $stateToSet
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet)
+    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class MaintenanceLineItemStateDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
      * @return $this
      */
     public function setLineItemIdentifier($lineItemIdentifier)
@@ -65,7 +65,7 @@ class MaintenanceLineItemStateDataType extends FlexnetType
     }
 
     /**
-     * @param string $stateToSet
+     * @param  string  $stateToSet
      * @return $this
      */
     public function setStateToSet($stateToSet)

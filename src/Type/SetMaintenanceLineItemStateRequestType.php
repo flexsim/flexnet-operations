@@ -14,9 +14,9 @@ class SetMaintenanceLineItemStateRequestType extends FlexnetType implements Requ
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType $maintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType  $maintenanceLineItem
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType $maintenanceLineItem)
+    public function __construct(MaintenanceLineItemStateDataType $maintenanceLineItem)
     {
         $this->maintenanceLineItem = $maintenanceLineItem;
     }
@@ -24,9 +24,9 @@ class SetMaintenanceLineItemStateRequestType extends FlexnetType implements Requ
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType $maintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType  $maintenanceLineItem
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType $maintenanceLineItem)
+    public static function create(MaintenanceLineItemStateDataType $maintenanceLineItem)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class SetMaintenanceLineItemStateRequestType extends FlexnetType implements Requ
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType $maintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType  $maintenanceLineItem
      * @return $this
      */
     public function setMaintenanceLineItem($maintenanceLineItem)

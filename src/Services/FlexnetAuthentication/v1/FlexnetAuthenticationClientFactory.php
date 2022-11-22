@@ -15,7 +15,7 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class FlexnetAuthenticationClientFactory
 {
-    public static function factory(string $wsdl, string $username, string $password): \Flexsim\FlexnetOperations\Services\FlexnetAuthentication\v1\FlexnetAuthenticationClient
+    public static function factory(string $wsdl, string $username, string $password): FlexnetAuthenticationClient
     {
         $engine = DefaultEngineFactory::create(
             ExtSoapOptions::defaults($wsdl, [])

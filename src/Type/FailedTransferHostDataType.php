@@ -17,10 +17,10 @@ class FailedTransferHostDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\TransferHostIdDataType  $hostIdentifier
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier = null, string $reason = null)
+    public function __construct(TransferHostIdDataType $hostIdentifier = null, string $reason = null)
     {
         $this->hostIdentifier = $hostIdentifier;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedTransferHostDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\TransferHostIdDataType  $hostIdentifier
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier = null, string $reason = null)
+    public static function create(TransferHostIdDataType $hostIdentifier = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedTransferHostDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\TransferHostIdDataType  $hostIdentifier
      * @return $this
      */
     public function setHostIdentifier($hostIdentifier)
@@ -65,7 +65,7 @@ class FailedTransferHostDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

@@ -19,10 +19,10 @@ class AddOnlyEntitlementLineItemRequestType extends FlexnetType implements Reque
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType  $lineItem
+     * @param  string  $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem, string $opType = null)
+    public function __construct(AddEntitlementLineItemDataType $lineItem, string $opType = null)
     {
         $this->lineItem = $lineItem;
         $this->opType = $opType;
@@ -31,10 +31,10 @@ class AddOnlyEntitlementLineItemRequestType extends FlexnetType implements Reque
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType  $lineItem
+     * @param  string  $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem, string $opType = null)
+    public static function create(AddEntitlementLineItemDataType $lineItem, string $opType = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class AddOnlyEntitlementLineItemRequestType extends FlexnetType implements Reque
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType  $lineItem
      * @return $this
      */
     public function setLineItem($lineItem)
@@ -67,7 +67,7 @@ class AddOnlyEntitlementLineItemRequestType extends FlexnetType implements Reque
     }
 
     /**
-     * @param string $opType
+     * @param  string  $opType
      * @return $this
      */
     public function setOpType($opType)

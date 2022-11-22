@@ -19,10 +19,10 @@ class GetHostAttributesRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypePKType  $hostType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType = null)
+    public function __construct(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, HostTypePKType $hostType = null)
     {
         $this->licenseTechnologyIdentifier = $licenseTechnologyIdentifier;
         $this->hostType = $hostType;
@@ -31,10 +31,10 @@ class GetHostAttributesRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypePKType  $hostType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType = null)
+    public static function create(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, HostTypePKType $hostType = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetHostAttributesRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
      * @return $this
      */
     public function setLicenseTechnologyIdentifier($licenseTechnologyIdentifier)
@@ -67,7 +67,7 @@ class GetHostAttributesRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypePKType  $hostType
      * @return $this
      */
     public function setHostType($hostType)

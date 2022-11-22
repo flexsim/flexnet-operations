@@ -17,10 +17,10 @@ class UserOrganizationType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @param \Flexsim\FlexnetOperations\Type\UserOrganizationRolesListType $roles
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
+     * @param  \Flexsim\FlexnetOperations\Type\UserOrganizationRolesListType  $roles
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, \Flexsim\FlexnetOperations\Type\UserOrganizationRolesListType $roles = null)
+    public function __construct(OrganizationIdentifierType $organization, UserOrganizationRolesListType $roles = null)
     {
         $this->organization = $organization;
         $this->roles = $roles;
@@ -29,10 +29,10 @@ class UserOrganizationType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @param \Flexsim\FlexnetOperations\Type\UserOrganizationRolesListType $roles
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
+     * @param  \Flexsim\FlexnetOperations\Type\UserOrganizationRolesListType  $roles
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, \Flexsim\FlexnetOperations\Type\UserOrganizationRolesListType $roles = null)
+    public static function create(OrganizationIdentifierType $organization, UserOrganizationRolesListType $roles = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class UserOrganizationType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
      * @return $this
      */
     public function setOrganization($organization)
@@ -65,7 +65,7 @@ class UserOrganizationType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserOrganizationRolesListType $roles
+     * @param  \Flexsim\FlexnetOperations\Type\UserOrganizationRolesListType  $roles
      * @return $this
      */
     public function setRoles($roles)

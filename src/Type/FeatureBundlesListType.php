@@ -12,7 +12,7 @@ class FeatureBundlesListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array  $featureBundle
      */
     public function __construct($featureBundle)
     {
@@ -22,7 +22,7 @@ class FeatureBundlesListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array  $featureBundle
      */
     public static function create($featureBundle)
     {
@@ -38,7 +38,7 @@ class FeatureBundlesListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierWithCountDataType|array  $featureBundle
      * @return $this
      */
     public function setFeatureBundle($featureBundle)

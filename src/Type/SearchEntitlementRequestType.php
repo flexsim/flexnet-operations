@@ -24,11 +24,11 @@ class SearchEntitlementRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $entitlementSearchCriteria
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType  $entitlementSearchCriteria
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int $pageNumber = null)
+    public function __construct(SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int $pageNumber = null)
     {
         $this->entitlementSearchCriteria = $entitlementSearchCriteria;
         $this->batchSize = $batchSize;
@@ -38,11 +38,11 @@ class SearchEntitlementRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $entitlementSearchCriteria
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType  $entitlementSearchCriteria
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int $pageNumber = null)
+    public static function create(SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int $pageNumber = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class SearchEntitlementRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $entitlementSearchCriteria
+     * @param  \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType  $entitlementSearchCriteria
      * @return $this
      */
     public function setEntitlementSearchCriteria($entitlementSearchCriteria)
@@ -75,7 +75,7 @@ class SearchEntitlementRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)
@@ -94,7 +94,7 @@ class SearchEntitlementRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)

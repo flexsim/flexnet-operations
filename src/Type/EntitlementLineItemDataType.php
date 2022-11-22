@@ -67,20 +67,20 @@ class EntitlementLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param int $numberOfRemainingCopies
-     * @param int $availableExtraActivations
-     * @param bool $isTrustedType
-     * @param string $state
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem
-     * @param \DateTimeInterface $createdOnDateTime
-     * @param \DateTimeInterface $lastModifiedDateTime
-     * @param int $overdraftMax
-     * @param int $remainingOverdraftCount
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine
-     * @param int $fulfilledCount
+     * @param  int  $numberOfRemainingCopies
+     * @param  int  $availableExtraActivations
+     * @param  bool  $isTrustedType
+     * @param  string  $state
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $parentLineItem
+     * @param  \DateTimeInterface  $createdOnDateTime
+     * @param  \DateTimeInterface  $lastModifiedDateTime
+     * @param  int  $overdraftMax
+     * @param  int  $remainingOverdraftCount
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productLine
+     * @param  int  $fulfilledCount
      */
-    public function __construct(int $numberOfRemainingCopies = null, int $availableExtraActivations = null, bool $isTrustedType = null, string $state = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, int $overdraftMax = null, int $remainingOverdraftCount = null, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine = null, int $fulfilledCount = null)
+    public function __construct(int $numberOfRemainingCopies = null, int $availableExtraActivations = null, bool $isTrustedType = null, string $state = null, LicenseTechnologyIdentifierType $licenseTechnology = null, EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, int $overdraftMax = null, int $remainingOverdraftCount = null, ProductCategoryDataType $productLine = null, int $fulfilledCount = null)
     {
         $this->numberOfRemainingCopies = $numberOfRemainingCopies;
         $this->availableExtraActivations = $availableExtraActivations;
@@ -99,20 +99,20 @@ class EntitlementLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param int $numberOfRemainingCopies
-     * @param int $availableExtraActivations
-     * @param bool $isTrustedType
-     * @param string $state
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem
-     * @param \DateTimeInterface $createdOnDateTime
-     * @param \DateTimeInterface $lastModifiedDateTime
-     * @param int $overdraftMax
-     * @param int $remainingOverdraftCount
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine
-     * @param int $fulfilledCount
+     * @param  int  $numberOfRemainingCopies
+     * @param  int  $availableExtraActivations
+     * @param  bool  $isTrustedType
+     * @param  string  $state
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $parentLineItem
+     * @param  \DateTimeInterface  $createdOnDateTime
+     * @param  \DateTimeInterface  $lastModifiedDateTime
+     * @param  int  $overdraftMax
+     * @param  int  $remainingOverdraftCount
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productLine
+     * @param  int  $fulfilledCount
      */
-    public static function create(int $numberOfRemainingCopies = null, int $availableExtraActivations = null, bool $isTrustedType = null, string $state = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, int $overdraftMax = null, int $remainingOverdraftCount = null, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine = null, int $fulfilledCount = null)
+    public static function create(int $numberOfRemainingCopies = null, int $availableExtraActivations = null, bool $isTrustedType = null, string $state = null, LicenseTechnologyIdentifierType $licenseTechnology = null, EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, int $overdraftMax = null, int $remainingOverdraftCount = null, ProductCategoryDataType $productLine = null, int $fulfilledCount = null)
     {
         return new self(...func_get_args());
     }
@@ -126,7 +126,7 @@ class EntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param int $numberOfRemainingCopies
+     * @param  int  $numberOfRemainingCopies
      * @return $this
      */
     public function setNumberOfRemainingCopies($numberOfRemainingCopies)
@@ -145,7 +145,7 @@ class EntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param int $availableExtraActivations
+     * @param  int  $availableExtraActivations
      * @return $this
      */
     public function setAvailableExtraActivations($availableExtraActivations)
@@ -164,7 +164,7 @@ class EntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param bool $isTrustedType
+     * @param  bool  $isTrustedType
      * @return $this
      */
     public function setIsTrustedType($isTrustedType)
@@ -183,7 +183,7 @@ class EntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $state
+     * @param  string  $state
      * @return $this
      */
     public function setState($state)
@@ -202,7 +202,7 @@ class EntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnology
      * @return $this
      */
     public function setLicenseTechnology($licenseTechnology)
@@ -221,7 +221,7 @@ class EntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $parentLineItem
      * @return $this
      */
     public function setParentLineItem($parentLineItem)
@@ -240,7 +240,7 @@ class EntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $createdOnDateTime
+     * @param  \DateTimeInterface  $createdOnDateTime
      * @return $this
      */
     public function setCreatedOnDateTime($createdOnDateTime)
@@ -259,7 +259,7 @@ class EntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $lastModifiedDateTime
+     * @param  \DateTimeInterface  $lastModifiedDateTime
      * @return $this
      */
     public function setLastModifiedDateTime($lastModifiedDateTime)
@@ -278,7 +278,7 @@ class EntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param int $overdraftMax
+     * @param  int  $overdraftMax
      * @return $this
      */
     public function setOverdraftMax($overdraftMax)
@@ -297,7 +297,7 @@ class EntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param int $remainingOverdraftCount
+     * @param  int  $remainingOverdraftCount
      * @return $this
      */
     public function setRemainingOverdraftCount($remainingOverdraftCount)
@@ -316,7 +316,7 @@ class EntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productLine
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productLine
      * @return $this
      */
     public function setProductLine($productLine)
@@ -335,7 +335,7 @@ class EntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param int $fulfilledCount
+     * @param  int  $fulfilledCount
      * @return $this
      */
     public function setFulfilledCount($fulfilledCount)

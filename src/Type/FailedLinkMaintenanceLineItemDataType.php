@@ -17,10 +17,10 @@ class FailedLinkMaintenanceLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType $linkMaintenanceLineItem
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType  $linkMaintenanceLineItem
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType $linkMaintenanceLineItem, string $reason)
+    public function __construct(LinkMaintenanceLineItemDataType $linkMaintenanceLineItem, string $reason)
     {
         $this->linkMaintenanceLineItem = $linkMaintenanceLineItem;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedLinkMaintenanceLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType $linkMaintenanceLineItem
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType  $linkMaintenanceLineItem
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType $linkMaintenanceLineItem, string $reason)
+    public static function create(LinkMaintenanceLineItemDataType $linkMaintenanceLineItem, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedLinkMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType $linkMaintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType  $linkMaintenanceLineItem
      * @return $this
      */
     public function setLinkMaintenanceLineItem($linkMaintenanceLineItem)
@@ -65,7 +65,7 @@ class FailedLinkMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

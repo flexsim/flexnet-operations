@@ -27,10 +27,10 @@ class ModelAttributesType extends FlexnetType
     /**
      * Constructor
      *
-     * @param bool $needServerId
-     * @param bool $needNodeLockId
-     * @param bool $needCount
-     * @param bool $needOverdraftCount
+     * @param  bool  $needServerId
+     * @param  bool  $needNodeLockId
+     * @param  bool  $needCount
+     * @param  bool  $needOverdraftCount
      */
     public function __construct(bool $needServerId, bool $needNodeLockId, bool $needCount, bool $needOverdraftCount)
     {
@@ -43,10 +43,10 @@ class ModelAttributesType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param bool $needServerId
-     * @param bool $needNodeLockId
-     * @param bool $needCount
-     * @param bool $needOverdraftCount
+     * @param  bool  $needServerId
+     * @param  bool  $needNodeLockId
+     * @param  bool  $needCount
+     * @param  bool  $needOverdraftCount
      */
     public static function create(bool $needServerId, bool $needNodeLockId, bool $needCount, bool $needOverdraftCount)
     {
@@ -62,7 +62,7 @@ class ModelAttributesType extends FlexnetType
     }
 
     /**
-     * @param bool $needServerId
+     * @param  bool  $needServerId
      * @return $this
      */
     public function setNeedServerId($needServerId)
@@ -81,7 +81,7 @@ class ModelAttributesType extends FlexnetType
     }
 
     /**
-     * @param bool $needNodeLockId
+     * @param  bool  $needNodeLockId
      * @return $this
      */
     public function setNeedNodeLockId($needNodeLockId)
@@ -100,7 +100,7 @@ class ModelAttributesType extends FlexnetType
     }
 
     /**
-     * @param bool $needCount
+     * @param  bool  $needCount
      * @return $this
      */
     public function setNeedCount($needCount)
@@ -119,7 +119,7 @@ class ModelAttributesType extends FlexnetType
     }
 
     /**
-     * @param bool $needOverdraftCount
+     * @param  bool  $needOverdraftCount
      * @return $this
      */
     public function setNeedOverdraftCount($needOverdraftCount)

@@ -17,10 +17,10 @@ class FailedDeleteFeatureBundleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier, string $reason = null)
+    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier, string $reason = null)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedDeleteFeatureBundleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier, string $reason = null)
+    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedDeleteFeatureBundleDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
      * @return $this
      */
     public function setFeatureBundleIdentifier($featureBundleIdentifier)
@@ -65,7 +65,7 @@ class FailedDeleteFeatureBundleDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

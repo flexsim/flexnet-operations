@@ -19,10 +19,10 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType extends Flexnet
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemPropertiesType|array $entitlementMaintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemPropertiesType|array  $entitlementMaintenanceLineItem
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $entitlementMaintenanceLineItem = null)
+    public function __construct(StatusInfoType $statusInfo, $entitlementMaintenanceLineItem = null)
     {
         $this->statusInfo = $statusInfo;
         $this->entitlementMaintenanceLineItem = $entitlementMaintenanceLineItem;
@@ -31,10 +31,10 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType extends Flexnet
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemPropertiesType|array $entitlementMaintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemPropertiesType|array  $entitlementMaintenanceLineItem
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $entitlementMaintenanceLineItem = null)
+    public static function create(StatusInfoType $statusInfo, $entitlementMaintenanceLineItem = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType extends Flexnet
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType extends Flexnet
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemPropertiesType $entitlementMaintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemPropertiesType  $entitlementMaintenanceLineItem
      * @return $this
      */
     public function setEntitlementMaintenanceLineItem($entitlementMaintenanceLineItem)

@@ -2,9 +2,8 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeviceClassList extends FlexnetType 
+class DeviceClassList extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -13,17 +12,17 @@ class DeviceClassList extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $deviceClass
+     * @param  string  $deviceClass
      */
     public function __construct(string $deviceClass)
     {
-        $this->deviceclass = extends FlexnetType $deviceClass; extends FlexnetType 
+        $this->deviceclass = $deviceClass;
     }
 
     /**
      * create a new instance of this class
      *
-     * @param string $deviceClass
+     * @param  string  $deviceClass
      */
     public static function create(string $deviceClass)
     {
@@ -39,15 +38,13 @@ class DeviceClassList extends FlexnetType
     }
 
     /**
-     * @param string $deviceClass
+     * @param  string  $deviceClass
      * @return $this
      */
     public function setDeviceClass($deviceClass)
     {
-        $this->deviceclass = extends FlexnetType $deviceClass; extends FlexnetType 
+        $this->deviceclass = $deviceClass;
+
         return $this;
     }
-
-
 }
-

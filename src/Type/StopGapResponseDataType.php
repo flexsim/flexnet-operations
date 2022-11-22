@@ -12,7 +12,7 @@ class StopGapResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StopGapFulfillmentResponseDataType|array $fulfillmentData
+     * @param  \Flexsim\FlexnetOperations\Type\StopGapFulfillmentResponseDataType|array  $fulfillmentData
      */
     public function __construct($fulfillmentData = null)
     {
@@ -22,7 +22,7 @@ class StopGapResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StopGapFulfillmentResponseDataType|array $fulfillmentData
+     * @param  \Flexsim\FlexnetOperations\Type\StopGapFulfillmentResponseDataType|array  $fulfillmentData
      */
     public static function create($fulfillmentData = null)
     {
@@ -38,7 +38,7 @@ class StopGapResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StopGapFulfillmentResponseDataType $fulfillmentData
+     * @param  \Flexsim\FlexnetOperations\Type\StopGapFulfillmentResponseDataType  $fulfillmentData
      * @return $this
      */
     public function setFulfillmentData($fulfillmentData)

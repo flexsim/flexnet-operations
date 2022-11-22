@@ -47,16 +47,16 @@ class PartNumberQueryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseModel
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
-     * @param bool $unmappedWithProduct
-     * @param bool $unmappedWithLicenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $partId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $productName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $creationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $lastModifiedDate
+     * @param  bool  $unmappedWithProduct
+     * @param  bool  $unmappedWithLicenseModel
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $partId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseModel = null, \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null, bool $unmappedWithProduct = null, bool $unmappedWithLicenseModel = null)
+    public function __construct(SimpleQueryType $partId = null, SimpleQueryType $description = null, SimpleQueryType $productName = null, SimpleQueryType $licenseModel = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null, bool $unmappedWithProduct = null, bool $unmappedWithLicenseModel = null)
     {
         $this->partId = $partId;
         $this->description = $description;
@@ -71,16 +71,16 @@ class PartNumberQueryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseModel
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
-     * @param bool $unmappedWithProduct
-     * @param bool $unmappedWithLicenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $partId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $productName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $creationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $lastModifiedDate
+     * @param  bool  $unmappedWithProduct
+     * @param  bool  $unmappedWithLicenseModel
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $partId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseModel = null, \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null, bool $unmappedWithProduct = null, bool $unmappedWithLicenseModel = null)
+    public static function create(SimpleQueryType $partId = null, SimpleQueryType $description = null, SimpleQueryType $productName = null, SimpleQueryType $licenseModel = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null, bool $unmappedWithProduct = null, bool $unmappedWithLicenseModel = null)
     {
         return new self(...func_get_args());
     }
@@ -94,7 +94,7 @@ class PartNumberQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $partId
      * @return $this
      */
     public function setPartId($partId)
@@ -113,7 +113,7 @@ class PartNumberQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
      * @return $this
      */
     public function setDescription($description)
@@ -132,7 +132,7 @@ class PartNumberQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $productName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $productName
      * @return $this
      */
     public function setProductName($productName)
@@ -151,7 +151,7 @@ class PartNumberQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $licenseModel
      * @return $this
      */
     public function setLicenseModel($licenseModel)
@@ -170,7 +170,7 @@ class PartNumberQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $creationDate
      * @return $this
      */
     public function setCreationDate($creationDate)
@@ -189,7 +189,7 @@ class PartNumberQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $lastModifiedDate
      * @return $this
      */
     public function setLastModifiedDate($lastModifiedDate)
@@ -208,7 +208,7 @@ class PartNumberQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param bool $unmappedWithProduct
+     * @param  bool  $unmappedWithProduct
      * @return $this
      */
     public function setUnmappedWithProduct($unmappedWithProduct)
@@ -227,7 +227,7 @@ class PartNumberQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param bool $unmappedWithLicenseModel
+     * @param  bool  $unmappedWithLicenseModel
      * @return $this
      */
     public function setUnmappedWithLicenseModel($unmappedWithLicenseModel)

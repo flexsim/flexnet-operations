@@ -42,13 +42,13 @@ class FeatureQueryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $uniqueId
-     * @param string $featureName
-     * @param string $state
-     * @param string $versionFormat
-     * @param string $version
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param  string  $uniqueId
+     * @param  string  $featureName
+     * @param  string  $state
+     * @param  string  $versionFormat
+     * @param  string  $version
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType  $featureOverrideParams
      */
     public function __construct(
         string $uniqueId,
@@ -57,7 +57,7 @@ class FeatureQueryDataType extends FlexnetType
         string $versionFormat,
         string $version = null,
         string $description = null,
-        \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null
+        FeatureOverrideParamsType $featureOverrideParams = null
     ) {
         $this->uniqueId = $uniqueId;
         $this->featureName = $featureName;
@@ -71,13 +71,13 @@ class FeatureQueryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
-     * @param string $featureName
-     * @param string $state
-     * @param string $versionFormat
-     * @param string $version
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param  string  $uniqueId
+     * @param  string  $featureName
+     * @param  string  $state
+     * @param  string  $versionFormat
+     * @param  string  $version
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType  $featureOverrideParams
      */
     public static function create(
         string $uniqueId,
@@ -86,7 +86,7 @@ class FeatureQueryDataType extends FlexnetType
         string $versionFormat,
         string $version = null,
         string $description = null,
-        \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null
+        FeatureOverrideParamsType $featureOverrideParams = null
     ) {
         return new self(...func_get_args());
     }
@@ -100,7 +100,7 @@ class FeatureQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -119,7 +119,7 @@ class FeatureQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $featureName
+     * @param  string  $featureName
      * @return $this
      */
     public function setFeatureName($featureName)
@@ -138,7 +138,7 @@ class FeatureQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $versionFormat
+     * @param  string  $versionFormat
      * @return $this
      */
     public function setVersionFormat($versionFormat)
@@ -157,7 +157,7 @@ class FeatureQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $version
+     * @param  string  $version
      * @return $this
      */
     public function setVersion($version)
@@ -176,7 +176,7 @@ class FeatureQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -195,7 +195,7 @@ class FeatureQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $state
+     * @param  string  $state
      * @return $this
      */
     public function setState($state)
@@ -214,7 +214,7 @@ class FeatureQueryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType  $featureOverrideParams
      * @return $this
      */
     public function setFeatureOverrideParams($featureOverrideParams)

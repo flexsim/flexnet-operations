@@ -17,10 +17,10 @@ class FailedCreateOrgDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationDataType $organization
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationDataType  $organization
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationDataType $organization = null, string $reason = null)
+    public function __construct(OrganizationDataType $organization = null, string $reason = null)
     {
         $this->organization = $organization;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedCreateOrgDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationDataType $organization
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationDataType  $organization
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OrganizationDataType $organization = null, string $reason = null)
+    public static function create(OrganizationDataType $organization = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedCreateOrgDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationDataType $organization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationDataType  $organization
      * @return $this
      */
     public function setOrganization($organization)
@@ -65,7 +65,7 @@ class FailedCreateOrgDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

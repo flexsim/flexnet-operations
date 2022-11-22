@@ -17,10 +17,10 @@ class LinkAccountsDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $parentAcct
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $subAcct
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $parentAcct
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $subAcct
      */
-    public function __construct($parentAcct,  $subAcct)
+    public function __construct($parentAcct, $subAcct)
     {
         $this->parentAcct = $parentAcct;
         $this->subAcct = $subAcct;
@@ -29,10 +29,10 @@ class LinkAccountsDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $parentAcct
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $subAcct
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $parentAcct
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $subAcct
      */
-    public static function create($parentAcct,  $subAcct)
+    public static function create($parentAcct, $subAcct)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class LinkAccountsDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $parentAcct
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $parentAcct
      * @return $this
      */
     public function setParentAcct($parentAcct)
@@ -65,7 +65,7 @@ class LinkAccountsDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $subAcct
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $subAcct
      * @return $this
      */
     public function setSubAcct($subAcct)

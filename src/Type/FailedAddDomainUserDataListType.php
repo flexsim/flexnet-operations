@@ -12,7 +12,7 @@ class FailedAddDomainUserDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataType|array $failedUser
+     * @param  \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataType|array  $failedUser
      */
     public function __construct($failedUser = null)
     {
@@ -22,7 +22,7 @@ class FailedAddDomainUserDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataType|array $failedUser
+     * @param  \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataType|array  $failedUser
      */
     public static function create($failedUser = null)
     {
@@ -38,7 +38,7 @@ class FailedAddDomainUserDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataType|array $failedUser
+     * @param  \Flexsim\FlexnetOperations\Type\FailedAddDomainUserDataType|array  $failedUser
      * @return $this
      */
     public function setFailedUser($failedUser)

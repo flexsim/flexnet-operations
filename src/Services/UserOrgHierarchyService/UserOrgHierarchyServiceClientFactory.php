@@ -15,7 +15,7 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class UserOrgHierarchyServiceClientFactory
 {
-    public static function factory(string $wsdl, string $username, string $password): \Flexsim\FlexnetOperations\Services\UserOrgHierarchyService\UserOrgHierarchyServiceClient
+    public static function factory(string $wsdl, string $username, string $password): UserOrgHierarchyServiceClient
     {
         $engine = DefaultEngineFactory::create(
             ExtSoapOptions::defaults($wsdl, [])

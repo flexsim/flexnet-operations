@@ -12,9 +12,9 @@ class LicenseTechnologyQueryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $name
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $name
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $name = null)
+    public function __construct(SimpleQueryType $name = null)
     {
         $this->name = $name;
     }
@@ -22,9 +22,9 @@ class LicenseTechnologyQueryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $name
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $name
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $name = null)
+    public static function create(SimpleQueryType $name = null)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class LicenseTechnologyQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $name
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $name
      * @return $this
      */
     public function setName($name)

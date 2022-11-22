@@ -12,7 +12,7 @@ class FailedDeleteMaintenanceLineItemDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteMaintenanceLineItemDataType|array $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedDeleteMaintenanceLineItemDataType|array  $failedData
      */
     public function __construct($failedData = null)
     {
@@ -22,7 +22,7 @@ class FailedDeleteMaintenanceLineItemDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteMaintenanceLineItemDataType|array $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedDeleteMaintenanceLineItemDataType|array  $failedData
      */
     public static function create($failedData = null)
     {
@@ -38,7 +38,7 @@ class FailedDeleteMaintenanceLineItemDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteMaintenanceLineItemDataType|array $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedDeleteMaintenanceLineItemDataType|array  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

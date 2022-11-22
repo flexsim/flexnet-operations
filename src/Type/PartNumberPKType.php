@@ -12,7 +12,7 @@ class PartNumberPKType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $partId
+     * @param  string  $partId
      */
     public function __construct(string $partId)
     {
@@ -22,7 +22,7 @@ class PartNumberPKType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $partId
+     * @param  string  $partId
      */
     public static function create(string $partId)
     {
@@ -38,7 +38,7 @@ class PartNumberPKType extends FlexnetType
     }
 
     /**
-     * @param string $partId
+     * @param  string  $partId
      * @return $this
      */
     public function setPartId($partId)

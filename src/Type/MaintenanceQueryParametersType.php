@@ -42,15 +42,15 @@ class MaintenanceQueryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $version
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
-     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $maintenanceName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $version
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\StateQueryType  $state
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $creationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $lastModifiedDate
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $version = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null, \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null)
+    public function __construct(SimpleQueryType $maintenanceName = null, SimpleQueryType $version = null, SimpleQueryType $description = null, SimpleQueryType $partNumber = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null)
     {
         $this->maintenanceName = $maintenanceName;
         $this->version = $version;
@@ -64,15 +64,15 @@ class MaintenanceQueryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $version
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
-     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $maintenanceName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $version
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\StateQueryType  $state
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $creationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $lastModifiedDate
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $version = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null, \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null)
+    public static function create(SimpleQueryType $maintenanceName = null, SimpleQueryType $version = null, SimpleQueryType $description = null, SimpleQueryType $partNumber = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null)
     {
         return new self(...func_get_args());
     }
@@ -86,7 +86,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $maintenanceName
      * @return $this
      */
     public function setMaintenanceName($maintenanceName)
@@ -105,7 +105,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $version
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $version
      * @return $this
      */
     public function setVersion($version)
@@ -124,7 +124,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
      * @return $this
      */
     public function setDescription($description)
@@ -143,7 +143,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -162,7 +162,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param  \Flexsim\FlexnetOperations\Type\StateQueryType  $state
      * @return $this
      */
     public function setState($state)
@@ -181,7 +181,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $creationDate
      * @return $this
      */
     public function setCreationDate($creationDate)
@@ -200,7 +200,7 @@ class MaintenanceQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $lastModifiedDate
      * @return $this
      */
     public function setLastModifiedDate($lastModifiedDate)

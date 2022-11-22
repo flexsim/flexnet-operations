@@ -19,10 +19,10 @@ class DeleteEntitlementResponseType extends FlexnetType implements ResultInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteEntitlementDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedDeleteEntitlementDataListType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedDeleteEntitlementDataListType $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedDeleteEntitlementDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -31,10 +31,10 @@ class DeleteEntitlementResponseType extends FlexnetType implements ResultInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteEntitlementDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedDeleteEntitlementDataListType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedDeleteEntitlementDataListType $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedDeleteEntitlementDataListType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class DeleteEntitlementResponseType extends FlexnetType implements ResultInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class DeleteEntitlementResponseType extends FlexnetType implements ResultInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteEntitlementDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedDeleteEntitlementDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

@@ -17,8 +17,8 @@ class ActivationIdOverDraftMapType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $activationId
-     * @param bool $overDraftAllowed
+     * @param  string  $activationId
+     * @param  bool  $overDraftAllowed
      */
     public function __construct(string $activationId, bool $overDraftAllowed)
     {
@@ -29,8 +29,8 @@ class ActivationIdOverDraftMapType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $activationId
-     * @param bool $overDraftAllowed
+     * @param  string  $activationId
+     * @param  bool  $overDraftAllowed
      */
     public static function create(string $activationId, bool $overDraftAllowed)
     {
@@ -46,7 +46,7 @@ class ActivationIdOverDraftMapType extends FlexnetType
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -65,7 +65,7 @@ class ActivationIdOverDraftMapType extends FlexnetType
     }
 
     /**
-     * @param bool $overDraftAllowed
+     * @param  bool  $overDraftAllowed
      * @return $this
      */
     public function setOverDraftAllowed($overDraftAllowed)

@@ -17,10 +17,10 @@ class ProductStateChangeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType|array  $stateChangeRecord
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, $stateChangeRecord = null)
+    public function __construct(ProductIdentifierType $productIdentifier, $stateChangeRecord = null)
     {
         $this->productIdentifier = $productIdentifier;
         $this->stateChangeRecord = $stateChangeRecord;
@@ -29,10 +29,10 @@ class ProductStateChangeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType|array  $stateChangeRecord
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, $stateChangeRecord = null)
+    public static function create(ProductIdentifierType $productIdentifier, $stateChangeRecord = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class ProductStateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
      * @return $this
      */
     public function setProductIdentifier($productIdentifier)
@@ -65,7 +65,7 @@ class ProductStateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType  $stateChangeRecord
      * @return $this
      */
     public function setStateChangeRecord($stateChangeRecord)

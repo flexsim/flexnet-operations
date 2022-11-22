@@ -12,7 +12,7 @@ class LicenseTechnologyDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array  $licenseTechnology
      */
     public function __construct($licenseTechnology = null)
     {
@@ -22,7 +22,7 @@ class LicenseTechnologyDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array  $licenseTechnology
      */
     public static function create($licenseTechnology = null)
     {
@@ -38,7 +38,7 @@ class LicenseTechnologyDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyDetailsType|array  $licenseTechnology
      * @return $this
      */
     public function setLicenseTechnology($licenseTechnology)

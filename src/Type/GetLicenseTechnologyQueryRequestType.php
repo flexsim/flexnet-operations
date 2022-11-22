@@ -14,9 +14,9 @@ class GetLicenseTechnologyQueryRequestType extends FlexnetType implements Reques
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyQueryParametersType  $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LicenseTechnologyQueryParametersType $queryParams = null)
+    public function __construct(LicenseTechnologyQueryParametersType $queryParams = null)
     {
         $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
@@ -25,9 +25,9 @@ class GetLicenseTechnologyQueryRequestType extends FlexnetType implements Reques
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyQueryParametersType  $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LicenseTechnologyQueryParametersType $queryParams = null)
+    public static function create(LicenseTechnologyQueryParametersType $queryParams = null)
     {
         return new self(...func_get_args());
     }
@@ -41,7 +41,7 @@ class GetLicenseTechnologyQueryRequestType extends FlexnetType implements Reques
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)

@@ -12,7 +12,7 @@ class RepairResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\RepairFulfillmentResponseDataType|array $fulfillmentData
+     * @param  \Flexsim\FlexnetOperations\Type\RepairFulfillmentResponseDataType|array  $fulfillmentData
      */
     public function __construct($fulfillmentData = null)
     {
@@ -22,7 +22,7 @@ class RepairResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\RepairFulfillmentResponseDataType|array $fulfillmentData
+     * @param  \Flexsim\FlexnetOperations\Type\RepairFulfillmentResponseDataType|array  $fulfillmentData
      */
     public static function create($fulfillmentData = null)
     {
@@ -38,7 +38,7 @@ class RepairResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\RepairFulfillmentResponseDataType $fulfillmentData
+     * @param  \Flexsim\FlexnetOperations\Type\RepairFulfillmentResponseDataType  $fulfillmentData
      * @return $this
      */
     public function setFulfillmentData($fulfillmentData)

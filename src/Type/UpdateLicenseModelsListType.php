@@ -17,8 +17,8 @@ class UpdateLicenseModelsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array  $licenseModelIdentifiers
+     * @param  string  $opType
      */
     public function __construct($licenseModelIdentifiers, string $opType)
     {
@@ -29,8 +29,8 @@ class UpdateLicenseModelsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array  $licenseModelIdentifiers
+     * @param  string  $opType
      */
     public static function create($licenseModelIdentifiers, string $opType)
     {
@@ -46,7 +46,7 @@ class UpdateLicenseModelsListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType|array  $licenseModelIdentifiers
      * @return $this
      */
     public function setLicenseModelIdentifiers($licenseModelIdentifiers)
@@ -65,7 +65,7 @@ class UpdateLicenseModelsListType extends FlexnetType
     }
 
     /**
-     * @param string $opType
+     * @param  string  $opType
      * @return $this
      */
     public function setOpType($opType)

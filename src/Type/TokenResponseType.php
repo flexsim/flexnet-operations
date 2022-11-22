@@ -14,7 +14,7 @@ class TokenResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param string $token
+     * @param  string  $token
      */
     public function __construct(string $token)
     {
@@ -24,7 +24,7 @@ class TokenResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param string $token
+     * @param  string  $token
      */
     public static function create(string $token)
     {
@@ -40,7 +40,7 @@ class TokenResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param string $token
+     * @param  string  $token
      * @return $this
      */
     public function setToken($token)

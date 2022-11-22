@@ -17,10 +17,10 @@ class AccountIdentifierType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $uniqueId
-     * @param \Flexsim\FlexnetOperations\Type\AccountPKType $primaryKeys
+     * @param  string  $uniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\AccountPKType  $primaryKeys
      */
-    public function __construct(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\AccountPKType $primaryKeys = null)
+    public function __construct(string $uniqueId = null, AccountPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
@@ -29,10 +29,10 @@ class AccountIdentifierType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
-     * @param \Flexsim\FlexnetOperations\Type\AccountPKType $primaryKeys
+     * @param  string  $uniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\AccountPKType  $primaryKeys
      */
-    public static function create(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\AccountPKType $primaryKeys = null)
+    public static function create(string $uniqueId = null, AccountPKType $primaryKeys = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class AccountIdentifierType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -65,7 +65,7 @@ class AccountIdentifierType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountPKType $primaryKeys
+     * @param  \Flexsim\FlexnetOperations\Type\AccountPKType  $primaryKeys
      * @return $this
      */
     public function setPrimaryKeys($primaryKeys)

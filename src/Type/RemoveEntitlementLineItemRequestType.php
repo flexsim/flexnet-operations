@@ -14,9 +14,9 @@ class RemoveEntitlementLineItemRequestType extends FlexnetType implements Reques
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\RemoveEntitlementLineItemDataType $lineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\RemoveEntitlementLineItemDataType  $lineItemData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\RemoveEntitlementLineItemDataType $lineItemData)
+    public function __construct(RemoveEntitlementLineItemDataType $lineItemData)
     {
         $this->lineItemData = $lineItemData;
     }
@@ -24,9 +24,9 @@ class RemoveEntitlementLineItemRequestType extends FlexnetType implements Reques
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\RemoveEntitlementLineItemDataType $lineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\RemoveEntitlementLineItemDataType  $lineItemData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\RemoveEntitlementLineItemDataType $lineItemData)
+    public static function create(RemoveEntitlementLineItemDataType $lineItemData)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class RemoveEntitlementLineItemRequestType extends FlexnetType implements Reques
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\RemoveEntitlementLineItemDataType $lineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\RemoveEntitlementLineItemDataType  $lineItemData
      * @return $this
      */
     public function setLineItemData($lineItemData)

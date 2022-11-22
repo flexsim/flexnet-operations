@@ -17,10 +17,10 @@ class DeleteAddonLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType  $lineItem
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem)
+    public function __construct(DeviceIdentifier $deviceIdentifier, DeleteLineItemDataType $lineItem)
     {
         $this->deviceIdentifier = $deviceIdentifier;
         $this->lineItem = $lineItem;
@@ -29,10 +29,10 @@ class DeleteAddonLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType  $lineItem
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem)
+    public static function create(DeviceIdentifier $deviceIdentifier, DeleteLineItemDataType $lineItem)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class DeleteAddonLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
      * @return $this
      */
     public function setDeviceIdentifier($deviceIdentifier)
@@ -65,7 +65,7 @@ class DeleteAddonLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteLineItemDataType  $lineItem
      * @return $this
      */
     public function setLineItem($lineItem)

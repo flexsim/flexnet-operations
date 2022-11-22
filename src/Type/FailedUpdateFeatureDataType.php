@@ -17,10 +17,10 @@ class FailedUpdateFeatureDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierType  $featureIdentifier
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, string $reason = null)
+    public function __construct(FeatureIdentifierType $featureIdentifier, string $reason = null)
     {
         $this->featureIdentifier = $featureIdentifier;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedUpdateFeatureDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierType  $featureIdentifier
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, string $reason = null)
+    public static function create(FeatureIdentifierType $featureIdentifier, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedUpdateFeatureDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierType  $featureIdentifier
      * @return $this
      */
     public function setFeatureIdentifier($featureIdentifier)
@@ -65,7 +65,7 @@ class FailedUpdateFeatureDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

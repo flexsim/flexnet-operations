@@ -1,25 +1,26 @@
 <?php
 
-namespace  Flexsim\FlexnetOperations;
+namespace Flexsim\FlexnetOperations;
 
-use Illuminate\Support\ServiceProvider;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FlexnetOperationsServiceProvider extends ServiceProvider
+class FlexnetOperationsServiceProvider extends PackageServiceProvider
 {
-    public function boot()
+    public function configurePackage(Package $package): void
     {
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__ . '/../config/config.php' => config_path('flexnet-operations.php'),
-            ], 'config');
-        }
+        /*
+         * This class is a Package Service Provider
+         *
+         * More info: https://github.com/spatie/laravel-package-tools
+         */
+        $package
+            ->name('flexnet-operations')
+            ->hasConfigFile();
     }
 
-    public function register()
+    public function packageRegistered()
     {
-        // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'flexnet-operations');
-
         // Register the main class to use with the facade
         $this->app->singleton('flexnet-operations.entitlement-order-service', function ($app) {
             return new FlexnetOperationsClientManager($app, 'Flexsim\FlexnetOperations\Services\EntitlementOrderService');

@@ -34,13 +34,13 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams
-     * @param \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType $responseConfig
-     * @param \Flexsim\FlexnetOperations\Type\DeviceSortBys $sortBys
-     * @param int $pageNumber
-     * @param int $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType  $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType  $responseConfig
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceSortBys  $sortBys
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams = null, \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType $responseConfig = null, \Flexsim\FlexnetOperations\Type\DeviceSortBys $sortBys = null, int $pageNumber = null, int $batchSize = null)
+    public function __construct(SearchDevicesParametersType $queryParams = null, SearchDeviceResponseConfigType $responseConfig = null, DeviceSortBys $sortBys = null, int $pageNumber = null, int $batchSize = null)
     {
         $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
@@ -53,13 +53,13 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams
-     * @param \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType $responseConfig
-     * @param \Flexsim\FlexnetOperations\Type\DeviceSortBys $sortBys
-     * @param int $pageNumber
-     * @param int $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType  $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType  $responseConfig
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceSortBys  $sortBys
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams = null, \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType $responseConfig = null, \Flexsim\FlexnetOperations\Type\DeviceSortBys $sortBys = null, int $pageNumber = null, int $batchSize = null)
+    public static function create(SearchDevicesParametersType $queryParams = null, SearchDeviceResponseConfigType $responseConfig = null, DeviceSortBys $sortBys = null, int $pageNumber = null, int $batchSize = null)
     {
         return new self(...func_get_args());
     }
@@ -73,7 +73,7 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\SearchDevicesParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -92,7 +92,7 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType $responseConfig
+     * @param  \Flexsim\FlexnetOperations\Type\SearchDeviceResponseConfigType  $responseConfig
      * @return $this
      */
     public function setResponseConfig($responseConfig)
@@ -111,7 +111,7 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceSortBys $sortBys
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceSortBys  $sortBys
      * @return $this
      */
     public function setSortBys($sortBys)
@@ -130,7 +130,7 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)
@@ -149,7 +149,7 @@ class SearchDevicesRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)

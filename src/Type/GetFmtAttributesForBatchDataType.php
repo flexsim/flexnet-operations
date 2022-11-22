@@ -72,21 +72,21 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param bool $needStartDate
-     * @param bool $needVersionDate
-     * @param bool $needVersionStartDate
-     * @param bool $needServerId
-     * @param bool $needNodeLockId
-     * @param bool $needCustomHost
-     * @param bool $needCount
-     * @param bool $needSoldTo
-     * @param \Flexsim\FlexnetOperations\Type\OverDraftDataListType $overDraftData
-     * @param string $modelType
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $modelAttributes
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $hostAttributes
-     * @param bool $needTimeZone
+     * @param  bool  $needStartDate
+     * @param  bool  $needVersionDate
+     * @param  bool  $needVersionStartDate
+     * @param  bool  $needServerId
+     * @param  bool  $needNodeLockId
+     * @param  bool  $needCustomHost
+     * @param  bool  $needCount
+     * @param  bool  $needSoldTo
+     * @param  \Flexsim\FlexnetOperations\Type\OverDraftDataListType  $overDraftData
+     * @param  string  $modelType
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $modelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $hostAttributes
+     * @param  bool  $needTimeZone
      */
-    public function __construct(bool $needStartDate, bool $needVersionDate, bool $needVersionStartDate, bool $needServerId, bool $needNodeLockId, bool $needCustomHost, bool $needCount, bool $needSoldTo, \Flexsim\FlexnetOperations\Type\OverDraftDataListType $overDraftData, string $modelType, \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $modelAttributes = null, \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $hostAttributes = null, bool $needTimeZone = null)
+    public function __construct(bool $needStartDate, bool $needVersionDate, bool $needVersionStartDate, bool $needServerId, bool $needNodeLockId, bool $needCustomHost, bool $needCount, bool $needSoldTo, OverDraftDataListType $overDraftData, string $modelType, AttributeMetaDescriptorDataType $modelAttributes = null, AttributeMetaDescriptorDataType $hostAttributes = null, bool $needTimeZone = null)
     {
         $this->needStartDate = $needStartDate;
         $this->needVersionDate = $needVersionDate;
@@ -106,21 +106,21 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param bool $needStartDate
-     * @param bool $needVersionDate
-     * @param bool $needVersionStartDate
-     * @param bool $needServerId
-     * @param bool $needNodeLockId
-     * @param bool $needCustomHost
-     * @param bool $needCount
-     * @param bool $needSoldTo
-     * @param \Flexsim\FlexnetOperations\Type\OverDraftDataListType $overDraftData
-     * @param string $modelType
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $modelAttributes
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $hostAttributes
-     * @param bool $needTimeZone
+     * @param  bool  $needStartDate
+     * @param  bool  $needVersionDate
+     * @param  bool  $needVersionStartDate
+     * @param  bool  $needServerId
+     * @param  bool  $needNodeLockId
+     * @param  bool  $needCustomHost
+     * @param  bool  $needCount
+     * @param  bool  $needSoldTo
+     * @param  \Flexsim\FlexnetOperations\Type\OverDraftDataListType  $overDraftData
+     * @param  string  $modelType
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $modelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $hostAttributes
+     * @param  bool  $needTimeZone
      */
-    public static function create(bool $needStartDate, bool $needVersionDate, bool $needVersionStartDate, bool $needServerId, bool $needNodeLockId, bool $needCustomHost, bool $needCount, bool $needSoldTo, \Flexsim\FlexnetOperations\Type\OverDraftDataListType $overDraftData, string $modelType, \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $modelAttributes = null, \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $hostAttributes = null, bool $needTimeZone = null)
+    public static function create(bool $needStartDate, bool $needVersionDate, bool $needVersionStartDate, bool $needServerId, bool $needNodeLockId, bool $needCustomHost, bool $needCount, bool $needSoldTo, OverDraftDataListType $overDraftData, string $modelType, AttributeMetaDescriptorDataType $modelAttributes = null, AttributeMetaDescriptorDataType $hostAttributes = null, bool $needTimeZone = null)
     {
         return new self(...func_get_args());
     }
@@ -134,7 +134,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needStartDate
+     * @param  bool  $needStartDate
      * @return $this
      */
     public function setNeedStartDate($needStartDate)
@@ -153,7 +153,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needVersionDate
+     * @param  bool  $needVersionDate
      * @return $this
      */
     public function setNeedVersionDate($needVersionDate)
@@ -172,7 +172,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needVersionStartDate
+     * @param  bool  $needVersionStartDate
      * @return $this
      */
     public function setNeedVersionStartDate($needVersionStartDate)
@@ -191,7 +191,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needServerId
+     * @param  bool  $needServerId
      * @return $this
      */
     public function setNeedServerId($needServerId)
@@ -210,7 +210,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needNodeLockId
+     * @param  bool  $needNodeLockId
      * @return $this
      */
     public function setNeedNodeLockId($needNodeLockId)
@@ -229,7 +229,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needCustomHost
+     * @param  bool  $needCustomHost
      * @return $this
      */
     public function setNeedCustomHost($needCustomHost)
@@ -248,7 +248,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needCount
+     * @param  bool  $needCount
      * @return $this
      */
     public function setNeedCount($needCount)
@@ -267,7 +267,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needSoldTo
+     * @param  bool  $needSoldTo
      * @return $this
      */
     public function setNeedSoldTo($needSoldTo)
@@ -286,7 +286,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OverDraftDataListType $overDraftData
+     * @param  \Flexsim\FlexnetOperations\Type\OverDraftDataListType  $overDraftData
      * @return $this
      */
     public function setOverDraftData($overDraftData)
@@ -305,7 +305,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param string $modelType
+     * @param  string  $modelType
      * @return $this
      */
     public function setModelType($modelType)
@@ -324,7 +324,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $modelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $modelAttributes
      * @return $this
      */
     public function setModelAttributes($modelAttributes)
@@ -343,7 +343,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $hostAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $hostAttributes
      * @return $this
      */
     public function setHostAttributes($hostAttributes)
@@ -362,7 +362,7 @@ class GetFmtAttributesForBatchDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needTimeZone
+     * @param  bool  $needTimeZone
      * @return $this
      */
     public function setNeedTimeZone($needTimeZone)

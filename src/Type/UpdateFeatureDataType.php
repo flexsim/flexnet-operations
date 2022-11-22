@@ -37,14 +37,14 @@ class UpdateFeatureDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @param string $featureName
-     * @param string $versionFormat
-     * @param string $version
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierType  $featureIdentifier
+     * @param  string  $featureName
+     * @param  string  $versionFormat
+     * @param  string  $version
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType  $featureOverrideParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, string $featureName = null, string $versionFormat = null, string $version = null, string $description = null, \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null)
+    public function __construct(FeatureIdentifierType $featureIdentifier, string $featureName = null, string $versionFormat = null, string $version = null, string $description = null, FeatureOverrideParamsType $featureOverrideParams = null)
     {
         $this->featureIdentifier = $featureIdentifier;
         $this->featureName = $featureName;
@@ -57,14 +57,14 @@ class UpdateFeatureDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @param string $featureName
-     * @param string $versionFormat
-     * @param string $version
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierType  $featureIdentifier
+     * @param  string  $featureName
+     * @param  string  $versionFormat
+     * @param  string  $version
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType  $featureOverrideParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, string $featureName = null, string $versionFormat = null, string $version = null, string $description = null, \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null)
+    public static function create(FeatureIdentifierType $featureIdentifier, string $featureName = null, string $versionFormat = null, string $version = null, string $description = null, FeatureOverrideParamsType $featureOverrideParams = null)
     {
         return new self(...func_get_args());
     }
@@ -78,7 +78,7 @@ class UpdateFeatureDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierType  $featureIdentifier
      * @return $this
      */
     public function setFeatureIdentifier($featureIdentifier)
@@ -97,7 +97,7 @@ class UpdateFeatureDataType extends FlexnetType
     }
 
     /**
-     * @param string $featureName
+     * @param  string  $featureName
      * @return $this
      */
     public function setFeatureName($featureName)
@@ -116,7 +116,7 @@ class UpdateFeatureDataType extends FlexnetType
     }
 
     /**
-     * @param string $versionFormat
+     * @param  string  $versionFormat
      * @return $this
      */
     public function setVersionFormat($versionFormat)
@@ -135,7 +135,7 @@ class UpdateFeatureDataType extends FlexnetType
     }
 
     /**
-     * @param string $version
+     * @param  string  $version
      * @return $this
      */
     public function setVersion($version)
@@ -154,7 +154,7 @@ class UpdateFeatureDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -173,7 +173,7 @@ class UpdateFeatureDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType  $featureOverrideParams
      * @return $this
      */
     public function setFeatureOverrideParams($featureOverrideParams)

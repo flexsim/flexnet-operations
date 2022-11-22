@@ -17,10 +17,10 @@ class OrganizationIdentifierType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $uniqueId
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationPKType $primaryKeys
+     * @param  string  $uniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationPKType  $primaryKeys
      */
-    public function __construct(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\OrganizationPKType $primaryKeys = null)
+    public function __construct(string $uniqueId = null, OrganizationPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
@@ -29,10 +29,10 @@ class OrganizationIdentifierType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationPKType $primaryKeys
+     * @param  string  $uniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationPKType  $primaryKeys
      */
-    public static function create(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\OrganizationPKType $primaryKeys = null)
+    public static function create(string $uniqueId = null, OrganizationPKType $primaryKeys = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class OrganizationIdentifierType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -65,7 +65,7 @@ class OrganizationIdentifierType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationPKType $primaryKeys
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationPKType  $primaryKeys
      * @return $this
      */
     public function setPrimaryKeys($primaryKeys)

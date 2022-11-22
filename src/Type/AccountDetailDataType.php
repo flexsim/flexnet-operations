@@ -62,26 +62,26 @@ class AccountDetailDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @param string $name
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @param bool $visible
-     * @param string $accountType
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @param \DateTimeInterface $dateLastModified
-     * @param \DateTimeInterface $createdDate
-     * @param string $createdBy
-     * @param string $lastModifiedBy
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $account
+     * @param  string  $name
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
+     * @param  bool  $visible
+     * @param  string  $accountType
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
+     * @param  \DateTimeInterface  $dateLastModified
+     * @param  \DateTimeInterface  $createdDate
+     * @param  string  $createdBy
+     * @param  string  $lastModifiedBy
      */
     public function __construct(
         $account,
         string $name,
         string $description = null,
-        \Flexsim\FlexnetOperations\Type\AddressDataType $address = null,
+        AddressDataType $address = null,
         bool $visible = null,
         string $accountType = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null,
+        AttributeDescriptorDataType $customAttributes = null,
         \DateTimeInterface $dateLastModified = null,
         \DateTimeInterface $createdDate = null,
         string $createdBy = null,
@@ -103,26 +103,26 @@ class AccountDetailDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUserZ|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @param string $name
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @param bool $visible
-     * @param string $accountType
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @param \DateTimeInterface $dateLastModified
-     * @param \DateTimeInterface $createdDate
-     * @param string $createdBy
-     * @param string $lastModifiedBy
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUserZ|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $account
+     * @param  string  $name
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
+     * @param  bool  $visible
+     * @param  string  $accountType
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
+     * @param  \DateTimeInterface  $dateLastModified
+     * @param  \DateTimeInterface  $createdDate
+     * @param  string  $createdBy
+     * @param  string  $lastModifiedBy
      */
     public static function create(
         $account,
         string $name,
         string $description = null,
-        \Flexsim\FlexnetOperations\Type\AddressDataType $address = null,
+        AddressDataType $address = null,
         bool $visible = null,
         string $accountType = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null,
+        AttributeDescriptorDataType $customAttributes = null,
         \DateTimeInterface $dateLastModified = null,
         \DateTimeInterface $createdDate = null,
         string $createdBy = null,
@@ -140,7 +140,7 @@ class AccountDetailDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $account
      * @return $this
      */
     public function setAccount($account)
@@ -159,7 +159,7 @@ class AccountDetailDataType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -178,7 +178,7 @@ class AccountDetailDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -197,7 +197,7 @@ class AccountDetailDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
      * @return $this
      */
     public function setAddress($address)
@@ -216,7 +216,7 @@ class AccountDetailDataType extends FlexnetType
     }
 
     /**
-     * @param bool $visible
+     * @param  bool  $visible
      * @return $this
      */
     public function setVisible($visible)
@@ -235,7 +235,7 @@ class AccountDetailDataType extends FlexnetType
     }
 
     /**
-     * @param string $accountType
+     * @param  string  $accountType
      * @return $this
      */
     public function setAccountType($accountType)
@@ -254,7 +254,7 @@ class AccountDetailDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)
@@ -273,7 +273,7 @@ class AccountDetailDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $dateLastModified
+     * @param  \DateTimeInterface  $dateLastModified
      * @return $this
      */
     public function setDateLastModified($dateLastModified)
@@ -292,7 +292,7 @@ class AccountDetailDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $createdDate
+     * @param  \DateTimeInterface  $createdDate
      * @return $this
      */
     public function setCreatedDate($createdDate)
@@ -311,7 +311,7 @@ class AccountDetailDataType extends FlexnetType
     }
 
     /**
-     * @param string $createdBy
+     * @param  string  $createdBy
      * @return $this
      */
     public function setCreatedBy($createdBy)
@@ -330,7 +330,7 @@ class AccountDetailDataType extends FlexnetType
     }
 
     /**
-     * @param string $lastModifiedBy
+     * @param  string  $lastModifiedBy
      * @return $this
      */
     public function setLastModifiedBy($lastModifiedBy)

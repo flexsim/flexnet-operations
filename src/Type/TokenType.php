@@ -19,10 +19,10 @@ class TokenType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param string $token
-     * @param \Flexsim\FlexnetOperations\Type\IdentityType $identity
+     * @param  string  $token
+     * @param  \Flexsim\FlexnetOperations\Type\IdentityType  $identity
      */
-    public function __construct(string $token, \Flexsim\FlexnetOperations\Type\IdentityType $identity = null)
+    public function __construct(string $token, IdentityType $identity = null)
     {
         $this->token = $token;
         $this->identity = $identity;
@@ -31,10 +31,10 @@ class TokenType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param string $token
-     * @param \Flexsim\FlexnetOperations\Type\IdentityType $identity
+     * @param  string  $token
+     * @param  \Flexsim\FlexnetOperations\Type\IdentityType  $identity
      */
-    public static function create(string $token, \Flexsim\FlexnetOperations\Type\IdentityType $identity = null)
+    public static function create(string $token, IdentityType $identity = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class TokenType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\IdentityType $identity
+     * @param  \Flexsim\FlexnetOperations\Type\IdentityType  $identity
      * @return $this
      */
     public function setIdentity($identity)
@@ -67,7 +67,7 @@ class TokenType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param string $token
+     * @param  string  $token
      * @return $this
      */
     public function setToken($token)

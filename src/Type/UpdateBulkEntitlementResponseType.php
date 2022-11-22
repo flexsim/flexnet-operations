@@ -19,10 +19,10 @@ class UpdateBulkEntitlementResponseType extends FlexnetType implements ResultInt
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateBulkEntitlementDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedUpdateBulkEntitlementDataListType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUpdateBulkEntitlementDataListType $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedUpdateBulkEntitlementDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -31,10 +31,10 @@ class UpdateBulkEntitlementResponseType extends FlexnetType implements ResultInt
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateBulkEntitlementDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedUpdateBulkEntitlementDataListType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUpdateBulkEntitlementDataListType $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedUpdateBulkEntitlementDataListType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class UpdateBulkEntitlementResponseType extends FlexnetType implements ResultInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class UpdateBulkEntitlementResponseType extends FlexnetType implements ResultInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateBulkEntitlementDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedUpdateBulkEntitlementDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

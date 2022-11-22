@@ -12,7 +12,7 @@ class CreatedBulkEntitlementDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType|array $createdBulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType|array  $createdBulkEntitlement
      */
     public function __construct($createdBulkEntitlement = null)
     {
@@ -22,7 +22,7 @@ class CreatedBulkEntitlementDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType|array $createdBulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType|array  $createdBulkEntitlement
      */
     public static function create($createdBulkEntitlement = null)
     {
@@ -38,7 +38,7 @@ class CreatedBulkEntitlementDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType|array $createdBulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataType|array  $createdBulkEntitlement
      * @return $this
      */
     public function setCreatedBulkEntitlement($createdBulkEntitlement)

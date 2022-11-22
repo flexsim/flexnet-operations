@@ -14,9 +14,9 @@ class RelateOrganizationsRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType  $orgData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType $orgData)
+    public function __construct(RelateOrganizationsDataType $orgData)
     {
         $this->orgData = $orgData;
     }
@@ -24,9 +24,9 @@ class RelateOrganizationsRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType  $orgData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType $orgData)
+    public static function create(RelateOrganizationsDataType $orgData)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class RelateOrganizationsRequestType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\RelateOrganizationsDataType  $orgData
      * @return $this
      */
     public function setOrgData($orgData)

@@ -19,10 +19,10 @@ class UpdateFeatureResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureDataListType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureDataListType $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedUpdateFeatureDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -31,10 +31,10 @@ class UpdateFeatureResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureDataListType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureDataListType $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedUpdateFeatureDataListType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class UpdateFeatureResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class UpdateFeatureResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedUpdateFeatureDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

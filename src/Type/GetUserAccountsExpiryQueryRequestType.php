@@ -24,11 +24,11 @@ class GetUserAccountsExpiryQueryRequestType extends FlexnetType implements Reque
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType $queryParams
-     * @param int $pageNumber
-     * @param int $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType  $queryParams
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType $queryParams, int $pageNumber, int $batchSize)
+    public function __construct(AccountUserExpiryQueryParametersType $queryParams, int $pageNumber, int $batchSize)
     {
         $this->queryParams = $queryParams;
         $this->pageNumber = $pageNumber;
@@ -38,11 +38,11 @@ class GetUserAccountsExpiryQueryRequestType extends FlexnetType implements Reque
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType $queryParams
-     * @param int $pageNumber
-     * @param int $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType  $queryParams
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType $queryParams, int $pageNumber, int $batchSize)
+    public static function create(AccountUserExpiryQueryParametersType $queryParams, int $pageNumber, int $batchSize)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class GetUserAccountsExpiryQueryRequestType extends FlexnetType implements Reque
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\AccountUserExpiryQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -75,7 +75,7 @@ class GetUserAccountsExpiryQueryRequestType extends FlexnetType implements Reque
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)
@@ -94,7 +94,7 @@ class GetUserAccountsExpiryQueryRequestType extends FlexnetType implements Reque
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)

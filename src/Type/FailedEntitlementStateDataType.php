@@ -17,10 +17,10 @@ class FailedEntitlementStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateDataType $entitlement
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementStateDataType  $entitlement
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementStateDataType $entitlement, string $reason)
+    public function __construct(EntitlementStateDataType $entitlement, string $reason)
     {
         $this->entitlement = $entitlement;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedEntitlementStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateDataType $entitlement
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementStateDataType  $entitlement
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementStateDataType $entitlement, string $reason)
+    public static function create(EntitlementStateDataType $entitlement, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedEntitlementStateDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateDataType $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementStateDataType  $entitlement
      * @return $this
      */
     public function setEntitlement($entitlement)
@@ -65,7 +65,7 @@ class FailedEntitlementStateDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

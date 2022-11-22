@@ -27,12 +27,12 @@ class FeatureOverrideParamsType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $vendorString
-     * @param string $notice
-     * @param string $serialNumber
-     * @param \Flexsim\FlexnetOperations\Type\DupGroupDataType $dupGroup
+     * @param  string  $vendorString
+     * @param  string  $notice
+     * @param  string  $serialNumber
+     * @param  \Flexsim\FlexnetOperations\Type\DupGroupDataType  $dupGroup
      */
-    public function __construct(string $vendorString = null, string $notice = null, string $serialNumber = null, \Flexsim\FlexnetOperations\Type\DupGroupDataType $dupGroup = null)
+    public function __construct(string $vendorString = null, string $notice = null, string $serialNumber = null, DupGroupDataType $dupGroup = null)
     {
         $this->vendorString = $vendorString;
         $this->notice = $notice;
@@ -43,12 +43,12 @@ class FeatureOverrideParamsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $vendorString
-     * @param string $notice
-     * @param string $serialNumber
-     * @param \Flexsim\FlexnetOperations\Type\DupGroupDataType $dupGroup
+     * @param  string  $vendorString
+     * @param  string  $notice
+     * @param  string  $serialNumber
+     * @param  \Flexsim\FlexnetOperations\Type\DupGroupDataType  $dupGroup
      */
-    public static function create(string $vendorString = null, string $notice = null, string $serialNumber = null, \Flexsim\FlexnetOperations\Type\DupGroupDataType $dupGroup = null)
+    public static function create(string $vendorString = null, string $notice = null, string $serialNumber = null, DupGroupDataType $dupGroup = null)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class FeatureOverrideParamsType extends FlexnetType
     }
 
     /**
-     * @param string $vendorString
+     * @param  string  $vendorString
      * @return $this
      */
     public function setVendorString($vendorString)
@@ -81,7 +81,7 @@ class FeatureOverrideParamsType extends FlexnetType
     }
 
     /**
-     * @param string $notice
+     * @param  string  $notice
      * @return $this
      */
     public function setNotice($notice)
@@ -100,7 +100,7 @@ class FeatureOverrideParamsType extends FlexnetType
     }
 
     /**
-     * @param string $serialNumber
+     * @param  string  $serialNumber
      * @return $this
      */
     public function setSerialNumber($serialNumber)
@@ -119,7 +119,7 @@ class FeatureOverrideParamsType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DupGroupDataType $dupGroup
+     * @param  \Flexsim\FlexnetOperations\Type\DupGroupDataType  $dupGroup
      * @return $this
      */
     public function setDupGroup($dupGroup)

@@ -17,8 +17,8 @@ class AccountExpiryType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $accountID
-     * @param \DateTimeInterface $expiryDate
+     * @param  string  $accountID
+     * @param  \DateTimeInterface  $expiryDate
      */
     public function __construct(string $accountID, \DateTimeInterface $expiryDate)
     {
@@ -29,8 +29,8 @@ class AccountExpiryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $accountID
-     * @param \DateTimeInterface $expiryDate
+     * @param  string  $accountID
+     * @param  \DateTimeInterface  $expiryDate
      */
     public static function create(string $accountID, \DateTimeInterface $expiryDate)
     {
@@ -46,7 +46,7 @@ class AccountExpiryType extends FlexnetType
     }
 
     /**
-     * @param string $accountID
+     * @param  string  $accountID
      * @return $this
      */
     public function setAccountID($accountID)
@@ -65,7 +65,7 @@ class AccountExpiryType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $expiryDate
+     * @param  \DateTimeInterface  $expiryDate
      * @return $this
      */
     public function setExpiryDate($expiryDate)

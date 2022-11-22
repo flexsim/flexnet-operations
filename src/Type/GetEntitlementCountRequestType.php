@@ -14,9 +14,9 @@ class GetEntitlementCountRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType  $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $queryParams)
+    public function __construct(SearchEntitlementDataType $queryParams)
     {
         $this->queryParams = $queryParams;
     }
@@ -24,9 +24,9 @@ class GetEntitlementCountRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType  $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $queryParams)
+    public static function create(SearchEntitlementDataType $queryParams)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class GetEntitlementCountRequestType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\SearchEntitlementDataType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)

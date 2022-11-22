@@ -17,10 +17,10 @@ class TransferredEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\TransferredLineItemMapType|array $lineItemIdentifierMap
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\TransferredLineItemMapType|array  $lineItemIdentifierMap
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, $lineItemIdentifierMap = null)
+    public function __construct(EntitlementIdentifierType $entitlementIdentifier, $lineItemIdentifierMap = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->lineItemIdentifierMap = $lineItemIdentifierMap;
@@ -29,10 +29,10 @@ class TransferredEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\TransferredLineItemMapType|array $lineItemIdentifierMap
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\TransferredLineItemMapType|array  $lineItemIdentifierMap
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, $lineItemIdentifierMap = null)
+    public static function create(EntitlementIdentifierType $entitlementIdentifier, $lineItemIdentifierMap = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class TransferredEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
      * @return $this
      */
     public function setEntitlementIdentifier($entitlementIdentifier)
@@ -65,7 +65,7 @@ class TransferredEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TransferredLineItemMapType $lineItemIdentifierMap
+     * @param  \Flexsim\FlexnetOperations\Type\TransferredLineItemMapType  $lineItemIdentifierMap
      * @return $this
      */
     public function setLineItemIdentifierMap($lineItemIdentifierMap)

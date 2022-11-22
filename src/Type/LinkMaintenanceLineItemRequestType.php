@@ -14,9 +14,9 @@ class LinkMaintenanceLineItemRequestType extends FlexnetType implements RequestI
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemListType $linkMaintenanceLineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemListType  $linkMaintenanceLineItemList
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemListType $linkMaintenanceLineItemList)
+    public function __construct(LinkMaintenanceLineItemListType $linkMaintenanceLineItemList)
     {
         $this->linkMaintenanceLineItemList = $linkMaintenanceLineItemList;
     }
@@ -24,9 +24,9 @@ class LinkMaintenanceLineItemRequestType extends FlexnetType implements RequestI
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemListType $linkMaintenanceLineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemListType  $linkMaintenanceLineItemList
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemListType $linkMaintenanceLineItemList)
+    public static function create(LinkMaintenanceLineItemListType $linkMaintenanceLineItemList)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class LinkMaintenanceLineItemRequestType extends FlexnetType implements RequestI
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemListType $linkMaintenanceLineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemListType  $linkMaintenanceLineItemList
      * @return $this
      */
     public function setLinkMaintenanceLineItemList($linkMaintenanceLineItemList)

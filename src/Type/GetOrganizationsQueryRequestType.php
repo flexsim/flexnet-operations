@@ -24,14 +24,14 @@ class GetOrganizationsQueryRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType  $queryParams
      */
     public function __construct(
         int $pageNumber,
         int $batchSize,
-        \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams = []
+        OrganizationQueryParametersType $queryParams = []
     ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -41,14 +41,14 @@ class GetOrganizationsQueryRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType  $queryParams
      */
     public static function create(
         int $pageNumber,
         int $batchSize,
-        \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams = []
+        OrganizationQueryParametersType $queryParams = []
     ) {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class GetOrganizationsQueryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -81,7 +81,7 @@ class GetOrganizationsQueryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)
@@ -100,7 +100,7 @@ class GetOrganizationsQueryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)

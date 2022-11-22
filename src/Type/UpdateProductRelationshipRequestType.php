@@ -14,9 +14,9 @@ class UpdateProductRelationshipRequestType extends FlexnetType implements Reques
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array<\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType> $relationship
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array<\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType>  $relationship
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array $relationship)
+    public function __construct(UpdateProductRelationshipDataType|array $relationship)
     {
         $this->relationship = $relationship;
     }
@@ -24,9 +24,9 @@ class UpdateProductRelationshipRequestType extends FlexnetType implements Reques
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array<\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType> $relationship
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array<\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType>  $relationship
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array $relationship)
+    public static function create(UpdateProductRelationshipDataType|array $relationship)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class UpdateProductRelationshipRequestType extends FlexnetType implements Reques
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array<\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType> $relationship
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType|array<\Flexsim\FlexnetOperations\Type\UpdateProductRelationshipDataType>  $relationship
      * @return $this
      */
     public function setRelationship($relationship)

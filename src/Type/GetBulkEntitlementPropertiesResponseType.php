@@ -19,10 +19,10 @@ class GetBulkEntitlementPropertiesResponseType extends FlexnetType implements Re
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementPropertiesType|array $bulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\BulkEntitlementPropertiesType|array  $bulkEntitlement
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $bulkEntitlement = null)
+    public function __construct(StatusInfoType $statusInfo, $bulkEntitlement = null)
     {
         $this->statusInfo = $statusInfo;
         $this->bulkEntitlement = $bulkEntitlement;
@@ -31,10 +31,10 @@ class GetBulkEntitlementPropertiesResponseType extends FlexnetType implements Re
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementPropertiesType|array $bulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\BulkEntitlementPropertiesType|array  $bulkEntitlement
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $bulkEntitlement = null)
+    public static function create(StatusInfoType $statusInfo, $bulkEntitlement = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetBulkEntitlementPropertiesResponseType extends FlexnetType implements Re
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class GetBulkEntitlementPropertiesResponseType extends FlexnetType implements Re
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementPropertiesType $bulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\BulkEntitlementPropertiesType  $bulkEntitlement
      * @return $this
      */
     public function setBulkEntitlement($bulkEntitlement)

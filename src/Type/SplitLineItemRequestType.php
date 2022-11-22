@@ -14,9 +14,9 @@ class SplitLineItemRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemListType $lineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\SplitLineItemListType  $lineItemList
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SplitLineItemListType $lineItemList)
+    public function __construct(SplitLineItemListType $lineItemList)
     {
         $this->lineItemList = $lineItemList;
     }
@@ -24,9 +24,9 @@ class SplitLineItemRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemListType $lineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\SplitLineItemListType  $lineItemList
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SplitLineItemListType $lineItemList)
+    public static function create(SplitLineItemListType $lineItemList)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class SplitLineItemRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemListType $lineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\SplitLineItemListType  $lineItemList
      * @return $this
      */
     public function setLineItemList($lineItemList)

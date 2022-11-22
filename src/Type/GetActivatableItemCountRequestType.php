@@ -19,10 +19,10 @@ class GetActivatableItemCountRequestType extends FlexnetType implements RequestI
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams
-     * @param bool $restrictToItemsReadyToActivate
+     * @param  \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType  $queryParams
+     * @param  bool  $restrictToItemsReadyToActivate
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams, bool $restrictToItemsReadyToActivate = null)
+    public function __construct(SearchActivatableItemDataType $queryParams, bool $restrictToItemsReadyToActivate = null)
     {
         $this->queryParams = $queryParams;
         $this->restrictToItemsReadyToActivate = $restrictToItemsReadyToActivate;
@@ -31,10 +31,10 @@ class GetActivatableItemCountRequestType extends FlexnetType implements RequestI
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams
-     * @param bool $restrictToItemsReadyToActivate
+     * @param  \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType  $queryParams
+     * @param  bool  $restrictToItemsReadyToActivate
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams, bool $restrictToItemsReadyToActivate = null)
+    public static function create(SearchActivatableItemDataType $queryParams, bool $restrictToItemsReadyToActivate = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetActivatableItemCountRequestType extends FlexnetType implements RequestI
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -67,7 +67,7 @@ class GetActivatableItemCountRequestType extends FlexnetType implements RequestI
     }
 
     /**
-     * @param bool $restrictToItemsReadyToActivate
+     * @param  bool  $restrictToItemsReadyToActivate
      * @return $this
      */
     public function setRestrictToItemsReadyToActivate($restrictToItemsReadyToActivate)

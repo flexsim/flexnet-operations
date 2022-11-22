@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Facade;
  * @method static string getDefaultVersion( $connection = NULL)
  * @method static setDefaultVersion( $version,  $connection = NULL)
  * @method static array getClients()
- *
  * @method static \Flexsim\FlexnetOperations\Type\CreateAcctResponseType createAccount(\Flexsim\FlexnetOperations\Type\CreateAcctRequestType $createAcctRequest)
  * @method static \Flexsim\FlexnetOperations\Type\LinkAccountsResponseType linkAccounts(\Flexsim\FlexnetOperations\Type\LinkAccountsRequestType $linkAccountsRequest)
  * @method static \Flexsim\FlexnetOperations\Type\UpdateAccountResponseType updateAccount(\Flexsim\FlexnetOperations\Type\UpdateAccountRequestType $updateAccountRequest)

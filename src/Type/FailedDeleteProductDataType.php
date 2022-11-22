@@ -17,10 +17,10 @@ class FailedDeleteProductDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, string $reason = null)
+    public function __construct(ProductIdentifierType $productIdentifier, string $reason = null)
     {
         $this->productIdentifier = $productIdentifier;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedDeleteProductDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, string $reason = null)
+    public static function create(ProductIdentifierType $productIdentifier, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedDeleteProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
      * @return $this
      */
     public function setProductIdentifier($productIdentifier)
@@ -65,7 +65,7 @@ class FailedDeleteProductDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

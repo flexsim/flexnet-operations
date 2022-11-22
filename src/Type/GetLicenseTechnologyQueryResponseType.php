@@ -19,10 +19,10 @@ class GetLicenseTechnologyQueryResponseType extends FlexnetType implements Resul
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyDataListType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\LicenseTechnologyDataListType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, LicenseTechnologyDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
@@ -31,10 +31,10 @@ class GetLicenseTechnologyQueryResponseType extends FlexnetType implements Resul
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyDataListType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\LicenseTechnologyDataListType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, LicenseTechnologyDataListType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetLicenseTechnologyQueryResponseType extends FlexnetType implements Resul
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class GetLicenseTechnologyQueryResponseType extends FlexnetType implements Resul
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

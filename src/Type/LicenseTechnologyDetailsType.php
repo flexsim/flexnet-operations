@@ -27,12 +27,12 @@ class LicenseTechnologyDetailsType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType $licenseGenerators
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
-     * @param string $state
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType  $licenseGenerators
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeListType  $hostTypes
+     * @param  string  $state
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType $licenseGenerators, \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes, string $state)
+    public function __construct(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, LicenseGeneratorsDetailsType $licenseGenerators, HostTypeListType $hostTypes, string $state)
     {
         $this->licenseTechnologyIdentifier = $licenseTechnologyIdentifier;
         $this->licenseGenerators = $licenseGenerators;
@@ -43,12 +43,12 @@ class LicenseTechnologyDetailsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType $licenseGenerators
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
-     * @param string $state
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType  $licenseGenerators
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeListType  $hostTypes
+     * @param  string  $state
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType $licenseGenerators, \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes, string $state)
+    public static function create(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, LicenseGeneratorsDetailsType $licenseGenerators, HostTypeListType $hostTypes, string $state)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class LicenseTechnologyDetailsType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
      * @return $this
      */
     public function setLicenseTechnologyIdentifier($licenseTechnologyIdentifier)
@@ -81,7 +81,7 @@ class LicenseTechnologyDetailsType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType $licenseGenerators
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseGeneratorsDetailsType  $licenseGenerators
      * @return $this
      */
     public function setLicenseGenerators($licenseGenerators)
@@ -100,7 +100,7 @@ class LicenseTechnologyDetailsType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeListType  $hostTypes
      * @return $this
      */
     public function setHostTypes($hostTypes)
@@ -119,7 +119,7 @@ class LicenseTechnologyDetailsType extends FlexnetType
     }
 
     /**
-     * @param string $state
+     * @param  string  $state
      * @return $this
      */
     public function setState($state)

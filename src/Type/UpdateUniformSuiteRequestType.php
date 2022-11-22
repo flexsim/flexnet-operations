@@ -14,9 +14,9 @@ class UpdateUniformSuiteRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUniformSuiteDataType $uniformSuite
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUniformSuiteDataType  $uniformSuite
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateUniformSuiteDataType $uniformSuite)
+    public function __construct(UpdateUniformSuiteDataType $uniformSuite)
     {
         $this->uniformSuite = $uniformSuite;
     }
@@ -24,9 +24,9 @@ class UpdateUniformSuiteRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUniformSuiteDataType $uniformSuite
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUniformSuiteDataType  $uniformSuite
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateUniformSuiteDataType $uniformSuite)
+    public static function create(UpdateUniformSuiteDataType $uniformSuite)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class UpdateUniformSuiteRequestType extends FlexnetType implements RequestInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUniformSuiteDataType $uniformSuite
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUniformSuiteDataType  $uniformSuite
      * @return $this
      */
     public function setUniformSuite($uniformSuite)

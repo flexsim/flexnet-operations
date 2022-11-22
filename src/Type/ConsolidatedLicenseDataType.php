@@ -47,24 +47,24 @@ class ConsolidatedLicenseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $consolidatedLicenseId
-     * @param string $soldTo
-     * @param string $criteria
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $consolidatedFulfillments
-     * @param string $licenseText
-     * @param string $binaryLicense
-     * @param string $state
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  string  $consolidatedLicenseId
+     * @param  string  $soldTo
+     * @param  string  $criteria
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType  $consolidatedFulfillments
+     * @param  string  $licenseText
+     * @param  string  $binaryLicense
+     * @param  string  $state
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      */
     public function __construct(
         string $consolidatedLicenseId,
         string $soldTo,
         string $criteria,
-        \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $consolidatedFulfillments,
+        FulfillmentIdentifierListType $consolidatedFulfillments,
         string $licenseText = null,
         string $binaryLicense = null,
         string $state = null,
-        \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null
+        LicenseFileDataListType $licenseFiles = null
     ) {
         $this->consolidatedLicenseId = $consolidatedLicenseId;
         $this->soldTo = $soldTo;
@@ -79,24 +79,24 @@ class ConsolidatedLicenseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $consolidatedLicenseId
-     * @param string $soldTo
-     * @param string $criteria
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $consolidatedFulfillments
-     * @param string $licenseText
-     * @param string $binaryLicense
-     * @param string $state
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  string  $consolidatedLicenseId
+     * @param  string  $soldTo
+     * @param  string  $criteria
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType  $consolidatedFulfillments
+     * @param  string  $licenseText
+     * @param  string  $binaryLicense
+     * @param  string  $state
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      */
     public static function create(
         string $consolidatedLicenseId,
         string $soldTo,
         string $criteria,
-        \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $consolidatedFulfillments,
+        FulfillmentIdentifierListType $consolidatedFulfillments,
         string $licenseText = null,
         string $binaryLicense = null,
         string $state = null,
-        \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null
+        LicenseFileDataListType $licenseFiles = null
     ) {
         return new self(...func_get_args());
     }
@@ -110,7 +110,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param string $consolidatedLicenseId
+     * @param  string  $consolidatedLicenseId
      * @return $this
      */
     public function setConsolidatedLicenseId($consolidatedLicenseId)
@@ -129,7 +129,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param string $licenseText
+     * @param  string  $licenseText
      * @return $this
      */
     public function setLicenseText($licenseText)
@@ -148,7 +148,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param string $binaryLicense
+     * @param  string  $binaryLicense
      * @return $this
      */
     public function setBinaryLicense($binaryLicense)
@@ -167,7 +167,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param string $soldTo
+     * @param  string  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -186,7 +186,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param string $criteria
+     * @param  string  $criteria
      * @return $this
      */
     public function setCriteria($criteria)
@@ -205,7 +205,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param string $state
+     * @param  string  $state
      * @return $this
      */
     public function setState($state)
@@ -224,7 +224,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $consolidatedFulfillments
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType  $consolidatedFulfillments
      * @return $this
      */
     public function setConsolidatedFulfillments($consolidatedFulfillments)
@@ -243,7 +243,7 @@ class ConsolidatedLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      * @return $this
      */
     public function setLicenseFiles($licenseFiles)

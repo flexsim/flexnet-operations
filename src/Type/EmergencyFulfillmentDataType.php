@@ -57,28 +57,28 @@ class EmergencyFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $endDate
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param string $FNPTimeZoneValue
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
-     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
-     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $endDate
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  string  $FNPTimeZoneValue
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  \Flexsim\FlexnetOperations\Type\ServerIDsType  $serverIds
+     * @param  \Flexsim\FlexnetOperations\Type\NodeIDsType  $nodeIds
+     * @param  \Flexsim\FlexnetOperations\Type\CustomHostIDType  $customHost
      */
     public function __construct(
-        \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier,
+        FulfillmentIdentifierType $fulfillmentIdentifier,
         \DateTimeInterface $startDate,
         \DateTimeInterface $endDate,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null,
+        AttributeDescriptorDataType $licenseModelAttributes = null,
         string $FNPTimeZoneValue = null,
         string $shipToEmail = null,
         string $shipToAddress = null,
-        \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds = null,
-        \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds = null,
-        \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null
+        ServerIDsType $serverIds = null,
+        NodeIDsType $nodeIds = null,
+        CustomHostIDType $customHost = null
     ) {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->startDate = $startDate;
@@ -95,28 +95,28 @@ class EmergencyFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $endDate
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param string $FNPTimeZoneValue
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
-     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
-     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $endDate
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  string  $FNPTimeZoneValue
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  \Flexsim\FlexnetOperations\Type\ServerIDsType  $serverIds
+     * @param  \Flexsim\FlexnetOperations\Type\NodeIDsType  $nodeIds
+     * @param  \Flexsim\FlexnetOperations\Type\CustomHostIDType  $customHost
      */
     public static function create(
-        \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier,
+        FulfillmentIdentifierType $fulfillmentIdentifier,
         \DateTimeInterface $startDate,
         \DateTimeInterface $endDate,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null,
+        AttributeDescriptorDataType $licenseModelAttributes = null,
         string $FNPTimeZoneValue = null,
         string $shipToEmail = null,
         string $shipToAddress = null,
-        \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds = null,
-        \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds = null,
-        \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null
+        ServerIDsType $serverIds = null,
+        NodeIDsType $nodeIds = null,
+        CustomHostIDType $customHost = null
     ) {
         return new self(...func_get_args());
     }
@@ -130,7 +130,7 @@ class EmergencyFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
      * @return $this
      */
     public function setFulfillmentIdentifier($fulfillmentIdentifier)
@@ -149,7 +149,7 @@ class EmergencyFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
      * @return $this
      */
     public function setLicenseModelAttributes($licenseModelAttributes)
@@ -168,7 +168,7 @@ class EmergencyFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $FNPTimeZoneValue
+     * @param  string  $FNPTimeZoneValue
      * @return $this
      */
     public function setFNPTimeZoneValue($FNPTimeZoneValue)
@@ -187,7 +187,7 @@ class EmergencyFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $startDate
+     * @param  \DateTimeInterface  $startDate
      * @return $this
      */
     public function setStartDate($startDate)
@@ -206,7 +206,7 @@ class EmergencyFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $endDate
+     * @param  \DateTimeInterface  $endDate
      * @return $this
      */
     public function setEndDate($endDate)
@@ -225,7 +225,7 @@ class EmergencyFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToEmail
+     * @param  string  $shipToEmail
      * @return $this
      */
     public function setShipToEmail($shipToEmail)
@@ -244,7 +244,7 @@ class EmergencyFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToAddress
+     * @param  string  $shipToAddress
      * @return $this
      */
     public function setShipToAddress($shipToAddress)
@@ -263,7 +263,7 @@ class EmergencyFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
+     * @param  \Flexsim\FlexnetOperations\Type\ServerIDsType  $serverIds
      * @return $this
      */
     public function setServerIds($serverIds)
@@ -282,7 +282,7 @@ class EmergencyFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
+     * @param  \Flexsim\FlexnetOperations\Type\NodeIDsType  $nodeIds
      * @return $this
      */
     public function setNodeIds($nodeIds)
@@ -301,7 +301,7 @@ class EmergencyFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param  \Flexsim\FlexnetOperations\Type\CustomHostIDType  $customHost
      * @return $this
      */
     public function setCustomHost($customHost)

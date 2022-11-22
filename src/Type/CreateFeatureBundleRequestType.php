@@ -14,9 +14,9 @@ class CreateFeatureBundleRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateFeatureBundleDataType $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\CreateFeatureBundleDataType  $featureBundle
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreateFeatureBundleDataType $featureBundle)
+    public function __construct(CreateFeatureBundleDataType $featureBundle)
     {
         $this->featureBundle = $featureBundle;
     }
@@ -24,9 +24,9 @@ class CreateFeatureBundleRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateFeatureBundleDataType $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\CreateFeatureBundleDataType  $featureBundle
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreateFeatureBundleDataType $featureBundle)
+    public static function create(CreateFeatureBundleDataType $featureBundle)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class CreateFeatureBundleRequestType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateFeatureBundleDataType $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\CreateFeatureBundleDataType  $featureBundle
      * @return $this
      */
     public function setFeatureBundle($featureBundle)

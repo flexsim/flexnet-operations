@@ -14,9 +14,9 @@ class GeneratePrebuiltLicenseRequestType extends FlexnetType implements RequestI
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataType $requestDataList
+     * @param  \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataType  $requestDataList
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataType $requestDataList)
+    public function __construct(GeneratePrebuiltLicenseDataType $requestDataList)
     {
         $this->requestDataList = $requestDataList;
     }
@@ -24,9 +24,9 @@ class GeneratePrebuiltLicenseRequestType extends FlexnetType implements RequestI
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataType $requestDataList
+     * @param  \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataType  $requestDataList
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataType $requestDataList)
+    public static function create(GeneratePrebuiltLicenseDataType $requestDataList)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class GeneratePrebuiltLicenseRequestType extends FlexnetType implements RequestI
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataType $requestDataList
+     * @param  \Flexsim\FlexnetOperations\Type\GeneratePrebuiltLicenseDataType  $requestDataList
      * @return $this
      */
     public function setRequestDataList($requestDataList)

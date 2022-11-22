@@ -19,10 +19,10 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param array<\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType>|\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  array<\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType>|\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType  $relationship
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType|array $relationship)
+    public function __construct(StatusInfoType $statusInfo, ProductRelationshipDataType|array $relationship)
     {
         $this->statusInfo = $statusInfo;
         $this->relationship = $relationship;
@@ -31,10 +31,10 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param array<\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType>|\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  array<\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType>|\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType  $relationship
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType|array $relationship)
+    public static function create(StatusInfoType $statusInfo, ProductRelationshipDataType|array $relationship)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class GetProductRelationshipsResponseType extends FlexnetType implements ResultI
     }
 
     /**
-     * @param array<\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType>|\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
+     * @param  array<\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType>|\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType  $relationship
      * @return $this
      */
     public function setRelationship($relationship)

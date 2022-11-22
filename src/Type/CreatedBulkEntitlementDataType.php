@@ -22,9 +22,9 @@ class CreatedBulkEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $recordRefNo
-     * @param string $uniqueId
-     * @param string $bulkEntitlementId
+     * @param  string  $recordRefNo
+     * @param  string  $uniqueId
+     * @param  string  $bulkEntitlementId
      */
     public function __construct(string $recordRefNo, string $uniqueId, string $bulkEntitlementId)
     {
@@ -36,9 +36,9 @@ class CreatedBulkEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $recordRefNo
-     * @param string $uniqueId
-     * @param string $bulkEntitlementId
+     * @param  string  $recordRefNo
+     * @param  string  $uniqueId
+     * @param  string  $bulkEntitlementId
      */
     public static function create(string $recordRefNo, string $uniqueId, string $bulkEntitlementId)
     {
@@ -54,7 +54,7 @@ class CreatedBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $recordRefNo
+     * @param  string  $recordRefNo
      * @return $this
      */
     public function setRecordRefNo($recordRefNo)
@@ -73,7 +73,7 @@ class CreatedBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -92,7 +92,7 @@ class CreatedBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $bulkEntitlementId
+     * @param  string  $bulkEntitlementId
      * @return $this
      */
     public function setBulkEntitlementId($bulkEntitlementId)

@@ -19,10 +19,10 @@ class CreateUserRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserDataType $user
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserDataType  $user
+     * @param  string  $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreateUserDataType $user, string $opType = null)
+    public function __construct(CreateUserDataType $user, string $opType = null)
     {
         $this->user = $user;
         $this->opType = $opType;
@@ -31,10 +31,10 @@ class CreateUserRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserDataType $user
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserDataType  $user
+     * @param  string  $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreateUserDataType $user, string $opType = null)
+    public static function create(CreateUserDataType $user, string $opType = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class CreateUserRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserDataType $user
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserDataType  $user
      * @return $this
      */
     public function setUser($user)
@@ -67,7 +67,7 @@ class CreateUserRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param string $opType
+     * @param  string  $opType
      * @return $this
      */
     public function setOpType($opType)

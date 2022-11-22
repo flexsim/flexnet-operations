@@ -12,7 +12,7 @@ class PermissionListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string|array $permission
+     * @param  string|array  $permission
      */
     public function __construct(string $permission)
     {
@@ -22,7 +22,7 @@ class PermissionListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string|array $permission
+     * @param  string|array  $permission
      */
     public static function create(string $permission)
     {
@@ -38,7 +38,7 @@ class PermissionListType extends FlexnetType
     }
 
     /**
-     * @param string|array $permission
+     * @param  string|array  $permission
      * @return $this
      */
     public function setPermission($permission)

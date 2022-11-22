@@ -17,8 +17,8 @@ class CreatedFulfillmentDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array $createdFulfillment
-     * @param \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array $verifiedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array  $createdFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array  $verifiedFulfillment
      */
     public function __construct($createdFulfillment = null, $verifiedFulfillment = null)
     {
@@ -29,8 +29,8 @@ class CreatedFulfillmentDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array $createdFulfillment
-     * @param \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array $verifiedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array  $createdFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array  $verifiedFulfillment
      */
     public static function create($createdFulfillment = null, $verifiedFulfillment = null)
     {
@@ -46,7 +46,7 @@ class CreatedFulfillmentDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array $createdFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedFulfillmentDataType|array  $createdFulfillment
      * @return $this
      */
     public function setCreatedFulfillment($createdFulfillment)
@@ -65,7 +65,7 @@ class CreatedFulfillmentDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array $verifiedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\VerifiedFulfillmentDataType|array  $verifiedFulfillment
      * @return $this
      */
     public function setVerifiedFulfillment($verifiedFulfillment)

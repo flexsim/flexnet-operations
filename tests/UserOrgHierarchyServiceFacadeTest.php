@@ -5,38 +5,17 @@ namespace Flexsim\FlexnetOperations\Tests;
 use Flexsim\FlexnetOperations\Facades\UserOrgHierarchyService;
 use Flexsim\FlexnetOperations\Services\UserOrgHierarchyService\UserOrgHierarchyServiceClient as UserOrgHierarchyServiceClient;
 use Flexsim\FlexnetOperations\Services\UserOrgHierarchyService\v1\UserOrgHierarchyServiceClient as v1UserOrgHierarchyServiceClient;
-use Orchestra\Testbench\TestCase;
 
-class UserOrgHierarchyServiceFacadeTest extends TestCase
-{
-    protected $loadEnvironmentVariables = true;
+it('resolves UserOrgHierarchyServiceClient client', function () {
+    $client = UserOrgHierarchyService::client();
 
-    /**
-     * Get package providers.
-     *
-     * @param  \Illuminate\Foundation\Application  $app
-     *
-     * @return array
-     */
-    protected function getPackageProviders($app)
-    {
-        return [
-            'Flexsim\FlexnetOperations\FlexnetOperationsServiceProvider',
-        ];
-    }
+    $this->assertInstanceOf(v1UserOrgHierarchyServiceClient::class, $client);
 
-    public function testClientFunction()
-    {
-        $client = UserOrgHierarchyService::client();
+    $client = UserOrgHierarchyService::version('base')->client();
 
-        $this->assertInstanceOf(v1UserOrgHierarchyServiceClient::class, $client);
+    $this->assertInstanceOf(UserOrgHierarchyServiceClient::class, $client);
 
-        $client = UserOrgHierarchyService::version('base')->client();
+    $client = UserOrgHierarchyService::version('v1')->client();
 
-        $this->assertInstanceOf(UserOrgHierarchyServiceClient::class, $client);
-
-        $client = UserOrgHierarchyService::version('v1')->client();
-
-        $this->assertInstanceOf(v1UserOrgHierarchyServiceClient::class, $client);
-    }
-}
+    $this->assertInstanceOf(v1UserOrgHierarchyServiceClient::class, $client);
+});

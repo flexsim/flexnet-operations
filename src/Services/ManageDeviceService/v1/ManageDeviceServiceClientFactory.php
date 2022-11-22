@@ -15,7 +15,7 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class ManageDeviceServiceClientFactory
 {
-    public static function factory(string $wsdl, string $username, string $password): \Flexsim\FlexnetOperations\Services\ManageDeviceService\v1\ManageDeviceServiceClient
+    public static function factory(string $wsdl, string $username, string $password): ManageDeviceServiceClient
     {
         $engine = DefaultEngineFactory::create(
             ExtSoapOptions::defaults($wsdl, [])

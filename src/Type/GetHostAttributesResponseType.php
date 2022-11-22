@@ -19,10 +19,10 @@ class GetHostAttributesResponseType extends FlexnetType implements ResultInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\GetHostAttributesDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\GetHostAttributesDataType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetHostAttributesDataType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetHostAttributesDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
@@ -31,10 +31,10 @@ class GetHostAttributesResponseType extends FlexnetType implements ResultInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\GetHostAttributesDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\GetHostAttributesDataType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetHostAttributesDataType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetHostAttributesDataType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetHostAttributesResponseType extends FlexnetType implements ResultInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class GetHostAttributesResponseType extends FlexnetType implements ResultInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetHostAttributesDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\GetHostAttributesDataType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

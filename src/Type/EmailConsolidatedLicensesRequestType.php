@@ -29,12 +29,12 @@ class EmailConsolidatedLicensesRequestType extends FlexnetType implements Reques
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseIdListType $consolidatedLicenseIdList
-     * @param bool $validateEmailAddresses
-     * @param \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
-     * @param string $locale
+     * @param  \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseIdListType  $consolidatedLicenseIdList
+     * @param  bool  $validateEmailAddresses
+     * @param  \Flexsim\FlexnetOperations\Type\EmailContactListType  $emailIdList
+     * @param  string  $locale
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ConsolidatedLicenseIdListType $consolidatedLicenseIdList, bool $validateEmailAddresses = null, \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList = null, string $locale = null)
+    public function __construct(ConsolidatedLicenseIdListType $consolidatedLicenseIdList, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, string $locale = null)
     {
         $this->consolidatedLicenseIdList = $consolidatedLicenseIdList;
         $this->validateEmailAddresses = $validateEmailAddresses;
@@ -45,12 +45,12 @@ class EmailConsolidatedLicensesRequestType extends FlexnetType implements Reques
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseIdListType $consolidatedLicenseIdList
-     * @param bool $validateEmailAddresses
-     * @param \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
-     * @param string $locale
+     * @param  \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseIdListType  $consolidatedLicenseIdList
+     * @param  bool  $validateEmailAddresses
+     * @param  \Flexsim\FlexnetOperations\Type\EmailContactListType  $emailIdList
+     * @param  string  $locale
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ConsolidatedLicenseIdListType $consolidatedLicenseIdList, bool $validateEmailAddresses = null, \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList = null, string $locale = null)
+    public static function create(ConsolidatedLicenseIdListType $consolidatedLicenseIdList, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, string $locale = null)
     {
         return new self(...func_get_args());
     }
@@ -64,7 +64,7 @@ class EmailConsolidatedLicensesRequestType extends FlexnetType implements Reques
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseIdListType $consolidatedLicenseIdList
+     * @param  \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseIdListType  $consolidatedLicenseIdList
      * @return $this
      */
     public function setConsolidatedLicenseIdList($consolidatedLicenseIdList)
@@ -83,7 +83,7 @@ class EmailConsolidatedLicensesRequestType extends FlexnetType implements Reques
     }
 
     /**
-     * @param bool $validateEmailAddresses
+     * @param  bool  $validateEmailAddresses
      * @return $this
      */
     public function setValidateEmailAddresses($validateEmailAddresses)
@@ -102,7 +102,7 @@ class EmailConsolidatedLicensesRequestType extends FlexnetType implements Reques
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
+     * @param  \Flexsim\FlexnetOperations\Type\EmailContactListType  $emailIdList
      * @return $this
      */
     public function setEmailIdList($emailIdList)
@@ -121,7 +121,7 @@ class EmailConsolidatedLicensesRequestType extends FlexnetType implements Reques
     }
 
     /**
-     * @param string $locale
+     * @param  string  $locale
      * @return $this
      */
     public function setLocale($locale)

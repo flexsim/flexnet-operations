@@ -99,8 +99,8 @@ class FlexnetOperationsClientManager
     /**
      * create a new service client for the specified connection and version
      *
-     * @param string $connection the name of the connection to use
-     * @param string $version the version of the service to use
+     * @param  string  $connection the name of the connection to use
+     * @param  string  $version the version of the service to use
      */
     protected function createClient($connection, $version)
     {
@@ -146,7 +146,7 @@ class FlexnetOperationsClientManager
     /**
      * Validate the configuration for the connection
      *
-     * @param array $config
+     * @param  array  $config
      *
      * @throws \InvalidArgumentException
      */
@@ -164,35 +164,33 @@ class FlexnetOperationsClientManager
     /**
      * return the wsdl path generated from the config
      *
-     * @param array $config the configuration for a specific connection
-     *
+     * @param  array  $config the configuration for a specific connection
      * @return string
      */
     protected function createWsdlPath($config): string
     {
-        $baseUrl = $config['url'] . '/services' ?? ($config['scheme'] ? $config['scheme'] . '://' : '') . $config['domain'] . $config['uri'];
+        $baseUrl = $config['url'].'/services' ?? ($config['scheme'] ? $config['scheme'].'://' : '').$config['domain'].$config['uri'];
 
-        return $baseUrl .
+        return $baseUrl.
             (($activeVersion = $this->activeVersion()) == 'base'
                 ? ''
-                : '/' . $activeVersion)
-            . '/' . $this->getServiceName() . '?wsdl';
+                : '/'.$activeVersion)
+            .'/'.$this->getServiceName().'?wsdl';
     }
 
     /**
      * return the path to the service client factory for a specific version of a service
      *
-     * @param string $version the version of the service to use
-     *
+     * @param  string  $version the version of the service to use
      * @return string
      */
     protected function getFactoryClass($version): string
     {
-        $class = $this->serviceNamespace .
+        $class = $this->serviceNamespace.
             ($version == 'base'
                 ? ''
-                : '\\' . $version)
-            . '\\' . $this->getServiceName() . 'ClientFactory';
+                : '\\'.$version)
+            .'\\'.$this->getServiceName().'ClientFactory';
 
         return $class;
     }

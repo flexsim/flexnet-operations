@@ -82,23 +82,23 @@ class OrganizationQueryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgDisplayName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $address1
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $address2
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $city
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $state
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $country
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $region
-     * @param bool $onlyRootOrgs
-     * @param string $orgType
-     * @param \Flexsim\FlexnetOperations\Type\OrgTypeList $orgTypeList
-     * @param \Flexsim\FlexnetOperations\Type\OrgCustomAttributesQueryListType $customAttributes
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orgName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orgDisplayName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $address1
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $address2
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $city
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $state
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $zipcode
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $country
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $region
+     * @param  bool  $onlyRootOrgs
+     * @param  string  $orgType
+     * @param  \Flexsim\FlexnetOperations\Type\OrgTypeList  $orgTypeList
+     * @param  \Flexsim\FlexnetOperations\Type\OrgCustomAttributesQueryListType  $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $lastModifiedDateTime
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $orgName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgDisplayName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $address1 = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $address2 = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $city = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $country = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $region = null, bool $onlyRootOrgs = null, string $orgType = null, \Flexsim\FlexnetOperations\Type\OrgTypeList $orgTypeList = null, \Flexsim\FlexnetOperations\Type\OrgCustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null)
+    public function __construct(SimpleQueryType $orgName = null, SimpleQueryType $orgDisplayName = null, SimpleQueryType $description = null, SimpleQueryType $address1 = null, SimpleQueryType $address2 = null, SimpleQueryType $city = null, SimpleQueryType $state = null, SimpleQueryType $zipcode = null, SimpleQueryType $country = null, SimpleQueryType $region = null, bool $onlyRootOrgs = null, string $orgType = null, OrgTypeList $orgTypeList = null, OrgCustomAttributesQueryListType $customAttributes = null, DateTimeQueryType $lastModifiedDateTime = null)
     {
         $this->orgName = $orgName;
         $this->orgDisplayName = $orgDisplayName;
@@ -120,23 +120,23 @@ class OrganizationQueryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgDisplayName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $address1
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $address2
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $city
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $state
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $country
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $region
-     * @param bool $onlyRootOrgs
-     * @param string $orgType
-     * @param \Flexsim\FlexnetOperations\Type\OrgTypeList $orgTypeList
-     * @param \Flexsim\FlexnetOperations\Type\OrgCustomAttributesQueryListType $customAttributes
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orgName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orgDisplayName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $address1
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $address2
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $city
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $state
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $zipcode
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $country
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $region
+     * @param  bool  $onlyRootOrgs
+     * @param  string  $orgType
+     * @param  \Flexsim\FlexnetOperations\Type\OrgTypeList  $orgTypeList
+     * @param  \Flexsim\FlexnetOperations\Type\OrgCustomAttributesQueryListType  $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $lastModifiedDateTime
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $orgName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgDisplayName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $address1 = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $address2 = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $city = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $state = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $country = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $region = null, bool $onlyRootOrgs = null, string $orgType = null, \Flexsim\FlexnetOperations\Type\OrgTypeList $orgTypeList = null, \Flexsim\FlexnetOperations\Type\OrgCustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime = null)
+    public static function create(SimpleQueryType $orgName = null, SimpleQueryType $orgDisplayName = null, SimpleQueryType $description = null, SimpleQueryType $address1 = null, SimpleQueryType $address2 = null, SimpleQueryType $city = null, SimpleQueryType $state = null, SimpleQueryType $zipcode = null, SimpleQueryType $country = null, SimpleQueryType $region = null, bool $onlyRootOrgs = null, string $orgType = null, OrgTypeList $orgTypeList = null, OrgCustomAttributesQueryListType $customAttributes = null, DateTimeQueryType $lastModifiedDateTime = null)
     {
         return new self(...func_get_args());
     }
@@ -150,7 +150,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orgName
      * @return $this
      */
     public function setOrgName($orgName)
@@ -169,7 +169,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orgDisplayName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orgDisplayName
      * @return $this
      */
     public function setOrgDisplayName($orgDisplayName)
@@ -188,7 +188,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
      * @return $this
      */
     public function setDescription($description)
@@ -207,7 +207,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $address1
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $address1
      * @return $this
      */
     public function setAddress1($address1)
@@ -226,7 +226,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $address2
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $address2
      * @return $this
      */
     public function setAddress2($address2)
@@ -245,7 +245,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $city
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $city
      * @return $this
      */
     public function setCity($city)
@@ -264,7 +264,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $state
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $state
      * @return $this
      */
     public function setState($state)
@@ -283,7 +283,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $zipcode
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $zipcode
      * @return $this
      */
     public function setZipcode($zipcode)
@@ -302,7 +302,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $country
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $country
      * @return $this
      */
     public function setCountry($country)
@@ -321,7 +321,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $region
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $region
      * @return $this
      */
     public function setRegion($region)
@@ -340,7 +340,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param bool $onlyRootOrgs
+     * @param  bool  $onlyRootOrgs
      * @return $this
      */
     public function setOnlyRootOrgs($onlyRootOrgs)
@@ -359,7 +359,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param string $orgType
+     * @param  string  $orgType
      * @return $this
      */
     public function setOrgType($orgType)
@@ -378,7 +378,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrgTypeList $orgTypeList
+     * @param  \Flexsim\FlexnetOperations\Type\OrgTypeList  $orgTypeList
      * @return $this
      */
     public function setOrgTypeList($orgTypeList)
@@ -397,7 +397,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrgCustomAttributesQueryListType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\OrgCustomAttributesQueryListType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)
@@ -416,7 +416,7 @@ class OrganizationQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $lastModifiedDateTime
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $lastModifiedDateTime
      * @return $this
      */
     public function setLastModifiedDateTime($lastModifiedDateTime)

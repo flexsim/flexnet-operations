@@ -19,10 +19,10 @@ class CreateSimpleEntitlementRequestType extends FlexnetType implements RequestI
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType  $simpleEntitlement
+     * @param  string  $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement, string $opType = null)
+    public function __construct(CreateSimpleEntitlementDataType $simpleEntitlement, string $opType = null)
     {
         $this->simpleEntitlement = $simpleEntitlement;
         $this->opType = $opType;
@@ -31,10 +31,10 @@ class CreateSimpleEntitlementRequestType extends FlexnetType implements RequestI
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType  $simpleEntitlement
+     * @param  string  $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement, string $opType = null)
+    public static function create(CreateSimpleEntitlementDataType $simpleEntitlement, string $opType = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class CreateSimpleEntitlementRequestType extends FlexnetType implements RequestI
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType $simpleEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementDataType  $simpleEntitlement
      * @return $this
      */
     public function setSimpleEntitlement($simpleEntitlement)
@@ -67,7 +67,7 @@ class CreateSimpleEntitlementRequestType extends FlexnetType implements RequestI
     }
 
     /**
-     * @param string $opType
+     * @param  string  $opType
      * @return $this
      */
     public function setOpType($opType)

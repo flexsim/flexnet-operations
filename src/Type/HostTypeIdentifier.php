@@ -12,7 +12,7 @@ class HostTypeIdentifier extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $name
+     * @param  string  $name
      */
     public function __construct(string $name)
     {
@@ -22,7 +22,7 @@ class HostTypeIdentifier extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $name
+     * @param  string  $name
      */
     public static function create(string $name)
     {
@@ -38,7 +38,7 @@ class HostTypeIdentifier extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)

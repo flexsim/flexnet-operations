@@ -12,7 +12,7 @@ class UserOrganizationsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UserOrganizationType|array $orgRoles
+     * @param  \Flexsim\FlexnetOperations\Type\UserOrganizationType|array  $orgRoles
      */
     public function __construct($orgRoles = null)
     {
@@ -22,7 +22,7 @@ class UserOrganizationsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UserOrganizationType|array $orgRoles
+     * @param  \Flexsim\FlexnetOperations\Type\UserOrganizationType|array  $orgRoles
      */
     public static function create($orgRoles = null)
     {
@@ -38,7 +38,7 @@ class UserOrganizationsListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserOrganizationType|array $orgRoles
+     * @param  \Flexsim\FlexnetOperations\Type\UserOrganizationType|array  $orgRoles
      * @return $this
      */
     public function setOrgRoles($orgRoles)

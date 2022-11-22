@@ -17,10 +17,10 @@ class FailedUniformSuiteStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType $suite
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType  $suite
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType $suite, string $reason)
+    public function __construct(UniformSuiteStateDataType $suite, string $reason)
     {
         $this->suite = $suite;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedUniformSuiteStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType $suite
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType  $suite
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType $suite, string $reason)
+    public static function create(UniformSuiteStateDataType $suite, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedUniformSuiteStateDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType $suite
+     * @param  \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType  $suite
      * @return $this
      */
     public function setSuite($suite)
@@ -65,7 +65,7 @@ class FailedUniformSuiteStateDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

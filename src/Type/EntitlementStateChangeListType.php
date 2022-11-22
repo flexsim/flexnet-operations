@@ -12,7 +12,7 @@ class EntitlementStateChangeListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType|array $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType|array  $entitlement
      */
     public function __construct($entitlement = null)
     {
@@ -22,7 +22,7 @@ class EntitlementStateChangeListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType|array $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType|array  $entitlement
      */
     public static function create($entitlement = null)
     {
@@ -38,7 +38,7 @@ class EntitlementStateChangeListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType|array $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementStateChangeDataType|array  $entitlement
      * @return $this
      */
     public function setEntitlement($entitlement)

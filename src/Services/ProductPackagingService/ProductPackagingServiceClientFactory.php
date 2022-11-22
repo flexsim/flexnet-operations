@@ -15,7 +15,7 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class ProductPackagingServiceClientFactory
 {
-    public static function factory(string $wsdl, string $username, string $password): \Flexsim\FlexnetOperations\Services\ProductPackagingService\ProductPackagingServiceClient
+    public static function factory(string $wsdl, string $username, string $password): ProductPackagingServiceClient
     {
         $engine = DefaultEngineFactory::create(
             ExtSoapOptions::defaults($wsdl, [])

@@ -15,7 +15,7 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class UsageServiceClientFactory
 {
-    public static function factory(string $wsdl, string $username, string $password): \Flexsim\FlexnetOperations\Services\UsageService\v1\UsageServiceClient
+    public static function factory(string $wsdl, string $username, string $password): UsageServiceClient
     {
         $engine = DefaultEngineFactory::create(
             ExtSoapOptions::defaults($wsdl, [])

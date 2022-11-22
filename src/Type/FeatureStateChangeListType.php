@@ -12,7 +12,7 @@ class FeatureStateChangeListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType|array $feature
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType|array  $feature
      */
     public function __construct($feature = null)
     {
@@ -22,7 +22,7 @@ class FeatureStateChangeListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType|array $feature
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType|array  $feature
      */
     public static function create($feature = null)
     {
@@ -38,7 +38,7 @@ class FeatureStateChangeListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType|array $feature
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureStateChangeDataType|array  $feature
      * @return $this
      */
     public function setFeature($feature)

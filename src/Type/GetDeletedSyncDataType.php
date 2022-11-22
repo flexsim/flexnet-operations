@@ -12,7 +12,7 @@ class GetDeletedSyncDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeletedSyncDataType|array $deletedSync
+     * @param  \Flexsim\FlexnetOperations\Type\DeletedSyncDataType|array  $deletedSync
      */
     public function __construct($deletedSync = null)
     {
@@ -22,7 +22,7 @@ class GetDeletedSyncDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeletedSyncDataType|array $deletedSync
+     * @param  \Flexsim\FlexnetOperations\Type\DeletedSyncDataType|array  $deletedSync
      */
     public static function create($deletedSync = null)
     {
@@ -38,7 +38,7 @@ class GetDeletedSyncDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeletedSyncDataType $deletedSync
+     * @param  \Flexsim\FlexnetOperations\Type\DeletedSyncDataType  $deletedSync
      * @return $this
      */
     public function setDeletedSync($deletedSync)

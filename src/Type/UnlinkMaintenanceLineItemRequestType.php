@@ -14,9 +14,9 @@ class UnlinkMaintenanceLineItemRequestType extends FlexnetType implements Reques
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemListType $unlinkMaintenanceLineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemListType  $unlinkMaintenanceLineItemList
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemListType $unlinkMaintenanceLineItemList)
+    public function __construct(UnlinkMaintenanceLineItemListType $unlinkMaintenanceLineItemList)
     {
         $this->unlinkMaintenanceLineItemList = $unlinkMaintenanceLineItemList;
     }
@@ -24,9 +24,9 @@ class UnlinkMaintenanceLineItemRequestType extends FlexnetType implements Reques
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemListType $unlinkMaintenanceLineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemListType  $unlinkMaintenanceLineItemList
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemListType $unlinkMaintenanceLineItemList)
+    public static function create(UnlinkMaintenanceLineItemListType $unlinkMaintenanceLineItemList)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class UnlinkMaintenanceLineItemRequestType extends FlexnetType implements Reques
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemListType $unlinkMaintenanceLineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemListType  $unlinkMaintenanceLineItemList
      * @return $this
      */
     public function setUnlinkMaintenanceLineItemList($unlinkMaintenanceLineItemList)

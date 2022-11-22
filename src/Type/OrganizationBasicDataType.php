@@ -17,8 +17,8 @@ class OrganizationBasicDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $orgUnitId
-     * @param string $displayName
+     * @param  string  $orgUnitId
+     * @param  string  $displayName
      */
     public function __construct(string $orgUnitId, string $displayName)
     {
@@ -29,8 +29,8 @@ class OrganizationBasicDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $orgUnitId
-     * @param string $displayName
+     * @param  string  $orgUnitId
+     * @param  string  $displayName
      */
     public static function create(string $orgUnitId, string $displayName)
     {
@@ -46,7 +46,7 @@ class OrganizationBasicDataType extends FlexnetType
     }
 
     /**
-     * @param string $orgUnitId
+     * @param  string  $orgUnitId
      * @return $this
      */
     public function setOrgUnitId($orgUnitId)
@@ -65,7 +65,7 @@ class OrganizationBasicDataType extends FlexnetType
     }
 
     /**
-     * @param string $displayName
+     * @param  string  $displayName
      * @return $this
      */
     public function setDisplayName($displayName)

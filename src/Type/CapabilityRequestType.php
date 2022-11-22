@@ -37,14 +37,14 @@ class CapabilityRequestType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param int $lastUpdateTime
-     * @param bool $force
-     * @param \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary $vendorDictionary
-     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemDataType|array $lineItem
-     * @param bool $bufferLicense
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  int  $lastUpdateTime
+     * @param  bool  $force
+     * @param  \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary  $vendorDictionary
+     * @param  \Flexsim\FlexnetOperations\Type\LinkLineItemDataType|array  $lineItem
+     * @param  bool  $bufferLicense
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, int $lastUpdateTime = null, bool $force = null, \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary $vendorDictionary = null, $lineItem = null, bool $bufferLicense = null)
+    public function __construct(DeviceIdentifier $deviceIdentifier, int $lastUpdateTime = null, bool $force = null, GenerateCapabilityResponseDictionary $vendorDictionary = null, $lineItem = null, bool $bufferLicense = null)
     {
         $this->deviceIdentifier = $deviceIdentifier;
         $this->lastUpdateTime = $lastUpdateTime;
@@ -57,14 +57,14 @@ class CapabilityRequestType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param int $lastUpdateTime
-     * @param bool $force
-     * @param \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary $vendorDictionary
-     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemDataType|array $lineItem
-     * @param bool $bufferLicense
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  int  $lastUpdateTime
+     * @param  bool  $force
+     * @param  \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary  $vendorDictionary
+     * @param  \Flexsim\FlexnetOperations\Type\LinkLineItemDataType|array  $lineItem
+     * @param  bool  $bufferLicense
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, int $lastUpdateTime = null, bool $force = null, \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary $vendorDictionary = null, $lineItem = null, bool $bufferLicense = null)
+    public static function create(DeviceIdentifier $deviceIdentifier, int $lastUpdateTime = null, bool $force = null, GenerateCapabilityResponseDictionary $vendorDictionary = null, $lineItem = null, bool $bufferLicense = null)
     {
         return new self(...func_get_args());
     }
@@ -78,7 +78,7 @@ class CapabilityRequestType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
      * @return $this
      */
     public function setDeviceIdentifier($deviceIdentifier)
@@ -97,7 +97,7 @@ class CapabilityRequestType extends FlexnetType
     }
 
     /**
-     * @param int $lastUpdateTime
+     * @param  int  $lastUpdateTime
      * @return $this
      */
     public function setLastUpdateTime($lastUpdateTime)
@@ -116,7 +116,7 @@ class CapabilityRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $force
+     * @param  bool  $force
      * @return $this
      */
     public function setForce($force)
@@ -135,7 +135,7 @@ class CapabilityRequestType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary $vendorDictionary
+     * @param  \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionary  $vendorDictionary
      * @return $this
      */
     public function setVendorDictionary($vendorDictionary)
@@ -154,7 +154,7 @@ class CapabilityRequestType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\LinkLineItemDataType  $lineItem
      * @return $this
      */
     public function setLineItem($lineItem)
@@ -173,7 +173,7 @@ class CapabilityRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $bufferLicense
+     * @param  bool  $bufferLicense
      * @return $this
      */
     public function setBufferLicense($bufferLicense)

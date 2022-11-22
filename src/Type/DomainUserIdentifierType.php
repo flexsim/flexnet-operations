@@ -17,10 +17,10 @@ class DomainUserIdentifierType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $uniqueId
-     * @param \Flexsim\FlexnetOperations\Type\DomainUserPKType $primaryKeys
+     * @param  string  $uniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\DomainUserPKType  $primaryKeys
      */
-    public function __construct(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\DomainUserPKType $primaryKeys = null)
+    public function __construct(string $uniqueId = null, DomainUserPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
@@ -29,10 +29,10 @@ class DomainUserIdentifierType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
-     * @param \Flexsim\FlexnetOperations\Type\DomainUserPKType $primaryKeys
+     * @param  string  $uniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\DomainUserPKType  $primaryKeys
      */
-    public static function create(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\DomainUserPKType $primaryKeys = null)
+    public static function create(string $uniqueId = null, DomainUserPKType $primaryKeys = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class DomainUserIdentifierType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -65,7 +65,7 @@ class DomainUserIdentifierType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DomainUserPKType $primaryKeys
+     * @param  \Flexsim\FlexnetOperations\Type\DomainUserPKType  $primaryKeys
      * @return $this
      */
     public function setPrimaryKeys($primaryKeys)

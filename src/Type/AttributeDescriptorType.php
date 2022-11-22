@@ -37,12 +37,12 @@ class AttributeDescriptorType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $attributeName
-     * @param string $stringValue
-     * @param \DateTimeInterface $dateValue
-     * @param bool $booleanValue
-     * @param int $integerValue
-     * @param string|array $arrayValue
+     * @param  string  $attributeName
+     * @param  string  $stringValue
+     * @param  \DateTimeInterface  $dateValue
+     * @param  bool  $booleanValue
+     * @param  int  $integerValue
+     * @param  string|array  $arrayValue
      */
     public function __construct(string $attributeName, string $stringValue = null, \DateTimeInterface $dateValue = null, bool $booleanValue = null, int $integerValue = null, $arrayValue = null)
     {
@@ -57,12 +57,12 @@ class AttributeDescriptorType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $attributeName
-     * @param string $stringValue
-     * @param \DateTimeInterface $dateValue
-     * @param bool $booleanValue
-     * @param int $integerValue
-     * @param string|array $arrayValue
+     * @param  string  $attributeName
+     * @param  string  $stringValue
+     * @param  \DateTimeInterface  $dateValue
+     * @param  bool  $booleanValue
+     * @param  int  $integerValue
+     * @param  string|array  $arrayValue
      */
     public static function create(string $attributeName, string $stringValue = null, \DateTimeInterface $dateValue = null, bool $booleanValue = null, int $integerValue = null, $arrayValue = null)
     {
@@ -78,7 +78,7 @@ class AttributeDescriptorType extends FlexnetType
     }
 
     /**
-     * @param string $attributeName
+     * @param  string  $attributeName
      * @return $this
      */
     public function setAttributeName($attributeName)
@@ -97,7 +97,7 @@ class AttributeDescriptorType extends FlexnetType
     }
 
     /**
-     * @param string $stringValue
+     * @param  string  $stringValue
      * @return $this
      */
     public function setStringValue($stringValue)
@@ -116,7 +116,7 @@ class AttributeDescriptorType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $dateValue
+     * @param  \DateTimeInterface  $dateValue
      * @return $this
      */
     public function setDateValue($dateValue)
@@ -135,7 +135,7 @@ class AttributeDescriptorType extends FlexnetType
     }
 
     /**
-     * @param bool $booleanValue
+     * @param  bool  $booleanValue
      * @return $this
      */
     public function setBooleanValue($booleanValue)
@@ -154,7 +154,7 @@ class AttributeDescriptorType extends FlexnetType
     }
 
     /**
-     * @param int $integerValue
+     * @param  int  $integerValue
      * @return $this
      */
     public function setIntegerValue($integerValue)
@@ -173,7 +173,7 @@ class AttributeDescriptorType extends FlexnetType
     }
 
     /**
-     * @param string $arrayValue
+     * @param  string  $arrayValue
      * @return $this
      */
     public function setArrayValue($arrayValue)

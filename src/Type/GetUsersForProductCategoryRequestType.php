@@ -14,9 +14,9 @@ class GetUsersForProductCategoryRequestType extends FlexnetType implements Reque
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productCategory
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory)
+    public function __construct(ProductCategoryDataType $productCategory)
     {
         $this->productCategory = $productCategory;
     }
@@ -24,9 +24,9 @@ class GetUsersForProductCategoryRequestType extends FlexnetType implements Reque
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productCategory
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory)
+    public static function create(ProductCategoryDataType $productCategory)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class GetUsersForProductCategoryRequestType extends FlexnetType implements Reque
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productCategory
      * @return $this
      */
     public function setProductCategory($productCategory)

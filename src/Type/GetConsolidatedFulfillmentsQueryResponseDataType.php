@@ -12,7 +12,7 @@ class GetConsolidatedFulfillmentsQueryResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType|array $consolidatedLicense
+     * @param  \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType|array  $consolidatedLicense
      */
     public function __construct($consolidatedLicense = null)
     {
@@ -22,7 +22,7 @@ class GetConsolidatedFulfillmentsQueryResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType|array $consolidatedLicense
+     * @param  \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType|array  $consolidatedLicense
      */
     public static function create($consolidatedLicense = null)
     {
@@ -38,7 +38,7 @@ class GetConsolidatedFulfillmentsQueryResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType $consolidatedLicense
+     * @param  \Flexsim\FlexnetOperations\Type\ConsolidatedLicenseDataType  $consolidatedLicense
      * @return $this
      */
     public function setConsolidatedLicense($consolidatedLicense)

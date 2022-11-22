@@ -147,36 +147,36 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\IdType $entitlementId
-     * @param string $soldTo
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param string $FNPTimeZoneValue
-     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param string $orderId
-     * @param string $orderLineNumber
-     * @param string $startDateOption
-     * @param bool $isPermanent
-     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @param \DateTimeInterface $expirationDate
-     * @param \DateTimeInterface $versionDate
-     * @param \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
-     * @param int $numberOfCopies
-     * @param string $description
-     * @param bool $autoDeploy
-     * @param \Flexsim\FlexnetOperations\Type\UpdateEntitledProductDataListType $updatedEntitledProducts
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @param bool $allowPortalLogin
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $entitlementId
+     * @param  string  $soldTo
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $product
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType  $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $alternateLicenseModel1
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $alternateLicenseModel2
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  string  $FNPTimeZoneValue
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyAttributesListType  $policyAttributes
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  string  $orderId
+     * @param  string  $orderLineNumber
+     * @param  string  $startDateOption
+     * @param  bool  $isPermanent
+     * @param  \Flexsim\FlexnetOperations\Type\DurationType  $term
+     * @param  \DateTimeInterface  $expirationDate
+     * @param  \DateTimeInterface  $versionDate
+     * @param  \Flexsim\FlexnetOperations\Type\VersionDateAttributesType  $versionDateAttributes
+     * @param  int  $numberOfCopies
+     * @param  string  $description
+     * @param  bool  $autoDeploy
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateEntitledProductDataListType  $updatedEntitledProducts
+     * @param  \Flexsim\FlexnetOperations\Type\EntitledProductDataListType  $entitledProducts
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
+     * @param  bool  $allowPortalLogin
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexsim\FlexnetOperations\Type\IdType $entitlementId = null, string $soldTo = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes = null, string $shipToEmail = null, string $shipToAddress = null, string $orderId = null, string $orderLineNumber = null, string $startDateOption = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, int $numberOfCopies = null, string $description = null, bool $autoDeploy = null, \Flexsim\FlexnetOperations\Type\UpdateEntitledProductDataListType $updatedEntitledProducts = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null)
+    public function __construct(EntitlementIdentifierType $entitlementIdentifier, IdType $entitlementId = null, string $soldTo = null, ProductIdentifierType $product = null, PartNumberIdentifierType $partNumber = null, LicenseModelIdentifierType $licenseModel = null, LicenseModelIdentifierType $alternateLicenseModel1 = null, LicenseModelIdentifierType $alternateLicenseModel2 = null, AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, PolicyAttributesListType $policyAttributes = null, string $shipToEmail = null, string $shipToAddress = null, string $orderId = null, string $orderLineNumber = null, string $startDateOption = null, bool $isPermanent = null, DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, VersionDateAttributesType $versionDateAttributes = null, int $numberOfCopies = null, string $description = null, bool $autoDeploy = null, UpdateEntitledProductDataListType $updatedEntitledProducts = null, EntitledProductDataListType $entitledProducts = null, ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->entitlementId = $entitlementId;
@@ -211,36 +211,36 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\IdType $entitlementId
-     * @param string $soldTo
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param string $FNPTimeZoneValue
-     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param string $orderId
-     * @param string $orderLineNumber
-     * @param string $startDateOption
-     * @param bool $isPermanent
-     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @param \DateTimeInterface $expirationDate
-     * @param \DateTimeInterface $versionDate
-     * @param \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
-     * @param int $numberOfCopies
-     * @param string $description
-     * @param bool $autoDeploy
-     * @param \Flexsim\FlexnetOperations\Type\UpdateEntitledProductDataListType $updatedEntitledProducts
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @param bool $allowPortalLogin
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $entitlementId
+     * @param  string  $soldTo
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $product
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType  $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $alternateLicenseModel1
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $alternateLicenseModel2
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  string  $FNPTimeZoneValue
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyAttributesListType  $policyAttributes
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  string  $orderId
+     * @param  string  $orderLineNumber
+     * @param  string  $startDateOption
+     * @param  bool  $isPermanent
+     * @param  \Flexsim\FlexnetOperations\Type\DurationType  $term
+     * @param  \DateTimeInterface  $expirationDate
+     * @param  \DateTimeInterface  $versionDate
+     * @param  \Flexsim\FlexnetOperations\Type\VersionDateAttributesType  $versionDateAttributes
+     * @param  int  $numberOfCopies
+     * @param  string  $description
+     * @param  bool  $autoDeploy
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateEntitledProductDataListType  $updatedEntitledProducts
+     * @param  \Flexsim\FlexnetOperations\Type\EntitledProductDataListType  $entitledProducts
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
+     * @param  bool  $allowPortalLogin
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexsim\FlexnetOperations\Type\IdType $entitlementId = null, string $soldTo = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes = null, string $shipToEmail = null, string $shipToAddress = null, string $orderId = null, string $orderLineNumber = null, string $startDateOption = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, int $numberOfCopies = null, string $description = null, bool $autoDeploy = null, \Flexsim\FlexnetOperations\Type\UpdateEntitledProductDataListType $updatedEntitledProducts = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null)
+    public static function create(EntitlementIdentifierType $entitlementIdentifier, IdType $entitlementId = null, string $soldTo = null, ProductIdentifierType $product = null, PartNumberIdentifierType $partNumber = null, LicenseModelIdentifierType $licenseModel = null, LicenseModelIdentifierType $alternateLicenseModel1 = null, LicenseModelIdentifierType $alternateLicenseModel2 = null, AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, PolicyAttributesListType $policyAttributes = null, string $shipToEmail = null, string $shipToAddress = null, string $orderId = null, string $orderLineNumber = null, string $startDateOption = null, bool $isPermanent = null, DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, VersionDateAttributesType $versionDateAttributes = null, int $numberOfCopies = null, string $description = null, bool $autoDeploy = null, UpdateEntitledProductDataListType $updatedEntitledProducts = null, EntitledProductDataListType $entitledProducts = null, ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null)
     {
         return new self(...func_get_args());
     }
@@ -254,7 +254,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
      * @return $this
      */
     public function setEntitlementIdentifier($entitlementIdentifier)
@@ -273,7 +273,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\IdType $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)
@@ -292,7 +292,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $soldTo
+     * @param  string  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -311,7 +311,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $product
      * @return $this
      */
     public function setProduct($product)
@@ -330,7 +330,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType  $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -349,7 +349,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModel
      * @return $this
      */
     public function setLicenseModel($licenseModel)
@@ -368,7 +368,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $alternateLicenseModel1
      * @return $this
      */
     public function setAlternateLicenseModel1($alternateLicenseModel1)
@@ -387,7 +387,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $alternateLicenseModel2
      * @return $this
      */
     public function setAlternateLicenseModel2($alternateLicenseModel2)
@@ -406,7 +406,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
      * @return $this
      */
     public function setLicenseModelAttributes($licenseModelAttributes)
@@ -425,7 +425,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $FNPTimeZoneValue
+     * @param  string  $FNPTimeZoneValue
      * @return $this
      */
     public function setFNPTimeZoneValue($FNPTimeZoneValue)
@@ -444,7 +444,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyAttributesListType  $policyAttributes
      * @return $this
      */
     public function setPolicyAttributes($policyAttributes)
@@ -463,7 +463,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToEmail
+     * @param  string  $shipToEmail
      * @return $this
      */
     public function setShipToEmail($shipToEmail)
@@ -482,7 +482,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToAddress
+     * @param  string  $shipToAddress
      * @return $this
      */
     public function setShipToAddress($shipToAddress)
@@ -501,7 +501,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $orderId
+     * @param  string  $orderId
      * @return $this
      */
     public function setOrderId($orderId)
@@ -520,7 +520,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $orderLineNumber
+     * @param  string  $orderLineNumber
      * @return $this
      */
     public function setOrderLineNumber($orderLineNumber)
@@ -539,7 +539,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $startDateOption
+     * @param  string  $startDateOption
      * @return $this
      */
     public function setStartDateOption($startDateOption)
@@ -558,7 +558,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param bool $isPermanent
+     * @param  bool  $isPermanent
      * @return $this
      */
     public function setIsPermanent($isPermanent)
@@ -577,7 +577,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
+     * @param  \Flexsim\FlexnetOperations\Type\DurationType  $term
      * @return $this
      */
     public function setTerm($term)
@@ -596,7 +596,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $expirationDate
+     * @param  \DateTimeInterface  $expirationDate
      * @return $this
      */
     public function setExpirationDate($expirationDate)
@@ -615,7 +615,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $versionDate
+     * @param  \DateTimeInterface  $versionDate
      * @return $this
      */
     public function setVersionDate($versionDate)
@@ -634,7 +634,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\VersionDateAttributesType  $versionDateAttributes
      * @return $this
      */
     public function setVersionDateAttributes($versionDateAttributes)
@@ -653,7 +653,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param int $numberOfCopies
+     * @param  int  $numberOfCopies
      * @return $this
      */
     public function setNumberOfCopies($numberOfCopies)
@@ -672,7 +672,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -691,7 +691,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param bool $autoDeploy
+     * @param  bool  $autoDeploy
      * @return $this
      */
     public function setAutoDeploy($autoDeploy)
@@ -710,7 +710,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateEntitledProductDataListType $updatedEntitledProducts
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateEntitledProductDataListType  $updatedEntitledProducts
      * @return $this
      */
     public function setUpdatedEntitledProducts($updatedEntitledProducts)
@@ -729,7 +729,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
+     * @param  \Flexsim\FlexnetOperations\Type\EntitledProductDataListType  $entitledProducts
      * @return $this
      */
     public function setEntitledProducts($entitledProducts)
@@ -748,7 +748,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
      * @return $this
      */
     public function setChannelPartners($channelPartners)
@@ -767,7 +767,7 @@ class UpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param bool $allowPortalLogin
+     * @param  bool  $allowPortalLogin
      * @return $this
      */
     public function setAllowPortalLogin($allowPortalLogin)

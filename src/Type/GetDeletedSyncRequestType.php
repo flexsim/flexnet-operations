@@ -24,14 +24,14 @@ class GetDeletedSyncRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType $queryParams
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType  $queryParams
      */
     public function __construct(
         int $pageNumber,
         int $batchSize,
-        \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType $queryParams = []
+        GetDeletedSyncParametersType $queryParams = []
     ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -41,14 +41,14 @@ class GetDeletedSyncRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType $queryParams
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType  $queryParams
      */
     public static function create(
         int $pageNumber,
         int $batchSize,
-        \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType $queryParams = []
+        GetDeletedSyncParametersType $queryParams = []
     ) {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class GetDeletedSyncRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\GetDeletedSyncParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -81,7 +81,7 @@ class GetDeletedSyncRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)
@@ -100,7 +100,7 @@ class GetDeletedSyncRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)

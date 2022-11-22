@@ -14,9 +14,9 @@ class AdvancedFulfillmentLCRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCListType $fulfillmentList
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCListType  $fulfillmentList
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCListType $fulfillmentList)
+    public function __construct(AdvancedFulfillmentLCListType $fulfillmentList)
     {
         $this->fulfillmentList = $fulfillmentList;
     }
@@ -24,9 +24,9 @@ class AdvancedFulfillmentLCRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCListType $fulfillmentList
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCListType  $fulfillmentList
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCListType $fulfillmentList)
+    public static function create(AdvancedFulfillmentLCListType $fulfillmentList)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class AdvancedFulfillmentLCRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCListType $fulfillmentList
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCListType  $fulfillmentList
      * @return $this
      */
     public function setFulfillmentList($fulfillmentList)

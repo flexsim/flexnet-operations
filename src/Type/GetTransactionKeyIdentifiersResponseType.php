@@ -19,10 +19,10 @@ class GetTransactionKeyIdentifiersResponseType extends FlexnetType implements Re
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\TransactionKeyIdentifiersDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\TransactionKeyIdentifiersDataListType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\TransactionKeyIdentifiersDataListType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, TransactionKeyIdentifiersDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
@@ -31,10 +31,10 @@ class GetTransactionKeyIdentifiersResponseType extends FlexnetType implements Re
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\TransactionKeyIdentifiersDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\TransactionKeyIdentifiersDataListType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\TransactionKeyIdentifiersDataListType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, TransactionKeyIdentifiersDataListType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetTransactionKeyIdentifiersResponseType extends FlexnetType implements Re
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class GetTransactionKeyIdentifiersResponseType extends FlexnetType implements Re
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TransactionKeyIdentifiersDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\TransactionKeyIdentifiersDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

@@ -12,7 +12,7 @@ class MaintenanceLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $state
+     * @param  string  $state
      */
     public function __construct(string $state = null)
     {
@@ -22,7 +22,7 @@ class MaintenanceLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $state
+     * @param  string  $state
      */
     public static function create(string $state = null)
     {
@@ -38,7 +38,7 @@ class MaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $state
+     * @param  string  $state
      * @return $this
      */
     public function setState($state)

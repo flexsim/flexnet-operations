@@ -17,10 +17,10 @@ class UserCustomAttributeQueryType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $attributeName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue
+     * @param  string  $attributeName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $stringValue
      */
-    public function __construct(string $attributeName, \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue = null)
+    public function __construct(string $attributeName, SimpleQueryType $stringValue = null)
     {
         $this->attributeName = $attributeName;
         $this->stringValue = $stringValue;
@@ -29,10 +29,10 @@ class UserCustomAttributeQueryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $attributeName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue
+     * @param  string  $attributeName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $stringValue
      */
-    public static function create(string $attributeName, \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue = null)
+    public static function create(string $attributeName, SimpleQueryType $stringValue = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class UserCustomAttributeQueryType extends FlexnetType
     }
 
     /**
-     * @param string $attributeName
+     * @param  string  $attributeName
      * @return $this
      */
     public function setAttributeName($attributeName)
@@ -65,7 +65,7 @@ class UserCustomAttributeQueryType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $stringValue
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $stringValue
      * @return $this
      */
     public function setStringValue($stringValue)

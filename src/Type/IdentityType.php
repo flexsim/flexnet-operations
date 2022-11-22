@@ -14,7 +14,7 @@ class IdentityType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param string $userId
+     * @param  string  $userId
      */
     public function __construct(string $userId)
     {
@@ -24,7 +24,7 @@ class IdentityType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param string $userId
+     * @param  string  $userId
      */
     public static function create(string $userId)
     {
@@ -40,7 +40,7 @@ class IdentityType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param string $userId
+     * @param  string  $userId
      * @return $this
      */
     public function setUserId($userId)

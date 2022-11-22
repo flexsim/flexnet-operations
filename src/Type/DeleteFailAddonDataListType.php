@@ -12,7 +12,7 @@ class DeleteFailAddonDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType|array $failAddon
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType|array  $failAddon
      */
     public function __construct($failAddon = null)
     {
@@ -22,7 +22,7 @@ class DeleteFailAddonDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType|array $failAddon
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType|array  $failAddon
      */
     public static function create($failAddon = null)
     {
@@ -38,7 +38,7 @@ class DeleteFailAddonDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType|array $failAddon
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataType|array  $failAddon
      * @return $this
      */
     public function setFailAddon($failAddon)

@@ -12,9 +12,9 @@ class DeviceSortBys extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceSortBy  $sortBy
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy)
+    public function __construct(DeviceSortBy $sortBy)
     {
         $this->sortBy = $sortBy;
     }
@@ -22,9 +22,9 @@ class DeviceSortBys extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceSortBy  $sortBy
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy)
+    public static function create(DeviceSortBy $sortBy)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class DeviceSortBys extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceSortBy $sortBy
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceSortBy  $sortBy
      * @return $this
      */
     public function setSortBy($sortBy)

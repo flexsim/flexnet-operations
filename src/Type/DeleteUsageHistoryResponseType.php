@@ -19,10 +19,10 @@ class DeleteUsageHistoryResponseType extends FlexnetType implements ResultInterf
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteUsageHistoryDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedDeleteUsageHistoryDataType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedDeleteUsageHistoryDataType $failedData = null)
+    public function __construct(OpsEmbeddedStatusInfoType $statusInfo, FailedDeleteUsageHistoryDataType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -31,10 +31,10 @@ class DeleteUsageHistoryResponseType extends FlexnetType implements ResultInterf
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteUsageHistoryDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedDeleteUsageHistoryDataType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedDeleteUsageHistoryDataType $failedData = null)
+    public static function create(OpsEmbeddedStatusInfoType $statusInfo, FailedDeleteUsageHistoryDataType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class DeleteUsageHistoryResponseType extends FlexnetType implements ResultInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class DeleteUsageHistoryResponseType extends FlexnetType implements ResultInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteUsageHistoryDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedDeleteUsageHistoryDataType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

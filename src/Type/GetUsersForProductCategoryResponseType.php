@@ -19,10 +19,10 @@ class GetUsersForProductCategoryResponseType extends FlexnetType implements Resu
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType $userData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType  $userData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType $userData = null)
+    public function __construct(StatusInfoType $statusInfo, GetUsersForProductCategoryResponseDataType $userData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->userData = $userData;
@@ -31,10 +31,10 @@ class GetUsersForProductCategoryResponseType extends FlexnetType implements Resu
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType $userData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType  $userData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType $userData = null)
+    public static function create(StatusInfoType $statusInfo, GetUsersForProductCategoryResponseDataType $userData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetUsersForProductCategoryResponseType extends FlexnetType implements Resu
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class GetUsersForProductCategoryResponseType extends FlexnetType implements Resu
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType $userData
+     * @param  \Flexsim\FlexnetOperations\Type\GetUsersForProductCategoryResponseDataType  $userData
      * @return $this
      */
     public function setUserData($userData)

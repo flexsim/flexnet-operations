@@ -29,10 +29,10 @@ class GetDevicesRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType $queryParams
-     * @param \Flexsim\FlexnetOperations\Type\DeviceResponseConfigRequestType|\Flexsim\FlexnetOperations\Type\v2DeviceResponseConfigRequestType $deviceResponseConfig
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType  $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceResponseConfigRequestType|\Flexsim\FlexnetOperations\Type\v2DeviceResponseConfigRequestType  $deviceResponseConfig
      */
     public function __construct(
         int $pageNumber,
@@ -49,10 +49,10 @@ class GetDevicesRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType $queryParams
-     * @param \Flexsim\FlexnetOperations\Type\DeviceResponseConfigRequestType|\Flexsim\FlexnetOperations\Type\v2DeviceResponseConfigRequestType $deviceResponseConfig
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType  $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceResponseConfigRequestType|\Flexsim\FlexnetOperations\Type\v2DeviceResponseConfigRequestType  $deviceResponseConfig
      */
     public static function create(
         int $pageNumber,
@@ -72,7 +72,7 @@ class GetDevicesRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\GetDevicesParametersType|\Flexsim\FlexnetOperations\Type\v2GetDevicesParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -91,7 +91,7 @@ class GetDevicesRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceResponseConfigRequestType|\Flexsim\FlexnetOperations\Type\v2DeviceResponseConfigRequestType $deviceResponseConfig
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceResponseConfigRequestType|\Flexsim\FlexnetOperations\Type\v2DeviceResponseConfigRequestType  $deviceResponseConfig
      * @return $this
      */
     public function setDeviceResponseConfig($deviceResponseConfig)
@@ -110,7 +110,7 @@ class GetDevicesRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)
@@ -129,7 +129,7 @@ class GetDevicesRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)

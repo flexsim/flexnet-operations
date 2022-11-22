@@ -17,10 +17,10 @@ class DupGroupDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $dupGroupOption
-     * @param \Flexsim\FlexnetOperations\Type\GroupMaskDataType $groupMask
+     * @param  string  $dupGroupOption
+     * @param  \Flexsim\FlexnetOperations\Type\GroupMaskDataType  $groupMask
      */
-    public function __construct(string $dupGroupOption, \Flexsim\FlexnetOperations\Type\GroupMaskDataType $groupMask = null)
+    public function __construct(string $dupGroupOption, GroupMaskDataType $groupMask = null)
     {
         $this->dupGroupOption = $dupGroupOption;
         $this->groupMask = $groupMask;
@@ -29,10 +29,10 @@ class DupGroupDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $dupGroupOption
-     * @param \Flexsim\FlexnetOperations\Type\GroupMaskDataType $groupMask
+     * @param  string  $dupGroupOption
+     * @param  \Flexsim\FlexnetOperations\Type\GroupMaskDataType  $groupMask
      */
-    public static function create(string $dupGroupOption, \Flexsim\FlexnetOperations\Type\GroupMaskDataType $groupMask = null)
+    public static function create(string $dupGroupOption, GroupMaskDataType $groupMask = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class DupGroupDataType extends FlexnetType
     }
 
     /**
-     * @param string $dupGroupOption
+     * @param  string  $dupGroupOption
      * @return $this
      */
     public function setDupGroupOption($dupGroupOption)
@@ -65,7 +65,7 @@ class DupGroupDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GroupMaskDataType $groupMask
+     * @param  \Flexsim\FlexnetOperations\Type\GroupMaskDataType  $groupMask
      * @return $this
      */
     public function setGroupMask($groupMask)

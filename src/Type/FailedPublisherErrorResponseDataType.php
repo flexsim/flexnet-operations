@@ -17,10 +17,10 @@ class FailedPublisherErrorResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType  $fulfillment
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment, string $reason)
+    public function __construct(PublisherErrorFulfillmentDataType $fulfillment, string $reason)
     {
         $this->fulfillment = $fulfillment;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedPublisherErrorResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType  $fulfillment
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment, string $reason)
+    public static function create(PublisherErrorFulfillmentDataType $fulfillment, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedPublisherErrorResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherErrorFulfillmentDataType  $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)
@@ -65,7 +65,7 @@ class FailedPublisherErrorResponseDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

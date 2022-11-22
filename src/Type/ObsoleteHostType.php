@@ -12,9 +12,9 @@ class ObsoleteHostType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $hostIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier)
+    public function __construct(DeviceIdentifier $hostIdentifier)
     {
         $this->hostIdentifier = $hostIdentifier;
     }
@@ -22,9 +22,9 @@ class ObsoleteHostType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $hostIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier)
+    public static function create(DeviceIdentifier $hostIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class ObsoleteHostType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $hostIdentifier
      * @return $this
      */
     public function setHostIdentifier($hostIdentifier)

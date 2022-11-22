@@ -24,11 +24,11 @@ class CreateFeatureResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedFeatureDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\CreatedFeatureDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedFeatureDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedFeatureDataListType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedFeatureDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedFeatureDataListType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedFeatureDataListType $failedData = null, CreatedFeatureDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -38,11 +38,11 @@ class CreateFeatureResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedFeatureDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\CreatedFeatureDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedFeatureDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedFeatureDataListType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedFeatureDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedFeatureDataListType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FailedFeatureDataListType $failedData = null, CreatedFeatureDataListType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class CreateFeatureResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class CreateFeatureResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedFeatureDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedFeatureDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -94,7 +94,7 @@ class CreateFeatureResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedFeatureDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedFeatureDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

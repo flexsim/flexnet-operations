@@ -24,11 +24,11 @@ class CreateProductResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedProductDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\CreatedProductDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedProductDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedProductDataListType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedProductDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedProductDataListType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedProductDataListType $failedData = null, CreatedProductDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -38,11 +38,11 @@ class CreateProductResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedProductDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\CreatedProductDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedProductDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedProductDataListType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedProductDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedProductDataListType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FailedProductDataListType $failedData = null, CreatedProductDataListType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class CreateProductResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class CreateProductResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedProductDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedProductDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -94,7 +94,7 @@ class CreateProductResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedProductDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedProductDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

@@ -12,7 +12,7 @@ class RestoreServedClientDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string|array $servedClientResponse
+     * @param  string|array  $servedClientResponse
      */
     public function __construct($servedClientResponse = null)
     {
@@ -22,7 +22,7 @@ class RestoreServedClientDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string|array $servedClientResponse
+     * @param  string|array  $servedClientResponse
      */
     public static function create($servedClientResponse = null)
     {
@@ -38,7 +38,7 @@ class RestoreServedClientDataType extends FlexnetType
     }
 
     /**
-     * @param string $servedClientResponse
+     * @param  string  $servedClientResponse
      * @return $this
      */
     public function setServedClientResponse($servedClientResponse)

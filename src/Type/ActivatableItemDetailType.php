@@ -57,28 +57,28 @@ class ActivatableItemDetailType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $activatableItemType
-     * @param string $entitlementId
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType $activatableItemData
-     * @param string $parentBulkEntitlementId
-     * @param string $soldTo
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param string $entitlementState
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
+     * @param  string  $activatableItemType
+     * @param  string  $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType  $activatableItemData
+     * @param  string  $parentBulkEntitlementId
+     * @param  string  $soldTo
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  string  $entitlementState
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $entitlementAttributes
      */
     public function __construct(
         string $activatableItemType,
         string $entitlementId,
-        \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType $activatableItemData,
+        EntitlementLineItemDataType $activatableItemData,
         string $parentBulkEntitlementId = null,
         string $soldTo = null,
         string $shipToEmail = null,
         string $shipToAddress = null,
         string $entitlementState = null,
-        \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null
+        ChannelPartnerDataListType $channelPartners = null,
+        AttributeDescriptorDataType $entitlementAttributes = null
     ) {
         $this->activatableItemType = $activatableItemType;
         $this->entitlementId = $entitlementId;
@@ -95,28 +95,28 @@ class ActivatableItemDetailType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $activatableItemType
-     * @param string $entitlementId
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType $activatableItemData
-     * @param string $parentBulkEntitlementId
-     * @param string $soldTo
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param string $entitlementState
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
+     * @param  string  $activatableItemType
+     * @param  string  $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType  $activatableItemData
+     * @param  string  $parentBulkEntitlementId
+     * @param  string  $soldTo
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  string  $entitlementState
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $entitlementAttributes
      */
     public static function create(
         string $activatableItemType,
         string $entitlementId,
-        \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType $activatableItemData,
+        EntitlementLineItemDataType $activatableItemData,
         string $parentBulkEntitlementId = null,
         string $soldTo = null,
         string $shipToEmail = null,
         string $shipToAddress = null,
         string $entitlementState = null,
-        \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null
+        ChannelPartnerDataListType $channelPartners = null,
+        AttributeDescriptorDataType $entitlementAttributes = null
     ) {
         return new self(...func_get_args());
     }
@@ -130,7 +130,7 @@ class ActivatableItemDetailType extends FlexnetType
     }
 
     /**
-     * @param string $activatableItemType
+     * @param  string  $activatableItemType
      * @return $this
      */
     public function setActivatableItemType($activatableItemType)
@@ -149,7 +149,7 @@ class ActivatableItemDetailType extends FlexnetType
     }
 
     /**
-     * @param string $parentBulkEntitlementId
+     * @param  string  $parentBulkEntitlementId
      * @return $this
      */
     public function setParentBulkEntitlementId($parentBulkEntitlementId)
@@ -168,7 +168,7 @@ class ActivatableItemDetailType extends FlexnetType
     }
 
     /**
-     * @param string $entitlementId
+     * @param  string  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)
@@ -187,7 +187,7 @@ class ActivatableItemDetailType extends FlexnetType
     }
 
     /**
-     * @param string $soldTo
+     * @param  string  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -206,7 +206,7 @@ class ActivatableItemDetailType extends FlexnetType
     }
 
     /**
-     * @param string $shipToEmail
+     * @param  string  $shipToEmail
      * @return $this
      */
     public function setShipToEmail($shipToEmail)
@@ -225,7 +225,7 @@ class ActivatableItemDetailType extends FlexnetType
     }
 
     /**
-     * @param string $shipToAddress
+     * @param  string  $shipToAddress
      * @return $this
      */
     public function setShipToAddress($shipToAddress)
@@ -244,7 +244,7 @@ class ActivatableItemDetailType extends FlexnetType
     }
 
     /**
-     * @param string $entitlementState
+     * @param  string  $entitlementState
      * @return $this
      */
     public function setEntitlementState($entitlementState)
@@ -263,7 +263,7 @@ class ActivatableItemDetailType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType $activatableItemData
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType  $activatableItemData
      * @return $this
      */
     public function setActivatableItemData($activatableItemData)
@@ -282,7 +282,7 @@ class ActivatableItemDetailType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
      * @return $this
      */
     public function setChannelPartners($channelPartners)
@@ -301,7 +301,7 @@ class ActivatableItemDetailType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $entitlementAttributes
      * @return $this
      */
     public function setEntitlementAttributes($entitlementAttributes)

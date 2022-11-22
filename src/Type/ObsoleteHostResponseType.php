@@ -19,10 +19,10 @@ class ObsoleteHostResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedObsoleteHostListDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedObsoleteHostListDataType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedObsoleteHostListDataType $failedData = null)
+    public function __construct(OpsEmbeddedStatusInfoType $statusInfo, FailedObsoleteHostListDataType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -31,10 +31,10 @@ class ObsoleteHostResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedObsoleteHostListDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedObsoleteHostListDataType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedObsoleteHostListDataType $failedData = null)
+    public static function create(OpsEmbeddedStatusInfoType $statusInfo, FailedObsoleteHostListDataType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class ObsoleteHostResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class ObsoleteHostResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedObsoleteHostListDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedObsoleteHostListDataType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

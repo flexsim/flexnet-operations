@@ -19,10 +19,10 @@ class SearchActivatableItemResponseType extends FlexnetType implements ResultInt
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\ActivatableItemDetailType|array $activatableItem
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\ActivatableItemDetailType|array  $activatableItem
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $activatableItem = null)
+    public function __construct(StatusInfoType $statusInfo, $activatableItem = null)
     {
         $this->statusInfo = $statusInfo;
         $this->activatableItem = $activatableItem;
@@ -31,10 +31,10 @@ class SearchActivatableItemResponseType extends FlexnetType implements ResultInt
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\ActivatableItemDetailType|array $activatableItem
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\ActivatableItemDetailType|array  $activatableItem
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $activatableItem = null)
+    public static function create(StatusInfoType $statusInfo, $activatableItem = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class SearchActivatableItemResponseType extends FlexnetType implements ResultInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class SearchActivatableItemResponseType extends FlexnetType implements ResultInt
     }
 
     /**
-     * @param array<\Flexsim\FlexnetOperations\Type\ActivatableItemDetailType> $activatableItem
+     * @param  array<\Flexsim\FlexnetOperations\Type\ActivatableItemDetailType>  $activatableItem
      * @return $this
      */
     public function setActivatableItem($activatableItem)

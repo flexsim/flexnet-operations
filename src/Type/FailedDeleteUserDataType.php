@@ -17,8 +17,8 @@ class FailedDeleteUserDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType $user
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType  $user
+     * @param  string  $reason
      */
     public function __construct($user = null, string $reason = null)
     {
@@ -29,8 +29,8 @@ class FailedDeleteUserDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType $user
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType  $user
+     * @param  string  $reason
      */
     public static function create($user = null, string $reason = null)
     {
@@ -46,7 +46,7 @@ class FailedDeleteUserDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @param  \Flexsim\FlexnetOperations\Type\ForceDeleteUserIdentifierType|\Flexsim\FlexnetOperations\Type\UserIdentifierType  $user
      * @return $this
      */
     public function setUser($user)
@@ -65,7 +65,7 @@ class FailedDeleteUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

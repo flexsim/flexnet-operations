@@ -17,10 +17,10 @@ class FailedTransferEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType  $entitlementInfo
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo, string $reason)
+    public function __construct(TransferEntitlementInfoType $entitlementInfo, string $reason)
     {
         $this->entitlementInfo = $entitlementInfo;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedTransferEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType  $entitlementInfo
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo, string $reason)
+    public static function create(TransferEntitlementInfoType $entitlementInfo, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedTransferEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType $entitlementInfo
+     * @param  \Flexsim\FlexnetOperations\Type\TransferEntitlementInfoType  $entitlementInfo
      * @return $this
      */
     public function setEntitlementInfo($entitlementInfo)
@@ -65,7 +65,7 @@ class FailedTransferEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

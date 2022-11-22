@@ -82,21 +82,21 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     /**
      * Constructor
      *
-     * @param bool $activationId
-     * @param bool $state
-     * @param bool $orderId
-     * @param bool $orderLineNumber
-     * @param bool $entitlementId
-     * @param bool $maintenanceProduct
-     * @param bool $maintenancePartNumber
-     * @param bool $maintenancePartNumberDescription
-     * @param bool $startDate
-     * @param bool $isPermanent
-     * @param bool $expirationDate
-     * @param bool $createdOnDateTime
-     * @param bool $lastModifiedDateTime
-     * @param bool $maintenanceLineItemAttributes
-     * @param bool $linkedEntitlementLineItem
+     * @param  bool  $activationId
+     * @param  bool  $state
+     * @param  bool  $orderId
+     * @param  bool  $orderLineNumber
+     * @param  bool  $entitlementId
+     * @param  bool  $maintenanceProduct
+     * @param  bool  $maintenancePartNumber
+     * @param  bool  $maintenancePartNumberDescription
+     * @param  bool  $startDate
+     * @param  bool  $isPermanent
+     * @param  bool  $expirationDate
+     * @param  bool  $createdOnDateTime
+     * @param  bool  $lastModifiedDateTime
+     * @param  bool  $maintenanceLineItemAttributes
+     * @param  bool  $linkedEntitlementLineItem
      */
     public function __construct(bool $activationId = null, bool $state = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $maintenanceProduct = null, bool $maintenancePartNumber = null, bool $maintenancePartNumberDescription = null, bool $startDate = null, bool $isPermanent = null, bool $expirationDate = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $maintenanceLineItemAttributes = null, bool $linkedEntitlementLineItem = null)
     {
@@ -120,21 +120,21 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     /**
      * create a new instance of this class
      *
-     * @param bool $activationId
-     * @param bool $state
-     * @param bool $orderId
-     * @param bool $orderLineNumber
-     * @param bool $entitlementId
-     * @param bool $maintenanceProduct
-     * @param bool $maintenancePartNumber
-     * @param bool $maintenancePartNumberDescription
-     * @param bool $startDate
-     * @param bool $isPermanent
-     * @param bool $expirationDate
-     * @param bool $createdOnDateTime
-     * @param bool $lastModifiedDateTime
-     * @param bool $maintenanceLineItemAttributes
-     * @param bool $linkedEntitlementLineItem
+     * @param  bool  $activationId
+     * @param  bool  $state
+     * @param  bool  $orderId
+     * @param  bool  $orderLineNumber
+     * @param  bool  $entitlementId
+     * @param  bool  $maintenanceProduct
+     * @param  bool  $maintenancePartNumber
+     * @param  bool  $maintenancePartNumberDescription
+     * @param  bool  $startDate
+     * @param  bool  $isPermanent
+     * @param  bool  $expirationDate
+     * @param  bool  $createdOnDateTime
+     * @param  bool  $lastModifiedDateTime
+     * @param  bool  $maintenanceLineItemAttributes
+     * @param  bool  $linkedEntitlementLineItem
      */
     public static function create(bool $activationId = null, bool $state = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $maintenanceProduct = null, bool $maintenancePartNumber = null, bool $maintenancePartNumberDescription = null, bool $startDate = null, bool $isPermanent = null, bool $expirationDate = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $maintenanceLineItemAttributes = null, bool $linkedEntitlementLineItem = null)
     {
@@ -150,7 +150,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $activationId
+     * @param  bool  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -169,7 +169,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $state
+     * @param  bool  $state
      * @return $this
      */
     public function setState($state)
@@ -188,7 +188,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $orderId
+     * @param  bool  $orderId
      * @return $this
      */
     public function setOrderId($orderId)
@@ -207,7 +207,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $orderLineNumber
+     * @param  bool  $orderLineNumber
      * @return $this
      */
     public function setOrderLineNumber($orderLineNumber)
@@ -226,7 +226,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $entitlementId
+     * @param  bool  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)
@@ -245,7 +245,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $maintenanceProduct
+     * @param  bool  $maintenanceProduct
      * @return $this
      */
     public function setMaintenanceProduct($maintenanceProduct)
@@ -264,7 +264,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $maintenancePartNumber
+     * @param  bool  $maintenancePartNumber
      * @return $this
      */
     public function setMaintenancePartNumber($maintenancePartNumber)
@@ -283,7 +283,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $maintenancePartNumberDescription
+     * @param  bool  $maintenancePartNumberDescription
      * @return $this
      */
     public function setMaintenancePartNumberDescription($maintenancePartNumberDescription)
@@ -302,7 +302,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $startDate
+     * @param  bool  $startDate
      * @return $this
      */
     public function setStartDate($startDate)
@@ -321,7 +321,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $isPermanent
+     * @param  bool  $isPermanent
      * @return $this
      */
     public function setIsPermanent($isPermanent)
@@ -340,7 +340,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $expirationDate
+     * @param  bool  $expirationDate
      * @return $this
      */
     public function setExpirationDate($expirationDate)
@@ -359,7 +359,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $createdOnDateTime
+     * @param  bool  $createdOnDateTime
      * @return $this
      */
     public function setCreatedOnDateTime($createdOnDateTime)
@@ -378,7 +378,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $lastModifiedDateTime
+     * @param  bool  $lastModifiedDateTime
      * @return $this
      */
     public function setLastModifiedDateTime($lastModifiedDateTime)
@@ -397,7 +397,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $maintenanceLineItemAttributes
+     * @param  bool  $maintenanceLineItemAttributes
      * @return $this
      */
     public function setMaintenanceLineItemAttributes($maintenanceLineItemAttributes)
@@ -416,7 +416,7 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType extends FlexnetTyp
     }
 
     /**
-     * @param bool $linkedEntitlementLineItem
+     * @param  bool  $linkedEntitlementLineItem
      * @return $this
      */
     public function setLinkedEntitlementLineItem($linkedEntitlementLineItem)

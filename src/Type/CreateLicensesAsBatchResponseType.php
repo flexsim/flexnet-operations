@@ -19,10 +19,10 @@ class CreateLicensesAsBatchResponseType extends FlexnetType implements ResultInt
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\CreateLicensesAsBatchResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\CreateLicensesAsBatchResponseDataType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\CreateLicensesAsBatchResponseDataType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, CreateLicensesAsBatchResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
@@ -31,10 +31,10 @@ class CreateLicensesAsBatchResponseType extends FlexnetType implements ResultInt
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\CreateLicensesAsBatchResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\CreateLicensesAsBatchResponseDataType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\CreateLicensesAsBatchResponseDataType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, CreateLicensesAsBatchResponseDataType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class CreateLicensesAsBatchResponseType extends FlexnetType implements ResultInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class CreateLicensesAsBatchResponseType extends FlexnetType implements ResultInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateLicensesAsBatchResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\CreateLicensesAsBatchResponseDataType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

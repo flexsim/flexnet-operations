@@ -17,10 +17,10 @@ class RelateOrganizationsDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationToRelate
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organizationToRelate
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $relatedOrganization
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationToRelate, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization)
+    public function __construct(OrganizationIdentifierType $organizationToRelate, OrganizationIdentifierType $relatedOrganization)
     {
         $this->organizationToRelate = $organizationToRelate;
         $this->relatedOrganization = $relatedOrganization;
@@ -29,10 +29,10 @@ class RelateOrganizationsDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationToRelate
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organizationToRelate
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $relatedOrganization
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationToRelate, \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization)
+    public static function create(OrganizationIdentifierType $organizationToRelate, OrganizationIdentifierType $relatedOrganization)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class RelateOrganizationsDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organizationToRelate
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organizationToRelate
      * @return $this
      */
     public function setOrganizationToRelate($organizationToRelate)
@@ -65,7 +65,7 @@ class RelateOrganizationsDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $relatedOrganization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $relatedOrganization
      * @return $this
      */
     public function setRelatedOrganization($relatedOrganization)

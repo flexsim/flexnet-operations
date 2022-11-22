@@ -24,9 +24,9 @@ class StatusResponse extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param string $statusCorelation
-     * @param string $statusCode
-     * @param string $statusMessage
+     * @param  string  $statusCorelation
+     * @param  string  $statusCode
+     * @param  string  $statusMessage
      */
     public function __construct(string $statusCorelation = null, string $statusCode = null, string $statusMessage = null)
     {
@@ -38,9 +38,9 @@ class StatusResponse extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param string $statusCorelation
-     * @param string $statusCode
-     * @param string $statusMessage
+     * @param  string  $statusCorelation
+     * @param  string  $statusCode
+     * @param  string  $statusMessage
      */
     public static function create(string $statusCorelation = null, string $statusCode = null, string $statusMessage = null)
     {
@@ -56,7 +56,7 @@ class StatusResponse extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param string $statusCorelation
+     * @param  string  $statusCorelation
      * @return $this
      */
     public function setStatusCorelation($statusCorelation)
@@ -75,7 +75,7 @@ class StatusResponse extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param string $statusCode
+     * @param  string  $statusCode
      * @return $this
      */
     public function setStatusCode($statusCode)
@@ -94,7 +94,7 @@ class StatusResponse extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param string $statusMessage
+     * @param  string  $statusMessage
      * @return $this
      */
     public function setStatusMessage($statusMessage)

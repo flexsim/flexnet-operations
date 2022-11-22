@@ -17,10 +17,10 @@ class FailedUpdateBulkEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType $bulkEntitlement
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType  $bulkEntitlement
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType $bulkEntitlement = null, string $reason = null)
+    public function __construct(UpdateBulkEntitlementDataType $bulkEntitlement = null, string $reason = null)
     {
         $this->bulkEntitlement = $bulkEntitlement;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedUpdateBulkEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType $bulkEntitlement
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType  $bulkEntitlement
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType $bulkEntitlement = null, string $reason = null)
+    public static function create(UpdateBulkEntitlementDataType $bulkEntitlement = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedUpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType $bulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType  $bulkEntitlement
      * @return $this
      */
     public function setBulkEntitlement($bulkEntitlement)
@@ -65,7 +65,7 @@ class FailedUpdateBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

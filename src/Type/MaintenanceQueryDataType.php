@@ -52,15 +52,15 @@ class MaintenanceQueryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $uniqueId
-     * @param string $maintenanceName
-     * @param string $state
-     * @param string $version
-     * @param string $description
-     * @param bool $allowUpgrades
-     * @param bool $allowUpsells
-     * @param bool $allowRenewals
-     * @param \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers
+     * @param  string  $uniqueId
+     * @param  string  $maintenanceName
+     * @param  string  $state
+     * @param  string  $version
+     * @param  string  $description
+     * @param  bool  $allowUpgrades
+     * @param  bool  $allowUpsells
+     * @param  bool  $allowRenewals
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType  $partNumbers
      */
     public function __construct(
         string $uniqueId,
@@ -71,7 +71,7 @@ class MaintenanceQueryDataType extends FlexnetType
         bool $allowUpgrades = null,
         bool $allowUpsells = null,
         bool $allowRenewals = null,
-        \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers = null
+        PartNumbersSimpleListType $partNumbers = null
     ) {
         $this->uniqueId = $uniqueId;
         $this->maintenanceName = $maintenanceName;
@@ -87,15 +87,15 @@ class MaintenanceQueryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
-     * @param string $maintenanceName
-     * @param string $state
-     * @param string $version
-     * @param string $description
-     * @param bool $allowUpgrades
-     * @param bool $allowUpsells
-     * @param bool $allowRenewals
-     * @param \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers
+     * @param  string  $uniqueId
+     * @param  string  $maintenanceName
+     * @param  string  $state
+     * @param  string  $version
+     * @param  string  $description
+     * @param  bool  $allowUpgrades
+     * @param  bool  $allowUpsells
+     * @param  bool  $allowRenewals
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType  $partNumbers
      */
     public static function create(
         string $uniqueId,
@@ -106,7 +106,7 @@ class MaintenanceQueryDataType extends FlexnetType
         bool $allowUpgrades = null,
         bool $allowUpsells = null,
         bool $allowRenewals = null,
-        \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers = null
+        PartNumbersSimpleListType $partNumbers = null
     ) {
         return new self(...func_get_args());
     }
@@ -120,7 +120,7 @@ class MaintenanceQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -139,7 +139,7 @@ class MaintenanceQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $maintenanceName
+     * @param  string  $maintenanceName
      * @return $this
      */
     public function setMaintenanceName($maintenanceName)
@@ -158,7 +158,7 @@ class MaintenanceQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $version
+     * @param  string  $version
      * @return $this
      */
     public function setVersion($version)
@@ -177,7 +177,7 @@ class MaintenanceQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -196,7 +196,7 @@ class MaintenanceQueryDataType extends FlexnetType
     }
 
     /**
-     * @param string $state
+     * @param  string  $state
      * @return $this
      */
     public function setState($state)
@@ -215,7 +215,7 @@ class MaintenanceQueryDataType extends FlexnetType
     }
 
     /**
-     * @param bool $allowUpgrades
+     * @param  bool  $allowUpgrades
      * @return $this
      */
     public function setAllowUpgrades($allowUpgrades)
@@ -234,7 +234,7 @@ class MaintenanceQueryDataType extends FlexnetType
     }
 
     /**
-     * @param bool $allowUpsells
+     * @param  bool  $allowUpsells
      * @return $this
      */
     public function setAllowUpsells($allowUpsells)
@@ -253,7 +253,7 @@ class MaintenanceQueryDataType extends FlexnetType
     }
 
     /**
-     * @param bool $allowRenewals
+     * @param  bool  $allowRenewals
      * @return $this
      */
     public function setAllowRenewals($allowRenewals)
@@ -272,7 +272,7 @@ class MaintenanceQueryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType  $partNumbers
      * @return $this
      */
     public function setPartNumbers($partNumbers)

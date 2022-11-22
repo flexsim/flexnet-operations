@@ -112,26 +112,26 @@ class CreateUserDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $firstName
-     * @param string $lastName
-     * @param string $emailAddress
-     * @param bool $canLogin
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserAccountsListType|\Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType $acctRolesList this method is backwards compatible so you may also pass $orgRolesList
-     * @param string $displayName
-     * @param bool $optIn
-     * @param string $phoneNumber
-     * @param string $faxNumber
-     * @param string $street
-     * @param string $city
-     * @param string $state
-     * @param string $zipcode
-     * @param string $country
-     * @param string $locale
-     * @param string $userName
-     * @param string $status
-     * @param string $timezone
-     * @param bool $shared
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  string  $firstName
+     * @param  string  $lastName
+     * @param  string  $emailAddress
+     * @param  bool  $canLogin
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserAccountsListType|\Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType  $acctRolesList this method is backwards compatible so you may also pass $orgRolesList
+     * @param  string  $displayName
+     * @param  bool  $optIn
+     * @param  string  $phoneNumber
+     * @param  string  $faxNumber
+     * @param  string  $street
+     * @param  string  $city
+     * @param  string  $state
+     * @param  string  $zipcode
+     * @param  string  $country
+     * @param  string  $locale
+     * @param  string  $userName
+     * @param  string  $status
+     * @param  string  $timezone
+     * @param  bool  $shared
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      */
     public function __construct(
         string $firstName,
@@ -153,7 +153,7 @@ class CreateUserDataType extends FlexnetType
         string $status = null,
         string $timezone = null,
         bool $shared = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null
+        AttributeDescriptorDataType $customAttributes = null
     ) {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
@@ -181,26 +181,26 @@ class CreateUserDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $firstName
-     * @param string $lastName
-     * @param string $emailAddress
-     * @param bool $canLogin
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserAccountsListType|\Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType $acctRolesList this method is backwards compatible so you may also pass $orgRolesList
-     * @param string $displayName
-     * @param bool $optIn
-     * @param string $phoneNumber
-     * @param string $faxNumber
-     * @param string $street
-     * @param string $city
-     * @param string $state
-     * @param string $zipcode
-     * @param string $country
-     * @param string $locale
-     * @param string $userName
-     * @param string $status
-     * @param string $timezone
-     * @param bool $shared
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  string  $firstName
+     * @param  string  $lastName
+     * @param  string  $emailAddress
+     * @param  bool  $canLogin
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserAccountsListType|\Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType  $acctRolesList this method is backwards compatible so you may also pass $orgRolesList
+     * @param  string  $displayName
+     * @param  bool  $optIn
+     * @param  string  $phoneNumber
+     * @param  string  $faxNumber
+     * @param  string  $street
+     * @param  string  $city
+     * @param  string  $state
+     * @param  string  $zipcode
+     * @param  string  $country
+     * @param  string  $locale
+     * @param  string  $userName
+     * @param  string  $status
+     * @param  string  $timezone
+     * @param  bool  $shared
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      */
     public static function create(
         string $firstName,
@@ -222,7 +222,7 @@ class CreateUserDataType extends FlexnetType
         string $status = null,
         string $timezone = null,
         bool $shared = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null
+        AttributeDescriptorDataType $customAttributes = null
     ) {
         return new self(...func_get_args());
     }
@@ -236,7 +236,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $firstName
+     * @param  string  $firstName
      * @return $this
      */
     public function setFirstName($firstName)
@@ -255,7 +255,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $lastName
+     * @param  string  $lastName
      * @return $this
      */
     public function setLastName($lastName)
@@ -274,7 +274,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $displayName
+     * @param  string  $displayName
      * @return $this
      */
     public function setDisplayName($displayName)
@@ -293,7 +293,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $emailAddress
+     * @param  string  $emailAddress
      * @return $this
      */
     public function setEmailAddress($emailAddress)
@@ -312,7 +312,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param bool $optIn
+     * @param  bool  $optIn
      * @return $this
      */
     public function setOptIn($optIn)
@@ -331,7 +331,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $phoneNumber
+     * @param  string  $phoneNumber
      * @return $this
      */
     public function setPhoneNumber($phoneNumber)
@@ -350,7 +350,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $faxNumber
+     * @param  string  $faxNumber
      * @return $this
      */
     public function setFaxNumber($faxNumber)
@@ -369,7 +369,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $street
+     * @param  string  $street
      * @return $this
      */
     public function setStreet($street)
@@ -388,7 +388,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $city
+     * @param  string  $city
      * @return $this
      */
     public function setCity($city)
@@ -407,7 +407,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $state
+     * @param  string  $state
      * @return $this
      */
     public function setState($state)
@@ -426,7 +426,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $zipcode
+     * @param  string  $zipcode
      * @return $this
      */
     public function setZipcode($zipcode)
@@ -445,7 +445,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $country
+     * @param  string  $country
      * @return $this
      */
     public function setCountry($country)
@@ -464,7 +464,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $locale
+     * @param  string  $locale
      * @return $this
      */
     public function setLocale($locale)
@@ -483,7 +483,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param bool $canLogin
+     * @param  bool  $canLogin
      * @return $this
      */
     public function setCanLogin($canLogin)
@@ -502,7 +502,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $userName
+     * @param  string  $userName
      * @return $this
      */
     public function setUserName($userName)
@@ -521,7 +521,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $status
+     * @param  string  $status
      * @return $this
      */
     public function setStatus($status)
@@ -540,7 +540,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $timezone
+     * @param  string  $timezone
      * @return $this
      */
     public function setTimezone($timezone)
@@ -559,7 +559,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param bool $shared
+     * @param  bool  $shared
      * @return $this
      */
     public function setShared($shared)
@@ -578,7 +578,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserAccountsListType $acctRolesList
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserAccountsListType  $acctRolesList
      * @return $this
      */
     public function setAcctRolesList($acctRolesList)
@@ -597,7 +597,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType $orgRolesList
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserOrganizationsListType  $orgRolesList
      * @return $this
      */
     public function setOrgRolesList($orgRolesList)
@@ -616,7 +616,7 @@ class CreateUserDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)

@@ -22,14 +22,14 @@ class CreateUserAccountType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @param \DateTimeInterface $expiryDate
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $account
+     * @param  \DateTimeInterface  $expiryDate
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType  $roles
      */
     public function __construct(
         $account,
         \DateTimeInterface $expiryDate = null,
-        \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles = null
+        CreateUserAccountRolesListType $roles = null
     ) {
         $this->account = $account;
         $this->expiryDate = $expiryDate;
@@ -39,14 +39,14 @@ class CreateUserAccountType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @param \DateTimeInterface $expiryDate
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $account
+     * @param  \DateTimeInterface  $expiryDate
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType  $roles
      */
     public static function create(
         $account,
         \DateTimeInterface $expiryDate = null,
-        \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles = null
+        CreateUserAccountRolesListType $roles = null
     ) {
         return new self(...func_get_args());
     }
@@ -60,7 +60,7 @@ class CreateUserAccountType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $account
      * @return $this
      */
     public function setAccount($account)
@@ -79,7 +79,7 @@ class CreateUserAccountType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $expiryDate
+     * @param  \DateTimeInterface  $expiryDate
      * @return $this
      */
     public function setExpiryDate($expiryDate)
@@ -98,7 +98,7 @@ class CreateUserAccountType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType $roles
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserAccountRolesListType  $roles
      * @return $this
      */
     public function setRoles($roles)

@@ -12,7 +12,7 @@ class LineItemCustomAttributesQueryListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LineItemCustomAttributeQueryType|array $attribute
+     * @param  \Flexsim\FlexnetOperations\Type\LineItemCustomAttributeQueryType|array  $attribute
      */
     public function __construct($attribute = null)
     {
@@ -22,7 +22,7 @@ class LineItemCustomAttributesQueryListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LineItemCustomAttributeQueryType|array $attribute
+     * @param  \Flexsim\FlexnetOperations\Type\LineItemCustomAttributeQueryType|array  $attribute
      */
     public static function create($attribute = null)
     {
@@ -38,7 +38,7 @@ class LineItemCustomAttributesQueryListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LineItemCustomAttributeQueryType|array $attribute
+     * @param  \Flexsim\FlexnetOperations\Type\LineItemCustomAttributeQueryType|array  $attribute
      * @return $this
      */
     public function setAttribute($attribute)

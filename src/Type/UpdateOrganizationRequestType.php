@@ -14,9 +14,9 @@ class UpdateOrganizationRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateOrgDataType  $orgData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData)
+    public function __construct(UpdateOrgDataType $orgData)
     {
         $this->orgData = $orgData;
     }
@@ -24,9 +24,9 @@ class UpdateOrganizationRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateOrgDataType  $orgData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData)
+    public static function create(UpdateOrgDataType $orgData)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class UpdateOrganizationRequestType extends FlexnetType implements RequestInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateOrgDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateOrgDataType  $orgData
      * @return $this
      */
     public function setOrgData($orgData)

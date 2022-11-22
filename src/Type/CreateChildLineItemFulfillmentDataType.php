@@ -67,29 +67,29 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $activationId
-     * @param \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $versionDate
-     * @param \DateTimeInterface $versionStartDate
-     * @param string $soldTo
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param bool $overridePolicy
-     * @param string $owner
-     * @param string $FNPTimeZoneValue
+     * @param  string  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\HostIdDetailsType  $hostIdDetails
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $versionDate
+     * @param  \DateTimeInterface  $versionStartDate
+     * @param  string  $soldTo
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  bool  $overridePolicy
+     * @param  string  $owner
+     * @param  string  $FNPTimeZoneValue
      */
     public function __construct(
         string $activationId,
-        \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails,
+        HostIdDetailsType $hostIdDetails,
         \DateTimeInterface $startDate = null,
         \DateTimeInterface $versionDate = null,
         \DateTimeInterface $versionStartDate = null,
         string $soldTo = null,
         string $shipToEmail = null,
         string $shipToAddress = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null,
+        AttributeDescriptorDataType $licenseModelAttributes = null,
         bool $overridePolicy = null,
         string $owner = null,
         string $FNPTimeZoneValue = null
@@ -111,29 +111,29 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $activationId
-     * @param \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $versionDate
-     * @param \DateTimeInterface $versionStartDate
-     * @param string $soldTo
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param bool $overridePolicy
-     * @param string $owner
-     * @param string $FNPTimeZoneValue
+     * @param  string  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\HostIdDetailsType  $hostIdDetails
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $versionDate
+     * @param  \DateTimeInterface  $versionStartDate
+     * @param  string  $soldTo
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  bool  $overridePolicy
+     * @param  string  $owner
+     * @param  string  $FNPTimeZoneValue
      */
     public static function create(
         string $activationId,
-        \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails,
+        HostIdDetailsType $hostIdDetails,
         \DateTimeInterface $startDate = null,
         \DateTimeInterface $versionDate = null,
         \DateTimeInterface $versionStartDate = null,
         string $soldTo = null,
         string $shipToEmail = null,
         string $shipToAddress = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null,
+        AttributeDescriptorDataType $licenseModelAttributes = null,
         bool $overridePolicy = null,
         string $owner = null,
         string $FNPTimeZoneValue = null
@@ -150,7 +150,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -169,7 +169,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $startDate
+     * @param  \DateTimeInterface  $startDate
      * @return $this
      */
     public function setStartDate($startDate)
@@ -188,7 +188,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $versionDate
+     * @param  \DateTimeInterface  $versionDate
      * @return $this
      */
     public function setVersionDate($versionDate)
@@ -207,7 +207,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $versionStartDate
+     * @param  \DateTimeInterface  $versionStartDate
      * @return $this
      */
     public function setVersionStartDate($versionStartDate)
@@ -226,7 +226,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $soldTo
+     * @param  string  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -245,7 +245,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToEmail
+     * @param  string  $shipToEmail
      * @return $this
      */
     public function setShipToEmail($shipToEmail)
@@ -264,7 +264,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToAddress
+     * @param  string  $shipToAddress
      * @return $this
      */
     public function setShipToAddress($shipToAddress)
@@ -283,7 +283,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
      * @return $this
      */
     public function setLicenseModelAttributes($licenseModelAttributes)
@@ -302,7 +302,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostIdDetailsType $hostIdDetails
+     * @param  \Flexsim\FlexnetOperations\Type\HostIdDetailsType  $hostIdDetails
      * @return $this
      */
     public function setHostIdDetails($hostIdDetails)
@@ -321,7 +321,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param bool $overridePolicy
+     * @param  bool  $overridePolicy
      * @return $this
      */
     public function setOverridePolicy($overridePolicy)
@@ -340,7 +340,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $owner
+     * @param  string  $owner
      * @return $this
      */
     public function setOwner($owner)
@@ -359,7 +359,7 @@ class CreateChildLineItemFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $FNPTimeZoneValue
+     * @param  string  $FNPTimeZoneValue
      * @return $this
      */
     public function setFNPTimeZoneValue($FNPTimeZoneValue)

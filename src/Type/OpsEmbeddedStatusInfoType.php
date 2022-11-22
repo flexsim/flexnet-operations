@@ -17,8 +17,8 @@ class OpsEmbeddedStatusInfoType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $status
-     * @param string $reason
+     * @param  string  $status
+     * @param  string  $reason
      */
     public function __construct(string $status, string $reason = null)
     {
@@ -29,8 +29,8 @@ class OpsEmbeddedStatusInfoType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $status
-     * @param string $reason
+     * @param  string  $status
+     * @param  string  $reason
      */
     public static function create(string $status, string $reason = null)
     {
@@ -46,7 +46,7 @@ class OpsEmbeddedStatusInfoType extends FlexnetType
     }
 
     /**
-     * @param string $status
+     * @param  string  $status
      * @return $this
      */
     public function setStatus($status)
@@ -65,7 +65,7 @@ class OpsEmbeddedStatusInfoType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

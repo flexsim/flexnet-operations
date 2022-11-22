@@ -27,12 +27,12 @@ class UpdateProductRelationshipDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productToRelate
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $relatedProduct
-     * @param string $relation
-     * @param string $newRelation
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productToRelate
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $relatedProduct
+     * @param  string  $relation
+     * @param  string  $newRelation
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productToRelate, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $relatedProduct, string $relation, string $newRelation)
+    public function __construct(ProductIdentifierType $productToRelate, ProductIdentifierType $relatedProduct, string $relation, string $newRelation)
     {
         $this->productToRelate = $productToRelate;
         $this->relatedProduct = $relatedProduct;
@@ -43,12 +43,12 @@ class UpdateProductRelationshipDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productToRelate
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $relatedProduct
-     * @param string $relation
-     * @param string $newRelation
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productToRelate
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $relatedProduct
+     * @param  string  $relation
+     * @param  string  $newRelation
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productToRelate, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $relatedProduct, string $relation, string $newRelation)
+    public static function create(ProductIdentifierType $productToRelate, ProductIdentifierType $relatedProduct, string $relation, string $newRelation)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class UpdateProductRelationshipDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productToRelate
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productToRelate
      * @return $this
      */
     public function setProductToRelate($productToRelate)
@@ -81,7 +81,7 @@ class UpdateProductRelationshipDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $relatedProduct
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $relatedProduct
      * @return $this
      */
     public function setRelatedProduct($relatedProduct)
@@ -100,7 +100,7 @@ class UpdateProductRelationshipDataType extends FlexnetType
     }
 
     /**
-     * @param string $relation
+     * @param  string  $relation
      * @return $this
      */
     public function setRelation($relation)
@@ -119,7 +119,7 @@ class UpdateProductRelationshipDataType extends FlexnetType
     }
 
     /**
-     * @param string $newRelation
+     * @param  string  $newRelation
      * @return $this
      */
     public function setNewRelation($newRelation)

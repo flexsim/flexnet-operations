@@ -32,13 +32,13 @@ class FeatureDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $featureName
-     * @param string $versionFormat
-     * @param string $version
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param  string  $featureName
+     * @param  string  $versionFormat
+     * @param  string  $version
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType  $featureOverrideParams
      */
-    public function __construct(string $featureName, string $versionFormat, string $version = null, string $description = null, \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null)
+    public function __construct(string $featureName, string $versionFormat, string $version = null, string $description = null, FeatureOverrideParamsType $featureOverrideParams = null)
     {
         $this->featureName = $featureName;
         $this->versionFormat = $versionFormat;
@@ -50,13 +50,13 @@ class FeatureDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $featureName
-     * @param string $versionFormat
-     * @param string $version
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param  string  $featureName
+     * @param  string  $versionFormat
+     * @param  string  $version
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType  $featureOverrideParams
      */
-    public static function create(string $featureName, string $versionFormat, string $version = null, string $description = null, \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams = null)
+    public static function create(string $featureName, string $versionFormat, string $version = null, string $description = null, FeatureOverrideParamsType $featureOverrideParams = null)
     {
         return new self(...func_get_args());
     }
@@ -70,7 +70,7 @@ class FeatureDataType extends FlexnetType
     }
 
     /**
-     * @param string $featureName
+     * @param  string  $featureName
      * @return $this
      */
     public function setFeatureName($featureName)
@@ -89,7 +89,7 @@ class FeatureDataType extends FlexnetType
     }
 
     /**
-     * @param string $versionFormat
+     * @param  string  $versionFormat
      * @return $this
      */
     public function setVersionFormat($versionFormat)
@@ -108,7 +108,7 @@ class FeatureDataType extends FlexnetType
     }
 
     /**
-     * @param string $version
+     * @param  string  $version
      * @return $this
      */
     public function setVersion($version)
@@ -127,7 +127,7 @@ class FeatureDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -146,7 +146,7 @@ class FeatureDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType $featureOverrideParams
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureOverrideParamsType  $featureOverrideParams
      * @return $this
      */
     public function setFeatureOverrideParams($featureOverrideParams)

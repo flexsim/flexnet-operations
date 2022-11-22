@@ -42,15 +42,15 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $consolidatedLicenseId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $criteria
-     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $consolidatedLicenseId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $fulfillmentId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $soldTo
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $criteria
+     * @param  \Flexsim\FlexnetOperations\Type\StateQueryType  $state
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $consolidatedLicenseId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $criteria = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null)
+    public function __construct(SimpleQueryType $consolidatedLicenseId = null, SimpleQueryType $fulfillmentId = null, SimpleQueryType $activationId = null, SimpleQueryType $entitlementId = null, SimpleQueryType $soldTo = null, SimpleQueryType $criteria = null, StateQueryType $state = null)
     {
         $this->consolidatedLicenseId = $consolidatedLicenseId;
         $this->fulfillmentId = $fulfillmentId;
@@ -64,15 +64,15 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $consolidatedLicenseId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $criteria
-     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $consolidatedLicenseId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $fulfillmentId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $soldTo
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $criteria
+     * @param  \Flexsim\FlexnetOperations\Type\StateQueryType  $state
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $consolidatedLicenseId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $criteria = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null)
+    public static function create(SimpleQueryType $consolidatedLicenseId = null, SimpleQueryType $fulfillmentId = null, SimpleQueryType $activationId = null, SimpleQueryType $entitlementId = null, SimpleQueryType $soldTo = null, SimpleQueryType $criteria = null, StateQueryType $state = null)
     {
         return new self(...func_get_args());
     }
@@ -86,7 +86,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $consolidatedLicenseId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $consolidatedLicenseId
      * @return $this
      */
     public function setConsolidatedLicenseId($consolidatedLicenseId)
@@ -105,7 +105,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $fulfillmentId
      * @return $this
      */
     public function setFulfillmentId($fulfillmentId)
@@ -124,7 +124,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -143,7 +143,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)
@@ -162,7 +162,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -181,7 +181,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $criteria
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $criteria
      * @return $this
      */
     public function setCriteria($criteria)
@@ -200,7 +200,7 @@ class ConsolidatedFulfillmentsQPType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param  \Flexsim\FlexnetOperations\Type\StateQueryType  $state
      * @return $this
      */
     public function setState($state)

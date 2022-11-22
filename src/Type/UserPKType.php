@@ -27,10 +27,10 @@ class UserPKType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $firstName
-     * @param string $lastName
-     * @param string $emailAddress
-     * @param string $phoneNumber
+     * @param  string  $firstName
+     * @param  string  $lastName
+     * @param  string  $emailAddress
+     * @param  string  $phoneNumber
      */
     public function __construct(string $firstName, string $lastName, string $emailAddress, string $phoneNumber = null)
     {
@@ -43,10 +43,10 @@ class UserPKType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $firstName
-     * @param string $lastName
-     * @param string $emailAddress
-     * @param string $phoneNumber
+     * @param  string  $firstName
+     * @param  string  $lastName
+     * @param  string  $emailAddress
+     * @param  string  $phoneNumber
      */
     public static function create(string $firstName, string $lastName, string $emailAddress, string $phoneNumber = null)
     {
@@ -62,7 +62,7 @@ class UserPKType extends FlexnetType
     }
 
     /**
-     * @param string $firstName
+     * @param  string  $firstName
      * @return $this
      */
     public function setFirstName($firstName)
@@ -81,7 +81,7 @@ class UserPKType extends FlexnetType
     }
 
     /**
-     * @param string $lastName
+     * @param  string  $lastName
      * @return $this
      */
     public function setLastName($lastName)
@@ -100,7 +100,7 @@ class UserPKType extends FlexnetType
     }
 
     /**
-     * @param string $emailAddress
+     * @param  string  $emailAddress
      * @return $this
      */
     public function setEmailAddress($emailAddress)
@@ -119,7 +119,7 @@ class UserPKType extends FlexnetType
     }
 
     /**
-     * @param string $phoneNumber
+     * @param  string  $phoneNumber
      * @return $this
      */
     public function setPhoneNumber($phoneNumber)

@@ -28,12 +28,8 @@ return [
 
             'user' => env('FLEXNET_OPERATIONS_USER'),
             'password' => env('FLEXNET_OPERATIONS_PASSWORD'),
-            'domain' => env('FLEXNET_OPERATIONS_DOMAIN'),
-            'scheme' => env('FLEXNET_OPERATIONS_SCHEME', 'http'),
-            'uri' => '/flexnet/services',
-        ]
+        ],
     ],
-
 
     /**
      * Define the default versions to use for each service
@@ -45,7 +41,6 @@ return [
      * specific service)
      * options: base, v1, v2, v3
      */
-
     'services' => [
         'ProductPackagingService' => 'v2',
         'EntitlementOrderService' => 'v3',
@@ -57,5 +52,5 @@ return [
 
         // this service was replaced by the UserAcctHeigharchyService in FlexNet Operations 2018 but is still available for use
         'UserOrgHierarchyService' => 'v1',
-    ]
+    ],
 ];

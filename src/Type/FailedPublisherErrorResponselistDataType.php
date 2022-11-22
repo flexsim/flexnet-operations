@@ -12,7 +12,7 @@ class FailedPublisherErrorResponselistDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponseDataType|array $failedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponseDataType|array  $failedFulfillment
      */
     public function __construct($failedFulfillment = null)
     {
@@ -22,7 +22,7 @@ class FailedPublisherErrorResponselistDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponseDataType|array $failedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponseDataType|array  $failedFulfillment
      */
     public static function create($failedFulfillment = null)
     {
@@ -38,7 +38,7 @@ class FailedPublisherErrorResponselistDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponseDataType $failedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponseDataType  $failedFulfillment
      * @return $this
      */
     public function setFailedFulfillment($failedFulfillment)

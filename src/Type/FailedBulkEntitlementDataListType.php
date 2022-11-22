@@ -12,7 +12,7 @@ class FailedBulkEntitlementDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataType|array $failedBulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataType|array  $failedBulkEntitlement
      */
     public function __construct($failedBulkEntitlement = null)
     {
@@ -22,7 +22,7 @@ class FailedBulkEntitlementDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataType|array $failedBulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataType|array  $failedBulkEntitlement
      */
     public static function create($failedBulkEntitlement = null)
     {
@@ -38,7 +38,7 @@ class FailedBulkEntitlementDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataType|array $failedBulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataType|array  $failedBulkEntitlement
      * @return $this
      */
     public function setFailedBulkEntitlement($failedBulkEntitlement)

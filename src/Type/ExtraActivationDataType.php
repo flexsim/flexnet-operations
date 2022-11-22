@@ -12,7 +12,7 @@ class ExtraActivationDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param int $allowedCount
+     * @param  int  $allowedCount
      */
     public function __construct(int $allowedCount)
     {
@@ -22,7 +22,7 @@ class ExtraActivationDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param int $allowedCount
+     * @param  int  $allowedCount
      */
     public static function create(int $allowedCount)
     {
@@ -38,7 +38,7 @@ class ExtraActivationDataType extends FlexnetType
     }
 
     /**
-     * @param int $allowedCount
+     * @param  int  $allowedCount
      * @return $this
      */
     public function setAllowedCount($allowedCount)

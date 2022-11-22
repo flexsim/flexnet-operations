@@ -24,11 +24,11 @@ class SearchDevicesResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedSearchDevicesData $failed
-     * @param \Flexsim\FlexnetOperations\Type\SearchDevicesResponseData $devices
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedSearchDevicesData  $failed
+     * @param  \Flexsim\FlexnetOperations\Type\SearchDevicesResponseData  $devices
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedSearchDevicesData $failed = null, \Flexsim\FlexnetOperations\Type\SearchDevicesResponseData $devices = null)
+    public function __construct(OpsEmbeddedStatusInfoType $statusInfo, FailedSearchDevicesData $failed = null, SearchDevicesResponseData $devices = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failed = $failed;
@@ -38,11 +38,11 @@ class SearchDevicesResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedSearchDevicesData $failed
-     * @param \Flexsim\FlexnetOperations\Type\SearchDevicesResponseData $devices
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedSearchDevicesData  $failed
+     * @param  \Flexsim\FlexnetOperations\Type\SearchDevicesResponseData  $devices
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedSearchDevicesData $failed = null, \Flexsim\FlexnetOperations\Type\SearchDevicesResponseData $devices = null)
+    public static function create(OpsEmbeddedStatusInfoType $statusInfo, FailedSearchDevicesData $failed = null, SearchDevicesResponseData $devices = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class SearchDevicesResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class SearchDevicesResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedSearchDevicesData $failed
+     * @param  \Flexsim\FlexnetOperations\Type\FailedSearchDevicesData  $failed
      * @return $this
      */
     public function setFailed($failed)
@@ -94,7 +94,7 @@ class SearchDevicesResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SearchDevicesResponseData $devices
+     * @param  \Flexsim\FlexnetOperations\Type\SearchDevicesResponseData  $devices
      * @return $this
      */
     public function setDevices($devices)

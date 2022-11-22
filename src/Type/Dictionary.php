@@ -12,9 +12,9 @@ class Dictionary extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection $Entries
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection  $Entries
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection $Entries = null)
+    public function __construct(DictionaryEntriesCollection $Entries = null)
     {
         $this->Entries = $Entries;
     }
@@ -22,9 +22,9 @@ class Dictionary extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection $Entries
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection  $Entries
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection $Entries = null)
+    public static function create(DictionaryEntriesCollection $Entries = null)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class Dictionary extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection $Entries
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryEntriesCollection  $Entries
      * @return $this
      */
     public function setEntries($Entries)

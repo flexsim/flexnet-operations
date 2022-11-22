@@ -12,7 +12,7 @@ class SearchDevicesResponseData extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchDeviceResponseData|array $device
+     * @param  \Flexsim\FlexnetOperations\Type\SearchDeviceResponseData|array  $device
      */
     public function __construct($device = null)
     {
@@ -22,7 +22,7 @@ class SearchDevicesResponseData extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchDeviceResponseData|array $device
+     * @param  \Flexsim\FlexnetOperations\Type\SearchDeviceResponseData|array  $device
      */
     public static function create($device = null)
     {
@@ -38,7 +38,7 @@ class SearchDevicesResponseData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SearchDeviceResponseData $device
+     * @param  \Flexsim\FlexnetOperations\Type\SearchDeviceResponseData  $device
      * @return $this
      */
     public function setDevice($device)

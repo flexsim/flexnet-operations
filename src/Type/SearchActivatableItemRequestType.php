@@ -24,11 +24,11 @@ class SearchActivatableItemRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $activatableItemSearchCriteria
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType  $activatableItemSearchCriteria
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int $pageNumber = null)
+    public function __construct(SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int $pageNumber = null)
     {
         $this->activatableItemSearchCriteria = $activatableItemSearchCriteria;
         $this->batchSize = $batchSize;
@@ -38,11 +38,11 @@ class SearchActivatableItemRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $activatableItemSearchCriteria
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType  $activatableItemSearchCriteria
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int $pageNumber = null)
+    public static function create(SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int $pageNumber = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class SearchActivatableItemRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $activatableItemSearchCriteria
+     * @param  \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType  $activatableItemSearchCriteria
      * @return $this
      */
     public function setActivatableItemSearchCriteria($activatableItemSearchCriteria)
@@ -75,7 +75,7 @@ class SearchActivatableItemRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)
@@ -94,7 +94,7 @@ class SearchActivatableItemRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)

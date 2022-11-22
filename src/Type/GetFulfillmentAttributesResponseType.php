@@ -19,10 +19,10 @@ class GetFulfillmentAttributesResponseType extends FlexnetType implements Result
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\GetFulfillmentAttributesDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\GetFulfillmentAttributesDataType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetFulfillmentAttributesDataType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetFulfillmentAttributesDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
@@ -31,10 +31,10 @@ class GetFulfillmentAttributesResponseType extends FlexnetType implements Result
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\GetFulfillmentAttributesDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\GetFulfillmentAttributesDataType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetFulfillmentAttributesDataType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetFulfillmentAttributesDataType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetFulfillmentAttributesResponseType extends FlexnetType implements Result
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class GetFulfillmentAttributesResponseType extends FlexnetType implements Result
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetFulfillmentAttributesDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\GetFulfillmentAttributesDataType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

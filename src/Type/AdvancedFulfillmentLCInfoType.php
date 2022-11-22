@@ -32,13 +32,13 @@ class AdvancedFulfillmentLCInfoType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $uniqueId
-     * @param string $fulfillmentId
-     * @param string $licenseText
-     * @param string $binaryLicense
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  string  $uniqueId
+     * @param  string  $fulfillmentId
+     * @param  string  $licenseText
+     * @param  string  $binaryLicense
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      */
-    public function __construct(string $uniqueId, string $fulfillmentId, string $licenseText = null, string $binaryLicense = null, \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null)
+    public function __construct(string $uniqueId, string $fulfillmentId, string $licenseText = null, string $binaryLicense = null, LicenseFileDataListType $licenseFiles = null)
     {
         $this->uniqueId = $uniqueId;
         $this->fulfillmentId = $fulfillmentId;
@@ -50,13 +50,13 @@ class AdvancedFulfillmentLCInfoType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
-     * @param string $fulfillmentId
-     * @param string $licenseText
-     * @param string $binaryLicense
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  string  $uniqueId
+     * @param  string  $fulfillmentId
+     * @param  string  $licenseText
+     * @param  string  $binaryLicense
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      */
-    public static function create(string $uniqueId, string $fulfillmentId, string $licenseText = null, string $binaryLicense = null, \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null)
+    public static function create(string $uniqueId, string $fulfillmentId, string $licenseText = null, string $binaryLicense = null, LicenseFileDataListType $licenseFiles = null)
     {
         return new self(...func_get_args());
     }
@@ -70,7 +70,7 @@ class AdvancedFulfillmentLCInfoType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -89,7 +89,7 @@ class AdvancedFulfillmentLCInfoType extends FlexnetType
     }
 
     /**
-     * @param string $fulfillmentId
+     * @param  string  $fulfillmentId
      * @return $this
      */
     public function setFulfillmentId($fulfillmentId)
@@ -108,7 +108,7 @@ class AdvancedFulfillmentLCInfoType extends FlexnetType
     }
 
     /**
-     * @param string $licenseText
+     * @param  string  $licenseText
      * @return $this
      */
     public function setLicenseText($licenseText)
@@ -127,7 +127,7 @@ class AdvancedFulfillmentLCInfoType extends FlexnetType
     }
 
     /**
-     * @param string $binaryLicense
+     * @param  string  $binaryLicense
      * @return $this
      */
     public function setBinaryLicense($binaryLicense)
@@ -146,7 +146,7 @@ class AdvancedFulfillmentLCInfoType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      * @return $this
      */
     public function setLicenseFiles($licenseFiles)

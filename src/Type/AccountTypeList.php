@@ -12,7 +12,7 @@ class AccountTypeList extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $accountType
+     * @param  string  $accountType
      */
     public function __construct(string $accountType)
     {
@@ -22,7 +22,7 @@ class AccountTypeList extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $accountType
+     * @param  string  $accountType
      */
     public static function create(string $accountType)
     {
@@ -38,7 +38,7 @@ class AccountTypeList extends FlexnetType
     }
 
     /**
-     * @param string $accountType
+     * @param  string  $accountType
      * @return $this
      */
     public function setAccountType($accountType)

@@ -14,9 +14,9 @@ class CreateDevRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceDataType $device
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceDataType  $device
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceDataType $device)
+    public function __construct(DeviceDataType $device)
     {
         $this->device = $device;
     }
@@ -24,9 +24,9 @@ class CreateDevRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceDataType $device
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceDataType  $device
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceDataType $device)
+    public static function create(DeviceDataType $device)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class CreateDevRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceDataType $device
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceDataType  $device
      * @return $this
      */
     public function setDevice($device)

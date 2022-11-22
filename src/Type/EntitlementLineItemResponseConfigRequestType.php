@@ -237,54 +237,54 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     /**
      * Constructor
      *
-     * @param bool $activationId
-     * @param bool $description
-     * @param bool $state
-     * @param bool $activatableItemType
-     * @param bool $orderId
-     * @param bool $orderLineNumber
-     * @param bool $entitlementId
-     * @param bool $allowPortalLogin
-     * @param bool $soldTo
-     * @param bool $soldToDisplayName
-     * @param bool $entitlementState
-     * @param bool $entitlementDescription
-     * @param bool $shipToEmail
-     * @param bool $shipToAddress
-     * @param bool $parentBulkEntitlementId
-     * @param bool $bulkEntSoldTo
-     * @param bool $bulkEntSoldToDisplayName
-     * @param bool $product
-     * @param bool $productDescription
-     * @param bool $partNumber
-     * @param bool $partNumberDescription
-     * @param bool $licenseTechnology
-     * @param bool $licenseModel
-     * @param bool $lineItemSupportAction
-     * @param bool $parentLineItem
-     * @param bool $startDate
-     * @param bool $startDateOption
-     * @param bool $isPermanent
-     * @param bool $term
-     * @param bool $expirationDate
-     * @param bool $versionDate
-     * @param bool $versionDateAttributes
-     * @param bool $numberOfCopies
-     * @param bool $fulfilledAmount
-     * @param bool $numberOfRemainingCopies
-     * @param bool $isTrusted
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
-     * @param bool $maintenance
-     * @param bool $maintenancePartNumber
-     * @param bool $FNPTimeZoneValue
-     * @param bool $createdOnDateTime
-     * @param bool $lastModifiedDateTime
-     * @param bool $lineItemAttributes
-     * @param bool $maintenanceLineItemAttributes
-     * @param bool $transferredFromLineItem
-     * @param bool $splitFromLineItem
+     * @param  bool  $activationId
+     * @param  bool  $description
+     * @param  bool  $state
+     * @param  bool  $activatableItemType
+     * @param  bool  $orderId
+     * @param  bool  $orderLineNumber
+     * @param  bool  $entitlementId
+     * @param  bool  $allowPortalLogin
+     * @param  bool  $soldTo
+     * @param  bool  $soldToDisplayName
+     * @param  bool  $entitlementState
+     * @param  bool  $entitlementDescription
+     * @param  bool  $shipToEmail
+     * @param  bool  $shipToAddress
+     * @param  bool  $parentBulkEntitlementId
+     * @param  bool  $bulkEntSoldTo
+     * @param  bool  $bulkEntSoldToDisplayName
+     * @param  bool  $product
+     * @param  bool  $productDescription
+     * @param  bool  $partNumber
+     * @param  bool  $partNumberDescription
+     * @param  bool  $licenseTechnology
+     * @param  bool  $licenseModel
+     * @param  bool  $lineItemSupportAction
+     * @param  bool  $parentLineItem
+     * @param  bool  $startDate
+     * @param  bool  $startDateOption
+     * @param  bool  $isPermanent
+     * @param  bool  $term
+     * @param  bool  $expirationDate
+     * @param  bool  $versionDate
+     * @param  bool  $versionDateAttributes
+     * @param  bool  $numberOfCopies
+     * @param  bool  $fulfilledAmount
+     * @param  bool  $numberOfRemainingCopies
+     * @param  bool  $isTrusted
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType  $customAttributes
+     * @param  bool  $maintenance
+     * @param  bool  $maintenancePartNumber
+     * @param  bool  $FNPTimeZoneValue
+     * @param  bool  $createdOnDateTime
+     * @param  bool  $lastModifiedDateTime
+     * @param  bool  $lineItemAttributes
+     * @param  bool  $maintenanceLineItemAttributes
+     * @param  bool  $transferredFromLineItem
+     * @param  bool  $splitFromLineItem
      */
-    public function __construct(bool $activationId = null, bool $description = null, bool $state = null, bool $activatableItemType = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $allowPortalLogin = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $entitlementState = null, bool $entitlementDescription = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $parentBulkEntitlementId = null, bool $bulkEntSoldTo = null, bool $bulkEntSoldToDisplayName = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseTechnology = null, bool $licenseModel = null, bool $lineItemSupportAction = null, bool $parentLineItem = null, bool $startDate = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $fulfilledAmount = null, bool $numberOfRemainingCopies = null, bool $isTrusted = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $maintenance = null, bool $maintenancePartNumber = null, bool $FNPTimeZoneValue = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $lineItemAttributes = null, bool $maintenanceLineItemAttributes = null, bool $transferredFromLineItem = null, bool $splitFromLineItem = null)
+    public function __construct(bool $activationId = null, bool $description = null, bool $state = null, bool $activatableItemType = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $allowPortalLogin = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $entitlementState = null, bool $entitlementDescription = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $parentBulkEntitlementId = null, bool $bulkEntSoldTo = null, bool $bulkEntSoldToDisplayName = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseTechnology = null, bool $licenseModel = null, bool $lineItemSupportAction = null, bool $parentLineItem = null, bool $startDate = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $fulfilledAmount = null, bool $numberOfRemainingCopies = null, bool $isTrusted = null, CustomAttributeDescriptorDataType $customAttributes = null, bool $maintenance = null, bool $maintenancePartNumber = null, bool $FNPTimeZoneValue = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $lineItemAttributes = null, bool $maintenanceLineItemAttributes = null, bool $transferredFromLineItem = null, bool $splitFromLineItem = null)
     {
         $this->activationId = $activationId;
         $this->description = $description;
@@ -337,54 +337,54 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param bool $activationId
-     * @param bool $description
-     * @param bool $state
-     * @param bool $activatableItemType
-     * @param bool $orderId
-     * @param bool $orderLineNumber
-     * @param bool $entitlementId
-     * @param bool $allowPortalLogin
-     * @param bool $soldTo
-     * @param bool $soldToDisplayName
-     * @param bool $entitlementState
-     * @param bool $entitlementDescription
-     * @param bool $shipToEmail
-     * @param bool $shipToAddress
-     * @param bool $parentBulkEntitlementId
-     * @param bool $bulkEntSoldTo
-     * @param bool $bulkEntSoldToDisplayName
-     * @param bool $product
-     * @param bool $productDescription
-     * @param bool $partNumber
-     * @param bool $partNumberDescription
-     * @param bool $licenseTechnology
-     * @param bool $licenseModel
-     * @param bool $lineItemSupportAction
-     * @param bool $parentLineItem
-     * @param bool $startDate
-     * @param bool $startDateOption
-     * @param bool $isPermanent
-     * @param bool $term
-     * @param bool $expirationDate
-     * @param bool $versionDate
-     * @param bool $versionDateAttributes
-     * @param bool $numberOfCopies
-     * @param bool $fulfilledAmount
-     * @param bool $numberOfRemainingCopies
-     * @param bool $isTrusted
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
-     * @param bool $maintenance
-     * @param bool $maintenancePartNumber
-     * @param bool $FNPTimeZoneValue
-     * @param bool $createdOnDateTime
-     * @param bool $lastModifiedDateTime
-     * @param bool $lineItemAttributes
-     * @param bool $maintenanceLineItemAttributes
-     * @param bool $transferredFromLineItem
-     * @param bool $splitFromLineItem
+     * @param  bool  $activationId
+     * @param  bool  $description
+     * @param  bool  $state
+     * @param  bool  $activatableItemType
+     * @param  bool  $orderId
+     * @param  bool  $orderLineNumber
+     * @param  bool  $entitlementId
+     * @param  bool  $allowPortalLogin
+     * @param  bool  $soldTo
+     * @param  bool  $soldToDisplayName
+     * @param  bool  $entitlementState
+     * @param  bool  $entitlementDescription
+     * @param  bool  $shipToEmail
+     * @param  bool  $shipToAddress
+     * @param  bool  $parentBulkEntitlementId
+     * @param  bool  $bulkEntSoldTo
+     * @param  bool  $bulkEntSoldToDisplayName
+     * @param  bool  $product
+     * @param  bool  $productDescription
+     * @param  bool  $partNumber
+     * @param  bool  $partNumberDescription
+     * @param  bool  $licenseTechnology
+     * @param  bool  $licenseModel
+     * @param  bool  $lineItemSupportAction
+     * @param  bool  $parentLineItem
+     * @param  bool  $startDate
+     * @param  bool  $startDateOption
+     * @param  bool  $isPermanent
+     * @param  bool  $term
+     * @param  bool  $expirationDate
+     * @param  bool  $versionDate
+     * @param  bool  $versionDateAttributes
+     * @param  bool  $numberOfCopies
+     * @param  bool  $fulfilledAmount
+     * @param  bool  $numberOfRemainingCopies
+     * @param  bool  $isTrusted
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType  $customAttributes
+     * @param  bool  $maintenance
+     * @param  bool  $maintenancePartNumber
+     * @param  bool  $FNPTimeZoneValue
+     * @param  bool  $createdOnDateTime
+     * @param  bool  $lastModifiedDateTime
+     * @param  bool  $lineItemAttributes
+     * @param  bool  $maintenanceLineItemAttributes
+     * @param  bool  $transferredFromLineItem
+     * @param  bool  $splitFromLineItem
      */
-    public static function create(bool $activationId = null, bool $description = null, bool $state = null, bool $activatableItemType = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $allowPortalLogin = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $entitlementState = null, bool $entitlementDescription = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $parentBulkEntitlementId = null, bool $bulkEntSoldTo = null, bool $bulkEntSoldToDisplayName = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseTechnology = null, bool $licenseModel = null, bool $lineItemSupportAction = null, bool $parentLineItem = null, bool $startDate = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $fulfilledAmount = null, bool $numberOfRemainingCopies = null, bool $isTrusted = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $maintenance = null, bool $maintenancePartNumber = null, bool $FNPTimeZoneValue = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $lineItemAttributes = null, bool $maintenanceLineItemAttributes = null, bool $transferredFromLineItem = null, bool $splitFromLineItem = null)
+    public static function create(bool $activationId = null, bool $description = null, bool $state = null, bool $activatableItemType = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $allowPortalLogin = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $entitlementState = null, bool $entitlementDescription = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $parentBulkEntitlementId = null, bool $bulkEntSoldTo = null, bool $bulkEntSoldToDisplayName = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseTechnology = null, bool $licenseModel = null, bool $lineItemSupportAction = null, bool $parentLineItem = null, bool $startDate = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $fulfilledAmount = null, bool $numberOfRemainingCopies = null, bool $isTrusted = null, CustomAttributeDescriptorDataType $customAttributes = null, bool $maintenance = null, bool $maintenancePartNumber = null, bool $FNPTimeZoneValue = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $lineItemAttributes = null, bool $maintenanceLineItemAttributes = null, bool $transferredFromLineItem = null, bool $splitFromLineItem = null)
     {
         return new self(...func_get_args());
     }
@@ -398,7 +398,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $activationId
+     * @param  bool  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -417,7 +417,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $description
+     * @param  bool  $description
      * @return $this
      */
     public function setDescription($description)
@@ -436,7 +436,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $state
+     * @param  bool  $state
      * @return $this
      */
     public function setState($state)
@@ -455,7 +455,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $activatableItemType
+     * @param  bool  $activatableItemType
      * @return $this
      */
     public function setActivatableItemType($activatableItemType)
@@ -474,7 +474,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $orderId
+     * @param  bool  $orderId
      * @return $this
      */
     public function setOrderId($orderId)
@@ -493,7 +493,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $orderLineNumber
+     * @param  bool  $orderLineNumber
      * @return $this
      */
     public function setOrderLineNumber($orderLineNumber)
@@ -512,7 +512,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $entitlementId
+     * @param  bool  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)
@@ -531,7 +531,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $allowPortalLogin
+     * @param  bool  $allowPortalLogin
      * @return $this
      */
     public function setAllowPortalLogin($allowPortalLogin)
@@ -550,7 +550,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $soldTo
+     * @param  bool  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -569,7 +569,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $soldToDisplayName
+     * @param  bool  $soldToDisplayName
      * @return $this
      */
     public function setSoldToDisplayName($soldToDisplayName)
@@ -588,7 +588,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $entitlementState
+     * @param  bool  $entitlementState
      * @return $this
      */
     public function setEntitlementState($entitlementState)
@@ -607,7 +607,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $entitlementDescription
+     * @param  bool  $entitlementDescription
      * @return $this
      */
     public function setEntitlementDescription($entitlementDescription)
@@ -626,7 +626,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $shipToEmail
+     * @param  bool  $shipToEmail
      * @return $this
      */
     public function setShipToEmail($shipToEmail)
@@ -645,7 +645,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $shipToAddress
+     * @param  bool  $shipToAddress
      * @return $this
      */
     public function setShipToAddress($shipToAddress)
@@ -664,7 +664,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $parentBulkEntitlementId
+     * @param  bool  $parentBulkEntitlementId
      * @return $this
      */
     public function setParentBulkEntitlementId($parentBulkEntitlementId)
@@ -683,7 +683,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $bulkEntSoldTo
+     * @param  bool  $bulkEntSoldTo
      * @return $this
      */
     public function setBulkEntSoldTo($bulkEntSoldTo)
@@ -702,7 +702,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $bulkEntSoldToDisplayName
+     * @param  bool  $bulkEntSoldToDisplayName
      * @return $this
      */
     public function setBulkEntSoldToDisplayName($bulkEntSoldToDisplayName)
@@ -721,7 +721,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $product
+     * @param  bool  $product
      * @return $this
      */
     public function setProduct($product)
@@ -740,7 +740,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $productDescription
+     * @param  bool  $productDescription
      * @return $this
      */
     public function setProductDescription($productDescription)
@@ -759,7 +759,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $partNumber
+     * @param  bool  $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -778,7 +778,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $partNumberDescription
+     * @param  bool  $partNumberDescription
      * @return $this
      */
     public function setPartNumberDescription($partNumberDescription)
@@ -797,7 +797,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $licenseTechnology
+     * @param  bool  $licenseTechnology
      * @return $this
      */
     public function setLicenseTechnology($licenseTechnology)
@@ -816,7 +816,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $licenseModel
+     * @param  bool  $licenseModel
      * @return $this
      */
     public function setLicenseModel($licenseModel)
@@ -835,7 +835,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $lineItemSupportAction
+     * @param  bool  $lineItemSupportAction
      * @return $this
      */
     public function setLineItemSupportAction($lineItemSupportAction)
@@ -854,7 +854,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $parentLineItem
+     * @param  bool  $parentLineItem
      * @return $this
      */
     public function setParentLineItem($parentLineItem)
@@ -873,7 +873,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $startDate
+     * @param  bool  $startDate
      * @return $this
      */
     public function setStartDate($startDate)
@@ -892,7 +892,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $startDateOption
+     * @param  bool  $startDateOption
      * @return $this
      */
     public function setStartDateOption($startDateOption)
@@ -911,7 +911,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $isPermanent
+     * @param  bool  $isPermanent
      * @return $this
      */
     public function setIsPermanent($isPermanent)
@@ -930,7 +930,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $term
+     * @param  bool  $term
      * @return $this
      */
     public function setTerm($term)
@@ -949,7 +949,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $expirationDate
+     * @param  bool  $expirationDate
      * @return $this
      */
     public function setExpirationDate($expirationDate)
@@ -968,7 +968,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $versionDate
+     * @param  bool  $versionDate
      * @return $this
      */
     public function setVersionDate($versionDate)
@@ -987,7 +987,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $versionDateAttributes
+     * @param  bool  $versionDateAttributes
      * @return $this
      */
     public function setVersionDateAttributes($versionDateAttributes)
@@ -1006,7 +1006,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $numberOfCopies
+     * @param  bool  $numberOfCopies
      * @return $this
      */
     public function setNumberOfCopies($numberOfCopies)
@@ -1025,7 +1025,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $fulfilledAmount
+     * @param  bool  $fulfilledAmount
      * @return $this
      */
     public function setFulfilledAmount($fulfilledAmount)
@@ -1044,7 +1044,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $numberOfRemainingCopies
+     * @param  bool  $numberOfRemainingCopies
      * @return $this
      */
     public function setNumberOfRemainingCopies($numberOfRemainingCopies)
@@ -1063,7 +1063,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $isTrusted
+     * @param  bool  $isTrusted
      * @return $this
      */
     public function setIsTrusted($isTrusted)
@@ -1082,7 +1082,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)
@@ -1101,7 +1101,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $maintenance
+     * @param  bool  $maintenance
      * @return $this
      */
     public function setMaintenance($maintenance)
@@ -1120,7 +1120,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $maintenancePartNumber
+     * @param  bool  $maintenancePartNumber
      * @return $this
      */
     public function setMaintenancePartNumber($maintenancePartNumber)
@@ -1139,7 +1139,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $FNPTimeZoneValue
+     * @param  bool  $FNPTimeZoneValue
      * @return $this
      */
     public function setFNPTimeZoneValue($FNPTimeZoneValue)
@@ -1158,7 +1158,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $createdOnDateTime
+     * @param  bool  $createdOnDateTime
      * @return $this
      */
     public function setCreatedOnDateTime($createdOnDateTime)
@@ -1177,7 +1177,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $lastModifiedDateTime
+     * @param  bool  $lastModifiedDateTime
      * @return $this
      */
     public function setLastModifiedDateTime($lastModifiedDateTime)
@@ -1196,7 +1196,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $lineItemAttributes
+     * @param  bool  $lineItemAttributes
      * @return $this
      */
     public function setLineItemAttributes($lineItemAttributes)
@@ -1215,7 +1215,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $maintenanceLineItemAttributes
+     * @param  bool  $maintenanceLineItemAttributes
      * @return $this
      */
     public function setMaintenanceLineItemAttributes($maintenanceLineItemAttributes)
@@ -1234,7 +1234,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $transferredFromLineItem
+     * @param  bool  $transferredFromLineItem
      * @return $this
      */
     public function setTransferredFromLineItem($transferredFromLineItem)
@@ -1253,7 +1253,7 @@ class EntitlementLineItemResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $splitFromLineItem
+     * @param  bool  $splitFromLineItem
      * @return $this
      */
     public function setSplitFromLineItem($splitFromLineItem)

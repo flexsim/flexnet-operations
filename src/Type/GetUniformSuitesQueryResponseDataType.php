@@ -12,7 +12,7 @@ class GetUniformSuitesQueryResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UniformSuiteQueryDataType|array $uniformSuite
+     * @param  \Flexsim\FlexnetOperations\Type\UniformSuiteQueryDataType|array  $uniformSuite
      */
     public function __construct($uniformSuite = null)
     {
@@ -22,7 +22,7 @@ class GetUniformSuitesQueryResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UniformSuiteQueryDataType|array $uniformSuite
+     * @param  \Flexsim\FlexnetOperations\Type\UniformSuiteQueryDataType|array  $uniformSuite
      */
     public static function create($uniformSuite = null)
     {
@@ -38,7 +38,7 @@ class GetUniformSuitesQueryResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UniformSuiteQueryDataType $uniformSuite
+     * @param  \Flexsim\FlexnetOperations\Type\UniformSuiteQueryDataType  $uniformSuite
      * @return $this
      */
     public function setUniformSuite($uniformSuite)

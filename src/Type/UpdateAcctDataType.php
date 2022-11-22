@@ -52,26 +52,26 @@ class UpdateAcctDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @param string $id
-     * @param string $name
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @param \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts
-     * @param \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts
-     * @param bool $visible
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $account
+     * @param  string  $id
+     * @param  string  $name
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType  $subAccounts
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType  $relatedAccounts
+     * @param  bool  $visible
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      */
     public function __construct(
         $account,
         string $id = null,
         string $name = null,
         string $description = null,
-        \Flexsim\FlexnetOperations\Type\AddressDataType $address = null,
-        \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts = null,
-        \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts = null,
+        AddressDataType $address = null,
+        UpdateSubAccountsListType $subAccounts = null,
+        UpdateRelatedAccountsListType $relatedAccounts = null,
         bool $visible = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null
+        AttributeDescriptorDataType $customAttributes = null
     ) {
         $this->account = $account;
         $this->id = $id;
@@ -87,26 +87,26 @@ class UpdateAcctDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @param string $id
-     * @param string $name
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @param \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts
-     * @param \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts
-     * @param bool $visible
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $account
+     * @param  string  $id
+     * @param  string  $name
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType  $subAccounts
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType  $relatedAccounts
+     * @param  bool  $visible
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      */
     public static function create(
         $account,
         string $id = null,
         string $name = null,
         string $description = null,
-        \Flexsim\FlexnetOperations\Type\AddressDataType $address = null,
-        \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts = null,
-        \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts = null,
+        AddressDataType $address = null,
+        UpdateSubAccountsListType $subAccounts = null,
+        UpdateRelatedAccountsListType $relatedAccounts = null,
         bool $visible = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null
+        AttributeDescriptorDataType $customAttributes = null
     ) {
         return new self(...func_get_args());
     }
@@ -120,7 +120,7 @@ class UpdateAcctDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $account
      * @return $this
      */
     public function setAccount($account)
@@ -139,7 +139,7 @@ class UpdateAcctDataType extends FlexnetType
     }
 
     /**
-     * @param string $id
+     * @param  string  $id
      * @return $this
      */
     public function setId($id)
@@ -158,7 +158,7 @@ class UpdateAcctDataType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -177,7 +177,7 @@ class UpdateAcctDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -196,7 +196,7 @@ class UpdateAcctDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
      * @return $this
      */
     public function setAddress($address)
@@ -215,7 +215,7 @@ class UpdateAcctDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType $subAccounts
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateSubAccountsListType  $subAccounts
      * @return $this
      */
     public function setSubAccounts($subAccounts)
@@ -234,7 +234,7 @@ class UpdateAcctDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType $relatedAccounts
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateRelatedAccountsListType  $relatedAccounts
      * @return $this
      */
     public function setRelatedAccounts($relatedAccounts)
@@ -253,7 +253,7 @@ class UpdateAcctDataType extends FlexnetType
     }
 
     /**
-     * @param bool $visible
+     * @param  bool  $visible
      * @return $this
      */
     public function setVisible($visible)
@@ -272,7 +272,7 @@ class UpdateAcctDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)

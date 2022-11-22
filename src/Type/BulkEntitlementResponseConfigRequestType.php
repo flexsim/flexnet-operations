@@ -142,35 +142,35 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     /**
      * Constructor
      *
-     * @param bool $entitlementId
-     * @param bool $allowPortalLogin
-     * @param bool $description
-     * @param bool $state
-     * @param bool $soldTo
-     * @param bool $soldToDisplayName
-     * @param bool $shipToEmail
-     * @param bool $shipToAddress
-     * @param bool $orderId
-     * @param bool $orderLineNumber
-     * @param bool $product
-     * @param bool $productDescription
-     * @param bool $partNumber
-     * @param bool $partNumberDescription
-     * @param bool $licenseModel
-     * @param bool $licenseTechnology
-     * @param bool $startDateOption
-     * @param bool $isPermanent
-     * @param bool $term
-     * @param bool $expirationDate
-     * @param bool $versionDate
-     * @param bool $versionDateAttributes
-     * @param bool $numberOfCopies
-     * @param bool $bulkEntitlementType
-     * @param bool $createdUserId
-     * @param bool $FNPTimeZoneValue
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
+     * @param  bool  $entitlementId
+     * @param  bool  $allowPortalLogin
+     * @param  bool  $description
+     * @param  bool  $state
+     * @param  bool  $soldTo
+     * @param  bool  $soldToDisplayName
+     * @param  bool  $shipToEmail
+     * @param  bool  $shipToAddress
+     * @param  bool  $orderId
+     * @param  bool  $orderLineNumber
+     * @param  bool  $product
+     * @param  bool  $productDescription
+     * @param  bool  $partNumber
+     * @param  bool  $partNumberDescription
+     * @param  bool  $licenseModel
+     * @param  bool  $licenseTechnology
+     * @param  bool  $startDateOption
+     * @param  bool  $isPermanent
+     * @param  bool  $term
+     * @param  bool  $expirationDate
+     * @param  bool  $versionDate
+     * @param  bool  $versionDateAttributes
+     * @param  bool  $numberOfCopies
+     * @param  bool  $bulkEntitlementType
+     * @param  bool  $createdUserId
+     * @param  bool  $FNPTimeZoneValue
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType  $customAttributes
      */
-    public function __construct(bool $entitlementId = null, bool $allowPortalLogin = null, bool $description = null, bool $state = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $orderId = null, bool $orderLineNumber = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseModel = null, bool $licenseTechnology = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $bulkEntitlementType = null, bool $createdUserId = null, bool $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null)
+    public function __construct(bool $entitlementId = null, bool $allowPortalLogin = null, bool $description = null, bool $state = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $orderId = null, bool $orderLineNumber = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseModel = null, bool $licenseTechnology = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $bulkEntitlementType = null, bool $createdUserId = null, bool $FNPTimeZoneValue = null, CustomAttributeDescriptorDataType $customAttributes = null)
     {
         $this->entitlementId = $entitlementId;
         $this->allowPortalLogin = $allowPortalLogin;
@@ -204,35 +204,35 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param bool $entitlementId
-     * @param bool $allowPortalLogin
-     * @param bool $description
-     * @param bool $state
-     * @param bool $soldTo
-     * @param bool $soldToDisplayName
-     * @param bool $shipToEmail
-     * @param bool $shipToAddress
-     * @param bool $orderId
-     * @param bool $orderLineNumber
-     * @param bool $product
-     * @param bool $productDescription
-     * @param bool $partNumber
-     * @param bool $partNumberDescription
-     * @param bool $licenseModel
-     * @param bool $licenseTechnology
-     * @param bool $startDateOption
-     * @param bool $isPermanent
-     * @param bool $term
-     * @param bool $expirationDate
-     * @param bool $versionDate
-     * @param bool $versionDateAttributes
-     * @param bool $numberOfCopies
-     * @param bool $bulkEntitlementType
-     * @param bool $createdUserId
-     * @param bool $FNPTimeZoneValue
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
+     * @param  bool  $entitlementId
+     * @param  bool  $allowPortalLogin
+     * @param  bool  $description
+     * @param  bool  $state
+     * @param  bool  $soldTo
+     * @param  bool  $soldToDisplayName
+     * @param  bool  $shipToEmail
+     * @param  bool  $shipToAddress
+     * @param  bool  $orderId
+     * @param  bool  $orderLineNumber
+     * @param  bool  $product
+     * @param  bool  $productDescription
+     * @param  bool  $partNumber
+     * @param  bool  $partNumberDescription
+     * @param  bool  $licenseModel
+     * @param  bool  $licenseTechnology
+     * @param  bool  $startDateOption
+     * @param  bool  $isPermanent
+     * @param  bool  $term
+     * @param  bool  $expirationDate
+     * @param  bool  $versionDate
+     * @param  bool  $versionDateAttributes
+     * @param  bool  $numberOfCopies
+     * @param  bool  $bulkEntitlementType
+     * @param  bool  $createdUserId
+     * @param  bool  $FNPTimeZoneValue
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType  $customAttributes
      */
-    public static function create(bool $entitlementId = null, bool $allowPortalLogin = null, bool $description = null, bool $state = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $orderId = null, bool $orderLineNumber = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseModel = null, bool $licenseTechnology = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $bulkEntitlementType = null, bool $createdUserId = null, bool $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null)
+    public static function create(bool $entitlementId = null, bool $allowPortalLogin = null, bool $description = null, bool $state = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $orderId = null, bool $orderLineNumber = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseModel = null, bool $licenseTechnology = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $bulkEntitlementType = null, bool $createdUserId = null, bool $FNPTimeZoneValue = null, CustomAttributeDescriptorDataType $customAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -246,7 +246,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $entitlementId
+     * @param  bool  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)
@@ -265,7 +265,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $allowPortalLogin
+     * @param  bool  $allowPortalLogin
      * @return $this
      */
     public function setAllowPortalLogin($allowPortalLogin)
@@ -284,7 +284,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $description
+     * @param  bool  $description
      * @return $this
      */
     public function setDescription($description)
@@ -303,7 +303,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $state
+     * @param  bool  $state
      * @return $this
      */
     public function setState($state)
@@ -322,7 +322,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $soldTo
+     * @param  bool  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -341,7 +341,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $soldToDisplayName
+     * @param  bool  $soldToDisplayName
      * @return $this
      */
     public function setSoldToDisplayName($soldToDisplayName)
@@ -360,7 +360,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $shipToEmail
+     * @param  bool  $shipToEmail
      * @return $this
      */
     public function setShipToEmail($shipToEmail)
@@ -379,7 +379,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $shipToAddress
+     * @param  bool  $shipToAddress
      * @return $this
      */
     public function setShipToAddress($shipToAddress)
@@ -398,7 +398,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $orderId
+     * @param  bool  $orderId
      * @return $this
      */
     public function setOrderId($orderId)
@@ -417,7 +417,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $orderLineNumber
+     * @param  bool  $orderLineNumber
      * @return $this
      */
     public function setOrderLineNumber($orderLineNumber)
@@ -436,7 +436,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $product
+     * @param  bool  $product
      * @return $this
      */
     public function setProduct($product)
@@ -455,7 +455,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $productDescription
+     * @param  bool  $productDescription
      * @return $this
      */
     public function setProductDescription($productDescription)
@@ -474,7 +474,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $partNumber
+     * @param  bool  $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -493,7 +493,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $partNumberDescription
+     * @param  bool  $partNumberDescription
      * @return $this
      */
     public function setPartNumberDescription($partNumberDescription)
@@ -512,7 +512,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $licenseModel
+     * @param  bool  $licenseModel
      * @return $this
      */
     public function setLicenseModel($licenseModel)
@@ -531,7 +531,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $licenseTechnology
+     * @param  bool  $licenseTechnology
      * @return $this
      */
     public function setLicenseTechnology($licenseTechnology)
@@ -550,7 +550,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $startDateOption
+     * @param  bool  $startDateOption
      * @return $this
      */
     public function setStartDateOption($startDateOption)
@@ -569,7 +569,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $isPermanent
+     * @param  bool  $isPermanent
      * @return $this
      */
     public function setIsPermanent($isPermanent)
@@ -588,7 +588,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $term
+     * @param  bool  $term
      * @return $this
      */
     public function setTerm($term)
@@ -607,7 +607,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $expirationDate
+     * @param  bool  $expirationDate
      * @return $this
      */
     public function setExpirationDate($expirationDate)
@@ -626,7 +626,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $versionDate
+     * @param  bool  $versionDate
      * @return $this
      */
     public function setVersionDate($versionDate)
@@ -645,7 +645,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $versionDateAttributes
+     * @param  bool  $versionDateAttributes
      * @return $this
      */
     public function setVersionDateAttributes($versionDateAttributes)
@@ -664,7 +664,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $numberOfCopies
+     * @param  bool  $numberOfCopies
      * @return $this
      */
     public function setNumberOfCopies($numberOfCopies)
@@ -683,7 +683,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $bulkEntitlementType
+     * @param  bool  $bulkEntitlementType
      * @return $this
      */
     public function setBulkEntitlementType($bulkEntitlementType)
@@ -702,7 +702,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $createdUserId
+     * @param  bool  $createdUserId
      * @return $this
      */
     public function setCreatedUserId($createdUserId)
@@ -721,7 +721,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $FNPTimeZoneValue
+     * @param  bool  $FNPTimeZoneValue
      * @return $this
      */
     public function setFNPTimeZoneValue($FNPTimeZoneValue)
@@ -740,7 +740,7 @@ class BulkEntitlementResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)

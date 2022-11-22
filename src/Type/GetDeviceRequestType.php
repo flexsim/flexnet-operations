@@ -19,10 +19,10 @@ class GetDeviceRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
-     * @param \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType $responseConfig
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceId  $deviceId
+     * @param  \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType  $responseConfig
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceId $deviceId, \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType $responseConfig = null)
+    public function __construct(DeviceId $deviceId, GetDeviceResponseConfigType $responseConfig = null)
     {
         $this->deviceId = $deviceId;
         $this->responseConfig = $responseConfig;
@@ -31,10 +31,10 @@ class GetDeviceRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
-     * @param \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType $responseConfig
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceId  $deviceId
+     * @param  \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType  $responseConfig
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceId $deviceId, \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType $responseConfig = null)
+    public static function create(DeviceId $deviceId, GetDeviceResponseConfigType $responseConfig = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetDeviceRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceId  $deviceId
      * @return $this
      */
     public function setDeviceId($deviceId)
@@ -67,7 +67,7 @@ class GetDeviceRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType $responseConfig
+     * @param  \Flexsim\FlexnetOperations\Type\GetDeviceResponseConfigType  $responseConfig
      * @return $this
      */
     public function setResponseConfig($responseConfig)

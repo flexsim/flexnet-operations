@@ -42,13 +42,13 @@ class AddressDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $address1
-     * @param string $address2
-     * @param string $city
-     * @param string $state
-     * @param string $zipcode
-     * @param string $country
-     * @param string $region
+     * @param  string  $address1
+     * @param  string  $address2
+     * @param  string  $city
+     * @param  string  $state
+     * @param  string  $zipcode
+     * @param  string  $country
+     * @param  string  $region
      */
     public function __construct(string $address1 = null, string $address2 = null, string $city = null, string $state = null, string $zipcode = null, string $country = null, string $region = null)
     {
@@ -64,13 +64,13 @@ class AddressDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $address1
-     * @param string $address2
-     * @param string $city
-     * @param string $state
-     * @param string $zipcode
-     * @param string $country
-     * @param string $region
+     * @param  string  $address1
+     * @param  string  $address2
+     * @param  string  $city
+     * @param  string  $state
+     * @param  string  $zipcode
+     * @param  string  $country
+     * @param  string  $region
      */
     public static function create(string $address1 = null, string $address2 = null, string $city = null, string $state = null, string $zipcode = null, string $country = null, string $region = null)
     {
@@ -86,7 +86,7 @@ class AddressDataType extends FlexnetType
     }
 
     /**
-     * @param string $address1
+     * @param  string  $address1
      * @return $this
      */
     public function setAddress1($address1)
@@ -105,7 +105,7 @@ class AddressDataType extends FlexnetType
     }
 
     /**
-     * @param string $address2
+     * @param  string  $address2
      * @return $this
      */
     public function setAddress2($address2)
@@ -124,7 +124,7 @@ class AddressDataType extends FlexnetType
     }
 
     /**
-     * @param string $city
+     * @param  string  $city
      * @return $this
      */
     public function setCity($city)
@@ -143,7 +143,7 @@ class AddressDataType extends FlexnetType
     }
 
     /**
-     * @param string $state
+     * @param  string  $state
      * @return $this
      */
     public function setState($state)
@@ -162,7 +162,7 @@ class AddressDataType extends FlexnetType
     }
 
     /**
-     * @param string $zipcode
+     * @param  string  $zipcode
      * @return $this
      */
     public function setZipcode($zipcode)
@@ -181,7 +181,7 @@ class AddressDataType extends FlexnetType
     }
 
     /**
-     * @param string $country
+     * @param  string  $country
      * @return $this
      */
     public function setCountry($country)
@@ -200,7 +200,7 @@ class AddressDataType extends FlexnetType
     }
 
     /**
-     * @param string $region
+     * @param  string  $region
      * @return $this
      */
     public function setRegion($region)

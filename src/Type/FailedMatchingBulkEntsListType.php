@@ -12,7 +12,7 @@ class FailedMatchingBulkEntsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array $failedBulkEnt
+     * @param  \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array  $failedBulkEnt
      */
     public function __construct($failedBulkEnt)
     {
@@ -22,7 +22,7 @@ class FailedMatchingBulkEntsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array $failedBulkEnt
+     * @param  \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array  $failedBulkEnt
      */
     public static function create($failedBulkEnt)
     {
@@ -38,7 +38,7 @@ class FailedMatchingBulkEntsListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array $failedBulkEnt
+     * @param  \Flexsim\FlexnetOperations\Type\FailedMatchingBulkEntDataType|array  $failedBulkEnt
      * @return $this
      */
     public function setFailedBulkEnt($failedBulkEnt)

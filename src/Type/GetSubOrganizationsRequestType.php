@@ -14,9 +14,9 @@ class GetSubOrganizationsRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization)
+    public function __construct(OrganizationIdentifierType $organization)
     {
         $this->organization = $organization;
     }
@@ -24,9 +24,9 @@ class GetSubOrganizationsRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization)
+    public static function create(OrganizationIdentifierType $organization)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class GetSubOrganizationsRequestType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
      * @return $this
      */
     public function setOrganization($organization)

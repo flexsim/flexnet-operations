@@ -24,11 +24,11 @@ class UpdateDevResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateDevDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\UpdatedDeviceDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedUpdateDevDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdatedDeviceDataListType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUpdateDevDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\UpdatedDeviceDataListType $responseData = null)
+    public function __construct(OpsEmbeddedStatusInfoType $statusInfo, FailedUpdateDevDataListType $failedData = null, UpdatedDeviceDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -38,11 +38,11 @@ class UpdateDevResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateDevDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\UpdatedDeviceDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedUpdateDevDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdatedDeviceDataListType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUpdateDevDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\UpdatedDeviceDataListType $responseData = null)
+    public static function create(OpsEmbeddedStatusInfoType $statusInfo, FailedUpdateDevDataListType $failedData = null, UpdatedDeviceDataListType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class UpdateDevResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class UpdateDevResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateDevDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedUpdateDevDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -94,7 +94,7 @@ class UpdateDevResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdatedDeviceDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdatedDeviceDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

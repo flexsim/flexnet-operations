@@ -14,9 +14,9 @@ class LinkOrganizationsRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LinkOrganizationsDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\LinkOrganizationsDataType  $orgData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LinkOrganizationsDataType $orgData)
+    public function __construct(LinkOrganizationsDataType $orgData)
     {
         $this->orgData = $orgData;
     }
@@ -24,9 +24,9 @@ class LinkOrganizationsRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LinkOrganizationsDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\LinkOrganizationsDataType  $orgData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LinkOrganizationsDataType $orgData)
+    public static function create(LinkOrganizationsDataType $orgData)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class LinkOrganizationsRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LinkOrganizationsDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\LinkOrganizationsDataType  $orgData
      * @return $this
      */
     public function setOrgData($orgData)

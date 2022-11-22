@@ -19,10 +19,10 @@ class ConsolidateFulfillmentsResponseType extends FlexnetType implements ResultI
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\ConsolidatedResponseDataType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ConsolidatedResponseDataType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, ConsolidatedResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
@@ -31,10 +31,10 @@ class ConsolidateFulfillmentsResponseType extends FlexnetType implements ResultI
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\ConsolidatedResponseDataType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ConsolidatedResponseDataType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, ConsolidatedResponseDataType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class ConsolidateFulfillmentsResponseType extends FlexnetType implements ResultI
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class ConsolidateFulfillmentsResponseType extends FlexnetType implements ResultI
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\ConsolidatedResponseDataType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

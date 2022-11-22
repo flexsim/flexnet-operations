@@ -29,12 +29,12 @@ class GetEntitlementAttributesResponseType extends FlexnetType implements Result
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $entitlementAttributes
-     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType $policyAttributes
-     * @param bool $needTimeZone
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $entitlementAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType  $policyAttributes
+     * @param  bool  $needTimeZone
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $entitlementAttributes = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType $policyAttributes = null, bool $needTimeZone = null)
+    public function __construct(StatusInfoType $statusInfo, AttributeMetaDescriptorDataType $entitlementAttributes = null, PolicyAttributesDataType $policyAttributes = null, bool $needTimeZone = null)
     {
         $this->statusInfo = $statusInfo;
         $this->entitlementAttributes = $entitlementAttributes;
@@ -45,12 +45,12 @@ class GetEntitlementAttributesResponseType extends FlexnetType implements Result
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $entitlementAttributes
-     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType $policyAttributes
-     * @param bool $needTimeZone
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $entitlementAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType  $policyAttributes
+     * @param  bool  $needTimeZone
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $entitlementAttributes = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType $policyAttributes = null, bool $needTimeZone = null)
+    public static function create(StatusInfoType $statusInfo, AttributeMetaDescriptorDataType $entitlementAttributes = null, PolicyAttributesDataType $policyAttributes = null, bool $needTimeZone = null)
     {
         return new self(...func_get_args());
     }
@@ -64,7 +64,7 @@ class GetEntitlementAttributesResponseType extends FlexnetType implements Result
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -83,7 +83,7 @@ class GetEntitlementAttributesResponseType extends FlexnetType implements Result
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $entitlementAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $entitlementAttributes
      * @return $this
      */
     public function setEntitlementAttributes($entitlementAttributes)
@@ -102,7 +102,7 @@ class GetEntitlementAttributesResponseType extends FlexnetType implements Result
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType $policyAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyAttributesDataType  $policyAttributes
      * @return $this
      */
     public function setPolicyAttributes($policyAttributes)
@@ -121,7 +121,7 @@ class GetEntitlementAttributesResponseType extends FlexnetType implements Result
     }
 
     /**
-     * @param bool $needTimeZone
+     * @param  bool  $needTimeZone
      * @return $this
      */
     public function setNeedTimeZone($needTimeZone)

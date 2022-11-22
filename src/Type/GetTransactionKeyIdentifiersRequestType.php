@@ -14,9 +14,9 @@ class GetTransactionKeyIdentifiersRequestType extends FlexnetType implements Req
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType  $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType $queryParams = null)
+    public function __construct(IdentifierQueryParametersType $queryParams = null)
     {
         $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
@@ -25,9 +25,9 @@ class GetTransactionKeyIdentifiersRequestType extends FlexnetType implements Req
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType  $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType $queryParams = null)
+    public static function create(IdentifierQueryParametersType $queryParams = null)
     {
         return new self(...func_get_args());
     }
@@ -41,7 +41,7 @@ class GetTransactionKeyIdentifiersRequestType extends FlexnetType implements Req
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)

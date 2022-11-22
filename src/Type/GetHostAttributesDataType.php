@@ -12,9 +12,9 @@ class GetHostAttributesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $hostAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $hostAttributes
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $hostAttributes = null)
+    public function __construct(AttributeMetaDescriptorDataType $hostAttributes = null)
     {
         $this->hostAttributes = $hostAttributes;
     }
@@ -22,9 +22,9 @@ class GetHostAttributesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $hostAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $hostAttributes
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $hostAttributes = null)
+    public static function create(AttributeMetaDescriptorDataType $hostAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class GetHostAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType $hostAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeMetaDescriptorDataType  $hostAttributes
      * @return $this
      */
     public function setHostAttributes($hostAttributes)

@@ -19,10 +19,10 @@ class GetFeatureBundlesQueryResponseType extends FlexnetType implements ResultIn
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetFeatureBundlesQueryResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
@@ -31,10 +31,10 @@ class GetFeatureBundlesQueryResponseType extends FlexnetType implements ResultIn
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetFeatureBundlesQueryResponseDataType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetFeatureBundlesQueryResponseType extends FlexnetType implements ResultIn
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class GetFeatureBundlesQueryResponseType extends FlexnetType implements ResultIn
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\GetFeatureBundlesQueryResponseDataType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

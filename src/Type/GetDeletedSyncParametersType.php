@@ -27,12 +27,12 @@ class GetDeletedSyncParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $startTime
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $endTime
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $startTime
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $endTime
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $serverUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $serverId
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DateTimeQueryType $startTime = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $endTime = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId = null)
+    public function __construct(DateTimeQueryType $startTime = null, DateTimeQueryType $endTime = null, ExternalIdQueryType $serverUniqueId = null, SimpleQueryType $serverId = null)
     {
         $this->startTime = $startTime;
         $this->endTime = $endTime;
@@ -43,12 +43,12 @@ class GetDeletedSyncParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $startTime
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $endTime
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $startTime
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $endTime
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $serverUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $serverId
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DateTimeQueryType $startTime = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $endTime = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId = null)
+    public static function create(DateTimeQueryType $startTime = null, DateTimeQueryType $endTime = null, ExternalIdQueryType $serverUniqueId = null, SimpleQueryType $serverId = null)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class GetDeletedSyncParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $startTime
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $startTime
      * @return $this
      */
     public function setStartTime($startTime)
@@ -81,7 +81,7 @@ class GetDeletedSyncParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $endTime
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $endTime
      * @return $this
      */
     public function setEndTime($endTime)
@@ -100,7 +100,7 @@ class GetDeletedSyncParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $serverUniqueId
      * @return $this
      */
     public function setServerUniqueId($serverUniqueId)
@@ -119,7 +119,7 @@ class GetDeletedSyncParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $serverId
      * @return $this
      */
     public function setServerId($serverId)

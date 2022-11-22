@@ -17,10 +17,10 @@ class UnlinkMaintenanceLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $maintenanceLineItemIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
+    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->maintenanceLineItemIdentifier = $maintenanceLineItemIdentifier;
@@ -29,10 +29,10 @@ class UnlinkMaintenanceLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $maintenanceLineItemIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
+    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class UnlinkMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
      * @return $this
      */
     public function setLineItemIdentifier($lineItemIdentifier)
@@ -65,7 +65,7 @@ class UnlinkMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $maintenanceLineItemIdentifier
      * @return $this
      */
     public function setMaintenanceLineItemIdentifier($maintenanceLineItemIdentifier)

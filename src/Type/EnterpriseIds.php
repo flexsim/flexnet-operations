@@ -12,7 +12,7 @@ class EnterpriseIds extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $enterpriseId
+     * @param  string  $enterpriseId
      */
     public function __construct(string $enterpriseId)
     {
@@ -22,7 +22,7 @@ class EnterpriseIds extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $enterpriseId
+     * @param  string  $enterpriseId
      */
     public static function create(string $enterpriseId)
     {
@@ -38,7 +38,7 @@ class EnterpriseIds extends FlexnetType
     }
 
     /**
-     * @param string $enterpriseId
+     * @param  string  $enterpriseId
      * @return $this
      */
     public function setEnterpriseId($enterpriseId)

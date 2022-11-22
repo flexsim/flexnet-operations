@@ -17,8 +17,8 @@ class IdType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $id
-     * @param bool $autoGenerate
+     * @param  string  $id
+     * @param  bool  $autoGenerate
      */
     public function __construct(string $id = null, bool $autoGenerate = null)
     {
@@ -29,8 +29,8 @@ class IdType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $id
-     * @param bool $autoGenerate
+     * @param  string  $id
+     * @param  bool  $autoGenerate
      */
     public static function create(string $id = null, bool $autoGenerate = null)
     {
@@ -46,7 +46,7 @@ class IdType extends FlexnetType
     }
 
     /**
-     * @param string $id
+     * @param  string  $id
      * @return $this
      */
     public function setId($id)
@@ -65,7 +65,7 @@ class IdType extends FlexnetType
     }
 
     /**
-     * @param bool $autoGenerate
+     * @param  bool  $autoGenerate
      * @return $this
      */
     public function setAutoGenerate($autoGenerate)

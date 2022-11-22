@@ -12,9 +12,9 @@ class MoveDeviceList extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier)
+    public function __construct(DeviceIdentifier $deviceIdentifier)
     {
         $this->deviceIdentifier = $deviceIdentifier;
     }
@@ -22,9 +22,9 @@ class MoveDeviceList extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier)
+    public static function create(DeviceIdentifier $deviceIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class MoveDeviceList extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
      * @return $this
      */
     public function setDeviceIdentifier($deviceIdentifier)

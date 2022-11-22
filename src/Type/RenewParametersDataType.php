@@ -97,26 +97,26 @@ class RenewParametersDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\IdType $activationId
-     * @param bool $isPermanent
-     * @param \Flexsim\FlexnetOperations\Type\ExpirationTermsDataType $expirationTerms
-     * @param int $numberOfCopies
-     * @param \DateTimeInterface $startDate
-     * @param string $startDateOption
-     * @param \DateTimeInterface $versionDate
-     * @param \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
-     * @param string $description
-     * @param string $orderId
-     * @param string $orderLineNumber
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes
-     * @param string $FNPTimeZoneValue
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $activationId
+     * @param  bool  $isPermanent
+     * @param  \Flexsim\FlexnetOperations\Type\ExpirationTermsDataType  $expirationTerms
+     * @param  int  $numberOfCopies
+     * @param  \DateTimeInterface  $startDate
+     * @param  string  $startDateOption
+     * @param  \DateTimeInterface  $versionDate
+     * @param  \Flexsim\FlexnetOperations\Type\VersionDateAttributesType  $versionDateAttributes
+     * @param  string  $description
+     * @param  string  $orderId
+     * @param  string  $orderLineNumber
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $alternateLicenseModel1
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $alternateLicenseModel2
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyAttributesListType  $policyAttributes
+     * @param  string  $FNPTimeZoneValue
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $lineItemAttributes
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\IdType $activationId, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\ExpirationTermsDataType $expirationTerms = null, int $numberOfCopies = null, \DateTimeInterface $startDate = null, string $startDateOption = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, string $description = null, string $orderId = null, string $orderLineNumber = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes = null, string $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes = null)
+    public function __construct(IdType $activationId, bool $isPermanent = null, ExpirationTermsDataType $expirationTerms = null, int $numberOfCopies = null, \DateTimeInterface $startDate = null, string $startDateOption = null, \DateTimeInterface $versionDate = null, VersionDateAttributesType $versionDateAttributes = null, string $description = null, string $orderId = null, string $orderLineNumber = null, LicenseModelIdentifierType $licenseModel = null, LicenseModelIdentifierType $alternateLicenseModel1 = null, LicenseModelIdentifierType $alternateLicenseModel2 = null, AttributeDescriptorDataType $licenseModelAttributes = null, PolicyAttributesListType $policyAttributes = null, string $FNPTimeZoneValue = null, AttributeDescriptorDataType $lineItemAttributes = null)
     {
         $this->activationId = $activationId;
         $this->isPermanent = $isPermanent;
@@ -141,26 +141,26 @@ class RenewParametersDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\IdType $activationId
-     * @param bool $isPermanent
-     * @param \Flexsim\FlexnetOperations\Type\ExpirationTermsDataType $expirationTerms
-     * @param int $numberOfCopies
-     * @param \DateTimeInterface $startDate
-     * @param string $startDateOption
-     * @param \DateTimeInterface $versionDate
-     * @param \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
-     * @param string $description
-     * @param string $orderId
-     * @param string $orderLineNumber
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes
-     * @param string $FNPTimeZoneValue
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $activationId
+     * @param  bool  $isPermanent
+     * @param  \Flexsim\FlexnetOperations\Type\ExpirationTermsDataType  $expirationTerms
+     * @param  int  $numberOfCopies
+     * @param  \DateTimeInterface  $startDate
+     * @param  string  $startDateOption
+     * @param  \DateTimeInterface  $versionDate
+     * @param  \Flexsim\FlexnetOperations\Type\VersionDateAttributesType  $versionDateAttributes
+     * @param  string  $description
+     * @param  string  $orderId
+     * @param  string  $orderLineNumber
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $alternateLicenseModel1
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $alternateLicenseModel2
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyAttributesListType  $policyAttributes
+     * @param  string  $FNPTimeZoneValue
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $lineItemAttributes
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\IdType $activationId, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\ExpirationTermsDataType $expirationTerms = null, int $numberOfCopies = null, \DateTimeInterface $startDate = null, string $startDateOption = null, \DateTimeInterface $versionDate = null, \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes = null, string $description = null, string $orderId = null, string $orderLineNumber = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes = null, string $FNPTimeZoneValue = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes = null)
+    public static function create(IdType $activationId, bool $isPermanent = null, ExpirationTermsDataType $expirationTerms = null, int $numberOfCopies = null, \DateTimeInterface $startDate = null, string $startDateOption = null, \DateTimeInterface $versionDate = null, VersionDateAttributesType $versionDateAttributes = null, string $description = null, string $orderId = null, string $orderLineNumber = null, LicenseModelIdentifierType $licenseModel = null, LicenseModelIdentifierType $alternateLicenseModel1 = null, LicenseModelIdentifierType $alternateLicenseModel2 = null, AttributeDescriptorDataType $licenseModelAttributes = null, PolicyAttributesListType $policyAttributes = null, string $FNPTimeZoneValue = null, AttributeDescriptorDataType $lineItemAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -174,7 +174,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\IdType $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -193,7 +193,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param bool $isPermanent
+     * @param  bool  $isPermanent
      * @return $this
      */
     public function setIsPermanent($isPermanent)
@@ -212,7 +212,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ExpirationTermsDataType $expirationTerms
+     * @param  \Flexsim\FlexnetOperations\Type\ExpirationTermsDataType  $expirationTerms
      * @return $this
      */
     public function setExpirationTerms($expirationTerms)
@@ -231,7 +231,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param int $numberOfCopies
+     * @param  int  $numberOfCopies
      * @return $this
      */
     public function setNumberOfCopies($numberOfCopies)
@@ -250,7 +250,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $startDate
+     * @param  \DateTimeInterface  $startDate
      * @return $this
      */
     public function setStartDate($startDate)
@@ -269,7 +269,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param string $startDateOption
+     * @param  string  $startDateOption
      * @return $this
      */
     public function setStartDateOption($startDateOption)
@@ -288,7 +288,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $versionDate
+     * @param  \DateTimeInterface  $versionDate
      * @return $this
      */
     public function setVersionDate($versionDate)
@@ -307,7 +307,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\VersionDateAttributesType $versionDateAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\VersionDateAttributesType  $versionDateAttributes
      * @return $this
      */
     public function setVersionDateAttributes($versionDateAttributes)
@@ -326,7 +326,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -345,7 +345,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param string $orderId
+     * @param  string  $orderId
      * @return $this
      */
     public function setOrderId($orderId)
@@ -364,7 +364,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param string $orderLineNumber
+     * @param  string  $orderLineNumber
      * @return $this
      */
     public function setOrderLineNumber($orderLineNumber)
@@ -383,7 +383,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModel
      * @return $this
      */
     public function setLicenseModel($licenseModel)
@@ -402,7 +402,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel1
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $alternateLicenseModel1
      * @return $this
      */
     public function setAlternateLicenseModel1($alternateLicenseModel1)
@@ -421,7 +421,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $alternateLicenseModel2
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $alternateLicenseModel2
      * @return $this
      */
     public function setAlternateLicenseModel2($alternateLicenseModel2)
@@ -440,7 +440,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
      * @return $this
      */
     public function setLicenseModelAttributes($licenseModelAttributes)
@@ -459,7 +459,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PolicyAttributesListType $policyAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyAttributesListType  $policyAttributes
      * @return $this
      */
     public function setPolicyAttributes($policyAttributes)
@@ -478,7 +478,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param string $FNPTimeZoneValue
+     * @param  string  $FNPTimeZoneValue
      * @return $this
      */
     public function setFNPTimeZoneValue($FNPTimeZoneValue)
@@ -497,7 +497,7 @@ class RenewParametersDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $lineItemAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $lineItemAttributes
      * @return $this
      */
     public function setLineItemAttributes($lineItemAttributes)

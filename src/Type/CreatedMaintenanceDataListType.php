@@ -12,7 +12,7 @@ class CreatedMaintenanceDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType|array $createdMaintenance
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType|array  $createdMaintenance
      */
     public function __construct($createdMaintenance = null)
     {
@@ -22,7 +22,7 @@ class CreatedMaintenanceDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType|array $createdMaintenance
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType|array  $createdMaintenance
      */
     public static function create($createdMaintenance = null)
     {
@@ -38,7 +38,7 @@ class CreatedMaintenanceDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType|array $createdMaintenance
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedMaintenaceDataType|array  $createdMaintenance
      * @return $this
      */
     public function setCreatedMaintenance($createdMaintenance)

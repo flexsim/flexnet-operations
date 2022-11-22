@@ -17,10 +17,10 @@ class FailedUpdateDomainUserDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType  $user
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user = null, string $reason = null)
+    public function __construct(UpdateDomainUserDataType $user = null, string $reason = null)
     {
         $this->user = $user;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedUpdateDomainUserDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType  $user
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user = null, string $reason = null)
+    public static function create(UpdateDomainUserDataType $user = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedUpdateDomainUserDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType $user
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateDomainUserDataType  $user
      * @return $this
      */
     public function setUser($user)
@@ -65,7 +65,7 @@ class FailedUpdateDomainUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

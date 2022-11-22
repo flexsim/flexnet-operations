@@ -12,9 +12,9 @@ class CloneSuspects extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CloneSuspect $cloneSuspect
+     * @param  \Flexsim\FlexnetOperations\Type\CloneSuspect  $cloneSuspect
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CloneSuspect $cloneSuspect)
+    public function __construct(CloneSuspect $cloneSuspect)
     {
         $this->cloneSuspect = $cloneSuspect;
     }
@@ -22,9 +22,9 @@ class CloneSuspects extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CloneSuspect $cloneSuspect
+     * @param  \Flexsim\FlexnetOperations\Type\CloneSuspect  $cloneSuspect
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CloneSuspect $cloneSuspect)
+    public static function create(CloneSuspect $cloneSuspect)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class CloneSuspects extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CloneSuspect $cloneSuspect
+     * @param  \Flexsim\FlexnetOperations\Type\CloneSuspect  $cloneSuspect
      * @return $this
      */
     public function setCloneSuspect($cloneSuspect)

@@ -12,7 +12,7 @@ class GetFulfillmentsQueryResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentDataType|array $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentDataType|array  $fulfillment
      */
     public function __construct($fulfillment = null)
     {
@@ -22,7 +22,7 @@ class GetFulfillmentsQueryResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentDataType|array $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentDataType|array  $fulfillment
      */
     public static function create($fulfillment = null)
     {
@@ -38,7 +38,7 @@ class GetFulfillmentsQueryResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentDataType  $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)

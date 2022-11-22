@@ -22,11 +22,11 @@ class CustomHostIDType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $hostId
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $hostAttributes
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param  string  $hostId
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $hostAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypePKType  $hostType
      */
-    public function __construct(string $hostId = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $hostAttributes = null, \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType = null)
+    public function __construct(string $hostId = null, AttributeDescriptorDataType $hostAttributes = null, HostTypePKType $hostType = null)
     {
         $this->hostId = $hostId;
         $this->hostAttributes = $hostAttributes;
@@ -36,11 +36,11 @@ class CustomHostIDType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $hostId
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $hostAttributes
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param  string  $hostId
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $hostAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypePKType  $hostType
      */
-    public static function create(string $hostId = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $hostAttributes = null, \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType = null)
+    public static function create(string $hostId = null, AttributeDescriptorDataType $hostAttributes = null, HostTypePKType $hostType = null)
     {
         return new self(...func_get_args());
     }
@@ -54,7 +54,7 @@ class CustomHostIDType extends FlexnetType
     }
 
     /**
-     * @param string $hostId
+     * @param  string  $hostId
      * @return $this
      */
     public function setHostId($hostId)
@@ -73,7 +73,7 @@ class CustomHostIDType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $hostAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $hostAttributes
      * @return $this
      */
     public function setHostAttributes($hostAttributes)
@@ -92,7 +92,7 @@ class CustomHostIDType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypePKType  $hostType
      * @return $this
      */
     public function setHostType($hostType)

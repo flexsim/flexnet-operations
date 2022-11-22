@@ -59,18 +59,18 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @param string $activationId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $userId
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $count
-     * @param bool $policyOverridden
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $actionDateTime
-     * @param string $lifeCycleAction
-     * @param string $fulfillmentSource
-     * @param int $pageNumber
-     * @param int $batchSize
+     * @param  string  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $fulfillmentId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $userId
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $count
+     * @param  bool  $policyOverridden
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $actionDateTime
+     * @param  string  $lifeCycleAction
+     * @param  string  $fulfillmentSource
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
      */
-    public function __construct(string $activationId, \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $userId = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $count = null, bool $policyOverridden = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $actionDateTime = null, string $lifeCycleAction = null, string $fulfillmentSource = null, int $pageNumber = null, int $batchSize = null)
+    public function __construct(string $activationId, SimpleQueryType $fulfillmentId = null, SimpleQueryType $userId = null, NumberQueryType $count = null, bool $policyOverridden = null, DateTimeQueryType $actionDateTime = null, string $lifeCycleAction = null, string $fulfillmentSource = null, int $pageNumber = null, int $batchSize = null)
     {
         $this->activationId = $activationId;
         $this->fulfillmentId = $fulfillmentId;
@@ -87,18 +87,18 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @param string $activationId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $userId
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $count
-     * @param bool $policyOverridden
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $actionDateTime
-     * @param string $lifeCycleAction
-     * @param string $fulfillmentSource
-     * @param int $pageNumber
-     * @param int $batchSize
+     * @param  string  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $fulfillmentId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $userId
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $count
+     * @param  bool  $policyOverridden
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $actionDateTime
+     * @param  string  $lifeCycleAction
+     * @param  string  $fulfillmentSource
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
      */
-    public static function create(string $activationId, \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $userId = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $count = null, bool $policyOverridden = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $actionDateTime = null, string $lifeCycleAction = null, string $fulfillmentSource = null, int $pageNumber = null, int $batchSize = null)
+    public static function create(string $activationId, SimpleQueryType $fulfillmentId = null, SimpleQueryType $userId = null, NumberQueryType $count = null, bool $policyOverridden = null, DateTimeQueryType $actionDateTime = null, string $lifeCycleAction = null, string $fulfillmentSource = null, int $pageNumber = null, int $batchSize = null)
     {
         return new self(...func_get_args());
     }
@@ -112,7 +112,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -131,7 +131,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $fulfillmentId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $fulfillmentId
      * @return $this
      */
     public function setFulfillmentId($fulfillmentId)
@@ -150,7 +150,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $userId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $userId
      * @return $this
      */
     public function setUserId($userId)
@@ -169,7 +169,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $count
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $count
      * @return $this
      */
     public function setCount($count)
@@ -188,7 +188,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param bool $policyOverridden
+     * @param  bool  $policyOverridden
      * @return $this
      */
     public function setPolicyOverridden($policyOverridden)
@@ -207,7 +207,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $actionDateTime
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $actionDateTime
      * @return $this
      */
     public function setActionDateTime($actionDateTime)
@@ -226,7 +226,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param string $lifeCycleAction
+     * @param  string  $lifeCycleAction
      * @return $this
      */
     public function setLifeCycleAction($lifeCycleAction)
@@ -245,7 +245,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param string $fulfillmentSource
+     * @param  string  $fulfillmentSource
      * @return $this
      */
     public function setFulfillmentSource($fulfillmentSource)
@@ -264,7 +264,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)
@@ -283,7 +283,7 @@ class GetFulfillmentHistoryRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)

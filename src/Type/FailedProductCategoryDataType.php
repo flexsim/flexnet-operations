@@ -17,10 +17,10 @@ class FailedProductCategoryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType $productCategory
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType  $productCategory
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType $productCategory = null, string $reason = null)
+    public function __construct(CreateProductCategoryDataType $productCategory = null, string $reason = null)
     {
         $this->productCategory = $productCategory;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedProductCategoryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType $productCategory
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType  $productCategory
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType $productCategory = null, string $reason = null)
+    public static function create(CreateProductCategoryDataType $productCategory = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedProductCategoryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\CreateProductCategoryDataType  $productCategory
      * @return $this
      */
     public function setProductCategory($productCategory)
@@ -65,7 +65,7 @@ class FailedProductCategoryDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

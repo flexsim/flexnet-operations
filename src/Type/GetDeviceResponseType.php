@@ -24,11 +24,11 @@ class GetDeviceResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedGetDeviceDataType $failedDevice
-     * @param \Flexsim\FlexnetOperations\Type\GetDeviceResponseData $device
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedGetDeviceDataType  $failedDevice
+     * @param  \Flexsim\FlexnetOperations\Type\GetDeviceResponseData  $device
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedGetDeviceDataType $failedDevice = null, \Flexsim\FlexnetOperations\Type\GetDeviceResponseData $device = null)
+    public function __construct(OpsEmbeddedStatusInfoType $statusInfo, FailedGetDeviceDataType $failedDevice = null, GetDeviceResponseData $device = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedDevice = $failedDevice;
@@ -38,11 +38,11 @@ class GetDeviceResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedGetDeviceDataType $failedDevice
-     * @param \Flexsim\FlexnetOperations\Type\GetDeviceResponseData $device
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedGetDeviceDataType  $failedDevice
+     * @param  \Flexsim\FlexnetOperations\Type\GetDeviceResponseData  $device
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedGetDeviceDataType $failedDevice = null, \Flexsim\FlexnetOperations\Type\GetDeviceResponseData $device = null)
+    public static function create(OpsEmbeddedStatusInfoType $statusInfo, FailedGetDeviceDataType $failedDevice = null, GetDeviceResponseData $device = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class GetDeviceResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class GetDeviceResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedGetDeviceDataType $failedDevice
+     * @param  \Flexsim\FlexnetOperations\Type\FailedGetDeviceDataType  $failedDevice
      * @return $this
      */
     public function setFailedDevice($failedDevice)
@@ -94,7 +94,7 @@ class GetDeviceResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetDeviceResponseData $device
+     * @param  \Flexsim\FlexnetOperations\Type\GetDeviceResponseData  $device
      * @return $this
      */
     public function setDevice($device)

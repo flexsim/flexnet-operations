@@ -17,10 +17,10 @@ class FailedProductRelationshipDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType  $relationship
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship = null, string $reason = null)
+    public function __construct(ProductRelationshipDataType $relationship = null, string $reason = null)
     {
         $this->relationship = $relationship;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedProductRelationshipDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType  $relationship
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship = null, string $reason = null)
+    public static function create(ProductRelationshipDataType $relationship = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedProductRelationshipDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType $relationship
+     * @param  \Flexsim\FlexnetOperations\Type\ProductRelationshipDataType  $relationship
      * @return $this
      */
     public function setRelationship($relationship)
@@ -65,7 +65,7 @@ class FailedProductRelationshipDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

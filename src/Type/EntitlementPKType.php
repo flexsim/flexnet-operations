@@ -12,7 +12,7 @@ class EntitlementPKType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $entitlementId
+     * @param  string  $entitlementId
      */
     public function __construct(string $entitlementId)
     {
@@ -22,7 +22,7 @@ class EntitlementPKType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $entitlementId
+     * @param  string  $entitlementId
      */
     public static function create(string $entitlementId)
     {
@@ -38,7 +38,7 @@ class EntitlementPKType extends FlexnetType
     }
 
     /**
-     * @param string $entitlementId
+     * @param  string  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)

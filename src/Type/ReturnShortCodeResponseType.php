@@ -24,11 +24,11 @@ class ReturnShortCodeResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedReturnShortCodeDataType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\ReturnedShortCodeDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedReturnShortCodeDataType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\ReturnedShortCodeDataType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedReturnShortCodeDataType $failedData = null, \Flexsim\FlexnetOperations\Type\ReturnedShortCodeDataType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedReturnShortCodeDataType $failedData = null, ReturnedShortCodeDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -38,11 +38,11 @@ class ReturnShortCodeResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedReturnShortCodeDataType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\ReturnedShortCodeDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedReturnShortCodeDataType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\ReturnedShortCodeDataType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedReturnShortCodeDataType $failedData = null, \Flexsim\FlexnetOperations\Type\ReturnedShortCodeDataType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FailedReturnShortCodeDataType $failedData = null, ReturnedShortCodeDataType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class ReturnShortCodeResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class ReturnShortCodeResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedReturnShortCodeDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedReturnShortCodeDataType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -94,7 +94,7 @@ class ReturnShortCodeResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ReturnedShortCodeDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\ReturnedShortCodeDataType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

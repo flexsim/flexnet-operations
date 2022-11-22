@@ -29,12 +29,12 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetT
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType $queryParams
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType  $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType  $entitlementMaintenanceLineItemResponseConfig
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType $queryParams, \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int $pageNumber = null)
+    public function __construct(SearchMaintenanceLineItemDataType $queryParams, EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int $pageNumber = null)
     {
         $this->queryParams = $queryParams;
         $this->entitlementMaintenanceLineItemResponseConfig = $entitlementMaintenanceLineItemResponseConfig;
@@ -45,12 +45,12 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetT
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType $queryParams
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType  $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType  $entitlementMaintenanceLineItemResponseConfig
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType $queryParams, \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int $pageNumber = null)
+    public static function create(SearchMaintenanceLineItemDataType $queryParams, EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int $pageNumber = null)
     {
         return new self(...func_get_args());
     }
@@ -64,7 +64,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetT
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\SearchMaintenanceLineItemDataType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -83,7 +83,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetT
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementMaintenanceLineItemResponseConfigRequestType  $entitlementMaintenanceLineItemResponseConfig
      * @return $this
      */
     public function setEntitlementMaintenanceLineItemResponseConfig($entitlementMaintenanceLineItemResponseConfig)
@@ -102,7 +102,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetT
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)
@@ -121,7 +121,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType extends FlexnetT
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)

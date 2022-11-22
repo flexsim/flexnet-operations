@@ -24,14 +24,14 @@ class GetFeaturesQueryRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType  $queryParams
      */
     public function __construct(
         int $pageNumber,
         int $batchSize,
-        \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams = []
+        FeatureQueryParametersType $queryParams = []
     ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -41,14 +41,14 @@ class GetFeaturesQueryRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType  $queryParams
      */
     public static function create(
         int $pageNumber,
         int $batchSize,
-        \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams = []
+        FeatureQueryParametersType $queryParams = []
     ) {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class GetFeaturesQueryRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -81,7 +81,7 @@ class GetFeaturesQueryRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)
@@ -100,7 +100,7 @@ class GetFeaturesQueryRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)

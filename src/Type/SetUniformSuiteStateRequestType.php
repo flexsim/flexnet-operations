@@ -14,9 +14,9 @@ class SetUniformSuiteStateRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType $suite
+     * @param  \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType  $suite
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType $suite)
+    public function __construct(UniformSuiteStateDataType $suite)
     {
         $this->suite = $suite;
     }
@@ -24,9 +24,9 @@ class SetUniformSuiteStateRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType $suite
+     * @param  \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType  $suite
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType $suite)
+    public static function create(UniformSuiteStateDataType $suite)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class SetUniformSuiteStateRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType $suite
+     * @param  \Flexsim\FlexnetOperations\Type\UniformSuiteStateDataType  $suite
      * @return $this
      */
     public function setSuite($suite)

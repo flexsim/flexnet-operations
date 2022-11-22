@@ -27,12 +27,12 @@ class OnHoldFmtLicenseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $fulfillmentId
-     * @param string $textLicense
-     * @param string $binaryLicense
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  string  $fulfillmentId
+     * @param  string  $textLicense
+     * @param  string  $binaryLicense
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      */
-    public function __construct(string $fulfillmentId, string $textLicense = null, string $binaryLicense = null, \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null)
+    public function __construct(string $fulfillmentId, string $textLicense = null, string $binaryLicense = null, LicenseFileDataListType $licenseFiles = null)
     {
         $this->fulfillmentId = $fulfillmentId;
         $this->textLicense = $textLicense;
@@ -43,12 +43,12 @@ class OnHoldFmtLicenseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $fulfillmentId
-     * @param string $textLicense
-     * @param string $binaryLicense
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  string  $fulfillmentId
+     * @param  string  $textLicense
+     * @param  string  $binaryLicense
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      */
-    public static function create(string $fulfillmentId, string $textLicense = null, string $binaryLicense = null, \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null)
+    public static function create(string $fulfillmentId, string $textLicense = null, string $binaryLicense = null, LicenseFileDataListType $licenseFiles = null)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class OnHoldFmtLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param string $fulfillmentId
+     * @param  string  $fulfillmentId
      * @return $this
      */
     public function setFulfillmentId($fulfillmentId)
@@ -81,7 +81,7 @@ class OnHoldFmtLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param string $textLicense
+     * @param  string  $textLicense
      * @return $this
      */
     public function setTextLicense($textLicense)
@@ -100,7 +100,7 @@ class OnHoldFmtLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param string $binaryLicense
+     * @param  string  $binaryLicense
      * @return $this
      */
     public function setBinaryLicense($binaryLicense)
@@ -119,7 +119,7 @@ class OnHoldFmtLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      * @return $this
      */
     public function setLicenseFiles($licenseFiles)

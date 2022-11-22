@@ -17,10 +17,10 @@ class VersionDateAttributesType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $versionOption
-     * @param \Flexsim\FlexnetOperations\Type\DurationType $duration
+     * @param  string  $versionOption
+     * @param  \Flexsim\FlexnetOperations\Type\DurationType  $duration
      */
-    public function __construct(string $versionOption, \Flexsim\FlexnetOperations\Type\DurationType $duration = null)
+    public function __construct(string $versionOption, DurationType $duration = null)
     {
         $this->versionOption = $versionOption;
         $this->duration = $duration;
@@ -29,10 +29,10 @@ class VersionDateAttributesType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $versionOption
-     * @param \Flexsim\FlexnetOperations\Type\DurationType $duration
+     * @param  string  $versionOption
+     * @param  \Flexsim\FlexnetOperations\Type\DurationType  $duration
      */
-    public static function create(string $versionOption, \Flexsim\FlexnetOperations\Type\DurationType $duration = null)
+    public static function create(string $versionOption, DurationType $duration = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class VersionDateAttributesType extends FlexnetType
     }
 
     /**
-     * @param string $versionOption
+     * @param  string  $versionOption
      * @return $this
      */
     public function setVersionOption($versionOption)
@@ -65,7 +65,7 @@ class VersionDateAttributesType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DurationType $duration
+     * @param  \Flexsim\FlexnetOperations\Type\DurationType  $duration
      * @return $this
      */
     public function setDuration($duration)

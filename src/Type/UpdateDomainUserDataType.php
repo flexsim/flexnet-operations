@@ -52,17 +52,17 @@ class UpdateDomainUserDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $domainUser
-     * @param string $email
-     * @param string $organization
-     * @param string|array $roles
-     * @param bool $optIn
-     * @param string $locale
-     * @param string $timeZone
-     * @param string $status
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType  $domainUser
+     * @param  string  $email
+     * @param  string  $organization
+     * @param  string|array  $roles
+     * @param  bool  $optIn
+     * @param  string  $locale
+     * @param  string  $timeZone
+     * @param  string  $status
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $domainUser, string $email = null, string $organization = null, $roles = null, bool $optIn = null, string $locale = null, string $timeZone = null, string $status = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
+    public function __construct(DomainUserIdentifierType $domainUser, string $email = null, string $organization = null, $roles = null, bool $optIn = null, string $locale = null, string $timeZone = null, string $status = null, AttributeDescriptorDataType $customAttributes = null)
     {
         $this->domainUser = $domainUser;
         $this->email = $email;
@@ -78,17 +78,17 @@ class UpdateDomainUserDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $domainUser
-     * @param string $email
-     * @param string $organization
-     * @param string|array $roles
-     * @param bool $optIn
-     * @param string $locale
-     * @param string $timeZone
-     * @param string $status
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType  $domainUser
+     * @param  string  $email
+     * @param  string  $organization
+     * @param  string|array  $roles
+     * @param  bool  $optIn
+     * @param  string  $locale
+     * @param  string  $timeZone
+     * @param  string  $status
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $domainUser, string $email = null, string $organization = null, $roles = null, bool $optIn = null, string $locale = null, string $timeZone = null, string $status = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
+    public static function create(DomainUserIdentifierType $domainUser, string $email = null, string $organization = null, $roles = null, bool $optIn = null, string $locale = null, string $timeZone = null, string $status = null, AttributeDescriptorDataType $customAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -102,7 +102,7 @@ class UpdateDomainUserDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType $domainUser
+     * @param  \Flexsim\FlexnetOperations\Type\DomainUserIdentifierType  $domainUser
      * @return $this
      */
     public function setDomainUser($domainUser)
@@ -121,7 +121,7 @@ class UpdateDomainUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $email
+     * @param  string  $email
      * @return $this
      */
     public function setEmail($email)
@@ -140,7 +140,7 @@ class UpdateDomainUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $organization
+     * @param  string  $organization
      * @return $this
      */
     public function setOrganization($organization)
@@ -159,7 +159,7 @@ class UpdateDomainUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $roles
+     * @param  string  $roles
      * @return $this
      */
     public function setRoles($roles)
@@ -178,7 +178,7 @@ class UpdateDomainUserDataType extends FlexnetType
     }
 
     /**
-     * @param bool $optIn
+     * @param  bool  $optIn
      * @return $this
      */
     public function setOptIn($optIn)
@@ -197,7 +197,7 @@ class UpdateDomainUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $locale
+     * @param  string  $locale
      * @return $this
      */
     public function setLocale($locale)
@@ -216,7 +216,7 @@ class UpdateDomainUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $timeZone
+     * @param  string  $timeZone
      * @return $this
      */
     public function setTimeZone($timeZone)
@@ -235,7 +235,7 @@ class UpdateDomainUserDataType extends FlexnetType
     }
 
     /**
-     * @param string $status
+     * @param  string  $status
      * @return $this
      */
     public function setStatus($status)
@@ -254,7 +254,7 @@ class UpdateDomainUserDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)

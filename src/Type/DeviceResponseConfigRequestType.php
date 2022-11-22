@@ -117,30 +117,30 @@ class DeviceResponseConfigRequestType extends FlexnetType
     /**
      * Constructor
      *
-     * @param bool $alias
-     * @param bool $description
-     * @param bool $status
-     * @param bool $servedStatus
-     * @param bool $hostTypeName
-     * @param bool $soldTo
-     * @param bool $channelPartners
-     * @param bool $preBuiltProduct
-     * @param bool $preBuiltLicense
-     * @param bool $addOnActivationId
-     * @param bool $addOnCounts
-     * @param bool $addOnProduct
-     * @param bool $addOnLicense
-     * @param bool $features
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
-     * @param bool $publisherIdentity
-     * @param bool $parent
-     * @param bool $machineType
-     * @param bool $vmDetails
-     * @param bool $vmInfo
-     * @param bool $vendorDictionary
-     * @param bool $deviceUser
+     * @param  bool  $alias
+     * @param  bool  $description
+     * @param  bool  $status
+     * @param  bool  $servedStatus
+     * @param  bool  $hostTypeName
+     * @param  bool  $soldTo
+     * @param  bool  $channelPartners
+     * @param  bool  $preBuiltProduct
+     * @param  bool  $preBuiltLicense
+     * @param  bool  $addOnActivationId
+     * @param  bool  $addOnCounts
+     * @param  bool  $addOnProduct
+     * @param  bool  $addOnLicense
+     * @param  bool  $features
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType  $customAttributes
+     * @param  bool  $publisherIdentity
+     * @param  bool  $parent
+     * @param  bool  $machineType
+     * @param  bool  $vmDetails
+     * @param  bool  $vmInfo
+     * @param  bool  $vendorDictionary
+     * @param  bool  $deviceUser
      */
-    public function __construct(bool $alias = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $soldTo = null, bool $channelPartners = null, bool $preBuiltProduct = null, bool $preBuiltLicense = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnLicense = null, bool $features = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null, bool $deviceUser = null)
+    public function __construct(bool $alias = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $soldTo = null, bool $channelPartners = null, bool $preBuiltProduct = null, bool $preBuiltLicense = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnLicense = null, bool $features = null, CustomAttributeDescriptorDataType $customAttributes = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null, bool $deviceUser = null)
     {
         $this->alias = $alias;
         $this->description = $description;
@@ -169,30 +169,30 @@ class DeviceResponseConfigRequestType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param bool $alias
-     * @param bool $description
-     * @param bool $status
-     * @param bool $servedStatus
-     * @param bool $hostTypeName
-     * @param bool $soldTo
-     * @param bool $channelPartners
-     * @param bool $preBuiltProduct
-     * @param bool $preBuiltLicense
-     * @param bool $addOnActivationId
-     * @param bool $addOnCounts
-     * @param bool $addOnProduct
-     * @param bool $addOnLicense
-     * @param bool $features
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
-     * @param bool $publisherIdentity
-     * @param bool $parent
-     * @param bool $machineType
-     * @param bool $vmDetails
-     * @param bool $vmInfo
-     * @param bool $vendorDictionary
-     * @param bool $deviceUser
+     * @param  bool  $alias
+     * @param  bool  $description
+     * @param  bool  $status
+     * @param  bool  $servedStatus
+     * @param  bool  $hostTypeName
+     * @param  bool  $soldTo
+     * @param  bool  $channelPartners
+     * @param  bool  $preBuiltProduct
+     * @param  bool  $preBuiltLicense
+     * @param  bool  $addOnActivationId
+     * @param  bool  $addOnCounts
+     * @param  bool  $addOnProduct
+     * @param  bool  $addOnLicense
+     * @param  bool  $features
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType  $customAttributes
+     * @param  bool  $publisherIdentity
+     * @param  bool  $parent
+     * @param  bool  $machineType
+     * @param  bool  $vmDetails
+     * @param  bool  $vmInfo
+     * @param  bool  $vendorDictionary
+     * @param  bool  $deviceUser
      */
-    public static function create(bool $alias = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $soldTo = null, bool $channelPartners = null, bool $preBuiltProduct = null, bool $preBuiltLicense = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnLicense = null, bool $features = null, \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null, bool $deviceUser = null)
+    public static function create(bool $alias = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $soldTo = null, bool $channelPartners = null, bool $preBuiltProduct = null, bool $preBuiltLicense = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnLicense = null, bool $features = null, CustomAttributeDescriptorDataType $customAttributes = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $vmInfo = null, bool $vendorDictionary = null, bool $deviceUser = null)
     {
         return new self(...func_get_args());
     }
@@ -206,7 +206,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $alias
+     * @param  bool  $alias
      * @return $this
      */
     public function setAlias($alias)
@@ -225,7 +225,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $description
+     * @param  bool  $description
      * @return $this
      */
     public function setDescription($description)
@@ -244,7 +244,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $status
+     * @param  bool  $status
      * @return $this
      */
     public function setStatus($status)
@@ -263,7 +263,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $servedStatus
+     * @param  bool  $servedStatus
      * @return $this
      */
     public function setServedStatus($servedStatus)
@@ -282,7 +282,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $hostTypeName
+     * @param  bool  $hostTypeName
      * @return $this
      */
     public function setHostTypeName($hostTypeName)
@@ -301,7 +301,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $soldTo
+     * @param  bool  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -320,7 +320,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $channelPartners
+     * @param  bool  $channelPartners
      * @return $this
      */
     public function setChannelPartners($channelPartners)
@@ -339,7 +339,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $preBuiltProduct
+     * @param  bool  $preBuiltProduct
      * @return $this
      */
     public function setPreBuiltProduct($preBuiltProduct)
@@ -358,7 +358,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $preBuiltLicense
+     * @param  bool  $preBuiltLicense
      * @return $this
      */
     public function setPreBuiltLicense($preBuiltLicense)
@@ -377,7 +377,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $addOnActivationId
+     * @param  bool  $addOnActivationId
      * @return $this
      */
     public function setAddOnActivationId($addOnActivationId)
@@ -396,7 +396,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $addOnCounts
+     * @param  bool  $addOnCounts
      * @return $this
      */
     public function setAddOnCounts($addOnCounts)
@@ -415,7 +415,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $addOnProduct
+     * @param  bool  $addOnProduct
      * @return $this
      */
     public function setAddOnProduct($addOnProduct)
@@ -434,7 +434,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $addOnLicense
+     * @param  bool  $addOnLicense
      * @return $this
      */
     public function setAddOnLicense($addOnLicense)
@@ -453,7 +453,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $features
+     * @param  bool  $features
      * @return $this
      */
     public function setFeatures($features)
@@ -472,7 +472,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)
@@ -491,7 +491,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $publisherIdentity
+     * @param  bool  $publisherIdentity
      * @return $this
      */
     public function setPublisherIdentity($publisherIdentity)
@@ -510,7 +510,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $parent
+     * @param  bool  $parent
      * @return $this
      */
     public function setParent($parent)
@@ -529,7 +529,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $machineType
+     * @param  bool  $machineType
      * @return $this
      */
     public function setMachineType($machineType)
@@ -548,7 +548,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $vmDetails
+     * @param  bool  $vmDetails
      * @return $this
      */
     public function setVmDetails($vmDetails)
@@ -567,7 +567,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $vmInfo
+     * @param  bool  $vmInfo
      * @return $this
      */
     public function setVmInfo($vmInfo)
@@ -586,7 +586,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $vendorDictionary
+     * @param  bool  $vendorDictionary
      * @return $this
      */
     public function setVendorDictionary($vendorDictionary)
@@ -605,7 +605,7 @@ class DeviceResponseConfigRequestType extends FlexnetType
     }
 
     /**
-     * @param bool $deviceUser
+     * @param  bool  $deviceUser
      * @return $this
      */
     public function setDeviceUser($deviceUser)

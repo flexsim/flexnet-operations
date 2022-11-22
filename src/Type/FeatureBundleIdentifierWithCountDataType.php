@@ -17,10 +17,10 @@ class FeatureBundleIdentifierWithCountDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
-     * @param int $count
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
+     * @param  int  $count
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier, int $count)
+    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier, int $count)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
         $this->count = $count;
@@ -29,10 +29,10 @@ class FeatureBundleIdentifierWithCountDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
-     * @param int $count
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
+     * @param  int  $count
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier, int $count)
+    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier, int $count)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FeatureBundleIdentifierWithCountDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
      * @return $this
      */
     public function setFeatureBundleIdentifier($featureBundleIdentifier)
@@ -65,7 +65,7 @@ class FeatureBundleIdentifierWithCountDataType extends FlexnetType
     }
 
     /**
-     * @param int $count
+     * @param  int  $count
      * @return $this
      */
     public function setCount($count)

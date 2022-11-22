@@ -32,13 +32,13 @@ class FeatureBundleQueryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $name
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $name
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
+     * @param  \Flexsim\FlexnetOperations\Type\StateQueryType  $state
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $creationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $lastModifiedDate
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $name = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null, \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null)
+    public function __construct(SimpleQueryType $name = null, SimpleQueryType $description = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null)
     {
         $this->name = $name;
         $this->description = $description;
@@ -50,13 +50,13 @@ class FeatureBundleQueryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $name
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $name
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
+     * @param  \Flexsim\FlexnetOperations\Type\StateQueryType  $state
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $creationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $lastModifiedDate
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $name = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null, \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null)
+    public static function create(SimpleQueryType $name = null, SimpleQueryType $description = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null)
     {
         return new self(...func_get_args());
     }
@@ -70,7 +70,7 @@ class FeatureBundleQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $name
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $name
      * @return $this
      */
     public function setName($name)
@@ -89,7 +89,7 @@ class FeatureBundleQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
      * @return $this
      */
     public function setDescription($description)
@@ -108,7 +108,7 @@ class FeatureBundleQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param  \Flexsim\FlexnetOperations\Type\StateQueryType  $state
      * @return $this
      */
     public function setState($state)
@@ -127,7 +127,7 @@ class FeatureBundleQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $creationDate
      * @return $this
      */
     public function setCreationDate($creationDate)
@@ -146,7 +146,7 @@ class FeatureBundleQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $lastModifiedDate
      * @return $this
      */
     public function setLastModifiedDate($lastModifiedDate)

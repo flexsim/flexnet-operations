@@ -17,10 +17,10 @@ class MaintenanceStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier
-     * @param string $stateToSet
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType  $maintenanceIdentifier
+     * @param  string  $stateToSet
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier, string $stateToSet)
+    public function __construct(MaintenanceIdentifierType $maintenanceIdentifier, string $stateToSet)
     {
         $this->maintenanceIdentifier = $maintenanceIdentifier;
         $this->stateToSet = $stateToSet;
@@ -29,10 +29,10 @@ class MaintenanceStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier
-     * @param string $stateToSet
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType  $maintenanceIdentifier
+     * @param  string  $stateToSet
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier, string $stateToSet)
+    public static function create(MaintenanceIdentifierType $maintenanceIdentifier, string $stateToSet)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class MaintenanceStateDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType  $maintenanceIdentifier
      * @return $this
      */
     public function setMaintenanceIdentifier($maintenanceIdentifier)
@@ -65,7 +65,7 @@ class MaintenanceStateDataType extends FlexnetType
     }
 
     /**
-     * @param string $stateToSet
+     * @param  string  $stateToSet
      * @return $this
      */
     public function setStateToSet($stateToSet)

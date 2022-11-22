@@ -12,9 +12,9 @@ class CreatedChildLIFmtResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentDataType  $fulfillment
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentDataType $fulfillment)
+    public function __construct(CreatedChildLIFulfillmentDataType $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -22,9 +22,9 @@ class CreatedChildLIFmtResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentDataType  $fulfillment
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentDataType $fulfillment)
+    public static function create(CreatedChildLIFulfillmentDataType $fulfillment)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class CreatedChildLIFmtResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentDataType  $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)

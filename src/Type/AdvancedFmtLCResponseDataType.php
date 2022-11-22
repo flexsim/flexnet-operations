@@ -17,10 +17,10 @@ class AdvancedFmtLCResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param int $recordRefNo
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo
+     * @param  int  $recordRefNo
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType  $upgradedFulfillmentInfo
      */
-    public function __construct(int $recordRefNo, \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo)
+    public function __construct(int $recordRefNo, AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo)
     {
         $this->recordRefNo = $recordRefNo;
         $this->upgradedFulfillmentInfo = $upgradedFulfillmentInfo;
@@ -29,10 +29,10 @@ class AdvancedFmtLCResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param int $recordRefNo
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo
+     * @param  int  $recordRefNo
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType  $upgradedFulfillmentInfo
      */
-    public static function create(int $recordRefNo, \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo)
+    public static function create(int $recordRefNo, AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class AdvancedFmtLCResponseDataType extends FlexnetType
     }
 
     /**
-     * @param int $recordRefNo
+     * @param  int  $recordRefNo
      * @return $this
      */
     public function setRecordRefNo($recordRefNo)
@@ -65,7 +65,7 @@ class AdvancedFmtLCResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType $upgradedFulfillmentInfo
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCInfoType  $upgradedFulfillmentInfo
      * @return $this
      */
     public function setUpgradedFulfillmentInfo($upgradedFulfillmentInfo)

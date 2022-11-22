@@ -19,10 +19,10 @@ class RemoveEntitlementLineItemResponseType extends FlexnetType implements Resul
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedRemoveEntitlementLineItemDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedRemoveEntitlementLineItemDataListType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedRemoveEntitlementLineItemDataListType $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedRemoveEntitlementLineItemDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -31,10 +31,10 @@ class RemoveEntitlementLineItemResponseType extends FlexnetType implements Resul
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedRemoveEntitlementLineItemDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedRemoveEntitlementLineItemDataListType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedRemoveEntitlementLineItemDataListType $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedRemoveEntitlementLineItemDataListType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class RemoveEntitlementLineItemResponseType extends FlexnetType implements Resul
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class RemoveEntitlementLineItemResponseType extends FlexnetType implements Resul
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedRemoveEntitlementLineItemDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedRemoveEntitlementLineItemDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

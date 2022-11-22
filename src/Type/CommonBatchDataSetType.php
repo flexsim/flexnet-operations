@@ -52,17 +52,17 @@ class CommonBatchDataSetType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $versionDate
-     * @param \DateTimeInterface $versionStartDate
-     * @param string $soldTo
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param bool $overridePolicy
-     * @param string $FNPTimeZoneValue
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $versionDate
+     * @param  \DateTimeInterface  $versionStartDate
+     * @param  string  $soldTo
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  bool  $overridePolicy
+     * @param  string  $FNPTimeZoneValue
      */
-    public function __construct(\DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
+    public function __construct(\DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
     {
         $this->startDate = $startDate;
         $this->versionDate = $versionDate;
@@ -78,17 +78,17 @@ class CommonBatchDataSetType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $versionDate
-     * @param \DateTimeInterface $versionStartDate
-     * @param string $soldTo
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param bool $overridePolicy
-     * @param string $FNPTimeZoneValue
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $versionDate
+     * @param  \DateTimeInterface  $versionStartDate
+     * @param  string  $soldTo
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  bool  $overridePolicy
+     * @param  string  $FNPTimeZoneValue
      */
-    public static function create(\DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
+    public static function create(\DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
     {
         return new self(...func_get_args());
     }
@@ -102,7 +102,7 @@ class CommonBatchDataSetType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $startDate
+     * @param  \DateTimeInterface  $startDate
      * @return $this
      */
     public function setStartDate($startDate)
@@ -121,7 +121,7 @@ class CommonBatchDataSetType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $versionDate
+     * @param  \DateTimeInterface  $versionDate
      * @return $this
      */
     public function setVersionDate($versionDate)
@@ -140,7 +140,7 @@ class CommonBatchDataSetType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $versionStartDate
+     * @param  \DateTimeInterface  $versionStartDate
      * @return $this
      */
     public function setVersionStartDate($versionStartDate)
@@ -159,7 +159,7 @@ class CommonBatchDataSetType extends FlexnetType
     }
 
     /**
-     * @param string $soldTo
+     * @param  string  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -178,7 +178,7 @@ class CommonBatchDataSetType extends FlexnetType
     }
 
     /**
-     * @param string $shipToEmail
+     * @param  string  $shipToEmail
      * @return $this
      */
     public function setShipToEmail($shipToEmail)
@@ -197,7 +197,7 @@ class CommonBatchDataSetType extends FlexnetType
     }
 
     /**
-     * @param string $shipToAddress
+     * @param  string  $shipToAddress
      * @return $this
      */
     public function setShipToAddress($shipToAddress)
@@ -216,7 +216,7 @@ class CommonBatchDataSetType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
      * @return $this
      */
     public function setLicenseModelAttributes($licenseModelAttributes)
@@ -235,7 +235,7 @@ class CommonBatchDataSetType extends FlexnetType
     }
 
     /**
-     * @param bool $overridePolicy
+     * @param  bool  $overridePolicy
      * @return $this
      */
     public function setOverridePolicy($overridePolicy)
@@ -254,7 +254,7 @@ class CommonBatchDataSetType extends FlexnetType
     }
 
     /**
-     * @param string $FNPTimeZoneValue
+     * @param  string  $FNPTimeZoneValue
      * @return $this
      */
     public function setFNPTimeZoneValue($FNPTimeZoneValue)

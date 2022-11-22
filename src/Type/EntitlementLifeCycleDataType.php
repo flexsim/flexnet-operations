@@ -17,10 +17,10 @@ class EntitlementLifeCycleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType $lineItemData
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType  $lineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType $lineItemData, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null)
+    public function __construct(LineItemLifeCycleDataType $lineItemData, EntitlementIdentifierType $parentEntitlementIdentifier = null)
     {
         $this->lineItemData = $lineItemData;
         $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
@@ -29,10 +29,10 @@ class EntitlementLifeCycleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType $lineItemData
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType  $lineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType $lineItemData, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null)
+    public static function create(LineItemLifeCycleDataType $lineItemData, EntitlementIdentifierType $parentEntitlementIdentifier = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class EntitlementLifeCycleDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      * @return $this
      */
     public function setParentEntitlementIdentifier($parentEntitlementIdentifier)
@@ -65,7 +65,7 @@ class EntitlementLifeCycleDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType $lineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\LineItemLifeCycleDataType  $lineItemData
      * @return $this
      */
     public function setLineItemData($lineItemData)

@@ -17,10 +17,10 @@ class FailedCreateAcctDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountDataType $account
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\AccountDataType  $account
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountDataType $account = null, string $reason = null)
+    public function __construct(AccountDataType $account = null, string $reason = null)
     {
         $this->account = $account;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedCreateAcctDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountDataType $account
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\AccountDataType  $account
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountDataType $account = null, string $reason = null)
+    public static function create(AccountDataType $account = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedCreateAcctDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountDataType $account
+     * @param  \Flexsim\FlexnetOperations\Type\AccountDataType  $account
      * @return $this
      */
     public function setAccount($account)
@@ -65,7 +65,7 @@ class FailedCreateAcctDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

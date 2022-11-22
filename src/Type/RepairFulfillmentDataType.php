@@ -27,12 +27,12 @@ class RepairFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param bool $overridePolicy
-     * @param string $FNPTimeZoneValue
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  bool  $overridePolicy
+     * @param  string  $FNPTimeZoneValue
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
+    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->licenseModelAttributes = $licenseModelAttributes;
@@ -43,12 +43,12 @@ class RepairFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param bool $overridePolicy
-     * @param string $FNPTimeZoneValue
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  bool  $overridePolicy
+     * @param  string  $FNPTimeZoneValue
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
+    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class RepairFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
      * @return $this
      */
     public function setFulfillmentIdentifier($fulfillmentIdentifier)
@@ -81,7 +81,7 @@ class RepairFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
      * @return $this
      */
     public function setLicenseModelAttributes($licenseModelAttributes)
@@ -100,7 +100,7 @@ class RepairFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param bool $overridePolicy
+     * @param  bool  $overridePolicy
      * @return $this
      */
     public function setOverridePolicy($overridePolicy)
@@ -119,7 +119,7 @@ class RepairFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $FNPTimeZoneValue
+     * @param  string  $FNPTimeZoneValue
      * @return $this
      */
     public function setFNPTimeZoneValue($FNPTimeZoneValue)

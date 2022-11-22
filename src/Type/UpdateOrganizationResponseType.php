@@ -19,10 +19,10 @@ class UpdateOrganizationResponseType extends FlexnetType implements ResultInterf
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataListType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataListType $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedUpdateOrgDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -31,10 +31,10 @@ class UpdateOrganizationResponseType extends FlexnetType implements ResultInterf
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataListType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataListType $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedUpdateOrgDataListType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class UpdateOrganizationResponseType extends FlexnetType implements ResultInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class UpdateOrganizationResponseType extends FlexnetType implements ResultInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedUpdateOrgDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

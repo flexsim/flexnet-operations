@@ -14,9 +14,9 @@ class UpdateEntitlementLineItemRequestType extends FlexnetType implements Reques
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $lineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType  $lineItemData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $lineItemData)
+    public function __construct(UpdateEntitlementLineItemDataType $lineItemData)
     {
         $this->lineItemData = $lineItemData;
     }
@@ -24,9 +24,9 @@ class UpdateEntitlementLineItemRequestType extends FlexnetType implements Reques
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $lineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType  $lineItemData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $lineItemData)
+    public static function create(UpdateEntitlementLineItemDataType $lineItemData)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class UpdateEntitlementLineItemRequestType extends FlexnetType implements Reques
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $lineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType  $lineItemData
      * @return $this
      */
     public function setLineItemData($lineItemData)

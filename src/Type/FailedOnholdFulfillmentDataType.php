@@ -17,10 +17,10 @@ class FailedOnholdFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier, string $reason)
+    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, string $reason)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedOnholdFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier, string $reason)
+    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedOnholdFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
      * @return $this
      */
     public function setFulfillmentIdentifier($fulfillmentIdentifier)
@@ -65,7 +65,7 @@ class FailedOnholdFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

@@ -37,14 +37,14 @@ class TransferLineItemInfoType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @param int $numberOfCopies
-     * @param bool $useSameActivationId
-     * @param string $customActivationId
-     * @param bool $generateActivationId
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @param  int  $numberOfCopies
+     * @param  bool  $useSameActivationId
+     * @param  string  $customActivationId
+     * @param  bool  $generateActivationId
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementBelongsTo
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo, bool $useSameActivationId = null, string $customActivationId = null, bool $generateActivationId = null)
+    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, EntitlementIdentifierType $entitlementBelongsTo, bool $useSameActivationId = null, string $customActivationId = null, bool $generateActivationId = null)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->numberOfCopies = $numberOfCopies;
@@ -57,14 +57,14 @@ class TransferLineItemInfoType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @param int $numberOfCopies
-     * @param bool $useSameActivationId
-     * @param string $customActivationId
-     * @param bool $generateActivationId
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @param  int  $numberOfCopies
+     * @param  bool  $useSameActivationId
+     * @param  string  $customActivationId
+     * @param  bool  $generateActivationId
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementBelongsTo
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo, bool $useSameActivationId = null, string $customActivationId = null, bool $generateActivationId = null)
+    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, EntitlementIdentifierType $entitlementBelongsTo, bool $useSameActivationId = null, string $customActivationId = null, bool $generateActivationId = null)
     {
         return new self(...func_get_args());
     }
@@ -78,7 +78,7 @@ class TransferLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
      * @return $this
      */
     public function setLineItemIdentifier($lineItemIdentifier)
@@ -97,7 +97,7 @@ class TransferLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param int $numberOfCopies
+     * @param  int  $numberOfCopies
      * @return $this
      */
     public function setNumberOfCopies($numberOfCopies)
@@ -116,7 +116,7 @@ class TransferLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param bool $useSameActivationId
+     * @param  bool  $useSameActivationId
      * @return $this
      */
     public function setUseSameActivationId($useSameActivationId)
@@ -135,7 +135,7 @@ class TransferLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param string $customActivationId
+     * @param  string  $customActivationId
      * @return $this
      */
     public function setCustomActivationId($customActivationId)
@@ -154,7 +154,7 @@ class TransferLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param bool $generateActivationId
+     * @param  bool  $generateActivationId
      * @return $this
      */
     public function setGenerateActivationId($generateActivationId)
@@ -173,7 +173,7 @@ class TransferLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementBelongsTo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementBelongsTo
      * @return $this
      */
     public function setEntitlementBelongsTo($entitlementBelongsTo)

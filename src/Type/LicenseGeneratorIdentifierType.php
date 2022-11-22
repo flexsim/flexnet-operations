@@ -17,10 +17,10 @@ class LicenseGeneratorIdentifierType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $uniqueId
-     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorPKType $primaryKeys
+     * @param  string  $uniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseGeneratorPKType  $primaryKeys
      */
-    public function __construct(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\LicenseGeneratorPKType $primaryKeys = null)
+    public function __construct(string $uniqueId = null, LicenseGeneratorPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
@@ -29,10 +29,10 @@ class LicenseGeneratorIdentifierType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
-     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorPKType $primaryKeys
+     * @param  string  $uniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseGeneratorPKType  $primaryKeys
      */
-    public static function create(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\LicenseGeneratorPKType $primaryKeys = null)
+    public static function create(string $uniqueId = null, LicenseGeneratorPKType $primaryKeys = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class LicenseGeneratorIdentifierType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -65,7 +65,7 @@ class LicenseGeneratorIdentifierType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorPKType $primaryKeys
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseGeneratorPKType  $primaryKeys
      * @return $this
      */
     public function setPrimaryKeys($primaryKeys)

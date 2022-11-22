@@ -17,10 +17,10 @@ class FailedFeatureBundleStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType  $featureBundle
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle, string $reason)
+    public function __construct(FeatureBundleStateDataType $featureBundle, string $reason)
     {
         $this->featureBundle = $featureBundle;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedFeatureBundleStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType  $featureBundle
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle, string $reason)
+    public static function create(FeatureBundleStateDataType $featureBundle, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedFeatureBundleStateDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType  $featureBundle
      * @return $this
      */
     public function setFeatureBundle($featureBundle)
@@ -65,7 +65,7 @@ class FailedFeatureBundleStateDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

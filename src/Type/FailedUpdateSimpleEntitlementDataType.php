@@ -17,10 +17,10 @@ class FailedUpdateSimpleEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType $simpleEntitlement
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType  $simpleEntitlement
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType $simpleEntitlement = null, string $reason = null)
+    public function __construct(UpdateSimpleEntitlementDataType $simpleEntitlement = null, string $reason = null)
     {
         $this->simpleEntitlement = $simpleEntitlement;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedUpdateSimpleEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType $simpleEntitlement
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType  $simpleEntitlement
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType $simpleEntitlement = null, string $reason = null)
+    public static function create(UpdateSimpleEntitlementDataType $simpleEntitlement = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedUpdateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType $simpleEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementDataType  $simpleEntitlement
      * @return $this
      */
     public function setSimpleEntitlement($simpleEntitlement)
@@ -65,7 +65,7 @@ class FailedUpdateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

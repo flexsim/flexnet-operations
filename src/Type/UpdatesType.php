@@ -37,12 +37,12 @@ class UpdatesType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $updateId
-     * @param string $downloadPackageId
-     * @param string $platform
-     * @param string $language
-     * @param int $status
-     * @param string $statusReason
+     * @param  string  $updateId
+     * @param  string  $downloadPackageId
+     * @param  string  $platform
+     * @param  string  $language
+     * @param  int  $status
+     * @param  string  $statusReason
      */
     public function __construct(string $updateId = null, string $downloadPackageId = null, string $platform = null, string $language = null, int $status = null, string $statusReason = null)
     {
@@ -57,12 +57,12 @@ class UpdatesType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $updateId
-     * @param string $downloadPackageId
-     * @param string $platform
-     * @param string $language
-     * @param int $status
-     * @param string $statusReason
+     * @param  string  $updateId
+     * @param  string  $downloadPackageId
+     * @param  string  $platform
+     * @param  string  $language
+     * @param  int  $status
+     * @param  string  $statusReason
      */
     public static function create(string $updateId = null, string $downloadPackageId = null, string $platform = null, string $language = null, int $status = null, string $statusReason = null)
     {
@@ -78,7 +78,7 @@ class UpdatesType extends FlexnetType
     }
 
     /**
-     * @param string $updateId
+     * @param  string  $updateId
      * @return $this
      */
     public function setUpdateId($updateId)
@@ -97,7 +97,7 @@ class UpdatesType extends FlexnetType
     }
 
     /**
-     * @param string $downloadPackageId
+     * @param  string  $downloadPackageId
      * @return $this
      */
     public function setDownloadPackageId($downloadPackageId)
@@ -116,7 +116,7 @@ class UpdatesType extends FlexnetType
     }
 
     /**
-     * @param string $platform
+     * @param  string  $platform
      * @return $this
      */
     public function setPlatform($platform)
@@ -135,7 +135,7 @@ class UpdatesType extends FlexnetType
     }
 
     /**
-     * @param string $language
+     * @param  string  $language
      * @return $this
      */
     public function setLanguage($language)
@@ -154,7 +154,7 @@ class UpdatesType extends FlexnetType
     }
 
     /**
-     * @param int $status
+     * @param  int  $status
      * @return $this
      */
     public function setStatus($status)
@@ -173,7 +173,7 @@ class UpdatesType extends FlexnetType
     }
 
     /**
-     * @param string $statusReason
+     * @param  string  $statusReason
      * @return $this
      */
     public function setStatusReason($statusReason)

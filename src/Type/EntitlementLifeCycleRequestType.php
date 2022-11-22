@@ -14,7 +14,7 @@ class EntitlementLifeCycleRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType|array $entitlementData
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType|array  $entitlementData
      */
     public function __construct($entitlementData = null)
     {
@@ -24,7 +24,7 @@ class EntitlementLifeCycleRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType|array $entitlementData
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType|array  $entitlementData
      */
     public static function create($entitlementData = null)
     {
@@ -40,7 +40,7 @@ class EntitlementLifeCycleRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType $entitlementData
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleDataType  $entitlementData
      * @return $this
      */
     public function setEntitlementData($entitlementData)

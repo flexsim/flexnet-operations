@@ -12,7 +12,7 @@ class FeatureListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType|array $featureIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierType|array  $featureIdentifier
      */
     public function __construct($featureIdentifier)
     {
@@ -22,7 +22,7 @@ class FeatureListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType|array $featureIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierType|array  $featureIdentifier
      */
     public static function create($featureIdentifier)
     {
@@ -38,7 +38,7 @@ class FeatureListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType|array $featureIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierType|array  $featureIdentifier
      * @return $this
      */
     public function setFeatureIdentifier($featureIdentifier)

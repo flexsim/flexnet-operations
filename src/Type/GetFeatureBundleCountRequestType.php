@@ -14,9 +14,9 @@ class GetFeatureBundleCountRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType  $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = null)
+    public function __construct(FeatureBundleQueryParametersType $queryParams = null)
     {
         $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
@@ -25,9 +25,9 @@ class GetFeatureBundleCountRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType  $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams = null)
+    public static function create(FeatureBundleQueryParametersType $queryParams = null)
     {
         return new self(...func_get_args());
     }
@@ -41,7 +41,7 @@ class GetFeatureBundleCountRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)

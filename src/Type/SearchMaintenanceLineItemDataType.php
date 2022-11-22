@@ -67,20 +67,20 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceProductName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceProductVersion
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
-     * @param bool $isPermanent
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderLineNumber
-     * @param bool $withNoOrderId
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $maintenanceLineItemAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $maintenanceProductName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $maintenanceProductVersion
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $startDate
+     * @param  bool  $isPermanent
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $expirationDate
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orderId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orderLineNumber
+     * @param  bool  $withNoOrderId
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType  $maintenanceLineItemAttributes
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceProductName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceProductVersion = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber = null, \Flexsim\FlexnetOperations\Type\DateQueryType $startDate = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderLineNumber = null, bool $withNoOrderId = null, \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $maintenanceLineItemAttributes = null)
+    public function __construct(SimpleQueryType $entitlementId = null, SimpleQueryType $activationId = null, SimpleQueryType $maintenanceProductName = null, SimpleQueryType $maintenanceProductVersion = null, SimpleQueryType $partNumber = null, DateQueryType $startDate = null, bool $isPermanent = null, DateQueryType $expirationDate = null, SimpleQueryType $orderId = null, SimpleQueryType $orderLineNumber = null, bool $withNoOrderId = null, CustomAttributesQueryListType $maintenanceLineItemAttributes = null)
     {
         $this->entitlementId = $entitlementId;
         $this->activationId = $activationId;
@@ -99,20 +99,20 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceProductName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceProductVersion
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
-     * @param bool $isPermanent
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderLineNumber
-     * @param bool $withNoOrderId
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $maintenanceLineItemAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $maintenanceProductName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $maintenanceProductVersion
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $startDate
+     * @param  bool  $isPermanent
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $expirationDate
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orderId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orderLineNumber
+     * @param  bool  $withNoOrderId
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType  $maintenanceLineItemAttributes
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceProductName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceProductVersion = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber = null, \Flexsim\FlexnetOperations\Type\DateQueryType $startDate = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderLineNumber = null, bool $withNoOrderId = null, \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $maintenanceLineItemAttributes = null)
+    public static function create(SimpleQueryType $entitlementId = null, SimpleQueryType $activationId = null, SimpleQueryType $maintenanceProductName = null, SimpleQueryType $maintenanceProductVersion = null, SimpleQueryType $partNumber = null, DateQueryType $startDate = null, bool $isPermanent = null, DateQueryType $expirationDate = null, SimpleQueryType $orderId = null, SimpleQueryType $orderLineNumber = null, bool $withNoOrderId = null, CustomAttributesQueryListType $maintenanceLineItemAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -126,7 +126,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)
@@ -145,7 +145,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -164,7 +164,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceProductName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $maintenanceProductName
      * @return $this
      */
     public function setMaintenanceProductName($maintenanceProductName)
@@ -183,7 +183,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $maintenanceProductVersion
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $maintenanceProductVersion
      * @return $this
      */
     public function setMaintenanceProductVersion($maintenanceProductVersion)
@@ -202,7 +202,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -221,7 +221,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $startDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $startDate
      * @return $this
      */
     public function setStartDate($startDate)
@@ -240,7 +240,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param bool $isPermanent
+     * @param  bool  $isPermanent
      * @return $this
      */
     public function setIsPermanent($isPermanent)
@@ -259,7 +259,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $expirationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $expirationDate
      * @return $this
      */
     public function setExpirationDate($expirationDate)
@@ -278,7 +278,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orderId
      * @return $this
      */
     public function setOrderId($orderId)
@@ -297,7 +297,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderLineNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orderLineNumber
      * @return $this
      */
     public function setOrderLineNumber($orderLineNumber)
@@ -316,7 +316,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param bool $withNoOrderId
+     * @param  bool  $withNoOrderId
      * @return $this
      */
     public function setWithNoOrderId($withNoOrderId)
@@ -335,7 +335,7 @@ class SearchMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $maintenanceLineItemAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType  $maintenanceLineItemAttributes
      * @return $this
      */
     public function setMaintenanceLineItemAttributes($maintenanceLineItemAttributes)

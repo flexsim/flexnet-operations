@@ -12,9 +12,9 @@ class HostIdDataSetType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\HostIdDataType $hostIdData
+     * @param  \Flexsim\FlexnetOperations\Type\HostIdDataType  $hostIdData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\HostIdDataType $hostIdData)
+    public function __construct(HostIdDataType $hostIdData)
     {
         $this->hostIdData = $hostIdData;
     }
@@ -22,9 +22,9 @@ class HostIdDataSetType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\HostIdDataType $hostIdData
+     * @param  \Flexsim\FlexnetOperations\Type\HostIdDataType  $hostIdData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\HostIdDataType $hostIdData)
+    public static function create(HostIdDataType $hostIdData)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class HostIdDataSetType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostIdDataType $hostIdData
+     * @param  \Flexsim\FlexnetOperations\Type\HostIdDataType  $hostIdData
      * @return $this
      */
     public function setHostIdData($hostIdData)

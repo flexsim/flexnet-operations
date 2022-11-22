@@ -12,7 +12,7 @@ class CreatedProductDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedProductDataType|array $createdProduct
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedProductDataType|array  $createdProduct
      */
     public function __construct($createdProduct = null)
     {
@@ -22,7 +22,7 @@ class CreatedProductDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedProductDataType|array $createdProduct
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedProductDataType|array  $createdProduct
      */
     public static function create($createdProduct = null)
     {
@@ -38,7 +38,7 @@ class CreatedProductDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedProductDataType|array $createdProduct
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedProductDataType|array  $createdProduct
      * @return $this
      */
     public function setCreatedProduct($createdProduct)

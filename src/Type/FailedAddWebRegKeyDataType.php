@@ -17,10 +17,10 @@ class FailedAddWebRegKeyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType  $webRegKeyData
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData = null, string $reason = null)
+    public function __construct(AddWebRegKeyDataType $webRegKeyData = null, string $reason = null)
     {
         $this->webRegKeyData = $webRegKeyData;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedAddWebRegKeyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType  $webRegKeyData
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData = null, string $reason = null)
+    public static function create(AddWebRegKeyDataType $webRegKeyData = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedAddWebRegKeyDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType $webRegKeyData
+     * @param  \Flexsim\FlexnetOperations\Type\AddWebRegKeyDataType  $webRegKeyData
      * @return $this
      */
     public function setWebRegKeyData($webRegKeyData)
@@ -65,7 +65,7 @@ class FailedAddWebRegKeyDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

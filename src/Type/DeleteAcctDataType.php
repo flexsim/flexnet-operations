@@ -17,8 +17,8 @@ class DeleteAcctDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @param bool $deleteSubTree
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $account
+     * @param  bool  $deleteSubTree
      */
     public function __construct(
         $account,
@@ -31,8 +31,8 @@ class DeleteAcctDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
-     * @param bool $deleteSubTree
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $account
+     * @param  bool  $deleteSubTree
      */
     public static function create(
         $account,
@@ -50,7 +50,7 @@ class DeleteAcctDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $account
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $account
      * @return $this
      */
     public function setAccount($account)
@@ -69,7 +69,7 @@ class DeleteAcctDataType extends FlexnetType
     }
 
     /**
-     * @param bool $deleteSubTree
+     * @param  bool  $deleteSubTree
      * @return $this
      */
     public function setDeleteSubTree($deleteSubTree)

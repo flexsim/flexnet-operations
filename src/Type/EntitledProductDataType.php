@@ -17,10 +17,10 @@ class EntitledProductDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @param int $quantity
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $product
+     * @param  int  $quantity
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $product, int $quantity)
+    public function __construct(ProductIdentifierType $product, int $quantity)
     {
         $this->product = $product;
         $this->quantity = $quantity;
@@ -29,10 +29,10 @@ class EntitledProductDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @param int $quantity
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $product
+     * @param  int  $quantity
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $product, int $quantity)
+    public static function create(ProductIdentifierType $product, int $quantity)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class EntitledProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $product
      * @return $this
      */
     public function setProduct($product)
@@ -65,7 +65,7 @@ class EntitledProductDataType extends FlexnetType
     }
 
     /**
-     * @param int $quantity
+     * @param  int  $quantity
      * @return $this
      */
     public function setQuantity($quantity)

@@ -29,16 +29,16 @@ class GetProductsQueryRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param bool $returnContainedObjects
-     * @param \Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  bool  $returnContainedObjects
+     * @param  \Flexsim\FlexnetOperations\Type\ProductQueryParametersType  $queryParams
      */
     public function __construct(
         int $pageNumber,
         int $batchSize,
         bool $returnContainedObjects,
-        ?\Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams = null
+        ?ProductQueryParametersType $queryParams = null
     ) {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -49,16 +49,16 @@ class GetProductsQueryRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param bool $returnContainedObjects
-     * @param \Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  bool  $returnContainedObjects
+     * @param  \Flexsim\FlexnetOperations\Type\ProductQueryParametersType  $queryParams
      */
     public static function create(
         int $pageNumber,
         int $batchSize,
         bool $returnContainedObjects,
-        ?\Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams = null
+        ?ProductQueryParametersType $queryParams = null
     ) {
         return new self(...func_get_args());
     }
@@ -72,7 +72,7 @@ class GetProductsQueryRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\ProductQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -91,7 +91,7 @@ class GetProductsQueryRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)
@@ -110,7 +110,7 @@ class GetProductsQueryRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)
@@ -129,7 +129,7 @@ class GetProductsQueryRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param bool $returnContainedObjects
+     * @param  bool  $returnContainedObjects
      * @return $this
      */
     public function setReturnContainedObjects($returnContainedObjects)

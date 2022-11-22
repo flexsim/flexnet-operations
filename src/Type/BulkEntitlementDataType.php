@@ -22,11 +22,11 @@ class BulkEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $state
-     * @param string $createdUserId
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param  string  $state
+     * @param  string  $createdUserId
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnology
      */
-    public function __construct(string $state = null, string $createdUserId = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null)
+    public function __construct(string $state = null, string $createdUserId = null, LicenseTechnologyIdentifierType $licenseTechnology = null)
     {
         $this->state = $state;
         $this->createdUserId = $createdUserId;
@@ -36,11 +36,11 @@ class BulkEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $state
-     * @param string $createdUserId
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param  string  $state
+     * @param  string  $createdUserId
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnology
      */
-    public static function create(string $state = null, string $createdUserId = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null)
+    public static function create(string $state = null, string $createdUserId = null, LicenseTechnologyIdentifierType $licenseTechnology = null)
     {
         return new self(...func_get_args());
     }
@@ -54,7 +54,7 @@ class BulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $state
+     * @param  string  $state
      * @return $this
      */
     public function setState($state)
@@ -73,7 +73,7 @@ class BulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $createdUserId
+     * @param  string  $createdUserId
      * @return $this
      */
     public function setCreatedUserId($createdUserId)
@@ -92,7 +92,7 @@ class BulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnology
      * @return $this
      */
     public function setLicenseTechnology($licenseTechnology)

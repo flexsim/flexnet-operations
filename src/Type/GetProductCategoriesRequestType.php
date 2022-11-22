@@ -24,9 +24,9 @@ class GetProductCategoriesRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @param bool $returnContainedObjects
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  bool  $returnContainedObjects
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
     public function __construct(
         bool $returnContainedObjects,
@@ -41,9 +41,9 @@ class GetProductCategoriesRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @param bool $returnContainedObjects
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  bool  $returnContainedObjects
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
     public static function create(
         bool $returnContainedObjects,
@@ -62,7 +62,7 @@ class GetProductCategoriesRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)
@@ -81,7 +81,7 @@ class GetProductCategoriesRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)
@@ -100,7 +100,7 @@ class GetProductCategoriesRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param bool $returnContainedObjects
+     * @param  bool  $returnContainedObjects
      * @return $this
      */
     public function setReturnContainedObjects($returnContainedObjects)

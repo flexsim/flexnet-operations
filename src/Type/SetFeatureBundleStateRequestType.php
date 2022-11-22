@@ -14,9 +14,9 @@ class SetFeatureBundleStateRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType  $featureBundle
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle)
+    public function __construct(FeatureBundleStateDataType $featureBundle)
     {
         $this->featureBundle = $featureBundle;
     }
@@ -24,9 +24,9 @@ class SetFeatureBundleStateRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType  $featureBundle
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle)
+    public static function create(FeatureBundleStateDataType $featureBundle)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class SetFeatureBundleStateRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleStateDataType  $featureBundle
      * @return $this
      */
     public function setFeatureBundle($featureBundle)

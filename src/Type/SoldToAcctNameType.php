@@ -22,9 +22,9 @@ class SoldToAcctNameType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $displayName
-     * @param string $id
-     * @param string $name
+     * @param  string  $displayName
+     * @param  string  $id
+     * @param  string  $name
      */
     public function __construct(string $displayName, string $id, string $name)
     {
@@ -36,9 +36,9 @@ class SoldToAcctNameType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $displayName
-     * @param string $id
-     * @param string $name
+     * @param  string  $displayName
+     * @param  string  $id
+     * @param  string  $name
      */
     public static function create(string $displayName, string $id, string $name)
     {
@@ -54,7 +54,7 @@ class SoldToAcctNameType extends FlexnetType
     }
 
     /**
-     * @param string $displayName
+     * @param  string  $displayName
      * @return $this
      */
     public function setDisplayName($displayName)
@@ -73,7 +73,7 @@ class SoldToAcctNameType extends FlexnetType
     }
 
     /**
-     * @param string $id
+     * @param  string  $id
      * @return $this
      */
     public function setId($id)
@@ -92,7 +92,7 @@ class SoldToAcctNameType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)

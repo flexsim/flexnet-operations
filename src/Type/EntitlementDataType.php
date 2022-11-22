@@ -17,10 +17,10 @@ class EntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType $simpleEntitlement
-     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType $bulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType  $simpleEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType  $bulkEntitlement
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType $simpleEntitlement = null, \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType $bulkEntitlement = null)
+    public function __construct(SimpleEntitlementDataType $simpleEntitlement = null, BulkEntitlementDataType $bulkEntitlement = null)
     {
         $this->simpleEntitlement = $simpleEntitlement;
         $this->bulkEntitlement = $bulkEntitlement;
@@ -29,10 +29,10 @@ class EntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType $simpleEntitlement
-     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType $bulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType  $simpleEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType  $bulkEntitlement
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType $simpleEntitlement = null, \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType $bulkEntitlement = null)
+    public static function create(SimpleEntitlementDataType $simpleEntitlement = null, BulkEntitlementDataType $bulkEntitlement = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class EntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType $simpleEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleEntitlementDataType  $simpleEntitlement
      * @return $this
      */
     public function setSimpleEntitlement($simpleEntitlement)
@@ -65,7 +65,7 @@ class EntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType $bulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\BulkEntitlementDataType  $bulkEntitlement
      * @return $this
      */
     public function setBulkEntitlement($bulkEntitlement)

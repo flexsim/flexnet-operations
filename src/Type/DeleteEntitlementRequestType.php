@@ -14,9 +14,9 @@ class DeleteEntitlementRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteEntitlementDataType $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteEntitlementDataType  $entitlement
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeleteEntitlementDataType $entitlement)
+    public function __construct(DeleteEntitlementDataType $entitlement)
     {
         $this->entitlement = $entitlement;
     }
@@ -24,9 +24,9 @@ class DeleteEntitlementRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteEntitlementDataType $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteEntitlementDataType  $entitlement
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeleteEntitlementDataType $entitlement)
+    public static function create(DeleteEntitlementDataType $entitlement)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class DeleteEntitlementRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeleteEntitlementDataType $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteEntitlementDataType  $entitlement
      * @return $this
      */
     public function setEntitlement($entitlement)

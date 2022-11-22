@@ -12,7 +12,7 @@ class FailedDeleteWebRegKeyListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteWebRegKeyDataType|array $failedWebRegKey
+     * @param  \Flexsim\FlexnetOperations\Type\FailedDeleteWebRegKeyDataType|array  $failedWebRegKey
      */
     public function __construct($failedWebRegKey = null)
     {
@@ -22,7 +22,7 @@ class FailedDeleteWebRegKeyListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteWebRegKeyDataType|array $failedWebRegKey
+     * @param  \Flexsim\FlexnetOperations\Type\FailedDeleteWebRegKeyDataType|array  $failedWebRegKey
      */
     public static function create($failedWebRegKey = null)
     {
@@ -38,7 +38,7 @@ class FailedDeleteWebRegKeyListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedDeleteWebRegKeyDataType|array $failedWebRegKey
+     * @param  \Flexsim\FlexnetOperations\Type\FailedDeleteWebRegKeyDataType|array  $failedWebRegKey
      * @return $this
      */
     public function setFailedWebRegKey($failedWebRegKey)

@@ -17,10 +17,10 @@ class ProductStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @param string $stateToSet
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
+     * @param  string  $stateToSet
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, string $stateToSet)
+    public function __construct(ProductIdentifierType $productIdentifier, string $stateToSet)
     {
         $this->productIdentifier = $productIdentifier;
         $this->stateToSet = $stateToSet;
@@ -29,10 +29,10 @@ class ProductStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @param string $stateToSet
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
+     * @param  string  $stateToSet
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, string $stateToSet)
+    public static function create(ProductIdentifierType $productIdentifier, string $stateToSet)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class ProductStateDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
      * @return $this
      */
     public function setProductIdentifier($productIdentifier)
@@ -65,7 +65,7 @@ class ProductStateDataType extends FlexnetType
     }
 
     /**
-     * @param string $stateToSet
+     * @param  string  $stateToSet
      * @return $this
      */
     public function setStateToSet($stateToSet)

@@ -14,9 +14,9 @@ class RelateAccountsRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData
+     * @param  \Flexsim\FlexnetOperations\Type\RelateAccountsDataType  $acctData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData)
+    public function __construct(RelateAccountsDataType $acctData)
     {
         $this->acctData = $acctData;
     }
@@ -24,9 +24,9 @@ class RelateAccountsRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData
+     * @param  \Flexsim\FlexnetOperations\Type\RelateAccountsDataType  $acctData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData)
+    public static function create(RelateAccountsDataType $acctData)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class RelateAccountsRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\RelateAccountsDataType $acctData
+     * @param  \Flexsim\FlexnetOperations\Type\RelateAccountsDataType  $acctData
      * @return $this
      */
     public function setAcctData($acctData)

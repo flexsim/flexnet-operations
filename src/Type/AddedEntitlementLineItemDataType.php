@@ -32,13 +32,13 @@ class AddedEntitlementLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param string|array $lineItemUniqueIds
-     * @param string|array $maintenanceLineItemUniqueIds
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array $lineItemIdentifiers
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array $maintenanceLineItemIdentifiers
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  string|array  $lineItemUniqueIds
+     * @param  string|array  $maintenanceLineItemUniqueIds
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array  $lineItemIdentifiers
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array  $maintenanceLineItemIdentifiers
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, $lineItemUniqueIds = null, $maintenanceLineItemUniqueIds = null, $lineItemIdentifiers = null, $maintenanceLineItemIdentifiers = null)
+    public function __construct(EntitlementIdentifierType $entitlementIdentifier, $lineItemUniqueIds = null, $maintenanceLineItemUniqueIds = null, $lineItemIdentifiers = null, $maintenanceLineItemIdentifiers = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->lineItemUniqueIds = $lineItemUniqueIds;
@@ -50,13 +50,13 @@ class AddedEntitlementLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param string|array $lineItemUniqueIds
-     * @param string|array $maintenanceLineItemUniqueIds
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array $lineItemIdentifiers
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array $maintenanceLineItemIdentifiers
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  string|array  $lineItemUniqueIds
+     * @param  string|array  $maintenanceLineItemUniqueIds
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array  $lineItemIdentifiers
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType|array  $maintenanceLineItemIdentifiers
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, $lineItemUniqueIds = null, $maintenanceLineItemUniqueIds = null, $lineItemIdentifiers = null, $maintenanceLineItemIdentifiers = null)
+    public static function create(EntitlementIdentifierType $entitlementIdentifier, $lineItemUniqueIds = null, $maintenanceLineItemUniqueIds = null, $lineItemIdentifiers = null, $maintenanceLineItemIdentifiers = null)
     {
         return new self(...func_get_args());
     }
@@ -70,7 +70,7 @@ class AddedEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
      * @return $this
      */
     public function setEntitlementIdentifier($entitlementIdentifier)
@@ -89,7 +89,7 @@ class AddedEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $lineItemUniqueIds
+     * @param  string  $lineItemUniqueIds
      * @return $this
      */
     public function setLineItemUniqueIds($lineItemUniqueIds)
@@ -108,7 +108,7 @@ class AddedEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $maintenanceLineItemUniqueIds
+     * @param  string  $maintenanceLineItemUniqueIds
      * @return $this
      */
     public function setMaintenanceLineItemUniqueIds($maintenanceLineItemUniqueIds)
@@ -127,7 +127,7 @@ class AddedEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifiers
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifiers
      * @return $this
      */
     public function setLineItemIdentifiers($lineItemIdentifiers)
@@ -146,7 +146,7 @@ class AddedEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifiers
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $maintenanceLineItemIdentifiers
      * @return $this
      */
     public function setMaintenanceLineItemIdentifiers($maintenanceLineItemIdentifiers)

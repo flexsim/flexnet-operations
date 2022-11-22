@@ -14,9 +14,9 @@ class EmailEntitlementResponseType extends FlexnetType implements ResultInterfac
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo)
+    public function __construct(StatusInfoType $statusInfo)
     {
         $this->statusInfo = $statusInfo;
     }
@@ -24,9 +24,9 @@ class EmailEntitlementResponseType extends FlexnetType implements ResultInterfac
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo)
+    public static function create(StatusInfoType $statusInfo)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class EmailEntitlementResponseType extends FlexnetType implements ResultInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)

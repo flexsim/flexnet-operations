@@ -17,10 +17,10 @@ class FailedUpdateUserRolesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType $userData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType  $userData
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType $userData = null, string $reason = null)
+    public function __construct(UpdateUserRolesDataType $userData = null, string $reason = null)
     {
         $this->userData = $userData;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedUpdateUserRolesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType $userData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType  $userData
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType $userData = null, string $reason = null)
+    public static function create(UpdateUserRolesDataType $userData = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedUpdateUserRolesDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType $userData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserRolesDataType  $userData
      * @return $this
      */
     public function setUserData($userData)
@@ -65,7 +65,7 @@ class FailedUpdateUserRolesDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

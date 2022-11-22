@@ -12,7 +12,7 @@ class FailedCreateDevDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedCreateDeviceDataType|array $failedDevice
+     * @param  \Flexsim\FlexnetOperations\Type\FailedCreateDeviceDataType|array  $failedDevice
      */
     public function __construct($failedDevice = null)
     {
@@ -22,7 +22,7 @@ class FailedCreateDevDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedCreateDeviceDataType|array $failedDevice
+     * @param  \Flexsim\FlexnetOperations\Type\FailedCreateDeviceDataType|array  $failedDevice
      */
     public static function create($failedDevice = null)
     {
@@ -38,7 +38,7 @@ class FailedCreateDevDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedCreateDeviceDataType|array $failedDevice
+     * @param  \Flexsim\FlexnetOperations\Type\FailedCreateDeviceDataType|array  $failedDevice
      * @return $this
      */
     public function setFailedDevice($failedDevice)

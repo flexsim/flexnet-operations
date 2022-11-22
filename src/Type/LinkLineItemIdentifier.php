@@ -22,9 +22,9 @@ class LinkLineItemIdentifier extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $activationId
-     * @param int $count
-     * @param \DateTimeInterface $expirationDateOverride
+     * @param  string  $activationId
+     * @param  int  $count
+     * @param  \DateTimeInterface  $expirationDateOverride
      */
     public function __construct(string $activationId = null, int $count = null, \DateTimeInterface $expirationDateOverride = null)
     {
@@ -36,9 +36,9 @@ class LinkLineItemIdentifier extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $activationId
-     * @param int $count
-     * @param \DateTimeInterface $expirationDateOverride
+     * @param  string  $activationId
+     * @param  int  $count
+     * @param  \DateTimeInterface  $expirationDateOverride
      */
     public static function create(string $activationId = null, int $count = null, \DateTimeInterface $expirationDateOverride = null)
     {
@@ -54,7 +54,7 @@ class LinkLineItemIdentifier extends FlexnetType
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -73,7 +73,7 @@ class LinkLineItemIdentifier extends FlexnetType
     }
 
     /**
-     * @param int $count
+     * @param  int  $count
      * @return $this
      */
     public function setCount($count)
@@ -92,7 +92,7 @@ class LinkLineItemIdentifier extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $expirationDateOverride
+     * @param  \DateTimeInterface  $expirationDateOverride
      * @return $this
      */
     public function setExpirationDateOverride($expirationDateOverride)

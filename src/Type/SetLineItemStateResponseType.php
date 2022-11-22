@@ -19,10 +19,10 @@ class SetLineItemStateResponseType extends FlexnetType implements ResultInterfac
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedLineItemStateDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedLineItemStateDataListType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedLineItemStateDataListType $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedLineItemStateDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -31,10 +31,10 @@ class SetLineItemStateResponseType extends FlexnetType implements ResultInterfac
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedLineItemStateDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedLineItemStateDataListType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedLineItemStateDataListType $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedLineItemStateDataListType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class SetLineItemStateResponseType extends FlexnetType implements ResultInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class SetLineItemStateResponseType extends FlexnetType implements ResultInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedLineItemStateDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedLineItemStateDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

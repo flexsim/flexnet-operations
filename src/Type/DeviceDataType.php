@@ -57,18 +57,18 @@ class DeviceDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier $deviceIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
-     * @param \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @param string $alias
-     * @param string $user
-     * @param string $deployment
-     * @param string $siteName
+     * @param  \Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier  $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeIdentifier  $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherIdentifier  $publisherIdName
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
+     * @param  string  $alias
+     * @param  string  $user
+     * @param  string  $deployment
+     * @param  string  $siteName
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null, string $deployment = null, string $siteName = null)
+    public function __construct(CreateDeviceIdentifier $deviceIdentifier, HostTypeIdentifier $hostTypeName = null, PublisherIdentifier $publisherIdName = null, string $description = null, ChannelPartnerDataListType $channelPartners = null, AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null, string $deployment = null, string $siteName = null)
     {
         $this->deviceIdentifier = $deviceIdentifier;
         $this->hostTypeName = $hostTypeName;
@@ -85,18 +85,18 @@ class DeviceDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier $deviceIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
-     * @param \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @param string $alias
-     * @param string $user
-     * @param string $deployment
-     * @param string $siteName
+     * @param  \Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier  $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeIdentifier  $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherIdentifier  $publisherIdName
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
+     * @param  string  $alias
+     * @param  string  $user
+     * @param  string  $deployment
+     * @param  string  $siteName
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null, string $deployment = null, string $siteName = null)
+    public static function create(CreateDeviceIdentifier $deviceIdentifier, HostTypeIdentifier $hostTypeName = null, PublisherIdentifier $publisherIdName = null, string $description = null, ChannelPartnerDataListType $channelPartners = null, AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null, string $deployment = null, string $siteName = null)
     {
         return new self(...func_get_args());
     }
@@ -110,7 +110,7 @@ class DeviceDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\CreateDeviceIdentifier  $deviceIdentifier
      * @return $this
      */
     public function setDeviceIdentifier($deviceIdentifier)
@@ -129,7 +129,7 @@ class DeviceDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeIdentifier  $hostTypeName
      * @return $this
      */
     public function setHostTypeName($hostTypeName)
@@ -148,7 +148,7 @@ class DeviceDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherIdentifier  $publisherIdName
      * @return $this
      */
     public function setPublisherIdName($publisherIdName)
@@ -167,7 +167,7 @@ class DeviceDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -186,7 +186,7 @@ class DeviceDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
      * @return $this
      */
     public function setChannelPartners($channelPartners)
@@ -205,7 +205,7 @@ class DeviceDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)
@@ -224,7 +224,7 @@ class DeviceDataType extends FlexnetType
     }
 
     /**
-     * @param string $alias
+     * @param  string  $alias
      * @return $this
      */
     public function setAlias($alias)
@@ -243,7 +243,7 @@ class DeviceDataType extends FlexnetType
     }
 
     /**
-     * @param string $user
+     * @param  string  $user
      * @return $this
      */
     public function setUser($user)
@@ -262,7 +262,7 @@ class DeviceDataType extends FlexnetType
     }
 
     /**
-     * @param string $deployment
+     * @param  string  $deployment
      * @return $this
      */
     public function setDeployment($deployment)
@@ -281,7 +281,7 @@ class DeviceDataType extends FlexnetType
     }
 
     /**
-     * @param string $siteName
+     * @param  string  $siteName
      * @return $this
      */
     public function setSiteName($siteName)

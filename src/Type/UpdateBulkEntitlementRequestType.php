@@ -14,9 +14,9 @@ class UpdateBulkEntitlementRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType $bulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType  $bulkEntitlement
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType $bulkEntitlement)
+    public function __construct(UpdateBulkEntitlementDataType $bulkEntitlement)
     {
         $this->bulkEntitlement = $bulkEntitlement;
     }
@@ -24,9 +24,9 @@ class UpdateBulkEntitlementRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType $bulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType  $bulkEntitlement
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType $bulkEntitlement)
+    public static function create(UpdateBulkEntitlementDataType $bulkEntitlement)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class UpdateBulkEntitlementRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType $bulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementDataType  $bulkEntitlement
      * @return $this
      */
     public function setBulkEntitlement($bulkEntitlement)

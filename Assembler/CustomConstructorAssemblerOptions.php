@@ -8,8 +8,6 @@ use Phpro\SoapClient\CodeGenerator\Assembler\ConstructorAssemblerOptions;
 
 /**
  * Class ConstructorAssemblerOptions
- *
- * @package Phpro\SoapClient\CodeGenerator\Assembler
  */
 class CustomConstructorAssemblerOptions extends ConstructorAssemblerOptions
 {
@@ -42,8 +40,7 @@ class CustomConstructorAssemblerOptions extends ConstructorAssemblerOptions
     }
 
     /**
-     * @param bool $withTypeHints
-     *
+     * @param  bool  $withTypeHints
      * @return CustomConstructorAssemblerOptions
      */
     public function withTypeHints(bool $withTypeHints = true): CustomConstructorAssemblerOptions
@@ -63,8 +60,7 @@ class CustomConstructorAssemblerOptions extends ConstructorAssemblerOptions
     }
 
     /**
-     * @param bool $withDocBlocks
-     *
+     * @param  bool  $withDocBlocks
      * @return CustomConstructorAssemblerOptions
      */
     public function withDocBlocks(bool $withDocBlocks = true): CustomConstructorAssemblerOptions
@@ -84,8 +80,7 @@ class CustomConstructorAssemblerOptions extends ConstructorAssemblerOptions
     }
 
     /**
-     * @param bool $withDocBlocks
-     *
+     * @param  bool  $withDocBlocks
      * @return CustomConstructorAssemblerOptions
      */
     public function withCreateMethod(bool $withCreateMethod = true): CustomConstructorAssemblerOptions
@@ -105,8 +100,7 @@ class CustomConstructorAssemblerOptions extends ConstructorAssemblerOptions
     }
 
     /**
-     * @param array $typeMap
-     *
+     * @param  array  $typeMap
      * @return CustomConstructorAssemblerOptions
      */
     public function withTypeMap(array $withTypemap): CustomConstructorAssemblerOptions

@@ -37,14 +37,14 @@ class PartNumberDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumberIdentifier
-     * @param string $description
-     * @param \DateTimeInterface $creationDate
-     * @param \DateTimeInterface $lastModifiedDate
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $mappedProduct
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $mappedLicenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType  $partNumberIdentifier
+     * @param  string  $description
+     * @param  \DateTimeInterface  $creationDate
+     * @param  \DateTimeInterface  $lastModifiedDate
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $mappedProduct
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $mappedLicenseModel
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumberIdentifier, string $description, \DateTimeInterface $creationDate, \DateTimeInterface $lastModifiedDate, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $mappedProduct = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $mappedLicenseModel = null)
+    public function __construct(PartNumberIdentifierType $partNumberIdentifier, string $description, \DateTimeInterface $creationDate, \DateTimeInterface $lastModifiedDate, ProductIdentifierType $mappedProduct = null, LicenseModelIdentifierType $mappedLicenseModel = null)
     {
         $this->partNumberIdentifier = $partNumberIdentifier;
         $this->description = $description;
@@ -57,14 +57,14 @@ class PartNumberDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumberIdentifier
-     * @param string $description
-     * @param \DateTimeInterface $creationDate
-     * @param \DateTimeInterface $lastModifiedDate
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $mappedProduct
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $mappedLicenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType  $partNumberIdentifier
+     * @param  string  $description
+     * @param  \DateTimeInterface  $creationDate
+     * @param  \DateTimeInterface  $lastModifiedDate
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $mappedProduct
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $mappedLicenseModel
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumberIdentifier, string $description, \DateTimeInterface $creationDate, \DateTimeInterface $lastModifiedDate, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $mappedProduct = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $mappedLicenseModel = null)
+    public static function create(PartNumberIdentifierType $partNumberIdentifier, string $description, \DateTimeInterface $creationDate, \DateTimeInterface $lastModifiedDate, ProductIdentifierType $mappedProduct = null, LicenseModelIdentifierType $mappedLicenseModel = null)
     {
         return new self(...func_get_args());
     }
@@ -78,7 +78,7 @@ class PartNumberDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumberIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType  $partNumberIdentifier
      * @return $this
      */
     public function setPartNumberIdentifier($partNumberIdentifier)
@@ -97,7 +97,7 @@ class PartNumberDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -116,7 +116,7 @@ class PartNumberDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $creationDate
+     * @param  \DateTimeInterface  $creationDate
      * @return $this
      */
     public function setCreationDate($creationDate)
@@ -135,7 +135,7 @@ class PartNumberDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $lastModifiedDate
+     * @param  \DateTimeInterface  $lastModifiedDate
      * @return $this
      */
     public function setLastModifiedDate($lastModifiedDate)
@@ -154,7 +154,7 @@ class PartNumberDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $mappedProduct
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $mappedProduct
      * @return $this
      */
     public function setMappedProduct($mappedProduct)
@@ -173,7 +173,7 @@ class PartNumberDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $mappedLicenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $mappedLicenseModel
      * @return $this
      */
     public function setMappedLicenseModel($mappedLicenseModel)

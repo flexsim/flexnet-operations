@@ -14,9 +14,9 @@ class EmergencyFulfillmentRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType  $fulfillment
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType $fulfillment)
+    public function __construct(EmergencyFulfillmentDataType $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -24,9 +24,9 @@ class EmergencyFulfillmentRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType  $fulfillment
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType $fulfillment)
+    public static function create(EmergencyFulfillmentDataType $fulfillment)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class EmergencyFulfillmentRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentDataType  $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)

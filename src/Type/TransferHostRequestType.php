@@ -24,11 +24,11 @@ class TransferHostRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferHostList $sourceHosts
-     * @param string $soldTo
-     * @param bool $poolEntitlements
+     * @param  \Flexsim\FlexnetOperations\Type\TransferHostList  $sourceHosts
+     * @param  string  $soldTo
+     * @param  bool  $poolEntitlements
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\TransferHostList $sourceHosts, string $soldTo = null, bool $poolEntitlements = null)
+    public function __construct(TransferHostList $sourceHosts, string $soldTo = null, bool $poolEntitlements = null)
     {
         $this->sourceHosts = $sourceHosts;
         $this->soldTo = $soldTo;
@@ -38,11 +38,11 @@ class TransferHostRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferHostList $sourceHosts
-     * @param string $soldTo
-     * @param bool $poolEntitlements
+     * @param  \Flexsim\FlexnetOperations\Type\TransferHostList  $sourceHosts
+     * @param  string  $soldTo
+     * @param  bool  $poolEntitlements
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\TransferHostList $sourceHosts, string $soldTo = null, bool $poolEntitlements = null)
+    public static function create(TransferHostList $sourceHosts, string $soldTo = null, bool $poolEntitlements = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class TransferHostRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TransferHostList $sourceHosts
+     * @param  \Flexsim\FlexnetOperations\Type\TransferHostList  $sourceHosts
      * @return $this
      */
     public function setSourceHosts($sourceHosts)
@@ -75,7 +75,7 @@ class TransferHostRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param string $soldTo
+     * @param  string  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -94,7 +94,7 @@ class TransferHostRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param bool $poolEntitlements
+     * @param  bool  $poolEntitlements
      * @return $this
      */
     public function setPoolEntitlements($poolEntitlements)

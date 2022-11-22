@@ -12,7 +12,7 @@ class AdvancedFmtLCResponseDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataType|array $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataType|array  $fulfillment
      */
     public function __construct($fulfillment)
     {
@@ -22,7 +22,7 @@ class AdvancedFmtLCResponseDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataType|array $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataType|array  $fulfillment
      */
     public static function create($fulfillment)
     {
@@ -38,7 +38,7 @@ class AdvancedFmtLCResponseDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataType|array $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataType|array  $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)

@@ -12,7 +12,7 @@ class FulfillmentIdListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType|array $fulfillmentIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType|array  $fulfillmentIdentifier
      */
     public function __construct($fulfillmentIdentifier)
     {
@@ -22,7 +22,7 @@ class FulfillmentIdListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType|array $fulfillmentIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType|array  $fulfillmentIdentifier
      */
     public static function create($fulfillmentIdentifier)
     {
@@ -38,7 +38,7 @@ class FulfillmentIdListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType|array $fulfillmentIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType|array  $fulfillmentIdentifier
      * @return $this
      */
     public function setFulfillmentIdentifier($fulfillmentIdentifier)

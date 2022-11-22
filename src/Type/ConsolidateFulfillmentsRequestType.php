@@ -14,9 +14,9 @@ class ConsolidateFulfillmentsRequestType extends FlexnetType implements RequestI
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $fulfillments
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType  $fulfillments
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $fulfillments)
+    public function __construct(FulfillmentIdentifierListType $fulfillments)
     {
         $this->fulfillments = $fulfillments;
     }
@@ -24,9 +24,9 @@ class ConsolidateFulfillmentsRequestType extends FlexnetType implements RequestI
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $fulfillments
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType  $fulfillments
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $fulfillments)
+    public static function create(FulfillmentIdentifierListType $fulfillments)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class ConsolidateFulfillmentsRequestType extends FlexnetType implements RequestI
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType $fulfillments
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierListType  $fulfillments
      * @return $this
      */
     public function setFulfillments($fulfillments)

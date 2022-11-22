@@ -122,31 +122,31 @@ class CreateProductDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $productName
-     * @param string $version
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType $licenseGenerator
-     * @param \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType $packageProperties
-     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundlesListType $featureBundles
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelsListType $licenseModels
-     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $trustedKey
-     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $virtualTrustedKey
-     * @param \Flexsim\FlexnetOperations\Type\PartNumbersListType $partNumbers
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
-     * @param bool $usedOnDevice
-     * @param string $productCategory
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @param bool $allowDownloadObsoleteFrInAdmin
-     * @param bool $allowDownloadObsoleteFrInPortal
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $productAttributes
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $endDate
-     * @param string $upgradeEmailTemplateVarName
+     * @param  string  $productName
+     * @param  string  $version
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType  $licenseGenerator
+     * @param  \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType  $packageProperties
+     * @param  \Flexsim\FlexnetOperations\Type\FeaturesListType  $features
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundlesListType  $featureBundles
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelsListType  $licenseModels
+     * @param  \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType  $trustedKey
+     * @param  \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType  $virtualTrustedKey
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumbersListType  $partNumbers
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypePKType  $hostType
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeListType  $hostTypes
+     * @param  bool  $usedOnDevice
+     * @param  string  $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
+     * @param  bool  $allowDownloadObsoleteFrInAdmin
+     * @param  bool  $allowDownloadObsoleteFrInPortal
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $productAttributes
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $endDate
+     * @param  string  $upgradeEmailTemplateVarName
      */
-    public function __construct(string $productName, string $version = null, string $description = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType $packageProperties = null, \Flexsim\FlexnetOperations\Type\FeaturesListType $features = null, \Flexsim\FlexnetOperations\Type\FeatureBundlesListType $featureBundles = null, \Flexsim\FlexnetOperations\Type\LicenseModelsListType $licenseModels = null, \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $trustedKey = null, \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, \Flexsim\FlexnetOperations\Type\PartNumbersListType $partNumbers = null, \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType = null, \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes = null, bool $usedOnDevice = null, string $productCategory = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, bool $allowDownloadObsoleteFrInAdmin = null, bool $allowDownloadObsoleteFrInPortal = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $productAttributes = null, \DateTimeInterface $startDate = null, \DateTimeInterface $endDate = null, string $upgradeEmailTemplateVarName = null)
+    public function __construct(string $productName, string $version = null, string $description = null, LicenseTechnologyIdentifierType $licenseTechnology = null, LicenseGeneratorIdentifierType $licenseGenerator = null, PackagePropertiesDataType $packageProperties = null, FeaturesListType $features = null, FeatureBundlesListType $featureBundles = null, LicenseModelsListType $licenseModels = null, TrustedKeyIdentifierType $trustedKey = null, TrustedKeyIdentifierType $virtualTrustedKey = null, PartNumbersListType $partNumbers = null, HostTypePKType $hostType = null, HostTypeListType $hostTypes = null, bool $usedOnDevice = null, string $productCategory = null, AttributeDescriptorDataType $customAttributes = null, bool $allowDownloadObsoleteFrInAdmin = null, bool $allowDownloadObsoleteFrInPortal = null, AttributeDescriptorDataType $productAttributes = null, \DateTimeInterface $startDate = null, \DateTimeInterface $endDate = null, string $upgradeEmailTemplateVarName = null)
     {
         $this->productName = $productName;
         $this->version = $version;
@@ -176,31 +176,31 @@ class CreateProductDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $productName
-     * @param string $version
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType $licenseGenerator
-     * @param \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType $packageProperties
-     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundlesListType $featureBundles
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelsListType $licenseModels
-     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $trustedKey
-     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $virtualTrustedKey
-     * @param \Flexsim\FlexnetOperations\Type\PartNumbersListType $partNumbers
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
-     * @param bool $usedOnDevice
-     * @param string $productCategory
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @param bool $allowDownloadObsoleteFrInAdmin
-     * @param bool $allowDownloadObsoleteFrInPortal
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $productAttributes
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $endDate
-     * @param string $upgradeEmailTemplateVarName
+     * @param  string  $productName
+     * @param  string  $version
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType  $licenseGenerator
+     * @param  \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType  $packageProperties
+     * @param  \Flexsim\FlexnetOperations\Type\FeaturesListType  $features
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundlesListType  $featureBundles
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelsListType  $licenseModels
+     * @param  \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType  $trustedKey
+     * @param  \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType  $virtualTrustedKey
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumbersListType  $partNumbers
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypePKType  $hostType
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeListType  $hostTypes
+     * @param  bool  $usedOnDevice
+     * @param  string  $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
+     * @param  bool  $allowDownloadObsoleteFrInAdmin
+     * @param  bool  $allowDownloadObsoleteFrInPortal
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $productAttributes
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $endDate
+     * @param  string  $upgradeEmailTemplateVarName
      */
-    public static function create(string $productName, string $version = null, string $description = null, \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType $packageProperties = null, \Flexsim\FlexnetOperations\Type\FeaturesListType $features = null, \Flexsim\FlexnetOperations\Type\FeatureBundlesListType $featureBundles = null, \Flexsim\FlexnetOperations\Type\LicenseModelsListType $licenseModels = null, \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $trustedKey = null, \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, \Flexsim\FlexnetOperations\Type\PartNumbersListType $partNumbers = null, \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType = null, \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes = null, bool $usedOnDevice = null, string $productCategory = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, bool $allowDownloadObsoleteFrInAdmin = null, bool $allowDownloadObsoleteFrInPortal = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $productAttributes = null, \DateTimeInterface $startDate = null, \DateTimeInterface $endDate = null, string $upgradeEmailTemplateVarName = null)
+    public static function create(string $productName, string $version = null, string $description = null, LicenseTechnologyIdentifierType $licenseTechnology = null, LicenseGeneratorIdentifierType $licenseGenerator = null, PackagePropertiesDataType $packageProperties = null, FeaturesListType $features = null, FeatureBundlesListType $featureBundles = null, LicenseModelsListType $licenseModels = null, TrustedKeyIdentifierType $trustedKey = null, TrustedKeyIdentifierType $virtualTrustedKey = null, PartNumbersListType $partNumbers = null, HostTypePKType $hostType = null, HostTypeListType $hostTypes = null, bool $usedOnDevice = null, string $productCategory = null, AttributeDescriptorDataType $customAttributes = null, bool $allowDownloadObsoleteFrInAdmin = null, bool $allowDownloadObsoleteFrInPortal = null, AttributeDescriptorDataType $productAttributes = null, \DateTimeInterface $startDate = null, \DateTimeInterface $endDate = null, string $upgradeEmailTemplateVarName = null)
     {
         return new self(...func_get_args());
     }
@@ -214,7 +214,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param string $productName
+     * @param  string  $productName
      * @return $this
      */
     public function setProductName($productName)
@@ -233,7 +233,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param string $version
+     * @param  string  $version
      * @return $this
      */
     public function setVersion($version)
@@ -252,7 +252,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -271,7 +271,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnology
      * @return $this
      */
     public function setLicenseTechnology($licenseTechnology)
@@ -290,7 +290,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType $licenseGenerator
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType  $licenseGenerator
      * @return $this
      */
     public function setLicenseGenerator($licenseGenerator)
@@ -309,7 +309,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType $packageProperties
+     * @param  \Flexsim\FlexnetOperations\Type\PackagePropertiesDataType  $packageProperties
      * @return $this
      */
     public function setPackageProperties($packageProperties)
@@ -328,7 +328,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
+     * @param  \Flexsim\FlexnetOperations\Type\FeaturesListType  $features
      * @return $this
      */
     public function setFeatures($features)
@@ -347,7 +347,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundlesListType $featureBundles
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundlesListType  $featureBundles
      * @return $this
      */
     public function setFeatureBundles($featureBundles)
@@ -366,7 +366,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelsListType $licenseModels
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelsListType  $licenseModels
      * @return $this
      */
     public function setLicenseModels($licenseModels)
@@ -385,7 +385,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $trustedKey
+     * @param  \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType  $trustedKey
      * @return $this
      */
     public function setTrustedKey($trustedKey)
@@ -404,7 +404,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType $virtualTrustedKey
+     * @param  \Flexsim\FlexnetOperations\Type\TrustedKeyIdentifierType  $virtualTrustedKey
      * @return $this
      */
     public function setVirtualTrustedKey($virtualTrustedKey)
@@ -423,7 +423,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartNumbersListType $partNumbers
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumbersListType  $partNumbers
      * @return $this
      */
     public function setPartNumbers($partNumbers)
@@ -442,7 +442,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType $hostType
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypePKType  $hostType
      * @return $this
      */
     public function setHostType($hostType)
@@ -461,7 +461,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeListType $hostTypes
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeListType  $hostTypes
      * @return $this
      */
     public function setHostTypes($hostTypes)
@@ -480,7 +480,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param bool $usedOnDevice
+     * @param  bool  $usedOnDevice
      * @return $this
      */
     public function setUsedOnDevice($usedOnDevice)
@@ -499,7 +499,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param string $productCategory
+     * @param  string  $productCategory
      * @return $this
      */
     public function setProductCategory($productCategory)
@@ -518,7 +518,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)
@@ -537,7 +537,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param bool $allowDownloadObsoleteFrInAdmin
+     * @param  bool  $allowDownloadObsoleteFrInAdmin
      * @return $this
      */
     public function setAllowDownloadObsoleteFrInAdmin($allowDownloadObsoleteFrInAdmin)
@@ -556,7 +556,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param bool $allowDownloadObsoleteFrInPortal
+     * @param  bool  $allowDownloadObsoleteFrInPortal
      * @return $this
      */
     public function setAllowDownloadObsoleteFrInPortal($allowDownloadObsoleteFrInPortal)
@@ -575,7 +575,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $productAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $productAttributes
      * @return $this
      */
     public function setProductAttributes($productAttributes)
@@ -594,7 +594,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $startDate
+     * @param  \DateTimeInterface  $startDate
      * @return $this
      */
     public function setStartDate($startDate)
@@ -613,7 +613,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $endDate
+     * @param  \DateTimeInterface  $endDate
      * @return $this
      */
     public function setEndDate($endDate)
@@ -632,7 +632,7 @@ class CreateProductDataType extends FlexnetType
     }
 
     /**
-     * @param string $upgradeEmailTemplateVarName
+     * @param  string  $upgradeEmailTemplateVarName
      * @return $this
      */
     public function setUpgradeEmailTemplateVarName($upgradeEmailTemplateVarName)

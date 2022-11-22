@@ -17,8 +17,8 @@ class CreateProductCategoryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $name
-     * @param string $description
+     * @param  string  $name
+     * @param  string  $description
      */
     public function __construct(string $name, string $description = null)
     {
@@ -29,8 +29,8 @@ class CreateProductCategoryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $name
-     * @param string $description
+     * @param  string  $name
+     * @param  string  $description
      */
     public static function create(string $name, string $description = null)
     {
@@ -46,7 +46,7 @@ class CreateProductCategoryDataType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -65,7 +65,7 @@ class CreateProductCategoryDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)

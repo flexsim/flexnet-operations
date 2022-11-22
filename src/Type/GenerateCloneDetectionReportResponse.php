@@ -19,10 +19,10 @@ class GenerateCloneDetectionReportResponse extends FlexnetType implements Result
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\CloneSuspects $cloneSuspects
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\CloneSuspects  $cloneSuspects
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\CloneSuspects $cloneSuspects)
+    public function __construct(OpsEmbeddedStatusInfoType $statusInfo, CloneSuspects $cloneSuspects)
     {
         $this->statusInfo = $statusInfo;
         $this->cloneSuspects = $cloneSuspects;
@@ -31,10 +31,10 @@ class GenerateCloneDetectionReportResponse extends FlexnetType implements Result
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\CloneSuspects $cloneSuspects
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\CloneSuspects  $cloneSuspects
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\CloneSuspects $cloneSuspects)
+    public static function create(OpsEmbeddedStatusInfoType $statusInfo, CloneSuspects $cloneSuspects)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GenerateCloneDetectionReportResponse extends FlexnetType implements Result
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class GenerateCloneDetectionReportResponse extends FlexnetType implements Result
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CloneSuspects $cloneSuspects
+     * @param  \Flexsim\FlexnetOperations\Type\CloneSuspects  $cloneSuspects
      * @return $this
      */
     public function setCloneSuspects($cloneSuspects)

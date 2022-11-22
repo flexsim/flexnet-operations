@@ -14,9 +14,9 @@ class GetFeatureCountRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType  $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams = null)
+    public function __construct(FeatureQueryParametersType $queryParams = null)
     {
         $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
@@ -25,9 +25,9 @@ class GetFeatureCountRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType  $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams = null)
+    public static function create(FeatureQueryParametersType $queryParams = null)
     {
         return new self(...func_get_args());
     }
@@ -41,7 +41,7 @@ class GetFeatureCountRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)

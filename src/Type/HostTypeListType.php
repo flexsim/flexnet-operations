@@ -12,7 +12,7 @@ class HostTypeListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypePKType|array  $hostType
      */
     public function __construct($hostType)
     {
@@ -22,7 +22,7 @@ class HostTypeListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypePKType|array  $hostType
      */
     public static function create($hostType)
     {
@@ -38,7 +38,7 @@ class HostTypeListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostTypePKType|array $hostType
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypePKType|array  $hostType
      * @return $this
      */
     public function setHostType($hostType)

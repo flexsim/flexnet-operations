@@ -17,10 +17,10 @@ class EntitlementStateChangeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType|array  $stateChangeRecord
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, $stateChangeRecord = null)
+    public function __construct(EntitlementIdentifierType $entitlementIdentifier, $stateChangeRecord = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->stateChangeRecord = $stateChangeRecord;
@@ -29,10 +29,10 @@ class EntitlementStateChangeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType|array  $stateChangeRecord
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, $stateChangeRecord = null)
+    public static function create(EntitlementIdentifierType $entitlementIdentifier, $stateChangeRecord = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class EntitlementStateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
      * @return $this
      */
     public function setEntitlementIdentifier($entitlementIdentifier)
@@ -65,7 +65,7 @@ class EntitlementStateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType  $stateChangeRecord
      * @return $this
      */
     public function setStateChangeRecord($stateChangeRecord)

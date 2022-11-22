@@ -14,9 +14,9 @@ class SetEntitlementStateRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateDataType $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementStateDataType  $entitlement
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementStateDataType $entitlement)
+    public function __construct(EntitlementStateDataType $entitlement)
     {
         $this->entitlement = $entitlement;
     }
@@ -24,9 +24,9 @@ class SetEntitlementStateRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateDataType $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementStateDataType  $entitlement
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementStateDataType $entitlement)
+    public static function create(EntitlementStateDataType $entitlement)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class SetEntitlementStateRequestType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementStateDataType $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementStateDataType  $entitlement
      * @return $this
      */
     public function setEntitlement($entitlement)

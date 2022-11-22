@@ -17,8 +17,8 @@ class FailedIdDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $id
-     * @param string $reason
+     * @param  string  $id
+     * @param  string  $reason
      */
     public function __construct(string $id, string $reason)
     {
@@ -29,8 +29,8 @@ class FailedIdDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $id
-     * @param string $reason
+     * @param  string  $id
+     * @param  string  $reason
      */
     public static function create(string $id, string $reason)
     {
@@ -46,7 +46,7 @@ class FailedIdDataType extends FlexnetType
     }
 
     /**
-     * @param string $id
+     * @param  string  $id
      * @return $this
      */
     public function setId($id)
@@ -65,7 +65,7 @@ class FailedIdDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

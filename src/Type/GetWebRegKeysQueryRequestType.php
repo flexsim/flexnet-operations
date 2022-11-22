@@ -24,11 +24,11 @@ class GetWebRegKeysQueryRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
+    public function __construct(EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
     {
         $this->bulkEntitlementIdentifier = $bulkEntitlementIdentifier;
         $this->batchSize = $batchSize;
@@ -38,11 +38,11 @@ class GetWebRegKeysQueryRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
+    public static function create(EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class GetWebRegKeysQueryRequestType extends FlexnetType implements RequestInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
      * @return $this
      */
     public function setBulkEntitlementIdentifier($bulkEntitlementIdentifier)
@@ -75,7 +75,7 @@ class GetWebRegKeysQueryRequestType extends FlexnetType implements RequestInterf
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)
@@ -94,7 +94,7 @@ class GetWebRegKeysQueryRequestType extends FlexnetType implements RequestInterf
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)

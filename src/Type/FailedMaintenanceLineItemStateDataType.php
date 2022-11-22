@@ -17,10 +17,10 @@ class FailedMaintenanceLineItemStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType $maintenanceLineItem
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType  $maintenanceLineItem
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType $maintenanceLineItem, string $reason)
+    public function __construct(MaintenanceLineItemStateDataType $maintenanceLineItem, string $reason)
     {
         $this->maintenanceLineItem = $maintenanceLineItem;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedMaintenanceLineItemStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType $maintenanceLineItem
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType  $maintenanceLineItem
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType $maintenanceLineItem, string $reason)
+    public static function create(MaintenanceLineItemStateDataType $maintenanceLineItem, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedMaintenanceLineItemStateDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType $maintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceLineItemStateDataType  $maintenanceLineItem
      * @return $this
      */
     public function setMaintenanceLineItem($maintenanceLineItem)
@@ -65,7 +65,7 @@ class FailedMaintenanceLineItemStateDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

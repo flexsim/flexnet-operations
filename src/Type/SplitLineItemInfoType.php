@@ -42,20 +42,20 @@ class SplitLineItemInfoType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @param int $numberOfCopies
-     * @param string $targetTierName
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @param  int  $numberOfCopies
+     * @param  string  $targetTierName
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType  $targetContact
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $matchingLineItemIdentifier
      */
     public function __construct(
-        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier,
+        EntitlementLineItemIdentifierType $lineItemIdentifier,
         int $numberOfCopies,
         string $targetTierName,
         $targetAccountUnit,
-        \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact = null,
-        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier = null
+        UserIdentifierType $targetContact = null,
+        EntitlementLineItemIdentifierType $matchingLineItemIdentifier = null
     ) {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->numberOfCopies = $numberOfCopies;
@@ -69,20 +69,20 @@ class SplitLineItemInfoType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @param int $numberOfCopies
-     * @param string $targetTierName
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @param  int  $numberOfCopies
+     * @param  string  $targetTierName
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType  $targetContact
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $matchingLineItemIdentifier
      */
     public static function create(
-        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier,
+        EntitlementLineItemIdentifierType $lineItemIdentifier,
         int $numberOfCopies,
         string $targetTierName,
         $targetAccountUnit,
-        \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact = null,
-        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier = null
+        UserIdentifierType $targetContact = null,
+        EntitlementLineItemIdentifierType $matchingLineItemIdentifier = null
     ) {
         return new self(...func_get_args());
     }
@@ -96,7 +96,7 @@ class SplitLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
      * @return $this
      */
     public function setLineItemIdentifier($lineItemIdentifier)
@@ -115,7 +115,7 @@ class SplitLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param int $numberOfCopies
+     * @param  int  $numberOfCopies
      * @return $this
      */
     public function setNumberOfCopies($numberOfCopies)
@@ -134,7 +134,7 @@ class SplitLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param string $targetTierName
+     * @param  string  $targetTierName
      * @return $this
      */
     public function setTargetTierName($targetTierName)
@@ -153,7 +153,7 @@ class SplitLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $targetAccountUnit
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierType  $targetAccountUnit
      * @return $this
      */
     public function setTargetAccountUnit($targetAccountUnit)
@@ -172,7 +172,7 @@ class SplitLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetOrganizationUnit
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $targetOrganizationUnit
      * @return $this
      */
     public function setTargetOrganizationUnit($targetOrganizationUnit)
@@ -191,7 +191,7 @@ class SplitLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $targetContact
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType  $targetContact
      * @return $this
      */
     public function setTargetContact($targetContact)
@@ -210,7 +210,7 @@ class SplitLineItemInfoType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $matchingLineItemIdentifier
      * @return $this
      */
     public function setMatchingLineItemIdentifier($matchingLineItemIdentifier)

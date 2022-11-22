@@ -14,9 +14,9 @@ class GetMaintenanceCountRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType  $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType $queryParams = null)
+    public function __construct(MaintenanceQueryParametersType $queryParams = null)
     {
         $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
@@ -25,9 +25,9 @@ class GetMaintenanceCountRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType  $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType $queryParams = null)
+    public static function create(MaintenanceQueryParametersType $queryParams = null)
     {
         return new self(...func_get_args());
     }
@@ -41,7 +41,7 @@ class GetMaintenanceCountRequestType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)

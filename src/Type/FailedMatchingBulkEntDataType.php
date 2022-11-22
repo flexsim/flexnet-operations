@@ -17,10 +17,10 @@ class FailedMatchingBulkEntDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType $bulkEntInfo
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType  $bulkEntInfo
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType $bulkEntInfo, string $reason)
+    public function __construct(GetMatchingBulkEntInfoType $bulkEntInfo, string $reason)
     {
         $this->bulkEntInfo = $bulkEntInfo;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedMatchingBulkEntDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType $bulkEntInfo
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType  $bulkEntInfo
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType $bulkEntInfo, string $reason)
+    public static function create(GetMatchingBulkEntInfoType $bulkEntInfo, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedMatchingBulkEntDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType $bulkEntInfo
+     * @param  \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntInfoType  $bulkEntInfo
      * @return $this
      */
     public function setBulkEntInfo($bulkEntInfo)
@@ -65,7 +65,7 @@ class FailedMatchingBulkEntDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

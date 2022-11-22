@@ -29,11 +29,11 @@ class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInt
     /**
      * Constructor
      *
-     * @param string $userId
-     * @param \Flexsim\FlexnetOperations\Type\IdListType $idList
-     * @param string $userAcct this method is backwards compatible so you may also pass $userOrg
+     * @param  string  $userId
+     * @param  \Flexsim\FlexnetOperations\Type\IdListType  $idList
+     * @param  string  $userAcct this method is backwards compatible so you may also pass $userOrg
      */
-    public function __construct(string $userId, \Flexsim\FlexnetOperations\Type\IdListType $idList, string $userAcct = null)
+    public function __construct(string $userId, IdListType $idList, string $userAcct = null)
     {
         $this->userId = $userId;
         $this->idList = $idList;
@@ -44,11 +44,11 @@ class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInt
     /**
      * create a new instance of this class
      *
-     * @param string $userId
-     * @param \Flexsim\FlexnetOperations\Type\IdListType $idList
-     * @param string $userAcct this method is backwards compatible so you may also pass $userOrg
+     * @param  string  $userId
+     * @param  \Flexsim\FlexnetOperations\Type\IdListType  $idList
+     * @param  string  $userAcct this method is backwards compatible so you may also pass $userOrg
      */
-    public static function create(string $userId, \Flexsim\FlexnetOperations\Type\IdListType $idList, string $userAcct = null)
+    public static function create(string $userId, IdListType $idList, string $userAcct = null)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param string $userId
+     * @param  string  $userId
      * @return $this
      */
     public function setUserId($userId)
@@ -81,7 +81,7 @@ class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\IdListType $idList
+     * @param  \Flexsim\FlexnetOperations\Type\IdListType  $idList
      * @return $this
      */
     public function setIdList($idList)
@@ -100,7 +100,7 @@ class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param string $userAcct
+     * @param  string  $userAcct
      * @return $this
      */
     public function setUserAcct($userAcct)
@@ -119,7 +119,7 @@ class MapEntitlementsToUserRequestType extends FlexnetType implements RequestInt
     }
 
     /**
-     * @param string $userOrg
+     * @param  string  $userOrg
      * @return $this
      */
     public function setUserOrg($userOrg)

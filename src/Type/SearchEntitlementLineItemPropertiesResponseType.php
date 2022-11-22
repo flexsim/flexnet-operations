@@ -19,10 +19,10 @@ class SearchEntitlementLineItemPropertiesResponseType extends FlexnetType implem
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemPropertiesType|array $entitlementLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemPropertiesType|array  $entitlementLineItem
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $entitlementLineItem = null)
+    public function __construct(StatusInfoType $statusInfo, $entitlementLineItem = null)
     {
         $this->statusInfo = $statusInfo;
         $this->entitlementLineItem = $entitlementLineItem;
@@ -31,10 +31,10 @@ class SearchEntitlementLineItemPropertiesResponseType extends FlexnetType implem
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemPropertiesType|array $entitlementLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemPropertiesType|array  $entitlementLineItem
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $entitlementLineItem = null)
+    public static function create(StatusInfoType $statusInfo, $entitlementLineItem = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class SearchEntitlementLineItemPropertiesResponseType extends FlexnetType implem
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class SearchEntitlementLineItemPropertiesResponseType extends FlexnetType implem
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemPropertiesType $entitlementLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemPropertiesType  $entitlementLineItem
      * @return $this
      */
     public function setEntitlementLineItem($entitlementLineItem)

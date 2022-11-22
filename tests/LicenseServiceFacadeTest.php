@@ -5,38 +5,17 @@ namespace Flexsim\FlexnetOperations\Tests;
 use Flexsim\FlexnetOperations\Facades\LicenseService;
 use Flexsim\FlexnetOperations\Services\LicenseService\LicenseServiceClient;
 use Flexsim\FlexnetOperations\Services\LicenseService\v1\LicenseServiceClient as V1LicenseServiceClient;
-use Orchestra\Testbench\TestCase;
 
-class LicenseServiceFacadeTest extends TestCase
-{
-    protected $loadEnvironmentVariables = true;
+it('resolves LicenseServiceClient client', function () {
+    $client = LicenseService::client();
 
-    /**
-     * Get package providers.
-     *
-     * @param  \Illuminate\Foundation\Application  $app
-     *
-     * @return array
-     */
-    protected function getPackageProviders($app)
-    {
-        return [
-            'Flexsim\FlexnetOperations\FlexnetOperationsServiceProvider',
-        ];
-    }
+    $this->assertInstanceOf(V1LicenseServiceClient::class, $client);
 
-    public function testClientFunction()
-    {
-        $client = LicenseService::client();
+    $client = LicenseService::version('base')->client();
 
-        $this->assertInstanceOf(V1LicenseServiceClient::class, $client);
+    $this->assertInstanceOf(LicenseServiceClient::class, $client);
 
-        $client = LicenseService::version('base')->client();
+    $client = LicenseService::version('v1')->client();
 
-        $this->assertInstanceOf(LicenseServiceClient::class, $client);
-
-        $client = LicenseService::version('v1')->client();
-
-        $this->assertInstanceOf(V1LicenseServiceClient::class, $client);
-    }
-}
+    $this->assertInstanceOf(V1LicenseServiceClient::class, $client);
+});

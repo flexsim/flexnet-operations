@@ -12,7 +12,7 @@ class GetUsersQueryResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UserDetailDataType|array $user
+     * @param  \Flexsim\FlexnetOperations\Type\UserDetailDataType|array  $user
      */
     public function __construct($user = null)
     {
@@ -22,7 +22,7 @@ class GetUsersQueryResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UserDetailDataType|array $user
+     * @param  \Flexsim\FlexnetOperations\Type\UserDetailDataType|array  $user
      */
     public static function create($user = null)
     {
@@ -38,7 +38,7 @@ class GetUsersQueryResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserDetailDataType $user
+     * @param  \Flexsim\FlexnetOperations\Type\UserDetailDataType  $user
      * @return $this
      */
     public function setUser($user)

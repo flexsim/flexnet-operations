@@ -12,7 +12,7 @@ class CreatedOrganizationDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $organization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array  $organization
      */
     public function __construct($organization = null)
     {
@@ -22,7 +22,7 @@ class CreatedOrganizationDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $organization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array  $organization
      */
     public static function create($organization = null)
     {
@@ -38,7 +38,7 @@ class CreatedOrganizationDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $organization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array  $organization
      * @return $this
      */
     public function setOrganization($organization)

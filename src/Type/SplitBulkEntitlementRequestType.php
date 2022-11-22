@@ -14,9 +14,9 @@ class SplitBulkEntitlementRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementListType $bulkEntitlementList
+     * @param  \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementListType  $bulkEntitlementList
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SplitBulkEntitlementListType $bulkEntitlementList)
+    public function __construct(SplitBulkEntitlementListType $bulkEntitlementList)
     {
         $this->bulkEntitlementList = $bulkEntitlementList;
     }
@@ -24,9 +24,9 @@ class SplitBulkEntitlementRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementListType $bulkEntitlementList
+     * @param  \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementListType  $bulkEntitlementList
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SplitBulkEntitlementListType $bulkEntitlementList)
+    public static function create(SplitBulkEntitlementListType $bulkEntitlementList)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class SplitBulkEntitlementRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementListType $bulkEntitlementList
+     * @param  \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementListType  $bulkEntitlementList
      * @return $this
      */
     public function setBulkEntitlementList($bulkEntitlementList)

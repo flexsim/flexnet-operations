@@ -17,8 +17,8 @@ class MaintenancePKType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $name
-     * @param string $version
+     * @param  string  $name
+     * @param  string  $version
      */
     public function __construct(string $name, string $version)
     {
@@ -29,8 +29,8 @@ class MaintenancePKType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $name
-     * @param string $version
+     * @param  string  $name
+     * @param  string  $version
      */
     public static function create(string $name, string $version)
     {
@@ -46,7 +46,7 @@ class MaintenancePKType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -65,7 +65,7 @@ class MaintenancePKType extends FlexnetType
     }
 
     /**
-     * @param string $version
+     * @param  string  $version
      * @return $this
      */
     public function setVersion($version)

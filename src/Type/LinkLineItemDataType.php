@@ -12,9 +12,9 @@ class LinkLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier  $lineItemIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier $lineItemIdentifier)
+    public function __construct(LinkLineItemIdentifier $lineItemIdentifier)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
     }
@@ -22,9 +22,9 @@ class LinkLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier  $lineItemIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier $lineItemIdentifier)
+    public static function create(LinkLineItemIdentifier $lineItemIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class LinkLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LinkLineItemIdentifier  $lineItemIdentifier
      * @return $this
      */
     public function setLineItemIdentifier($lineItemIdentifier)

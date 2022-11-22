@@ -14,9 +14,9 @@ class RepairShortCodeRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData
+     * @param  \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType  $shortCodeData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData = null)
+    public function __construct(RepairShortCodeDataType $shortCodeData = null)
     {
         $this->shortCodeData = $shortCodeData;
     }
@@ -24,9 +24,9 @@ class RepairShortCodeRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData
+     * @param  \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType  $shortCodeData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData = null)
+    public static function create(RepairShortCodeDataType $shortCodeData = null)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class RepairShortCodeRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData
+     * @param  \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType  $shortCodeData
      * @return $this
      */
     public function setShortCodeData($shortCodeData)

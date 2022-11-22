@@ -12,7 +12,7 @@ class GenerateCapabilityResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CapabilityResponseDataType|array $device
+     * @param  \Flexsim\FlexnetOperations\Type\CapabilityResponseDataType|array  $device
      */
     public function __construct($device = null)
     {
@@ -22,7 +22,7 @@ class GenerateCapabilityResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CapabilityResponseDataType|array $device
+     * @param  \Flexsim\FlexnetOperations\Type\CapabilityResponseDataType|array  $device
      */
     public static function create($device = null)
     {
@@ -38,7 +38,7 @@ class GenerateCapabilityResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CapabilityResponseDataType $device
+     * @param  \Flexsim\FlexnetOperations\Type\CapabilityResponseDataType  $device
      * @return $this
      */
     public function setDevice($device)

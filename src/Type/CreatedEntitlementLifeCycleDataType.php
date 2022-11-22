@@ -22,11 +22,11 @@ class CreatedEntitlementLifeCycleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $entitlementRecordRefNo
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\LifeCycleLineItemDataType|array $createdLineItemData
+     * @param  string  $entitlementRecordRefNo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LifeCycleLineItemDataType|array  $createdLineItemData
      */
-    public function __construct(string $entitlementRecordRefNo, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier, $createdLineItemData = null)
+    public function __construct(string $entitlementRecordRefNo, EntitlementIdentifierType $parentEntitlementIdentifier, $createdLineItemData = null)
     {
         $this->entitlementRecordRefNo = $entitlementRecordRefNo;
         $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
@@ -36,11 +36,11 @@ class CreatedEntitlementLifeCycleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $entitlementRecordRefNo
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\LifeCycleLineItemDataType|array $createdLineItemData
+     * @param  string  $entitlementRecordRefNo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LifeCycleLineItemDataType|array  $createdLineItemData
      */
-    public static function create(string $entitlementRecordRefNo, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier, $createdLineItemData = null)
+    public static function create(string $entitlementRecordRefNo, EntitlementIdentifierType $parentEntitlementIdentifier, $createdLineItemData = null)
     {
         return new self(...func_get_args());
     }
@@ -54,7 +54,7 @@ class CreatedEntitlementLifeCycleDataType extends FlexnetType
     }
 
     /**
-     * @param string $entitlementRecordRefNo
+     * @param  string  $entitlementRecordRefNo
      * @return $this
      */
     public function setEntitlementRecordRefNo($entitlementRecordRefNo)
@@ -73,7 +73,7 @@ class CreatedEntitlementLifeCycleDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      * @return $this
      */
     public function setParentEntitlementIdentifier($parentEntitlementIdentifier)
@@ -92,7 +92,7 @@ class CreatedEntitlementLifeCycleDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LifeCycleLineItemDataType $createdLineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\LifeCycleLineItemDataType  $createdLineItemData
      * @return $this
      */
     public function setCreatedLineItemData($createdLineItemData)

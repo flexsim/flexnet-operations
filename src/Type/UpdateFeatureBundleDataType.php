@@ -27,12 +27,12 @@ class UpdateFeatureBundleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
-     * @param string $name
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType $features
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
+     * @param  string  $name
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType  $features
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier, string $name = null, string $description = null, \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType $features = null)
+    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier, string $name = null, string $description = null, UpdateFeaturesListType $features = null)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
         $this->name = $name;
@@ -43,12 +43,12 @@ class UpdateFeatureBundleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
-     * @param string $name
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType $features
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
+     * @param  string  $name
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType  $features
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier, string $name = null, string $description = null, \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType $features = null)
+    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier, string $name = null, string $description = null, UpdateFeaturesListType $features = null)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class UpdateFeatureBundleDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
      * @return $this
      */
     public function setFeatureBundleIdentifier($featureBundleIdentifier)
@@ -81,7 +81,7 @@ class UpdateFeatureBundleDataType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -100,7 +100,7 @@ class UpdateFeatureBundleDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -119,7 +119,7 @@ class UpdateFeatureBundleDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType $features
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateFeaturesListType  $features
      * @return $this
      */
     public function setFeatures($features)

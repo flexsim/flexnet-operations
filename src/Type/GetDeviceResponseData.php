@@ -152,37 +152,37 @@ class GetDeviceResponseData extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
-     * @param string $backupDeviceId
-     * @param string $name
-     * @param string $description
-     * @param string $hostTypeName
-     * @param string $status
-     * @param string $servedStatus
-     * @param bool $hosted
-     * @param \Flexsim\FlexnetOperations\Type\SoldToType $soldTo
-     * @param \Flexsim\FlexnetOperations\Type\ProductPKType $baseProduct
-     * @param bool $hasBufferLicense
-     * @param string $bufferLicense
-     * @param bool $hasAddonLicense
-     * @param string $addonLicense
-     * @param string $publisherIdName
-     * @param \Flexsim\FlexnetOperations\Type\AddonData|array $addon
-     * @param \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array $feature
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @param \Flexsim\FlexnetOperations\Type\DeviceId $parentIdentifier
-     * @param string $machineType
-     * @param string $vmName
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
-     * @param \Flexsim\FlexnetOperations\Type\UpdatesType|array $update
-     * @param string $userString
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier
-     * @param \DateTimeInterface $lastModified
-     * @param \DateTimeInterface $lastSyncTime
-     * @param \DateTimeInterface $lastRequestTime
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceId  $deviceId
+     * @param  string  $backupDeviceId
+     * @param  string  $name
+     * @param  string  $description
+     * @param  string  $hostTypeName
+     * @param  string  $status
+     * @param  string  $servedStatus
+     * @param  bool  $hosted
+     * @param  \Flexsim\FlexnetOperations\Type\SoldToType  $soldTo
+     * @param  \Flexsim\FlexnetOperations\Type\ProductPKType  $baseProduct
+     * @param  bool  $hasBufferLicense
+     * @param  string  $bufferLicense
+     * @param  bool  $hasAddonLicense
+     * @param  string  $addonLicense
+     * @param  string  $publisherIdName
+     * @param  \Flexsim\FlexnetOperations\Type\AddonData|array  $addon
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array  $feature
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceId  $parentIdentifier
+     * @param  string  $machineType
+     * @param  string  $vmName
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryType  $vmInfo
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryType  $vendorDictionary
+     * @param  \Flexsim\FlexnetOperations\Type\UpdatesType|array  $update
+     * @param  string  $userString
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType  $userIdentifier
+     * @param  \DateTimeInterface  $lastModified
+     * @param  \DateTimeInterface  $lastSyncTime
+     * @param  \DateTimeInterface  $lastRequestTime
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceId $deviceId = null, string $backupDeviceId = null, string $name = null, string $description = null, string $hostTypeName = null, string $status = null, string $servedStatus = null, bool $hosted = null, \Flexsim\FlexnetOperations\Type\SoldToType $soldTo = null, \Flexsim\FlexnetOperations\Type\ProductPKType $baseProduct = null, bool $hasBufferLicense = null, string $bufferLicense = null, bool $hasAddonLicense = null, string $addonLicense = null, string $publisherIdName = null, $addon = null, $feature = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DeviceId $parentIdentifier = null, string $machineType = null, string $vmName = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary = null, $update = null, string $userString = null, \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier = null, \DateTimeInterface $lastModified = null, \DateTimeInterface $lastSyncTime = null, \DateTimeInterface $lastRequestTime = null)
+    public function __construct(DeviceId $deviceId = null, string $backupDeviceId = null, string $name = null, string $description = null, string $hostTypeName = null, string $status = null, string $servedStatus = null, bool $hosted = null, SoldToType $soldTo = null, ProductPKType $baseProduct = null, bool $hasBufferLicense = null, string $bufferLicense = null, bool $hasAddonLicense = null, string $addonLicense = null, string $publisherIdName = null, $addon = null, $feature = null, AttributeDescriptorDataType $customAttributes = null, DeviceId $parentIdentifier = null, string $machineType = null, string $vmName = null, DictionaryType $vmInfo = null, DictionaryType $vendorDictionary = null, $update = null, string $userString = null, UserIdentifierType $userIdentifier = null, \DateTimeInterface $lastModified = null, \DateTimeInterface $lastSyncTime = null, \DateTimeInterface $lastRequestTime = null)
     {
         $this->deviceId = $deviceId;
         $this->backupDeviceId = $backupDeviceId;
@@ -218,37 +218,37 @@ class GetDeviceResponseData extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
-     * @param string $backupDeviceId
-     * @param string $name
-     * @param string $description
-     * @param string $hostTypeName
-     * @param string $status
-     * @param string $servedStatus
-     * @param bool $hosted
-     * @param \Flexsim\FlexnetOperations\Type\SoldToType $soldTo
-     * @param \Flexsim\FlexnetOperations\Type\ProductPKType $baseProduct
-     * @param bool $hasBufferLicense
-     * @param string $bufferLicense
-     * @param bool $hasAddonLicense
-     * @param string $addonLicense
-     * @param string $publisherIdName
-     * @param \Flexsim\FlexnetOperations\Type\AddonData|array $addon
-     * @param \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array $feature
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @param \Flexsim\FlexnetOperations\Type\DeviceId $parentIdentifier
-     * @param string $machineType
-     * @param string $vmName
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
-     * @param \Flexsim\FlexnetOperations\Type\UpdatesType|array $update
-     * @param string $userString
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier
-     * @param \DateTimeInterface $lastModified
-     * @param \DateTimeInterface $lastSyncTime
-     * @param \DateTimeInterface $lastRequestTime
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceId  $deviceId
+     * @param  string  $backupDeviceId
+     * @param  string  $name
+     * @param  string  $description
+     * @param  string  $hostTypeName
+     * @param  string  $status
+     * @param  string  $servedStatus
+     * @param  bool  $hosted
+     * @param  \Flexsim\FlexnetOperations\Type\SoldToType  $soldTo
+     * @param  \Flexsim\FlexnetOperations\Type\ProductPKType  $baseProduct
+     * @param  bool  $hasBufferLicense
+     * @param  string  $bufferLicense
+     * @param  bool  $hasAddonLicense
+     * @param  string  $addonLicense
+     * @param  string  $publisherIdName
+     * @param  \Flexsim\FlexnetOperations\Type\AddonData|array  $addon
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array  $feature
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceId  $parentIdentifier
+     * @param  string  $machineType
+     * @param  string  $vmName
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryType  $vmInfo
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryType  $vendorDictionary
+     * @param  \Flexsim\FlexnetOperations\Type\UpdatesType|array  $update
+     * @param  string  $userString
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType  $userIdentifier
+     * @param  \DateTimeInterface  $lastModified
+     * @param  \DateTimeInterface  $lastSyncTime
+     * @param  \DateTimeInterface  $lastRequestTime
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceId $deviceId = null, string $backupDeviceId = null, string $name = null, string $description = null, string $hostTypeName = null, string $status = null, string $servedStatus = null, bool $hosted = null, \Flexsim\FlexnetOperations\Type\SoldToType $soldTo = null, \Flexsim\FlexnetOperations\Type\ProductPKType $baseProduct = null, bool $hasBufferLicense = null, string $bufferLicense = null, bool $hasAddonLicense = null, string $addonLicense = null, string $publisherIdName = null, $addon = null, $feature = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DeviceId $parentIdentifier = null, string $machineType = null, string $vmName = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary = null, $update = null, string $userString = null, \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier = null, \DateTimeInterface $lastModified = null, \DateTimeInterface $lastSyncTime = null, \DateTimeInterface $lastRequestTime = null)
+    public static function create(DeviceId $deviceId = null, string $backupDeviceId = null, string $name = null, string $description = null, string $hostTypeName = null, string $status = null, string $servedStatus = null, bool $hosted = null, SoldToType $soldTo = null, ProductPKType $baseProduct = null, bool $hasBufferLicense = null, string $bufferLicense = null, bool $hasAddonLicense = null, string $addonLicense = null, string $publisherIdName = null, $addon = null, $feature = null, AttributeDescriptorDataType $customAttributes = null, DeviceId $parentIdentifier = null, string $machineType = null, string $vmName = null, DictionaryType $vmInfo = null, DictionaryType $vendorDictionary = null, $update = null, string $userString = null, UserIdentifierType $userIdentifier = null, \DateTimeInterface $lastModified = null, \DateTimeInterface $lastSyncTime = null, \DateTimeInterface $lastRequestTime = null)
     {
         return new self(...func_get_args());
     }
@@ -262,7 +262,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceId $deviceId
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceId  $deviceId
      * @return $this
      */
     public function setDeviceId($deviceId)
@@ -281,7 +281,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param string $backupDeviceId
+     * @param  string  $backupDeviceId
      * @return $this
      */
     public function setBackupDeviceId($backupDeviceId)
@@ -300,7 +300,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -319,7 +319,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -338,7 +338,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param string $hostTypeName
+     * @param  string  $hostTypeName
      * @return $this
      */
     public function setHostTypeName($hostTypeName)
@@ -357,7 +357,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param string $status
+     * @param  string  $status
      * @return $this
      */
     public function setStatus($status)
@@ -376,7 +376,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param string $servedStatus
+     * @param  string  $servedStatus
      * @return $this
      */
     public function setServedStatus($servedStatus)
@@ -395,7 +395,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param bool $hosted
+     * @param  bool  $hosted
      * @return $this
      */
     public function setHosted($hosted)
@@ -414,7 +414,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SoldToType $soldTo
+     * @param  \Flexsim\FlexnetOperations\Type\SoldToType  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -433,7 +433,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductPKType $baseProduct
+     * @param  \Flexsim\FlexnetOperations\Type\ProductPKType  $baseProduct
      * @return $this
      */
     public function setBaseProduct($baseProduct)
@@ -452,7 +452,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param bool $hasBufferLicense
+     * @param  bool  $hasBufferLicense
      * @return $this
      */
     public function setHasBufferLicense($hasBufferLicense)
@@ -471,7 +471,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param string $bufferLicense
+     * @param  string  $bufferLicense
      * @return $this
      */
     public function setBufferLicense($bufferLicense)
@@ -490,7 +490,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param bool $hasAddonLicense
+     * @param  bool  $hasAddonLicense
      * @return $this
      */
     public function setHasAddonLicense($hasAddonLicense)
@@ -509,7 +509,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param string $addonLicense
+     * @param  string  $addonLicense
      * @return $this
      */
     public function setAddonLicense($addonLicense)
@@ -528,7 +528,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param string $publisherIdName
+     * @param  string  $publisherIdName
      * @return $this
      */
     public function setPublisherIdName($publisherIdName)
@@ -547,7 +547,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddonData $addon
+     * @param  \Flexsim\FlexnetOperations\Type\AddonData  $addon
      * @return $this
      */
     public function setAddon($addon)
@@ -566,7 +566,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureDataDataType $feature
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureDataDataType  $feature
      * @return $this
      */
     public function setFeature($feature)
@@ -585,7 +585,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)
@@ -604,7 +604,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceId $parentIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceId  $parentIdentifier
      * @return $this
      */
     public function setParentIdentifier($parentIdentifier)
@@ -623,7 +623,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param string $machineType
+     * @param  string  $machineType
      * @return $this
      */
     public function setMachineType($machineType)
@@ -642,7 +642,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param string $vmName
+     * @param  string  $vmName
      * @return $this
      */
     public function setVmName($vmName)
@@ -661,7 +661,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryType  $vmInfo
      * @return $this
      */
     public function setVmInfo($vmInfo)
@@ -680,7 +680,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryType  $vendorDictionary
      * @return $this
      */
     public function setVendorDictionary($vendorDictionary)
@@ -699,7 +699,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdatesType $update
+     * @param  \Flexsim\FlexnetOperations\Type\UpdatesType  $update
      * @return $this
      */
     public function setUpdate($update)
@@ -718,7 +718,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param string $userString
+     * @param  string  $userString
      * @return $this
      */
     public function setUserString($userString)
@@ -737,7 +737,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $userIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType  $userIdentifier
      * @return $this
      */
     public function setUserIdentifier($userIdentifier)
@@ -756,7 +756,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $lastModified
+     * @param  \DateTimeInterface  $lastModified
      * @return $this
      */
     public function setLastModified($lastModified)
@@ -775,7 +775,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $lastSyncTime
+     * @param  \DateTimeInterface  $lastSyncTime
      * @return $this
      */
     public function setLastSyncTime($lastSyncTime)
@@ -794,7 +794,7 @@ class GetDeviceResponseData extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $lastRequestTime
+     * @param  \DateTimeInterface  $lastRequestTime
      * @return $this
      */
     public function setLastRequestTime($lastRequestTime)

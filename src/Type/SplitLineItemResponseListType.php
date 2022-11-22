@@ -12,7 +12,7 @@ class SplitLineItemResponseListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array $splitLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array  $splitLineItem
      */
     public function __construct($splitLineItem)
     {
@@ -22,7 +22,7 @@ class SplitLineItemResponseListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array $splitLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array  $splitLineItem
      */
     public static function create($splitLineItem)
     {
@@ -38,7 +38,7 @@ class SplitLineItemResponseListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array $splitLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\SplitLineItemDataType|array  $splitLineItem
      * @return $this
      */
     public function setSplitLineItem($splitLineItem)

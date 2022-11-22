@@ -19,10 +19,10 @@ class CreateProductRelationshipResponseType extends FlexnetType implements Resul
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataListType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataListType $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedProductRelationshipDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -31,10 +31,10 @@ class CreateProductRelationshipResponseType extends FlexnetType implements Resul
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataListType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataListType $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedProductRelationshipDataListType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class CreateProductRelationshipResponseType extends FlexnetType implements Resul
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class CreateProductRelationshipResponseType extends FlexnetType implements Resul
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedProductRelationshipDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

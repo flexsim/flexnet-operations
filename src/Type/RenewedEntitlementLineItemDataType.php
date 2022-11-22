@@ -22,11 +22,11 @@ class RenewedEntitlementLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $lineItemRecordRefNo
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType $newLineItem
+     * @param  string  $lineItemRecordRefNo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType  $newLineItem
      */
-    public function __construct(string $lineItemRecordRefNo, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier, \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType $newLineItem)
+    public function __construct(string $lineItemRecordRefNo, EntitlementLineItemIdentifierType $parentLineItemIdentifier, NewEntitlementLineItemDataType $newLineItem)
     {
         $this->lineItemRecordRefNo = $lineItemRecordRefNo;
         $this->parentLineItemIdentifier = $parentLineItemIdentifier;
@@ -36,11 +36,11 @@ class RenewedEntitlementLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $lineItemRecordRefNo
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType $newLineItem
+     * @param  string  $lineItemRecordRefNo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType  $newLineItem
      */
-    public static function create(string $lineItemRecordRefNo, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier, \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType $newLineItem)
+    public static function create(string $lineItemRecordRefNo, EntitlementLineItemIdentifierType $parentLineItemIdentifier, NewEntitlementLineItemDataType $newLineItem)
     {
         return new self(...func_get_args());
     }
@@ -54,7 +54,7 @@ class RenewedEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $lineItemRecordRefNo
+     * @param  string  $lineItemRecordRefNo
      * @return $this
      */
     public function setLineItemRecordRefNo($lineItemRecordRefNo)
@@ -73,7 +73,7 @@ class RenewedEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
      * @return $this
      */
     public function setParentLineItemIdentifier($parentLineItemIdentifier)
@@ -92,7 +92,7 @@ class RenewedEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType $newLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\NewEntitlementLineItemDataType  $newLineItem
      * @return $this
      */
     public function setNewLineItem($newLineItem)

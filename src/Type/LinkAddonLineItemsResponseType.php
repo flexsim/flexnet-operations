@@ -24,11 +24,11 @@ class LinkAddonLineItemsResponseType extends FlexnetType implements ResultInterf
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\LinkFailAddonDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\LinkFailAddonDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\LinkFailAddonDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType $responseData = null)
+    public function __construct(OpsEmbeddedStatusInfoType $statusInfo, LinkFailAddonDataListType $failedData = null, SuccessAddonDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -38,11 +38,11 @@ class LinkAddonLineItemsResponseType extends FlexnetType implements ResultInterf
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\LinkFailAddonDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\LinkFailAddonDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\LinkFailAddonDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType $responseData = null)
+    public static function create(OpsEmbeddedStatusInfoType $statusInfo, LinkFailAddonDataListType $failedData = null, SuccessAddonDataListType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class LinkAddonLineItemsResponseType extends FlexnetType implements ResultInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class LinkAddonLineItemsResponseType extends FlexnetType implements ResultInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LinkFailAddonDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\LinkFailAddonDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -94,7 +94,7 @@ class LinkAddonLineItemsResponseType extends FlexnetType implements ResultInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

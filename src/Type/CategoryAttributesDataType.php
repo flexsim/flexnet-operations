@@ -12,9 +12,9 @@ class CategoryAttributesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CategoryAttributeDataType $categoryAttribute
+     * @param  \Flexsim\FlexnetOperations\Type\CategoryAttributeDataType  $categoryAttribute
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CategoryAttributeDataType $categoryAttribute)
+    public function __construct(CategoryAttributeDataType $categoryAttribute)
     {
         $this->categoryAttribute = $categoryAttribute;
     }
@@ -22,9 +22,9 @@ class CategoryAttributesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CategoryAttributeDataType $categoryAttribute
+     * @param  \Flexsim\FlexnetOperations\Type\CategoryAttributeDataType  $categoryAttribute
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CategoryAttributeDataType $categoryAttribute)
+    public static function create(CategoryAttributeDataType $categoryAttribute)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class CategoryAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CategoryAttributeDataType $categoryAttribute
+     * @param  \Flexsim\FlexnetOperations\Type\CategoryAttributeDataType  $categoryAttribute
      * @return $this
      */
     public function setCategoryAttribute($categoryAttribute)

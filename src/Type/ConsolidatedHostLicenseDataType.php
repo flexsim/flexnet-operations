@@ -12,7 +12,7 @@ class ConsolidatedHostLicenseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $license
+     * @param  string  $license
      */
     public function __construct(string $license)
     {
@@ -22,7 +22,7 @@ class ConsolidatedHostLicenseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $license
+     * @param  string  $license
      */
     public static function create(string $license)
     {
@@ -38,7 +38,7 @@ class ConsolidatedHostLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param string $license
+     * @param  string  $license
      * @return $this
      */
     public function setLicense($license)

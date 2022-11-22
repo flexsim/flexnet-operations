@@ -29,12 +29,12 @@ class GetFulfillmentPropertiesRequestType extends FlexnetType implements Request
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType  $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentResponseConfigRequestType  $fulfillmentResponseConfig
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams, \Flexsim\FlexnetOperations\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, int $pageNumber = null)
+    public function __construct(FulfillmentsQueryParametersType $queryParams, FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, int $pageNumber = null)
     {
         $this->queryParams = $queryParams;
         $this->fulfillmentResponseConfig = $fulfillmentResponseConfig;
@@ -45,12 +45,12 @@ class GetFulfillmentPropertiesRequestType extends FlexnetType implements Request
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType  $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentResponseConfigRequestType  $fulfillmentResponseConfig
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams, \Flexsim\FlexnetOperations\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, int $pageNumber = null)
+    public static function create(FulfillmentsQueryParametersType $queryParams, FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, int $pageNumber = null)
     {
         return new self(...func_get_args());
     }
@@ -64,7 +64,7 @@ class GetFulfillmentPropertiesRequestType extends FlexnetType implements Request
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentsQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -83,7 +83,7 @@ class GetFulfillmentPropertiesRequestType extends FlexnetType implements Request
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentResponseConfigRequestType  $fulfillmentResponseConfig
      * @return $this
      */
     public function setFulfillmentResponseConfig($fulfillmentResponseConfig)
@@ -102,7 +102,7 @@ class GetFulfillmentPropertiesRequestType extends FlexnetType implements Request
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)
@@ -121,7 +121,7 @@ class GetFulfillmentPropertiesRequestType extends FlexnetType implements Request
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)

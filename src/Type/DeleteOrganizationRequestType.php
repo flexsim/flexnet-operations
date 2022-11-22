@@ -14,9 +14,9 @@ class DeleteOrganizationRequestType extends FlexnetType implements RequestInterf
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteOrgDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteOrgDataType  $orgData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeleteOrgDataType $orgData)
+    public function __construct(DeleteOrgDataType $orgData)
     {
         $this->orgData = $orgData;
     }
@@ -24,9 +24,9 @@ class DeleteOrganizationRequestType extends FlexnetType implements RequestInterf
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteOrgDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteOrgDataType  $orgData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeleteOrgDataType $orgData)
+    public static function create(DeleteOrgDataType $orgData)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class DeleteOrganizationRequestType extends FlexnetType implements RequestInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeleteOrgDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteOrgDataType  $orgData
      * @return $this
      */
     public function setOrgData($orgData)

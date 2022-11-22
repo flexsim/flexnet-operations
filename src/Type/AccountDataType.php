@@ -42,15 +42,15 @@ class AccountDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $id
-     * @param string $name
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @param bool $visible
-     * @param string $accountType
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  string  $id
+     * @param  string  $name
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
+     * @param  bool  $visible
+     * @param  string  $accountType
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      */
-    public function __construct(string $id, string $name, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, bool $visible = null, string $accountType = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
+    public function __construct(string $id, string $name, string $description = null, AddressDataType $address = null, bool $visible = null, string $accountType = null, AttributeDescriptorDataType $customAttributes = null)
     {
         $this->id = $id;
         $this->name = $name;
@@ -64,15 +64,15 @@ class AccountDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $id
-     * @param string $name
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @param bool $visible
-     * @param string $accountType
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  string  $id
+     * @param  string  $name
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
+     * @param  bool  $visible
+     * @param  string  $accountType
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      */
-    public static function create(string $id, string $name, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, bool $visible = null, string $accountType = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
+    public static function create(string $id, string $name, string $description = null, AddressDataType $address = null, bool $visible = null, string $accountType = null, AttributeDescriptorDataType $customAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -86,7 +86,7 @@ class AccountDataType extends FlexnetType
     }
 
     /**
-     * @param string $id
+     * @param  string  $id
      * @return $this
      */
     public function setId($id)
@@ -105,7 +105,7 @@ class AccountDataType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -124,7 +124,7 @@ class AccountDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -143,7 +143,7 @@ class AccountDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
      * @return $this
      */
     public function setAddress($address)
@@ -162,7 +162,7 @@ class AccountDataType extends FlexnetType
     }
 
     /**
-     * @param bool $visible
+     * @param  bool  $visible
      * @return $this
      */
     public function setVisible($visible)
@@ -181,7 +181,7 @@ class AccountDataType extends FlexnetType
     }
 
     /**
-     * @param string $accountType
+     * @param  string  $accountType
      * @return $this
      */
     public function setAccountType($accountType)
@@ -200,7 +200,7 @@ class AccountDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)

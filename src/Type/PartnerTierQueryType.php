@@ -22,9 +22,9 @@ class PartnerTierQueryType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $value
-     * @param string $searchType
-     * @param string $partnerTier
+     * @param  string  $value
+     * @param  string  $searchType
+     * @param  string  $partnerTier
      */
     public function __construct(string $value, string $searchType, string $partnerTier = null)
     {
@@ -36,9 +36,9 @@ class PartnerTierQueryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $value
-     * @param string $searchType
-     * @param string $partnerTier
+     * @param  string  $value
+     * @param  string  $searchType
+     * @param  string  $partnerTier
      */
     public static function create(string $value, string $searchType, string $partnerTier = null)
     {
@@ -54,7 +54,7 @@ class PartnerTierQueryType extends FlexnetType
     }
 
     /**
-     * @param string $value
+     * @param  string  $value
      * @return $this
      */
     public function setValue($value)
@@ -73,7 +73,7 @@ class PartnerTierQueryType extends FlexnetType
     }
 
     /**
-     * @param string $searchType
+     * @param  string  $searchType
      * @return $this
      */
     public function setSearchType($searchType)
@@ -92,7 +92,7 @@ class PartnerTierQueryType extends FlexnetType
     }
 
     /**
-     * @param string $partnerTier
+     * @param  string  $partnerTier
      * @return $this
      */
     public function setPartnerTier($partnerTier)

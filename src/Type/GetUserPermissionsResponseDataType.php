@@ -27,11 +27,11 @@ class GetUserPermissionsResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $userName
-     * @param string $accountType this method is backwards compatible so you may also pass $orgType
-     * @param \Flexsim\FlexnetOperations\Type\PermissionListType $permissions
+     * @param  string  $userName
+     * @param  string  $accountType this method is backwards compatible so you may also pass $orgType
+     * @param  \Flexsim\FlexnetOperations\Type\PermissionListType  $permissions
      */
-    public function __construct(string $userName, string $accountType, \Flexsim\FlexnetOperations\Type\PermissionListType $permissions)
+    public function __construct(string $userName, string $accountType, PermissionListType $permissions)
     {
         $this->userName = $userName;
         $this->accountType = $accountType;
@@ -42,11 +42,11 @@ class GetUserPermissionsResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $userName
-     * @param string $accountType this method is backwards compatible so you may also pass $orgType
-     * @param \Flexsim\FlexnetOperations\Type\PermissionListType $permissions
+     * @param  string  $userName
+     * @param  string  $accountType this method is backwards compatible so you may also pass $orgType
+     * @param  \Flexsim\FlexnetOperations\Type\PermissionListType  $permissions
      */
-    public static function create(string $userName, string $accountType, \Flexsim\FlexnetOperations\Type\PermissionListType $permissions)
+    public static function create(string $userName, string $accountType, PermissionListType $permissions)
     {
         return new self(...func_get_args());
     }
@@ -60,7 +60,7 @@ class GetUserPermissionsResponseDataType extends FlexnetType
     }
 
     /**
-     * @param string $userName
+     * @param  string  $userName
      * @return $this
      */
     public function setUserName($userName)
@@ -79,7 +79,7 @@ class GetUserPermissionsResponseDataType extends FlexnetType
     }
 
     /**
-     * @param string $accountType
+     * @param  string  $accountType
      * @return $this
      */
     public function setAccountType($accountType)
@@ -98,7 +98,7 @@ class GetUserPermissionsResponseDataType extends FlexnetType
     }
 
     /**
-     * @param string $orgType
+     * @param  string  $orgType
      * @return $this
      */
     public function setOrgType($orgType)
@@ -117,7 +117,7 @@ class GetUserPermissionsResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PermissionListType $permissions
+     * @param  \Flexsim\FlexnetOperations\Type\PermissionListType  $permissions
      * @return $this
      */
     public function setPermissions($permissions)

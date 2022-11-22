@@ -12,7 +12,7 @@ class CreatedPartNumberDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType|array $createdPartNumber
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType|array  $createdPartNumber
      */
     public function __construct($createdPartNumber = null)
     {
@@ -22,7 +22,7 @@ class CreatedPartNumberDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType|array $createdPartNumber
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType|array  $createdPartNumber
      */
     public static function create($createdPartNumber = null)
     {
@@ -38,7 +38,7 @@ class CreatedPartNumberDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType|array $createdPartNumber
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedPartNumberDataType|array  $createdPartNumber
      * @return $this
      */
     public function setCreatedPartNumber($createdPartNumber)

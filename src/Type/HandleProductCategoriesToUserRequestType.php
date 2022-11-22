@@ -19,10 +19,10 @@ class HandleProductCategoriesToUserRequestType extends FlexnetType implements Re
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType  $user
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productCategory
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UserIdentifierType $user, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory)
+    public function __construct(UserIdentifierType $user, ProductCategoryDataType $productCategory)
     {
         $this->user = $user;
         $this->productCategory = $productCategory;
@@ -31,10 +31,10 @@ class HandleProductCategoriesToUserRequestType extends FlexnetType implements Re
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType  $user
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productCategory
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UserIdentifierType $user, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory)
+    public static function create(UserIdentifierType $user, ProductCategoryDataType $productCategory)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class HandleProductCategoriesToUserRequestType extends FlexnetType implements Re
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType  $user
      * @return $this
      */
     public function setUser($user)
@@ -67,7 +67,7 @@ class HandleProductCategoriesToUserRequestType extends FlexnetType implements Re
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productCategory
      * @return $this
      */
     public function setProductCategory($productCategory)

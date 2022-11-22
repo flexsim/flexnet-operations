@@ -12,7 +12,7 @@ class CreatedUserDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType|array $user
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType|array  $user
      */
     public function __construct($user = null)
     {
@@ -22,7 +22,7 @@ class CreatedUserDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType|array $user
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType|array  $user
      */
     public static function create($user = null)
     {
@@ -38,7 +38,7 @@ class CreatedUserDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType|array $user
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType|array  $user
      * @return $this
      */
     public function setUser($user)

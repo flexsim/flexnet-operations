@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Facade;
  * @method static string getDefaultVersion( $connection = NULL)
  * @method static setDefaultVersion( $version,  $connection = NULL)
  * @method static array getClients()
- *
  * @method static \Flexsim\FlexnetOperations\Type\CreateFeatureResponseType createFeature(\Flexsim\FlexnetOperations\Type\CreateFeatureRequestType $createFeatureRequest)
  * @method static \Flexsim\FlexnetOperations\Type\UpdateFeatureResponseType updateFeature(\Flexsim\FlexnetOperations\Type\UpdateFeatureRequestType $updateFeatureRequest)
  * @method static \Flexsim\FlexnetOperations\Type\DeleteFeatureResponseType deleteFeature(\Flexsim\FlexnetOperations\Type\DeleteFeatureRequestType $deleteFeatureRequest)

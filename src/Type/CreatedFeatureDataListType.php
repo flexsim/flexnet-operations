@@ -12,7 +12,7 @@ class CreatedFeatureDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType|array $createdFeature
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType|array  $createdFeature
      */
     public function __construct($createdFeature = null)
     {
@@ -22,7 +22,7 @@ class CreatedFeatureDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType|array $createdFeature
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType|array  $createdFeature
      */
     public static function create($createdFeature = null)
     {
@@ -38,7 +38,7 @@ class CreatedFeatureDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType|array $createdFeature
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedFeatureDataType|array  $createdFeature
      * @return $this
      */
     public function setCreatedFeature($createdFeature)

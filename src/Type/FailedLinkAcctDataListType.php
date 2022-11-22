@@ -12,7 +12,7 @@ class FailedLinkAcctDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedLinkAcctDataType|array $failedAcctData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedLinkAcctDataType|array  $failedAcctData
      */
     public function __construct($failedAcctData = null)
     {
@@ -22,7 +22,7 @@ class FailedLinkAcctDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedLinkAcctDataType|array $failedAcctData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedLinkAcctDataType|array  $failedAcctData
      */
     public static function create($failedAcctData = null)
     {
@@ -38,7 +38,7 @@ class FailedLinkAcctDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedLinkAcctDataType|array $failedAcctData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedLinkAcctDataType|array  $failedAcctData
      * @return $this
      */
     public function setFailedAcctData($failedAcctData)

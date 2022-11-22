@@ -12,7 +12,7 @@ class OverDraftDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array $activationIdMap
+     * @param  \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array  $activationIdMap
      */
     public function __construct($activationIdMap)
     {
@@ -22,7 +22,7 @@ class OverDraftDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array $activationIdMap
+     * @param  \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array  $activationIdMap
      */
     public static function create($activationIdMap)
     {
@@ -38,7 +38,7 @@ class OverDraftDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array $activationIdMap
+     * @param  \Flexsim\FlexnetOperations\Type\ActivationIdOverDraftMapType|array  $activationIdMap
      * @return $this
      */
     public function setActivationIdMap($activationIdMap)

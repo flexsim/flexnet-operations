@@ -24,11 +24,11 @@ class RenewEntitlementResponseType extends FlexnetType implements ResultInterfac
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataListType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataListType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedRenewEntitlementDataListType $failedData = null, CreatedRenewEntitlementDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -38,11 +38,11 @@ class RenewEntitlementResponseType extends FlexnetType implements ResultInterfac
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataListType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataListType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FailedRenewEntitlementDataListType $failedData = null, CreatedRenewEntitlementDataListType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class RenewEntitlementResponseType extends FlexnetType implements ResultInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class RenewEntitlementResponseType extends FlexnetType implements ResultInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedRenewEntitlementDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -94,7 +94,7 @@ class RenewEntitlementResponseType extends FlexnetType implements ResultInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

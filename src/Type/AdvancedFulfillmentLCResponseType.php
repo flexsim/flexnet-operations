@@ -24,11 +24,11 @@ class AdvancedFulfillmentLCResponseType extends FlexnetType implements ResultInt
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataListType $responseData
-     * @param \Flexsim\FlexnetOperations\Type\FailedAdvancedFmtLCResponseDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataListType  $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedAdvancedFmtLCResponseDataType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedAdvancedFmtLCResponseDataType $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, AdvancedFmtLCResponseDataListType $responseData = null, FailedAdvancedFmtLCResponseDataType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
@@ -38,11 +38,11 @@ class AdvancedFulfillmentLCResponseType extends FlexnetType implements ResultInt
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataListType $responseData
-     * @param \Flexsim\FlexnetOperations\Type\FailedAdvancedFmtLCResponseDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataListType  $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedAdvancedFmtLCResponseDataType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedAdvancedFmtLCResponseDataType $failedData = null)
+    public static function create(StatusInfoType $statusInfo, AdvancedFmtLCResponseDataListType $responseData = null, FailedAdvancedFmtLCResponseDataType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class AdvancedFulfillmentLCResponseType extends FlexnetType implements ResultInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class AdvancedFulfillmentLCResponseType extends FlexnetType implements ResultInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFmtLCResponseDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)
@@ -94,7 +94,7 @@ class AdvancedFulfillmentLCResponseType extends FlexnetType implements ResultInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedAdvancedFmtLCResponseDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedAdvancedFmtLCResponseDataType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

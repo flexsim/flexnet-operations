@@ -14,9 +14,9 @@ class SetLineItemStateRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\LineItemStateDataType  $lineItem
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem)
+    public function __construct(LineItemStateDataType $lineItem)
     {
         $this->lineItem = $lineItem;
     }
@@ -24,9 +24,9 @@ class SetLineItemStateRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\LineItemStateDataType  $lineItem
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem)
+    public static function create(LineItemStateDataType $lineItem)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class SetLineItemStateRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LineItemStateDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\LineItemStateDataType  $lineItem
      * @return $this
      */
     public function setLineItem($lineItem)

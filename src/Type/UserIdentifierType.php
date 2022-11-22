@@ -22,11 +22,11 @@ class UserIdentifierType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $uniqueId
-     * @param string $userName
-     * @param \Flexsim\FlexnetOperations\Type\UserPKType $primaryKeys
+     * @param  string  $uniqueId
+     * @param  string  $userName
+     * @param  \Flexsim\FlexnetOperations\Type\UserPKType  $primaryKeys
      */
-    public function __construct(string $uniqueId = null, string $userName = null, \Flexsim\FlexnetOperations\Type\UserPKType $primaryKeys = null)
+    public function __construct(string $uniqueId = null, string $userName = null, UserPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->userName = $userName;
@@ -36,11 +36,11 @@ class UserIdentifierType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
-     * @param string $userName
-     * @param \Flexsim\FlexnetOperations\Type\UserPKType $primaryKeys
+     * @param  string  $uniqueId
+     * @param  string  $userName
+     * @param  \Flexsim\FlexnetOperations\Type\UserPKType  $primaryKeys
      */
-    public static function create(string $uniqueId = null, string $userName = null, \Flexsim\FlexnetOperations\Type\UserPKType $primaryKeys = null)
+    public static function create(string $uniqueId = null, string $userName = null, UserPKType $primaryKeys = null)
     {
         return new self(...func_get_args());
     }
@@ -54,7 +54,7 @@ class UserIdentifierType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -73,7 +73,7 @@ class UserIdentifierType extends FlexnetType
     }
 
     /**
-     * @param string $userName
+     * @param  string  $userName
      * @return $this
      */
     public function setUserName($userName)
@@ -92,7 +92,7 @@ class UserIdentifierType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserPKType $primaryKeys
+     * @param  \Flexsim\FlexnetOperations\Type\UserPKType  $primaryKeys
      * @return $this
      */
     public function setPrimaryKeys($primaryKeys)

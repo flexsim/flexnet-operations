@@ -12,7 +12,7 @@ class GetUsageHistoryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UsageHistoryDataType|array $deviceUpdate
+     * @param  \Flexsim\FlexnetOperations\Type\UsageHistoryDataType|array  $deviceUpdate
      */
     public function __construct($deviceUpdate = null)
     {
@@ -22,7 +22,7 @@ class GetUsageHistoryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UsageHistoryDataType|array $deviceUpdate
+     * @param  \Flexsim\FlexnetOperations\Type\UsageHistoryDataType|array  $deviceUpdate
      */
     public static function create($deviceUpdate = null)
     {
@@ -38,7 +38,7 @@ class GetUsageHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UsageHistoryDataType $deviceUpdate
+     * @param  \Flexsim\FlexnetOperations\Type\UsageHistoryDataType  $deviceUpdate
      * @return $this
      */
     public function setDeviceUpdate($deviceUpdate)

@@ -17,10 +17,10 @@ class FailedTransferLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType  $lineItemInfo
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo, string $reason)
+    public function __construct(TransferLineItemInfoType $lineItemInfo, string $reason)
     {
         $this->lineItemInfo = $lineItemInfo;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedTransferLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType  $lineItemInfo
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo, string $reason)
+    public static function create(TransferLineItemInfoType $lineItemInfo, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedTransferLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType $lineItemInfo
+     * @param  \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType  $lineItemInfo
      * @return $this
      */
     public function setLineItemInfo($lineItemInfo)
@@ -65,7 +65,7 @@ class FailedTransferLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

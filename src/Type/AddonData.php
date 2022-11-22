@@ -77,22 +77,22 @@ class AddonData extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $activationId
-     * @param string $entitlementId
-     * @param int $requestedCopies
-     * @param int $consumedCopies
-     * @param int $generatedCopies
-     * @param string $licenseState
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList
-     * @param string $partNumber
-     * @param \DateTimeInterface $licenseExpirationDate
-     * @param bool $licensePermanent
-     * @param \DateTimeInterface $expirationDateOverride
-     * @param string $licenseModelName
-     * @param \DateTimeInterface $createdDate
-     * @param \DateTimeInterface $lastModifiedDate
+     * @param  string  $activationId
+     * @param  string  $entitlementId
+     * @param  int  $requestedCopies
+     * @param  int  $consumedCopies
+     * @param  int  $generatedCopies
+     * @param  string  $licenseState
+     * @param  \Flexsim\FlexnetOperations\Type\EntitledProductDataListType  $productList
+     * @param  string  $partNumber
+     * @param  \DateTimeInterface  $licenseExpirationDate
+     * @param  bool  $licensePermanent
+     * @param  \DateTimeInterface  $expirationDateOverride
+     * @param  string  $licenseModelName
+     * @param  \DateTimeInterface  $createdDate
+     * @param  \DateTimeInterface  $lastModifiedDate
      */
-    public function __construct(string $activationId = null, string $entitlementId = null, int $requestedCopies = null, int $consumedCopies = null, int $generatedCopies = null, string $licenseState = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList = null, string $partNumber = null, \DateTimeInterface $licenseExpirationDate = null, bool $licensePermanent = null, \DateTimeInterface $expirationDateOverride = null, string $licenseModelName = null, \DateTimeInterface $createdDate = null, \DateTimeInterface $lastModifiedDate = null)
+    public function __construct(string $activationId = null, string $entitlementId = null, int $requestedCopies = null, int $consumedCopies = null, int $generatedCopies = null, string $licenseState = null, EntitledProductDataListType $productList = null, string $partNumber = null, \DateTimeInterface $licenseExpirationDate = null, bool $licensePermanent = null, \DateTimeInterface $expirationDateOverride = null, string $licenseModelName = null, \DateTimeInterface $createdDate = null, \DateTimeInterface $lastModifiedDate = null)
     {
         $this->activationId = $activationId;
         $this->entitlementId = $entitlementId;
@@ -113,22 +113,22 @@ class AddonData extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $activationId
-     * @param string $entitlementId
-     * @param int $requestedCopies
-     * @param int $consumedCopies
-     * @param int $generatedCopies
-     * @param string $licenseState
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList
-     * @param string $partNumber
-     * @param \DateTimeInterface $licenseExpirationDate
-     * @param bool $licensePermanent
-     * @param \DateTimeInterface $expirationDateOverride
-     * @param string $licenseModelName
-     * @param \DateTimeInterface $createdDate
-     * @param \DateTimeInterface $lastModifiedDate
+     * @param  string  $activationId
+     * @param  string  $entitlementId
+     * @param  int  $requestedCopies
+     * @param  int  $consumedCopies
+     * @param  int  $generatedCopies
+     * @param  string  $licenseState
+     * @param  \Flexsim\FlexnetOperations\Type\EntitledProductDataListType  $productList
+     * @param  string  $partNumber
+     * @param  \DateTimeInterface  $licenseExpirationDate
+     * @param  bool  $licensePermanent
+     * @param  \DateTimeInterface  $expirationDateOverride
+     * @param  string  $licenseModelName
+     * @param  \DateTimeInterface  $createdDate
+     * @param  \DateTimeInterface  $lastModifiedDate
      */
-    public static function create(string $activationId = null, string $entitlementId = null, int $requestedCopies = null, int $consumedCopies = null, int $generatedCopies = null, string $licenseState = null, \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList = null, string $partNumber = null, \DateTimeInterface $licenseExpirationDate = null, bool $licensePermanent = null, \DateTimeInterface $expirationDateOverride = null, string $licenseModelName = null, \DateTimeInterface $createdDate = null, \DateTimeInterface $lastModifiedDate = null)
+    public static function create(string $activationId = null, string $entitlementId = null, int $requestedCopies = null, int $consumedCopies = null, int $generatedCopies = null, string $licenseState = null, EntitledProductDataListType $productList = null, string $partNumber = null, \DateTimeInterface $licenseExpirationDate = null, bool $licensePermanent = null, \DateTimeInterface $expirationDateOverride = null, string $licenseModelName = null, \DateTimeInterface $createdDate = null, \DateTimeInterface $lastModifiedDate = null)
     {
         return new self(...func_get_args());
     }
@@ -142,7 +142,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -161,7 +161,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param string $entitlementId
+     * @param  string  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)
@@ -180,7 +180,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param int $requestedCopies
+     * @param  int  $requestedCopies
      * @return $this
      */
     public function setRequestedCopies($requestedCopies)
@@ -199,7 +199,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param int $consumedCopies
+     * @param  int  $consumedCopies
      * @return $this
      */
     public function setConsumedCopies($consumedCopies)
@@ -218,7 +218,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param int $generatedCopies
+     * @param  int  $generatedCopies
      * @return $this
      */
     public function setGeneratedCopies($generatedCopies)
@@ -237,7 +237,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param string $licenseState
+     * @param  string  $licenseState
      * @return $this
      */
     public function setLicenseState($licenseState)
@@ -256,7 +256,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $productList
+     * @param  \Flexsim\FlexnetOperations\Type\EntitledProductDataListType  $productList
      * @return $this
      */
     public function setProductList($productList)
@@ -275,7 +275,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param string $partNumber
+     * @param  string  $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -294,7 +294,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $licenseExpirationDate
+     * @param  \DateTimeInterface  $licenseExpirationDate
      * @return $this
      */
     public function setLicenseExpirationDate($licenseExpirationDate)
@@ -313,7 +313,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param bool $licensePermanent
+     * @param  bool  $licensePermanent
      * @return $this
      */
     public function setLicensePermanent($licensePermanent)
@@ -332,7 +332,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $expirationDateOverride
+     * @param  \DateTimeInterface  $expirationDateOverride
      * @return $this
      */
     public function setExpirationDateOverride($expirationDateOverride)
@@ -351,7 +351,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param string $licenseModelName
+     * @param  string  $licenseModelName
      * @return $this
      */
     public function setLicenseModelName($licenseModelName)
@@ -370,7 +370,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $createdDate
+     * @param  \DateTimeInterface  $createdDate
      * @return $this
      */
     public function setCreatedDate($createdDate)
@@ -389,7 +389,7 @@ class AddonData extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $lastModifiedDate
+     * @param  \DateTimeInterface  $lastModifiedDate
      * @return $this
      */
     public function setLastModifiedDate($lastModifiedDate)

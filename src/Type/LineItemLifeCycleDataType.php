@@ -32,13 +32,13 @@ class LineItemLifeCycleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType $lineItem
-     * @param bool $isFull
-     * @param bool $allowActivationsOnParent
-     * @param bool $autoDeploy
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType  $lineItem
+     * @param  bool  $isFull
+     * @param  bool  $allowActivationsOnParent
+     * @param  bool  $autoDeploy
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier, \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType $lineItem, bool $isFull = null, bool $allowActivationsOnParent = null, bool $autoDeploy = null)
+    public function __construct(EntitlementLineItemIdentifierType $parentLineItemIdentifier, CreateEntitlementLineItemDataType $lineItem, bool $isFull = null, bool $allowActivationsOnParent = null, bool $autoDeploy = null)
     {
         $this->parentLineItemIdentifier = $parentLineItemIdentifier;
         $this->lineItem = $lineItem;
@@ -50,13 +50,13 @@ class LineItemLifeCycleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType $lineItem
-     * @param bool $isFull
-     * @param bool $allowActivationsOnParent
-     * @param bool $autoDeploy
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType  $lineItem
+     * @param  bool  $isFull
+     * @param  bool  $allowActivationsOnParent
+     * @param  bool  $autoDeploy
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier, \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType $lineItem, bool $isFull = null, bool $allowActivationsOnParent = null, bool $autoDeploy = null)
+    public static function create(EntitlementLineItemIdentifierType $parentLineItemIdentifier, CreateEntitlementLineItemDataType $lineItem, bool $isFull = null, bool $allowActivationsOnParent = null, bool $autoDeploy = null)
     {
         return new self(...func_get_args());
     }
@@ -70,7 +70,7 @@ class LineItemLifeCycleDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
      * @return $this
      */
     public function setParentLineItemIdentifier($parentLineItemIdentifier)
@@ -89,7 +89,7 @@ class LineItemLifeCycleDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType  $lineItem
      * @return $this
      */
     public function setLineItem($lineItem)
@@ -108,7 +108,7 @@ class LineItemLifeCycleDataType extends FlexnetType
     }
 
     /**
-     * @param bool $isFull
+     * @param  bool  $isFull
      * @return $this
      */
     public function setIsFull($isFull)
@@ -127,7 +127,7 @@ class LineItemLifeCycleDataType extends FlexnetType
     }
 
     /**
-     * @param bool $allowActivationsOnParent
+     * @param  bool  $allowActivationsOnParent
      * @return $this
      */
     public function setAllowActivationsOnParent($allowActivationsOnParent)
@@ -146,7 +146,7 @@ class LineItemLifeCycleDataType extends FlexnetType
     }
 
     /**
-     * @param bool $autoDeploy
+     * @param  bool  $autoDeploy
      * @return $this
      */
     public function setAutoDeploy($autoDeploy)

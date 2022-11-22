@@ -2,9 +2,8 @@
 
 namespace Flexsim\FlexnetOperations\Type;
 
-class DeviceId extends FlexnetType 
+class DeviceId extends FlexnetType
 {
-
     /**
      * @var string
      */
@@ -28,26 +27,26 @@ class DeviceId extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $id
-     * @param string $idType
-     * @param string $publisherName
-     * @param string $deviceClass
+     * @param  string  $id
+     * @param  string  $idType
+     * @param  string  $publisherName
+     * @param  string  $deviceClass
      */
     public function __construct(string $id, string $idType, string $publisherName, string $deviceClass)
     {
         $this->id = $id;
         $this->idType = $idType;
         $this->publisherName = $publisherName;
-        $this->deviceclass = extends FlexnetType $deviceClass; extends FlexnetType 
+        $this->deviceclass = $deviceClass;
     }
 
     /**
      * create a new instance of this class
      *
-     * @param string $id
-     * @param string $idType
-     * @param string $publisherName
-     * @param string $deviceClass
+     * @param  string  $id
+     * @param  string  $idType
+     * @param  string  $publisherName
+     * @param  string  $deviceClass
      */
     public static function create(string $id, string $idType, string $publisherName, string $deviceClass)
     {
@@ -63,12 +62,13 @@ class DeviceId extends FlexnetType
     }
 
     /**
-     * @param string $id
+     * @param  string  $id
      * @return $this
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -81,12 +81,13 @@ class DeviceId extends FlexnetType
     }
 
     /**
-     * @param string $idType
+     * @param  string  $idType
      * @return $this
      */
     public function setIdType($idType)
     {
         $this->idType = $idType;
+
         return $this;
     }
 
@@ -99,12 +100,13 @@ class DeviceId extends FlexnetType
     }
 
     /**
-     * @param string $publisherName
+     * @param  string  $publisherName
      * @return $this
      */
     public function setPublisherName($publisherName)
     {
         $this->publisherName = $publisherName;
+
         return $this;
     }
 
@@ -117,15 +119,13 @@ class DeviceId extends FlexnetType
     }
 
     /**
-     * @param string $deviceClass
+     * @param  string  $deviceClass
      * @return $this
      */
     public function setDeviceClass($deviceClass)
     {
-        $this->deviceclass = extends FlexnetType $deviceClass; extends FlexnetType 
+        $this->deviceclass = $deviceClass;
+
         return $this;
     }
-
-
 }
-

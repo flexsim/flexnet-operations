@@ -12,7 +12,7 @@ class TransferLineItemsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType|array $lineItemInfo
+     * @param  \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType|array  $lineItemInfo
      */
     public function __construct($lineItemInfo)
     {
@@ -22,7 +22,7 @@ class TransferLineItemsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType|array $lineItemInfo
+     * @param  \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType|array  $lineItemInfo
      */
     public static function create($lineItemInfo)
     {
@@ -38,7 +38,7 @@ class TransferLineItemsListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType|array $lineItemInfo
+     * @param  \Flexsim\FlexnetOperations\Type\TransferLineItemInfoType|array  $lineItemInfo
      * @return $this
      */
     public function setLineItemInfo($lineItemInfo)

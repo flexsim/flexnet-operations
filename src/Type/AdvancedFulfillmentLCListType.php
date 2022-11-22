@@ -12,7 +12,7 @@ class AdvancedFulfillmentLCListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType|array $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType|array  $fulfillment
      */
     public function __construct($fulfillment)
     {
@@ -22,7 +22,7 @@ class AdvancedFulfillmentLCListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType|array $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType|array  $fulfillment
      */
     public static function create($fulfillment)
     {
@@ -38,7 +38,7 @@ class AdvancedFulfillmentLCListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType|array $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedFulfillmentLCDataType|array  $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)

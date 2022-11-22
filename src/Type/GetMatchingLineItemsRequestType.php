@@ -14,9 +14,9 @@ class GetMatchingLineItemsRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingLineItemsListType $lineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\GetMatchingLineItemsListType  $lineItemList
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\GetMatchingLineItemsListType $lineItemList)
+    public function __construct(GetMatchingLineItemsListType $lineItemList)
     {
         $this->lineItemList = $lineItemList;
     }
@@ -24,9 +24,9 @@ class GetMatchingLineItemsRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingLineItemsListType $lineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\GetMatchingLineItemsListType  $lineItemList
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\GetMatchingLineItemsListType $lineItemList)
+    public static function create(GetMatchingLineItemsListType $lineItemList)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class GetMatchingLineItemsRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingLineItemsListType $lineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\GetMatchingLineItemsListType  $lineItemList
      * @return $this
      */
     public function setLineItemList($lineItemList)

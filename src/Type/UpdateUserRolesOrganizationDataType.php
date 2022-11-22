@@ -17,10 +17,10 @@ class UpdateUserRolesOrganizationDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType $roles
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType  $roles
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType $roles)
+    public function __construct(OrganizationIdentifierType $organization, UpdateUserRolesListType $roles)
     {
         $this->organization = $organization;
         $this->roles = $roles;
@@ -29,10 +29,10 @@ class UpdateUserRolesOrganizationDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType $roles
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType  $roles
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType $roles)
+    public static function create(OrganizationIdentifierType $organization, UpdateUserRolesListType $roles)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class UpdateUserRolesOrganizationDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
      * @return $this
      */
     public function setOrganization($organization)
@@ -65,7 +65,7 @@ class UpdateUserRolesOrganizationDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType $roles
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserRolesListType  $roles
      * @return $this
      */
     public function setRoles($roles)

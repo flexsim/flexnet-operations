@@ -67,20 +67,20 @@ class GetUsageHistoryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $updateTime
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $deviceUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureVersion
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $featureCount
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $featureOverage
-     * @param \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType $machineType
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $updateTime
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $serverUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $serverId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $deviceUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $deviceId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $alias
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $featureName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $featureVersion
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $featureCount
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $featureOverage
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType  $machineType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DateTimeQueryType $updateTime = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $deviceUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureVersion = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $featureCount = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $featureOverage = null, \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType $machineType = null)
+    public function __construct(DateTimeQueryType $updateTime = null, ExternalIdQueryType $serverUniqueId = null, SimpleQueryType $serverId = null, ExternalIdQueryType $deviceUniqueId = null, SimpleQueryType $deviceId = null, SimpleQueryType $alias = null, SimpleQueryType $hostTypeName = null, SimpleQueryType $featureName = null, SimpleQueryType $featureVersion = null, NumberQueryType $featureCount = null, NumberQueryType $featureOverage = null, DeviceMachineTypeQueryType $machineType = null)
     {
         $this->updateTime = $updateTime;
         $this->serverUniqueId = $serverUniqueId;
@@ -99,20 +99,20 @@ class GetUsageHistoryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $updateTime
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $deviceUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureVersion
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $featureCount
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $featureOverage
-     * @param \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType $machineType
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $updateTime
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $serverUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $serverId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $deviceUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $deviceId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $alias
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $featureName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $featureVersion
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $featureCount
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $featureOverage
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType  $machineType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DateTimeQueryType $updateTime = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $deviceUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureVersion = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $featureCount = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $featureOverage = null, \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType $machineType = null)
+    public static function create(DateTimeQueryType $updateTime = null, ExternalIdQueryType $serverUniqueId = null, SimpleQueryType $serverId = null, ExternalIdQueryType $deviceUniqueId = null, SimpleQueryType $deviceId = null, SimpleQueryType $alias = null, SimpleQueryType $hostTypeName = null, SimpleQueryType $featureName = null, SimpleQueryType $featureVersion = null, NumberQueryType $featureCount = null, NumberQueryType $featureOverage = null, DeviceMachineTypeQueryType $machineType = null)
     {
         return new self(...func_get_args());
     }
@@ -126,7 +126,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $updateTime
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $updateTime
      * @return $this
      */
     public function setUpdateTime($updateTime)
@@ -145,7 +145,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $serverUniqueId
      * @return $this
      */
     public function setServerUniqueId($serverUniqueId)
@@ -164,7 +164,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $serverId
      * @return $this
      */
     public function setServerId($serverId)
@@ -183,7 +183,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $deviceUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $deviceUniqueId
      * @return $this
      */
     public function setDeviceUniqueId($deviceUniqueId)
@@ -202,7 +202,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $deviceId
      * @return $this
      */
     public function setDeviceId($deviceId)
@@ -221,7 +221,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $alias
      * @return $this
      */
     public function setAlias($alias)
@@ -240,7 +240,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $hostTypeName
      * @return $this
      */
     public function setHostTypeName($hostTypeName)
@@ -259,7 +259,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $featureName
      * @return $this
      */
     public function setFeatureName($featureName)
@@ -278,7 +278,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureVersion
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $featureVersion
      * @return $this
      */
     public function setFeatureVersion($featureVersion)
@@ -297,7 +297,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $featureCount
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $featureCount
      * @return $this
      */
     public function setFeatureCount($featureCount)
@@ -316,7 +316,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $featureOverage
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $featureOverage
      * @return $this
      */
     public function setFeatureOverage($featureOverage)
@@ -335,7 +335,7 @@ class GetUsageHistoryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType $machineType
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType  $machineType
      * @return $this
      */
     public function setMachineType($machineType)

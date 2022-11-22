@@ -17,10 +17,10 @@ class FailedRenewEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\RenewEntitlementDataType $entitlementData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\RenewEntitlementDataType  $entitlementData
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\RenewEntitlementDataType $entitlementData, string $reason)
+    public function __construct(RenewEntitlementDataType $entitlementData, string $reason)
     {
         $this->entitlementData = $entitlementData;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedRenewEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\RenewEntitlementDataType $entitlementData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\RenewEntitlementDataType  $entitlementData
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\RenewEntitlementDataType $entitlementData, string $reason)
+    public static function create(RenewEntitlementDataType $entitlementData, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedRenewEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\RenewEntitlementDataType $entitlementData
+     * @param  \Flexsim\FlexnetOperations\Type\RenewEntitlementDataType  $entitlementData
      * @return $this
      */
     public function setEntitlementData($entitlementData)
@@ -65,7 +65,7 @@ class FailedRenewEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

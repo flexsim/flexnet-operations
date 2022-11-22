@@ -17,10 +17,10 @@ class CountDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $activationId
-     * @param \Flexsim\FlexnetOperations\Type\CountForHostsType $countForHosts
+     * @param  string  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\CountForHostsType  $countForHosts
      */
-    public function __construct(string $activationId, \Flexsim\FlexnetOperations\Type\CountForHostsType $countForHosts)
+    public function __construct(string $activationId, CountForHostsType $countForHosts)
     {
         $this->activationId = $activationId;
         $this->countForHosts = $countForHosts;
@@ -29,10 +29,10 @@ class CountDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $activationId
-     * @param \Flexsim\FlexnetOperations\Type\CountForHostsType $countForHosts
+     * @param  string  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\CountForHostsType  $countForHosts
      */
-    public static function create(string $activationId, \Flexsim\FlexnetOperations\Type\CountForHostsType $countForHosts)
+    public static function create(string $activationId, CountForHostsType $countForHosts)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class CountDataType extends FlexnetType
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -65,7 +65,7 @@ class CountDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CountForHostsType $countForHosts
+     * @param  \Flexsim\FlexnetOperations\Type\CountForHostsType  $countForHosts
      * @return $this
      */
     public function setCountForHosts($countForHosts)

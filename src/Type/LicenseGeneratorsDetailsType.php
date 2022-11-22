@@ -12,7 +12,7 @@ class LicenseGeneratorsDetailsType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType|array $licenseGeneratorIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType|array  $licenseGeneratorIdentifier
      */
     public function __construct($licenseGeneratorIdentifier = null)
     {
@@ -22,7 +22,7 @@ class LicenseGeneratorsDetailsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType|array $licenseGeneratorIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType|array  $licenseGeneratorIdentifier
      */
     public static function create($licenseGeneratorIdentifier = null)
     {
@@ -38,7 +38,7 @@ class LicenseGeneratorsDetailsType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType $licenseGeneratorIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseGeneratorIdentifierType  $licenseGeneratorIdentifier
      * @return $this
      */
     public function setLicenseGeneratorIdentifier($licenseGeneratorIdentifier)

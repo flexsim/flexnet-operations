@@ -12,7 +12,7 @@ class UnlinkMaintenanceLineItemListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array  $unlinkMaintenanceLineItem
      */
     public function __construct($unlinkMaintenanceLineItem)
     {
@@ -22,7 +22,7 @@ class UnlinkMaintenanceLineItemListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array  $unlinkMaintenanceLineItem
      */
     public static function create($unlinkMaintenanceLineItem)
     {
@@ -38,7 +38,7 @@ class UnlinkMaintenanceLineItemListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType|array  $unlinkMaintenanceLineItem
      * @return $this
      */
     public function setUnlinkMaintenanceLineItem($unlinkMaintenanceLineItem)

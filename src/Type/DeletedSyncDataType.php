@@ -27,12 +27,12 @@ class DeletedSyncDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
-     * @param \DateTimeInterface $startTime
-     * @param \DateTimeInterface $endTime
-     * @param int $count
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $serverIdentifier
+     * @param  \DateTimeInterface  $startTime
+     * @param  \DateTimeInterface  $endTime
+     * @param  int  $count
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier, \DateTimeInterface $startTime, \DateTimeInterface $endTime, int $count)
+    public function __construct(DeviceIdentifier $serverIdentifier, \DateTimeInterface $startTime, \DateTimeInterface $endTime, int $count)
     {
         $this->serverIdentifier = $serverIdentifier;
         $this->startTime = $startTime;
@@ -43,12 +43,12 @@ class DeletedSyncDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
-     * @param \DateTimeInterface $startTime
-     * @param \DateTimeInterface $endTime
-     * @param int $count
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $serverIdentifier
+     * @param  \DateTimeInterface  $startTime
+     * @param  \DateTimeInterface  $endTime
+     * @param  int  $count
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier, \DateTimeInterface $startTime, \DateTimeInterface $endTime, int $count)
+    public static function create(DeviceIdentifier $serverIdentifier, \DateTimeInterface $startTime, \DateTimeInterface $endTime, int $count)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class DeletedSyncDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $serverIdentifier
      * @return $this
      */
     public function setServerIdentifier($serverIdentifier)
@@ -81,7 +81,7 @@ class DeletedSyncDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $startTime
+     * @param  \DateTimeInterface  $startTime
      * @return $this
      */
     public function setStartTime($startTime)
@@ -100,7 +100,7 @@ class DeletedSyncDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $endTime
+     * @param  \DateTimeInterface  $endTime
      * @return $this
      */
     public function setEndTime($endTime)
@@ -119,7 +119,7 @@ class DeletedSyncDataType extends FlexnetType
     }
 
     /**
-     * @param int $count
+     * @param  int  $count
      * @return $this
      */
     public function setCount($count)

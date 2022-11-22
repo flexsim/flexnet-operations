@@ -17,10 +17,10 @@ class ProductIdentifierWithCountDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @param int $count
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
+     * @param  int  $count
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, int $count)
+    public function __construct(ProductIdentifierType $productIdentifier, int $count)
     {
         $this->productIdentifier = $productIdentifier;
         $this->count = $count;
@@ -29,10 +29,10 @@ class ProductIdentifierWithCountDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
-     * @param int $count
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
+     * @param  int  $count
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier, int $count)
+    public static function create(ProductIdentifierType $productIdentifier, int $count)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class ProductIdentifierWithCountDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $productIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $productIdentifier
      * @return $this
      */
     public function setProductIdentifier($productIdentifier)
@@ -65,7 +65,7 @@ class ProductIdentifierWithCountDataType extends FlexnetType
     }
 
     /**
-     * @param int $count
+     * @param  int  $count
      * @return $this
      */
     public function setCount($count)

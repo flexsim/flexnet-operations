@@ -67,20 +67,20 @@ class CloneSuspect extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
-     * @param \DateTimeInterface $timeStamp
-     * @param string $hostClass
-     * @param string $hostAlias
-     * @param string $deviceId
-     * @param string $serverId
-     * @param string $acctId this method is backwards compatible so you may also pass $orgId
-     * @param string $acctName this method is backwards compatible so you may also pass $orgName
-     * @param string $enterpriseId
+     * @param  \Flexsim\FlexnetOperations\Type\LineItemActivationIds  $lineItemActivationIds
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIds  $featureIds
+     * @param  \DateTimeInterface  $timeStamp
+     * @param  string  $hostClass
+     * @param  string  $hostAlias
+     * @param  string  $deviceId
+     * @param  string  $serverId
+     * @param  string  $acctId this method is backwards compatible so you may also pass $orgId
+     * @param  string  $acctName this method is backwards compatible so you may also pass $orgName
+     * @param  string  $enterpriseId
      */
     public function __construct(
-        \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds,
-        \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds,
+        LineItemActivationIds $lineItemActivationIds,
+        FeatureIds $featureIds,
         \DateTimeInterface $timeStamp = null,
         string $hostClass = null,
         string $hostAlias = null,
@@ -107,20 +107,20 @@ class CloneSuspect extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
-     * @param \DateTimeInterface $timeStamp
-     * @param string $hostClass
-     * @param string $hostAlias
-     * @param string $deviceId
-     * @param string $serverId
-     * @param string $acctId this method is backwards compatible so you may also pass $orgId
-     * @param string $acctName this method is backwards compatible so you may also pass $orgName
-     * @param string $enterpriseId
+     * @param  \Flexsim\FlexnetOperations\Type\LineItemActivationIds  $lineItemActivationIds
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIds  $featureIds
+     * @param  \DateTimeInterface  $timeStamp
+     * @param  string  $hostClass
+     * @param  string  $hostAlias
+     * @param  string  $deviceId
+     * @param  string  $serverId
+     * @param  string  $acctId this method is backwards compatible so you may also pass $orgId
+     * @param  string  $acctName this method is backwards compatible so you may also pass $orgName
+     * @param  string  $enterpriseId
      */
     public static function create(
-        \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds,
-        \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds,
+        LineItemActivationIds $lineItemActivationIds,
+        FeatureIds $featureIds,
         \DateTimeInterface $timeStamp = null,
         string $hostClass = null,
         string $hostAlias = null,
@@ -142,7 +142,7 @@ class CloneSuspect extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $timeStamp
+     * @param  \DateTimeInterface  $timeStamp
      * @return $this
      */
     public function setTimeStamp($timeStamp)
@@ -161,7 +161,7 @@ class CloneSuspect extends FlexnetType
     }
 
     /**
-     * @param string $hostClass
+     * @param  string  $hostClass
      * @return $this
      */
     public function setHostClass($hostClass)
@@ -180,7 +180,7 @@ class CloneSuspect extends FlexnetType
     }
 
     /**
-     * @param string $hostAlias
+     * @param  string  $hostAlias
      * @return $this
      */
     public function setHostAlias($hostAlias)
@@ -199,7 +199,7 @@ class CloneSuspect extends FlexnetType
     }
 
     /**
-     * @param string $deviceId
+     * @param  string  $deviceId
      * @return $this
      */
     public function setDeviceId($deviceId)
@@ -218,7 +218,7 @@ class CloneSuspect extends FlexnetType
     }
 
     /**
-     * @param string $serverId
+     * @param  string  $serverId
      * @return $this
      */
     public function setServerId($serverId)
@@ -237,7 +237,7 @@ class CloneSuspect extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LineItemActivationIds $lineItemActivationIds
+     * @param  \Flexsim\FlexnetOperations\Type\LineItemActivationIds  $lineItemActivationIds
      * @return $this
      */
     public function setLineItemActivationIds($lineItemActivationIds)
@@ -256,7 +256,7 @@ class CloneSuspect extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIds $featureIds
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIds  $featureIds
      * @return $this
      */
     public function setFeatureIds($featureIds)
@@ -275,7 +275,7 @@ class CloneSuspect extends FlexnetType
     }
 
     /**
-     * @param string $acctId
+     * @param  string  $acctId
      * @return $this
      */
     public function setAcctId($acctId)
@@ -294,7 +294,7 @@ class CloneSuspect extends FlexnetType
     }
 
     /**
-     * @param string $orgId
+     * @param  string  $orgId
      * @return $this
      */
     public function setOrgId($orgId)
@@ -313,7 +313,7 @@ class CloneSuspect extends FlexnetType
     }
 
     /**
-     * @param string $acctName
+     * @param  string  $acctName
      * @return $this
      */
     public function setAcctName($acctName)
@@ -332,7 +332,7 @@ class CloneSuspect extends FlexnetType
     }
 
     /**
-     * @param string $orgName
+     * @param  string  $orgName
      * @return $this
      */
     public function setOrgName($orgName)
@@ -351,7 +351,7 @@ class CloneSuspect extends FlexnetType
     }
 
     /**
-     * @param string $enterpriseId
+     * @param  string  $enterpriseId
      * @return $this
      */
     public function setEnterpriseId($enterpriseId)

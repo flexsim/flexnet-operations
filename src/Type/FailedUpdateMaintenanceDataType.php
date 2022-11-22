@@ -17,10 +17,10 @@ class FailedUpdateMaintenanceDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType $maintenance
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType  $maintenance
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType $maintenance, string $reason = null)
+    public function __construct(UpdateMaintenanceDataType $maintenance, string $reason = null)
     {
         $this->maintenance = $maintenance;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedUpdateMaintenanceDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType $maintenance
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType  $maintenance
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType $maintenance, string $reason = null)
+    public static function create(UpdateMaintenanceDataType $maintenance, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedUpdateMaintenanceDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType $maintenance
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateMaintenanceDataType  $maintenance
      * @return $this
      */
     public function setMaintenance($maintenance)
@@ -65,7 +65,7 @@ class FailedUpdateMaintenanceDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

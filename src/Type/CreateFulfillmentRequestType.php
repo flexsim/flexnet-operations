@@ -14,9 +14,9 @@ class CreateFulfillmentRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\CreateFulfillmentDataType  $fulfillment
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreateFulfillmentDataType $fulfillment)
+    public function __construct(CreateFulfillmentDataType $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -24,9 +24,9 @@ class CreateFulfillmentRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\CreateFulfillmentDataType  $fulfillment
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreateFulfillmentDataType $fulfillment)
+    public static function create(CreateFulfillmentDataType $fulfillment)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class CreateFulfillmentRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\CreateFulfillmentDataType  $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)

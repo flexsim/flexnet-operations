@@ -24,11 +24,11 @@ class DeleteAddonLineItemsResponseType extends FlexnetType implements ResultInte
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType $responseData = null)
+    public function __construct(OpsEmbeddedStatusInfoType $statusInfo, DeleteFailAddonDataListType $failedData = null, SuccessAddonDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -38,11 +38,11 @@ class DeleteAddonLineItemsResponseType extends FlexnetType implements ResultInte
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType $responseData = null)
+    public static function create(OpsEmbeddedStatusInfoType $statusInfo, DeleteFailAddonDataListType $failedData = null, SuccessAddonDataListType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class DeleteAddonLineItemsResponseType extends FlexnetType implements ResultInte
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class DeleteAddonLineItemsResponseType extends FlexnetType implements ResultInte
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteFailAddonDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -94,7 +94,7 @@ class DeleteAddonLineItemsResponseType extends FlexnetType implements ResultInte
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\SuccessAddonDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

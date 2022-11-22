@@ -12,9 +12,9 @@ class DeleteLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteLineItemIdentifier $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteLineItemIdentifier  $lineItemIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeleteLineItemIdentifier $lineItemIdentifier)
+    public function __construct(DeleteLineItemIdentifier $lineItemIdentifier)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
     }
@@ -22,9 +22,9 @@ class DeleteLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteLineItemIdentifier $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteLineItemIdentifier  $lineItemIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeleteLineItemIdentifier $lineItemIdentifier)
+    public static function create(DeleteLineItemIdentifier $lineItemIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class DeleteLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeleteLineItemIdentifier $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteLineItemIdentifier  $lineItemIdentifier
      * @return $this
      */
     public function setLineItemIdentifier($lineItemIdentifier)

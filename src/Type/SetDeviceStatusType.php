@@ -17,10 +17,10 @@ class SetDeviceStatusType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param string $status
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  string  $status
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $status)
+    public function __construct(DeviceIdentifier $deviceIdentifier, string $status)
     {
         $this->deviceIdentifier = $deviceIdentifier;
         $this->status = $status;
@@ -29,10 +29,10 @@ class SetDeviceStatusType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param string $status
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  string  $status
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $status)
+    public static function create(DeviceIdentifier $deviceIdentifier, string $status)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class SetDeviceStatusType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
      * @return $this
      */
     public function setDeviceIdentifier($deviceIdentifier)
@@ -65,7 +65,7 @@ class SetDeviceStatusType extends FlexnetType
     }
 
     /**
-     * @param string $status
+     * @param  string  $status
      * @return $this
      */
     public function setStatus($status)

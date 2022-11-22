@@ -12,7 +12,7 @@ class FailedReturnHostListDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedReturnHostDataType|array $failedHost
+     * @param  \Flexsim\FlexnetOperations\Type\FailedReturnHostDataType|array  $failedHost
      */
     public function __construct($failedHost = null)
     {
@@ -22,7 +22,7 @@ class FailedReturnHostListDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedReturnHostDataType|array $failedHost
+     * @param  \Flexsim\FlexnetOperations\Type\FailedReturnHostDataType|array  $failedHost
      */
     public static function create($failedHost = null)
     {
@@ -38,7 +38,7 @@ class FailedReturnHostListDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedReturnHostDataType $failedHost
+     * @param  \Flexsim\FlexnetOperations\Type\FailedReturnHostDataType  $failedHost
      * @return $this
      */
     public function setFailedHost($failedHost)

@@ -24,11 +24,11 @@ class CreateBulkEntitlementResponseType extends FlexnetType implements ResultInt
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataListType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataListType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedBulkEntitlementDataListType $failedData = null, CreatedBulkEntitlementDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -38,11 +38,11 @@ class CreateBulkEntitlementResponseType extends FlexnetType implements ResultInt
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataListType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataListType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FailedBulkEntitlementDataListType $failedData = null, CreatedBulkEntitlementDataListType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class CreateBulkEntitlementResponseType extends FlexnetType implements ResultInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class CreateBulkEntitlementResponseType extends FlexnetType implements ResultInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedBulkEntitlementDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -94,7 +94,7 @@ class CreateBulkEntitlementResponseType extends FlexnetType implements ResultInt
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedBulkEntitlementDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

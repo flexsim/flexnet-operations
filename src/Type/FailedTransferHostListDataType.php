@@ -12,7 +12,7 @@ class FailedTransferHostListDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedTransferHostDataType|array $failedHost
+     * @param  \Flexsim\FlexnetOperations\Type\FailedTransferHostDataType|array  $failedHost
      */
     public function __construct($failedHost = null)
     {
@@ -22,7 +22,7 @@ class FailedTransferHostListDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedTransferHostDataType|array $failedHost
+     * @param  \Flexsim\FlexnetOperations\Type\FailedTransferHostDataType|array  $failedHost
      */
     public static function create($failedHost = null)
     {
@@ -38,7 +38,7 @@ class FailedTransferHostListDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedTransferHostDataType $failedHost
+     * @param  \Flexsim\FlexnetOperations\Type\FailedTransferHostDataType  $failedHost
      * @return $this
      */
     public function setFailedHost($failedHost)

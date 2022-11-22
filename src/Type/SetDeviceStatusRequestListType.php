@@ -14,7 +14,7 @@ class SetDeviceStatusRequestListType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array $devices
+     * @param  \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array  $devices
      */
     public function __construct($devices)
     {
@@ -24,7 +24,7 @@ class SetDeviceStatusRequestListType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array $devices
+     * @param  \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array  $devices
      */
     public static function create($devices)
     {
@@ -40,7 +40,7 @@ class SetDeviceStatusRequestListType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array $devices
+     * @param  \Flexsim\FlexnetOperations\Type\SetDeviceStatusType|array  $devices
      * @return $this
      */
     public function setDevices($devices)

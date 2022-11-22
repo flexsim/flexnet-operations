@@ -32,13 +32,13 @@ class CategoryAttributeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $attributeName
-     * @param bool $isRequired
-     * @param string $dataType
-     * @param string $maxLength
-     * @param \Flexsim\FlexnetOperations\Type\ValueType $validValues
+     * @param  string  $attributeName
+     * @param  bool  $isRequired
+     * @param  string  $dataType
+     * @param  string  $maxLength
+     * @param  \Flexsim\FlexnetOperations\Type\ValueType  $validValues
      */
-    public function __construct(string $attributeName, bool $isRequired, string $dataType, string $maxLength = null, \Flexsim\FlexnetOperations\Type\ValueType $validValues = null)
+    public function __construct(string $attributeName, bool $isRequired, string $dataType, string $maxLength = null, ValueType $validValues = null)
     {
         $this->attributeName = $attributeName;
         $this->isRequired = $isRequired;
@@ -50,13 +50,13 @@ class CategoryAttributeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $attributeName
-     * @param bool $isRequired
-     * @param string $dataType
-     * @param string $maxLength
-     * @param \Flexsim\FlexnetOperations\Type\ValueType $validValues
+     * @param  string  $attributeName
+     * @param  bool  $isRequired
+     * @param  string  $dataType
+     * @param  string  $maxLength
+     * @param  \Flexsim\FlexnetOperations\Type\ValueType  $validValues
      */
-    public static function create(string $attributeName, bool $isRequired, string $dataType, string $maxLength = null, \Flexsim\FlexnetOperations\Type\ValueType $validValues = null)
+    public static function create(string $attributeName, bool $isRequired, string $dataType, string $maxLength = null, ValueType $validValues = null)
     {
         return new self(...func_get_args());
     }
@@ -70,7 +70,7 @@ class CategoryAttributeDataType extends FlexnetType
     }
 
     /**
-     * @param string $attributeName
+     * @param  string  $attributeName
      * @return $this
      */
     public function setAttributeName($attributeName)
@@ -89,7 +89,7 @@ class CategoryAttributeDataType extends FlexnetType
     }
 
     /**
-     * @param bool $isRequired
+     * @param  bool  $isRequired
      * @return $this
      */
     public function setIsRequired($isRequired)
@@ -108,7 +108,7 @@ class CategoryAttributeDataType extends FlexnetType
     }
 
     /**
-     * @param string $dataType
+     * @param  string  $dataType
      * @return $this
      */
     public function setDataType($dataType)
@@ -127,7 +127,7 @@ class CategoryAttributeDataType extends FlexnetType
     }
 
     /**
-     * @param string $maxLength
+     * @param  string  $maxLength
      * @return $this
      */
     public function setMaxLength($maxLength)
@@ -146,7 +146,7 @@ class CategoryAttributeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ValueType $validValues
+     * @param  \Flexsim\FlexnetOperations\Type\ValueType  $validValues
      * @return $this
      */
     public function setValidValues($validValues)

@@ -29,12 +29,12 @@ class MoveDeviceRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\MoveDeviceList $sourceDevices
-     * @param string $soldToUniqueId
-     * @param string $soldToName
-     * @param bool $poolEntitlements
+     * @param  \Flexsim\FlexnetOperations\Type\MoveDeviceList  $sourceDevices
+     * @param  string  $soldToUniqueId
+     * @param  string  $soldToName
+     * @param  bool  $poolEntitlements
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\MoveDeviceList $sourceDevices, string $soldToUniqueId = null, string $soldToName = null, bool $poolEntitlements = null)
+    public function __construct(MoveDeviceList $sourceDevices, string $soldToUniqueId = null, string $soldToName = null, bool $poolEntitlements = null)
     {
         $this->sourceDevices = $sourceDevices;
         $this->soldToUniqueId = $soldToUniqueId;
@@ -45,12 +45,12 @@ class MoveDeviceRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\MoveDeviceList $sourceDevices
-     * @param string $soldToUniqueId
-     * @param string $soldToName
-     * @param bool $poolEntitlements
+     * @param  \Flexsim\FlexnetOperations\Type\MoveDeviceList  $sourceDevices
+     * @param  string  $soldToUniqueId
+     * @param  string  $soldToName
+     * @param  bool  $poolEntitlements
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\MoveDeviceList $sourceDevices, string $soldToUniqueId = null, string $soldToName = null, bool $poolEntitlements = null)
+    public static function create(MoveDeviceList $sourceDevices, string $soldToUniqueId = null, string $soldToName = null, bool $poolEntitlements = null)
     {
         return new self(...func_get_args());
     }
@@ -64,7 +64,7 @@ class MoveDeviceRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\MoveDeviceList $sourceDevices
+     * @param  \Flexsim\FlexnetOperations\Type\MoveDeviceList  $sourceDevices
      * @return $this
      */
     public function setSourceDevices($sourceDevices)
@@ -83,7 +83,7 @@ class MoveDeviceRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param string $soldToUniqueId
+     * @param  string  $soldToUniqueId
      * @return $this
      */
     public function setSoldToUniqueId($soldToUniqueId)
@@ -102,7 +102,7 @@ class MoveDeviceRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param string $soldToName
+     * @param  string  $soldToName
      * @return $this
      */
     public function setSoldToName($soldToName)
@@ -121,7 +121,7 @@ class MoveDeviceRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param bool $poolEntitlements
+     * @param  bool  $poolEntitlements
      * @return $this
      */
     public function setPoolEntitlements($poolEntitlements)

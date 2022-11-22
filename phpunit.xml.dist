@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd" backupGlobals="false" backupStaticAttributes="false" bootstrap="vendor/autoload.php" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="false" stopOnFailure="false" executionOrder="random" failOnWarning="true" failOnRisky="true" failOnEmptyTestSuite="true" beStrictAboutOutputDuringTests="true" verbose="true">
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+    backupGlobals="false"
+    backupStaticAttributes="false"
+    bootstrap="vendor/autoload.php"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    processIsolation="false"
+    stopOnFailure="false"
+    executionOrder="random"
+    failOnWarning="true"
+    failOnRisky="true"
+    failOnEmptyTestSuite="true"
+    beStrictAboutOutputDuringTests="true"
+    verbose="true"
+>
     <testsuites>
         <testsuite name="Flexsim Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
-    <php>
-        <server name="PROJECT_ROOT" value="./"/>
-        <server name="APP_ENV" value="testing"/>
-        <server name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
-        <server name="FLEXNET_OPERATIONS_USER" value="admin"/>
-        <server name="FLEXNET_OPERATIONS_PASSWORD" value="password"/>
-        <server name="FLEXNET_OPERATIONS_DOMAIN" value="licenseserver.test"/>
-        <server name="FLEXNET_OPERATIONS_SCHEME" value="http"/>
-    </php>
     <coverage>
         <include>
             <directory suffix=".php">./src</directory>

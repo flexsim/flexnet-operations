@@ -47,14 +47,14 @@ class FulfillmentHistoryRecordType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $fulfillmentId
-     * @param string $action
-     * @param \DateTimeInterface $actionDate
-     * @param \DateTimeInterface $actionDateTime
-     * @param string $actionPerformedBy
-     * @param bool $isPolicyOverridden
-     * @param int $count
-     * @param string $fulfillmentSource
+     * @param  string  $fulfillmentId
+     * @param  string  $action
+     * @param  \DateTimeInterface  $actionDate
+     * @param  \DateTimeInterface  $actionDateTime
+     * @param  string  $actionPerformedBy
+     * @param  bool  $isPolicyOverridden
+     * @param  int  $count
+     * @param  string  $fulfillmentSource
      */
     public function __construct(string $fulfillmentId, string $action, \DateTimeInterface $actionDate, \DateTimeInterface $actionDateTime, string $actionPerformedBy, bool $isPolicyOverridden, int $count, string $fulfillmentSource)
     {
@@ -71,14 +71,14 @@ class FulfillmentHistoryRecordType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $fulfillmentId
-     * @param string $action
-     * @param \DateTimeInterface $actionDate
-     * @param \DateTimeInterface $actionDateTime
-     * @param string $actionPerformedBy
-     * @param bool $isPolicyOverridden
-     * @param int $count
-     * @param string $fulfillmentSource
+     * @param  string  $fulfillmentId
+     * @param  string  $action
+     * @param  \DateTimeInterface  $actionDate
+     * @param  \DateTimeInterface  $actionDateTime
+     * @param  string  $actionPerformedBy
+     * @param  bool  $isPolicyOverridden
+     * @param  int  $count
+     * @param  string  $fulfillmentSource
      */
     public static function create(string $fulfillmentId, string $action, \DateTimeInterface $actionDate, \DateTimeInterface $actionDateTime, string $actionPerformedBy, bool $isPolicyOverridden, int $count, string $fulfillmentSource)
     {
@@ -94,7 +94,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     }
 
     /**
-     * @param string $fulfillmentId
+     * @param  string  $fulfillmentId
      * @return $this
      */
     public function setFulfillmentId($fulfillmentId)
@@ -113,7 +113,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     }
 
     /**
-     * @param string $action
+     * @param  string  $action
      * @return $this
      */
     public function setAction($action)
@@ -132,7 +132,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $actionDate
+     * @param  \DateTimeInterface  $actionDate
      * @return $this
      */
     public function setActionDate($actionDate)
@@ -151,7 +151,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $actionDateTime
+     * @param  \DateTimeInterface  $actionDateTime
      * @return $this
      */
     public function setActionDateTime($actionDateTime)
@@ -170,7 +170,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     }
 
     /**
-     * @param string $actionPerformedBy
+     * @param  string  $actionPerformedBy
      * @return $this
      */
     public function setActionPerformedBy($actionPerformedBy)
@@ -189,7 +189,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     }
 
     /**
-     * @param bool $isPolicyOverridden
+     * @param  bool  $isPolicyOverridden
      * @return $this
      */
     public function setIsPolicyOverridden($isPolicyOverridden)
@@ -208,7 +208,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     }
 
     /**
-     * @param int $count
+     * @param  int  $count
      * @return $this
      */
     public function setCount($count)
@@ -227,7 +227,7 @@ class FulfillmentHistoryRecordType extends FlexnetType
     }
 
     /**
-     * @param string $fulfillmentSource
+     * @param  string  $fulfillmentSource
      * @return $this
      */
     public function setFulfillmentSource($fulfillmentSource)

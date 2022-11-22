@@ -52,17 +52,17 @@ class UpdateOrgDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @param string $name
-     * @param string $displayName
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @param \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType $subOrganizations
-     * @param \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType $relatedOrganizations
-     * @param bool $visible
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
+     * @param  string  $name
+     * @param  string  $displayName
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType  $subOrganizations
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType  $relatedOrganizations
+     * @param  bool  $visible
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, string $name = null, string $displayName = null, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType $subOrganizations = null, \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType $relatedOrganizations = null, bool $visible = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
+    public function __construct(OrganizationIdentifierType $organization, string $name = null, string $displayName = null, string $description = null, AddressDataType $address = null, UpdateSubOrganizationsListType $subOrganizations = null, UpdateRelatedOrganizationsListType $relatedOrganizations = null, bool $visible = null, AttributeDescriptorDataType $customAttributes = null)
     {
         $this->organization = $organization;
         $this->name = $name;
@@ -78,17 +78,17 @@ class UpdateOrgDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @param string $name
-     * @param string $displayName
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @param \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType $subOrganizations
-     * @param \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType $relatedOrganizations
-     * @param bool $visible
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
+     * @param  string  $name
+     * @param  string  $displayName
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType  $subOrganizations
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType  $relatedOrganizations
+     * @param  bool  $visible
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, string $name = null, string $displayName = null, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType $subOrganizations = null, \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType $relatedOrganizations = null, bool $visible = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
+    public static function create(OrganizationIdentifierType $organization, string $name = null, string $displayName = null, string $description = null, AddressDataType $address = null, UpdateSubOrganizationsListType $subOrganizations = null, UpdateRelatedOrganizationsListType $relatedOrganizations = null, bool $visible = null, AttributeDescriptorDataType $customAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -102,7 +102,7 @@ class UpdateOrgDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
      * @return $this
      */
     public function setOrganization($organization)
@@ -121,7 +121,7 @@ class UpdateOrgDataType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -140,7 +140,7 @@ class UpdateOrgDataType extends FlexnetType
     }
 
     /**
-     * @param string $displayName
+     * @param  string  $displayName
      * @return $this
      */
     public function setDisplayName($displayName)
@@ -159,7 +159,7 @@ class UpdateOrgDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -178,7 +178,7 @@ class UpdateOrgDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
      * @return $this
      */
     public function setAddress($address)
@@ -197,7 +197,7 @@ class UpdateOrgDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType $subOrganizations
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateSubOrganizationsListType  $subOrganizations
      * @return $this
      */
     public function setSubOrganizations($subOrganizations)
@@ -216,7 +216,7 @@ class UpdateOrgDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType $relatedOrganizations
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateRelatedOrganizationsListType  $relatedOrganizations
      * @return $this
      */
     public function setRelatedOrganizations($relatedOrganizations)
@@ -235,7 +235,7 @@ class UpdateOrgDataType extends FlexnetType
     }
 
     /**
-     * @param bool $visible
+     * @param  bool  $visible
      * @return $this
      */
     public function setVisible($visible)
@@ -254,7 +254,7 @@ class UpdateOrgDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)

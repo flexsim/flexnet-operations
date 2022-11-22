@@ -12,7 +12,7 @@ class TrustedKeyPKType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $keyName
+     * @param  string  $keyName
      */
     public function __construct(string $keyName)
     {
@@ -22,7 +22,7 @@ class TrustedKeyPKType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $keyName
+     * @param  string  $keyName
      */
     public static function create(string $keyName)
     {
@@ -38,7 +38,7 @@ class TrustedKeyPKType extends FlexnetType
     }
 
     /**
-     * @param string $keyName
+     * @param  string  $keyName
      * @return $this
      */
     public function setKeyName($keyName)

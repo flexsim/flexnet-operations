@@ -14,9 +14,9 @@ class DeletePartNumberRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeletePartNumberDataType $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\DeletePartNumberDataType  $partNumber
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeletePartNumberDataType $partNumber)
+    public function __construct(DeletePartNumberDataType $partNumber)
     {
         $this->partNumber = $partNumber;
     }
@@ -24,9 +24,9 @@ class DeletePartNumberRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeletePartNumberDataType $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\DeletePartNumberDataType  $partNumber
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeletePartNumberDataType $partNumber)
+    public static function create(DeletePartNumberDataType $partNumber)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class DeletePartNumberRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeletePartNumberDataType $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\DeletePartNumberDataType  $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)

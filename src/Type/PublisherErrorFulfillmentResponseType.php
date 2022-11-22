@@ -24,11 +24,11 @@ class PublisherErrorFulfillmentResponseType extends FlexnetType implements Resul
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType $responseData
-     * @param \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType  $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, PublisherErrorResponseDataType $responseData = null, FailedPublisherErrorResponselistDataType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
@@ -38,11 +38,11 @@ class PublisherErrorFulfillmentResponseType extends FlexnetType implements Resul
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType $responseData
-     * @param \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType  $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType $failedData = null)
+    public static function create(StatusInfoType $statusInfo, PublisherErrorResponseDataType $responseData = null, FailedPublisherErrorResponselistDataType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class PublisherErrorFulfillmentResponseType extends FlexnetType implements Resul
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class PublisherErrorFulfillmentResponseType extends FlexnetType implements Resul
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherErrorResponseDataType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)
@@ -94,7 +94,7 @@ class PublisherErrorFulfillmentResponseType extends FlexnetType implements Resul
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedPublisherErrorResponselistDataType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

@@ -67,20 +67,20 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\IdType $entitlementId
-     * @param string $description
-     * @param string $soldTo
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType|array $lineItems
-     * @param \Flexsim\FlexnetOperations\Type\CreateMaintenanceLineItemDataType|array $maintenanceLineItems
-     * @param bool $autoDeploy
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @param bool $allowPortalLogin
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
-     * @param string $emailTemplateVariation
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $entitlementId
+     * @param  string  $description
+     * @param  string  $soldTo
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType|array  $lineItems
+     * @param  \Flexsim\FlexnetOperations\Type\CreateMaintenanceLineItemDataType|array  $maintenanceLineItems
+     * @param  bool  $autoDeploy
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
+     * @param  bool  $allowPortalLogin
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $entitlementAttributes
+     * @param  string  $emailTemplateVariation
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\IdType $entitlementId, string $description = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, $lineItems = null, $maintenanceLineItems = null, bool $autoDeploy = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null, string $emailTemplateVariation = null)
+    public function __construct(IdType $entitlementId, string $description = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, $lineItems = null, $maintenanceLineItems = null, bool $autoDeploy = null, ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, AttributeDescriptorDataType $entitlementAttributes = null, string $emailTemplateVariation = null)
     {
         $this->entitlementId = $entitlementId;
         $this->description = $description;
@@ -99,20 +99,20 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\IdType $entitlementId
-     * @param string $description
-     * @param string $soldTo
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType|array $lineItems
-     * @param \Flexsim\FlexnetOperations\Type\CreateMaintenanceLineItemDataType|array $maintenanceLineItems
-     * @param bool $autoDeploy
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @param bool $allowPortalLogin
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
-     * @param string $emailTemplateVariation
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $entitlementId
+     * @param  string  $description
+     * @param  string  $soldTo
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType|array  $lineItems
+     * @param  \Flexsim\FlexnetOperations\Type\CreateMaintenanceLineItemDataType|array  $maintenanceLineItems
+     * @param  bool  $autoDeploy
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
+     * @param  bool  $allowPortalLogin
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $entitlementAttributes
+     * @param  string  $emailTemplateVariation
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\IdType $entitlementId, string $description = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, $lineItems = null, $maintenanceLineItems = null, bool $autoDeploy = null, \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null, string $emailTemplateVariation = null)
+    public static function create(IdType $entitlementId, string $description = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, $lineItems = null, $maintenanceLineItems = null, bool $autoDeploy = null, ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, AttributeDescriptorDataType $entitlementAttributes = null, string $emailTemplateVariation = null)
     {
         return new self(...func_get_args());
     }
@@ -126,7 +126,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\IdType $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)
@@ -145,7 +145,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -164,7 +164,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $soldTo
+     * @param  string  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -183,7 +183,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToEmail
+     * @param  string  $shipToEmail
      * @return $this
      */
     public function setShipToEmail($shipToEmail)
@@ -202,7 +202,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToAddress
+     * @param  string  $shipToAddress
      * @return $this
      */
     public function setShipToAddress($shipToAddress)
@@ -221,7 +221,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType $lineItems
+     * @param  \Flexsim\FlexnetOperations\Type\CreateEntitlementLineItemDataType  $lineItems
      * @return $this
      */
     public function setLineItems($lineItems)
@@ -240,7 +240,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateMaintenanceLineItemDataType $maintenanceLineItems
+     * @param  \Flexsim\FlexnetOperations\Type\CreateMaintenanceLineItemDataType  $maintenanceLineItems
      * @return $this
      */
     public function setMaintenanceLineItems($maintenanceLineItems)
@@ -259,7 +259,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param bool $autoDeploy
+     * @param  bool  $autoDeploy
      * @return $this
      */
     public function setAutoDeploy($autoDeploy)
@@ -278,7 +278,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
      * @return $this
      */
     public function setChannelPartners($channelPartners)
@@ -297,7 +297,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param bool $allowPortalLogin
+     * @param  bool  $allowPortalLogin
      * @return $this
      */
     public function setAllowPortalLogin($allowPortalLogin)
@@ -316,7 +316,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $entitlementAttributes
      * @return $this
      */
     public function setEntitlementAttributes($entitlementAttributes)
@@ -335,7 +335,7 @@ class CreateSimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $emailTemplateVariation
+     * @param  string  $emailTemplateVariation
      * @return $this
      */
     public function setEmailTemplateVariation($emailTemplateVariation)

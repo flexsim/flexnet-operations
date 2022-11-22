@@ -22,9 +22,9 @@ class ServerIDsType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $server1
-     * @param string $server2
-     * @param string $server3
+     * @param  string  $server1
+     * @param  string  $server2
+     * @param  string  $server3
      */
     public function __construct(string $server1, string $server2 = null, string $server3 = null)
     {
@@ -36,9 +36,9 @@ class ServerIDsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $server1
-     * @param string $server2
-     * @param string $server3
+     * @param  string  $server1
+     * @param  string  $server2
+     * @param  string  $server3
      */
     public static function create(string $server1, string $server2 = null, string $server3 = null)
     {
@@ -54,7 +54,7 @@ class ServerIDsType extends FlexnetType
     }
 
     /**
-     * @param string $server1
+     * @param  string  $server1
      * @return $this
      */
     public function setServer1($server1)
@@ -73,7 +73,7 @@ class ServerIDsType extends FlexnetType
     }
 
     /**
-     * @param string $server2
+     * @param  string  $server2
      * @return $this
      */
     public function setServer2($server2)
@@ -92,7 +92,7 @@ class ServerIDsType extends FlexnetType
     }
 
     /**
-     * @param string $server3
+     * @param  string  $server3
      * @return $this
      */
     public function setServer3($server3)

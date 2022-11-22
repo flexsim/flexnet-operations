@@ -17,10 +17,10 @@ class FeatureStateChangeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierType  $featureIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType|array  $stateChangeRecord
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, $stateChangeRecord = null)
+    public function __construct(FeatureIdentifierType $featureIdentifier, $stateChangeRecord = null)
     {
         $this->featureIdentifier = $featureIdentifier;
         $this->stateChangeRecord = $stateChangeRecord;
@@ -29,10 +29,10 @@ class FeatureStateChangeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierType  $featureIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType|array  $stateChangeRecord
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier, $stateChangeRecord = null)
+    public static function create(FeatureIdentifierType $featureIdentifier, $stateChangeRecord = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FeatureStateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierType $featureIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierType  $featureIdentifier
      * @return $this
      */
     public function setFeatureIdentifier($featureIdentifier)
@@ -65,7 +65,7 @@ class FeatureStateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType  $stateChangeRecord
      * @return $this
      */
     public function setStateChangeRecord($stateChangeRecord)

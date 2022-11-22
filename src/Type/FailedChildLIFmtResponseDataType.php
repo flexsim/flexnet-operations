@@ -12,9 +12,9 @@ class FailedChildLIFmtResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType $failedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType  $failedFulfillment
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType $failedFulfillment)
+    public function __construct(FailedChildLIFulfillmentDataType $failedFulfillment)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
@@ -22,9 +22,9 @@ class FailedChildLIFmtResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType $failedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType  $failedFulfillment
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType $failedFulfillment)
+    public static function create(FailedChildLIFulfillmentDataType $failedFulfillment)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class FailedChildLIFmtResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType $failedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FailedChildLIFulfillmentDataType  $failedFulfillment
      * @return $this
      */
     public function setFailedFulfillment($failedFulfillment)

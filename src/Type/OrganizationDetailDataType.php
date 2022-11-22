@@ -47,16 +47,16 @@ class OrganizationDetailDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @param string $displayName
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @param bool $visible
-     * @param string $orgType
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @param \DateTimeInterface $dateLastModified
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
+     * @param  string  $displayName
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
+     * @param  bool  $visible
+     * @param  string  $orgType
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
+     * @param  \DateTimeInterface  $dateLastModified
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, string $displayName, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, bool $visible = null, string $orgType = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \DateTimeInterface $dateLastModified = null)
+    public function __construct(OrganizationIdentifierType $organization, string $displayName, string $description = null, AddressDataType $address = null, bool $visible = null, string $orgType = null, AttributeDescriptorDataType $customAttributes = null, \DateTimeInterface $dateLastModified = null)
     {
         $this->organization = $organization;
         $this->displayName = $displayName;
@@ -71,16 +71,16 @@ class OrganizationDetailDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
-     * @param string $displayName
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @param bool $visible
-     * @param string $orgType
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @param \DateTimeInterface $dateLastModified
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
+     * @param  string  $displayName
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
+     * @param  bool  $visible
+     * @param  string  $orgType
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
+     * @param  \DateTimeInterface  $dateLastModified
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization, string $displayName, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, bool $visible = null, string $orgType = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, \DateTimeInterface $dateLastModified = null)
+    public static function create(OrganizationIdentifierType $organization, string $displayName, string $description = null, AddressDataType $address = null, bool $visible = null, string $orgType = null, AttributeDescriptorDataType $customAttributes = null, \DateTimeInterface $dateLastModified = null)
     {
         return new self(...func_get_args());
     }
@@ -94,7 +94,7 @@ class OrganizationDetailDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $organization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $organization
      * @return $this
      */
     public function setOrganization($organization)
@@ -113,7 +113,7 @@ class OrganizationDetailDataType extends FlexnetType
     }
 
     /**
-     * @param string $displayName
+     * @param  string  $displayName
      * @return $this
      */
     public function setDisplayName($displayName)
@@ -132,7 +132,7 @@ class OrganizationDetailDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -151,7 +151,7 @@ class OrganizationDetailDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
      * @return $this
      */
     public function setAddress($address)
@@ -170,7 +170,7 @@ class OrganizationDetailDataType extends FlexnetType
     }
 
     /**
-     * @param bool $visible
+     * @param  bool  $visible
      * @return $this
      */
     public function setVisible($visible)
@@ -189,7 +189,7 @@ class OrganizationDetailDataType extends FlexnetType
     }
 
     /**
-     * @param string $orgType
+     * @param  string  $orgType
      * @return $this
      */
     public function setOrgType($orgType)
@@ -208,7 +208,7 @@ class OrganizationDetailDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)
@@ -227,7 +227,7 @@ class OrganizationDetailDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $dateLastModified
+     * @param  \DateTimeInterface  $dateLastModified
      * @return $this
      */
     public function setDateLastModified($dateLastModified)

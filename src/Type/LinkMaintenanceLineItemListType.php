@@ -12,7 +12,7 @@ class LinkMaintenanceLineItemListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType|array  $linkMaintenanceLineItem
      */
     public function __construct($linkMaintenanceLineItem)
     {
@@ -22,7 +22,7 @@ class LinkMaintenanceLineItemListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType|array  $linkMaintenanceLineItem
      */
     public static function create($linkMaintenanceLineItem)
     {
@@ -38,7 +38,7 @@ class LinkMaintenanceLineItemListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemDataType|array  $linkMaintenanceLineItem
      * @return $this
      */
     public function setLinkMaintenanceLineItem($linkMaintenanceLineItem)

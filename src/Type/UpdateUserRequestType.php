@@ -14,9 +14,9 @@ class UpdateUserRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserDataType $userData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserDataType  $userData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateUserDataType $userData)
+    public function __construct(UpdateUserDataType $userData)
     {
         $this->userData = $userData;
     }
@@ -24,9 +24,9 @@ class UpdateUserRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserDataType $userData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserDataType  $userData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateUserDataType $userData)
+    public static function create(UpdateUserDataType $userData)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class UpdateUserRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserDataType $userData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserDataType  $userData
      * @return $this
      */
     public function setUserData($userData)

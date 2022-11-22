@@ -17,10 +17,10 @@ class FailedDeleteUniformSuiteDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteIdentifierType  $suiteIdentifier
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier, string $reason = null)
+    public function __construct(SuiteIdentifierType $suiteIdentifier, string $reason = null)
     {
         $this->suiteIdentifier = $suiteIdentifier;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedDeleteUniformSuiteDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteIdentifierType  $suiteIdentifier
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier, string $reason = null)
+    public static function create(SuiteIdentifierType $suiteIdentifier, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedDeleteUniformSuiteDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteIdentifierType  $suiteIdentifier
      * @return $this
      */
     public function setSuiteIdentifier($suiteIdentifier)
@@ -65,7 +65,7 @@ class FailedDeleteUniformSuiteDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

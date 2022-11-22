@@ -12,7 +12,7 @@ class FailedSetLicenseOnholdFulfillmentListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array  $failedFmtData
      */
     public function __construct($failedFmtData)
     {
@@ -22,7 +22,7 @@ class FailedSetLicenseOnholdFulfillmentListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array  $failedFmtData
      */
     public static function create($failedFmtData)
     {
@@ -38,7 +38,7 @@ class FailedSetLicenseOnholdFulfillmentListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedSetLicenseOnholdFulfillmentDataType|array  $failedFmtData
      * @return $this
      */
     public function setFailedFmtData($failedFmtData)

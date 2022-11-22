@@ -14,9 +14,9 @@ class CreateChildLineItemFulfillmentRequestType extends FlexnetType implements R
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType  $fulfillment
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment)
+    public function __construct(CreateChildLineItemFulfillmentDataType $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -24,9 +24,9 @@ class CreateChildLineItemFulfillmentRequestType extends FlexnetType implements R
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType  $fulfillment
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment)
+    public static function create(CreateChildLineItemFulfillmentDataType $fulfillment)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class CreateChildLineItemFulfillmentRequestType extends FlexnetType implements R
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\CreateChildLineItemFulfillmentDataType  $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)

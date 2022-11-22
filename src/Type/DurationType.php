@@ -17,8 +17,8 @@ class DurationType extends FlexnetType
     /**
      * Constructor
      *
-     * @param int $numDuration
-     * @param string $durationUnit
+     * @param  int  $numDuration
+     * @param  string  $durationUnit
      */
     public function __construct(int $numDuration, string $durationUnit)
     {
@@ -29,8 +29,8 @@ class DurationType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param int $numDuration
-     * @param string $durationUnit
+     * @param  int  $numDuration
+     * @param  string  $durationUnit
      */
     public static function create(int $numDuration, string $durationUnit)
     {
@@ -46,7 +46,7 @@ class DurationType extends FlexnetType
     }
 
     /**
-     * @param int $numDuration
+     * @param  int  $numDuration
      * @return $this
      */
     public function setNumDuration($numDuration)
@@ -65,7 +65,7 @@ class DurationType extends FlexnetType
     }
 
     /**
-     * @param string $durationUnit
+     * @param  string  $durationUnit
      * @return $this
      */
     public function setDurationUnit($durationUnit)

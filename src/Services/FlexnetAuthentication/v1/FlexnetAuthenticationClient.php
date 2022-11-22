@@ -15,14 +15,15 @@ class FlexnetAuthenticationClient
      */
     private $caller;
 
-    public function __construct(\Phpro\SoapClient\Caller\Caller $caller)
+    public function __construct(Caller $caller)
     {
         $this->caller = $caller;
     }
 
     /**
-     * @param RequestInterface|Type\IdentityType $secureTokenRequest
+     * @param  RequestInterface|Type\IdentityType  $secureTokenRequest
      * @return ResultInterface|Type\TokenResponseType
+     *
      * @throws SoapException
      */
     public function getSecureToken(\Flexsim\FlexnetOperations\Type\IdentityType $secureTokenRequest): \Flexsim\FlexnetOperations\Type\TokenResponseType
@@ -31,8 +32,9 @@ class FlexnetAuthenticationClient
     }
 
     /**
-     * @param RequestInterface|Type\AuthenticateUserInputType $AuthenticateUserInput
+     * @param  RequestInterface|Type\AuthenticateUserInputType  $AuthenticateUserInput
      * @return ResultInterface|Type\AuthenticateUserReturnType
+     *
      * @throws SoapException
      */
     public function authenticateUser(\Flexsim\FlexnetOperations\Type\AuthenticateUserInputType $AuthenticateUserInput): \Flexsim\FlexnetOperations\Type\AuthenticateUserReturnType
@@ -41,8 +43,9 @@ class FlexnetAuthenticationClient
     }
 
     /**
-     * @param RequestInterface|Type\TokenType $validateTokenRequest
+     * @param  RequestInterface|Type\TokenType  $validateTokenRequest
      * @return ResultInterface|Type\StatusResponse
+     *
      * @throws SoapException
      */
     public function validateToken(\Flexsim\FlexnetOperations\Type\TokenType $validateTokenRequest): \Flexsim\FlexnetOperations\Type\StatusResponse

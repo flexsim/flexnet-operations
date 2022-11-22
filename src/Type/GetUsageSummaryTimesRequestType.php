@@ -19,8 +19,8 @@ class GetUsageSummaryTimesRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @param int $pageNumber
-     * @param int $batchSize
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
      */
     public function __construct(int $pageNumber, int $batchSize)
     {
@@ -31,8 +31,8 @@ class GetUsageSummaryTimesRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @param int $pageNumber
-     * @param int $batchSize
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
      */
     public static function create(int $pageNumber, int $batchSize)
     {
@@ -48,7 +48,7 @@ class GetUsageSummaryTimesRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)
@@ -67,7 +67,7 @@ class GetUsageSummaryTimesRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)

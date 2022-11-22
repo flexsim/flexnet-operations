@@ -27,12 +27,12 @@ class RepairShortCodeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $shortCode
-     * @param string $webRegKey
-     * @param \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
-     * @param bool $overridePolicy
+     * @param  string  $shortCode
+     * @param  string  $webRegKey
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType  $publisherAttributes
+     * @param  bool  $overridePolicy
      */
-    public function __construct(string $shortCode, string $webRegKey, \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null)
+    public function __construct(string $shortCode, string $webRegKey, PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null)
     {
         $this->shortCode = $shortCode;
         $this->webRegKey = $webRegKey;
@@ -43,12 +43,12 @@ class RepairShortCodeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $shortCode
-     * @param string $webRegKey
-     * @param \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
-     * @param bool $overridePolicy
+     * @param  string  $shortCode
+     * @param  string  $webRegKey
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType  $publisherAttributes
+     * @param  bool  $overridePolicy
      */
-    public static function create(string $shortCode, string $webRegKey, \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null)
+    public static function create(string $shortCode, string $webRegKey, PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class RepairShortCodeDataType extends FlexnetType
     }
 
     /**
-     * @param string $shortCode
+     * @param  string  $shortCode
      * @return $this
      */
     public function setShortCode($shortCode)
@@ -81,7 +81,7 @@ class RepairShortCodeDataType extends FlexnetType
     }
 
     /**
-     * @param string $webRegKey
+     * @param  string  $webRegKey
      * @return $this
      */
     public function setWebRegKey($webRegKey)
@@ -100,7 +100,7 @@ class RepairShortCodeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType $publisherAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherAttributesListDataType  $publisherAttributes
      * @return $this
      */
     public function setPublisherAttributes($publisherAttributes)
@@ -119,7 +119,7 @@ class RepairShortCodeDataType extends FlexnetType
     }
 
     /**
-     * @param bool $overridePolicy
+     * @param  bool  $overridePolicy
      * @return $this
      */
     public function setOverridePolicy($overridePolicy)

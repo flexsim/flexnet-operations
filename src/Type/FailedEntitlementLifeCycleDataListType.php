@@ -12,7 +12,7 @@ class FailedEntitlementLifeCycleDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedEntitlementLifeCycleDataType|array $failedEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\FailedEntitlementLifeCycleDataType|array  $failedEntitlement
      */
     public function __construct($failedEntitlement = null)
     {
@@ -22,7 +22,7 @@ class FailedEntitlementLifeCycleDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedEntitlementLifeCycleDataType|array $failedEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\FailedEntitlementLifeCycleDataType|array  $failedEntitlement
      */
     public static function create($failedEntitlement = null)
     {
@@ -38,7 +38,7 @@ class FailedEntitlementLifeCycleDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedEntitlementLifeCycleDataType|array $failedEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\FailedEntitlementLifeCycleDataType|array  $failedEntitlement
      * @return $this
      */
     public function setFailedEntitlement($failedEntitlement)

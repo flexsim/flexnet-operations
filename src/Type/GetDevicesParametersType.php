@@ -142,35 +142,35 @@ class GetDevicesParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $deviceIdType
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentId
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $parentIdType
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
-     * @param \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @param \Flexsim\FlexnetOperations\Type\DeviceStateQueryType $status
-     * @param \Flexsim\FlexnetOperations\Type\DeviceServedStateQueryType $servedStatus
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $preBuiltProductName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $preBuiltProductVersion
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnActivationId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductVersion
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureVersion
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $featureCount
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $featureOverage
-     * @param bool $isServer
-     * @param \Flexsim\FlexnetOperations\Type\DeviceTypeList $deviceTypes
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
-     * @param \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType $machineType
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $vmName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $userString
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $alias
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $deviceId
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType  $deviceIdType
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $parentId
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType  $parentIdType
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $soldTo
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $currentOwnerName
+     * @param  \Flexsim\FlexnetOperations\Type\PartnerTierQueryType  $organizationUnitName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceStateQueryType  $status
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceServedStateQueryType  $servedStatus
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $preBuiltProductName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $preBuiltProductVersion
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $addOnActivationId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $addOnProductName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $addOnProductVersion
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $featureName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $featureVersion
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $featureCount
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $featureOverage
+     * @param  bool  $isServer
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceTypeList  $deviceTypes
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType  $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType  $machineType
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $vmName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $userString
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $alias = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId = null, \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $deviceIdType = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentId = null, \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $parentIdType = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName = null, \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\DeviceStateQueryType $status = null, \Flexsim\FlexnetOperations\Type\DeviceServedStateQueryType $servedStatus = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $preBuiltProductName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $preBuiltProductVersion = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnActivationId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductVersion = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureVersion = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $featureCount = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $featureOverage = null, bool $isServer = null, \Flexsim\FlexnetOperations\Type\DeviceTypeList $deviceTypes = null, \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType $machineType = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $vmName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $userString = null)
+    public function __construct(SimpleQueryType $alias = null, SimpleQueryType $deviceId = null, DeviceIdTypeQueryType $deviceIdType = null, SimpleQueryType $parentId = null, DeviceIdTypeQueryType $parentIdType = null, SimpleQueryType $hostTypeName = null, SimpleQueryType $soldTo = null, SimpleQueryType $currentOwnerName = null, PartnerTierQueryType $organizationUnitName = null, SimpleQueryType $description = null, DeviceStateQueryType $status = null, DeviceServedStateQueryType $servedStatus = null, SimpleQueryType $preBuiltProductName = null, SimpleQueryType $preBuiltProductVersion = null, SimpleQueryType $addOnActivationId = null, SimpleQueryType $addOnProductName = null, SimpleQueryType $addOnProductVersion = null, SimpleQueryType $featureName = null, SimpleQueryType $featureVersion = null, NumberQueryType $featureCount = null, NumberQueryType $featureOverage = null, bool $isServer = null, DeviceTypeList $deviceTypes = null, CustomAttributesQueryListType $customAttributes = null, DeviceMachineTypeQueryType $machineType = null, SimpleQueryType $vmName = null, SimpleQueryType $userString = null)
     {
         $this->alias = $alias;
         $this->deviceId = $deviceId;
@@ -204,35 +204,35 @@ class GetDevicesParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $deviceIdType
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentId
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $parentIdType
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
-     * @param \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @param \Flexsim\FlexnetOperations\Type\DeviceStateQueryType $status
-     * @param \Flexsim\FlexnetOperations\Type\DeviceServedStateQueryType $servedStatus
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $preBuiltProductName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $preBuiltProductVersion
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnActivationId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductVersion
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureVersion
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $featureCount
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $featureOverage
-     * @param bool $isServer
-     * @param \Flexsim\FlexnetOperations\Type\DeviceTypeList $deviceTypes
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
-     * @param \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType $machineType
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $vmName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $userString
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $alias
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $deviceId
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType  $deviceIdType
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $parentId
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType  $parentIdType
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $soldTo
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $currentOwnerName
+     * @param  \Flexsim\FlexnetOperations\Type\PartnerTierQueryType  $organizationUnitName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceStateQueryType  $status
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceServedStateQueryType  $servedStatus
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $preBuiltProductName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $preBuiltProductVersion
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $addOnActivationId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $addOnProductName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $addOnProductVersion
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $featureName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $featureVersion
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $featureCount
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $featureOverage
+     * @param  bool  $isServer
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceTypeList  $deviceTypes
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType  $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType  $machineType
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $vmName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $userString
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $alias = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId = null, \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $deviceIdType = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentId = null, \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $parentIdType = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName = null, \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\DeviceStateQueryType $status = null, \Flexsim\FlexnetOperations\Type\DeviceServedStateQueryType $servedStatus = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $preBuiltProductName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $preBuiltProductVersion = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnActivationId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductVersion = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureVersion = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $featureCount = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $featureOverage = null, bool $isServer = null, \Flexsim\FlexnetOperations\Type\DeviceTypeList $deviceTypes = null, \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes = null, \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType $machineType = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $vmName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $userString = null)
+    public static function create(SimpleQueryType $alias = null, SimpleQueryType $deviceId = null, DeviceIdTypeQueryType $deviceIdType = null, SimpleQueryType $parentId = null, DeviceIdTypeQueryType $parentIdType = null, SimpleQueryType $hostTypeName = null, SimpleQueryType $soldTo = null, SimpleQueryType $currentOwnerName = null, PartnerTierQueryType $organizationUnitName = null, SimpleQueryType $description = null, DeviceStateQueryType $status = null, DeviceServedStateQueryType $servedStatus = null, SimpleQueryType $preBuiltProductName = null, SimpleQueryType $preBuiltProductVersion = null, SimpleQueryType $addOnActivationId = null, SimpleQueryType $addOnProductName = null, SimpleQueryType $addOnProductVersion = null, SimpleQueryType $featureName = null, SimpleQueryType $featureVersion = null, NumberQueryType $featureCount = null, NumberQueryType $featureOverage = null, bool $isServer = null, DeviceTypeList $deviceTypes = null, CustomAttributesQueryListType $customAttributes = null, DeviceMachineTypeQueryType $machineType = null, SimpleQueryType $vmName = null, SimpleQueryType $userString = null)
     {
         return new self(...func_get_args());
     }
@@ -246,7 +246,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $alias
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $alias
      * @return $this
      */
     public function setAlias($alias)
@@ -265,7 +265,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $deviceId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $deviceId
      * @return $this
      */
     public function setDeviceId($deviceId)
@@ -284,7 +284,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $deviceIdType
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType  $deviceIdType
      * @return $this
      */
     public function setDeviceIdType($deviceIdType)
@@ -303,7 +303,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $parentId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $parentId
      * @return $this
      */
     public function setParentId($parentId)
@@ -322,7 +322,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType $parentIdType
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdTypeQueryType  $parentIdType
      * @return $this
      */
     public function setParentIdType($parentIdType)
@@ -341,7 +341,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $hostTypeName
      * @return $this
      */
     public function setHostTypeName($hostTypeName)
@@ -360,7 +360,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $soldTo
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -379,7 +379,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $currentOwnerName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $currentOwnerName
      * @return $this
      */
     public function setCurrentOwnerName($currentOwnerName)
@@ -398,7 +398,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName
+     * @param  \Flexsim\FlexnetOperations\Type\PartnerTierQueryType  $organizationUnitName
      * @return $this
      */
     public function setOrganizationUnitName($organizationUnitName)
@@ -417,7 +417,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
      * @return $this
      */
     public function setDescription($description)
@@ -436,7 +436,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceStateQueryType $status
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceStateQueryType  $status
      * @return $this
      */
     public function setStatus($status)
@@ -455,7 +455,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceServedStateQueryType $servedStatus
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceServedStateQueryType  $servedStatus
      * @return $this
      */
     public function setServedStatus($servedStatus)
@@ -474,7 +474,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $preBuiltProductName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $preBuiltProductName
      * @return $this
      */
     public function setPreBuiltProductName($preBuiltProductName)
@@ -493,7 +493,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $preBuiltProductVersion
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $preBuiltProductVersion
      * @return $this
      */
     public function setPreBuiltProductVersion($preBuiltProductVersion)
@@ -512,7 +512,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnActivationId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $addOnActivationId
      * @return $this
      */
     public function setAddOnActivationId($addOnActivationId)
@@ -531,7 +531,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $addOnProductName
      * @return $this
      */
     public function setAddOnProductName($addOnProductName)
@@ -550,7 +550,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $addOnProductVersion
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $addOnProductVersion
      * @return $this
      */
     public function setAddOnProductVersion($addOnProductVersion)
@@ -569,7 +569,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $featureName
      * @return $this
      */
     public function setFeatureName($featureName)
@@ -588,7 +588,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $featureVersion
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $featureVersion
      * @return $this
      */
     public function setFeatureVersion($featureVersion)
@@ -607,7 +607,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $featureCount
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $featureCount
      * @return $this
      */
     public function setFeatureCount($featureCount)
@@ -626,7 +626,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $featureOverage
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $featureOverage
      * @return $this
      */
     public function setFeatureOverage($featureOverage)
@@ -645,7 +645,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param bool $isServer
+     * @param  bool  $isServer
      * @return $this
      */
     public function setIsServer($isServer)
@@ -664,7 +664,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceTypeList $deviceTypes
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceTypeList  $deviceTypes
      * @return $this
      */
     public function setDeviceTypes($deviceTypes)
@@ -683,7 +683,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\CustomAttributesQueryListType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)
@@ -702,7 +702,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType $machineType
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceMachineTypeQueryType  $machineType
      * @return $this
      */
     public function setMachineType($machineType)
@@ -721,7 +721,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $vmName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $vmName
      * @return $this
      */
     public function setVmName($vmName)
@@ -740,7 +740,7 @@ class GetDevicesParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $userString
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $userString
      * @return $this
      */
     public function setUserString($userString)

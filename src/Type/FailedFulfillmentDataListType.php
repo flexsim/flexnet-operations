@@ -12,7 +12,7 @@ class FailedFulfillmentDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataType|array $failedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataType|array  $failedFulfillment
      */
     public function __construct($failedFulfillment = null)
     {
@@ -22,7 +22,7 @@ class FailedFulfillmentDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataType|array $failedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataType|array  $failedFulfillment
      */
     public static function create($failedFulfillment = null)
     {
@@ -38,7 +38,7 @@ class FailedFulfillmentDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataType|array $failedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FailedFulfillmentDataType|array  $failedFulfillment
      * @return $this
      */
     public function setFailedFulfillment($failedFulfillment)

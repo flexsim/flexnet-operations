@@ -12,9 +12,9 @@ class DictionaryType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry $entry
+     * @param  \Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry  $entry
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry $entry)
+    public function __construct(ManageDeviceServiceDictionaryEntry $entry)
     {
         $this->entry = $entry;
     }
@@ -22,9 +22,9 @@ class DictionaryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry $entry
+     * @param  \Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry  $entry
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry $entry)
+    public static function create(ManageDeviceServiceDictionaryEntry $entry)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class DictionaryType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry $entry
+     * @param  \Flexsim\FlexnetOperations\Type\ManageDeviceServiceDictionaryEntry  $entry
      * @return $this
      */
     public function setEntry($entry)

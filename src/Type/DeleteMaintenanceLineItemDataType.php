@@ -12,9 +12,9 @@ class DeleteMaintenanceLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $maintenanceLineItemIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
+    public function __construct(EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
     {
         $this->maintenanceLineItemIdentifier = $maintenanceLineItemIdentifier;
     }
@@ -22,9 +22,9 @@ class DeleteMaintenanceLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $maintenanceLineItemIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
+    public static function create(EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class DeleteMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $maintenanceLineItemIdentifier
      * @return $this
      */
     public function setMaintenanceLineItemIdentifier($maintenanceLineItemIdentifier)

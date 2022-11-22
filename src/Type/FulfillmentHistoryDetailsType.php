@@ -12,9 +12,9 @@ class FulfillmentHistoryDetailsType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array<\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType> $record
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array<\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType>  $record
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array $record)
+    public function __construct(FulfillmentHistoryRecordType|array $record)
     {
         $this->record = $record;
     }
@@ -22,9 +22,9 @@ class FulfillmentHistoryDetailsType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array<\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType> $record
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array<\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType>  $record
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array $record)
+    public static function create(FulfillmentHistoryRecordType|array $record)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class FulfillmentHistoryDetailsType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array<\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType> $record
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType|array<\Flexsim\FlexnetOperations\Type\FulfillmentHistoryRecordType>  $record
      * @return $this
      */
     public function setRecord($record)

@@ -12,9 +12,9 @@ class DictionaryEntriesCollection extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry  $Entry
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry)
+    public function __construct(LicenseServiceDictionaryEntry $Entry)
     {
         $this->Entry = $Entry;
     }
@@ -22,9 +22,9 @@ class DictionaryEntriesCollection extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry  $Entry
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry)
+    public static function create(LicenseServiceDictionaryEntry $Entry)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class DictionaryEntriesCollection extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry $Entry
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseServiceDictionaryEntry  $Entry
      * @return $this
      */
     public function setEntry($Entry)

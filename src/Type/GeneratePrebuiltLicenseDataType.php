@@ -47,16 +47,16 @@ class GeneratePrebuiltLicenseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param \DateTimeInterface $startDate
-     * @param bool $isPermanent
-     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @param \DateTimeInterface $expirationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $product
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  \DateTimeInterface  $startDate
+     * @param  bool  $isPermanent
+     * @param  \Flexsim\FlexnetOperations\Type\DurationType  $term
+     * @param  \DateTimeInterface  $expirationDate
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, \DateTimeInterface $startDate = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null)
+    public function __construct(DeviceIdentifier $deviceIdentifier, ProductIdentifierType $product = null, LicenseModelIdentifierType $licenseModel = null, AttributeDescriptorDataType $licenseModelAttributes = null, \DateTimeInterface $startDate = null, bool $isPermanent = null, DurationType $term = null, \DateTimeInterface $expirationDate = null)
     {
         $this->deviceIdentifier = $deviceIdentifier;
         $this->product = $product;
@@ -71,16 +71,16 @@ class GeneratePrebuiltLicenseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param \DateTimeInterface $startDate
-     * @param bool $isPermanent
-     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @param \DateTimeInterface $expirationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $product
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  \DateTimeInterface  $startDate
+     * @param  bool  $isPermanent
+     * @param  \Flexsim\FlexnetOperations\Type\DurationType  $term
+     * @param  \DateTimeInterface  $expirationDate
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null, \DateTimeInterface $startDate = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null)
+    public static function create(DeviceIdentifier $deviceIdentifier, ProductIdentifierType $product = null, LicenseModelIdentifierType $licenseModel = null, AttributeDescriptorDataType $licenseModelAttributes = null, \DateTimeInterface $startDate = null, bool $isPermanent = null, DurationType $term = null, \DateTimeInterface $expirationDate = null)
     {
         return new self(...func_get_args());
     }
@@ -94,7 +94,7 @@ class GeneratePrebuiltLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
      * @return $this
      */
     public function setDeviceIdentifier($deviceIdentifier)
@@ -113,7 +113,7 @@ class GeneratePrebuiltLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $product
      * @return $this
      */
     public function setProduct($product)
@@ -132,7 +132,7 @@ class GeneratePrebuiltLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModel
      * @return $this
      */
     public function setLicenseModel($licenseModel)
@@ -151,7 +151,7 @@ class GeneratePrebuiltLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
      * @return $this
      */
     public function setLicenseModelAttributes($licenseModelAttributes)
@@ -170,7 +170,7 @@ class GeneratePrebuiltLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $startDate
+     * @param  \DateTimeInterface  $startDate
      * @return $this
      */
     public function setStartDate($startDate)
@@ -189,7 +189,7 @@ class GeneratePrebuiltLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param bool $isPermanent
+     * @param  bool  $isPermanent
      * @return $this
      */
     public function setIsPermanent($isPermanent)
@@ -208,7 +208,7 @@ class GeneratePrebuiltLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
+     * @param  \Flexsim\FlexnetOperations\Type\DurationType  $term
      * @return $this
      */
     public function setTerm($term)
@@ -227,7 +227,7 @@ class GeneratePrebuiltLicenseDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $expirationDate
+     * @param  \DateTimeInterface  $expirationDate
      * @return $this
      */
     public function setExpirationDate($expirationDate)

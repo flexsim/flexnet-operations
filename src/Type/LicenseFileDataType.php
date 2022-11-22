@@ -27,10 +27,10 @@ class LicenseFileDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $licenseFileDefinitionName
-     * @param string $licenseText
-     * @param string $binaryLicense
-     * @param string $fileName
+     * @param  string  $licenseFileDefinitionName
+     * @param  string  $licenseText
+     * @param  string  $binaryLicense
+     * @param  string  $fileName
      */
     public function __construct(string $licenseFileDefinitionName, string $licenseText = null, string $binaryLicense = null, string $fileName = null)
     {
@@ -43,10 +43,10 @@ class LicenseFileDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $licenseFileDefinitionName
-     * @param string $licenseText
-     * @param string $binaryLicense
-     * @param string $fileName
+     * @param  string  $licenseFileDefinitionName
+     * @param  string  $licenseText
+     * @param  string  $binaryLicense
+     * @param  string  $fileName
      */
     public static function create(string $licenseFileDefinitionName, string $licenseText = null, string $binaryLicense = null, string $fileName = null)
     {
@@ -62,7 +62,7 @@ class LicenseFileDataType extends FlexnetType
     }
 
     /**
-     * @param string $licenseFileDefinitionName
+     * @param  string  $licenseFileDefinitionName
      * @return $this
      */
     public function setLicenseFileDefinitionName($licenseFileDefinitionName)
@@ -81,7 +81,7 @@ class LicenseFileDataType extends FlexnetType
     }
 
     /**
-     * @param string $licenseText
+     * @param  string  $licenseText
      * @return $this
      */
     public function setLicenseText($licenseText)
@@ -100,7 +100,7 @@ class LicenseFileDataType extends FlexnetType
     }
 
     /**
-     * @param string $binaryLicense
+     * @param  string  $binaryLicense
      * @return $this
      */
     public function setBinaryLicense($binaryLicense)
@@ -119,7 +119,7 @@ class LicenseFileDataType extends FlexnetType
     }
 
     /**
-     * @param string $fileName
+     * @param  string  $fileName
      * @return $this
      */
     public function setFileName($fileName)

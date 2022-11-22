@@ -14,9 +14,9 @@ class CreateMaintenanceRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType $maintenance
+     * @param  \Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType  $maintenance
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType $maintenance)
+    public function __construct(CreateMaintenanceDataType $maintenance)
     {
         $this->maintenance = $maintenance;
     }
@@ -24,9 +24,9 @@ class CreateMaintenanceRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType $maintenance
+     * @param  \Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType  $maintenance
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType $maintenance)
+    public static function create(CreateMaintenanceDataType $maintenance)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class CreateMaintenanceRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType $maintenance
+     * @param  \Flexsim\FlexnetOperations\Type\CreateMaintenanceDataType  $maintenance
      * @return $this
      */
     public function setMaintenance($maintenance)

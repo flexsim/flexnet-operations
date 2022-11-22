@@ -42,13 +42,13 @@ class FeatureDataDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $name
-     * @param string $version
-     * @param int $count
-     * @param int $overage
-     * @param \DateTimeInterface $expiration
-     * @param string $lineItemUniqueId
-     * @param string $lineItemActivationId
+     * @param  string  $name
+     * @param  string  $version
+     * @param  int  $count
+     * @param  int  $overage
+     * @param  \DateTimeInterface  $expiration
+     * @param  string  $lineItemUniqueId
+     * @param  string  $lineItemActivationId
      */
     public function __construct(string $name = null, string $version = null, int $count = null, int $overage = null, \DateTimeInterface $expiration = null, string $lineItemUniqueId = null, string $lineItemActivationId = null)
     {
@@ -64,13 +64,13 @@ class FeatureDataDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $name
-     * @param string $version
-     * @param int $count
-     * @param int $overage
-     * @param \DateTimeInterface $expiration
-     * @param string $lineItemUniqueId
-     * @param string $lineItemActivationId
+     * @param  string  $name
+     * @param  string  $version
+     * @param  int  $count
+     * @param  int  $overage
+     * @param  \DateTimeInterface  $expiration
+     * @param  string  $lineItemUniqueId
+     * @param  string  $lineItemActivationId
      */
     public static function create(string $name = null, string $version = null, int $count = null, int $overage = null, \DateTimeInterface $expiration = null, string $lineItemUniqueId = null, string $lineItemActivationId = null)
     {
@@ -86,7 +86,7 @@ class FeatureDataDataType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -105,7 +105,7 @@ class FeatureDataDataType extends FlexnetType
     }
 
     /**
-     * @param string $version
+     * @param  string  $version
      * @return $this
      */
     public function setVersion($version)
@@ -124,7 +124,7 @@ class FeatureDataDataType extends FlexnetType
     }
 
     /**
-     * @param int $count
+     * @param  int  $count
      * @return $this
      */
     public function setCount($count)
@@ -143,7 +143,7 @@ class FeatureDataDataType extends FlexnetType
     }
 
     /**
-     * @param int $overage
+     * @param  int  $overage
      * @return $this
      */
     public function setOverage($overage)
@@ -162,7 +162,7 @@ class FeatureDataDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $expiration
+     * @param  \DateTimeInterface  $expiration
      * @return $this
      */
     public function setExpiration($expiration)
@@ -181,7 +181,7 @@ class FeatureDataDataType extends FlexnetType
     }
 
     /**
-     * @param string $lineItemUniqueId
+     * @param  string  $lineItemUniqueId
      * @return $this
      */
     public function setLineItemUniqueId($lineItemUniqueId)
@@ -200,7 +200,7 @@ class FeatureDataDataType extends FlexnetType
     }
 
     /**
-     * @param string $lineItemActivationId
+     * @param  string  $lineItemActivationId
      * @return $this
      */
     public function setLineItemActivationId($lineItemActivationId)

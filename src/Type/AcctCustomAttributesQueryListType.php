@@ -12,7 +12,7 @@ class AcctCustomAttributesQueryListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AcctCustomAttributeQueryType|array $attribute
+     * @param  \Flexsim\FlexnetOperations\Type\AcctCustomAttributeQueryType|array  $attribute
      */
     public function __construct($attribute = null)
     {
@@ -22,7 +22,7 @@ class AcctCustomAttributesQueryListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AcctCustomAttributeQueryType|array $attribute
+     * @param  \Flexsim\FlexnetOperations\Type\AcctCustomAttributeQueryType|array  $attribute
      */
     public static function create($attribute = null)
     {
@@ -38,7 +38,7 @@ class AcctCustomAttributesQueryListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AcctCustomAttributeQueryType|array $attribute
+     * @param  \Flexsim\FlexnetOperations\Type\AcctCustomAttributeQueryType|array  $attribute
      * @return $this
      */
     public function setAttribute($attribute)

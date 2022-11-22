@@ -17,8 +17,8 @@ class UpdateChannelPartnerDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array $channelPartners
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array  $channelPartners
+     * @param  string  $opType
      */
     public function __construct($channelPartners, string $opType)
     {
@@ -29,8 +29,8 @@ class UpdateChannelPartnerDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array $channelPartners
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array  $channelPartners
+     * @param  string  $opType
      */
     public static function create($channelPartners, string $opType)
     {
@@ -46,7 +46,7 @@ class UpdateChannelPartnerDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array $channelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType|array  $channelPartners
      * @return $this
      */
     public function setChannelPartners($channelPartners)
@@ -65,7 +65,7 @@ class UpdateChannelPartnerDataListType extends FlexnetType
     }
 
     /**
-     * @param string $opType
+     * @param  string  $opType
      * @return $this
      */
     public function setOpType($opType)

@@ -14,9 +14,9 @@ class GetMatchingBulkEntsRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsListType $bulkEntList
+     * @param  \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsListType  $bulkEntList
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsListType $bulkEntList)
+    public function __construct(GetMatchingBulkEntsListType $bulkEntList)
     {
         $this->bulkEntList = $bulkEntList;
     }
@@ -24,9 +24,9 @@ class GetMatchingBulkEntsRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsListType $bulkEntList
+     * @param  \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsListType  $bulkEntList
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsListType $bulkEntList)
+    public static function create(GetMatchingBulkEntsListType $bulkEntList)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class GetMatchingBulkEntsRequestType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsListType $bulkEntList
+     * @param  \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsListType  $bulkEntList
      * @return $this
      */
     public function setBulkEntList($bulkEntList)

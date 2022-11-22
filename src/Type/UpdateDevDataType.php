@@ -67,20 +67,20 @@ class UpdateDevDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param string $deviceId
-     * @param \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds
-     * @param string $deviceIdType
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
-     * @param \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @param string $alias
-     * @param string $user
-     * @param string $siteName
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  string  $deviceId
+     * @param  \Flexsim\FlexnetOperations\Type\ServerIdsType  $serverIds
+     * @param  string  $deviceIdType
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeIdentifier  $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherIdentifier  $publisherIdName
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType  $updateChannelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
+     * @param  string  $alias
+     * @param  string  $user
+     * @param  string  $siteName
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $deviceId = null, \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds = null, string $deviceIdType = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null, string $siteName = null)
+    public function __construct(DeviceIdentifier $deviceIdentifier, string $deviceId = null, ServerIdsType $serverIds = null, string $deviceIdType = null, HostTypeIdentifier $hostTypeName = null, PublisherIdentifier $publisherIdName = null, string $description = null, UpdateChannelPartnerDataListType $updateChannelPartners = null, AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null, string $siteName = null)
     {
         $this->deviceIdentifier = $deviceIdentifier;
         $this->deviceId = $deviceId;
@@ -99,20 +99,20 @@ class UpdateDevDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param string $deviceId
-     * @param \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds
-     * @param string $deviceIdType
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
-     * @param \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
-     * @param string $alias
-     * @param string $user
-     * @param string $siteName
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  string  $deviceId
+     * @param  \Flexsim\FlexnetOperations\Type\ServerIdsType  $serverIds
+     * @param  string  $deviceIdType
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeIdentifier  $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherIdentifier  $publisherIdName
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType  $updateChannelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
+     * @param  string  $alias
+     * @param  string  $user
+     * @param  string  $siteName
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $deviceId = null, \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds = null, string $deviceIdType = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName = null, string $description = null, \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null, string $siteName = null)
+    public static function create(DeviceIdentifier $deviceIdentifier, string $deviceId = null, ServerIdsType $serverIds = null, string $deviceIdType = null, HostTypeIdentifier $hostTypeName = null, PublisherIdentifier $publisherIdName = null, string $description = null, UpdateChannelPartnerDataListType $updateChannelPartners = null, AttributeDescriptorDataType $customAttributes = null, string $alias = null, string $user = null, string $siteName = null)
     {
         return new self(...func_get_args());
     }
@@ -126,7 +126,7 @@ class UpdateDevDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
      * @return $this
      */
     public function setDeviceIdentifier($deviceIdentifier)
@@ -145,7 +145,7 @@ class UpdateDevDataType extends FlexnetType
     }
 
     /**
-     * @param string $deviceId
+     * @param  string  $deviceId
      * @return $this
      */
     public function setDeviceId($deviceId)
@@ -164,7 +164,7 @@ class UpdateDevDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ServerIdsType $serverIds
+     * @param  \Flexsim\FlexnetOperations\Type\ServerIdsType  $serverIds
      * @return $this
      */
     public function setServerIds($serverIds)
@@ -183,7 +183,7 @@ class UpdateDevDataType extends FlexnetType
     }
 
     /**
-     * @param string $deviceIdType
+     * @param  string  $deviceIdType
      * @return $this
      */
     public function setDeviceIdType($deviceIdType)
@@ -202,7 +202,7 @@ class UpdateDevDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeIdentifier  $hostTypeName
      * @return $this
      */
     public function setHostTypeName($hostTypeName)
@@ -221,7 +221,7 @@ class UpdateDevDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PublisherIdentifier $publisherIdName
+     * @param  \Flexsim\FlexnetOperations\Type\PublisherIdentifier  $publisherIdName
      * @return $this
      */
     public function setPublisherIdName($publisherIdName)
@@ -240,7 +240,7 @@ class UpdateDevDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -259,7 +259,7 @@ class UpdateDevDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType $updateChannelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateChannelPartnerDataListType  $updateChannelPartners
      * @return $this
      */
     public function setUpdateChannelPartners($updateChannelPartners)
@@ -278,7 +278,7 @@ class UpdateDevDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)
@@ -297,7 +297,7 @@ class UpdateDevDataType extends FlexnetType
     }
 
     /**
-     * @param string $alias
+     * @param  string  $alias
      * @return $this
      */
     public function setAlias($alias)
@@ -316,7 +316,7 @@ class UpdateDevDataType extends FlexnetType
     }
 
     /**
-     * @param string $user
+     * @param  string  $user
      * @return $this
      */
     public function setUser($user)
@@ -335,7 +335,7 @@ class UpdateDevDataType extends FlexnetType
     }
 
     /**
-     * @param string $siteName
+     * @param  string  $siteName
      * @return $this
      */
     public function setSiteName($siteName)

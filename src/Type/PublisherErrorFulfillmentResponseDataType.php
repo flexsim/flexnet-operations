@@ -17,10 +17,10 @@ class PublisherErrorFulfillmentResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param int $recordRefNo
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment
+     * @param  int  $recordRefNo
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentDataType  $fulfillment
      */
-    public function __construct(int $recordRefNo, \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment = null)
+    public function __construct(int $recordRefNo, FulfillmentDataType $fulfillment = null)
     {
         $this->recordRefNo = $recordRefNo;
         $this->fulfillment = $fulfillment;
@@ -29,10 +29,10 @@ class PublisherErrorFulfillmentResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param int $recordRefNo
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment
+     * @param  int  $recordRefNo
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentDataType  $fulfillment
      */
-    public static function create(int $recordRefNo, \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment = null)
+    public static function create(int $recordRefNo, FulfillmentDataType $fulfillment = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class PublisherErrorFulfillmentResponseDataType extends FlexnetType
     }
 
     /**
-     * @param int $recordRefNo
+     * @param  int  $recordRefNo
      * @return $this
      */
     public function setRecordRefNo($recordRefNo)
@@ -65,7 +65,7 @@ class PublisherErrorFulfillmentResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentDataType  $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)

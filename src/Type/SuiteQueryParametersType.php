@@ -62,19 +62,19 @@ class SuiteQueryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $suiteName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $version
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
-     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostType
-     * @param bool $usedOnDevice
-     * @param \Flexsim\FlexnetOperations\Type\SuiteCustomAttributesQueryListType $productAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $suiteName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $version
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\StateQueryType  $state
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $creationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $lastModifiedDate
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $hostType
+     * @param  bool  $usedOnDevice
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteCustomAttributesQueryListType  $productAttributes
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleQueryType $suiteName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $version = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null, \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostType = null, bool $usedOnDevice = null, \Flexsim\FlexnetOperations\Type\SuiteCustomAttributesQueryListType $productAttributes = null)
+    public function __construct(SimpleQueryType $suiteName = null, SimpleQueryType $version = null, SimpleQueryType $description = null, SimpleQueryType $partNumber = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null, SimpleQueryType $licenseTechnology = null, SimpleQueryType $hostType = null, bool $usedOnDevice = null, SuiteCustomAttributesQueryListType $productAttributes = null)
     {
         $this->suiteName = $suiteName;
         $this->version = $version;
@@ -92,19 +92,19 @@ class SuiteQueryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $suiteName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $version
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
-     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostType
-     * @param bool $usedOnDevice
-     * @param \Flexsim\FlexnetOperations\Type\SuiteCustomAttributesQueryListType $productAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $suiteName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $version
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\StateQueryType  $state
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $creationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $lastModifiedDate
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $hostType
+     * @param  bool  $usedOnDevice
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteCustomAttributesQueryListType  $productAttributes
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleQueryType $suiteName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $version = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $description = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber = null, \Flexsim\FlexnetOperations\Type\StateQueryType $state = null, \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate = null, \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostType = null, bool $usedOnDevice = null, \Flexsim\FlexnetOperations\Type\SuiteCustomAttributesQueryListType $productAttributes = null)
+    public static function create(SimpleQueryType $suiteName = null, SimpleQueryType $version = null, SimpleQueryType $description = null, SimpleQueryType $partNumber = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null, SimpleQueryType $licenseTechnology = null, SimpleQueryType $hostType = null, bool $usedOnDevice = null, SuiteCustomAttributesQueryListType $productAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -118,7 +118,7 @@ class SuiteQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $suiteName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $suiteName
      * @return $this
      */
     public function setSuiteName($suiteName)
@@ -137,7 +137,7 @@ class SuiteQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $version
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $version
      * @return $this
      */
     public function setVersion($version)
@@ -156,7 +156,7 @@ class SuiteQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $description
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $description
      * @return $this
      */
     public function setDescription($description)
@@ -175,7 +175,7 @@ class SuiteQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -194,7 +194,7 @@ class SuiteQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StateQueryType $state
+     * @param  \Flexsim\FlexnetOperations\Type\StateQueryType  $state
      * @return $this
      */
     public function setState($state)
@@ -213,7 +213,7 @@ class SuiteQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $creationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $creationDate
      * @return $this
      */
     public function setCreationDate($creationDate)
@@ -232,7 +232,7 @@ class SuiteQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateQueryType $lastModifiedDate
+     * @param  \Flexsim\FlexnetOperations\Type\DateQueryType  $lastModifiedDate
      * @return $this
      */
     public function setLastModifiedDate($lastModifiedDate)
@@ -251,7 +251,7 @@ class SuiteQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $licenseTechnology
      * @return $this
      */
     public function setLicenseTechnology($licenseTechnology)
@@ -270,7 +270,7 @@ class SuiteQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $hostType
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $hostType
      * @return $this
      */
     public function setHostType($hostType)
@@ -289,7 +289,7 @@ class SuiteQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param bool $usedOnDevice
+     * @param  bool  $usedOnDevice
      * @return $this
      */
     public function setUsedOnDevice($usedOnDevice)
@@ -308,7 +308,7 @@ class SuiteQueryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SuiteCustomAttributesQueryListType $productAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteCustomAttributesQueryListType  $productAttributes
      * @return $this
      */
     public function setProductAttributes($productAttributes)

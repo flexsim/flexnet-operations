@@ -17,8 +17,8 @@ class VersionFormatQueryType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $value
-     * @param string $searchType
+     * @param  string  $value
+     * @param  string  $searchType
      */
     public function __construct(string $value, string $searchType)
     {
@@ -29,8 +29,8 @@ class VersionFormatQueryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $value
-     * @param string $searchType
+     * @param  string  $value
+     * @param  string  $searchType
      */
     public static function create(string $value, string $searchType)
     {
@@ -46,7 +46,7 @@ class VersionFormatQueryType extends FlexnetType
     }
 
     /**
-     * @param string $value
+     * @param  string  $value
      * @return $this
      */
     public function setValue($value)
@@ -65,7 +65,7 @@ class VersionFormatQueryType extends FlexnetType
     }
 
     /**
-     * @param string $searchType
+     * @param  string  $searchType
      * @return $this
      */
     public function setSearchType($searchType)

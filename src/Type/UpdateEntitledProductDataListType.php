@@ -17,8 +17,8 @@ class UpdateEntitledProductDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProducts
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array  $entitledProducts
+     * @param  string  $opType
      */
     public function __construct($entitledProducts, string $opType)
     {
@@ -29,8 +29,8 @@ class UpdateEntitledProductDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProducts
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array  $entitledProducts
+     * @param  string  $opType
      */
     public static function create($entitledProducts, string $opType)
     {
@@ -46,7 +46,7 @@ class UpdateEntitledProductDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array $entitledProducts
+     * @param  \Flexsim\FlexnetOperations\Type\EntitledProductDataType|array  $entitledProducts
      * @return $this
      */
     public function setEntitledProducts($entitledProducts)
@@ -65,7 +65,7 @@ class UpdateEntitledProductDataListType extends FlexnetType
     }
 
     /**
-     * @param string $opType
+     * @param  string  $opType
      * @return $this
      */
     public function setOpType($opType)

@@ -97,26 +97,26 @@ class GetUsageSummaryParametersType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $activationUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $entitlementUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $usedCount
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $usedExceedsOrderedBy
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $usedExceedsProvisionedBy
-     * @param \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $soldToUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $orderableUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderableName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderableVersion
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverAlias
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $summaryTimeUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $summaryTime
-     * @param string $groupBy
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $activationUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $entitlementUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $usedCount
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $usedExceedsOrderedBy
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $usedExceedsProvisionedBy
+     * @param  \Flexsim\FlexnetOperations\Type\PartnerTierQueryType  $organizationUnitName
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $soldToUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $orderableUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orderableName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orderableVersion
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $serverUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $serverId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $serverAlias
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $summaryTimeUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $summaryTime
+     * @param  string  $groupBy
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ExternalIdQueryType $activationUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $entitlementUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $usedCount = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $usedExceedsOrderedBy = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $usedExceedsProvisionedBy = null, \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $soldToUniqueId = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $orderableUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderableName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderableVersion = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverAlias = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $summaryTimeUniqueId = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $summaryTime = null, string $groupBy = null)
+    public function __construct(ExternalIdQueryType $activationUniqueId = null, SimpleQueryType $activationId = null, ExternalIdQueryType $entitlementUniqueId = null, SimpleQueryType $entitlementId = null, NumberQueryType $usedCount = null, NumberQueryType $usedExceedsOrderedBy = null, NumberQueryType $usedExceedsProvisionedBy = null, PartnerTierQueryType $organizationUnitName = null, ExternalIdQueryType $soldToUniqueId = null, ExternalIdQueryType $orderableUniqueId = null, SimpleQueryType $orderableName = null, SimpleQueryType $orderableVersion = null, ExternalIdQueryType $serverUniqueId = null, SimpleQueryType $serverId = null, SimpleQueryType $serverAlias = null, ExternalIdQueryType $summaryTimeUniqueId = null, DateTimeQueryType $summaryTime = null, string $groupBy = null)
     {
         $this->activationUniqueId = $activationUniqueId;
         $this->activationId = $activationId;
@@ -141,26 +141,26 @@ class GetUsageSummaryParametersType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $activationUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $entitlementUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $usedCount
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $usedExceedsOrderedBy
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $usedExceedsProvisionedBy
-     * @param \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $soldToUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $orderableUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderableName
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderableVersion
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverAlias
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $summaryTimeUniqueId
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $summaryTime
-     * @param string $groupBy
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $activationUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $entitlementUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $usedCount
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $usedExceedsOrderedBy
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $usedExceedsProvisionedBy
+     * @param  \Flexsim\FlexnetOperations\Type\PartnerTierQueryType  $organizationUnitName
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $soldToUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $orderableUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orderableName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orderableVersion
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $serverUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $serverId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $serverAlias
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $summaryTimeUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $summaryTime
+     * @param  string  $groupBy
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ExternalIdQueryType $activationUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $entitlementUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $usedCount = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $usedExceedsOrderedBy = null, \Flexsim\FlexnetOperations\Type\NumberQueryType $usedExceedsProvisionedBy = null, \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $soldToUniqueId = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $orderableUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderableName = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderableVersion = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId = null, \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverAlias = null, \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $summaryTimeUniqueId = null, \Flexsim\FlexnetOperations\Type\DateTimeQueryType $summaryTime = null, string $groupBy = null)
+    public static function create(ExternalIdQueryType $activationUniqueId = null, SimpleQueryType $activationId = null, ExternalIdQueryType $entitlementUniqueId = null, SimpleQueryType $entitlementId = null, NumberQueryType $usedCount = null, NumberQueryType $usedExceedsOrderedBy = null, NumberQueryType $usedExceedsProvisionedBy = null, PartnerTierQueryType $organizationUnitName = null, ExternalIdQueryType $soldToUniqueId = null, ExternalIdQueryType $orderableUniqueId = null, SimpleQueryType $orderableName = null, SimpleQueryType $orderableVersion = null, ExternalIdQueryType $serverUniqueId = null, SimpleQueryType $serverId = null, SimpleQueryType $serverAlias = null, ExternalIdQueryType $summaryTimeUniqueId = null, DateTimeQueryType $summaryTime = null, string $groupBy = null)
     {
         return new self(...func_get_args());
     }
@@ -174,7 +174,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $activationUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $activationUniqueId
      * @return $this
      */
     public function setActivationUniqueId($activationUniqueId)
@@ -193,7 +193,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -212,7 +212,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $entitlementUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $entitlementUniqueId
      * @return $this
      */
     public function setEntitlementUniqueId($entitlementUniqueId)
@@ -231,7 +231,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)
@@ -250,7 +250,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $usedCount
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $usedCount
      * @return $this
      */
     public function setUsedCount($usedCount)
@@ -269,7 +269,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $usedExceedsOrderedBy
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $usedExceedsOrderedBy
      * @return $this
      */
     public function setUsedExceedsOrderedBy($usedExceedsOrderedBy)
@@ -288,7 +288,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\NumberQueryType $usedExceedsProvisionedBy
+     * @param  \Flexsim\FlexnetOperations\Type\NumberQueryType  $usedExceedsProvisionedBy
      * @return $this
      */
     public function setUsedExceedsProvisionedBy($usedExceedsProvisionedBy)
@@ -307,7 +307,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartnerTierQueryType $organizationUnitName
+     * @param  \Flexsim\FlexnetOperations\Type\PartnerTierQueryType  $organizationUnitName
      * @return $this
      */
     public function setOrganizationUnitName($organizationUnitName)
@@ -326,7 +326,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $soldToUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $soldToUniqueId
      * @return $this
      */
     public function setSoldToUniqueId($soldToUniqueId)
@@ -345,7 +345,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $orderableUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $orderableUniqueId
      * @return $this
      */
     public function setOrderableUniqueId($orderableUniqueId)
@@ -364,7 +364,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderableName
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orderableName
      * @return $this
      */
     public function setOrderableName($orderableName)
@@ -383,7 +383,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $orderableVersion
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $orderableVersion
      * @return $this
      */
     public function setOrderableVersion($orderableVersion)
@@ -402,7 +402,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $serverUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $serverUniqueId
      * @return $this
      */
     public function setServerUniqueId($serverUniqueId)
@@ -421,7 +421,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverId
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $serverId
      * @return $this
      */
     public function setServerId($serverId)
@@ -440,7 +440,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleQueryType $serverAlias
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleQueryType  $serverAlias
      * @return $this
      */
     public function setServerAlias($serverAlias)
@@ -459,7 +459,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ExternalIdQueryType $summaryTimeUniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\ExternalIdQueryType  $summaryTimeUniqueId
      * @return $this
      */
     public function setSummaryTimeUniqueId($summaryTimeUniqueId)
@@ -478,7 +478,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DateTimeQueryType $summaryTime
+     * @param  \Flexsim\FlexnetOperations\Type\DateTimeQueryType  $summaryTime
      * @return $this
      */
     public function setSummaryTime($summaryTime)
@@ -497,7 +497,7 @@ class GetUsageSummaryParametersType extends FlexnetType
     }
 
     /**
-     * @param string $groupBy
+     * @param  string  $groupBy
      * @return $this
      */
     public function setGroupBy($groupBy)

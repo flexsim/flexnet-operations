@@ -17,8 +17,8 @@ class SimpleAttributeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $attributeName
-     * @param string $attributeValue
+     * @param  string  $attributeName
+     * @param  string  $attributeValue
      */
     public function __construct(string $attributeName, string $attributeValue)
     {
@@ -29,8 +29,8 @@ class SimpleAttributeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $attributeName
-     * @param string $attributeValue
+     * @param  string  $attributeName
+     * @param  string  $attributeValue
      */
     public static function create(string $attributeName, string $attributeValue)
     {
@@ -46,7 +46,7 @@ class SimpleAttributeDataType extends FlexnetType
     }
 
     /**
-     * @param string $attributeName
+     * @param  string  $attributeName
      * @return $this
      */
     public function setAttributeName($attributeName)
@@ -65,7 +65,7 @@ class SimpleAttributeDataType extends FlexnetType
     }
 
     /**
-     * @param string $attributeValue
+     * @param  string  $attributeValue
      * @return $this
      */
     public function setAttributeValue($attributeValue)

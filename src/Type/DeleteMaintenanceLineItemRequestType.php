@@ -14,9 +14,9 @@ class DeleteMaintenanceLineItemRequestType extends FlexnetType implements Reques
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType $maintenanceLineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType  $maintenanceLineItemData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType $maintenanceLineItemData)
+    public function __construct(DeleteMaintenanceLineItemDataType $maintenanceLineItemData)
     {
         $this->maintenanceLineItemData = $maintenanceLineItemData;
     }
@@ -24,9 +24,9 @@ class DeleteMaintenanceLineItemRequestType extends FlexnetType implements Reques
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType $maintenanceLineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType  $maintenanceLineItemData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType $maintenanceLineItemData)
+    public static function create(DeleteMaintenanceLineItemDataType $maintenanceLineItemData)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class DeleteMaintenanceLineItemRequestType extends FlexnetType implements Reques
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType $maintenanceLineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType  $maintenanceLineItemData
      * @return $this
      */
     public function setMaintenanceLineItemData($maintenanceLineItemData)

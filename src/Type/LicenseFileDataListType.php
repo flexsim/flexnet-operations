@@ -12,7 +12,7 @@ class LicenseFileDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array $licenseFile
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array  $licenseFile
      */
     public function __construct($licenseFile = null)
     {
@@ -22,7 +22,7 @@ class LicenseFileDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array $licenseFile
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array  $licenseFile
      */
     public static function create($licenseFile = null)
     {
@@ -38,7 +38,7 @@ class LicenseFileDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array $licenseFile
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataType|array  $licenseFile
      * @return $this
      */
     public function setLicenseFile($licenseFile)

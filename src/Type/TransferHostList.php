@@ -12,9 +12,9 @@ class TransferHostList extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\TransferHostIdDataType  $hostIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier)
+    public function __construct(TransferHostIdDataType $hostIdentifier)
     {
         $this->hostIdentifier = $hostIdentifier;
     }
@@ -22,9 +22,9 @@ class TransferHostList extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\TransferHostIdDataType  $hostIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier)
+    public static function create(TransferHostIdDataType $hostIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class TransferHostList extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TransferHostIdDataType $hostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\TransferHostIdDataType  $hostIdentifier
      * @return $this
      */
     public function setHostIdentifier($hostIdentifier)

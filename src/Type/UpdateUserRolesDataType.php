@@ -22,10 +22,10 @@ class UpdateUserRolesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserAccountRolesDataType|\Flexsim\FlexnetOperations\Type\UpdateUserRolesOrganizationDataType $accountRoles this method is backwards compatible so you may also pass $orgRoles
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType  $user
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserAccountRolesDataType|\Flexsim\FlexnetOperations\Type\UpdateUserRolesOrganizationDataType  $accountRoles this method is backwards compatible so you may also pass $orgRoles
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UserIdentifierType $user, $accountRoles)
+    public function __construct(UserIdentifierType $user, $accountRoles)
     {
         $this->user = $user;
         $this->accountRoles = $accountRoles;
@@ -35,10 +35,10 @@ class UpdateUserRolesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserAccountRolesDataType|\Flexsim\FlexnetOperations\Type\UpdateUserRolesOrganizationDataType $accountRoles this method is backwards compatible so you may also pass $orgRoles
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType  $user
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserAccountRolesDataType|\Flexsim\FlexnetOperations\Type\UpdateUserRolesOrganizationDataType  $accountRoles this method is backwards compatible so you may also pass $orgRoles
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UserIdentifierType $user, $accountRoles)
+    public static function create(UserIdentifierType $user, $accountRoles)
     {
         return new self(...func_get_args());
     }
@@ -52,7 +52,7 @@ class UpdateUserRolesDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UserIdentifierType $user
+     * @param  \Flexsim\FlexnetOperations\Type\UserIdentifierType  $user
      * @return $this
      */
     public function setUser($user)
@@ -71,7 +71,7 @@ class UpdateUserRolesDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserAccountRolesDataType $accountRoles
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserAccountRolesDataType  $accountRoles
      * @return $this
      */
     public function setAccountRoles($accountRoles)
@@ -90,7 +90,7 @@ class UpdateUserRolesDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateUserRolesOrganizationDataType $orgRoles
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateUserRolesOrganizationDataType  $orgRoles
      * @return $this
      */
     public function setOrgRoles($orgRoles)

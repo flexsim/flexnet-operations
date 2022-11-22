@@ -22,11 +22,11 @@ class CapabilityResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param string $addonLicense
-     * @param bool $bufferLicense
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  string  $addonLicense
+     * @param  bool  $bufferLicense
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $addonLicense, bool $bufferLicense = null)
+    public function __construct(DeviceIdentifier $deviceIdentifier, string $addonLicense, bool $bufferLicense = null)
     {
         $this->deviceIdentifier = $deviceIdentifier;
         $this->addonLicense = $addonLicense;
@@ -36,11 +36,11 @@ class CapabilityResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param string $addonLicense
-     * @param bool $bufferLicense
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  string  $addonLicense
+     * @param  bool  $bufferLicense
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, string $addonLicense, bool $bufferLicense = null)
+    public static function create(DeviceIdentifier $deviceIdentifier, string $addonLicense, bool $bufferLicense = null)
     {
         return new self(...func_get_args());
     }
@@ -54,7 +54,7 @@ class CapabilityResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
      * @return $this
      */
     public function setDeviceIdentifier($deviceIdentifier)
@@ -73,7 +73,7 @@ class CapabilityResponseDataType extends FlexnetType
     }
 
     /**
-     * @param string $addonLicense
+     * @param  string  $addonLicense
      * @return $this
      */
     public function setAddonLicense($addonLicense)
@@ -92,7 +92,7 @@ class CapabilityResponseDataType extends FlexnetType
     }
 
     /**
-     * @param bool $bufferLicense
+     * @param  bool  $bufferLicense
      * @return $this
      */
     public function setBufferLicense($bufferLicense)

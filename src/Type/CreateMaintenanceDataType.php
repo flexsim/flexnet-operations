@@ -42,15 +42,15 @@ class CreateMaintenanceDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $maintenanceName
-     * @param string $version
-     * @param string $description
-     * @param bool $allowUpgrades
-     * @param bool $allowUpsells
-     * @param bool $allowRenewals
-     * @param \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers
+     * @param  string  $maintenanceName
+     * @param  string  $version
+     * @param  string  $description
+     * @param  bool  $allowUpgrades
+     * @param  bool  $allowUpsells
+     * @param  bool  $allowRenewals
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType  $partNumbers
      */
-    public function __construct(string $maintenanceName, string $version = null, string $description = null, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers = null)
+    public function __construct(string $maintenanceName, string $version = null, string $description = null, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, PartNumbersSimpleListType $partNumbers = null)
     {
         $this->maintenanceName = $maintenanceName;
         $this->version = $version;
@@ -64,15 +64,15 @@ class CreateMaintenanceDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $maintenanceName
-     * @param string $version
-     * @param string $description
-     * @param bool $allowUpgrades
-     * @param bool $allowUpsells
-     * @param bool $allowRenewals
-     * @param \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers
+     * @param  string  $maintenanceName
+     * @param  string  $version
+     * @param  string  $description
+     * @param  bool  $allowUpgrades
+     * @param  bool  $allowUpsells
+     * @param  bool  $allowRenewals
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType  $partNumbers
      */
-    public static function create(string $maintenanceName, string $version = null, string $description = null, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers = null)
+    public static function create(string $maintenanceName, string $version = null, string $description = null, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, PartNumbersSimpleListType $partNumbers = null)
     {
         return new self(...func_get_args());
     }
@@ -86,7 +86,7 @@ class CreateMaintenanceDataType extends FlexnetType
     }
 
     /**
-     * @param string $maintenanceName
+     * @param  string  $maintenanceName
      * @return $this
      */
     public function setMaintenanceName($maintenanceName)
@@ -105,7 +105,7 @@ class CreateMaintenanceDataType extends FlexnetType
     }
 
     /**
-     * @param string $version
+     * @param  string  $version
      * @return $this
      */
     public function setVersion($version)
@@ -124,7 +124,7 @@ class CreateMaintenanceDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -143,7 +143,7 @@ class CreateMaintenanceDataType extends FlexnetType
     }
 
     /**
-     * @param bool $allowUpgrades
+     * @param  bool  $allowUpgrades
      * @return $this
      */
     public function setAllowUpgrades($allowUpgrades)
@@ -162,7 +162,7 @@ class CreateMaintenanceDataType extends FlexnetType
     }
 
     /**
-     * @param bool $allowUpsells
+     * @param  bool  $allowUpsells
      * @return $this
      */
     public function setAllowUpsells($allowUpsells)
@@ -181,7 +181,7 @@ class CreateMaintenanceDataType extends FlexnetType
     }
 
     /**
-     * @param bool $allowRenewals
+     * @param  bool  $allowRenewals
      * @return $this
      */
     public function setAllowRenewals($allowRenewals)
@@ -200,7 +200,7 @@ class CreateMaintenanceDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType $partNumbers
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumbersSimpleListType  $partNumbers
      * @return $this
      */
     public function setPartNumbers($partNumbers)

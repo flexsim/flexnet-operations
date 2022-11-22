@@ -27,12 +27,12 @@ class ProductCategoryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $uniqueId
-     * @param string $name
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType $categoryAttributes
+     * @param  string  $uniqueId
+     * @param  string  $name
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType  $categoryAttributes
      */
-    public function __construct(string $uniqueId = null, string $name = null, string $description = null, \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType $categoryAttributes = null)
+    public function __construct(string $uniqueId = null, string $name = null, string $description = null, CategoryAttributesDataType $categoryAttributes = null)
     {
         $this->uniqueId = $uniqueId;
         $this->name = $name;
@@ -43,12 +43,12 @@ class ProductCategoryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
-     * @param string $name
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType $categoryAttributes
+     * @param  string  $uniqueId
+     * @param  string  $name
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType  $categoryAttributes
      */
-    public static function create(string $uniqueId = null, string $name = null, string $description = null, \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType $categoryAttributes = null)
+    public static function create(string $uniqueId = null, string $name = null, string $description = null, CategoryAttributesDataType $categoryAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class ProductCategoryDataType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -81,7 +81,7 @@ class ProductCategoryDataType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -100,7 +100,7 @@ class ProductCategoryDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -119,7 +119,7 @@ class ProductCategoryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType $categoryAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\CategoryAttributesDataType  $categoryAttributes
      * @return $this
      */
     public function setCategoryAttributes($categoryAttributes)

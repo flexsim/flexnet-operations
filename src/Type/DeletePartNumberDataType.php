@@ -12,9 +12,9 @@ class DeletePartNumberDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumberIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType  $partNumberIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumberIdentifier)
+    public function __construct(PartNumberIdentifierType $partNumberIdentifier)
     {
         $this->partNumberIdentifier = $partNumberIdentifier;
     }
@@ -22,9 +22,9 @@ class DeletePartNumberDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumberIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType  $partNumberIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumberIdentifier)
+    public static function create(PartNumberIdentifierType $partNumberIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class DeletePartNumberDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumberIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType  $partNumberIdentifier
      * @return $this
      */
     public function setPartNumberIdentifier($partNumberIdentifier)

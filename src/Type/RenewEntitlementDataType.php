@@ -17,10 +17,10 @@ class RenewEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\RenewLineItemDataType  $renewLineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null)
+    public function __construct(RenewLineItemDataType $renewLineItemData, EntitlementIdentifierType $parentEntitlementIdentifier = null)
     {
         $this->renewLineItemData = $renewLineItemData;
         $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
@@ -29,10 +29,10 @@ class RenewEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\RenewLineItemDataType  $renewLineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData, \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null)
+    public static function create(RenewLineItemDataType $renewLineItemData, EntitlementIdentifierType $parentEntitlementIdentifier = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class RenewEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $parentEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      * @return $this
      */
     public function setParentEntitlementIdentifier($parentEntitlementIdentifier)
@@ -65,7 +65,7 @@ class RenewEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\RenewLineItemDataType $renewLineItemData
+     * @param  \Flexsim\FlexnetOperations\Type\RenewLineItemDataType  $renewLineItemData
      * @return $this
      */
     public function setRenewLineItemData($renewLineItemData)

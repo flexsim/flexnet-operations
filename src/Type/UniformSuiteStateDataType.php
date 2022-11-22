@@ -17,10 +17,10 @@ class UniformSuiteStateDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
-     * @param string $stateToSet
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteIdentifierType  $suiteIdentifier
+     * @param  string  $stateToSet
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier, string $stateToSet)
+    public function __construct(SuiteIdentifierType $suiteIdentifier, string $stateToSet)
     {
         $this->suiteIdentifier = $suiteIdentifier;
         $this->stateToSet = $stateToSet;
@@ -29,10 +29,10 @@ class UniformSuiteStateDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
-     * @param string $stateToSet
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteIdentifierType  $suiteIdentifier
+     * @param  string  $stateToSet
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier, string $stateToSet)
+    public static function create(SuiteIdentifierType $suiteIdentifier, string $stateToSet)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class UniformSuiteStateDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteIdentifierType  $suiteIdentifier
      * @return $this
      */
     public function setSuiteIdentifier($suiteIdentifier)
@@ -65,7 +65,7 @@ class UniformSuiteStateDataType extends FlexnetType
     }
 
     /**
-     * @param string $stateToSet
+     * @param  string  $stateToSet
      * @return $this
      */
     public function setStateToSet($stateToSet)

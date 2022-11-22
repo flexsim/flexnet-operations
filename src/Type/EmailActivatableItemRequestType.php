@@ -34,13 +34,13 @@ class EmailActivatableItemRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @param string $activationId
-     * @param bool $ignoreExistingEmailList
-     * @param bool $validateEmailAddresses
-     * @param \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
-     * @param string $locale
+     * @param  string  $activationId
+     * @param  bool  $ignoreExistingEmailList
+     * @param  bool  $validateEmailAddresses
+     * @param  \Flexsim\FlexnetOperations\Type\EmailContactListType  $emailIdList
+     * @param  string  $locale
      */
-    public function __construct(string $activationId, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList = null, string $locale = null)
+    public function __construct(string $activationId, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, string $locale = null)
     {
         $this->activationId = $activationId;
         $this->ignoreExistingEmailList = $ignoreExistingEmailList;
@@ -52,13 +52,13 @@ class EmailActivatableItemRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @param string $activationId
-     * @param bool $ignoreExistingEmailList
-     * @param bool $validateEmailAddresses
-     * @param \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
-     * @param string $locale
+     * @param  string  $activationId
+     * @param  bool  $ignoreExistingEmailList
+     * @param  bool  $validateEmailAddresses
+     * @param  \Flexsim\FlexnetOperations\Type\EmailContactListType  $emailIdList
+     * @param  string  $locale
      */
-    public static function create(string $activationId, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList = null, string $locale = null)
+    public static function create(string $activationId, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, string $locale = null)
     {
         return new self(...func_get_args());
     }
@@ -72,7 +72,7 @@ class EmailActivatableItemRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -91,7 +91,7 @@ class EmailActivatableItemRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param bool $ignoreExistingEmailList
+     * @param  bool  $ignoreExistingEmailList
      * @return $this
      */
     public function setIgnoreExistingEmailList($ignoreExistingEmailList)
@@ -110,7 +110,7 @@ class EmailActivatableItemRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param bool $validateEmailAddresses
+     * @param  bool  $validateEmailAddresses
      * @return $this
      */
     public function setValidateEmailAddresses($validateEmailAddresses)
@@ -129,7 +129,7 @@ class EmailActivatableItemRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
+     * @param  \Flexsim\FlexnetOperations\Type\EmailContactListType  $emailIdList
      * @return $this
      */
     public function setEmailIdList($emailIdList)
@@ -148,7 +148,7 @@ class EmailActivatableItemRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param string $locale
+     * @param  string  $locale
      * @return $this
      */
     public function setLocale($locale)

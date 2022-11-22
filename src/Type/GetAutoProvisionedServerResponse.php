@@ -19,10 +19,10 @@ class GetAutoProvisionedServerResponse extends FlexnetType implements ResultInte
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $cloudLicenseServer
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $cloudLicenseServer
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $cloudLicenseServer = null)
+    public function __construct(OpsEmbeddedStatusInfoType $statusInfo, DeviceIdentifier $cloudLicenseServer = null)
     {
         $this->statusInfo = $statusInfo;
         $this->cloudLicenseServer = $cloudLicenseServer;
@@ -31,10 +31,10 @@ class GetAutoProvisionedServerResponse extends FlexnetType implements ResultInte
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $cloudLicenseServer
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $cloudLicenseServer
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $cloudLicenseServer = null)
+    public static function create(OpsEmbeddedStatusInfoType $statusInfo, DeviceIdentifier $cloudLicenseServer = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetAutoProvisionedServerResponse extends FlexnetType implements ResultInte
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class GetAutoProvisionedServerResponse extends FlexnetType implements ResultInte
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $cloudLicenseServer
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $cloudLicenseServer
      * @return $this
      */
     public function setCloudLicenseServer($cloudLicenseServer)

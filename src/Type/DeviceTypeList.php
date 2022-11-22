@@ -12,7 +12,7 @@ class DeviceTypeList extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $deviceType
+     * @param  string  $deviceType
      */
     public function __construct(string $deviceType)
     {
@@ -22,7 +22,7 @@ class DeviceTypeList extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $deviceType
+     * @param  string  $deviceType
      */
     public static function create(string $deviceType)
     {
@@ -38,7 +38,7 @@ class DeviceTypeList extends FlexnetType
     }
 
     /**
-     * @param string $deviceType
+     * @param  string  $deviceType
      * @return $this
      */
     public function setDeviceType($deviceType)

@@ -22,9 +22,9 @@ class PackagePropertiesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $name
-     * @param string $versionFormat
-     * @param string $version
+     * @param  string  $name
+     * @param  string  $versionFormat
+     * @param  string  $version
      */
     public function __construct(string $name, string $versionFormat, string $version = null)
     {
@@ -36,9 +36,9 @@ class PackagePropertiesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $name
-     * @param string $versionFormat
-     * @param string $version
+     * @param  string  $name
+     * @param  string  $versionFormat
+     * @param  string  $version
      */
     public static function create(string $name, string $versionFormat, string $version = null)
     {
@@ -54,7 +54,7 @@ class PackagePropertiesDataType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -73,7 +73,7 @@ class PackagePropertiesDataType extends FlexnetType
     }
 
     /**
-     * @param string $version
+     * @param  string  $version
      * @return $this
      */
     public function setVersion($version)
@@ -92,7 +92,7 @@ class PackagePropertiesDataType extends FlexnetType
     }
 
     /**
-     * @param string $versionFormat
+     * @param  string  $versionFormat
      * @return $this
      */
     public function setVersionFormat($versionFormat)

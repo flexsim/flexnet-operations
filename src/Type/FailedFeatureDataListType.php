@@ -12,7 +12,7 @@ class FailedFeatureDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedFeatureDataType|array $failedFeature
+     * @param  \Flexsim\FlexnetOperations\Type\FailedFeatureDataType|array  $failedFeature
      */
     public function __construct($failedFeature = null)
     {
@@ -22,7 +22,7 @@ class FailedFeatureDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedFeatureDataType|array $failedFeature
+     * @param  \Flexsim\FlexnetOperations\Type\FailedFeatureDataType|array  $failedFeature
      */
     public static function create($failedFeature = null)
     {
@@ -38,7 +38,7 @@ class FailedFeatureDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedFeatureDataType|array $failedFeature
+     * @param  \Flexsim\FlexnetOperations\Type\FailedFeatureDataType|array  $failedFeature
      * @return $this
      */
     public function setFailedFeature($failedFeature)

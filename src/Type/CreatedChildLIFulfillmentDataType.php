@@ -17,10 +17,10 @@ class CreatedChildLIFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param int $recordRefNo
-     * @param \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType $fulfillmentInfo
+     * @param  int  $recordRefNo
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType  $fulfillmentInfo
      */
-    public function __construct(int $recordRefNo, \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType $fulfillmentInfo)
+    public function __construct(int $recordRefNo, CreatedChildLIFulfillmentInfoType $fulfillmentInfo)
     {
         $this->recordRefNo = $recordRefNo;
         $this->fulfillmentInfo = $fulfillmentInfo;
@@ -29,10 +29,10 @@ class CreatedChildLIFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param int $recordRefNo
-     * @param \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType $fulfillmentInfo
+     * @param  int  $recordRefNo
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType  $fulfillmentInfo
      */
-    public static function create(int $recordRefNo, \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType $fulfillmentInfo)
+    public static function create(int $recordRefNo, CreatedChildLIFulfillmentInfoType $fulfillmentInfo)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class CreatedChildLIFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param int $recordRefNo
+     * @param  int  $recordRefNo
      * @return $this
      */
     public function setRecordRefNo($recordRefNo)
@@ -65,7 +65,7 @@ class CreatedChildLIFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType $fulfillmentInfo
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedChildLIFulfillmentInfoType  $fulfillmentInfo
      * @return $this
      */
     public function setFulfillmentInfo($fulfillmentInfo)

@@ -12,7 +12,7 @@ class GetFeaturesQueryResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryDataType|array $feature
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureQueryDataType|array  $feature
      */
     public function __construct($feature = null)
     {
@@ -22,7 +22,7 @@ class GetFeaturesQueryResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryDataType|array $feature
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureQueryDataType|array  $feature
      */
     public static function create($feature = null)
     {
@@ -38,7 +38,7 @@ class GetFeaturesQueryResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureQueryDataType $feature
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureQueryDataType  $feature
      * @return $this
      */
     public function setFeature($feature)

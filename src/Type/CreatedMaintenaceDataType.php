@@ -17,8 +17,8 @@ class CreatedMaintenaceDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $recordRefNo
-     * @param string $uniqueId
+     * @param  string  $recordRefNo
+     * @param  string  $uniqueId
      */
     public function __construct(string $recordRefNo, string $uniqueId)
     {
@@ -29,8 +29,8 @@ class CreatedMaintenaceDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $recordRefNo
-     * @param string $uniqueId
+     * @param  string  $recordRefNo
+     * @param  string  $uniqueId
      */
     public static function create(string $recordRefNo, string $uniqueId)
     {
@@ -46,7 +46,7 @@ class CreatedMaintenaceDataType extends FlexnetType
     }
 
     /**
-     * @param string $recordRefNo
+     * @param  string  $recordRefNo
      * @return $this
      */
     public function setRecordRefNo($recordRefNo)
@@ -65,7 +65,7 @@ class CreatedMaintenaceDataType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)

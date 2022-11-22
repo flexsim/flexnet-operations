@@ -19,8 +19,8 @@ class GenerateCapabilityResponseRequestType extends FlexnetType implements Reque
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CapabilityRequestType|array $device
-     * @param string|array $request
+     * @param  \Flexsim\FlexnetOperations\Type\CapabilityRequestType|array  $device
+     * @param  string|array  $request
      */
     public function __construct($device = null, $request = null)
     {
@@ -31,8 +31,8 @@ class GenerateCapabilityResponseRequestType extends FlexnetType implements Reque
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CapabilityRequestType|array $device
-     * @param string|array $request
+     * @param  \Flexsim\FlexnetOperations\Type\CapabilityRequestType|array  $device
+     * @param  string|array  $request
      */
     public static function create($device = null, $request = null)
     {
@@ -48,7 +48,7 @@ class GenerateCapabilityResponseRequestType extends FlexnetType implements Reque
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CapabilityRequestType $device
+     * @param  \Flexsim\FlexnetOperations\Type\CapabilityRequestType  $device
      * @return $this
      */
     public function setDevice($device)
@@ -67,7 +67,7 @@ class GenerateCapabilityResponseRequestType extends FlexnetType implements Reque
     }
 
     /**
-     * @param string $request
+     * @param  string  $request
      * @return $this
      */
     public function setRequest($request)

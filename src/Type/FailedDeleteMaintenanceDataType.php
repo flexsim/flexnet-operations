@@ -17,10 +17,10 @@ class FailedDeleteMaintenanceDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType  $maintenanceIdentifier
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier, string $reason = null)
+    public function __construct(MaintenanceIdentifierType $maintenanceIdentifier, string $reason = null)
     {
         $this->maintenanceIdentifier = $maintenanceIdentifier;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedDeleteMaintenanceDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType  $maintenanceIdentifier
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier, string $reason = null)
+    public static function create(MaintenanceIdentifierType $maintenanceIdentifier, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedDeleteMaintenanceDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType $maintenanceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceIdentifierType  $maintenanceIdentifier
      * @return $this
      */
     public function setMaintenanceIdentifier($maintenanceIdentifier)
@@ -65,7 +65,7 @@ class FailedDeleteMaintenanceDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

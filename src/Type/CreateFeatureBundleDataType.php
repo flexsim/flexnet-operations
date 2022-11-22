@@ -22,11 +22,11 @@ class CreateFeatureBundleDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $name
-     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
-     * @param string $description
+     * @param  string  $name
+     * @param  \Flexsim\FlexnetOperations\Type\FeaturesListType  $features
+     * @param  string  $description
      */
-    public function __construct(string $name, \Flexsim\FlexnetOperations\Type\FeaturesListType $features, string $description = null)
+    public function __construct(string $name, FeaturesListType $features, string $description = null)
     {
         $this->name = $name;
         $this->features = $features;
@@ -36,11 +36,11 @@ class CreateFeatureBundleDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $name
-     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
-     * @param string $description
+     * @param  string  $name
+     * @param  \Flexsim\FlexnetOperations\Type\FeaturesListType  $features
+     * @param  string  $description
      */
-    public static function create(string $name, \Flexsim\FlexnetOperations\Type\FeaturesListType $features, string $description = null)
+    public static function create(string $name, FeaturesListType $features, string $description = null)
     {
         return new self(...func_get_args());
     }
@@ -54,7 +54,7 @@ class CreateFeatureBundleDataType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -73,7 +73,7 @@ class CreateFeatureBundleDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -92,7 +92,7 @@ class CreateFeatureBundleDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeaturesListType $features
+     * @param  \Flexsim\FlexnetOperations\Type\FeaturesListType  $features
      * @return $this
      */
     public function setFeatures($features)

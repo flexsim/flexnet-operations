@@ -17,10 +17,10 @@ class PolicyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param int $allowedCount
-     * @param \Flexsim\FlexnetOperations\Type\PolicyTermType $policyTerm
+     * @param  int  $allowedCount
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyTermType  $policyTerm
      */
-    public function __construct(int $allowedCount, \Flexsim\FlexnetOperations\Type\PolicyTermType $policyTerm)
+    public function __construct(int $allowedCount, PolicyTermType $policyTerm)
     {
         $this->allowedCount = $allowedCount;
         $this->policyTerm = $policyTerm;
@@ -29,10 +29,10 @@ class PolicyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param int $allowedCount
-     * @param \Flexsim\FlexnetOperations\Type\PolicyTermType $policyTerm
+     * @param  int  $allowedCount
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyTermType  $policyTerm
      */
-    public static function create(int $allowedCount, \Flexsim\FlexnetOperations\Type\PolicyTermType $policyTerm)
+    public static function create(int $allowedCount, PolicyTermType $policyTerm)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class PolicyDataType extends FlexnetType
     }
 
     /**
-     * @param int $allowedCount
+     * @param  int  $allowedCount
      * @return $this
      */
     public function setAllowedCount($allowedCount)
@@ -65,7 +65,7 @@ class PolicyDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PolicyTermType $policyTerm
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyTermType  $policyTerm
      * @return $this
      */
     public function setPolicyTerm($policyTerm)

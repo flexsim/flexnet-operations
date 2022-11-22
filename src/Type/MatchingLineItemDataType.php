@@ -12,9 +12,9 @@ class MatchingLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $matchingLineItemIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier)
+    public function __construct(EntitlementLineItemIdentifierType $matchingLineItemIdentifier)
     {
         $this->matchingLineItemIdentifier = $matchingLineItemIdentifier;
     }
@@ -22,9 +22,9 @@ class MatchingLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $matchingLineItemIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier)
+    public static function create(EntitlementLineItemIdentifierType $matchingLineItemIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class MatchingLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $matchingLineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $matchingLineItemIdentifier
      * @return $this
      */
     public function setMatchingLineItemIdentifier($matchingLineItemIdentifier)

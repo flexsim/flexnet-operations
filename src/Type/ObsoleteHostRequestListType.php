@@ -14,7 +14,7 @@ class ObsoleteHostRequestListType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array $host
+     * @param  \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array  $host
      */
     public function __construct($host)
     {
@@ -24,7 +24,7 @@ class ObsoleteHostRequestListType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array $host
+     * @param  \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array  $host
      */
     public static function create($host)
     {
@@ -40,7 +40,7 @@ class ObsoleteHostRequestListType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array $host
+     * @param  \Flexsim\FlexnetOperations\Type\ObsoleteHostType|array  $host
      * @return $this
      */
     public function setHost($host)

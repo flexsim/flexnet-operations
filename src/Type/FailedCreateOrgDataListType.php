@@ -12,7 +12,7 @@ class FailedCreateOrgDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedCreateOrgDataType|array $failedOrg
+     * @param  \Flexsim\FlexnetOperations\Type\FailedCreateOrgDataType|array  $failedOrg
      */
     public function __construct($failedOrg = null)
     {
@@ -22,7 +22,7 @@ class FailedCreateOrgDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedCreateOrgDataType|array $failedOrg
+     * @param  \Flexsim\FlexnetOperations\Type\FailedCreateOrgDataType|array  $failedOrg
      */
     public static function create($failedOrg = null)
     {
@@ -38,7 +38,7 @@ class FailedCreateOrgDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedCreateOrgDataType|array $failedOrg
+     * @param  \Flexsim\FlexnetOperations\Type\FailedCreateOrgDataType|array  $failedOrg
      * @return $this
      */
     public function setFailedOrg($failedOrg)

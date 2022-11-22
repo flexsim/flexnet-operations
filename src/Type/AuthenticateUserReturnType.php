@@ -14,7 +14,7 @@ class AuthenticateUserReturnType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param bool $Success
+     * @param  bool  $Success
      */
     public function __construct(bool $Success)
     {
@@ -24,7 +24,7 @@ class AuthenticateUserReturnType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param bool $Success
+     * @param  bool  $Success
      */
     public static function create(bool $Success)
     {
@@ -40,7 +40,7 @@ class AuthenticateUserReturnType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param bool $Success
+     * @param  bool  $Success
      * @return $this
      */
     public function setSuccess($Success)

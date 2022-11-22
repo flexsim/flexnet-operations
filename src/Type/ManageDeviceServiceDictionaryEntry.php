@@ -22,9 +22,9 @@ class ManageDeviceServiceDictionaryEntry extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $name
-     * @param string $stringValue
-     * @param int $numberValue
+     * @param  string  $name
+     * @param  string  $stringValue
+     * @param  int  $numberValue
      */
     public function __construct(string $name, string $stringValue = null, int $numberValue = null)
     {
@@ -36,9 +36,9 @@ class ManageDeviceServiceDictionaryEntry extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $name
-     * @param string $stringValue
-     * @param int $numberValue
+     * @param  string  $name
+     * @param  string  $stringValue
+     * @param  int  $numberValue
      */
     public static function create(string $name, string $stringValue = null, int $numberValue = null)
     {
@@ -54,7 +54,7 @@ class ManageDeviceServiceDictionaryEntry extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -73,7 +73,7 @@ class ManageDeviceServiceDictionaryEntry extends FlexnetType
     }
 
     /**
-     * @param string $stringValue
+     * @param  string  $stringValue
      * @return $this
      */
     public function setStringValue($stringValue)
@@ -92,7 +92,7 @@ class ManageDeviceServiceDictionaryEntry extends FlexnetType
     }
 
     /**
-     * @param int $numberValue
+     * @param  int  $numberValue
      * @return $this
      */
     public function setNumberValue($numberValue)

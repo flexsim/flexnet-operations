@@ -17,10 +17,10 @@ class FailedLinkAcctDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LinkAccountsDataType $acctData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\LinkAccountsDataType  $acctData
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LinkAccountsDataType $acctData = null, string $reason = null)
+    public function __construct(LinkAccountsDataType $acctData = null, string $reason = null)
     {
         $this->acctData = $acctData;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedLinkAcctDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LinkAccountsDataType $acctData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\LinkAccountsDataType  $acctData
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LinkAccountsDataType $acctData = null, string $reason = null)
+    public static function create(LinkAccountsDataType $acctData = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedLinkAcctDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LinkAccountsDataType $acctData
+     * @param  \Flexsim\FlexnetOperations\Type\LinkAccountsDataType  $acctData
      * @return $this
      */
     public function setAcctData($acctData)
@@ -65,7 +65,7 @@ class FailedLinkAcctDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

@@ -14,9 +14,9 @@ class UpdateFeatureRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateFeatureDataType $feature
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateFeatureDataType  $feature
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateFeatureDataType $feature)
+    public function __construct(UpdateFeatureDataType $feature)
     {
         $this->feature = $feature;
     }
@@ -24,9 +24,9 @@ class UpdateFeatureRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateFeatureDataType $feature
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateFeatureDataType  $feature
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateFeatureDataType $feature)
+    public static function create(UpdateFeatureDataType $feature)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class UpdateFeatureRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateFeatureDataType $feature
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateFeatureDataType  $feature
      * @return $this
      */
     public function setFeature($feature)

@@ -12,7 +12,7 @@ class ForceDeleteUserIdentifierType extends FlexnetType
     /**
      * Constructor
      *
-     * @param bool $forceDelete
+     * @param  bool  $forceDelete
      */
     public function __construct(bool $forceDelete = null)
     {
@@ -22,7 +22,7 @@ class ForceDeleteUserIdentifierType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param bool $forceDelete
+     * @param  bool  $forceDelete
      */
     public static function create(bool $forceDelete = null)
     {
@@ -38,7 +38,7 @@ class ForceDeleteUserIdentifierType extends FlexnetType
     }
 
     /**
-     * @param bool $forceDelete
+     * @param  bool  $forceDelete
      * @return $this
      */
     public function setForceDelete($forceDelete)

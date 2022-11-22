@@ -17,10 +17,10 @@ class ReinstallPolicyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $defaultPolicy
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType $advancedPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyDataType  $defaultPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType  $advancedPolicy
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\PolicyDataType $defaultPolicy = null, \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType $advancedPolicy = null)
+    public function __construct(PolicyDataType $defaultPolicy = null, AdvancedReinstallPolicyType $advancedPolicy = null)
     {
         $this->defaultPolicy = $defaultPolicy;
         $this->advancedPolicy = $advancedPolicy;
@@ -29,10 +29,10 @@ class ReinstallPolicyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $defaultPolicy
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType $advancedPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyDataType  $defaultPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType  $advancedPolicy
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\PolicyDataType $defaultPolicy = null, \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType $advancedPolicy = null)
+    public static function create(PolicyDataType $defaultPolicy = null, AdvancedReinstallPolicyType $advancedPolicy = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class ReinstallPolicyDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $defaultPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyDataType  $defaultPolicy
      * @return $this
      */
     public function setDefaultPolicy($defaultPolicy)
@@ -65,7 +65,7 @@ class ReinstallPolicyDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType $advancedPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\AdvancedReinstallPolicyType  $advancedPolicy
      * @return $this
      */
     public function setAdvancedPolicy($advancedPolicy)

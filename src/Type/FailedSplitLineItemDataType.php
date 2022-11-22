@@ -17,10 +17,10 @@ class FailedSplitLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType  $lineItemInfo
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo, string $reason)
+    public function __construct(SplitLineItemInfoType $lineItemInfo, string $reason)
     {
         $this->lineItemInfo = $lineItemInfo;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedSplitLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType  $lineItemInfo
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo, string $reason)
+    public static function create(SplitLineItemInfoType $lineItemInfo, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedSplitLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType $lineItemInfo
+     * @param  \Flexsim\FlexnetOperations\Type\SplitLineItemInfoType  $lineItemInfo
      * @return $this
      */
     public function setLineItemInfo($lineItemInfo)
@@ -65,7 +65,7 @@ class FailedSplitLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

@@ -17,10 +17,10 @@ class FailedDeleteMaintenanceLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType $failedData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType  $failedData
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType $failedData = null, string $reason = null)
+    public function __construct(DeleteMaintenanceLineItemDataType $failedData = null, string $reason = null)
     {
         $this->failedData = $failedData;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedDeleteMaintenanceLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType $failedData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType  $failedData
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType $failedData = null, string $reason = null)
+    public static function create(DeleteMaintenanceLineItemDataType $failedData = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedDeleteMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemDataType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -65,7 +65,7 @@ class FailedDeleteMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

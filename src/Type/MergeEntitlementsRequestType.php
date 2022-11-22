@@ -39,10 +39,10 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @param string $accountFrom this method is backwards compatible so you may also pass $organizationFrom
-     * @param string $accountTo this method is backwards compatible so you may also pass $organizationTo
-     * @param bool $mergeUsers
-     * @param bool $mergeEntitlements
+     * @param  string  $accountFrom this method is backwards compatible so you may also pass $organizationFrom
+     * @param  string  $accountTo this method is backwards compatible so you may also pass $organizationTo
+     * @param  bool  $mergeUsers
+     * @param  bool  $mergeEntitlements
      */
     public function __construct(
         string $accountFrom,
@@ -61,10 +61,10 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @param string $accountFrom this method is backwards compatible so you may also pass $organizationFrom
-     * @param string $accountTo this method is backwards compatible so you may also pass $organizationTo
-     * @param bool $mergeUsers
-     * @param bool $mergeEntitlements
+     * @param  string  $accountFrom this method is backwards compatible so you may also pass $organizationFrom
+     * @param  string  $accountTo this method is backwards compatible so you may also pass $organizationTo
+     * @param  bool  $mergeUsers
+     * @param  bool  $mergeEntitlements
      */
     public static function create(
         string $accountFrom,
@@ -84,7 +84,7 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param string $accountFrom
+     * @param  string  $accountFrom
      * @return $this
      */
     public function setAccountFrom($accountFrom)
@@ -103,7 +103,7 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param string $organizationFrom
+     * @param  string  $organizationFrom
      * @return $this
      */
     public function setOrganizationFrom($organizationFrom)
@@ -122,7 +122,7 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param string $accountTo
+     * @param  string  $accountTo
      * @return $this
      */
     public function setAccountTo($accountTo)
@@ -141,7 +141,7 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param string $organizationTo
+     * @param  string  $organizationTo
      * @return $this
      */
     public function setOrganizationTo($organizationTo)
@@ -160,7 +160,7 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param bool $mergeUsers
+     * @param  bool  $mergeUsers
      * @return $this
      */
     public function setMergeUsers($mergeUsers)
@@ -179,7 +179,7 @@ class MergeEntitlementsRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param bool $mergeEntitlements
+     * @param  bool  $mergeEntitlements
      * @return $this
      */
     public function setMergeEntitlements($mergeEntitlements)

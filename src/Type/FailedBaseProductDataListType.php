@@ -12,7 +12,7 @@ class FailedBaseProductDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array $failedBaseProduct
+     * @param  \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array  $failedBaseProduct
      */
     public function __construct($failedBaseProduct = null)
     {
@@ -22,7 +22,7 @@ class FailedBaseProductDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array $failedBaseProduct
+     * @param  \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array  $failedBaseProduct
      */
     public static function create($failedBaseProduct = null)
     {
@@ -38,7 +38,7 @@ class FailedBaseProductDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array $failedBaseProduct
+     * @param  \Flexsim\FlexnetOperations\Type\FailedBaseProductDataType|array  $failedBaseProduct
      * @return $this
      */
     public function setFailedBaseProduct($failedBaseProduct)

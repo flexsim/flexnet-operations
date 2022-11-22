@@ -12,7 +12,7 @@ class SuccessAddonDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array  $deviceIdentifier
      */
     public function __construct($deviceIdentifier = null)
     {
@@ -22,7 +22,7 @@ class SuccessAddonDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array  $deviceIdentifier
      */
     public static function create($deviceIdentifier = null)
     {
@@ -38,7 +38,7 @@ class SuccessAddonDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier|array  $deviceIdentifier
      * @return $this
      */
     public function setDeviceIdentifier($deviceIdentifier)

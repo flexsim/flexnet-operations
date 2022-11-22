@@ -12,7 +12,7 @@ class EmergencyResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentResponseDataType|array $fulfillmentData
+     * @param  \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentResponseDataType|array  $fulfillmentData
      */
     public function __construct($fulfillmentData = null)
     {
@@ -22,7 +22,7 @@ class EmergencyResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentResponseDataType|array $fulfillmentData
+     * @param  \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentResponseDataType|array  $fulfillmentData
      */
     public static function create($fulfillmentData = null)
     {
@@ -38,7 +38,7 @@ class EmergencyResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentResponseDataType $fulfillmentData
+     * @param  \Flexsim\FlexnetOperations\Type\EmergencyFulfillmentResponseDataType  $fulfillmentData
      * @return $this
      */
     public function setFulfillmentData($fulfillmentData)

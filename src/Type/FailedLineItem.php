@@ -12,7 +12,7 @@ class FailedLineItem extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $activationId
+     * @param  string  $activationId
      */
     public function __construct(string $activationId = null)
     {
@@ -22,7 +22,7 @@ class FailedLineItem extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $activationId
+     * @param  string  $activationId
      */
     public static function create(string $activationId = null)
     {
@@ -38,7 +38,7 @@ class FailedLineItem extends FlexnetType
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)

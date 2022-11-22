@@ -12,7 +12,7 @@ class CreatedShortCodeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $shortCode
+     * @param  string  $shortCode
      */
     public function __construct(string $shortCode)
     {
@@ -22,7 +22,7 @@ class CreatedShortCodeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $shortCode
+     * @param  string  $shortCode
      */
     public static function create(string $shortCode)
     {
@@ -38,7 +38,7 @@ class CreatedShortCodeDataType extends FlexnetType
     }
 
     /**
-     * @param string $shortCode
+     * @param  string  $shortCode
      * @return $this
      */
     public function setShortCode($shortCode)

@@ -17,10 +17,10 @@ class FulfillmentHistoryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $activationId
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType $historyDetails
+     * @param  string  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType  $historyDetails
      */
-    public function __construct(string $activationId, \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType $historyDetails)
+    public function __construct(string $activationId, FulfillmentHistoryDetailsType $historyDetails)
     {
         $this->activationId = $activationId;
         $this->historyDetails = $historyDetails;
@@ -29,10 +29,10 @@ class FulfillmentHistoryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $activationId
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType $historyDetails
+     * @param  string  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType  $historyDetails
      */
-    public static function create(string $activationId, \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType $historyDetails)
+    public static function create(string $activationId, FulfillmentHistoryDetailsType $historyDetails)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FulfillmentHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -65,7 +65,7 @@ class FulfillmentHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType $historyDetails
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentHistoryDetailsType  $historyDetails
      * @return $this
      */
     public function setHistoryDetails($historyDetails)

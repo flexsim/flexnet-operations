@@ -12,7 +12,7 @@ class OrgTypeList extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $orgType
+     * @param  string  $orgType
      */
     public function __construct(string $orgType)
     {
@@ -22,7 +22,7 @@ class OrgTypeList extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $orgType
+     * @param  string  $orgType
      */
     public static function create(string $orgType)
     {
@@ -38,7 +38,7 @@ class OrgTypeList extends FlexnetType
     }
 
     /**
-     * @param string $orgType
+     * @param  string  $orgType
      * @return $this
      */
     public function setOrgType($orgType)

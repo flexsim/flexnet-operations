@@ -14,9 +14,9 @@ class RepairFulfillmentRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\RepairFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\RepairFulfillmentDataType  $fulfillment
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\RepairFulfillmentDataType $fulfillment)
+    public function __construct(RepairFulfillmentDataType $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -24,9 +24,9 @@ class RepairFulfillmentRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\RepairFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\RepairFulfillmentDataType  $fulfillment
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\RepairFulfillmentDataType $fulfillment)
+    public static function create(RepairFulfillmentDataType $fulfillment)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class RepairFulfillmentRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\RepairFulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\RepairFulfillmentDataType  $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)

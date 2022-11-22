@@ -82,28 +82,28 @@ class UsageSummaryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param int $usedCount
-     * @param int $provisionedCount
-     * @param string $summaryTimeUniqueId
-     * @param \DateTimeInterface $summaryTime
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server
-     * @param string $serverAlias
-     * @param \DateTimeInterface $serverLastSyncTime
-     * @param string $entitlementUniqueId
-     * @param string $entitlementId
-     * @param string $activationUniqueId
-     * @param string $activationId
-     * @param string $featureUniqueId
-     * @param string $featureName
-     * @param string $featureVersion
-     * @param int $orderedCount
+     * @param  int  $usedCount
+     * @param  int  $provisionedCount
+     * @param  string  $summaryTimeUniqueId
+     * @param  \DateTimeInterface  $summaryTime
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $server
+     * @param  string  $serverAlias
+     * @param  \DateTimeInterface  $serverLastSyncTime
+     * @param  string  $entitlementUniqueId
+     * @param  string  $entitlementId
+     * @param  string  $activationUniqueId
+     * @param  string  $activationId
+     * @param  string  $featureUniqueId
+     * @param  string  $featureName
+     * @param  string  $featureVersion
+     * @param  int  $orderedCount
      */
     public function __construct(
         int $usedCount,
         int $provisionedCount,
         string $summaryTimeUniqueId = null,
         \DateTimeInterface $summaryTime = null,
-        \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server = null,
+        DeviceIdentifier $server = null,
         string $serverAlias = null,
         \DateTimeInterface $serverLastSyncTime = null,
         string $entitlementUniqueId = null,
@@ -135,28 +135,28 @@ class UsageSummaryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param int $usedCount
-     * @param int $provisionedCount
-     * @param string $summaryTimeUniqueId
-     * @param \DateTimeInterface $summaryTime
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server
-     * @param string $serverAlias
-     * @param \DateTimeInterface $serverLastSyncTime
-     * @param string $entitlementUniqueId
-     * @param string $entitlementId
-     * @param string $activationUniqueId
-     * @param string $activationId
-     * @param string $featureUniqueId
-     * @param string $featureName
-     * @param string $featureVersion
-     * @param int $orderedCount
+     * @param  int  $usedCount
+     * @param  int  $provisionedCount
+     * @param  string  $summaryTimeUniqueId
+     * @param  \DateTimeInterface  $summaryTime
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $server
+     * @param  string  $serverAlias
+     * @param  \DateTimeInterface  $serverLastSyncTime
+     * @param  string  $entitlementUniqueId
+     * @param  string  $entitlementId
+     * @param  string  $activationUniqueId
+     * @param  string  $activationId
+     * @param  string  $featureUniqueId
+     * @param  string  $featureName
+     * @param  string  $featureVersion
+     * @param  int  $orderedCount
      */
     public static function create(
         int $usedCount,
         int $provisionedCount,
         string $summaryTimeUniqueId = null,
         \DateTimeInterface $summaryTime = null,
-        \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server = null,
+        DeviceIdentifier $server = null,
         string $serverAlias = null,
         \DateTimeInterface $serverLastSyncTime = null,
         string $entitlementUniqueId = null,
@@ -180,7 +180,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param string $summaryTimeUniqueId
+     * @param  string  $summaryTimeUniqueId
      * @return $this
      */
     public function setSummaryTimeUniqueId($summaryTimeUniqueId)
@@ -199,7 +199,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $summaryTime
+     * @param  \DateTimeInterface  $summaryTime
      * @return $this
      */
     public function setSummaryTime($summaryTime)
@@ -218,7 +218,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $server
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $server
      * @return $this
      */
     public function setServer($server)
@@ -237,7 +237,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param string $serverAlias
+     * @param  string  $serverAlias
      * @return $this
      */
     public function setServerAlias($serverAlias)
@@ -256,7 +256,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $serverLastSyncTime
+     * @param  \DateTimeInterface  $serverLastSyncTime
      * @return $this
      */
     public function setServerLastSyncTime($serverLastSyncTime)
@@ -275,7 +275,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param string $entitlementUniqueId
+     * @param  string  $entitlementUniqueId
      * @return $this
      */
     public function setEntitlementUniqueId($entitlementUniqueId)
@@ -294,7 +294,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param string $entitlementId
+     * @param  string  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)
@@ -313,7 +313,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param string $activationUniqueId
+     * @param  string  $activationUniqueId
      * @return $this
      */
     public function setActivationUniqueId($activationUniqueId)
@@ -332,7 +332,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -351,7 +351,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param string $featureUniqueId
+     * @param  string  $featureUniqueId
      * @return $this
      */
     public function setFeatureUniqueId($featureUniqueId)
@@ -370,7 +370,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param string $featureName
+     * @param  string  $featureName
      * @return $this
      */
     public function setFeatureName($featureName)
@@ -389,7 +389,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param string $featureVersion
+     * @param  string  $featureVersion
      * @return $this
      */
     public function setFeatureVersion($featureVersion)
@@ -408,7 +408,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param int $orderedCount
+     * @param  int  $orderedCount
      * @return $this
      */
     public function setOrderedCount($orderedCount)
@@ -427,7 +427,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param int $usedCount
+     * @param  int  $usedCount
      * @return $this
      */
     public function setUsedCount($usedCount)
@@ -446,7 +446,7 @@ class UsageSummaryDataType extends FlexnetType
     }
 
     /**
-     * @param int $provisionedCount
+     * @param  int  $provisionedCount
      * @return $this
      */
     public function setProvisionedCount($provisionedCount)

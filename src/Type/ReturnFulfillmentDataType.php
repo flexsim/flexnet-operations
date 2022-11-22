@@ -32,13 +32,13 @@ class ReturnFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param int $partialCount
-     * @param int $overDraftCount
-     * @param bool $overridePolicy
-     * @param bool $forceReturnOfThisTrustedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  int  $partialCount
+     * @param  int  $overDraftCount
+     * @param  bool  $overridePolicy
+     * @param  bool  $forceReturnOfThisTrustedFulfillment
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier, int $partialCount = null, int $overDraftCount = null, bool $overridePolicy = null, bool $forceReturnOfThisTrustedFulfillment = null)
+    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, int $partialCount = null, int $overDraftCount = null, bool $overridePolicy = null, bool $forceReturnOfThisTrustedFulfillment = null)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->partialCount = $partialCount;
@@ -50,13 +50,13 @@ class ReturnFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param int $partialCount
-     * @param int $overDraftCount
-     * @param bool $overridePolicy
-     * @param bool $forceReturnOfThisTrustedFulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  int  $partialCount
+     * @param  int  $overDraftCount
+     * @param  bool  $overridePolicy
+     * @param  bool  $forceReturnOfThisTrustedFulfillment
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier, int $partialCount = null, int $overDraftCount = null, bool $overridePolicy = null, bool $forceReturnOfThisTrustedFulfillment = null)
+    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, int $partialCount = null, int $overDraftCount = null, bool $overridePolicy = null, bool $forceReturnOfThisTrustedFulfillment = null)
     {
         return new self(...func_get_args());
     }
@@ -70,7 +70,7 @@ class ReturnFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
      * @return $this
      */
     public function setFulfillmentIdentifier($fulfillmentIdentifier)
@@ -89,7 +89,7 @@ class ReturnFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param int $partialCount
+     * @param  int  $partialCount
      * @return $this
      */
     public function setPartialCount($partialCount)
@@ -108,7 +108,7 @@ class ReturnFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param int $overDraftCount
+     * @param  int  $overDraftCount
      * @return $this
      */
     public function setOverDraftCount($overDraftCount)
@@ -127,7 +127,7 @@ class ReturnFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param bool $overridePolicy
+     * @param  bool  $overridePolicy
      * @return $this
      */
     public function setOverridePolicy($overridePolicy)
@@ -146,7 +146,7 @@ class ReturnFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param bool $forceReturnOfThisTrustedFulfillment
+     * @param  bool  $forceReturnOfThisTrustedFulfillment
      * @return $this
      */
     public function setForceReturnOfThisTrustedFulfillment($forceReturnOfThisTrustedFulfillment)

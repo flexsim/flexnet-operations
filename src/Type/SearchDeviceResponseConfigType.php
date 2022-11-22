@@ -127,30 +127,30 @@ class SearchDeviceResponseConfigType extends FlexnetType
     /**
      * Constructor
      *
-     * @param bool $name
-     * @param bool $description
-     * @param bool $status
-     * @param bool $servedStatus
-     * @param bool $hostTypeName
-     * @param bool $hosted
-     * @param bool $soldTo
-     * @param bool $hasLicense
-     * @param bool $bufferLicense
-     * @param bool $addOnLicense
-     * @param bool $publisherIdentity
-     * @param bool $parent
-     * @param bool $machineType
-     * @param bool $vmDetails
-     * @param bool $userInfo
-     * @param bool $lastRequestTime
-     * @param bool $lastSyncTime
-     * @param bool $addOnActivationId
-     * @param bool $addOnCounts
-     * @param bool $addOnProduct
-     * @param bool $addOnProductLine
-     * @param bool $addOnPartNumber
-     * @param bool $addOnEntitlementId
-     * @param bool $hasUpdates
+     * @param  bool  $name
+     * @param  bool  $description
+     * @param  bool  $status
+     * @param  bool  $servedStatus
+     * @param  bool  $hostTypeName
+     * @param  bool  $hosted
+     * @param  bool  $soldTo
+     * @param  bool  $hasLicense
+     * @param  bool  $bufferLicense
+     * @param  bool  $addOnLicense
+     * @param  bool  $publisherIdentity
+     * @param  bool  $parent
+     * @param  bool  $machineType
+     * @param  bool  $vmDetails
+     * @param  bool  $userInfo
+     * @param  bool  $lastRequestTime
+     * @param  bool  $lastSyncTime
+     * @param  bool  $addOnActivationId
+     * @param  bool  $addOnCounts
+     * @param  bool  $addOnProduct
+     * @param  bool  $addOnProductLine
+     * @param  bool  $addOnPartNumber
+     * @param  bool  $addOnEntitlementId
+     * @param  bool  $hasUpdates
      */
     public function __construct(bool $name = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $hosted = null, bool $soldTo = null, bool $hasLicense = null, bool $bufferLicense = null, bool $addOnLicense = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $userInfo = null, bool $lastRequestTime = null, bool $lastSyncTime = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnProductLine = null, bool $addOnPartNumber = null, bool $addOnEntitlementId = null, bool $hasUpdates = null)
     {
@@ -183,30 +183,30 @@ class SearchDeviceResponseConfigType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param bool $name
-     * @param bool $description
-     * @param bool $status
-     * @param bool $servedStatus
-     * @param bool $hostTypeName
-     * @param bool $hosted
-     * @param bool $soldTo
-     * @param bool $hasLicense
-     * @param bool $bufferLicense
-     * @param bool $addOnLicense
-     * @param bool $publisherIdentity
-     * @param bool $parent
-     * @param bool $machineType
-     * @param bool $vmDetails
-     * @param bool $userInfo
-     * @param bool $lastRequestTime
-     * @param bool $lastSyncTime
-     * @param bool $addOnActivationId
-     * @param bool $addOnCounts
-     * @param bool $addOnProduct
-     * @param bool $addOnProductLine
-     * @param bool $addOnPartNumber
-     * @param bool $addOnEntitlementId
-     * @param bool $hasUpdates
+     * @param  bool  $name
+     * @param  bool  $description
+     * @param  bool  $status
+     * @param  bool  $servedStatus
+     * @param  bool  $hostTypeName
+     * @param  bool  $hosted
+     * @param  bool  $soldTo
+     * @param  bool  $hasLicense
+     * @param  bool  $bufferLicense
+     * @param  bool  $addOnLicense
+     * @param  bool  $publisherIdentity
+     * @param  bool  $parent
+     * @param  bool  $machineType
+     * @param  bool  $vmDetails
+     * @param  bool  $userInfo
+     * @param  bool  $lastRequestTime
+     * @param  bool  $lastSyncTime
+     * @param  bool  $addOnActivationId
+     * @param  bool  $addOnCounts
+     * @param  bool  $addOnProduct
+     * @param  bool  $addOnProductLine
+     * @param  bool  $addOnPartNumber
+     * @param  bool  $addOnEntitlementId
+     * @param  bool  $hasUpdates
      */
     public static function create(bool $name = null, bool $description = null, bool $status = null, bool $servedStatus = null, bool $hostTypeName = null, bool $hosted = null, bool $soldTo = null, bool $hasLicense = null, bool $bufferLicense = null, bool $addOnLicense = null, bool $publisherIdentity = null, bool $parent = null, bool $machineType = null, bool $vmDetails = null, bool $userInfo = null, bool $lastRequestTime = null, bool $lastSyncTime = null, bool $addOnActivationId = null, bool $addOnCounts = null, bool $addOnProduct = null, bool $addOnProductLine = null, bool $addOnPartNumber = null, bool $addOnEntitlementId = null, bool $hasUpdates = null)
     {
@@ -222,7 +222,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $name
+     * @param  bool  $name
      * @return $this
      */
     public function setName($name)
@@ -241,7 +241,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $description
+     * @param  bool  $description
      * @return $this
      */
     public function setDescription($description)
@@ -260,7 +260,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $status
+     * @param  bool  $status
      * @return $this
      */
     public function setStatus($status)
@@ -279,7 +279,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $servedStatus
+     * @param  bool  $servedStatus
      * @return $this
      */
     public function setServedStatus($servedStatus)
@@ -298,7 +298,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $hostTypeName
+     * @param  bool  $hostTypeName
      * @return $this
      */
     public function setHostTypeName($hostTypeName)
@@ -317,7 +317,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $hosted
+     * @param  bool  $hosted
      * @return $this
      */
     public function setHosted($hosted)
@@ -336,7 +336,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $soldTo
+     * @param  bool  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -355,7 +355,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $hasLicense
+     * @param  bool  $hasLicense
      * @return $this
      */
     public function setHasLicense($hasLicense)
@@ -374,7 +374,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $bufferLicense
+     * @param  bool  $bufferLicense
      * @return $this
      */
     public function setBufferLicense($bufferLicense)
@@ -393,7 +393,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $addOnLicense
+     * @param  bool  $addOnLicense
      * @return $this
      */
     public function setAddOnLicense($addOnLicense)
@@ -412,7 +412,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $publisherIdentity
+     * @param  bool  $publisherIdentity
      * @return $this
      */
     public function setPublisherIdentity($publisherIdentity)
@@ -431,7 +431,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $parent
+     * @param  bool  $parent
      * @return $this
      */
     public function setParent($parent)
@@ -450,7 +450,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $machineType
+     * @param  bool  $machineType
      * @return $this
      */
     public function setMachineType($machineType)
@@ -469,7 +469,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $vmDetails
+     * @param  bool  $vmDetails
      * @return $this
      */
     public function setVmDetails($vmDetails)
@@ -488,7 +488,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $userInfo
+     * @param  bool  $userInfo
      * @return $this
      */
     public function setUserInfo($userInfo)
@@ -507,7 +507,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $lastRequestTime
+     * @param  bool  $lastRequestTime
      * @return $this
      */
     public function setLastRequestTime($lastRequestTime)
@@ -526,7 +526,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $lastSyncTime
+     * @param  bool  $lastSyncTime
      * @return $this
      */
     public function setLastSyncTime($lastSyncTime)
@@ -545,7 +545,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $addOnActivationId
+     * @param  bool  $addOnActivationId
      * @return $this
      */
     public function setAddOnActivationId($addOnActivationId)
@@ -564,7 +564,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $addOnCounts
+     * @param  bool  $addOnCounts
      * @return $this
      */
     public function setAddOnCounts($addOnCounts)
@@ -583,7 +583,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $addOnProduct
+     * @param  bool  $addOnProduct
      * @return $this
      */
     public function setAddOnProduct($addOnProduct)
@@ -602,7 +602,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $addOnProductLine
+     * @param  bool  $addOnProductLine
      * @return $this
      */
     public function setAddOnProductLine($addOnProductLine)
@@ -621,7 +621,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $addOnPartNumber
+     * @param  bool  $addOnPartNumber
      * @return $this
      */
     public function setAddOnPartNumber($addOnPartNumber)
@@ -640,7 +640,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $addOnEntitlementId
+     * @param  bool  $addOnEntitlementId
      * @return $this
      */
     public function setAddOnEntitlementId($addOnEntitlementId)
@@ -659,7 +659,7 @@ class SearchDeviceResponseConfigType extends FlexnetType
     }
 
     /**
-     * @param bool $hasUpdates
+     * @param  bool  $hasUpdates
      * @return $this
      */
     public function setHasUpdates($hasUpdates)

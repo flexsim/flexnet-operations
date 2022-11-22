@@ -19,10 +19,10 @@ class SearchEntitlementResponseType extends FlexnetType implements ResultInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementDataType|array $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementDataType|array  $entitlement
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $entitlement = null)
+    public function __construct(StatusInfoType $statusInfo, $entitlement = null)
     {
         $this->statusInfo = $statusInfo;
         $this->entitlement = $entitlement;
@@ -31,10 +31,10 @@ class SearchEntitlementResponseType extends FlexnetType implements ResultInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementDataType|array $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementDataType|array  $entitlement
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, $entitlement = null)
+    public static function create(StatusInfoType $statusInfo, $entitlement = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class SearchEntitlementResponseType extends FlexnetType implements ResultInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class SearchEntitlementResponseType extends FlexnetType implements ResultInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementDataType $entitlement
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementDataType  $entitlement
      * @return $this
      */
     public function setEntitlement($entitlement)

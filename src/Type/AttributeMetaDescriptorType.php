@@ -27,12 +27,12 @@ class AttributeMetaDescriptorType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $attributeName
-     * @param string $attributeDataType
-     * @param string $namespace
-     * @param \Flexsim\FlexnetOperations\Type\ValueType $validValues
+     * @param  string  $attributeName
+     * @param  string  $attributeDataType
+     * @param  string  $namespace
+     * @param  \Flexsim\FlexnetOperations\Type\ValueType  $validValues
      */
-    public function __construct(string $attributeName, string $attributeDataType, string $namespace, \Flexsim\FlexnetOperations\Type\ValueType $validValues = null)
+    public function __construct(string $attributeName, string $attributeDataType, string $namespace, ValueType $validValues = null)
     {
         $this->attributeName = $attributeName;
         $this->attributeDataType = $attributeDataType;
@@ -43,12 +43,12 @@ class AttributeMetaDescriptorType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $attributeName
-     * @param string $attributeDataType
-     * @param string $namespace
-     * @param \Flexsim\FlexnetOperations\Type\ValueType $validValues
+     * @param  string  $attributeName
+     * @param  string  $attributeDataType
+     * @param  string  $namespace
+     * @param  \Flexsim\FlexnetOperations\Type\ValueType  $validValues
      */
-    public static function create(string $attributeName, string $attributeDataType, string $namespace, \Flexsim\FlexnetOperations\Type\ValueType $validValues = null)
+    public static function create(string $attributeName, string $attributeDataType, string $namespace, ValueType $validValues = null)
     {
         return new self(...func_get_args());
     }
@@ -62,7 +62,7 @@ class AttributeMetaDescriptorType extends FlexnetType
     }
 
     /**
-     * @param string $attributeName
+     * @param  string  $attributeName
      * @return $this
      */
     public function setAttributeName($attributeName)
@@ -81,7 +81,7 @@ class AttributeMetaDescriptorType extends FlexnetType
     }
 
     /**
-     * @param string $attributeDataType
+     * @param  string  $attributeDataType
      * @return $this
      */
     public function setAttributeDataType($attributeDataType)
@@ -100,7 +100,7 @@ class AttributeMetaDescriptorType extends FlexnetType
     }
 
     /**
-     * @param string $namespace
+     * @param  string  $namespace
      * @return $this
      */
     public function setNamespace($namespace)
@@ -119,7 +119,7 @@ class AttributeMetaDescriptorType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ValueType $validValues
+     * @param  \Flexsim\FlexnetOperations\Type\ValueType  $validValues
      * @return $this
      */
     public function setValidValues($validValues)

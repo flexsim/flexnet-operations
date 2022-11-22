@@ -72,19 +72,19 @@ class PolicyAttributesDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param bool $needRehostsPolicy
-     * @param bool $needReturnsPolicy
-     * @param bool $needRepairsPolicy
-     * @param bool $needExtraActivationsPolicy
-     * @param bool $needCancelLicensePolicy
-     * @param bool $needVirtualLicensePolicy
-     * @param bool $needReinstallPolicy
-     * @param bool $needServerHostIdPolicy
-     * @param bool $needNodelockedHostIdPolicy
-     * @param bool $needPortalServerHostIdPolicy
-     * @param bool $needPortalNodelockedHostIdPolicy
-     * @param bool $needRedundantServerPolicy
-     * @param bool $needACPIGenerationIdLicensePolicy
+     * @param  bool  $needRehostsPolicy
+     * @param  bool  $needReturnsPolicy
+     * @param  bool  $needRepairsPolicy
+     * @param  bool  $needExtraActivationsPolicy
+     * @param  bool  $needCancelLicensePolicy
+     * @param  bool  $needVirtualLicensePolicy
+     * @param  bool  $needReinstallPolicy
+     * @param  bool  $needServerHostIdPolicy
+     * @param  bool  $needNodelockedHostIdPolicy
+     * @param  bool  $needPortalServerHostIdPolicy
+     * @param  bool  $needPortalNodelockedHostIdPolicy
+     * @param  bool  $needRedundantServerPolicy
+     * @param  bool  $needACPIGenerationIdLicensePolicy
      */
     public function __construct(bool $needRehostsPolicy, bool $needReturnsPolicy, bool $needRepairsPolicy, bool $needExtraActivationsPolicy, bool $needCancelLicensePolicy, bool $needVirtualLicensePolicy, bool $needReinstallPolicy, bool $needServerHostIdPolicy, bool $needNodelockedHostIdPolicy, bool $needPortalServerHostIdPolicy, bool $needPortalNodelockedHostIdPolicy, bool $needRedundantServerPolicy, bool $needACPIGenerationIdLicensePolicy)
     {
@@ -106,19 +106,19 @@ class PolicyAttributesDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param bool $needRehostsPolicy
-     * @param bool $needReturnsPolicy
-     * @param bool $needRepairsPolicy
-     * @param bool $needExtraActivationsPolicy
-     * @param bool $needCancelLicensePolicy
-     * @param bool $needVirtualLicensePolicy
-     * @param bool $needReinstallPolicy
-     * @param bool $needServerHostIdPolicy
-     * @param bool $needNodelockedHostIdPolicy
-     * @param bool $needPortalServerHostIdPolicy
-     * @param bool $needPortalNodelockedHostIdPolicy
-     * @param bool $needRedundantServerPolicy
-     * @param bool $needACPIGenerationIdLicensePolicy
+     * @param  bool  $needRehostsPolicy
+     * @param  bool  $needReturnsPolicy
+     * @param  bool  $needRepairsPolicy
+     * @param  bool  $needExtraActivationsPolicy
+     * @param  bool  $needCancelLicensePolicy
+     * @param  bool  $needVirtualLicensePolicy
+     * @param  bool  $needReinstallPolicy
+     * @param  bool  $needServerHostIdPolicy
+     * @param  bool  $needNodelockedHostIdPolicy
+     * @param  bool  $needPortalServerHostIdPolicy
+     * @param  bool  $needPortalNodelockedHostIdPolicy
+     * @param  bool  $needRedundantServerPolicy
+     * @param  bool  $needACPIGenerationIdLicensePolicy
      */
     public static function create(bool $needRehostsPolicy, bool $needReturnsPolicy, bool $needRepairsPolicy, bool $needExtraActivationsPolicy, bool $needCancelLicensePolicy, bool $needVirtualLicensePolicy, bool $needReinstallPolicy, bool $needServerHostIdPolicy, bool $needNodelockedHostIdPolicy, bool $needPortalServerHostIdPolicy, bool $needPortalNodelockedHostIdPolicy, bool $needRedundantServerPolicy, bool $needACPIGenerationIdLicensePolicy)
     {
@@ -134,7 +134,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needRehostsPolicy
+     * @param  bool  $needRehostsPolicy
      * @return $this
      */
     public function setNeedRehostsPolicy($needRehostsPolicy)
@@ -153,7 +153,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needReturnsPolicy
+     * @param  bool  $needReturnsPolicy
      * @return $this
      */
     public function setNeedReturnsPolicy($needReturnsPolicy)
@@ -172,7 +172,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needRepairsPolicy
+     * @param  bool  $needRepairsPolicy
      * @return $this
      */
     public function setNeedRepairsPolicy($needRepairsPolicy)
@@ -191,7 +191,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needExtraActivationsPolicy
+     * @param  bool  $needExtraActivationsPolicy
      * @return $this
      */
     public function setNeedExtraActivationsPolicy($needExtraActivationsPolicy)
@@ -210,7 +210,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needCancelLicensePolicy
+     * @param  bool  $needCancelLicensePolicy
      * @return $this
      */
     public function setNeedCancelLicensePolicy($needCancelLicensePolicy)
@@ -229,7 +229,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needVirtualLicensePolicy
+     * @param  bool  $needVirtualLicensePolicy
      * @return $this
      */
     public function setNeedVirtualLicensePolicy($needVirtualLicensePolicy)
@@ -248,7 +248,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needReinstallPolicy
+     * @param  bool  $needReinstallPolicy
      * @return $this
      */
     public function setNeedReinstallPolicy($needReinstallPolicy)
@@ -267,7 +267,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needServerHostIdPolicy
+     * @param  bool  $needServerHostIdPolicy
      * @return $this
      */
     public function setNeedServerHostIdPolicy($needServerHostIdPolicy)
@@ -286,7 +286,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needNodelockedHostIdPolicy
+     * @param  bool  $needNodelockedHostIdPolicy
      * @return $this
      */
     public function setNeedNodelockedHostIdPolicy($needNodelockedHostIdPolicy)
@@ -305,7 +305,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needPortalServerHostIdPolicy
+     * @param  bool  $needPortalServerHostIdPolicy
      * @return $this
      */
     public function setNeedPortalServerHostIdPolicy($needPortalServerHostIdPolicy)
@@ -324,7 +324,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needPortalNodelockedHostIdPolicy
+     * @param  bool  $needPortalNodelockedHostIdPolicy
      * @return $this
      */
     public function setNeedPortalNodelockedHostIdPolicy($needPortalNodelockedHostIdPolicy)
@@ -343,7 +343,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needRedundantServerPolicy
+     * @param  bool  $needRedundantServerPolicy
      * @return $this
      */
     public function setNeedRedundantServerPolicy($needRedundantServerPolicy)
@@ -362,7 +362,7 @@ class PolicyAttributesDataType extends FlexnetType
     }
 
     /**
-     * @param bool $needACPIGenerationIdLicensePolicy
+     * @param  bool  $needACPIGenerationIdLicensePolicy
      * @return $this
      */
     public function setNeedACPIGenerationIdLicensePolicy($needACPIGenerationIdLicensePolicy)

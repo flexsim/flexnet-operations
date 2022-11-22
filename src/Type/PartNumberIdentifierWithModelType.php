@@ -22,11 +22,11 @@ class PartNumberIdentifierWithModelType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $uniqueId
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberPKType $primaryKeys
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param  string  $uniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberPKType  $primaryKeys
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModel
      */
-    public function __construct(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\PartNumberPKType $primaryKeys = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null)
+    public function __construct(string $uniqueId = null, PartNumberPKType $primaryKeys = null, LicenseModelIdentifierType $licenseModel = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
@@ -36,11 +36,11 @@ class PartNumberIdentifierWithModelType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberPKType $primaryKeys
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param  string  $uniqueId
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberPKType  $primaryKeys
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModel
      */
-    public static function create(string $uniqueId = null, \Flexsim\FlexnetOperations\Type\PartNumberPKType $primaryKeys = null, \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel = null)
+    public static function create(string $uniqueId = null, PartNumberPKType $primaryKeys = null, LicenseModelIdentifierType $licenseModel = null)
     {
         return new self(...func_get_args());
     }
@@ -54,7 +54,7 @@ class PartNumberIdentifierWithModelType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -73,7 +73,7 @@ class PartNumberIdentifierWithModelType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberPKType $primaryKeys
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberPKType  $primaryKeys
      * @return $this
      */
     public function setPrimaryKeys($primaryKeys)
@@ -92,7 +92,7 @@ class PartNumberIdentifierWithModelType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModel
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModel
      * @return $this
      */
     public function setLicenseModel($licenseModel)

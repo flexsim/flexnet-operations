@@ -8,7 +8,7 @@ use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 
 class UsageServiceClassmap
 {
-    public static function getCollection(): \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
+    public static function getCollection(): ClassMapCollection
     {
         return new ClassMapCollection(
             new ClassMap('GetUsageRequest', Type\GetUsageRequest::class),

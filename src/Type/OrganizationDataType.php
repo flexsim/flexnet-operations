@@ -42,15 +42,15 @@ class OrganizationDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $name
-     * @param string $displayName
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @param bool $visible
-     * @param string $orgType
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  string  $name
+     * @param  string  $displayName
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
+     * @param  bool  $visible
+     * @param  string  $orgType
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      */
-    public function __construct(string $name, string $displayName, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, bool $visible = null, string $orgType = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
+    public function __construct(string $name, string $displayName, string $description = null, AddressDataType $address = null, bool $visible = null, string $orgType = null, AttributeDescriptorDataType $customAttributes = null)
     {
         $this->name = $name;
         $this->displayName = $displayName;
@@ -64,15 +64,15 @@ class OrganizationDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $name
-     * @param string $displayName
-     * @param string $description
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
-     * @param bool $visible
-     * @param string $orgType
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  string  $name
+     * @param  string  $displayName
+     * @param  string  $description
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
+     * @param  bool  $visible
+     * @param  string  $orgType
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      */
-    public static function create(string $name, string $displayName, string $description = null, \Flexsim\FlexnetOperations\Type\AddressDataType $address = null, bool $visible = null, string $orgType = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes = null)
+    public static function create(string $name, string $displayName, string $description = null, AddressDataType $address = null, bool $visible = null, string $orgType = null, AttributeDescriptorDataType $customAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -86,7 +86,7 @@ class OrganizationDataType extends FlexnetType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return $this
      */
     public function setName($name)
@@ -105,7 +105,7 @@ class OrganizationDataType extends FlexnetType
     }
 
     /**
-     * @param string $displayName
+     * @param  string  $displayName
      * @return $this
      */
     public function setDisplayName($displayName)
@@ -124,7 +124,7 @@ class OrganizationDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -143,7 +143,7 @@ class OrganizationDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddressDataType $address
+     * @param  \Flexsim\FlexnetOperations\Type\AddressDataType  $address
      * @return $this
      */
     public function setAddress($address)
@@ -162,7 +162,7 @@ class OrganizationDataType extends FlexnetType
     }
 
     /**
-     * @param bool $visible
+     * @param  bool  $visible
      * @return $this
      */
     public function setVisible($visible)
@@ -181,7 +181,7 @@ class OrganizationDataType extends FlexnetType
     }
 
     /**
-     * @param string $orgType
+     * @param  string  $orgType
      * @return $this
      */
     public function setOrgType($orgType)
@@ -200,7 +200,7 @@ class OrganizationDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $customAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $customAttributes
      * @return $this
      */
     public function setCustomAttributes($customAttributes)

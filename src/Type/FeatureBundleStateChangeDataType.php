@@ -17,10 +17,10 @@ class FeatureBundleStateChangeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType|array  $stateChangeRecord
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier, $stateChangeRecord = null)
+    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier, $stateChangeRecord = null)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
         $this->stateChangeRecord = $stateChangeRecord;
@@ -29,10 +29,10 @@ class FeatureBundleStateChangeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType|array  $stateChangeRecord
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier, $stateChangeRecord = null)
+    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier, $stateChangeRecord = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FeatureBundleStateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType $featureBundleIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
      * @return $this
      */
     public function setFeatureBundleIdentifier($featureBundleIdentifier)
@@ -65,7 +65,7 @@ class FeatureBundleStateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType  $stateChangeRecord
      * @return $this
      */
     public function setStateChangeRecord($stateChangeRecord)

@@ -19,10 +19,10 @@ class GetModelIdentifiersResponseType extends FlexnetType implements ResultInter
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\ModelIdentifiersDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\ModelIdentifiersDataListType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ModelIdentifiersDataListType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, ModelIdentifiersDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
@@ -31,10 +31,10 @@ class GetModelIdentifiersResponseType extends FlexnetType implements ResultInter
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\ModelIdentifiersDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\ModelIdentifiersDataListType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\ModelIdentifiersDataListType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, ModelIdentifiersDataListType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetModelIdentifiersResponseType extends FlexnetType implements ResultInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class GetModelIdentifiersResponseType extends FlexnetType implements ResultInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ModelIdentifiersDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\ModelIdentifiersDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

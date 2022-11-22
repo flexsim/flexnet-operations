@@ -12,7 +12,7 @@ class WebRegKeyType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $webRegKey
+     * @param  string  $webRegKey
      */
     public function __construct(string $webRegKey)
     {
@@ -22,7 +22,7 @@ class WebRegKeyType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $webRegKey
+     * @param  string  $webRegKey
      */
     public static function create(string $webRegKey)
     {
@@ -38,7 +38,7 @@ class WebRegKeyType extends FlexnetType
     }
 
     /**
-     * @param string $webRegKey
+     * @param  string  $webRegKey
      * @return $this
      */
     public function setWebRegKey($webRegKey)

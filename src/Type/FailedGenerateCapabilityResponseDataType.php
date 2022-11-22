@@ -12,7 +12,7 @@ class FailedGenerateCapabilityResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedCapabilityResponseDataType|array $failedDevice
+     * @param  \Flexsim\FlexnetOperations\Type\FailedCapabilityResponseDataType|array  $failedDevice
      */
     public function __construct($failedDevice = null)
     {
@@ -22,7 +22,7 @@ class FailedGenerateCapabilityResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedCapabilityResponseDataType|array $failedDevice
+     * @param  \Flexsim\FlexnetOperations\Type\FailedCapabilityResponseDataType|array  $failedDevice
      */
     public static function create($failedDevice = null)
     {
@@ -38,7 +38,7 @@ class FailedGenerateCapabilityResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedCapabilityResponseDataType $failedDevice
+     * @param  \Flexsim\FlexnetOperations\Type\FailedCapabilityResponseDataType  $failedDevice
      * @return $this
      */
     public function setFailedDevice($failedDevice)

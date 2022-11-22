@@ -24,11 +24,11 @@ class GetDeviceCountResponseType extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedGetDevicesDataType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\GetDeviceCountResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedGetDevicesDataType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\GetDeviceCountResponseDataType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedGetDevicesDataType $failedData = null, \Flexsim\FlexnetOperations\Type\GetDeviceCountResponseDataType $responseData = null)
+    public function __construct(OpsEmbeddedStatusInfoType $statusInfo, FailedGetDevicesDataType $failedData = null, GetDeviceCountResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -38,11 +38,11 @@ class GetDeviceCountResponseType extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedGetDevicesDataType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\GetDeviceCountResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedGetDevicesDataType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\GetDeviceCountResponseDataType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedGetDevicesDataType $failedData = null, \Flexsim\FlexnetOperations\Type\GetDeviceCountResponseDataType $responseData = null)
+    public static function create(OpsEmbeddedStatusInfoType $statusInfo, FailedGetDevicesDataType $failedData = null, GetDeviceCountResponseDataType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class GetDeviceCountResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\OpsEmbeddedStatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class GetDeviceCountResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedGetDevicesDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedGetDevicesDataType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -94,7 +94,7 @@ class GetDeviceCountResponseType extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GetDeviceCountResponseDataType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\GetDeviceCountResponseDataType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

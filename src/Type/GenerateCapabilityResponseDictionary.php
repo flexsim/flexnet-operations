@@ -12,9 +12,9 @@ class GenerateCapabilityResponseDictionary extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionaryEntry $entry
+     * @param  \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionaryEntry  $entry
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionaryEntry $entry)
+    public function __construct(GenerateCapabilityResponseDictionaryEntry $entry)
     {
         $this->entry = $entry;
     }
@@ -22,9 +22,9 @@ class GenerateCapabilityResponseDictionary extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionaryEntry $entry
+     * @param  \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionaryEntry  $entry
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionaryEntry $entry)
+    public static function create(GenerateCapabilityResponseDictionaryEntry $entry)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class GenerateCapabilityResponseDictionary extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionaryEntry $entry
+     * @param  \Flexsim\FlexnetOperations\Type\GenerateCapabilityResponseDictionaryEntry  $entry
      * @return $this
      */
     public function setEntry($entry)

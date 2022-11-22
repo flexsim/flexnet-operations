@@ -12,7 +12,7 @@ class CountDevicesResponseData extends FlexnetType
     /**
      * Constructor
      *
-     * @param int $count
+     * @param  int  $count
      */
     public function __construct(int $count = null)
     {
@@ -22,7 +22,7 @@ class CountDevicesResponseData extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param int $count
+     * @param  int  $count
      */
     public static function create(int $count = null)
     {
@@ -38,7 +38,7 @@ class CountDevicesResponseData extends FlexnetType
     }
 
     /**
-     * @param int $count
+     * @param  int  $count
      * @return $this
      */
     public function setCount($count)

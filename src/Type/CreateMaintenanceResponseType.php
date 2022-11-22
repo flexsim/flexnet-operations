@@ -24,11 +24,11 @@ class CreateMaintenanceResponseType extends FlexnetType implements ResultInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedMaintenanceDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\CreatedMaintenanceDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedMaintenanceDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedMaintenanceDataListType  $responseData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedMaintenanceDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedMaintenanceDataListType $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedMaintenanceDataListType $failedData = null, CreatedMaintenanceDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -38,11 +38,11 @@ class CreateMaintenanceResponseType extends FlexnetType implements ResultInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedMaintenanceDataListType $failedData
-     * @param \Flexsim\FlexnetOperations\Type\CreatedMaintenanceDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedMaintenanceDataListType  $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedMaintenanceDataListType  $responseData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedMaintenanceDataListType $failedData = null, \Flexsim\FlexnetOperations\Type\CreatedMaintenanceDataListType $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FailedMaintenanceDataListType $failedData = null, CreatedMaintenanceDataListType $responseData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class CreateMaintenanceResponseType extends FlexnetType implements ResultInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class CreateMaintenanceResponseType extends FlexnetType implements ResultInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedMaintenanceDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedMaintenanceDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -94,7 +94,7 @@ class CreateMaintenanceResponseType extends FlexnetType implements ResultInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedMaintenanceDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedMaintenanceDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)

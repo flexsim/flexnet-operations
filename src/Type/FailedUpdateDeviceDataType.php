@@ -17,10 +17,10 @@ class FailedUpdateDeviceDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateDevDataType $device
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateDevDataType  $device
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateDevDataType $device = null, string $reason = null)
+    public function __construct(UpdateDevDataType $device = null, string $reason = null)
     {
         $this->device = $device;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedUpdateDeviceDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateDevDataType $device
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateDevDataType  $device
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateDevDataType $device = null, string $reason = null)
+    public static function create(UpdateDevDataType $device = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedUpdateDeviceDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateDevDataType $device
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateDevDataType  $device
      * @return $this
      */
     public function setDevice($device)
@@ -65,7 +65,7 @@ class FailedUpdateDeviceDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

@@ -19,10 +19,10 @@ class SetMaintenanceStateResponseType extends FlexnetType implements ResultInter
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedMaintenanceStateDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedMaintenanceStateDataListType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedMaintenanceStateDataListType $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedMaintenanceStateDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -31,10 +31,10 @@ class SetMaintenanceStateResponseType extends FlexnetType implements ResultInter
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedMaintenanceStateDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedMaintenanceStateDataListType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedMaintenanceStateDataListType $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedMaintenanceStateDataListType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class SetMaintenanceStateResponseType extends FlexnetType implements ResultInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class SetMaintenanceStateResponseType extends FlexnetType implements ResultInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedMaintenanceStateDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedMaintenanceStateDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

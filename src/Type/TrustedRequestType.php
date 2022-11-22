@@ -14,9 +14,9 @@ class TrustedRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ActivationDataType $inputData
+     * @param  \Flexsim\FlexnetOperations\Type\ActivationDataType  $inputData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ActivationDataType $inputData)
+    public function __construct(ActivationDataType $inputData)
     {
         $this->inputData = $inputData;
     }
@@ -24,9 +24,9 @@ class TrustedRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ActivationDataType $inputData
+     * @param  \Flexsim\FlexnetOperations\Type\ActivationDataType  $inputData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ActivationDataType $inputData)
+    public static function create(ActivationDataType $inputData)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class TrustedRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ActivationDataType $inputData
+     * @param  \Flexsim\FlexnetOperations\Type\ActivationDataType  $inputData
      * @return $this
      */
     public function setInputData($inputData)

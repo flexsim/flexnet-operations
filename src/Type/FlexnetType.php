@@ -7,7 +7,7 @@ abstract class FlexnetType
     /**
      * Fill this objects attributes
      *
-     * @param array $attributes
+     * @param  array  $attributes
      * @return $this
      */
     public function fill(array $attributes)

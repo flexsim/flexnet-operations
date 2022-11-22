@@ -24,11 +24,11 @@ class ActivateLicensesResponseType extends FlexnetType implements ResultInterfac
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedLineItem $failedData
-     * @param string $resultData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedLineItem  $failedData
+     * @param  string  $resultData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedLineItem $failedData = null, string $resultData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedLineItem $failedData = null, string $resultData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -38,11 +38,11 @@ class ActivateLicensesResponseType extends FlexnetType implements ResultInterfac
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedLineItem $failedData
-     * @param string $resultData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedLineItem  $failedData
+     * @param  string  $resultData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedLineItem $failedData = null, string $resultData = null)
+    public static function create(StatusInfoType $statusInfo, FailedLineItem $failedData = null, string $resultData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class ActivateLicensesResponseType extends FlexnetType implements ResultInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class ActivateLicensesResponseType extends FlexnetType implements ResultInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedLineItem $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedLineItem  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -94,7 +94,7 @@ class ActivateLicensesResponseType extends FlexnetType implements ResultInterfac
     }
 
     /**
-     * @param string $resultData
+     * @param  string  $resultData
      * @return $this
      */
     public function setResultData($resultData)

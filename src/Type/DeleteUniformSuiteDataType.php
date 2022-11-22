@@ -12,9 +12,9 @@ class DeleteUniformSuiteDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteIdentifierType  $suiteIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier)
+    public function __construct(SuiteIdentifierType $suiteIdentifier)
     {
         $this->suiteIdentifier = $suiteIdentifier;
     }
@@ -22,9 +22,9 @@ class DeleteUniformSuiteDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteIdentifierType  $suiteIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier)
+    public static function create(SuiteIdentifierType $suiteIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class DeleteUniformSuiteDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SuiteIdentifierType $suiteIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteIdentifierType  $suiteIdentifier
      * @return $this
      */
     public function setSuiteIdentifier($suiteIdentifier)

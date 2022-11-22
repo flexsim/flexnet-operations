@@ -19,10 +19,10 @@ class DeleteOnholdFulfillmentsResponseType extends FlexnetType implements Result
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentListType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentListType $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedOnholdFulfillmentListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -31,10 +31,10 @@ class DeleteOnholdFulfillmentsResponseType extends FlexnetType implements Result
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentListType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentListType $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedOnholdFulfillmentListType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class DeleteOnholdFulfillmentsResponseType extends FlexnetType implements Result
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -67,7 +67,7 @@ class DeleteOnholdFulfillmentsResponseType extends FlexnetType implements Result
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedOnholdFulfillmentListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

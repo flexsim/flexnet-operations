@@ -29,12 +29,12 @@ class SearchEntitlementLineItemPropertiesRequestType extends FlexnetType impleme
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType  $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemResponseConfigRequestType  $entitlementLineItemResponseConfig
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams, \Flexsim\FlexnetOperations\Type\EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig, int $batchSize, int $pageNumber = null)
+    public function __construct(SearchActivatableItemDataType $queryParams, EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig, int $batchSize, int $pageNumber = null)
     {
         $this->queryParams = $queryParams;
         $this->entitlementLineItemResponseConfig = $entitlementLineItemResponseConfig;
@@ -45,12 +45,12 @@ class SearchEntitlementLineItemPropertiesRequestType extends FlexnetType impleme
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType  $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemResponseConfigRequestType  $entitlementLineItemResponseConfig
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams, \Flexsim\FlexnetOperations\Type\EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig, int $batchSize, int $pageNumber = null)
+    public static function create(SearchActivatableItemDataType $queryParams, EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig, int $batchSize, int $pageNumber = null)
     {
         return new self(...func_get_args());
     }
@@ -64,7 +64,7 @@ class SearchEntitlementLineItemPropertiesRequestType extends FlexnetType impleme
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\SearchActivatableItemDataType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -83,7 +83,7 @@ class SearchEntitlementLineItemPropertiesRequestType extends FlexnetType impleme
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemResponseConfigRequestType  $entitlementLineItemResponseConfig
      * @return $this
      */
     public function setEntitlementLineItemResponseConfig($entitlementLineItemResponseConfig)
@@ -102,7 +102,7 @@ class SearchEntitlementLineItemPropertiesRequestType extends FlexnetType impleme
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)
@@ -121,7 +121,7 @@ class SearchEntitlementLineItemPropertiesRequestType extends FlexnetType impleme
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)

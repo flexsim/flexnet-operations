@@ -47,16 +47,16 @@ class PolicyAttributesListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $rehostsPolicy
-     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $returnsPolicy
-     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $repairsPolicy
-     * @param \Flexsim\FlexnetOperations\Type\ExtraActivationDataType $extraActivationsPolicy
-     * @param \Flexsim\FlexnetOperations\Type\CancelLicensePolicyDataType $cancelLicensePolicy
-     * @param \Flexsim\FlexnetOperations\Type\VirtualLicensePolicyDataType $virtualLicensePolicy
-     * @param \Flexsim\FlexnetOperations\Type\ReinstallPolicyDataType $reinstallPolicy
-     * @param \Flexsim\FlexnetOperations\Type\AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyDataType  $rehostsPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyDataType  $returnsPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyDataType  $repairsPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\ExtraActivationDataType  $extraActivationsPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\CancelLicensePolicyDataType  $cancelLicensePolicy
+     * @param  \Flexsim\FlexnetOperations\Type\VirtualLicensePolicyDataType  $virtualLicensePolicy
+     * @param  \Flexsim\FlexnetOperations\Type\ReinstallPolicyDataType  $reinstallPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\AcpiGenerationIdLicensePolicyDataType  $acpiGenerationIdLicensePolicy
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\PolicyDataType $rehostsPolicy = null, \Flexsim\FlexnetOperations\Type\PolicyDataType $returnsPolicy = null, \Flexsim\FlexnetOperations\Type\PolicyDataType $repairsPolicy = null, \Flexsim\FlexnetOperations\Type\ExtraActivationDataType $extraActivationsPolicy = null, \Flexsim\FlexnetOperations\Type\CancelLicensePolicyDataType $cancelLicensePolicy = null, \Flexsim\FlexnetOperations\Type\VirtualLicensePolicyDataType $virtualLicensePolicy = null, \Flexsim\FlexnetOperations\Type\ReinstallPolicyDataType $reinstallPolicy = null, \Flexsim\FlexnetOperations\Type\AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy = null)
+    public function __construct(PolicyDataType $rehostsPolicy = null, PolicyDataType $returnsPolicy = null, PolicyDataType $repairsPolicy = null, ExtraActivationDataType $extraActivationsPolicy = null, CancelLicensePolicyDataType $cancelLicensePolicy = null, VirtualLicensePolicyDataType $virtualLicensePolicy = null, ReinstallPolicyDataType $reinstallPolicy = null, AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy = null)
     {
         $this->rehostsPolicy = $rehostsPolicy;
         $this->returnsPolicy = $returnsPolicy;
@@ -71,16 +71,16 @@ class PolicyAttributesListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $rehostsPolicy
-     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $returnsPolicy
-     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $repairsPolicy
-     * @param \Flexsim\FlexnetOperations\Type\ExtraActivationDataType $extraActivationsPolicy
-     * @param \Flexsim\FlexnetOperations\Type\CancelLicensePolicyDataType $cancelLicensePolicy
-     * @param \Flexsim\FlexnetOperations\Type\VirtualLicensePolicyDataType $virtualLicensePolicy
-     * @param \Flexsim\FlexnetOperations\Type\ReinstallPolicyDataType $reinstallPolicy
-     * @param \Flexsim\FlexnetOperations\Type\AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyDataType  $rehostsPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyDataType  $returnsPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyDataType  $repairsPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\ExtraActivationDataType  $extraActivationsPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\CancelLicensePolicyDataType  $cancelLicensePolicy
+     * @param  \Flexsim\FlexnetOperations\Type\VirtualLicensePolicyDataType  $virtualLicensePolicy
+     * @param  \Flexsim\FlexnetOperations\Type\ReinstallPolicyDataType  $reinstallPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\AcpiGenerationIdLicensePolicyDataType  $acpiGenerationIdLicensePolicy
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\PolicyDataType $rehostsPolicy = null, \Flexsim\FlexnetOperations\Type\PolicyDataType $returnsPolicy = null, \Flexsim\FlexnetOperations\Type\PolicyDataType $repairsPolicy = null, \Flexsim\FlexnetOperations\Type\ExtraActivationDataType $extraActivationsPolicy = null, \Flexsim\FlexnetOperations\Type\CancelLicensePolicyDataType $cancelLicensePolicy = null, \Flexsim\FlexnetOperations\Type\VirtualLicensePolicyDataType $virtualLicensePolicy = null, \Flexsim\FlexnetOperations\Type\ReinstallPolicyDataType $reinstallPolicy = null, \Flexsim\FlexnetOperations\Type\AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy = null)
+    public static function create(PolicyDataType $rehostsPolicy = null, PolicyDataType $returnsPolicy = null, PolicyDataType $repairsPolicy = null, ExtraActivationDataType $extraActivationsPolicy = null, CancelLicensePolicyDataType $cancelLicensePolicy = null, VirtualLicensePolicyDataType $virtualLicensePolicy = null, ReinstallPolicyDataType $reinstallPolicy = null, AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy = null)
     {
         return new self(...func_get_args());
     }
@@ -94,7 +94,7 @@ class PolicyAttributesListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $rehostsPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyDataType  $rehostsPolicy
      * @return $this
      */
     public function setRehostsPolicy($rehostsPolicy)
@@ -113,7 +113,7 @@ class PolicyAttributesListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $returnsPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyDataType  $returnsPolicy
      * @return $this
      */
     public function setReturnsPolicy($returnsPolicy)
@@ -132,7 +132,7 @@ class PolicyAttributesListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PolicyDataType $repairsPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\PolicyDataType  $repairsPolicy
      * @return $this
      */
     public function setRepairsPolicy($repairsPolicy)
@@ -151,7 +151,7 @@ class PolicyAttributesListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ExtraActivationDataType $extraActivationsPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\ExtraActivationDataType  $extraActivationsPolicy
      * @return $this
      */
     public function setExtraActivationsPolicy($extraActivationsPolicy)
@@ -170,7 +170,7 @@ class PolicyAttributesListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CancelLicensePolicyDataType $cancelLicensePolicy
+     * @param  \Flexsim\FlexnetOperations\Type\CancelLicensePolicyDataType  $cancelLicensePolicy
      * @return $this
      */
     public function setCancelLicensePolicy($cancelLicensePolicy)
@@ -189,7 +189,7 @@ class PolicyAttributesListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\VirtualLicensePolicyDataType $virtualLicensePolicy
+     * @param  \Flexsim\FlexnetOperations\Type\VirtualLicensePolicyDataType  $virtualLicensePolicy
      * @return $this
      */
     public function setVirtualLicensePolicy($virtualLicensePolicy)
@@ -208,7 +208,7 @@ class PolicyAttributesListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ReinstallPolicyDataType $reinstallPolicy
+     * @param  \Flexsim\FlexnetOperations\Type\ReinstallPolicyDataType  $reinstallPolicy
      * @return $this
      */
     public function setReinstallPolicy($reinstallPolicy)
@@ -227,7 +227,7 @@ class PolicyAttributesListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy
+     * @param  \Flexsim\FlexnetOperations\Type\AcpiGenerationIdLicensePolicyDataType  $acpiGenerationIdLicensePolicy
      * @return $this
      */
     public function setAcpiGenerationIdLicensePolicy($acpiGenerationIdLicensePolicy)

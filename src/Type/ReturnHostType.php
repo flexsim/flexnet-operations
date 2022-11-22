@@ -17,10 +17,10 @@ class ReturnHostType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $targetHostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $hostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $targetHostIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $targetHostIdentifier = null)
+    public function __construct(DeviceIdentifier $hostIdentifier, DeviceIdentifier $targetHostIdentifier = null)
     {
         $this->hostIdentifier = $hostIdentifier;
         $this->targetHostIdentifier = $targetHostIdentifier;
@@ -29,10 +29,10 @@ class ReturnHostType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $targetHostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $hostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $targetHostIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $targetHostIdentifier = null)
+    public static function create(DeviceIdentifier $hostIdentifier, DeviceIdentifier $targetHostIdentifier = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class ReturnHostType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $hostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $hostIdentifier
      * @return $this
      */
     public function setHostIdentifier($hostIdentifier)
@@ -65,7 +65,7 @@ class ReturnHostType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $targetHostIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $targetHostIdentifier
      * @return $this
      */
     public function setTargetHostIdentifier($targetHostIdentifier)

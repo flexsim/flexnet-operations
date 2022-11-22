@@ -14,9 +14,9 @@ class AddDomainUserRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AddDomainUserDataType $user
+     * @param  \Flexsim\FlexnetOperations\Type\AddDomainUserDataType  $user
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AddDomainUserDataType $user)
+    public function __construct(AddDomainUserDataType $user)
     {
         $this->user = $user;
     }
@@ -24,9 +24,9 @@ class AddDomainUserRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AddDomainUserDataType $user
+     * @param  \Flexsim\FlexnetOperations\Type\AddDomainUserDataType  $user
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AddDomainUserDataType $user)
+    public static function create(AddDomainUserDataType $user)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class AddDomainUserRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddDomainUserDataType $user
+     * @param  \Flexsim\FlexnetOperations\Type\AddDomainUserDataType  $user
      * @return $this
      */
     public function setUser($user)

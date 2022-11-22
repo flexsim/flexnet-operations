@@ -15,14 +15,15 @@ class UserOrgHierarchyServiceClient
      */
     private $caller;
 
-    public function __construct(\Phpro\SoapClient\Caller\Caller $caller)
+    public function __construct(Caller $caller)
     {
         $this->caller = $caller;
     }
 
     /**
-     * @param RequestInterface|Type\CreateOrgRequestType $createOrgRequest
+     * @param  RequestInterface|Type\CreateOrgRequestType  $createOrgRequest
      * @return ResultInterface|Type\CreateOrgResponseType
+     *
      * @throws SoapException
      */
     public function createOrganization(\Flexsim\FlexnetOperations\Type\CreateOrgRequestType $createOrgRequest): \Flexsim\FlexnetOperations\Type\CreateOrgResponseType
@@ -31,8 +32,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\LinkOrganizationsRequestType $linkOrganizationsRequest
+     * @param  RequestInterface|Type\LinkOrganizationsRequestType  $linkOrganizationsRequest
      * @return ResultInterface|Type\LinkOrganizationsResponseType
+     *
      * @throws SoapException
      */
     public function linkOrganizations(\Flexsim\FlexnetOperations\Type\LinkOrganizationsRequestType $linkOrganizationsRequest): \Flexsim\FlexnetOperations\Type\LinkOrganizationsResponseType
@@ -41,8 +43,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\UpdateOrganizationRequestType $updateOrganizationRequest
+     * @param  RequestInterface|Type\UpdateOrganizationRequestType  $updateOrganizationRequest
      * @return ResultInterface|Type\UpdateOrganizationResponseType
+     *
      * @throws SoapException
      */
     public function updateOrganization(\Flexsim\FlexnetOperations\Type\UpdateOrganizationRequestType $updateOrganizationRequest): \Flexsim\FlexnetOperations\Type\UpdateOrganizationResponseType
@@ -51,8 +54,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\DeleteOrganizationRequestType $deleteOrganizationRequest
+     * @param  RequestInterface|Type\DeleteOrganizationRequestType  $deleteOrganizationRequest
      * @return ResultInterface|Type\DeleteOrganizationResponseType
+     *
      * @throws SoapException
      */
     public function deleteOrganization(\Flexsim\FlexnetOperations\Type\DeleteOrganizationRequestType $deleteOrganizationRequest): \Flexsim\FlexnetOperations\Type\DeleteOrganizationResponseType
@@ -61,8 +65,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetOrganizationsQueryRequestType $getOrganizationsQueryRequest
+     * @param  RequestInterface|Type\GetOrganizationsQueryRequestType  $getOrganizationsQueryRequest
      * @return ResultInterface|Type\GetOrganizationsQueryResponseType
+     *
      * @throws SoapException
      */
     public function getOrganizationsQuery(\Flexsim\FlexnetOperations\Type\GetOrganizationsQueryRequestType $getOrganizationsQueryRequest): \Flexsim\FlexnetOperations\Type\GetOrganizationsQueryResponseType
@@ -71,8 +76,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetOrganizationCountRequestType $getOrganizationCountRequest
+     * @param  RequestInterface|Type\GetOrganizationCountRequestType  $getOrganizationCountRequest
      * @return ResultInterface|Type\GetOrganizationCountResponseType
+     *
      * @throws SoapException
      */
     public function getOrganizationCount(\Flexsim\FlexnetOperations\Type\GetOrganizationCountRequestType $getOrganizationCountRequest): \Flexsim\FlexnetOperations\Type\GetOrganizationCountResponseType
@@ -81,8 +87,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetParentOrganizationsRequestType $getParentOrganizationsRequest
+     * @param  RequestInterface|Type\GetParentOrganizationsRequestType  $getParentOrganizationsRequest
      * @return ResultInterface|Type\GetParentOrganizationsResponseType
+     *
      * @throws SoapException
      */
     public function getParentOrganizations(\Flexsim\FlexnetOperations\Type\GetParentOrganizationsRequestType $getParentOrganizationsRequest): \Flexsim\FlexnetOperations\Type\GetParentOrganizationsResponseType
@@ -91,8 +98,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetSubOrganizationsRequestType $getSubOrganizationsRequest
+     * @param  RequestInterface|Type\GetSubOrganizationsRequestType  $getSubOrganizationsRequest
      * @return ResultInterface|Type\GetSubOrganizationsResponseType
+     *
      * @throws SoapException
      */
     public function getSubOrganizations(\Flexsim\FlexnetOperations\Type\GetSubOrganizationsRequestType $getSubOrganizationsRequest): \Flexsim\FlexnetOperations\Type\GetSubOrganizationsResponseType
@@ -101,8 +109,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetUsersQueryRequestType $getUsersQueryRequest
+     * @param  RequestInterface|Type\GetUsersQueryRequestType  $getUsersQueryRequest
      * @return ResultInterface|Type\GetUsersQueryResponseType
+     *
      * @throws SoapException
      */
     public function getUsersQuery(\Flexsim\FlexnetOperations\Type\GetUsersQueryRequestType $getUsersQueryRequest): \Flexsim\FlexnetOperations\Type\GetUsersQueryResponseType
@@ -111,8 +120,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetUserCountRequestType $getUserCountRequest
+     * @param  RequestInterface|Type\GetUserCountRequestType  $getUserCountRequest
      * @return ResultInterface|Type\GetUserCountResponseType
+     *
      * @throws SoapException
      */
     public function getUserCount(\Flexsim\FlexnetOperations\Type\GetUserCountRequestType $getUserCountRequest): \Flexsim\FlexnetOperations\Type\GetUserCountResponseType
@@ -121,8 +131,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\CreateUserRequestType $createUserRequest
+     * @param  RequestInterface|Type\CreateUserRequestType  $createUserRequest
      * @return ResultInterface|Type\CreateUserResponseType
+     *
      * @throws SoapException
      */
     public function createUser(\Flexsim\FlexnetOperations\Type\CreateUserRequestType $createUserRequest): \Flexsim\FlexnetOperations\Type\CreateUserResponseType
@@ -131,8 +142,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\UpdateUserRequestType $updateUserRequest
+     * @param  RequestInterface|Type\UpdateUserRequestType  $updateUserRequest
      * @return ResultInterface|Type\UpdateUserResponseType
+     *
      * @throws SoapException
      */
     public function updateUser(\Flexsim\FlexnetOperations\Type\UpdateUserRequestType $updateUserRequest): \Flexsim\FlexnetOperations\Type\UpdateUserResponseType
@@ -141,8 +153,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\UpdateUserRolesRequestType $updateUserRolesRequest
+     * @param  RequestInterface|Type\UpdateUserRolesRequestType  $updateUserRolesRequest
      * @return ResultInterface|Type\UpdateUserRolesResponseType
+     *
      * @throws SoapException
      */
     public function updateUserRoles(\Flexsim\FlexnetOperations\Type\UpdateUserRolesRequestType $updateUserRolesRequest): \Flexsim\FlexnetOperations\Type\UpdateUserRolesResponseType
@@ -151,8 +164,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\DeleteUserRequestType $deleteUserRequest
+     * @param  RequestInterface|Type\DeleteUserRequestType  $deleteUserRequest
      * @return ResultInterface|Type\DeleteUserResponseType
+     *
      * @throws SoapException
      */
     public function deleteUser(\Flexsim\FlexnetOperations\Type\DeleteUserRequestType $deleteUserRequest): \Flexsim\FlexnetOperations\Type\DeleteUserResponseType
@@ -161,8 +175,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\RelateOrganizationsRequestType $relateOrganizationsRequest
+     * @param  RequestInterface|Type\RelateOrganizationsRequestType  $relateOrganizationsRequest
      * @return ResultInterface|Type\RelateOrganizationsResponseType
+     *
      * @throws SoapException
      */
     public function relateOrganizations(\Flexsim\FlexnetOperations\Type\RelateOrganizationsRequestType $relateOrganizationsRequest): \Flexsim\FlexnetOperations\Type\RelateOrganizationsResponseType
@@ -171,8 +186,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetRelatedOrganizationsRequestType $getRelatedOrganizationsRequest
+     * @param  RequestInterface|Type\GetRelatedOrganizationsRequestType  $getRelatedOrganizationsRequest
      * @return ResultInterface|Type\GetRelatedOrganizationsResponseType
+     *
      * @throws SoapException
      */
     public function getRelatedOrganizations(\Flexsim\FlexnetOperations\Type\GetRelatedOrganizationsRequestType $getRelatedOrganizationsRequest): \Flexsim\FlexnetOperations\Type\GetRelatedOrganizationsResponseType
@@ -181,8 +197,9 @@ class UserOrgHierarchyServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetUserPermissionsRequestType $getUserPermissionsRequest
+     * @param  RequestInterface|Type\GetUserPermissionsRequestType  $getUserPermissionsRequest
      * @return ResultInterface|Type\GetUserPermissionsResponseType
+     *
      * @throws SoapException
      */
     public function getUserPermissions(\Flexsim\FlexnetOperations\Type\GetUserPermissionsRequestType $getUserPermissionsRequest): \Flexsim\FlexnetOperations\Type\GetUserPermissionsResponseType

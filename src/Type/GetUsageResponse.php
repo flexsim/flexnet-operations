@@ -19,10 +19,10 @@ class GetUsageResponse extends FlexnetType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfoType
-     * @param \Flexsim\FlexnetOperations\Type\Usage $usages
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfoType
+     * @param  \Flexsim\FlexnetOperations\Type\Usage  $usages
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfoType, \Flexsim\FlexnetOperations\Type\Usage $usages)
+    public function __construct(StatusInfoType $statusInfoType, Usage $usages)
     {
         $this->statusInfoType = $statusInfoType;
         $this->usages = $usages;
@@ -31,10 +31,10 @@ class GetUsageResponse extends FlexnetType implements ResultInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfoType
-     * @param \Flexsim\FlexnetOperations\Type\Usage $usages
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfoType
+     * @param  \Flexsim\FlexnetOperations\Type\Usage  $usages
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfoType, \Flexsim\FlexnetOperations\Type\Usage $usages)
+    public static function create(StatusInfoType $statusInfoType, Usage $usages)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class GetUsageResponse extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfoType
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfoType
      * @return $this
      */
     public function setStatusInfoType($statusInfoType)
@@ -67,7 +67,7 @@ class GetUsageResponse extends FlexnetType implements ResultInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\Usage $usages
+     * @param  \Flexsim\FlexnetOperations\Type\Usage  $usages
      * @return $this
      */
     public function setUsages($usages)

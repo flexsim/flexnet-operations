@@ -19,10 +19,10 @@ class CreatePartNumberRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
-     * @param bool $processSync
+     * @param  \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType  $partNumber
+     * @param  bool  $processSync
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber, bool $processSync = null)
+    public function __construct(CreatePartNumberDataType $partNumber, bool $processSync = null)
     {
         $this->partNumber = $partNumber;
         $this->processSync = $processSync;
@@ -31,10 +31,10 @@ class CreatePartNumberRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
-     * @param bool $processSync
+     * @param  \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType  $partNumber
+     * @param  bool  $processSync
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber, bool $processSync = null)
+    public static function create(CreatePartNumberDataType $partNumber, bool $processSync = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class CreatePartNumberRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\CreatePartNumberDataType  $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -67,7 +67,7 @@ class CreatePartNumberRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param bool $processSync
+     * @param  bool  $processSync
      * @return $this
      */
     public function setProcessSync($processSync)

@@ -17,10 +17,10 @@ class FailedDeleteAcctDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteAcctDataType  $acctData
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData = null, string $reason = null)
+    public function __construct(DeleteAcctDataType $acctData = null, string $reason = null)
     {
         $this->acctData = $acctData;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedDeleteAcctDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteAcctDataType  $acctData
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData = null, string $reason = null)
+    public static function create(DeleteAcctDataType $acctData = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedDeleteAcctDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeleteAcctDataType $acctData
+     * @param  \Flexsim\FlexnetOperations\Type\DeleteAcctDataType  $acctData
      * @return $this
      */
     public function setAcctData($acctData)
@@ -65,7 +65,7 @@ class FailedDeleteAcctDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

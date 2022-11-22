@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Facade;
  * @method static string getDefaultVersion( $connection = NULL)
  * @method static setDefaultVersion( $version,  $connection = NULL)
  * @method static array getClients()
- *
  * @method static \Flexsim\FlexnetOperations\Type\CreateOrgResponseType createOrganization(\Flexsim\FlexnetOperations\Type\CreateOrgRequestType $createOrgRequest)
  * @method static \Flexsim\FlexnetOperations\Type\LinkOrganizationsResponseType linkOrganizations(\Flexsim\FlexnetOperations\Type\LinkOrganizationsRequestType $linkOrganizationsRequest)
  * @method static \Flexsim\FlexnetOperations\Type\UpdateOrganizationResponseType updateOrganization(\Flexsim\FlexnetOperations\Type\UpdateOrganizationRequestType $updateOrganizationRequest)

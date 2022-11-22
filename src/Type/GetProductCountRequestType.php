@@ -14,9 +14,9 @@ class GetProductCountRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\ProductQueryParametersType  $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams = null)
+    public function __construct(ProductQueryParametersType $queryParams = null)
     {
         $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
@@ -25,9 +25,9 @@ class GetProductCountRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\ProductQueryParametersType  $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams = null)
+    public static function create(ProductQueryParametersType $queryParams = null)
     {
         return new self(...func_get_args());
     }
@@ -41,7 +41,7 @@ class GetProductCountRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\ProductQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)

@@ -17,10 +17,10 @@ class FailedUpdateEntitlementLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $failedData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType  $failedData
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $failedData = null, string $reason = null)
+    public function __construct(UpdateEntitlementLineItemDataType $failedData = null, string $reason = null)
     {
         $this->failedData = $failedData;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedUpdateEntitlementLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $failedData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType  $failedData
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $failedData = null, string $reason = null)
+    public static function create(UpdateEntitlementLineItemDataType $failedData = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedUpdateEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemDataType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)
@@ -65,7 +65,7 @@ class FailedUpdateEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

@@ -14,9 +14,9 @@ class TransferLineItemsRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemsListType $lineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\TransferLineItemsListType  $lineItemList
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\TransferLineItemsListType $lineItemList)
+    public function __construct(TransferLineItemsListType $lineItemList)
     {
         $this->lineItemList = $lineItemList;
     }
@@ -24,9 +24,9 @@ class TransferLineItemsRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemsListType $lineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\TransferLineItemsListType  $lineItemList
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\TransferLineItemsListType $lineItemList)
+    public static function create(TransferLineItemsListType $lineItemList)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class TransferLineItemsRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\TransferLineItemsListType $lineItemList
+     * @param  \Flexsim\FlexnetOperations\Type\TransferLineItemsListType  $lineItemList
      * @return $this
      */
     public function setLineItemList($lineItemList)

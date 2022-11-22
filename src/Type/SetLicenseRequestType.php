@@ -14,9 +14,9 @@ class SetLicenseRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OnholdFulfillmentListType $onholdFulfillmentList
+     * @param  \Flexsim\FlexnetOperations\Type\OnholdFulfillmentListType  $onholdFulfillmentList
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OnholdFulfillmentListType $onholdFulfillmentList)
+    public function __construct(OnholdFulfillmentListType $onholdFulfillmentList)
     {
         $this->onholdFulfillmentList = $onholdFulfillmentList;
     }
@@ -24,9 +24,9 @@ class SetLicenseRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OnholdFulfillmentListType $onholdFulfillmentList
+     * @param  \Flexsim\FlexnetOperations\Type\OnholdFulfillmentListType  $onholdFulfillmentList
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OnholdFulfillmentListType $onholdFulfillmentList)
+    public static function create(OnholdFulfillmentListType $onholdFulfillmentList)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class SetLicenseRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OnholdFulfillmentListType $onholdFulfillmentList
+     * @param  \Flexsim\FlexnetOperations\Type\OnholdFulfillmentListType  $onholdFulfillmentList
      * @return $this
      */
     public function setOnholdFulfillmentList($onholdFulfillmentList)

@@ -12,9 +12,9 @@ class PublisherAttributesListDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleAttributeDataType $attribute
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleAttributeDataType  $attribute
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SimpleAttributeDataType $attribute)
+    public function __construct(SimpleAttributeDataType $attribute)
     {
         $this->attribute = $attribute;
     }
@@ -22,9 +22,9 @@ class PublisherAttributesListDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SimpleAttributeDataType $attribute
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleAttributeDataType  $attribute
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SimpleAttributeDataType $attribute)
+    public static function create(SimpleAttributeDataType $attribute)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class PublisherAttributesListDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SimpleAttributeDataType $attribute
+     * @param  \Flexsim\FlexnetOperations\Type\SimpleAttributeDataType  $attribute
      * @return $this
      */
     public function setAttribute($attribute)

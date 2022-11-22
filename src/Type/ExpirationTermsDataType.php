@@ -17,10 +17,10 @@ class ExpirationTermsDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @param \DateTimeInterface $expirationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DurationType  $term
+     * @param  \DateTimeInterface  $expirationDate
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null)
+    public function __construct(DurationType $term = null, \DateTimeInterface $expirationDate = null)
     {
         $this->term = $term;
         $this->expirationDate = $expirationDate;
@@ -29,10 +29,10 @@ class ExpirationTermsDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
-     * @param \DateTimeInterface $expirationDate
+     * @param  \Flexsim\FlexnetOperations\Type\DurationType  $term
+     * @param  \DateTimeInterface  $expirationDate
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DurationType $term = null, \DateTimeInterface $expirationDate = null)
+    public static function create(DurationType $term = null, \DateTimeInterface $expirationDate = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class ExpirationTermsDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DurationType $term
+     * @param  \Flexsim\FlexnetOperations\Type\DurationType  $term
      * @return $this
      */
     public function setTerm($term)
@@ -65,7 +65,7 @@ class ExpirationTermsDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $expirationDate
+     * @param  \DateTimeInterface  $expirationDate
      * @return $this
      */
     public function setExpirationDate($expirationDate)

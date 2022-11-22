@@ -12,7 +12,7 @@ class GetAccountsQueryResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountDetailDataType|array $acctData
+     * @param  \Flexsim\FlexnetOperations\Type\AccountDetailDataType|array  $acctData
      */
     public function __construct($acctData = null)
     {
@@ -22,7 +22,7 @@ class GetAccountsQueryResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountDetailDataType|array $acctData
+     * @param  \Flexsim\FlexnetOperations\Type\AccountDetailDataType|array  $acctData
      */
     public static function create($acctData = null)
     {
@@ -38,7 +38,7 @@ class GetAccountsQueryResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountDetailDataType $acctData
+     * @param  \Flexsim\FlexnetOperations\Type\AccountDetailDataType  $acctData
      * @return $this
      */
     public function setAcctData($acctData)

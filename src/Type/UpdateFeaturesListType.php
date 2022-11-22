@@ -17,8 +17,8 @@ class UpdateFeaturesListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array $feature
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array  $feature
+     * @param  string  $opType
      */
     public function __construct($feature, string $opType)
     {
@@ -29,8 +29,8 @@ class UpdateFeaturesListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array $feature
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array  $feature
+     * @param  string  $opType
      */
     public static function create($feature, string $opType)
     {
@@ -46,7 +46,7 @@ class UpdateFeaturesListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array $feature
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureIdentifierWithCountDataType|array  $feature
      * @return $this
      */
     public function setFeature($feature)
@@ -65,7 +65,7 @@ class UpdateFeaturesListType extends FlexnetType
     }
 
     /**
-     * @param string $opType
+     * @param  string  $opType
      * @return $this
      */
     public function setOpType($opType)

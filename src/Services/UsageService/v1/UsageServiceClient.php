@@ -15,14 +15,15 @@ class UsageServiceClient
      */
     private $caller;
 
-    public function __construct(\Phpro\SoapClient\Caller\Caller $caller)
+    public function __construct(Caller $caller)
     {
         $this->caller = $caller;
     }
 
     /**
-     * @param RequestInterface|Type\GetUsageRequest $GetUsageRequest
+     * @param  RequestInterface|Type\GetUsageRequest  $GetUsageRequest
      * @return ResultInterface|Type\GetUsageResponse
+     *
      * @throws SoapException
      */
     public function getUsage(\Flexsim\FlexnetOperations\Type\GetUsageRequest $GetUsageRequest): \Flexsim\FlexnetOperations\Type\GetUsageResponse

@@ -162,44 +162,44 @@ class FulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param string $fulfillmentType
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItem
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @param string $soldTo
-     * @param string $fulfilledCount
-     * @param string $overDraftCount
-     * @param \DateTimeInterface $fulfillDate
-     * @param \DateTimeInterface $fulfillDateTime
-     * @param bool $isPermanent
-     * @param \DateTimeInterface $lastModifiedDateTime
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
-     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
-     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $expirationDate
-     * @param string $licenseText
-     * @param string $binaryLicense
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedHostLicenseDataType $consolidatedHostLicense
-     * @param string $supportAction
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $parentFulfillmentId
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param string $state
-     * @param string $fulfillmentSource
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
-     * @param string $activationType
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  string  $fulfillmentType
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $product
+     * @param  string  $soldTo
+     * @param  string  $fulfilledCount
+     * @param  string  $overDraftCount
+     * @param  \DateTimeInterface  $fulfillDate
+     * @param  \DateTimeInterface  $fulfillDateTime
+     * @param  bool  $isPermanent
+     * @param  \DateTimeInterface  $lastModifiedDateTime
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  \Flexsim\FlexnetOperations\Type\ServerIDsType  $serverIds
+     * @param  \Flexsim\FlexnetOperations\Type\NodeIDsType  $nodeIds
+     * @param  \Flexsim\FlexnetOperations\Type\CustomHostIDType  $customHost
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $expirationDate
+     * @param  string  $licenseText
+     * @param  string  $binaryLicense
+     * @param  \Flexsim\FlexnetOperations\Type\ConsolidatedHostLicenseDataType  $consolidatedHostLicense
+     * @param  string  $supportAction
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $parentFulfillmentId
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  string  $state
+     * @param  string  $fulfillmentSource
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
+     * @param  \Flexsim\FlexnetOperations\Type\EntitledProductDataListType  $entitledProducts
+     * @param  string  $activationType
      */
     public function __construct(
-        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier,
-        \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier,
+        EntitlementIdentifierType $entitlementIdentifier,
+        FulfillmentIdentifierType $fulfillmentIdentifier,
         string $fulfillmentType,
-        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItem,
-        \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product,
+        EntitlementLineItemIdentifierType $lineItem,
+        ProductIdentifierType $product,
         string $soldTo,
         string $fulfilledCount,
         string $overDraftCount,
@@ -209,22 +209,22 @@ class FulfillmentDataType extends FlexnetType
         \DateTimeInterface $lastModifiedDateTime,
         string $shipToEmail = null,
         string $shipToAddress = null,
-        \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds = null,
-        \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds = null,
-        \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null,
+        ServerIDsType $serverIds = null,
+        NodeIDsType $nodeIds = null,
+        CustomHostIDType $customHost = null,
         \DateTimeInterface $startDate = null,
         \DateTimeInterface $expirationDate = null,
         string $licenseText = null,
         string $binaryLicense = null,
-        \Flexsim\FlexnetOperations\Type\ConsolidatedHostLicenseDataType $consolidatedHostLicense = null,
+        ConsolidatedHostLicenseDataType $consolidatedHostLicense = null,
         string $supportAction = null,
-        \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $parentFulfillmentId = null,
-        \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null,
+        FulfillmentIdentifierType $parentFulfillmentId = null,
+        LicenseTechnologyIdentifierType $licenseTechnology = null,
+        AttributeDescriptorDataType $licenseModelAttributes = null,
         string $state = null,
         string $fulfillmentSource = null,
-        \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null,
-        \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null,
+        LicenseFileDataListType $licenseFiles = null,
+        EntitledProductDataListType $entitledProducts = null,
         string $activationType = null
     ) {
         $this->entitlementIdentifier = $entitlementIdentifier;
@@ -263,44 +263,44 @@ class FulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param string $fulfillmentType
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItem
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
-     * @param string $soldTo
-     * @param string $fulfilledCount
-     * @param string $overDraftCount
-     * @param \DateTimeInterface $fulfillDate
-     * @param \DateTimeInterface $fulfillDateTime
-     * @param bool $isPermanent
-     * @param \DateTimeInterface $lastModifiedDateTime
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
-     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
-     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $expirationDate
-     * @param string $licenseText
-     * @param string $binaryLicense
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedHostLicenseDataType $consolidatedHostLicense
-     * @param string $supportAction
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $parentFulfillmentId
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
-     * @param string $state
-     * @param string $fulfillmentSource
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
-     * @param string $activationType
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  string  $fulfillmentType
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $product
+     * @param  string  $soldTo
+     * @param  string  $fulfilledCount
+     * @param  string  $overDraftCount
+     * @param  \DateTimeInterface  $fulfillDate
+     * @param  \DateTimeInterface  $fulfillDateTime
+     * @param  bool  $isPermanent
+     * @param  \DateTimeInterface  $lastModifiedDateTime
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  \Flexsim\FlexnetOperations\Type\ServerIDsType  $serverIds
+     * @param  \Flexsim\FlexnetOperations\Type\NodeIDsType  $nodeIds
+     * @param  \Flexsim\FlexnetOperations\Type\CustomHostIDType  $customHost
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $expirationDate
+     * @param  string  $licenseText
+     * @param  string  $binaryLicense
+     * @param  \Flexsim\FlexnetOperations\Type\ConsolidatedHostLicenseDataType  $consolidatedHostLicense
+     * @param  string  $supportAction
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $parentFulfillmentId
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
+     * @param  string  $state
+     * @param  string  $fulfillmentSource
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
+     * @param  \Flexsim\FlexnetOperations\Type\EntitledProductDataListType  $entitledProducts
+     * @param  string  $activationType
      */
     public static function create(
-        \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier,
-        \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier,
+        EntitlementIdentifierType $entitlementIdentifier,
+        FulfillmentIdentifierType $fulfillmentIdentifier,
         string $fulfillmentType,
-        \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItem,
-        \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product,
+        EntitlementLineItemIdentifierType $lineItem,
+        ProductIdentifierType $product,
         string $soldTo,
         string $fulfilledCount,
         string $overDraftCount,
@@ -310,22 +310,22 @@ class FulfillmentDataType extends FlexnetType
         \DateTimeInterface $lastModifiedDateTime,
         string $shipToEmail = null,
         string $shipToAddress = null,
-        \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds = null,
-        \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds = null,
-        \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost = null,
+        ServerIDsType $serverIds = null,
+        NodeIDsType $nodeIds = null,
+        CustomHostIDType $customHost = null,
         \DateTimeInterface $startDate = null,
         \DateTimeInterface $expirationDate = null,
         string $licenseText = null,
         string $binaryLicense = null,
-        \Flexsim\FlexnetOperations\Type\ConsolidatedHostLicenseDataType $consolidatedHostLicense = null,
+        ConsolidatedHostLicenseDataType $consolidatedHostLicense = null,
         string $supportAction = null,
-        \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $parentFulfillmentId = null,
-        \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes = null,
+        FulfillmentIdentifierType $parentFulfillmentId = null,
+        LicenseTechnologyIdentifierType $licenseTechnology = null,
+        AttributeDescriptorDataType $licenseModelAttributes = null,
         string $state = null,
         string $fulfillmentSource = null,
-        \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null,
-        \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts = null,
+        LicenseFileDataListType $licenseFiles = null,
+        EntitledProductDataListType $entitledProducts = null,
         string $activationType = null
     ) {
         return new self(...func_get_args());
@@ -340,7 +340,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
      * @return $this
      */
     public function setEntitlementIdentifier($entitlementIdentifier)
@@ -359,7 +359,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillmentIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
      * @return $this
      */
     public function setFulfillmentIdentifier($fulfillmentIdentifier)
@@ -378,7 +378,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $fulfillmentType
+     * @param  string  $fulfillmentType
      * @return $this
      */
     public function setFulfillmentType($fulfillmentType)
@@ -397,7 +397,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItem
      * @return $this
      */
     public function setLineItem($lineItem)
@@ -416,7 +416,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $product
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $product
      * @return $this
      */
     public function setProduct($product)
@@ -435,7 +435,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $soldTo
+     * @param  string  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -454,7 +454,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToEmail
+     * @param  string  $shipToEmail
      * @return $this
      */
     public function setShipToEmail($shipToEmail)
@@ -473,7 +473,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToAddress
+     * @param  string  $shipToAddress
      * @return $this
      */
     public function setShipToAddress($shipToAddress)
@@ -492,7 +492,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ServerIDsType $serverIds
+     * @param  \Flexsim\FlexnetOperations\Type\ServerIDsType  $serverIds
      * @return $this
      */
     public function setServerIds($serverIds)
@@ -511,7 +511,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\NodeIDsType $nodeIds
+     * @param  \Flexsim\FlexnetOperations\Type\NodeIDsType  $nodeIds
      * @return $this
      */
     public function setNodeIds($nodeIds)
@@ -530,7 +530,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CustomHostIDType $customHost
+     * @param  \Flexsim\FlexnetOperations\Type\CustomHostIDType  $customHost
      * @return $this
      */
     public function setCustomHost($customHost)
@@ -549,7 +549,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $fulfilledCount
+     * @param  string  $fulfilledCount
      * @return $this
      */
     public function setFulfilledCount($fulfilledCount)
@@ -568,7 +568,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $overDraftCount
+     * @param  string  $overDraftCount
      * @return $this
      */
     public function setOverDraftCount($overDraftCount)
@@ -587,7 +587,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $fulfillDate
+     * @param  \DateTimeInterface  $fulfillDate
      * @return $this
      */
     public function setFulfillDate($fulfillDate)
@@ -606,7 +606,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $fulfillDateTime
+     * @param  \DateTimeInterface  $fulfillDateTime
      * @return $this
      */
     public function setFulfillDateTime($fulfillDateTime)
@@ -625,7 +625,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param bool $isPermanent
+     * @param  bool  $isPermanent
      * @return $this
      */
     public function setIsPermanent($isPermanent)
@@ -644,7 +644,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $startDate
+     * @param  \DateTimeInterface  $startDate
      * @return $this
      */
     public function setStartDate($startDate)
@@ -663,7 +663,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $expirationDate
+     * @param  \DateTimeInterface  $expirationDate
      * @return $this
      */
     public function setExpirationDate($expirationDate)
@@ -682,7 +682,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $licenseText
+     * @param  string  $licenseText
      * @return $this
      */
     public function setLicenseText($licenseText)
@@ -701,7 +701,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $binaryLicense
+     * @param  string  $binaryLicense
      * @return $this
      */
     public function setBinaryLicense($binaryLicense)
@@ -720,7 +720,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ConsolidatedHostLicenseDataType $consolidatedHostLicense
+     * @param  \Flexsim\FlexnetOperations\Type\ConsolidatedHostLicenseDataType  $consolidatedHostLicense
      * @return $this
      */
     public function setConsolidatedHostLicense($consolidatedHostLicense)
@@ -739,7 +739,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $supportAction
+     * @param  string  $supportAction
      * @return $this
      */
     public function setSupportAction($supportAction)
@@ -758,7 +758,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $lastModifiedDateTime
+     * @param  \DateTimeInterface  $lastModifiedDateTime
      * @return $this
      */
     public function setLastModifiedDateTime($lastModifiedDateTime)
@@ -777,7 +777,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $parentFulfillmentId
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $parentFulfillmentId
      * @return $this
      */
     public function setParentFulfillmentId($parentFulfillmentId)
@@ -796,7 +796,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType $licenseTechnology
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseTechnologyIdentifierType  $licenseTechnology
      * @return $this
      */
     public function setLicenseTechnology($licenseTechnology)
@@ -815,7 +815,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $licenseModelAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $licenseModelAttributes
      * @return $this
      */
     public function setLicenseModelAttributes($licenseModelAttributes)
@@ -834,7 +834,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $state
+     * @param  string  $state
      * @return $this
      */
     public function setState($state)
@@ -853,7 +853,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $fulfillmentSource
+     * @param  string  $fulfillmentSource
      * @return $this
      */
     public function setFulfillmentSource($fulfillmentSource)
@@ -872,7 +872,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      * @return $this
      */
     public function setLicenseFiles($licenseFiles)
@@ -891,7 +891,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitledProductDataListType $entitledProducts
+     * @param  \Flexsim\FlexnetOperations\Type\EntitledProductDataListType  $entitledProducts
      * @return $this
      */
     public function setEntitledProducts($entitledProducts)
@@ -910,7 +910,7 @@ class FulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $activationType
+     * @param  string  $activationType
      * @return $this
      */
     public function setActivationType($activationType)

@@ -12,7 +12,7 @@ class CreateUserAccountsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserAccountType|array $acctRoles
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserAccountType|array  $acctRoles
      */
     public function __construct($acctRoles)
     {
@@ -22,7 +22,7 @@ class CreateUserAccountsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserAccountType|array $acctRoles
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserAccountType|array  $acctRoles
      */
     public static function create($acctRoles)
     {
@@ -38,7 +38,7 @@ class CreateUserAccountsListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateUserAccountType|array $acctRoles
+     * @param  \Flexsim\FlexnetOperations\Type\CreateUserAccountType|array  $acctRoles
      * @return $this
      */
     public function setAcctRoles($acctRoles)

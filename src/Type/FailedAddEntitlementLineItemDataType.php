@@ -17,10 +17,10 @@ class FailedAddEntitlementLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType  $lineItem
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem = null, string $reason = null)
+    public function __construct(AddEntitlementLineItemDataType $lineItem = null, string $reason = null)
     {
         $this->lineItem = $lineItem;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedAddEntitlementLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType  $lineItem
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem = null, string $reason = null)
+    public static function create(AddEntitlementLineItemDataType $lineItem = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedAddEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\AddEntitlementLineItemDataType  $lineItem
      * @return $this
      */
     public function setLineItem($lineItem)
@@ -65,7 +65,7 @@ class FailedAddEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

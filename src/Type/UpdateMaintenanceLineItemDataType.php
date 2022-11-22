@@ -62,19 +62,19 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\IdType $activationId
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
-     * @param string $orderId
-     * @param string $orderLineNumber
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $expirationDate
-     * @param bool $isPermanent
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $maintenanceProduct
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType  $partNumber
+     * @param  string  $orderId
+     * @param  string  $orderLineNumber
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $expirationDate
+     * @param  bool  $isPermanent
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $parentLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $maintenanceLineItemAttributes
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexsim\FlexnetOperations\Type\IdType $activationId = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes = null)
+    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, IdType $activationId = null, ProductIdentifierType $maintenanceProduct = null, PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, EntitlementLineItemIdentifierType $parentLineItem = null, AttributeDescriptorDataType $maintenanceLineItemAttributes = null)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->activationId = $activationId;
@@ -92,19 +92,19 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\IdType $activationId
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
-     * @param string $orderId
-     * @param string $orderLineNumber
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $expirationDate
-     * @param bool $isPermanent
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $maintenanceProduct
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType  $partNumber
+     * @param  string  $orderId
+     * @param  string  $orderLineNumber
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $expirationDate
+     * @param  bool  $isPermanent
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $parentLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $maintenanceLineItemAttributes
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexsim\FlexnetOperations\Type\IdType $activationId = null, \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct = null, \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem = null, \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes = null)
+    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, IdType $activationId = null, ProductIdentifierType $maintenanceProduct = null, PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, EntitlementLineItemIdentifierType $parentLineItem = null, AttributeDescriptorDataType $maintenanceLineItemAttributes = null)
     {
         return new self(...func_get_args());
     }
@@ -118,7 +118,7 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $lineItemIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
      * @return $this
      */
     public function setLineItemIdentifier($lineItemIdentifier)
@@ -137,7 +137,7 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\IdType $activationId
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $activationId
      * @return $this
      */
     public function setActivationId($activationId)
@@ -156,7 +156,7 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierType $maintenanceProduct
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierType  $maintenanceProduct
      * @return $this
      */
     public function setMaintenanceProduct($maintenanceProduct)
@@ -175,7 +175,7 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType $partNumber
+     * @param  \Flexsim\FlexnetOperations\Type\PartNumberIdentifierType  $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -194,7 +194,7 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $orderId
+     * @param  string  $orderId
      * @return $this
      */
     public function setOrderId($orderId)
@@ -213,7 +213,7 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $orderLineNumber
+     * @param  string  $orderLineNumber
      * @return $this
      */
     public function setOrderLineNumber($orderLineNumber)
@@ -232,7 +232,7 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $startDate
+     * @param  \DateTimeInterface  $startDate
      * @return $this
      */
     public function setStartDate($startDate)
@@ -251,7 +251,7 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $expirationDate
+     * @param  \DateTimeInterface  $expirationDate
      * @return $this
      */
     public function setExpirationDate($expirationDate)
@@ -270,7 +270,7 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param bool $isPermanent
+     * @param  bool  $isPermanent
      * @return $this
      */
     public function setIsPermanent($isPermanent)
@@ -289,7 +289,7 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType $parentLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemIdentifierType  $parentLineItem
      * @return $this
      */
     public function setParentLineItem($parentLineItem)
@@ -308,7 +308,7 @@ class UpdateMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $maintenanceLineItemAttributes
      * @return $this
      */
     public function setMaintenanceLineItemAttributes($maintenanceLineItemAttributes)

@@ -34,13 +34,13 @@ class EmailEntitlementRequestType extends FlexnetType implements RequestInterfac
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param bool $ignoreExistingEmailList
-     * @param bool $validateEmailAddresses
-     * @param \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
-     * @param string $locale
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  bool  $ignoreExistingEmailList
+     * @param  bool  $validateEmailAddresses
+     * @param  \Flexsim\FlexnetOperations\Type\EmailContactListType  $emailIdList
+     * @param  string  $locale
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList = null, string $locale = null)
+    public function __construct(EntitlementIdentifierType $entitlementIdentifier, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, string $locale = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->ignoreExistingEmailList = $ignoreExistingEmailList;
@@ -52,13 +52,13 @@ class EmailEntitlementRequestType extends FlexnetType implements RequestInterfac
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
-     * @param bool $ignoreExistingEmailList
-     * @param bool $validateEmailAddresses
-     * @param \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
-     * @param string $locale
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @param  bool  $ignoreExistingEmailList
+     * @param  bool  $validateEmailAddresses
+     * @param  \Flexsim\FlexnetOperations\Type\EmailContactListType  $emailIdList
+     * @param  string  $locale
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList = null, string $locale = null)
+    public static function create(EntitlementIdentifierType $entitlementIdentifier, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, string $locale = null)
     {
         return new self(...func_get_args());
     }
@@ -72,7 +72,7 @@ class EmailEntitlementRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $entitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $entitlementIdentifier
      * @return $this
      */
     public function setEntitlementIdentifier($entitlementIdentifier)
@@ -91,7 +91,7 @@ class EmailEntitlementRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param bool $ignoreExistingEmailList
+     * @param  bool  $ignoreExistingEmailList
      * @return $this
      */
     public function setIgnoreExistingEmailList($ignoreExistingEmailList)
@@ -110,7 +110,7 @@ class EmailEntitlementRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param bool $validateEmailAddresses
+     * @param  bool  $validateEmailAddresses
      * @return $this
      */
     public function setValidateEmailAddresses($validateEmailAddresses)
@@ -129,7 +129,7 @@ class EmailEntitlementRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EmailContactListType $emailIdList
+     * @param  \Flexsim\FlexnetOperations\Type\EmailContactListType  $emailIdList
      * @return $this
      */
     public function setEmailIdList($emailIdList)
@@ -148,7 +148,7 @@ class EmailEntitlementRequestType extends FlexnetType implements RequestInterfac
     }
 
     /**
-     * @param string $locale
+     * @param  string  $locale
      * @return $this
      */
     public function setLocale($locale)

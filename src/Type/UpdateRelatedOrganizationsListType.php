@@ -17,8 +17,8 @@ class UpdateRelatedOrganizationsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $relatedOrganization
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array  $relatedOrganization
+     * @param  string  $opType
      */
     public function __construct($relatedOrganization, string $opType)
     {
@@ -29,8 +29,8 @@ class UpdateRelatedOrganizationsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $relatedOrganization
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array  $relatedOrganization
+     * @param  string  $opType
      */
     public static function create($relatedOrganization, string $opType)
     {
@@ -46,7 +46,7 @@ class UpdateRelatedOrganizationsListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array $relatedOrganization
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType|array  $relatedOrganization
      * @return $this
      */
     public function setRelatedOrganization($relatedOrganization)
@@ -65,7 +65,7 @@ class UpdateRelatedOrganizationsListType extends FlexnetType
     }
 
     /**
-     * @param string $opType
+     * @param  string  $opType
      * @return $this
      */
     public function setOpType($opType)

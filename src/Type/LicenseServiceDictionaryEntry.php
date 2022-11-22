@@ -17,8 +17,8 @@ class LicenseServiceDictionaryEntry extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $Key
-     * @param string $Value
+     * @param  string  $Key
+     * @param  string  $Value
      */
     public function __construct(string $Key, string $Value)
     {
@@ -29,8 +29,8 @@ class LicenseServiceDictionaryEntry extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $Key
-     * @param string $Value
+     * @param  string  $Key
+     * @param  string  $Value
      */
     public static function create(string $Key, string $Value)
     {
@@ -46,7 +46,7 @@ class LicenseServiceDictionaryEntry extends FlexnetType
     }
 
     /**
-     * @param string $Key
+     * @param  string  $Key
      * @return $this
      */
     public function setKey($Key)
@@ -65,7 +65,7 @@ class LicenseServiceDictionaryEntry extends FlexnetType
     }
 
     /**
-     * @param string $Value
+     * @param  string  $Value
      * @return $this
      */
     public function setValue($Value)

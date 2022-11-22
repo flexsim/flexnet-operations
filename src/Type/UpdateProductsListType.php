@@ -17,8 +17,8 @@ class UpdateProductsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $productIdentifier
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array  $productIdentifier
+     * @param  string  $opType
      */
     public function __construct($productIdentifier, string $opType)
     {
@@ -29,8 +29,8 @@ class UpdateProductsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $productIdentifier
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array  $productIdentifier
+     * @param  string  $opType
      */
     public static function create($productIdentifier, string $opType)
     {
@@ -46,7 +46,7 @@ class UpdateProductsListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array $productIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\ProductIdentifierWithCountDataType|array  $productIdentifier
      * @return $this
      */
     public function setProductIdentifier($productIdentifier)
@@ -65,7 +65,7 @@ class UpdateProductsListType extends FlexnetType
     }
 
     /**
-     * @param string $opType
+     * @param  string  $opType
      * @return $this
      */
     public function setOpType($opType)

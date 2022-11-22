@@ -17,8 +17,8 @@ class FailedDeleteWebRegKeyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $webRegKey
-     * @param string $reason
+     * @param  string  $webRegKey
+     * @param  string  $reason
      */
     public function __construct(string $webRegKey, string $reason = null)
     {
@@ -29,8 +29,8 @@ class FailedDeleteWebRegKeyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $webRegKey
-     * @param string $reason
+     * @param  string  $webRegKey
+     * @param  string  $reason
      */
     public static function create(string $webRegKey, string $reason = null)
     {
@@ -46,7 +46,7 @@ class FailedDeleteWebRegKeyDataType extends FlexnetType
     }
 
     /**
-     * @param string $webRegKey
+     * @param  string  $webRegKey
      * @return $this
      */
     public function setWebRegKey($webRegKey)
@@ -65,7 +65,7 @@ class FailedDeleteWebRegKeyDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

@@ -12,7 +12,7 @@ class FailedMatchingLineItemsListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedMatchingLineItemDataType|array $failedLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\FailedMatchingLineItemDataType|array  $failedLineItem
      */
     public function __construct($failedLineItem)
     {
@@ -22,7 +22,7 @@ class FailedMatchingLineItemsListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FailedMatchingLineItemDataType|array $failedLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\FailedMatchingLineItemDataType|array  $failedLineItem
      */
     public static function create($failedLineItem)
     {
@@ -38,7 +38,7 @@ class FailedMatchingLineItemsListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedMatchingLineItemDataType|array $failedLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\FailedMatchingLineItemDataType|array  $failedLineItem
      * @return $this
      */
     public function setFailedLineItem($failedLineItem)

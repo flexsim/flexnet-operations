@@ -17,10 +17,10 @@ class FailedUnlinkMaintenanceLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType  $unlinkMaintenanceLineItem
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem = null, string $reason = null)
+    public function __construct(UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem = null, string $reason = null)
     {
         $this->unlinkMaintenanceLineItem = $unlinkMaintenanceLineItem;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedUnlinkMaintenanceLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType  $unlinkMaintenanceLineItem
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem = null, string $reason = null)
+    public static function create(UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedUnlinkMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem
+     * @param  \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemDataType  $unlinkMaintenanceLineItem
      * @return $this
      */
     public function setUnlinkMaintenanceLineItem($unlinkMaintenanceLineItem)
@@ -65,7 +65,7 @@ class FailedUnlinkMaintenanceLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

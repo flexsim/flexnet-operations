@@ -29,15 +29,15 @@ class GetMaintenanceQueryRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType $queryParams
-     * @param bool $returnContainedObjects
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType  $queryParams
+     * @param  bool  $returnContainedObjects
      */
     public function __construct(
         int $pageNumber,
         int $batchSize,
-        \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType $queryParams = [],
+        MaintenanceQueryParametersType $queryParams,
         bool $returnContainedObjects
     ) {
         $this->pageNumber = $pageNumber;
@@ -49,15 +49,15 @@ class GetMaintenanceQueryRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType $queryParams
-     * @param bool $returnContainedObjects
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType  $queryParams
+     * @param  bool  $returnContainedObjects
      */
     public static function create(
         int $pageNumber,
         int $batchSize,
-        \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType $queryParams = [],
+        MaintenanceQueryParametersType $queryParams,
         bool $returnContainedObjects
     ) {
         return new self(...func_get_args());
@@ -72,7 +72,7 @@ class GetMaintenanceQueryRequestType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
@@ -91,7 +91,7 @@ class GetMaintenanceQueryRequestType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)
@@ -110,7 +110,7 @@ class GetMaintenanceQueryRequestType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)
@@ -129,7 +129,7 @@ class GetMaintenanceQueryRequestType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param bool $returnContainedObjects
+     * @param  bool  $returnContainedObjects
      * @return $this
      */
     public function setReturnContainedObjects($returnContainedObjects)

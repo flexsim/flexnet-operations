@@ -62,19 +62,19 @@ class UsageHistoryDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \DateTimeInterface $updateTime
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param string $alias
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
-     * @param string $deviceServedStatus
-     * @param \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array $featureData
-     * @param string $machineType
-     * @param string $vmName
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
+     * @param  \DateTimeInterface  $updateTime
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $serverIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  string  $alias
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeIdentifier  $hostTypeName
+     * @param  string  $deviceServedStatus
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array  $featureData
+     * @param  string  $machineType
+     * @param  string  $vmName
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryType  $vmInfo
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryType  $vendorDictionary
      */
-    public function __construct(\DateTimeInterface $updateTime, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier = null, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier = null, string $alias = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, string $deviceServedStatus = null, $featureData = null, string $machineType = null, string $vmName = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary = null)
+    public function __construct(\DateTimeInterface $updateTime, DeviceIdentifier $serverIdentifier = null, DeviceIdentifier $deviceIdentifier = null, string $alias = null, HostTypeIdentifier $hostTypeName = null, string $deviceServedStatus = null, $featureData = null, string $machineType = null, string $vmName = null, DictionaryType $vmInfo = null, DictionaryType $vendorDictionary = null)
     {
         $this->updateTime = $updateTime;
         $this->serverIdentifier = $serverIdentifier;
@@ -92,19 +92,19 @@ class UsageHistoryDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \DateTimeInterface $updateTime
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param string $alias
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
-     * @param string $deviceServedStatus
-     * @param \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array $featureData
-     * @param string $machineType
-     * @param string $vmName
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
+     * @param  \DateTimeInterface  $updateTime
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $serverIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  string  $alias
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeIdentifier  $hostTypeName
+     * @param  string  $deviceServedStatus
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureDataDataType|array  $featureData
+     * @param  string  $machineType
+     * @param  string  $vmName
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryType  $vmInfo
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryType  $vendorDictionary
      */
-    public static function create(\DateTimeInterface $updateTime, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier = null, \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier = null, string $alias = null, \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName = null, string $deviceServedStatus = null, $featureData = null, string $machineType = null, string $vmName = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo = null, \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary = null)
+    public static function create(\DateTimeInterface $updateTime, DeviceIdentifier $serverIdentifier = null, DeviceIdentifier $deviceIdentifier = null, string $alias = null, HostTypeIdentifier $hostTypeName = null, string $deviceServedStatus = null, $featureData = null, string $machineType = null, string $vmName = null, DictionaryType $vmInfo = null, DictionaryType $vendorDictionary = null)
     {
         return new self(...func_get_args());
     }
@@ -118,7 +118,7 @@ class UsageHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $updateTime
+     * @param  \DateTimeInterface  $updateTime
      * @return $this
      */
     public function setUpdateTime($updateTime)
@@ -137,7 +137,7 @@ class UsageHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $serverIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $serverIdentifier
      * @return $this
      */
     public function setServerIdentifier($serverIdentifier)
@@ -156,7 +156,7 @@ class UsageHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
      * @return $this
      */
     public function setDeviceIdentifier($deviceIdentifier)
@@ -175,7 +175,7 @@ class UsageHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param string $alias
+     * @param  string  $alias
      * @return $this
      */
     public function setAlias($alias)
@@ -194,7 +194,7 @@ class UsageHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\HostTypeIdentifier $hostTypeName
+     * @param  \Flexsim\FlexnetOperations\Type\HostTypeIdentifier  $hostTypeName
      * @return $this
      */
     public function setHostTypeName($hostTypeName)
@@ -213,7 +213,7 @@ class UsageHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param string $deviceServedStatus
+     * @param  string  $deviceServedStatus
      * @return $this
      */
     public function setDeviceServedStatus($deviceServedStatus)
@@ -232,7 +232,7 @@ class UsageHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureDataDataType $featureData
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureDataDataType  $featureData
      * @return $this
      */
     public function setFeatureData($featureData)
@@ -251,7 +251,7 @@ class UsageHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param string $machineType
+     * @param  string  $machineType
      * @return $this
      */
     public function setMachineType($machineType)
@@ -270,7 +270,7 @@ class UsageHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param string $vmName
+     * @param  string  $vmName
      * @return $this
      */
     public function setVmName($vmName)
@@ -289,7 +289,7 @@ class UsageHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vmInfo
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryType  $vmInfo
      * @return $this
      */
     public function setVmInfo($vmInfo)
@@ -308,7 +308,7 @@ class UsageHistoryDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DictionaryType $vendorDictionary
+     * @param  \Flexsim\FlexnetOperations\Type\DictionaryType  $vendorDictionary
      * @return $this
      */
     public function setVendorDictionary($vendorDictionary)

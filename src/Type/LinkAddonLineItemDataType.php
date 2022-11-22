@@ -17,10 +17,10 @@ class LinkAddonLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LinkLineItemDataType  $lineItem
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\LinkLineItemDataType $lineItem)
+    public function __construct(DeviceIdentifier $deviceIdentifier, LinkLineItemDataType $lineItem)
     {
         $this->deviceIdentifier = $deviceIdentifier;
         $this->lineItem = $lineItem;
@@ -29,10 +29,10 @@ class LinkAddonLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LinkLineItemDataType  $lineItem
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier, \Flexsim\FlexnetOperations\Type\LinkLineItemDataType $lineItem)
+    public static function create(DeviceIdentifier $deviceIdentifier, LinkLineItemDataType $lineItem)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class LinkAddonLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\DeviceIdentifier $deviceIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\DeviceIdentifier  $deviceIdentifier
      * @return $this
      */
     public function setDeviceIdentifier($deviceIdentifier)
@@ -65,7 +65,7 @@ class LinkAddonLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LinkLineItemDataType $lineItem
+     * @param  \Flexsim\FlexnetOperations\Type\LinkLineItemDataType  $lineItem
      * @return $this
      */
     public function setLineItem($lineItem)

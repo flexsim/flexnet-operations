@@ -12,7 +12,7 @@ class CreatedRenewEntitlementDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType|array $entitlementData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType|array  $entitlementData
      */
     public function __construct($entitlementData = null)
     {
@@ -22,7 +22,7 @@ class CreatedRenewEntitlementDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType|array $entitlementData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType|array  $entitlementData
      */
     public static function create($entitlementData = null)
     {
@@ -38,7 +38,7 @@ class CreatedRenewEntitlementDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType|array $entitlementData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedRenewEntitlementDataType|array  $entitlementData
      * @return $this
      */
     public function setEntitlementData($entitlementData)

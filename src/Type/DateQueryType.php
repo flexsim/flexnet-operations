@@ -17,8 +17,8 @@ class DateQueryType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \DateTimeInterface $value
-     * @param string $searchType
+     * @param  \DateTimeInterface  $value
+     * @param  string  $searchType
      */
     public function __construct(\DateTimeInterface $value, string $searchType)
     {
@@ -29,8 +29,8 @@ class DateQueryType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \DateTimeInterface $value
-     * @param string $searchType
+     * @param  \DateTimeInterface  $value
+     * @param  string  $searchType
      */
     public static function create(\DateTimeInterface $value, string $searchType)
     {
@@ -46,7 +46,7 @@ class DateQueryType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $value
+     * @param  \DateTimeInterface  $value
      * @return $this
      */
     public function setValue($value)
@@ -65,7 +65,7 @@ class DateQueryType extends FlexnetType
     }
 
     /**
-     * @param string $searchType
+     * @param  string  $searchType
      * @return $this
      */
     public function setSearchType($searchType)

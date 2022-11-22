@@ -82,24 +82,24 @@ class SimpleEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\IdType $entitlementId
-     * @param string $description
-     * @param string $soldTo
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param string $state
-     * @param string $createdUserId
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType|array $lineItems
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceLineItemDataType|array $maintenanceLineItems
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @param bool $allowPortalLogin
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
-     * @param \DateTimeInterface $lastModifiedDateTime
-     * @param string $soldToName
-     * @param string $emailTemplateVariation
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $entitlementId
+     * @param  string  $description
+     * @param  string  $soldTo
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  string  $state
+     * @param  string  $createdUserId
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType|array  $lineItems
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceLineItemDataType|array  $maintenanceLineItems
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
+     * @param  bool  $allowPortalLogin
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $entitlementAttributes
+     * @param  \DateTimeInterface  $lastModifiedDateTime
+     * @param  string  $soldToName
+     * @param  string  $emailTemplateVariation
      */
     public function __construct(
-        \Flexsim\FlexnetOperations\Type\IdType $entitlementId,
+        IdType $entitlementId,
         string $description = null,
         string $soldTo = null,
         string $shipToEmail = null,
@@ -108,9 +108,9 @@ class SimpleEntitlementDataType extends FlexnetType
         string $createdUserId = null,
         $lineItems = null,
         $maintenanceLineItems = null,
-        \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null,
+        ChannelPartnerDataListType $channelPartners = null,
         bool $allowPortalLogin = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null,
+        AttributeDescriptorDataType $entitlementAttributes = null,
         \DateTimeInterface $lastModifiedDateTime = null,
         string $soldToName = null,
         string $emailTemplateVariation = null
@@ -135,24 +135,24 @@ class SimpleEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\IdType $entitlementId
-     * @param string $description
-     * @param string $soldTo
-     * @param string $shipToEmail
-     * @param string $shipToAddress
-     * @param string $state
-     * @param string $createdUserId
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType|array $lineItems
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceLineItemDataType|array $maintenanceLineItems
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
-     * @param bool $allowPortalLogin
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
-     * @param \DateTimeInterface $lastModifiedDateTime
-     * @param string $soldToName
-     * @param string $emailTemplateVariation
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $entitlementId
+     * @param  string  $description
+     * @param  string  $soldTo
+     * @param  string  $shipToEmail
+     * @param  string  $shipToAddress
+     * @param  string  $state
+     * @param  string  $createdUserId
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType|array  $lineItems
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceLineItemDataType|array  $maintenanceLineItems
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
+     * @param  bool  $allowPortalLogin
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $entitlementAttributes
+     * @param  \DateTimeInterface  $lastModifiedDateTime
+     * @param  string  $soldToName
+     * @param  string  $emailTemplateVariation
      */
     public static function create(
-        \Flexsim\FlexnetOperations\Type\IdType $entitlementId,
+        IdType $entitlementId,
         string $description = null,
         string $soldTo = null,
         string $shipToEmail = null,
@@ -161,9 +161,9 @@ class SimpleEntitlementDataType extends FlexnetType
         string $createdUserId = null,
         $lineItems = null,
         $maintenanceLineItems = null,
-        \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners = null,
+        ChannelPartnerDataListType $channelPartners = null,
         bool $allowPortalLogin = null,
-        \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes = null,
+        AttributeDescriptorDataType $entitlementAttributes = null,
         \DateTimeInterface $lastModifiedDateTime = null,
         string $soldToName = null,
         string $emailTemplateVariation = null
@@ -180,7 +180,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\IdType $entitlementId
+     * @param  \Flexsim\FlexnetOperations\Type\IdType  $entitlementId
      * @return $this
      */
     public function setEntitlementId($entitlementId)
@@ -199,7 +199,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
@@ -218,7 +218,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $soldTo
+     * @param  string  $soldTo
      * @return $this
      */
     public function setSoldTo($soldTo)
@@ -237,7 +237,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToEmail
+     * @param  string  $shipToEmail
      * @return $this
      */
     public function setShipToEmail($shipToEmail)
@@ -256,7 +256,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $shipToAddress
+     * @param  string  $shipToAddress
      * @return $this
      */
     public function setShipToAddress($shipToAddress)
@@ -275,7 +275,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $state
+     * @param  string  $state
      * @return $this
      */
     public function setState($state)
@@ -294,7 +294,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $createdUserId
+     * @param  string  $createdUserId
      * @return $this
      */
     public function setCreatedUserId($createdUserId)
@@ -313,7 +313,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType $lineItems
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementLineItemDataType  $lineItems
      * @return $this
      */
     public function setLineItems($lineItems)
@@ -332,7 +332,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\MaintenanceLineItemDataType $maintenanceLineItems
+     * @param  \Flexsim\FlexnetOperations\Type\MaintenanceLineItemDataType  $maintenanceLineItems
      * @return $this
      */
     public function setMaintenanceLineItems($maintenanceLineItems)
@@ -351,7 +351,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType $channelPartners
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataListType  $channelPartners
      * @return $this
      */
     public function setChannelPartners($channelPartners)
@@ -370,7 +370,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param bool $allowPortalLogin
+     * @param  bool  $allowPortalLogin
      * @return $this
      */
     public function setAllowPortalLogin($allowPortalLogin)
@@ -389,7 +389,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType $entitlementAttributes
+     * @param  \Flexsim\FlexnetOperations\Type\AttributeDescriptorDataType  $entitlementAttributes
      * @return $this
      */
     public function setEntitlementAttributes($entitlementAttributes)
@@ -408,7 +408,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \DateTimeInterface $lastModifiedDateTime
+     * @param  \DateTimeInterface  $lastModifiedDateTime
      * @return $this
      */
     public function setLastModifiedDateTime($lastModifiedDateTime)
@@ -427,7 +427,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $soldToName
+     * @param  string  $soldToName
      * @return $this
      */
     public function setSoldToName($soldToName)
@@ -446,7 +446,7 @@ class SimpleEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $emailTemplateVariation
+     * @param  string  $emailTemplateVariation
      * @return $this
      */
     public function setEmailTemplateVariation($emailTemplateVariation)

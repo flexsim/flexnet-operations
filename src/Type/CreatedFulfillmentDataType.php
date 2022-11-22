@@ -37,14 +37,14 @@ class CreatedFulfillmentDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $recordRefNo
-     * @param string $uniqueId
-     * @param string $fulfillmentId
-     * @param string $licenseText
-     * @param string $binaryLicense
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  string  $recordRefNo
+     * @param  string  $uniqueId
+     * @param  string  $fulfillmentId
+     * @param  string  $licenseText
+     * @param  string  $binaryLicense
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      */
-    public function __construct(string $recordRefNo, string $uniqueId, string $fulfillmentId, string $licenseText = null, string $binaryLicense = null, \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null)
+    public function __construct(string $recordRefNo, string $uniqueId, string $fulfillmentId, string $licenseText = null, string $binaryLicense = null, LicenseFileDataListType $licenseFiles = null)
     {
         $this->recordRefNo = $recordRefNo;
         $this->uniqueId = $uniqueId;
@@ -57,14 +57,14 @@ class CreatedFulfillmentDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $recordRefNo
-     * @param string $uniqueId
-     * @param string $fulfillmentId
-     * @param string $licenseText
-     * @param string $binaryLicense
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  string  $recordRefNo
+     * @param  string  $uniqueId
+     * @param  string  $fulfillmentId
+     * @param  string  $licenseText
+     * @param  string  $binaryLicense
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      */
-    public static function create(string $recordRefNo, string $uniqueId, string $fulfillmentId, string $licenseText = null, string $binaryLicense = null, \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles = null)
+    public static function create(string $recordRefNo, string $uniqueId, string $fulfillmentId, string $licenseText = null, string $binaryLicense = null, LicenseFileDataListType $licenseFiles = null)
     {
         return new self(...func_get_args());
     }
@@ -78,7 +78,7 @@ class CreatedFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $recordRefNo
+     * @param  string  $recordRefNo
      * @return $this
      */
     public function setRecordRefNo($recordRefNo)
@@ -97,7 +97,7 @@ class CreatedFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -116,7 +116,7 @@ class CreatedFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $fulfillmentId
+     * @param  string  $fulfillmentId
      * @return $this
      */
     public function setFulfillmentId($fulfillmentId)
@@ -135,7 +135,7 @@ class CreatedFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $licenseText
+     * @param  string  $licenseText
      * @return $this
      */
     public function setLicenseText($licenseText)
@@ -154,7 +154,7 @@ class CreatedFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param string $binaryLicense
+     * @param  string  $binaryLicense
      * @return $this
      */
     public function setBinaryLicense($binaryLicense)
@@ -173,7 +173,7 @@ class CreatedFulfillmentDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseFileDataListType $licenseFiles
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseFileDataListType  $licenseFiles
      * @return $this
      */
     public function setLicenseFiles($licenseFiles)

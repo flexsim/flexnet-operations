@@ -14,7 +14,7 @@ class DeleteBaseProductRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      */
     public function __construct(string $uniqueId)
     {
@@ -24,7 +24,7 @@ class DeleteBaseProductRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      */
     public static function create(string $uniqueId)
     {
@@ -40,7 +40,7 @@ class DeleteBaseProductRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)

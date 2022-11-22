@@ -19,10 +19,10 @@ class CreateAcctRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountDataType $account
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\AccountDataType  $account
+     * @param  string  $opType
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountDataType $account, string $opType = null)
+    public function __construct(AccountDataType $account, string $opType = null)
     {
         $this->account = $account;
         $this->opType = $opType;
@@ -31,10 +31,10 @@ class CreateAcctRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountDataType $account
-     * @param string $opType
+     * @param  \Flexsim\FlexnetOperations\Type\AccountDataType  $account
+     * @param  string  $opType
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountDataType $account, string $opType = null)
+    public static function create(AccountDataType $account, string $opType = null)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class CreateAcctRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountDataType $account
+     * @param  \Flexsim\FlexnetOperations\Type\AccountDataType  $account
      * @return $this
      */
     public function setAccount($account)
@@ -67,7 +67,7 @@ class CreateAcctRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param string $opType
+     * @param  string  $opType
      * @return $this
      */
     public function setOpType($opType)

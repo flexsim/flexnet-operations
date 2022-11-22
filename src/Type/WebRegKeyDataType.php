@@ -22,9 +22,9 @@ class WebRegKeyDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string|array $webRegKey
-     * @param bool $autoGenerate
-     * @param int $numAutoGenerate
+     * @param  string|array  $webRegKey
+     * @param  bool  $autoGenerate
+     * @param  int  $numAutoGenerate
      */
     public function __construct($webRegKey = null, bool $autoGenerate = null, int $numAutoGenerate = null)
     {
@@ -36,9 +36,9 @@ class WebRegKeyDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string|array $webRegKey
-     * @param bool $autoGenerate
-     * @param int $numAutoGenerate
+     * @param  string|array  $webRegKey
+     * @param  bool  $autoGenerate
+     * @param  int  $numAutoGenerate
      */
     public static function create($webRegKey = null, bool $autoGenerate = null, int $numAutoGenerate = null)
     {
@@ -54,7 +54,7 @@ class WebRegKeyDataType extends FlexnetType
     }
 
     /**
-     * @param string $webRegKey
+     * @param  string  $webRegKey
      * @return $this
      */
     public function setWebRegKey($webRegKey)
@@ -73,7 +73,7 @@ class WebRegKeyDataType extends FlexnetType
     }
 
     /**
-     * @param bool $autoGenerate
+     * @param  bool  $autoGenerate
      * @return $this
      */
     public function setAutoGenerate($autoGenerate)
@@ -92,7 +92,7 @@ class WebRegKeyDataType extends FlexnetType
     }
 
     /**
-     * @param int $numAutoGenerate
+     * @param  int  $numAutoGenerate
      * @return $this
      */
     public function setNumAutoGenerate($numAutoGenerate)

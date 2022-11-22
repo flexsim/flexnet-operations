@@ -14,9 +14,9 @@ class GetUniformSuiteCountRequestType extends FlexnetType implements RequestInte
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType  $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams = null)
+    public function __construct(SuiteQueryParametersType $queryParams = null)
     {
         $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
@@ -25,9 +25,9 @@ class GetUniformSuiteCountRequestType extends FlexnetType implements RequestInte
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType  $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams = null)
+    public static function create(SuiteQueryParametersType $queryParams = null)
     {
         return new self(...func_get_args());
     }
@@ -41,7 +41,7 @@ class GetUniformSuiteCountRequestType extends FlexnetType implements RequestInte
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\SuiteQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)

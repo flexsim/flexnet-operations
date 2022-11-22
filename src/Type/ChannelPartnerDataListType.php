@@ -12,7 +12,7 @@ class ChannelPartnerDataListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType|array $channelPartner
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType|array  $channelPartner
      */
     public function __construct($channelPartner = null)
     {
@@ -22,7 +22,7 @@ class ChannelPartnerDataListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType|array $channelPartner
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType|array  $channelPartner
      */
     public static function create($channelPartner = null)
     {
@@ -38,7 +38,7 @@ class ChannelPartnerDataListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType|array $channelPartner
+     * @param  \Flexsim\FlexnetOperations\Type\ChannelPartnerDataType|array  $channelPartner
      * @return $this
      */
     public function setChannelPartner($channelPartner)

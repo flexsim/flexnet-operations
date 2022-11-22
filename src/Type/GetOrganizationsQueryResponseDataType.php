@@ -12,7 +12,7 @@ class GetOrganizationsQueryResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationDetailDataType|array $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationDetailDataType|array  $orgData
      */
     public function __construct($orgData = null)
     {
@@ -22,7 +22,7 @@ class GetOrganizationsQueryResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationDetailDataType|array $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationDetailDataType|array  $orgData
      */
     public static function create($orgData = null)
     {
@@ -38,7 +38,7 @@ class GetOrganizationsQueryResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationDetailDataType $orgData
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationDetailDataType  $orgData
      * @return $this
      */
     public function setOrgData($orgData)

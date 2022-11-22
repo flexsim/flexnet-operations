@@ -15,14 +15,15 @@ class EntitlementOrderServiceClient
      */
     private $caller;
 
-    public function __construct(\Phpro\SoapClient\Caller\Caller $caller)
+    public function __construct(Caller $caller)
     {
         $this->caller = $caller;
     }
 
     /**
-     * @param RequestInterface|Type\CreateBulkEntitlementRequestType $createBulkEntitlementRequest
+     * @param  RequestInterface|Type\CreateBulkEntitlementRequestType  $createBulkEntitlementRequest
      * @return ResultInterface|Type\CreateBulkEntitlementResponseType
+     *
      * @throws SoapException
      */
     public function createBulkEntitlement(\Flexsim\FlexnetOperations\Type\CreateBulkEntitlementRequestType $createBulkEntitlementRequest): \Flexsim\FlexnetOperations\Type\CreateBulkEntitlementResponseType
@@ -31,8 +32,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\CreateSimpleEntitlementRequestType $createSimpleEntitlementRequest
+     * @param  RequestInterface|Type\CreateSimpleEntitlementRequestType  $createSimpleEntitlementRequest
      * @return ResultInterface|Type\CreateSimpleEntitlementResponseType
+     *
      * @throws SoapException
      */
     public function createSimpleEntitlement(\Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementRequestType $createSimpleEntitlementRequest): \Flexsim\FlexnetOperations\Type\CreateSimpleEntitlementResponseType
@@ -41,8 +43,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\DeleteEntitlementRequestType $deleteEntitlementRequest
+     * @param  RequestInterface|Type\DeleteEntitlementRequestType  $deleteEntitlementRequest
      * @return ResultInterface|Type\DeleteEntitlementResponseType
+     *
      * @throws SoapException
      */
     public function deleteEntitlement(\Flexsim\FlexnetOperations\Type\DeleteEntitlementRequestType $deleteEntitlementRequest): \Flexsim\FlexnetOperations\Type\DeleteEntitlementResponseType
@@ -51,8 +54,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\AddWebRegKeyRequestType $addWebRegKeyRequest
+     * @param  RequestInterface|Type\AddWebRegKeyRequestType  $addWebRegKeyRequest
      * @return ResultInterface|Type\AddWebRegKeyResponseType
+     *
      * @throws SoapException
      */
     public function createWebRegKey(\Flexsim\FlexnetOperations\Type\AddWebRegKeyRequestType $addWebRegKeyRequest): \Flexsim\FlexnetOperations\Type\AddWebRegKeyResponseType
@@ -61,8 +65,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\UpdateBulkEntitlementRequestType $updateBulkEntitlementRequest
+     * @param  RequestInterface|Type\UpdateBulkEntitlementRequestType  $updateBulkEntitlementRequest
      * @return ResultInterface|Type\UpdateBulkEntitlementResponseType
+     *
      * @throws SoapException
      */
     public function updateBulkEntitlement(\Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementRequestType $updateBulkEntitlementRequest): \Flexsim\FlexnetOperations\Type\UpdateBulkEntitlementResponseType
@@ -71,8 +76,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\UpdateSimpleEntitlementRequestType $updateSimpleEntitlementRequest
+     * @param  RequestInterface|Type\UpdateSimpleEntitlementRequestType  $updateSimpleEntitlementRequest
      * @return ResultInterface|Type\UpdateSimpleEntitlementResponseType
+     *
      * @throws SoapException
      */
     public function updateSimpleEntitlement(\Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementRequestType $updateSimpleEntitlementRequest): \Flexsim\FlexnetOperations\Type\UpdateSimpleEntitlementResponseType
@@ -81,8 +87,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\AddOrReplaceEntitlementLineItemRequestType $createEntitlementLineItemRequest
+     * @param  RequestInterface|Type\AddOrReplaceEntitlementLineItemRequestType  $createEntitlementLineItemRequest
      * @return ResultInterface|Type\AddOrReplaceEntitlementLineItemResponseType
+     *
      * @throws SoapException
      */
     public function createEntitlementLineItem(\Flexsim\FlexnetOperations\Type\AddOrReplaceEntitlementLineItemRequestType $createEntitlementLineItemRequest): \Flexsim\FlexnetOperations\Type\AddOrReplaceEntitlementLineItemResponseType
@@ -91,8 +98,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\AddOrReplaceEntitlementLineItemRequestType $replaceEntitlementLineItemRequest
+     * @param  RequestInterface|Type\AddOrReplaceEntitlementLineItemRequestType  $replaceEntitlementLineItemRequest
      * @return ResultInterface|Type\AddOrReplaceEntitlementLineItemResponseType
+     *
      * @throws SoapException
      */
     public function replaceEntitlementLineItem(\Flexsim\FlexnetOperations\Type\AddOrReplaceEntitlementLineItemRequestType $replaceEntitlementLineItemRequest): \Flexsim\FlexnetOperations\Type\AddOrReplaceEntitlementLineItemResponseType
@@ -101,8 +109,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\RemoveEntitlementLineItemRequestType $removeEntitlementLineItemRequest
+     * @param  RequestInterface|Type\RemoveEntitlementLineItemRequestType  $removeEntitlementLineItemRequest
      * @return ResultInterface|Type\RemoveEntitlementLineItemResponseType
+     *
      * @throws SoapException
      */
     public function deleteEntitlementLineItem(\Flexsim\FlexnetOperations\Type\RemoveEntitlementLineItemRequestType $removeEntitlementLineItemRequest): \Flexsim\FlexnetOperations\Type\RemoveEntitlementLineItemResponseType
@@ -111,8 +120,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\UpdateEntitlementLineItemRequestType $updateEntitlementLineItemRequest
+     * @param  RequestInterface|Type\UpdateEntitlementLineItemRequestType  $updateEntitlementLineItemRequest
      * @return ResultInterface|Type\UpdateEntitlementLineItemResponseType
+     *
      * @throws SoapException
      */
     public function updateEntitlementLineItem(\Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemRequestType $updateEntitlementLineItemRequest): \Flexsim\FlexnetOperations\Type\UpdateEntitlementLineItemResponseType
@@ -121,8 +131,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\SearchEntitlementRequestType $searchEntitlementRequest
+     * @param  RequestInterface|Type\SearchEntitlementRequestType  $searchEntitlementRequest
      * @return ResultInterface|Type\SearchEntitlementResponseType
+     *
      * @throws SoapException
      */
     public function getEntitlementsQuery(\Flexsim\FlexnetOperations\Type\SearchEntitlementRequestType $searchEntitlementRequest): \Flexsim\FlexnetOperations\Type\SearchEntitlementResponseType
@@ -131,8 +142,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetBulkEntitlementPropertiesRequestType $getBulkEntitlementPropertiesRequest
+     * @param  RequestInterface|Type\GetBulkEntitlementPropertiesRequestType  $getBulkEntitlementPropertiesRequest
      * @return ResultInterface|Type\GetBulkEntitlementPropertiesResponseType
+     *
      * @throws SoapException
      */
     public function getBulkEntitlementPropertiesQuery(\Flexsim\FlexnetOperations\Type\GetBulkEntitlementPropertiesRequestType $getBulkEntitlementPropertiesRequest): \Flexsim\FlexnetOperations\Type\GetBulkEntitlementPropertiesResponseType
@@ -141,8 +153,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetBulkEntitlementCountRequestType $getBulkEntitlementCountRequest
+     * @param  RequestInterface|Type\GetBulkEntitlementCountRequestType  $getBulkEntitlementCountRequest
      * @return ResultInterface|Type\GetBulkEntitlementCountResponseType
+     *
      * @throws SoapException
      */
     public function getBulkEntitlementCount(\Flexsim\FlexnetOperations\Type\GetBulkEntitlementCountRequestType $getBulkEntitlementCountRequest): \Flexsim\FlexnetOperations\Type\GetBulkEntitlementCountResponseType
@@ -151,8 +164,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\SearchActivatableItemRequestType $searchActivatableItemRequest
+     * @param  RequestInterface|Type\SearchActivatableItemRequestType  $searchActivatableItemRequest
      * @return ResultInterface|Type\SearchActivatableItemResponseType
+     *
      * @throws SoapException
      */
     public function getActivatableItemsQuery(\Flexsim\FlexnetOperations\Type\SearchActivatableItemRequestType $searchActivatableItemRequest): \Flexsim\FlexnetOperations\Type\SearchActivatableItemResponseType
@@ -161,8 +175,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\SearchEntitlementLineItemPropertiesRequestType $searchEntitlementLineItemPropertiesRequest
+     * @param  RequestInterface|Type\SearchEntitlementLineItemPropertiesRequestType  $searchEntitlementLineItemPropertiesRequest
      * @return ResultInterface|Type\SearchEntitlementLineItemPropertiesResponseType
+     *
      * @throws SoapException
      */
     public function getEntitlementLineItemPropertiesQuery(\Flexsim\FlexnetOperations\Type\SearchEntitlementLineItemPropertiesRequestType $searchEntitlementLineItemPropertiesRequest): \Flexsim\FlexnetOperations\Type\SearchEntitlementLineItemPropertiesResponseType
@@ -171,8 +186,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetEntitlementCountRequestType $getEntitlementCountRequest
+     * @param  RequestInterface|Type\GetEntitlementCountRequestType  $getEntitlementCountRequest
      * @return ResultInterface|Type\GetEntitlementCountResponseType
+     *
      * @throws SoapException
      */
     public function getEntitlementCount(\Flexsim\FlexnetOperations\Type\GetEntitlementCountRequestType $getEntitlementCountRequest): \Flexsim\FlexnetOperations\Type\GetEntitlementCountResponseType
@@ -181,8 +197,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetActivatableItemCountRequestType $getActivatableItemCountRequest
+     * @param  RequestInterface|Type\GetActivatableItemCountRequestType  $getActivatableItemCountRequest
      * @return ResultInterface|Type\GetActivatableItemCountResponseType
+     *
      * @throws SoapException
      */
     public function getActivatableItemCount(\Flexsim\FlexnetOperations\Type\GetActivatableItemCountRequestType $getActivatableItemCountRequest): \Flexsim\FlexnetOperations\Type\GetActivatableItemCountResponseType
@@ -191,8 +208,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetExactAvailableCountRequestType $getExactAvailableCountRequest
+     * @param  RequestInterface|Type\GetExactAvailableCountRequestType  $getExactAvailableCountRequest
      * @return ResultInterface|Type\GetExactAvailableCountResponseType
+     *
      * @throws SoapException
      */
     public function getExactAvailableCount(\Flexsim\FlexnetOperations\Type\GetExactAvailableCountRequestType $getExactAvailableCountRequest): \Flexsim\FlexnetOperations\Type\GetExactAvailableCountResponseType
@@ -201,8 +219,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\SetEntitlementStateRequestType $setEntitlementStateRequest
+     * @param  RequestInterface|Type\SetEntitlementStateRequestType  $setEntitlementStateRequest
      * @return ResultInterface|Type\SetEntitlementStateResponseType
+     *
      * @throws SoapException
      */
     public function setEntitlementState(\Flexsim\FlexnetOperations\Type\SetEntitlementStateRequestType $setEntitlementStateRequest): \Flexsim\FlexnetOperations\Type\SetEntitlementStateResponseType
@@ -211,8 +230,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetWebRegKeyCountRequestType $getWebRegKeyCountRequest
+     * @param  RequestInterface|Type\GetWebRegKeyCountRequestType  $getWebRegKeyCountRequest
      * @return ResultInterface|Type\GetWebRegKeyCountResponseType
+     *
      * @throws SoapException
      */
     public function getWebRegKeyCount(\Flexsim\FlexnetOperations\Type\GetWebRegKeyCountRequestType $getWebRegKeyCountRequest): \Flexsim\FlexnetOperations\Type\GetWebRegKeyCountResponseType
@@ -221,8 +241,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetWebRegKeysQueryRequestType $getWebRegKeysQueryRequest
+     * @param  RequestInterface|Type\GetWebRegKeysQueryRequestType  $getWebRegKeysQueryRequest
      * @return ResultInterface|Type\GetWebRegKeysQueryResponseType
+     *
      * @throws SoapException
      */
     public function getWebRegKeysQuery(\Flexsim\FlexnetOperations\Type\GetWebRegKeysQueryRequestType $getWebRegKeysQueryRequest): \Flexsim\FlexnetOperations\Type\GetWebRegKeysQueryResponseType
@@ -231,8 +252,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetEntitlementAttributesRequestType $getEntitlementAttributesRequest
+     * @param  RequestInterface|Type\GetEntitlementAttributesRequestType  $getEntitlementAttributesRequest
      * @return ResultInterface|Type\GetEntitlementAttributesResponseType
+     *
      * @throws SoapException
      */
     public function getEntitlementAttributesFromModel(\Flexsim\FlexnetOperations\Type\GetEntitlementAttributesRequestType $getEntitlementAttributesRequest): \Flexsim\FlexnetOperations\Type\GetEntitlementAttributesResponseType
@@ -241,8 +263,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\RenewEntitlementRequestType $renewLicenseRequest
+     * @param  RequestInterface|Type\RenewEntitlementRequestType  $renewLicenseRequest
      * @return ResultInterface|Type\RenewEntitlementResponseType
+     *
      * @throws SoapException
      */
     public function renewLicense(\Flexsim\FlexnetOperations\Type\RenewEntitlementRequestType $renewLicenseRequest): \Flexsim\FlexnetOperations\Type\RenewEntitlementResponseType
@@ -251,8 +274,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\EntitlementLifeCycleRequestType $upgradeLicenseRequest
+     * @param  RequestInterface|Type\EntitlementLifeCycleRequestType  $upgradeLicenseRequest
      * @return ResultInterface|Type\EntitlementLifeCycleResponseType
+     *
      * @throws SoapException
      */
     public function upgradeLicense(\Flexsim\FlexnetOperations\Type\EntitlementLifeCycleRequestType $upgradeLicenseRequest): \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleResponseType
@@ -261,8 +285,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\EntitlementLifeCycleRequestType $upsellLicenseRequest
+     * @param  RequestInterface|Type\EntitlementLifeCycleRequestType  $upsellLicenseRequest
      * @return ResultInterface|Type\EntitlementLifeCycleResponseType
+     *
      * @throws SoapException
      */
     public function upsellLicense(\Flexsim\FlexnetOperations\Type\EntitlementLifeCycleRequestType $upsellLicenseRequest): \Flexsim\FlexnetOperations\Type\EntitlementLifeCycleResponseType
@@ -271,8 +296,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\MapEntitlementsToUserRequestType $mapEntitlementsToUserRequest
+     * @param  RequestInterface|Type\MapEntitlementsToUserRequestType  $mapEntitlementsToUserRequest
      * @return ResultInterface|Type\MapEntitlementsToUserResponseType
+     *
      * @throws SoapException
      */
     public function mapEntitlementsToUser(\Flexsim\FlexnetOperations\Type\MapEntitlementsToUserRequestType $mapEntitlementsToUserRequest): \Flexsim\FlexnetOperations\Type\MapEntitlementsToUserResponseType
@@ -281,8 +307,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\EmailEntitlementRequestType $emailEntitlementRequest
+     * @param  RequestInterface|Type\EmailEntitlementRequestType  $emailEntitlementRequest
      * @return ResultInterface|Type\EmailEntitlementResponseType
+     *
      * @throws SoapException
      */
     public function emailEntitlement(\Flexsim\FlexnetOperations\Type\EmailEntitlementRequestType $emailEntitlementRequest): \Flexsim\FlexnetOperations\Type\EmailEntitlementResponseType
@@ -291,8 +318,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\EmailActivatableItemRequestType $emailActivatableItemRequest
+     * @param  RequestInterface|Type\EmailActivatableItemRequestType  $emailActivatableItemRequest
      * @return ResultInterface|Type\EmailActivatableItemResponseType
+     *
      * @throws SoapException
      */
     public function emailActivatableItem(\Flexsim\FlexnetOperations\Type\EmailActivatableItemRequestType $emailActivatableItemRequest): \Flexsim\FlexnetOperations\Type\EmailActivatableItemResponseType
@@ -301,8 +329,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\SetLineItemStateRequestType $setLineItemStateRequest
+     * @param  RequestInterface|Type\SetLineItemStateRequestType  $setLineItemStateRequest
      * @return ResultInterface|Type\SetLineItemStateResponseType
+     *
      * @throws SoapException
      */
     public function setLineItemState(\Flexsim\FlexnetOperations\Type\SetLineItemStateRequestType $setLineItemStateRequest): \Flexsim\FlexnetOperations\Type\SetLineItemStateResponseType
@@ -311,8 +340,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\SetMaintenanceLineItemStateRequestType $setMaintenanceLineItemStateRequest
+     * @param  RequestInterface|Type\SetMaintenanceLineItemStateRequestType  $setMaintenanceLineItemStateRequest
      * @return ResultInterface|Type\SetMaintenanceLineItemStateResponseType
+     *
      * @throws SoapException
      */
     public function setMaintenanceLineItemState(\Flexsim\FlexnetOperations\Type\SetMaintenanceLineItemStateRequestType $setMaintenanceLineItemStateRequest): \Flexsim\FlexnetOperations\Type\SetMaintenanceLineItemStateResponseType
@@ -321,8 +351,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\DeleteWebRegKeyRequestType $deleteWebRegKeyRequest
+     * @param  RequestInterface|Type\DeleteWebRegKeyRequestType  $deleteWebRegKeyRequest
      * @return ResultInterface|Type\DeleteWebRegKeyResponseType
+     *
      * @throws SoapException
      */
     public function deleteWebRegKey(\Flexsim\FlexnetOperations\Type\DeleteWebRegKeyRequestType $deleteWebRegKeyRequest): \Flexsim\FlexnetOperations\Type\DeleteWebRegKeyResponseType
@@ -331,8 +362,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\MergeEntitlementsRequestType $mergeEntitlementsRequest
+     * @param  RequestInterface|Type\MergeEntitlementsRequestType  $mergeEntitlementsRequest
      * @return ResultInterface|Type\MergeEntitlementsResponseType
+     *
      * @throws SoapException
      */
     public function mergeEntitlements(\Flexsim\FlexnetOperations\Type\MergeEntitlementsRequestType $mergeEntitlementsRequest): \Flexsim\FlexnetOperations\Type\MergeEntitlementsResponseType
@@ -341,8 +373,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\TransferEntitlementsRequestType $transferEntitlementsRequest
+     * @param  RequestInterface|Type\TransferEntitlementsRequestType  $transferEntitlementsRequest
      * @return ResultInterface|Type\TransferEntitlementsResponseType
+     *
      * @throws SoapException
      */
     public function transferEntitlement(\Flexsim\FlexnetOperations\Type\TransferEntitlementsRequestType $transferEntitlementsRequest): \Flexsim\FlexnetOperations\Type\TransferEntitlementsResponseType
@@ -351,8 +384,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\TransferLineItemsRequestType $transferLineItemsRequest
+     * @param  RequestInterface|Type\TransferLineItemsRequestType  $transferLineItemsRequest
      * @return ResultInterface|Type\TransferLineItemsResponseType
+     *
      * @throws SoapException
      */
     public function transferLineItem(\Flexsim\FlexnetOperations\Type\TransferLineItemsRequestType $transferLineItemsRequest): \Flexsim\FlexnetOperations\Type\TransferLineItemsResponseType
@@ -361,8 +395,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetStateChangeHistoryRequestType $getStateChangeHistoryRequest
+     * @param  RequestInterface|Type\GetStateChangeHistoryRequestType  $getStateChangeHistoryRequest
      * @return ResultInterface|Type\GetStateChangeHistoryResponseType
+     *
      * @throws SoapException
      */
     public function getStateChangeHistory(\Flexsim\FlexnetOperations\Type\GetStateChangeHistoryRequestType $getStateChangeHistoryRequest): \Flexsim\FlexnetOperations\Type\GetStateChangeHistoryResponseType
@@ -371,8 +406,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\LinkMaintenanceLineItemRequestType $linkMaintenanceLineItemRequest
+     * @param  RequestInterface|Type\LinkMaintenanceLineItemRequestType  $linkMaintenanceLineItemRequest
      * @return ResultInterface|Type\LinkMaintenanceLineItemResponseType
+     *
      * @throws SoapException
      */
     public function linkMaintenanceLineItem(\Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemRequestType $linkMaintenanceLineItemRequest): \Flexsim\FlexnetOperations\Type\LinkMaintenanceLineItemResponseType
@@ -381,8 +417,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\SplitLineItemRequestType $splitLineItemRequest
+     * @param  RequestInterface|Type\SplitLineItemRequestType  $splitLineItemRequest
      * @return ResultInterface|Type\SplitLineItemResponseType
+     *
      * @throws SoapException
      */
     public function splitLineItem(\Flexsim\FlexnetOperations\Type\SplitLineItemRequestType $splitLineItemRequest): \Flexsim\FlexnetOperations\Type\SplitLineItemResponseType
@@ -391,8 +428,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\SplitBulkEntitlementRequestType $splitBulkEntitlementRequest
+     * @param  RequestInterface|Type\SplitBulkEntitlementRequestType  $splitBulkEntitlementRequest
      * @return ResultInterface|Type\SplitBulkEntitlementResponseType
+     *
      * @throws SoapException
      */
     public function splitBulkEntitlement(\Flexsim\FlexnetOperations\Type\SplitBulkEntitlementRequestType $splitBulkEntitlementRequest): \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementResponseType
@@ -401,8 +439,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetMatchingLineItemsRequestType $getMatchingLineItemsRequest
+     * @param  RequestInterface|Type\GetMatchingLineItemsRequestType  $getMatchingLineItemsRequest
      * @return ResultInterface|Type\GetMatchingLineItemsResponseType
+     *
      * @throws SoapException
      */
     public function getMatchingLineItems(\Flexsim\FlexnetOperations\Type\GetMatchingLineItemsRequestType $getMatchingLineItemsRequest): \Flexsim\FlexnetOperations\Type\GetMatchingLineItemsResponseType
@@ -411,8 +450,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\GetMatchingBulkEntsRequestType $getMatchingBulkEntsRequest
+     * @param  RequestInterface|Type\GetMatchingBulkEntsRequestType  $getMatchingBulkEntsRequest
      * @return ResultInterface|Type\GetMatchingBulkEntsResponseType
+     *
      * @throws SoapException
      */
     public function getMatchingBulkEnts(\Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsRequestType $getMatchingBulkEntsRequest): \Flexsim\FlexnetOperations\Type\GetMatchingBulkEntsResponseType
@@ -421,8 +461,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\DeleteMaintenanceLineItemRequestType $deleteMaintenanceLineItemRequest
+     * @param  RequestInterface|Type\DeleteMaintenanceLineItemRequestType  $deleteMaintenanceLineItemRequest
      * @return ResultInterface|Type\DeleteMaintenanceLineItemResponseType
+     *
      * @throws SoapException
      */
     public function deleteMaintenanceLineItem(\Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemRequestType $deleteMaintenanceLineItemRequest): \Flexsim\FlexnetOperations\Type\DeleteMaintenanceLineItemResponseType
@@ -431,8 +472,9 @@ class EntitlementOrderServiceClient
     }
 
     /**
-     * @param RequestInterface|Type\UnlinkMaintenanceLineItemRequestType $unlinkMaintenanceLineItemRequest
+     * @param  RequestInterface|Type\UnlinkMaintenanceLineItemRequestType  $unlinkMaintenanceLineItemRequest
      * @return ResultInterface|Type\UnlinkMaintenanceLineItemResponseType
+     *
      * @throws SoapException
      */
     public function unlinkMaintenanceLineItem(\Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemRequestType $unlinkMaintenanceLineItemRequest): \Flexsim\FlexnetOperations\Type\UnlinkMaintenanceLineItemResponseType

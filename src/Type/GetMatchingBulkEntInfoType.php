@@ -27,11 +27,11 @@ class GetMatchingBulkEntInfoType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
-     * @param string $targetTierName
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $bulkEntIdentifier
+     * @param  string  $targetTierName
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier, string $targetTierName, $targetAccountUnit)
+    public function __construct(EntitlementIdentifierType $bulkEntIdentifier, string $targetTierName, $targetAccountUnit)
     {
         $this->bulkEntIdentifier = $bulkEntIdentifier;
         $this->targetTierName = $targetTierName;
@@ -42,11 +42,11 @@ class GetMatchingBulkEntInfoType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
-     * @param string $targetTierName
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $bulkEntIdentifier
+     * @param  string  $targetTierName
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierType|\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $targetAccountUnit this method is backwards compatible so you may also pass $targetOrganizationUnit
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier, string $targetTierName, $targetAccountUnit)
+    public static function create(EntitlementIdentifierType $bulkEntIdentifier, string $targetTierName, $targetAccountUnit)
     {
         return new self(...func_get_args());
     }
@@ -60,7 +60,7 @@ class GetMatchingBulkEntInfoType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $bulkEntIdentifier
      * @return $this
      */
     public function setBulkEntIdentifier($bulkEntIdentifier)
@@ -79,7 +79,7 @@ class GetMatchingBulkEntInfoType extends FlexnetType
     }
 
     /**
-     * @param string $targetTierName
+     * @param  string  $targetTierName
      * @return $this
      */
     public function setTargetTierName($targetTierName)
@@ -98,7 +98,7 @@ class GetMatchingBulkEntInfoType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $targetAccountUnit
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierType  $targetAccountUnit
      * @return $this
      */
     public function setTargetAccountUnit($targetAccountUnit)
@@ -117,7 +117,7 @@ class GetMatchingBulkEntInfoType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $targetOrganizationUnit
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $targetOrganizationUnit
      * @return $this
      */
     public function setTargetOrganizationUnit($targetOrganizationUnit)

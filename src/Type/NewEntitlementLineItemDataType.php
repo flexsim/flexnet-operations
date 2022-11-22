@@ -17,8 +17,8 @@ class NewEntitlementLineItemDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string $uniqueId
-     * @param string $activationId
+     * @param  string  $uniqueId
+     * @param  string  $activationId
      */
     public function __construct(string $uniqueId, string $activationId)
     {
@@ -29,8 +29,8 @@ class NewEntitlementLineItemDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string $uniqueId
-     * @param string $activationId
+     * @param  string  $uniqueId
+     * @param  string  $activationId
      */
     public static function create(string $uniqueId, string $activationId)
     {
@@ -46,7 +46,7 @@ class NewEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $uniqueId
+     * @param  string  $uniqueId
      * @return $this
      */
     public function setUniqueId($uniqueId)
@@ -65,7 +65,7 @@ class NewEntitlementLineItemDataType extends FlexnetType
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return $this
      */
     public function setActivationId($activationId)

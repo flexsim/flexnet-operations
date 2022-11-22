@@ -29,12 +29,12 @@ class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements Req
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria
-     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
+     * @param  \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType  $bulkEntitlementResponseConfig
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int $pageNumber = null)
+    public function __construct(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int $pageNumber = null)
     {
         $this->bulkEntitlementSearchCriteria = $bulkEntitlementSearchCriteria;
         $this->bulkEntitlementResponseConfig = $bulkEntitlementResponseConfig;
@@ -45,12 +45,12 @@ class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements Req
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria
-     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig
-     * @param int $batchSize
-     * @param int $pageNumber
+     * @param  \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
+     * @param  \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType  $bulkEntitlementResponseConfig
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int $pageNumber = null)
+    public static function create(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int $pageNumber = null)
     {
         return new self(...func_get_args());
     }
@@ -64,7 +64,7 @@ class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements Req
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria
+     * @param  \Flexsim\FlexnetOperations\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
      * @return $this
      */
     public function setBulkEntitlementSearchCriteria($bulkEntitlementSearchCriteria)
@@ -83,7 +83,7 @@ class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements Req
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig
+     * @param  \Flexsim\FlexnetOperations\Type\BulkEntitlementResponseConfigRequestType  $bulkEntitlementResponseConfig
      * @return $this
      */
     public function setBulkEntitlementResponseConfig($bulkEntitlementResponseConfig)
@@ -102,7 +102,7 @@ class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements Req
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return $this
      */
     public function setBatchSize($batchSize)
@@ -121,7 +121,7 @@ class GetBulkEntitlementPropertiesRequestType extends FlexnetType implements Req
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return $this
      */
     public function setPageNumber($pageNumber)

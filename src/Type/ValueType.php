@@ -12,7 +12,7 @@ class ValueType extends FlexnetType
     /**
      * Constructor
      *
-     * @param string|array $value
+     * @param  string|array  $value
      */
     public function __construct($value = null)
     {
@@ -22,7 +22,7 @@ class ValueType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param string|array $value
+     * @param  string|array  $value
      */
     public static function create($value = null)
     {
@@ -38,7 +38,7 @@ class ValueType extends FlexnetType
     }
 
     /**
-     * @param string $value
+     * @param  string  $value
      * @return $this
      */
     public function setValue($value)

@@ -17,10 +17,10 @@ class RelateAccountsDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $accountToRelate
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $relatedAccount
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $accountToRelate
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $relatedAccount
      */
-    public function __construct($accountToRelate,  $relatedAccount)
+    public function __construct($accountToRelate, $relatedAccount)
     {
         $this->accountToRelate = $accountToRelate;
         $this->relatedAccount = $relatedAccount;
@@ -29,10 +29,10 @@ class RelateAccountsDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $accountToRelate
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $relatedAccount
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $accountToRelate
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $relatedAccount
      */
-    public static function create($accountToRelate,  $relatedAccount)
+    public static function create($accountToRelate, $relatedAccount)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class RelateAccountsDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $accountToRelate
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $accountToRelate
      * @return $this
      */
     public function setAccountToRelate($accountToRelate)
@@ -65,7 +65,7 @@ class RelateAccountsDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType $relatedAccount
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierTypeUser|\Flexsim\FlexnetOperations\Type\AccountIdentifierType  $relatedAccount
      * @return $this
      */
     public function setRelatedAccount($relatedAccount)

@@ -24,11 +24,11 @@ class CreateOrganizationResponseType extends FlexnetType implements ResultInterf
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\CreatedOrgDataListType $responseData
-     * @param \Flexsim\FlexnetOperations\Type\FailedOrgDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedOrgDataListType  $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedOrgDataListType  $failedData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\CreatedOrgDataListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedOrgDataListType $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, CreatedOrgDataListType $responseData = null, FailedOrgDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
@@ -38,11 +38,11 @@ class CreateOrganizationResponseType extends FlexnetType implements ResultInterf
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
-     * @param \Flexsim\FlexnetOperations\Type\CreatedOrgDataListType $responseData
-     * @param \Flexsim\FlexnetOperations\Type\FailedOrgDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedOrgDataListType  $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedOrgDataListType  $failedData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo, \Flexsim\FlexnetOperations\Type\CreatedOrgDataListType $responseData = null, \Flexsim\FlexnetOperations\Type\FailedOrgDataListType $failedData = null)
+    public static function create(StatusInfoType $statusInfo, CreatedOrgDataListType $responseData = null, FailedOrgDataListType $failedData = null)
     {
         return new self(...func_get_args());
     }
@@ -56,7 +56,7 @@ class CreateOrganizationResponseType extends FlexnetType implements ResultInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StatusInfoType $statusInfo
+     * @param  \Flexsim\FlexnetOperations\Type\StatusInfoType  $statusInfo
      * @return $this
      */
     public function setStatusInfo($statusInfo)
@@ -75,7 +75,7 @@ class CreateOrganizationResponseType extends FlexnetType implements ResultInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreatedOrgDataListType $responseData
+     * @param  \Flexsim\FlexnetOperations\Type\CreatedOrgDataListType  $responseData
      * @return $this
      */
     public function setResponseData($responseData)
@@ -94,7 +94,7 @@ class CreateOrganizationResponseType extends FlexnetType implements ResultInterf
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FailedOrgDataListType $failedData
+     * @param  \Flexsim\FlexnetOperations\Type\FailedOrgDataListType  $failedData
      * @return $this
      */
     public function setFailedData($failedData)

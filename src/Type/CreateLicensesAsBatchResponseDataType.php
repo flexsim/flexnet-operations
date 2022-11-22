@@ -12,9 +12,9 @@ class CreateLicensesAsBatchResponseDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentDataType  $fulfillment
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment)
+    public function __construct(FulfillmentDataType $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -22,9 +22,9 @@ class CreateLicensesAsBatchResponseDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentDataType  $fulfillment
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment)
+    public static function create(FulfillmentDataType $fulfillment)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class CreateLicensesAsBatchResponseDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentDataType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentDataType  $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)

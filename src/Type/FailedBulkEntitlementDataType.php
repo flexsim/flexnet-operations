@@ -17,10 +17,10 @@ class FailedBulkEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateBulkEntitlementDataType $bulkEntitlement
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\CreateBulkEntitlementDataType  $bulkEntitlement
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CreateBulkEntitlementDataType $bulkEntitlement = null, string $reason = null)
+    public function __construct(CreateBulkEntitlementDataType $bulkEntitlement = null, string $reason = null)
     {
         $this->bulkEntitlement = $bulkEntitlement;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedBulkEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CreateBulkEntitlementDataType $bulkEntitlement
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\CreateBulkEntitlementDataType  $bulkEntitlement
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CreateBulkEntitlementDataType $bulkEntitlement = null, string $reason = null)
+    public static function create(CreateBulkEntitlementDataType $bulkEntitlement = null, string $reason = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CreateBulkEntitlementDataType $bulkEntitlement
+     * @param  \Flexsim\FlexnetOperations\Type\CreateBulkEntitlementDataType  $bulkEntitlement
      * @return $this
      */
     public function setBulkEntitlement($bulkEntitlement)
@@ -65,7 +65,7 @@ class FailedBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

@@ -19,10 +19,10 @@ class HandleProductCategoryToOrgRequestType extends FlexnetType implements Reque
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $org
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $org
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productCategory
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $org, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory)
+    public function __construct(OrganizationIdentifierType $org, ProductCategoryDataType $productCategory)
     {
         $this->org = $org;
         $this->productCategory = $productCategory;
@@ -31,10 +31,10 @@ class HandleProductCategoryToOrgRequestType extends FlexnetType implements Reque
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $org
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $org
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productCategory
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $org, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory)
+    public static function create(OrganizationIdentifierType $org, ProductCategoryDataType $productCategory)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class HandleProductCategoryToOrgRequestType extends FlexnetType implements Reque
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType $org
+     * @param  \Flexsim\FlexnetOperations\Type\OrganizationIdentifierType  $org
      * @return $this
      */
     public function setOrg($org)
@@ -67,7 +67,7 @@ class HandleProductCategoryToOrgRequestType extends FlexnetType implements Reque
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productCategory
      * @return $this
      */
     public function setProductCategory($productCategory)

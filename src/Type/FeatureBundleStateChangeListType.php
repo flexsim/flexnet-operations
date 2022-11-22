@@ -12,7 +12,7 @@ class FeatureBundleStateChangeListType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array  $featureBundle
      */
     public function __construct($featureBundle = null)
     {
@@ -22,7 +22,7 @@ class FeatureBundleStateChangeListType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array  $featureBundle
      */
     public static function create($featureBundle = null)
     {
@@ -38,7 +38,7 @@ class FeatureBundleStateChangeListType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array $featureBundle
+     * @param  \Flexsim\FlexnetOperations\Type\FeatureBundleStateChangeDataType|array  $featureBundle
      * @return $this
      */
     public function setFeatureBundle($featureBundle)

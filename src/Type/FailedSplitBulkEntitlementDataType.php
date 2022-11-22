@@ -17,10 +17,10 @@ class FailedSplitBulkEntitlementDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType  $bulkEntitlementInfo
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo, string $reason)
+    public function __construct(SplitBulkEntitlementInfoType $bulkEntitlementInfo, string $reason)
     {
         $this->bulkEntitlementInfo = $bulkEntitlementInfo;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedSplitBulkEntitlementDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType  $bulkEntitlementInfo
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo, string $reason)
+    public static function create(SplitBulkEntitlementInfoType $bulkEntitlementInfo, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedSplitBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo
+     * @param  \Flexsim\FlexnetOperations\Type\SplitBulkEntitlementInfoType  $bulkEntitlementInfo
      * @return $this
      */
     public function setBulkEntitlementInfo($bulkEntitlementInfo)
@@ -65,7 +65,7 @@ class FailedSplitBulkEntitlementDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

@@ -14,9 +14,9 @@ class DeleteOnholdFulfillmentsRequestType extends FlexnetType implements Request
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdListType $fulfillmentIdList
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdListType  $fulfillmentIdList
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentIdListType $fulfillmentIdList)
+    public function __construct(FulfillmentIdListType $fulfillmentIdList)
     {
         $this->fulfillmentIdList = $fulfillmentIdList;
     }
@@ -24,9 +24,9 @@ class DeleteOnholdFulfillmentsRequestType extends FlexnetType implements Request
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdListType $fulfillmentIdList
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdListType  $fulfillmentIdList
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentIdListType $fulfillmentIdList)
+    public static function create(FulfillmentIdListType $fulfillmentIdList)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class DeleteOnholdFulfillmentsRequestType extends FlexnetType implements Request
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdListType $fulfillmentIdList
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdListType  $fulfillmentIdList
      * @return $this
      */
     public function setFulfillmentIdList($fulfillmentIdList)

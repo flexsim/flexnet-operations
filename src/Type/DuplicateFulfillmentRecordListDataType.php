@@ -12,9 +12,9 @@ class DuplicateFulfillmentRecordListDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillment
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillment)
+    public function __construct(FulfillmentIdentifierType $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -22,9 +22,9 @@ class DuplicateFulfillmentRecordListDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillment
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillment)
+    public static function create(FulfillmentIdentifierType $fulfillment)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class DuplicateFulfillmentRecordListDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType $fulfillment
+     * @param  \Flexsim\FlexnetOperations\Type\FulfillmentIdentifierType  $fulfillment
      * @return $this
      */
     public function setFulfillment($fulfillment)

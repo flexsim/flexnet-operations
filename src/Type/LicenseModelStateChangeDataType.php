@@ -17,10 +17,10 @@ class LicenseModelStateChangeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModelIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType|array  $stateChangeRecord
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier, $stateChangeRecord = null)
+    public function __construct(LicenseModelIdentifierType $licenseModelIdentifier, $stateChangeRecord = null)
     {
         $this->licenseModelIdentifier = $licenseModelIdentifier;
         $this->stateChangeRecord = $stateChangeRecord;
@@ -29,10 +29,10 @@ class LicenseModelStateChangeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType|array $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModelIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType|array  $stateChangeRecord
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier, $stateChangeRecord = null)
+    public static function create(LicenseModelIdentifierType $licenseModelIdentifier, $stateChangeRecord = null)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class LicenseModelStateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\LicenseModelIdentifierType  $licenseModelIdentifier
      * @return $this
      */
     public function setLicenseModelIdentifier($licenseModelIdentifier)
@@ -65,7 +65,7 @@ class LicenseModelStateChangeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\StateChangeDataType $stateChangeRecord
+     * @param  \Flexsim\FlexnetOperations\Type\StateChangeDataType  $stateChangeRecord
      * @return $this
      */
     public function setStateChangeRecord($stateChangeRecord)

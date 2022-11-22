@@ -12,9 +12,9 @@ class CountDataSetType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\CountDataType $countData
+     * @param  \Flexsim\FlexnetOperations\Type\CountDataType  $countData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\CountDataType $countData)
+    public function __construct(CountDataType $countData)
     {
         $this->countData = $countData;
     }
@@ -22,9 +22,9 @@ class CountDataSetType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\CountDataType $countData
+     * @param  \Flexsim\FlexnetOperations\Type\CountDataType  $countData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\CountDataType $countData)
+    public static function create(CountDataType $countData)
     {
         return new self(...func_get_args());
     }
@@ -38,7 +38,7 @@ class CountDataSetType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\CountDataType $countData
+     * @param  \Flexsim\FlexnetOperations\Type\CountDataType  $countData
      * @return $this
      */
     public function setCountData($countData)

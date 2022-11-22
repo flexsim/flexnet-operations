@@ -14,9 +14,9 @@ class GetWebRegKeyCountRequestType extends FlexnetType implements RequestInterfa
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier)
+    public function __construct(EntitlementIdentifierType $bulkEntitlementIdentifier)
     {
         $this->bulkEntitlementIdentifier = $bulkEntitlementIdentifier;
     }
@@ -24,9 +24,9 @@ class GetWebRegKeyCountRequestType extends FlexnetType implements RequestInterfa
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier)
+    public static function create(EntitlementIdentifierType $bulkEntitlementIdentifier)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class GetWebRegKeyCountRequestType extends FlexnetType implements RequestInterfa
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType $bulkEntitlementIdentifier
+     * @param  \Flexsim\FlexnetOperations\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
      * @return $this
      */
     public function setBulkEntitlementIdentifier($bulkEntitlementIdentifier)

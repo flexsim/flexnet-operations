@@ -14,9 +14,9 @@ class UpdateAccountRequestType extends FlexnetType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateAcctDataType $acctData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateAcctDataType  $acctData
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\UpdateAcctDataType $acctData)
+    public function __construct(UpdateAcctDataType $acctData)
     {
         $this->acctData = $acctData;
     }
@@ -24,9 +24,9 @@ class UpdateAccountRequestType extends FlexnetType implements RequestInterface
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\UpdateAcctDataType $acctData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateAcctDataType  $acctData
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\UpdateAcctDataType $acctData)
+    public static function create(UpdateAcctDataType $acctData)
     {
         return new self(...func_get_args());
     }
@@ -40,7 +40,7 @@ class UpdateAccountRequestType extends FlexnetType implements RequestInterface
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\UpdateAcctDataType $acctData
+     * @param  \Flexsim\FlexnetOperations\Type\UpdateAcctDataType  $acctData
      * @return $this
      */
     public function setAcctData($acctData)

@@ -19,10 +19,10 @@ class HandleProductCategoryToAcctRequestType extends FlexnetType implements Requ
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $acct
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierType  $acct
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productCategory
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $acct, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory)
+    public function __construct(AccountIdentifierType $acct, ProductCategoryDataType $productCategory)
     {
         $this->acct = $acct;
         $this->productCategory = $productCategory;
@@ -31,10 +31,10 @@ class HandleProductCategoryToAcctRequestType extends FlexnetType implements Requ
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $acct
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierType  $acct
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productCategory
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\AccountIdentifierType $acct, \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory)
+    public static function create(AccountIdentifierType $acct, ProductCategoryDataType $productCategory)
     {
         return new self(...func_get_args());
     }
@@ -48,7 +48,7 @@ class HandleProductCategoryToAcctRequestType extends FlexnetType implements Requ
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\AccountIdentifierType $acct
+     * @param  \Flexsim\FlexnetOperations\Type\AccountIdentifierType  $acct
      * @return $this
      */
     public function setAcct($acct)
@@ -67,7 +67,7 @@ class HandleProductCategoryToAcctRequestType extends FlexnetType implements Requ
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\ProductCategoryDataType $productCategory
+     * @param  \Flexsim\FlexnetOperations\Type\ProductCategoryDataType  $productCategory
      * @return $this
      */
     public function setProductCategory($productCategory)

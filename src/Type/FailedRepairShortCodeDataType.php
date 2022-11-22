@@ -17,10 +17,10 @@ class FailedRepairShortCodeDataType extends FlexnetType
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType  $shortCodeData
+     * @param  string  $reason
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData, string $reason)
+    public function __construct(RepairShortCodeDataType $shortCodeData, string $reason)
     {
         $this->shortCodeData = $shortCodeData;
         $this->reason = $reason;
@@ -29,10 +29,10 @@ class FailedRepairShortCodeDataType extends FlexnetType
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData
-     * @param string $reason
+     * @param  \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType  $shortCodeData
+     * @param  string  $reason
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData, string $reason)
+    public static function create(RepairShortCodeDataType $shortCodeData, string $reason)
     {
         return new self(...func_get_args());
     }
@@ -46,7 +46,7 @@ class FailedRepairShortCodeDataType extends FlexnetType
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType $shortCodeData
+     * @param  \Flexsim\FlexnetOperations\Type\RepairShortCodeDataType  $shortCodeData
      * @return $this
      */
     public function setShortCodeData($shortCodeData)
@@ -65,7 +65,7 @@ class FailedRepairShortCodeDataType extends FlexnetType
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return $this
      */
     public function setReason($reason)

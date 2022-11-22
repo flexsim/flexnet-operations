@@ -14,9 +14,9 @@ class GetModelIdentifiersRequestType extends FlexnetType implements RequestInter
     /**
      * Constructor
      *
-     * @param \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType  $queryParams
      */
-    public function __construct(\Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType $queryParams = null)
+    public function __construct(IdentifierQueryParametersType $queryParams = null)
     {
         $queryParams = $queryParams ?? [];
         $this->queryParams = $queryParams;
@@ -25,9 +25,9 @@ class GetModelIdentifiersRequestType extends FlexnetType implements RequestInter
     /**
      * create a new instance of this class
      *
-     * @param \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType  $queryParams
      */
-    public static function create(\Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType $queryParams = null)
+    public static function create(IdentifierQueryParametersType $queryParams = null)
     {
         return new self(...func_get_args());
     }
@@ -41,7 +41,7 @@ class GetModelIdentifiersRequestType extends FlexnetType implements RequestInter
     }
 
     /**
-     * @param \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType $queryParams
+     * @param  \Flexsim\FlexnetOperations\Type\IdentifierQueryParametersType  $queryParams
      * @return $this
      */
     public function setQueryParams($queryParams)
