@@ -12,12 +12,12 @@ class EntitlementLifeCycleResponseType implements ResultInterface
     private $statusInfo;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataListType
+     * @var \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataListType|null
      */
     private $failedData;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataListType
+     * @var \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataListType|null
      */
     private $responseData;
 
@@ -25,10 +25,10 @@ class EntitlementLifeCycleResponseType implements ResultInterface
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataListType  $failedData
-     * @param  \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataListType  $responseData
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataListType|null  $failedData
+     * @param  \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataListType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedEntitlementLifeCycleDataListType $failedData, CreatedEntitlementLifeCycleDataListType $responseData)
+    public function __construct(StatusInfoType $statusInfo, FailedEntitlementLifeCycleDataListType|null $failedData = null, CreatedEntitlementLifeCycleDataListType|null $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -37,10 +37,10 @@ class EntitlementLifeCycleResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataListType  $failedData
-     * @param  \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataListType  $responseData
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataListType|null  $failedData
+     * @param  \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataListType|null  $responseData
      */
-    public static function create(StatusInfoType $statusInfo, FailedEntitlementLifeCycleDataListType $failedData, CreatedEntitlementLifeCycleDataListType $responseData)
+    public static function create(StatusInfoType $statusInfo, FailedEntitlementLifeCycleDataListType|null $failedData = null, CreatedEntitlementLifeCycleDataListType|null $responseData = null)
     {
         return new static(...\func_get_args());
     }
@@ -58,12 +58,12 @@ class EntitlementLifeCycleResponseType implements ResultInterface
         return $new;
     }
 
-    public function getFailedData(): FailedEntitlementLifeCycleDataListType
+    public function getFailedData(): FailedEntitlementLifeCycleDataListType|null
     {
         return $this->failedData;
     }
 
-    public function withFailedData(FailedEntitlementLifeCycleDataListType $failedData): EntitlementLifeCycleResponseType
+    public function withFailedData(FailedEntitlementLifeCycleDataListType|null $failedData): EntitlementLifeCycleResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -71,12 +71,12 @@ class EntitlementLifeCycleResponseType implements ResultInterface
         return $new;
     }
 
-    public function getResponseData(): CreatedEntitlementLifeCycleDataListType
+    public function getResponseData(): CreatedEntitlementLifeCycleDataListType|null
     {
         return $this->responseData;
     }
 
-    public function withResponseData(CreatedEntitlementLifeCycleDataListType $responseData): EntitlementLifeCycleResponseType
+    public function withResponseData(CreatedEntitlementLifeCycleDataListType|null $responseData): EntitlementLifeCycleResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

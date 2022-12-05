@@ -41,7 +41,7 @@ trait HasTypeMap
 
     protected function typeElements(string $typeName): array
     {
-        $typeDefinition = Arr::get($this->complexTypes(), lcfirst($typeName));
+        $typeDefinition = Arr::get($this->complexTypes(), lcfirst($typeName), Arr::get($this->complexTypes(), $typeName));
 
         $typeElements = Arr::get($typeDefinition, 'sequence.element', Arr::get($typeDefinition, 'complexContent.extension.sequence.element', []));
 
