@@ -1,8 +1,8 @@
 {
     "name": "flexsim/flexnet-operations",
-    "description": "A package for interacting with the flexnet soap services",
+    "description": "A package for connecting with the FlexNet Operations api",
     "keywords": [
-        "FlexSim",
+        "flexsim",
         "laravel",
         "flexnet-operations"
     ],
@@ -16,33 +16,29 @@
         }
     ],
     "require": {
-        "php": "^8.0 | ^8.1",
-        "guzzlehttp/guzzle": "^7.4",
-        "spatie/laravel-package-tools": "^1.13.0",
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.2",
         "illuminate/contracts": "^9.0",
-        "phpro/soap-client": "^2.2"
+        "phpro/soap-client": "^2.2",
+        "spatie/laravel-package-tools": "^1.13.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
         "nunomaduro/collision": "^6.0",
-        "nunomaduro/larastan": "^2.0.1",
         "orchestra/testbench": "^7.0",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.1",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
         "phpunit/phpunit": "^9.5",
         "spatie/laravel-ray": "^1.26"
     },
     "autoload": {
         "psr-4": {
-            "Flexsim\\FlexnetOperations\\": "src"
+            "Flexsim\\FlexnetOperations\\": "src",
+            "Flexnet\\": "flexnet/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Flexsim\\FlexnetOperations\\Assembler\\": "Assembler",
             "Flexsim\\FlexnetOperations\\Tests\\": "tests"
         }
     },
@@ -66,7 +62,7 @@
                 "Flexsim\\FlexnetOperations\\FlexnetOperationsServiceProvider"
             ],
             "aliases": {
-                "Flexnet": "Flexsim\\FlexnetOperations\\Facades\\Flexnet"
+                "FlexnetOperations": "Flexsim\\FlexnetOperations\\Facades\\FlexnetOperations"
             }
         }
     },

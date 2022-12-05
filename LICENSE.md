@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) FlexSim <cole.shirley@flexsim.com>
+Copyright (c) flexsim <cole.shirley@flexsim.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
