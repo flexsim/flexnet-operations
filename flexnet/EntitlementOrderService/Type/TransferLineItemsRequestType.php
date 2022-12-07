@@ -12,16 +12,21 @@ class TransferLineItemsRequestType implements RequestInterface
     private $lineItemList;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemsListType  $lineItemList
+     */
+    public function __construct(TransferLineItemsListType $lineItemList)
+    {
+        $this->lineItemList = $lineItemList;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemsListType  $lineItemList
      */
     public static function create(TransferLineItemsListType $lineItemList)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(TransferLineItemsListType $lineItemList)
-    {
-        $this->lineItemList = $lineItemList;
     }
 
     /**

@@ -12,16 +12,21 @@ class RenewEntitlementRequestType implements RequestInterface
     private $entitlementData;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType>|null  $entitlementData
+     */
+    public function __construct(RenewEntitlementDataType|array|null $entitlementData = null)
+    {
+        $this->entitlementData = $entitlementData;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType>|null  $entitlementData
      */
     public static function create(RenewEntitlementDataType|array|null $entitlementData = null)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(RenewEntitlementDataType $entitlementData)
-    {
-        $this->entitlementData = $entitlementData;
     }
 
     /**

@@ -12,16 +12,21 @@ class TransferEntitlementsRequestType implements RequestInterface
     private $entitlementList;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementsListType  $entitlementList
+     */
+    public function __construct(TransferEntitlementsListType $entitlementList)
+    {
+        $this->entitlementList = $entitlementList;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementsListType  $entitlementList
      */
     public static function create(TransferEntitlementsListType $entitlementList)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(TransferEntitlementsListType $entitlementList)
-    {
-        $this->entitlementList = $entitlementList;
     }
 
     /**

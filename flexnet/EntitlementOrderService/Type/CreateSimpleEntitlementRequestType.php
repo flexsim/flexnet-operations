@@ -17,18 +17,24 @@ class CreateSimpleEntitlementRequestType implements RequestInterface
     private $opType;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType>  $simpleEntitlement
+     * @param  string|null  $opType
+     */
+    public function __construct(CreateSimpleEntitlementDataType|array $simpleEntitlement, string|null $opType = null)
+    {
+        $this->simpleEntitlement = $simpleEntitlement;
+        $this->opType = $opType;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType>  $simpleEntitlement
      * @param  string|null  $opType
      */
     public static function create(CreateSimpleEntitlementDataType|array $simpleEntitlement, string|null $opType = null)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(CreateSimpleEntitlementDataType $simpleEntitlement, string $opType)
-    {
-        $this->simpleEntitlement = $simpleEntitlement;
-        $this->opType = $opType;
     }
 
     /**

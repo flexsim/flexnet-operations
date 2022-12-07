@@ -12,16 +12,21 @@ class CreateBulkEntitlementRequestType implements RequestInterface
     private $bulkEntitlement;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType>  $bulkEntitlement
+     */
+    public function __construct(CreateBulkEntitlementDataType|array $bulkEntitlement)
+    {
+        $this->bulkEntitlement = $bulkEntitlement;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType>  $bulkEntitlement
      */
     public static function create(CreateBulkEntitlementDataType|array $bulkEntitlement)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(CreateBulkEntitlementDataType $bulkEntitlement)
-    {
-        $this->bulkEntitlement = $bulkEntitlement;
     }
 
     /**

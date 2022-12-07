@@ -12,16 +12,21 @@ class UpdateEntitlementLineItemRequestType implements RequestInterface
     private $lineItemData;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType>  $lineItemData
+     */
+    public function __construct(UpdateEntitlementLineItemDataType|array $lineItemData)
+    {
+        $this->lineItemData = $lineItemData;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType>  $lineItemData
      */
     public static function create(UpdateEntitlementLineItemDataType|array $lineItemData)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(UpdateEntitlementLineItemDataType $lineItemData)
-    {
-        $this->lineItemData = $lineItemData;
     }
 
     /**

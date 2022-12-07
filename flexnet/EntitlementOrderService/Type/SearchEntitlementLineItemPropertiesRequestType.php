@@ -27,6 +27,22 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
     private $pageNumber;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $queryParams
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemResponseConfigRequestType  $entitlementLineItemResponseConfig
+     * @param  int  $batchSize
+     * @param  int|null  $pageNumber
+     */
+    public function __construct(SearchActivatableItemDataType $queryParams, EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig, int $batchSize, int|null $pageNumber = null)
+    {
+        $this->queryParams = $queryParams;
+        $this->entitlementLineItemResponseConfig = $entitlementLineItemResponseConfig;
+        $this->batchSize = $batchSize;
+        $this->pageNumber = $pageNumber;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $queryParams
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemResponseConfigRequestType  $entitlementLineItemResponseConfig
      * @param  int  $batchSize
@@ -35,14 +51,6 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
     public static function create(SearchActivatableItemDataType $queryParams, EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig, int $batchSize, int|null $pageNumber = null)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(SearchActivatableItemDataType $queryParams, EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig, int $batchSize, int $pageNumber)
-    {
-        $this->queryParams = $queryParams;
-        $this->entitlementLineItemResponseConfig = $entitlementLineItemResponseConfig;
-        $this->batchSize = $batchSize;
-        $this->pageNumber = $pageNumber;
     }
 
     /**

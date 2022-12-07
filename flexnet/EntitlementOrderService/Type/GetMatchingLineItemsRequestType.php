@@ -12,16 +12,21 @@ class GetMatchingLineItemsRequestType implements RequestInterface
     private $lineItemList;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsListType  $lineItemList
+     */
+    public function __construct(GetMatchingLineItemsListType $lineItemList)
+    {
+        $this->lineItemList = $lineItemList;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsListType  $lineItemList
      */
     public static function create(GetMatchingLineItemsListType $lineItemList)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(GetMatchingLineItemsListType $lineItemList)
-    {
-        $this->lineItemList = $lineItemList;
     }
 
     /**

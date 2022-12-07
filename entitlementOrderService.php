@@ -27,7 +27,9 @@ return Config::create()
         new Rules\AssembleRule(new Assembler\ClientMethodAssembler()),
     ]))
     ->addRule(new Rules\AssembleRule(new FlexnetAssembler\PropertyAssembler(__DIR__.'/entitlementOrderService.json')))
-    ->addRule(new Rules\AssembleRule(new  FlexnetAssembler\ConstructorAssembler((new FlexnetAssembler\ConstructorAssemblerOptions(__DIR__.'/entitlementOrderService.json'))->withTypeHints())))
+    ->addRule(new Rules\AssembleRule(new FlexnetAssembler\ConstructorAssembler(
+        (new FlexnetAssembler\ConstructorAssemblerOptions(__DIR__.'/entitlementOrderService.json'))->withTypeHints()
+    )))
     ->addRule(new Rules\AssembleRule(new FlexnetAssembler\GetterAssembler(
         (new FlexnetAssembler\GetterAssemblerOptions(__DIR__.'/entitlementOrderService.json'))->withReturnType()
     )))
@@ -39,9 +41,6 @@ return Config::create()
             $engine->getMetadata(),
             new Rules\MultiRule([
                 new Rules\AssembleRule(new Assembler\RequestAssembler()),
-                new Rules\AssembleRule(new Assembler\ConstructorAssembler(
-                    (new Assembler\ConstructorAssemblerOptions())->withDocBlocks(false)->withTypeHints()
-                )),
             ])
         )
     )

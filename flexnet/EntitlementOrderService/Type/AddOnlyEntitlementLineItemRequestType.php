@@ -17,18 +17,24 @@ class AddOnlyEntitlementLineItemRequestType implements RequestInterface
     private $opType;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
+     * @param  string|null  $opType
+     */
+    public function __construct(AddEntitlementLineItemDataType|array $lineItem, string|null $opType = null)
+    {
+        $this->lineItem = $lineItem;
+        $this->opType = $opType;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
      * @param  string|null  $opType
      */
     public static function create(AddEntitlementLineItemDataType|array $lineItem, string|null $opType = null)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(AddEntitlementLineItemDataType $lineItem, string $opType)
-    {
-        $this->lineItem = $lineItem;
-        $this->opType = $opType;
     }
 
     /**

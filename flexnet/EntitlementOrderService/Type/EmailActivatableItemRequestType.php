@@ -42,6 +42,28 @@ class EmailActivatableItemRequestType implements RequestInterface
     private $locale;
 
     /**
+     * Constructor
+     *
+     * @param  string  $activationId
+     * @param  bool|null  $ignoreExistingEmailList
+     * @param  bool|null  $validateEmailAddresses
+     * @param  \Flexnet\EntitlementOrderService\Type\EmailContactListType|null  $emailIdList
+     * @param  \Flexnet\EntitlementOrderService\Type\EmailContactListType|null  $ccEmailIdList
+     * @param  \Flexnet\EntitlementOrderService\Type\EmailContactListType|null  $bccEmailIdList
+     * @param  string|null  $locale
+     */
+    public function __construct(string $activationId, bool|null $ignoreExistingEmailList = null, bool|null $validateEmailAddresses = null, EmailContactListType|null $emailIdList = null, EmailContactListType|null $ccEmailIdList = null, EmailContactListType|null $bccEmailIdList = null, string|null $locale = null)
+    {
+        $this->activationId = $activationId;
+        $this->ignoreExistingEmailList = $ignoreExistingEmailList;
+        $this->validateEmailAddresses = $validateEmailAddresses;
+        $this->emailIdList = $emailIdList;
+        $this->ccEmailIdList = $ccEmailIdList;
+        $this->bccEmailIdList = $bccEmailIdList;
+        $this->locale = $locale;
+    }
+
+    /**
      * @param  string  $activationId
      * @param  bool|null  $ignoreExistingEmailList
      * @param  bool|null  $validateEmailAddresses
@@ -53,17 +75,6 @@ class EmailActivatableItemRequestType implements RequestInterface
     public static function create(string $activationId, bool|null $ignoreExistingEmailList = null, bool|null $validateEmailAddresses = null, EmailContactListType|null $emailIdList = null, EmailContactListType|null $ccEmailIdList = null, EmailContactListType|null $bccEmailIdList = null, string|null $locale = null)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(string $activationId, bool $ignoreExistingEmailList, bool $validateEmailAddresses, EmailContactListType $emailIdList, EmailContactListType $ccEmailIdList, EmailContactListType $bccEmailIdList, string $locale)
-    {
-        $this->activationId = $activationId;
-        $this->ignoreExistingEmailList = $ignoreExistingEmailList;
-        $this->validateEmailAddresses = $validateEmailAddresses;
-        $this->emailIdList = $emailIdList;
-        $this->ccEmailIdList = $ccEmailIdList;
-        $this->bccEmailIdList = $bccEmailIdList;
-        $this->locale = $locale;
     }
 
     /**

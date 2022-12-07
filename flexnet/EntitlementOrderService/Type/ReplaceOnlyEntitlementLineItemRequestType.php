@@ -12,16 +12,21 @@ class ReplaceOnlyEntitlementLineItemRequestType implements RequestInterface
     private $lineItem;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
+     */
+    public function __construct(AddEntitlementLineItemDataType|array $lineItem)
+    {
+        $this->lineItem = $lineItem;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
      */
     public static function create(AddEntitlementLineItemDataType|array $lineItem)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(AddEntitlementLineItemDataType $lineItem)
-    {
-        $this->lineItem = $lineItem;
     }
 
     /**

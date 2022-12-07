@@ -12,16 +12,21 @@ class GetBulkEntitlementCountRequestType implements RequestInterface
     private $bulkEntitlementSearchCriteria;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
+     */
+    public function __construct(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria)
+    {
+        $this->bulkEntitlementSearchCriteria = $bulkEntitlementSearchCriteria;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
      */
     public static function create(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria)
-    {
-        $this->bulkEntitlementSearchCriteria = $bulkEntitlementSearchCriteria;
     }
 
     /**

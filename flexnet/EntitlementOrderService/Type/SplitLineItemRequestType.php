@@ -12,16 +12,21 @@ class SplitLineItemRequestType implements RequestInterface
     private $lineItemList;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemListType  $lineItemList
+     */
+    public function __construct(SplitLineItemListType $lineItemList)
+    {
+        $this->lineItemList = $lineItemList;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemListType  $lineItemList
      */
     public static function create(SplitLineItemListType $lineItemList)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(SplitLineItemListType $lineItemList)
-    {
-        $this->lineItemList = $lineItemList;
     }
 
     /**

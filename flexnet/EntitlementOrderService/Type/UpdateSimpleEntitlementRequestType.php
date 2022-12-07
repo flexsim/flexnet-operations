@@ -12,16 +12,21 @@ class UpdateSimpleEntitlementRequestType implements RequestInterface
     private $simpleEntitlement;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType>  $simpleEntitlement
+     */
+    public function __construct(UpdateSimpleEntitlementDataType|array $simpleEntitlement)
+    {
+        $this->simpleEntitlement = $simpleEntitlement;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType>  $simpleEntitlement
      */
     public static function create(UpdateSimpleEntitlementDataType|array $simpleEntitlement)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(UpdateSimpleEntitlementDataType $simpleEntitlement)
-    {
-        $this->simpleEntitlement = $simpleEntitlement;
     }
 
     /**

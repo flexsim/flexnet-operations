@@ -17,18 +17,24 @@ class GetActivatableItemCountRequestType implements RequestInterface
     private $restrictToItemsReadyToActivate;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $queryParams
+     * @param  bool|null  $restrictToItemsReadyToActivate
+     */
+    public function __construct(SearchActivatableItemDataType $queryParams, bool|null $restrictToItemsReadyToActivate = null)
+    {
+        $this->queryParams = $queryParams;
+        $this->restrictToItemsReadyToActivate = $restrictToItemsReadyToActivate;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $queryParams
      * @param  bool|null  $restrictToItemsReadyToActivate
      */
     public static function create(SearchActivatableItemDataType $queryParams, bool|null $restrictToItemsReadyToActivate = null)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(SearchActivatableItemDataType $queryParams, bool $restrictToItemsReadyToActivate)
-    {
-        $this->queryParams = $queryParams;
-        $this->restrictToItemsReadyToActivate = $restrictToItemsReadyToActivate;
     }
 
     /**

@@ -12,16 +12,21 @@ class GetMatchingBulkEntsRequestType implements RequestInterface
     private $bulkEntList;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsListType  $bulkEntList
+     */
+    public function __construct(GetMatchingBulkEntsListType $bulkEntList)
+    {
+        $this->bulkEntList = $bulkEntList;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsListType  $bulkEntList
      */
     public static function create(GetMatchingBulkEntsListType $bulkEntList)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(GetMatchingBulkEntsListType $bulkEntList)
-    {
-        $this->bulkEntList = $bulkEntList;
     }
 
     /**

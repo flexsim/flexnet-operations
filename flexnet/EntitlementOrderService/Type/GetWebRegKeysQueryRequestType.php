@@ -22,6 +22,20 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
     private $pageNumber;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
+     * @param  int  $batchSize
+     * @param  int  $pageNumber
+     */
+    public function __construct(EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
+    {
+        $this->bulkEntitlementIdentifier = $bulkEntitlementIdentifier;
+        $this->batchSize = $batchSize;
+        $this->pageNumber = $pageNumber;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
      * @param  int  $batchSize
      * @param  int  $pageNumber
@@ -29,13 +43,6 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
     public static function create(EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
-    {
-        $this->bulkEntitlementIdentifier = $bulkEntitlementIdentifier;
-        $this->batchSize = $batchSize;
-        $this->pageNumber = $pageNumber;
     }
 
     /**

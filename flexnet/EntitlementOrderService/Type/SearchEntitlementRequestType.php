@@ -22,6 +22,20 @@ class SearchEntitlementRequestType implements RequestInterface
     private $pageNumber;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType  $entitlementSearchCriteria
+     * @param  int  $batchSize
+     * @param  int|null  $pageNumber
+     */
+    public function __construct(SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int|null $pageNumber = null)
+    {
+        $this->entitlementSearchCriteria = $entitlementSearchCriteria;
+        $this->batchSize = $batchSize;
+        $this->pageNumber = $pageNumber;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType  $entitlementSearchCriteria
      * @param  int  $batchSize
      * @param  int|null  $pageNumber
@@ -29,13 +43,6 @@ class SearchEntitlementRequestType implements RequestInterface
     public static function create(SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int|null $pageNumber = null)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int $pageNumber)
-    {
-        $this->entitlementSearchCriteria = $entitlementSearchCriteria;
-        $this->batchSize = $batchSize;
-        $this->pageNumber = $pageNumber;
     }
 
     /**

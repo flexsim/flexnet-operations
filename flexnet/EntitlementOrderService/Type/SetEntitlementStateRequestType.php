@@ -12,16 +12,21 @@ class SetEntitlementStateRequestType implements RequestInterface
     private $entitlement;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateDataType>  $entitlement
+     */
+    public function __construct(EntitlementStateDataType|array $entitlement)
+    {
+        $this->entitlement = $entitlement;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateDataType>  $entitlement
      */
     public static function create(EntitlementStateDataType|array $entitlement)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(EntitlementStateDataType $entitlement)
-    {
-        $this->entitlement = $entitlement;
     }
 
     /**

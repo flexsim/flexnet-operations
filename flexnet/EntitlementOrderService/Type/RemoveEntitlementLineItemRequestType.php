@@ -12,16 +12,21 @@ class RemoveEntitlementLineItemRequestType implements RequestInterface
     private $lineItemData;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType>  $lineItemData
+     */
+    public function __construct(RemoveEntitlementLineItemDataType|array $lineItemData)
+    {
+        $this->lineItemData = $lineItemData;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType>  $lineItemData
      */
     public static function create(RemoveEntitlementLineItemDataType|array $lineItemData)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(RemoveEntitlementLineItemDataType $lineItemData)
-    {
-        $this->lineItemData = $lineItemData;
     }
 
     /**

@@ -12,16 +12,21 @@ class SetMaintenanceLineItemStateRequestType implements RequestInterface
     private $maintenanceLineItem;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType>  $maintenanceLineItem
+     */
+    public function __construct(MaintenanceLineItemStateDataType|array $maintenanceLineItem)
+    {
+        $this->maintenanceLineItem = $maintenanceLineItem;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType>  $maintenanceLineItem
      */
     public static function create(MaintenanceLineItemStateDataType|array $maintenanceLineItem)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(MaintenanceLineItemStateDataType $maintenanceLineItem)
-    {
-        $this->maintenanceLineItem = $maintenanceLineItem;
     }
 
     /**

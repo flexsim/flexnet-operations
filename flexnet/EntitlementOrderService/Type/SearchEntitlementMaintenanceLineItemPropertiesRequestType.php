@@ -27,6 +27,22 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
     private $pageNumber;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\SearchMaintenanceLineItemDataType  $queryParams
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemResponseConfigRequestType  $entitlementMaintenanceLineItemResponseConfig
+     * @param  int  $batchSize
+     * @param  int|null  $pageNumber
+     */
+    public function __construct(SearchMaintenanceLineItemDataType $queryParams, EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int|null $pageNumber = null)
+    {
+        $this->queryParams = $queryParams;
+        $this->entitlementMaintenanceLineItemResponseConfig = $entitlementMaintenanceLineItemResponseConfig;
+        $this->batchSize = $batchSize;
+        $this->pageNumber = $pageNumber;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchMaintenanceLineItemDataType  $queryParams
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemResponseConfigRequestType  $entitlementMaintenanceLineItemResponseConfig
      * @param  int  $batchSize
@@ -35,14 +51,6 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
     public static function create(SearchMaintenanceLineItemDataType $queryParams, EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int|null $pageNumber = null)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(SearchMaintenanceLineItemDataType $queryParams, EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int $pageNumber)
-    {
-        $this->queryParams = $queryParams;
-        $this->entitlementMaintenanceLineItemResponseConfig = $entitlementMaintenanceLineItemResponseConfig;
-        $this->batchSize = $batchSize;
-        $this->pageNumber = $pageNumber;
     }
 
     /**

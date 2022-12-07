@@ -12,16 +12,21 @@ class GetEntitlementAttributesRequestType implements RequestInterface
     private $licenseModelIdentifier;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
+     */
+    public function __construct(LicenseModelIdentifierType $licenseModelIdentifier)
+    {
+        $this->licenseModelIdentifier = $licenseModelIdentifier;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
      */
     public static function create(LicenseModelIdentifierType $licenseModelIdentifier)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(LicenseModelIdentifierType $licenseModelIdentifier)
-    {
-        $this->licenseModelIdentifier = $licenseModelIdentifier;
     }
 
     /**

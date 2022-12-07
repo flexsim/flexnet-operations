@@ -22,6 +22,20 @@ class SearchActivatableItemRequestType implements RequestInterface
     private $pageNumber;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $activatableItemSearchCriteria
+     * @param  int  $batchSize
+     * @param  int|null  $pageNumber
+     */
+    public function __construct(SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int|null $pageNumber = null)
+    {
+        $this->activatableItemSearchCriteria = $activatableItemSearchCriteria;
+        $this->batchSize = $batchSize;
+        $this->pageNumber = $pageNumber;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $activatableItemSearchCriteria
      * @param  int  $batchSize
      * @param  int|null  $pageNumber
@@ -29,13 +43,6 @@ class SearchActivatableItemRequestType implements RequestInterface
     public static function create(SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int|null $pageNumber = null)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int $pageNumber)
-    {
-        $this->activatableItemSearchCriteria = $activatableItemSearchCriteria;
-        $this->batchSize = $batchSize;
-        $this->pageNumber = $pageNumber;
     }
 
     /**

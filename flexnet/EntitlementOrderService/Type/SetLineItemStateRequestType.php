@@ -12,16 +12,21 @@ class SetLineItemStateRequestType implements RequestInterface
     private $lineItem;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemStateDataType>  $lineItem
+     */
+    public function __construct(LineItemStateDataType|array $lineItem)
+    {
+        $this->lineItem = $lineItem;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemStateDataType>  $lineItem
      */
     public static function create(LineItemStateDataType|array $lineItem)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(LineItemStateDataType $lineItem)
-    {
-        $this->lineItem = $lineItem;
     }
 
     /**

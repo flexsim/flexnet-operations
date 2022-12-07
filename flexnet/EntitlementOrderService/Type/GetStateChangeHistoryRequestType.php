@@ -37,6 +37,26 @@ class GetStateChangeHistoryRequestType implements RequestInterface
     private $bulkEntitlementList;
 
     /**
+     * Constructor
+     *
+     * @param  \Flexnet\EntitlementOrderService\Type\FeatureListType|null  $featureList
+     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleListType|null  $featureBundleList
+     * @param  \Flexnet\EntitlementOrderService\Type\ProductListType|null  $productList
+     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelListType|null  $licenseModelList
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementListType|null  $simpleEntitlementList
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementListType|null  $bulkEntitlementList
+     */
+    public function __construct(FeatureListType|null $featureList = null, FeatureBundleListType|null $featureBundleList = null, ProductListType|null $productList = null, LicenseModelListType|null $licenseModelList = null, EntitlementListType|null $simpleEntitlementList = null, EntitlementListType|null $bulkEntitlementList = null)
+    {
+        $this->featureList = $featureList;
+        $this->featureBundleList = $featureBundleList;
+        $this->productList = $productList;
+        $this->licenseModelList = $licenseModelList;
+        $this->simpleEntitlementList = $simpleEntitlementList;
+        $this->bulkEntitlementList = $bulkEntitlementList;
+    }
+
+    /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureListType|null  $featureList
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleListType|null  $featureBundleList
      * @param  \Flexnet\EntitlementOrderService\Type\ProductListType|null  $productList
@@ -47,16 +67,6 @@ class GetStateChangeHistoryRequestType implements RequestInterface
     public static function create(FeatureListType|null $featureList = null, FeatureBundleListType|null $featureBundleList = null, ProductListType|null $productList = null, LicenseModelListType|null $licenseModelList = null, EntitlementListType|null $simpleEntitlementList = null, EntitlementListType|null $bulkEntitlementList = null)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(FeatureListType $featureList, FeatureBundleListType $featureBundleList, ProductListType $productList, LicenseModelListType $licenseModelList, EntitlementListType $simpleEntitlementList, EntitlementListType $bulkEntitlementList)
-    {
-        $this->featureList = $featureList;
-        $this->featureBundleList = $featureBundleList;
-        $this->productList = $productList;
-        $this->licenseModelList = $licenseModelList;
-        $this->simpleEntitlementList = $simpleEntitlementList;
-        $this->bulkEntitlementList = $bulkEntitlementList;
     }
 
     /**

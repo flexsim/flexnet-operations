@@ -22,6 +22,20 @@ class MapEntitlementsToUserRequestType implements RequestInterface
     private $userAcct;
 
     /**
+     * Constructor
+     *
+     * @param  string  $userId
+     * @param  \Flexnet\EntitlementOrderService\Type\IdListType  $idList
+     * @param  string|null  $userAcct
+     */
+    public function __construct(string $userId, IdListType $idList, string|null $userAcct = null)
+    {
+        $this->userId = $userId;
+        $this->idList = $idList;
+        $this->userAcct = $userAcct;
+    }
+
+    /**
      * @param  string  $userId
      * @param  \Flexnet\EntitlementOrderService\Type\IdListType  $idList
      * @param  string|null  $userAcct
@@ -29,13 +43,6 @@ class MapEntitlementsToUserRequestType implements RequestInterface
     public static function create(string $userId, IdListType $idList, string|null $userAcct = null)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(string $userId, IdListType $idList, string $userAcct)
-    {
-        $this->userId = $userId;
-        $this->idList = $idList;
-        $this->userAcct = $userAcct;
     }
 
     /**

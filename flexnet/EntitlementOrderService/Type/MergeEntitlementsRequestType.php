@@ -27,6 +27,22 @@ class MergeEntitlementsRequestType implements RequestInterface
     private $mergeEntitlements;
 
     /**
+     * Constructor
+     *
+     * @param  string  $accountFrom
+     * @param  string  $accountTo
+     * @param  bool|null  $mergeUsers
+     * @param  bool|null  $mergeEntitlements
+     */
+    public function __construct(string $accountFrom, string $accountTo, bool|null $mergeUsers = null, bool|null $mergeEntitlements = null)
+    {
+        $this->accountFrom = $accountFrom;
+        $this->accountTo = $accountTo;
+        $this->mergeUsers = $mergeUsers;
+        $this->mergeEntitlements = $mergeEntitlements;
+    }
+
+    /**
      * @param  string  $accountFrom
      * @param  string  $accountTo
      * @param  bool|null  $mergeUsers
@@ -35,14 +51,6 @@ class MergeEntitlementsRequestType implements RequestInterface
     public static function create(string $accountFrom, string $accountTo, bool|null $mergeUsers = null, bool|null $mergeEntitlements = null)
     {
         return new static(...\func_get_args());
-    }
-
-    public function __construct(string $accountFrom, string $accountTo, bool $mergeUsers, bool $mergeEntitlements)
-    {
-        $this->accountFrom = $accountFrom;
-        $this->accountTo = $accountTo;
-        $this->mergeUsers = $mergeUsers;
-        $this->mergeEntitlements = $mergeEntitlements;
     }
 
     /**
