@@ -24,11 +24,18 @@ class DeleteMaintenanceLineItemRequestType implements RequestInterface
         $this->maintenanceLineItemData = $maintenanceLineItemData;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType>
+     */
     public function getMaintenanceLineItemData(): DeleteMaintenanceLineItemDataType|array
     {
         return $this->maintenanceLineItemData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType>  $maintenanceLineItemData
+     * @return DeleteMaintenanceLineItemRequestType
+     */
     public function withMaintenanceLineItemData(DeleteMaintenanceLineItemDataType|array $maintenanceLineItemData): DeleteMaintenanceLineItemRequestType
     {
         $new = clone $this;

@@ -35,11 +35,18 @@ class RenewEntitlementDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null
+     */
     public function getParentEntitlementIdentifier(): EntitlementIdentifierType|null
     {
         return $this->parentEntitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
+     * @return RenewEntitlementDataType
+     */
     public function withParentEntitlementIdentifier(EntitlementIdentifierType|null $parentEntitlementIdentifier): RenewEntitlementDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class RenewEntitlementDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\RenewLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewLineItemDataType>
+     */
     public function getRenewLineItemData(): RenewLineItemDataType|array
     {
         return $this->renewLineItemData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\RenewLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewLineItemDataType>  $renewLineItemData
+     * @return RenewEntitlementDataType
+     */
     public function withRenewLineItemData(RenewLineItemDataType|array $renewLineItemData): RenewEntitlementDataType
     {
         $new = clone $this;

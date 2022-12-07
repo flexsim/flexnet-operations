@@ -35,11 +35,18 @@ class FailedTransferEntitlementDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType
+     */
     public function getEntitlementInfo(): TransferEntitlementInfoType
     {
         return $this->entitlementInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType  $entitlementInfo
+     * @return FailedTransferEntitlementDataType
+     */
     public function withEntitlementInfo(TransferEntitlementInfoType $entitlementInfo): FailedTransferEntitlementDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedTransferEntitlementDataType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string  $reason
+     * @return FailedTransferEntitlementDataType
+     */
     public function withReason(string $reason): FailedTransferEntitlementDataType
     {
         $new = clone $this;

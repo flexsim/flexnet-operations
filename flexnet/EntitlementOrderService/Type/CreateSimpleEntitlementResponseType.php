@@ -45,11 +45,18 @@ class CreateSimpleEntitlementResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return CreateSimpleEntitlementResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): CreateSimpleEntitlementResponseType
     {
         $new = clone $this;
@@ -58,11 +65,18 @@ class CreateSimpleEntitlementResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedSimpleEntitlementDataListType|null
+     */
     public function getFailedData(): FailedSimpleEntitlementDataListType|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedSimpleEntitlementDataListType|null  $failedData
+     * @return CreateSimpleEntitlementResponseType
+     */
     public function withFailedData(FailedSimpleEntitlementDataListType|null $failedData): CreateSimpleEntitlementResponseType
     {
         $new = clone $this;
@@ -71,11 +85,18 @@ class CreateSimpleEntitlementResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataListType|null
+     */
     public function getResponseData(): CreatedSimpleEntitlementDataListType|null
     {
         return $this->responseData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataListType|null  $responseData
+     * @return CreateSimpleEntitlementResponseType
+     */
     public function withResponseData(CreatedSimpleEntitlementDataListType|null $responseData): CreateSimpleEntitlementResponseType
     {
         $new = clone $this;

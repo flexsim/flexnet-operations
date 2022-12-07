@@ -24,11 +24,18 @@ class GetBulkEntitlementCountRequestType implements RequestInterface
         $this->bulkEntitlementSearchCriteria = $bulkEntitlementSearchCriteria;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType
+     */
     public function getBulkEntitlementSearchCriteria(): SearchBulkEntitlementDataType
     {
         return $this->bulkEntitlementSearchCriteria;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
+     * @return GetBulkEntitlementCountRequestType
+     */
     public function withBulkEntitlementSearchCriteria(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria): GetBulkEntitlementCountRequestType
     {
         $new = clone $this;

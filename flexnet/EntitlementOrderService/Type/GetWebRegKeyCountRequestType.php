@@ -24,11 +24,18 @@ class GetWebRegKeyCountRequestType implements RequestInterface
         $this->bulkEntitlementIdentifier = $bulkEntitlementIdentifier;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getBulkEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->bulkEntitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
+     * @return GetWebRegKeyCountRequestType
+     */
     public function withBulkEntitlementIdentifier(EntitlementIdentifierType $bulkEntitlementIdentifier): GetWebRegKeyCountRequestType
     {
         $new = clone $this;

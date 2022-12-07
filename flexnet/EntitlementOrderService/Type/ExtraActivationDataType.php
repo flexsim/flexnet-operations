@@ -27,11 +27,18 @@ class ExtraActivationDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return int
+     */
     public function getAllowedCount(): int
     {
         return $this->allowedCount;
     }
 
+    /**
+     * @param  int  $allowedCount
+     * @return ExtraActivationDataType
+     */
     public function withAllowedCount(int $allowedCount): ExtraActivationDataType
     {
         $new = clone $this;

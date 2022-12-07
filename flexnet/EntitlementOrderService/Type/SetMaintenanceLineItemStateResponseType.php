@@ -37,11 +37,18 @@ class SetMaintenanceLineItemStateResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return SetMaintenanceLineItemStateResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): SetMaintenanceLineItemStateResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class SetMaintenanceLineItemStateResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataListType|null
+     */
     public function getFailedMaintenanceData(): FailedMaintenanceLineItemStateDataListType|null
     {
         return $this->failedMaintenanceData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataListType|null  $failedMaintenanceData
+     * @return SetMaintenanceLineItemStateResponseType
+     */
     public function withFailedMaintenanceData(FailedMaintenanceLineItemStateDataListType|null $failedMaintenanceData): SetMaintenanceLineItemStateResponseType
     {
         $new = clone $this;

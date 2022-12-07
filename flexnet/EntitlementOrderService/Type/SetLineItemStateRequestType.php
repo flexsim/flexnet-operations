@@ -24,11 +24,18 @@ class SetLineItemStateRequestType implements RequestInterface
         $this->lineItem = $lineItem;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemStateDataType>
+     */
     public function getLineItem(): LineItemStateDataType|array
     {
         return $this->lineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemStateDataType>  $lineItem
+     * @return SetLineItemStateRequestType
+     */
     public function withLineItem(LineItemStateDataType|array $lineItem): SetLineItemStateRequestType
     {
         $new = clone $this;

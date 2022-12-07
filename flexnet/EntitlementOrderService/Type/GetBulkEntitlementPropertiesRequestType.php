@@ -45,11 +45,18 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         $this->pageNumber = $pageNumber;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType
+     */
     public function getBulkEntitlementSearchCriteria(): SearchBulkEntitlementDataType
     {
         return $this->bulkEntitlementSearchCriteria;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
+     * @return GetBulkEntitlementPropertiesRequestType
+     */
     public function withBulkEntitlementSearchCriteria(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria): GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;
@@ -58,11 +65,18 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
+     */
     public function getBulkEntitlementResponseConfig(): BulkEntitlementResponseConfigRequestType
     {
         return $this->bulkEntitlementResponseConfig;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType  $bulkEntitlementResponseConfig
+     * @return GetBulkEntitlementPropertiesRequestType
+     */
     public function withBulkEntitlementResponseConfig(BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig): GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;
@@ -71,11 +85,18 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return int
+     */
     public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
+    /**
+     * @param  int  $batchSize
+     * @return GetBulkEntitlementPropertiesRequestType
+     */
     public function withBatchSize(int $batchSize): GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;
@@ -84,11 +105,18 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return int|null
+     */
     public function getPageNumber(): int|null
     {
         return $this->pageNumber;
     }
 
+    /**
+     * @param  int|null  $pageNumber
+     * @return GetBulkEntitlementPropertiesRequestType
+     */
     public function withPageNumber(int|null $pageNumber): GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;

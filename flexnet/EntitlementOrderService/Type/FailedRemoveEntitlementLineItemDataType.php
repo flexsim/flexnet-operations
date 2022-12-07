@@ -35,11 +35,18 @@ class FailedRemoveEntitlementLineItemDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|null
+     */
     public function getFailedData(): RemoveEntitlementLineItemDataType|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|null  $failedData
+     * @return FailedRemoveEntitlementLineItemDataType
+     */
     public function withFailedData(RemoveEntitlementLineItemDataType|null $failedData): FailedRemoveEntitlementLineItemDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedRemoveEntitlementLineItemDataType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string|null  $reason
+     * @return FailedRemoveEntitlementLineItemDataType
+     */
     public function withReason(string|null $reason): FailedRemoveEntitlementLineItemDataType
     {
         $new = clone $this;

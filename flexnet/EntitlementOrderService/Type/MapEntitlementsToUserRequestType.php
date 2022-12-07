@@ -38,11 +38,18 @@ class MapEntitlementsToUserRequestType implements RequestInterface
         $this->userAcct = $userAcct;
     }
 
+    /**
+     * @return string
+     */
     public function getUserId(): string
     {
         return $this->userId;
     }
 
+    /**
+     * @param  string  $userId
+     * @return MapEntitlementsToUserRequestType
+     */
     public function withUserId(string $userId): MapEntitlementsToUserRequestType
     {
         $new = clone $this;
@@ -51,11 +58,18 @@ class MapEntitlementsToUserRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\IdListType
+     */
     public function getIdList(): IdListType
     {
         return $this->idList;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\IdListType  $idList
+     * @return MapEntitlementsToUserRequestType
+     */
     public function withIdList(IdListType $idList): MapEntitlementsToUserRequestType
     {
         $new = clone $this;
@@ -64,11 +78,18 @@ class MapEntitlementsToUserRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getUserAcct(): string|null
     {
         return $this->userAcct;
     }
 
+    /**
+     * @param  string|null  $userAcct
+     * @return MapEntitlementsToUserRequestType
+     */
     public function withUserAcct(string|null $userAcct): MapEntitlementsToUserRequestType
     {
         $new = clone $this;

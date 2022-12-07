@@ -27,11 +27,18 @@ class ProductListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|array<\Flexnet\EntitlementOrderService\Type\ProductIdentifierType>
+     */
     public function getProductIdentifier(): ProductIdentifierType|array
     {
         return $this->productIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|array<\Flexnet\EntitlementOrderService\Type\ProductIdentifierType>  $productIdentifier
+     * @return ProductListType
+     */
     public function withProductIdentifier(ProductIdentifierType|array $productIdentifier): ProductListType
     {
         $new = clone $this;

@@ -27,11 +27,18 @@ class FailedMaintenanceLineItemStateDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType>|null
+     */
     public function getFailedMaintenanceLineItem(): FailedMaintenanceLineItemStateDataType|array|null
     {
         return $this->failedMaintenanceLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType>|null  $failedMaintenanceLineItem
+     * @return FailedMaintenanceLineItemStateDataListType
+     */
     public function withFailedMaintenanceLineItem(FailedMaintenanceLineItemStateDataType|array|null $failedMaintenanceLineItem): FailedMaintenanceLineItemStateDataListType
     {
         $new = clone $this;

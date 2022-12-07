@@ -27,11 +27,18 @@ class FailedDeleteWebRegKeyListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType>|null
+     */
     public function getFailedWebRegKey(): FailedDeleteWebRegKeyDataType|array|null
     {
         return $this->failedWebRegKey;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType>|null  $failedWebRegKey
+     * @return FailedDeleteWebRegKeyListType
+     */
     public function withFailedWebRegKey(FailedDeleteWebRegKeyDataType|array|null $failedWebRegKey): FailedDeleteWebRegKeyListType
     {
         $new = clone $this;

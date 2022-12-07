@@ -35,11 +35,18 @@ class FeatureBundleStateChangeDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType
+     */
     public function getFeatureBundleIdentifier(): FeatureBundleIdentifierType
     {
         return $this->featureBundleIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
+     * @return FeatureBundleStateChangeDataType
+     */
     public function withFeatureBundleIdentifier(FeatureBundleIdentifierType $featureBundleIdentifier): FeatureBundleStateChangeDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FeatureBundleStateChangeDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null
+     */
     public function getStateChangeRecord(): StateChangeDataType|array|null
     {
         return $this->stateChangeRecord;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
+     * @return FeatureBundleStateChangeDataType
+     */
     public function withStateChangeRecord(StateChangeDataType|array|null $stateChangeRecord): FeatureBundleStateChangeDataType
     {
         $new = clone $this;

@@ -27,11 +27,18 @@ class SplitLineItemResponseListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\SplitLineItemDataType>
+     */
     public function getSplitLineItem(): SplitLineItemDataType|array
     {
         return $this->splitLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\SplitLineItemDataType>  $splitLineItem
+     * @return SplitLineItemResponseListType
+     */
     public function withSplitLineItem(SplitLineItemDataType|array $splitLineItem): SplitLineItemResponseListType
     {
         $new = clone $this;

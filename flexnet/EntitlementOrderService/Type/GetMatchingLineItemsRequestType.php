@@ -24,11 +24,18 @@ class GetMatchingLineItemsRequestType implements RequestInterface
         $this->lineItemList = $lineItemList;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsListType
+     */
     public function getLineItemList(): GetMatchingLineItemsListType
     {
         return $this->lineItemList;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsListType  $lineItemList
+     * @return GetMatchingLineItemsRequestType
+     */
     public function withLineItemList(GetMatchingLineItemsListType $lineItemList): GetMatchingLineItemsRequestType
     {
         $new = clone $this;

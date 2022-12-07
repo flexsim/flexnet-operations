@@ -27,11 +27,18 @@ class EntitlementPKType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getEntitlementId(): string
     {
         return $this->entitlementId;
     }
 
+    /**
+     * @param  string  $entitlementId
+     * @return EntitlementPKType
+     */
     public function withEntitlementId(string $entitlementId): EntitlementPKType
     {
         $new = clone $this;

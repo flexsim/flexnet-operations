@@ -35,11 +35,18 @@ class LineItemCustomAttributeQueryType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getAttributeName(): string
     {
         return $this->attributeName;
     }
 
+    /**
+     * @param  string  $attributeName
+     * @return LineItemCustomAttributeQueryType
+     */
     public function withAttributeName(string $attributeName): LineItemCustomAttributeQueryType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class LineItemCustomAttributeQueryType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null
+     */
     public function getStringValue(): SimpleQueryType|null
     {
         return $this->stringValue;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null  $stringValue
+     * @return LineItemCustomAttributeQueryType
+     */
     public function withStringValue(SimpleQueryType|null $stringValue): LineItemCustomAttributeQueryType
     {
         $new = clone $this;

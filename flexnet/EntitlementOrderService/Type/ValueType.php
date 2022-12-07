@@ -27,11 +27,18 @@ class ValueType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string|array<string>|null
+     */
     public function getValue(): string|array|null
     {
         return $this->value;
     }
 
+    /**
+     * @param  string|array<string>|null  $value
+     * @return ValueType
+     */
     public function withValue(string|array|null $value): ValueType
     {
         $new = clone $this;

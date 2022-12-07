@@ -35,11 +35,18 @@ class StatusInfoType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getStatus(): string
     {
         return $this->status;
     }
 
+    /**
+     * @param  string  $status
+     * @return StatusInfoType
+     */
     public function withStatus(string $status): StatusInfoType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class StatusInfoType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string|null  $reason
+     * @return StatusInfoType
+     */
     public function withReason(string|null $reason): StatusInfoType
     {
         $new = clone $this;

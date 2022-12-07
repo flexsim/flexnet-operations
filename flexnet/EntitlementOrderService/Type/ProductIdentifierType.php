@@ -35,11 +35,18 @@ class ProductIdentifierType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string|null
+     */
     public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
+    /**
+     * @param  string|null  $uniqueId
+     * @return ProductIdentifierType
+     */
     public function withUniqueId(string|null $uniqueId): ProductIdentifierType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class ProductIdentifierType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\ProductPKType|null
+     */
     public function getPrimaryKeys(): ProductPKType|null
     {
         return $this->primaryKeys;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\ProductPKType|null  $primaryKeys
+     * @return ProductIdentifierType
+     */
     public function withPrimaryKeys(ProductPKType|null $primaryKeys): ProductIdentifierType
     {
         $new = clone $this;

@@ -37,11 +37,18 @@ class GetWebRegKeysQueryResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return GetWebRegKeysQueryResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetWebRegKeysQueryResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class GetWebRegKeysQueryResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\WebRegKeysDataListType|null
+     */
     public function getResponseData(): WebRegKeysDataListType|null
     {
         return $this->responseData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeysDataListType|null  $responseData
+     * @return GetWebRegKeysQueryResponseType
+     */
     public function withResponseData(WebRegKeysDataListType|null $responseData): GetWebRegKeysQueryResponseType
     {
         $new = clone $this;

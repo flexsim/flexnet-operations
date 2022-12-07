@@ -37,11 +37,18 @@ class GetWebRegKeyCountResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return GetWebRegKeyCountResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetWebRegKeyCountResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class GetWebRegKeyCountResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\WebRegKeyCountDataType|null
+     */
     public function getResponseData(): WebRegKeyCountDataType|null
     {
         return $this->responseData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyCountDataType|null  $responseData
+     * @return GetWebRegKeyCountResponseType
+     */
     public function withResponseData(WebRegKeyCountDataType|null $responseData): GetWebRegKeyCountResponseType
     {
         $new = clone $this;

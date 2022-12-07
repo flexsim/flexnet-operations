@@ -43,11 +43,18 @@ class ProductCategoryDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string|null
+     */
     public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
+    /**
+     * @param  string|null  $uniqueId
+     * @return ProductCategoryDataType
+     */
     public function withUniqueId(string|null $uniqueId): ProductCategoryDataType
     {
         $new = clone $this;
@@ -56,11 +63,18 @@ class ProductCategoryDataType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getName(): string|null
     {
         return $this->name;
     }
 
+    /**
+     * @param  string|null  $name
+     * @return ProductCategoryDataType
+     */
     public function withName(string|null $name): ProductCategoryDataType
     {
         $new = clone $this;
@@ -69,11 +83,18 @@ class ProductCategoryDataType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getDescription(): string|null
     {
         return $this->description;
     }
 
+    /**
+     * @param  string|null  $description
+     * @return ProductCategoryDataType
+     */
     public function withDescription(string|null $description): ProductCategoryDataType
     {
         $new = clone $this;

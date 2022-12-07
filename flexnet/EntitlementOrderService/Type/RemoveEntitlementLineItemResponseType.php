@@ -37,11 +37,18 @@ class RemoveEntitlementLineItemResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return RemoveEntitlementLineItemResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): RemoveEntitlementLineItemResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class RemoveEntitlementLineItemResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataListType|null
+     */
     public function getFailedData(): FailedRemoveEntitlementLineItemDataListType|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataListType|null  $failedData
+     * @return RemoveEntitlementLineItemResponseType
+     */
     public function withFailedData(FailedRemoveEntitlementLineItemDataListType|null $failedData): RemoveEntitlementLineItemResponseType
     {
         $new = clone $this;

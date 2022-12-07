@@ -35,11 +35,18 @@ class FailedDeleteEntitlementDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @return FailedDeleteEntitlementDataType
+     */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): FailedDeleteEntitlementDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedDeleteEntitlementDataType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string|null  $reason
+     * @return FailedDeleteEntitlementDataType
+     */
     public function withReason(string|null $reason): FailedDeleteEntitlementDataType
     {
         $new = clone $this;

@@ -35,11 +35,18 @@ class ProductStateChangeDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\ProductIdentifierType
+     */
     public function getProductIdentifier(): ProductIdentifierType
     {
         return $this->productIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType  $productIdentifier
+     * @return ProductStateChangeDataType
+     */
     public function withProductIdentifier(ProductIdentifierType $productIdentifier): ProductStateChangeDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class ProductStateChangeDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null
+     */
     public function getStateChangeRecord(): StateChangeDataType|array|null
     {
         return $this->stateChangeRecord;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
+     * @return ProductStateChangeDataType
+     */
     public function withStateChangeRecord(StateChangeDataType|array|null $stateChangeRecord): ProductStateChangeDataType
     {
         $new = clone $this;

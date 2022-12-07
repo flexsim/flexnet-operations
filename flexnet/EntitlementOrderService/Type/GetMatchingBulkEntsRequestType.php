@@ -24,11 +24,18 @@ class GetMatchingBulkEntsRequestType implements RequestInterface
         $this->bulkEntList = $bulkEntList;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsListType
+     */
     public function getBulkEntList(): GetMatchingBulkEntsListType
     {
         return $this->bulkEntList;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsListType  $bulkEntList
+     * @return GetMatchingBulkEntsRequestType
+     */
     public function withBulkEntList(GetMatchingBulkEntsListType $bulkEntList): GetMatchingBulkEntsRequestType
     {
         $new = clone $this;

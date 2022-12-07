@@ -29,11 +29,18 @@ class EmailEntitlementResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return EmailEntitlementResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): EmailEntitlementResponseType
     {
         $new = clone $this;

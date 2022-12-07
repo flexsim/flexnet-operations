@@ -45,11 +45,18 @@ class MergeEntitlementsRequestType implements RequestInterface
         $this->mergeEntitlements = $mergeEntitlements;
     }
 
+    /**
+     * @return string
+     */
     public function getAccountFrom(): string
     {
         return $this->accountFrom;
     }
 
+    /**
+     * @param  string  $accountFrom
+     * @return MergeEntitlementsRequestType
+     */
     public function withAccountFrom(string $accountFrom): MergeEntitlementsRequestType
     {
         $new = clone $this;
@@ -58,11 +65,18 @@ class MergeEntitlementsRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getAccountTo(): string
     {
         return $this->accountTo;
     }
 
+    /**
+     * @param  string  $accountTo
+     * @return MergeEntitlementsRequestType
+     */
     public function withAccountTo(string $accountTo): MergeEntitlementsRequestType
     {
         $new = clone $this;
@@ -71,11 +85,18 @@ class MergeEntitlementsRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getMergeUsers(): bool|null
     {
         return $this->mergeUsers;
     }
 
+    /**
+     * @param  bool|null  $mergeUsers
+     * @return MergeEntitlementsRequestType
+     */
     public function withMergeUsers(bool|null $mergeUsers): MergeEntitlementsRequestType
     {
         $new = clone $this;
@@ -84,11 +105,18 @@ class MergeEntitlementsRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getMergeEntitlements(): bool|null
     {
         return $this->mergeEntitlements;
     }
 
+    /**
+     * @param  bool|null  $mergeEntitlements
+     * @return MergeEntitlementsRequestType
+     */
     public function withMergeEntitlements(bool|null $mergeEntitlements): MergeEntitlementsRequestType
     {
         $new = clone $this;

@@ -45,11 +45,18 @@ class CreateBulkEntitlementResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return CreateBulkEntitlementResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): CreateBulkEntitlementResponseType
     {
         $new = clone $this;
@@ -58,11 +65,18 @@ class CreateBulkEntitlementResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedBulkEntitlementDataListType|null
+     */
     public function getFailedData(): FailedBulkEntitlementDataListType|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedBulkEntitlementDataListType|null  $failedData
+     * @return CreateBulkEntitlementResponseType
+     */
     public function withFailedData(FailedBulkEntitlementDataListType|null $failedData): CreateBulkEntitlementResponseType
     {
         $new = clone $this;
@@ -71,11 +85,18 @@ class CreateBulkEntitlementResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataListType|null
+     */
     public function getResponseData(): CreatedBulkEntitlementDataListType|null
     {
         return $this->responseData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataListType|null  $responseData
+     * @return CreateBulkEntitlementResponseType
+     */
     public function withResponseData(CreatedBulkEntitlementDataListType|null $responseData): CreateBulkEntitlementResponseType
     {
         $new = clone $this;

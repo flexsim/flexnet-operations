@@ -27,11 +27,18 @@ class EntitlementLineItemPKType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getActivationId(): string
     {
         return $this->activationId;
     }
 
+    /**
+     * @param  string  $activationId
+     * @return EntitlementLineItemPKType
+     */
     public function withActivationId(string $activationId): EntitlementLineItemPKType
     {
         $new = clone $this;

@@ -35,11 +35,18 @@ class LicenseModelIdentifierType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string|null
+     */
     public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
+    /**
+     * @param  string|null  $uniqueId
+     * @return LicenseModelIdentifierType
+     */
     public function withUniqueId(string|null $uniqueId): LicenseModelIdentifierType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class LicenseModelIdentifierType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelPKType|null
+     */
     public function getPrimaryKeys(): LicenseModelPKType|null
     {
         return $this->primaryKeys;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelPKType|null  $primaryKeys
+     * @return LicenseModelIdentifierType
+     */
     public function withPrimaryKeys(LicenseModelPKType|null $primaryKeys): LicenseModelIdentifierType
     {
         $new = clone $this;

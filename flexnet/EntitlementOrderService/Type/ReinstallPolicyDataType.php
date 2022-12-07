@@ -35,11 +35,18 @@ class ReinstallPolicyDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\PolicyDataType|null
+     */
     public function getDefaultPolicy(): PolicyDataType|null
     {
         return $this->defaultPolicy;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType|null  $defaultPolicy
+     * @return ReinstallPolicyDataType
+     */
     public function withDefaultPolicy(PolicyDataType|null $defaultPolicy): ReinstallPolicyDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class ReinstallPolicyDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType|null
+     */
     public function getAdvancedPolicy(): AdvancedReinstallPolicyType|null
     {
         return $this->advancedPolicy;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType|null  $advancedPolicy
+     * @return ReinstallPolicyDataType
+     */
     public function withAdvancedPolicy(AdvancedReinstallPolicyType|null $advancedPolicy): ReinstallPolicyDataType
     {
         $new = clone $this;

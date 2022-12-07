@@ -59,11 +59,18 @@ class AddedEntitlementLineItemDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @return AddedEntitlementLineItemDataType
+     */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): AddedEntitlementLineItemDataType
     {
         $new = clone $this;
@@ -72,11 +79,18 @@ class AddedEntitlementLineItemDataType
         return $new;
     }
 
+    /**
+     * @return string|array<string>|null
+     */
     public function getLineItemUniqueIds(): string|array|null
     {
         return $this->lineItemUniqueIds;
     }
 
+    /**
+     * @param  string|array<string>|null  $lineItemUniqueIds
+     * @return AddedEntitlementLineItemDataType
+     */
     public function withLineItemUniqueIds(string|array|null $lineItemUniqueIds): AddedEntitlementLineItemDataType
     {
         $new = clone $this;
@@ -85,11 +99,18 @@ class AddedEntitlementLineItemDataType
         return $new;
     }
 
+    /**
+     * @return string|array<string>|null
+     */
     public function getMaintenanceLineItemUniqueIds(): string|array|null
     {
         return $this->maintenanceLineItemUniqueIds;
     }
 
+    /**
+     * @param  string|array<string>|null  $maintenanceLineItemUniqueIds
+     * @return AddedEntitlementLineItemDataType
+     */
     public function withMaintenanceLineItemUniqueIds(string|array|null $maintenanceLineItemUniqueIds): AddedEntitlementLineItemDataType
     {
         $new = clone $this;
@@ -98,11 +119,18 @@ class AddedEntitlementLineItemDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null
+     */
     public function getLineItemIdentifiers(): EntitlementLineItemIdentifierType|array|null
     {
         return $this->lineItemIdentifiers;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifiers
+     * @return AddedEntitlementLineItemDataType
+     */
     public function withLineItemIdentifiers(EntitlementLineItemIdentifierType|array|null $lineItemIdentifiers): AddedEntitlementLineItemDataType
     {
         $new = clone $this;
@@ -111,11 +139,18 @@ class AddedEntitlementLineItemDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null
+     */
     public function getMaintenanceLineItemIdentifiers(): EntitlementLineItemIdentifierType|array|null
     {
         return $this->maintenanceLineItemIdentifiers;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $maintenanceLineItemIdentifiers
+     * @return AddedEntitlementLineItemDataType
+     */
     public function withMaintenanceLineItemIdentifiers(EntitlementLineItemIdentifierType|array|null $maintenanceLineItemIdentifiers): AddedEntitlementLineItemDataType
     {
         $new = clone $this;

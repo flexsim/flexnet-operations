@@ -37,11 +37,18 @@ class GetEntitlementCountResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return GetEntitlementCountResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetEntitlementCountResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class GetEntitlementCountResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return int|null
+     */
     public function getCount(): int|null
     {
         return $this->count;
     }
 
+    /**
+     * @param  int|null  $count
+     * @return GetEntitlementCountResponseType
+     */
     public function withCount(int|null $count): GetEntitlementCountResponseType
     {
         $new = clone $this;

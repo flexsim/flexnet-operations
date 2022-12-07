@@ -37,11 +37,18 @@ class SearchEntitlementLineItemPropertiesResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return SearchEntitlementLineItemPropertiesResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): SearchEntitlementLineItemPropertiesResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class SearchEntitlementLineItemPropertiesResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemPropertiesType>|null
+     */
     public function getEntitlementLineItem(): EntitlementLineItemPropertiesType|array|null
     {
         return $this->entitlementLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemPropertiesType>|null  $entitlementLineItem
+     * @return SearchEntitlementLineItemPropertiesResponseType
+     */
     public function withEntitlementLineItem(EntitlementLineItemPropertiesType|array|null $entitlementLineItem): SearchEntitlementLineItemPropertiesResponseType
     {
         $new = clone $this;

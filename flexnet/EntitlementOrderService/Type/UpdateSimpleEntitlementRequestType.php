@@ -24,11 +24,18 @@ class UpdateSimpleEntitlementRequestType implements RequestInterface
         $this->simpleEntitlement = $simpleEntitlement;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType>
+     */
     public function getSimpleEntitlement(): UpdateSimpleEntitlementDataType|array
     {
         return $this->simpleEntitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType>  $simpleEntitlement
+     * @return UpdateSimpleEntitlementRequestType
+     */
     public function withSimpleEntitlement(UpdateSimpleEntitlementDataType|array $simpleEntitlement): UpdateSimpleEntitlementRequestType
     {
         $new = clone $this;

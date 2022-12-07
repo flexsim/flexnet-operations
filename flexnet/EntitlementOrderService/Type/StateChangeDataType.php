@@ -51,11 +51,18 @@ class StateChangeDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getEventName(): string
     {
         return $this->eventName;
     }
 
+    /**
+     * @param  string  $eventName
+     * @return StateChangeDataType
+     */
     public function withEventName(string $eventName): StateChangeDataType
     {
         $new = clone $this;
@@ -64,11 +71,18 @@ class StateChangeDataType
         return $new;
     }
 
+    /**
+     * @return \DateTimeInterface
+     */
     public function getEventDate(): \DateTimeInterface
     {
         return $this->eventDate;
     }
 
+    /**
+     * @param  \DateTimeInterface  $eventDate
+     * @return StateChangeDataType
+     */
     public function withEventDate(\DateTimeInterface $eventDate): StateChangeDataType
     {
         $new = clone $this;
@@ -77,11 +91,18 @@ class StateChangeDataType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getUserId(): string
     {
         return $this->userId;
     }
 
+    /**
+     * @param  string  $userId
+     * @return StateChangeDataType
+     */
     public function withUserId(string $userId): StateChangeDataType
     {
         $new = clone $this;
@@ -90,11 +111,18 @@ class StateChangeDataType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getDescription(): string|null
     {
         return $this->description;
     }
 
+    /**
+     * @param  string|null  $description
+     * @return StateChangeDataType
+     */
     public function withDescription(string|null $description): StateChangeDataType
     {
         $new = clone $this;

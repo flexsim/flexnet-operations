@@ -35,11 +35,18 @@ class FeatureBundleIdentifierType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string|null
+     */
     public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
+    /**
+     * @param  string|null  $uniqueId
+     * @return FeatureBundleIdentifierType
+     */
     public function withUniqueId(string|null $uniqueId): FeatureBundleIdentifierType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FeatureBundleIdentifierType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FeatureBundlePKType|null
+     */
     public function getPrimaryKeys(): FeatureBundlePKType|null
     {
         return $this->primaryKeys;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundlePKType|null  $primaryKeys
+     * @return FeatureBundleIdentifierType
+     */
     public function withPrimaryKeys(FeatureBundlePKType|null $primaryKeys): FeatureBundleIdentifierType
     {
         $new = clone $this;

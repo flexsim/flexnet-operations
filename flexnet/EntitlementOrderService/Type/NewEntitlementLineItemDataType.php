@@ -35,11 +35,18 @@ class NewEntitlementLineItemDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getUniqueId(): string
     {
         return $this->uniqueId;
     }
 
+    /**
+     * @param  string  $uniqueId
+     * @return NewEntitlementLineItemDataType
+     */
     public function withUniqueId(string $uniqueId): NewEntitlementLineItemDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class NewEntitlementLineItemDataType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getActivationId(): string
     {
         return $this->activationId;
     }
 
+    /**
+     * @param  string  $activationId
+     * @return NewEntitlementLineItemDataType
+     */
     public function withActivationId(string $activationId): NewEntitlementLineItemDataType
     {
         $new = clone $this;

@@ -27,11 +27,18 @@ class MatchingBulkEntDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getMatchingBulkEntIdentifier(): EntitlementIdentifierType
     {
         return $this->matchingBulkEntIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $matchingBulkEntIdentifier
+     * @return MatchingBulkEntDataType
+     */
     public function withMatchingBulkEntIdentifier(EntitlementIdentifierType $matchingBulkEntIdentifier): MatchingBulkEntDataType
     {
         $new = clone $this;

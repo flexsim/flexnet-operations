@@ -37,11 +37,18 @@ class DeleteMaintenanceLineItemResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return DeleteMaintenanceLineItemResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): DeleteMaintenanceLineItemResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class DeleteMaintenanceLineItemResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedDeleteMaintenanceLineItemDataListType|null
+     */
     public function getFailedData(): FailedDeleteMaintenanceLineItemDataListType|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteMaintenanceLineItemDataListType|null  $failedData
+     * @return DeleteMaintenanceLineItemResponseType
+     */
     public function withFailedData(FailedDeleteMaintenanceLineItemDataListType|null $failedData): DeleteMaintenanceLineItemResponseType
     {
         $new = clone $this;

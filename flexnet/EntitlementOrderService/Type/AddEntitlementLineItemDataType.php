@@ -51,11 +51,18 @@ class AddEntitlementLineItemDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @return AddEntitlementLineItemDataType
+     */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): AddEntitlementLineItemDataType
     {
         $new = clone $this;
@@ -64,11 +71,18 @@ class AddEntitlementLineItemDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\CreateEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\CreateEntitlementLineItemDataType>|null
+     */
     public function getLineItems(): CreateEntitlementLineItemDataType|array|null
     {
         return $this->lineItems;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\CreateEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\CreateEntitlementLineItemDataType>|null  $lineItems
+     * @return AddEntitlementLineItemDataType
+     */
     public function withLineItems(CreateEntitlementLineItemDataType|array|null $lineItems): AddEntitlementLineItemDataType
     {
         $new = clone $this;
@@ -77,11 +91,18 @@ class AddEntitlementLineItemDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\CreateMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\CreateMaintenanceLineItemDataType>|null
+     */
     public function getMaintenanceLineItems(): CreateMaintenanceLineItemDataType|array|null
     {
         return $this->maintenanceLineItems;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\CreateMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\CreateMaintenanceLineItemDataType>|null  $maintenanceLineItems
+     * @return AddEntitlementLineItemDataType
+     */
     public function withMaintenanceLineItems(CreateMaintenanceLineItemDataType|array|null $maintenanceLineItems): AddEntitlementLineItemDataType
     {
         $new = clone $this;
@@ -90,11 +111,18 @@ class AddEntitlementLineItemDataType
         return $new;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getAutoDeploy(): bool|null
     {
         return $this->autoDeploy;
     }
 
+    /**
+     * @param  bool|null  $autoDeploy
+     * @return AddEntitlementLineItemDataType
+     */
     public function withAutoDeploy(bool|null $autoDeploy): AddEntitlementLineItemDataType
     {
         $new = clone $this;

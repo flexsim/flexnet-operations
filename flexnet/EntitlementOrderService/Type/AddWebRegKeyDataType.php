@@ -35,11 +35,18 @@ class AddWebRegKeyDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getBulkEntitlement(): EntitlementIdentifierType
     {
         return $this->bulkEntitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntitlement
+     * @return AddWebRegKeyDataType
+     */
     public function withBulkEntitlement(EntitlementIdentifierType $bulkEntitlement): AddWebRegKeyDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class AddWebRegKeyDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\WebRegKeyDataType
+     */
     public function getWebRegKeys(): WebRegKeyDataType
     {
         return $this->webRegKeys;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyDataType  $webRegKeys
+     * @return AddWebRegKeyDataType
+     */
     public function withWebRegKeys(WebRegKeyDataType $webRegKeys): AddWebRegKeyDataType
     {
         $new = clone $this;

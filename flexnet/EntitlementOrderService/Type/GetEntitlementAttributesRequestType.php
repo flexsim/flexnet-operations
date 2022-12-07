@@ -24,11 +24,18 @@ class GetEntitlementAttributesRequestType implements RequestInterface
         $this->licenseModelIdentifier = $licenseModelIdentifier;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType
+     */
     public function getLicenseModelIdentifier(): LicenseModelIdentifierType
     {
         return $this->licenseModelIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
+     * @return GetEntitlementAttributesRequestType
+     */
     public function withLicenseModelIdentifier(LicenseModelIdentifierType $licenseModelIdentifier): GetEntitlementAttributesRequestType
     {
         $new = clone $this;

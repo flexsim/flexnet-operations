@@ -35,11 +35,18 @@ class EntitledProductDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null
+     */
     public function getProduct(): ProductIdentifierType|null
     {
         return $this->product;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
+     * @return EntitledProductDataType
+     */
     public function withProduct(ProductIdentifierType|null $product): EntitledProductDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class EntitledProductDataType
         return $new;
     }
 
+    /**
+     * @return int
+     */
     public function getQuantity(): int
     {
         return $this->quantity;
     }
 
+    /**
+     * @param  int  $quantity
+     * @return EntitledProductDataType
+     */
     public function withQuantity(int $quantity): EntitledProductDataType
     {
         $new = clone $this;

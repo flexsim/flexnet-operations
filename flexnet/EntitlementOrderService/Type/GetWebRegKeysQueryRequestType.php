@@ -38,11 +38,18 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
         $this->pageNumber = $pageNumber;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getBulkEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->bulkEntitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
+     * @return GetWebRegKeysQueryRequestType
+     */
     public function withBulkEntitlementIdentifier(EntitlementIdentifierType $bulkEntitlementIdentifier): GetWebRegKeysQueryRequestType
     {
         $new = clone $this;
@@ -51,11 +58,18 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return int
+     */
     public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
+    /**
+     * @param  int  $batchSize
+     * @return GetWebRegKeysQueryRequestType
+     */
     public function withBatchSize(int $batchSize): GetWebRegKeysQueryRequestType
     {
         $new = clone $this;
@@ -64,11 +78,18 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return int
+     */
     public function getPageNumber(): int
     {
         return $this->pageNumber;
     }
 
+    /**
+     * @param  int  $pageNumber
+     * @return GetWebRegKeysQueryRequestType
+     */
     public function withPageNumber(int $pageNumber): GetWebRegKeysQueryRequestType
     {
         $new = clone $this;

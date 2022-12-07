@@ -27,11 +27,18 @@ class DeleteEntitlementDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @return DeleteEntitlementDataType
+     */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): DeleteEntitlementDataType
     {
         $new = clone $this;

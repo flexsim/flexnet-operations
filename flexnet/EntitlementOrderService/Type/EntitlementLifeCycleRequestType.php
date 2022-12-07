@@ -24,11 +24,18 @@ class EntitlementLifeCycleRequestType implements RequestInterface
         $this->entitlementData = $entitlementData;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType>|null
+     */
     public function getEntitlementData(): EntitlementLifeCycleDataType|array|null
     {
         return $this->entitlementData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType>|null  $entitlementData
+     * @return EntitlementLifeCycleRequestType
+     */
     public function withEntitlementData(EntitlementLifeCycleDataType|array|null $entitlementData): EntitlementLifeCycleRequestType
     {
         $new = clone $this;

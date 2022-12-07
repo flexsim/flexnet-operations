@@ -24,11 +24,18 @@ class UpdateEntitlementLineItemRequestType implements RequestInterface
         $this->lineItemData = $lineItemData;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType>
+     */
     public function getLineItemData(): UpdateEntitlementLineItemDataType|array
     {
         return $this->lineItemData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType>  $lineItemData
+     * @return UpdateEntitlementLineItemRequestType
+     */
     public function withLineItemData(UpdateEntitlementLineItemDataType|array $lineItemData): UpdateEntitlementLineItemRequestType
     {
         $new = clone $this;

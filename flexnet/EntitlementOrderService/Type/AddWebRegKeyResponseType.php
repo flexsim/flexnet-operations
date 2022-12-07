@@ -45,11 +45,18 @@ class AddWebRegKeyResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return AddWebRegKeyResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): AddWebRegKeyResponseType
     {
         $new = clone $this;
@@ -58,11 +65,18 @@ class AddWebRegKeyResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\WebRegKeyDataListType|null
+     */
     public function getResponseData(): WebRegKeyDataListType|null
     {
         return $this->responseData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyDataListType|null  $responseData
+     * @return AddWebRegKeyResponseType
+     */
     public function withResponseData(WebRegKeyDataListType|null $responseData): AddWebRegKeyResponseType
     {
         $new = clone $this;
@@ -71,11 +85,18 @@ class AddWebRegKeyResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataListType|null
+     */
     public function getFailedData(): FailedAddWebRegKeyDataListType|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataListType|null  $failedData
+     * @return AddWebRegKeyResponseType
+     */
     public function withFailedData(FailedAddWebRegKeyDataListType|null $failedData): AddWebRegKeyResponseType
     {
         $new = clone $this;

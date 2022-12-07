@@ -45,11 +45,18 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
         $this->pageNumber = $pageNumber;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
+     */
     public function getQueryParams(): SearchActivatableItemDataType
     {
         return $this->queryParams;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $queryParams
+     * @return SearchEntitlementLineItemPropertiesRequestType
+     */
     public function withQueryParams(SearchActivatableItemDataType $queryParams): SearchEntitlementLineItemPropertiesRequestType
     {
         $new = clone $this;
@@ -58,11 +65,18 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemResponseConfigRequestType
+     */
     public function getEntitlementLineItemResponseConfig(): EntitlementLineItemResponseConfigRequestType
     {
         return $this->entitlementLineItemResponseConfig;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemResponseConfigRequestType  $entitlementLineItemResponseConfig
+     * @return SearchEntitlementLineItemPropertiesRequestType
+     */
     public function withEntitlementLineItemResponseConfig(EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig): SearchEntitlementLineItemPropertiesRequestType
     {
         $new = clone $this;
@@ -71,11 +85,18 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return int
+     */
     public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
+    /**
+     * @param  int  $batchSize
+     * @return SearchEntitlementLineItemPropertiesRequestType
+     */
     public function withBatchSize(int $batchSize): SearchEntitlementLineItemPropertiesRequestType
     {
         $new = clone $this;
@@ -84,11 +105,18 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return int|null
+     */
     public function getPageNumber(): int|null
     {
         return $this->pageNumber;
     }
 
+    /**
+     * @param  int|null  $pageNumber
+     * @return SearchEntitlementLineItemPropertiesRequestType
+     */
     public function withPageNumber(int|null $pageNumber): SearchEntitlementLineItemPropertiesRequestType
     {
         $new = clone $this;

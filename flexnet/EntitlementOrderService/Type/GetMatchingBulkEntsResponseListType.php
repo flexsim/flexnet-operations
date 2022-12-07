@@ -27,11 +27,18 @@ class GetMatchingBulkEntsResponseListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\MatchingBulkEntDataType|array<\Flexnet\EntitlementOrderService\Type\MatchingBulkEntDataType>
+     */
     public function getMatchingBulkEnt(): MatchingBulkEntDataType|array
     {
         return $this->matchingBulkEnt;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\MatchingBulkEntDataType|array<\Flexnet\EntitlementOrderService\Type\MatchingBulkEntDataType>  $matchingBulkEnt
+     * @return GetMatchingBulkEntsResponseListType
+     */
     public function withMatchingBulkEnt(MatchingBulkEntDataType|array $matchingBulkEnt): GetMatchingBulkEntsResponseListType
     {
         $new = clone $this;

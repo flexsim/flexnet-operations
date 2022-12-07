@@ -27,11 +27,18 @@ class CustomAttributeDescriptorType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getAttributeName(): string
     {
         return $this->attributeName;
     }
 
+    /**
+     * @param  string  $attributeName
+     * @return CustomAttributeDescriptorType
+     */
     public function withAttributeName(string $attributeName): CustomAttributeDescriptorType
     {
         $new = clone $this;

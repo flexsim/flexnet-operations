@@ -35,11 +35,18 @@ class SplitLineItemDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
+     */
     public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @return SplitLineItemDataType
+     */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): SplitLineItemDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class SplitLineItemDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null
+     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType|null
     {
         return $this->entitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $entitlementIdentifier
+     * @return SplitLineItemDataType
+     */
     public function withEntitlementIdentifier(EntitlementIdentifierType|null $entitlementIdentifier): SplitLineItemDataType
     {
         $new = clone $this;

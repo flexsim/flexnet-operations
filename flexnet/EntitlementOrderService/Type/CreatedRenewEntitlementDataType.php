@@ -43,11 +43,18 @@ class CreatedRenewEntitlementDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getEntitlementRecordRefNo(): string
     {
         return $this->entitlementRecordRefNo;
     }
 
+    /**
+     * @param  string  $entitlementRecordRefNo
+     * @return CreatedRenewEntitlementDataType
+     */
     public function withEntitlementRecordRefNo(string $entitlementRecordRefNo): CreatedRenewEntitlementDataType
     {
         $new = clone $this;
@@ -56,11 +63,18 @@ class CreatedRenewEntitlementDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getParentEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->parentEntitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
+     * @return CreatedRenewEntitlementDataType
+     */
     public function withParentEntitlementIdentifier(EntitlementIdentifierType $parentEntitlementIdentifier): CreatedRenewEntitlementDataType
     {
         $new = clone $this;
@@ -69,11 +83,18 @@ class CreatedRenewEntitlementDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType>|null
+     */
     public function getRenewedLineItem(): RenewedEntitlementLineItemDataType|array|null
     {
         return $this->renewedLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType>|null  $renewedLineItem
+     * @return CreatedRenewEntitlementDataType
+     */
     public function withRenewedLineItem(RenewedEntitlementLineItemDataType|array|null $renewedLineItem): CreatedRenewEntitlementDataType
     {
         $new = clone $this;

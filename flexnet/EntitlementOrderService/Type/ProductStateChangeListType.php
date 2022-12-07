@@ -27,11 +27,18 @@ class ProductStateChangeListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType>|null
+     */
     public function getProduct(): ProductStateChangeDataType|array|null
     {
         return $this->product;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType>|null  $product
+     * @return ProductStateChangeListType
+     */
     public function withProduct(ProductStateChangeDataType|array|null $product): ProductStateChangeListType
     {
         $new = clone $this;

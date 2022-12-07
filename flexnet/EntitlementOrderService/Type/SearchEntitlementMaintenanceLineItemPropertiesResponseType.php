@@ -37,11 +37,18 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType implements Resu
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return SearchEntitlementMaintenanceLineItemPropertiesResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): SearchEntitlementMaintenanceLineItemPropertiesResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType implements Resu
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType>|null
+     */
     public function getEntitlementMaintenanceLineItem(): EntitlementMaintenanceLineItemPropertiesType|array|null
     {
         return $this->entitlementMaintenanceLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType>|null  $entitlementMaintenanceLineItem
+     * @return SearchEntitlementMaintenanceLineItemPropertiesResponseType
+     */
     public function withEntitlementMaintenanceLineItem(EntitlementMaintenanceLineItemPropertiesType|array|null $entitlementMaintenanceLineItem): SearchEntitlementMaintenanceLineItemPropertiesResponseType
     {
         $new = clone $this;

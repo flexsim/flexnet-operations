@@ -27,11 +27,18 @@ class AcpiGenerationIdLicensePolicyDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return bool
+     */
     public function getUseACPIGenerationId(): bool
     {
         return $this->useACPIGenerationId;
     }
 
+    /**
+     * @param  bool  $useACPIGenerationId
+     * @return AcpiGenerationIdLicensePolicyDataType
+     */
     public function withUseACPIGenerationId(bool $useACPIGenerationId): AcpiGenerationIdLicensePolicyDataType
     {
         $new = clone $this;

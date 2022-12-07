@@ -35,11 +35,18 @@ class TransferredLineItemDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
+     */
     public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @return TransferredLineItemDataType
+     */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): TransferredLineItemDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class TransferredLineItemDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
+     */
     public function getTransferredFromId(): EntitlementLineItemIdentifierType
     {
         return $this->transferredFromId;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $transferredFromId
+     * @return TransferredLineItemDataType
+     */
     public function withTransferredFromId(EntitlementLineItemIdentifierType $transferredFromId): TransferredLineItemDataType
     {
         $new = clone $this;

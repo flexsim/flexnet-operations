@@ -27,11 +27,18 @@ class LicenseModelPKType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getName(): string
     {
         return $this->name;
     }
 
+    /**
+     * @param  string  $name
+     * @return LicenseModelPKType
+     */
     public function withName(string $name): LicenseModelPKType
     {
         $new = clone $this;

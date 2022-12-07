@@ -27,11 +27,18 @@ class WebRegKeysListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string|array<string>|null
+     */
     public function getWebRegKey(): string|array|null
     {
         return $this->webRegKey;
     }
 
+    /**
+     * @param  string|array<string>|null  $webRegKey
+     * @return WebRegKeysListType
+     */
     public function withWebRegKey(string|array|null $webRegKey): WebRegKeysListType
     {
         $new = clone $this;

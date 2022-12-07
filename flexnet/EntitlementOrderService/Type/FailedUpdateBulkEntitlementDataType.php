@@ -35,11 +35,18 @@ class FailedUpdateBulkEntitlementDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementDataType|null
+     */
     public function getBulkEntitlement(): UpdateBulkEntitlementDataType|null
     {
         return $this->bulkEntitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementDataType|null  $bulkEntitlement
+     * @return FailedUpdateBulkEntitlementDataType
+     */
     public function withBulkEntitlement(UpdateBulkEntitlementDataType|null $bulkEntitlement): FailedUpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedUpdateBulkEntitlementDataType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string|null  $reason
+     * @return FailedUpdateBulkEntitlementDataType
+     */
     public function withReason(string|null $reason): FailedUpdateBulkEntitlementDataType
     {
         $new = clone $this;

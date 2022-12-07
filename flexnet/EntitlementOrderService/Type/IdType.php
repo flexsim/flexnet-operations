@@ -35,11 +35,18 @@ class IdType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string|null
+     */
     public function getId(): string|null
     {
         return $this->id;
     }
 
+    /**
+     * @param  string|null  $id
+     * @return IdType
+     */
     public function withId(string|null $id): IdType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class IdType
         return $new;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getAutoGenerate(): bool|null
     {
         return $this->autoGenerate;
     }
 
+    /**
+     * @param  bool|null  $autoGenerate
+     * @return IdType
+     */
     public function withAutoGenerate(bool|null $autoGenerate): IdType
     {
         $new = clone $this;

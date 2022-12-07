@@ -51,11 +51,18 @@ class ChannelPartnerDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getTierName(): string
     {
         return $this->tierName;
     }
 
+    /**
+     * @param  string  $tierName
+     * @return ChannelPartnerDataType
+     */
     public function withTierName(string $tierName): ChannelPartnerDataType
     {
         $new = clone $this;
@@ -64,11 +71,18 @@ class ChannelPartnerDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\AccountIdentifierType
+     */
     public function getAccountUnit(): AccountIdentifierType
     {
         return $this->accountUnit;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $accountUnit
+     * @return ChannelPartnerDataType
+     */
     public function withAccountUnit(AccountIdentifierType $accountUnit): ChannelPartnerDataType
     {
         $new = clone $this;
@@ -77,11 +91,18 @@ class ChannelPartnerDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null
+     */
     public function getContact(): UserIdentifierType|null
     {
         return $this->contact;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $contact
+     * @return ChannelPartnerDataType
+     */
     public function withContact(UserIdentifierType|null $contact): ChannelPartnerDataType
     {
         $new = clone $this;
@@ -90,11 +111,18 @@ class ChannelPartnerDataType
         return $new;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getCurrentOwner(): bool|null
     {
         return $this->currentOwner;
     }
 
+    /**
+     * @param  bool|null  $currentOwner
+     * @return ChannelPartnerDataType
+     */
     public function withCurrentOwner(bool|null $currentOwner): ChannelPartnerDataType
     {
         $new = clone $this;

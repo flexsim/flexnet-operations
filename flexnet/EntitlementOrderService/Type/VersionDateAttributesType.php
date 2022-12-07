@@ -35,11 +35,18 @@ class VersionDateAttributesType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getVersionOption(): string
     {
         return $this->versionOption;
     }
 
+    /**
+     * @param  string  $versionOption
+     * @return VersionDateAttributesType
+     */
     public function withVersionOption(string $versionOption): VersionDateAttributesType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class VersionDateAttributesType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\DurationType|null
+     */
     public function getDuration(): DurationType|null
     {
         return $this->duration;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $duration
+     * @return VersionDateAttributesType
+     */
     public function withDuration(DurationType|null $duration): VersionDateAttributesType
     {
         $new = clone $this;

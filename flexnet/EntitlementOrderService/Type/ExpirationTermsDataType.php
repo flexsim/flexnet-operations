@@ -35,11 +35,18 @@ class ExpirationTermsDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\DurationType|null
+     */
     public function getTerm(): DurationType|null
     {
         return $this->term;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $term
+     * @return ExpirationTermsDataType
+     */
     public function withTerm(DurationType|null $term): ExpirationTermsDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class ExpirationTermsDataType
         return $new;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getExpirationDate(): \DateTimeInterface|null
     {
         return $this->expirationDate;
     }
 
+    /**
+     * @param  \DateTimeInterface|null  $expirationDate
+     * @return ExpirationTermsDataType
+     */
     public function withExpirationDate(\DateTimeInterface|null $expirationDate): ExpirationTermsDataType
     {
         $new = clone $this;

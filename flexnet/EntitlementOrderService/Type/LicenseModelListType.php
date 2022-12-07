@@ -27,11 +27,18 @@ class LicenseModelListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|array<\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType>
+     */
     public function getLicenseModelIdentifier(): LicenseModelIdentifierType|array
     {
         return $this->licenseModelIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|array<\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType>  $licenseModelIdentifier
+     * @return LicenseModelListType
+     */
     public function withLicenseModelIdentifier(LicenseModelIdentifierType|array $licenseModelIdentifier): LicenseModelListType
     {
         $new = clone $this;

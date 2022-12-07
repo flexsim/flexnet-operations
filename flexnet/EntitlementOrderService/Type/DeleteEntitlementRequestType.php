@@ -24,11 +24,18 @@ class DeleteEntitlementRequestType implements RequestInterface
         $this->entitlement = $entitlement;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType>
+     */
     public function getEntitlement(): DeleteEntitlementDataType|array
     {
         return $this->entitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType>  $entitlement
+     * @return DeleteEntitlementRequestType
+     */
     public function withEntitlement(DeleteEntitlementDataType|array $entitlement): DeleteEntitlementRequestType
     {
         $new = clone $this;

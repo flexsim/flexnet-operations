@@ -27,11 +27,18 @@ class LicenseTechnologyPKType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getName(): string
     {
         return $this->name;
     }
 
+    /**
+     * @param  string  $name
+     * @return LicenseTechnologyPKType
+     */
     public function withName(string $name): LicenseTechnologyPKType
     {
         $new = clone $this;

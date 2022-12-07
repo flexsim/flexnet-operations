@@ -35,11 +35,18 @@ class FailedTransferLineItemDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType
+     */
     public function getLineItemInfo(): TransferLineItemInfoType
     {
         return $this->lineItemInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType  $lineItemInfo
+     * @return FailedTransferLineItemDataType
+     */
     public function withLineItemInfo(TransferLineItemInfoType $lineItemInfo): FailedTransferLineItemDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedTransferLineItemDataType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string  $reason
+     * @return FailedTransferLineItemDataType
+     */
     public function withReason(string $reason): FailedTransferLineItemDataType
     {
         $new = clone $this;

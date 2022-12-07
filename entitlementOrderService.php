@@ -29,10 +29,10 @@ return Config::create()
     ->addRule(new Rules\AssembleRule(new FlexnetAssembler\PropertyAssembler(__DIR__.'/entitlementOrderService.json')))
     ->addRule(new Rules\AssembleRule(new  FlexnetAssembler\ConstructorAssembler((new FlexnetAssembler\ConstructorAssemblerOptions(__DIR__.'/entitlementOrderService.json'))->withTypeHints())))
     ->addRule(new Rules\AssembleRule(new FlexnetAssembler\GetterAssembler(
-        (new FlexnetAssembler\GetterAssemblerOptions(__DIR__.'/entitlementOrderService.json'))->withDocBlocks(false)->withReturnType()
+        (new FlexnetAssembler\GetterAssemblerOptions(__DIR__.'/entitlementOrderService.json'))->withReturnType()
     )))
     ->addRule(new Rules\AssembleRule(new FlexnetAssembler\ImmutableSetterAssembler(
-        (new FlexnetAssembler\ImmutableSetterAssemblerOptions(__DIR__.'/entitlementOrderService.json'))->withDocBlocks(false)->withTypeHints()->withReturnTypes()
+        (new FlexnetAssembler\ImmutableSetterAssemblerOptions(__DIR__.'/entitlementOrderService.json'))->withTypeHints()->withReturnTypes()
     )))
     ->addRule(
         new Rules\IsRequestRule(

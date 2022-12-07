@@ -27,11 +27,18 @@ class FeatureStateChangeListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType>|null
+     */
     public function getFeature(): FeatureStateChangeDataType|array|null
     {
         return $this->feature;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType>|null  $feature
+     * @return FeatureStateChangeListType
+     */
     public function withFeature(FeatureStateChangeDataType|array|null $feature): FeatureStateChangeListType
     {
         $new = clone $this;

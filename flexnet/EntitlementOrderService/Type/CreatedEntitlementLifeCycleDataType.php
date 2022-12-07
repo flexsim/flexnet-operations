@@ -43,11 +43,18 @@ class CreatedEntitlementLifeCycleDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getEntitlementRecordRefNo(): string
     {
         return $this->entitlementRecordRefNo;
     }
 
+    /**
+     * @param  string  $entitlementRecordRefNo
+     * @return CreatedEntitlementLifeCycleDataType
+     */
     public function withEntitlementRecordRefNo(string $entitlementRecordRefNo): CreatedEntitlementLifeCycleDataType
     {
         $new = clone $this;
@@ -56,11 +63,18 @@ class CreatedEntitlementLifeCycleDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getParentEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->parentEntitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
+     * @return CreatedEntitlementLifeCycleDataType
+     */
     public function withParentEntitlementIdentifier(EntitlementIdentifierType $parentEntitlementIdentifier): CreatedEntitlementLifeCycleDataType
     {
         $new = clone $this;
@@ -69,11 +83,18 @@ class CreatedEntitlementLifeCycleDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType>|null
+     */
     public function getCreatedLineItemData(): LifeCycleLineItemDataType|array|null
     {
         return $this->createdLineItemData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType>|null  $createdLineItemData
+     * @return CreatedEntitlementLifeCycleDataType
+     */
     public function withCreatedLineItemData(LifeCycleLineItemDataType|array|null $createdLineItemData): CreatedEntitlementLifeCycleDataType
     {
         $new = clone $this;

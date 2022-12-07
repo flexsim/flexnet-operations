@@ -27,11 +27,18 @@ class EntitlementListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType>
+     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType|array
     {
         return $this->entitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType>  $entitlementIdentifier
+     * @return EntitlementListType
+     */
     public function withEntitlementIdentifier(EntitlementIdentifierType|array $entitlementIdentifier): EntitlementListType
     {
         $new = clone $this;

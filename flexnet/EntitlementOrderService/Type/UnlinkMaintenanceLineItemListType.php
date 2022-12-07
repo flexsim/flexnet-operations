@@ -27,11 +27,18 @@ class UnlinkMaintenanceLineItemListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType>
+     */
     public function getUnlinkMaintenanceLineItem(): UnlinkMaintenanceLineItemDataType|array
     {
         return $this->unlinkMaintenanceLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType>  $unlinkMaintenanceLineItem
+     * @return UnlinkMaintenanceLineItemListType
+     */
     public function withUnlinkMaintenanceLineItem(UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem): UnlinkMaintenanceLineItemListType
     {
         $new = clone $this;

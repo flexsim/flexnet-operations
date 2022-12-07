@@ -27,11 +27,18 @@ class FailedMatchingBulkEntsListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedMatchingBulkEntDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMatchingBulkEntDataType>
+     */
     public function getFailedBulkEnt(): FailedMatchingBulkEntDataType|array
     {
         return $this->failedBulkEnt;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedMatchingBulkEntDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMatchingBulkEntDataType>  $failedBulkEnt
+     * @return FailedMatchingBulkEntsListType
+     */
     public function withFailedBulkEnt(FailedMatchingBulkEntDataType|array $failedBulkEnt): FailedMatchingBulkEntsListType
     {
         $new = clone $this;

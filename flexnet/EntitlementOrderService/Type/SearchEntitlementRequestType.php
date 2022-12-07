@@ -38,11 +38,18 @@ class SearchEntitlementRequestType implements RequestInterface
         $this->pageNumber = $pageNumber;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType
+     */
     public function getEntitlementSearchCriteria(): SearchEntitlementDataType
     {
         return $this->entitlementSearchCriteria;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType  $entitlementSearchCriteria
+     * @return SearchEntitlementRequestType
+     */
     public function withEntitlementSearchCriteria(SearchEntitlementDataType $entitlementSearchCriteria): SearchEntitlementRequestType
     {
         $new = clone $this;
@@ -51,11 +58,18 @@ class SearchEntitlementRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return int
+     */
     public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
+    /**
+     * @param  int  $batchSize
+     * @return SearchEntitlementRequestType
+     */
     public function withBatchSize(int $batchSize): SearchEntitlementRequestType
     {
         $new = clone $this;
@@ -64,11 +78,18 @@ class SearchEntitlementRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return int|null
+     */
     public function getPageNumber(): int|null
     {
         return $this->pageNumber;
     }
 
+    /**
+     * @param  int|null  $pageNumber
+     * @return SearchEntitlementRequestType
+     */
     public function withPageNumber(int|null $pageNumber): SearchEntitlementRequestType
     {
         $new = clone $this;

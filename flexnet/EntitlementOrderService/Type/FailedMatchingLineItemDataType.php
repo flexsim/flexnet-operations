@@ -35,11 +35,18 @@ class FailedMatchingLineItemDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType
+     */
     public function getLineItemInfo(): GetMatchingLineItemInfoType
     {
         return $this->lineItemInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType  $lineItemInfo
+     * @return FailedMatchingLineItemDataType
+     */
     public function withLineItemInfo(GetMatchingLineItemInfoType $lineItemInfo): FailedMatchingLineItemDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedMatchingLineItemDataType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string  $reason
+     * @return FailedMatchingLineItemDataType
+     */
     public function withReason(string $reason): FailedMatchingLineItemDataType
     {
         $new = clone $this;

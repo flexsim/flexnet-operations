@@ -45,11 +45,18 @@ class ReplaceOnlyEntitlementLineItemResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return ReplaceOnlyEntitlementLineItemResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): ReplaceOnlyEntitlementLineItemResponseType
     {
         $new = clone $this;
@@ -58,11 +65,18 @@ class ReplaceOnlyEntitlementLineItemResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataListType|null
+     */
     public function getFailedData(): FailedAddEntitlementLineItemDataListType|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataListType|null  $failedData
+     * @return ReplaceOnlyEntitlementLineItemResponseType
+     */
     public function withFailedData(FailedAddEntitlementLineItemDataListType|null $failedData): ReplaceOnlyEntitlementLineItemResponseType
     {
         $new = clone $this;
@@ -71,11 +85,18 @@ class ReplaceOnlyEntitlementLineItemResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataListType|null
+     */
     public function getResponseData(): AddedEntitlementLineItemDataListType|null
     {
         return $this->responseData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataListType|null  $responseData
+     * @return ReplaceOnlyEntitlementLineItemResponseType
+     */
     public function withResponseData(AddedEntitlementLineItemDataListType|null $responseData): ReplaceOnlyEntitlementLineItemResponseType
     {
         $new = clone $this;

@@ -27,11 +27,18 @@ class LicenseModelStateChangeListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType>|null
+     */
     public function getLicenseModel(): LicenseModelStateChangeDataType|array|null
     {
         return $this->licenseModel;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType>|null  $licenseModel
+     * @return LicenseModelStateChangeListType
+     */
     public function withLicenseModel(LicenseModelStateChangeDataType|array|null $licenseModel): LicenseModelStateChangeListType
     {
         $new = clone $this;

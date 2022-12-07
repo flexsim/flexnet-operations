@@ -27,11 +27,18 @@ class FailedTransferLineItemListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType>
+     */
     public function getFailedLineItem(): FailedTransferLineItemDataType|array
     {
         return $this->failedLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType>  $failedLineItem
+     * @return FailedTransferLineItemListType
+     */
     public function withFailedLineItem(FailedTransferLineItemDataType|array $failedLineItem): FailedTransferLineItemListType
     {
         $new = clone $this;

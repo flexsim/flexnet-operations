@@ -27,11 +27,18 @@ class EntitlementStateChangeListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType>|null
+     */
     public function getEntitlement(): EntitlementStateChangeDataType|array|null
     {
         return $this->entitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType>|null  $entitlement
+     * @return EntitlementStateChangeListType
+     */
     public function withEntitlement(EntitlementStateChangeDataType|array|null $entitlement): EntitlementStateChangeListType
     {
         $new = clone $this;

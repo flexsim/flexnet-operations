@@ -35,11 +35,18 @@ class UpdateEntitledProductDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null
+     */
     public function getEntitledProducts(): EntitledProductDataType|array|null
     {
         return $this->entitledProducts;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
+     * @return UpdateEntitledProductDataListType
+     */
     public function withEntitledProducts(EntitledProductDataType|array|null $entitledProducts): UpdateEntitledProductDataListType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class UpdateEntitledProductDataListType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getOpType(): string
     {
         return $this->opType;
     }
 
+    /**
+     * @param  string  $opType
+     * @return UpdateEntitledProductDataListType
+     */
     public function withOpType(string $opType): UpdateEntitledProductDataListType
     {
         $new = clone $this;

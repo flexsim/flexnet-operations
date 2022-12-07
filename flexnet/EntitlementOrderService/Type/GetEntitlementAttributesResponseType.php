@@ -53,11 +53,18 @@ class GetEntitlementAttributesResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return GetEntitlementAttributesResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetEntitlementAttributesResponseType
     {
         $new = clone $this;
@@ -66,11 +73,18 @@ class GetEntitlementAttributesResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorDataType|null
+     */
     public function getEntitlementAttributes(): AttributeMetaDescriptorDataType|null
     {
         return $this->entitlementAttributes;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorDataType|null  $entitlementAttributes
+     * @return GetEntitlementAttributesResponseType
+     */
     public function withEntitlementAttributes(AttributeMetaDescriptorDataType|null $entitlementAttributes): GetEntitlementAttributesResponseType
     {
         $new = clone $this;
@@ -79,11 +93,18 @@ class GetEntitlementAttributesResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType|null
+     */
     public function getPolicyAttributes(): PolicyAttributesDataType|null
     {
         return $this->policyAttributes;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType|null  $policyAttributes
+     * @return GetEntitlementAttributesResponseType
+     */
     public function withPolicyAttributes(PolicyAttributesDataType|null $policyAttributes): GetEntitlementAttributesResponseType
     {
         $new = clone $this;
@@ -92,11 +113,18 @@ class GetEntitlementAttributesResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getNeedTimeZone(): bool|null
     {
         return $this->needTimeZone;
     }
 
+    /**
+     * @param  bool|null  $needTimeZone
+     * @return GetEntitlementAttributesResponseType
+     */
     public function withNeedTimeZone(bool|null $needTimeZone): GetEntitlementAttributesResponseType
     {
         $new = clone $this;

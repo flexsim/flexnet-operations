@@ -43,11 +43,18 @@ class UserIdentifierType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string|null
+     */
     public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
+    /**
+     * @param  string|null  $uniqueId
+     * @return UserIdentifierType
+     */
     public function withUniqueId(string|null $uniqueId): UserIdentifierType
     {
         $new = clone $this;
@@ -56,11 +63,18 @@ class UserIdentifierType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getUserName(): string|null
     {
         return $this->userName;
     }
 
+    /**
+     * @param  string|null  $userName
+     * @return UserIdentifierType
+     */
     public function withUserName(string|null $userName): UserIdentifierType
     {
         $new = clone $this;
@@ -69,11 +83,18 @@ class UserIdentifierType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\UserPKType|null
+     */
     public function getPrimaryKeys(): UserPKType|null
     {
         return $this->primaryKeys;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\UserPKType|null  $primaryKeys
+     * @return UserIdentifierType
+     */
     public function withPrimaryKeys(UserPKType|null $primaryKeys): UserIdentifierType
     {
         $new = clone $this;

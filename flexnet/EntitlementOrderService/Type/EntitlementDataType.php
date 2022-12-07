@@ -35,11 +35,18 @@ class EntitlementDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType|null
+     */
     public function getSimpleEntitlement(): SimpleEntitlementDataType|null
     {
         return $this->simpleEntitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType|null  $simpleEntitlement
+     * @return EntitlementDataType
+     */
     public function withSimpleEntitlement(SimpleEntitlementDataType|null $simpleEntitlement): EntitlementDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class EntitlementDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\BulkEntitlementDataType|null
+     */
     public function getBulkEntitlement(): BulkEntitlementDataType|null
     {
         return $this->bulkEntitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementDataType|null  $bulkEntitlement
+     * @return EntitlementDataType
+     */
     public function withBulkEntitlement(BulkEntitlementDataType|null $bulkEntitlement): EntitlementDataType
     {
         $new = clone $this;

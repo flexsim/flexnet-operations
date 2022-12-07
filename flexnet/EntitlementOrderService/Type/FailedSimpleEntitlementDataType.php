@@ -35,11 +35,18 @@ class FailedSimpleEntitlementDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|null
+     */
     public function getSimpleEntitlement(): CreateSimpleEntitlementDataType|null
     {
         return $this->simpleEntitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|null  $simpleEntitlement
+     * @return FailedSimpleEntitlementDataType
+     */
     public function withSimpleEntitlement(CreateSimpleEntitlementDataType|null $simpleEntitlement): FailedSimpleEntitlementDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedSimpleEntitlementDataType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string|null  $reason
+     * @return FailedSimpleEntitlementDataType
+     */
     public function withReason(string|null $reason): FailedSimpleEntitlementDataType
     {
         $new = clone $this;

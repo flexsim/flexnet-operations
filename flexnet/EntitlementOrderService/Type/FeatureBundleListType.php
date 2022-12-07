@@ -27,11 +27,18 @@ class FeatureBundleListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType|array<\Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType>
+     */
     public function getFeatureBundleIdentifier(): FeatureBundleIdentifierType|array
     {
         return $this->featureBundleIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType|array<\Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType>  $featureBundleIdentifier
+     * @return FeatureBundleListType
+     */
     public function withFeatureBundleIdentifier(FeatureBundleIdentifierType|array $featureBundleIdentifier): FeatureBundleListType
     {
         $new = clone $this;

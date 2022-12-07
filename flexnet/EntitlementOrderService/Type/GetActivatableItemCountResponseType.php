@@ -37,11 +37,18 @@ class GetActivatableItemCountResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return GetActivatableItemCountResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetActivatableItemCountResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class GetActivatableItemCountResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return int|null
+     */
     public function getCount(): int|null
     {
         return $this->count;
     }
 
+    /**
+     * @param  int|null  $count
+     * @return GetActivatableItemCountResponseType
+     */
     public function withCount(int|null $count): GetActivatableItemCountResponseType
     {
         $new = clone $this;

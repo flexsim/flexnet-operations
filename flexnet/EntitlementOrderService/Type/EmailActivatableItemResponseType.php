@@ -29,11 +29,18 @@ class EmailActivatableItemResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return EmailActivatableItemResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): EmailActivatableItemResponseType
     {
         $new = clone $this;

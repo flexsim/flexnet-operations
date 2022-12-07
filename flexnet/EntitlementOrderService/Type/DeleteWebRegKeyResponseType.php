@@ -37,11 +37,18 @@ class DeleteWebRegKeyResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return DeleteWebRegKeyResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): DeleteWebRegKeyResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class DeleteWebRegKeyResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyListType|null
+     */
     public function getFailedData(): FailedDeleteWebRegKeyListType|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyListType|null  $failedData
+     * @return DeleteWebRegKeyResponseType
+     */
     public function withFailedData(FailedDeleteWebRegKeyListType|null $failedData): DeleteWebRegKeyResponseType
     {
         $new = clone $this;

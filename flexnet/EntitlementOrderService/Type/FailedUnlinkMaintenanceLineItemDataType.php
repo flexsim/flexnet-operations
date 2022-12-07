@@ -35,11 +35,18 @@ class FailedUnlinkMaintenanceLineItemDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|null
+     */
     public function getUnlinkMaintenanceLineItem(): UnlinkMaintenanceLineItemDataType|null
     {
         return $this->unlinkMaintenanceLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|null  $unlinkMaintenanceLineItem
+     * @return FailedUnlinkMaintenanceLineItemDataType
+     */
     public function withUnlinkMaintenanceLineItem(UnlinkMaintenanceLineItemDataType|null $unlinkMaintenanceLineItem): FailedUnlinkMaintenanceLineItemDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedUnlinkMaintenanceLineItemDataType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string|null  $reason
+     * @return FailedUnlinkMaintenanceLineItemDataType
+     */
     public function withReason(string|null $reason): FailedUnlinkMaintenanceLineItemDataType
     {
         $new = clone $this;

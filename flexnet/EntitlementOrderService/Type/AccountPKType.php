@@ -27,11 +27,18 @@ class AccountPKType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getId(): string
     {
         return $this->id;
     }
 
+    /**
+     * @param  string  $id
+     * @return AccountPKType
+     */
     public function withId(string $id): AccountPKType
     {
         $new = clone $this;

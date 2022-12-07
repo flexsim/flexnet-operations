@@ -45,11 +45,18 @@ class TransferLineItemsResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return TransferLineItemsResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): TransferLineItemsResponseType
     {
         $new = clone $this;
@@ -58,11 +65,18 @@ class TransferLineItemsResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\TransferredLineItemsListType|null
+     */
     public function getResponseData(): TransferredLineItemsListType|null
     {
         return $this->responseData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemsListType|null  $responseData
+     * @return TransferLineItemsResponseType
+     */
     public function withResponseData(TransferredLineItemsListType|null $responseData): TransferLineItemsResponseType
     {
         $new = clone $this;
@@ -71,11 +85,18 @@ class TransferLineItemsResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemListType|null
+     */
     public function getFailedData(): FailedTransferLineItemListType|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemListType|null  $failedData
+     * @return TransferLineItemsResponseType
+     */
     public function withFailedData(FailedTransferLineItemListType|null $failedData): TransferLineItemsResponseType
     {
         $new = clone $this;

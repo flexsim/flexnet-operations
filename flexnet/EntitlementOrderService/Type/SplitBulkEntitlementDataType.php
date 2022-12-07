@@ -35,11 +35,18 @@ class SplitBulkEntitlementDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getBulkEntIdentifier(): EntitlementIdentifierType
     {
         return $this->bulkEntIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntIdentifier
+     * @return SplitBulkEntitlementDataType
+     */
     public function withBulkEntIdentifier(EntitlementIdentifierType $bulkEntIdentifier): SplitBulkEntitlementDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class SplitBulkEntitlementDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null
+     */
     public function getNewBulkEntIdentifier(): EntitlementIdentifierType|null
     {
         return $this->newBulkEntIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $newBulkEntIdentifier
+     * @return SplitBulkEntitlementDataType
+     */
     public function withNewBulkEntIdentifier(EntitlementIdentifierType|null $newBulkEntIdentifier): SplitBulkEntitlementDataType
     {
         $new = clone $this;

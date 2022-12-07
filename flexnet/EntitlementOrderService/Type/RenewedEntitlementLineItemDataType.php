@@ -43,11 +43,18 @@ class RenewedEntitlementLineItemDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getLineItemRecordRefNo(): string
     {
         return $this->lineItemRecordRefNo;
     }
 
+    /**
+     * @param  string  $lineItemRecordRefNo
+     * @return RenewedEntitlementLineItemDataType
+     */
     public function withLineItemRecordRefNo(string $lineItemRecordRefNo): RenewedEntitlementLineItemDataType
     {
         $new = clone $this;
@@ -56,11 +63,18 @@ class RenewedEntitlementLineItemDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
+     */
     public function getParentLineItemIdentifier(): EntitlementLineItemIdentifierType
     {
         return $this->parentLineItemIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
+     * @return RenewedEntitlementLineItemDataType
+     */
     public function withParentLineItemIdentifier(EntitlementLineItemIdentifierType $parentLineItemIdentifier): RenewedEntitlementLineItemDataType
     {
         $new = clone $this;
@@ -69,11 +83,18 @@ class RenewedEntitlementLineItemDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType
+     */
     public function getNewLineItem(): NewEntitlementLineItemDataType
     {
         return $this->newLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType  $newLineItem
+     * @return RenewedEntitlementLineItemDataType
+     */
     public function withNewLineItem(NewEntitlementLineItemDataType $newLineItem): RenewedEntitlementLineItemDataType
     {
         $new = clone $this;

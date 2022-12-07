@@ -27,11 +27,18 @@ class DeleteMaintenanceLineItemDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
+     */
     public function getMaintenanceLineItemIdentifier(): EntitlementLineItemIdentifierType
     {
         return $this->maintenanceLineItemIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $maintenanceLineItemIdentifier
+     * @return DeleteMaintenanceLineItemDataType
+     */
     public function withMaintenanceLineItemIdentifier(EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier): DeleteMaintenanceLineItemDataType
     {
         $new = clone $this;

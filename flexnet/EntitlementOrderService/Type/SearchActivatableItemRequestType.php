@@ -38,11 +38,18 @@ class SearchActivatableItemRequestType implements RequestInterface
         $this->pageNumber = $pageNumber;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
+     */
     public function getActivatableItemSearchCriteria(): SearchActivatableItemDataType
     {
         return $this->activatableItemSearchCriteria;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $activatableItemSearchCriteria
+     * @return SearchActivatableItemRequestType
+     */
     public function withActivatableItemSearchCriteria(SearchActivatableItemDataType $activatableItemSearchCriteria): SearchActivatableItemRequestType
     {
         $new = clone $this;
@@ -51,11 +58,18 @@ class SearchActivatableItemRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return int
+     */
     public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
+    /**
+     * @param  int  $batchSize
+     * @return SearchActivatableItemRequestType
+     */
     public function withBatchSize(int $batchSize): SearchActivatableItemRequestType
     {
         $new = clone $this;
@@ -64,11 +78,18 @@ class SearchActivatableItemRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return int|null
+     */
     public function getPageNumber(): int|null
     {
         return $this->pageNumber;
     }
 
+    /**
+     * @param  int|null  $pageNumber
+     * @return SearchActivatableItemRequestType
+     */
     public function withPageNumber(int|null $pageNumber): SearchActivatableItemRequestType
     {
         $new = clone $this;

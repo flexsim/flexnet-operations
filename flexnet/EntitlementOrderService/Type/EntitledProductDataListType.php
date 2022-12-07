@@ -27,11 +27,18 @@ class EntitledProductDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null
+     */
     public function getEntitledProduct(): EntitledProductDataType|array|null
     {
         return $this->entitledProduct;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProduct
+     * @return EntitledProductDataListType
+     */
     public function withEntitledProduct(EntitledProductDataType|array|null $entitledProduct): EntitledProductDataListType
     {
         $new = clone $this;

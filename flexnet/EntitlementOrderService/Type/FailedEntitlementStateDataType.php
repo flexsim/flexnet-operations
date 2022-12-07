@@ -35,11 +35,18 @@ class FailedEntitlementStateDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementStateDataType
+     */
     public function getEntitlement(): EntitlementStateDataType
     {
         return $this->entitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateDataType  $entitlement
+     * @return FailedEntitlementStateDataType
+     */
     public function withEntitlement(EntitlementStateDataType $entitlement): FailedEntitlementStateDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedEntitlementStateDataType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string  $reason
+     * @return FailedEntitlementStateDataType
+     */
     public function withReason(string $reason): FailedEntitlementStateDataType
     {
         $new = clone $this;

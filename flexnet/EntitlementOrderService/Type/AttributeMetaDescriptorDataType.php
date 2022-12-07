@@ -27,11 +27,18 @@ class AttributeMetaDescriptorDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType|array<\Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType>|null
+     */
     public function getAttribute(): AttributeMetaDescriptorType|array|null
     {
         return $this->attribute;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType|array<\Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType>|null  $attribute
+     * @return AttributeMetaDescriptorDataType
+     */
     public function withAttribute(AttributeMetaDescriptorType|array|null $attribute): AttributeMetaDescriptorDataType
     {
         $new = clone $this;

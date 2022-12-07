@@ -45,11 +45,18 @@ class SplitLineItemResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return SplitLineItemResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): SplitLineItemResponseType
     {
         $new = clone $this;
@@ -58,11 +65,18 @@ class SplitLineItemResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SplitLineItemResponseListType|null
+     */
     public function getResponseData(): SplitLineItemResponseListType|null
     {
         return $this->responseData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemResponseListType|null  $responseData
+     * @return SplitLineItemResponseType
+     */
     public function withResponseData(SplitLineItemResponseListType|null $responseData): SplitLineItemResponseType
     {
         $new = clone $this;
@@ -71,11 +85,18 @@ class SplitLineItemResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemListType|null
+     */
     public function getFailedData(): FailedSplitLineItemListType|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemListType|null  $failedData
+     * @return SplitLineItemResponseType
+     */
     public function withFailedData(FailedSplitLineItemListType|null $failedData): SplitLineItemResponseType
     {
         $new = clone $this;

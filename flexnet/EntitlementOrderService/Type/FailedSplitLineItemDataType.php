@@ -35,11 +35,18 @@ class FailedSplitLineItemDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SplitLineItemInfoType
+     */
     public function getLineItemInfo(): SplitLineItemInfoType
     {
         return $this->lineItemInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemInfoType  $lineItemInfo
+     * @return FailedSplitLineItemDataType
+     */
     public function withLineItemInfo(SplitLineItemInfoType $lineItemInfo): FailedSplitLineItemDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedSplitLineItemDataType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string  $reason
+     * @return FailedSplitLineItemDataType
+     */
     public function withReason(string $reason): FailedSplitLineItemDataType
     {
         $new = clone $this;

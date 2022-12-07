@@ -24,11 +24,18 @@ class TransferLineItemsRequestType implements RequestInterface
         $this->lineItemList = $lineItemList;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\TransferLineItemsListType
+     */
     public function getLineItemList(): TransferLineItemsListType
     {
         return $this->lineItemList;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemsListType  $lineItemList
+     * @return TransferLineItemsRequestType
+     */
     public function withLineItemList(TransferLineItemsListType $lineItemList): TransferLineItemsRequestType
     {
         $new = clone $this;

@@ -27,11 +27,18 @@ class PartNumberPKType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getPartId(): string
     {
         return $this->partId;
     }
 
+    /**
+     * @param  string  $partId
+     * @return PartNumberPKType
+     */
     public function withPartId(string $partId): PartNumberPKType
     {
         $new = clone $this;

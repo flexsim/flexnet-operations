@@ -27,11 +27,18 @@ class WebRegKeyDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType>
+     */
     public function getWebRegKeyData(): AddWebRegKeyDataType|array
     {
         return $this->webRegKeyData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType>  $webRegKeyData
+     * @return WebRegKeyDataListType
+     */
     public function withWebRegKeyData(AddWebRegKeyDataType|array $webRegKeyData): WebRegKeyDataListType
     {
         $new = clone $this;

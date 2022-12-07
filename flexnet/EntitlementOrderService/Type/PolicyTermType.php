@@ -35,11 +35,18 @@ class PolicyTermType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return int
+     */
     public function getDuration(): int
     {
         return $this->duration;
     }
 
+    /**
+     * @param  int  $duration
+     * @return PolicyTermType
+     */
     public function withDuration(int $duration): PolicyTermType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class PolicyTermType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getDurationUnit(): string
     {
         return $this->durationUnit;
     }
 
+    /**
+     * @param  string  $durationUnit
+     * @return PolicyTermType
+     */
     public function withDurationUnit(string $durationUnit): PolicyTermType
     {
         $new = clone $this;

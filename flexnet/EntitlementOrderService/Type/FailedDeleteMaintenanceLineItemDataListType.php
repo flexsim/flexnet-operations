@@ -27,11 +27,18 @@ class FailedDeleteMaintenanceLineItemDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedDeleteMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedDeleteMaintenanceLineItemDataType>|null
+     */
     public function getFailedData(): FailedDeleteMaintenanceLineItemDataType|array|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedDeleteMaintenanceLineItemDataType>|null  $failedData
+     * @return FailedDeleteMaintenanceLineItemDataListType
+     */
     public function withFailedData(FailedDeleteMaintenanceLineItemDataType|array|null $failedData): FailedDeleteMaintenanceLineItemDataListType
     {
         $new = clone $this;

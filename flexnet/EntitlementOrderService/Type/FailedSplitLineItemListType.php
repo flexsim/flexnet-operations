@@ -27,11 +27,18 @@ class FailedSplitLineItemListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType>
+     */
     public function getFailedLineItem(): FailedSplitLineItemDataType|array
     {
         return $this->failedLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType>  $failedLineItem
+     * @return FailedSplitLineItemListType
+     */
     public function withFailedLineItem(FailedSplitLineItemDataType|array $failedLineItem): FailedSplitLineItemListType
     {
         $new = clone $this;

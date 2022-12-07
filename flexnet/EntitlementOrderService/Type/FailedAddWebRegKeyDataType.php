@@ -35,11 +35,18 @@ class FailedAddWebRegKeyDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|null
+     */
     public function getWebRegKeyData(): AddWebRegKeyDataType|null
     {
         return $this->webRegKeyData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|null  $webRegKeyData
+     * @return FailedAddWebRegKeyDataType
+     */
     public function withWebRegKeyData(AddWebRegKeyDataType|null $webRegKeyData): FailedAddWebRegKeyDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedAddWebRegKeyDataType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string|null  $reason
+     * @return FailedAddWebRegKeyDataType
+     */
     public function withReason(string|null $reason): FailedAddWebRegKeyDataType
     {
         $new = clone $this;

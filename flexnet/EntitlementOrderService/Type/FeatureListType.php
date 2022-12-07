@@ -27,11 +27,18 @@ class FeatureListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FeatureIdentifierType|array<\Flexnet\EntitlementOrderService\Type\FeatureIdentifierType>
+     */
     public function getFeatureIdentifier(): FeatureIdentifierType|array
     {
         return $this->featureIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FeatureIdentifierType|array<\Flexnet\EntitlementOrderService\Type\FeatureIdentifierType>  $featureIdentifier
+     * @return FeatureListType
+     */
     public function withFeatureIdentifier(FeatureIdentifierType|array $featureIdentifier): FeatureListType
     {
         $new = clone $this;

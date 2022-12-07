@@ -27,11 +27,18 @@ class FailedMatchingLineItemsListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType>
+     */
     public function getFailedLineItem(): FailedMatchingLineItemDataType|array
     {
         return $this->failedLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType>  $failedLineItem
+     * @return FailedMatchingLineItemsListType
+     */
     public function withFailedLineItem(FailedMatchingLineItemDataType|array $failedLineItem): FailedMatchingLineItemsListType
     {
         $new = clone $this;

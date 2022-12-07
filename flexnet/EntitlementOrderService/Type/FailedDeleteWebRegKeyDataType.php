@@ -35,11 +35,18 @@ class FailedDeleteWebRegKeyDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getWebRegKey(): string
     {
         return $this->webRegKey;
     }
 
+    /**
+     * @param  string  $webRegKey
+     * @return FailedDeleteWebRegKeyDataType
+     */
     public function withWebRegKey(string $webRegKey): FailedDeleteWebRegKeyDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedDeleteWebRegKeyDataType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string|null  $reason
+     * @return FailedDeleteWebRegKeyDataType
+     */
     public function withReason(string|null $reason): FailedDeleteWebRegKeyDataType
     {
         $new = clone $this;

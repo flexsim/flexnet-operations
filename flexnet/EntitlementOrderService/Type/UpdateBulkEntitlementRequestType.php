@@ -24,11 +24,18 @@ class UpdateBulkEntitlementRequestType implements RequestInterface
         $this->bulkEntitlement = $bulkEntitlement;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementDataType>
+     */
     public function getBulkEntitlement(): UpdateBulkEntitlementDataType|array
     {
         return $this->bulkEntitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementDataType>  $bulkEntitlement
+     * @return UpdateBulkEntitlementRequestType
+     */
     public function withBulkEntitlement(UpdateBulkEntitlementDataType|array $bulkEntitlement): UpdateBulkEntitlementRequestType
     {
         $new = clone $this;

@@ -24,11 +24,18 @@ class SetMaintenanceLineItemStateRequestType implements RequestInterface
         $this->maintenanceLineItem = $maintenanceLineItem;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType>
+     */
     public function getMaintenanceLineItem(): MaintenanceLineItemStateDataType|array
     {
         return $this->maintenanceLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType>  $maintenanceLineItem
+     * @return SetMaintenanceLineItemStateRequestType
+     */
     public function withMaintenanceLineItem(MaintenanceLineItemStateDataType|array $maintenanceLineItem): SetMaintenanceLineItemStateRequestType
     {
         $new = clone $this;

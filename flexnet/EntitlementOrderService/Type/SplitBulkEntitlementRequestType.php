@@ -24,11 +24,18 @@ class SplitBulkEntitlementRequestType implements RequestInterface
         $this->bulkEntitlementList = $bulkEntitlementList;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementListType
+     */
     public function getBulkEntitlementList(): SplitBulkEntitlementListType
     {
         return $this->bulkEntitlementList;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementListType  $bulkEntitlementList
+     * @return SplitBulkEntitlementRequestType
+     */
     public function withBulkEntitlementList(SplitBulkEntitlementListType $bulkEntitlementList): SplitBulkEntitlementRequestType
     {
         $new = clone $this;

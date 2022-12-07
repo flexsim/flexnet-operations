@@ -35,11 +35,18 @@ class StateQueryType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getValue(): string
     {
         return $this->value;
     }
 
+    /**
+     * @param  string  $value
+     * @return StateQueryType
+     */
     public function withValue(string $value): StateQueryType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class StateQueryType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getSearchType(): string
     {
         return $this->searchType;
     }
 
+    /**
+     * @param  string  $searchType
+     * @return StateQueryType
+     */
     public function withSearchType(string $searchType): StateQueryType
     {
         $new = clone $this;

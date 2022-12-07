@@ -37,11 +37,18 @@ class SetEntitlementStateResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return SetEntitlementStateResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): SetEntitlementStateResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class SetEntitlementStateResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedEntitlementStateDataListType|null
+     */
     public function getFailedData(): FailedEntitlementStateDataListType|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementStateDataListType|null  $failedData
+     * @return SetEntitlementStateResponseType
+     */
     public function withFailedData(FailedEntitlementStateDataListType|null $failedData): SetEntitlementStateResponseType
     {
         $new = clone $this;

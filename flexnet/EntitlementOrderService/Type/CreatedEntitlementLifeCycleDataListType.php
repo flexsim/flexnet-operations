@@ -27,11 +27,18 @@ class CreatedEntitlementLifeCycleDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataType>|null
+     */
     public function getEntitlementData(): CreatedEntitlementLifeCycleDataType|array|null
     {
         return $this->entitlementData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataType>|null  $entitlementData
+     * @return CreatedEntitlementLifeCycleDataListType
+     */
     public function withEntitlementData(CreatedEntitlementLifeCycleDataType|array|null $entitlementData): CreatedEntitlementLifeCycleDataListType
     {
         $new = clone $this;

@@ -35,11 +35,18 @@ class SimpleQueryType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getValue(): string
     {
         return $this->value;
     }
 
+    /**
+     * @param  string  $value
+     * @return SimpleQueryType
+     */
     public function withValue(string $value): SimpleQueryType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class SimpleQueryType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getSearchType(): string
     {
         return $this->searchType;
     }
 
+    /**
+     * @param  string  $searchType
+     * @return SimpleQueryType
+     */
     public function withSearchType(string $searchType): SimpleQueryType
     {
         $new = clone $this;

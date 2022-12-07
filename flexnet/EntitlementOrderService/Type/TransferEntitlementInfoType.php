@@ -67,11 +67,18 @@ class TransferEntitlementInfoType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @return TransferEntitlementInfoType
+     */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): TransferEntitlementInfoType
     {
         $new = clone $this;
@@ -80,11 +87,18 @@ class TransferEntitlementInfoType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getAccountTo(): string
     {
         return $this->accountTo;
     }
 
+    /**
+     * @param  string  $accountTo
+     * @return TransferEntitlementInfoType
+     */
     public function withAccountTo(string $accountTo): TransferEntitlementInfoType
     {
         $new = clone $this;
@@ -93,11 +107,18 @@ class TransferEntitlementInfoType
         return $new;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getRetainExistingIds(): bool|null
     {
         return $this->retainExistingIds;
     }
 
+    /**
+     * @param  bool|null  $retainExistingIds
+     * @return TransferEntitlementInfoType
+     */
     public function withRetainExistingIds(bool|null $retainExistingIds): TransferEntitlementInfoType
     {
         $new = clone $this;
@@ -106,11 +127,18 @@ class TransferEntitlementInfoType
         return $new;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getReturnActiveFulfillments(): bool|null
     {
         return $this->returnActiveFulfillments;
     }
 
+    /**
+     * @param  bool|null  $returnActiveFulfillments
+     * @return TransferEntitlementInfoType
+     */
     public function withReturnActiveFulfillments(bool|null $returnActiveFulfillments): TransferEntitlementInfoType
     {
         $new = clone $this;
@@ -119,11 +147,18 @@ class TransferEntitlementInfoType
         return $new;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getForceTransferEvenIfNoTargetUsers(): bool|null
     {
         return $this->forceTransferEvenIfNoTargetUsers;
     }
 
+    /**
+     * @param  bool|null  $forceTransferEvenIfNoTargetUsers
+     * @return TransferEntitlementInfoType
+     */
     public function withForceTransferEvenIfNoTargetUsers(bool|null $forceTransferEvenIfNoTargetUsers): TransferEntitlementInfoType
     {
         $new = clone $this;
@@ -132,11 +167,18 @@ class TransferEntitlementInfoType
         return $new;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getForceTransferEvenIfParentAndChildSeparated(): bool|null
     {
         return $this->forceTransferEvenIfParentAndChildSeparated;
     }
 
+    /**
+     * @param  bool|null  $forceTransferEvenIfParentAndChildSeparated
+     * @return TransferEntitlementInfoType
+     */
     public function withForceTransferEvenIfParentAndChildSeparated(bool|null $forceTransferEvenIfParentAndChildSeparated): TransferEntitlementInfoType
     {
         $new = clone $this;

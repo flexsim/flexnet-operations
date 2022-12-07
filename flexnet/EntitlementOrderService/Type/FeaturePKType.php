@@ -35,11 +35,18 @@ class FeaturePKType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getName(): string
     {
         return $this->name;
     }
 
+    /**
+     * @param  string  $name
+     * @return FeaturePKType
+     */
     public function withName(string $name): FeaturePKType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FeaturePKType
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getVersion(): string|null
     {
         return $this->version;
     }
 
+    /**
+     * @param  string|null  $version
+     * @return FeaturePKType
+     */
     public function withVersion(string|null $version): FeaturePKType
     {
         $new = clone $this;

@@ -37,11 +37,18 @@ class SearchActivatableItemResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return SearchActivatableItemResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): SearchActivatableItemResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class SearchActivatableItemResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType|array<\Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType>|null
+     */
     public function getActivatableItem(): ActivatableItemDetailType|array|null
     {
         return $this->activatableItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType|array<\Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType>|null  $activatableItem
+     * @return SearchActivatableItemResponseType
+     */
     public function withActivatableItem(ActivatableItemDetailType|array|null $activatableItem): SearchActivatableItemResponseType
     {
         $new = clone $this;

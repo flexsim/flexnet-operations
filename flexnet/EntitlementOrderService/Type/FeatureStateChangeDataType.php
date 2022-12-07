@@ -35,11 +35,18 @@ class FeatureStateChangeDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FeatureIdentifierType
+     */
     public function getFeatureIdentifier(): FeatureIdentifierType
     {
         return $this->featureIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FeatureIdentifierType  $featureIdentifier
+     * @return FeatureStateChangeDataType
+     */
     public function withFeatureIdentifier(FeatureIdentifierType $featureIdentifier): FeatureStateChangeDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FeatureStateChangeDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null
+     */
     public function getStateChangeRecord(): StateChangeDataType|array|null
     {
         return $this->stateChangeRecord;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
+     * @return FeatureStateChangeDataType
+     */
     public function withStateChangeRecord(StateChangeDataType|array|null $stateChangeRecord): FeatureStateChangeDataType
     {
         $new = clone $this;

@@ -27,11 +27,18 @@ class CreatedSimpleEntitlementDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType>|null
+     */
     public function getCreatedSimpleEntitlement(): CreatedSimpleEntitlementDataType|array|null
     {
         return $this->createdSimpleEntitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType>|null  $createdSimpleEntitlement
+     * @return CreatedSimpleEntitlementDataListType
+     */
     public function withCreatedSimpleEntitlement(CreatedSimpleEntitlementDataType|array|null $createdSimpleEntitlement): CreatedSimpleEntitlementDataListType
     {
         $new = clone $this;

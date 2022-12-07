@@ -27,11 +27,18 @@ class LinkMaintenanceLineItemListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType>
+     */
     public function getLinkMaintenanceLineItem(): LinkMaintenanceLineItemDataType|array
     {
         return $this->linkMaintenanceLineItem;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType>  $linkMaintenanceLineItem
+     * @return LinkMaintenanceLineItemListType
+     */
     public function withLinkMaintenanceLineItem(LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem): LinkMaintenanceLineItemListType
     {
         $new = clone $this;

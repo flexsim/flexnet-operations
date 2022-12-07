@@ -67,11 +67,18 @@ class SplitLineItemInfoType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
+     */
     public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @return SplitLineItemInfoType
+     */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): SplitLineItemInfoType
     {
         $new = clone $this;
@@ -80,11 +87,18 @@ class SplitLineItemInfoType
         return $new;
     }
 
+    /**
+     * @return int
+     */
     public function getNumberOfCopies(): int
     {
         return $this->numberOfCopies;
     }
 
+    /**
+     * @param  int  $numberOfCopies
+     * @return SplitLineItemInfoType
+     */
     public function withNumberOfCopies(int $numberOfCopies): SplitLineItemInfoType
     {
         $new = clone $this;
@@ -93,11 +107,18 @@ class SplitLineItemInfoType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getTargetTierName(): string
     {
         return $this->targetTierName;
     }
 
+    /**
+     * @param  string  $targetTierName
+     * @return SplitLineItemInfoType
+     */
     public function withTargetTierName(string $targetTierName): SplitLineItemInfoType
     {
         $new = clone $this;
@@ -106,11 +127,18 @@ class SplitLineItemInfoType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\AccountIdentifierType
+     */
     public function getTargetAccountUnit(): AccountIdentifierType
     {
         return $this->targetAccountUnit;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
+     * @return SplitLineItemInfoType
+     */
     public function withTargetAccountUnit(AccountIdentifierType $targetAccountUnit): SplitLineItemInfoType
     {
         $new = clone $this;
@@ -119,11 +147,18 @@ class SplitLineItemInfoType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null
+     */
     public function getTargetContact(): UserIdentifierType|null
     {
         return $this->targetContact;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $targetContact
+     * @return SplitLineItemInfoType
+     */
     public function withTargetContact(UserIdentifierType|null $targetContact): SplitLineItemInfoType
     {
         $new = clone $this;
@@ -132,11 +167,18 @@ class SplitLineItemInfoType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null
+     */
     public function getMatchingLineItemIdentifier(): EntitlementLineItemIdentifierType|null
     {
         return $this->matchingLineItemIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $matchingLineItemIdentifier
+     * @return SplitLineItemInfoType
+     */
     public function withMatchingLineItemIdentifier(EntitlementLineItemIdentifierType|null $matchingLineItemIdentifier): SplitLineItemInfoType
     {
         $new = clone $this;

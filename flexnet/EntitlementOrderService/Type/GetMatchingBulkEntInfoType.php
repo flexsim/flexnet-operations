@@ -43,11 +43,18 @@ class GetMatchingBulkEntInfoType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getBulkEntIdentifier(): EntitlementIdentifierType
     {
         return $this->bulkEntIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntIdentifier
+     * @return GetMatchingBulkEntInfoType
+     */
     public function withBulkEntIdentifier(EntitlementIdentifierType $bulkEntIdentifier): GetMatchingBulkEntInfoType
     {
         $new = clone $this;
@@ -56,11 +63,18 @@ class GetMatchingBulkEntInfoType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getTargetTierName(): string
     {
         return $this->targetTierName;
     }
 
+    /**
+     * @param  string  $targetTierName
+     * @return GetMatchingBulkEntInfoType
+     */
     public function withTargetTierName(string $targetTierName): GetMatchingBulkEntInfoType
     {
         $new = clone $this;
@@ -69,11 +83,18 @@ class GetMatchingBulkEntInfoType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\AccountIdentifierType
+     */
     public function getTargetAccountUnit(): AccountIdentifierType
     {
         return $this->targetAccountUnit;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
+     * @return GetMatchingBulkEntInfoType
+     */
     public function withTargetAccountUnit(AccountIdentifierType $targetAccountUnit): GetMatchingBulkEntInfoType
     {
         $new = clone $this;

@@ -24,11 +24,18 @@ class SplitLineItemRequestType implements RequestInterface
         $this->lineItemList = $lineItemList;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SplitLineItemListType
+     */
     public function getLineItemList(): SplitLineItemListType
     {
         return $this->lineItemList;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemListType  $lineItemList
+     * @return SplitLineItemRequestType
+     */
     public function withLineItemList(SplitLineItemListType $lineItemList): SplitLineItemRequestType
     {
         $new = clone $this;

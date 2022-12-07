@@ -24,11 +24,18 @@ class DeleteWebRegKeyRequestType implements RequestInterface
         $this->webRegKeyList = $webRegKeyList;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\WebRegKeysListType
+     */
     public function getWebRegKeyList(): WebRegKeysListType
     {
         return $this->webRegKeyList;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeysListType  $webRegKeyList
+     * @return DeleteWebRegKeyRequestType
+     */
     public function withWebRegKeyList(WebRegKeysListType $webRegKeyList): DeleteWebRegKeyRequestType
     {
         $new = clone $this;

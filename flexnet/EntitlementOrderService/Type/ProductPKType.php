@@ -35,11 +35,18 @@ class ProductPKType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getName(): string
     {
         return $this->name;
     }
 
+    /**
+     * @param  string  $name
+     * @return ProductPKType
+     */
     public function withName(string $name): ProductPKType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class ProductPKType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getVersion(): string
     {
         return $this->version;
     }
 
+    /**
+     * @param  string  $version
+     * @return ProductPKType
+     */
     public function withVersion(string $version): ProductPKType
     {
         $new = clone $this;

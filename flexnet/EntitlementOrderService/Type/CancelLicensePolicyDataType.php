@@ -27,11 +27,18 @@ class CancelLicensePolicyDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return bool
+     */
     public function getIsCancelLicense(): bool
     {
         return $this->isCancelLicense;
     }
 
+    /**
+     * @param  bool  $isCancelLicense
+     * @return CancelLicensePolicyDataType
+     */
     public function withIsCancelLicense(bool $isCancelLicense): CancelLicensePolicyDataType
     {
         $new = clone $this;

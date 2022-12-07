@@ -43,11 +43,18 @@ class GetMatchingLineItemInfoType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
+     */
     public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
+     * @return GetMatchingLineItemInfoType
+     */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): GetMatchingLineItemInfoType
     {
         $new = clone $this;
@@ -56,11 +63,18 @@ class GetMatchingLineItemInfoType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getTargetTierName(): string
     {
         return $this->targetTierName;
     }
 
+    /**
+     * @param  string  $targetTierName
+     * @return GetMatchingLineItemInfoType
+     */
     public function withTargetTierName(string $targetTierName): GetMatchingLineItemInfoType
     {
         $new = clone $this;
@@ -69,11 +83,18 @@ class GetMatchingLineItemInfoType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\AccountIdentifierType
+     */
     public function getTargetAccountUnit(): AccountIdentifierType
     {
         return $this->targetAccountUnit;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
+     * @return GetMatchingLineItemInfoType
+     */
     public function withTargetAccountUnit(AccountIdentifierType $targetAccountUnit): GetMatchingLineItemInfoType
     {
         $new = clone $this;

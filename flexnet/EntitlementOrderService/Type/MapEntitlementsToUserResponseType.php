@@ -37,11 +37,18 @@ class MapEntitlementsToUserResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return MapEntitlementsToUserResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): MapEntitlementsToUserResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class MapEntitlementsToUserResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedMapEntitlementsToUserDataListType|null
+     */
     public function getFailedData(): FailedMapEntitlementsToUserDataListType|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedMapEntitlementsToUserDataListType|null  $failedData
+     * @return MapEntitlementsToUserResponseType
+     */
     public function withFailedData(FailedMapEntitlementsToUserDataListType|null $failedData): MapEntitlementsToUserResponseType
     {
         $new = clone $this;

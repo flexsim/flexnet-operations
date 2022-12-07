@@ -27,11 +27,18 @@ class FailedSplitBulkEntitlementListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType>
+     */
     public function getFailedBulkEntitlement(): FailedSplitBulkEntitlementDataType|array
     {
         return $this->failedBulkEntitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType>  $failedBulkEntitlement
+     * @return FailedSplitBulkEntitlementListType
+     */
     public function withFailedBulkEntitlement(FailedSplitBulkEntitlementDataType|array $failedBulkEntitlement): FailedSplitBulkEntitlementListType
     {
         $new = clone $this;

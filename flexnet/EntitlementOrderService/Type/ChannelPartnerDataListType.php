@@ -27,11 +27,18 @@ class ChannelPartnerDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType|array<\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType>|null
+     */
     public function getChannelPartner(): ChannelPartnerDataType|array|null
     {
         return $this->channelPartner;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType|array<\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType>|null  $channelPartner
+     * @return ChannelPartnerDataListType
+     */
     public function withChannelPartner(ChannelPartnerDataType|array|null $channelPartner): ChannelPartnerDataListType
     {
         $new = clone $this;

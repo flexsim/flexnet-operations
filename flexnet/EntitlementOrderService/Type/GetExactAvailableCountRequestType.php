@@ -24,11 +24,18 @@ class GetExactAvailableCountRequestType implements RequestInterface
         $this->activationId = $activationId;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null
+     */
     public function getActivationId(): EntitlementLineItemIdentifierType|null
     {
         return $this->activationId;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $activationId
+     * @return GetExactAvailableCountRequestType
+     */
     public function withActivationId(EntitlementLineItemIdentifierType|null $activationId): GetExactAvailableCountRequestType
     {
         $new = clone $this;

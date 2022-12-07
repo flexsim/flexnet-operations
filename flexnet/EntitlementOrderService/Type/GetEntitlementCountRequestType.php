@@ -24,11 +24,18 @@ class GetEntitlementCountRequestType implements RequestInterface
         $this->queryParams = $queryParams;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType
+     */
     public function getQueryParams(): SearchEntitlementDataType
     {
         return $this->queryParams;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType  $queryParams
+     * @return GetEntitlementCountRequestType
+     */
     public function withQueryParams(SearchEntitlementDataType $queryParams): GetEntitlementCountRequestType
     {
         $new = clone $this;

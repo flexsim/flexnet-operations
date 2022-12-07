@@ -27,11 +27,18 @@ class FailedAddWebRegKeyDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataType>|null
+     */
     public function getFailedWebRegKeyData(): FailedAddWebRegKeyDataType|array|null
     {
         return $this->failedWebRegKeyData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataType>|null  $failedWebRegKeyData
+     * @return FailedAddWebRegKeyDataListType
+     */
     public function withFailedWebRegKeyData(FailedAddWebRegKeyDataType|array|null $failedWebRegKeyData): FailedAddWebRegKeyDataListType
     {
         $new = clone $this;

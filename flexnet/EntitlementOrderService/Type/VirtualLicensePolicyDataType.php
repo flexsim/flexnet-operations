@@ -27,11 +27,18 @@ class VirtualLicensePolicyDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return bool
+     */
     public function getIsVirtualLicense(): bool
     {
         return $this->isVirtualLicense;
     }
 
+    /**
+     * @param  bool  $isVirtualLicense
+     * @return VirtualLicensePolicyDataType
+     */
     public function withIsVirtualLicense(bool $isVirtualLicense): VirtualLicensePolicyDataType
     {
         $new = clone $this;

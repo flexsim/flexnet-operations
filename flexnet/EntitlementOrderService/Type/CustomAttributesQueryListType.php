@@ -27,11 +27,18 @@ class CustomAttributesQueryListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType>|null
+     */
     public function getAttribute(): CustomAttributeQueryType|array|null
     {
         return $this->attribute;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType>|null  $attribute
+     * @return CustomAttributesQueryListType
+     */
     public function withAttribute(CustomAttributeQueryType|array|null $attribute): CustomAttributesQueryListType
     {
         $new = clone $this;

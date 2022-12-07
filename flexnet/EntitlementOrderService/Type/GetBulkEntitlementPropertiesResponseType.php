@@ -37,11 +37,18 @@ class GetBulkEntitlementPropertiesResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return GetBulkEntitlementPropertiesResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetBulkEntitlementPropertiesResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class GetBulkEntitlementPropertiesResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType|array<\Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType>|null
+     */
     public function getBulkEntitlement(): BulkEntitlementPropertiesType|array|null
     {
         return $this->bulkEntitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType|array<\Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType>|null  $bulkEntitlement
+     * @return GetBulkEntitlementPropertiesResponseType
+     */
     public function withBulkEntitlement(BulkEntitlementPropertiesType|array|null $bulkEntitlement): GetBulkEntitlementPropertiesResponseType
     {
         $new = clone $this;

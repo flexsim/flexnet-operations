@@ -27,11 +27,18 @@ class EmailContactListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string|array<string>|null
+     */
     public function getEmailId(): string|array|null
     {
         return $this->emailId;
     }
 
+    /**
+     * @param  string|array<string>|null  $emailId
+     * @return EmailContactListType
+     */
     public function withEmailId(string|array|null $emailId): EmailContactListType
     {
         $new = clone $this;

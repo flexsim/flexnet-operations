@@ -27,11 +27,18 @@ class FailedUpdateSimpleEntitlementDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType>|null
+     */
     public function getFailedSimpleEntitlement(): FailedUpdateSimpleEntitlementDataType|array|null
     {
         return $this->failedSimpleEntitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType>|null  $failedSimpleEntitlement
+     * @return FailedUpdateSimpleEntitlementDataListType
+     */
     public function withFailedSimpleEntitlement(FailedUpdateSimpleEntitlementDataType|array|null $failedSimpleEntitlement): FailedUpdateSimpleEntitlementDataListType
     {
         $new = clone $this;

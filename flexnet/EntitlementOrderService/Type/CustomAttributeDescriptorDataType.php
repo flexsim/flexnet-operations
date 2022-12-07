@@ -27,11 +27,18 @@ class CustomAttributeDescriptorDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType>|null
+     */
     public function getAttribute(): CustomAttributeDescriptorType|array|null
     {
         return $this->attribute;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType>|null  $attribute
+     * @return CustomAttributeDescriptorDataType
+     */
     public function withAttribute(CustomAttributeDescriptorType|array|null $attribute): CustomAttributeDescriptorDataType
     {
         $new = clone $this;

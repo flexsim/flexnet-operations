@@ -27,11 +27,18 @@ class FailedRemoveEntitlementLineItemDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataType>|null
+     */
     public function getFailedData(): FailedRemoveEntitlementLineItemDataType|array|null
     {
         return $this->failedData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataType>|null  $failedData
+     * @return FailedRemoveEntitlementLineItemDataListType
+     */
     public function withFailedData(FailedRemoveEntitlementLineItemDataType|array|null $failedData): FailedRemoveEntitlementLineItemDataListType
     {
         $new = clone $this;

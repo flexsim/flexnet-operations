@@ -37,11 +37,18 @@ class SearchEntitlementResponseType implements ResultInterface
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
+     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
+     * @return SearchEntitlementResponseType
+     */
     public function withStatusInfo(StatusInfoType $statusInfo): SearchEntitlementResponseType
     {
         $new = clone $this;
@@ -50,11 +57,18 @@ class SearchEntitlementResponseType implements ResultInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementDataType>|null
+     */
     public function getEntitlement(): EntitlementDataType|array|null
     {
         return $this->entitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementDataType>|null  $entitlement
+     * @return SearchEntitlementResponseType
+     */
     public function withEntitlement(EntitlementDataType|array|null $entitlement): SearchEntitlementResponseType
     {
         $new = clone $this;

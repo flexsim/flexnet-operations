@@ -27,11 +27,18 @@ class SplitBulkEntitlementResponseListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType>
+     */
     public function getSplitBulkEntitlement(): SplitBulkEntitlementDataType|array
     {
         return $this->splitBulkEntitlement;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType>  $splitBulkEntitlement
+     * @return SplitBulkEntitlementResponseListType
+     */
     public function withSplitBulkEntitlement(SplitBulkEntitlementDataType|array $splitBulkEntitlement): SplitBulkEntitlementResponseListType
     {
         $new = clone $this;

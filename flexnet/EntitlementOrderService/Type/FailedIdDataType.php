@@ -35,11 +35,18 @@ class FailedIdDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getId(): string
     {
         return $this->id;
     }
 
+    /**
+     * @param  string  $id
+     * @return FailedIdDataType
+     */
     public function withId(string $id): FailedIdDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedIdDataType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string  $reason
+     * @return FailedIdDataType
+     */
     public function withReason(string $reason): FailedIdDataType
     {
         $new = clone $this;

@@ -27,11 +27,18 @@ class TransferLineItemsListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType>
+     */
     public function getLineItemInfo(): TransferLineItemInfoType|array
     {
         return $this->lineItemInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType>  $lineItemInfo
+     * @return TransferLineItemsListType
+     */
     public function withLineItemInfo(TransferLineItemInfoType|array $lineItemInfo): TransferLineItemsListType
     {
         $new = clone $this;

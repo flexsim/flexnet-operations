@@ -27,11 +27,18 @@ class IdListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string|array<string>
+     */
     public function getId(): string|array
     {
         return $this->id;
     }
 
+    /**
+     * @param  string|array<string>  $id
+     * @return IdListType
+     */
     public function withId(string|array $id): IdListType
     {
         $new = clone $this;

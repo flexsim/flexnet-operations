@@ -24,11 +24,18 @@ class RenewEntitlementRequestType implements RequestInterface
         $this->entitlementData = $entitlementData;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType>|null
+     */
     public function getEntitlementData(): RenewEntitlementDataType|array|null
     {
         return $this->entitlementData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType>|null  $entitlementData
+     * @return RenewEntitlementRequestType
+     */
     public function withEntitlementData(RenewEntitlementDataType|array|null $entitlementData): RenewEntitlementRequestType
     {
         $new = clone $this;

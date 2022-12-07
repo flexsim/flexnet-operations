@@ -27,11 +27,18 @@ class TransferEntitlementsListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType>
+     */
     public function getEntitlementInfo(): TransferEntitlementInfoType|array
     {
         return $this->entitlementInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType>  $entitlementInfo
+     * @return TransferEntitlementsListType
+     */
     public function withEntitlementInfo(TransferEntitlementInfoType|array $entitlementInfo): TransferEntitlementsListType
     {
         $new = clone $this;

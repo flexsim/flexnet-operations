@@ -35,11 +35,18 @@ class EntCustomAttributeQueryType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return string
+     */
     public function getAttributeName(): string
     {
         return $this->attributeName;
     }
 
+    /**
+     * @param  string  $attributeName
+     * @return EntCustomAttributeQueryType
+     */
     public function withAttributeName(string $attributeName): EntCustomAttributeQueryType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class EntCustomAttributeQueryType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null
+     */
     public function getStringValue(): SimpleQueryType|null
     {
         return $this->stringValue;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null  $stringValue
+     * @return EntCustomAttributeQueryType
+     */
     public function withStringValue(SimpleQueryType|null $stringValue): EntCustomAttributeQueryType
     {
         $new = clone $this;

@@ -35,11 +35,18 @@ class EntitlementLifeCycleDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null
+     */
     public function getParentEntitlementIdentifier(): EntitlementIdentifierType|null
     {
         return $this->parentEntitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
+     * @return EntitlementLifeCycleDataType
+     */
     public function withParentEntitlementIdentifier(EntitlementIdentifierType|null $parentEntitlementIdentifier): EntitlementLifeCycleDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class EntitlementLifeCycleDataType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType>
+     */
     public function getLineItemData(): LineItemLifeCycleDataType|array
     {
         return $this->lineItemData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType>  $lineItemData
+     * @return EntitlementLifeCycleDataType
+     */
     public function withLineItemData(LineItemLifeCycleDataType|array $lineItemData): EntitlementLifeCycleDataType
     {
         $new = clone $this;

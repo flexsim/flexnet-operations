@@ -66,11 +66,18 @@ class EmailEntitlementRequestType implements RequestInterface
         $this->locale = $locale;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @return EmailEntitlementRequestType
+     */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): EmailEntitlementRequestType
     {
         $new = clone $this;
@@ -79,11 +86,18 @@ class EmailEntitlementRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getIgnoreExistingEmailList(): bool|null
     {
         return $this->ignoreExistingEmailList;
     }
 
+    /**
+     * @param  bool|null  $ignoreExistingEmailList
+     * @return EmailEntitlementRequestType
+     */
     public function withIgnoreExistingEmailList(bool|null $ignoreExistingEmailList): EmailEntitlementRequestType
     {
         $new = clone $this;
@@ -92,11 +106,18 @@ class EmailEntitlementRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getValidateEmailAddresses(): bool|null
     {
         return $this->validateEmailAddresses;
     }
 
+    /**
+     * @param  bool|null  $validateEmailAddresses
+     * @return EmailEntitlementRequestType
+     */
     public function withValidateEmailAddresses(bool|null $validateEmailAddresses): EmailEntitlementRequestType
     {
         $new = clone $this;
@@ -105,11 +126,18 @@ class EmailEntitlementRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EmailContactListType|null
+     */
     public function getEmailIdList(): EmailContactListType|null
     {
         return $this->emailIdList;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EmailContactListType|null  $emailIdList
+     * @return EmailEntitlementRequestType
+     */
     public function withEmailIdList(EmailContactListType|null $emailIdList): EmailEntitlementRequestType
     {
         $new = clone $this;
@@ -118,11 +146,18 @@ class EmailEntitlementRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EmailContactListType|null
+     */
     public function getCcEmailIdList(): EmailContactListType|null
     {
         return $this->ccEmailIdList;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EmailContactListType|null  $ccEmailIdList
+     * @return EmailEntitlementRequestType
+     */
     public function withCcEmailIdList(EmailContactListType|null $ccEmailIdList): EmailEntitlementRequestType
     {
         $new = clone $this;
@@ -131,11 +166,18 @@ class EmailEntitlementRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EmailContactListType|null
+     */
     public function getBccEmailIdList(): EmailContactListType|null
     {
         return $this->bccEmailIdList;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EmailContactListType|null  $bccEmailIdList
+     * @return EmailEntitlementRequestType
+     */
     public function withBccEmailIdList(EmailContactListType|null $bccEmailIdList): EmailEntitlementRequestType
     {
         $new = clone $this;
@@ -144,11 +186,18 @@ class EmailEntitlementRequestType implements RequestInterface
         return $new;
     }
 
+    /**
+     * @return string|null
+     */
     public function getLocale(): string|null
     {
         return $this->locale;
     }
 
+    /**
+     * @param  string|null  $locale
+     * @return EmailEntitlementRequestType
+     */
     public function withLocale(string|null $locale): EmailEntitlementRequestType
     {
         $new = clone $this;

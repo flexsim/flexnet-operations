@@ -27,11 +27,18 @@ class FailedMapEntitlementsToUserDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\FailedIdDataType|array<\Flexnet\EntitlementOrderService\Type\FailedIdDataType>
+     */
     public function getFailedId(): FailedIdDataType|array
     {
         return $this->failedId;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\FailedIdDataType|array<\Flexnet\EntitlementOrderService\Type\FailedIdDataType>  $failedId
+     * @return FailedMapEntitlementsToUserDataListType
+     */
     public function withFailedId(FailedIdDataType|array $failedId): FailedMapEntitlementsToUserDataListType
     {
         $new = clone $this;

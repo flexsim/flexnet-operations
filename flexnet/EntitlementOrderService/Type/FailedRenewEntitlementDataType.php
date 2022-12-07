@@ -35,11 +35,18 @@ class FailedRenewEntitlementDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType
+     */
     public function getEntitlementData(): RenewEntitlementDataType
     {
         return $this->entitlementData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType  $entitlementData
+     * @return FailedRenewEntitlementDataType
+     */
     public function withEntitlementData(RenewEntitlementDataType $entitlementData): FailedRenewEntitlementDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class FailedRenewEntitlementDataType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
+    /**
+     * @param  string  $reason
+     * @return FailedRenewEntitlementDataType
+     */
     public function withReason(string $reason): FailedRenewEntitlementDataType
     {
         $new = clone $this;

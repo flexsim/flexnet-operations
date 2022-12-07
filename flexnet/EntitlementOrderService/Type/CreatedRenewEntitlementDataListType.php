@@ -27,11 +27,18 @@ class CreatedRenewEntitlementDataListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType>|null
+     */
     public function getEntitlementData(): CreatedRenewEntitlementDataType|array|null
     {
         return $this->entitlementData;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType>|null  $entitlementData
+     * @return CreatedRenewEntitlementDataListType
+     */
     public function withEntitlementData(CreatedRenewEntitlementDataType|array|null $entitlementData): CreatedRenewEntitlementDataListType
     {
         $new = clone $this;

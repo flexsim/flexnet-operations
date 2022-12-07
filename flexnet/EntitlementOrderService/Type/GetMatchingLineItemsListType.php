@@ -27,11 +27,18 @@ class GetMatchingLineItemsListType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType>
+     */
     public function getLineItemInfo(): GetMatchingLineItemInfoType|array
     {
         return $this->lineItemInfo;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType>  $lineItemInfo
+     * @return GetMatchingLineItemsListType
+     */
     public function withLineItemInfo(GetMatchingLineItemInfoType|array $lineItemInfo): GetMatchingLineItemsListType
     {
         $new = clone $this;

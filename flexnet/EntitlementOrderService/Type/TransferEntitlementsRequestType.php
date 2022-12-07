@@ -24,11 +24,18 @@ class TransferEntitlementsRequestType implements RequestInterface
         $this->entitlementList = $entitlementList;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\TransferEntitlementsListType
+     */
     public function getEntitlementList(): TransferEntitlementsListType
     {
         return $this->entitlementList;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementsListType  $entitlementList
+     * @return TransferEntitlementsRequestType
+     */
     public function withEntitlementList(TransferEntitlementsListType $entitlementList): TransferEntitlementsRequestType
     {
         $new = clone $this;

@@ -35,11 +35,18 @@ class EntitlementStateDataType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
+     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
+     * @return EntitlementStateDataType
+     */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): EntitlementStateDataType
     {
         $new = clone $this;
@@ -48,11 +55,18 @@ class EntitlementStateDataType
         return $new;
     }
 
+    /**
+     * @return string
+     */
     public function getStateToSet(): string
     {
         return $this->stateToSet;
     }
 
+    /**
+     * @param  string  $stateToSet
+     * @return EntitlementStateDataType
+     */
     public function withStateToSet(string $stateToSet): EntitlementStateDataType
     {
         $new = clone $this;

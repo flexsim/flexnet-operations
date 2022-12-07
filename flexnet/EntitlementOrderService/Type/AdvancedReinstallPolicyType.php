@@ -51,11 +51,18 @@ class AdvancedReinstallPolicyType
         return new static(...\func_get_args());
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\PolicyDataType
+     */
     public function getUmn1Policy(): PolicyDataType
     {
         return $this->umn1Policy;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType  $umn1Policy
+     * @return AdvancedReinstallPolicyType
+     */
     public function withUmn1Policy(PolicyDataType $umn1Policy): AdvancedReinstallPolicyType
     {
         $new = clone $this;
@@ -64,11 +71,18 @@ class AdvancedReinstallPolicyType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\PolicyDataType
+     */
     public function getUmn2Policy(): PolicyDataType
     {
         return $this->umn2Policy;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType  $umn2Policy
+     * @return AdvancedReinstallPolicyType
+     */
     public function withUmn2Policy(PolicyDataType $umn2Policy): AdvancedReinstallPolicyType
     {
         $new = clone $this;
@@ -77,11 +91,18 @@ class AdvancedReinstallPolicyType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\PolicyDataType
+     */
     public function getUmn3Policy(): PolicyDataType
     {
         return $this->umn3Policy;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType  $umn3Policy
+     * @return AdvancedReinstallPolicyType
+     */
     public function withUmn3Policy(PolicyDataType $umn3Policy): AdvancedReinstallPolicyType
     {
         $new = clone $this;
@@ -90,11 +111,18 @@ class AdvancedReinstallPolicyType
         return $new;
     }
 
+    /**
+     * @return \Flexnet\EntitlementOrderService\Type\PolicyDataType
+     */
     public function getMidPolicy(): PolicyDataType
     {
         return $this->midPolicy;
     }
 
+    /**
+     * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType  $midPolicy
+     * @return AdvancedReinstallPolicyType
+     */
     public function withMidPolicy(PolicyDataType $midPolicy): AdvancedReinstallPolicyType
     {
         $new = clone $this;
