@@ -19,20 +19,20 @@ class GetFulfillmentPropertiesResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array<\Flexnet\LicenseService\Type\FulfillmentPropertiesType>|null $fulfillment
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array<\Flexnet\LicenseService\Type\FulfillmentPropertiesType>|null  $fulfillment
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array|null $fulfillment = null)
+    public function __construct(StatusInfoType $statusInfo, FulfillmentPropertiesType|array|null $fulfillment = null)
     {
         $this->statusInfo = $statusInfo;
         $this->fulfillment = $fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array<\Flexnet\LicenseService\Type\FulfillmentPropertiesType>|null $fulfillment
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array<\Flexnet\LicenseService\Type\FulfillmentPropertiesType>|null  $fulfillment
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array|null $fulfillment = null)
+    public static function create(StatusInfoType $statusInfo, FulfillmentPropertiesType|array|null $fulfillment = null)
     {
         return new static(...\func_get_args());
     }
@@ -40,16 +40,16 @@ class GetFulfillmentPropertiesResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return GetFulfillmentPropertiesResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\GetFulfillmentPropertiesResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): GetFulfillmentPropertiesResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -60,16 +60,16 @@ class GetFulfillmentPropertiesResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array<\Flexnet\LicenseService\Type\FulfillmentPropertiesType>|null
      */
-    public function getFulfillment() : \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array|null
+    public function getFulfillment(): FulfillmentPropertiesType|array|null
     {
         return $this->fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array<\Flexnet\LicenseService\Type\FulfillmentPropertiesType>|null $fulfillment
+     * @param  \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array<\Flexnet\LicenseService\Type\FulfillmentPropertiesType>|null  $fulfillment
      * @return GetFulfillmentPropertiesResponseType
      */
-    public function withFulfillment(\Flexnet\LicenseService\Type\FulfillmentPropertiesType|array|null $fulfillment) : \Flexnet\LicenseService\Type\GetFulfillmentPropertiesResponseType
+    public function withFulfillment(FulfillmentPropertiesType|array|null $fulfillment): GetFulfillmentPropertiesResponseType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;
@@ -77,4 +77,3 @@ class GetFulfillmentPropertiesResponseType implements ResultInterface
         return $new;
     }
 }
-

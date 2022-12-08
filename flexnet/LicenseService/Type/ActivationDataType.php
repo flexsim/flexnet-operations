@@ -12,7 +12,7 @@ class ActivationDataType
     /**
      * Constructor
      *
-     * @param string $activationData
+     * @param  string  $activationData
      */
     public function __construct(string $activationData)
     {
@@ -20,7 +20,7 @@ class ActivationDataType
     }
 
     /**
-     * @param string $activationData
+     * @param  string  $activationData
      */
     public static function create(string $activationData)
     {
@@ -30,16 +30,16 @@ class ActivationDataType
     /**
      * @return string
      */
-    public function getActivationData() : string
+    public function getActivationData(): string
     {
         return $this->activationData;
     }
 
     /**
-     * @param string $activationData
+     * @param  string  $activationData
      * @return ActivationDataType
      */
-    public function withActivationData(string $activationData) : \Flexnet\LicenseService\Type\ActivationDataType
+    public function withActivationData(string $activationData): ActivationDataType
     {
         $new = clone $this;
         $new->activationData = $activationData;
@@ -47,4 +47,3 @@ class ActivationDataType
         return $new;
     }
 }
-

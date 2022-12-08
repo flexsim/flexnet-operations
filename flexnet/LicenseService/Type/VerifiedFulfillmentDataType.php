@@ -12,7 +12,7 @@ class VerifiedFulfillmentDataType
     /**
      * Constructor
      *
-     * @param string $recordRefNo
+     * @param  string  $recordRefNo
      */
     public function __construct(string $recordRefNo)
     {
@@ -20,7 +20,7 @@ class VerifiedFulfillmentDataType
     }
 
     /**
-     * @param string $recordRefNo
+     * @param  string  $recordRefNo
      */
     public static function create(string $recordRefNo)
     {
@@ -30,16 +30,16 @@ class VerifiedFulfillmentDataType
     /**
      * @return string
      */
-    public function getRecordRefNo() : string
+    public function getRecordRefNo(): string
     {
         return $this->recordRefNo;
     }
 
     /**
-     * @param string $recordRefNo
+     * @param  string  $recordRefNo
      * @return VerifiedFulfillmentDataType
      */
-    public function withRecordRefNo(string $recordRefNo) : \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType
+    public function withRecordRefNo(string $recordRefNo): VerifiedFulfillmentDataType
     {
         $new = clone $this;
         $new->recordRefNo = $recordRefNo;
@@ -47,4 +47,3 @@ class VerifiedFulfillmentDataType
         return $new;
     }
 }
-

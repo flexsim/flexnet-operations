@@ -14,17 +14,17 @@ class GetFulfillmentAttributesRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param  \Flexnet\LicenseService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
      */
-    public function __construct(\Flexnet\LicenseService\Type\LicenseModelIdentifierType $licenseModelIdentifier)
+    public function __construct(LicenseModelIdentifierType $licenseModelIdentifier)
     {
         $this->licenseModelIdentifier = $licenseModelIdentifier;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param  \Flexnet\LicenseService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
      */
-    public static function create(\Flexnet\LicenseService\Type\LicenseModelIdentifierType $licenseModelIdentifier)
+    public static function create(LicenseModelIdentifierType $licenseModelIdentifier)
     {
         return new static(...\func_get_args());
     }
@@ -32,16 +32,16 @@ class GetFulfillmentAttributesRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\LicenseModelIdentifierType
      */
-    public function getLicenseModelIdentifier() : \Flexnet\LicenseService\Type\LicenseModelIdentifierType
+    public function getLicenseModelIdentifier(): LicenseModelIdentifierType
     {
         return $this->licenseModelIdentifier;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\LicenseModelIdentifierType $licenseModelIdentifier
+     * @param  \Flexnet\LicenseService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
      * @return GetFulfillmentAttributesRequestType
      */
-    public function withLicenseModelIdentifier(\Flexnet\LicenseService\Type\LicenseModelIdentifierType $licenseModelIdentifier) : \Flexnet\LicenseService\Type\GetFulfillmentAttributesRequestType
+    public function withLicenseModelIdentifier(LicenseModelIdentifierType $licenseModelIdentifier): GetFulfillmentAttributesRequestType
     {
         $new = clone $this;
         $new->licenseModelIdentifier = $licenseModelIdentifier;
@@ -49,4 +49,3 @@ class GetFulfillmentAttributesRequestType implements RequestInterface
         return $new;
     }
 }
-

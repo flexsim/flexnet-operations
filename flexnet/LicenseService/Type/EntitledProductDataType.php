@@ -17,20 +17,20 @@ class EntitledProductDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\ProductIdentifierType|null $product
-     * @param int $quantity
+     * @param  \Flexnet\LicenseService\Type\ProductIdentifierType|null  $product
+     * @param  int  $quantity
      */
-    public function __construct(\Flexnet\LicenseService\Type\ProductIdentifierType|null $product = null, int $quantity)
+    public function __construct(ProductIdentifierType|null $product = null, int $quantity)
     {
         $this->product = $product;
         $this->quantity = $quantity;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ProductIdentifierType|null $product
-     * @param int $quantity
+     * @param  \Flexnet\LicenseService\Type\ProductIdentifierType|null  $product
+     * @param  int  $quantity
      */
-    public static function create(\Flexnet\LicenseService\Type\ProductIdentifierType|null $product = null, int $quantity)
+    public static function create(ProductIdentifierType|null $product = null, int $quantity)
     {
         return new static(...\func_get_args());
     }
@@ -38,16 +38,16 @@ class EntitledProductDataType
     /**
      * @return \Flexnet\LicenseService\Type\ProductIdentifierType|null
      */
-    public function getProduct() : \Flexnet\LicenseService\Type\ProductIdentifierType|null
+    public function getProduct(): ProductIdentifierType|null
     {
         return $this->product;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ProductIdentifierType|null $product
+     * @param  \Flexnet\LicenseService\Type\ProductIdentifierType|null  $product
      * @return EntitledProductDataType
      */
-    public function withProduct(\Flexnet\LicenseService\Type\ProductIdentifierType|null $product) : \Flexnet\LicenseService\Type\EntitledProductDataType
+    public function withProduct(ProductIdentifierType|null $product): EntitledProductDataType
     {
         $new = clone $this;
         $new->product = $product;
@@ -58,16 +58,16 @@ class EntitledProductDataType
     /**
      * @return int
      */
-    public function getQuantity() : int
+    public function getQuantity(): int
     {
         return $this->quantity;
     }
 
     /**
-     * @param int $quantity
+     * @param  int  $quantity
      * @return EntitledProductDataType
      */
-    public function withQuantity(int $quantity) : \Flexnet\LicenseService\Type\EntitledProductDataType
+    public function withQuantity(int $quantity): EntitledProductDataType
     {
         $new = clone $this;
         $new->quantity = $quantity;
@@ -75,4 +75,3 @@ class EntitledProductDataType
         return $new;
     }
 }
-

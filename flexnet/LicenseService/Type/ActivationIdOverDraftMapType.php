@@ -17,8 +17,8 @@ class ActivationIdOverDraftMapType
     /**
      * Constructor
      *
-     * @param string $activationId
-     * @param bool $overDraftAllowed
+     * @param  string  $activationId
+     * @param  bool  $overDraftAllowed
      */
     public function __construct(string $activationId, bool $overDraftAllowed)
     {
@@ -27,8 +27,8 @@ class ActivationIdOverDraftMapType
     }
 
     /**
-     * @param string $activationId
-     * @param bool $overDraftAllowed
+     * @param  string  $activationId
+     * @param  bool  $overDraftAllowed
      */
     public static function create(string $activationId, bool $overDraftAllowed)
     {
@@ -38,16 +38,16 @@ class ActivationIdOverDraftMapType
     /**
      * @return string
      */
-    public function getActivationId() : string
+    public function getActivationId(): string
     {
         return $this->activationId;
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return ActivationIdOverDraftMapType
      */
-    public function withActivationId(string $activationId) : \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType
+    public function withActivationId(string $activationId): ActivationIdOverDraftMapType
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -58,16 +58,16 @@ class ActivationIdOverDraftMapType
     /**
      * @return bool
      */
-    public function getOverDraftAllowed() : bool
+    public function getOverDraftAllowed(): bool
     {
         return $this->overDraftAllowed;
     }
 
     /**
-     * @param bool $overDraftAllowed
+     * @param  bool  $overDraftAllowed
      * @return ActivationIdOverDraftMapType
      */
-    public function withOverDraftAllowed(bool $overDraftAllowed) : \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType
+    public function withOverDraftAllowed(bool $overDraftAllowed): ActivationIdOverDraftMapType
     {
         $new = clone $this;
         $new->overDraftAllowed = $overDraftAllowed;
@@ -75,4 +75,3 @@ class ActivationIdOverDraftMapType
         return $new;
     }
 }
-

@@ -12,7 +12,7 @@ class ReturnedShortCodeDataType
     /**
      * Constructor
      *
-     * @param string $shortCode
+     * @param  string  $shortCode
      */
     public function __construct(string $shortCode)
     {
@@ -20,7 +20,7 @@ class ReturnedShortCodeDataType
     }
 
     /**
-     * @param string $shortCode
+     * @param  string  $shortCode
      */
     public static function create(string $shortCode)
     {
@@ -30,16 +30,16 @@ class ReturnedShortCodeDataType
     /**
      * @return string
      */
-    public function getShortCode() : string
+    public function getShortCode(): string
     {
         return $this->shortCode;
     }
 
     /**
-     * @param string $shortCode
+     * @param  string  $shortCode
      * @return ReturnedShortCodeDataType
      */
-    public function withShortCode(string $shortCode) : \Flexnet\LicenseService\Type\ReturnedShortCodeDataType
+    public function withShortCode(string $shortCode): ReturnedShortCodeDataType
     {
         $new = clone $this;
         $new->shortCode = $shortCode;
@@ -47,4 +47,3 @@ class ReturnedShortCodeDataType
         return $new;
     }
 }
-

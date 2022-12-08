@@ -12,7 +12,7 @@ class FulfillmentPKType
     /**
      * Constructor
      *
-     * @param string $fulfillmentId
+     * @param  string  $fulfillmentId
      */
     public function __construct(string $fulfillmentId)
     {
@@ -20,7 +20,7 @@ class FulfillmentPKType
     }
 
     /**
-     * @param string $fulfillmentId
+     * @param  string  $fulfillmentId
      */
     public static function create(string $fulfillmentId)
     {
@@ -30,16 +30,16 @@ class FulfillmentPKType
     /**
      * @return string
      */
-    public function getFulfillmentId() : string
+    public function getFulfillmentId(): string
     {
         return $this->fulfillmentId;
     }
 
     /**
-     * @param string $fulfillmentId
+     * @param  string  $fulfillmentId
      * @return FulfillmentPKType
      */
-    public function withFulfillmentId(string $fulfillmentId) : \Flexnet\LicenseService\Type\FulfillmentPKType
+    public function withFulfillmentId(string $fulfillmentId): FulfillmentPKType
     {
         $new = clone $this;
         $new->fulfillmentId = $fulfillmentId;
@@ -47,4 +47,3 @@ class FulfillmentPKType
         return $new;
     }
 }
-

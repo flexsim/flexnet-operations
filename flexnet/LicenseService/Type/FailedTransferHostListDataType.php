@@ -12,17 +12,17 @@ class FailedTransferHostListDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\FailedTransferHostDataType|array<\Flexnet\LicenseService\Type\FailedTransferHostDataType>|null $failedHost
+     * @param  \Flexnet\LicenseService\Type\FailedTransferHostDataType|array<\Flexnet\LicenseService\Type\FailedTransferHostDataType>|null  $failedHost
      */
-    public function __construct(\Flexnet\LicenseService\Type\FailedTransferHostDataType|array|null $failedHost = null)
+    public function __construct(FailedTransferHostDataType|array|null $failedHost = null)
     {
         $this->failedHost = $failedHost;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedTransferHostDataType|array<\Flexnet\LicenseService\Type\FailedTransferHostDataType>|null $failedHost
+     * @param  \Flexnet\LicenseService\Type\FailedTransferHostDataType|array<\Flexnet\LicenseService\Type\FailedTransferHostDataType>|null  $failedHost
      */
-    public static function create(\Flexnet\LicenseService\Type\FailedTransferHostDataType|array|null $failedHost = null)
+    public static function create(FailedTransferHostDataType|array|null $failedHost = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class FailedTransferHostListDataType
     /**
      * @return \Flexnet\LicenseService\Type\FailedTransferHostDataType|array<\Flexnet\LicenseService\Type\FailedTransferHostDataType>|null
      */
-    public function getFailedHost() : \Flexnet\LicenseService\Type\FailedTransferHostDataType|array|null
+    public function getFailedHost(): FailedTransferHostDataType|array|null
     {
         return $this->failedHost;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedTransferHostDataType|array<\Flexnet\LicenseService\Type\FailedTransferHostDataType>|null $failedHost
+     * @param  \Flexnet\LicenseService\Type\FailedTransferHostDataType|array<\Flexnet\LicenseService\Type\FailedTransferHostDataType>|null  $failedHost
      * @return FailedTransferHostListDataType
      */
-    public function withFailedHost(\Flexnet\LicenseService\Type\FailedTransferHostDataType|array|null $failedHost) : \Flexnet\LicenseService\Type\FailedTransferHostListDataType
+    public function withFailedHost(FailedTransferHostDataType|array|null $failedHost): FailedTransferHostListDataType
     {
         $new = clone $this;
         $new->failedHost = $failedHost;
@@ -47,4 +47,3 @@ class FailedTransferHostListDataType
         return $new;
     }
 }
-

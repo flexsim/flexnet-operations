@@ -12,17 +12,17 @@ class CustomAttributeDescriptorDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array<\Flexnet\LicenseService\Type\CustomAttributeDescriptorType>|null $attribute
+     * @param  \Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array<\Flexnet\LicenseService\Type\CustomAttributeDescriptorType>|null  $attribute
      */
-    public function __construct(\Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array|null $attribute = null)
+    public function __construct(CustomAttributeDescriptorType|array|null $attribute = null)
     {
         $this->attribute = $attribute;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array<\Flexnet\LicenseService\Type\CustomAttributeDescriptorType>|null $attribute
+     * @param  \Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array<\Flexnet\LicenseService\Type\CustomAttributeDescriptorType>|null  $attribute
      */
-    public static function create(\Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array|null $attribute = null)
+    public static function create(CustomAttributeDescriptorType|array|null $attribute = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class CustomAttributeDescriptorDataType
     /**
      * @return \Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array<\Flexnet\LicenseService\Type\CustomAttributeDescriptorType>|null
      */
-    public function getAttribute() : \Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array|null
+    public function getAttribute(): CustomAttributeDescriptorType|array|null
     {
         return $this->attribute;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array<\Flexnet\LicenseService\Type\CustomAttributeDescriptorType>|null $attribute
+     * @param  \Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array<\Flexnet\LicenseService\Type\CustomAttributeDescriptorType>|null  $attribute
      * @return CustomAttributeDescriptorDataType
      */
-    public function withAttribute(\Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array|null $attribute) : \Flexnet\LicenseService\Type\CustomAttributeDescriptorDataType
+    public function withAttribute(CustomAttributeDescriptorType|array|null $attribute): CustomAttributeDescriptorDataType
     {
         $new = clone $this;
         $new->attribute = $attribute;
@@ -47,4 +47,3 @@ class CustomAttributeDescriptorDataType
         return $new;
     }
 }
-

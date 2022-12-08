@@ -29,12 +29,12 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null $queryParams
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param bool|null $includeLicenseText
+     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  bool|null  $includeLicenseText
      */
-    public function __construct(\Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null $queryParams = null, int $pageNumber, int $batchSize, bool|null $includeLicenseText = null)
+    public function __construct(ConsolidatedFulfillmentsQPType|null $queryParams = null, int $pageNumber, int $batchSize, bool|null $includeLicenseText = null)
     {
         $this->queryParams = $queryParams;
         $this->pageNumber = $pageNumber;
@@ -43,12 +43,12 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null $queryParams
-     * @param int $pageNumber
-     * @param int $batchSize
-     * @param bool|null $includeLicenseText
+     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
+     * @param  int  $pageNumber
+     * @param  int  $batchSize
+     * @param  bool|null  $includeLicenseText
      */
-    public static function create(\Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null $queryParams = null, int $pageNumber, int $batchSize, bool|null $includeLicenseText = null)
+    public static function create(ConsolidatedFulfillmentsQPType|null $queryParams = null, int $pageNumber, int $batchSize, bool|null $includeLicenseText = null)
     {
         return new static(...\func_get_args());
     }
@@ -56,16 +56,16 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null
      */
-    public function getQueryParams() : \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null
+    public function getQueryParams(): ConsolidatedFulfillmentsQPType|null
     {
         return $this->queryParams;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null $queryParams
+     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
      * @return GetConsolidatedFulfillmentsQueryRequestType
      */
-    public function withQueryParams(\Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null $queryParams) : \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryRequestType
+    public function withQueryParams(ConsolidatedFulfillmentsQPType|null $queryParams): GetConsolidatedFulfillmentsQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -76,16 +76,16 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
     /**
      * @return int
      */
-    public function getPageNumber() : int
+    public function getPageNumber(): int
     {
         return $this->pageNumber;
     }
 
     /**
-     * @param int $pageNumber
+     * @param  int  $pageNumber
      * @return GetConsolidatedFulfillmentsQueryRequestType
      */
-    public function withPageNumber(int $pageNumber) : \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryRequestType
+    public function withPageNumber(int $pageNumber): GetConsolidatedFulfillmentsQueryRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;
@@ -96,16 +96,16 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
     /**
      * @return int
      */
-    public function getBatchSize() : int
+    public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return GetConsolidatedFulfillmentsQueryRequestType
      */
-    public function withBatchSize(int $batchSize) : \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryRequestType
+    public function withBatchSize(int $batchSize): GetConsolidatedFulfillmentsQueryRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;
@@ -116,16 +116,16 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
     /**
      * @return bool|null
      */
-    public function getIncludeLicenseText() : bool|null
+    public function getIncludeLicenseText(): bool|null
     {
         return $this->includeLicenseText;
     }
 
     /**
-     * @param bool|null $includeLicenseText
+     * @param  bool|null  $includeLicenseText
      * @return GetConsolidatedFulfillmentsQueryRequestType
      */
-    public function withIncludeLicenseText(bool|null $includeLicenseText) : \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryRequestType
+    public function withIncludeLicenseText(bool|null $includeLicenseText): GetConsolidatedFulfillmentsQueryRequestType
     {
         $new = clone $this;
         $new->includeLicenseText = $includeLicenseText;
@@ -133,4 +133,3 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
         return $new;
     }
 }
-

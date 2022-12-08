@@ -27,10 +27,10 @@ class LicenseFileDataType
     /**
      * Constructor
      *
-     * @param string $licenseFileDefinitionName
-     * @param string|null $licenseText
-     * @param string|null $binaryLicense
-     * @param string|null $fileName
+     * @param  string  $licenseFileDefinitionName
+     * @param  string|null  $licenseText
+     * @param  string|null  $binaryLicense
+     * @param  string|null  $fileName
      */
     public function __construct(string $licenseFileDefinitionName, string|null $licenseText = null, string|null $binaryLicense = null, string|null $fileName = null)
     {
@@ -41,10 +41,10 @@ class LicenseFileDataType
     }
 
     /**
-     * @param string $licenseFileDefinitionName
-     * @param string|null $licenseText
-     * @param string|null $binaryLicense
-     * @param string|null $fileName
+     * @param  string  $licenseFileDefinitionName
+     * @param  string|null  $licenseText
+     * @param  string|null  $binaryLicense
+     * @param  string|null  $fileName
      */
     public static function create(string $licenseFileDefinitionName, string|null $licenseText = null, string|null $binaryLicense = null, string|null $fileName = null)
     {
@@ -54,16 +54,16 @@ class LicenseFileDataType
     /**
      * @return string
      */
-    public function getLicenseFileDefinitionName() : string
+    public function getLicenseFileDefinitionName(): string
     {
         return $this->licenseFileDefinitionName;
     }
 
     /**
-     * @param string $licenseFileDefinitionName
+     * @param  string  $licenseFileDefinitionName
      * @return LicenseFileDataType
      */
-    public function withLicenseFileDefinitionName(string $licenseFileDefinitionName) : \Flexnet\LicenseService\Type\LicenseFileDataType
+    public function withLicenseFileDefinitionName(string $licenseFileDefinitionName): LicenseFileDataType
     {
         $new = clone $this;
         $new->licenseFileDefinitionName = $licenseFileDefinitionName;
@@ -74,16 +74,16 @@ class LicenseFileDataType
     /**
      * @return string|null
      */
-    public function getLicenseText() : string|null
+    public function getLicenseText(): string|null
     {
         return $this->licenseText;
     }
 
     /**
-     * @param string|null $licenseText
+     * @param  string|null  $licenseText
      * @return LicenseFileDataType
      */
-    public function withLicenseText(string|null $licenseText) : \Flexnet\LicenseService\Type\LicenseFileDataType
+    public function withLicenseText(string|null $licenseText): LicenseFileDataType
     {
         $new = clone $this;
         $new->licenseText = $licenseText;
@@ -94,16 +94,16 @@ class LicenseFileDataType
     /**
      * @return string|null
      */
-    public function getBinaryLicense() : string|null
+    public function getBinaryLicense(): string|null
     {
         return $this->binaryLicense;
     }
 
     /**
-     * @param string|null $binaryLicense
+     * @param  string|null  $binaryLicense
      * @return LicenseFileDataType
      */
-    public function withBinaryLicense(string|null $binaryLicense) : \Flexnet\LicenseService\Type\LicenseFileDataType
+    public function withBinaryLicense(string|null $binaryLicense): LicenseFileDataType
     {
         $new = clone $this;
         $new->binaryLicense = $binaryLicense;
@@ -114,16 +114,16 @@ class LicenseFileDataType
     /**
      * @return string|null
      */
-    public function getFileName() : string|null
+    public function getFileName(): string|null
     {
         return $this->fileName;
     }
 
     /**
-     * @param string|null $fileName
+     * @param  string|null  $fileName
      * @return LicenseFileDataType
      */
-    public function withFileName(string|null $fileName) : \Flexnet\LicenseService\Type\LicenseFileDataType
+    public function withFileName(string|null $fileName): LicenseFileDataType
     {
         $new = clone $this;
         $new->fileName = $fileName;
@@ -131,4 +131,3 @@ class LicenseFileDataType
         return $new;
     }
 }
-

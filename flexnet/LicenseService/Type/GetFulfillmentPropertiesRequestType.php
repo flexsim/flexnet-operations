@@ -29,12 +29,12 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams
-     * @param \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig
-     * @param int $batchSize
-     * @param int|null $pageNumber
+     * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType  $queryParams
+     * @param  \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType  $fulfillmentResponseConfig
+     * @param  int  $batchSize
+     * @param  int|null  $pageNumber
      */
-    public function __construct(\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams, \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, int|null $pageNumber = null)
+    public function __construct(FulfillmentsQueryParametersType $queryParams, FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, int|null $pageNumber = null)
     {
         $this->queryParams = $queryParams;
         $this->fulfillmentResponseConfig = $fulfillmentResponseConfig;
@@ -43,12 +43,12 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams
-     * @param \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig
-     * @param int $batchSize
-     * @param int|null $pageNumber
+     * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType  $queryParams
+     * @param  \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType  $fulfillmentResponseConfig
+     * @param  int  $batchSize
+     * @param  int|null  $pageNumber
      */
-    public static function create(\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams, \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, int|null $pageNumber = null)
+    public static function create(FulfillmentsQueryParametersType $queryParams, FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, int|null $pageNumber = null)
     {
         return new static(...\func_get_args());
     }
@@ -56,16 +56,16 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType
      */
-    public function getQueryParams() : \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType
+    public function getQueryParams(): FulfillmentsQueryParametersType
     {
         return $this->queryParams;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams
+     * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType  $queryParams
      * @return GetFulfillmentPropertiesRequestType
      */
-    public function withQueryParams(\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams) : \Flexnet\LicenseService\Type\GetFulfillmentPropertiesRequestType
+    public function withQueryParams(FulfillmentsQueryParametersType $queryParams): GetFulfillmentPropertiesRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -76,16 +76,16 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType
      */
-    public function getFulfillmentResponseConfig() : \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType
+    public function getFulfillmentResponseConfig(): FulfillmentResponseConfigRequestType
     {
         return $this->fulfillmentResponseConfig;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig
+     * @param  \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType  $fulfillmentResponseConfig
      * @return GetFulfillmentPropertiesRequestType
      */
-    public function withFulfillmentResponseConfig(\Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig) : \Flexnet\LicenseService\Type\GetFulfillmentPropertiesRequestType
+    public function withFulfillmentResponseConfig(FulfillmentResponseConfigRequestType $fulfillmentResponseConfig): GetFulfillmentPropertiesRequestType
     {
         $new = clone $this;
         $new->fulfillmentResponseConfig = $fulfillmentResponseConfig;
@@ -96,16 +96,16 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
     /**
      * @return int
      */
-    public function getBatchSize() : int
+    public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
     /**
-     * @param int $batchSize
+     * @param  int  $batchSize
      * @return GetFulfillmentPropertiesRequestType
      */
-    public function withBatchSize(int $batchSize) : \Flexnet\LicenseService\Type\GetFulfillmentPropertiesRequestType
+    public function withBatchSize(int $batchSize): GetFulfillmentPropertiesRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;
@@ -116,16 +116,16 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
     /**
      * @return int|null
      */
-    public function getPageNumber() : int|null
+    public function getPageNumber(): int|null
     {
         return $this->pageNumber;
     }
 
     /**
-     * @param int|null $pageNumber
+     * @param  int|null  $pageNumber
      * @return GetFulfillmentPropertiesRequestType
      */
-    public function withPageNumber(int|null $pageNumber) : \Flexnet\LicenseService\Type\GetFulfillmentPropertiesRequestType
+    public function withPageNumber(int|null $pageNumber): GetFulfillmentPropertiesRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;
@@ -133,4 +133,3 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
         return $new;
     }
 }
-

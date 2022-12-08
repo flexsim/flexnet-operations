@@ -12,7 +12,7 @@ class LicenseTechnologyPKType
     /**
      * Constructor
      *
-     * @param string $name
+     * @param  string  $name
      */
     public function __construct(string $name)
     {
@@ -20,7 +20,7 @@ class LicenseTechnologyPKType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      */
     public static function create(string $name)
     {
@@ -30,16 +30,16 @@ class LicenseTechnologyPKType
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return LicenseTechnologyPKType
      */
-    public function withName(string $name) : \Flexnet\LicenseService\Type\LicenseTechnologyPKType
+    public function withName(string $name): LicenseTechnologyPKType
     {
         $new = clone $this;
         $new->name = $name;
@@ -47,4 +47,3 @@ class LicenseTechnologyPKType
         return $new;
     }
 }
-

@@ -22,9 +22,9 @@ class ServerIDsType
     /**
      * Constructor
      *
-     * @param string $server1
-     * @param string|null $server2
-     * @param string|null $server3
+     * @param  string  $server1
+     * @param  string|null  $server2
+     * @param  string|null  $server3
      */
     public function __construct(string $server1, string|null $server2 = null, string|null $server3 = null)
     {
@@ -34,9 +34,9 @@ class ServerIDsType
     }
 
     /**
-     * @param string $server1
-     * @param string|null $server2
-     * @param string|null $server3
+     * @param  string  $server1
+     * @param  string|null  $server2
+     * @param  string|null  $server3
      */
     public static function create(string $server1, string|null $server2 = null, string|null $server3 = null)
     {
@@ -46,16 +46,16 @@ class ServerIDsType
     /**
      * @return string
      */
-    public function getServer1() : string
+    public function getServer1(): string
     {
         return $this->server1;
     }
 
     /**
-     * @param string $server1
+     * @param  string  $server1
      * @return ServerIDsType
      */
-    public function withServer1(string $server1) : \Flexnet\LicenseService\Type\ServerIDsType
+    public function withServer1(string $server1): ServerIDsType
     {
         $new = clone $this;
         $new->server1 = $server1;
@@ -66,16 +66,16 @@ class ServerIDsType
     /**
      * @return string|null
      */
-    public function getServer2() : string|null
+    public function getServer2(): string|null
     {
         return $this->server2;
     }
 
     /**
-     * @param string|null $server2
+     * @param  string|null  $server2
      * @return ServerIDsType
      */
-    public function withServer2(string|null $server2) : \Flexnet\LicenseService\Type\ServerIDsType
+    public function withServer2(string|null $server2): ServerIDsType
     {
         $new = clone $this;
         $new->server2 = $server2;
@@ -86,16 +86,16 @@ class ServerIDsType
     /**
      * @return string|null
      */
-    public function getServer3() : string|null
+    public function getServer3(): string|null
     {
         return $this->server3;
     }
 
     /**
-     * @param string|null $server3
+     * @param  string|null  $server3
      * @return ServerIDsType
      */
-    public function withServer3(string|null $server3) : \Flexnet\LicenseService\Type\ServerIDsType
+    public function withServer3(string|null $server3): ServerIDsType
     {
         $new = clone $this;
         $new->server3 = $server3;
@@ -103,4 +103,3 @@ class ServerIDsType
         return $new;
     }
 }
-

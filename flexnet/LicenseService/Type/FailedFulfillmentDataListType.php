@@ -12,17 +12,17 @@ class FailedFulfillmentDataListType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\FailedFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedFulfillmentDataType>|null $failedFulfillment
+     * @param  \Flexnet\LicenseService\Type\FailedFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedFulfillmentDataType>|null  $failedFulfillment
      */
-    public function __construct(\Flexnet\LicenseService\Type\FailedFulfillmentDataType|array|null $failedFulfillment = null)
+    public function __construct(FailedFulfillmentDataType|array|null $failedFulfillment = null)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedFulfillmentDataType>|null $failedFulfillment
+     * @param  \Flexnet\LicenseService\Type\FailedFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedFulfillmentDataType>|null  $failedFulfillment
      */
-    public static function create(\Flexnet\LicenseService\Type\FailedFulfillmentDataType|array|null $failedFulfillment = null)
+    public static function create(FailedFulfillmentDataType|array|null $failedFulfillment = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class FailedFulfillmentDataListType
     /**
      * @return \Flexnet\LicenseService\Type\FailedFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedFulfillmentDataType>|null
      */
-    public function getFailedFulfillment() : \Flexnet\LicenseService\Type\FailedFulfillmentDataType|array|null
+    public function getFailedFulfillment(): FailedFulfillmentDataType|array|null
     {
         return $this->failedFulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedFulfillmentDataType>|null $failedFulfillment
+     * @param  \Flexnet\LicenseService\Type\FailedFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedFulfillmentDataType>|null  $failedFulfillment
      * @return FailedFulfillmentDataListType
      */
-    public function withFailedFulfillment(\Flexnet\LicenseService\Type\FailedFulfillmentDataType|array|null $failedFulfillment) : \Flexnet\LicenseService\Type\FailedFulfillmentDataListType
+    public function withFailedFulfillment(FailedFulfillmentDataType|array|null $failedFulfillment): FailedFulfillmentDataListType
     {
         $new = clone $this;
         $new->failedFulfillment = $failedFulfillment;
@@ -47,4 +47,3 @@ class FailedFulfillmentDataListType
         return $new;
     }
 }
-

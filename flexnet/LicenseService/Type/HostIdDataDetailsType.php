@@ -42,15 +42,15 @@ class HostIdDataDetailsType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\ServerIDsType|null $serverHost
-     * @param string|null $nodeLockHost
-     * @param \Flexnet\LicenseService\Type\NodeIDsType|null $countedNodeLockHostIds
-     * @param \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost
-     * @param int|null $countFromParent
-     * @param int|null $countFromOwn
-     * @param string|null $parentActivationId
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverHost
+     * @param  string|null  $nodeLockHost
+     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $countedNodeLockHostIds
+     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
+     * @param  int|null  $countFromParent
+     * @param  int|null  $countFromOwn
+     * @param  string|null  $parentActivationId
      */
-    public function __construct(\Flexnet\LicenseService\Type\ServerIDsType|null $serverHost = null, string|null $nodeLockHost = null, \Flexnet\LicenseService\Type\NodeIDsType|null $countedNodeLockHostIds = null, \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost = null, int|null $countFromParent = null, int|null $countFromOwn = null, string|null $parentActivationId = null)
+    public function __construct(ServerIDsType|null $serverHost = null, string|null $nodeLockHost = null, NodeIDsType|null $countedNodeLockHostIds = null, CustomHostIDType|null $customHost = null, int|null $countFromParent = null, int|null $countFromOwn = null, string|null $parentActivationId = null)
     {
         $this->serverHost = $serverHost;
         $this->nodeLockHost = $nodeLockHost;
@@ -62,15 +62,15 @@ class HostIdDataDetailsType
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ServerIDsType|null $serverHost
-     * @param string|null $nodeLockHost
-     * @param \Flexnet\LicenseService\Type\NodeIDsType|null $countedNodeLockHostIds
-     * @param \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost
-     * @param int|null $countFromParent
-     * @param int|null $countFromOwn
-     * @param string|null $parentActivationId
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverHost
+     * @param  string|null  $nodeLockHost
+     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $countedNodeLockHostIds
+     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
+     * @param  int|null  $countFromParent
+     * @param  int|null  $countFromOwn
+     * @param  string|null  $parentActivationId
      */
-    public static function create(\Flexnet\LicenseService\Type\ServerIDsType|null $serverHost = null, string|null $nodeLockHost = null, \Flexnet\LicenseService\Type\NodeIDsType|null $countedNodeLockHostIds = null, \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost = null, int|null $countFromParent = null, int|null $countFromOwn = null, string|null $parentActivationId = null)
+    public static function create(ServerIDsType|null $serverHost = null, string|null $nodeLockHost = null, NodeIDsType|null $countedNodeLockHostIds = null, CustomHostIDType|null $customHost = null, int|null $countFromParent = null, int|null $countFromOwn = null, string|null $parentActivationId = null)
     {
         return new static(...\func_get_args());
     }
@@ -78,16 +78,16 @@ class HostIdDataDetailsType
     /**
      * @return \Flexnet\LicenseService\Type\ServerIDsType|null
      */
-    public function getServerHost() : \Flexnet\LicenseService\Type\ServerIDsType|null
+    public function getServerHost(): ServerIDsType|null
     {
         return $this->serverHost;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ServerIDsType|null $serverHost
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverHost
      * @return HostIdDataDetailsType
      */
-    public function withServerHost(\Flexnet\LicenseService\Type\ServerIDsType|null $serverHost) : \Flexnet\LicenseService\Type\HostIdDataDetailsType
+    public function withServerHost(ServerIDsType|null $serverHost): HostIdDataDetailsType
     {
         $new = clone $this;
         $new->serverHost = $serverHost;
@@ -98,16 +98,16 @@ class HostIdDataDetailsType
     /**
      * @return string|null
      */
-    public function getNodeLockHost() : string|null
+    public function getNodeLockHost(): string|null
     {
         return $this->nodeLockHost;
     }
 
     /**
-     * @param string|null $nodeLockHost
+     * @param  string|null  $nodeLockHost
      * @return HostIdDataDetailsType
      */
-    public function withNodeLockHost(string|null $nodeLockHost) : \Flexnet\LicenseService\Type\HostIdDataDetailsType
+    public function withNodeLockHost(string|null $nodeLockHost): HostIdDataDetailsType
     {
         $new = clone $this;
         $new->nodeLockHost = $nodeLockHost;
@@ -118,16 +118,16 @@ class HostIdDataDetailsType
     /**
      * @return \Flexnet\LicenseService\Type\NodeIDsType|null
      */
-    public function getCountedNodeLockHostIds() : \Flexnet\LicenseService\Type\NodeIDsType|null
+    public function getCountedNodeLockHostIds(): NodeIDsType|null
     {
         return $this->countedNodeLockHostIds;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\NodeIDsType|null $countedNodeLockHostIds
+     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $countedNodeLockHostIds
      * @return HostIdDataDetailsType
      */
-    public function withCountedNodeLockHostIds(\Flexnet\LicenseService\Type\NodeIDsType|null $countedNodeLockHostIds) : \Flexnet\LicenseService\Type\HostIdDataDetailsType
+    public function withCountedNodeLockHostIds(NodeIDsType|null $countedNodeLockHostIds): HostIdDataDetailsType
     {
         $new = clone $this;
         $new->countedNodeLockHostIds = $countedNodeLockHostIds;
@@ -138,16 +138,16 @@ class HostIdDataDetailsType
     /**
      * @return \Flexnet\LicenseService\Type\CustomHostIDType|null
      */
-    public function getCustomHost() : \Flexnet\LicenseService\Type\CustomHostIDType|null
+    public function getCustomHost(): CustomHostIDType|null
     {
         return $this->customHost;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost
+     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
      * @return HostIdDataDetailsType
      */
-    public function withCustomHost(\Flexnet\LicenseService\Type\CustomHostIDType|null $customHost) : \Flexnet\LicenseService\Type\HostIdDataDetailsType
+    public function withCustomHost(CustomHostIDType|null $customHost): HostIdDataDetailsType
     {
         $new = clone $this;
         $new->customHost = $customHost;
@@ -158,16 +158,16 @@ class HostIdDataDetailsType
     /**
      * @return int|null
      */
-    public function getCountFromParent() : int|null
+    public function getCountFromParent(): int|null
     {
         return $this->countFromParent;
     }
 
     /**
-     * @param int|null $countFromParent
+     * @param  int|null  $countFromParent
      * @return HostIdDataDetailsType
      */
-    public function withCountFromParent(int|null $countFromParent) : \Flexnet\LicenseService\Type\HostIdDataDetailsType
+    public function withCountFromParent(int|null $countFromParent): HostIdDataDetailsType
     {
         $new = clone $this;
         $new->countFromParent = $countFromParent;
@@ -178,16 +178,16 @@ class HostIdDataDetailsType
     /**
      * @return int|null
      */
-    public function getCountFromOwn() : int|null
+    public function getCountFromOwn(): int|null
     {
         return $this->countFromOwn;
     }
 
     /**
-     * @param int|null $countFromOwn
+     * @param  int|null  $countFromOwn
      * @return HostIdDataDetailsType
      */
-    public function withCountFromOwn(int|null $countFromOwn) : \Flexnet\LicenseService\Type\HostIdDataDetailsType
+    public function withCountFromOwn(int|null $countFromOwn): HostIdDataDetailsType
     {
         $new = clone $this;
         $new->countFromOwn = $countFromOwn;
@@ -198,16 +198,16 @@ class HostIdDataDetailsType
     /**
      * @return string|null
      */
-    public function getParentActivationId() : string|null
+    public function getParentActivationId(): string|null
     {
         return $this->parentActivationId;
     }
 
     /**
-     * @param string|null $parentActivationId
+     * @param  string|null  $parentActivationId
      * @return HostIdDataDetailsType
      */
-    public function withParentActivationId(string|null $parentActivationId) : \Flexnet\LicenseService\Type\HostIdDataDetailsType
+    public function withParentActivationId(string|null $parentActivationId): HostIdDataDetailsType
     {
         $new = clone $this;
         $new->parentActivationId = $parentActivationId;
@@ -215,4 +215,3 @@ class HostIdDataDetailsType
         return $new;
     }
 }
-

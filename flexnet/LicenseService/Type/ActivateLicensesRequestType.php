@@ -39,14 +39,14 @@ class ActivateLicensesRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem> $lineItem
-     * @param string|null $shipToEmail
-     * @param string|null $shipToAddress
-     * @param string|null $soldTo
-     * @param string|null $owner
-     * @param string $hostInfo
+     * @param  \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem>  $lineItem
+     * @param  string|null  $shipToEmail
+     * @param  string|null  $shipToAddress
+     * @param  string|null  $soldTo
+     * @param  string|null  $owner
+     * @param  string  $hostInfo
      */
-    public function __construct(\Flexnet\LicenseService\Type\TypeLineItem|array $lineItem, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $soldTo = null, string|null $owner = null, string $hostInfo)
+    public function __construct(TypeLineItem|array $lineItem, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $soldTo = null, string|null $owner = null, string $hostInfo)
     {
         $this->lineItem = $lineItem;
         $this->shipToEmail = $shipToEmail;
@@ -57,14 +57,14 @@ class ActivateLicensesRequestType implements RequestInterface
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem> $lineItem
-     * @param string|null $shipToEmail
-     * @param string|null $shipToAddress
-     * @param string|null $soldTo
-     * @param string|null $owner
-     * @param string $hostInfo
+     * @param  \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem>  $lineItem
+     * @param  string|null  $shipToEmail
+     * @param  string|null  $shipToAddress
+     * @param  string|null  $soldTo
+     * @param  string|null  $owner
+     * @param  string  $hostInfo
      */
-    public static function create(\Flexnet\LicenseService\Type\TypeLineItem|array $lineItem, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $soldTo = null, string|null $owner = null, string $hostInfo)
+    public static function create(TypeLineItem|array $lineItem, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $soldTo = null, string|null $owner = null, string $hostInfo)
     {
         return new static(...\func_get_args());
     }
@@ -72,16 +72,16 @@ class ActivateLicensesRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem>
      */
-    public function getLineItem() : \Flexnet\LicenseService\Type\TypeLineItem|array
+    public function getLineItem(): TypeLineItem|array
     {
         return $this->lineItem;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem> $lineItem
+     * @param  \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem>  $lineItem
      * @return ActivateLicensesRequestType
      */
-    public function withLineItem(\Flexnet\LicenseService\Type\TypeLineItem|array $lineItem) : \Flexnet\LicenseService\Type\ActivateLicensesRequestType
+    public function withLineItem(TypeLineItem|array $lineItem): ActivateLicensesRequestType
     {
         $new = clone $this;
         $new->lineItem = $lineItem;
@@ -92,16 +92,16 @@ class ActivateLicensesRequestType implements RequestInterface
     /**
      * @return string|null
      */
-    public function getShipToEmail() : string|null
+    public function getShipToEmail(): string|null
     {
         return $this->shipToEmail;
     }
 
     /**
-     * @param string|null $shipToEmail
+     * @param  string|null  $shipToEmail
      * @return ActivateLicensesRequestType
      */
-    public function withShipToEmail(string|null $shipToEmail) : \Flexnet\LicenseService\Type\ActivateLicensesRequestType
+    public function withShipToEmail(string|null $shipToEmail): ActivateLicensesRequestType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -112,16 +112,16 @@ class ActivateLicensesRequestType implements RequestInterface
     /**
      * @return string|null
      */
-    public function getShipToAddress() : string|null
+    public function getShipToAddress(): string|null
     {
         return $this->shipToAddress;
     }
 
     /**
-     * @param string|null $shipToAddress
+     * @param  string|null  $shipToAddress
      * @return ActivateLicensesRequestType
      */
-    public function withShipToAddress(string|null $shipToAddress) : \Flexnet\LicenseService\Type\ActivateLicensesRequestType
+    public function withShipToAddress(string|null $shipToAddress): ActivateLicensesRequestType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -132,16 +132,16 @@ class ActivateLicensesRequestType implements RequestInterface
     /**
      * @return string|null
      */
-    public function getSoldTo() : string|null
+    public function getSoldTo(): string|null
     {
         return $this->soldTo;
     }
 
     /**
-     * @param string|null $soldTo
+     * @param  string|null  $soldTo
      * @return ActivateLicensesRequestType
      */
-    public function withSoldTo(string|null $soldTo) : \Flexnet\LicenseService\Type\ActivateLicensesRequestType
+    public function withSoldTo(string|null $soldTo): ActivateLicensesRequestType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -152,16 +152,16 @@ class ActivateLicensesRequestType implements RequestInterface
     /**
      * @return string|null
      */
-    public function getOwner() : string|null
+    public function getOwner(): string|null
     {
         return $this->owner;
     }
 
     /**
-     * @param string|null $owner
+     * @param  string|null  $owner
      * @return ActivateLicensesRequestType
      */
-    public function withOwner(string|null $owner) : \Flexnet\LicenseService\Type\ActivateLicensesRequestType
+    public function withOwner(string|null $owner): ActivateLicensesRequestType
     {
         $new = clone $this;
         $new->owner = $owner;
@@ -172,16 +172,16 @@ class ActivateLicensesRequestType implements RequestInterface
     /**
      * @return string
      */
-    public function getHostInfo() : string
+    public function getHostInfo(): string
     {
         return $this->hostInfo;
     }
 
     /**
-     * @param string $hostInfo
+     * @param  string  $hostInfo
      * @return ActivateLicensesRequestType
      */
-    public function withHostInfo(string $hostInfo) : \Flexnet\LicenseService\Type\ActivateLicensesRequestType
+    public function withHostInfo(string $hostInfo): ActivateLicensesRequestType
     {
         $new = clone $this;
         $new->hostInfo = $hostInfo;
@@ -189,4 +189,3 @@ class ActivateLicensesRequestType implements RequestInterface
         return $new;
     }
 }
-

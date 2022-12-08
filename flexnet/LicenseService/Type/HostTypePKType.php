@@ -12,7 +12,7 @@ class HostTypePKType
     /**
      * Constructor
      *
-     * @param string $name
+     * @param  string  $name
      */
     public function __construct(string $name)
     {
@@ -20,7 +20,7 @@ class HostTypePKType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      */
     public static function create(string $name)
     {
@@ -30,16 +30,16 @@ class HostTypePKType
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return HostTypePKType
      */
-    public function withName(string $name) : \Flexnet\LicenseService\Type\HostTypePKType
+    public function withName(string $name): HostTypePKType
     {
         $new = clone $this;
         $new->name = $name;
@@ -47,4 +47,3 @@ class HostTypePKType
         return $new;
     }
 }
-

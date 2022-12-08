@@ -19,20 +19,20 @@ class DeleteOnholdFulfillmentsResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null $failedData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null  $failedData
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedOnholdFulfillmentListType|null $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null $failedData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null  $failedData
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedOnholdFulfillmentListType|null $failedData = null)
     {
         return new static(...\func_get_args());
     }
@@ -40,16 +40,16 @@ class DeleteOnholdFulfillmentsResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return DeleteOnholdFulfillmentsResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\DeleteOnholdFulfillmentsResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): DeleteOnholdFulfillmentsResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -60,16 +60,16 @@ class DeleteOnholdFulfillmentsResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null
      */
-    public function getFailedData() : \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null
+    public function getFailedData(): FailedOnholdFulfillmentListType|null
     {
         return $this->failedData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null $failedData
+     * @param  \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null  $failedData
      * @return DeleteOnholdFulfillmentsResponseType
      */
-    public function withFailedData(\Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null $failedData) : \Flexnet\LicenseService\Type\DeleteOnholdFulfillmentsResponseType
+    public function withFailedData(FailedOnholdFulfillmentListType|null $failedData): DeleteOnholdFulfillmentsResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -77,4 +77,3 @@ class DeleteOnholdFulfillmentsResponseType implements ResultInterface
         return $new;
     }
 }
-

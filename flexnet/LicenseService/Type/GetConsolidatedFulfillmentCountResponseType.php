@@ -19,20 +19,20 @@ class GetConsolidatedFulfillmentCountResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType|null  $responseData
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetConsolidatedFulfillmentCountResponseDataType|null $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType|null  $responseData
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetConsolidatedFulfillmentCountResponseDataType|null $responseData = null)
     {
         return new static(...\func_get_args());
     }
@@ -40,16 +40,16 @@ class GetConsolidatedFulfillmentCountResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return GetConsolidatedFulfillmentCountResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): GetConsolidatedFulfillmentCountResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -60,16 +60,16 @@ class GetConsolidatedFulfillmentCountResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType|null
      */
-    public function getResponseData() : \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType|null
+    public function getResponseData(): GetConsolidatedFulfillmentCountResponseDataType|null
     {
         return $this->responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType|null  $responseData
      * @return GetConsolidatedFulfillmentCountResponseType
      */
-    public function withResponseData(\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType|null $responseData) : \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseType
+    public function withResponseData(GetConsolidatedFulfillmentCountResponseDataType|null $responseData): GetConsolidatedFulfillmentCountResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -77,4 +77,3 @@ class GetConsolidatedFulfillmentCountResponseType implements ResultInterface
         return $new;
     }
 }
-

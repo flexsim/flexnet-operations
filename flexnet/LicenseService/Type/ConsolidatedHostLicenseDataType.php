@@ -12,7 +12,7 @@ class ConsolidatedHostLicenseDataType
     /**
      * Constructor
      *
-     * @param string|array<string> $license
+     * @param  string|array<string>  $license
      */
     public function __construct(string|array $license)
     {
@@ -20,7 +20,7 @@ class ConsolidatedHostLicenseDataType
     }
 
     /**
-     * @param string|array<string> $license
+     * @param  string|array<string>  $license
      */
     public static function create(string|array $license)
     {
@@ -30,16 +30,16 @@ class ConsolidatedHostLicenseDataType
     /**
      * @return string|array<string>
      */
-    public function getLicense() : string|array
+    public function getLicense(): string|array
     {
         return $this->license;
     }
 
     /**
-     * @param string|array<string> $license
+     * @param  string|array<string>  $license
      * @return ConsolidatedHostLicenseDataType
      */
-    public function withLicense(string|array $license) : \Flexnet\LicenseService\Type\ConsolidatedHostLicenseDataType
+    public function withLicense(string|array $license): ConsolidatedHostLicenseDataType
     {
         $new = clone $this;
         $new->license = $license;
@@ -47,4 +47,3 @@ class ConsolidatedHostLicenseDataType
         return $new;
     }
 }
-

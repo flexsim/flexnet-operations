@@ -22,11 +22,11 @@ class CustomHostIDType
     /**
      * Constructor
      *
-     * @param string|null $hostId
-     * @param \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null $hostAttributes
-     * @param \Flexnet\LicenseService\Type\HostTypePKType|null $hostType
+     * @param  string|null  $hostId
+     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $hostAttributes
+     * @param  \Flexnet\LicenseService\Type\HostTypePKType|null  $hostType
      */
-    public function __construct(string|null $hostId = null, \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null $hostAttributes = null, \Flexnet\LicenseService\Type\HostTypePKType|null $hostType = null)
+    public function __construct(string|null $hostId = null, AttributeDescriptorDataType|null $hostAttributes = null, HostTypePKType|null $hostType = null)
     {
         $this->hostId = $hostId;
         $this->hostAttributes = $hostAttributes;
@@ -34,11 +34,11 @@ class CustomHostIDType
     }
 
     /**
-     * @param string|null $hostId
-     * @param \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null $hostAttributes
-     * @param \Flexnet\LicenseService\Type\HostTypePKType|null $hostType
+     * @param  string|null  $hostId
+     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $hostAttributes
+     * @param  \Flexnet\LicenseService\Type\HostTypePKType|null  $hostType
      */
-    public static function create(string|null $hostId = null, \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null $hostAttributes = null, \Flexnet\LicenseService\Type\HostTypePKType|null $hostType = null)
+    public static function create(string|null $hostId = null, AttributeDescriptorDataType|null $hostAttributes = null, HostTypePKType|null $hostType = null)
     {
         return new static(...\func_get_args());
     }
@@ -46,16 +46,16 @@ class CustomHostIDType
     /**
      * @return string|null
      */
-    public function getHostId() : string|null
+    public function getHostId(): string|null
     {
         return $this->hostId;
     }
 
     /**
-     * @param string|null $hostId
+     * @param  string|null  $hostId
      * @return CustomHostIDType
      */
-    public function withHostId(string|null $hostId) : \Flexnet\LicenseService\Type\CustomHostIDType
+    public function withHostId(string|null $hostId): CustomHostIDType
     {
         $new = clone $this;
         $new->hostId = $hostId;
@@ -66,16 +66,16 @@ class CustomHostIDType
     /**
      * @return \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null
      */
-    public function getHostAttributes() : \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null
+    public function getHostAttributes(): AttributeDescriptorDataType|null
     {
         return $this->hostAttributes;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null $hostAttributes
+     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $hostAttributes
      * @return CustomHostIDType
      */
-    public function withHostAttributes(\Flexnet\LicenseService\Type\AttributeDescriptorDataType|null $hostAttributes) : \Flexnet\LicenseService\Type\CustomHostIDType
+    public function withHostAttributes(AttributeDescriptorDataType|null $hostAttributes): CustomHostIDType
     {
         $new = clone $this;
         $new->hostAttributes = $hostAttributes;
@@ -86,16 +86,16 @@ class CustomHostIDType
     /**
      * @return \Flexnet\LicenseService\Type\HostTypePKType|null
      */
-    public function getHostType() : \Flexnet\LicenseService\Type\HostTypePKType|null
+    public function getHostType(): HostTypePKType|null
     {
         return $this->hostType;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\HostTypePKType|null $hostType
+     * @param  \Flexnet\LicenseService\Type\HostTypePKType|null  $hostType
      * @return CustomHostIDType
      */
-    public function withHostType(\Flexnet\LicenseService\Type\HostTypePKType|null $hostType) : \Flexnet\LicenseService\Type\CustomHostIDType
+    public function withHostType(HostTypePKType|null $hostType): CustomHostIDType
     {
         $new = clone $this;
         $new->hostType = $hostType;
@@ -103,4 +103,3 @@ class CustomHostIDType
         return $new;
     }
 }
-

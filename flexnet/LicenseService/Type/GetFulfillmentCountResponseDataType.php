@@ -12,7 +12,7 @@ class GetFulfillmentCountResponseDataType
     /**
      * Constructor
      *
-     * @param int $count
+     * @param  int  $count
      */
     public function __construct(int $count)
     {
@@ -20,7 +20,7 @@ class GetFulfillmentCountResponseDataType
     }
 
     /**
-     * @param int $count
+     * @param  int  $count
      */
     public static function create(int $count)
     {
@@ -30,16 +30,16 @@ class GetFulfillmentCountResponseDataType
     /**
      * @return int
      */
-    public function getCount() : int
+    public function getCount(): int
     {
         return $this->count;
     }
 
     /**
-     * @param int $count
+     * @param  int  $count
      * @return GetFulfillmentCountResponseDataType
      */
-    public function withCount(int $count) : \Flexnet\LicenseService\Type\GetFulfillmentCountResponseDataType
+    public function withCount(int $count): GetFulfillmentCountResponseDataType
     {
         $new = clone $this;
         $new->count = $count;
@@ -47,4 +47,3 @@ class GetFulfillmentCountResponseDataType
         return $new;
     }
 }
-

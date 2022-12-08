@@ -12,17 +12,17 @@ class Dictionary
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null $Entries
+     * @param  \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null  $Entries
      */
-    public function __construct(\Flexnet\LicenseService\Type\DictionaryEntriesCollection|null $Entries = null)
+    public function __construct(DictionaryEntriesCollection|null $Entries = null)
     {
         $this->Entries = $Entries;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null $Entries
+     * @param  \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null  $Entries
      */
-    public static function create(\Flexnet\LicenseService\Type\DictionaryEntriesCollection|null $Entries = null)
+    public static function create(DictionaryEntriesCollection|null $Entries = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class Dictionary
     /**
      * @return \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null
      */
-    public function getEntries() : \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null
+    public function getEntries(): DictionaryEntriesCollection|null
     {
         return $this->Entries;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null $Entries
+     * @param  \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null  $Entries
      * @return Dictionary
      */
-    public function withEntries(\Flexnet\LicenseService\Type\DictionaryEntriesCollection|null $Entries) : \Flexnet\LicenseService\Type\Dictionary
+    public function withEntries(DictionaryEntriesCollection|null $Entries): Dictionary
     {
         $new = clone $this;
         $new->Entries = $Entries;
@@ -47,4 +47,3 @@ class Dictionary
         return $new;
     }
 }
-

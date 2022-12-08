@@ -12,17 +12,17 @@ class FulfillmentIdentifierListType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType> $fulfillmentIdentifier
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>  $fulfillmentIdentifier
      */
-    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdentifierType|array $fulfillmentIdentifier)
+    public function __construct(FulfillmentIdentifierType|array $fulfillmentIdentifier)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType> $fulfillmentIdentifier
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>  $fulfillmentIdentifier
      */
-    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdentifierType|array $fulfillmentIdentifier)
+    public static function create(FulfillmentIdentifierType|array $fulfillmentIdentifier)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class FulfillmentIdentifierListType
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>
      */
-    public function getFulfillmentIdentifier() : \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array
+    public function getFulfillmentIdentifier(): FulfillmentIdentifierType|array
     {
         return $this->fulfillmentIdentifier;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType> $fulfillmentIdentifier
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>  $fulfillmentIdentifier
      * @return FulfillmentIdentifierListType
      */
-    public function withFulfillmentIdentifier(\Flexnet\LicenseService\Type\FulfillmentIdentifierType|array $fulfillmentIdentifier) : \Flexnet\LicenseService\Type\FulfillmentIdentifierListType
+    public function withFulfillmentIdentifier(FulfillmentIdentifierType|array $fulfillmentIdentifier): FulfillmentIdentifierListType
     {
         $new = clone $this;
         $new->fulfillmentIdentifier = $fulfillmentIdentifier;
@@ -47,4 +47,3 @@ class FulfillmentIdentifierListType
         return $new;
     }
 }
-

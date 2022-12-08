@@ -17,20 +17,20 @@ class GetFulfillmentAttributesDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null $fulfillmentAttributes
-     * @param bool|null $needTimeZone
+     * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null  $fulfillmentAttributes
+     * @param  bool|null  $needTimeZone
      */
-    public function __construct(\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null $fulfillmentAttributes = null, bool|null $needTimeZone = null)
+    public function __construct(AttributeMetaDescriptorDataType|null $fulfillmentAttributes = null, bool|null $needTimeZone = null)
     {
         $this->fulfillmentAttributes = $fulfillmentAttributes;
         $this->needTimeZone = $needTimeZone;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null $fulfillmentAttributes
-     * @param bool|null $needTimeZone
+     * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null  $fulfillmentAttributes
+     * @param  bool|null  $needTimeZone
      */
-    public static function create(\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null $fulfillmentAttributes = null, bool|null $needTimeZone = null)
+    public static function create(AttributeMetaDescriptorDataType|null $fulfillmentAttributes = null, bool|null $needTimeZone = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,16 +38,16 @@ class GetFulfillmentAttributesDataType
     /**
      * @return \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null
      */
-    public function getFulfillmentAttributes() : \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null
+    public function getFulfillmentAttributes(): AttributeMetaDescriptorDataType|null
     {
         return $this->fulfillmentAttributes;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null $fulfillmentAttributes
+     * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null  $fulfillmentAttributes
      * @return GetFulfillmentAttributesDataType
      */
-    public function withFulfillmentAttributes(\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null $fulfillmentAttributes) : \Flexnet\LicenseService\Type\GetFulfillmentAttributesDataType
+    public function withFulfillmentAttributes(AttributeMetaDescriptorDataType|null $fulfillmentAttributes): GetFulfillmentAttributesDataType
     {
         $new = clone $this;
         $new->fulfillmentAttributes = $fulfillmentAttributes;
@@ -58,16 +58,16 @@ class GetFulfillmentAttributesDataType
     /**
      * @return bool|null
      */
-    public function getNeedTimeZone() : bool|null
+    public function getNeedTimeZone(): bool|null
     {
         return $this->needTimeZone;
     }
 
     /**
-     * @param bool|null $needTimeZone
+     * @param  bool|null  $needTimeZone
      * @return GetFulfillmentAttributesDataType
      */
-    public function withNeedTimeZone(bool|null $needTimeZone) : \Flexnet\LicenseService\Type\GetFulfillmentAttributesDataType
+    public function withNeedTimeZone(bool|null $needTimeZone): GetFulfillmentAttributesDataType
     {
         $new = clone $this;
         $new->needTimeZone = $needTimeZone;
@@ -75,4 +75,3 @@ class GetFulfillmentAttributesDataType
         return $new;
     }
 }
-

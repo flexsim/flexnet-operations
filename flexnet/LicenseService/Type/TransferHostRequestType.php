@@ -24,11 +24,11 @@ class TransferHostRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\TransferHostList $sourceHosts
-     * @param string|null $soldTo
-     * @param bool|null $poolEntitlements
+     * @param  \Flexnet\LicenseService\Type\TransferHostList  $sourceHosts
+     * @param  string|null  $soldTo
+     * @param  bool|null  $poolEntitlements
      */
-    public function __construct(\Flexnet\LicenseService\Type\TransferHostList $sourceHosts, string|null $soldTo = null, bool|null $poolEntitlements = null)
+    public function __construct(TransferHostList $sourceHosts, string|null $soldTo = null, bool|null $poolEntitlements = null)
     {
         $this->sourceHosts = $sourceHosts;
         $this->soldTo = $soldTo;
@@ -36,11 +36,11 @@ class TransferHostRequestType implements RequestInterface
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\TransferHostList $sourceHosts
-     * @param string|null $soldTo
-     * @param bool|null $poolEntitlements
+     * @param  \Flexnet\LicenseService\Type\TransferHostList  $sourceHosts
+     * @param  string|null  $soldTo
+     * @param  bool|null  $poolEntitlements
      */
-    public static function create(\Flexnet\LicenseService\Type\TransferHostList $sourceHosts, string|null $soldTo = null, bool|null $poolEntitlements = null)
+    public static function create(TransferHostList $sourceHosts, string|null $soldTo = null, bool|null $poolEntitlements = null)
     {
         return new static(...\func_get_args());
     }
@@ -48,16 +48,16 @@ class TransferHostRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\TransferHostList
      */
-    public function getSourceHosts() : \Flexnet\LicenseService\Type\TransferHostList
+    public function getSourceHosts(): TransferHostList
     {
         return $this->sourceHosts;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\TransferHostList $sourceHosts
+     * @param  \Flexnet\LicenseService\Type\TransferHostList  $sourceHosts
      * @return TransferHostRequestType
      */
-    public function withSourceHosts(\Flexnet\LicenseService\Type\TransferHostList $sourceHosts) : \Flexnet\LicenseService\Type\TransferHostRequestType
+    public function withSourceHosts(TransferHostList $sourceHosts): TransferHostRequestType
     {
         $new = clone $this;
         $new->sourceHosts = $sourceHosts;
@@ -68,16 +68,16 @@ class TransferHostRequestType implements RequestInterface
     /**
      * @return string|null
      */
-    public function getSoldTo() : string|null
+    public function getSoldTo(): string|null
     {
         return $this->soldTo;
     }
 
     /**
-     * @param string|null $soldTo
+     * @param  string|null  $soldTo
      * @return TransferHostRequestType
      */
-    public function withSoldTo(string|null $soldTo) : \Flexnet\LicenseService\Type\TransferHostRequestType
+    public function withSoldTo(string|null $soldTo): TransferHostRequestType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -88,16 +88,16 @@ class TransferHostRequestType implements RequestInterface
     /**
      * @return bool|null
      */
-    public function getPoolEntitlements() : bool|null
+    public function getPoolEntitlements(): bool|null
     {
         return $this->poolEntitlements;
     }
 
     /**
-     * @param bool|null $poolEntitlements
+     * @param  bool|null  $poolEntitlements
      * @return TransferHostRequestType
      */
-    public function withPoolEntitlements(bool|null $poolEntitlements) : \Flexnet\LicenseService\Type\TransferHostRequestType
+    public function withPoolEntitlements(bool|null $poolEntitlements): TransferHostRequestType
     {
         $new = clone $this;
         $new->poolEntitlements = $poolEntitlements;
@@ -105,4 +105,3 @@ class TransferHostRequestType implements RequestInterface
         return $new;
     }
 }
-

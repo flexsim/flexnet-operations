@@ -17,20 +17,20 @@ class ProductIdentifierType
     /**
      * Constructor
      *
-     * @param string|null $uniqueId
-     * @param \Flexnet\LicenseService\Type\ProductPKType|null $primaryKeys
+     * @param  string|null  $uniqueId
+     * @param  \Flexnet\LicenseService\Type\ProductPKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, \Flexnet\LicenseService\Type\ProductPKType|null $primaryKeys = null)
+    public function __construct(string|null $uniqueId = null, ProductPKType|null $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
     /**
-     * @param string|null $uniqueId
-     * @param \Flexnet\LicenseService\Type\ProductPKType|null $primaryKeys
+     * @param  string|null  $uniqueId
+     * @param  \Flexnet\LicenseService\Type\ProductPKType|null  $primaryKeys
      */
-    public static function create(string|null $uniqueId = null, \Flexnet\LicenseService\Type\ProductPKType|null $primaryKeys = null)
+    public static function create(string|null $uniqueId = null, ProductPKType|null $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,16 +38,16 @@ class ProductIdentifierType
     /**
      * @return string|null
      */
-    public function getUniqueId() : string|null
+    public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
     /**
-     * @param string|null $uniqueId
+     * @param  string|null  $uniqueId
      * @return ProductIdentifierType
      */
-    public function withUniqueId(string|null $uniqueId) : \Flexnet\LicenseService\Type\ProductIdentifierType
+    public function withUniqueId(string|null $uniqueId): ProductIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -58,16 +58,16 @@ class ProductIdentifierType
     /**
      * @return \Flexnet\LicenseService\Type\ProductPKType|null
      */
-    public function getPrimaryKeys() : \Flexnet\LicenseService\Type\ProductPKType|null
+    public function getPrimaryKeys(): ProductPKType|null
     {
         return $this->primaryKeys;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ProductPKType|null $primaryKeys
+     * @param  \Flexnet\LicenseService\Type\ProductPKType|null  $primaryKeys
      * @return ProductIdentifierType
      */
-    public function withPrimaryKeys(\Flexnet\LicenseService\Type\ProductPKType|null $primaryKeys) : \Flexnet\LicenseService\Type\ProductIdentifierType
+    public function withPrimaryKeys(ProductPKType|null $primaryKeys): ProductIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;
@@ -75,4 +75,3 @@ class ProductIdentifierType
         return $new;
     }
 }
-

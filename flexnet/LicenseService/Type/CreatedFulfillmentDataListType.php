@@ -17,20 +17,20 @@ class CreatedFulfillmentDataListType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedFulfillmentDataType>|null $createdFulfillment
-     * @param \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array<\Flexnet\LicenseService\Type\VerifiedFulfillmentDataType>|null $verifiedFulfillment
+     * @param  \Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedFulfillmentDataType>|null  $createdFulfillment
+     * @param  \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array<\Flexnet\LicenseService\Type\VerifiedFulfillmentDataType>|null  $verifiedFulfillment
      */
-    public function __construct(\Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array|null $createdFulfillment = null, \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array|null $verifiedFulfillment = null)
+    public function __construct(CreatedFulfillmentDataType|array|null $createdFulfillment = null, VerifiedFulfillmentDataType|array|null $verifiedFulfillment = null)
     {
         $this->createdFulfillment = $createdFulfillment;
         $this->verifiedFulfillment = $verifiedFulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedFulfillmentDataType>|null $createdFulfillment
-     * @param \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array<\Flexnet\LicenseService\Type\VerifiedFulfillmentDataType>|null $verifiedFulfillment
+     * @param  \Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedFulfillmentDataType>|null  $createdFulfillment
+     * @param  \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array<\Flexnet\LicenseService\Type\VerifiedFulfillmentDataType>|null  $verifiedFulfillment
      */
-    public static function create(\Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array|null $createdFulfillment = null, \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array|null $verifiedFulfillment = null)
+    public static function create(CreatedFulfillmentDataType|array|null $createdFulfillment = null, VerifiedFulfillmentDataType|array|null $verifiedFulfillment = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,16 +38,16 @@ class CreatedFulfillmentDataListType
     /**
      * @return \Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedFulfillmentDataType>|null
      */
-    public function getCreatedFulfillment() : \Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array|null
+    public function getCreatedFulfillment(): CreatedFulfillmentDataType|array|null
     {
         return $this->createdFulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedFulfillmentDataType>|null $createdFulfillment
+     * @param  \Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedFulfillmentDataType>|null  $createdFulfillment
      * @return CreatedFulfillmentDataListType
      */
-    public function withCreatedFulfillment(\Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array|null $createdFulfillment) : \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType
+    public function withCreatedFulfillment(CreatedFulfillmentDataType|array|null $createdFulfillment): CreatedFulfillmentDataListType
     {
         $new = clone $this;
         $new->createdFulfillment = $createdFulfillment;
@@ -58,16 +58,16 @@ class CreatedFulfillmentDataListType
     /**
      * @return \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array<\Flexnet\LicenseService\Type\VerifiedFulfillmentDataType>|null
      */
-    public function getVerifiedFulfillment() : \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array|null
+    public function getVerifiedFulfillment(): VerifiedFulfillmentDataType|array|null
     {
         return $this->verifiedFulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array<\Flexnet\LicenseService\Type\VerifiedFulfillmentDataType>|null $verifiedFulfillment
+     * @param  \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array<\Flexnet\LicenseService\Type\VerifiedFulfillmentDataType>|null  $verifiedFulfillment
      * @return CreatedFulfillmentDataListType
      */
-    public function withVerifiedFulfillment(\Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array|null $verifiedFulfillment) : \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType
+    public function withVerifiedFulfillment(VerifiedFulfillmentDataType|array|null $verifiedFulfillment): CreatedFulfillmentDataListType
     {
         $new = clone $this;
         $new->verifiedFulfillment = $verifiedFulfillment;
@@ -75,4 +75,3 @@ class CreatedFulfillmentDataListType
         return $new;
     }
 }
-

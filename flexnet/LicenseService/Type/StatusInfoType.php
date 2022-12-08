@@ -17,8 +17,8 @@ class StatusInfoType
     /**
      * Constructor
      *
-     * @param string $status
-     * @param string|null $reason
+     * @param  string  $status
+     * @param  string|null  $reason
      */
     public function __construct(string $status, string|null $reason = null)
     {
@@ -27,8 +27,8 @@ class StatusInfoType
     }
 
     /**
-     * @param string $status
-     * @param string|null $reason
+     * @param  string  $status
+     * @param  string|null  $reason
      */
     public static function create(string $status, string|null $reason = null)
     {
@@ -38,16 +38,16 @@ class StatusInfoType
     /**
      * @return string
      */
-    public function getStatus() : string
+    public function getStatus(): string
     {
         return $this->status;
     }
 
     /**
-     * @param string $status
+     * @param  string  $status
      * @return StatusInfoType
      */
-    public function withStatus(string $status) : \Flexnet\LicenseService\Type\StatusInfoType
+    public function withStatus(string $status): StatusInfoType
     {
         $new = clone $this;
         $new->status = $status;
@@ -58,16 +58,16 @@ class StatusInfoType
     /**
      * @return string|null
      */
-    public function getReason() : string|null
+    public function getReason(): string|null
     {
         return $this->reason;
     }
 
     /**
-     * @param string|null $reason
+     * @param  string|null  $reason
      * @return StatusInfoType
      */
-    public function withReason(string|null $reason) : \Flexnet\LicenseService\Type\StatusInfoType
+    public function withReason(string|null $reason): StatusInfoType
     {
         $new = clone $this;
         $new->reason = $reason;
@@ -75,4 +75,3 @@ class StatusInfoType
         return $new;
     }
 }
-

@@ -17,20 +17,20 @@ class LicenseModelIdentifierType
     /**
      * Constructor
      *
-     * @param string|null $uniqueId
-     * @param \Flexnet\LicenseService\Type\LicenseModelPKType|null $primaryKeys
+     * @param  string|null  $uniqueId
+     * @param  \Flexnet\LicenseService\Type\LicenseModelPKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, \Flexnet\LicenseService\Type\LicenseModelPKType|null $primaryKeys = null)
+    public function __construct(string|null $uniqueId = null, LicenseModelPKType|null $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
     /**
-     * @param string|null $uniqueId
-     * @param \Flexnet\LicenseService\Type\LicenseModelPKType|null $primaryKeys
+     * @param  string|null  $uniqueId
+     * @param  \Flexnet\LicenseService\Type\LicenseModelPKType|null  $primaryKeys
      */
-    public static function create(string|null $uniqueId = null, \Flexnet\LicenseService\Type\LicenseModelPKType|null $primaryKeys = null)
+    public static function create(string|null $uniqueId = null, LicenseModelPKType|null $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,16 +38,16 @@ class LicenseModelIdentifierType
     /**
      * @return string|null
      */
-    public function getUniqueId() : string|null
+    public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
     /**
-     * @param string|null $uniqueId
+     * @param  string|null  $uniqueId
      * @return LicenseModelIdentifierType
      */
-    public function withUniqueId(string|null $uniqueId) : \Flexnet\LicenseService\Type\LicenseModelIdentifierType
+    public function withUniqueId(string|null $uniqueId): LicenseModelIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -58,16 +58,16 @@ class LicenseModelIdentifierType
     /**
      * @return \Flexnet\LicenseService\Type\LicenseModelPKType|null
      */
-    public function getPrimaryKeys() : \Flexnet\LicenseService\Type\LicenseModelPKType|null
+    public function getPrimaryKeys(): LicenseModelPKType|null
     {
         return $this->primaryKeys;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\LicenseModelPKType|null $primaryKeys
+     * @param  \Flexnet\LicenseService\Type\LicenseModelPKType|null  $primaryKeys
      * @return LicenseModelIdentifierType
      */
-    public function withPrimaryKeys(\Flexnet\LicenseService\Type\LicenseModelPKType|null $primaryKeys) : \Flexnet\LicenseService\Type\LicenseModelIdentifierType
+    public function withPrimaryKeys(LicenseModelPKType|null $primaryKeys): LicenseModelIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;
@@ -75,4 +75,3 @@ class LicenseModelIdentifierType
         return $new;
     }
 }
-

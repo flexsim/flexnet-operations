@@ -17,20 +17,20 @@ class FailedRepairShortCodeDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\RepairShortCodeDataType $shortCodeData
-     * @param string $reason
+     * @param  \Flexnet\LicenseService\Type\RepairShortCodeDataType  $shortCodeData
+     * @param  string  $reason
      */
-    public function __construct(\Flexnet\LicenseService\Type\RepairShortCodeDataType $shortCodeData, string $reason)
+    public function __construct(RepairShortCodeDataType $shortCodeData, string $reason)
     {
         $this->shortCodeData = $shortCodeData;
         $this->reason = $reason;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RepairShortCodeDataType $shortCodeData
-     * @param string $reason
+     * @param  \Flexnet\LicenseService\Type\RepairShortCodeDataType  $shortCodeData
+     * @param  string  $reason
      */
-    public static function create(\Flexnet\LicenseService\Type\RepairShortCodeDataType $shortCodeData, string $reason)
+    public static function create(RepairShortCodeDataType $shortCodeData, string $reason)
     {
         return new static(...\func_get_args());
     }
@@ -38,16 +38,16 @@ class FailedRepairShortCodeDataType
     /**
      * @return \Flexnet\LicenseService\Type\RepairShortCodeDataType
      */
-    public function getShortCodeData() : \Flexnet\LicenseService\Type\RepairShortCodeDataType
+    public function getShortCodeData(): RepairShortCodeDataType
     {
         return $this->shortCodeData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RepairShortCodeDataType $shortCodeData
+     * @param  \Flexnet\LicenseService\Type\RepairShortCodeDataType  $shortCodeData
      * @return FailedRepairShortCodeDataType
      */
-    public function withShortCodeData(\Flexnet\LicenseService\Type\RepairShortCodeDataType $shortCodeData) : \Flexnet\LicenseService\Type\FailedRepairShortCodeDataType
+    public function withShortCodeData(RepairShortCodeDataType $shortCodeData): FailedRepairShortCodeDataType
     {
         $new = clone $this;
         $new->shortCodeData = $shortCodeData;
@@ -58,16 +58,16 @@ class FailedRepairShortCodeDataType
     /**
      * @return string
      */
-    public function getReason() : string
+    public function getReason(): string
     {
         return $this->reason;
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return FailedRepairShortCodeDataType
      */
-    public function withReason(string $reason) : \Flexnet\LicenseService\Type\FailedRepairShortCodeDataType
+    public function withReason(string $reason): FailedRepairShortCodeDataType
     {
         $new = clone $this;
         $new->reason = $reason;
@@ -75,4 +75,3 @@ class FailedRepairShortCodeDataType
         return $new;
     }
 }
-

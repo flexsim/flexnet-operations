@@ -17,8 +17,8 @@ class DictionaryEntry
     /**
      * Constructor
      *
-     * @param string $Key
-     * @param string $Value
+     * @param  string  $Key
+     * @param  string  $Value
      */
     public function __construct(string $Key, string $Value)
     {
@@ -27,8 +27,8 @@ class DictionaryEntry
     }
 
     /**
-     * @param string $Key
-     * @param string $Value
+     * @param  string  $Key
+     * @param  string  $Value
      */
     public static function create(string $Key, string $Value)
     {
@@ -38,16 +38,16 @@ class DictionaryEntry
     /**
      * @return string
      */
-    public function getKey() : string
+    public function getKey(): string
     {
         return $this->Key;
     }
 
     /**
-     * @param string $Key
+     * @param  string  $Key
      * @return DictionaryEntry
      */
-    public function withKey(string $Key) : \Flexnet\LicenseService\Type\DictionaryEntry
+    public function withKey(string $Key): DictionaryEntry
     {
         $new = clone $this;
         $new->Key = $Key;
@@ -58,16 +58,16 @@ class DictionaryEntry
     /**
      * @return string
      */
-    public function getValue() : string
+    public function getValue(): string
     {
         return $this->Value;
     }
 
     /**
-     * @param string $Value
+     * @param  string  $Value
      * @return DictionaryEntry
      */
-    public function withValue(string $Value) : \Flexnet\LicenseService\Type\DictionaryEntry
+    public function withValue(string $Value): DictionaryEntry
     {
         $new = clone $this;
         $new->Value = $Value;
@@ -75,4 +75,3 @@ class DictionaryEntry
         return $new;
     }
 }
-

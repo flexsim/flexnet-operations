@@ -14,17 +14,17 @@ class SetLicenseRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\OnholdFulfillmentListType $onholdFulfillmentList
+     * @param  \Flexnet\LicenseService\Type\OnholdFulfillmentListType  $onholdFulfillmentList
      */
-    public function __construct(\Flexnet\LicenseService\Type\OnholdFulfillmentListType $onholdFulfillmentList)
+    public function __construct(OnholdFulfillmentListType $onholdFulfillmentList)
     {
         $this->onholdFulfillmentList = $onholdFulfillmentList;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\OnholdFulfillmentListType $onholdFulfillmentList
+     * @param  \Flexnet\LicenseService\Type\OnholdFulfillmentListType  $onholdFulfillmentList
      */
-    public static function create(\Flexnet\LicenseService\Type\OnholdFulfillmentListType $onholdFulfillmentList)
+    public static function create(OnholdFulfillmentListType $onholdFulfillmentList)
     {
         return new static(...\func_get_args());
     }
@@ -32,16 +32,16 @@ class SetLicenseRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\OnholdFulfillmentListType
      */
-    public function getOnholdFulfillmentList() : \Flexnet\LicenseService\Type\OnholdFulfillmentListType
+    public function getOnholdFulfillmentList(): OnholdFulfillmentListType
     {
         return $this->onholdFulfillmentList;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\OnholdFulfillmentListType $onholdFulfillmentList
+     * @param  \Flexnet\LicenseService\Type\OnholdFulfillmentListType  $onholdFulfillmentList
      * @return SetLicenseRequestType
      */
-    public function withOnholdFulfillmentList(\Flexnet\LicenseService\Type\OnholdFulfillmentListType $onholdFulfillmentList) : \Flexnet\LicenseService\Type\SetLicenseRequestType
+    public function withOnholdFulfillmentList(OnholdFulfillmentListType $onholdFulfillmentList): SetLicenseRequestType
     {
         $new = clone $this;
         $new->onholdFulfillmentList = $onholdFulfillmentList;
@@ -49,4 +49,3 @@ class SetLicenseRequestType implements RequestInterface
         return $new;
     }
 }
-

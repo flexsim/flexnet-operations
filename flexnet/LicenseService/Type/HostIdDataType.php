@@ -22,11 +22,11 @@ class HostIdDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds
-     * @param \Flexnet\LicenseService\Type\NodeIDsType|null $nodeIds
-     * @param \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
+     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
+     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
      */
-    public function __construct(\Flexnet\LicenseService\Type\ServerIDsType|null $serverIds = null, \Flexnet\LicenseService\Type\NodeIDsType|null $nodeIds = null, \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost = null)
+    public function __construct(ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null)
     {
         $this->serverIds = $serverIds;
         $this->nodeIds = $nodeIds;
@@ -34,11 +34,11 @@ class HostIdDataType
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds
-     * @param \Flexnet\LicenseService\Type\NodeIDsType|null $nodeIds
-     * @param \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
+     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
+     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
      */
-    public static function create(\Flexnet\LicenseService\Type\ServerIDsType|null $serverIds = null, \Flexnet\LicenseService\Type\NodeIDsType|null $nodeIds = null, \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost = null)
+    public static function create(ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null)
     {
         return new static(...\func_get_args());
     }
@@ -46,16 +46,16 @@ class HostIdDataType
     /**
      * @return \Flexnet\LicenseService\Type\ServerIDsType|null
      */
-    public function getServerIds() : \Flexnet\LicenseService\Type\ServerIDsType|null
+    public function getServerIds(): ServerIDsType|null
     {
         return $this->serverIds;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
      * @return HostIdDataType
      */
-    public function withServerIds(\Flexnet\LicenseService\Type\ServerIDsType|null $serverIds) : \Flexnet\LicenseService\Type\HostIdDataType
+    public function withServerIds(ServerIDsType|null $serverIds): HostIdDataType
     {
         $new = clone $this;
         $new->serverIds = $serverIds;
@@ -66,16 +66,16 @@ class HostIdDataType
     /**
      * @return \Flexnet\LicenseService\Type\NodeIDsType|null
      */
-    public function getNodeIds() : \Flexnet\LicenseService\Type\NodeIDsType|null
+    public function getNodeIds(): NodeIDsType|null
     {
         return $this->nodeIds;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\NodeIDsType|null $nodeIds
+     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
      * @return HostIdDataType
      */
-    public function withNodeIds(\Flexnet\LicenseService\Type\NodeIDsType|null $nodeIds) : \Flexnet\LicenseService\Type\HostIdDataType
+    public function withNodeIds(NodeIDsType|null $nodeIds): HostIdDataType
     {
         $new = clone $this;
         $new->nodeIds = $nodeIds;
@@ -86,16 +86,16 @@ class HostIdDataType
     /**
      * @return \Flexnet\LicenseService\Type\CustomHostIDType|null
      */
-    public function getCustomHost() : \Flexnet\LicenseService\Type\CustomHostIDType|null
+    public function getCustomHost(): CustomHostIDType|null
     {
         return $this->customHost;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost
+     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
      * @return HostIdDataType
      */
-    public function withCustomHost(\Flexnet\LicenseService\Type\CustomHostIDType|null $customHost) : \Flexnet\LicenseService\Type\HostIdDataType
+    public function withCustomHost(CustomHostIDType|null $customHost): HostIdDataType
     {
         $new = clone $this;
         $new->customHost = $customHost;
@@ -103,4 +103,3 @@ class HostIdDataType
         return $new;
     }
 }
-

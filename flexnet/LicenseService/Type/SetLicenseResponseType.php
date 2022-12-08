@@ -19,20 +19,20 @@ class SetLicenseResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null $failedData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null  $failedData
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedSetLicenseOnholdFulfillmentListType|null $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null $failedData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null  $failedData
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedSetLicenseOnholdFulfillmentListType|null $failedData = null)
     {
         return new static(...\func_get_args());
     }
@@ -40,16 +40,16 @@ class SetLicenseResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return SetLicenseResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\SetLicenseResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): SetLicenseResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -60,16 +60,16 @@ class SetLicenseResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null
      */
-    public function getFailedData() : \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null
+    public function getFailedData(): FailedSetLicenseOnholdFulfillmentListType|null
     {
         return $this->failedData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null $failedData
+     * @param  \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null  $failedData
      * @return SetLicenseResponseType
      */
-    public function withFailedData(\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null $failedData) : \Flexnet\LicenseService\Type\SetLicenseResponseType
+    public function withFailedData(FailedSetLicenseOnholdFulfillmentListType|null $failedData): SetLicenseResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -77,4 +77,3 @@ class SetLicenseResponseType implements ResultInterface
         return $new;
     }
 }
-

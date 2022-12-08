@@ -17,20 +17,20 @@ class EmergencyFulfillmentResponseDataType
     /**
      * Constructor
      *
-     * @param int $recordRefNo
-     * @param \Flexnet\LicenseService\Type\FulfillmentDataType|null $fulfillment
+     * @param  int  $recordRefNo
+     * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|null  $fulfillment
      */
-    public function __construct(int $recordRefNo, \Flexnet\LicenseService\Type\FulfillmentDataType|null $fulfillment = null)
+    public function __construct(int $recordRefNo, FulfillmentDataType|null $fulfillment = null)
     {
         $this->recordRefNo = $recordRefNo;
         $this->fulfillment = $fulfillment;
     }
 
     /**
-     * @param int $recordRefNo
-     * @param \Flexnet\LicenseService\Type\FulfillmentDataType|null $fulfillment
+     * @param  int  $recordRefNo
+     * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|null  $fulfillment
      */
-    public static function create(int $recordRefNo, \Flexnet\LicenseService\Type\FulfillmentDataType|null $fulfillment = null)
+    public static function create(int $recordRefNo, FulfillmentDataType|null $fulfillment = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,16 +38,16 @@ class EmergencyFulfillmentResponseDataType
     /**
      * @return int
      */
-    public function getRecordRefNo() : int
+    public function getRecordRefNo(): int
     {
         return $this->recordRefNo;
     }
 
     /**
-     * @param int $recordRefNo
+     * @param  int  $recordRefNo
      * @return EmergencyFulfillmentResponseDataType
      */
-    public function withRecordRefNo(int $recordRefNo) : \Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType
+    public function withRecordRefNo(int $recordRefNo): EmergencyFulfillmentResponseDataType
     {
         $new = clone $this;
         $new->recordRefNo = $recordRefNo;
@@ -58,16 +58,16 @@ class EmergencyFulfillmentResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentDataType|null
      */
-    public function getFulfillment() : \Flexnet\LicenseService\Type\FulfillmentDataType|null
+    public function getFulfillment(): FulfillmentDataType|null
     {
         return $this->fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentDataType|null $fulfillment
+     * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|null  $fulfillment
      * @return EmergencyFulfillmentResponseDataType
      */
-    public function withFulfillment(\Flexnet\LicenseService\Type\FulfillmentDataType|null $fulfillment) : \Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType
+    public function withFulfillment(FulfillmentDataType|null $fulfillment): EmergencyFulfillmentResponseDataType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;
@@ -75,4 +75,3 @@ class EmergencyFulfillmentResponseDataType
         return $new;
     }
 }
-

@@ -14,17 +14,17 @@ class EmailConsolidatedLicensesResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo)
+    public function __construct(StatusInfoType $statusInfo)
     {
         $this->statusInfo = $statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo)
+    public static function create(StatusInfoType $statusInfo)
     {
         return new static(...\func_get_args());
     }
@@ -32,16 +32,16 @@ class EmailConsolidatedLicensesResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return EmailConsolidatedLicensesResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\EmailConsolidatedLicensesResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): EmailConsolidatedLicensesResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -49,4 +49,3 @@ class EmailConsolidatedLicensesResponseType implements ResultInterface
         return $new;
     }
 }
-

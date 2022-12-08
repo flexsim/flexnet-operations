@@ -14,17 +14,17 @@ class ConsolidateFulfillmentsRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdentifierListType $fulfillments
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierListType  $fulfillments
      */
-    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdentifierListType $fulfillments)
+    public function __construct(FulfillmentIdentifierListType $fulfillments)
     {
         $this->fulfillments = $fulfillments;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdentifierListType $fulfillments
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierListType  $fulfillments
      */
-    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdentifierListType $fulfillments)
+    public static function create(FulfillmentIdentifierListType $fulfillments)
     {
         return new static(...\func_get_args());
     }
@@ -32,16 +32,16 @@ class ConsolidateFulfillmentsRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentIdentifierListType
      */
-    public function getFulfillments() : \Flexnet\LicenseService\Type\FulfillmentIdentifierListType
+    public function getFulfillments(): FulfillmentIdentifierListType
     {
         return $this->fulfillments;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdentifierListType $fulfillments
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierListType  $fulfillments
      * @return ConsolidateFulfillmentsRequestType
      */
-    public function withFulfillments(\Flexnet\LicenseService\Type\FulfillmentIdentifierListType $fulfillments) : \Flexnet\LicenseService\Type\ConsolidateFulfillmentsRequestType
+    public function withFulfillments(FulfillmentIdentifierListType $fulfillments): ConsolidateFulfillmentsRequestType
     {
         $new = clone $this;
         $new->fulfillments = $fulfillments;
@@ -49,4 +49,3 @@ class ConsolidateFulfillmentsRequestType implements RequestInterface
         return $new;
     }
 }
-

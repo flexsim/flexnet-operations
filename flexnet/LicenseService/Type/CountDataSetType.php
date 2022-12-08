@@ -12,17 +12,17 @@ class CountDataSetType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\CountDataType|array<\Flexnet\LicenseService\Type\CountDataType> $countData
+     * @param  \Flexnet\LicenseService\Type\CountDataType|array<\Flexnet\LicenseService\Type\CountDataType>  $countData
      */
-    public function __construct(\Flexnet\LicenseService\Type\CountDataType|array $countData)
+    public function __construct(CountDataType|array $countData)
     {
         $this->countData = $countData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CountDataType|array<\Flexnet\LicenseService\Type\CountDataType> $countData
+     * @param  \Flexnet\LicenseService\Type\CountDataType|array<\Flexnet\LicenseService\Type\CountDataType>  $countData
      */
-    public static function create(\Flexnet\LicenseService\Type\CountDataType|array $countData)
+    public static function create(CountDataType|array $countData)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class CountDataSetType
     /**
      * @return \Flexnet\LicenseService\Type\CountDataType|array<\Flexnet\LicenseService\Type\CountDataType>
      */
-    public function getCountData() : \Flexnet\LicenseService\Type\CountDataType|array
+    public function getCountData(): CountDataType|array
     {
         return $this->countData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CountDataType|array<\Flexnet\LicenseService\Type\CountDataType> $countData
+     * @param  \Flexnet\LicenseService\Type\CountDataType|array<\Flexnet\LicenseService\Type\CountDataType>  $countData
      * @return CountDataSetType
      */
-    public function withCountData(\Flexnet\LicenseService\Type\CountDataType|array $countData) : \Flexnet\LicenseService\Type\CountDataSetType
+    public function withCountData(CountDataType|array $countData): CountDataSetType
     {
         $new = clone $this;
         $new->countData = $countData;
@@ -47,4 +47,3 @@ class CountDataSetType
         return $new;
     }
 }
-

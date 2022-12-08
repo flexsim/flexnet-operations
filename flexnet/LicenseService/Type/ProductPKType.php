@@ -17,8 +17,8 @@ class ProductPKType
     /**
      * Constructor
      *
-     * @param string $name
-     * @param string $version
+     * @param  string  $name
+     * @param  string  $version
      */
     public function __construct(string $name, string $version)
     {
@@ -27,8 +27,8 @@ class ProductPKType
     }
 
     /**
-     * @param string $name
-     * @param string $version
+     * @param  string  $name
+     * @param  string  $version
      */
     public static function create(string $name, string $version)
     {
@@ -38,16 +38,16 @@ class ProductPKType
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return ProductPKType
      */
-    public function withName(string $name) : \Flexnet\LicenseService\Type\ProductPKType
+    public function withName(string $name): ProductPKType
     {
         $new = clone $this;
         $new->name = $name;
@@ -58,16 +58,16 @@ class ProductPKType
     /**
      * @return string
      */
-    public function getVersion() : string
+    public function getVersion(): string
     {
         return $this->version;
     }
 
     /**
-     * @param string $version
+     * @param  string  $version
      * @return ProductPKType
      */
-    public function withVersion(string $version) : \Flexnet\LicenseService\Type\ProductPKType
+    public function withVersion(string $version): ProductPKType
     {
         $new = clone $this;
         $new->version = $version;
@@ -75,4 +75,3 @@ class ProductPKType
         return $new;
     }
 }
-

@@ -5,7 +5,6 @@ namespace Flexnet\LicenseService;
 use Illuminate\Support\Facades\Facade;
 
 /**
- *
  * @method static \Flexnet\LicenseService\Type\GetFulfillmentCountResponseType getFulfillmentCount(\Flexnet\LicenseService\Type\GetFulfillmentCountRequestType $getFulfillmentCountRequest)
  * @method static \Flexnet\LicenseService\Type\GetFulfillmentsQueryResponseType getFulfillmentsQuery(\Flexnet\LicenseService\Type\GetFulfillmentsQueryRequestType $getFulfillmentsQueryRequest)
  * @method static \Flexnet\LicenseService\Type\GetFulfillmentPropertiesResponseType getFulfillmentPropertiesQuery(\Flexnet\LicenseService\Type\GetFulfillmentPropertiesRequestType $getFulfillmentPropertiesRequest)

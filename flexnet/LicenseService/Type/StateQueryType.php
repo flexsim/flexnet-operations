@@ -17,8 +17,8 @@ class StateQueryType
     /**
      * Constructor
      *
-     * @param string $value
-     * @param string $searchType
+     * @param  string  $value
+     * @param  string  $searchType
      */
     public function __construct(string $value, string $searchType)
     {
@@ -27,8 +27,8 @@ class StateQueryType
     }
 
     /**
-     * @param string $value
-     * @param string $searchType
+     * @param  string  $value
+     * @param  string  $searchType
      */
     public static function create(string $value, string $searchType)
     {
@@ -38,16 +38,16 @@ class StateQueryType
     /**
      * @return string
      */
-    public function getValue() : string
+    public function getValue(): string
     {
         return $this->value;
     }
 
     /**
-     * @param string $value
+     * @param  string  $value
      * @return StateQueryType
      */
-    public function withValue(string $value) : \Flexnet\LicenseService\Type\StateQueryType
+    public function withValue(string $value): StateQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -58,16 +58,16 @@ class StateQueryType
     /**
      * @return string
      */
-    public function getSearchType() : string
+    public function getSearchType(): string
     {
         return $this->searchType;
     }
 
     /**
-     * @param string $searchType
+     * @param  string  $searchType
      * @return StateQueryType
      */
-    public function withSearchType(string $searchType) : \Flexnet\LicenseService\Type\StateQueryType
+    public function withSearchType(string $searchType): StateQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;
@@ -75,4 +75,3 @@ class StateQueryType
         return $new;
     }
 }
-

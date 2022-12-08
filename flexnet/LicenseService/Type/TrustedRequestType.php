@@ -14,17 +14,17 @@ class TrustedRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\ActivationDataType $inputData
+     * @param  \Flexnet\LicenseService\Type\ActivationDataType  $inputData
      */
-    public function __construct(\Flexnet\LicenseService\Type\ActivationDataType $inputData)
+    public function __construct(ActivationDataType $inputData)
     {
         $this->inputData = $inputData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ActivationDataType $inputData
+     * @param  \Flexnet\LicenseService\Type\ActivationDataType  $inputData
      */
-    public static function create(\Flexnet\LicenseService\Type\ActivationDataType $inputData)
+    public static function create(ActivationDataType $inputData)
     {
         return new static(...\func_get_args());
     }
@@ -32,16 +32,16 @@ class TrustedRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\ActivationDataType
      */
-    public function getInputData() : \Flexnet\LicenseService\Type\ActivationDataType
+    public function getInputData(): ActivationDataType
     {
         return $this->inputData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ActivationDataType $inputData
+     * @param  \Flexnet\LicenseService\Type\ActivationDataType  $inputData
      * @return TrustedRequestType
      */
-    public function withInputData(\Flexnet\LicenseService\Type\ActivationDataType $inputData) : \Flexnet\LicenseService\Type\TrustedRequestType
+    public function withInputData(ActivationDataType $inputData): TrustedRequestType
     {
         $new = clone $this;
         $new->inputData = $inputData;
@@ -49,4 +49,3 @@ class TrustedRequestType implements RequestInterface
         return $new;
     }
 }
-

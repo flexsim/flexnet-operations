@@ -24,11 +24,11 @@ class RehostFulfillmentResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\RehostResponseDataType|null $responseData
-     * @param \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null $failedData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\RehostResponseDataType|null  $responseData
+     * @param  \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null  $failedData
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\RehostResponseDataType|null $responseData = null, \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, RehostResponseDataType|null $responseData = null, FailedRehostResponselistDataType|null $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
@@ -36,11 +36,11 @@ class RehostFulfillmentResponseType implements ResultInterface
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\RehostResponseDataType|null $responseData
-     * @param \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null $failedData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\RehostResponseDataType|null  $responseData
+     * @param  \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null  $failedData
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\RehostResponseDataType|null $responseData = null, \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, RehostResponseDataType|null $responseData = null, FailedRehostResponselistDataType|null $failedData = null)
     {
         return new static(...\func_get_args());
     }
@@ -48,16 +48,16 @@ class RehostFulfillmentResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return RehostFulfillmentResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\RehostFulfillmentResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): RehostFulfillmentResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -68,16 +68,16 @@ class RehostFulfillmentResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\RehostResponseDataType|null
      */
-    public function getResponseData() : \Flexnet\LicenseService\Type\RehostResponseDataType|null
+    public function getResponseData(): RehostResponseDataType|null
     {
         return $this->responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RehostResponseDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\RehostResponseDataType|null  $responseData
      * @return RehostFulfillmentResponseType
      */
-    public function withResponseData(\Flexnet\LicenseService\Type\RehostResponseDataType|null $responseData) : \Flexnet\LicenseService\Type\RehostFulfillmentResponseType
+    public function withResponseData(RehostResponseDataType|null $responseData): RehostFulfillmentResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -88,16 +88,16 @@ class RehostFulfillmentResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null
      */
-    public function getFailedData() : \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null
+    public function getFailedData(): FailedRehostResponselistDataType|null
     {
         return $this->failedData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null $failedData
+     * @param  \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null  $failedData
      * @return RehostFulfillmentResponseType
      */
-    public function withFailedData(\Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null $failedData) : \Flexnet\LicenseService\Type\RehostFulfillmentResponseType
+    public function withFailedData(FailedRehostResponselistDataType|null $failedData): RehostFulfillmentResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -105,4 +105,3 @@ class RehostFulfillmentResponseType implements ResultInterface
         return $new;
     }
 }
-

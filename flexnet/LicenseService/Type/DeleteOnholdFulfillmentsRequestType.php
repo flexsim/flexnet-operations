@@ -14,17 +14,17 @@ class DeleteOnholdFulfillmentsRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdListType $fulfillmentIdList
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdListType  $fulfillmentIdList
      */
-    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdListType $fulfillmentIdList)
+    public function __construct(FulfillmentIdListType $fulfillmentIdList)
     {
         $this->fulfillmentIdList = $fulfillmentIdList;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdListType $fulfillmentIdList
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdListType  $fulfillmentIdList
      */
-    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdListType $fulfillmentIdList)
+    public static function create(FulfillmentIdListType $fulfillmentIdList)
     {
         return new static(...\func_get_args());
     }
@@ -32,16 +32,16 @@ class DeleteOnholdFulfillmentsRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentIdListType
      */
-    public function getFulfillmentIdList() : \Flexnet\LicenseService\Type\FulfillmentIdListType
+    public function getFulfillmentIdList(): FulfillmentIdListType
     {
         return $this->fulfillmentIdList;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdListType $fulfillmentIdList
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdListType  $fulfillmentIdList
      * @return DeleteOnholdFulfillmentsRequestType
      */
-    public function withFulfillmentIdList(\Flexnet\LicenseService\Type\FulfillmentIdListType $fulfillmentIdList) : \Flexnet\LicenseService\Type\DeleteOnholdFulfillmentsRequestType
+    public function withFulfillmentIdList(FulfillmentIdListType $fulfillmentIdList): DeleteOnholdFulfillmentsRequestType
     {
         $new = clone $this;
         $new->fulfillmentIdList = $fulfillmentIdList;
@@ -49,4 +49,3 @@ class DeleteOnholdFulfillmentsRequestType implements RequestInterface
         return $new;
     }
 }
-

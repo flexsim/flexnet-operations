@@ -12,7 +12,7 @@ class ActivationIdsListType
     /**
      * Constructor
      *
-     * @param string|array<string> $activationId
+     * @param  string|array<string>  $activationId
      */
     public function __construct(string|array $activationId)
     {
@@ -20,7 +20,7 @@ class ActivationIdsListType
     }
 
     /**
-     * @param string|array<string> $activationId
+     * @param  string|array<string>  $activationId
      */
     public static function create(string|array $activationId)
     {
@@ -30,16 +30,16 @@ class ActivationIdsListType
     /**
      * @return string|array<string>
      */
-    public function getActivationId() : string|array
+    public function getActivationId(): string|array
     {
         return $this->activationId;
     }
 
     /**
-     * @param string|array<string> $activationId
+     * @param  string|array<string>  $activationId
      * @return ActivationIdsListType
      */
-    public function withActivationId(string|array $activationId) : \Flexnet\LicenseService\Type\ActivationIdsListType
+    public function withActivationId(string|array $activationId): ActivationIdsListType
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -47,4 +47,3 @@ class ActivationIdsListType
         return $new;
     }
 }
-

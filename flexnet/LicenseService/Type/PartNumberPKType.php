@@ -12,7 +12,7 @@ class PartNumberPKType
     /**
      * Constructor
      *
-     * @param string $partId
+     * @param  string  $partId
      */
     public function __construct(string $partId)
     {
@@ -20,7 +20,7 @@ class PartNumberPKType
     }
 
     /**
-     * @param string $partId
+     * @param  string  $partId
      */
     public static function create(string $partId)
     {
@@ -30,16 +30,16 @@ class PartNumberPKType
     /**
      * @return string
      */
-    public function getPartId() : string
+    public function getPartId(): string
     {
         return $this->partId;
     }
 
     /**
-     * @param string $partId
+     * @param  string  $partId
      * @return PartNumberPKType
      */
-    public function withPartId(string $partId) : \Flexnet\LicenseService\Type\PartNumberPKType
+    public function withPartId(string $partId): PartNumberPKType
     {
         $new = clone $this;
         $new->partId = $partId;
@@ -47,4 +47,3 @@ class PartNumberPKType
         return $new;
     }
 }
-

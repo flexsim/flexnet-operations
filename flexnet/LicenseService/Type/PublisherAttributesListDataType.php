@@ -12,17 +12,17 @@ class PublisherAttributesListDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\SimpleAttributeDataType|array<\Flexnet\LicenseService\Type\SimpleAttributeDataType> $attribute
+     * @param  \Flexnet\LicenseService\Type\SimpleAttributeDataType|array<\Flexnet\LicenseService\Type\SimpleAttributeDataType>  $attribute
      */
-    public function __construct(\Flexnet\LicenseService\Type\SimpleAttributeDataType|array $attribute)
+    public function __construct(SimpleAttributeDataType|array $attribute)
     {
         $this->attribute = $attribute;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\SimpleAttributeDataType|array<\Flexnet\LicenseService\Type\SimpleAttributeDataType> $attribute
+     * @param  \Flexnet\LicenseService\Type\SimpleAttributeDataType|array<\Flexnet\LicenseService\Type\SimpleAttributeDataType>  $attribute
      */
-    public static function create(\Flexnet\LicenseService\Type\SimpleAttributeDataType|array $attribute)
+    public static function create(SimpleAttributeDataType|array $attribute)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class PublisherAttributesListDataType
     /**
      * @return \Flexnet\LicenseService\Type\SimpleAttributeDataType|array<\Flexnet\LicenseService\Type\SimpleAttributeDataType>
      */
-    public function getAttribute() : \Flexnet\LicenseService\Type\SimpleAttributeDataType|array
+    public function getAttribute(): SimpleAttributeDataType|array
     {
         return $this->attribute;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\SimpleAttributeDataType|array<\Flexnet\LicenseService\Type\SimpleAttributeDataType> $attribute
+     * @param  \Flexnet\LicenseService\Type\SimpleAttributeDataType|array<\Flexnet\LicenseService\Type\SimpleAttributeDataType>  $attribute
      * @return PublisherAttributesListDataType
      */
-    public function withAttribute(\Flexnet\LicenseService\Type\SimpleAttributeDataType|array $attribute) : \Flexnet\LicenseService\Type\PublisherAttributesListDataType
+    public function withAttribute(SimpleAttributeDataType|array $attribute): PublisherAttributesListDataType
     {
         $new = clone $this;
         $new->attribute = $attribute;
@@ -47,4 +47,3 @@ class PublisherAttributesListDataType
         return $new;
     }
 }
-

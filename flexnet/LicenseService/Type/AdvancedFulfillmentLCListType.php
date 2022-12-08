@@ -12,17 +12,17 @@ class AdvancedFulfillmentLCListType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType|array<\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType|array<\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType>  $fulfillment
      */
-    public function __construct(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType|array $fulfillment)
+    public function __construct(AdvancedFulfillmentLCDataType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType|array<\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType|array<\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType>  $fulfillment
      */
-    public static function create(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType|array $fulfillment)
+    public static function create(AdvancedFulfillmentLCDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class AdvancedFulfillmentLCListType
     /**
      * @return \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType|array<\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType>
      */
-    public function getFulfillment() : \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType|array
+    public function getFulfillment(): AdvancedFulfillmentLCDataType|array
     {
         return $this->fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType|array<\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType|array<\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType>  $fulfillment
      * @return AdvancedFulfillmentLCListType
      */
-    public function withFulfillment(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType|array $fulfillment) : \Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType
+    public function withFulfillment(AdvancedFulfillmentLCDataType|array $fulfillment): AdvancedFulfillmentLCListType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;
@@ -47,4 +47,3 @@ class AdvancedFulfillmentLCListType
         return $new;
     }
 }
-

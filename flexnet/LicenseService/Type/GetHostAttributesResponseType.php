@@ -19,20 +19,20 @@ class GetHostAttributesResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\GetHostAttributesDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\GetHostAttributesDataType|null  $responseData
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\GetHostAttributesDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetHostAttributesDataType|null $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\GetHostAttributesDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\GetHostAttributesDataType|null  $responseData
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\GetHostAttributesDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetHostAttributesDataType|null $responseData = null)
     {
         return new static(...\func_get_args());
     }
@@ -40,16 +40,16 @@ class GetHostAttributesResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return GetHostAttributesResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\GetHostAttributesResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): GetHostAttributesResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -60,16 +60,16 @@ class GetHostAttributesResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\GetHostAttributesDataType|null
      */
-    public function getResponseData() : \Flexnet\LicenseService\Type\GetHostAttributesDataType|null
+    public function getResponseData(): GetHostAttributesDataType|null
     {
         return $this->responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\GetHostAttributesDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\GetHostAttributesDataType|null  $responseData
      * @return GetHostAttributesResponseType
      */
-    public function withResponseData(\Flexnet\LicenseService\Type\GetHostAttributesDataType|null $responseData) : \Flexnet\LicenseService\Type\GetHostAttributesResponseType
+    public function withResponseData(GetHostAttributesDataType|null $responseData): GetHostAttributesResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -77,4 +77,3 @@ class GetHostAttributesResponseType implements ResultInterface
         return $new;
     }
 }
-

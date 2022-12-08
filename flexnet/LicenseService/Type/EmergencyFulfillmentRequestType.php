@@ -14,17 +14,17 @@ class EmergencyFulfillmentRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType>  $fulfillment
      */
-    public function __construct(\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array $fulfillment)
+    public function __construct(EmergencyFulfillmentDataType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType>  $fulfillment
      */
-    public static function create(\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array $fulfillment)
+    public static function create(EmergencyFulfillmentDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -32,16 +32,16 @@ class EmergencyFulfillmentRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType>
      */
-    public function getFulfillment() : \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array
+    public function getFulfillment(): EmergencyFulfillmentDataType|array
     {
         return $this->fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType>  $fulfillment
      * @return EmergencyFulfillmentRequestType
      */
-    public function withFulfillment(\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array $fulfillment) : \Flexnet\LicenseService\Type\EmergencyFulfillmentRequestType
+    public function withFulfillment(EmergencyFulfillmentDataType|array $fulfillment): EmergencyFulfillmentRequestType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;
@@ -49,4 +49,3 @@ class EmergencyFulfillmentRequestType implements RequestInterface
         return $new;
     }
 }
-

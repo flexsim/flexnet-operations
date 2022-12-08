@@ -12,17 +12,17 @@ class GetHostAttributesDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null $hostAttributes
+     * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null  $hostAttributes
      */
-    public function __construct(\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null $hostAttributes = null)
+    public function __construct(AttributeMetaDescriptorDataType|null $hostAttributes = null)
     {
         $this->hostAttributes = $hostAttributes;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null $hostAttributes
+     * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null  $hostAttributes
      */
-    public static function create(\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null $hostAttributes = null)
+    public static function create(AttributeMetaDescriptorDataType|null $hostAttributes = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class GetHostAttributesDataType
     /**
      * @return \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null
      */
-    public function getHostAttributes() : \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null
+    public function getHostAttributes(): AttributeMetaDescriptorDataType|null
     {
         return $this->hostAttributes;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null $hostAttributes
+     * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null  $hostAttributes
      * @return GetHostAttributesDataType
      */
-    public function withHostAttributes(\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null $hostAttributes) : \Flexnet\LicenseService\Type\GetHostAttributesDataType
+    public function withHostAttributes(AttributeMetaDescriptorDataType|null $hostAttributes): GetHostAttributesDataType
     {
         $new = clone $this;
         $new->hostAttributes = $hostAttributes;
@@ -47,4 +47,3 @@ class GetHostAttributesDataType
         return $new;
     }
 }
-

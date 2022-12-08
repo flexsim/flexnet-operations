@@ -12,17 +12,17 @@ class RehostResponseDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType>|null $fulfillmentData
+     * @param  \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function __construct(\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public function __construct(RehostFulfillmentResponseDataType|array|null $fulfillmentData = null)
     {
         $this->fulfillmentData = $fulfillmentData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType>|null $fulfillmentData
+     * @param  \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public static function create(\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public static function create(RehostFulfillmentResponseDataType|array|null $fulfillmentData = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class RehostResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType>|null
      */
-    public function getFulfillmentData() : \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array|null
+    public function getFulfillmentData(): RehostFulfillmentResponseDataType|array|null
     {
         return $this->fulfillmentData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType>|null $fulfillmentData
+     * @param  \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType>|null  $fulfillmentData
      * @return RehostResponseDataType
      */
-    public function withFulfillmentData(\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array|null $fulfillmentData) : \Flexnet\LicenseService\Type\RehostResponseDataType
+    public function withFulfillmentData(RehostFulfillmentResponseDataType|array|null $fulfillmentData): RehostResponseDataType
     {
         $new = clone $this;
         $new->fulfillmentData = $fulfillmentData;
@@ -47,4 +47,3 @@ class RehostResponseDataType
         return $new;
     }
 }
-

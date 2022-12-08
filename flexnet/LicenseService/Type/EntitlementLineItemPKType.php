@@ -12,7 +12,7 @@ class EntitlementLineItemPKType
     /**
      * Constructor
      *
-     * @param string $activationId
+     * @param  string  $activationId
      */
     public function __construct(string $activationId)
     {
@@ -20,7 +20,7 @@ class EntitlementLineItemPKType
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      */
     public static function create(string $activationId)
     {
@@ -30,16 +30,16 @@ class EntitlementLineItemPKType
     /**
      * @return string
      */
-    public function getActivationId() : string
+    public function getActivationId(): string
     {
         return $this->activationId;
     }
 
     /**
-     * @param string $activationId
+     * @param  string  $activationId
      * @return EntitlementLineItemPKType
      */
-    public function withActivationId(string $activationId) : \Flexnet\LicenseService\Type\EntitlementLineItemPKType
+    public function withActivationId(string $activationId): EntitlementLineItemPKType
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -47,4 +47,3 @@ class EntitlementLineItemPKType
         return $new;
     }
 }
-

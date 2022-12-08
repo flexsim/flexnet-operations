@@ -12,17 +12,17 @@ class AttributeMetaDescriptorDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\AttributeMetaDescriptorType|array<\Flexnet\LicenseService\Type\AttributeMetaDescriptorType>|null $attribute
+     * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorType|array<\Flexnet\LicenseService\Type\AttributeMetaDescriptorType>|null  $attribute
      */
-    public function __construct(\Flexnet\LicenseService\Type\AttributeMetaDescriptorType|array|null $attribute = null)
+    public function __construct(AttributeMetaDescriptorType|array|null $attribute = null)
     {
         $this->attribute = $attribute;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\AttributeMetaDescriptorType|array<\Flexnet\LicenseService\Type\AttributeMetaDescriptorType>|null $attribute
+     * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorType|array<\Flexnet\LicenseService\Type\AttributeMetaDescriptorType>|null  $attribute
      */
-    public static function create(\Flexnet\LicenseService\Type\AttributeMetaDescriptorType|array|null $attribute = null)
+    public static function create(AttributeMetaDescriptorType|array|null $attribute = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class AttributeMetaDescriptorDataType
     /**
      * @return \Flexnet\LicenseService\Type\AttributeMetaDescriptorType|array<\Flexnet\LicenseService\Type\AttributeMetaDescriptorType>|null
      */
-    public function getAttribute() : \Flexnet\LicenseService\Type\AttributeMetaDescriptorType|array|null
+    public function getAttribute(): AttributeMetaDescriptorType|array|null
     {
         return $this->attribute;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\AttributeMetaDescriptorType|array<\Flexnet\LicenseService\Type\AttributeMetaDescriptorType>|null $attribute
+     * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorType|array<\Flexnet\LicenseService\Type\AttributeMetaDescriptorType>|null  $attribute
      * @return AttributeMetaDescriptorDataType
      */
-    public function withAttribute(\Flexnet\LicenseService\Type\AttributeMetaDescriptorType|array|null $attribute) : \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType
+    public function withAttribute(AttributeMetaDescriptorType|array|null $attribute): AttributeMetaDescriptorDataType
     {
         $new = clone $this;
         $new->attribute = $attribute;
@@ -47,4 +47,3 @@ class AttributeMetaDescriptorDataType
         return $new;
     }
 }
-

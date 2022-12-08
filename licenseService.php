@@ -10,7 +10,7 @@ use Soap\ExtSoapEngine\ExtSoapOptions;
 
 return Config::create()
     ->setEngine($engine = DefaultEngineFactory::create(
-        ExtSoapOptions::defaults(__DIR__ . '/licenseService.wsdl', [])
+        ExtSoapOptions::defaults(__DIR__.'/licenseService.wsdl', [])
             ->disableWsdlCache()
     ))
     ->setTypeDestination('flexnet/LicenseService/Type')
@@ -26,15 +26,15 @@ return Config::create()
         new Rules\AssembleRule(new Assembler\ClientConstructorAssembler()),
         new Rules\AssembleRule(new Assembler\ClientMethodAssembler()),
     ]))
-    ->addRule(new Rules\AssembleRule(new FlexnetAssembler\PropertyAssembler(__DIR__ . '/licenseService.json')))
+    ->addRule(new Rules\AssembleRule(new FlexnetAssembler\PropertyAssembler(__DIR__.'/licenseService.json')))
     ->addRule(new Rules\AssembleRule(new FlexnetAssembler\ConstructorAssembler(
-        (new FlexnetAssembler\ConstructorAssemblerOptions(__DIR__ . '/licenseService.json'))->withTypeHints()
+        (new FlexnetAssembler\ConstructorAssemblerOptions(__DIR__.'/licenseService.json'))->withTypeHints()
     )))
     ->addRule(new Rules\AssembleRule(new FlexnetAssembler\GetterAssembler(
-        (new FlexnetAssembler\GetterAssemblerOptions(__DIR__ . '/licenseService.json'))->withReturnType()
+        (new FlexnetAssembler\GetterAssemblerOptions(__DIR__.'/licenseService.json'))->withReturnType()
     )))
     ->addRule(new Rules\AssembleRule(new FlexnetAssembler\ImmutableSetterAssembler(
-        (new FlexnetAssembler\ImmutableSetterAssemblerOptions(__DIR__ . '/licenseService.json'))->withTypeHints()->withReturnTypes()
+        (new FlexnetAssembler\ImmutableSetterAssemblerOptions(__DIR__.'/licenseService.json'))->withTypeHints()->withReturnTypes()
     )))
     ->addRule(
         new Rules\IsRequestRule(

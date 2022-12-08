@@ -24,11 +24,11 @@ class ActivateShortCodeResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FailedShortCodeDataType|null $failedData
-     * @param \Flexnet\LicenseService\Type\CreatedShortCodeDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FailedShortCodeDataType|null  $failedData
+     * @param  \Flexnet\LicenseService\Type\CreatedShortCodeDataType|null  $responseData
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FailedShortCodeDataType|null $failedData = null, \Flexnet\LicenseService\Type\CreatedShortCodeDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedShortCodeDataType|null $failedData = null, CreatedShortCodeDataType|null $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -36,11 +36,11 @@ class ActivateShortCodeResponseType implements ResultInterface
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FailedShortCodeDataType|null $failedData
-     * @param \Flexnet\LicenseService\Type\CreatedShortCodeDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FailedShortCodeDataType|null  $failedData
+     * @param  \Flexnet\LicenseService\Type\CreatedShortCodeDataType|null  $responseData
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FailedShortCodeDataType|null $failedData = null, \Flexnet\LicenseService\Type\CreatedShortCodeDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FailedShortCodeDataType|null $failedData = null, CreatedShortCodeDataType|null $responseData = null)
     {
         return new static(...\func_get_args());
     }
@@ -48,16 +48,16 @@ class ActivateShortCodeResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return ActivateShortCodeResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\ActivateShortCodeResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): ActivateShortCodeResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -68,16 +68,16 @@ class ActivateShortCodeResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\FailedShortCodeDataType|null
      */
-    public function getFailedData() : \Flexnet\LicenseService\Type\FailedShortCodeDataType|null
+    public function getFailedData(): FailedShortCodeDataType|null
     {
         return $this->failedData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedShortCodeDataType|null $failedData
+     * @param  \Flexnet\LicenseService\Type\FailedShortCodeDataType|null  $failedData
      * @return ActivateShortCodeResponseType
      */
-    public function withFailedData(\Flexnet\LicenseService\Type\FailedShortCodeDataType|null $failedData) : \Flexnet\LicenseService\Type\ActivateShortCodeResponseType
+    public function withFailedData(FailedShortCodeDataType|null $failedData): ActivateShortCodeResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -88,16 +88,16 @@ class ActivateShortCodeResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\CreatedShortCodeDataType|null
      */
-    public function getResponseData() : \Flexnet\LicenseService\Type\CreatedShortCodeDataType|null
+    public function getResponseData(): CreatedShortCodeDataType|null
     {
         return $this->responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CreatedShortCodeDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\CreatedShortCodeDataType|null  $responseData
      * @return ActivateShortCodeResponseType
      */
-    public function withResponseData(\Flexnet\LicenseService\Type\CreatedShortCodeDataType|null $responseData) : \Flexnet\LicenseService\Type\ActivateShortCodeResponseType
+    public function withResponseData(CreatedShortCodeDataType|null $responseData): ActivateShortCodeResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -105,4 +105,3 @@ class ActivateShortCodeResponseType implements ResultInterface
         return $new;
     }
 }
-

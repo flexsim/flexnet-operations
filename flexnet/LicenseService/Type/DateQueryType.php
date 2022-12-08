@@ -17,8 +17,8 @@ class DateQueryType
     /**
      * Constructor
      *
-     * @param \DateTimeInterface $value
-     * @param string $searchType
+     * @param  \DateTimeInterface  $value
+     * @param  string  $searchType
      */
     public function __construct(\DateTimeInterface $value, string $searchType)
     {
@@ -27,8 +27,8 @@ class DateQueryType
     }
 
     /**
-     * @param \DateTimeInterface $value
-     * @param string $searchType
+     * @param  \DateTimeInterface  $value
+     * @param  string  $searchType
      */
     public static function create(\DateTimeInterface $value, string $searchType)
     {
@@ -38,16 +38,16 @@ class DateQueryType
     /**
      * @return \DateTimeInterface
      */
-    public function getValue() : \DateTimeInterface
+    public function getValue(): \DateTimeInterface
     {
         return $this->value;
     }
 
     /**
-     * @param \DateTimeInterface $value
+     * @param  \DateTimeInterface  $value
      * @return DateQueryType
      */
-    public function withValue(\DateTimeInterface $value) : \Flexnet\LicenseService\Type\DateQueryType
+    public function withValue(\DateTimeInterface $value): DateQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -58,16 +58,16 @@ class DateQueryType
     /**
      * @return string
      */
-    public function getSearchType() : string
+    public function getSearchType(): string
     {
         return $this->searchType;
     }
 
     /**
-     * @param string $searchType
+     * @param  string  $searchType
      * @return DateQueryType
      */
-    public function withSearchType(string $searchType) : \Flexnet\LicenseService\Type\DateQueryType
+    public function withSearchType(string $searchType): DateQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;
@@ -75,4 +75,3 @@ class DateQueryType
         return $new;
     }
 }
-

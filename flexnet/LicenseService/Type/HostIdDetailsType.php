@@ -12,17 +12,17 @@ class HostIdDetailsType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\HostIdDataDetailsType|array<\Flexnet\LicenseService\Type\HostIdDataDetailsType> $hostIdData
+     * @param  \Flexnet\LicenseService\Type\HostIdDataDetailsType|array<\Flexnet\LicenseService\Type\HostIdDataDetailsType>  $hostIdData
      */
-    public function __construct(\Flexnet\LicenseService\Type\HostIdDataDetailsType|array $hostIdData)
+    public function __construct(HostIdDataDetailsType|array $hostIdData)
     {
         $this->hostIdData = $hostIdData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\HostIdDataDetailsType|array<\Flexnet\LicenseService\Type\HostIdDataDetailsType> $hostIdData
+     * @param  \Flexnet\LicenseService\Type\HostIdDataDetailsType|array<\Flexnet\LicenseService\Type\HostIdDataDetailsType>  $hostIdData
      */
-    public static function create(\Flexnet\LicenseService\Type\HostIdDataDetailsType|array $hostIdData)
+    public static function create(HostIdDataDetailsType|array $hostIdData)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class HostIdDetailsType
     /**
      * @return \Flexnet\LicenseService\Type\HostIdDataDetailsType|array<\Flexnet\LicenseService\Type\HostIdDataDetailsType>
      */
-    public function getHostIdData() : \Flexnet\LicenseService\Type\HostIdDataDetailsType|array
+    public function getHostIdData(): HostIdDataDetailsType|array
     {
         return $this->hostIdData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\HostIdDataDetailsType|array<\Flexnet\LicenseService\Type\HostIdDataDetailsType> $hostIdData
+     * @param  \Flexnet\LicenseService\Type\HostIdDataDetailsType|array<\Flexnet\LicenseService\Type\HostIdDataDetailsType>  $hostIdData
      * @return HostIdDetailsType
      */
-    public function withHostIdData(\Flexnet\LicenseService\Type\HostIdDataDetailsType|array $hostIdData) : \Flexnet\LicenseService\Type\HostIdDetailsType
+    public function withHostIdData(HostIdDataDetailsType|array $hostIdData): HostIdDetailsType
     {
         $new = clone $this;
         $new->hostIdData = $hostIdData;
@@ -47,4 +47,3 @@ class HostIdDetailsType
         return $new;
     }
 }
-

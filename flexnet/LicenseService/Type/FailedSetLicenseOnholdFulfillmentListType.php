@@ -12,17 +12,17 @@ class FailedSetLicenseOnholdFulfillmentListType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType> $failedFmtData
+     * @param  \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType>  $failedFmtData
      */
-    public function __construct(\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData)
+    public function __construct(FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData)
     {
         $this->failedFmtData = $failedFmtData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType> $failedFmtData
+     * @param  \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType>  $failedFmtData
      */
-    public static function create(\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData)
+    public static function create(FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class FailedSetLicenseOnholdFulfillmentListType
     /**
      * @return \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType>
      */
-    public function getFailedFmtData() : \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType|array
+    public function getFailedFmtData(): FailedSetLicenseOnholdFulfillmentDataType|array
     {
         return $this->failedFmtData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType> $failedFmtData
+     * @param  \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType>  $failedFmtData
      * @return FailedSetLicenseOnholdFulfillmentListType
      */
-    public function withFailedFmtData(\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData) : \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType
+    public function withFailedFmtData(FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData): FailedSetLicenseOnholdFulfillmentListType
     {
         $new = clone $this;
         $new->failedFmtData = $failedFmtData;
@@ -47,4 +47,3 @@ class FailedSetLicenseOnholdFulfillmentListType
         return $new;
     }
 }
-

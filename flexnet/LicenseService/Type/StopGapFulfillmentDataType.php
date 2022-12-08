@@ -32,13 +32,13 @@ class StopGapFulfillmentDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $endDate
-     * @param string|null $shipToEmail
-     * @param string|null $shipToAddress
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $endDate
+     * @param  string|null  $shipToEmail
+     * @param  string|null  $shipToAddress
      */
-    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, string|null $shipToEmail = null, string|null $shipToAddress = null)
+    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, string|null $shipToEmail = null, string|null $shipToAddress = null)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->startDate = $startDate;
@@ -48,13 +48,13 @@ class StopGapFulfillmentDataType
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $endDate
-     * @param string|null $shipToEmail
-     * @param string|null $shipToAddress
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  \DateTimeInterface  $startDate
+     * @param  \DateTimeInterface  $endDate
+     * @param  string|null  $shipToEmail
+     * @param  string|null  $shipToAddress
      */
-    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, string|null $shipToEmail = null, string|null $shipToAddress = null)
+    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, string|null $shipToEmail = null, string|null $shipToAddress = null)
     {
         return new static(...\func_get_args());
     }
@@ -62,16 +62,16 @@ class StopGapFulfillmentDataType
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentIdentifierType
      */
-    public function getFulfillmentIdentifier() : \Flexnet\LicenseService\Type\FulfillmentIdentifierType
+    public function getFulfillmentIdentifier(): FulfillmentIdentifierType
     {
         return $this->fulfillmentIdentifier;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
      * @return StopGapFulfillmentDataType
      */
-    public function withFulfillmentIdentifier(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier) : \Flexnet\LicenseService\Type\StopGapFulfillmentDataType
+    public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): StopGapFulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillmentIdentifier = $fulfillmentIdentifier;
@@ -82,16 +82,16 @@ class StopGapFulfillmentDataType
     /**
      * @return \DateTimeInterface
      */
-    public function getStartDate() : \DateTimeInterface
+    public function getStartDate(): \DateTimeInterface
     {
         return $this->startDate;
     }
 
     /**
-     * @param \DateTimeInterface $startDate
+     * @param  \DateTimeInterface  $startDate
      * @return StopGapFulfillmentDataType
      */
-    public function withStartDate(\DateTimeInterface $startDate) : \Flexnet\LicenseService\Type\StopGapFulfillmentDataType
+    public function withStartDate(\DateTimeInterface $startDate): StopGapFulfillmentDataType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -102,16 +102,16 @@ class StopGapFulfillmentDataType
     /**
      * @return \DateTimeInterface
      */
-    public function getEndDate() : \DateTimeInterface
+    public function getEndDate(): \DateTimeInterface
     {
         return $this->endDate;
     }
 
     /**
-     * @param \DateTimeInterface $endDate
+     * @param  \DateTimeInterface  $endDate
      * @return StopGapFulfillmentDataType
      */
-    public function withEndDate(\DateTimeInterface $endDate) : \Flexnet\LicenseService\Type\StopGapFulfillmentDataType
+    public function withEndDate(\DateTimeInterface $endDate): StopGapFulfillmentDataType
     {
         $new = clone $this;
         $new->endDate = $endDate;
@@ -122,16 +122,16 @@ class StopGapFulfillmentDataType
     /**
      * @return string|null
      */
-    public function getShipToEmail() : string|null
+    public function getShipToEmail(): string|null
     {
         return $this->shipToEmail;
     }
 
     /**
-     * @param string|null $shipToEmail
+     * @param  string|null  $shipToEmail
      * @return StopGapFulfillmentDataType
      */
-    public function withShipToEmail(string|null $shipToEmail) : \Flexnet\LicenseService\Type\StopGapFulfillmentDataType
+    public function withShipToEmail(string|null $shipToEmail): StopGapFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -142,16 +142,16 @@ class StopGapFulfillmentDataType
     /**
      * @return string|null
      */
-    public function getShipToAddress() : string|null
+    public function getShipToAddress(): string|null
     {
         return $this->shipToAddress;
     }
 
     /**
-     * @param string|null $shipToAddress
+     * @param  string|null  $shipToAddress
      * @return StopGapFulfillmentDataType
      */
-    public function withShipToAddress(string|null $shipToAddress) : \Flexnet\LicenseService\Type\StopGapFulfillmentDataType
+    public function withShipToAddress(string|null $shipToAddress): StopGapFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -159,4 +159,3 @@ class StopGapFulfillmentDataType
         return $new;
     }
 }
-

@@ -12,7 +12,7 @@ class AccountPKType
     /**
      * Constructor
      *
-     * @param string $name
+     * @param  string  $name
      */
     public function __construct(string $name)
     {
@@ -20,7 +20,7 @@ class AccountPKType
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      */
     public static function create(string $name)
     {
@@ -30,16 +30,16 @@ class AccountPKType
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return AccountPKType
      */
-    public function withName(string $name) : \Flexnet\LicenseService\Type\AccountPKType
+    public function withName(string $name): AccountPKType
     {
         $new = clone $this;
         $new->name = $name;
@@ -47,4 +47,3 @@ class AccountPKType
         return $new;
     }
 }
-

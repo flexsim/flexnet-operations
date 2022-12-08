@@ -12,7 +12,7 @@ class NodeIDsType
     /**
      * Constructor
      *
-     * @param string|array<string> $nodeId
+     * @param  string|array<string>  $nodeId
      */
     public function __construct(string|array $nodeId)
     {
@@ -20,7 +20,7 @@ class NodeIDsType
     }
 
     /**
-     * @param string|array<string> $nodeId
+     * @param  string|array<string>  $nodeId
      */
     public static function create(string|array $nodeId)
     {
@@ -30,16 +30,16 @@ class NodeIDsType
     /**
      * @return string|array<string>
      */
-    public function getNodeId() : string|array
+    public function getNodeId(): string|array
     {
         return $this->nodeId;
     }
 
     /**
-     * @param string|array<string> $nodeId
+     * @param  string|array<string>  $nodeId
      * @return NodeIDsType
      */
-    public function withNodeId(string|array $nodeId) : \Flexnet\LicenseService\Type\NodeIDsType
+    public function withNodeId(string|array $nodeId): NodeIDsType
     {
         $new = clone $this;
         $new->nodeId = $nodeId;
@@ -47,4 +47,3 @@ class NodeIDsType
         return $new;
     }
 }
-

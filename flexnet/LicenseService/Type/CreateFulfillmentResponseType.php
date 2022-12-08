@@ -24,11 +24,11 @@ class CreateFulfillmentResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FailedFulfillmentDataListType|null $failedData
-     * @param \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FailedFulfillmentDataListType|null  $failedData
+     * @param  \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType|null  $responseData
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FailedFulfillmentDataListType|null $failedData = null, \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedFulfillmentDataListType|null $failedData = null, CreatedFulfillmentDataListType|null $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -36,11 +36,11 @@ class CreateFulfillmentResponseType implements ResultInterface
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FailedFulfillmentDataListType|null $failedData
-     * @param \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FailedFulfillmentDataListType|null  $failedData
+     * @param  \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType|null  $responseData
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FailedFulfillmentDataListType|null $failedData = null, \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FailedFulfillmentDataListType|null $failedData = null, CreatedFulfillmentDataListType|null $responseData = null)
     {
         return new static(...\func_get_args());
     }
@@ -48,16 +48,16 @@ class CreateFulfillmentResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return CreateFulfillmentResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\CreateFulfillmentResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): CreateFulfillmentResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -68,16 +68,16 @@ class CreateFulfillmentResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\FailedFulfillmentDataListType|null
      */
-    public function getFailedData() : \Flexnet\LicenseService\Type\FailedFulfillmentDataListType|null
+    public function getFailedData(): FailedFulfillmentDataListType|null
     {
         return $this->failedData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedFulfillmentDataListType|null $failedData
+     * @param  \Flexnet\LicenseService\Type\FailedFulfillmentDataListType|null  $failedData
      * @return CreateFulfillmentResponseType
      */
-    public function withFailedData(\Flexnet\LicenseService\Type\FailedFulfillmentDataListType|null $failedData) : \Flexnet\LicenseService\Type\CreateFulfillmentResponseType
+    public function withFailedData(FailedFulfillmentDataListType|null $failedData): CreateFulfillmentResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -88,16 +88,16 @@ class CreateFulfillmentResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType|null
      */
-    public function getResponseData() : \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType|null
+    public function getResponseData(): CreatedFulfillmentDataListType|null
     {
         return $this->responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType|null  $responseData
      * @return CreateFulfillmentResponseType
      */
-    public function withResponseData(\Flexnet\LicenseService\Type\CreatedFulfillmentDataListType|null $responseData) : \Flexnet\LicenseService\Type\CreateFulfillmentResponseType
+    public function withResponseData(CreatedFulfillmentDataListType|null $responseData): CreateFulfillmentResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -105,4 +105,3 @@ class CreateFulfillmentResponseType implements ResultInterface
         return $new;
     }
 }
-

@@ -19,20 +19,20 @@ class GetFmtAttributesForBatchActivationResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null  $responseData
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetFmtAttributesForBatchDataType|null $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null  $responseData
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetFmtAttributesForBatchDataType|null $responseData = null)
     {
         return new static(...\func_get_args());
     }
@@ -40,16 +40,16 @@ class GetFmtAttributesForBatchActivationResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return GetFmtAttributesForBatchActivationResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\GetFmtAttributesForBatchActivationResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): GetFmtAttributesForBatchActivationResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -60,16 +60,16 @@ class GetFmtAttributesForBatchActivationResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null
      */
-    public function getResponseData() : \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null
+    public function getResponseData(): GetFmtAttributesForBatchDataType|null
     {
         return $this->responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null  $responseData
      * @return GetFmtAttributesForBatchActivationResponseType
      */
-    public function withResponseData(\Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null $responseData) : \Flexnet\LicenseService\Type\GetFmtAttributesForBatchActivationResponseType
+    public function withResponseData(GetFmtAttributesForBatchDataType|null $responseData): GetFmtAttributesForBatchActivationResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -77,4 +77,3 @@ class GetFmtAttributesForBatchActivationResponseType implements ResultInterface
         return $new;
     }
 }
-

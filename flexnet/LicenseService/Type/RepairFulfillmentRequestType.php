@@ -14,17 +14,17 @@ class RepairFulfillmentRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentDataType>  $fulfillment
      */
-    public function __construct(\Flexnet\LicenseService\Type\RepairFulfillmentDataType|array $fulfillment)
+    public function __construct(RepairFulfillmentDataType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentDataType>  $fulfillment
      */
-    public static function create(\Flexnet\LicenseService\Type\RepairFulfillmentDataType|array $fulfillment)
+    public static function create(RepairFulfillmentDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -32,16 +32,16 @@ class RepairFulfillmentRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentDataType>
      */
-    public function getFulfillment() : \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array
+    public function getFulfillment(): RepairFulfillmentDataType|array
     {
         return $this->fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentDataType>  $fulfillment
      * @return RepairFulfillmentRequestType
      */
-    public function withFulfillment(\Flexnet\LicenseService\Type\RepairFulfillmentDataType|array $fulfillment) : \Flexnet\LicenseService\Type\RepairFulfillmentRequestType
+    public function withFulfillment(RepairFulfillmentDataType|array $fulfillment): RepairFulfillmentRequestType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;
@@ -49,4 +49,3 @@ class RepairFulfillmentRequestType implements RequestInterface
         return $new;
     }
 }
-

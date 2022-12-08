@@ -12,17 +12,17 @@ class CustomAttributesQueryListType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\CustomAttributeQueryType|array<\Flexnet\LicenseService\Type\CustomAttributeQueryType>|null $attribute
+     * @param  \Flexnet\LicenseService\Type\CustomAttributeQueryType|array<\Flexnet\LicenseService\Type\CustomAttributeQueryType>|null  $attribute
      */
-    public function __construct(\Flexnet\LicenseService\Type\CustomAttributeQueryType|array|null $attribute = null)
+    public function __construct(CustomAttributeQueryType|array|null $attribute = null)
     {
         $this->attribute = $attribute;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CustomAttributeQueryType|array<\Flexnet\LicenseService\Type\CustomAttributeQueryType>|null $attribute
+     * @param  \Flexnet\LicenseService\Type\CustomAttributeQueryType|array<\Flexnet\LicenseService\Type\CustomAttributeQueryType>|null  $attribute
      */
-    public static function create(\Flexnet\LicenseService\Type\CustomAttributeQueryType|array|null $attribute = null)
+    public static function create(CustomAttributeQueryType|array|null $attribute = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class CustomAttributesQueryListType
     /**
      * @return \Flexnet\LicenseService\Type\CustomAttributeQueryType|array<\Flexnet\LicenseService\Type\CustomAttributeQueryType>|null
      */
-    public function getAttribute() : \Flexnet\LicenseService\Type\CustomAttributeQueryType|array|null
+    public function getAttribute(): CustomAttributeQueryType|array|null
     {
         return $this->attribute;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CustomAttributeQueryType|array<\Flexnet\LicenseService\Type\CustomAttributeQueryType>|null $attribute
+     * @param  \Flexnet\LicenseService\Type\CustomAttributeQueryType|array<\Flexnet\LicenseService\Type\CustomAttributeQueryType>|null  $attribute
      * @return CustomAttributesQueryListType
      */
-    public function withAttribute(\Flexnet\LicenseService\Type\CustomAttributeQueryType|array|null $attribute) : \Flexnet\LicenseService\Type\CustomAttributesQueryListType
+    public function withAttribute(CustomAttributeQueryType|array|null $attribute): CustomAttributesQueryListType
     {
         $new = clone $this;
         $new->attribute = $attribute;
@@ -47,4 +47,3 @@ class CustomAttributesQueryListType
         return $new;
     }
 }
-

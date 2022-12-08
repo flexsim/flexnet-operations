@@ -12,17 +12,17 @@ class DictionaryEntriesCollection
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\DictionaryEntry|array<\Flexnet\LicenseService\Type\DictionaryEntry> $Entry
+     * @param  \Flexnet\LicenseService\Type\DictionaryEntry|array<\Flexnet\LicenseService\Type\DictionaryEntry>  $Entry
      */
-    public function __construct(\Flexnet\LicenseService\Type\DictionaryEntry|array $Entry)
+    public function __construct(DictionaryEntry|array $Entry)
     {
         $this->Entry = $Entry;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\DictionaryEntry|array<\Flexnet\LicenseService\Type\DictionaryEntry> $Entry
+     * @param  \Flexnet\LicenseService\Type\DictionaryEntry|array<\Flexnet\LicenseService\Type\DictionaryEntry>  $Entry
      */
-    public static function create(\Flexnet\LicenseService\Type\DictionaryEntry|array $Entry)
+    public static function create(DictionaryEntry|array $Entry)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class DictionaryEntriesCollection
     /**
      * @return \Flexnet\LicenseService\Type\DictionaryEntry|array<\Flexnet\LicenseService\Type\DictionaryEntry>
      */
-    public function getEntry() : \Flexnet\LicenseService\Type\DictionaryEntry|array
+    public function getEntry(): DictionaryEntry|array
     {
         return $this->Entry;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\DictionaryEntry|array<\Flexnet\LicenseService\Type\DictionaryEntry> $Entry
+     * @param  \Flexnet\LicenseService\Type\DictionaryEntry|array<\Flexnet\LicenseService\Type\DictionaryEntry>  $Entry
      * @return DictionaryEntriesCollection
      */
-    public function withEntry(\Flexnet\LicenseService\Type\DictionaryEntry|array $Entry) : \Flexnet\LicenseService\Type\DictionaryEntriesCollection
+    public function withEntry(DictionaryEntry|array $Entry): DictionaryEntriesCollection
     {
         $new = clone $this;
         $new->Entry = $Entry;
@@ -47,4 +47,3 @@ class DictionaryEntriesCollection
         return $new;
     }
 }
-

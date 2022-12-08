@@ -12,7 +12,7 @@ class EmailContactListType
     /**
      * Constructor
      *
-     * @param string|array<string>|null $emailId
+     * @param  string|array<string>|null  $emailId
      */
     public function __construct(string|array|null $emailId = null)
     {
@@ -20,7 +20,7 @@ class EmailContactListType
     }
 
     /**
-     * @param string|array<string>|null $emailId
+     * @param  string|array<string>|null  $emailId
      */
     public static function create(string|array|null $emailId = null)
     {
@@ -30,16 +30,16 @@ class EmailContactListType
     /**
      * @return string|array<string>|null
      */
-    public function getEmailId() : string|array|null
+    public function getEmailId(): string|array|null
     {
         return $this->emailId;
     }
 
     /**
-     * @param string|array<string>|null $emailId
+     * @param  string|array<string>|null  $emailId
      * @return EmailContactListType
      */
-    public function withEmailId(string|array|null $emailId) : \Flexnet\LicenseService\Type\EmailContactListType
+    public function withEmailId(string|array|null $emailId): EmailContactListType
     {
         $new = clone $this;
         $new->emailId = $emailId;
@@ -47,4 +47,3 @@ class EmailContactListType
         return $new;
     }
 }
-

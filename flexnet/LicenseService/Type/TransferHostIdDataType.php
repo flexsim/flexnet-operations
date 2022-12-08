@@ -37,14 +37,14 @@ class TransferHostIdDataType
     /**
      * Constructor
      *
-     * @param string $soldTo
-     * @param \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds
-     * @param string|null $nodeId
-     * @param string|null $customHostId
-     * @param string|null $customHostType
-     * @param string|null $customLicenseTechnology
+     * @param  string  $soldTo
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
+     * @param  string|null  $nodeId
+     * @param  string|null  $customHostId
+     * @param  string|null  $customHostType
+     * @param  string|null  $customLicenseTechnology
      */
-    public function __construct(string $soldTo, \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds = null, string|null $nodeId = null, string|null $customHostId = null, string|null $customHostType = null, string|null $customLicenseTechnology = null)
+    public function __construct(string $soldTo, ServerIDsType|null $serverIds = null, string|null $nodeId = null, string|null $customHostId = null, string|null $customHostType = null, string|null $customLicenseTechnology = null)
     {
         $this->soldTo = $soldTo;
         $this->serverIds = $serverIds;
@@ -55,14 +55,14 @@ class TransferHostIdDataType
     }
 
     /**
-     * @param string $soldTo
-     * @param \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds
-     * @param string|null $nodeId
-     * @param string|null $customHostId
-     * @param string|null $customHostType
-     * @param string|null $customLicenseTechnology
+     * @param  string  $soldTo
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
+     * @param  string|null  $nodeId
+     * @param  string|null  $customHostId
+     * @param  string|null  $customHostType
+     * @param  string|null  $customLicenseTechnology
      */
-    public static function create(string $soldTo, \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds = null, string|null $nodeId = null, string|null $customHostId = null, string|null $customHostType = null, string|null $customLicenseTechnology = null)
+    public static function create(string $soldTo, ServerIDsType|null $serverIds = null, string|null $nodeId = null, string|null $customHostId = null, string|null $customHostType = null, string|null $customLicenseTechnology = null)
     {
         return new static(...\func_get_args());
     }
@@ -70,16 +70,16 @@ class TransferHostIdDataType
     /**
      * @return string
      */
-    public function getSoldTo() : string
+    public function getSoldTo(): string
     {
         return $this->soldTo;
     }
 
     /**
-     * @param string $soldTo
+     * @param  string  $soldTo
      * @return TransferHostIdDataType
      */
-    public function withSoldTo(string $soldTo) : \Flexnet\LicenseService\Type\TransferHostIdDataType
+    public function withSoldTo(string $soldTo): TransferHostIdDataType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -90,16 +90,16 @@ class TransferHostIdDataType
     /**
      * @return \Flexnet\LicenseService\Type\ServerIDsType|null
      */
-    public function getServerIds() : \Flexnet\LicenseService\Type\ServerIDsType|null
+    public function getServerIds(): ServerIDsType|null
     {
         return $this->serverIds;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
      * @return TransferHostIdDataType
      */
-    public function withServerIds(\Flexnet\LicenseService\Type\ServerIDsType|null $serverIds) : \Flexnet\LicenseService\Type\TransferHostIdDataType
+    public function withServerIds(ServerIDsType|null $serverIds): TransferHostIdDataType
     {
         $new = clone $this;
         $new->serverIds = $serverIds;
@@ -110,16 +110,16 @@ class TransferHostIdDataType
     /**
      * @return string|null
      */
-    public function getNodeId() : string|null
+    public function getNodeId(): string|null
     {
         return $this->nodeId;
     }
 
     /**
-     * @param string|null $nodeId
+     * @param  string|null  $nodeId
      * @return TransferHostIdDataType
      */
-    public function withNodeId(string|null $nodeId) : \Flexnet\LicenseService\Type\TransferHostIdDataType
+    public function withNodeId(string|null $nodeId): TransferHostIdDataType
     {
         $new = clone $this;
         $new->nodeId = $nodeId;
@@ -130,16 +130,16 @@ class TransferHostIdDataType
     /**
      * @return string|null
      */
-    public function getCustomHostId() : string|null
+    public function getCustomHostId(): string|null
     {
         return $this->customHostId;
     }
 
     /**
-     * @param string|null $customHostId
+     * @param  string|null  $customHostId
      * @return TransferHostIdDataType
      */
-    public function withCustomHostId(string|null $customHostId) : \Flexnet\LicenseService\Type\TransferHostIdDataType
+    public function withCustomHostId(string|null $customHostId): TransferHostIdDataType
     {
         $new = clone $this;
         $new->customHostId = $customHostId;
@@ -150,16 +150,16 @@ class TransferHostIdDataType
     /**
      * @return string|null
      */
-    public function getCustomHostType() : string|null
+    public function getCustomHostType(): string|null
     {
         return $this->customHostType;
     }
 
     /**
-     * @param string|null $customHostType
+     * @param  string|null  $customHostType
      * @return TransferHostIdDataType
      */
-    public function withCustomHostType(string|null $customHostType) : \Flexnet\LicenseService\Type\TransferHostIdDataType
+    public function withCustomHostType(string|null $customHostType): TransferHostIdDataType
     {
         $new = clone $this;
         $new->customHostType = $customHostType;
@@ -170,16 +170,16 @@ class TransferHostIdDataType
     /**
      * @return string|null
      */
-    public function getCustomLicenseTechnology() : string|null
+    public function getCustomLicenseTechnology(): string|null
     {
         return $this->customLicenseTechnology;
     }
 
     /**
-     * @param string|null $customLicenseTechnology
+     * @param  string|null  $customLicenseTechnology
      * @return TransferHostIdDataType
      */
-    public function withCustomLicenseTechnology(string|null $customLicenseTechnology) : \Flexnet\LicenseService\Type\TransferHostIdDataType
+    public function withCustomLicenseTechnology(string|null $customLicenseTechnology): TransferHostIdDataType
     {
         $new = clone $this;
         $new->customLicenseTechnology = $customLicenseTechnology;
@@ -187,4 +187,3 @@ class TransferHostIdDataType
         return $new;
     }
 }
-

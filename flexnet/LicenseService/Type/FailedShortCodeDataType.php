@@ -22,11 +22,11 @@ class FailedShortCodeDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\CreateShortCodeDataType $shortCodeData
-     * @param string $reason
-     * @param \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null $duplicateFulfillmentRecords
+     * @param  \Flexnet\LicenseService\Type\CreateShortCodeDataType  $shortCodeData
+     * @param  string  $reason
+     * @param  \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null  $duplicateFulfillmentRecords
      */
-    public function __construct(\Flexnet\LicenseService\Type\CreateShortCodeDataType $shortCodeData, string $reason, \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null $duplicateFulfillmentRecords = null)
+    public function __construct(CreateShortCodeDataType $shortCodeData, string $reason, DuplicateFulfillmentRecordListDataType|null $duplicateFulfillmentRecords = null)
     {
         $this->shortCodeData = $shortCodeData;
         $this->reason = $reason;
@@ -34,11 +34,11 @@ class FailedShortCodeDataType
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CreateShortCodeDataType $shortCodeData
-     * @param string $reason
-     * @param \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null $duplicateFulfillmentRecords
+     * @param  \Flexnet\LicenseService\Type\CreateShortCodeDataType  $shortCodeData
+     * @param  string  $reason
+     * @param  \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null  $duplicateFulfillmentRecords
      */
-    public static function create(\Flexnet\LicenseService\Type\CreateShortCodeDataType $shortCodeData, string $reason, \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null $duplicateFulfillmentRecords = null)
+    public static function create(CreateShortCodeDataType $shortCodeData, string $reason, DuplicateFulfillmentRecordListDataType|null $duplicateFulfillmentRecords = null)
     {
         return new static(...\func_get_args());
     }
@@ -46,16 +46,16 @@ class FailedShortCodeDataType
     /**
      * @return \Flexnet\LicenseService\Type\CreateShortCodeDataType
      */
-    public function getShortCodeData() : \Flexnet\LicenseService\Type\CreateShortCodeDataType
+    public function getShortCodeData(): CreateShortCodeDataType
     {
         return $this->shortCodeData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CreateShortCodeDataType $shortCodeData
+     * @param  \Flexnet\LicenseService\Type\CreateShortCodeDataType  $shortCodeData
      * @return FailedShortCodeDataType
      */
-    public function withShortCodeData(\Flexnet\LicenseService\Type\CreateShortCodeDataType $shortCodeData) : \Flexnet\LicenseService\Type\FailedShortCodeDataType
+    public function withShortCodeData(CreateShortCodeDataType $shortCodeData): FailedShortCodeDataType
     {
         $new = clone $this;
         $new->shortCodeData = $shortCodeData;
@@ -66,16 +66,16 @@ class FailedShortCodeDataType
     /**
      * @return string
      */
-    public function getReason() : string
+    public function getReason(): string
     {
         return $this->reason;
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return FailedShortCodeDataType
      */
-    public function withReason(string $reason) : \Flexnet\LicenseService\Type\FailedShortCodeDataType
+    public function withReason(string $reason): FailedShortCodeDataType
     {
         $new = clone $this;
         $new->reason = $reason;
@@ -86,16 +86,16 @@ class FailedShortCodeDataType
     /**
      * @return \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null
      */
-    public function getDuplicateFulfillmentRecords() : \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null
+    public function getDuplicateFulfillmentRecords(): DuplicateFulfillmentRecordListDataType|null
     {
         return $this->duplicateFulfillmentRecords;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null $duplicateFulfillmentRecords
+     * @param  \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null  $duplicateFulfillmentRecords
      * @return FailedShortCodeDataType
      */
-    public function withDuplicateFulfillmentRecords(\Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null $duplicateFulfillmentRecords) : \Flexnet\LicenseService\Type\FailedShortCodeDataType
+    public function withDuplicateFulfillmentRecords(DuplicateFulfillmentRecordListDataType|null $duplicateFulfillmentRecords): FailedShortCodeDataType
     {
         $new = clone $this;
         $new->duplicateFulfillmentRecords = $duplicateFulfillmentRecords;
@@ -103,4 +103,3 @@ class FailedShortCodeDataType
         return $new;
     }
 }
-

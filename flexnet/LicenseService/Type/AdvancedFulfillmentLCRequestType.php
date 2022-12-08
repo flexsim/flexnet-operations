@@ -14,17 +14,17 @@ class AdvancedFulfillmentLCRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType $fulfillmentList
+     * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType  $fulfillmentList
      */
-    public function __construct(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType $fulfillmentList)
+    public function __construct(AdvancedFulfillmentLCListType $fulfillmentList)
     {
         $this->fulfillmentList = $fulfillmentList;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType $fulfillmentList
+     * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType  $fulfillmentList
      */
-    public static function create(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType $fulfillmentList)
+    public static function create(AdvancedFulfillmentLCListType $fulfillmentList)
     {
         return new static(...\func_get_args());
     }
@@ -32,16 +32,16 @@ class AdvancedFulfillmentLCRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType
      */
-    public function getFulfillmentList() : \Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType
+    public function getFulfillmentList(): AdvancedFulfillmentLCListType
     {
         return $this->fulfillmentList;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType $fulfillmentList
+     * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType  $fulfillmentList
      * @return AdvancedFulfillmentLCRequestType
      */
-    public function withFulfillmentList(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType $fulfillmentList) : \Flexnet\LicenseService\Type\AdvancedFulfillmentLCRequestType
+    public function withFulfillmentList(AdvancedFulfillmentLCListType $fulfillmentList): AdvancedFulfillmentLCRequestType
     {
         $new = clone $this;
         $new->fulfillmentList = $fulfillmentList;
@@ -49,4 +49,3 @@ class AdvancedFulfillmentLCRequestType implements RequestInterface
         return $new;
     }
 }
-

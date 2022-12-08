@@ -14,17 +14,17 @@ class RepairShortCodeRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\RepairShortCodeDataType|null $shortCodeData
+     * @param  \Flexnet\LicenseService\Type\RepairShortCodeDataType|null  $shortCodeData
      */
-    public function __construct(\Flexnet\LicenseService\Type\RepairShortCodeDataType|null $shortCodeData = null)
+    public function __construct(RepairShortCodeDataType|null $shortCodeData = null)
     {
         $this->shortCodeData = $shortCodeData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RepairShortCodeDataType|null $shortCodeData
+     * @param  \Flexnet\LicenseService\Type\RepairShortCodeDataType|null  $shortCodeData
      */
-    public static function create(\Flexnet\LicenseService\Type\RepairShortCodeDataType|null $shortCodeData = null)
+    public static function create(RepairShortCodeDataType|null $shortCodeData = null)
     {
         return new static(...\func_get_args());
     }
@@ -32,16 +32,16 @@ class RepairShortCodeRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\RepairShortCodeDataType|null
      */
-    public function getShortCodeData() : \Flexnet\LicenseService\Type\RepairShortCodeDataType|null
+    public function getShortCodeData(): RepairShortCodeDataType|null
     {
         return $this->shortCodeData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RepairShortCodeDataType|null $shortCodeData
+     * @param  \Flexnet\LicenseService\Type\RepairShortCodeDataType|null  $shortCodeData
      * @return RepairShortCodeRequestType
      */
-    public function withShortCodeData(\Flexnet\LicenseService\Type\RepairShortCodeDataType|null $shortCodeData) : \Flexnet\LicenseService\Type\RepairShortCodeRequestType
+    public function withShortCodeData(RepairShortCodeDataType|null $shortCodeData): RepairShortCodeRequestType
     {
         $new = clone $this;
         $new->shortCodeData = $shortCodeData;
@@ -49,4 +49,3 @@ class RepairShortCodeRequestType implements RequestInterface
         return $new;
     }
 }
-

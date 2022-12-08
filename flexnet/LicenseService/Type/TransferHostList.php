@@ -12,17 +12,17 @@ class TransferHostList
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\TransferHostIdDataType|array<\Flexnet\LicenseService\Type\TransferHostIdDataType> $hostIdentifier
+     * @param  \Flexnet\LicenseService\Type\TransferHostIdDataType|array<\Flexnet\LicenseService\Type\TransferHostIdDataType>  $hostIdentifier
      */
-    public function __construct(\Flexnet\LicenseService\Type\TransferHostIdDataType|array $hostIdentifier)
+    public function __construct(TransferHostIdDataType|array $hostIdentifier)
     {
         $this->hostIdentifier = $hostIdentifier;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\TransferHostIdDataType|array<\Flexnet\LicenseService\Type\TransferHostIdDataType> $hostIdentifier
+     * @param  \Flexnet\LicenseService\Type\TransferHostIdDataType|array<\Flexnet\LicenseService\Type\TransferHostIdDataType>  $hostIdentifier
      */
-    public static function create(\Flexnet\LicenseService\Type\TransferHostIdDataType|array $hostIdentifier)
+    public static function create(TransferHostIdDataType|array $hostIdentifier)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class TransferHostList
     /**
      * @return \Flexnet\LicenseService\Type\TransferHostIdDataType|array<\Flexnet\LicenseService\Type\TransferHostIdDataType>
      */
-    public function getHostIdentifier() : \Flexnet\LicenseService\Type\TransferHostIdDataType|array
+    public function getHostIdentifier(): TransferHostIdDataType|array
     {
         return $this->hostIdentifier;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\TransferHostIdDataType|array<\Flexnet\LicenseService\Type\TransferHostIdDataType> $hostIdentifier
+     * @param  \Flexnet\LicenseService\Type\TransferHostIdDataType|array<\Flexnet\LicenseService\Type\TransferHostIdDataType>  $hostIdentifier
      * @return TransferHostList
      */
-    public function withHostIdentifier(\Flexnet\LicenseService\Type\TransferHostIdDataType|array $hostIdentifier) : \Flexnet\LicenseService\Type\TransferHostList
+    public function withHostIdentifier(TransferHostIdDataType|array $hostIdentifier): TransferHostList
     {
         $new = clone $this;
         $new->hostIdentifier = $hostIdentifier;
@@ -47,4 +47,3 @@ class TransferHostList
         return $new;
     }
 }
-

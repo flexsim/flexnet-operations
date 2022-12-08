@@ -42,15 +42,15 @@ class RehostFulfillmentDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds
-     * @param \Flexnet\LicenseService\Type\NodeIDsType|null $nodeIds
-     * @param \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost
-     * @param int|null $partialCount
-     * @param int|null $overDraftCount
-     * @param bool|null $overridePolicy
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
+     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
+     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
+     * @param  int|null  $partialCount
+     * @param  int|null  $overDraftCount
+     * @param  bool|null  $overridePolicy
      */
-    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds = null, \Flexnet\LicenseService\Type\NodeIDsType|null $nodeIds = null, \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost = null, int|null $partialCount = null, int|null $overDraftCount = null, bool|null $overridePolicy = null)
+    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null, int|null $partialCount = null, int|null $overDraftCount = null, bool|null $overridePolicy = null)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->serverIds = $serverIds;
@@ -62,15 +62,15 @@ class RehostFulfillmentDataType
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier
-     * @param \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds
-     * @param \Flexnet\LicenseService\Type\NodeIDsType|null $nodeIds
-     * @param \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost
-     * @param int|null $partialCount
-     * @param int|null $overDraftCount
-     * @param bool|null $overridePolicy
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
+     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
+     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
+     * @param  int|null  $partialCount
+     * @param  int|null  $overDraftCount
+     * @param  bool|null  $overridePolicy
      */
-    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds = null, \Flexnet\LicenseService\Type\NodeIDsType|null $nodeIds = null, \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost = null, int|null $partialCount = null, int|null $overDraftCount = null, bool|null $overridePolicy = null)
+    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null, int|null $partialCount = null, int|null $overDraftCount = null, bool|null $overridePolicy = null)
     {
         return new static(...\func_get_args());
     }
@@ -78,16 +78,16 @@ class RehostFulfillmentDataType
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentIdentifierType
      */
-    public function getFulfillmentIdentifier() : \Flexnet\LicenseService\Type\FulfillmentIdentifierType
+    public function getFulfillmentIdentifier(): FulfillmentIdentifierType
     {
         return $this->fulfillmentIdentifier;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier
+     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
      * @return RehostFulfillmentDataType
      */
-    public function withFulfillmentIdentifier(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier) : \Flexnet\LicenseService\Type\RehostFulfillmentDataType
+    public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillmentIdentifier = $fulfillmentIdentifier;
@@ -98,16 +98,16 @@ class RehostFulfillmentDataType
     /**
      * @return \Flexnet\LicenseService\Type\ServerIDsType|null
      */
-    public function getServerIds() : \Flexnet\LicenseService\Type\ServerIDsType|null
+    public function getServerIds(): ServerIDsType|null
     {
         return $this->serverIds;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ServerIDsType|null $serverIds
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
      * @return RehostFulfillmentDataType
      */
-    public function withServerIds(\Flexnet\LicenseService\Type\ServerIDsType|null $serverIds) : \Flexnet\LicenseService\Type\RehostFulfillmentDataType
+    public function withServerIds(ServerIDsType|null $serverIds): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->serverIds = $serverIds;
@@ -118,16 +118,16 @@ class RehostFulfillmentDataType
     /**
      * @return \Flexnet\LicenseService\Type\NodeIDsType|null
      */
-    public function getNodeIds() : \Flexnet\LicenseService\Type\NodeIDsType|null
+    public function getNodeIds(): NodeIDsType|null
     {
         return $this->nodeIds;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\NodeIDsType|null $nodeIds
+     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
      * @return RehostFulfillmentDataType
      */
-    public function withNodeIds(\Flexnet\LicenseService\Type\NodeIDsType|null $nodeIds) : \Flexnet\LicenseService\Type\RehostFulfillmentDataType
+    public function withNodeIds(NodeIDsType|null $nodeIds): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->nodeIds = $nodeIds;
@@ -138,16 +138,16 @@ class RehostFulfillmentDataType
     /**
      * @return \Flexnet\LicenseService\Type\CustomHostIDType|null
      */
-    public function getCustomHost() : \Flexnet\LicenseService\Type\CustomHostIDType|null
+    public function getCustomHost(): CustomHostIDType|null
     {
         return $this->customHost;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CustomHostIDType|null $customHost
+     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
      * @return RehostFulfillmentDataType
      */
-    public function withCustomHost(\Flexnet\LicenseService\Type\CustomHostIDType|null $customHost) : \Flexnet\LicenseService\Type\RehostFulfillmentDataType
+    public function withCustomHost(CustomHostIDType|null $customHost): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->customHost = $customHost;
@@ -158,16 +158,16 @@ class RehostFulfillmentDataType
     /**
      * @return int|null
      */
-    public function getPartialCount() : int|null
+    public function getPartialCount(): int|null
     {
         return $this->partialCount;
     }
 
     /**
-     * @param int|null $partialCount
+     * @param  int|null  $partialCount
      * @return RehostFulfillmentDataType
      */
-    public function withPartialCount(int|null $partialCount) : \Flexnet\LicenseService\Type\RehostFulfillmentDataType
+    public function withPartialCount(int|null $partialCount): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->partialCount = $partialCount;
@@ -178,16 +178,16 @@ class RehostFulfillmentDataType
     /**
      * @return int|null
      */
-    public function getOverDraftCount() : int|null
+    public function getOverDraftCount(): int|null
     {
         return $this->overDraftCount;
     }
 
     /**
-     * @param int|null $overDraftCount
+     * @param  int|null  $overDraftCount
      * @return RehostFulfillmentDataType
      */
-    public function withOverDraftCount(int|null $overDraftCount) : \Flexnet\LicenseService\Type\RehostFulfillmentDataType
+    public function withOverDraftCount(int|null $overDraftCount): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->overDraftCount = $overDraftCount;
@@ -198,16 +198,16 @@ class RehostFulfillmentDataType
     /**
      * @return bool|null
      */
-    public function getOverridePolicy() : bool|null
+    public function getOverridePolicy(): bool|null
     {
         return $this->overridePolicy;
     }
 
     /**
-     * @param bool|null $overridePolicy
+     * @param  bool|null  $overridePolicy
      * @return RehostFulfillmentDataType
      */
-    public function withOverridePolicy(bool|null $overridePolicy) : \Flexnet\LicenseService\Type\RehostFulfillmentDataType
+    public function withOverridePolicy(bool|null $overridePolicy): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->overridePolicy = $overridePolicy;
@@ -215,4 +215,3 @@ class RehostFulfillmentDataType
         return $new;
     }
 }
-

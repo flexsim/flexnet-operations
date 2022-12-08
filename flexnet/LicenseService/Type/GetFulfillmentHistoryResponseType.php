@@ -19,20 +19,20 @@ class GetFulfillmentHistoryResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FulfillmentHistoryDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryDataType|null  $responseData
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FulfillmentHistoryDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FulfillmentHistoryDataType|null $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FulfillmentHistoryDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryDataType|null  $responseData
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FulfillmentHistoryDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FulfillmentHistoryDataType|null $responseData = null)
     {
         return new static(...\func_get_args());
     }
@@ -40,16 +40,16 @@ class GetFulfillmentHistoryResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return GetFulfillmentHistoryResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\GetFulfillmentHistoryResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): GetFulfillmentHistoryResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -60,16 +60,16 @@ class GetFulfillmentHistoryResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentHistoryDataType|null
      */
-    public function getResponseData() : \Flexnet\LicenseService\Type\FulfillmentHistoryDataType|null
+    public function getResponseData(): FulfillmentHistoryDataType|null
     {
         return $this->responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentHistoryDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryDataType|null  $responseData
      * @return GetFulfillmentHistoryResponseType
      */
-    public function withResponseData(\Flexnet\LicenseService\Type\FulfillmentHistoryDataType|null $responseData) : \Flexnet\LicenseService\Type\GetFulfillmentHistoryResponseType
+    public function withResponseData(FulfillmentHistoryDataType|null $responseData): GetFulfillmentHistoryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -77,4 +77,3 @@ class GetFulfillmentHistoryResponseType implements ResultInterface
         return $new;
     }
 }
-

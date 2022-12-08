@@ -17,20 +17,20 @@ class PartNumberIdentifierType
     /**
      * Constructor
      *
-     * @param string|null $uniqueId
-     * @param \Flexnet\LicenseService\Type\PartNumberPKType|null $primaryKeys
+     * @param  string|null  $uniqueId
+     * @param  \Flexnet\LicenseService\Type\PartNumberPKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, \Flexnet\LicenseService\Type\PartNumberPKType|null $primaryKeys = null)
+    public function __construct(string|null $uniqueId = null, PartNumberPKType|null $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
     /**
-     * @param string|null $uniqueId
-     * @param \Flexnet\LicenseService\Type\PartNumberPKType|null $primaryKeys
+     * @param  string|null  $uniqueId
+     * @param  \Flexnet\LicenseService\Type\PartNumberPKType|null  $primaryKeys
      */
-    public static function create(string|null $uniqueId = null, \Flexnet\LicenseService\Type\PartNumberPKType|null $primaryKeys = null)
+    public static function create(string|null $uniqueId = null, PartNumberPKType|null $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,16 +38,16 @@ class PartNumberIdentifierType
     /**
      * @return string|null
      */
-    public function getUniqueId() : string|null
+    public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
     /**
-     * @param string|null $uniqueId
+     * @param  string|null  $uniqueId
      * @return PartNumberIdentifierType
      */
-    public function withUniqueId(string|null $uniqueId) : \Flexnet\LicenseService\Type\PartNumberIdentifierType
+    public function withUniqueId(string|null $uniqueId): PartNumberIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -58,16 +58,16 @@ class PartNumberIdentifierType
     /**
      * @return \Flexnet\LicenseService\Type\PartNumberPKType|null
      */
-    public function getPrimaryKeys() : \Flexnet\LicenseService\Type\PartNumberPKType|null
+    public function getPrimaryKeys(): PartNumberPKType|null
     {
         return $this->primaryKeys;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\PartNumberPKType|null $primaryKeys
+     * @param  \Flexnet\LicenseService\Type\PartNumberPKType|null  $primaryKeys
      * @return PartNumberIdentifierType
      */
-    public function withPrimaryKeys(\Flexnet\LicenseService\Type\PartNumberPKType|null $primaryKeys) : \Flexnet\LicenseService\Type\PartNumberIdentifierType
+    public function withPrimaryKeys(PartNumberPKType|null $primaryKeys): PartNumberIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;
@@ -75,4 +75,3 @@ class PartNumberIdentifierType
         return $new;
     }
 }
-

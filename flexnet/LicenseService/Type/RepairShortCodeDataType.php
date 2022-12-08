@@ -27,12 +27,12 @@ class RepairShortCodeDataType
     /**
      * Constructor
      *
-     * @param string $shortCode
-     * @param string $webRegKey
-     * @param \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null $publisherAttributes
-     * @param bool|null $overridePolicy
+     * @param  string  $shortCode
+     * @param  string  $webRegKey
+     * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
+     * @param  bool|null  $overridePolicy
      */
-    public function __construct(string $shortCode, string $webRegKey, \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null $publisherAttributes = null, bool|null $overridePolicy = null)
+    public function __construct(string $shortCode, string $webRegKey, PublisherAttributesListDataType|null $publisherAttributes = null, bool|null $overridePolicy = null)
     {
         $this->shortCode = $shortCode;
         $this->webRegKey = $webRegKey;
@@ -41,12 +41,12 @@ class RepairShortCodeDataType
     }
 
     /**
-     * @param string $shortCode
-     * @param string $webRegKey
-     * @param \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null $publisherAttributes
-     * @param bool|null $overridePolicy
+     * @param  string  $shortCode
+     * @param  string  $webRegKey
+     * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
+     * @param  bool|null  $overridePolicy
      */
-    public static function create(string $shortCode, string $webRegKey, \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null $publisherAttributes = null, bool|null $overridePolicy = null)
+    public static function create(string $shortCode, string $webRegKey, PublisherAttributesListDataType|null $publisherAttributes = null, bool|null $overridePolicy = null)
     {
         return new static(...\func_get_args());
     }
@@ -54,16 +54,16 @@ class RepairShortCodeDataType
     /**
      * @return string
      */
-    public function getShortCode() : string
+    public function getShortCode(): string
     {
         return $this->shortCode;
     }
 
     /**
-     * @param string $shortCode
+     * @param  string  $shortCode
      * @return RepairShortCodeDataType
      */
-    public function withShortCode(string $shortCode) : \Flexnet\LicenseService\Type\RepairShortCodeDataType
+    public function withShortCode(string $shortCode): RepairShortCodeDataType
     {
         $new = clone $this;
         $new->shortCode = $shortCode;
@@ -74,16 +74,16 @@ class RepairShortCodeDataType
     /**
      * @return string
      */
-    public function getWebRegKey() : string
+    public function getWebRegKey(): string
     {
         return $this->webRegKey;
     }
 
     /**
-     * @param string $webRegKey
+     * @param  string  $webRegKey
      * @return RepairShortCodeDataType
      */
-    public function withWebRegKey(string $webRegKey) : \Flexnet\LicenseService\Type\RepairShortCodeDataType
+    public function withWebRegKey(string $webRegKey): RepairShortCodeDataType
     {
         $new = clone $this;
         $new->webRegKey = $webRegKey;
@@ -94,16 +94,16 @@ class RepairShortCodeDataType
     /**
      * @return \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null
      */
-    public function getPublisherAttributes() : \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null
+    public function getPublisherAttributes(): PublisherAttributesListDataType|null
     {
         return $this->publisherAttributes;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null $publisherAttributes
+     * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
      * @return RepairShortCodeDataType
      */
-    public function withPublisherAttributes(\Flexnet\LicenseService\Type\PublisherAttributesListDataType|null $publisherAttributes) : \Flexnet\LicenseService\Type\RepairShortCodeDataType
+    public function withPublisherAttributes(PublisherAttributesListDataType|null $publisherAttributes): RepairShortCodeDataType
     {
         $new = clone $this;
         $new->publisherAttributes = $publisherAttributes;
@@ -114,16 +114,16 @@ class RepairShortCodeDataType
     /**
      * @return bool|null
      */
-    public function getOverridePolicy() : bool|null
+    public function getOverridePolicy(): bool|null
     {
         return $this->overridePolicy;
     }
 
     /**
-     * @param bool|null $overridePolicy
+     * @param  bool|null  $overridePolicy
      * @return RepairShortCodeDataType
      */
-    public function withOverridePolicy(bool|null $overridePolicy) : \Flexnet\LicenseService\Type\RepairShortCodeDataType
+    public function withOverridePolicy(bool|null $overridePolicy): RepairShortCodeDataType
     {
         $new = clone $this;
         $new->overridePolicy = $overridePolicy;
@@ -131,4 +131,3 @@ class RepairShortCodeDataType
         return $new;
     }
 }
-

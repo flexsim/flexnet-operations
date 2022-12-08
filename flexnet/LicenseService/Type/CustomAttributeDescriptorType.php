@@ -12,7 +12,7 @@ class CustomAttributeDescriptorType
     /**
      * Constructor
      *
-     * @param string $attributeName
+     * @param  string  $attributeName
      */
     public function __construct(string $attributeName)
     {
@@ -20,7 +20,7 @@ class CustomAttributeDescriptorType
     }
 
     /**
-     * @param string $attributeName
+     * @param  string  $attributeName
      */
     public static function create(string $attributeName)
     {
@@ -30,16 +30,16 @@ class CustomAttributeDescriptorType
     /**
      * @return string
      */
-    public function getAttributeName() : string
+    public function getAttributeName(): string
     {
         return $this->attributeName;
     }
 
     /**
-     * @param string $attributeName
+     * @param  string  $attributeName
      * @return CustomAttributeDescriptorType
      */
-    public function withAttributeName(string $attributeName) : \Flexnet\LicenseService\Type\CustomAttributeDescriptorType
+    public function withAttributeName(string $attributeName): CustomAttributeDescriptorType
     {
         $new = clone $this;
         $new->attributeName = $attributeName;
@@ -47,4 +47,3 @@ class CustomAttributeDescriptorType
         return $new;
     }
 }
-

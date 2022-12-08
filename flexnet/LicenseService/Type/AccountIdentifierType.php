@@ -17,20 +17,20 @@ class AccountIdentifierType
     /**
      * Constructor
      *
-     * @param string|null $uniqueId
-     * @param \Flexnet\LicenseService\Type\AccountPKType|null $primaryKeys
+     * @param  string|null  $uniqueId
+     * @param  \Flexnet\LicenseService\Type\AccountPKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, \Flexnet\LicenseService\Type\AccountPKType|null $primaryKeys = null)
+    public function __construct(string|null $uniqueId = null, AccountPKType|null $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
     /**
-     * @param string|null $uniqueId
-     * @param \Flexnet\LicenseService\Type\AccountPKType|null $primaryKeys
+     * @param  string|null  $uniqueId
+     * @param  \Flexnet\LicenseService\Type\AccountPKType|null  $primaryKeys
      */
-    public static function create(string|null $uniqueId = null, \Flexnet\LicenseService\Type\AccountPKType|null $primaryKeys = null)
+    public static function create(string|null $uniqueId = null, AccountPKType|null $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,16 +38,16 @@ class AccountIdentifierType
     /**
      * @return string|null
      */
-    public function getUniqueId() : string|null
+    public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
     /**
-     * @param string|null $uniqueId
+     * @param  string|null  $uniqueId
      * @return AccountIdentifierType
      */
-    public function withUniqueId(string|null $uniqueId) : \Flexnet\LicenseService\Type\AccountIdentifierType
+    public function withUniqueId(string|null $uniqueId): AccountIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -58,16 +58,16 @@ class AccountIdentifierType
     /**
      * @return \Flexnet\LicenseService\Type\AccountPKType|null
      */
-    public function getPrimaryKeys() : \Flexnet\LicenseService\Type\AccountPKType|null
+    public function getPrimaryKeys(): AccountPKType|null
     {
         return $this->primaryKeys;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\AccountPKType|null $primaryKeys
+     * @param  \Flexnet\LicenseService\Type\AccountPKType|null  $primaryKeys
      * @return AccountIdentifierType
      */
-    public function withPrimaryKeys(\Flexnet\LicenseService\Type\AccountPKType|null $primaryKeys) : \Flexnet\LicenseService\Type\AccountIdentifierType
+    public function withPrimaryKeys(AccountPKType|null $primaryKeys): AccountIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;
@@ -75,4 +75,3 @@ class AccountIdentifierType
         return $new;
     }
 }
-

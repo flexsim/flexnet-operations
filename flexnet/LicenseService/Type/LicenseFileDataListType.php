@@ -12,17 +12,17 @@ class LicenseFileDataListType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\LicenseFileDataType|array<\Flexnet\LicenseService\Type\LicenseFileDataType>|null $licenseFile
+     * @param  \Flexnet\LicenseService\Type\LicenseFileDataType|array<\Flexnet\LicenseService\Type\LicenseFileDataType>|null  $licenseFile
      */
-    public function __construct(\Flexnet\LicenseService\Type\LicenseFileDataType|array|null $licenseFile = null)
+    public function __construct(LicenseFileDataType|array|null $licenseFile = null)
     {
         $this->licenseFile = $licenseFile;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\LicenseFileDataType|array<\Flexnet\LicenseService\Type\LicenseFileDataType>|null $licenseFile
+     * @param  \Flexnet\LicenseService\Type\LicenseFileDataType|array<\Flexnet\LicenseService\Type\LicenseFileDataType>|null  $licenseFile
      */
-    public static function create(\Flexnet\LicenseService\Type\LicenseFileDataType|array|null $licenseFile = null)
+    public static function create(LicenseFileDataType|array|null $licenseFile = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class LicenseFileDataListType
     /**
      * @return \Flexnet\LicenseService\Type\LicenseFileDataType|array<\Flexnet\LicenseService\Type\LicenseFileDataType>|null
      */
-    public function getLicenseFile() : \Flexnet\LicenseService\Type\LicenseFileDataType|array|null
+    public function getLicenseFile(): LicenseFileDataType|array|null
     {
         return $this->licenseFile;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\LicenseFileDataType|array<\Flexnet\LicenseService\Type\LicenseFileDataType>|null $licenseFile
+     * @param  \Flexnet\LicenseService\Type\LicenseFileDataType|array<\Flexnet\LicenseService\Type\LicenseFileDataType>|null  $licenseFile
      * @return LicenseFileDataListType
      */
-    public function withLicenseFile(\Flexnet\LicenseService\Type\LicenseFileDataType|array|null $licenseFile) : \Flexnet\LicenseService\Type\LicenseFileDataListType
+    public function withLicenseFile(LicenseFileDataType|array|null $licenseFile): LicenseFileDataListType
     {
         $new = clone $this;
         $new->licenseFile = $licenseFile;
@@ -47,4 +47,3 @@ class LicenseFileDataListType
         return $new;
     }
 }
-

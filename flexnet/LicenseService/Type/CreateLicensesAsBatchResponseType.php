@@ -19,20 +19,20 @@ class CreateLicensesAsBatchResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType|null  $responseData
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, CreateLicensesAsBatchResponseDataType|null $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType|null  $responseData
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, CreateLicensesAsBatchResponseDataType|null $responseData = null)
     {
         return new static(...\func_get_args());
     }
@@ -40,16 +40,16 @@ class CreateLicensesAsBatchResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return CreateLicensesAsBatchResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): CreateLicensesAsBatchResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -60,16 +60,16 @@ class CreateLicensesAsBatchResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType|null
      */
-    public function getResponseData() : \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType|null
+    public function getResponseData(): CreateLicensesAsBatchResponseDataType|null
     {
         return $this->responseData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType|null $responseData
+     * @param  \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType|null  $responseData
      * @return CreateLicensesAsBatchResponseType
      */
-    public function withResponseData(\Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType|null $responseData) : \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseType
+    public function withResponseData(CreateLicensesAsBatchResponseDataType|null $responseData): CreateLicensesAsBatchResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -77,4 +77,3 @@ class CreateLicensesAsBatchResponseType implements ResultInterface
         return $new;
     }
 }
-

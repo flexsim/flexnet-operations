@@ -24,11 +24,11 @@ class ActivateLicensesResponseType implements ResultInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FailedLineItem|null $failedData
-     * @param string|null $resultData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FailedLineItem|null  $failedData
+     * @param  string|null  $resultData
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FailedLineItem|null $failedData = null, string|null $resultData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedLineItem|null $failedData = null, string|null $resultData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
@@ -36,11 +36,11 @@ class ActivateLicensesResponseType implements ResultInterface
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
-     * @param \Flexnet\LicenseService\Type\FailedLineItem|null $failedData
-     * @param string|null $resultData
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
+     * @param  \Flexnet\LicenseService\Type\FailedLineItem|null  $failedData
+     * @param  string|null  $resultData
      */
-    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, \Flexnet\LicenseService\Type\FailedLineItem|null $failedData = null, string|null $resultData = null)
+    public static function create(StatusInfoType $statusInfo, FailedLineItem|null $failedData = null, string|null $resultData = null)
     {
         return new static(...\func_get_args());
     }
@@ -48,16 +48,16 @@ class ActivateLicensesResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\StatusInfoType
      */
-    public function getStatusInfo() : \Flexnet\LicenseService\Type\StatusInfoType
+    public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\StatusInfoType $statusInfo
+     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @return ActivateLicensesResponseType
      */
-    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo) : \Flexnet\LicenseService\Type\ActivateLicensesResponseType
+    public function withStatusInfo(StatusInfoType $statusInfo): ActivateLicensesResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -68,16 +68,16 @@ class ActivateLicensesResponseType implements ResultInterface
     /**
      * @return \Flexnet\LicenseService\Type\FailedLineItem|null
      */
-    public function getFailedData() : \Flexnet\LicenseService\Type\FailedLineItem|null
+    public function getFailedData(): FailedLineItem|null
     {
         return $this->failedData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedLineItem|null $failedData
+     * @param  \Flexnet\LicenseService\Type\FailedLineItem|null  $failedData
      * @return ActivateLicensesResponseType
      */
-    public function withFailedData(\Flexnet\LicenseService\Type\FailedLineItem|null $failedData) : \Flexnet\LicenseService\Type\ActivateLicensesResponseType
+    public function withFailedData(FailedLineItem|null $failedData): ActivateLicensesResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -88,16 +88,16 @@ class ActivateLicensesResponseType implements ResultInterface
     /**
      * @return string|null
      */
-    public function getResultData() : string|null
+    public function getResultData(): string|null
     {
         return $this->resultData;
     }
 
     /**
-     * @param string|null $resultData
+     * @param  string|null  $resultData
      * @return ActivateLicensesResponseType
      */
-    public function withResultData(string|null $resultData) : \Flexnet\LicenseService\Type\ActivateLicensesResponseType
+    public function withResultData(string|null $resultData): ActivateLicensesResponseType
     {
         $new = clone $this;
         $new->resultData = $resultData;
@@ -105,4 +105,3 @@ class ActivateLicensesResponseType implements ResultInterface
         return $new;
     }
 }
-

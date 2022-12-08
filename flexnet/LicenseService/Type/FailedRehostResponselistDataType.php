@@ -12,17 +12,17 @@ class FailedRehostResponselistDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array<\Flexnet\LicenseService\Type\FailedRehostResponseDataType>|null $failedFulfillment
+     * @param  \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array<\Flexnet\LicenseService\Type\FailedRehostResponseDataType>|null  $failedFulfillment
      */
-    public function __construct(\Flexnet\LicenseService\Type\FailedRehostResponseDataType|array|null $failedFulfillment = null)
+    public function __construct(FailedRehostResponseDataType|array|null $failedFulfillment = null)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array<\Flexnet\LicenseService\Type\FailedRehostResponseDataType>|null $failedFulfillment
+     * @param  \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array<\Flexnet\LicenseService\Type\FailedRehostResponseDataType>|null  $failedFulfillment
      */
-    public static function create(\Flexnet\LicenseService\Type\FailedRehostResponseDataType|array|null $failedFulfillment = null)
+    public static function create(FailedRehostResponseDataType|array|null $failedFulfillment = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class FailedRehostResponselistDataType
     /**
      * @return \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array<\Flexnet\LicenseService\Type\FailedRehostResponseDataType>|null
      */
-    public function getFailedFulfillment() : \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array|null
+    public function getFailedFulfillment(): FailedRehostResponseDataType|array|null
     {
         return $this->failedFulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array<\Flexnet\LicenseService\Type\FailedRehostResponseDataType>|null $failedFulfillment
+     * @param  \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array<\Flexnet\LicenseService\Type\FailedRehostResponseDataType>|null  $failedFulfillment
      * @return FailedRehostResponselistDataType
      */
-    public function withFailedFulfillment(\Flexnet\LicenseService\Type\FailedRehostResponseDataType|array|null $failedFulfillment) : \Flexnet\LicenseService\Type\FailedRehostResponselistDataType
+    public function withFailedFulfillment(FailedRehostResponseDataType|array|null $failedFulfillment): FailedRehostResponselistDataType
     {
         $new = clone $this;
         $new->failedFulfillment = $failedFulfillment;
@@ -47,4 +47,3 @@ class FailedRehostResponselistDataType
         return $new;
     }
 }
-

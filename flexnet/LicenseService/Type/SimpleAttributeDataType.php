@@ -17,8 +17,8 @@ class SimpleAttributeDataType
     /**
      * Constructor
      *
-     * @param string $attributeName
-     * @param string $attributeValue
+     * @param  string  $attributeName
+     * @param  string  $attributeValue
      */
     public function __construct(string $attributeName, string $attributeValue)
     {
@@ -27,8 +27,8 @@ class SimpleAttributeDataType
     }
 
     /**
-     * @param string $attributeName
-     * @param string $attributeValue
+     * @param  string  $attributeName
+     * @param  string  $attributeValue
      */
     public static function create(string $attributeName, string $attributeValue)
     {
@@ -38,16 +38,16 @@ class SimpleAttributeDataType
     /**
      * @return string
      */
-    public function getAttributeName() : string
+    public function getAttributeName(): string
     {
         return $this->attributeName;
     }
 
     /**
-     * @param string $attributeName
+     * @param  string  $attributeName
      * @return SimpleAttributeDataType
      */
-    public function withAttributeName(string $attributeName) : \Flexnet\LicenseService\Type\SimpleAttributeDataType
+    public function withAttributeName(string $attributeName): SimpleAttributeDataType
     {
         $new = clone $this;
         $new->attributeName = $attributeName;
@@ -58,16 +58,16 @@ class SimpleAttributeDataType
     /**
      * @return string
      */
-    public function getAttributeValue() : string
+    public function getAttributeValue(): string
     {
         return $this->attributeValue;
     }
 
     /**
-     * @param string $attributeValue
+     * @param  string  $attributeValue
      * @return SimpleAttributeDataType
      */
-    public function withAttributeValue(string $attributeValue) : \Flexnet\LicenseService\Type\SimpleAttributeDataType
+    public function withAttributeValue(string $attributeValue): SimpleAttributeDataType
     {
         $new = clone $this;
         $new->attributeValue = $attributeValue;
@@ -75,4 +75,3 @@ class SimpleAttributeDataType
         return $new;
     }
 }
-

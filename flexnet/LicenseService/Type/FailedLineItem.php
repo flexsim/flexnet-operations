@@ -12,7 +12,7 @@ class FailedLineItem
     /**
      * Constructor
      *
-     * @param string|null $activationId
+     * @param  string|null  $activationId
      */
     public function __construct(string|null $activationId = null)
     {
@@ -20,7 +20,7 @@ class FailedLineItem
     }
 
     /**
-     * @param string|null $activationId
+     * @param  string|null  $activationId
      */
     public static function create(string|null $activationId = null)
     {
@@ -30,16 +30,16 @@ class FailedLineItem
     /**
      * @return string|null
      */
-    public function getActivationId() : string|null
+    public function getActivationId(): string|null
     {
         return $this->activationId;
     }
 
     /**
-     * @param string|null $activationId
+     * @param  string|null  $activationId
      * @return FailedLineItem
      */
-    public function withActivationId(string|null $activationId) : \Flexnet\LicenseService\Type\FailedLineItem
+    public function withActivationId(string|null $activationId): FailedLineItem
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -47,4 +47,3 @@ class FailedLineItem
         return $new;
     }
 }
-

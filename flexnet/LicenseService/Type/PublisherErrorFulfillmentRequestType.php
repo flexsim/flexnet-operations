@@ -14,17 +14,17 @@ class PublisherErrorFulfillmentRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType>  $fulfillment
      */
-    public function __construct(\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array $fulfillment)
+    public function __construct(PublisherErrorFulfillmentDataType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType>  $fulfillment
      */
-    public static function create(\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array $fulfillment)
+    public static function create(PublisherErrorFulfillmentDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -32,16 +32,16 @@ class PublisherErrorFulfillmentRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType>
      */
-    public function getFulfillment() : \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array
+    public function getFulfillment(): PublisherErrorFulfillmentDataType|array
     {
         return $this->fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType>  $fulfillment
      * @return PublisherErrorFulfillmentRequestType
      */
-    public function withFulfillment(\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array $fulfillment) : \Flexnet\LicenseService\Type\PublisherErrorFulfillmentRequestType
+    public function withFulfillment(PublisherErrorFulfillmentDataType|array $fulfillment): PublisherErrorFulfillmentRequestType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;
@@ -49,4 +49,3 @@ class PublisherErrorFulfillmentRequestType implements RequestInterface
         return $new;
     }
 }
-

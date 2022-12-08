@@ -17,20 +17,20 @@ class FulfillmentIdentifierType
     /**
      * Constructor
      *
-     * @param string|null $uniqueId
-     * @param \Flexnet\LicenseService\Type\FulfillmentPKType|null $primaryKeys
+     * @param  string|null  $uniqueId
+     * @param  \Flexnet\LicenseService\Type\FulfillmentPKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, \Flexnet\LicenseService\Type\FulfillmentPKType|null $primaryKeys = null)
+    public function __construct(string|null $uniqueId = null, FulfillmentPKType|null $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
     /**
-     * @param string|null $uniqueId
-     * @param \Flexnet\LicenseService\Type\FulfillmentPKType|null $primaryKeys
+     * @param  string|null  $uniqueId
+     * @param  \Flexnet\LicenseService\Type\FulfillmentPKType|null  $primaryKeys
      */
-    public static function create(string|null $uniqueId = null, \Flexnet\LicenseService\Type\FulfillmentPKType|null $primaryKeys = null)
+    public static function create(string|null $uniqueId = null, FulfillmentPKType|null $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,16 +38,16 @@ class FulfillmentIdentifierType
     /**
      * @return string|null
      */
-    public function getUniqueId() : string|null
+    public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
     /**
-     * @param string|null $uniqueId
+     * @param  string|null  $uniqueId
      * @return FulfillmentIdentifierType
      */
-    public function withUniqueId(string|null $uniqueId) : \Flexnet\LicenseService\Type\FulfillmentIdentifierType
+    public function withUniqueId(string|null $uniqueId): FulfillmentIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -58,16 +58,16 @@ class FulfillmentIdentifierType
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentPKType|null
      */
-    public function getPrimaryKeys() : \Flexnet\LicenseService\Type\FulfillmentPKType|null
+    public function getPrimaryKeys(): FulfillmentPKType|null
     {
         return $this->primaryKeys;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\FulfillmentPKType|null $primaryKeys
+     * @param  \Flexnet\LicenseService\Type\FulfillmentPKType|null  $primaryKeys
      * @return FulfillmentIdentifierType
      */
-    public function withPrimaryKeys(\Flexnet\LicenseService\Type\FulfillmentPKType|null $primaryKeys) : \Flexnet\LicenseService\Type\FulfillmentIdentifierType
+    public function withPrimaryKeys(FulfillmentPKType|null $primaryKeys): FulfillmentIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;
@@ -75,4 +75,3 @@ class FulfillmentIdentifierType
         return $new;
     }
 }
-

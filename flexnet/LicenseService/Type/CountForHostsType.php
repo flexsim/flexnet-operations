@@ -22,9 +22,9 @@ class CountForHostsType
     /**
      * Constructor
      *
-     * @param string $hostDataRefId
-     * @param int $fulfillCount
-     * @param int|null $overDraftCount
+     * @param  string  $hostDataRefId
+     * @param  int  $fulfillCount
+     * @param  int|null  $overDraftCount
      */
     public function __construct(string $hostDataRefId, int $fulfillCount, int|null $overDraftCount = null)
     {
@@ -34,9 +34,9 @@ class CountForHostsType
     }
 
     /**
-     * @param string $hostDataRefId
-     * @param int $fulfillCount
-     * @param int|null $overDraftCount
+     * @param  string  $hostDataRefId
+     * @param  int  $fulfillCount
+     * @param  int|null  $overDraftCount
      */
     public static function create(string $hostDataRefId, int $fulfillCount, int|null $overDraftCount = null)
     {
@@ -46,16 +46,16 @@ class CountForHostsType
     /**
      * @return string
      */
-    public function getHostDataRefId() : string
+    public function getHostDataRefId(): string
     {
         return $this->hostDataRefId;
     }
 
     /**
-     * @param string $hostDataRefId
+     * @param  string  $hostDataRefId
      * @return CountForHostsType
      */
-    public function withHostDataRefId(string $hostDataRefId) : \Flexnet\LicenseService\Type\CountForHostsType
+    public function withHostDataRefId(string $hostDataRefId): CountForHostsType
     {
         $new = clone $this;
         $new->hostDataRefId = $hostDataRefId;
@@ -66,16 +66,16 @@ class CountForHostsType
     /**
      * @return int
      */
-    public function getFulfillCount() : int
+    public function getFulfillCount(): int
     {
         return $this->fulfillCount;
     }
 
     /**
-     * @param int $fulfillCount
+     * @param  int  $fulfillCount
      * @return CountForHostsType
      */
-    public function withFulfillCount(int $fulfillCount) : \Flexnet\LicenseService\Type\CountForHostsType
+    public function withFulfillCount(int $fulfillCount): CountForHostsType
     {
         $new = clone $this;
         $new->fulfillCount = $fulfillCount;
@@ -86,16 +86,16 @@ class CountForHostsType
     /**
      * @return int|null
      */
-    public function getOverDraftCount() : int|null
+    public function getOverDraftCount(): int|null
     {
         return $this->overDraftCount;
     }
 
     /**
-     * @param int|null $overDraftCount
+     * @param  int|null  $overDraftCount
      * @return CountForHostsType
      */
-    public function withOverDraftCount(int|null $overDraftCount) : \Flexnet\LicenseService\Type\CountForHostsType
+    public function withOverDraftCount(int|null $overDraftCount): CountForHostsType
     {
         $new = clone $this;
         $new->overDraftCount = $overDraftCount;
@@ -103,4 +103,3 @@ class CountForHostsType
         return $new;
     }
 }
-

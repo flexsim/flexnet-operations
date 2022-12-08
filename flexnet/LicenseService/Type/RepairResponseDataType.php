@@ -12,17 +12,17 @@ class RepairResponseDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null $fulfillmentData
+     * @param  \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function __construct(\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public function __construct(RepairFulfillmentResponseDataType|array|null $fulfillmentData = null)
     {
         $this->fulfillmentData = $fulfillmentData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null $fulfillmentData
+     * @param  \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public static function create(\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public static function create(RepairFulfillmentResponseDataType|array|null $fulfillmentData = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class RepairResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null
      */
-    public function getFulfillmentData() : \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array|null
+    public function getFulfillmentData(): RepairFulfillmentResponseDataType|array|null
     {
         return $this->fulfillmentData;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null $fulfillmentData
+     * @param  \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null  $fulfillmentData
      * @return RepairResponseDataType
      */
-    public function withFulfillmentData(\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array|null $fulfillmentData) : \Flexnet\LicenseService\Type\RepairResponseDataType
+    public function withFulfillmentData(RepairFulfillmentResponseDataType|array|null $fulfillmentData): RepairResponseDataType
     {
         $new = clone $this;
         $new->fulfillmentData = $fulfillmentData;
@@ -47,4 +47,3 @@ class RepairResponseDataType
         return $new;
     }
 }
-

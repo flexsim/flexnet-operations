@@ -17,20 +17,20 @@ class FailedRepairResponseDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\RepairFulfillmentDataType $fulfillment
-     * @param string $reason
+     * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType  $fulfillment
+     * @param  string  $reason
      */
-    public function __construct(\Flexnet\LicenseService\Type\RepairFulfillmentDataType $fulfillment, string $reason)
+    public function __construct(RepairFulfillmentDataType $fulfillment, string $reason)
     {
         $this->fulfillment = $fulfillment;
         $this->reason = $reason;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RepairFulfillmentDataType $fulfillment
-     * @param string $reason
+     * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType  $fulfillment
+     * @param  string  $reason
      */
-    public static function create(\Flexnet\LicenseService\Type\RepairFulfillmentDataType $fulfillment, string $reason)
+    public static function create(RepairFulfillmentDataType $fulfillment, string $reason)
     {
         return new static(...\func_get_args());
     }
@@ -38,16 +38,16 @@ class FailedRepairResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\RepairFulfillmentDataType
      */
-    public function getFulfillment() : \Flexnet\LicenseService\Type\RepairFulfillmentDataType
+    public function getFulfillment(): RepairFulfillmentDataType
     {
         return $this->fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\RepairFulfillmentDataType $fulfillment
+     * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType  $fulfillment
      * @return FailedRepairResponseDataType
      */
-    public function withFulfillment(\Flexnet\LicenseService\Type\RepairFulfillmentDataType $fulfillment) : \Flexnet\LicenseService\Type\FailedRepairResponseDataType
+    public function withFulfillment(RepairFulfillmentDataType $fulfillment): FailedRepairResponseDataType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;
@@ -58,16 +58,16 @@ class FailedRepairResponseDataType
     /**
      * @return string
      */
-    public function getReason() : string
+    public function getReason(): string
     {
         return $this->reason;
     }
 
     /**
-     * @param string $reason
+     * @param  string  $reason
      * @return FailedRepairResponseDataType
      */
-    public function withReason(string $reason) : \Flexnet\LicenseService\Type\FailedRepairResponseDataType
+    public function withReason(string $reason): FailedRepairResponseDataType
     {
         $new = clone $this;
         $new->reason = $reason;
@@ -75,4 +75,3 @@ class FailedRepairResponseDataType
         return $new;
     }
 }
-

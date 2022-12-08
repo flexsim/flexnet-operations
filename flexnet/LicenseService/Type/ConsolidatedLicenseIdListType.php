@@ -12,7 +12,7 @@ class ConsolidatedLicenseIdListType
     /**
      * Constructor
      *
-     * @param string|array<string> $consolidatedLicenseId
+     * @param  string|array<string>  $consolidatedLicenseId
      */
     public function __construct(string|array $consolidatedLicenseId)
     {
@@ -20,7 +20,7 @@ class ConsolidatedLicenseIdListType
     }
 
     /**
-     * @param string|array<string> $consolidatedLicenseId
+     * @param  string|array<string>  $consolidatedLicenseId
      */
     public static function create(string|array $consolidatedLicenseId)
     {
@@ -30,16 +30,16 @@ class ConsolidatedLicenseIdListType
     /**
      * @return string|array<string>
      */
-    public function getConsolidatedLicenseId() : string|array
+    public function getConsolidatedLicenseId(): string|array
     {
         return $this->consolidatedLicenseId;
     }
 
     /**
-     * @param string|array<string> $consolidatedLicenseId
+     * @param  string|array<string>  $consolidatedLicenseId
      * @return ConsolidatedLicenseIdListType
      */
-    public function withConsolidatedLicenseId(string|array $consolidatedLicenseId) : \Flexnet\LicenseService\Type\ConsolidatedLicenseIdListType
+    public function withConsolidatedLicenseId(string|array $consolidatedLicenseId): ConsolidatedLicenseIdListType
     {
         $new = clone $this;
         $new->consolidatedLicenseId = $consolidatedLicenseId;
@@ -47,4 +47,3 @@ class ConsolidatedLicenseIdListType
         return $new;
     }
 }
-

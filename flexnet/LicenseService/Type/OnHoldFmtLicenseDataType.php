@@ -27,12 +27,12 @@ class OnHoldFmtLicenseDataType
     /**
      * Constructor
      *
-     * @param string $fulfillmentId
-     * @param string|null $textLicense
-     * @param string|null $binaryLicense
-     * @param \Flexnet\LicenseService\Type\LicenseFileDataListType|null $licenseFiles
+     * @param  string  $fulfillmentId
+     * @param  string|null  $textLicense
+     * @param  string|null  $binaryLicense
+     * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
      */
-    public function __construct(string $fulfillmentId, string|null $textLicense = null, string|null $binaryLicense = null, \Flexnet\LicenseService\Type\LicenseFileDataListType|null $licenseFiles = null)
+    public function __construct(string $fulfillmentId, string|null $textLicense = null, string|null $binaryLicense = null, LicenseFileDataListType|null $licenseFiles = null)
     {
         $this->fulfillmentId = $fulfillmentId;
         $this->textLicense = $textLicense;
@@ -41,12 +41,12 @@ class OnHoldFmtLicenseDataType
     }
 
     /**
-     * @param string $fulfillmentId
-     * @param string|null $textLicense
-     * @param string|null $binaryLicense
-     * @param \Flexnet\LicenseService\Type\LicenseFileDataListType|null $licenseFiles
+     * @param  string  $fulfillmentId
+     * @param  string|null  $textLicense
+     * @param  string|null  $binaryLicense
+     * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
      */
-    public static function create(string $fulfillmentId, string|null $textLicense = null, string|null $binaryLicense = null, \Flexnet\LicenseService\Type\LicenseFileDataListType|null $licenseFiles = null)
+    public static function create(string $fulfillmentId, string|null $textLicense = null, string|null $binaryLicense = null, LicenseFileDataListType|null $licenseFiles = null)
     {
         return new static(...\func_get_args());
     }
@@ -54,16 +54,16 @@ class OnHoldFmtLicenseDataType
     /**
      * @return string
      */
-    public function getFulfillmentId() : string
+    public function getFulfillmentId(): string
     {
         return $this->fulfillmentId;
     }
 
     /**
-     * @param string $fulfillmentId
+     * @param  string  $fulfillmentId
      * @return OnHoldFmtLicenseDataType
      */
-    public function withFulfillmentId(string $fulfillmentId) : \Flexnet\LicenseService\Type\OnHoldFmtLicenseDataType
+    public function withFulfillmentId(string $fulfillmentId): OnHoldFmtLicenseDataType
     {
         $new = clone $this;
         $new->fulfillmentId = $fulfillmentId;
@@ -74,16 +74,16 @@ class OnHoldFmtLicenseDataType
     /**
      * @return string|null
      */
-    public function getTextLicense() : string|null
+    public function getTextLicense(): string|null
     {
         return $this->textLicense;
     }
 
     /**
-     * @param string|null $textLicense
+     * @param  string|null  $textLicense
      * @return OnHoldFmtLicenseDataType
      */
-    public function withTextLicense(string|null $textLicense) : \Flexnet\LicenseService\Type\OnHoldFmtLicenseDataType
+    public function withTextLicense(string|null $textLicense): OnHoldFmtLicenseDataType
     {
         $new = clone $this;
         $new->textLicense = $textLicense;
@@ -94,16 +94,16 @@ class OnHoldFmtLicenseDataType
     /**
      * @return string|null
      */
-    public function getBinaryLicense() : string|null
+    public function getBinaryLicense(): string|null
     {
         return $this->binaryLicense;
     }
 
     /**
-     * @param string|null $binaryLicense
+     * @param  string|null  $binaryLicense
      * @return OnHoldFmtLicenseDataType
      */
-    public function withBinaryLicense(string|null $binaryLicense) : \Flexnet\LicenseService\Type\OnHoldFmtLicenseDataType
+    public function withBinaryLicense(string|null $binaryLicense): OnHoldFmtLicenseDataType
     {
         $new = clone $this;
         $new->binaryLicense = $binaryLicense;
@@ -114,16 +114,16 @@ class OnHoldFmtLicenseDataType
     /**
      * @return \Flexnet\LicenseService\Type\LicenseFileDataListType|null
      */
-    public function getLicenseFiles() : \Flexnet\LicenseService\Type\LicenseFileDataListType|null
+    public function getLicenseFiles(): LicenseFileDataListType|null
     {
         return $this->licenseFiles;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\LicenseFileDataListType|null $licenseFiles
+     * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
      * @return OnHoldFmtLicenseDataType
      */
-    public function withLicenseFiles(\Flexnet\LicenseService\Type\LicenseFileDataListType|null $licenseFiles) : \Flexnet\LicenseService\Type\OnHoldFmtLicenseDataType
+    public function withLicenseFiles(LicenseFileDataListType|null $licenseFiles): OnHoldFmtLicenseDataType
     {
         $new = clone $this;
         $new->licenseFiles = $licenseFiles;
@@ -131,4 +131,3 @@ class OnHoldFmtLicenseDataType
         return $new;
     }
 }
-

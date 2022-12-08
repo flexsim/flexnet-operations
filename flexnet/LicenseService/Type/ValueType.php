@@ -12,7 +12,7 @@ class ValueType
     /**
      * Constructor
      *
-     * @param string|array<string>|null $value
+     * @param  string|array<string>|null  $value
      */
     public function __construct(string|array|null $value = null)
     {
@@ -20,7 +20,7 @@ class ValueType
     }
 
     /**
-     * @param string|array<string>|null $value
+     * @param  string|array<string>|null  $value
      */
     public static function create(string|array|null $value = null)
     {
@@ -30,16 +30,16 @@ class ValueType
     /**
      * @return string|array<string>|null
      */
-    public function getValue() : string|array|null
+    public function getValue(): string|array|null
     {
         return $this->value;
     }
 
     /**
-     * @param string|array<string>|null $value
+     * @param  string|array<string>|null  $value
      * @return ValueType
      */
-    public function withValue(string|array|null $value) : \Flexnet\LicenseService\Type\ValueType
+    public function withValue(string|array|null $value): ValueType
     {
         $new = clone $this;
         $new->value = $value;
@@ -47,4 +47,3 @@ class ValueType
         return $new;
     }
 }
-

@@ -12,17 +12,17 @@ class GetConsolidatedFulfillmentsQueryResponseDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array<\Flexnet\LicenseService\Type\ConsolidatedLicenseDataType>|null $consolidatedLicense
+     * @param  \Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array<\Flexnet\LicenseService\Type\ConsolidatedLicenseDataType>|null  $consolidatedLicense
      */
-    public function __construct(\Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array|null $consolidatedLicense = null)
+    public function __construct(ConsolidatedLicenseDataType|array|null $consolidatedLicense = null)
     {
         $this->consolidatedLicense = $consolidatedLicense;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array<\Flexnet\LicenseService\Type\ConsolidatedLicenseDataType>|null $consolidatedLicense
+     * @param  \Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array<\Flexnet\LicenseService\Type\ConsolidatedLicenseDataType>|null  $consolidatedLicense
      */
-    public static function create(\Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array|null $consolidatedLicense = null)
+    public static function create(ConsolidatedLicenseDataType|array|null $consolidatedLicense = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class GetConsolidatedFulfillmentsQueryResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array<\Flexnet\LicenseService\Type\ConsolidatedLicenseDataType>|null
      */
-    public function getConsolidatedLicense() : \Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array|null
+    public function getConsolidatedLicense(): ConsolidatedLicenseDataType|array|null
     {
         return $this->consolidatedLicense;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array<\Flexnet\LicenseService\Type\ConsolidatedLicenseDataType>|null $consolidatedLicense
+     * @param  \Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array<\Flexnet\LicenseService\Type\ConsolidatedLicenseDataType>|null  $consolidatedLicense
      * @return GetConsolidatedFulfillmentsQueryResponseDataType
      */
-    public function withConsolidatedLicense(\Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array|null $consolidatedLicense) : \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryResponseDataType
+    public function withConsolidatedLicense(ConsolidatedLicenseDataType|array|null $consolidatedLicense): GetConsolidatedFulfillmentsQueryResponseDataType
     {
         $new = clone $this;
         $new->consolidatedLicense = $consolidatedLicense;
@@ -47,4 +47,3 @@ class GetConsolidatedFulfillmentsQueryResponseDataType
         return $new;
     }
 }
-

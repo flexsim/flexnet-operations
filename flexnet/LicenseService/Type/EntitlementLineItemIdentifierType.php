@@ -17,20 +17,20 @@ class EntitlementLineItemIdentifierType
     /**
      * Constructor
      *
-     * @param string|null $uniqueId
-     * @param \Flexnet\LicenseService\Type\EntitlementLineItemPKType|null $primaryKeys
+     * @param  string|null  $uniqueId
+     * @param  \Flexnet\LicenseService\Type\EntitlementLineItemPKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, \Flexnet\LicenseService\Type\EntitlementLineItemPKType|null $primaryKeys = null)
+    public function __construct(string|null $uniqueId = null, EntitlementLineItemPKType|null $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
     /**
-     * @param string|null $uniqueId
-     * @param \Flexnet\LicenseService\Type\EntitlementLineItemPKType|null $primaryKeys
+     * @param  string|null  $uniqueId
+     * @param  \Flexnet\LicenseService\Type\EntitlementLineItemPKType|null  $primaryKeys
      */
-    public static function create(string|null $uniqueId = null, \Flexnet\LicenseService\Type\EntitlementLineItemPKType|null $primaryKeys = null)
+    public static function create(string|null $uniqueId = null, EntitlementLineItemPKType|null $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,16 +38,16 @@ class EntitlementLineItemIdentifierType
     /**
      * @return string|null
      */
-    public function getUniqueId() : string|null
+    public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
     /**
-     * @param string|null $uniqueId
+     * @param  string|null  $uniqueId
      * @return EntitlementLineItemIdentifierType
      */
-    public function withUniqueId(string|null $uniqueId) : \Flexnet\LicenseService\Type\EntitlementLineItemIdentifierType
+    public function withUniqueId(string|null $uniqueId): EntitlementLineItemIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -58,16 +58,16 @@ class EntitlementLineItemIdentifierType
     /**
      * @return \Flexnet\LicenseService\Type\EntitlementLineItemPKType|null
      */
-    public function getPrimaryKeys() : \Flexnet\LicenseService\Type\EntitlementLineItemPKType|null
+    public function getPrimaryKeys(): EntitlementLineItemPKType|null
     {
         return $this->primaryKeys;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\EntitlementLineItemPKType|null $primaryKeys
+     * @param  \Flexnet\LicenseService\Type\EntitlementLineItemPKType|null  $primaryKeys
      * @return EntitlementLineItemIdentifierType
      */
-    public function withPrimaryKeys(\Flexnet\LicenseService\Type\EntitlementLineItemPKType|null $primaryKeys) : \Flexnet\LicenseService\Type\EntitlementLineItemIdentifierType
+    public function withPrimaryKeys(EntitlementLineItemPKType|null $primaryKeys): EntitlementLineItemIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;
@@ -75,4 +75,3 @@ class EntitlementLineItemIdentifierType
         return $new;
     }
 }
-

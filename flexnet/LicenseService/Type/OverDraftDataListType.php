@@ -12,17 +12,17 @@ class OverDraftDataListType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType|array<\Flexnet\LicenseService\Type\ActivationIdOverDraftMapType> $activationIdMap
+     * @param  \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType|array<\Flexnet\LicenseService\Type\ActivationIdOverDraftMapType>  $activationIdMap
      */
-    public function __construct(\Flexnet\LicenseService\Type\ActivationIdOverDraftMapType|array $activationIdMap)
+    public function __construct(ActivationIdOverDraftMapType|array $activationIdMap)
     {
         $this->activationIdMap = $activationIdMap;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType|array<\Flexnet\LicenseService\Type\ActivationIdOverDraftMapType> $activationIdMap
+     * @param  \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType|array<\Flexnet\LicenseService\Type\ActivationIdOverDraftMapType>  $activationIdMap
      */
-    public static function create(\Flexnet\LicenseService\Type\ActivationIdOverDraftMapType|array $activationIdMap)
+    public static function create(ActivationIdOverDraftMapType|array $activationIdMap)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class OverDraftDataListType
     /**
      * @return \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType|array<\Flexnet\LicenseService\Type\ActivationIdOverDraftMapType>
      */
-    public function getActivationIdMap() : \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType|array
+    public function getActivationIdMap(): ActivationIdOverDraftMapType|array
     {
         return $this->activationIdMap;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType|array<\Flexnet\LicenseService\Type\ActivationIdOverDraftMapType> $activationIdMap
+     * @param  \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType|array<\Flexnet\LicenseService\Type\ActivationIdOverDraftMapType>  $activationIdMap
      * @return OverDraftDataListType
      */
-    public function withActivationIdMap(\Flexnet\LicenseService\Type\ActivationIdOverDraftMapType|array $activationIdMap) : \Flexnet\LicenseService\Type\OverDraftDataListType
+    public function withActivationIdMap(ActivationIdOverDraftMapType|array $activationIdMap): OverDraftDataListType
     {
         $new = clone $this;
         $new->activationIdMap = $activationIdMap;
@@ -47,4 +47,3 @@ class OverDraftDataListType
         return $new;
     }
 }
-

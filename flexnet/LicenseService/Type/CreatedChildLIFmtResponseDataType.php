@@ -12,17 +12,17 @@ class CreatedChildLIFmtResponseDataType
     /**
      * Constructor
      *
-     * @param \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType>  $fulfillment
      */
-    public function __construct(\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType|array $fulfillment)
+    public function __construct(CreatedChildLIFulfillmentDataType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType>  $fulfillment
      */
-    public static function create(\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType|array $fulfillment)
+    public static function create(CreatedChildLIFulfillmentDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -30,16 +30,16 @@ class CreatedChildLIFmtResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType>
      */
-    public function getFulfillment() : \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType|array
+    public function getFulfillment(): CreatedChildLIFulfillmentDataType|array
     {
         return $this->fulfillment;
     }
 
     /**
-     * @param \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType> $fulfillment
+     * @param  \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType>  $fulfillment
      * @return CreatedChildLIFmtResponseDataType
      */
-    public function withFulfillment(\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType|array $fulfillment) : \Flexnet\LicenseService\Type\CreatedChildLIFmtResponseDataType
+    public function withFulfillment(CreatedChildLIFulfillmentDataType|array $fulfillment): CreatedChildLIFmtResponseDataType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;
@@ -47,4 +47,3 @@ class CreatedChildLIFmtResponseDataType
         return $new;
     }
 }
-

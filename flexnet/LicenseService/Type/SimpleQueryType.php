@@ -17,8 +17,8 @@ class SimpleQueryType
     /**
      * Constructor
      *
-     * @param string $value
-     * @param string $searchType
+     * @param  string  $value
+     * @param  string  $searchType
      */
     public function __construct(string $value, string $searchType)
     {
@@ -27,8 +27,8 @@ class SimpleQueryType
     }
 
     /**
-     * @param string $value
-     * @param string $searchType
+     * @param  string  $value
+     * @param  string  $searchType
      */
     public static function create(string $value, string $searchType)
     {
@@ -38,16 +38,16 @@ class SimpleQueryType
     /**
      * @return string
      */
-    public function getValue() : string
+    public function getValue(): string
     {
         return $this->value;
     }
 
     /**
-     * @param string $value
+     * @param  string  $value
      * @return SimpleQueryType
      */
-    public function withValue(string $value) : \Flexnet\LicenseService\Type\SimpleQueryType
+    public function withValue(string $value): SimpleQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -58,16 +58,16 @@ class SimpleQueryType
     /**
      * @return string
      */
-    public function getSearchType() : string
+    public function getSearchType(): string
     {
         return $this->searchType;
     }
 
     /**
-     * @param string $searchType
+     * @param  string  $searchType
      * @return SimpleQueryType
      */
-    public function withSearchType(string $searchType) : \Flexnet\LicenseService\Type\SimpleQueryType
+    public function withSearchType(string $searchType): SimpleQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;
@@ -75,4 +75,3 @@ class SimpleQueryType
         return $new;
     }
 }
-
