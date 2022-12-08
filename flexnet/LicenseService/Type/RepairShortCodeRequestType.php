@@ -1,0 +1,52 @@
+<?php
+
+namespace Flexnet\LicenseService\Type;
+
+use Phpro\SoapClient\Type\RequestInterface;
+
+class RepairShortCodeRequestType implements RequestInterface
+{
+    /**
+     * @var \Flexnet\LicenseService\Type\RepairShortCodeDataType|null
+     */
+    private $shortCodeData;
+
+    /**
+     * Constructor
+     *
+     * @param \Flexnet\LicenseService\Type\RepairShortCodeDataType|null $shortCodeData
+     */
+    public function __construct(\Flexnet\LicenseService\Type\RepairShortCodeDataType|null $shortCodeData = null)
+    {
+        $this->shortCodeData = $shortCodeData;
+    }
+
+    /**
+     * @param \Flexnet\LicenseService\Type\RepairShortCodeDataType|null $shortCodeData
+     */
+    public static function create(\Flexnet\LicenseService\Type\RepairShortCodeDataType|null $shortCodeData = null)
+    {
+        return new static(...\func_get_args());
+    }
+
+    /**
+     * @return \Flexnet\LicenseService\Type\RepairShortCodeDataType|null
+     */
+    public function getShortCodeData() : \Flexnet\LicenseService\Type\RepairShortCodeDataType|null
+    {
+        return $this->shortCodeData;
+    }
+
+    /**
+     * @param \Flexnet\LicenseService\Type\RepairShortCodeDataType|null $shortCodeData
+     * @return RepairShortCodeRequestType
+     */
+    public function withShortCodeData(\Flexnet\LicenseService\Type\RepairShortCodeDataType|null $shortCodeData) : \Flexnet\LicenseService\Type\RepairShortCodeRequestType
+    {
+        $new = clone $this;
+        $new->shortCodeData = $shortCodeData;
+
+        return $new;
+    }
+}
+

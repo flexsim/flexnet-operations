@@ -4,6 +4,8 @@ namespace Flexsim\FlexnetOperations;
 
 use Flexnet\EntitlementOrderService\EntitlementOrderServiceClient;
 use Flexnet\EntitlementOrderService\EntitlementOrderServiceClientFactory;
+use Flexnet\LicenseService\LicenseServiceClient;
+use Flexnet\LicenseService\LicenseServiceClientFactory;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -25,6 +27,10 @@ class FlexnetOperationsServiceProvider extends PackageServiceProvider
     {
         $this->app->singleton(EntitlementOrderServiceClient::class, function () {
             return EntitlementOrderServiceClientFactory::factory(config('flexnet-operations.entitlementOrderService.wsdl'), config('flexnet-operations.username'), config('flexnet-operations.password'));
+        });
+
+        $this->app->singleton(LicenseServiceClient::class, function () {
+            return LicenseServiceClientFactory::factory(config('flexnet-operations.entitlementOrderService.wsdl'), config('flexnet-operations.username'), config('flexnet-operations.password'));
         });
     }
 }
