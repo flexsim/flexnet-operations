@@ -30,7 +30,7 @@ class FlexnetOperationsServiceProvider extends PackageServiceProvider
         });
 
         $this->app->singleton(LicenseServiceClient::class, function () {
-            return LicenseServiceClientFactory::factory(config('flexnet-operations.entitlementOrderService.wsdl'), config('flexnet-operations.username'), config('flexnet-operations.password'));
+            return LicenseServiceClientFactory::factory(config('flexnet-operations.licenseService.wsdl'), config('flexnet-operations.username'), config('flexnet-operations.password'));
         });
     }
 }
