@@ -5,41 +5,41 @@ namespace Flexnet\LicenseService\Type;
 class FulfillmentHistoryDetailsType
 {
     /**
-     * @var \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>
+     * @var \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>|null
      */
     private $record;
 
     /**
      * Constructor
      *
-     * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>  $record
+     * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>|null  $record
      */
-    public function __construct(FulfillmentHistoryRecordType|array $record)
+    public function __construct(FulfillmentHistoryRecordType|array|null $record = null)
     {
         $this->record = $record;
     }
 
     /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>  $record
+     * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>|null  $record
      */
-    public static function create(FulfillmentHistoryRecordType|array $record)
+    public static function create(FulfillmentHistoryRecordType|array|null $record = null)
     {
         return new static(...\func_get_args());
     }
 
     /**
-     * @return \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>
+     * @return \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>|null
      */
-    public function getRecord(): FulfillmentHistoryRecordType|array
+    public function getRecord(): FulfillmentHistoryRecordType|array|null
     {
         return $this->record;
     }
 
     /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>  $record
+     * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>|null  $record
      * @return FulfillmentHistoryDetailsType
      */
-    public function withRecord(FulfillmentHistoryRecordType|array $record): FulfillmentHistoryDetailsType
+    public function withRecord(FulfillmentHistoryRecordType|array|null $record): FulfillmentHistoryDetailsType
     {
         $new = clone $this;
         $new->record = $record;

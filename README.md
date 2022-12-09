@@ -43,8 +43,12 @@ echo $flexnetOperations->echoPhrase('Hello, Flexsim!');
 
 # Type Generation
 
-1. Run the flexnet WSDL file through the xml to json tool here: https://codebeautify.org/xmlviewer
-2. Normalize Extension types in the wsdl file by extracting them from the base type into the child type
+1. Fix types in wsdl files
+   1. LicenseService
+      - fulfillmentHistoryDetailsType - add minOccurs="0" to the "record" property
+
+2. Run the flexnet WSDL file through the xml to json tool here: https://codebeautify.org/xmlviewer
+3. Normalize Extension types in the wsdl file by extracting them from the base type into the child type
 
 # Client Factory Generation
 
