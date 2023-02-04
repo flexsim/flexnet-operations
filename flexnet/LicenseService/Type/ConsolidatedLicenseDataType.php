@@ -48,37 +48,37 @@ class ConsolidatedLicenseDataType
      * Constructor
      *
      * @param  string  $consolidatedLicenseId
-     * @param  string|null  $licenseText
-     * @param  string|null  $binaryLicense
      * @param  string  $soldTo
      * @param  string  $criteria
-     * @param  string|null  $state
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierListType  $consolidatedFulfillments
+     * @param  string|null  $licenseText
+     * @param  string|null  $binaryLicense
+     * @param  string|null  $state
      * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
      */
-    public function __construct(string $consolidatedLicenseId, string|null $licenseText = null, string|null $binaryLicense = null, string $soldTo, string $criteria, string|null $state = null, FulfillmentIdentifierListType $consolidatedFulfillments, LicenseFileDataListType|null $licenseFiles = null)
+    public function __construct(string $consolidatedLicenseId, string $soldTo, string $criteria, FulfillmentIdentifierListType $consolidatedFulfillments, string|null $licenseText = null, string|null $binaryLicense = null, string|null $state = null, LicenseFileDataListType|null $licenseFiles = null)
     {
         $this->consolidatedLicenseId = $consolidatedLicenseId;
-        $this->licenseText = $licenseText;
-        $this->binaryLicense = $binaryLicense;
         $this->soldTo = $soldTo;
         $this->criteria = $criteria;
-        $this->state = $state;
         $this->consolidatedFulfillments = $consolidatedFulfillments;
+        $this->licenseText = $licenseText;
+        $this->binaryLicense = $binaryLicense;
+        $this->state = $state;
         $this->licenseFiles = $licenseFiles;
     }
 
     /**
      * @param  string  $consolidatedLicenseId
-     * @param  string|null  $licenseText
-     * @param  string|null  $binaryLicense
      * @param  string  $soldTo
      * @param  string  $criteria
-     * @param  string|null  $state
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierListType  $consolidatedFulfillments
+     * @param  string|null  $licenseText
+     * @param  string|null  $binaryLicense
+     * @param  string|null  $state
      * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
      */
-    public static function create(string $consolidatedLicenseId, string|null $licenseText = null, string|null $binaryLicense = null, string $soldTo, string $criteria, string|null $state = null, FulfillmentIdentifierListType $consolidatedFulfillments, LicenseFileDataListType|null $licenseFiles = null)
+    public static function create(string $consolidatedLicenseId, string $soldTo, string $criteria, FulfillmentIdentifierListType $consolidatedFulfillments, string|null $licenseText = null, string|null $binaryLicense = null, string|null $state = null, LicenseFileDataListType|null $licenseFiles = null)
     {
         return new static(...\func_get_args());
     }

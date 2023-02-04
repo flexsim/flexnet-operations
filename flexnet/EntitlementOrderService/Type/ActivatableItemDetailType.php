@@ -58,43 +58,43 @@ class ActivatableItemDetailType
      * Constructor
      *
      * @param  string  $activatableItemType
-     * @param  string|null  $parentBulkEntitlementId
      * @param  string  $entitlementId
      * @param  string  $soldTo
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType  $activatableItemData
+     * @param  string|null  $parentBulkEntitlementId
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
      * @param  string|null  $entitlementState
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType  $activatableItemData
      * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType|null  $channelPartners
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $entitlementAttributes
      */
-    public function __construct(string $activatableItemType, string|null $parentBulkEntitlementId = null, string $entitlementId, string $soldTo, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $entitlementState = null, EntitlementLineItemDataType $activatableItemData, ChannelPartnerDataListType|null $channelPartners = null, AttributeDescriptorDataType|null $entitlementAttributes = null)
+    public function __construct(string $activatableItemType, string $entitlementId, string $soldTo, EntitlementLineItemDataType $activatableItemData, string|null $parentBulkEntitlementId = null, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $entitlementState = null, ChannelPartnerDataListType|null $channelPartners = null, AttributeDescriptorDataType|null $entitlementAttributes = null)
     {
         $this->activatableItemType = $activatableItemType;
-        $this->parentBulkEntitlementId = $parentBulkEntitlementId;
         $this->entitlementId = $entitlementId;
         $this->soldTo = $soldTo;
+        $this->activatableItemData = $activatableItemData;
+        $this->parentBulkEntitlementId = $parentBulkEntitlementId;
         $this->shipToEmail = $shipToEmail;
         $this->shipToAddress = $shipToAddress;
         $this->entitlementState = $entitlementState;
-        $this->activatableItemData = $activatableItemData;
         $this->channelPartners = $channelPartners;
         $this->entitlementAttributes = $entitlementAttributes;
     }
 
     /**
      * @param  string  $activatableItemType
-     * @param  string|null  $parentBulkEntitlementId
      * @param  string  $entitlementId
      * @param  string  $soldTo
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType  $activatableItemData
+     * @param  string|null  $parentBulkEntitlementId
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
      * @param  string|null  $entitlementState
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType  $activatableItemData
      * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType|null  $channelPartners
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $entitlementAttributes
      */
-    public static function create(string $activatableItemType, string|null $parentBulkEntitlementId = null, string $entitlementId, string $soldTo, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $entitlementState = null, EntitlementLineItemDataType $activatableItemData, ChannelPartnerDataListType|null $channelPartners = null, AttributeDescriptorDataType|null $entitlementAttributes = null)
+    public static function create(string $activatableItemType, string $entitlementId, string $soldTo, EntitlementLineItemDataType $activatableItemData, string|null $parentBulkEntitlementId = null, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $entitlementState = null, ChannelPartnerDataListType|null $channelPartners = null, AttributeDescriptorDataType|null $entitlementAttributes = null)
     {
         return new static(...\func_get_args());
     }

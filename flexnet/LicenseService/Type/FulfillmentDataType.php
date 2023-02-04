@@ -168,23 +168,23 @@ class FulfillmentDataType
      * @param  \Flexnet\LicenseService\Type\EntitlementLineItemIdentifierType  $lineItem
      * @param  \Flexnet\LicenseService\Type\ProductIdentifierType  $product
      * @param  string  $soldTo
-     * @param  string|null  $shipToEmail
-     * @param  string|null  $shipToAddress
-     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
-     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
-     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
      * @param  string  $fulfilledCount
      * @param  string  $overDraftCount
      * @param  \DateTimeInterface  $fulfillDate
      * @param  \DateTimeInterface  $fulfillDateTime
      * @param  bool  $isPermanent
+     * @param  \DateTimeInterface  $lastModifiedDateTime
+     * @param  string|null  $shipToEmail
+     * @param  string|null  $shipToAddress
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
+     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
+     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
      * @param  \DateTimeInterface|null  $startDate
      * @param  \DateTimeInterface|null  $expirationDate
      * @param  string|null  $licenseText
      * @param  string|null  $binaryLicense
      * @param  \Flexnet\LicenseService\Type\ConsolidatedHostLicenseDataType|null  $consolidatedHostLicense
      * @param  string|null  $supportAction
-     * @param  \DateTimeInterface  $lastModifiedDateTime
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null  $parentFulfillmentId
      * @param  \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
      * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
@@ -194,7 +194,7 @@ class FulfillmentDataType
      * @param  \Flexnet\LicenseService\Type\EntitledProductDataListType|null  $entitledProducts
      * @param  string|null  $activationType
      */
-    public function __construct(EntitlementIdentifierType $entitlementIdentifier, FulfillmentIdentifierType $fulfillmentIdentifier, string $fulfillmentType, EntitlementLineItemIdentifierType $lineItem, ProductIdentifierType $product, string $soldTo, string|null $shipToEmail = null, string|null $shipToAddress = null, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null, string $fulfilledCount, string $overDraftCount, \DateTimeInterface $fulfillDate, \DateTimeInterface $fulfillDateTime, bool $isPermanent, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $expirationDate = null, string|null $licenseText = null, string|null $binaryLicense = null, ConsolidatedHostLicenseDataType|null $consolidatedHostLicense = null, string|null $supportAction = null, \DateTimeInterface $lastModifiedDateTime, FulfillmentIdentifierType|null $parentFulfillmentId = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $state = null, string|null $fulfillmentSource = null, LicenseFileDataListType|null $licenseFiles = null, EntitledProductDataListType|null $entitledProducts = null, string|null $activationType = null)
+    public function __construct(EntitlementIdentifierType $entitlementIdentifier, FulfillmentIdentifierType $fulfillmentIdentifier, string $fulfillmentType, EntitlementLineItemIdentifierType $lineItem, ProductIdentifierType $product, string $soldTo, string $fulfilledCount, string $overDraftCount, \DateTimeInterface $fulfillDate, \DateTimeInterface $fulfillDateTime, bool $isPermanent, \DateTimeInterface $lastModifiedDateTime, string|null $shipToEmail = null, string|null $shipToAddress = null, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $expirationDate = null, string|null $licenseText = null, string|null $binaryLicense = null, ConsolidatedHostLicenseDataType|null $consolidatedHostLicense = null, string|null $supportAction = null, FulfillmentIdentifierType|null $parentFulfillmentId = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $state = null, string|null $fulfillmentSource = null, LicenseFileDataListType|null $licenseFiles = null, EntitledProductDataListType|null $entitledProducts = null, string|null $activationType = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
@@ -202,23 +202,23 @@ class FulfillmentDataType
         $this->lineItem = $lineItem;
         $this->product = $product;
         $this->soldTo = $soldTo;
-        $this->shipToEmail = $shipToEmail;
-        $this->shipToAddress = $shipToAddress;
-        $this->serverIds = $serverIds;
-        $this->nodeIds = $nodeIds;
-        $this->customHost = $customHost;
         $this->fulfilledCount = $fulfilledCount;
         $this->overDraftCount = $overDraftCount;
         $this->fulfillDate = $fulfillDate;
         $this->fulfillDateTime = $fulfillDateTime;
         $this->isPermanent = $isPermanent;
+        $this->lastModifiedDateTime = $lastModifiedDateTime;
+        $this->shipToEmail = $shipToEmail;
+        $this->shipToAddress = $shipToAddress;
+        $this->serverIds = $serverIds;
+        $this->nodeIds = $nodeIds;
+        $this->customHost = $customHost;
         $this->startDate = $startDate;
         $this->expirationDate = $expirationDate;
         $this->licenseText = $licenseText;
         $this->binaryLicense = $binaryLicense;
         $this->consolidatedHostLicense = $consolidatedHostLicense;
         $this->supportAction = $supportAction;
-        $this->lastModifiedDateTime = $lastModifiedDateTime;
         $this->parentFulfillmentId = $parentFulfillmentId;
         $this->licenseTechnology = $licenseTechnology;
         $this->licenseModelAttributes = $licenseModelAttributes;
@@ -236,23 +236,23 @@ class FulfillmentDataType
      * @param  \Flexnet\LicenseService\Type\EntitlementLineItemIdentifierType  $lineItem
      * @param  \Flexnet\LicenseService\Type\ProductIdentifierType  $product
      * @param  string  $soldTo
-     * @param  string|null  $shipToEmail
-     * @param  string|null  $shipToAddress
-     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
-     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
-     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
      * @param  string  $fulfilledCount
      * @param  string  $overDraftCount
      * @param  \DateTimeInterface  $fulfillDate
      * @param  \DateTimeInterface  $fulfillDateTime
      * @param  bool  $isPermanent
+     * @param  \DateTimeInterface  $lastModifiedDateTime
+     * @param  string|null  $shipToEmail
+     * @param  string|null  $shipToAddress
+     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
+     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
+     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
      * @param  \DateTimeInterface|null  $startDate
      * @param  \DateTimeInterface|null  $expirationDate
      * @param  string|null  $licenseText
      * @param  string|null  $binaryLicense
      * @param  \Flexnet\LicenseService\Type\ConsolidatedHostLicenseDataType|null  $consolidatedHostLicense
      * @param  string|null  $supportAction
-     * @param  \DateTimeInterface  $lastModifiedDateTime
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null  $parentFulfillmentId
      * @param  \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
      * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
@@ -262,7 +262,7 @@ class FulfillmentDataType
      * @param  \Flexnet\LicenseService\Type\EntitledProductDataListType|null  $entitledProducts
      * @param  string|null  $activationType
      */
-    public static function create(EntitlementIdentifierType $entitlementIdentifier, FulfillmentIdentifierType $fulfillmentIdentifier, string $fulfillmentType, EntitlementLineItemIdentifierType $lineItem, ProductIdentifierType $product, string $soldTo, string|null $shipToEmail = null, string|null $shipToAddress = null, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null, string $fulfilledCount, string $overDraftCount, \DateTimeInterface $fulfillDate, \DateTimeInterface $fulfillDateTime, bool $isPermanent, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $expirationDate = null, string|null $licenseText = null, string|null $binaryLicense = null, ConsolidatedHostLicenseDataType|null $consolidatedHostLicense = null, string|null $supportAction = null, \DateTimeInterface $lastModifiedDateTime, FulfillmentIdentifierType|null $parentFulfillmentId = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $state = null, string|null $fulfillmentSource = null, LicenseFileDataListType|null $licenseFiles = null, EntitledProductDataListType|null $entitledProducts = null, string|null $activationType = null)
+    public static function create(EntitlementIdentifierType $entitlementIdentifier, FulfillmentIdentifierType $fulfillmentIdentifier, string $fulfillmentType, EntitlementLineItemIdentifierType $lineItem, ProductIdentifierType $product, string $soldTo, string $fulfilledCount, string $overDraftCount, \DateTimeInterface $fulfillDate, \DateTimeInterface $fulfillDateTime, bool $isPermanent, \DateTimeInterface $lastModifiedDateTime, string|null $shipToEmail = null, string|null $shipToAddress = null, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $expirationDate = null, string|null $licenseText = null, string|null $binaryLicense = null, ConsolidatedHostLicenseDataType|null $consolidatedHostLicense = null, string|null $supportAction = null, FulfillmentIdentifierType|null $parentFulfillmentId = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $state = null, string|null $fulfillmentSource = null, LicenseFileDataListType|null $licenseFiles = null, EntitledProductDataListType|null $entitledProducts = null, string|null $activationType = null)
     {
         return new static(...\func_get_args());
     }

@@ -29,26 +29,26 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
      * @param  int  $pageNumber
      * @param  int  $batchSize
+     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
      * @param  bool|null  $includeLicenseText
      */
-    public function __construct(ConsolidatedFulfillmentsQPType|null $queryParams = null, int $pageNumber, int $batchSize, bool|null $includeLicenseText = null)
+    public function __construct(int $pageNumber, int $batchSize, ConsolidatedFulfillmentsQPType|null $queryParams = null, bool|null $includeLicenseText = null)
     {
-        $this->queryParams = $queryParams;
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
+        $this->queryParams = $queryParams;
         $this->includeLicenseText = $includeLicenseText;
     }
 
     /**
-     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
      * @param  int  $pageNumber
      * @param  int  $batchSize
+     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
      * @param  bool|null  $includeLicenseText
      */
-    public static function create(ConsolidatedFulfillmentsQPType|null $queryParams = null, int $pageNumber, int $batchSize, bool|null $includeLicenseText = null)
+    public static function create(int $pageNumber, int $batchSize, ConsolidatedFulfillmentsQPType|null $queryParams = null, bool|null $includeLicenseText = null)
     {
         return new static(...\func_get_args());
     }

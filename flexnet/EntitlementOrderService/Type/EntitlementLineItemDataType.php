@@ -183,6 +183,7 @@ class EntitlementLineItemDataType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
+     * @param  int  $numberOfCopies
      * @param  string|null  $description
      * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
      * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
@@ -194,7 +195,6 @@ class EntitlementLineItemDataType
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
      * @param  string|null  $orderId
      * @param  string|null  $orderLineNumber
-     * @param  int  $numberOfCopies
      * @param  \DateTimeInterface|null  $startDate
      * @param  string|null  $startDateOption
      * @param  bool|null  $isPermanent
@@ -218,9 +218,10 @@ class EntitlementLineItemDataType
      * @param  int|null  $overdraftMax
      * @param  int|null  $remainingOverdraftCount
      */
-    public function __construct(IdType $activationId, string|null $description = null, ProductIdentifierType|null $product = null, PartNumberIdentifierType|null $partNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, PolicyAttributesListType|null $policyAttributes = null, string|null $orderId = null, string|null $orderLineNumber = null, int $numberOfCopies, \DateTimeInterface|null $startDate = null, string|null $startDateOption = null, bool|null $isPermanent = null, DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $lineItemType = null, EntitledProductDataListType|null $entitledProducts = null, AttributeDescriptorDataType|null $lineItemAttributes = null, ProductCategoryDataType|null $productLine = null, int|null $numberOfRemainingCopies = null, int|null $fulfilledCount = null, int|null $availableExtraActivations = null, bool|null $isTrustedType = null, string|null $state = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, EntitlementLineItemIdentifierType|null $parentLineItem = null, \DateTimeInterface|null $createdOnDateTime = null, \DateTimeInterface|null $lastModifiedDateTime = null, int|null $overdraftMax = null, int|null $remainingOverdraftCount = null)
+    public function __construct(IdType $activationId, int $numberOfCopies, string|null $description = null, ProductIdentifierType|null $product = null, PartNumberIdentifierType|null $partNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, PolicyAttributesListType|null $policyAttributes = null, string|null $orderId = null, string|null $orderLineNumber = null, \DateTimeInterface|null $startDate = null, string|null $startDateOption = null, bool|null $isPermanent = null, DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $lineItemType = null, EntitledProductDataListType|null $entitledProducts = null, AttributeDescriptorDataType|null $lineItemAttributes = null, ProductCategoryDataType|null $productLine = null, int|null $numberOfRemainingCopies = null, int|null $fulfilledCount = null, int|null $availableExtraActivations = null, bool|null $isTrustedType = null, string|null $state = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, EntitlementLineItemIdentifierType|null $parentLineItem = null, \DateTimeInterface|null $createdOnDateTime = null, \DateTimeInterface|null $lastModifiedDateTime = null, int|null $overdraftMax = null, int|null $remainingOverdraftCount = null)
     {
         $this->activationId = $activationId;
+        $this->numberOfCopies = $numberOfCopies;
         $this->description = $description;
         $this->product = $product;
         $this->partNumber = $partNumber;
@@ -232,7 +233,6 @@ class EntitlementLineItemDataType
         $this->policyAttributes = $policyAttributes;
         $this->orderId = $orderId;
         $this->orderLineNumber = $orderLineNumber;
-        $this->numberOfCopies = $numberOfCopies;
         $this->startDate = $startDate;
         $this->startDateOption = $startDateOption;
         $this->isPermanent = $isPermanent;
@@ -259,6 +259,7 @@ class EntitlementLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
+     * @param  int  $numberOfCopies
      * @param  string|null  $description
      * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
      * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
@@ -270,7 +271,6 @@ class EntitlementLineItemDataType
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
      * @param  string|null  $orderId
      * @param  string|null  $orderLineNumber
-     * @param  int  $numberOfCopies
      * @param  \DateTimeInterface|null  $startDate
      * @param  string|null  $startDateOption
      * @param  bool|null  $isPermanent
@@ -294,7 +294,7 @@ class EntitlementLineItemDataType
      * @param  int|null  $overdraftMax
      * @param  int|null  $remainingOverdraftCount
      */
-    public static function create(IdType $activationId, string|null $description = null, ProductIdentifierType|null $product = null, PartNumberIdentifierType|null $partNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, PolicyAttributesListType|null $policyAttributes = null, string|null $orderId = null, string|null $orderLineNumber = null, int $numberOfCopies, \DateTimeInterface|null $startDate = null, string|null $startDateOption = null, bool|null $isPermanent = null, DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $lineItemType = null, EntitledProductDataListType|null $entitledProducts = null, AttributeDescriptorDataType|null $lineItemAttributes = null, ProductCategoryDataType|null $productLine = null, int|null $numberOfRemainingCopies = null, int|null $fulfilledCount = null, int|null $availableExtraActivations = null, bool|null $isTrustedType = null, string|null $state = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, EntitlementLineItemIdentifierType|null $parentLineItem = null, \DateTimeInterface|null $createdOnDateTime = null, \DateTimeInterface|null $lastModifiedDateTime = null, int|null $overdraftMax = null, int|null $remainingOverdraftCount = null)
+    public static function create(IdType $activationId, int $numberOfCopies, string|null $description = null, ProductIdentifierType|null $product = null, PartNumberIdentifierType|null $partNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, PolicyAttributesListType|null $policyAttributes = null, string|null $orderId = null, string|null $orderLineNumber = null, \DateTimeInterface|null $startDate = null, string|null $startDateOption = null, bool|null $isPermanent = null, DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $lineItemType = null, EntitledProductDataListType|null $entitledProducts = null, AttributeDescriptorDataType|null $lineItemAttributes = null, ProductCategoryDataType|null $productLine = null, int|null $numberOfRemainingCopies = null, int|null $fulfilledCount = null, int|null $availableExtraActivations = null, bool|null $isTrustedType = null, string|null $state = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, EntitlementLineItemIdentifierType|null $parentLineItem = null, \DateTimeInterface|null $createdOnDateTime = null, \DateTimeInterface|null $lastModifiedDateTime = null, int|null $overdraftMax = null, int|null $remainingOverdraftCount = null)
     {
         return new static(...\func_get_args());
     }

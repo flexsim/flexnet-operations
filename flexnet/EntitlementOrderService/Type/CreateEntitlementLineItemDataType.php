@@ -123,6 +123,7 @@ class CreateEntitlementLineItemDataType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
+     * @param  int  $numberOfCopies
      * @param  string|null  $description
      * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
      * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
@@ -134,7 +135,6 @@ class CreateEntitlementLineItemDataType
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
      * @param  string|null  $orderId
      * @param  string|null  $orderLineNumber
-     * @param  int  $numberOfCopies
      * @param  \DateTimeInterface|null  $startDate
      * @param  string|null  $startDateOption
      * @param  bool|null  $isPermanent
@@ -146,9 +146,10 @@ class CreateEntitlementLineItemDataType
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataListType|null  $entitledProducts
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $lineItemAttributes
      */
-    public function __construct(IdType $activationId, string|null $description = null, ProductIdentifierType|null $product = null, PartNumberIdentifierType|null $partNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, PolicyAttributesListType|null $policyAttributes = null, string|null $orderId = null, string|null $orderLineNumber = null, int $numberOfCopies, \DateTimeInterface|null $startDate = null, string|null $startDateOption = null, bool|null $isPermanent = null, DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $lineItemType = null, EntitledProductDataListType|null $entitledProducts = null, AttributeDescriptorDataType|null $lineItemAttributes = null)
+    public function __construct(IdType $activationId, int $numberOfCopies, string|null $description = null, ProductIdentifierType|null $product = null, PartNumberIdentifierType|null $partNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, PolicyAttributesListType|null $policyAttributes = null, string|null $orderId = null, string|null $orderLineNumber = null, \DateTimeInterface|null $startDate = null, string|null $startDateOption = null, bool|null $isPermanent = null, DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $lineItemType = null, EntitledProductDataListType|null $entitledProducts = null, AttributeDescriptorDataType|null $lineItemAttributes = null)
     {
         $this->activationId = $activationId;
+        $this->numberOfCopies = $numberOfCopies;
         $this->description = $description;
         $this->product = $product;
         $this->partNumber = $partNumber;
@@ -160,7 +161,6 @@ class CreateEntitlementLineItemDataType
         $this->policyAttributes = $policyAttributes;
         $this->orderId = $orderId;
         $this->orderLineNumber = $orderLineNumber;
-        $this->numberOfCopies = $numberOfCopies;
         $this->startDate = $startDate;
         $this->startDateOption = $startDateOption;
         $this->isPermanent = $isPermanent;
@@ -175,6 +175,7 @@ class CreateEntitlementLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
+     * @param  int  $numberOfCopies
      * @param  string|null  $description
      * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
      * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
@@ -186,7 +187,6 @@ class CreateEntitlementLineItemDataType
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
      * @param  string|null  $orderId
      * @param  string|null  $orderLineNumber
-     * @param  int  $numberOfCopies
      * @param  \DateTimeInterface|null  $startDate
      * @param  string|null  $startDateOption
      * @param  bool|null  $isPermanent
@@ -198,7 +198,7 @@ class CreateEntitlementLineItemDataType
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataListType|null  $entitledProducts
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $lineItemAttributes
      */
-    public static function create(IdType $activationId, string|null $description = null, ProductIdentifierType|null $product = null, PartNumberIdentifierType|null $partNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, PolicyAttributesListType|null $policyAttributes = null, string|null $orderId = null, string|null $orderLineNumber = null, int $numberOfCopies, \DateTimeInterface|null $startDate = null, string|null $startDateOption = null, bool|null $isPermanent = null, DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $lineItemType = null, EntitledProductDataListType|null $entitledProducts = null, AttributeDescriptorDataType|null $lineItemAttributes = null)
+    public static function create(IdType $activationId, int $numberOfCopies, string|null $description = null, ProductIdentifierType|null $product = null, PartNumberIdentifierType|null $partNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, PolicyAttributesListType|null $policyAttributes = null, string|null $orderId = null, string|null $orderLineNumber = null, \DateTimeInterface|null $startDate = null, string|null $startDateOption = null, bool|null $isPermanent = null, DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $lineItemType = null, EntitledProductDataListType|null $entitledProducts = null, AttributeDescriptorDataType|null $lineItemAttributes = null)
     {
         return new static(...\func_get_args());
     }

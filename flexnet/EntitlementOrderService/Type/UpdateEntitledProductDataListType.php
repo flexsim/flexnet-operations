@@ -17,20 +17,20 @@ class UpdateEntitledProductDataListType
     /**
      * Constructor
      *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
      * @param  string  $opType
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
      */
-    public function __construct(EntitledProductDataType|array|null $entitledProducts = null, string $opType)
+    public function __construct(string $opType, EntitledProductDataType|array|null $entitledProducts = null)
     {
-        $this->entitledProducts = $entitledProducts;
         $this->opType = $opType;
+        $this->entitledProducts = $entitledProducts;
     }
 
     /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
      * @param  string  $opType
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
      */
-    public static function create(EntitledProductDataType|array|null $entitledProducts = null, string $opType)
+    public static function create(string $opType, EntitledProductDataType|array|null $entitledProducts = null)
     {
         return new static(...\func_get_args());
     }

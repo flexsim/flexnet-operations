@@ -31,24 +31,24 @@ class CreateLicensesAsBatchRequestType implements RequestInterface
      *
      * @param  \Flexnet\LicenseService\Type\ActivationIdsListType  $activationIds
      * @param  \Flexnet\LicenseService\Type\HostIdDataSetType  $hostIdDataSet
-     * @param  \Flexnet\LicenseService\Type\CountDataSetType|null  $countDataSet
      * @param  \Flexnet\LicenseService\Type\CommonBatchDataSetType  $commonBatchDataSet
+     * @param  \Flexnet\LicenseService\Type\CountDataSetType|null  $countDataSet
      */
-    public function __construct(ActivationIdsListType $activationIds, HostIdDataSetType $hostIdDataSet, CountDataSetType|null $countDataSet = null, CommonBatchDataSetType $commonBatchDataSet)
+    public function __construct(ActivationIdsListType $activationIds, HostIdDataSetType $hostIdDataSet, CommonBatchDataSetType $commonBatchDataSet, CountDataSetType|null $countDataSet = null)
     {
         $this->activationIds = $activationIds;
         $this->hostIdDataSet = $hostIdDataSet;
-        $this->countDataSet = $countDataSet;
         $this->commonBatchDataSet = $commonBatchDataSet;
+        $this->countDataSet = $countDataSet;
     }
 
     /**
      * @param  \Flexnet\LicenseService\Type\ActivationIdsListType  $activationIds
      * @param  \Flexnet\LicenseService\Type\HostIdDataSetType  $hostIdDataSet
-     * @param  \Flexnet\LicenseService\Type\CountDataSetType|null  $countDataSet
      * @param  \Flexnet\LicenseService\Type\CommonBatchDataSetType  $commonBatchDataSet
+     * @param  \Flexnet\LicenseService\Type\CountDataSetType|null  $countDataSet
      */
-    public static function create(ActivationIdsListType $activationIds, HostIdDataSetType $hostIdDataSet, CountDataSetType|null $countDataSet = null, CommonBatchDataSetType $commonBatchDataSet)
+    public static function create(ActivationIdsListType $activationIds, HostIdDataSetType $hostIdDataSet, CommonBatchDataSetType $commonBatchDataSet, CountDataSetType|null $countDataSet = null)
     {
         return new static(...\func_get_args());
     }

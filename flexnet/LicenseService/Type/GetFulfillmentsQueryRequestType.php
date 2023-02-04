@@ -39,32 +39,32 @@ class GetFulfillmentsQueryRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType|null  $queryParams
      * @param  int  $pageNumber
      * @param  int  $batchSize
+     * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType|null  $queryParams
      * @param  bool|null  $includeLicenseText
      * @param  bool|null  $excludeInactiveObsoleteLineItems
      * @param  bool|null  $includeConsolidatedHostLicense
      */
-    public function __construct(FulfillmentsQueryParametersType|null $queryParams = null, int $pageNumber, int $batchSize, bool|null $includeLicenseText = null, bool|null $excludeInactiveObsoleteLineItems = null, bool|null $includeConsolidatedHostLicense = null)
+    public function __construct(int $pageNumber, int $batchSize, FulfillmentsQueryParametersType|null $queryParams = null, bool|null $includeLicenseText = null, bool|null $excludeInactiveObsoleteLineItems = null, bool|null $includeConsolidatedHostLicense = null)
     {
-        $this->queryParams = $queryParams;
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
+        $this->queryParams = $queryParams;
         $this->includeLicenseText = $includeLicenseText;
         $this->excludeInactiveObsoleteLineItems = $excludeInactiveObsoleteLineItems;
         $this->includeConsolidatedHostLicense = $includeConsolidatedHostLicense;
     }
 
     /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType|null  $queryParams
      * @param  int  $pageNumber
      * @param  int  $batchSize
+     * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType|null  $queryParams
      * @param  bool|null  $includeLicenseText
      * @param  bool|null  $excludeInactiveObsoleteLineItems
      * @param  bool|null  $includeConsolidatedHostLicense
      */
-    public static function create(FulfillmentsQueryParametersType|null $queryParams = null, int $pageNumber, int $batchSize, bool|null $includeLicenseText = null, bool|null $excludeInactiveObsoleteLineItems = null, bool|null $includeConsolidatedHostLicense = null)
+    public static function create(int $pageNumber, int $batchSize, FulfillmentsQueryParametersType|null $queryParams = null, bool|null $includeLicenseText = null, bool|null $excludeInactiveObsoleteLineItems = null, bool|null $includeConsolidatedHostLicense = null)
     {
         return new static(...\func_get_args());
     }

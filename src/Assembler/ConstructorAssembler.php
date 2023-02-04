@@ -77,7 +77,27 @@ class ConstructorAssembler implements AssemblerInterface
             'shortdescription' => 'Constructor',
         ]);
 
-        foreach ($type->getProperties() as $property) {
+        $properties = $type->getProperties();
+
+        usort($properties, function ($a, $b) use ($type) {
+            [$aPropertyType, $docType] = $this->options->propertyType($a, $type);
+            [$bPropertyType, $docType] = $this->options->propertyType($b, $type);
+
+            $aNullable = str($aPropertyType)->contains('|null');
+            $bNullable = str($bPropertyType)->contains('|null');
+
+            if ($aNullable && ! $bNullable) {
+                return 1;
+            }
+
+            if ($bNullable && ! $aNullable) {
+                return -1;
+            }
+
+            return 0;
+        });
+
+        foreach ($properties as $property) {
             [$propertyType, $docType] = $this->options->propertyType($property, $type);
 
             $body[] = sprintf('$this->%1$s = $%1$s;', $property->getName());

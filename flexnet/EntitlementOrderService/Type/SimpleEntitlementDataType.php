@@ -83,9 +83,9 @@ class SimpleEntitlementDataType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\IdType  $entitlementId
+     * @param  string  $soldTo
      * @param  \DateTimeInterface|null  $lastModifiedDateTime
      * @param  string|null  $description
-     * @param  string  $soldTo
      * @param  string|null  $soldToName
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
@@ -98,12 +98,12 @@ class SimpleEntitlementDataType
      * @param  bool|null  $allowPortalLogin
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $entitlementAttributes
      */
-    public function __construct(IdType $entitlementId, \DateTimeInterface|null $lastModifiedDateTime = null, string|null $description = null, string $soldTo, string|null $soldToName = null, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $emailTemplateVariation = null, string|null $state = null, string|null $createdUserId = null, EntitlementLineItemDataType|array|null $lineItems = null, MaintenanceLineItemDataType|array|null $maintenanceLineItems = null, ChannelPartnerDataListType|null $channelPartners = null, bool|null $allowPortalLogin = null, AttributeDescriptorDataType|null $entitlementAttributes = null)
+    public function __construct(IdType $entitlementId, string $soldTo, \DateTimeInterface|null $lastModifiedDateTime = null, string|null $description = null, string|null $soldToName = null, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $emailTemplateVariation = null, string|null $state = null, string|null $createdUserId = null, EntitlementLineItemDataType|array|null $lineItems = null, MaintenanceLineItemDataType|array|null $maintenanceLineItems = null, ChannelPartnerDataListType|null $channelPartners = null, bool|null $allowPortalLogin = null, AttributeDescriptorDataType|null $entitlementAttributes = null)
     {
         $this->entitlementId = $entitlementId;
+        $this->soldTo = $soldTo;
         $this->lastModifiedDateTime = $lastModifiedDateTime;
         $this->description = $description;
-        $this->soldTo = $soldTo;
         $this->soldToName = $soldToName;
         $this->shipToEmail = $shipToEmail;
         $this->shipToAddress = $shipToAddress;
@@ -119,9 +119,9 @@ class SimpleEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\IdType  $entitlementId
+     * @param  string  $soldTo
      * @param  \DateTimeInterface|null  $lastModifiedDateTime
      * @param  string|null  $description
-     * @param  string  $soldTo
      * @param  string|null  $soldToName
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
@@ -134,7 +134,7 @@ class SimpleEntitlementDataType
      * @param  bool|null  $allowPortalLogin
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $entitlementAttributes
      */
-    public static function create(IdType $entitlementId, \DateTimeInterface|null $lastModifiedDateTime = null, string|null $description = null, string $soldTo, string|null $soldToName = null, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $emailTemplateVariation = null, string|null $state = null, string|null $createdUserId = null, EntitlementLineItemDataType|array|null $lineItems = null, MaintenanceLineItemDataType|array|null $maintenanceLineItems = null, ChannelPartnerDataListType|null $channelPartners = null, bool|null $allowPortalLogin = null, AttributeDescriptorDataType|null $entitlementAttributes = null)
+    public static function create(IdType $entitlementId, string $soldTo, \DateTimeInterface|null $lastModifiedDateTime = null, string|null $description = null, string|null $soldToName = null, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $emailTemplateVariation = null, string|null $state = null, string|null $createdUserId = null, EntitlementLineItemDataType|array|null $lineItems = null, MaintenanceLineItemDataType|array|null $maintenanceLineItems = null, ChannelPartnerDataListType|null $channelPartners = null, bool|null $allowPortalLogin = null, AttributeDescriptorDataType|null $entitlementAttributes = null)
     {
         return new static(...\func_get_args());
     }

@@ -58,23 +58,23 @@ class EmergencyFulfillmentDataType
      * Constructor
      *
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  string|null  $FNPTimeZoneValue
      * @param  \DateTimeInterface  $startDate
      * @param  \DateTimeInterface  $endDate
+     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
+     * @param  string|null  $FNPTimeZoneValue
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
      * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
      * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
      * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
      */
-    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, \DateTimeInterface $startDate, \DateTimeInterface $endDate, string|null $shipToEmail = null, string|null $shipToAddress = null, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null)
+    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, string|null $shipToEmail = null, string|null $shipToAddress = null, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
-        $this->licenseModelAttributes = $licenseModelAttributes;
-        $this->FNPTimeZoneValue = $FNPTimeZoneValue;
         $this->startDate = $startDate;
         $this->endDate = $endDate;
+        $this->licenseModelAttributes = $licenseModelAttributes;
+        $this->FNPTimeZoneValue = $FNPTimeZoneValue;
         $this->shipToEmail = $shipToEmail;
         $this->shipToAddress = $shipToAddress;
         $this->serverIds = $serverIds;
@@ -84,17 +84,17 @@ class EmergencyFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  string|null  $FNPTimeZoneValue
      * @param  \DateTimeInterface  $startDate
      * @param  \DateTimeInterface  $endDate
+     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
+     * @param  string|null  $FNPTimeZoneValue
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
      * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
      * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
      * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
      */
-    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, \DateTimeInterface $startDate, \DateTimeInterface $endDate, string|null $shipToEmail = null, string|null $shipToAddress = null, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null)
+    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, string|null $shipToEmail = null, string|null $shipToAddress = null, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null)
     {
         return new static(...\func_get_args());
     }

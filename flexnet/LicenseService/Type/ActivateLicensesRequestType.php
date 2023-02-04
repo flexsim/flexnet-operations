@@ -40,31 +40,31 @@ class ActivateLicensesRequestType implements RequestInterface
      * Constructor
      *
      * @param  \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem>  $lineItem
+     * @param  string  $hostInfo
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
      * @param  string|null  $soldTo
      * @param  string|null  $owner
-     * @param  string  $hostInfo
      */
-    public function __construct(TypeLineItem|array $lineItem, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $soldTo = null, string|null $owner = null, string $hostInfo)
+    public function __construct(TypeLineItem|array $lineItem, string $hostInfo, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $soldTo = null, string|null $owner = null)
     {
         $this->lineItem = $lineItem;
+        $this->hostInfo = $hostInfo;
         $this->shipToEmail = $shipToEmail;
         $this->shipToAddress = $shipToAddress;
         $this->soldTo = $soldTo;
         $this->owner = $owner;
-        $this->hostInfo = $hostInfo;
     }
 
     /**
      * @param  \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem>  $lineItem
+     * @param  string  $hostInfo
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
      * @param  string|null  $soldTo
      * @param  string|null  $owner
-     * @param  string  $hostInfo
      */
-    public static function create(TypeLineItem|array $lineItem, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $soldTo = null, string|null $owner = null, string $hostInfo)
+    public static function create(TypeLineItem|array $lineItem, string $hostInfo, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $soldTo = null, string|null $owner = null)
     {
         return new static(...\func_get_args());
     }

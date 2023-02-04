@@ -42,19 +42,19 @@ class CreateShortCodeDataType
     /**
      * Constructor
      *
-     * @param  string|null  $bulkEntitlementId
      * @param  string  $webRegkey
      * @param  string  $shortCode
+     * @param  string|null  $bulkEntitlementId
      * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
      * @param  bool|null  $overridePolicy
      * @param  string|null  $shortCodeActivationType
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null  $reinstallFulfillment
      */
-    public function __construct(string|null $bulkEntitlementId = null, string $webRegkey, string $shortCode, PublisherAttributesListDataType|null $publisherAttributes = null, bool|null $overridePolicy = null, string|null $shortCodeActivationType = null, FulfillmentIdentifierType|null $reinstallFulfillment = null)
+    public function __construct(string $webRegkey, string $shortCode, string|null $bulkEntitlementId = null, PublisherAttributesListDataType|null $publisherAttributes = null, bool|null $overridePolicy = null, string|null $shortCodeActivationType = null, FulfillmentIdentifierType|null $reinstallFulfillment = null)
     {
-        $this->bulkEntitlementId = $bulkEntitlementId;
         $this->webRegkey = $webRegkey;
         $this->shortCode = $shortCode;
+        $this->bulkEntitlementId = $bulkEntitlementId;
         $this->publisherAttributes = $publisherAttributes;
         $this->overridePolicy = $overridePolicy;
         $this->shortCodeActivationType = $shortCodeActivationType;
@@ -62,15 +62,15 @@ class CreateShortCodeDataType
     }
 
     /**
-     * @param  string|null  $bulkEntitlementId
      * @param  string  $webRegkey
      * @param  string  $shortCode
+     * @param  string|null  $bulkEntitlementId
      * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
      * @param  bool|null  $overridePolicy
      * @param  string|null  $shortCodeActivationType
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null  $reinstallFulfillment
      */
-    public static function create(string|null $bulkEntitlementId = null, string $webRegkey, string $shortCode, PublisherAttributesListDataType|null $publisherAttributes = null, bool|null $overridePolicy = null, string|null $shortCodeActivationType = null, FulfillmentIdentifierType|null $reinstallFulfillment = null)
+    public static function create(string $webRegkey, string $shortCode, string|null $bulkEntitlementId = null, PublisherAttributesListDataType|null $publisherAttributes = null, bool|null $overridePolicy = null, string|null $shortCodeActivationType = null, FulfillmentIdentifierType|null $reinstallFulfillment = null)
     {
         return new static(...\func_get_args());
     }

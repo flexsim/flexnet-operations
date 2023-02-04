@@ -17,20 +17,20 @@ class EntitlementLifeCycleDataType
     /**
      * Constructor
      *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType>  $lineItemData
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
      */
-    public function __construct(EntitlementIdentifierType|null $parentEntitlementIdentifier = null, LineItemLifeCycleDataType|array $lineItemData)
+    public function __construct(LineItemLifeCycleDataType|array $lineItemData, EntitlementIdentifierType|null $parentEntitlementIdentifier = null)
     {
-        $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
         $this->lineItemData = $lineItemData;
+        $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
     }
 
     /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType>  $lineItemData
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
      */
-    public static function create(EntitlementIdentifierType|null $parentEntitlementIdentifier = null, LineItemLifeCycleDataType|array $lineItemData)
+    public static function create(LineItemLifeCycleDataType|array $lineItemData, EntitlementIdentifierType|null $parentEntitlementIdentifier = null)
     {
         return new static(...\func_get_args());
     }

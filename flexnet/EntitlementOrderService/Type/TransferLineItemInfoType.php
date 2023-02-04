@@ -39,30 +39,30 @@ class TransferLineItemInfoType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
      * @param  int  $numberOfCopies
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementBelongsTo
      * @param  bool|null  $useSameActivationId
      * @param  string|null  $customActivationId
      * @param  bool|null  $generateActivationId
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementBelongsTo
      */
-    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, bool|null $useSameActivationId = null, string|null $customActivationId = null, bool|null $generateActivationId = null, EntitlementIdentifierType $entitlementBelongsTo)
+    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, EntitlementIdentifierType $entitlementBelongsTo, bool|null $useSameActivationId = null, string|null $customActivationId = null, bool|null $generateActivationId = null)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->numberOfCopies = $numberOfCopies;
+        $this->entitlementBelongsTo = $entitlementBelongsTo;
         $this->useSameActivationId = $useSameActivationId;
         $this->customActivationId = $customActivationId;
         $this->generateActivationId = $generateActivationId;
-        $this->entitlementBelongsTo = $entitlementBelongsTo;
     }
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
      * @param  int  $numberOfCopies
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementBelongsTo
      * @param  bool|null  $useSameActivationId
      * @param  string|null  $customActivationId
      * @param  bool|null  $generateActivationId
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementBelongsTo
      */
-    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, bool|null $useSameActivationId = null, string|null $customActivationId = null, bool|null $generateActivationId = null, EntitlementIdentifierType $entitlementBelongsTo)
+    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, EntitlementIdentifierType $entitlementBelongsTo, bool|null $useSameActivationId = null, string|null $customActivationId = null, bool|null $generateActivationId = null)
     {
         return new static(...\func_get_args());
     }

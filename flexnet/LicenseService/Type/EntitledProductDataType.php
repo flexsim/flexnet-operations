@@ -17,20 +17,20 @@ class EntitledProductDataType
     /**
      * Constructor
      *
-     * @param  \Flexnet\LicenseService\Type\ProductIdentifierType|null  $product
      * @param  int  $quantity
+     * @param  \Flexnet\LicenseService\Type\ProductIdentifierType|null  $product
      */
-    public function __construct(ProductIdentifierType|null $product = null, int $quantity)
+    public function __construct(int $quantity, ProductIdentifierType|null $product = null)
     {
-        $this->product = $product;
         $this->quantity = $quantity;
+        $this->product = $product;
     }
 
     /**
-     * @param  \Flexnet\LicenseService\Type\ProductIdentifierType|null  $product
      * @param  int  $quantity
+     * @param  \Flexnet\LicenseService\Type\ProductIdentifierType|null  $product
      */
-    public static function create(ProductIdentifierType|null $product = null, int $quantity)
+    public static function create(int $quantity, ProductIdentifierType|null $product = null)
     {
         return new static(...\func_get_args());
     }

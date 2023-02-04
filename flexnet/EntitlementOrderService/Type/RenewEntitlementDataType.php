@@ -17,20 +17,20 @@ class RenewEntitlementDataType
     /**
      * Constructor
      *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\RenewLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewLineItemDataType>  $renewLineItemData
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
      */
-    public function __construct(EntitlementIdentifierType|null $parentEntitlementIdentifier = null, RenewLineItemDataType|array $renewLineItemData)
+    public function __construct(RenewLineItemDataType|array $renewLineItemData, EntitlementIdentifierType|null $parentEntitlementIdentifier = null)
     {
-        $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
         $this->renewLineItemData = $renewLineItemData;
+        $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
     }
 
     /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\RenewLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewLineItemDataType>  $renewLineItemData
+     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
      */
-    public static function create(EntitlementIdentifierType|null $parentEntitlementIdentifier = null, RenewLineItemDataType|array $renewLineItemData)
+    public static function create(RenewLineItemDataType|array $renewLineItemData, EntitlementIdentifierType|null $parentEntitlementIdentifier = null)
     {
         return new static(...\func_get_args());
     }

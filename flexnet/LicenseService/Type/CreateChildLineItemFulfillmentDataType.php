@@ -68,6 +68,7 @@ class CreateChildLineItemFulfillmentDataType
      * Constructor
      *
      * @param  string  $activationId
+     * @param  \Flexnet\LicenseService\Type\HostIdDetailsType  $hostIdDetails
      * @param  \DateTimeInterface|null  $startDate
      * @param  \DateTimeInterface|null  $versionDate
      * @param  \DateTimeInterface|null  $versionStartDate
@@ -75,14 +76,14 @@ class CreateChildLineItemFulfillmentDataType
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
      * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  \Flexnet\LicenseService\Type\HostIdDetailsType  $hostIdDetails
      * @param  bool|null  $overridePolicy
      * @param  string|null  $owner
      * @param  string|null  $FNPTimeZoneValue
      */
-    public function __construct(string $activationId, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $versionDate = null, \DateTimeInterface|null $versionStartDate = null, string|null $soldTo = null, string|null $shipToEmail = null, string|null $shipToAddress = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, HostIdDetailsType $hostIdDetails, bool|null $overridePolicy = null, string|null $owner = null, string|null $FNPTimeZoneValue = null)
+    public function __construct(string $activationId, HostIdDetailsType $hostIdDetails, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $versionDate = null, \DateTimeInterface|null $versionStartDate = null, string|null $soldTo = null, string|null $shipToEmail = null, string|null $shipToAddress = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, bool|null $overridePolicy = null, string|null $owner = null, string|null $FNPTimeZoneValue = null)
     {
         $this->activationId = $activationId;
+        $this->hostIdDetails = $hostIdDetails;
         $this->startDate = $startDate;
         $this->versionDate = $versionDate;
         $this->versionStartDate = $versionStartDate;
@@ -90,7 +91,6 @@ class CreateChildLineItemFulfillmentDataType
         $this->shipToEmail = $shipToEmail;
         $this->shipToAddress = $shipToAddress;
         $this->licenseModelAttributes = $licenseModelAttributes;
-        $this->hostIdDetails = $hostIdDetails;
         $this->overridePolicy = $overridePolicy;
         $this->owner = $owner;
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
@@ -98,6 +98,7 @@ class CreateChildLineItemFulfillmentDataType
 
     /**
      * @param  string  $activationId
+     * @param  \Flexnet\LicenseService\Type\HostIdDetailsType  $hostIdDetails
      * @param  \DateTimeInterface|null  $startDate
      * @param  \DateTimeInterface|null  $versionDate
      * @param  \DateTimeInterface|null  $versionStartDate
@@ -105,12 +106,11 @@ class CreateChildLineItemFulfillmentDataType
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
      * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  \Flexnet\LicenseService\Type\HostIdDetailsType  $hostIdDetails
      * @param  bool|null  $overridePolicy
      * @param  string|null  $owner
      * @param  string|null  $FNPTimeZoneValue
      */
-    public static function create(string $activationId, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $versionDate = null, \DateTimeInterface|null $versionStartDate = null, string|null $soldTo = null, string|null $shipToEmail = null, string|null $shipToAddress = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, HostIdDetailsType $hostIdDetails, bool|null $overridePolicy = null, string|null $owner = null, string|null $FNPTimeZoneValue = null)
+    public static function create(string $activationId, HostIdDetailsType $hostIdDetails, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $versionDate = null, \DateTimeInterface|null $versionStartDate = null, string|null $soldTo = null, string|null $shipToEmail = null, string|null $shipToAddress = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, bool|null $overridePolicy = null, string|null $owner = null, string|null $FNPTimeZoneValue = null)
     {
         return new static(...\func_get_args());
     }
