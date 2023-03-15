@@ -47,8 +47,8 @@ echo $flexnetOperations->echoPhrase('Hello, Flexsim!');
    1. LicenseService
       - fulfillmentHistoryDetailsType - add minOccurs="0" to the "record" property
 
-2. Run the flexnet WSDL file through the xml to json tool here: https://codebeautify.org/xmlviewer
-3. Normalize Extension types in the wsdl file by extracting them from the base type into the child type
+2. Normalize Extension types in the wsdl file by extracting them from the base type into the child type
+3. Run the flexnet WSDL file through the xml to json tool here: https://codebeautify.org/xmlviewer
 
 # Client Factory Generation
 

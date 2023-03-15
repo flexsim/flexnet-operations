@@ -6,6 +6,8 @@ use Flexnet\EntitlementOrderService\EntitlementOrderServiceClient;
 use Flexnet\EntitlementOrderService\EntitlementOrderServiceClientFactory;
 use Flexnet\LicenseService\LicenseServiceClient;
 use Flexnet\LicenseService\LicenseServiceClientFactory;
+use Flexnet\ProductPackagingService\ProductPackagingServiceClient;
+use Flexnet\ProductPackagingService\ProductPackagingServiceClientFactory;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -31,6 +33,10 @@ class FlexnetOperationsServiceProvider extends PackageServiceProvider
 
         $this->app->singleton(LicenseServiceClient::class, function () {
             return LicenseServiceClientFactory::factory(config('flexnet-operations.licenseService.wsdl'), config('flexnet-operations.username'), config('flexnet-operations.password'));
+        });
+
+        $this->app->singleton(ProductPackagingServiceClient::class, function () {
+            return ProductPackagingServiceClientFactory::factory(config('flexnet-operations.licenseService.wsdl'), config('flexnet-operations.username'), config('flexnet-operations.password'));
         });
     }
 }
