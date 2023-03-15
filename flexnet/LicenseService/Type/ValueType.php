@@ -37,7 +37,6 @@ class ValueType
 
     /**
      * @param  string|array<string>|null  $value
-     * @return ValueType
      */
     public function withValue(string|array|null $value): ValueType
     {

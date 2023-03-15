@@ -22,8 +22,6 @@ class CountForHostsType
     /**
      * Constructor
      *
-     * @param  string  $hostDataRefId
-     * @param  int  $fulfillCount
      * @param  int|null  $overDraftCount
      */
     public function __construct(string $hostDataRefId, int $fulfillCount, int|null $overDraftCount = null)
@@ -34,8 +32,6 @@ class CountForHostsType
     }
 
     /**
-     * @param  string  $hostDataRefId
-     * @param  int  $fulfillCount
      * @param  int|null  $overDraftCount
      */
     public static function create(string $hostDataRefId, int $fulfillCount, int|null $overDraftCount = null)
@@ -43,18 +39,11 @@ class CountForHostsType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getHostDataRefId(): string
     {
         return $this->hostDataRefId;
     }
 
-    /**
-     * @param  string  $hostDataRefId
-     * @return CountForHostsType
-     */
     public function withHostDataRefId(string $hostDataRefId): CountForHostsType
     {
         $new = clone $this;
@@ -63,18 +52,11 @@ class CountForHostsType
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function getFulfillCount(): int
     {
         return $this->fulfillCount;
     }
 
-    /**
-     * @param  int  $fulfillCount
-     * @return CountForHostsType
-     */
     public function withFulfillCount(int $fulfillCount): CountForHostsType
     {
         $new = clone $this;
@@ -83,18 +65,11 @@ class CountForHostsType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getOverDraftCount(): int|null
     {
         return $this->overDraftCount;
     }
 
-    /**
-     * @param  int|null  $overDraftCount
-     * @return CountForHostsType
-     */
     public function withOverDraftCount(int|null $overDraftCount): CountForHostsType
     {
         $new = clone $this;

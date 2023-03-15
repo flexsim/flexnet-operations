@@ -39,7 +39,6 @@ class DeleteEntitlementRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType>  $entitlement
-     * @return DeleteEntitlementRequestType
      */
     public function withEntitlement(DeleteEntitlementDataType|array $entitlement): DeleteEntitlementRequestType
     {

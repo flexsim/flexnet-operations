@@ -37,7 +37,6 @@ class PublisherErrorResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType>|null  $fulfillmentData
-     * @return PublisherErrorResponseDataType
      */
     public function withFulfillmentData(PublisherErrorFulfillmentResponseDataType|array|null $fulfillmentData): PublisherErrorResponseDataType
     {

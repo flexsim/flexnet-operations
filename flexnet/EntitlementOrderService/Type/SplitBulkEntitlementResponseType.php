@@ -55,7 +55,6 @@ class SplitBulkEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return SplitBulkEntitlementResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): SplitBulkEntitlementResponseType
     {
@@ -75,7 +74,6 @@ class SplitBulkEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementResponseListType|null  $responseData
-     * @return SplitBulkEntitlementResponseType
      */
     public function withResponseData(SplitBulkEntitlementResponseListType|null $responseData): SplitBulkEntitlementResponseType
     {
@@ -95,7 +93,6 @@ class SplitBulkEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementListType|null  $failedData
-     * @return SplitBulkEntitlementResponseType
      */
     public function withFailedData(FailedSplitBulkEntitlementListType|null $failedData): SplitBulkEntitlementResponseType
     {

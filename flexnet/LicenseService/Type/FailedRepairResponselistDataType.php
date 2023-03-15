@@ -37,7 +37,6 @@ class FailedRepairResponselistDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedRepairResponseDataType|array<\Flexnet\LicenseService\Type\FailedRepairResponseDataType>|null  $failedFulfillment
-     * @return FailedRepairResponselistDataType
      */
     public function withFailedFulfillment(FailedRepairResponseDataType|array|null $failedFulfillment): FailedRepairResponselistDataType
     {

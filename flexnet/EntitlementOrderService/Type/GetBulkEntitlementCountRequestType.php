@@ -39,7 +39,6 @@ class GetBulkEntitlementCountRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
-     * @return GetBulkEntitlementCountRequestType
      */
     public function withBulkEntitlementSearchCriteria(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria): GetBulkEntitlementCountRequestType
     {

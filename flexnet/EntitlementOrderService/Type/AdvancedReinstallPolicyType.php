@@ -61,7 +61,6 @@ class AdvancedReinstallPolicyType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType  $umn1Policy
-     * @return AdvancedReinstallPolicyType
      */
     public function withUmn1Policy(PolicyDataType $umn1Policy): AdvancedReinstallPolicyType
     {
@@ -81,7 +80,6 @@ class AdvancedReinstallPolicyType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType  $umn2Policy
-     * @return AdvancedReinstallPolicyType
      */
     public function withUmn2Policy(PolicyDataType $umn2Policy): AdvancedReinstallPolicyType
     {
@@ -101,7 +99,6 @@ class AdvancedReinstallPolicyType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType  $umn3Policy
-     * @return AdvancedReinstallPolicyType
      */
     public function withUmn3Policy(PolicyDataType $umn3Policy): AdvancedReinstallPolicyType
     {
@@ -121,7 +118,6 @@ class AdvancedReinstallPolicyType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType  $midPolicy
-     * @return AdvancedReinstallPolicyType
      */
     public function withMidPolicy(PolicyDataType $midPolicy): AdvancedReinstallPolicyType
     {

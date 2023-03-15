@@ -47,7 +47,6 @@ class UpdateBulkEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return UpdateBulkEntitlementResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): UpdateBulkEntitlementResponseType
     {
@@ -67,7 +66,6 @@ class UpdateBulkEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataListType|null  $failedData
-     * @return UpdateBulkEntitlementResponseType
      */
     public function withFailedData(FailedUpdateBulkEntitlementDataListType|null $failedData): UpdateBulkEntitlementResponseType
     {

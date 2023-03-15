@@ -16,9 +16,6 @@ class WebRegKeyCountDataType
 
     /**
      * Constructor
-     *
-     * @param  int  $totalCount
-     * @param  int  $redeemedCount
      */
     public function __construct(int $totalCount, int $redeemedCount)
     {
@@ -26,27 +23,16 @@ class WebRegKeyCountDataType
         $this->redeemedCount = $redeemedCount;
     }
 
-    /**
-     * @param  int  $totalCount
-     * @param  int  $redeemedCount
-     */
     public static function create(int $totalCount, int $redeemedCount)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return int
-     */
     public function getTotalCount(): int
     {
         return $this->totalCount;
     }
 
-    /**
-     * @param  int  $totalCount
-     * @return WebRegKeyCountDataType
-     */
     public function withTotalCount(int $totalCount): WebRegKeyCountDataType
     {
         $new = clone $this;
@@ -55,18 +41,11 @@ class WebRegKeyCountDataType
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function getRedeemedCount(): int
     {
         return $this->redeemedCount;
     }
 
-    /**
-     * @param  int  $redeemedCount
-     * @return WebRegKeyCountDataType
-     */
     public function withRedeemedCount(int $redeemedCount): WebRegKeyCountDataType
     {
         $new = clone $this;

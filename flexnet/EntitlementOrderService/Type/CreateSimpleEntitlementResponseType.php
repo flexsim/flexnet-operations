@@ -55,7 +55,6 @@ class CreateSimpleEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return CreateSimpleEntitlementResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): CreateSimpleEntitlementResponseType
     {
@@ -75,7 +74,6 @@ class CreateSimpleEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedSimpleEntitlementDataListType|null  $failedData
-     * @return CreateSimpleEntitlementResponseType
      */
     public function withFailedData(FailedSimpleEntitlementDataListType|null $failedData): CreateSimpleEntitlementResponseType
     {
@@ -95,7 +93,6 @@ class CreateSimpleEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataListType|null  $responseData
-     * @return CreateSimpleEntitlementResponseType
      */
     public function withResponseData(CreatedSimpleEntitlementDataListType|null $responseData): CreateSimpleEntitlementResponseType
     {

@@ -37,7 +37,6 @@ class GetFulfillmentsQueryResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|array<\Flexnet\LicenseService\Type\FulfillmentDataType>|null  $fulfillment
-     * @return GetFulfillmentsQueryResponseDataType
      */
     public function withFulfillment(FulfillmentDataType|array|null $fulfillment): GetFulfillmentsQueryResponseDataType
     {

@@ -47,7 +47,6 @@ class RemoveEntitlementLineItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return RemoveEntitlementLineItemResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): RemoveEntitlementLineItemResponseType
     {
@@ -67,7 +66,6 @@ class RemoveEntitlementLineItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataListType|null  $failedData
-     * @return RemoveEntitlementLineItemResponseType
      */
     public function withFailedData(FailedRemoveEntitlementLineItemDataListType|null $failedData): RemoveEntitlementLineItemResponseType
     {

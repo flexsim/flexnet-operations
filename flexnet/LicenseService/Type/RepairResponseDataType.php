@@ -37,7 +37,6 @@ class RepairResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null  $fulfillmentData
-     * @return RepairResponseDataType
      */
     public function withFulfillmentData(RepairFulfillmentResponseDataType|array|null $fulfillmentData): RepairResponseDataType
     {

@@ -37,7 +37,6 @@ class FailedTransferHostListDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedTransferHostDataType|array<\Flexnet\LicenseService\Type\FailedTransferHostDataType>|null  $failedHost
-     * @return FailedTransferHostListDataType
      */
     public function withFailedHost(FailedTransferHostDataType|array|null $failedHost): FailedTransferHostListDataType
     {

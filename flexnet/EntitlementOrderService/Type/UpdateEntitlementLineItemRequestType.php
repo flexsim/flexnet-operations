@@ -39,7 +39,6 @@ class UpdateEntitlementLineItemRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType>  $lineItemData
-     * @return UpdateEntitlementLineItemRequestType
      */
     public function withLineItemData(UpdateEntitlementLineItemDataType|array $lineItemData): UpdateEntitlementLineItemRequestType
     {

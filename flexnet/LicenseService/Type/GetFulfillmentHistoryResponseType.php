@@ -47,7 +47,6 @@ class GetFulfillmentHistoryResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return GetFulfillmentHistoryResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): GetFulfillmentHistoryResponseType
     {
@@ -67,7 +66,6 @@ class GetFulfillmentHistoryResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryDataType|null  $responseData
-     * @return GetFulfillmentHistoryResponseType
      */
     public function withResponseData(FulfillmentHistoryDataType|null $responseData): GetFulfillmentHistoryResponseType
     {

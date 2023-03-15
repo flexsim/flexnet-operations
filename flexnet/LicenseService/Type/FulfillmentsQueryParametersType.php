@@ -181,7 +181,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $entitlementId
-     * @return FulfillmentsQueryParametersType
      */
     public function withEntitlementId(SimpleQueryType|null $entitlementId): FulfillmentsQueryParametersType
     {
@@ -201,7 +200,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $activationId
-     * @return FulfillmentsQueryParametersType
      */
     public function withActivationId(SimpleQueryType|null $activationId): FulfillmentsQueryParametersType
     {
@@ -221,7 +219,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $fulfillmentId
-     * @return FulfillmentsQueryParametersType
      */
     public function withFulfillmentId(SimpleQueryType|null $fulfillmentId): FulfillmentsQueryParametersType
     {
@@ -241,7 +238,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $product
-     * @return FulfillmentsQueryParametersType
      */
     public function withProduct(SimpleQueryType|null $product): FulfillmentsQueryParametersType
     {
@@ -261,7 +257,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $hostId
-     * @return FulfillmentsQueryParametersType
      */
     public function withHostId(SimpleQueryType|null $hostId): FulfillmentsQueryParametersType
     {
@@ -281,7 +276,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $nodeLockHostId
-     * @return FulfillmentsQueryParametersType
      */
     public function withNodeLockHostId(SimpleQueryType|null $nodeLockHostId): FulfillmentsQueryParametersType
     {
@@ -301,7 +295,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $soldTo
-     * @return FulfillmentsQueryParametersType
      */
     public function withSoldTo(SimpleQueryType|null $soldTo): FulfillmentsQueryParametersType
     {
@@ -321,7 +314,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\DateQueryType|null  $fulfillDate
-     * @return FulfillmentsQueryParametersType
      */
     public function withFulfillDate(DateQueryType|null $fulfillDate): FulfillmentsQueryParametersType
     {
@@ -341,7 +333,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\DateTimeQueryType|null  $fulfillDateTime
-     * @return FulfillmentsQueryParametersType
      */
     public function withFulfillDateTime(DateTimeQueryType|null $fulfillDateTime): FulfillmentsQueryParametersType
     {
@@ -361,7 +352,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\DateQueryType|null  $startDate
-     * @return FulfillmentsQueryParametersType
      */
     public function withStartDate(DateQueryType|null $startDate): FulfillmentsQueryParametersType
     {
@@ -381,7 +371,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\DateQueryType|null  $expirationDate
-     * @return FulfillmentsQueryParametersType
      */
     public function withExpirationDate(DateQueryType|null $expirationDate): FulfillmentsQueryParametersType
     {
@@ -401,7 +390,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\DateTimeQueryType|null  $lastModifiedDateTime
-     * @return FulfillmentsQueryParametersType
      */
     public function withLastModifiedDateTime(DateTimeQueryType|null $lastModifiedDateTime): FulfillmentsQueryParametersType
     {
@@ -421,7 +409,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\StateQueryType|null  $state
-     * @return FulfillmentsQueryParametersType
      */
     public function withState(StateQueryType|null $state): FulfillmentsQueryParametersType
     {
@@ -441,7 +428,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $licenseTechnology
-     * @return FulfillmentsQueryParametersType
      */
     public function withLicenseTechnology(SimpleQueryType|null $licenseTechnology): FulfillmentsQueryParametersType
     {
@@ -451,18 +437,11 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getUserId(): string|null
     {
         return $this->userId;
     }
 
-    /**
-     * @param  string|null  $userId
-     * @return FulfillmentsQueryParametersType
-     */
     public function withUserId(string|null $userId): FulfillmentsQueryParametersType
     {
         $new = clone $this;
@@ -471,18 +450,11 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getFulfillmentSource(): string|null
     {
         return $this->fulfillmentSource;
     }
 
-    /**
-     * @param  string|null  $fulfillmentSource
-     * @return FulfillmentsQueryParametersType
-     */
     public function withFulfillmentSource(string|null $fulfillmentSource): FulfillmentsQueryParametersType
     {
         $new = clone $this;
@@ -501,7 +473,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CustomAttributesQueryListType|null  $customAttributes
-     * @return FulfillmentsQueryParametersType
      */
     public function withCustomAttributes(CustomAttributesQueryListType|null $customAttributes): FulfillmentsQueryParametersType
     {
@@ -521,7 +492,6 @@ class FulfillmentsQueryParametersType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CustomAttributesQueryListType|null  $customHostAttributes
-     * @return FulfillmentsQueryParametersType
      */
     public function withCustomHostAttributes(CustomAttributesQueryListType|null $customHostAttributes): FulfillmentsQueryParametersType
     {
@@ -531,18 +501,11 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getActivationType(): string|null
     {
         return $this->activationType;
     }
 
-    /**
-     * @param  string|null  $activationType
-     * @return FulfillmentsQueryParametersType
-     */
     public function withActivationType(string|null $activationType): FulfillmentsQueryParametersType
     {
         $new = clone $this;

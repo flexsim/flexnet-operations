@@ -35,18 +35,11 @@ class LicenseTechnologyIdentifierType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string|null
-     */
     public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @return LicenseTechnologyIdentifierType
-     */
     public function withUniqueId(string|null $uniqueId): LicenseTechnologyIdentifierType
     {
         $new = clone $this;
@@ -65,7 +58,6 @@ class LicenseTechnologyIdentifierType
 
     /**
      * @param  \Flexnet\LicenseService\Type\LicenseTechnologyPKType|null  $primaryKeys
-     * @return LicenseTechnologyIdentifierType
      */
     public function withPrimaryKeys(LicenseTechnologyPKType|null $primaryKeys): LicenseTechnologyIdentifierType
     {

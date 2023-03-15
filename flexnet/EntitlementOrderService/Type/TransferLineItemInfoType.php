@@ -38,7 +38,6 @@ class TransferLineItemInfoType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  int  $numberOfCopies
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementBelongsTo
      * @param  bool|null  $useSameActivationId
      * @param  string|null  $customActivationId
@@ -56,7 +55,6 @@ class TransferLineItemInfoType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  int  $numberOfCopies
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementBelongsTo
      * @param  bool|null  $useSameActivationId
      * @param  string|null  $customActivationId
@@ -77,7 +75,6 @@ class TransferLineItemInfoType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @return TransferLineItemInfoType
      */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): TransferLineItemInfoType
     {
@@ -87,18 +84,11 @@ class TransferLineItemInfoType
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function getNumberOfCopies(): int
     {
         return $this->numberOfCopies;
     }
 
-    /**
-     * @param  int  $numberOfCopies
-     * @return TransferLineItemInfoType
-     */
     public function withNumberOfCopies(int $numberOfCopies): TransferLineItemInfoType
     {
         $new = clone $this;
@@ -107,18 +97,11 @@ class TransferLineItemInfoType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getUseSameActivationId(): bool|null
     {
         return $this->useSameActivationId;
     }
 
-    /**
-     * @param  bool|null  $useSameActivationId
-     * @return TransferLineItemInfoType
-     */
     public function withUseSameActivationId(bool|null $useSameActivationId): TransferLineItemInfoType
     {
         $new = clone $this;
@@ -127,18 +110,11 @@ class TransferLineItemInfoType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCustomActivationId(): string|null
     {
         return $this->customActivationId;
     }
 
-    /**
-     * @param  string|null  $customActivationId
-     * @return TransferLineItemInfoType
-     */
     public function withCustomActivationId(string|null $customActivationId): TransferLineItemInfoType
     {
         $new = clone $this;
@@ -147,18 +123,11 @@ class TransferLineItemInfoType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getGenerateActivationId(): bool|null
     {
         return $this->generateActivationId;
     }
 
-    /**
-     * @param  bool|null  $generateActivationId
-     * @return TransferLineItemInfoType
-     */
     public function withGenerateActivationId(bool|null $generateActivationId): TransferLineItemInfoType
     {
         $new = clone $this;
@@ -177,7 +146,6 @@ class TransferLineItemInfoType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementBelongsTo
-     * @return TransferLineItemInfoType
      */
     public function withEntitlementBelongsTo(EntitlementIdentifierType $entitlementBelongsTo): TransferLineItemInfoType
     {

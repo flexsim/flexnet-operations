@@ -37,7 +37,6 @@ class ConsolidatedLicenseIdListType
 
     /**
      * @param  string|array<string>  $consolidatedLicenseId
-     * @return ConsolidatedLicenseIdListType
      */
     public function withConsolidatedLicenseId(string|array $consolidatedLicenseId): ConsolidatedLicenseIdListType
     {

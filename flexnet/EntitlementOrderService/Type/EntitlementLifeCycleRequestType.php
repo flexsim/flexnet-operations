@@ -39,7 +39,6 @@ class EntitlementLifeCycleRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType>|null  $entitlementData
-     * @return EntitlementLifeCycleRequestType
      */
     public function withEntitlementData(EntitlementLifeCycleDataType|array|null $entitlementData): EntitlementLifeCycleRequestType
     {

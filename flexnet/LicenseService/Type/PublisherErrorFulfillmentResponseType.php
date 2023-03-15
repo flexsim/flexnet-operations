@@ -55,7 +55,6 @@ class PublisherErrorFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return PublisherErrorFulfillmentResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): PublisherErrorFulfillmentResponseType
     {
@@ -75,7 +74,6 @@ class PublisherErrorFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherErrorResponseDataType|null  $responseData
-     * @return PublisherErrorFulfillmentResponseType
      */
     public function withResponseData(PublisherErrorResponseDataType|null $responseData): PublisherErrorFulfillmentResponseType
     {
@@ -95,7 +93,6 @@ class PublisherErrorFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedPublisherErrorResponselistDataType|null  $failedData
-     * @return PublisherErrorFulfillmentResponseType
      */
     public function withFailedData(FailedPublisherErrorResponselistDataType|null $failedData): PublisherErrorFulfillmentResponseType
     {

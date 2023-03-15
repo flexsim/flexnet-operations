@@ -18,7 +18,6 @@ class FailedMatchingBulkEntDataType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType  $bulkEntInfo
-     * @param  string  $reason
      */
     public function __construct(GetMatchingBulkEntInfoType $bulkEntInfo, string $reason)
     {
@@ -28,7 +27,6 @@ class FailedMatchingBulkEntDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType  $bulkEntInfo
-     * @param  string  $reason
      */
     public static function create(GetMatchingBulkEntInfoType $bulkEntInfo, string $reason)
     {
@@ -45,7 +43,6 @@ class FailedMatchingBulkEntDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType  $bulkEntInfo
-     * @return FailedMatchingBulkEntDataType
      */
     public function withBulkEntInfo(GetMatchingBulkEntInfoType $bulkEntInfo): FailedMatchingBulkEntDataType
     {
@@ -55,18 +52,11 @@ class FailedMatchingBulkEntDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string  $reason
-     * @return FailedMatchingBulkEntDataType
-     */
     public function withReason(string $reason): FailedMatchingBulkEntDataType
     {
         $new = clone $this;

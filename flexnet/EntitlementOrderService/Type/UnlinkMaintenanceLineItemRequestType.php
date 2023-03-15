@@ -39,7 +39,6 @@ class UnlinkMaintenanceLineItemRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemListType  $unlinkMaintenanceLineItemList
-     * @return UnlinkMaintenanceLineItemRequestType
      */
     public function withUnlinkMaintenanceLineItemList(UnlinkMaintenanceLineItemListType $unlinkMaintenanceLineItemList): UnlinkMaintenanceLineItemRequestType
     {

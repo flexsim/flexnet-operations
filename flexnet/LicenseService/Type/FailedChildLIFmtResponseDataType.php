@@ -37,7 +37,6 @@ class FailedChildLIFmtResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType>  $failedFulfillment
-     * @return FailedChildLIFmtResponseDataType
      */
     public function withFailedFulfillment(FailedChildLIFulfillmentDataType|array $failedFulfillment): FailedChildLIFmtResponseDataType
     {

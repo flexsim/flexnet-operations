@@ -37,7 +37,6 @@ class AdvancedFulfillmentLCListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType|array<\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType>  $fulfillment
-     * @return AdvancedFulfillmentLCListType
      */
     public function withFulfillment(AdvancedFulfillmentLCDataType|array $fulfillment): AdvancedFulfillmentLCListType
     {

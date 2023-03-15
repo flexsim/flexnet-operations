@@ -37,7 +37,6 @@ class GetHostAttributesDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null  $hostAttributes
-     * @return GetHostAttributesDataType
      */
     public function withHostAttributes(AttributeMetaDescriptorDataType|null $hostAttributes): GetHostAttributesDataType
     {

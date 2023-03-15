@@ -37,7 +37,6 @@ class ProductStateChangeListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType>|null  $product
-     * @return ProductStateChangeListType
      */
     public function withProduct(ProductStateChangeDataType|array|null $product): ProductStateChangeListType
     {

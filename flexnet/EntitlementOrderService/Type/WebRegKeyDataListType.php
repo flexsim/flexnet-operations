@@ -37,7 +37,6 @@ class WebRegKeyDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType>  $webRegKeyData
-     * @return WebRegKeyDataListType
      */
     public function withWebRegKeyData(AddWebRegKeyDataType|array $webRegKeyData): WebRegKeyDataListType
     {

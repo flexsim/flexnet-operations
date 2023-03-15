@@ -55,7 +55,6 @@ class ReturnShortCodeResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return ReturnShortCodeResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): ReturnShortCodeResponseType
     {
@@ -75,7 +74,6 @@ class ReturnShortCodeResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedReturnShortCodeDataType|null  $failedData
-     * @return ReturnShortCodeResponseType
      */
     public function withFailedData(FailedReturnShortCodeDataType|null $failedData): ReturnShortCodeResponseType
     {
@@ -95,7 +93,6 @@ class ReturnShortCodeResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\ReturnedShortCodeDataType|null  $responseData
-     * @return ReturnShortCodeResponseType
      */
     public function withResponseData(ReturnedShortCodeDataType|null $responseData): ReturnShortCodeResponseType
     {

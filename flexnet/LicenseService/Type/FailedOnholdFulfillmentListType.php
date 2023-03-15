@@ -37,7 +37,6 @@ class FailedOnholdFulfillmentListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedOnholdFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedOnholdFulfillmentDataType>  $failedFulfillment
-     * @return FailedOnholdFulfillmentListType
      */
     public function withFailedFulfillment(FailedOnholdFulfillmentDataType|array $failedFulfillment): FailedOnholdFulfillmentListType
     {

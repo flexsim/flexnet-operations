@@ -45,7 +45,6 @@ class RemoveEntitlementLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @return RemoveEntitlementLineItemDataType
      */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): RemoveEntitlementLineItemDataType
     {
@@ -65,7 +64,6 @@ class RemoveEntitlementLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifier
-     * @return RemoveEntitlementLineItemDataType
      */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType|array|null $lineItemIdentifier): RemoveEntitlementLineItemDataType
     {

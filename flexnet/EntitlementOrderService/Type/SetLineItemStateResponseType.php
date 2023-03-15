@@ -47,7 +47,6 @@ class SetLineItemStateResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return SetLineItemStateResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): SetLineItemStateResponseType
     {
@@ -67,7 +66,6 @@ class SetLineItemStateResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataListType|null  $failedData
-     * @return SetLineItemStateResponseType
      */
     public function withFailedData(FailedLineItemStateDataListType|null $failedData): SetLineItemStateResponseType
     {

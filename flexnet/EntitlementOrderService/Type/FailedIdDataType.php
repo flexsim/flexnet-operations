@@ -16,9 +16,6 @@ class FailedIdDataType
 
     /**
      * Constructor
-     *
-     * @param  string  $id
-     * @param  string  $reason
      */
     public function __construct(string $id, string $reason)
     {
@@ -26,27 +23,16 @@ class FailedIdDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  string  $id
-     * @param  string  $reason
-     */
     public static function create(string $id, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getId(): string
     {
         return $this->id;
     }
 
-    /**
-     * @param  string  $id
-     * @return FailedIdDataType
-     */
     public function withId(string $id): FailedIdDataType
     {
         $new = clone $this;
@@ -55,18 +41,11 @@ class FailedIdDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string  $reason
-     * @return FailedIdDataType
-     */
     public function withReason(string $reason): FailedIdDataType
     {
         $new = clone $this;

@@ -26,9 +26,6 @@ trait HasTypeMap
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function useTypeMap(): bool
     {
         return (bool) $this->typeMap;

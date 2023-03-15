@@ -39,7 +39,6 @@ class RemoveEntitlementLineItemRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType>  $lineItemData
-     * @return RemoveEntitlementLineItemRequestType
      */
     public function withLineItemData(RemoveEntitlementLineItemDataType|array $lineItemData): RemoveEntitlementLineItemRequestType
     {

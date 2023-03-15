@@ -37,7 +37,6 @@ class FeatureBundleListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType|array<\Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType>  $featureBundleIdentifier
-     * @return FeatureBundleListType
      */
     public function withFeatureBundleIdentifier(FeatureBundleIdentifierType|array $featureBundleIdentifier): FeatureBundleListType
     {

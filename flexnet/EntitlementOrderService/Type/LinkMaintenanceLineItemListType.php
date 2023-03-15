@@ -37,7 +37,6 @@ class LinkMaintenanceLineItemListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType>  $linkMaintenanceLineItem
-     * @return LinkMaintenanceLineItemListType
      */
     public function withLinkMaintenanceLineItem(LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem): LinkMaintenanceLineItemListType
     {

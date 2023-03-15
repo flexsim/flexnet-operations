@@ -17,7 +17,6 @@ class RepairFulfillmentResponseDataType
     /**
      * Constructor
      *
-     * @param  int  $recordRefNo
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|null  $fulfillment
      */
     public function __construct(int $recordRefNo, FulfillmentDataType|null $fulfillment = null)
@@ -27,7 +26,6 @@ class RepairFulfillmentResponseDataType
     }
 
     /**
-     * @param  int  $recordRefNo
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|null  $fulfillment
      */
     public static function create(int $recordRefNo, FulfillmentDataType|null $fulfillment = null)
@@ -35,18 +33,11 @@ class RepairFulfillmentResponseDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return int
-     */
     public function getRecordRefNo(): int
     {
         return $this->recordRefNo;
     }
 
-    /**
-     * @param  int  $recordRefNo
-     * @return RepairFulfillmentResponseDataType
-     */
     public function withRecordRefNo(int $recordRefNo): RepairFulfillmentResponseDataType
     {
         $new = clone $this;
@@ -65,7 +56,6 @@ class RepairFulfillmentResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|null  $fulfillment
-     * @return RepairFulfillmentResponseDataType
      */
     public function withFulfillment(FulfillmentDataType|null $fulfillment): RepairFulfillmentResponseDataType
     {

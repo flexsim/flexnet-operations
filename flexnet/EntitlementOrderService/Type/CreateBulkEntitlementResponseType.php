@@ -55,7 +55,6 @@ class CreateBulkEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return CreateBulkEntitlementResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): CreateBulkEntitlementResponseType
     {
@@ -75,7 +74,6 @@ class CreateBulkEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedBulkEntitlementDataListType|null  $failedData
-     * @return CreateBulkEntitlementResponseType
      */
     public function withFailedData(FailedBulkEntitlementDataListType|null $failedData): CreateBulkEntitlementResponseType
     {
@@ -95,7 +93,6 @@ class CreateBulkEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataListType|null  $responseData
-     * @return CreateBulkEntitlementResponseType
      */
     public function withResponseData(CreatedBulkEntitlementDataListType|null $responseData): CreateBulkEntitlementResponseType
     {

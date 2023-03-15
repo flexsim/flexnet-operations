@@ -39,7 +39,6 @@ class TrustedRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\ActivationDataType  $inputData
-     * @return TrustedRequestType
      */
     public function withInputData(ActivationDataType $inputData): TrustedRequestType
     {

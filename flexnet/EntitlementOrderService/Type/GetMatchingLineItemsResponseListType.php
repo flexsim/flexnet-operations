@@ -37,7 +37,6 @@ class GetMatchingLineItemsResponseListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType>  $matchingLineItem
-     * @return GetMatchingLineItemsResponseListType
      */
     public function withMatchingLineItem(MatchingLineItemDataType|array $matchingLineItem): GetMatchingLineItemsResponseListType
     {

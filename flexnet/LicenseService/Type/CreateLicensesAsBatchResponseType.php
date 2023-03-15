@@ -47,7 +47,6 @@ class CreateLicensesAsBatchResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return CreateLicensesAsBatchResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): CreateLicensesAsBatchResponseType
     {
@@ -67,7 +66,6 @@ class CreateLicensesAsBatchResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType|null  $responseData
-     * @return CreateLicensesAsBatchResponseType
      */
     public function withResponseData(CreateLicensesAsBatchResponseDataType|null $responseData): CreateLicensesAsBatchResponseType
     {

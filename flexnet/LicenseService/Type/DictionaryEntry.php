@@ -16,9 +16,6 @@ class DictionaryEntry
 
     /**
      * Constructor
-     *
-     * @param  string  $Key
-     * @param  string  $Value
      */
     public function __construct(string $Key, string $Value)
     {
@@ -26,27 +23,16 @@ class DictionaryEntry
         $this->Value = $Value;
     }
 
-    /**
-     * @param  string  $Key
-     * @param  string  $Value
-     */
     public static function create(string $Key, string $Value)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getKey(): string
     {
         return $this->Key;
     }
 
-    /**
-     * @param  string  $Key
-     * @return DictionaryEntry
-     */
     public function withKey(string $Key): DictionaryEntry
     {
         $new = clone $this;
@@ -55,18 +41,11 @@ class DictionaryEntry
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getValue(): string
     {
         return $this->Value;
     }
 
-    /**
-     * @param  string  $Value
-     * @return DictionaryEntry
-     */
     public function withValue(string $Value): DictionaryEntry
     {
         $new = clone $this;

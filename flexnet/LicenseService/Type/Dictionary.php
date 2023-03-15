@@ -37,7 +37,6 @@ class Dictionary
 
     /**
      * @param  \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null  $Entries
-     * @return Dictionary
      */
     public function withEntries(DictionaryEntriesCollection|null $Entries): Dictionary
     {

@@ -40,7 +40,6 @@ class ActivateLicensesRequestType implements RequestInterface
      * Constructor
      *
      * @param  \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem>  $lineItem
-     * @param  string  $hostInfo
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
      * @param  string|null  $soldTo
@@ -58,7 +57,6 @@ class ActivateLicensesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem>  $lineItem
-     * @param  string  $hostInfo
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
      * @param  string|null  $soldTo
@@ -79,7 +77,6 @@ class ActivateLicensesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem>  $lineItem
-     * @return ActivateLicensesRequestType
      */
     public function withLineItem(TypeLineItem|array $lineItem): ActivateLicensesRequestType
     {
@@ -89,18 +86,11 @@ class ActivateLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToEmail(): string|null
     {
         return $this->shipToEmail;
     }
 
-    /**
-     * @param  string|null  $shipToEmail
-     * @return ActivateLicensesRequestType
-     */
     public function withShipToEmail(string|null $shipToEmail): ActivateLicensesRequestType
     {
         $new = clone $this;
@@ -109,18 +99,11 @@ class ActivateLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToAddress(): string|null
     {
         return $this->shipToAddress;
     }
 
-    /**
-     * @param  string|null  $shipToAddress
-     * @return ActivateLicensesRequestType
-     */
     public function withShipToAddress(string|null $shipToAddress): ActivateLicensesRequestType
     {
         $new = clone $this;
@@ -129,18 +112,11 @@ class ActivateLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSoldTo(): string|null
     {
         return $this->soldTo;
     }
 
-    /**
-     * @param  string|null  $soldTo
-     * @return ActivateLicensesRequestType
-     */
     public function withSoldTo(string|null $soldTo): ActivateLicensesRequestType
     {
         $new = clone $this;
@@ -149,18 +125,11 @@ class ActivateLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getOwner(): string|null
     {
         return $this->owner;
     }
 
-    /**
-     * @param  string|null  $owner
-     * @return ActivateLicensesRequestType
-     */
     public function withOwner(string|null $owner): ActivateLicensesRequestType
     {
         $new = clone $this;
@@ -169,18 +138,11 @@ class ActivateLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getHostInfo(): string
     {
         return $this->hostInfo;
     }
 
-    /**
-     * @param  string  $hostInfo
-     * @return ActivateLicensesRequestType
-     */
     public function withHostInfo(string $hostInfo): ActivateLicensesRequestType
     {
         $new = clone $this;

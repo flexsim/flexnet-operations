@@ -37,7 +37,6 @@ class CreateLicensesAsBatchResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|array<\Flexnet\LicenseService\Type\FulfillmentDataType>  $fulfillment
-     * @return CreateLicensesAsBatchResponseDataType
      */
     public function withFulfillment(FulfillmentDataType|array $fulfillment): CreateLicensesAsBatchResponseDataType
     {

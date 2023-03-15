@@ -35,18 +35,11 @@ class AccountIdentifierType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string|null
-     */
     public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @return AccountIdentifierType
-     */
     public function withUniqueId(string|null $uniqueId): AccountIdentifierType
     {
         $new = clone $this;
@@ -65,7 +58,6 @@ class AccountIdentifierType
 
     /**
      * @param  \Flexnet\LicenseService\Type\AccountPKType|null  $primaryKeys
-     * @return AccountIdentifierType
      */
     public function withPrimaryKeys(AccountPKType|null $primaryKeys): AccountIdentifierType
     {

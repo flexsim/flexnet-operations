@@ -47,7 +47,6 @@ class SetEntitlementStateResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return SetEntitlementStateResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): SetEntitlementStateResponseType
     {
@@ -67,7 +66,6 @@ class SetEntitlementStateResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementStateDataListType|null  $failedData
-     * @return SetEntitlementStateResponseType
      */
     public function withFailedData(FailedEntitlementStateDataListType|null $failedData): SetEntitlementStateResponseType
     {

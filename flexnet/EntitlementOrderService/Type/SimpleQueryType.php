@@ -16,9 +16,6 @@ class SimpleQueryType
 
     /**
      * Constructor
-     *
-     * @param  string  $value
-     * @param  string  $searchType
      */
     public function __construct(string $value, string $searchType)
     {
@@ -26,27 +23,16 @@ class SimpleQueryType
         $this->searchType = $searchType;
     }
 
-    /**
-     * @param  string  $value
-     * @param  string  $searchType
-     */
     public static function create(string $value, string $searchType)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getValue(): string
     {
         return $this->value;
     }
 
-    /**
-     * @param  string  $value
-     * @return SimpleQueryType
-     */
     public function withValue(string $value): SimpleQueryType
     {
         $new = clone $this;
@@ -55,18 +41,11 @@ class SimpleQueryType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getSearchType(): string
     {
         return $this->searchType;
     }
 
-    /**
-     * @param  string  $searchType
-     * @return SimpleQueryType
-     */
     public function withSearchType(string $searchType): SimpleQueryType
     {
         $new = clone $this;

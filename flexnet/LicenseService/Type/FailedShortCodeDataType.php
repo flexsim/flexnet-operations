@@ -23,7 +23,6 @@ class FailedShortCodeDataType
      * Constructor
      *
      * @param  \Flexnet\LicenseService\Type\CreateShortCodeDataType  $shortCodeData
-     * @param  string  $reason
      * @param  \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null  $duplicateFulfillmentRecords
      */
     public function __construct(CreateShortCodeDataType $shortCodeData, string $reason, DuplicateFulfillmentRecordListDataType|null $duplicateFulfillmentRecords = null)
@@ -35,7 +34,6 @@ class FailedShortCodeDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CreateShortCodeDataType  $shortCodeData
-     * @param  string  $reason
      * @param  \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null  $duplicateFulfillmentRecords
      */
     public static function create(CreateShortCodeDataType $shortCodeData, string $reason, DuplicateFulfillmentRecordListDataType|null $duplicateFulfillmentRecords = null)
@@ -53,7 +51,6 @@ class FailedShortCodeDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CreateShortCodeDataType  $shortCodeData
-     * @return FailedShortCodeDataType
      */
     public function withShortCodeData(CreateShortCodeDataType $shortCodeData): FailedShortCodeDataType
     {
@@ -63,18 +60,11 @@ class FailedShortCodeDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string  $reason
-     * @return FailedShortCodeDataType
-     */
     public function withReason(string $reason): FailedShortCodeDataType
     {
         $new = clone $this;
@@ -93,7 +83,6 @@ class FailedShortCodeDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType|null  $duplicateFulfillmentRecords
-     * @return FailedShortCodeDataType
      */
     public function withDuplicateFulfillmentRecords(DuplicateFulfillmentRecordListDataType|null $duplicateFulfillmentRecords): FailedShortCodeDataType
     {

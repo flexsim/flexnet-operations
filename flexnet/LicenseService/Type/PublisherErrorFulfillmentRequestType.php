@@ -39,7 +39,6 @@ class PublisherErrorFulfillmentRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType>  $fulfillment
-     * @return PublisherErrorFulfillmentRequestType
      */
     public function withFulfillment(PublisherErrorFulfillmentDataType|array $fulfillment): PublisherErrorFulfillmentRequestType
     {

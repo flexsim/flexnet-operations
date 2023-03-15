@@ -39,7 +39,6 @@ class UpdateBulkEntitlementRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementDataType>  $bulkEntitlement
-     * @return UpdateBulkEntitlementRequestType
      */
     public function withBulkEntitlement(UpdateBulkEntitlementDataType|array $bulkEntitlement): UpdateBulkEntitlementRequestType
     {

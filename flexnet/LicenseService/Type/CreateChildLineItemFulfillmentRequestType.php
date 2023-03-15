@@ -39,7 +39,6 @@ class CreateChildLineItemFulfillmentRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType>  $fulfillment
-     * @return CreateChildLineItemFulfillmentRequestType
      */
     public function withFulfillment(CreateChildLineItemFulfillmentDataType|array $fulfillment): CreateChildLineItemFulfillmentRequestType
     {

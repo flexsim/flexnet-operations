@@ -17,7 +17,6 @@ class AdvancedFmtLCResponseDataType
     /**
      * Constructor
      *
-     * @param  int  $recordRefNo
      * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCInfoType|array<\Flexnet\LicenseService\Type\AdvancedFulfillmentLCInfoType>  $upgradedFulfillmentInfo
      */
     public function __construct(int $recordRefNo, AdvancedFulfillmentLCInfoType|array $upgradedFulfillmentInfo)
@@ -27,7 +26,6 @@ class AdvancedFmtLCResponseDataType
     }
 
     /**
-     * @param  int  $recordRefNo
      * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCInfoType|array<\Flexnet\LicenseService\Type\AdvancedFulfillmentLCInfoType>  $upgradedFulfillmentInfo
      */
     public static function create(int $recordRefNo, AdvancedFulfillmentLCInfoType|array $upgradedFulfillmentInfo)
@@ -35,18 +33,11 @@ class AdvancedFmtLCResponseDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return int
-     */
     public function getRecordRefNo(): int
     {
         return $this->recordRefNo;
     }
 
-    /**
-     * @param  int  $recordRefNo
-     * @return AdvancedFmtLCResponseDataType
-     */
     public function withRecordRefNo(int $recordRefNo): AdvancedFmtLCResponseDataType
     {
         $new = clone $this;
@@ -65,7 +56,6 @@ class AdvancedFmtLCResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCInfoType|array<\Flexnet\LicenseService\Type\AdvancedFulfillmentLCInfoType>  $upgradedFulfillmentInfo
-     * @return AdvancedFmtLCResponseDataType
      */
     public function withUpgradedFulfillmentInfo(AdvancedFulfillmentLCInfoType|array $upgradedFulfillmentInfo): AdvancedFmtLCResponseDataType
     {

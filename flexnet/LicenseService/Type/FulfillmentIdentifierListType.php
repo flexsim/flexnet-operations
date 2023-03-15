@@ -37,7 +37,6 @@ class FulfillmentIdentifierListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>  $fulfillmentIdentifier
-     * @return FulfillmentIdentifierListType
      */
     public function withFulfillmentIdentifier(FulfillmentIdentifierType|array $fulfillmentIdentifier): FulfillmentIdentifierListType
     {

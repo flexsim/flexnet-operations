@@ -37,7 +37,6 @@ class FailedPublisherErrorResponselistDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedPublisherErrorResponseDataType|array<\Flexnet\LicenseService\Type\FailedPublisherErrorResponseDataType>|null  $failedFulfillment
-     * @return FailedPublisherErrorResponselistDataType
      */
     public function withFailedFulfillment(FailedPublisherErrorResponseDataType|array|null $failedFulfillment): FailedPublisherErrorResponselistDataType
     {

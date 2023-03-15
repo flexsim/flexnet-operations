@@ -33,18 +33,11 @@ class GetterAssemblerOptions
         $this->typeMap = $typeMap;
     }
 
-    /**
-     * @return GetterAssemblerOptions
-     */
     public static function create(string $typeMap): GetterAssemblerOptions
     {
         return new self($typeMap);
     }
 
-    /**
-     * @param  bool  $boolGetters
-     * @return GetterAssemblerOptions
-     */
     public function withBoolGetters(bool $boolGetters = true): GetterAssemblerOptions
     {
         $new = clone $this;
@@ -53,10 +46,6 @@ class GetterAssemblerOptions
         return $new;
     }
 
-    /**
-     * @param  bool  $returnType
-     * @return GetterAssemblerOptions
-     */
     public function withReturnType(bool $returnType = true): GetterAssemblerOptions
     {
         $new = clone $this;
@@ -65,26 +54,16 @@ class GetterAssemblerOptions
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function useBoolGetters(): bool
     {
         return $this->boolGetters;
     }
 
-    /**
-     * @return bool
-     */
     public function useReturnType(): bool
     {
         return $this->returnType;
     }
 
-    /**
-     * @param  bool  $withDocBlocks
-     * @return GetterAssemblerOptions
-     */
     public function withDocBlocks(bool $withDocBlocks = true): GetterAssemblerOptions
     {
         $new = clone $this;
@@ -93,9 +72,6 @@ class GetterAssemblerOptions
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function useDocBlocks(): bool
     {
         return $this->docBlocks;

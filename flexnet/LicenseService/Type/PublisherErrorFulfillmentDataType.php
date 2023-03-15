@@ -109,7 +109,6 @@ class PublisherErrorFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     * @return PublisherErrorFulfillmentDataType
      */
     public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): PublisherErrorFulfillmentDataType
     {
@@ -129,7 +128,6 @@ class PublisherErrorFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @return PublisherErrorFulfillmentDataType
      */
     public function withLicenseModelAttributes(AttributeDescriptorDataType|null $licenseModelAttributes): PublisherErrorFulfillmentDataType
     {
@@ -139,18 +137,11 @@ class PublisherErrorFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getFNPTimeZoneValue(): string|null
     {
         return $this->FNPTimeZoneValue;
     }
 
-    /**
-     * @param  string|null  $FNPTimeZoneValue
-     * @return PublisherErrorFulfillmentDataType
-     */
     public function withFNPTimeZoneValue(string|null $FNPTimeZoneValue): PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
@@ -159,18 +150,11 @@ class PublisherErrorFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToEmail(): string|null
     {
         return $this->shipToEmail;
     }
 
-    /**
-     * @param  string|null  $shipToEmail
-     * @return PublisherErrorFulfillmentDataType
-     */
     public function withShipToEmail(string|null $shipToEmail): PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
@@ -179,18 +163,11 @@ class PublisherErrorFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToAddress(): string|null
     {
         return $this->shipToAddress;
     }
 
-    /**
-     * @param  string|null  $shipToAddress
-     * @return PublisherErrorFulfillmentDataType
-     */
     public function withShipToAddress(string|null $shipToAddress): PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
@@ -209,7 +186,6 @@ class PublisherErrorFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
-     * @return PublisherErrorFulfillmentDataType
      */
     public function withServerIds(ServerIDsType|null $serverIds): PublisherErrorFulfillmentDataType
     {
@@ -229,7 +205,6 @@ class PublisherErrorFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
-     * @return PublisherErrorFulfillmentDataType
      */
     public function withNodeIds(NodeIDsType|null $nodeIds): PublisherErrorFulfillmentDataType
     {
@@ -249,7 +224,6 @@ class PublisherErrorFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
-     * @return PublisherErrorFulfillmentDataType
      */
     public function withCustomHost(CustomHostIDType|null $customHost): PublisherErrorFulfillmentDataType
     {
@@ -259,18 +233,11 @@ class PublisherErrorFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getFulfillCount(): int|null
     {
         return $this->fulfillCount;
     }
 
-    /**
-     * @param  int|null  $fulfillCount
-     * @return PublisherErrorFulfillmentDataType
-     */
     public function withFulfillCount(int|null $fulfillCount): PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
@@ -279,18 +246,11 @@ class PublisherErrorFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getOverridePolicy(): bool|null
     {
         return $this->overridePolicy;
     }
 
-    /**
-     * @param  bool|null  $overridePolicy
-     * @return PublisherErrorFulfillmentDataType
-     */
     public function withOverridePolicy(bool|null $overridePolicy): PublisherErrorFulfillmentDataType
     {
         $new = clone $this;

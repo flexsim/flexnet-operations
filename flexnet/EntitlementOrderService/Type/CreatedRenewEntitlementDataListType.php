@@ -37,7 +37,6 @@ class CreatedRenewEntitlementDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType>|null  $entitlementData
-     * @return CreatedRenewEntitlementDataListType
      */
     public function withEntitlementData(CreatedRenewEntitlementDataType|array|null $entitlementData): CreatedRenewEntitlementDataListType
     {

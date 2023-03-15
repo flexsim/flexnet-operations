@@ -47,7 +47,6 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType implements Resu
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return SearchEntitlementMaintenanceLineItemPropertiesResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): SearchEntitlementMaintenanceLineItemPropertiesResponseType
     {
@@ -67,7 +66,6 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType implements Resu
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType>|null  $entitlementMaintenanceLineItem
-     * @return SearchEntitlementMaintenanceLineItemPropertiesResponseType
      */
     public function withEntitlementMaintenanceLineItem(EntitlementMaintenanceLineItemPropertiesType|array|null $entitlementMaintenanceLineItem): SearchEntitlementMaintenanceLineItemPropertiesResponseType
     {

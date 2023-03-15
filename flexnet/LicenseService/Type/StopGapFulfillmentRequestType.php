@@ -39,7 +39,6 @@ class StopGapFulfillmentRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StopGapFulfillmentDataType|array<\Flexnet\LicenseService\Type\StopGapFulfillmentDataType>  $fulfillment
-     * @return StopGapFulfillmentRequestType
      */
     public function withFulfillment(StopGapFulfillmentDataType|array $fulfillment): StopGapFulfillmentRequestType
     {

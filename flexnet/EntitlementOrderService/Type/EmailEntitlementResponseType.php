@@ -39,7 +39,6 @@ class EmailEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return EmailEntitlementResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): EmailEntitlementResponseType
     {

@@ -45,7 +45,6 @@ class EntitlementLifeCycleDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
-     * @return EntitlementLifeCycleDataType
      */
     public function withParentEntitlementIdentifier(EntitlementIdentifierType|null $parentEntitlementIdentifier): EntitlementLifeCycleDataType
     {
@@ -65,7 +64,6 @@ class EntitlementLifeCycleDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType>  $lineItemData
-     * @return EntitlementLifeCycleDataType
      */
     public function withLineItemData(LineItemLifeCycleDataType|array $lineItemData): EntitlementLifeCycleDataType
     {

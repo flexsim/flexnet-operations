@@ -37,7 +37,6 @@ class TransferEntitlementsListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType>  $entitlementInfo
-     * @return TransferEntitlementsListType
      */
     public function withEntitlementInfo(TransferEntitlementInfoType|array $entitlementInfo): TransferEntitlementsListType
     {

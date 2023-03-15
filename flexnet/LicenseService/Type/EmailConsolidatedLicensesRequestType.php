@@ -63,7 +63,6 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\ConsolidatedLicenseIdListType  $consolidatedLicenseIdList
-     * @return EmailConsolidatedLicensesRequestType
      */
     public function withConsolidatedLicenseIdList(ConsolidatedLicenseIdListType $consolidatedLicenseIdList): EmailConsolidatedLicensesRequestType
     {
@@ -73,18 +72,11 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getValidateEmailAddresses(): bool|null
     {
         return $this->validateEmailAddresses;
     }
 
-    /**
-     * @param  bool|null  $validateEmailAddresses
-     * @return EmailConsolidatedLicensesRequestType
-     */
     public function withValidateEmailAddresses(bool|null $validateEmailAddresses): EmailConsolidatedLicensesRequestType
     {
         $new = clone $this;
@@ -103,7 +95,6 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\EmailContactListType|null  $emailIdList
-     * @return EmailConsolidatedLicensesRequestType
      */
     public function withEmailIdList(EmailContactListType|null $emailIdList): EmailConsolidatedLicensesRequestType
     {
@@ -113,18 +104,11 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLocale(): string|null
     {
         return $this->locale;
     }
 
-    /**
-     * @param  string|null  $locale
-     * @return EmailConsolidatedLicensesRequestType
-     */
     public function withLocale(string|null $locale): EmailConsolidatedLicensesRequestType
     {
         $new = clone $this;

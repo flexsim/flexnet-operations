@@ -37,7 +37,6 @@ class FailedUnlinkMaintenanceLineItemListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType>|null  $failedUnlinkMaintenanceLineItem
-     * @return FailedUnlinkMaintenanceLineItemListType
      */
     public function withFailedUnlinkMaintenanceLineItem(FailedUnlinkMaintenanceLineItemDataType|array|null $failedUnlinkMaintenanceLineItem): FailedUnlinkMaintenanceLineItemListType
     {

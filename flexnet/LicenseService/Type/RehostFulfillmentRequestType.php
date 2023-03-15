@@ -39,7 +39,6 @@ class RehostFulfillmentRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\RehostFulfillmentDataType|array<\Flexnet\LicenseService\Type\RehostFulfillmentDataType>  $fulfillment
-     * @return RehostFulfillmentRequestType
      */
     public function withFulfillment(RehostFulfillmentDataType|array $fulfillment): RehostFulfillmentRequestType
     {

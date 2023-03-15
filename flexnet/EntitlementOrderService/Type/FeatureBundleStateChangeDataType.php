@@ -45,7 +45,6 @@ class FeatureBundleStateChangeDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
-     * @return FeatureBundleStateChangeDataType
      */
     public function withFeatureBundleIdentifier(FeatureBundleIdentifierType $featureBundleIdentifier): FeatureBundleStateChangeDataType
     {
@@ -65,7 +64,6 @@ class FeatureBundleStateChangeDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
-     * @return FeatureBundleStateChangeDataType
      */
     public function withStateChangeRecord(StateChangeDataType|array|null $stateChangeRecord): FeatureBundleStateChangeDataType
     {

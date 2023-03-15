@@ -37,7 +37,6 @@ class CountDataSetType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CountDataType|array<\Flexnet\LicenseService\Type\CountDataType>  $countData
-     * @return CountDataSetType
      */
     public function withCountData(CountDataType|array $countData): CountDataSetType
     {

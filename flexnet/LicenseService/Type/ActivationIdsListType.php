@@ -37,7 +37,6 @@ class ActivationIdsListType
 
     /**
      * @param  string|array<string>  $activationId
-     * @return ActivationIdsListType
      */
     public function withActivationId(string|array $activationId): ActivationIdsListType
     {

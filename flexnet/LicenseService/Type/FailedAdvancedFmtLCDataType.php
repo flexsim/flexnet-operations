@@ -18,7 +18,6 @@ class FailedAdvancedFmtLCDataType
      * Constructor
      *
      * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType  $fulfillment
-     * @param  string  $reason
      */
     public function __construct(AdvancedFulfillmentLCDataType $fulfillment, string $reason)
     {
@@ -28,7 +27,6 @@ class FailedAdvancedFmtLCDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType  $fulfillment
-     * @param  string  $reason
      */
     public static function create(AdvancedFulfillmentLCDataType $fulfillment, string $reason)
     {
@@ -45,7 +43,6 @@ class FailedAdvancedFmtLCDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType  $fulfillment
-     * @return FailedAdvancedFmtLCDataType
      */
     public function withFulfillment(AdvancedFulfillmentLCDataType $fulfillment): FailedAdvancedFmtLCDataType
     {
@@ -55,18 +52,11 @@ class FailedAdvancedFmtLCDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string  $reason
-     * @return FailedAdvancedFmtLCDataType
-     */
     public function withReason(string $reason): FailedAdvancedFmtLCDataType
     {
         $new = clone $this;

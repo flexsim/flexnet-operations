@@ -45,7 +45,6 @@ class FailedAddEntitlementLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|null  $lineItem
-     * @return FailedAddEntitlementLineItemDataType
      */
     public function withLineItem(AddEntitlementLineItemDataType|null $lineItem): FailedAddEntitlementLineItemDataType
     {
@@ -55,18 +54,11 @@ class FailedAddEntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string|null  $reason
-     * @return FailedAddEntitlementLineItemDataType
-     */
     public function withReason(string|null $reason): FailedAddEntitlementLineItemDataType
     {
         $new = clone $this;

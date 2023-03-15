@@ -77,7 +77,6 @@ class StateChangeResponseType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureStateChangeListType|null  $featureList
-     * @return StateChangeResponseType
      */
     public function withFeatureList(FeatureStateChangeListType|null $featureList): StateChangeResponseType
     {
@@ -97,7 +96,6 @@ class StateChangeResponseType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeListType|null  $featureBundleList
-     * @return StateChangeResponseType
      */
     public function withFeatureBundleList(FeatureBundleStateChangeListType|null $featureBundleList): StateChangeResponseType
     {
@@ -117,7 +115,6 @@ class StateChangeResponseType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ProductStateChangeListType|null  $productList
-     * @return StateChangeResponseType
      */
     public function withProductList(ProductStateChangeListType|null $productList): StateChangeResponseType
     {
@@ -137,7 +134,6 @@ class StateChangeResponseType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeListType|null  $licenseModelList
-     * @return StateChangeResponseType
      */
     public function withLicenseModelList(LicenseModelStateChangeListType|null $licenseModelList): StateChangeResponseType
     {
@@ -157,7 +153,6 @@ class StateChangeResponseType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeListType|null  $simpleEntitlementList
-     * @return StateChangeResponseType
      */
     public function withSimpleEntitlementList(EntitlementStateChangeListType|null $simpleEntitlementList): StateChangeResponseType
     {
@@ -177,7 +172,6 @@ class StateChangeResponseType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeListType|null  $bulkEntitlementList
-     * @return StateChangeResponseType
      */
     public function withBulkEntitlementList(EntitlementStateChangeListType|null $bulkEntitlementList): StateChangeResponseType
     {

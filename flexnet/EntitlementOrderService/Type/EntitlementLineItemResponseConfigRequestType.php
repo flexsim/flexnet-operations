@@ -403,18 +403,11 @@ class EntitlementLineItemResponseConfigRequestType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return bool|null
-     */
     public function getActivationId(): bool|null
     {
         return $this->activationId;
     }
 
-    /**
-     * @param  bool|null  $activationId
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withActivationId(bool|null $activationId): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -423,18 +416,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getDescription(): bool|null
     {
         return $this->description;
     }
 
-    /**
-     * @param  bool|null  $description
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withDescription(bool|null $description): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -443,18 +429,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getState(): bool|null
     {
         return $this->state;
     }
 
-    /**
-     * @param  bool|null  $state
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withState(bool|null $state): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -463,18 +442,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getActivatableItemType(): bool|null
     {
         return $this->activatableItemType;
     }
 
-    /**
-     * @param  bool|null  $activatableItemType
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withActivatableItemType(bool|null $activatableItemType): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -483,18 +455,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getOrderId(): bool|null
     {
         return $this->orderId;
     }
 
-    /**
-     * @param  bool|null  $orderId
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withOrderId(bool|null $orderId): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -503,18 +468,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getOrderLineNumber(): bool|null
     {
         return $this->orderLineNumber;
     }
 
-    /**
-     * @param  bool|null  $orderLineNumber
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withOrderLineNumber(bool|null $orderLineNumber): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -523,18 +481,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getEntitlementId(): bool|null
     {
         return $this->entitlementId;
     }
 
-    /**
-     * @param  bool|null  $entitlementId
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withEntitlementId(bool|null $entitlementId): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -543,18 +494,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getAllowPortalLogin(): bool|null
     {
         return $this->allowPortalLogin;
     }
 
-    /**
-     * @param  bool|null  $allowPortalLogin
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withAllowPortalLogin(bool|null $allowPortalLogin): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -563,18 +507,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getSoldTo(): bool|null
     {
         return $this->soldTo;
     }
 
-    /**
-     * @param  bool|null  $soldTo
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withSoldTo(bool|null $soldTo): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -583,18 +520,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getSoldToDisplayName(): bool|null
     {
         return $this->soldToDisplayName;
     }
 
-    /**
-     * @param  bool|null  $soldToDisplayName
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withSoldToDisplayName(bool|null $soldToDisplayName): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -603,18 +533,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getEntitlementState(): bool|null
     {
         return $this->entitlementState;
     }
 
-    /**
-     * @param  bool|null  $entitlementState
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withEntitlementState(bool|null $entitlementState): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -623,18 +546,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getEntitlementDescription(): bool|null
     {
         return $this->entitlementDescription;
     }
 
-    /**
-     * @param  bool|null  $entitlementDescription
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withEntitlementDescription(bool|null $entitlementDescription): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -643,18 +559,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getShipToEmail(): bool|null
     {
         return $this->shipToEmail;
     }
 
-    /**
-     * @param  bool|null  $shipToEmail
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withShipToEmail(bool|null $shipToEmail): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -663,18 +572,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getShipToAddress(): bool|null
     {
         return $this->shipToAddress;
     }
 
-    /**
-     * @param  bool|null  $shipToAddress
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withShipToAddress(bool|null $shipToAddress): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -683,18 +585,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getParentBulkEntitlementId(): bool|null
     {
         return $this->parentBulkEntitlementId;
     }
 
-    /**
-     * @param  bool|null  $parentBulkEntitlementId
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withParentBulkEntitlementId(bool|null $parentBulkEntitlementId): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -703,18 +598,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getBulkEntSoldTo(): bool|null
     {
         return $this->bulkEntSoldTo;
     }
 
-    /**
-     * @param  bool|null  $bulkEntSoldTo
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withBulkEntSoldTo(bool|null $bulkEntSoldTo): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -723,18 +611,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getBulkEntSoldToDisplayName(): bool|null
     {
         return $this->bulkEntSoldToDisplayName;
     }
 
-    /**
-     * @param  bool|null  $bulkEntSoldToDisplayName
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withBulkEntSoldToDisplayName(bool|null $bulkEntSoldToDisplayName): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -743,18 +624,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getProduct(): bool|null
     {
         return $this->product;
     }
 
-    /**
-     * @param  bool|null  $product
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withProduct(bool|null $product): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -763,18 +637,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getProductDescription(): bool|null
     {
         return $this->productDescription;
     }
 
-    /**
-     * @param  bool|null  $productDescription
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withProductDescription(bool|null $productDescription): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -783,18 +650,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getPartNumber(): bool|null
     {
         return $this->partNumber;
     }
 
-    /**
-     * @param  bool|null  $partNumber
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withPartNumber(bool|null $partNumber): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -803,18 +663,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getPartNumberDescription(): bool|null
     {
         return $this->partNumberDescription;
     }
 
-    /**
-     * @param  bool|null  $partNumberDescription
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withPartNumberDescription(bool|null $partNumberDescription): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -823,18 +676,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getLicenseTechnology(): bool|null
     {
         return $this->licenseTechnology;
     }
 
-    /**
-     * @param  bool|null  $licenseTechnology
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withLicenseTechnology(bool|null $licenseTechnology): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -843,18 +689,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getLicenseModel(): bool|null
     {
         return $this->licenseModel;
     }
 
-    /**
-     * @param  bool|null  $licenseModel
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withLicenseModel(bool|null $licenseModel): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -863,18 +702,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getLineItemSupportAction(): bool|null
     {
         return $this->lineItemSupportAction;
     }
 
-    /**
-     * @param  bool|null  $lineItemSupportAction
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withLineItemSupportAction(bool|null $lineItemSupportAction): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -883,18 +715,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getParentLineItem(): bool|null
     {
         return $this->parentLineItem;
     }
 
-    /**
-     * @param  bool|null  $parentLineItem
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withParentLineItem(bool|null $parentLineItem): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -903,18 +728,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getStartDate(): bool|null
     {
         return $this->startDate;
     }
 
-    /**
-     * @param  bool|null  $startDate
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withStartDate(bool|null $startDate): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -923,18 +741,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getStartDateOption(): bool|null
     {
         return $this->startDateOption;
     }
 
-    /**
-     * @param  bool|null  $startDateOption
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withStartDateOption(bool|null $startDateOption): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -943,18 +754,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getIsPermanent(): bool|null
     {
         return $this->isPermanent;
     }
 
-    /**
-     * @param  bool|null  $isPermanent
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withIsPermanent(bool|null $isPermanent): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -963,18 +767,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getTerm(): bool|null
     {
         return $this->term;
     }
 
-    /**
-     * @param  bool|null  $term
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withTerm(bool|null $term): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -983,18 +780,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getExpirationDate(): bool|null
     {
         return $this->expirationDate;
     }
 
-    /**
-     * @param  bool|null  $expirationDate
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withExpirationDate(bool|null $expirationDate): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1003,18 +793,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getVersionDate(): bool|null
     {
         return $this->versionDate;
     }
 
-    /**
-     * @param  bool|null  $versionDate
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withVersionDate(bool|null $versionDate): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1023,18 +806,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getVersionDateAttributes(): bool|null
     {
         return $this->versionDateAttributes;
     }
 
-    /**
-     * @param  bool|null  $versionDateAttributes
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withVersionDateAttributes(bool|null $versionDateAttributes): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1043,18 +819,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getNumberOfCopies(): bool|null
     {
         return $this->numberOfCopies;
     }
 
-    /**
-     * @param  bool|null  $numberOfCopies
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withNumberOfCopies(bool|null $numberOfCopies): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1063,18 +832,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getFulfilledAmount(): bool|null
     {
         return $this->fulfilledAmount;
     }
 
-    /**
-     * @param  bool|null  $fulfilledAmount
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withFulfilledAmount(bool|null $fulfilledAmount): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1083,18 +845,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getNumberOfRemainingCopies(): bool|null
     {
         return $this->numberOfRemainingCopies;
     }
 
-    /**
-     * @param  bool|null  $numberOfRemainingCopies
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withNumberOfRemainingCopies(bool|null $numberOfRemainingCopies): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1103,18 +858,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getIsTrusted(): bool|null
     {
         return $this->isTrusted;
     }
 
-    /**
-     * @param  bool|null  $isTrusted
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withIsTrusted(bool|null $isTrusted): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1133,7 +881,6 @@ class EntitlementLineItemResponseConfigRequestType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorDataType|null  $customAttributes
-     * @return EntitlementLineItemResponseConfigRequestType
      */
     public function withCustomAttributes(CustomAttributeDescriptorDataType|null $customAttributes): EntitlementLineItemResponseConfigRequestType
     {
@@ -1143,18 +890,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getMaintenance(): bool|null
     {
         return $this->maintenance;
     }
 
-    /**
-     * @param  bool|null  $maintenance
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withMaintenance(bool|null $maintenance): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1163,18 +903,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getMaintenancePartNumber(): bool|null
     {
         return $this->maintenancePartNumber;
     }
 
-    /**
-     * @param  bool|null  $maintenancePartNumber
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withMaintenancePartNumber(bool|null $maintenancePartNumber): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1183,18 +916,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getFNPTimeZoneValue(): bool|null
     {
         return $this->FNPTimeZoneValue;
     }
 
-    /**
-     * @param  bool|null  $FNPTimeZoneValue
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withFNPTimeZoneValue(bool|null $FNPTimeZoneValue): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1203,18 +929,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getCreatedOnDateTime(): bool|null
     {
         return $this->createdOnDateTime;
     }
 
-    /**
-     * @param  bool|null  $createdOnDateTime
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withCreatedOnDateTime(bool|null $createdOnDateTime): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1223,18 +942,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getLastModifiedDateTime(): bool|null
     {
         return $this->lastModifiedDateTime;
     }
 
-    /**
-     * @param  bool|null  $lastModifiedDateTime
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withLastModifiedDateTime(bool|null $lastModifiedDateTime): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1243,18 +955,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getLineItemAttributes(): bool|null
     {
         return $this->lineItemAttributes;
     }
 
-    /**
-     * @param  bool|null  $lineItemAttributes
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withLineItemAttributes(bool|null $lineItemAttributes): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1263,18 +968,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getMaintenanceLineItemAttributes(): bool|null
     {
         return $this->maintenanceLineItemAttributes;
     }
 
-    /**
-     * @param  bool|null  $maintenanceLineItemAttributes
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withMaintenanceLineItemAttributes(bool|null $maintenanceLineItemAttributes): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1283,18 +981,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getTransferredFromLineItem(): bool|null
     {
         return $this->transferredFromLineItem;
     }
 
-    /**
-     * @param  bool|null  $transferredFromLineItem
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withTransferredFromLineItem(bool|null $transferredFromLineItem): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1303,18 +994,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getSplitFromLineItem(): bool|null
     {
         return $this->splitFromLineItem;
     }
 
-    /**
-     * @param  bool|null  $splitFromLineItem
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withSplitFromLineItem(bool|null $splitFromLineItem): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1323,18 +1007,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getFetchCreatedBy(): bool|null
     {
         return $this->fetchCreatedBy;
     }
 
-    /**
-     * @param  bool|null  $fetchCreatedBy
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withFetchCreatedBy(bool|null $fetchCreatedBy): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;
@@ -1343,18 +1020,11 @@ class EntitlementLineItemResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getFetchLastModifiedBy(): bool|null
     {
         return $this->fetchLastModifiedBy;
     }
 
-    /**
-     * @param  bool|null  $fetchLastModifiedBy
-     * @return EntitlementLineItemResponseConfigRequestType
-     */
     public function withFetchLastModifiedBy(bool|null $fetchLastModifiedBy): EntitlementLineItemResponseConfigRequestType
     {
         $new = clone $this;

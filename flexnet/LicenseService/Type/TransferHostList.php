@@ -37,7 +37,6 @@ class TransferHostList
 
     /**
      * @param  \Flexnet\LicenseService\Type\TransferHostIdDataType|array<\Flexnet\LicenseService\Type\TransferHostIdDataType>  $hostIdentifier
-     * @return TransferHostList
      */
     public function withHostIdentifier(TransferHostIdDataType|array $hostIdentifier): TransferHostList
     {

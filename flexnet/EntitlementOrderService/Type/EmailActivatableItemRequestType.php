@@ -44,7 +44,6 @@ class EmailActivatableItemRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param  string  $activationId
      * @param  bool|null  $ignoreExistingEmailList
      * @param  bool|null  $validateEmailAddresses
      * @param  \Flexnet\EntitlementOrderService\Type\EmailContactListType|null  $emailIdList
@@ -64,7 +63,6 @@ class EmailActivatableItemRequestType implements RequestInterface
     }
 
     /**
-     * @param  string  $activationId
      * @param  bool|null  $ignoreExistingEmailList
      * @param  bool|null  $validateEmailAddresses
      * @param  \Flexnet\EntitlementOrderService\Type\EmailContactListType|null  $emailIdList
@@ -77,18 +75,11 @@ class EmailActivatableItemRequestType implements RequestInterface
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getActivationId(): string
     {
         return $this->activationId;
     }
 
-    /**
-     * @param  string  $activationId
-     * @return EmailActivatableItemRequestType
-     */
     public function withActivationId(string $activationId): EmailActivatableItemRequestType
     {
         $new = clone $this;
@@ -97,18 +88,11 @@ class EmailActivatableItemRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getIgnoreExistingEmailList(): bool|null
     {
         return $this->ignoreExistingEmailList;
     }
 
-    /**
-     * @param  bool|null  $ignoreExistingEmailList
-     * @return EmailActivatableItemRequestType
-     */
     public function withIgnoreExistingEmailList(bool|null $ignoreExistingEmailList): EmailActivatableItemRequestType
     {
         $new = clone $this;
@@ -117,18 +101,11 @@ class EmailActivatableItemRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getValidateEmailAddresses(): bool|null
     {
         return $this->validateEmailAddresses;
     }
 
-    /**
-     * @param  bool|null  $validateEmailAddresses
-     * @return EmailActivatableItemRequestType
-     */
     public function withValidateEmailAddresses(bool|null $validateEmailAddresses): EmailActivatableItemRequestType
     {
         $new = clone $this;
@@ -147,7 +124,6 @@ class EmailActivatableItemRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EmailContactListType|null  $emailIdList
-     * @return EmailActivatableItemRequestType
      */
     public function withEmailIdList(EmailContactListType|null $emailIdList): EmailActivatableItemRequestType
     {
@@ -167,7 +143,6 @@ class EmailActivatableItemRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EmailContactListType|null  $ccEmailIdList
-     * @return EmailActivatableItemRequestType
      */
     public function withCcEmailIdList(EmailContactListType|null $ccEmailIdList): EmailActivatableItemRequestType
     {
@@ -187,7 +162,6 @@ class EmailActivatableItemRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EmailContactListType|null  $bccEmailIdList
-     * @return EmailActivatableItemRequestType
      */
     public function withBccEmailIdList(EmailContactListType|null $bccEmailIdList): EmailActivatableItemRequestType
     {
@@ -197,18 +171,11 @@ class EmailActivatableItemRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLocale(): string|null
     {
         return $this->locale;
     }
 
-    /**
-     * @param  string|null  $locale
-     * @return EmailActivatableItemRequestType
-     */
     public function withLocale(string|null $locale): EmailActivatableItemRequestType
     {
         $new = clone $this;

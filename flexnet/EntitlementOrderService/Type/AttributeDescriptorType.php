@@ -37,7 +37,6 @@ class AttributeDescriptorType
     /**
      * Constructor
      *
-     * @param  string  $attributeName
      * @param  string|null  $stringValue
      * @param  \DateTimeInterface|null  $dateValue
      * @param  bool|null  $booleanValue
@@ -55,7 +54,6 @@ class AttributeDescriptorType
     }
 
     /**
-     * @param  string  $attributeName
      * @param  string|null  $stringValue
      * @param  \DateTimeInterface|null  $dateValue
      * @param  bool|null  $booleanValue
@@ -67,18 +65,11 @@ class AttributeDescriptorType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getAttributeName(): string
     {
         return $this->attributeName;
     }
 
-    /**
-     * @param  string  $attributeName
-     * @return AttributeDescriptorType
-     */
     public function withAttributeName(string $attributeName): AttributeDescriptorType
     {
         $new = clone $this;
@@ -87,18 +78,11 @@ class AttributeDescriptorType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getStringValue(): string|null
     {
         return $this->stringValue;
     }
 
-    /**
-     * @param  string|null  $stringValue
-     * @return AttributeDescriptorType
-     */
     public function withStringValue(string|null $stringValue): AttributeDescriptorType
     {
         $new = clone $this;
@@ -107,18 +91,11 @@ class AttributeDescriptorType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface|null
-     */
     public function getDateValue(): \DateTimeInterface|null
     {
         return $this->dateValue;
     }
 
-    /**
-     * @param  \DateTimeInterface|null  $dateValue
-     * @return AttributeDescriptorType
-     */
     public function withDateValue(\DateTimeInterface|null $dateValue): AttributeDescriptorType
     {
         $new = clone $this;
@@ -127,18 +104,11 @@ class AttributeDescriptorType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getBooleanValue(): bool|null
     {
         return $this->booleanValue;
     }
 
-    /**
-     * @param  bool|null  $booleanValue
-     * @return AttributeDescriptorType
-     */
     public function withBooleanValue(bool|null $booleanValue): AttributeDescriptorType
     {
         $new = clone $this;
@@ -147,18 +117,11 @@ class AttributeDescriptorType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getIntegerValue(): int|null
     {
         return $this->integerValue;
     }
 
-    /**
-     * @param  int|null  $integerValue
-     * @return AttributeDescriptorType
-     */
     public function withIntegerValue(int|null $integerValue): AttributeDescriptorType
     {
         $new = clone $this;
@@ -177,7 +140,6 @@ class AttributeDescriptorType
 
     /**
      * @param  string|array<string>|null  $arrayValue
-     * @return AttributeDescriptorType
      */
     public function withArrayValue(string|array|null $arrayValue): AttributeDescriptorType
     {

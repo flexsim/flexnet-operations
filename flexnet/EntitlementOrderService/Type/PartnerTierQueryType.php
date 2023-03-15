@@ -27,8 +27,6 @@ class PartnerTierQueryType
     /**
      * Constructor
      *
-     * @param  string  $value
-     * @param  string  $searchType
      * @param  string|null  $partnerTier
      * @param  bool|null  $isSearchByName
      */
@@ -41,8 +39,6 @@ class PartnerTierQueryType
     }
 
     /**
-     * @param  string  $value
-     * @param  string  $searchType
      * @param  string|null  $partnerTier
      * @param  bool|null  $isSearchByName
      */
@@ -51,18 +47,11 @@ class PartnerTierQueryType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getValue(): string
     {
         return $this->value;
     }
 
-    /**
-     * @param  string  $value
-     * @return PartnerTierQueryType
-     */
     public function withValue(string $value): PartnerTierQueryType
     {
         $new = clone $this;
@@ -71,18 +60,11 @@ class PartnerTierQueryType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getSearchType(): string
     {
         return $this->searchType;
     }
 
-    /**
-     * @param  string  $searchType
-     * @return PartnerTierQueryType
-     */
     public function withSearchType(string $searchType): PartnerTierQueryType
     {
         $new = clone $this;
@@ -91,18 +73,11 @@ class PartnerTierQueryType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPartnerTier(): string|null
     {
         return $this->partnerTier;
     }
 
-    /**
-     * @param  string|null  $partnerTier
-     * @return PartnerTierQueryType
-     */
     public function withPartnerTier(string|null $partnerTier): PartnerTierQueryType
     {
         $new = clone $this;
@@ -111,18 +86,11 @@ class PartnerTierQueryType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getIsSearchByName(): bool|null
     {
         return $this->isSearchByName;
     }
 
-    /**
-     * @param  bool|null  $isSearchByName
-     * @return PartnerTierQueryType
-     */
     public function withIsSearchByName(bool|null $isSearchByName): PartnerTierQueryType
     {
         $new = clone $this;

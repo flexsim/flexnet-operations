@@ -53,7 +53,6 @@ class HostIdDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
-     * @return HostIdDataType
      */
     public function withServerIds(ServerIDsType|null $serverIds): HostIdDataType
     {
@@ -73,7 +72,6 @@ class HostIdDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
-     * @return HostIdDataType
      */
     public function withNodeIds(NodeIDsType|null $nodeIds): HostIdDataType
     {
@@ -93,7 +91,6 @@ class HostIdDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
-     * @return HostIdDataType
      */
     public function withCustomHost(CustomHostIDType|null $customHost): HostIdDataType
     {

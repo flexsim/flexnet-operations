@@ -37,7 +37,6 @@ class OnholdFulfillmentListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\OnHoldFmtLicenseDataType|array<\Flexnet\LicenseService\Type\OnHoldFmtLicenseDataType>  $onholdFmtLicenseData
-     * @return OnholdFulfillmentListType
      */
     public function withOnholdFmtLicenseData(OnHoldFmtLicenseDataType|array $onholdFmtLicenseData): OnholdFulfillmentListType
     {

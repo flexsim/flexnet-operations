@@ -39,7 +39,6 @@ class DeleteMaintenanceLineItemRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType>  $maintenanceLineItemData
-     * @return DeleteMaintenanceLineItemRequestType
      */
     public function withMaintenanceLineItemData(DeleteMaintenanceLineItemDataType|array $maintenanceLineItemData): DeleteMaintenanceLineItemRequestType
     {

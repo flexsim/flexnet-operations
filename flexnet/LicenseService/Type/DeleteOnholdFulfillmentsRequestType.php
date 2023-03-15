@@ -39,7 +39,6 @@ class DeleteOnholdFulfillmentsRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdListType  $fulfillmentIdList
-     * @return DeleteOnholdFulfillmentsRequestType
      */
     public function withFulfillmentIdList(FulfillmentIdListType $fulfillmentIdList): DeleteOnholdFulfillmentsRequestType
     {

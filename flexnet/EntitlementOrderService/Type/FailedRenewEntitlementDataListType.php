@@ -37,7 +37,6 @@ class FailedRenewEntitlementDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedRenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedRenewEntitlementDataType>|null  $failedEntitlement
-     * @return FailedRenewEntitlementDataListType
      */
     public function withFailedEntitlement(FailedRenewEntitlementDataType|array|null $failedEntitlement): FailedRenewEntitlementDataListType
     {

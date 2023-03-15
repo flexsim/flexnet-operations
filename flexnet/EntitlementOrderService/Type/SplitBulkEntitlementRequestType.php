@@ -39,7 +39,6 @@ class SplitBulkEntitlementRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementListType  $bulkEntitlementList
-     * @return SplitBulkEntitlementRequestType
      */
     public function withBulkEntitlementList(SplitBulkEntitlementListType $bulkEntitlementList): SplitBulkEntitlementRequestType
     {

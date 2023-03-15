@@ -37,7 +37,6 @@ class FailedFulfillmentDataListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedFulfillmentDataType>|null  $failedFulfillment
-     * @return FailedFulfillmentDataListType
      */
     public function withFailedFulfillment(FailedFulfillmentDataType|array|null $failedFulfillment): FailedFulfillmentDataListType
     {

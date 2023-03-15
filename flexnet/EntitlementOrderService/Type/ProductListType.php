@@ -37,7 +37,6 @@ class ProductListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|array<\Flexnet\EntitlementOrderService\Type\ProductIdentifierType>  $productIdentifier
-     * @return ProductListType
      */
     public function withProductIdentifier(ProductIdentifierType|array $productIdentifier): ProductListType
     {

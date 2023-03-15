@@ -45,7 +45,6 @@ class ProductStateChangeDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType  $productIdentifier
-     * @return ProductStateChangeDataType
      */
     public function withProductIdentifier(ProductIdentifierType $productIdentifier): ProductStateChangeDataType
     {
@@ -65,7 +64,6 @@ class ProductStateChangeDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
-     * @return ProductStateChangeDataType
      */
     public function withStateChangeRecord(StateChangeDataType|array|null $stateChangeRecord): ProductStateChangeDataType
     {

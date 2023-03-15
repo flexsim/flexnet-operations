@@ -35,18 +35,11 @@ class FulfillmentIdentifierType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string|null
-     */
     public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @return FulfillmentIdentifierType
-     */
     public function withUniqueId(string|null $uniqueId): FulfillmentIdentifierType
     {
         $new = clone $this;
@@ -65,7 +58,6 @@ class FulfillmentIdentifierType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentPKType|null  $primaryKeys
-     * @return FulfillmentIdentifierType
      */
     public function withPrimaryKeys(FulfillmentPKType|null $primaryKeys): FulfillmentIdentifierType
     {

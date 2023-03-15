@@ -71,20 +71,6 @@ class PolicyAttributesDataType
 
     /**
      * Constructor
-     *
-     * @param  bool  $needRehostsPolicy
-     * @param  bool  $needReturnsPolicy
-     * @param  bool  $needRepairsPolicy
-     * @param  bool  $needExtraActivationsPolicy
-     * @param  bool  $needCancelLicensePolicy
-     * @param  bool  $needVirtualLicensePolicy
-     * @param  bool  $needReinstallPolicy
-     * @param  bool  $needServerHostIdPolicy
-     * @param  bool  $needNodelockedHostIdPolicy
-     * @param  bool  $needPortalServerHostIdPolicy
-     * @param  bool  $needPortalNodelockedHostIdPolicy
-     * @param  bool  $needRedundantServerPolicy
-     * @param  bool  $needACPIGenerationIdLicensePolicy
      */
     public function __construct(bool $needRehostsPolicy, bool $needReturnsPolicy, bool $needRepairsPolicy, bool $needExtraActivationsPolicy, bool $needCancelLicensePolicy, bool $needVirtualLicensePolicy, bool $needReinstallPolicy, bool $needServerHostIdPolicy, bool $needNodelockedHostIdPolicy, bool $needPortalServerHostIdPolicy, bool $needPortalNodelockedHostIdPolicy, bool $needRedundantServerPolicy, bool $needACPIGenerationIdLicensePolicy)
     {
@@ -103,38 +89,16 @@ class PolicyAttributesDataType
         $this->needACPIGenerationIdLicensePolicy = $needACPIGenerationIdLicensePolicy;
     }
 
-    /**
-     * @param  bool  $needRehostsPolicy
-     * @param  bool  $needReturnsPolicy
-     * @param  bool  $needRepairsPolicy
-     * @param  bool  $needExtraActivationsPolicy
-     * @param  bool  $needCancelLicensePolicy
-     * @param  bool  $needVirtualLicensePolicy
-     * @param  bool  $needReinstallPolicy
-     * @param  bool  $needServerHostIdPolicy
-     * @param  bool  $needNodelockedHostIdPolicy
-     * @param  bool  $needPortalServerHostIdPolicy
-     * @param  bool  $needPortalNodelockedHostIdPolicy
-     * @param  bool  $needRedundantServerPolicy
-     * @param  bool  $needACPIGenerationIdLicensePolicy
-     */
     public static function create(bool $needRehostsPolicy, bool $needReturnsPolicy, bool $needRepairsPolicy, bool $needExtraActivationsPolicy, bool $needCancelLicensePolicy, bool $needVirtualLicensePolicy, bool $needReinstallPolicy, bool $needServerHostIdPolicy, bool $needNodelockedHostIdPolicy, bool $needPortalServerHostIdPolicy, bool $needPortalNodelockedHostIdPolicy, bool $needRedundantServerPolicy, bool $needACPIGenerationIdLicensePolicy)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedRehostsPolicy(): bool
     {
         return $this->needRehostsPolicy;
     }
 
-    /**
-     * @param  bool  $needRehostsPolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedRehostsPolicy(bool $needRehostsPolicy): PolicyAttributesDataType
     {
         $new = clone $this;
@@ -143,18 +107,11 @@ class PolicyAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedReturnsPolicy(): bool
     {
         return $this->needReturnsPolicy;
     }
 
-    /**
-     * @param  bool  $needReturnsPolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedReturnsPolicy(bool $needReturnsPolicy): PolicyAttributesDataType
     {
         $new = clone $this;
@@ -163,18 +120,11 @@ class PolicyAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedRepairsPolicy(): bool
     {
         return $this->needRepairsPolicy;
     }
 
-    /**
-     * @param  bool  $needRepairsPolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedRepairsPolicy(bool $needRepairsPolicy): PolicyAttributesDataType
     {
         $new = clone $this;
@@ -183,18 +133,11 @@ class PolicyAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedExtraActivationsPolicy(): bool
     {
         return $this->needExtraActivationsPolicy;
     }
 
-    /**
-     * @param  bool  $needExtraActivationsPolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedExtraActivationsPolicy(bool $needExtraActivationsPolicy): PolicyAttributesDataType
     {
         $new = clone $this;
@@ -203,18 +146,11 @@ class PolicyAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedCancelLicensePolicy(): bool
     {
         return $this->needCancelLicensePolicy;
     }
 
-    /**
-     * @param  bool  $needCancelLicensePolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedCancelLicensePolicy(bool $needCancelLicensePolicy): PolicyAttributesDataType
     {
         $new = clone $this;
@@ -223,18 +159,11 @@ class PolicyAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedVirtualLicensePolicy(): bool
     {
         return $this->needVirtualLicensePolicy;
     }
 
-    /**
-     * @param  bool  $needVirtualLicensePolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedVirtualLicensePolicy(bool $needVirtualLicensePolicy): PolicyAttributesDataType
     {
         $new = clone $this;
@@ -243,18 +172,11 @@ class PolicyAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedReinstallPolicy(): bool
     {
         return $this->needReinstallPolicy;
     }
 
-    /**
-     * @param  bool  $needReinstallPolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedReinstallPolicy(bool $needReinstallPolicy): PolicyAttributesDataType
     {
         $new = clone $this;
@@ -263,18 +185,11 @@ class PolicyAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedServerHostIdPolicy(): bool
     {
         return $this->needServerHostIdPolicy;
     }
 
-    /**
-     * @param  bool  $needServerHostIdPolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedServerHostIdPolicy(bool $needServerHostIdPolicy): PolicyAttributesDataType
     {
         $new = clone $this;
@@ -283,18 +198,11 @@ class PolicyAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedNodelockedHostIdPolicy(): bool
     {
         return $this->needNodelockedHostIdPolicy;
     }
 
-    /**
-     * @param  bool  $needNodelockedHostIdPolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedNodelockedHostIdPolicy(bool $needNodelockedHostIdPolicy): PolicyAttributesDataType
     {
         $new = clone $this;
@@ -303,18 +211,11 @@ class PolicyAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedPortalServerHostIdPolicy(): bool
     {
         return $this->needPortalServerHostIdPolicy;
     }
 
-    /**
-     * @param  bool  $needPortalServerHostIdPolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedPortalServerHostIdPolicy(bool $needPortalServerHostIdPolicy): PolicyAttributesDataType
     {
         $new = clone $this;
@@ -323,18 +224,11 @@ class PolicyAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedPortalNodelockedHostIdPolicy(): bool
     {
         return $this->needPortalNodelockedHostIdPolicy;
     }
 
-    /**
-     * @param  bool  $needPortalNodelockedHostIdPolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedPortalNodelockedHostIdPolicy(bool $needPortalNodelockedHostIdPolicy): PolicyAttributesDataType
     {
         $new = clone $this;
@@ -343,18 +237,11 @@ class PolicyAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedRedundantServerPolicy(): bool
     {
         return $this->needRedundantServerPolicy;
     }
 
-    /**
-     * @param  bool  $needRedundantServerPolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedRedundantServerPolicy(bool $needRedundantServerPolicy): PolicyAttributesDataType
     {
         $new = clone $this;
@@ -363,18 +250,11 @@ class PolicyAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getNeedACPIGenerationIdLicensePolicy(): bool
     {
         return $this->needACPIGenerationIdLicensePolicy;
     }
 
-    /**
-     * @param  bool  $needACPIGenerationIdLicensePolicy
-     * @return PolicyAttributesDataType
-     */
     public function withNeedACPIGenerationIdLicensePolicy(bool $needACPIGenerationIdLicensePolicy): PolicyAttributesDataType
     {
         $new = clone $this;

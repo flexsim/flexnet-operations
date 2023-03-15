@@ -71,7 +71,6 @@ class EmailLicenseRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     * @return EmailLicenseRequestType
      */
     public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): EmailLicenseRequestType
     {
@@ -81,18 +80,11 @@ class EmailLicenseRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getIgnoreExistingEmailList(): bool|null
     {
         return $this->ignoreExistingEmailList;
     }
 
-    /**
-     * @param  bool|null  $ignoreExistingEmailList
-     * @return EmailLicenseRequestType
-     */
     public function withIgnoreExistingEmailList(bool|null $ignoreExistingEmailList): EmailLicenseRequestType
     {
         $new = clone $this;
@@ -101,18 +93,11 @@ class EmailLicenseRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getValidateEmailAddresses(): bool|null
     {
         return $this->validateEmailAddresses;
     }
 
-    /**
-     * @param  bool|null  $validateEmailAddresses
-     * @return EmailLicenseRequestType
-     */
     public function withValidateEmailAddresses(bool|null $validateEmailAddresses): EmailLicenseRequestType
     {
         $new = clone $this;
@@ -131,7 +116,6 @@ class EmailLicenseRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\EmailContactListType|null  $emailIdList
-     * @return EmailLicenseRequestType
      */
     public function withEmailIdList(EmailContactListType|null $emailIdList): EmailLicenseRequestType
     {
@@ -141,18 +125,11 @@ class EmailLicenseRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLocale(): string|null
     {
         return $this->locale;
     }
 
-    /**
-     * @param  string|null  $locale
-     * @return EmailLicenseRequestType
-     */
     public function withLocale(string|null $locale): EmailLicenseRequestType
     {
         $new = clone $this;

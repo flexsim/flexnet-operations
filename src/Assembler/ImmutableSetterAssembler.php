@@ -22,18 +22,12 @@ class ImmutableSetterAssembler implements AssemblerInterface
 
     /**
      * ImmutableSetterAssembler constructor.
-     *
-     * @param  ImmutableSetterAssemblerOptions  $options
      */
     public function __construct(ImmutableSetterAssemblerOptions $options)
     {
         $this->options = $options;
     }
 
-    /**
-     * @param  ContextInterface  $context
-     * @return bool
-     */
     public function canAssemble(ContextInterface $context): bool
     {
         return $context instanceof PropertyContext;

@@ -37,7 +37,6 @@ class FailedEntitlementLifeCycleDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType>|null  $failedEntitlement
-     * @return FailedEntitlementLifeCycleDataListType
      */
     public function withFailedEntitlement(FailedEntitlementLifeCycleDataType|array|null $failedEntitlement): FailedEntitlementLifeCycleDataListType
     {

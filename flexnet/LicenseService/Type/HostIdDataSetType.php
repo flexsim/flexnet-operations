@@ -37,7 +37,6 @@ class HostIdDataSetType
 
     /**
      * @param  \Flexnet\LicenseService\Type\HostIdDataType|array<\Flexnet\LicenseService\Type\HostIdDataType>  $hostIdData
-     * @return HostIdDataSetType
      */
     public function withHostIdData(HostIdDataType|array $hostIdData): HostIdDataSetType
     {

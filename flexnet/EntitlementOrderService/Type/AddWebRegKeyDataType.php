@@ -45,7 +45,6 @@ class AddWebRegKeyDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntitlement
-     * @return AddWebRegKeyDataType
      */
     public function withBulkEntitlement(EntitlementIdentifierType $bulkEntitlement): AddWebRegKeyDataType
     {
@@ -65,7 +64,6 @@ class AddWebRegKeyDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyDataType  $webRegKeys
-     * @return AddWebRegKeyDataType
      */
     public function withWebRegKeys(WebRegKeyDataType $webRegKeys): AddWebRegKeyDataType
     {

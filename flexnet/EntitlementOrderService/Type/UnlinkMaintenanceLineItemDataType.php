@@ -45,7 +45,6 @@ class UnlinkMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @return UnlinkMaintenanceLineItemDataType
      */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): UnlinkMaintenanceLineItemDataType
     {
@@ -65,7 +64,6 @@ class UnlinkMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $maintenanceLineItemIdentifier
-     * @return UnlinkMaintenanceLineItemDataType
      */
     public function withMaintenanceLineItemIdentifier(EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier): UnlinkMaintenanceLineItemDataType
     {

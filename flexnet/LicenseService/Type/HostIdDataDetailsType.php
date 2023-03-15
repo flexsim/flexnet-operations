@@ -85,7 +85,6 @@ class HostIdDataDetailsType
 
     /**
      * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverHost
-     * @return HostIdDataDetailsType
      */
     public function withServerHost(ServerIDsType|null $serverHost): HostIdDataDetailsType
     {
@@ -95,18 +94,11 @@ class HostIdDataDetailsType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getNodeLockHost(): string|null
     {
         return $this->nodeLockHost;
     }
 
-    /**
-     * @param  string|null  $nodeLockHost
-     * @return HostIdDataDetailsType
-     */
     public function withNodeLockHost(string|null $nodeLockHost): HostIdDataDetailsType
     {
         $new = clone $this;
@@ -125,7 +117,6 @@ class HostIdDataDetailsType
 
     /**
      * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $countedNodeLockHostIds
-     * @return HostIdDataDetailsType
      */
     public function withCountedNodeLockHostIds(NodeIDsType|null $countedNodeLockHostIds): HostIdDataDetailsType
     {
@@ -145,7 +136,6 @@ class HostIdDataDetailsType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
-     * @return HostIdDataDetailsType
      */
     public function withCustomHost(CustomHostIDType|null $customHost): HostIdDataDetailsType
     {
@@ -155,18 +145,11 @@ class HostIdDataDetailsType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getCountFromParent(): int|null
     {
         return $this->countFromParent;
     }
 
-    /**
-     * @param  int|null  $countFromParent
-     * @return HostIdDataDetailsType
-     */
     public function withCountFromParent(int|null $countFromParent): HostIdDataDetailsType
     {
         $new = clone $this;
@@ -175,18 +158,11 @@ class HostIdDataDetailsType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getCountFromOwn(): int|null
     {
         return $this->countFromOwn;
     }
 
-    /**
-     * @param  int|null  $countFromOwn
-     * @return HostIdDataDetailsType
-     */
     public function withCountFromOwn(int|null $countFromOwn): HostIdDataDetailsType
     {
         $new = clone $this;
@@ -195,18 +171,11 @@ class HostIdDataDetailsType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getParentActivationId(): string|null
     {
         return $this->parentActivationId;
     }
 
-    /**
-     * @param  string|null  $parentActivationId
-     * @return HostIdDataDetailsType
-     */
     public function withParentActivationId(string|null $parentActivationId): HostIdDataDetailsType
     {
         $new = clone $this;

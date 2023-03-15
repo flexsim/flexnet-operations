@@ -37,7 +37,6 @@ class FailedDeleteWebRegKeyListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType>|null  $failedWebRegKey
-     * @return FailedDeleteWebRegKeyListType
      */
     public function withFailedWebRegKey(FailedDeleteWebRegKeyDataType|array|null $failedWebRegKey): FailedDeleteWebRegKeyListType
     {

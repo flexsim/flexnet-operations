@@ -47,7 +47,6 @@ class GetActivatableItemCountRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $queryParams
-     * @return GetActivatableItemCountRequestType
      */
     public function withQueryParams(SearchActivatableItemDataType $queryParams): GetActivatableItemCountRequestType
     {
@@ -57,18 +56,11 @@ class GetActivatableItemCountRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getRestrictToItemsReadyToActivate(): bool|null
     {
         return $this->restrictToItemsReadyToActivate;
     }
 
-    /**
-     * @param  bool|null  $restrictToItemsReadyToActivate
-     * @return GetActivatableItemCountRequestType
-     */
     public function withRestrictToItemsReadyToActivate(bool|null $restrictToItemsReadyToActivate): GetActivatableItemCountRequestType
     {
         $new = clone $this;

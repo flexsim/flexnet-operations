@@ -47,7 +47,6 @@ class MapEntitlementsToUserResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return MapEntitlementsToUserResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): MapEntitlementsToUserResponseType
     {
@@ -67,7 +66,6 @@ class MapEntitlementsToUserResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedMapEntitlementsToUserDataListType|null  $failedData
-     * @return MapEntitlementsToUserResponseType
      */
     public function withFailedData(FailedMapEntitlementsToUserDataListType|null $failedData): MapEntitlementsToUserResponseType
     {

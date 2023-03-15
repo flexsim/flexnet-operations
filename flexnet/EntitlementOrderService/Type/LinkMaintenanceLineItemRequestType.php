@@ -39,7 +39,6 @@ class LinkMaintenanceLineItemRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemListType  $linkMaintenanceLineItemList
-     * @return LinkMaintenanceLineItemRequestType
      */
     public function withLinkMaintenanceLineItemList(LinkMaintenanceLineItemListType $linkMaintenanceLineItemList): LinkMaintenanceLineItemRequestType
     {

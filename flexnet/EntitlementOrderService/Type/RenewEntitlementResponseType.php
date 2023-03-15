@@ -55,7 +55,6 @@ class RenewEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return RenewEntitlementResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): RenewEntitlementResponseType
     {
@@ -75,7 +74,6 @@ class RenewEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedRenewEntitlementDataListType|null  $failedData
-     * @return RenewEntitlementResponseType
      */
     public function withFailedData(FailedRenewEntitlementDataListType|null $failedData): RenewEntitlementResponseType
     {
@@ -95,7 +93,6 @@ class RenewEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataListType|null  $responseData
-     * @return RenewEntitlementResponseType
      */
     public function withResponseData(CreatedRenewEntitlementDataListType|null $responseData): RenewEntitlementResponseType
     {

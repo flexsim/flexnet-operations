@@ -37,7 +37,6 @@ class FailedDeleteMaintenanceLineItemDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedDeleteMaintenanceLineItemDataType>|null  $failedData
-     * @return FailedDeleteMaintenanceLineItemDataListType
      */
     public function withFailedData(FailedDeleteMaintenanceLineItemDataType|array|null $failedData): FailedDeleteMaintenanceLineItemDataListType
     {

@@ -69,7 +69,6 @@ class ReturnFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     * @return ReturnFulfillmentDataType
      */
     public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): ReturnFulfillmentDataType
     {
@@ -79,18 +78,11 @@ class ReturnFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getPartialCount(): int|null
     {
         return $this->partialCount;
     }
 
-    /**
-     * @param  int|null  $partialCount
-     * @return ReturnFulfillmentDataType
-     */
     public function withPartialCount(int|null $partialCount): ReturnFulfillmentDataType
     {
         $new = clone $this;
@@ -99,18 +91,11 @@ class ReturnFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getOverDraftCount(): int|null
     {
         return $this->overDraftCount;
     }
 
-    /**
-     * @param  int|null  $overDraftCount
-     * @return ReturnFulfillmentDataType
-     */
     public function withOverDraftCount(int|null $overDraftCount): ReturnFulfillmentDataType
     {
         $new = clone $this;
@@ -119,18 +104,11 @@ class ReturnFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getOverridePolicy(): bool|null
     {
         return $this->overridePolicy;
     }
 
-    /**
-     * @param  bool|null  $overridePolicy
-     * @return ReturnFulfillmentDataType
-     */
     public function withOverridePolicy(bool|null $overridePolicy): ReturnFulfillmentDataType
     {
         $new = clone $this;
@@ -139,18 +117,11 @@ class ReturnFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getForceReturnOfThisTrustedFulfillment(): bool|null
     {
         return $this->forceReturnOfThisTrustedFulfillment;
     }
 
-    /**
-     * @param  bool|null  $forceReturnOfThisTrustedFulfillment
-     * @return ReturnFulfillmentDataType
-     */
     public function withForceReturnOfThisTrustedFulfillment(bool|null $forceReturnOfThisTrustedFulfillment): ReturnFulfillmentDataType
     {
         $new = clone $this;

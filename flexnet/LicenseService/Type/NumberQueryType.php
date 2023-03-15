@@ -16,9 +16,6 @@ class NumberQueryType
 
     /**
      * Constructor
-     *
-     * @param  int  $value
-     * @param  string  $searchType
      */
     public function __construct(int $value, string $searchType)
     {
@@ -26,27 +23,16 @@ class NumberQueryType
         $this->searchType = $searchType;
     }
 
-    /**
-     * @param  int  $value
-     * @param  string  $searchType
-     */
     public static function create(int $value, string $searchType)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return int
-     */
     public function getValue(): int
     {
         return $this->value;
     }
 
-    /**
-     * @param  int  $value
-     * @return NumberQueryType
-     */
     public function withValue(int $value): NumberQueryType
     {
         $new = clone $this;
@@ -55,18 +41,11 @@ class NumberQueryType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getSearchType(): string
     {
         return $this->searchType;
     }
 
-    /**
-     * @param  string  $searchType
-     * @return NumberQueryType
-     */
     public function withSearchType(string $searchType): NumberQueryType
     {
         $new = clone $this;

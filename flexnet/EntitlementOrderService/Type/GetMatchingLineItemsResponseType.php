@@ -55,7 +55,6 @@ class GetMatchingLineItemsResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return GetMatchingLineItemsResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): GetMatchingLineItemsResponseType
     {
@@ -75,7 +74,6 @@ class GetMatchingLineItemsResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsResponseListType|null  $responseData
-     * @return GetMatchingLineItemsResponseType
      */
     public function withResponseData(GetMatchingLineItemsResponseListType|null $responseData): GetMatchingLineItemsResponseType
     {
@@ -95,7 +93,6 @@ class GetMatchingLineItemsResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemsListType|null  $failedData
-     * @return GetMatchingLineItemsResponseType
      */
     public function withFailedData(FailedMatchingLineItemsListType|null $failedData): GetMatchingLineItemsResponseType
     {

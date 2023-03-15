@@ -37,7 +37,6 @@ class FulfillmentHistoryDetailsType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>|null  $record
-     * @return FulfillmentHistoryDetailsType
      */
     public function withRecord(FulfillmentHistoryRecordType|array|null $record): FulfillmentHistoryDetailsType
     {

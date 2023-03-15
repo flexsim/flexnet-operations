@@ -45,7 +45,6 @@ class SplitBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntIdentifier
-     * @return SplitBulkEntitlementDataType
      */
     public function withBulkEntIdentifier(EntitlementIdentifierType $bulkEntIdentifier): SplitBulkEntitlementDataType
     {
@@ -65,7 +64,6 @@ class SplitBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $newBulkEntIdentifier
-     * @return SplitBulkEntitlementDataType
      */
     public function withNewBulkEntIdentifier(EntitlementIdentifierType|null $newBulkEntIdentifier): SplitBulkEntitlementDataType
     {

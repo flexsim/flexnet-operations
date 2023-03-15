@@ -37,7 +37,6 @@ class FailedUpdateSimpleEntitlementDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType>|null  $failedSimpleEntitlement
-     * @return FailedUpdateSimpleEntitlementDataListType
      */
     public function withFailedSimpleEntitlement(FailedUpdateSimpleEntitlementDataType|array|null $failedSimpleEntitlement): FailedUpdateSimpleEntitlementDataListType
     {

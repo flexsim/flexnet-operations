@@ -45,7 +45,6 @@ class EntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType|null  $simpleEntitlement
-     * @return EntitlementDataType
      */
     public function withSimpleEntitlement(SimpleEntitlementDataType|null $simpleEntitlement): EntitlementDataType
     {
@@ -65,7 +64,6 @@ class EntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementDataType|null  $bulkEntitlement
-     * @return EntitlementDataType
      */
     public function withBulkEntitlement(BulkEntitlementDataType|null $bulkEntitlement): EntitlementDataType
     {

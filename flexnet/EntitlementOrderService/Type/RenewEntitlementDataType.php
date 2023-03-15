@@ -45,7 +45,6 @@ class RenewEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
-     * @return RenewEntitlementDataType
      */
     public function withParentEntitlementIdentifier(EntitlementIdentifierType|null $parentEntitlementIdentifier): RenewEntitlementDataType
     {
@@ -65,7 +64,6 @@ class RenewEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\RenewLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewLineItemDataType>  $renewLineItemData
-     * @return RenewEntitlementDataType
      */
     public function withRenewLineItemData(RenewLineItemDataType|array $renewLineItemData): RenewEntitlementDataType
     {

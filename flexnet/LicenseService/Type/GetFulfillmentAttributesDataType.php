@@ -45,7 +45,6 @@ class GetFulfillmentAttributesDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null  $fulfillmentAttributes
-     * @return GetFulfillmentAttributesDataType
      */
     public function withFulfillmentAttributes(AttributeMetaDescriptorDataType|null $fulfillmentAttributes): GetFulfillmentAttributesDataType
     {
@@ -55,18 +54,11 @@ class GetFulfillmentAttributesDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getNeedTimeZone(): bool|null
     {
         return $this->needTimeZone;
     }
 
-    /**
-     * @param  bool|null  $needTimeZone
-     * @return GetFulfillmentAttributesDataType
-     */
     public function withNeedTimeZone(bool|null $needTimeZone): GetFulfillmentAttributesDataType
     {
         $new = clone $this;

@@ -39,7 +39,6 @@ class SplitLineItemRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemListType  $lineItemList
-     * @return SplitLineItemRequestType
      */
     public function withLineItemList(SplitLineItemListType $lineItemList): SplitLineItemRequestType
     {

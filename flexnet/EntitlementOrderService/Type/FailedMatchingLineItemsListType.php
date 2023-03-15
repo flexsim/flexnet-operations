@@ -37,7 +37,6 @@ class FailedMatchingLineItemsListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType>  $failedLineItem
-     * @return FailedMatchingLineItemsListType
      */
     public function withFailedLineItem(FailedMatchingLineItemDataType|array $failedLineItem): FailedMatchingLineItemsListType
     {

@@ -39,7 +39,6 @@ class EmergencyFulfillmentRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType>  $fulfillment
-     * @return EmergencyFulfillmentRequestType
      */
     public function withFulfillment(EmergencyFulfillmentDataType|array $fulfillment): EmergencyFulfillmentRequestType
     {

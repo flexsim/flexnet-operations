@@ -29,8 +29,6 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param  int  $pageNumber
-     * @param  int  $batchSize
      * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
      * @param  bool|null  $includeLicenseText
      */
@@ -43,8 +41,6 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
     }
 
     /**
-     * @param  int  $pageNumber
-     * @param  int  $batchSize
      * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
      * @param  bool|null  $includeLicenseText
      */
@@ -63,7 +59,6 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
-     * @return GetConsolidatedFulfillmentsQueryRequestType
      */
     public function withQueryParams(ConsolidatedFulfillmentsQPType|null $queryParams): GetConsolidatedFulfillmentsQueryRequestType
     {
@@ -73,18 +68,11 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function getPageNumber(): int
     {
         return $this->pageNumber;
     }
 
-    /**
-     * @param  int  $pageNumber
-     * @return GetConsolidatedFulfillmentsQueryRequestType
-     */
     public function withPageNumber(int $pageNumber): GetConsolidatedFulfillmentsQueryRequestType
     {
         $new = clone $this;
@@ -93,18 +81,11 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
-    /**
-     * @param  int  $batchSize
-     * @return GetConsolidatedFulfillmentsQueryRequestType
-     */
     public function withBatchSize(int $batchSize): GetConsolidatedFulfillmentsQueryRequestType
     {
         $new = clone $this;
@@ -113,18 +94,11 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getIncludeLicenseText(): bool|null
     {
         return $this->includeLicenseText;
     }
 
-    /**
-     * @param  bool|null  $includeLicenseText
-     * @return GetConsolidatedFulfillmentsQueryRequestType
-     */
     public function withIncludeLicenseText(bool|null $includeLicenseText): GetConsolidatedFulfillmentsQueryRequestType
     {
         $new = clone $this;

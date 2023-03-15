@@ -37,7 +37,6 @@ class FailedMapEntitlementsToUserDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedIdDataType|array<\Flexnet\EntitlementOrderService\Type\FailedIdDataType>  $failedId
-     * @return FailedMapEntitlementsToUserDataListType
      */
     public function withFailedId(FailedIdDataType|array $failedId): FailedMapEntitlementsToUserDataListType
     {

@@ -32,7 +32,6 @@ class CustomAttributeQueryType
     /**
      * Constructor
      *
-     * @param  string  $attributeName
      * @param  \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null  $stringValue
      * @param  \Flexnet\EntitlementOrderService\Type\NumberQueryType|null  $numberValue
      * @param  \Flexnet\EntitlementOrderService\Type\DateQueryType|null  $dateValue
@@ -48,7 +47,6 @@ class CustomAttributeQueryType
     }
 
     /**
-     * @param  string  $attributeName
      * @param  \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null  $stringValue
      * @param  \Flexnet\EntitlementOrderService\Type\NumberQueryType|null  $numberValue
      * @param  \Flexnet\EntitlementOrderService\Type\DateQueryType|null  $dateValue
@@ -59,18 +57,11 @@ class CustomAttributeQueryType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getAttributeName(): string
     {
         return $this->attributeName;
     }
 
-    /**
-     * @param  string  $attributeName
-     * @return CustomAttributeQueryType
-     */
     public function withAttributeName(string $attributeName): CustomAttributeQueryType
     {
         $new = clone $this;
@@ -89,7 +80,6 @@ class CustomAttributeQueryType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null  $stringValue
-     * @return CustomAttributeQueryType
      */
     public function withStringValue(SimpleQueryType|null $stringValue): CustomAttributeQueryType
     {
@@ -109,7 +99,6 @@ class CustomAttributeQueryType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\NumberQueryType|null  $numberValue
-     * @return CustomAttributeQueryType
      */
     public function withNumberValue(NumberQueryType|null $numberValue): CustomAttributeQueryType
     {
@@ -129,7 +118,6 @@ class CustomAttributeQueryType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DateQueryType|null  $dateValue
-     * @return CustomAttributeQueryType
      */
     public function withDateValue(DateQueryType|null $dateValue): CustomAttributeQueryType
     {
@@ -139,18 +127,11 @@ class CustomAttributeQueryType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getBooleanValue(): bool|null
     {
         return $this->booleanValue;
     }
 
-    /**
-     * @param  bool|null  $booleanValue
-     * @return CustomAttributeQueryType
-     */
     public function withBooleanValue(bool|null $booleanValue): CustomAttributeQueryType
     {
         $new = clone $this;

@@ -37,7 +37,6 @@ class LicenseFileDataListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\LicenseFileDataType|array<\Flexnet\LicenseService\Type\LicenseFileDataType>|null  $licenseFile
-     * @return LicenseFileDataListType
      */
     public function withLicenseFile(LicenseFileDataType|array|null $licenseFile): LicenseFileDataListType
     {

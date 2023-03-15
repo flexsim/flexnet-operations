@@ -22,7 +22,6 @@ class ServerIDsType
     /**
      * Constructor
      *
-     * @param  string  $server1
      * @param  string|null  $server2
      * @param  string|null  $server3
      */
@@ -34,7 +33,6 @@ class ServerIDsType
     }
 
     /**
-     * @param  string  $server1
      * @param  string|null  $server2
      * @param  string|null  $server3
      */
@@ -43,18 +41,11 @@ class ServerIDsType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getServer1(): string
     {
         return $this->server1;
     }
 
-    /**
-     * @param  string  $server1
-     * @return ServerIDsType
-     */
     public function withServer1(string $server1): ServerIDsType
     {
         $new = clone $this;
@@ -63,18 +54,11 @@ class ServerIDsType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getServer2(): string|null
     {
         return $this->server2;
     }
 
-    /**
-     * @param  string|null  $server2
-     * @return ServerIDsType
-     */
     public function withServer2(string|null $server2): ServerIDsType
     {
         $new = clone $this;
@@ -83,18 +67,11 @@ class ServerIDsType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getServer3(): string|null
     {
         return $this->server3;
     }
 
-    /**
-     * @param  string|null  $server3
-     * @return ServerIDsType
-     */
     public function withServer3(string|null $server3): ServerIDsType
     {
         $new = clone $this;

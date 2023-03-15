@@ -37,7 +37,6 @@ class SplitLineItemResponseListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\SplitLineItemDataType>  $splitLineItem
-     * @return SplitLineItemResponseListType
      */
     public function withSplitLineItem(SplitLineItemDataType|array $splitLineItem): SplitLineItemResponseListType
     {

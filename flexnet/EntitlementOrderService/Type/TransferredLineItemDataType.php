@@ -45,7 +45,6 @@ class TransferredLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @return TransferredLineItemDataType
      */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): TransferredLineItemDataType
     {
@@ -65,7 +64,6 @@ class TransferredLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $transferredFromId
-     * @return TransferredLineItemDataType
      */
     public function withTransferredFromId(EntitlementLineItemIdentifierType $transferredFromId): TransferredLineItemDataType
     {

@@ -55,7 +55,6 @@ class ReturnFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return ReturnFulfillmentResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): ReturnFulfillmentResponseType
     {
@@ -75,7 +74,6 @@ class ReturnFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\ReturnResponseDataType|null  $responseData
-     * @return ReturnFulfillmentResponseType
      */
     public function withResponseData(ReturnResponseDataType|null $responseData): ReturnFulfillmentResponseType
     {
@@ -95,7 +93,6 @@ class ReturnFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedReturnResponselistDataType|null  $failedData
-     * @return ReturnFulfillmentResponseType
      */
     public function withFailedData(FailedReturnResponselistDataType|null $failedData): ReturnFulfillmentResponseType
     {

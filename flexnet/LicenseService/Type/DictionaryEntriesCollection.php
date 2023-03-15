@@ -37,7 +37,6 @@ class DictionaryEntriesCollection
 
     /**
      * @param  \Flexnet\LicenseService\Type\DictionaryEntry|array<\Flexnet\LicenseService\Type\DictionaryEntry>  $Entry
-     * @return DictionaryEntriesCollection
      */
     public function withEntry(DictionaryEntry|array $Entry): DictionaryEntriesCollection
     {

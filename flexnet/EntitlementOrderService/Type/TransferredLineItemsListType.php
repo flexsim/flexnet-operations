@@ -37,7 +37,6 @@ class TransferredLineItemsListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType>  $transferredLineItem
-     * @return TransferredLineItemsListType
      */
     public function withTransferredLineItem(TransferredLineItemDataType|array $transferredLineItem): TransferredLineItemsListType
     {

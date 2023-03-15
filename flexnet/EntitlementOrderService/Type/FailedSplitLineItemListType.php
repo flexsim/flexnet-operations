@@ -37,7 +37,6 @@ class FailedSplitLineItemListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType>  $failedLineItem
-     * @return FailedSplitLineItemListType
      */
     public function withFailedLineItem(FailedSplitLineItemDataType|array $failedLineItem): FailedSplitLineItemListType
     {

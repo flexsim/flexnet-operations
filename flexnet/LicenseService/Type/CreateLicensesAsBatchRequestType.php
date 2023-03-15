@@ -63,7 +63,6 @@ class CreateLicensesAsBatchRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\ActivationIdsListType  $activationIds
-     * @return CreateLicensesAsBatchRequestType
      */
     public function withActivationIds(ActivationIdsListType $activationIds): CreateLicensesAsBatchRequestType
     {
@@ -83,7 +82,6 @@ class CreateLicensesAsBatchRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\HostIdDataSetType  $hostIdDataSet
-     * @return CreateLicensesAsBatchRequestType
      */
     public function withHostIdDataSet(HostIdDataSetType $hostIdDataSet): CreateLicensesAsBatchRequestType
     {
@@ -103,7 +101,6 @@ class CreateLicensesAsBatchRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\CountDataSetType|null  $countDataSet
-     * @return CreateLicensesAsBatchRequestType
      */
     public function withCountDataSet(CountDataSetType|null $countDataSet): CreateLicensesAsBatchRequestType
     {
@@ -123,7 +120,6 @@ class CreateLicensesAsBatchRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\CommonBatchDataSetType  $commonBatchDataSet
-     * @return CreateLicensesAsBatchRequestType
      */
     public function withCommonBatchDataSet(CommonBatchDataSetType $commonBatchDataSet): CreateLicensesAsBatchRequestType
     {

@@ -37,7 +37,6 @@ class FeatureListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureIdentifierType|array<\Flexnet\EntitlementOrderService\Type\FeatureIdentifierType>  $featureIdentifier
-     * @return FeatureListType
      */
     public function withFeatureIdentifier(FeatureIdentifierType|array $featureIdentifier): FeatureListType
     {

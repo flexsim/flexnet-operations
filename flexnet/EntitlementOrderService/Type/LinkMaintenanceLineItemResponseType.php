@@ -47,7 +47,6 @@ class LinkMaintenanceLineItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return LinkMaintenanceLineItemResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): LinkMaintenanceLineItemResponseType
     {
@@ -67,7 +66,6 @@ class LinkMaintenanceLineItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedLinkMaintenanceLineItemListType|null  $failedData
-     * @return LinkMaintenanceLineItemResponseType
      */
     public function withFailedData(FailedLinkMaintenanceLineItemListType|null $failedData): LinkMaintenanceLineItemResponseType
     {

@@ -117,7 +117,6 @@ class UpdateSimpleEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @return UpdateSimpleEntitlementDataType
      */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): UpdateSimpleEntitlementDataType
     {
@@ -137,7 +136,6 @@ class UpdateSimpleEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\IdType|null  $entitlementId
-     * @return UpdateSimpleEntitlementDataType
      */
     public function withEntitlementId(IdType|null $entitlementId): UpdateSimpleEntitlementDataType
     {
@@ -147,18 +145,11 @@ class UpdateSimpleEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getDescription(): string|null
     {
         return $this->description;
     }
 
-    /**
-     * @param  string|null  $description
-     * @return UpdateSimpleEntitlementDataType
-     */
     public function withDescription(string|null $description): UpdateSimpleEntitlementDataType
     {
         $new = clone $this;
@@ -167,18 +158,11 @@ class UpdateSimpleEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSoldTo(): string|null
     {
         return $this->soldTo;
     }
 
-    /**
-     * @param  string|null  $soldTo
-     * @return UpdateSimpleEntitlementDataType
-     */
     public function withSoldTo(string|null $soldTo): UpdateSimpleEntitlementDataType
     {
         $new = clone $this;
@@ -187,18 +171,11 @@ class UpdateSimpleEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToEmail(): string|null
     {
         return $this->shipToEmail;
     }
 
-    /**
-     * @param  string|null  $shipToEmail
-     * @return UpdateSimpleEntitlementDataType
-     */
     public function withShipToEmail(string|null $shipToEmail): UpdateSimpleEntitlementDataType
     {
         $new = clone $this;
@@ -207,18 +184,11 @@ class UpdateSimpleEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToAddress(): string|null
     {
         return $this->shipToAddress;
     }
 
-    /**
-     * @param  string|null  $shipToAddress
-     * @return UpdateSimpleEntitlementDataType
-     */
     public function withShipToAddress(string|null $shipToAddress): UpdateSimpleEntitlementDataType
     {
         $new = clone $this;
@@ -227,18 +197,11 @@ class UpdateSimpleEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getEmailTemplateVariation(): string|null
     {
         return $this->emailTemplateVariation;
     }
 
-    /**
-     * @param  string|null  $emailTemplateVariation
-     * @return UpdateSimpleEntitlementDataType
-     */
     public function withEmailTemplateVariation(string|null $emailTemplateVariation): UpdateSimpleEntitlementDataType
     {
         $new = clone $this;
@@ -247,18 +210,11 @@ class UpdateSimpleEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getAutoDeploy(): bool|null
     {
         return $this->autoDeploy;
     }
 
-    /**
-     * @param  bool|null  $autoDeploy
-     * @return UpdateSimpleEntitlementDataType
-     */
     public function withAutoDeploy(bool|null $autoDeploy): UpdateSimpleEntitlementDataType
     {
         $new = clone $this;
@@ -277,7 +233,6 @@ class UpdateSimpleEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType|null  $channelPartners
-     * @return UpdateSimpleEntitlementDataType
      */
     public function withChannelPartners(ChannelPartnerDataListType|null $channelPartners): UpdateSimpleEntitlementDataType
     {
@@ -287,18 +242,11 @@ class UpdateSimpleEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getAllowPortalLogin(): bool|null
     {
         return $this->allowPortalLogin;
     }
 
-    /**
-     * @param  bool|null  $allowPortalLogin
-     * @return UpdateSimpleEntitlementDataType
-     */
     public function withAllowPortalLogin(bool|null $allowPortalLogin): UpdateSimpleEntitlementDataType
     {
         $new = clone $this;
@@ -317,7 +265,6 @@ class UpdateSimpleEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $entitlementAttributes
-     * @return UpdateSimpleEntitlementDataType
      */
     public function withEntitlementAttributes(AttributeDescriptorDataType|null $entitlementAttributes): UpdateSimpleEntitlementDataType
     {

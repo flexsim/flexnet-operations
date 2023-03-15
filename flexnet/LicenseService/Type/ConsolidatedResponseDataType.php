@@ -37,7 +37,6 @@ class ConsolidatedResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array<\Flexnet\LicenseService\Type\ConsolidatedLicenseDataType>  $consolidatedLicense
-     * @return ConsolidatedResponseDataType
      */
     public function withConsolidatedLicense(ConsolidatedLicenseDataType|array $consolidatedLicense): ConsolidatedResponseDataType
     {

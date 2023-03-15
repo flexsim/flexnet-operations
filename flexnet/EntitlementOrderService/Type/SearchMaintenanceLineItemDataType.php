@@ -141,7 +141,6 @@ class SearchMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null  $entitlementId
-     * @return SearchMaintenanceLineItemDataType
      */
     public function withEntitlementId(SimpleQueryType|null $entitlementId): SearchMaintenanceLineItemDataType
     {
@@ -161,7 +160,6 @@ class SearchMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null  $activationId
-     * @return SearchMaintenanceLineItemDataType
      */
     public function withActivationId(SimpleQueryType|null $activationId): SearchMaintenanceLineItemDataType
     {
@@ -181,7 +179,6 @@ class SearchMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null  $maintenanceProductName
-     * @return SearchMaintenanceLineItemDataType
      */
     public function withMaintenanceProductName(SimpleQueryType|null $maintenanceProductName): SearchMaintenanceLineItemDataType
     {
@@ -201,7 +198,6 @@ class SearchMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null  $maintenanceProductVersion
-     * @return SearchMaintenanceLineItemDataType
      */
     public function withMaintenanceProductVersion(SimpleQueryType|null $maintenanceProductVersion): SearchMaintenanceLineItemDataType
     {
@@ -221,7 +217,6 @@ class SearchMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null  $partNumber
-     * @return SearchMaintenanceLineItemDataType
      */
     public function withPartNumber(SimpleQueryType|null $partNumber): SearchMaintenanceLineItemDataType
     {
@@ -241,7 +236,6 @@ class SearchMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DateQueryType|null  $startDate
-     * @return SearchMaintenanceLineItemDataType
      */
     public function withStartDate(DateQueryType|null $startDate): SearchMaintenanceLineItemDataType
     {
@@ -251,18 +245,11 @@ class SearchMaintenanceLineItemDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getIsPermanent(): bool|null
     {
         return $this->isPermanent;
     }
 
-    /**
-     * @param  bool|null  $isPermanent
-     * @return SearchMaintenanceLineItemDataType
-     */
     public function withIsPermanent(bool|null $isPermanent): SearchMaintenanceLineItemDataType
     {
         $new = clone $this;
@@ -281,7 +268,6 @@ class SearchMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DateQueryType|null  $expirationDate
-     * @return SearchMaintenanceLineItemDataType
      */
     public function withExpirationDate(DateQueryType|null $expirationDate): SearchMaintenanceLineItemDataType
     {
@@ -301,7 +287,6 @@ class SearchMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DateTimeQueryType|null  $createdOnDateTime
-     * @return SearchMaintenanceLineItemDataType
      */
     public function withCreatedOnDateTime(DateTimeQueryType|null $createdOnDateTime): SearchMaintenanceLineItemDataType
     {
@@ -321,7 +306,6 @@ class SearchMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DateTimeQueryType|null  $lastModifiedDateTime
-     * @return SearchMaintenanceLineItemDataType
      */
     public function withLastModifiedDateTime(DateTimeQueryType|null $lastModifiedDateTime): SearchMaintenanceLineItemDataType
     {
@@ -341,7 +325,6 @@ class SearchMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null  $orderId
-     * @return SearchMaintenanceLineItemDataType
      */
     public function withOrderId(SimpleQueryType|null $orderId): SearchMaintenanceLineItemDataType
     {
@@ -361,7 +344,6 @@ class SearchMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SimpleQueryType|null  $orderLineNumber
-     * @return SearchMaintenanceLineItemDataType
      */
     public function withOrderLineNumber(SimpleQueryType|null $orderLineNumber): SearchMaintenanceLineItemDataType
     {
@@ -371,18 +353,11 @@ class SearchMaintenanceLineItemDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getWithNoOrderId(): bool|null
     {
         return $this->withNoOrderId;
     }
 
-    /**
-     * @param  bool|null  $withNoOrderId
-     * @return SearchMaintenanceLineItemDataType
-     */
     public function withWithNoOrderId(bool|null $withNoOrderId): SearchMaintenanceLineItemDataType
     {
         $new = clone $this;
@@ -401,7 +376,6 @@ class SearchMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CustomAttributesQueryListType|null  $maintenanceLineItemAttributes
-     * @return SearchMaintenanceLineItemDataType
      */
     public function withMaintenanceLineItemAttributes(CustomAttributesQueryListType|null $maintenanceLineItemAttributes): SearchMaintenanceLineItemDataType
     {

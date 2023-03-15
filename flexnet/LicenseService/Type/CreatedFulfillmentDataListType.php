@@ -45,7 +45,6 @@ class CreatedFulfillmentDataListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedFulfillmentDataType>|null  $createdFulfillment
-     * @return CreatedFulfillmentDataListType
      */
     public function withCreatedFulfillment(CreatedFulfillmentDataType|array|null $createdFulfillment): CreatedFulfillmentDataListType
     {
@@ -65,7 +64,6 @@ class CreatedFulfillmentDataListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array<\Flexnet\LicenseService\Type\VerifiedFulfillmentDataType>|null  $verifiedFulfillment
-     * @return CreatedFulfillmentDataListType
      */
     public function withVerifiedFulfillment(VerifiedFulfillmentDataType|array|null $verifiedFulfillment): CreatedFulfillmentDataListType
     {

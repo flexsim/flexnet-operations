@@ -27,9 +27,6 @@ class AttributeMetaDescriptorType
     /**
      * Constructor
      *
-     * @param  string  $attributeName
-     * @param  string  $attributeDataType
-     * @param  string  $namespace
      * @param  \Flexnet\LicenseService\Type\ValueType|null  $validValues
      */
     public function __construct(string $attributeName, string $attributeDataType, string $namespace, ValueType|null $validValues = null)
@@ -41,9 +38,6 @@ class AttributeMetaDescriptorType
     }
 
     /**
-     * @param  string  $attributeName
-     * @param  string  $attributeDataType
-     * @param  string  $namespace
      * @param  \Flexnet\LicenseService\Type\ValueType|null  $validValues
      */
     public static function create(string $attributeName, string $attributeDataType, string $namespace, ValueType|null $validValues = null)
@@ -51,18 +45,11 @@ class AttributeMetaDescriptorType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getAttributeName(): string
     {
         return $this->attributeName;
     }
 
-    /**
-     * @param  string  $attributeName
-     * @return AttributeMetaDescriptorType
-     */
     public function withAttributeName(string $attributeName): AttributeMetaDescriptorType
     {
         $new = clone $this;
@@ -71,18 +58,11 @@ class AttributeMetaDescriptorType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getAttributeDataType(): string
     {
         return $this->attributeDataType;
     }
 
-    /**
-     * @param  string  $attributeDataType
-     * @return AttributeMetaDescriptorType
-     */
     public function withAttributeDataType(string $attributeDataType): AttributeMetaDescriptorType
     {
         $new = clone $this;
@@ -91,18 +71,11 @@ class AttributeMetaDescriptorType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getNamespace(): string
     {
         return $this->namespace;
     }
 
-    /**
-     * @param  string  $namespace
-     * @return AttributeMetaDescriptorType
-     */
     public function withNamespace(string $namespace): AttributeMetaDescriptorType
     {
         $new = clone $this;
@@ -121,7 +94,6 @@ class AttributeMetaDescriptorType
 
     /**
      * @param  \Flexnet\LicenseService\Type\ValueType|null  $validValues
-     * @return AttributeMetaDescriptorType
      */
     public function withValidValues(ValueType|null $validValues): AttributeMetaDescriptorType
     {

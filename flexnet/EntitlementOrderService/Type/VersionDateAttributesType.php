@@ -17,7 +17,6 @@ class VersionDateAttributesType
     /**
      * Constructor
      *
-     * @param  string  $versionOption
      * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $duration
      */
     public function __construct(string $versionOption, DurationType|null $duration = null)
@@ -27,7 +26,6 @@ class VersionDateAttributesType
     }
 
     /**
-     * @param  string  $versionOption
      * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $duration
      */
     public static function create(string $versionOption, DurationType|null $duration = null)
@@ -35,18 +33,11 @@ class VersionDateAttributesType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getVersionOption(): string
     {
         return $this->versionOption;
     }
 
-    /**
-     * @param  string  $versionOption
-     * @return VersionDateAttributesType
-     */
     public function withVersionOption(string $versionOption): VersionDateAttributesType
     {
         $new = clone $this;
@@ -65,7 +56,6 @@ class VersionDateAttributesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $duration
-     * @return VersionDateAttributesType
      */
     public function withDuration(DurationType|null $duration): VersionDateAttributesType
     {

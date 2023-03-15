@@ -37,7 +37,6 @@ class CreatedChildLIFmtResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType>  $fulfillment
-     * @return CreatedChildLIFmtResponseDataType
      */
     public function withFulfillment(CreatedChildLIFulfillmentDataType|array $fulfillment): CreatedChildLIFmtResponseDataType
     {

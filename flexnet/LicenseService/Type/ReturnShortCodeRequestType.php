@@ -47,7 +47,6 @@ class ReturnShortCodeRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\ReturnShortCodeDataType|null  $shortCodeData
-     * @return ReturnShortCodeRequestType
      */
     public function withShortCodeData(ReturnShortCodeDataType|null $shortCodeData): ReturnShortCodeRequestType
     {
@@ -57,18 +56,11 @@ class ReturnShortCodeRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getReturnReason(): string|null
     {
         return $this->returnReason;
     }
 
-    /**
-     * @param  string|null  $returnReason
-     * @return ReturnShortCodeRequestType
-     */
     public function withReturnReason(string|null $returnReason): ReturnShortCodeRequestType
     {
         $new = clone $this;

@@ -37,7 +37,6 @@ class StopGapResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\StopGapFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\StopGapFulfillmentResponseDataType>|null  $fulfillmentData
-     * @return StopGapResponseDataType
      */
     public function withFulfillmentData(StopGapFulfillmentResponseDataType|array|null $fulfillmentData): StopGapResponseDataType
     {

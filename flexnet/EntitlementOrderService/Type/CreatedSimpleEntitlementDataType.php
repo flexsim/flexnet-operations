@@ -42,9 +42,6 @@ class CreatedSimpleEntitlementDataType
     /**
      * Constructor
      *
-     * @param  string  $recordRefNo
-     * @param  string  $uniqueId
-     * @param  string  $entitlementId
      * @param  string|array<string>|null  $lineItemUniqueIds
      * @param  string|array<string>|null  $maintenanceLineItemUniqueIds
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifiers
@@ -62,9 +59,6 @@ class CreatedSimpleEntitlementDataType
     }
 
     /**
-     * @param  string  $recordRefNo
-     * @param  string  $uniqueId
-     * @param  string  $entitlementId
      * @param  string|array<string>|null  $lineItemUniqueIds
      * @param  string|array<string>|null  $maintenanceLineItemUniqueIds
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifiers
@@ -75,18 +69,11 @@ class CreatedSimpleEntitlementDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getRecordRefNo(): string
     {
         return $this->recordRefNo;
     }
 
-    /**
-     * @param  string  $recordRefNo
-     * @return CreatedSimpleEntitlementDataType
-     */
     public function withRecordRefNo(string $recordRefNo): CreatedSimpleEntitlementDataType
     {
         $new = clone $this;
@@ -95,18 +82,11 @@ class CreatedSimpleEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getUniqueId(): string
     {
         return $this->uniqueId;
     }
 
-    /**
-     * @param  string  $uniqueId
-     * @return CreatedSimpleEntitlementDataType
-     */
     public function withUniqueId(string $uniqueId): CreatedSimpleEntitlementDataType
     {
         $new = clone $this;
@@ -115,18 +95,11 @@ class CreatedSimpleEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getEntitlementId(): string
     {
         return $this->entitlementId;
     }
 
-    /**
-     * @param  string  $entitlementId
-     * @return CreatedSimpleEntitlementDataType
-     */
     public function withEntitlementId(string $entitlementId): CreatedSimpleEntitlementDataType
     {
         $new = clone $this;
@@ -145,7 +118,6 @@ class CreatedSimpleEntitlementDataType
 
     /**
      * @param  string|array<string>|null  $lineItemUniqueIds
-     * @return CreatedSimpleEntitlementDataType
      */
     public function withLineItemUniqueIds(string|array|null $lineItemUniqueIds): CreatedSimpleEntitlementDataType
     {
@@ -165,7 +137,6 @@ class CreatedSimpleEntitlementDataType
 
     /**
      * @param  string|array<string>|null  $maintenanceLineItemUniqueIds
-     * @return CreatedSimpleEntitlementDataType
      */
     public function withMaintenanceLineItemUniqueIds(string|array|null $maintenanceLineItemUniqueIds): CreatedSimpleEntitlementDataType
     {
@@ -185,7 +156,6 @@ class CreatedSimpleEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifiers
-     * @return CreatedSimpleEntitlementDataType
      */
     public function withLineItemIdentifiers(EntitlementLineItemIdentifierType|array|null $lineItemIdentifiers): CreatedSimpleEntitlementDataType
     {
@@ -205,7 +175,6 @@ class CreatedSimpleEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $maintenanceLineItemIdentifiers
-     * @return CreatedSimpleEntitlementDataType
      */
     public function withMaintenanceLineItemIdentifiers(EntitlementLineItemIdentifierType|array|null $maintenanceLineItemIdentifiers): CreatedSimpleEntitlementDataType
     {

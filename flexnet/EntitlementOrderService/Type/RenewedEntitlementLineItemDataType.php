@@ -22,7 +22,6 @@ class RenewedEntitlementLineItemDataType
     /**
      * Constructor
      *
-     * @param  string  $lineItemRecordRefNo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType  $newLineItem
      */
@@ -34,7 +33,6 @@ class RenewedEntitlementLineItemDataType
     }
 
     /**
-     * @param  string  $lineItemRecordRefNo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType  $newLineItem
      */
@@ -43,18 +41,11 @@ class RenewedEntitlementLineItemDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getLineItemRecordRefNo(): string
     {
         return $this->lineItemRecordRefNo;
     }
 
-    /**
-     * @param  string  $lineItemRecordRefNo
-     * @return RenewedEntitlementLineItemDataType
-     */
     public function withLineItemRecordRefNo(string $lineItemRecordRefNo): RenewedEntitlementLineItemDataType
     {
         $new = clone $this;
@@ -73,7 +64,6 @@ class RenewedEntitlementLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
-     * @return RenewedEntitlementLineItemDataType
      */
     public function withParentLineItemIdentifier(EntitlementLineItemIdentifierType $parentLineItemIdentifier): RenewedEntitlementLineItemDataType
     {
@@ -93,7 +83,6 @@ class RenewedEntitlementLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType  $newLineItem
-     * @return RenewedEntitlementLineItemDataType
      */
     public function withNewLineItem(NewEntitlementLineItemDataType $newLineItem): RenewedEntitlementLineItemDataType
     {

@@ -39,7 +39,6 @@ class ReplaceOnlyEntitlementLineItemRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
-     * @return ReplaceOnlyEntitlementLineItemRequestType
      */
     public function withLineItem(AddEntitlementLineItemDataType|array $lineItem): ReplaceOnlyEntitlementLineItemRequestType
     {

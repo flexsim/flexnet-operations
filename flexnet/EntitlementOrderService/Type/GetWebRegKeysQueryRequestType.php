@@ -25,8 +25,6 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
-     * @param  int  $batchSize
-     * @param  int  $pageNumber
      */
     public function __construct(EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
     {
@@ -37,8 +35,6 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
-     * @param  int  $batchSize
-     * @param  int  $pageNumber
      */
     public static function create(EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
     {
@@ -55,7 +51,6 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
-     * @return GetWebRegKeysQueryRequestType
      */
     public function withBulkEntitlementIdentifier(EntitlementIdentifierType $bulkEntitlementIdentifier): GetWebRegKeysQueryRequestType
     {
@@ -65,18 +60,11 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
-    /**
-     * @param  int  $batchSize
-     * @return GetWebRegKeysQueryRequestType
-     */
     public function withBatchSize(int $batchSize): GetWebRegKeysQueryRequestType
     {
         $new = clone $this;
@@ -85,18 +73,11 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function getPageNumber(): int
     {
         return $this->pageNumber;
     }
 
-    /**
-     * @param  int  $pageNumber
-     * @return GetWebRegKeysQueryRequestType
-     */
     public function withPageNumber(int $pageNumber): GetWebRegKeysQueryRequestType
     {
         $new = clone $this;

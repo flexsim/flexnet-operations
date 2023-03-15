@@ -20,18 +20,12 @@ class ConstructorAssembler implements AssemblerInterface
 
     /**
      * ConstructorAssembler constructor.
-     *
-     * @param  ConstructorAssemblerOptions  $options
      */
     public function __construct(ConstructorAssemblerOptions $options)
     {
         $this->options = $options;
     }
 
-    /**
-     * @param  ContextInterface  $context
-     * @return bool
-     */
     public function canAssemble(ContextInterface $context): bool
     {
         return $context instanceof TypeContext;
@@ -56,7 +50,6 @@ class ConstructorAssembler implements AssemblerInterface
     }
 
     /**
-     * @param  Type  $type
      * @return MethodGenerator
      *
      * @throws \Laminas\Code\Generator\Exception\InvalidArgumentException

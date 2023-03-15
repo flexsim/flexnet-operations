@@ -39,7 +39,6 @@ class CreateFulfillmentRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\CreateFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreateFulfillmentDataType>  $fulfillment
-     * @return CreateFulfillmentRequestType
      */
     public function withFulfillment(CreateFulfillmentDataType|array $fulfillment): CreateFulfillmentRequestType
     {

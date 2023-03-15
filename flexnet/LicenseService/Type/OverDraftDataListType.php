@@ -37,7 +37,6 @@ class OverDraftDataListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType|array<\Flexnet\LicenseService\Type\ActivationIdOverDraftMapType>  $activationIdMap
-     * @return OverDraftDataListType
      */
     public function withActivationIdMap(ActivationIdOverDraftMapType|array $activationIdMap): OverDraftDataListType
     {

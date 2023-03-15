@@ -37,7 +37,6 @@ class ChannelPartnerDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType|array<\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType>|null  $channelPartner
-     * @return ChannelPartnerDataListType
      */
     public function withChannelPartner(ChannelPartnerDataType|array|null $channelPartner): ChannelPartnerDataListType
     {

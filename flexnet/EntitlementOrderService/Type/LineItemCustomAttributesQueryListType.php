@@ -37,7 +37,6 @@ class LineItemCustomAttributesQueryListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType>|null  $attribute
-     * @return LineItemCustomAttributesQueryListType
      */
     public function withAttribute(LineItemCustomAttributeQueryType|array|null $attribute): LineItemCustomAttributesQueryListType
     {

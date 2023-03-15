@@ -47,7 +47,6 @@ class SearchEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return SearchEntitlementResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): SearchEntitlementResponseType
     {
@@ -67,7 +66,6 @@ class SearchEntitlementResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementDataType>|null  $entitlement
-     * @return SearchEntitlementResponseType
      */
     public function withEntitlement(EntitlementDataType|array|null $entitlement): SearchEntitlementResponseType
     {

@@ -37,7 +37,6 @@ class CustomAttributeDescriptorDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType>|null  $attribute
-     * @return CustomAttributeDescriptorDataType
      */
     public function withAttribute(CustomAttributeDescriptorType|array|null $attribute): CustomAttributeDescriptorDataType
     {

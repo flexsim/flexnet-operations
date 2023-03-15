@@ -53,7 +53,6 @@ class WebRegKeyDataType
 
     /**
      * @param  string|array<string>|null  $webRegKey
-     * @return WebRegKeyDataType
      */
     public function withWebRegKey(string|array|null $webRegKey): WebRegKeyDataType
     {
@@ -63,18 +62,11 @@ class WebRegKeyDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getAutoGenerate(): bool|null
     {
         return $this->autoGenerate;
     }
 
-    /**
-     * @param  bool|null  $autoGenerate
-     * @return WebRegKeyDataType
-     */
     public function withAutoGenerate(bool|null $autoGenerate): WebRegKeyDataType
     {
         $new = clone $this;
@@ -83,18 +75,11 @@ class WebRegKeyDataType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getNumAutoGenerate(): int|null
     {
         return $this->numAutoGenerate;
     }
 
-    /**
-     * @param  int|null  $numAutoGenerate
-     * @return WebRegKeyDataType
-     */
     public function withNumAutoGenerate(int|null $numAutoGenerate): WebRegKeyDataType
     {
         $new = clone $this;

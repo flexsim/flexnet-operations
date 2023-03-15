@@ -45,7 +45,6 @@ class LinkMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @return LinkMaintenanceLineItemDataType
      */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): LinkMaintenanceLineItemDataType
     {
@@ -65,7 +64,6 @@ class LinkMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $maintenanceLineItemIdentifier
-     * @return LinkMaintenanceLineItemDataType
      */
     public function withMaintenanceLineItemIdentifier(EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier): LinkMaintenanceLineItemDataType
     {

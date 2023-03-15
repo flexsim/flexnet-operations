@@ -27,8 +27,6 @@ class RepairShortCodeDataType
     /**
      * Constructor
      *
-     * @param  string  $shortCode
-     * @param  string  $webRegKey
      * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
      * @param  bool|null  $overridePolicy
      */
@@ -41,8 +39,6 @@ class RepairShortCodeDataType
     }
 
     /**
-     * @param  string  $shortCode
-     * @param  string  $webRegKey
      * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
      * @param  bool|null  $overridePolicy
      */
@@ -51,18 +47,11 @@ class RepairShortCodeDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getShortCode(): string
     {
         return $this->shortCode;
     }
 
-    /**
-     * @param  string  $shortCode
-     * @return RepairShortCodeDataType
-     */
     public function withShortCode(string $shortCode): RepairShortCodeDataType
     {
         $new = clone $this;
@@ -71,18 +60,11 @@ class RepairShortCodeDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getWebRegKey(): string
     {
         return $this->webRegKey;
     }
 
-    /**
-     * @param  string  $webRegKey
-     * @return RepairShortCodeDataType
-     */
     public function withWebRegKey(string $webRegKey): RepairShortCodeDataType
     {
         $new = clone $this;
@@ -101,7 +83,6 @@ class RepairShortCodeDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
-     * @return RepairShortCodeDataType
      */
     public function withPublisherAttributes(PublisherAttributesListDataType|null $publisherAttributes): RepairShortCodeDataType
     {
@@ -111,18 +92,11 @@ class RepairShortCodeDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getOverridePolicy(): bool|null
     {
         return $this->overridePolicy;
     }
 
-    /**
-     * @param  bool|null  $overridePolicy
-     * @return RepairShortCodeDataType
-     */
     public function withOverridePolicy(bool|null $overridePolicy): RepairShortCodeDataType
     {
         $new = clone $this;

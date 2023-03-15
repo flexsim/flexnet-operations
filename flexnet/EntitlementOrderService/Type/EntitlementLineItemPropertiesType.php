@@ -429,7 +429,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $activationId
-     * @return EntitlementLineItemPropertiesType
      */
     public function withActivationId(EntitlementLineItemIdentifierType|null $activationId): EntitlementLineItemPropertiesType
     {
@@ -439,18 +438,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getDescription(): string|null
     {
         return $this->description;
     }
 
-    /**
-     * @param  string|null  $description
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withDescription(string|null $description): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -459,18 +451,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getState(): string|null
     {
         return $this->state;
     }
 
-    /**
-     * @param  string|null  $state
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withState(string|null $state): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -479,18 +464,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getActivatableItemType(): string|null
     {
         return $this->activatableItemType;
     }
 
-    /**
-     * @param  string|null  $activatableItemType
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withActivatableItemType(string|null $activatableItemType): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -499,18 +477,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getOrderId(): string|null
     {
         return $this->orderId;
     }
 
-    /**
-     * @param  string|null  $orderId
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withOrderId(string|null $orderId): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -519,18 +490,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getOrderLineNumber(): string|null
     {
         return $this->orderLineNumber;
     }
 
-    /**
-     * @param  string|null  $orderLineNumber
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withOrderLineNumber(string|null $orderLineNumber): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -549,7 +513,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $entitlementId
-     * @return EntitlementLineItemPropertiesType
      */
     public function withEntitlementId(EntitlementIdentifierType|null $entitlementId): EntitlementLineItemPropertiesType
     {
@@ -569,7 +532,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType|null  $soldTo
-     * @return EntitlementLineItemPropertiesType
      */
     public function withSoldTo(AccountIdentifierType|null $soldTo): EntitlementLineItemPropertiesType
     {
@@ -579,18 +541,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSoldToDisplayName(): string|null
     {
         return $this->soldToDisplayName;
     }
 
-    /**
-     * @param  string|null  $soldToDisplayName
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withSoldToDisplayName(string|null $soldToDisplayName): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -599,18 +554,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getEntitlementState(): string|null
     {
         return $this->entitlementState;
     }
 
-    /**
-     * @param  string|null  $entitlementState
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withEntitlementState(string|null $entitlementState): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -619,18 +567,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getEntitlementDescription(): string|null
     {
         return $this->entitlementDescription;
     }
 
-    /**
-     * @param  string|null  $entitlementDescription
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withEntitlementDescription(string|null $entitlementDescription): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -639,18 +580,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getAllowPortalLogin(): bool|null
     {
         return $this->allowPortalLogin;
     }
 
-    /**
-     * @param  bool|null  $allowPortalLogin
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withAllowPortalLogin(bool|null $allowPortalLogin): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -659,18 +593,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToEmail(): string|null
     {
         return $this->shipToEmail;
     }
 
-    /**
-     * @param  string|null  $shipToEmail
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withShipToEmail(string|null $shipToEmail): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -679,18 +606,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToAddress(): string|null
     {
         return $this->shipToAddress;
     }
 
-    /**
-     * @param  string|null  $shipToAddress
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withShipToAddress(string|null $shipToAddress): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -709,7 +629,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentBulkEntitlementId
-     * @return EntitlementLineItemPropertiesType
      */
     public function withParentBulkEntitlementId(EntitlementIdentifierType|null $parentBulkEntitlementId): EntitlementLineItemPropertiesType
     {
@@ -729,7 +648,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType|null  $bulkEntSoldTo
-     * @return EntitlementLineItemPropertiesType
      */
     public function withBulkEntSoldTo(AccountIdentifierType|null $bulkEntSoldTo): EntitlementLineItemPropertiesType
     {
@@ -739,18 +657,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getBulkEntSoldToDisplayName(): string|null
     {
         return $this->bulkEntSoldToDisplayName;
     }
 
-    /**
-     * @param  string|null  $bulkEntSoldToDisplayName
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withBulkEntSoldToDisplayName(string|null $bulkEntSoldToDisplayName): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -769,7 +680,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
-     * @return EntitlementLineItemPropertiesType
      */
     public function withProduct(ProductIdentifierType|null $product): EntitlementLineItemPropertiesType
     {
@@ -779,18 +689,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getProductDescription(): string|null
     {
         return $this->productDescription;
     }
 
-    /**
-     * @param  string|null  $productDescription
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withProductDescription(string|null $productDescription): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -809,7 +712,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
-     * @return EntitlementLineItemPropertiesType
      */
     public function withPartNumber(PartNumberIdentifierType|null $partNumber): EntitlementLineItemPropertiesType
     {
@@ -819,18 +721,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPartNumberDescription(): string|null
     {
         return $this->partNumberDescription;
     }
 
-    /**
-     * @param  string|null  $partNumberDescription
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withPartNumberDescription(string|null $partNumberDescription): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -849,7 +744,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
-     * @return EntitlementLineItemPropertiesType
      */
     public function withLicenseTechnology(LicenseTechnologyIdentifierType|null $licenseTechnology): EntitlementLineItemPropertiesType
     {
@@ -869,7 +763,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $licenseModel
-     * @return EntitlementLineItemPropertiesType
      */
     public function withLicenseModel(LicenseModelIdentifierType|null $licenseModel): EntitlementLineItemPropertiesType
     {
@@ -889,7 +782,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel1
-     * @return EntitlementLineItemPropertiesType
      */
     public function withAlternateLicenseModel1(LicenseModelIdentifierType|null $alternateLicenseModel1): EntitlementLineItemPropertiesType
     {
@@ -909,7 +801,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel2
-     * @return EntitlementLineItemPropertiesType
      */
     public function withAlternateLicenseModel2(LicenseModelIdentifierType|null $alternateLicenseModel2): EntitlementLineItemPropertiesType
     {
@@ -919,18 +810,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLineItemSupportAction(): string|null
     {
         return $this->lineItemSupportAction;
     }
 
-    /**
-     * @param  string|null  $lineItemSupportAction
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withLineItemSupportAction(string|null $lineItemSupportAction): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -949,7 +833,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $parentLineItem
-     * @return EntitlementLineItemPropertiesType
      */
     public function withParentLineItem(EntitlementLineItemIdentifierType|null $parentLineItem): EntitlementLineItemPropertiesType
     {
@@ -959,18 +842,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface|null
-     */
     public function getStartDate(): \DateTimeInterface|null
     {
         return $this->startDate;
     }
 
-    /**
-     * @param  \DateTimeInterface|null  $startDate
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withStartDate(\DateTimeInterface|null $startDate): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -979,18 +855,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getStartDateOption(): string|null
     {
         return $this->startDateOption;
     }
 
-    /**
-     * @param  string|null  $startDateOption
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withStartDateOption(string|null $startDateOption): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -999,18 +868,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getIsPermanent(): bool|null
     {
         return $this->isPermanent;
     }
 
-    /**
-     * @param  bool|null  $isPermanent
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withIsPermanent(bool|null $isPermanent): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1029,7 +891,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $term
-     * @return EntitlementLineItemPropertiesType
      */
     public function withTerm(DurationType|null $term): EntitlementLineItemPropertiesType
     {
@@ -1039,18 +900,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface|null
-     */
     public function getExpirationDate(): \DateTimeInterface|null
     {
         return $this->expirationDate;
     }
 
-    /**
-     * @param  \DateTimeInterface|null  $expirationDate
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withExpirationDate(\DateTimeInterface|null $expirationDate): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1059,18 +913,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface|null
-     */
     public function getVersionDate(): \DateTimeInterface|null
     {
         return $this->versionDate;
     }
 
-    /**
-     * @param  \DateTimeInterface|null  $versionDate
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withVersionDate(\DateTimeInterface|null $versionDate): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1089,7 +936,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null  $versionDateAttributes
-     * @return EntitlementLineItemPropertiesType
      */
     public function withVersionDateAttributes(VersionDateAttributesType|null $versionDateAttributes): EntitlementLineItemPropertiesType
     {
@@ -1099,18 +945,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getNumberOfCopies(): int|null
     {
         return $this->numberOfCopies;
     }
 
-    /**
-     * @param  int|null  $numberOfCopies
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withNumberOfCopies(int|null $numberOfCopies): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1119,18 +958,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getFulfilledAmount(): int|null
     {
         return $this->fulfilledAmount;
     }
 
-    /**
-     * @param  int|null  $fulfilledAmount
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withFulfilledAmount(int|null $fulfilledAmount): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1139,18 +971,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getNumberOfRemainingCopies(): int|null
     {
         return $this->numberOfRemainingCopies;
     }
 
-    /**
-     * @param  int|null  $numberOfRemainingCopies
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withNumberOfRemainingCopies(int|null $numberOfRemainingCopies): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1159,18 +984,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getIsTrusted(): bool|null
     {
         return $this->isTrusted;
     }
 
-    /**
-     * @param  bool|null  $isTrusted
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withIsTrusted(bool|null $isTrusted): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1189,7 +1007,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $customAttributes
-     * @return EntitlementLineItemPropertiesType
      */
     public function withCustomAttributes(AttributeDescriptorDataType|null $customAttributes): EntitlementLineItemPropertiesType
     {
@@ -1209,7 +1026,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataListType|null  $entitledProducts
-     * @return EntitlementLineItemPropertiesType
      */
     public function withEntitledProducts(EntitledProductDataListType|null $entitledProducts): EntitlementLineItemPropertiesType
     {
@@ -1229,7 +1045,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType|null  $channelPartners
-     * @return EntitlementLineItemPropertiesType
      */
     public function withChannelPartners(ChannelPartnerDataListType|null $channelPartners): EntitlementLineItemPropertiesType
     {
@@ -1249,7 +1064,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemPropertiesType>|null  $maintenanceLineItems
-     * @return EntitlementLineItemPropertiesType
      */
     public function withMaintenanceLineItems(MaintenanceLineItemPropertiesType|array|null $maintenanceLineItems): EntitlementLineItemPropertiesType
     {
@@ -1259,18 +1073,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getFNPTimeZoneValue(): string|null
     {
         return $this->FNPTimeZoneValue;
     }
 
-    /**
-     * @param  string|null  $FNPTimeZoneValue
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withFNPTimeZoneValue(string|null $FNPTimeZoneValue): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1279,18 +1086,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface|null
-     */
     public function getCreatedOnDateTime(): \DateTimeInterface|null
     {
         return $this->createdOnDateTime;
     }
 
-    /**
-     * @param  \DateTimeInterface|null  $createdOnDateTime
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withCreatedOnDateTime(\DateTimeInterface|null $createdOnDateTime): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1299,18 +1099,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface|null
-     */
     public function getLastModifiedDateTime(): \DateTimeInterface|null
     {
         return $this->lastModifiedDateTime;
     }
 
-    /**
-     * @param  \DateTimeInterface|null  $lastModifiedDateTime
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withLastModifiedDateTime(\DateTimeInterface|null $lastModifiedDateTime): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1319,18 +1112,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCreatedBy(): string|null
     {
         return $this->createdBy;
     }
 
-    /**
-     * @param  string|null  $createdBy
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withCreatedBy(string|null $createdBy): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1339,18 +1125,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLastModifiedBy(): string|null
     {
         return $this->lastModifiedBy;
     }
 
-    /**
-     * @param  string|null  $lastModifiedBy
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withLastModifiedBy(string|null $lastModifiedBy): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1369,7 +1148,6 @@ class EntitlementLineItemPropertiesType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $lineItemAttributes
-     * @return EntitlementLineItemPropertiesType
      */
     public function withLineItemAttributes(AttributeDescriptorDataType|null $lineItemAttributes): EntitlementLineItemPropertiesType
     {
@@ -1379,18 +1157,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransferredFromLineItem(): string|null
     {
         return $this->transferredFromLineItem;
     }
 
-    /**
-     * @param  string|null  $transferredFromLineItem
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withTransferredFromLineItem(string|null $transferredFromLineItem): EntitlementLineItemPropertiesType
     {
         $new = clone $this;
@@ -1399,18 +1170,11 @@ class EntitlementLineItemPropertiesType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSplitFromLineItem(): string|null
     {
         return $this->splitFromLineItem;
     }
 
-    /**
-     * @param  string|null  $splitFromLineItem
-     * @return EntitlementLineItemPropertiesType
-     */
     public function withSplitFromLineItem(string|null $splitFromLineItem): EntitlementLineItemPropertiesType
     {
         $new = clone $this;

@@ -37,7 +37,6 @@ class GetMatchingLineItemsListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType>  $lineItemInfo
-     * @return GetMatchingLineItemsListType
      */
     public function withLineItemInfo(GetMatchingLineItemInfoType|array $lineItemInfo): GetMatchingLineItemsListType
     {

@@ -85,7 +85,6 @@ class RehostFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     * @return RehostFulfillmentDataType
      */
     public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): RehostFulfillmentDataType
     {
@@ -105,7 +104,6 @@ class RehostFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
-     * @return RehostFulfillmentDataType
      */
     public function withServerIds(ServerIDsType|null $serverIds): RehostFulfillmentDataType
     {
@@ -125,7 +123,6 @@ class RehostFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
-     * @return RehostFulfillmentDataType
      */
     public function withNodeIds(NodeIDsType|null $nodeIds): RehostFulfillmentDataType
     {
@@ -145,7 +142,6 @@ class RehostFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
-     * @return RehostFulfillmentDataType
      */
     public function withCustomHost(CustomHostIDType|null $customHost): RehostFulfillmentDataType
     {
@@ -155,18 +151,11 @@ class RehostFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getPartialCount(): int|null
     {
         return $this->partialCount;
     }
 
-    /**
-     * @param  int|null  $partialCount
-     * @return RehostFulfillmentDataType
-     */
     public function withPartialCount(int|null $partialCount): RehostFulfillmentDataType
     {
         $new = clone $this;
@@ -175,18 +164,11 @@ class RehostFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getOverDraftCount(): int|null
     {
         return $this->overDraftCount;
     }
 
-    /**
-     * @param  int|null  $overDraftCount
-     * @return RehostFulfillmentDataType
-     */
     public function withOverDraftCount(int|null $overDraftCount): RehostFulfillmentDataType
     {
         $new = clone $this;
@@ -195,18 +177,11 @@ class RehostFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getOverridePolicy(): bool|null
     {
         return $this->overridePolicy;
     }
 
-    /**
-     * @param  bool|null  $overridePolicy
-     * @return RehostFulfillmentDataType
-     */
     public function withOverridePolicy(bool|null $overridePolicy): RehostFulfillmentDataType
     {
         $new = clone $this;

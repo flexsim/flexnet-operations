@@ -27,9 +27,6 @@ class UserPKType
     /**
      * Constructor
      *
-     * @param  string  $firstName
-     * @param  string  $lastName
-     * @param  string  $emailAddress
      * @param  string|null  $phoneNumber
      */
     public function __construct(string $firstName, string $lastName, string $emailAddress, string|null $phoneNumber = null)
@@ -41,9 +38,6 @@ class UserPKType
     }
 
     /**
-     * @param  string  $firstName
-     * @param  string  $lastName
-     * @param  string  $emailAddress
      * @param  string|null  $phoneNumber
      */
     public static function create(string $firstName, string $lastName, string $emailAddress, string|null $phoneNumber = null)
@@ -51,18 +45,11 @@ class UserPKType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getFirstName(): string
     {
         return $this->firstName;
     }
 
-    /**
-     * @param  string  $firstName
-     * @return UserPKType
-     */
     public function withFirstName(string $firstName): UserPKType
     {
         $new = clone $this;
@@ -71,18 +58,11 @@ class UserPKType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getLastName(): string
     {
         return $this->lastName;
     }
 
-    /**
-     * @param  string  $lastName
-     * @return UserPKType
-     */
     public function withLastName(string $lastName): UserPKType
     {
         $new = clone $this;
@@ -91,18 +71,11 @@ class UserPKType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getEmailAddress(): string
     {
         return $this->emailAddress;
     }
 
-    /**
-     * @param  string  $emailAddress
-     * @return UserPKType
-     */
     public function withEmailAddress(string $emailAddress): UserPKType
     {
         $new = clone $this;
@@ -111,18 +84,11 @@ class UserPKType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPhoneNumber(): string|null
     {
         return $this->phoneNumber;
     }
 
-    /**
-     * @param  string|null  $phoneNumber
-     * @return UserPKType
-     */
     public function withPhoneNumber(string|null $phoneNumber): UserPKType
     {
         $new = clone $this;

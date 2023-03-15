@@ -31,7 +31,6 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
      *
      * @param  \Flexnet\EntitlementOrderService\Type\SearchMaintenanceLineItemDataType  $queryParams
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemResponseConfigRequestType  $entitlementMaintenanceLineItemResponseConfig
-     * @param  int  $batchSize
      * @param  int|null  $pageNumber
      */
     public function __construct(SearchMaintenanceLineItemDataType $queryParams, EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int|null $pageNumber = null)
@@ -45,7 +44,6 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchMaintenanceLineItemDataType  $queryParams
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemResponseConfigRequestType  $entitlementMaintenanceLineItemResponseConfig
-     * @param  int  $batchSize
      * @param  int|null  $pageNumber
      */
     public static function create(SearchMaintenanceLineItemDataType $queryParams, EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int|null $pageNumber = null)
@@ -63,7 +61,6 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchMaintenanceLineItemDataType  $queryParams
-     * @return SearchEntitlementMaintenanceLineItemPropertiesRequestType
      */
     public function withQueryParams(SearchMaintenanceLineItemDataType $queryParams): SearchEntitlementMaintenanceLineItemPropertiesRequestType
     {
@@ -83,7 +80,6 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemResponseConfigRequestType  $entitlementMaintenanceLineItemResponseConfig
-     * @return SearchEntitlementMaintenanceLineItemPropertiesRequestType
      */
     public function withEntitlementMaintenanceLineItemResponseConfig(EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig): SearchEntitlementMaintenanceLineItemPropertiesRequestType
     {
@@ -93,18 +89,11 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
-    /**
-     * @param  int  $batchSize
-     * @return SearchEntitlementMaintenanceLineItemPropertiesRequestType
-     */
     public function withBatchSize(int $batchSize): SearchEntitlementMaintenanceLineItemPropertiesRequestType
     {
         $new = clone $this;
@@ -113,18 +102,11 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getPageNumber(): int|null
     {
         return $this->pageNumber;
     }
 
-    /**
-     * @param  int|null  $pageNumber
-     * @return SearchEntitlementMaintenanceLineItemPropertiesRequestType
-     */
     public function withPageNumber(int|null $pageNumber): SearchEntitlementMaintenanceLineItemPropertiesRequestType
     {
         $new = clone $this;

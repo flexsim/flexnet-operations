@@ -45,7 +45,6 @@ class FeatureStateChangeDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureIdentifierType  $featureIdentifier
-     * @return FeatureStateChangeDataType
      */
     public function withFeatureIdentifier(FeatureIdentifierType $featureIdentifier): FeatureStateChangeDataType
     {
@@ -65,7 +64,6 @@ class FeatureStateChangeDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
-     * @return FeatureStateChangeDataType
      */
     public function withStateChangeRecord(StateChangeDataType|array|null $stateChangeRecord): FeatureStateChangeDataType
     {

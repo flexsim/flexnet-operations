@@ -47,7 +47,6 @@ class GetHostAttributesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
-     * @return GetHostAttributesRequestType
      */
     public function withLicenseTechnologyIdentifier(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier): GetHostAttributesRequestType
     {
@@ -67,7 +66,6 @@ class GetHostAttributesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\HostTypePKType|null  $hostType
-     * @return GetHostAttributesRequestType
      */
     public function withHostType(HostTypePKType|null $hostType): GetHostAttributesRequestType
     {

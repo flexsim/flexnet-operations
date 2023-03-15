@@ -35,18 +35,11 @@ class EntitlementLineItemIdentifierType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string|null
-     */
     public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @return EntitlementLineItemIdentifierType
-     */
     public function withUniqueId(string|null $uniqueId): EntitlementLineItemIdentifierType
     {
         $new = clone $this;
@@ -65,7 +58,6 @@ class EntitlementLineItemIdentifierType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemPKType|null  $primaryKeys
-     * @return EntitlementLineItemIdentifierType
      */
     public function withPrimaryKeys(EntitlementLineItemPKType|null $primaryKeys): EntitlementLineItemIdentifierType
     {

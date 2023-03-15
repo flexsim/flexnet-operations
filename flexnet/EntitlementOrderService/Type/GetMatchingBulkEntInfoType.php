@@ -23,7 +23,6 @@ class GetMatchingBulkEntInfoType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntIdentifier
-     * @param  string  $targetTierName
      * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
      */
     public function __construct(EntitlementIdentifierType $bulkEntIdentifier, string $targetTierName, AccountIdentifierType $targetAccountUnit)
@@ -35,7 +34,6 @@ class GetMatchingBulkEntInfoType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntIdentifier
-     * @param  string  $targetTierName
      * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
      */
     public static function create(EntitlementIdentifierType $bulkEntIdentifier, string $targetTierName, AccountIdentifierType $targetAccountUnit)
@@ -53,7 +51,6 @@ class GetMatchingBulkEntInfoType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntIdentifier
-     * @return GetMatchingBulkEntInfoType
      */
     public function withBulkEntIdentifier(EntitlementIdentifierType $bulkEntIdentifier): GetMatchingBulkEntInfoType
     {
@@ -63,18 +60,11 @@ class GetMatchingBulkEntInfoType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getTargetTierName(): string
     {
         return $this->targetTierName;
     }
 
-    /**
-     * @param  string  $targetTierName
-     * @return GetMatchingBulkEntInfoType
-     */
     public function withTargetTierName(string $targetTierName): GetMatchingBulkEntInfoType
     {
         $new = clone $this;
@@ -93,7 +83,6 @@ class GetMatchingBulkEntInfoType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
-     * @return GetMatchingBulkEntInfoType
      */
     public function withTargetAccountUnit(AccountIdentifierType $targetAccountUnit): GetMatchingBulkEntInfoType
     {

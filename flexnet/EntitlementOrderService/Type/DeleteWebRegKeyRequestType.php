@@ -39,7 +39,6 @@ class DeleteWebRegKeyRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeysListType  $webRegKeyList
-     * @return DeleteWebRegKeyRequestType
      */
     public function withWebRegKeyList(WebRegKeysListType $webRegKeyList): DeleteWebRegKeyRequestType
     {

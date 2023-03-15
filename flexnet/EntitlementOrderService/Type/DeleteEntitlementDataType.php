@@ -37,7 +37,6 @@ class DeleteEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @return DeleteEntitlementDataType
      */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): DeleteEntitlementDataType
     {

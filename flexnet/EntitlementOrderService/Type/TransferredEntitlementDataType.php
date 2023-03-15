@@ -45,7 +45,6 @@ class TransferredEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @return TransferredEntitlementDataType
      */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): TransferredEntitlementDataType
     {
@@ -65,7 +64,6 @@ class TransferredEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType|array<\Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType>|null  $lineItemIdentifierMap
-     * @return TransferredEntitlementDataType
      */
     public function withLineItemIdentifierMap(TransferredLineItemMapType|array|null $lineItemIdentifierMap): TransferredEntitlementDataType
     {

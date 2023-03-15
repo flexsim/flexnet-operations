@@ -42,8 +42,6 @@ class CreateShortCodeDataType
     /**
      * Constructor
      *
-     * @param  string  $webRegkey
-     * @param  string  $shortCode
      * @param  string|null  $bulkEntitlementId
      * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
      * @param  bool|null  $overridePolicy
@@ -62,8 +60,6 @@ class CreateShortCodeDataType
     }
 
     /**
-     * @param  string  $webRegkey
-     * @param  string  $shortCode
      * @param  string|null  $bulkEntitlementId
      * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
      * @param  bool|null  $overridePolicy
@@ -75,18 +71,11 @@ class CreateShortCodeDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string|null
-     */
     public function getBulkEntitlementId(): string|null
     {
         return $this->bulkEntitlementId;
     }
 
-    /**
-     * @param  string|null  $bulkEntitlementId
-     * @return CreateShortCodeDataType
-     */
     public function withBulkEntitlementId(string|null $bulkEntitlementId): CreateShortCodeDataType
     {
         $new = clone $this;
@@ -95,18 +84,11 @@ class CreateShortCodeDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getWebRegkey(): string
     {
         return $this->webRegkey;
     }
 
-    /**
-     * @param  string  $webRegkey
-     * @return CreateShortCodeDataType
-     */
     public function withWebRegkey(string $webRegkey): CreateShortCodeDataType
     {
         $new = clone $this;
@@ -115,18 +97,11 @@ class CreateShortCodeDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getShortCode(): string
     {
         return $this->shortCode;
     }
 
-    /**
-     * @param  string  $shortCode
-     * @return CreateShortCodeDataType
-     */
     public function withShortCode(string $shortCode): CreateShortCodeDataType
     {
         $new = clone $this;
@@ -145,7 +120,6 @@ class CreateShortCodeDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
-     * @return CreateShortCodeDataType
      */
     public function withPublisherAttributes(PublisherAttributesListDataType|null $publisherAttributes): CreateShortCodeDataType
     {
@@ -155,18 +129,11 @@ class CreateShortCodeDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getOverridePolicy(): bool|null
     {
         return $this->overridePolicy;
     }
 
-    /**
-     * @param  bool|null  $overridePolicy
-     * @return CreateShortCodeDataType
-     */
     public function withOverridePolicy(bool|null $overridePolicy): CreateShortCodeDataType
     {
         $new = clone $this;
@@ -175,18 +142,11 @@ class CreateShortCodeDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShortCodeActivationType(): string|null
     {
         return $this->shortCodeActivationType;
     }
 
-    /**
-     * @param  string|null  $shortCodeActivationType
-     * @return CreateShortCodeDataType
-     */
     public function withShortCodeActivationType(string|null $shortCodeActivationType): CreateShortCodeDataType
     {
         $new = clone $this;
@@ -205,7 +165,6 @@ class CreateShortCodeDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null  $reinstallFulfillment
-     * @return CreateShortCodeDataType
      */
     public function withReinstallFulfillment(FulfillmentIdentifierType|null $reinstallFulfillment): CreateShortCodeDataType
     {

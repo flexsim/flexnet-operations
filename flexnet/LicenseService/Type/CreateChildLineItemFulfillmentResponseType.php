@@ -55,7 +55,6 @@ class CreateChildLineItemFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return CreateChildLineItemFulfillmentResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): CreateChildLineItemFulfillmentResponseType
     {
@@ -75,7 +74,6 @@ class CreateChildLineItemFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\CreatedChildLIFmtResponseDataType|null  $responseData
-     * @return CreateChildLineItemFulfillmentResponseType
      */
     public function withResponseData(CreatedChildLIFmtResponseDataType|null $responseData): CreateChildLineItemFulfillmentResponseType
     {
@@ -95,7 +93,6 @@ class CreateChildLineItemFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedChildLIFmtResponseDataType|null  $failedData
-     * @return CreateChildLineItemFulfillmentResponseType
      */
     public function withFailedData(FailedChildLIFmtResponseDataType|null $failedData): CreateChildLineItemFulfillmentResponseType
     {

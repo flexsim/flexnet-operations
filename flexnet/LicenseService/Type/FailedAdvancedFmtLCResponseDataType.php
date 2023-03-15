@@ -37,7 +37,6 @@ class FailedAdvancedFmtLCResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType|array<\Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType>  $failedFulfillment
-     * @return FailedAdvancedFmtLCResponseDataType
      */
     public function withFailedFulfillment(FailedAdvancedFmtLCDataType|array $failedFulfillment): FailedAdvancedFmtLCResponseDataType
     {

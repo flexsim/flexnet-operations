@@ -18,7 +18,6 @@ class FailedEmergencyResponseDataType
      * Constructor
      *
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType  $fulfillment
-     * @param  string  $reason
      */
     public function __construct(EmergencyFulfillmentDataType $fulfillment, string $reason)
     {
@@ -28,7 +27,6 @@ class FailedEmergencyResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType  $fulfillment
-     * @param  string  $reason
      */
     public static function create(EmergencyFulfillmentDataType $fulfillment, string $reason)
     {
@@ -45,7 +43,6 @@ class FailedEmergencyResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType  $fulfillment
-     * @return FailedEmergencyResponseDataType
      */
     public function withFulfillment(EmergencyFulfillmentDataType $fulfillment): FailedEmergencyResponseDataType
     {
@@ -55,18 +52,11 @@ class FailedEmergencyResponseDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string  $reason
-     * @return FailedEmergencyResponseDataType
-     */
     public function withReason(string $reason): FailedEmergencyResponseDataType
     {
         $new = clone $this;

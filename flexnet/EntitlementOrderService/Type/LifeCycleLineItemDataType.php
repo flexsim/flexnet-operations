@@ -22,7 +22,6 @@ class LifeCycleLineItemDataType
     /**
      * Constructor
      *
-     * @param  string  $lineItemRecordRefNo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType  $newLineItem
      */
@@ -34,7 +33,6 @@ class LifeCycleLineItemDataType
     }
 
     /**
-     * @param  string  $lineItemRecordRefNo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType  $newLineItem
      */
@@ -43,18 +41,11 @@ class LifeCycleLineItemDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getLineItemRecordRefNo(): string
     {
         return $this->lineItemRecordRefNo;
     }
 
-    /**
-     * @param  string  $lineItemRecordRefNo
-     * @return LifeCycleLineItemDataType
-     */
     public function withLineItemRecordRefNo(string $lineItemRecordRefNo): LifeCycleLineItemDataType
     {
         $new = clone $this;
@@ -73,7 +64,6 @@ class LifeCycleLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
-     * @return LifeCycleLineItemDataType
      */
     public function withParentLineItemIdentifier(EntitlementLineItemIdentifierType $parentLineItemIdentifier): LifeCycleLineItemDataType
     {
@@ -93,7 +83,6 @@ class LifeCycleLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType  $newLineItem
-     * @return LifeCycleLineItemDataType
      */
     public function withNewLineItem(NewEntitlementLineItemDataType $newLineItem): LifeCycleLineItemDataType
     {

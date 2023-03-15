@@ -39,7 +39,6 @@ class ConsolidateFulfillmentsRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierListType  $fulfillments
-     * @return ConsolidateFulfillmentsRequestType
      */
     public function withFulfillments(FulfillmentIdentifierListType $fulfillments): ConsolidateFulfillmentsRequestType
     {

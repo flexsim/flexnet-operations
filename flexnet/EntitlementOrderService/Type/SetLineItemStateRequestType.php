@@ -39,7 +39,6 @@ class SetLineItemStateRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemStateDataType>  $lineItem
-     * @return SetLineItemStateRequestType
      */
     public function withLineItem(LineItemStateDataType|array $lineItem): SetLineItemStateRequestType
     {

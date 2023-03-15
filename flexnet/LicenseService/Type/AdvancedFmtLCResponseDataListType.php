@@ -37,7 +37,6 @@ class AdvancedFmtLCResponseDataListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType|array<\Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType>  $fulfillment
-     * @return AdvancedFmtLCResponseDataListType
      */
     public function withFulfillment(AdvancedFmtLCResponseDataType|array $fulfillment): AdvancedFmtLCResponseDataListType
     {

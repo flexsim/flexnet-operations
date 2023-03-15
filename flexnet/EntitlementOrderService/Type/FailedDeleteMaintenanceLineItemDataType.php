@@ -45,7 +45,6 @@ class FailedDeleteMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|null  $failedData
-     * @return FailedDeleteMaintenanceLineItemDataType
      */
     public function withFailedData(DeleteMaintenanceLineItemDataType|null $failedData): FailedDeleteMaintenanceLineItemDataType
     {
@@ -55,18 +54,11 @@ class FailedDeleteMaintenanceLineItemDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string|null  $reason
-     * @return FailedDeleteMaintenanceLineItemDataType
-     */
     public function withReason(string|null $reason): FailedDeleteMaintenanceLineItemDataType
     {
         $new = clone $this;

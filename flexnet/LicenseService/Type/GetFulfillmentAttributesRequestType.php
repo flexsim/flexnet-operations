@@ -39,7 +39,6 @@ class GetFulfillmentAttributesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
-     * @return GetFulfillmentAttributesRequestType
      */
     public function withLicenseModelIdentifier(LicenseModelIdentifierType $licenseModelIdentifier): GetFulfillmentAttributesRequestType
     {

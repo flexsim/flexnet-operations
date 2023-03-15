@@ -47,7 +47,6 @@ class GetWebRegKeyCountResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return GetWebRegKeyCountResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): GetWebRegKeyCountResponseType
     {
@@ -67,7 +66,6 @@ class GetWebRegKeyCountResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyCountDataType|null  $responseData
-     * @return GetWebRegKeyCountResponseType
      */
     public function withResponseData(WebRegKeyCountDataType|null $responseData): GetWebRegKeyCountResponseType
     {

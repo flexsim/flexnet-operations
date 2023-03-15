@@ -31,7 +31,6 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
      * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType  $bulkEntitlementResponseConfig
-     * @param  int  $batchSize
      * @param  int|null  $pageNumber
      */
     public function __construct(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int|null $pageNumber = null)
@@ -45,7 +44,6 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
      * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType  $bulkEntitlementResponseConfig
-     * @param  int  $batchSize
      * @param  int|null  $pageNumber
      */
     public static function create(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int|null $pageNumber = null)
@@ -63,7 +61,6 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
-     * @return GetBulkEntitlementPropertiesRequestType
      */
     public function withBulkEntitlementSearchCriteria(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria): GetBulkEntitlementPropertiesRequestType
     {
@@ -83,7 +80,6 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType  $bulkEntitlementResponseConfig
-     * @return GetBulkEntitlementPropertiesRequestType
      */
     public function withBulkEntitlementResponseConfig(BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig): GetBulkEntitlementPropertiesRequestType
     {
@@ -93,18 +89,11 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
-    /**
-     * @param  int  $batchSize
-     * @return GetBulkEntitlementPropertiesRequestType
-     */
     public function withBatchSize(int $batchSize): GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;
@@ -113,18 +102,11 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getPageNumber(): int|null
     {
         return $this->pageNumber;
     }
 
-    /**
-     * @param  int|null  $pageNumber
-     * @return GetBulkEntitlementPropertiesRequestType
-     */
     public function withPageNumber(int|null $pageNumber): GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;

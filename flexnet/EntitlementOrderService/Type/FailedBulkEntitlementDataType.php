@@ -45,7 +45,6 @@ class FailedBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType|null  $bulkEntitlement
-     * @return FailedBulkEntitlementDataType
      */
     public function withBulkEntitlement(CreateBulkEntitlementDataType|null $bulkEntitlement): FailedBulkEntitlementDataType
     {
@@ -55,18 +54,11 @@ class FailedBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string|null  $reason
-     * @return FailedBulkEntitlementDataType
-     */
     public function withReason(string|null $reason): FailedBulkEntitlementDataType
     {
         $new = clone $this;

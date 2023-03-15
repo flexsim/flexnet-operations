@@ -39,7 +39,6 @@ class GetMatchingBulkEntsRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsListType  $bulkEntList
-     * @return GetMatchingBulkEntsRequestType
      */
     public function withBulkEntList(GetMatchingBulkEntsListType $bulkEntList): GetMatchingBulkEntsRequestType
     {

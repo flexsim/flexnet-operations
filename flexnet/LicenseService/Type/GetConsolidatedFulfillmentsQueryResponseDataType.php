@@ -37,7 +37,6 @@ class GetConsolidatedFulfillmentsQueryResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\ConsolidatedLicenseDataType|array<\Flexnet\LicenseService\Type\ConsolidatedLicenseDataType>|null  $consolidatedLicense
-     * @return GetConsolidatedFulfillmentsQueryResponseDataType
      */
     public function withConsolidatedLicense(ConsolidatedLicenseDataType|array|null $consolidatedLicense): GetConsolidatedFulfillmentsQueryResponseDataType
     {

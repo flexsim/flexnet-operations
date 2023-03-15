@@ -39,7 +39,6 @@ class EmailConsolidatedLicensesResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return EmailConsolidatedLicensesResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): EmailConsolidatedLicensesResponseType
     {

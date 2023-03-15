@@ -37,7 +37,6 @@ class IdListType
 
     /**
      * @param  string|array<string>  $id
-     * @return IdListType
      */
     public function withId(string|array $id): IdListType
     {

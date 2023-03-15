@@ -37,7 +37,6 @@ class EmergencyResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType>|null  $fulfillmentData
-     * @return EmergencyResponseDataType
      */
     public function withFulfillmentData(EmergencyFulfillmentResponseDataType|array|null $fulfillmentData): EmergencyResponseDataType
     {

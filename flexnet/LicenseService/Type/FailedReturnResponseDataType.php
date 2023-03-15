@@ -18,7 +18,6 @@ class FailedReturnResponseDataType
      * Constructor
      *
      * @param  \Flexnet\LicenseService\Type\ReturnFulfillmentDataType  $fulfillment
-     * @param  string  $reason
      */
     public function __construct(ReturnFulfillmentDataType $fulfillment, string $reason)
     {
@@ -28,7 +27,6 @@ class FailedReturnResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\ReturnFulfillmentDataType  $fulfillment
-     * @param  string  $reason
      */
     public static function create(ReturnFulfillmentDataType $fulfillment, string $reason)
     {
@@ -45,7 +43,6 @@ class FailedReturnResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\ReturnFulfillmentDataType  $fulfillment
-     * @return FailedReturnResponseDataType
      */
     public function withFulfillment(ReturnFulfillmentDataType $fulfillment): FailedReturnResponseDataType
     {
@@ -55,18 +52,11 @@ class FailedReturnResponseDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string  $reason
-     * @return FailedReturnResponseDataType
-     */
     public function withReason(string $reason): FailedReturnResponseDataType
     {
         $new = clone $this;

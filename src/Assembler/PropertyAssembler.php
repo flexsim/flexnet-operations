@@ -24,8 +24,6 @@ class PropertyAssembler implements AssemblerInterface
 
     /**
      * PropertyAssembler constructor.
-     *
-     * @param  string  $visibility
      */
     public function __construct(string $typeMap, string $visibility = PropertyGenerator::VISIBILITY_PRIVATE)
     {

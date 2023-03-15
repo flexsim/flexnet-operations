@@ -69,7 +69,6 @@ class LineItemLifeCycleDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
-     * @return LineItemLifeCycleDataType
      */
     public function withParentLineItemIdentifier(EntitlementLineItemIdentifierType $parentLineItemIdentifier): LineItemLifeCycleDataType
     {
@@ -89,7 +88,6 @@ class LineItemLifeCycleDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreateEntitlementLineItemDataType  $lineItem
-     * @return LineItemLifeCycleDataType
      */
     public function withLineItem(CreateEntitlementLineItemDataType $lineItem): LineItemLifeCycleDataType
     {
@@ -99,18 +97,11 @@ class LineItemLifeCycleDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getIsFull(): bool|null
     {
         return $this->isFull;
     }
 
-    /**
-     * @param  bool|null  $isFull
-     * @return LineItemLifeCycleDataType
-     */
     public function withIsFull(bool|null $isFull): LineItemLifeCycleDataType
     {
         $new = clone $this;
@@ -119,18 +110,11 @@ class LineItemLifeCycleDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getAllowActivationsOnParent(): bool|null
     {
         return $this->allowActivationsOnParent;
     }
 
-    /**
-     * @param  bool|null  $allowActivationsOnParent
-     * @return LineItemLifeCycleDataType
-     */
     public function withAllowActivationsOnParent(bool|null $allowActivationsOnParent): LineItemLifeCycleDataType
     {
         $new = clone $this;
@@ -139,18 +123,11 @@ class LineItemLifeCycleDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getAutoDeploy(): bool|null
     {
         return $this->autoDeploy;
     }
 
-    /**
-     * @param  bool|null  $autoDeploy
-     * @return LineItemLifeCycleDataType
-     */
     public function withAutoDeploy(bool|null $autoDeploy): LineItemLifeCycleDataType
     {
         $new = clone $this;

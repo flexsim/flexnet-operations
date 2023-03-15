@@ -37,7 +37,6 @@ class MatchingLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $matchingLineItemIdentifier
-     * @return MatchingLineItemDataType
      */
     public function withMatchingLineItemIdentifier(EntitlementLineItemIdentifierType $matchingLineItemIdentifier): MatchingLineItemDataType
     {

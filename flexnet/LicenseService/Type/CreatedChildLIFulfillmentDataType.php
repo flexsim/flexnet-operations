@@ -17,7 +17,6 @@ class CreatedChildLIFulfillmentDataType
     /**
      * Constructor
      *
-     * @param  int  $recordRefNo
      * @param  \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType>  $fulfillmentInfo
      */
     public function __construct(int $recordRefNo, CreatedChildLIFulfillmentInfoType|array $fulfillmentInfo)
@@ -27,7 +26,6 @@ class CreatedChildLIFulfillmentDataType
     }
 
     /**
-     * @param  int  $recordRefNo
      * @param  \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType>  $fulfillmentInfo
      */
     public static function create(int $recordRefNo, CreatedChildLIFulfillmentInfoType|array $fulfillmentInfo)
@@ -35,18 +33,11 @@ class CreatedChildLIFulfillmentDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return int
-     */
     public function getRecordRefNo(): int
     {
         return $this->recordRefNo;
     }
 
-    /**
-     * @param  int  $recordRefNo
-     * @return CreatedChildLIFulfillmentDataType
-     */
     public function withRecordRefNo(int $recordRefNo): CreatedChildLIFulfillmentDataType
     {
         $new = clone $this;
@@ -65,7 +56,6 @@ class CreatedChildLIFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType>  $fulfillmentInfo
-     * @return CreatedChildLIFulfillmentDataType
      */
     public function withFulfillmentInfo(CreatedChildLIFulfillmentInfoType|array $fulfillmentInfo): CreatedChildLIFulfillmentDataType
     {

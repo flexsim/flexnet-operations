@@ -37,7 +37,6 @@ class FailedMatchingBulkEntsListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedMatchingBulkEntDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMatchingBulkEntDataType>  $failedBulkEnt
-     * @return FailedMatchingBulkEntsListType
      */
     public function withFailedBulkEnt(FailedMatchingBulkEntDataType|array $failedBulkEnt): FailedMatchingBulkEntsListType
     {

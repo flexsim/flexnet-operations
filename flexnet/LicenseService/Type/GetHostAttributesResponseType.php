@@ -47,7 +47,6 @@ class GetHostAttributesResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return GetHostAttributesResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): GetHostAttributesResponseType
     {
@@ -67,7 +66,6 @@ class GetHostAttributesResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\GetHostAttributesDataType|null  $responseData
-     * @return GetHostAttributesResponseType
      */
     public function withResponseData(GetHostAttributesDataType|null $responseData): GetHostAttributesResponseType
     {

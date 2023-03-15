@@ -55,7 +55,6 @@ class AddWebRegKeyResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return AddWebRegKeyResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): AddWebRegKeyResponseType
     {
@@ -75,7 +74,6 @@ class AddWebRegKeyResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyDataListType|null  $responseData
-     * @return AddWebRegKeyResponseType
      */
     public function withResponseData(WebRegKeyDataListType|null $responseData): AddWebRegKeyResponseType
     {
@@ -95,7 +93,6 @@ class AddWebRegKeyResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataListType|null  $failedData
-     * @return AddWebRegKeyResponseType
      */
     public function withFailedData(FailedAddWebRegKeyDataListType|null $failedData): AddWebRegKeyResponseType
     {

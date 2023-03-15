@@ -18,7 +18,6 @@ class FailedPublisherErrorResponseDataType
      * Constructor
      *
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType  $fulfillment
-     * @param  string  $reason
      */
     public function __construct(PublisherErrorFulfillmentDataType $fulfillment, string $reason)
     {
@@ -28,7 +27,6 @@ class FailedPublisherErrorResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType  $fulfillment
-     * @param  string  $reason
      */
     public static function create(PublisherErrorFulfillmentDataType $fulfillment, string $reason)
     {
@@ -45,7 +43,6 @@ class FailedPublisherErrorResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType  $fulfillment
-     * @return FailedPublisherErrorResponseDataType
      */
     public function withFulfillment(PublisherErrorFulfillmentDataType $fulfillment): FailedPublisherErrorResponseDataType
     {
@@ -55,18 +52,11 @@ class FailedPublisherErrorResponseDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string  $reason
-     * @return FailedPublisherErrorResponseDataType
-     */
     public function withReason(string $reason): FailedPublisherErrorResponseDataType
     {
         $new = clone $this;

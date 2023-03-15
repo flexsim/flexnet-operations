@@ -39,7 +39,6 @@ class TransferLineItemsRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemsListType  $lineItemList
-     * @return TransferLineItemsRequestType
      */
     public function withLineItemList(TransferLineItemsListType $lineItemList): TransferLineItemsRequestType
     {

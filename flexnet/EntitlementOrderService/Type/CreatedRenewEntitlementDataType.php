@@ -22,7 +22,6 @@ class CreatedRenewEntitlementDataType
     /**
      * Constructor
      *
-     * @param  string  $entitlementRecordRefNo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType>|null  $renewedLineItem
      */
@@ -34,7 +33,6 @@ class CreatedRenewEntitlementDataType
     }
 
     /**
-     * @param  string  $entitlementRecordRefNo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType>|null  $renewedLineItem
      */
@@ -43,18 +41,11 @@ class CreatedRenewEntitlementDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getEntitlementRecordRefNo(): string
     {
         return $this->entitlementRecordRefNo;
     }
 
-    /**
-     * @param  string  $entitlementRecordRefNo
-     * @return CreatedRenewEntitlementDataType
-     */
     public function withEntitlementRecordRefNo(string $entitlementRecordRefNo): CreatedRenewEntitlementDataType
     {
         $new = clone $this;
@@ -73,7 +64,6 @@ class CreatedRenewEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
-     * @return CreatedRenewEntitlementDataType
      */
     public function withParentEntitlementIdentifier(EntitlementIdentifierType $parentEntitlementIdentifier): CreatedRenewEntitlementDataType
     {
@@ -93,7 +83,6 @@ class CreatedRenewEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType>|null  $renewedLineItem
-     * @return CreatedRenewEntitlementDataType
      */
     public function withRenewedLineItem(RenewedEntitlementLineItemDataType|array|null $renewedLineItem): CreatedRenewEntitlementDataType
     {

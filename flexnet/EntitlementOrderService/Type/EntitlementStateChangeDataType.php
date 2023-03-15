@@ -45,7 +45,6 @@ class EntitlementStateChangeDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @return EntitlementStateChangeDataType
      */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): EntitlementStateChangeDataType
     {
@@ -65,7 +64,6 @@ class EntitlementStateChangeDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
-     * @return EntitlementStateChangeDataType
      */
     public function withStateChangeRecord(StateChangeDataType|array|null $stateChangeRecord): EntitlementStateChangeDataType
     {

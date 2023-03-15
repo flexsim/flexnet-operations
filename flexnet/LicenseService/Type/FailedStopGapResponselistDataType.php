@@ -37,7 +37,6 @@ class FailedStopGapResponselistDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedStopGapResponseDataType|array<\Flexnet\LicenseService\Type\FailedStopGapResponseDataType>|null  $failedFulfillment
-     * @return FailedStopGapResponselistDataType
      */
     public function withFailedFulfillment(FailedStopGapResponseDataType|array|null $failedFulfillment): FailedStopGapResponselistDataType
     {

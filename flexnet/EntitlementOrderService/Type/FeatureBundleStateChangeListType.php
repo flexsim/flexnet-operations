@@ -37,7 +37,6 @@ class FeatureBundleStateChangeListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeDataType>|null  $featureBundle
-     * @return FeatureBundleStateChangeListType
      */
     public function withFeatureBundle(FeatureBundleStateChangeDataType|array|null $featureBundle): FeatureBundleStateChangeListType
     {

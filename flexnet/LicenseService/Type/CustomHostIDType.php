@@ -43,18 +43,11 @@ class CustomHostIDType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string|null
-     */
     public function getHostId(): string|null
     {
         return $this->hostId;
     }
 
-    /**
-     * @param  string|null  $hostId
-     * @return CustomHostIDType
-     */
     public function withHostId(string|null $hostId): CustomHostIDType
     {
         $new = clone $this;
@@ -73,7 +66,6 @@ class CustomHostIDType
 
     /**
      * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $hostAttributes
-     * @return CustomHostIDType
      */
     public function withHostAttributes(AttributeDescriptorDataType|null $hostAttributes): CustomHostIDType
     {
@@ -93,7 +85,6 @@ class CustomHostIDType
 
     /**
      * @param  \Flexnet\LicenseService\Type\HostTypePKType|null  $hostType
-     * @return CustomHostIDType
      */
     public function withHostType(HostTypePKType|null $hostType): CustomHostIDType
     {

@@ -16,9 +16,6 @@ class DateTimeQueryType
 
     /**
      * Constructor
-     *
-     * @param  \DateTimeInterface  $value
-     * @param  string  $searchType
      */
     public function __construct(\DateTimeInterface $value, string $searchType)
     {
@@ -26,27 +23,16 @@ class DateTimeQueryType
         $this->searchType = $searchType;
     }
 
-    /**
-     * @param  \DateTimeInterface  $value
-     * @param  string  $searchType
-     */
     public static function create(\DateTimeInterface $value, string $searchType)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \DateTimeInterface
-     */
     public function getValue(): \DateTimeInterface
     {
         return $this->value;
     }
 
-    /**
-     * @param  \DateTimeInterface  $value
-     * @return DateTimeQueryType
-     */
     public function withValue(\DateTimeInterface $value): DateTimeQueryType
     {
         $new = clone $this;
@@ -55,18 +41,11 @@ class DateTimeQueryType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getSearchType(): string
     {
         return $this->searchType;
     }
 
-    /**
-     * @param  string  $searchType
-     * @return DateTimeQueryType
-     */
     public function withSearchType(string $searchType): DateTimeQueryType
     {
         $new = clone $this;

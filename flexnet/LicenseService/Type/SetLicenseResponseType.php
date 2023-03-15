@@ -47,7 +47,6 @@ class SetLicenseResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return SetLicenseResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): SetLicenseResponseType
     {
@@ -67,7 +66,6 @@ class SetLicenseResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null  $failedData
-     * @return SetLicenseResponseType
      */
     public function withFailedData(FailedSetLicenseOnholdFulfillmentListType|null $failedData): SetLicenseResponseType
     {

@@ -37,7 +37,6 @@ class CreatedBulkEntitlementDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType>|null  $createdBulkEntitlement
-     * @return CreatedBulkEntitlementDataListType
      */
     public function withCreatedBulkEntitlement(CreatedBulkEntitlementDataType|array|null $createdBulkEntitlement): CreatedBulkEntitlementDataListType
     {

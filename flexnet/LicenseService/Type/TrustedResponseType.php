@@ -47,7 +47,6 @@ class TrustedResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return TrustedResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): TrustedResponseType
     {
@@ -67,7 +66,6 @@ class TrustedResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\ActivationDataType|null  $responseData
-     * @return TrustedResponseType
      */
     public function withResponseData(ActivationDataType|null $responseData): TrustedResponseType
     {

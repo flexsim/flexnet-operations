@@ -37,7 +37,6 @@ class MatchingBulkEntDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $matchingBulkEntIdentifier
-     * @return MatchingBulkEntDataType
      */
     public function withMatchingBulkEntIdentifier(EntitlementIdentifierType $matchingBulkEntIdentifier): MatchingBulkEntDataType
     {

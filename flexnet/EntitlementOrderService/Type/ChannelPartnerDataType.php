@@ -27,7 +27,6 @@ class ChannelPartnerDataType
     /**
      * Constructor
      *
-     * @param  string  $tierName
      * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $accountUnit
      * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $contact
      * @param  bool|null  $currentOwner
@@ -41,7 +40,6 @@ class ChannelPartnerDataType
     }
 
     /**
-     * @param  string  $tierName
      * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $accountUnit
      * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $contact
      * @param  bool|null  $currentOwner
@@ -51,18 +49,11 @@ class ChannelPartnerDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getTierName(): string
     {
         return $this->tierName;
     }
 
-    /**
-     * @param  string  $tierName
-     * @return ChannelPartnerDataType
-     */
     public function withTierName(string $tierName): ChannelPartnerDataType
     {
         $new = clone $this;
@@ -81,7 +72,6 @@ class ChannelPartnerDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $accountUnit
-     * @return ChannelPartnerDataType
      */
     public function withAccountUnit(AccountIdentifierType $accountUnit): ChannelPartnerDataType
     {
@@ -101,7 +91,6 @@ class ChannelPartnerDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $contact
-     * @return ChannelPartnerDataType
      */
     public function withContact(UserIdentifierType|null $contact): ChannelPartnerDataType
     {
@@ -111,18 +100,11 @@ class ChannelPartnerDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getCurrentOwner(): bool|null
     {
         return $this->currentOwner;
     }
 
-    /**
-     * @param  bool|null  $currentOwner
-     * @return ChannelPartnerDataType
-     */
     public function withCurrentOwner(bool|null $currentOwner): ChannelPartnerDataType
     {
         $new = clone $this;

@@ -37,7 +37,6 @@ class WebRegKeyType
 
     /**
      * @param  string|array<string>  $webRegKey
-     * @return WebRegKeyType
      */
     public function withWebRegKey(string|array $webRegKey): WebRegKeyType
     {

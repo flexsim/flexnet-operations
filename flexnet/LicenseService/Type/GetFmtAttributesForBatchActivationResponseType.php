@@ -47,7 +47,6 @@ class GetFmtAttributesForBatchActivationResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return GetFmtAttributesForBatchActivationResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): GetFmtAttributesForBatchActivationResponseType
     {
@@ -67,7 +66,6 @@ class GetFmtAttributesForBatchActivationResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null  $responseData
-     * @return GetFmtAttributesForBatchActivationResponseType
      */
     public function withResponseData(GetFmtAttributesForBatchDataType|null $responseData): GetFmtAttributesForBatchActivationResponseType
     {

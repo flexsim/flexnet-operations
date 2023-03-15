@@ -37,7 +37,6 @@ class SplitBulkEntitlementResponseListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType>  $splitBulkEntitlement
-     * @return SplitBulkEntitlementResponseListType
      */
     public function withSplitBulkEntitlement(SplitBulkEntitlementDataType|array $splitBulkEntitlement): SplitBulkEntitlementResponseListType
     {

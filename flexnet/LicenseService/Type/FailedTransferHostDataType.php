@@ -45,7 +45,6 @@ class FailedTransferHostDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\TransferHostIdDataType|null  $hostIdentifier
-     * @return FailedTransferHostDataType
      */
     public function withHostIdentifier(TransferHostIdDataType|null $hostIdentifier): FailedTransferHostDataType
     {
@@ -55,18 +54,11 @@ class FailedTransferHostDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string|null  $reason
-     * @return FailedTransferHostDataType
-     */
     public function withReason(string|null $reason): FailedTransferHostDataType
     {
         $new = clone $this;

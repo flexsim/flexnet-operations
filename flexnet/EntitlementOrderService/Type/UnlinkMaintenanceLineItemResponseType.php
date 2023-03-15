@@ -47,7 +47,6 @@ class UnlinkMaintenanceLineItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return UnlinkMaintenanceLineItemResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): UnlinkMaintenanceLineItemResponseType
     {
@@ -67,7 +66,6 @@ class UnlinkMaintenanceLineItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemListType|null  $failedData
-     * @return UnlinkMaintenanceLineItemResponseType
      */
     public function withFailedData(FailedUnlinkMaintenanceLineItemListType|null $failedData): UnlinkMaintenanceLineItemResponseType
     {

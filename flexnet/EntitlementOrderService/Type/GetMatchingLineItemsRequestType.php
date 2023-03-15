@@ -39,7 +39,6 @@ class GetMatchingLineItemsRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsListType  $lineItemList
-     * @return GetMatchingLineItemsRequestType
      */
     public function withLineItemList(GetMatchingLineItemsListType $lineItemList): GetMatchingLineItemsRequestType
     {

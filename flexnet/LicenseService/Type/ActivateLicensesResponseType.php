@@ -55,7 +55,6 @@ class ActivateLicensesResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return ActivateLicensesResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): ActivateLicensesResponseType
     {
@@ -75,7 +74,6 @@ class ActivateLicensesResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedLineItem|null  $failedData
-     * @return ActivateLicensesResponseType
      */
     public function withFailedData(FailedLineItem|null $failedData): ActivateLicensesResponseType
     {
@@ -85,18 +83,11 @@ class ActivateLicensesResponseType implements ResultInterface
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getResultData(): string|null
     {
         return $this->resultData;
     }
 
-    /**
-     * @param  string|null  $resultData
-     * @return ActivateLicensesResponseType
-     */
     public function withResultData(string|null $resultData): ActivateLicensesResponseType
     {
         $new = clone $this;

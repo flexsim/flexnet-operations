@@ -55,7 +55,6 @@ class EntitlementLifeCycleResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return EntitlementLifeCycleResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): EntitlementLifeCycleResponseType
     {
@@ -75,7 +74,6 @@ class EntitlementLifeCycleResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataListType|null  $failedData
-     * @return EntitlementLifeCycleResponseType
      */
     public function withFailedData(FailedEntitlementLifeCycleDataListType|null $failedData): EntitlementLifeCycleResponseType
     {
@@ -95,7 +93,6 @@ class EntitlementLifeCycleResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataListType|null  $responseData
-     * @return EntitlementLifeCycleResponseType
      */
     public function withResponseData(CreatedEntitlementLifeCycleDataListType|null $responseData): EntitlementLifeCycleResponseType
     {

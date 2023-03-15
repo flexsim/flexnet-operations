@@ -18,7 +18,6 @@ class MaintenanceLineItemStateDataType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  string  $stateToSet
      */
     public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet)
     {
@@ -28,7 +27,6 @@ class MaintenanceLineItemStateDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  string  $stateToSet
      */
     public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet)
     {
@@ -45,7 +43,6 @@ class MaintenanceLineItemStateDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @return MaintenanceLineItemStateDataType
      */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): MaintenanceLineItemStateDataType
     {
@@ -55,18 +52,11 @@ class MaintenanceLineItemStateDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getStateToSet(): string
     {
         return $this->stateToSet;
     }
 
-    /**
-     * @param  string  $stateToSet
-     * @return MaintenanceLineItemStateDataType
-     */
     public function withStateToSet(string $stateToSet): MaintenanceLineItemStateDataType
     {
         $new = clone $this;

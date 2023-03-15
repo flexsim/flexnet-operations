@@ -47,7 +47,6 @@ class GetBulkEntitlementPropertiesResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return GetBulkEntitlementPropertiesResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): GetBulkEntitlementPropertiesResponseType
     {
@@ -67,7 +66,6 @@ class GetBulkEntitlementPropertiesResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType|array<\Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType>|null  $bulkEntitlement
-     * @return GetBulkEntitlementPropertiesResponseType
      */
     public function withBulkEntitlement(BulkEntitlementPropertiesType|array|null $bulkEntitlement): GetBulkEntitlementPropertiesResponseType
     {

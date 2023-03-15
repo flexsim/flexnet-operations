@@ -39,7 +39,6 @@ class EmailLicenseResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return EmailLicenseResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): EmailLicenseResponseType
     {

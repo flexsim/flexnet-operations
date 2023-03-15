@@ -37,7 +37,6 @@ class CreatedEntitlementLifeCycleDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataType>|null  $entitlementData
-     * @return CreatedEntitlementLifeCycleDataListType
      */
     public function withEntitlementData(CreatedEntitlementLifeCycleDataType|array|null $entitlementData): CreatedEntitlementLifeCycleDataListType
     {

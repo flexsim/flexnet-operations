@@ -39,7 +39,6 @@ class ActivateShortCodeRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\CreateShortCodeDataType|null  $shortCodeData
-     * @return ActivateShortCodeRequestType
      */
     public function withShortCodeData(CreateShortCodeDataType|null $shortCodeData): ActivateShortCodeRequestType
     {

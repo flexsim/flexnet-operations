@@ -47,7 +47,6 @@ class DeleteOnholdFulfillmentsResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return DeleteOnholdFulfillmentsResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): DeleteOnholdFulfillmentsResponseType
     {
@@ -67,7 +66,6 @@ class DeleteOnholdFulfillmentsResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null  $failedData
-     * @return DeleteOnholdFulfillmentsResponseType
      */
     public function withFailedData(FailedOnholdFulfillmentListType|null $failedData): DeleteOnholdFulfillmentsResponseType
     {

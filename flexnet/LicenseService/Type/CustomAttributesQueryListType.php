@@ -37,7 +37,6 @@ class CustomAttributesQueryListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CustomAttributeQueryType|array<\Flexnet\LicenseService\Type\CustomAttributeQueryType>|null  $attribute
-     * @return CustomAttributesQueryListType
      */
     public function withAttribute(CustomAttributeQueryType|array|null $attribute): CustomAttributesQueryListType
     {

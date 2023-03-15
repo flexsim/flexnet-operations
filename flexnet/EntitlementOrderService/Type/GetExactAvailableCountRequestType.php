@@ -39,7 +39,6 @@ class GetExactAvailableCountRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $activationId
-     * @return GetExactAvailableCountRequestType
      */
     public function withActivationId(EntitlementLineItemIdentifierType|null $activationId): GetExactAvailableCountRequestType
     {

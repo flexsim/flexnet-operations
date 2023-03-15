@@ -61,7 +61,6 @@ class RepairFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     * @return RepairFulfillmentDataType
      */
     public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): RepairFulfillmentDataType
     {
@@ -81,7 +80,6 @@ class RepairFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @return RepairFulfillmentDataType
      */
     public function withLicenseModelAttributes(AttributeDescriptorDataType|null $licenseModelAttributes): RepairFulfillmentDataType
     {
@@ -91,18 +89,11 @@ class RepairFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getOverridePolicy(): bool|null
     {
         return $this->overridePolicy;
     }
 
-    /**
-     * @param  bool|null  $overridePolicy
-     * @return RepairFulfillmentDataType
-     */
     public function withOverridePolicy(bool|null $overridePolicy): RepairFulfillmentDataType
     {
         $new = clone $this;
@@ -111,18 +102,11 @@ class RepairFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getFNPTimeZoneValue(): string|null
     {
         return $this->FNPTimeZoneValue;
     }
 
-    /**
-     * @param  string|null  $FNPTimeZoneValue
-     * @return RepairFulfillmentDataType
-     */
     public function withFNPTimeZoneValue(string|null $FNPTimeZoneValue): RepairFulfillmentDataType
     {
         $new = clone $this;

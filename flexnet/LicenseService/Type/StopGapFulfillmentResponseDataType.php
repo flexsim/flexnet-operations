@@ -17,7 +17,6 @@ class StopGapFulfillmentResponseDataType
     /**
      * Constructor
      *
-     * @param  int  $recordRefNo
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|null  $fulfillment
      */
     public function __construct(int $recordRefNo, FulfillmentDataType|null $fulfillment = null)
@@ -27,7 +26,6 @@ class StopGapFulfillmentResponseDataType
     }
 
     /**
-     * @param  int  $recordRefNo
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|null  $fulfillment
      */
     public static function create(int $recordRefNo, FulfillmentDataType|null $fulfillment = null)
@@ -35,18 +33,11 @@ class StopGapFulfillmentResponseDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return int
-     */
     public function getRecordRefNo(): int
     {
         return $this->recordRefNo;
     }
 
-    /**
-     * @param  int  $recordRefNo
-     * @return StopGapFulfillmentResponseDataType
-     */
     public function withRecordRefNo(int $recordRefNo): StopGapFulfillmentResponseDataType
     {
         $new = clone $this;
@@ -65,7 +56,6 @@ class StopGapFulfillmentResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|null  $fulfillment
-     * @return StopGapFulfillmentResponseDataType
      */
     public function withFulfillment(FulfillmentDataType|null $fulfillment): StopGapFulfillmentResponseDataType
     {

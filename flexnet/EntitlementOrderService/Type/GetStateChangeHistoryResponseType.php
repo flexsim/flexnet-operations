@@ -47,7 +47,6 @@ class GetStateChangeHistoryResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return GetStateChangeHistoryResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): GetStateChangeHistoryResponseType
     {
@@ -67,7 +66,6 @@ class GetStateChangeHistoryResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeResponseType|null  $responseData
-     * @return GetStateChangeHistoryResponseType
      */
     public function withResponseData(StateChangeResponseType|null $responseData): GetStateChangeHistoryResponseType
     {

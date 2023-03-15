@@ -45,7 +45,6 @@ class FailedUpdateSimpleEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|null  $simpleEntitlement
-     * @return FailedUpdateSimpleEntitlementDataType
      */
     public function withSimpleEntitlement(UpdateSimpleEntitlementDataType|null $simpleEntitlement): FailedUpdateSimpleEntitlementDataType
     {
@@ -55,18 +54,11 @@ class FailedUpdateSimpleEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getReason(): string|null
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string|null  $reason
-     * @return FailedUpdateSimpleEntitlementDataType
-     */
     public function withReason(string|null $reason): FailedUpdateSimpleEntitlementDataType
     {
         $new = clone $this;

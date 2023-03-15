@@ -37,7 +37,6 @@ class PublisherAttributesListDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleAttributeDataType|array<\Flexnet\LicenseService\Type\SimpleAttributeDataType>  $attribute
-     * @return PublisherAttributesListDataType
      */
     public function withAttribute(SimpleAttributeDataType|array $attribute): PublisherAttributesListDataType
     {

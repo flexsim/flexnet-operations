@@ -55,7 +55,6 @@ class AddOnlyEntitlementLineItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return AddOnlyEntitlementLineItemResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): AddOnlyEntitlementLineItemResponseType
     {
@@ -75,7 +74,6 @@ class AddOnlyEntitlementLineItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataListType|null  $failedData
-     * @return AddOnlyEntitlementLineItemResponseType
      */
     public function withFailedData(FailedAddEntitlementLineItemDataListType|null $failedData): AddOnlyEntitlementLineItemResponseType
     {
@@ -95,7 +93,6 @@ class AddOnlyEntitlementLineItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataListType|null  $responseData
-     * @return AddOnlyEntitlementLineItemResponseType
      */
     public function withResponseData(AddedEntitlementLineItemDataListType|null $responseData): AddOnlyEntitlementLineItemResponseType
     {

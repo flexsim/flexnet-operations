@@ -31,7 +31,6 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
      *
      * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType  $queryParams
      * @param  \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType  $fulfillmentResponseConfig
-     * @param  int  $batchSize
      * @param  int|null  $pageNumber
      */
     public function __construct(FulfillmentsQueryParametersType $queryParams, FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, int|null $pageNumber = null)
@@ -45,7 +44,6 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType  $queryParams
      * @param  \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType  $fulfillmentResponseConfig
-     * @param  int  $batchSize
      * @param  int|null  $pageNumber
      */
     public static function create(FulfillmentsQueryParametersType $queryParams, FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, int|null $pageNumber = null)
@@ -63,7 +61,6 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType  $queryParams
-     * @return GetFulfillmentPropertiesRequestType
      */
     public function withQueryParams(FulfillmentsQueryParametersType $queryParams): GetFulfillmentPropertiesRequestType
     {
@@ -83,7 +80,6 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType  $fulfillmentResponseConfig
-     * @return GetFulfillmentPropertiesRequestType
      */
     public function withFulfillmentResponseConfig(FulfillmentResponseConfigRequestType $fulfillmentResponseConfig): GetFulfillmentPropertiesRequestType
     {
@@ -93,18 +89,11 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
-    /**
-     * @param  int  $batchSize
-     * @return GetFulfillmentPropertiesRequestType
-     */
     public function withBatchSize(int $batchSize): GetFulfillmentPropertiesRequestType
     {
         $new = clone $this;
@@ -113,18 +102,11 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getPageNumber(): int|null
     {
         return $this->pageNumber;
     }
 
-    /**
-     * @param  int|null  $pageNumber
-     * @return GetFulfillmentPropertiesRequestType
-     */
     public function withPageNumber(int|null $pageNumber): GetFulfillmentPropertiesRequestType
     {
         $new = clone $this;

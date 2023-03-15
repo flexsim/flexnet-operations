@@ -37,7 +37,6 @@ class GetMatchingBulkEntsListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType|array<\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType>  $bulkEntInfo
-     * @return GetMatchingBulkEntsListType
      */
     public function withBulkEntInfo(GetMatchingBulkEntInfoType|array $bulkEntInfo): GetMatchingBulkEntsListType
     {

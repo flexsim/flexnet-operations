@@ -37,7 +37,6 @@ class FailedMaintenanceLineItemStateDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType>|null  $failedMaintenanceLineItem
-     * @return FailedMaintenanceLineItemStateDataListType
      */
     public function withFailedMaintenanceLineItem(FailedMaintenanceLineItemStateDataType|array|null $failedMaintenanceLineItem): FailedMaintenanceLineItemStateDataListType
     {

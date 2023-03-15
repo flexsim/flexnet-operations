@@ -27,8 +27,6 @@ class ReturnShortCodeDataType
     /**
      * Constructor
      *
-     * @param  string  $shortCode
-     * @param  string  $webRegKey
      * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
      * @param  bool|null  $overridePolicy
      */
@@ -41,8 +39,6 @@ class ReturnShortCodeDataType
     }
 
     /**
-     * @param  string  $shortCode
-     * @param  string  $webRegKey
      * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
      * @param  bool|null  $overridePolicy
      */
@@ -51,18 +47,11 @@ class ReturnShortCodeDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getShortCode(): string
     {
         return $this->shortCode;
     }
 
-    /**
-     * @param  string  $shortCode
-     * @return ReturnShortCodeDataType
-     */
     public function withShortCode(string $shortCode): ReturnShortCodeDataType
     {
         $new = clone $this;
@@ -71,18 +60,11 @@ class ReturnShortCodeDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getWebRegKey(): string
     {
         return $this->webRegKey;
     }
 
-    /**
-     * @param  string  $webRegKey
-     * @return ReturnShortCodeDataType
-     */
     public function withWebRegKey(string $webRegKey): ReturnShortCodeDataType
     {
         $new = clone $this;
@@ -101,7 +83,6 @@ class ReturnShortCodeDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
-     * @return ReturnShortCodeDataType
      */
     public function withPublisherAttributes(PublisherAttributesListDataType|null $publisherAttributes): ReturnShortCodeDataType
     {
@@ -111,18 +92,11 @@ class ReturnShortCodeDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getOverridePolicy(): bool|null
     {
         return $this->overridePolicy;
     }
 
-    /**
-     * @param  bool|null  $overridePolicy
-     * @return ReturnShortCodeDataType
-     */
     public function withOverridePolicy(bool|null $overridePolicy): ReturnShortCodeDataType
     {
         $new = clone $this;

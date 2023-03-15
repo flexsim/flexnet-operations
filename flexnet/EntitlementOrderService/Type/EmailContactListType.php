@@ -37,7 +37,6 @@ class EmailContactListType
 
     /**
      * @param  string|array<string>|null  $emailId
-     * @return EmailContactListType
      */
     public function withEmailId(string|array|null $emailId): EmailContactListType
     {

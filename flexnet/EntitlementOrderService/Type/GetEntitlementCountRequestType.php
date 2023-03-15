@@ -39,7 +39,6 @@ class GetEntitlementCountRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType  $queryParams
-     * @return GetEntitlementCountRequestType
      */
     public function withQueryParams(SearchEntitlementDataType $queryParams): GetEntitlementCountRequestType
     {

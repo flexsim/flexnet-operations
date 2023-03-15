@@ -37,7 +37,6 @@ class UnlinkMaintenanceLineItemListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType>  $unlinkMaintenanceLineItem
-     * @return UnlinkMaintenanceLineItemListType
      */
     public function withUnlinkMaintenanceLineItem(UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem): UnlinkMaintenanceLineItemListType
     {

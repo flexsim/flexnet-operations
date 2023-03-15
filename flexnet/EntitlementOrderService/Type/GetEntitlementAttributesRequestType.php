@@ -39,7 +39,6 @@ class GetEntitlementAttributesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
-     * @return GetEntitlementAttributesRequestType
      */
     public function withLicenseModelIdentifier(LicenseModelIdentifierType $licenseModelIdentifier): GetEntitlementAttributesRequestType
     {

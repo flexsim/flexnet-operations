@@ -37,7 +37,6 @@ class LicenseModelStateChangeListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType>|null  $licenseModel
-     * @return LicenseModelStateChangeListType
      */
     public function withLicenseModel(LicenseModelStateChangeDataType|array|null $licenseModel): LicenseModelStateChangeListType
     {

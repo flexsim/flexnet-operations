@@ -37,7 +37,6 @@ class CreatedSimpleEntitlementDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType>|null  $createdSimpleEntitlement
-     * @return CreatedSimpleEntitlementDataListType
      */
     public function withCreatedSimpleEntitlement(CreatedSimpleEntitlementDataType|array|null $createdSimpleEntitlement): CreatedSimpleEntitlementDataListType
     {

@@ -37,7 +37,6 @@ class FailedBulkEntitlementDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedBulkEntitlementDataType>|null  $failedBulkEntitlement
-     * @return FailedBulkEntitlementDataListType
      */
     public function withFailedBulkEntitlement(FailedBulkEntitlementDataType|array|null $failedBulkEntitlement): FailedBulkEntitlementDataListType
     {

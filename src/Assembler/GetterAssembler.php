@@ -23,8 +23,6 @@ class GetterAssembler implements AssemblerInterface
 
     /**
      * GetterAssembler constructor.
-     *
-     * @param  GetterAssemblerOptions  $options
      */
     public function __construct(GetterAssemblerOptions $options)
     {
@@ -80,10 +78,6 @@ class GetterAssembler implements AssemblerInterface
         }
     }
 
-    /**
-     * @param  Property  $property
-     * @return string
-     */
     public function getPrefix(Property $property): string
     {
         if (! $this->options->useBoolGetters()) {

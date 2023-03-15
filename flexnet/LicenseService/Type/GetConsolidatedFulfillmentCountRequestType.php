@@ -39,7 +39,6 @@ class GetConsolidatedFulfillmentCountRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
-     * @return GetConsolidatedFulfillmentCountRequestType
      */
     public function withQueryParams(ConsolidatedFulfillmentsQPType|null $queryParams): GetConsolidatedFulfillmentCountRequestType
     {

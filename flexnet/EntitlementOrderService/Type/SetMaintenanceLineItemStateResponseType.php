@@ -47,7 +47,6 @@ class SetMaintenanceLineItemStateResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return SetMaintenanceLineItemStateResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): SetMaintenanceLineItemStateResponseType
     {
@@ -67,7 +66,6 @@ class SetMaintenanceLineItemStateResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataListType|null  $failedMaintenanceData
-     * @return SetMaintenanceLineItemStateResponseType
      */
     public function withFailedMaintenanceData(FailedMaintenanceLineItemStateDataListType|null $failedMaintenanceData): SetMaintenanceLineItemStateResponseType
     {

@@ -37,7 +37,6 @@ class AddedEntitlementLineItemDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType>|null  $addedLineItems
-     * @return AddedEntitlementLineItemDataListType
      */
     public function withAddedLineItems(AddedEntitlementLineItemDataType|array|null $addedLineItems): AddedEntitlementLineItemDataListType
     {

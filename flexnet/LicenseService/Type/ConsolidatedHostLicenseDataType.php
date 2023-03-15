@@ -37,7 +37,6 @@ class ConsolidatedHostLicenseDataType
 
     /**
      * @param  string|array<string>  $license
-     * @return ConsolidatedHostLicenseDataType
      */
     public function withLicense(string|array $license): ConsolidatedHostLicenseDataType
     {

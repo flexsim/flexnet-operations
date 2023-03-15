@@ -37,7 +37,6 @@ class FailedAddEntitlementLineItemDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataType>|null  $failedLineItemData
-     * @return FailedAddEntitlementLineItemDataListType
      */
     public function withFailedLineItemData(FailedAddEntitlementLineItemDataType|array|null $failedLineItemData): FailedAddEntitlementLineItemDataListType
     {

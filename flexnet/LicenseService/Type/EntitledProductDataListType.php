@@ -37,7 +37,6 @@ class EntitledProductDataListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\EntitledProductDataType|array<\Flexnet\LicenseService\Type\EntitledProductDataType>|null  $entitledProduct
-     * @return EntitledProductDataListType
      */
     public function withEntitledProduct(EntitledProductDataType|array|null $entitledProduct): EntitledProductDataListType
     {

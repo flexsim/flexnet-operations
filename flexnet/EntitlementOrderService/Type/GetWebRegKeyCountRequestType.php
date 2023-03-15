@@ -39,7 +39,6 @@ class GetWebRegKeyCountRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntitlementIdentifier
-     * @return GetWebRegKeyCountRequestType
      */
     public function withBulkEntitlementIdentifier(EntitlementIdentifierType $bulkEntitlementIdentifier): GetWebRegKeyCountRequestType
     {

@@ -45,7 +45,6 @@ class LicenseModelStateChangeDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
-     * @return LicenseModelStateChangeDataType
      */
     public function withLicenseModelIdentifier(LicenseModelIdentifierType $licenseModelIdentifier): LicenseModelStateChangeDataType
     {
@@ -65,7 +64,6 @@ class LicenseModelStateChangeDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
-     * @return LicenseModelStateChangeDataType
      */
     public function withStateChangeRecord(StateChangeDataType|array|null $stateChangeRecord): LicenseModelStateChangeDataType
     {

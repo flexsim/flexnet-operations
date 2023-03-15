@@ -37,7 +37,6 @@ class DuplicateFulfillmentRecordListDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>  $fulfillment
-     * @return DuplicateFulfillmentRecordListDataType
      */
     public function withFulfillment(FulfillmentIdentifierType|array $fulfillment): DuplicateFulfillmentRecordListDataType
     {

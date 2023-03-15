@@ -39,7 +39,6 @@ class RepairFulfillmentRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentDataType>  $fulfillment
-     * @return RepairFulfillmentRequestType
      */
     public function withFulfillment(RepairFulfillmentDataType|array $fulfillment): RepairFulfillmentRequestType
     {

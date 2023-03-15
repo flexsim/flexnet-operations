@@ -38,8 +38,6 @@ class SplitLineItemInfoType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  int  $numberOfCopies
-     * @param  string  $targetTierName
      * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
      * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $targetContact
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $matchingLineItemIdentifier
@@ -56,8 +54,6 @@ class SplitLineItemInfoType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  int  $numberOfCopies
-     * @param  string  $targetTierName
      * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
      * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $targetContact
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $matchingLineItemIdentifier
@@ -77,7 +73,6 @@ class SplitLineItemInfoType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @return SplitLineItemInfoType
      */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): SplitLineItemInfoType
     {
@@ -87,18 +82,11 @@ class SplitLineItemInfoType
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function getNumberOfCopies(): int
     {
         return $this->numberOfCopies;
     }
 
-    /**
-     * @param  int  $numberOfCopies
-     * @return SplitLineItemInfoType
-     */
     public function withNumberOfCopies(int $numberOfCopies): SplitLineItemInfoType
     {
         $new = clone $this;
@@ -107,18 +95,11 @@ class SplitLineItemInfoType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getTargetTierName(): string
     {
         return $this->targetTierName;
     }
 
-    /**
-     * @param  string  $targetTierName
-     * @return SplitLineItemInfoType
-     */
     public function withTargetTierName(string $targetTierName): SplitLineItemInfoType
     {
         $new = clone $this;
@@ -137,7 +118,6 @@ class SplitLineItemInfoType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
-     * @return SplitLineItemInfoType
      */
     public function withTargetAccountUnit(AccountIdentifierType $targetAccountUnit): SplitLineItemInfoType
     {
@@ -157,7 +137,6 @@ class SplitLineItemInfoType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $targetContact
-     * @return SplitLineItemInfoType
      */
     public function withTargetContact(UserIdentifierType|null $targetContact): SplitLineItemInfoType
     {
@@ -177,7 +156,6 @@ class SplitLineItemInfoType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $matchingLineItemIdentifier
-     * @return SplitLineItemInfoType
      */
     public function withMatchingLineItemIdentifier(EntitlementLineItemIdentifierType|null $matchingLineItemIdentifier): SplitLineItemInfoType
     {

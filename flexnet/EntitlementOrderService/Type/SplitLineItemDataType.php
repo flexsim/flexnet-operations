@@ -45,7 +45,6 @@ class SplitLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @return SplitLineItemDataType
      */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): SplitLineItemDataType
     {
@@ -65,7 +64,6 @@ class SplitLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $entitlementIdentifier
-     * @return SplitLineItemDataType
      */
     public function withEntitlementIdentifier(EntitlementIdentifierType|null $entitlementIdentifier): SplitLineItemDataType
     {

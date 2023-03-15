@@ -87,7 +87,6 @@ class AdvancedFulfillmentLCDataType
     /**
      * Constructor
      *
-     * @param  string  $fulfillmentId
      * @param  string|null  $childActivationId
      * @param  int|null  $fulfillCount
      * @param  \DateTimeInterface|null  $startDate
@@ -125,7 +124,6 @@ class AdvancedFulfillmentLCDataType
     }
 
     /**
-     * @param  string  $fulfillmentId
      * @param  string|null  $childActivationId
      * @param  int|null  $fulfillCount
      * @param  \DateTimeInterface|null  $startDate
@@ -147,18 +145,11 @@ class AdvancedFulfillmentLCDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getFulfillmentId(): string
     {
         return $this->fulfillmentId;
     }
 
-    /**
-     * @param  string  $fulfillmentId
-     * @return AdvancedFulfillmentLCDataType
-     */
     public function withFulfillmentId(string $fulfillmentId): AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
@@ -167,18 +158,11 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getChildActivationId(): string|null
     {
         return $this->childActivationId;
     }
 
-    /**
-     * @param  string|null  $childActivationId
-     * @return AdvancedFulfillmentLCDataType
-     */
     public function withChildActivationId(string|null $childActivationId): AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
@@ -187,18 +171,11 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getFulfillCount(): int|null
     {
         return $this->fulfillCount;
     }
 
-    /**
-     * @param  int|null  $fulfillCount
-     * @return AdvancedFulfillmentLCDataType
-     */
     public function withFulfillCount(int|null $fulfillCount): AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
@@ -207,18 +184,11 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface|null
-     */
     public function getStartDate(): \DateTimeInterface|null
     {
         return $this->startDate;
     }
 
-    /**
-     * @param  \DateTimeInterface|null  $startDate
-     * @return AdvancedFulfillmentLCDataType
-     */
     public function withStartDate(\DateTimeInterface|null $startDate): AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
@@ -227,18 +197,11 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface|null
-     */
     public function getVersionDate(): \DateTimeInterface|null
     {
         return $this->versionDate;
     }
 
-    /**
-     * @param  \DateTimeInterface|null  $versionDate
-     * @return AdvancedFulfillmentLCDataType
-     */
     public function withVersionDate(\DateTimeInterface|null $versionDate): AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
@@ -247,18 +210,11 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface|null
-     */
     public function getVersionStartDate(): \DateTimeInterface|null
     {
         return $this->versionStartDate;
     }
 
-    /**
-     * @param  \DateTimeInterface|null  $versionStartDate
-     * @return AdvancedFulfillmentLCDataType
-     */
     public function withVersionStartDate(\DateTimeInterface|null $versionStartDate): AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
@@ -267,18 +223,11 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSoldTo(): string|null
     {
         return $this->soldTo;
     }
 
-    /**
-     * @param  string|null  $soldTo
-     * @return AdvancedFulfillmentLCDataType
-     */
     public function withSoldTo(string|null $soldTo): AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
@@ -287,18 +236,11 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToEmail(): string|null
     {
         return $this->shipToEmail;
     }
 
-    /**
-     * @param  string|null  $shipToEmail
-     * @return AdvancedFulfillmentLCDataType
-     */
     public function withShipToEmail(string|null $shipToEmail): AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
@@ -307,18 +249,11 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToAddress(): string|null
     {
         return $this->shipToAddress;
     }
 
-    /**
-     * @param  string|null  $shipToAddress
-     * @return AdvancedFulfillmentLCDataType
-     */
     public function withShipToAddress(string|null $shipToAddress): AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
@@ -337,7 +272,6 @@ class AdvancedFulfillmentLCDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverHost
-     * @return AdvancedFulfillmentLCDataType
      */
     public function withServerHost(ServerIDsType|null $serverHost): AdvancedFulfillmentLCDataType
     {
@@ -347,18 +281,11 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getNodeLockHost(): string|null
     {
         return $this->nodeLockHost;
     }
 
-    /**
-     * @param  string|null  $nodeLockHost
-     * @return AdvancedFulfillmentLCDataType
-     */
     public function withNodeLockHost(string|null $nodeLockHost): AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
@@ -377,7 +304,6 @@ class AdvancedFulfillmentLCDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $countedNodeLockHostIds
-     * @return AdvancedFulfillmentLCDataType
      */
     public function withCountedNodeLockHostIds(NodeIDsType|null $countedNodeLockHostIds): AdvancedFulfillmentLCDataType
     {
@@ -397,7 +323,6 @@ class AdvancedFulfillmentLCDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
-     * @return AdvancedFulfillmentLCDataType
      */
     public function withCustomHost(CustomHostIDType|null $customHost): AdvancedFulfillmentLCDataType
     {
@@ -417,7 +342,6 @@ class AdvancedFulfillmentLCDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @return AdvancedFulfillmentLCDataType
      */
     public function withLicenseModelAttributes(AttributeDescriptorDataType|null $licenseModelAttributes): AdvancedFulfillmentLCDataType
     {
@@ -427,18 +351,11 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getOverridePolicy(): bool|null
     {
         return $this->overridePolicy;
     }
 
-    /**
-     * @param  bool|null  $overridePolicy
-     * @return AdvancedFulfillmentLCDataType
-     */
     public function withOverridePolicy(bool|null $overridePolicy): AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
@@ -447,18 +364,11 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getFNPTimeZoneValue(): string|null
     {
         return $this->FNPTimeZoneValue;
     }
 
-    /**
-     * @param  string|null  $FNPTimeZoneValue
-     * @return AdvancedFulfillmentLCDataType
-     */
     public function withFNPTimeZoneValue(string|null $FNPTimeZoneValue): AdvancedFulfillmentLCDataType
     {
         $new = clone $this;

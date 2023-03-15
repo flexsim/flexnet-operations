@@ -37,7 +37,6 @@ class WebRegKeysDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyType|null  $webRegKeys
-     * @return WebRegKeysDataListType
      */
     public function withWebRegKeys(WebRegKeyType|null $webRegKeys): WebRegKeysDataListType
     {

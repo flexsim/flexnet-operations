@@ -69,7 +69,6 @@ class AddedEntitlementLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @return AddedEntitlementLineItemDataType
      */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): AddedEntitlementLineItemDataType
     {
@@ -89,7 +88,6 @@ class AddedEntitlementLineItemDataType
 
     /**
      * @param  string|array<string>|null  $lineItemUniqueIds
-     * @return AddedEntitlementLineItemDataType
      */
     public function withLineItemUniqueIds(string|array|null $lineItemUniqueIds): AddedEntitlementLineItemDataType
     {
@@ -109,7 +107,6 @@ class AddedEntitlementLineItemDataType
 
     /**
      * @param  string|array<string>|null  $maintenanceLineItemUniqueIds
-     * @return AddedEntitlementLineItemDataType
      */
     public function withMaintenanceLineItemUniqueIds(string|array|null $maintenanceLineItemUniqueIds): AddedEntitlementLineItemDataType
     {
@@ -129,7 +126,6 @@ class AddedEntitlementLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifiers
-     * @return AddedEntitlementLineItemDataType
      */
     public function withLineItemIdentifiers(EntitlementLineItemIdentifierType|array|null $lineItemIdentifiers): AddedEntitlementLineItemDataType
     {
@@ -149,7 +145,6 @@ class AddedEntitlementLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $maintenanceLineItemIdentifiers
-     * @return AddedEntitlementLineItemDataType
      */
     public function withMaintenanceLineItemIdentifiers(EntitlementLineItemIdentifierType|array|null $maintenanceLineItemIdentifiers): AddedEntitlementLineItemDataType
     {

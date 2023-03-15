@@ -39,7 +39,6 @@ class MergeEntitlementsResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return MergeEntitlementsResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): MergeEntitlementsResponseType
     {

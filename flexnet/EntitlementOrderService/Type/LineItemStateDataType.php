@@ -23,7 +23,6 @@ class LineItemStateDataType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  string  $stateToSet
      * @param  bool|null  $includeChildItems
      */
     public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet, bool|null $includeChildItems = null)
@@ -35,7 +34,6 @@ class LineItemStateDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  string  $stateToSet
      * @param  bool|null  $includeChildItems
      */
     public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet, bool|null $includeChildItems = null)
@@ -53,7 +51,6 @@ class LineItemStateDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @return LineItemStateDataType
      */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): LineItemStateDataType
     {
@@ -63,18 +60,11 @@ class LineItemStateDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getStateToSet(): string
     {
         return $this->stateToSet;
     }
 
-    /**
-     * @param  string  $stateToSet
-     * @return LineItemStateDataType
-     */
     public function withStateToSet(string $stateToSet): LineItemStateDataType
     {
         $new = clone $this;
@@ -83,18 +73,11 @@ class LineItemStateDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getIncludeChildItems(): bool|null
     {
         return $this->includeChildItems;
     }
 
-    /**
-     * @param  bool|null  $includeChildItems
-     * @return LineItemStateDataType
-     */
     public function withIncludeChildItems(bool|null $includeChildItems): LineItemStateDataType
     {
         $new = clone $this;

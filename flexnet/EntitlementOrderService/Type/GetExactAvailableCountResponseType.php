@@ -47,7 +47,6 @@ class GetExactAvailableCountResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return GetExactAvailableCountResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): GetExactAvailableCountResponseType
     {
@@ -57,18 +56,11 @@ class GetExactAvailableCountResponseType implements ResultInterface
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getCount(): int|null
     {
         return $this->count;
     }
 
-    /**
-     * @param  int|null  $count
-     * @return GetExactAvailableCountResponseType
-     */
     public function withCount(int|null $count): GetExactAvailableCountResponseType
     {
         $new = clone $this;

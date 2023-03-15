@@ -37,7 +37,6 @@ class EntitlementListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType>  $entitlementIdentifier
-     * @return EntitlementListType
      */
     public function withEntitlementIdentifier(EntitlementIdentifierType|array $entitlementIdentifier): EntitlementListType
     {

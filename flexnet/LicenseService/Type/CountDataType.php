@@ -17,7 +17,6 @@ class CountDataType
     /**
      * Constructor
      *
-     * @param  string  $activationId
      * @param  \Flexnet\LicenseService\Type\CountForHostsType|array<\Flexnet\LicenseService\Type\CountForHostsType>  $countForHosts
      */
     public function __construct(string $activationId, CountForHostsType|array $countForHosts)
@@ -27,7 +26,6 @@ class CountDataType
     }
 
     /**
-     * @param  string  $activationId
      * @param  \Flexnet\LicenseService\Type\CountForHostsType|array<\Flexnet\LicenseService\Type\CountForHostsType>  $countForHosts
      */
     public static function create(string $activationId, CountForHostsType|array $countForHosts)
@@ -35,18 +33,11 @@ class CountDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getActivationId(): string
     {
         return $this->activationId;
     }
 
-    /**
-     * @param  string  $activationId
-     * @return CountDataType
-     */
     public function withActivationId(string $activationId): CountDataType
     {
         $new = clone $this;
@@ -65,7 +56,6 @@ class CountDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\CountForHostsType|array<\Flexnet\LicenseService\Type\CountForHostsType>  $countForHosts
-     * @return CountDataType
      */
     public function withCountForHosts(CountForHostsType|array $countForHosts): CountDataType
     {

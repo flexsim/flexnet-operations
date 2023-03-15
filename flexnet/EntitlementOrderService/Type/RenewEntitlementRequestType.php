@@ -39,7 +39,6 @@ class RenewEntitlementRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType>|null  $entitlementData
-     * @return RenewEntitlementRequestType
      */
     public function withEntitlementData(RenewEntitlementDataType|array|null $entitlementData): RenewEntitlementRequestType
     {

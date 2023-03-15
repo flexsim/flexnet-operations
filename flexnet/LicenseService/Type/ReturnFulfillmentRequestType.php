@@ -39,7 +39,6 @@ class ReturnFulfillmentRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\ReturnFulfillmentDataType|array<\Flexnet\LicenseService\Type\ReturnFulfillmentDataType>  $fulfillment
-     * @return ReturnFulfillmentRequestType
      */
     public function withFulfillment(ReturnFulfillmentDataType|array $fulfillment): ReturnFulfillmentRequestType
     {

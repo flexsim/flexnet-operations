@@ -39,7 +39,6 @@ class SetMaintenanceLineItemStateRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType>  $maintenanceLineItem
-     * @return SetMaintenanceLineItemStateRequestType
      */
     public function withMaintenanceLineItem(MaintenanceLineItemStateDataType|array $maintenanceLineItem): SetMaintenanceLineItemStateRequestType
     {

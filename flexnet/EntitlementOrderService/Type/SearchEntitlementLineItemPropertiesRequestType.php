@@ -31,7 +31,6 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $queryParams
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemResponseConfigRequestType  $entitlementLineItemResponseConfig
-     * @param  int  $batchSize
      * @param  int|null  $pageNumber
      */
     public function __construct(SearchActivatableItemDataType $queryParams, EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig, int $batchSize, int|null $pageNumber = null)
@@ -45,7 +44,6 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $queryParams
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemResponseConfigRequestType  $entitlementLineItemResponseConfig
-     * @param  int  $batchSize
      * @param  int|null  $pageNumber
      */
     public static function create(SearchActivatableItemDataType $queryParams, EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig, int $batchSize, int|null $pageNumber = null)
@@ -63,7 +61,6 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $queryParams
-     * @return SearchEntitlementLineItemPropertiesRequestType
      */
     public function withQueryParams(SearchActivatableItemDataType $queryParams): SearchEntitlementLineItemPropertiesRequestType
     {
@@ -83,7 +80,6 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemResponseConfigRequestType  $entitlementLineItemResponseConfig
-     * @return SearchEntitlementLineItemPropertiesRequestType
      */
     public function withEntitlementLineItemResponseConfig(EntitlementLineItemResponseConfigRequestType $entitlementLineItemResponseConfig): SearchEntitlementLineItemPropertiesRequestType
     {
@@ -93,18 +89,11 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function getBatchSize(): int
     {
         return $this->batchSize;
     }
 
-    /**
-     * @param  int  $batchSize
-     * @return SearchEntitlementLineItemPropertiesRequestType
-     */
     public function withBatchSize(int $batchSize): SearchEntitlementLineItemPropertiesRequestType
     {
         $new = clone $this;
@@ -113,18 +102,11 @@ class SearchEntitlementLineItemPropertiesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getPageNumber(): int|null
     {
         return $this->pageNumber;
     }
 
-    /**
-     * @param  int|null  $pageNumber
-     * @return SearchEntitlementLineItemPropertiesRequestType
-     */
     public function withPageNumber(int|null $pageNumber): SearchEntitlementLineItemPropertiesRequestType
     {
         $new = clone $this;

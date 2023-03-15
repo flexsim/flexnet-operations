@@ -85,7 +85,6 @@ class ConsolidatedFulfillmentsQPType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $consolidatedLicenseId
-     * @return ConsolidatedFulfillmentsQPType
      */
     public function withConsolidatedLicenseId(SimpleQueryType|null $consolidatedLicenseId): ConsolidatedFulfillmentsQPType
     {
@@ -105,7 +104,6 @@ class ConsolidatedFulfillmentsQPType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $fulfillmentId
-     * @return ConsolidatedFulfillmentsQPType
      */
     public function withFulfillmentId(SimpleQueryType|null $fulfillmentId): ConsolidatedFulfillmentsQPType
     {
@@ -125,7 +123,6 @@ class ConsolidatedFulfillmentsQPType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $activationId
-     * @return ConsolidatedFulfillmentsQPType
      */
     public function withActivationId(SimpleQueryType|null $activationId): ConsolidatedFulfillmentsQPType
     {
@@ -145,7 +142,6 @@ class ConsolidatedFulfillmentsQPType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $entitlementId
-     * @return ConsolidatedFulfillmentsQPType
      */
     public function withEntitlementId(SimpleQueryType|null $entitlementId): ConsolidatedFulfillmentsQPType
     {
@@ -165,7 +161,6 @@ class ConsolidatedFulfillmentsQPType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $soldTo
-     * @return ConsolidatedFulfillmentsQPType
      */
     public function withSoldTo(SimpleQueryType|null $soldTo): ConsolidatedFulfillmentsQPType
     {
@@ -185,7 +180,6 @@ class ConsolidatedFulfillmentsQPType
 
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $criteria
-     * @return ConsolidatedFulfillmentsQPType
      */
     public function withCriteria(SimpleQueryType|null $criteria): ConsolidatedFulfillmentsQPType
     {
@@ -205,7 +199,6 @@ class ConsolidatedFulfillmentsQPType
 
     /**
      * @param  \Flexnet\LicenseService\Type\StateQueryType|null  $state
-     * @return ConsolidatedFulfillmentsQPType
      */
     public function withState(StateQueryType|null $state): ConsolidatedFulfillmentsQPType
     {

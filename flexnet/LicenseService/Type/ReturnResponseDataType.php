@@ -37,7 +37,6 @@ class ReturnResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType>|null  $fulfillmentData
-     * @return ReturnResponseDataType
      */
     public function withFulfillmentData(ReturnFulfillmentResponseDataType|array|null $fulfillmentData): ReturnResponseDataType
     {

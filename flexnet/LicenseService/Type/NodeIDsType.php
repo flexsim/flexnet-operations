@@ -37,7 +37,6 @@ class NodeIDsType
 
     /**
      * @param  string|array<string>  $nodeId
-     * @return NodeIDsType
      */
     public function withNodeId(string|array $nodeId): NodeIDsType
     {

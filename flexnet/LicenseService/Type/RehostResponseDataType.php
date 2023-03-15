@@ -37,7 +37,6 @@ class RehostResponseDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType>|null  $fulfillmentData
-     * @return RehostResponseDataType
      */
     public function withFulfillmentData(RehostFulfillmentResponseDataType|array|null $fulfillmentData): RehostResponseDataType
     {

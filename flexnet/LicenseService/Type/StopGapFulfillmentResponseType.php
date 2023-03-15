@@ -55,7 +55,6 @@ class StopGapFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return StopGapFulfillmentResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): StopGapFulfillmentResponseType
     {
@@ -75,7 +74,6 @@ class StopGapFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StopGapResponseDataType|null  $responseData
-     * @return StopGapFulfillmentResponseType
      */
     public function withResponseData(StopGapResponseDataType|null $responseData): StopGapFulfillmentResponseType
     {
@@ -95,7 +93,6 @@ class StopGapFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedStopGapResponselistDataType|null  $failedData
-     * @return StopGapFulfillmentResponseType
      */
     public function withFailedData(FailedStopGapResponselistDataType|null $failedData): StopGapFulfillmentResponseType
     {

@@ -47,7 +47,6 @@ class SearchActivatableItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return SearchActivatableItemResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): SearchActivatableItemResponseType
     {
@@ -67,7 +66,6 @@ class SearchActivatableItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType|array<\Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType>|null  $activatableItem
-     * @return SearchActivatableItemResponseType
      */
     public function withActivatableItem(ActivatableItemDetailType|array|null $activatableItem): SearchActivatableItemResponseType
     {

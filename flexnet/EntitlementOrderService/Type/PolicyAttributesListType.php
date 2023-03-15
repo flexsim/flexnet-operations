@@ -93,7 +93,6 @@ class PolicyAttributesListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType|null  $rehostsPolicy
-     * @return PolicyAttributesListType
      */
     public function withRehostsPolicy(PolicyDataType|null $rehostsPolicy): PolicyAttributesListType
     {
@@ -113,7 +112,6 @@ class PolicyAttributesListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType|null  $returnsPolicy
-     * @return PolicyAttributesListType
      */
     public function withReturnsPolicy(PolicyDataType|null $returnsPolicy): PolicyAttributesListType
     {
@@ -133,7 +131,6 @@ class PolicyAttributesListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType|null  $repairsPolicy
-     * @return PolicyAttributesListType
      */
     public function withRepairsPolicy(PolicyDataType|null $repairsPolicy): PolicyAttributesListType
     {
@@ -153,7 +150,6 @@ class PolicyAttributesListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ExtraActivationDataType|null  $extraActivationsPolicy
-     * @return PolicyAttributesListType
      */
     public function withExtraActivationsPolicy(ExtraActivationDataType|null $extraActivationsPolicy): PolicyAttributesListType
     {
@@ -173,7 +169,6 @@ class PolicyAttributesListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CancelLicensePolicyDataType|null  $cancelLicensePolicy
-     * @return PolicyAttributesListType
      */
     public function withCancelLicensePolicy(CancelLicensePolicyDataType|null $cancelLicensePolicy): PolicyAttributesListType
     {
@@ -193,7 +188,6 @@ class PolicyAttributesListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\VirtualLicensePolicyDataType|null  $virtualLicensePolicy
-     * @return PolicyAttributesListType
      */
     public function withVirtualLicensePolicy(VirtualLicensePolicyDataType|null $virtualLicensePolicy): PolicyAttributesListType
     {
@@ -213,7 +207,6 @@ class PolicyAttributesListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ReinstallPolicyDataType|null  $reinstallPolicy
-     * @return PolicyAttributesListType
      */
     public function withReinstallPolicy(ReinstallPolicyDataType|null $reinstallPolicy): PolicyAttributesListType
     {
@@ -233,7 +226,6 @@ class PolicyAttributesListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AcpiGenerationIdLicensePolicyDataType|null  $acpiGenerationIdLicensePolicy
-     * @return PolicyAttributesListType
      */
     public function withAcpiGenerationIdLicensePolicy(AcpiGenerationIdLicensePolicyDataType|null $acpiGenerationIdLicensePolicy): PolicyAttributesListType
     {

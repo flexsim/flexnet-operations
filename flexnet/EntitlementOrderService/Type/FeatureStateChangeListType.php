@@ -37,7 +37,6 @@ class FeatureStateChangeListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType>|null  $feature
-     * @return FeatureStateChangeListType
      */
     public function withFeature(FeatureStateChangeDataType|array|null $feature): FeatureStateChangeListType
     {

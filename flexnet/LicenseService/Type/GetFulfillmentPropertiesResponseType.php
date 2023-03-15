@@ -47,7 +47,6 @@ class GetFulfillmentPropertiesResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return GetFulfillmentPropertiesResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): GetFulfillmentPropertiesResponseType
     {
@@ -67,7 +66,6 @@ class GetFulfillmentPropertiesResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array<\Flexnet\LicenseService\Type\FulfillmentPropertiesType>|null  $fulfillment
-     * @return GetFulfillmentPropertiesResponseType
      */
     public function withFulfillment(FulfillmentPropertiesType|array|null $fulfillment): GetFulfillmentPropertiesResponseType
     {

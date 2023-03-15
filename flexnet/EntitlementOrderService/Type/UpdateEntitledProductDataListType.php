@@ -17,7 +17,6 @@ class UpdateEntitledProductDataListType
     /**
      * Constructor
      *
-     * @param  string  $opType
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
      */
     public function __construct(string $opType, EntitledProductDataType|array|null $entitledProducts = null)
@@ -27,7 +26,6 @@ class UpdateEntitledProductDataListType
     }
 
     /**
-     * @param  string  $opType
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
      */
     public static function create(string $opType, EntitledProductDataType|array|null $entitledProducts = null)
@@ -45,7 +43,6 @@ class UpdateEntitledProductDataListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
-     * @return UpdateEntitledProductDataListType
      */
     public function withEntitledProducts(EntitledProductDataType|array|null $entitledProducts): UpdateEntitledProductDataListType
     {
@@ -55,18 +52,11 @@ class UpdateEntitledProductDataListType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getOpType(): string
     {
         return $this->opType;
     }
 
-    /**
-     * @param  string  $opType
-     * @return UpdateEntitledProductDataListType
-     */
     public function withOpType(string $opType): UpdateEntitledProductDataListType
     {
         $new = clone $this;

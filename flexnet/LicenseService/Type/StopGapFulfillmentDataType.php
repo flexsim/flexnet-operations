@@ -33,8 +33,6 @@ class StopGapFulfillmentDataType
      * Constructor
      *
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     * @param  \DateTimeInterface  $startDate
-     * @param  \DateTimeInterface  $endDate
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
      */
@@ -49,8 +47,6 @@ class StopGapFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     * @param  \DateTimeInterface  $startDate
-     * @param  \DateTimeInterface  $endDate
      * @param  string|null  $shipToEmail
      * @param  string|null  $shipToAddress
      */
@@ -69,7 +65,6 @@ class StopGapFulfillmentDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     * @return StopGapFulfillmentDataType
      */
     public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): StopGapFulfillmentDataType
     {
@@ -79,18 +74,11 @@ class StopGapFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface
-     */
     public function getStartDate(): \DateTimeInterface
     {
         return $this->startDate;
     }
 
-    /**
-     * @param  \DateTimeInterface  $startDate
-     * @return StopGapFulfillmentDataType
-     */
     public function withStartDate(\DateTimeInterface $startDate): StopGapFulfillmentDataType
     {
         $new = clone $this;
@@ -99,18 +87,11 @@ class StopGapFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface
-     */
     public function getEndDate(): \DateTimeInterface
     {
         return $this->endDate;
     }
 
-    /**
-     * @param  \DateTimeInterface  $endDate
-     * @return StopGapFulfillmentDataType
-     */
     public function withEndDate(\DateTimeInterface $endDate): StopGapFulfillmentDataType
     {
         $new = clone $this;
@@ -119,18 +100,11 @@ class StopGapFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToEmail(): string|null
     {
         return $this->shipToEmail;
     }
 
-    /**
-     * @param  string|null  $shipToEmail
-     * @return StopGapFulfillmentDataType
-     */
     public function withShipToEmail(string|null $shipToEmail): StopGapFulfillmentDataType
     {
         $new = clone $this;
@@ -139,18 +113,11 @@ class StopGapFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToAddress(): string|null
     {
         return $this->shipToAddress;
     }
 
-    /**
-     * @param  string|null  $shipToAddress
-     * @return StopGapFulfillmentDataType
-     */
     public function withShipToAddress(string|null $shipToAddress): StopGapFulfillmentDataType
     {
         $new = clone $this;

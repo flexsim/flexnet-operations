@@ -47,7 +47,6 @@ class DeleteWebRegKeyResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return DeleteWebRegKeyResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): DeleteWebRegKeyResponseType
     {
@@ -67,7 +66,6 @@ class DeleteWebRegKeyResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyListType|null  $failedData
-     * @return DeleteWebRegKeyResponseType
      */
     public function withFailedData(FailedDeleteWebRegKeyListType|null $failedData): DeleteWebRegKeyResponseType
     {

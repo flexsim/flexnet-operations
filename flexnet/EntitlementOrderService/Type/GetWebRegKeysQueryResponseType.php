@@ -47,7 +47,6 @@ class GetWebRegKeysQueryResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return GetWebRegKeysQueryResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): GetWebRegKeysQueryResponseType
     {
@@ -67,7 +66,6 @@ class GetWebRegKeysQueryResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeysDataListType|null  $responseData
-     * @return GetWebRegKeysQueryResponseType
      */
     public function withResponseData(WebRegKeysDataListType|null $responseData): GetWebRegKeysQueryResponseType
     {

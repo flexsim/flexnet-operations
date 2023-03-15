@@ -22,7 +22,6 @@ class CreatedEntitlementLifeCycleDataType
     /**
      * Constructor
      *
-     * @param  string  $entitlementRecordRefNo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType>|null  $createdLineItemData
      */
@@ -34,7 +33,6 @@ class CreatedEntitlementLifeCycleDataType
     }
 
     /**
-     * @param  string  $entitlementRecordRefNo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType>|null  $createdLineItemData
      */
@@ -43,18 +41,11 @@ class CreatedEntitlementLifeCycleDataType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getEntitlementRecordRefNo(): string
     {
         return $this->entitlementRecordRefNo;
     }
 
-    /**
-     * @param  string  $entitlementRecordRefNo
-     * @return CreatedEntitlementLifeCycleDataType
-     */
     public function withEntitlementRecordRefNo(string $entitlementRecordRefNo): CreatedEntitlementLifeCycleDataType
     {
         $new = clone $this;
@@ -73,7 +64,6 @@ class CreatedEntitlementLifeCycleDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
-     * @return CreatedEntitlementLifeCycleDataType
      */
     public function withParentEntitlementIdentifier(EntitlementIdentifierType $parentEntitlementIdentifier): CreatedEntitlementLifeCycleDataType
     {
@@ -93,7 +83,6 @@ class CreatedEntitlementLifeCycleDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType>|null  $createdLineItemData
-     * @return CreatedEntitlementLifeCycleDataType
      */
     public function withCreatedLineItemData(LifeCycleLineItemDataType|array|null $createdLineItemData): CreatedEntitlementLifeCycleDataType
     {

@@ -39,7 +39,6 @@ class RepairShortCodeRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\RepairShortCodeDataType|null  $shortCodeData
-     * @return RepairShortCodeRequestType
      */
     public function withShortCodeData(RepairShortCodeDataType|null $shortCodeData): RepairShortCodeRequestType
     {

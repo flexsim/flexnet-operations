@@ -37,7 +37,6 @@ class FailedRehostResponselistDataType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array<\Flexnet\LicenseService\Type\FailedRehostResponseDataType>|null  $failedFulfillment
-     * @return FailedRehostResponselistDataType
      */
     public function withFailedFulfillment(FailedRehostResponseDataType|array|null $failedFulfillment): FailedRehostResponselistDataType
     {

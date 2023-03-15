@@ -35,18 +35,11 @@ class FeatureIdentifierType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string|null
-     */
     public function getUniqueId(): string|null
     {
         return $this->uniqueId;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @return FeatureIdentifierType
-     */
     public function withUniqueId(string|null $uniqueId): FeatureIdentifierType
     {
         $new = clone $this;
@@ -65,7 +58,6 @@ class FeatureIdentifierType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeaturePKType|null  $primaryKeys
-     * @return FeatureIdentifierType
      */
     public function withPrimaryKeys(FeaturePKType|null $primaryKeys): FeatureIdentifierType
     {

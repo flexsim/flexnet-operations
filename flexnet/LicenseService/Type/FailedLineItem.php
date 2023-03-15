@@ -27,18 +27,11 @@ class FailedLineItem
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string|null
-     */
     public function getActivationId(): string|null
     {
         return $this->activationId;
     }
 
-    /**
-     * @param  string|null  $activationId
-     * @return FailedLineItem
-     */
     public function withActivationId(string|null $activationId): FailedLineItem
     {
         $new = clone $this;

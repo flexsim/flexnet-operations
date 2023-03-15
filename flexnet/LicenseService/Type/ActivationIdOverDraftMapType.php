@@ -16,9 +16,6 @@ class ActivationIdOverDraftMapType
 
     /**
      * Constructor
-     *
-     * @param  string  $activationId
-     * @param  bool  $overDraftAllowed
      */
     public function __construct(string $activationId, bool $overDraftAllowed)
     {
@@ -26,27 +23,16 @@ class ActivationIdOverDraftMapType
         $this->overDraftAllowed = $overDraftAllowed;
     }
 
-    /**
-     * @param  string  $activationId
-     * @param  bool  $overDraftAllowed
-     */
     public static function create(string $activationId, bool $overDraftAllowed)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getActivationId(): string
     {
         return $this->activationId;
     }
 
-    /**
-     * @param  string  $activationId
-     * @return ActivationIdOverDraftMapType
-     */
     public function withActivationId(string $activationId): ActivationIdOverDraftMapType
     {
         $new = clone $this;
@@ -55,18 +41,11 @@ class ActivationIdOverDraftMapType
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function getOverDraftAllowed(): bool
     {
         return $this->overDraftAllowed;
     }
 
-    /**
-     * @param  bool  $overDraftAllowed
-     * @return ActivationIdOverDraftMapType
-     */
     public function withOverDraftAllowed(bool $overDraftAllowed): ActivationIdOverDraftMapType
     {
         $new = clone $this;

@@ -37,7 +37,6 @@ class EntitlementStateChangeListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType>|null  $entitlement
-     * @return EntitlementStateChangeListType
      */
     public function withEntitlement(EntitlementStateChangeDataType|array|null $entitlement): EntitlementStateChangeListType
     {

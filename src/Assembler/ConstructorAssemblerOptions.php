@@ -25,18 +25,11 @@ class ConstructorAssemblerOptions
         $this->typeMap = $typeMap;
     }
 
-    /**
-     * @return ConstructorAssemblerOptions
-     */
     public static function create(string $typeMap): ConstructorAssemblerOptions
     {
         return new self($typeMap);
     }
 
-    /**
-     * @param  bool  $withTypeHints
-     * @return ConstructorAssemblerOptions
-     */
     public function withTypeHints(bool $withTypeHints = true): ConstructorAssemblerOptions
     {
         $new = clone $this;
@@ -45,18 +38,11 @@ class ConstructorAssemblerOptions
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function useTypeHints(): bool
     {
         return $this->typeHints;
     }
 
-    /**
-     * @param  bool  $withDocBlocks
-     * @return ConstructorAssemblerOptions
-     */
     public function withDocBlocks(bool $withDocBlocks = true): ConstructorAssemblerOptions
     {
         $new = clone $this;
@@ -65,9 +51,6 @@ class ConstructorAssemblerOptions
         return $new;
     }
 
-    /**
-     * @return bool
-     */
     public function useDocBlocks(): bool
     {
         return $this->docBlocks;

@@ -27,7 +27,6 @@ class TypeLineItem
     /**
      * Constructor
      *
-     * @param  string  $activationId
      * @param  string|null  $Reason
      * @param  string|null  $Count
      * @param  \Flexnet\LicenseService\Type\Dictionary|null  $VendorDictionary
@@ -41,7 +40,6 @@ class TypeLineItem
     }
 
     /**
-     * @param  string  $activationId
      * @param  string|null  $Reason
      * @param  string|null  $Count
      * @param  \Flexnet\LicenseService\Type\Dictionary|null  $VendorDictionary
@@ -51,18 +49,11 @@ class TypeLineItem
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getActivationId(): string
     {
         return $this->activationId;
     }
 
-    /**
-     * @param  string  $activationId
-     * @return TypeLineItem
-     */
     public function withActivationId(string $activationId): TypeLineItem
     {
         $new = clone $this;
@@ -71,18 +62,11 @@ class TypeLineItem
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getReason(): string|null
     {
         return $this->Reason;
     }
 
-    /**
-     * @param  string|null  $Reason
-     * @return TypeLineItem
-     */
     public function withReason(string|null $Reason): TypeLineItem
     {
         $new = clone $this;
@@ -91,18 +75,11 @@ class TypeLineItem
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCount(): string|null
     {
         return $this->Count;
     }
 
-    /**
-     * @param  string|null  $Count
-     * @return TypeLineItem
-     */
     public function withCount(string|null $Count): TypeLineItem
     {
         $new = clone $this;
@@ -121,7 +98,6 @@ class TypeLineItem
 
     /**
      * @param  \Flexnet\LicenseService\Type\Dictionary|null  $VendorDictionary
-     * @return TypeLineItem
      */
     public function withVendorDictionary(Dictionary|null $VendorDictionary): TypeLineItem
     {

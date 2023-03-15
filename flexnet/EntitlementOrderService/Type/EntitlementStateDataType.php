@@ -18,7 +18,6 @@ class EntitlementStateDataType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @param  string  $stateToSet
      */
     public function __construct(EntitlementIdentifierType $entitlementIdentifier, string $stateToSet)
     {
@@ -28,7 +27,6 @@ class EntitlementStateDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @param  string  $stateToSet
      */
     public static function create(EntitlementIdentifierType $entitlementIdentifier, string $stateToSet)
     {
@@ -45,7 +43,6 @@ class EntitlementStateDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @return EntitlementStateDataType
      */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): EntitlementStateDataType
     {
@@ -55,18 +52,11 @@ class EntitlementStateDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getStateToSet(): string
     {
         return $this->stateToSet;
     }
 
-    /**
-     * @param  string  $stateToSet
-     * @return EntitlementStateDataType
-     */
     public function withStateToSet(string $stateToSet): EntitlementStateDataType
     {
         $new = clone $this;

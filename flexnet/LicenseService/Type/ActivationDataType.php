@@ -11,34 +11,22 @@ class ActivationDataType
 
     /**
      * Constructor
-     *
-     * @param  string  $activationData
      */
     public function __construct(string $activationData)
     {
         $this->activationData = $activationData;
     }
 
-    /**
-     * @param  string  $activationData
-     */
     public static function create(string $activationData)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getActivationData(): string
     {
         return $this->activationData;
     }
 
-    /**
-     * @param  string  $activationData
-     * @return ActivationDataType
-     */
     public function withActivationData(string $activationData): ActivationDataType
     {
         $new = clone $this;

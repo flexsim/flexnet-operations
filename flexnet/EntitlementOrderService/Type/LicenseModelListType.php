@@ -37,7 +37,6 @@ class LicenseModelListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|array<\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType>  $licenseModelIdentifier
-     * @return LicenseModelListType
      */
     public function withLicenseModelIdentifier(LicenseModelIdentifierType|array $licenseModelIdentifier): LicenseModelListType
     {

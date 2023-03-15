@@ -37,7 +37,6 @@ class FailedSetLicenseOnholdFulfillmentListType
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentDataType>  $failedFmtData
-     * @return FailedSetLicenseOnholdFulfillmentListType
      */
     public function withFailedFmtData(FailedSetLicenseOnholdFulfillmentDataType|array $failedFmtData): FailedSetLicenseOnholdFulfillmentListType
     {

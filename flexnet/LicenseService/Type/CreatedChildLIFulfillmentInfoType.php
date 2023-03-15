@@ -32,8 +32,6 @@ class CreatedChildLIFulfillmentInfoType
     /**
      * Constructor
      *
-     * @param  string  $uniqueId
-     * @param  string  $fulfillmentId
      * @param  string|null  $licenseText
      * @param  string|null  $binaryLicense
      * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
@@ -48,8 +46,6 @@ class CreatedChildLIFulfillmentInfoType
     }
 
     /**
-     * @param  string  $uniqueId
-     * @param  string  $fulfillmentId
      * @param  string|null  $licenseText
      * @param  string|null  $binaryLicense
      * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
@@ -59,18 +55,11 @@ class CreatedChildLIFulfillmentInfoType
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return string
-     */
     public function getUniqueId(): string
     {
         return $this->uniqueId;
     }
 
-    /**
-     * @param  string  $uniqueId
-     * @return CreatedChildLIFulfillmentInfoType
-     */
     public function withUniqueId(string $uniqueId): CreatedChildLIFulfillmentInfoType
     {
         $new = clone $this;
@@ -79,18 +68,11 @@ class CreatedChildLIFulfillmentInfoType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getFulfillmentId(): string
     {
         return $this->fulfillmentId;
     }
 
-    /**
-     * @param  string  $fulfillmentId
-     * @return CreatedChildLIFulfillmentInfoType
-     */
     public function withFulfillmentId(string $fulfillmentId): CreatedChildLIFulfillmentInfoType
     {
         $new = clone $this;
@@ -99,18 +81,11 @@ class CreatedChildLIFulfillmentInfoType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLicenseText(): string|null
     {
         return $this->licenseText;
     }
 
-    /**
-     * @param  string|null  $licenseText
-     * @return CreatedChildLIFulfillmentInfoType
-     */
     public function withLicenseText(string|null $licenseText): CreatedChildLIFulfillmentInfoType
     {
         $new = clone $this;
@@ -119,18 +94,11 @@ class CreatedChildLIFulfillmentInfoType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getBinaryLicense(): string|null
     {
         return $this->binaryLicense;
     }
 
-    /**
-     * @param  string|null  $binaryLicense
-     * @return CreatedChildLIFulfillmentInfoType
-     */
     public function withBinaryLicense(string|null $binaryLicense): CreatedChildLIFulfillmentInfoType
     {
         $new = clone $this;
@@ -149,7 +117,6 @@ class CreatedChildLIFulfillmentInfoType
 
     /**
      * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
-     * @return CreatedChildLIFulfillmentInfoType
      */
     public function withLicenseFiles(LicenseFileDataListType|null $licenseFiles): CreatedChildLIFulfillmentInfoType
     {

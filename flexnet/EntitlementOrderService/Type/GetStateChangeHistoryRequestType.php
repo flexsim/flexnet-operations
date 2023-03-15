@@ -79,7 +79,6 @@ class GetStateChangeHistoryRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureListType|null  $featureList
-     * @return GetStateChangeHistoryRequestType
      */
     public function withFeatureList(FeatureListType|null $featureList): GetStateChangeHistoryRequestType
     {
@@ -99,7 +98,6 @@ class GetStateChangeHistoryRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleListType|null  $featureBundleList
-     * @return GetStateChangeHistoryRequestType
      */
     public function withFeatureBundleList(FeatureBundleListType|null $featureBundleList): GetStateChangeHistoryRequestType
     {
@@ -119,7 +117,6 @@ class GetStateChangeHistoryRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ProductListType|null  $productList
-     * @return GetStateChangeHistoryRequestType
      */
     public function withProductList(ProductListType|null $productList): GetStateChangeHistoryRequestType
     {
@@ -139,7 +136,6 @@ class GetStateChangeHistoryRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelListType|null  $licenseModelList
-     * @return GetStateChangeHistoryRequestType
      */
     public function withLicenseModelList(LicenseModelListType|null $licenseModelList): GetStateChangeHistoryRequestType
     {
@@ -159,7 +155,6 @@ class GetStateChangeHistoryRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementListType|null  $simpleEntitlementList
-     * @return GetStateChangeHistoryRequestType
      */
     public function withSimpleEntitlementList(EntitlementListType|null $simpleEntitlementList): GetStateChangeHistoryRequestType
     {
@@ -179,7 +174,6 @@ class GetStateChangeHistoryRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementListType|null  $bulkEntitlementList
-     * @return GetStateChangeHistoryRequestType
      */
     public function withBulkEntitlementList(EntitlementListType|null $bulkEntitlementList): GetStateChangeHistoryRequestType
     {

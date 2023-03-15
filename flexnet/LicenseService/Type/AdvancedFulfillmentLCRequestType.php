@@ -39,7 +39,6 @@ class AdvancedFulfillmentLCRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\AdvancedFulfillmentLCListType  $fulfillmentList
-     * @return AdvancedFulfillmentLCRequestType
      */
     public function withFulfillmentList(AdvancedFulfillmentLCListType $fulfillmentList): AdvancedFulfillmentLCRequestType
     {

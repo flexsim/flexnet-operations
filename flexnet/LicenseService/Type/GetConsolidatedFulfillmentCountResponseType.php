@@ -47,7 +47,6 @@ class GetConsolidatedFulfillmentCountResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return GetConsolidatedFulfillmentCountResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): GetConsolidatedFulfillmentCountResponseType
     {
@@ -67,7 +66,6 @@ class GetConsolidatedFulfillmentCountResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType|null  $responseData
-     * @return GetConsolidatedFulfillmentCountResponseType
      */
     public function withResponseData(GetConsolidatedFulfillmentCountResponseDataType|null $responseData): GetConsolidatedFulfillmentCountResponseType
     {

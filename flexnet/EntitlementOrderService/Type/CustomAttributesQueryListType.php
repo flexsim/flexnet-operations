@@ -37,7 +37,6 @@ class CustomAttributesQueryListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType>|null  $attribute
-     * @return CustomAttributesQueryListType
      */
     public function withAttribute(CustomAttributeQueryType|array|null $attribute): CustomAttributesQueryListType
     {

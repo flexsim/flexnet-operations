@@ -45,7 +45,6 @@ class ReinstallPolicyDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType|null  $defaultPolicy
-     * @return ReinstallPolicyDataType
      */
     public function withDefaultPolicy(PolicyDataType|null $defaultPolicy): ReinstallPolicyDataType
     {
@@ -65,7 +64,6 @@ class ReinstallPolicyDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType|null  $advancedPolicy
-     * @return ReinstallPolicyDataType
      */
     public function withAdvancedPolicy(AdvancedReinstallPolicyType|null $advancedPolicy): ReinstallPolicyDataType
     {

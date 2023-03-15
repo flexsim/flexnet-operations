@@ -55,7 +55,6 @@ class EmergencyFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return EmergencyFulfillmentResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): EmergencyFulfillmentResponseType
     {
@@ -75,7 +74,6 @@ class EmergencyFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\EmergencyResponseDataType|null  $responseData
-     * @return EmergencyFulfillmentResponseType
      */
     public function withResponseData(EmergencyResponseDataType|null $responseData): EmergencyFulfillmentResponseType
     {
@@ -95,7 +93,6 @@ class EmergencyFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedEmergencyResponselistDataType|null  $failedData
-     * @return EmergencyFulfillmentResponseType
      */
     public function withFailedData(FailedEmergencyResponselistDataType|null $failedData): EmergencyFulfillmentResponseType
     {

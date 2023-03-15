@@ -39,7 +39,6 @@ class CreateBulkEntitlementRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType>  $bulkEntitlement
-     * @return CreateBulkEntitlementRequestType
      */
     public function withBulkEntitlement(CreateBulkEntitlementDataType|array $bulkEntitlement): CreateBulkEntitlementRequestType
     {

@@ -37,7 +37,6 @@ class DeleteMaintenanceLineItemDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $maintenanceLineItemIdentifier
-     * @return DeleteMaintenanceLineItemDataType
      */
     public function withMaintenanceLineItemIdentifier(EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier): DeleteMaintenanceLineItemDataType
     {

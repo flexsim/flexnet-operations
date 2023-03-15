@@ -55,7 +55,6 @@ class ReplaceOnlyEntitlementLineItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return ReplaceOnlyEntitlementLineItemResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): ReplaceOnlyEntitlementLineItemResponseType
     {
@@ -75,7 +74,6 @@ class ReplaceOnlyEntitlementLineItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataListType|null  $failedData
-     * @return ReplaceOnlyEntitlementLineItemResponseType
      */
     public function withFailedData(FailedAddEntitlementLineItemDataListType|null $failedData): ReplaceOnlyEntitlementLineItemResponseType
     {
@@ -95,7 +93,6 @@ class ReplaceOnlyEntitlementLineItemResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataListType|null  $responseData
-     * @return ReplaceOnlyEntitlementLineItemResponseType
      */
     public function withResponseData(AddedEntitlementLineItemDataListType|null $responseData): ReplaceOnlyEntitlementLineItemResponseType
     {

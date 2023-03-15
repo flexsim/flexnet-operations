@@ -245,7 +245,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @return UpdateBulkEntitlementDataType
      */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): UpdateBulkEntitlementDataType
     {
@@ -265,7 +264,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\IdType|null  $entitlementId
-     * @return UpdateBulkEntitlementDataType
      */
     public function withEntitlementId(IdType|null $entitlementId): UpdateBulkEntitlementDataType
     {
@@ -275,18 +273,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSoldTo(): string|null
     {
         return $this->soldTo;
     }
 
-    /**
-     * @param  string|null  $soldTo
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withSoldTo(string|null $soldTo): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -305,7 +296,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
-     * @return UpdateBulkEntitlementDataType
      */
     public function withProduct(ProductIdentifierType|null $product): UpdateBulkEntitlementDataType
     {
@@ -325,7 +315,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
-     * @return UpdateBulkEntitlementDataType
      */
     public function withPartNumber(PartNumberIdentifierType|null $partNumber): UpdateBulkEntitlementDataType
     {
@@ -345,7 +334,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $licenseModel
-     * @return UpdateBulkEntitlementDataType
      */
     public function withLicenseModel(LicenseModelIdentifierType|null $licenseModel): UpdateBulkEntitlementDataType
     {
@@ -365,7 +353,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel1
-     * @return UpdateBulkEntitlementDataType
      */
     public function withAlternateLicenseModel1(LicenseModelIdentifierType|null $alternateLicenseModel1): UpdateBulkEntitlementDataType
     {
@@ -385,7 +372,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel2
-     * @return UpdateBulkEntitlementDataType
      */
     public function withAlternateLicenseModel2(LicenseModelIdentifierType|null $alternateLicenseModel2): UpdateBulkEntitlementDataType
     {
@@ -405,7 +391,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @return UpdateBulkEntitlementDataType
      */
     public function withLicenseModelAttributes(AttributeDescriptorDataType|null $licenseModelAttributes): UpdateBulkEntitlementDataType
     {
@@ -415,18 +400,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getFNPTimeZoneValue(): string|null
     {
         return $this->FNPTimeZoneValue;
     }
 
-    /**
-     * @param  string|null  $FNPTimeZoneValue
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withFNPTimeZoneValue(string|null $FNPTimeZoneValue): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -445,7 +423,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
-     * @return UpdateBulkEntitlementDataType
      */
     public function withPolicyAttributes(PolicyAttributesListType|null $policyAttributes): UpdateBulkEntitlementDataType
     {
@@ -455,18 +432,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToEmail(): string|null
     {
         return $this->shipToEmail;
     }
 
-    /**
-     * @param  string|null  $shipToEmail
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withShipToEmail(string|null $shipToEmail): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -475,18 +445,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getShipToAddress(): string|null
     {
         return $this->shipToAddress;
     }
 
-    /**
-     * @param  string|null  $shipToAddress
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withShipToAddress(string|null $shipToAddress): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -495,18 +458,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getOrderId(): string|null
     {
         return $this->orderId;
     }
 
-    /**
-     * @param  string|null  $orderId
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withOrderId(string|null $orderId): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -515,18 +471,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getOrderLineNumber(): string|null
     {
         return $this->orderLineNumber;
     }
 
-    /**
-     * @param  string|null  $orderLineNumber
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withOrderLineNumber(string|null $orderLineNumber): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -535,18 +484,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getStartDateOption(): string|null
     {
         return $this->startDateOption;
     }
 
-    /**
-     * @param  string|null  $startDateOption
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withStartDateOption(string|null $startDateOption): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -555,18 +497,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getIsPermanent(): bool|null
     {
         return $this->isPermanent;
     }
 
-    /**
-     * @param  bool|null  $isPermanent
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withIsPermanent(bool|null $isPermanent): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -585,7 +520,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $term
-     * @return UpdateBulkEntitlementDataType
      */
     public function withTerm(DurationType|null $term): UpdateBulkEntitlementDataType
     {
@@ -595,18 +529,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface|null
-     */
     public function getExpirationDate(): \DateTimeInterface|null
     {
         return $this->expirationDate;
     }
 
-    /**
-     * @param  \DateTimeInterface|null  $expirationDate
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withExpirationDate(\DateTimeInterface|null $expirationDate): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -615,18 +542,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \DateTimeInterface|null
-     */
     public function getVersionDate(): \DateTimeInterface|null
     {
         return $this->versionDate;
     }
 
-    /**
-     * @param  \DateTimeInterface|null  $versionDate
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withVersionDate(\DateTimeInterface|null $versionDate): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -645,7 +565,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null  $versionDateAttributes
-     * @return UpdateBulkEntitlementDataType
      */
     public function withVersionDateAttributes(VersionDateAttributesType|null $versionDateAttributes): UpdateBulkEntitlementDataType
     {
@@ -655,18 +574,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return int|null
-     */
     public function getNumberOfCopies(): int|null
     {
         return $this->numberOfCopies;
     }
 
-    /**
-     * @param  int|null  $numberOfCopies
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withNumberOfCopies(int|null $numberOfCopies): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -675,18 +587,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return string|null
-     */
     public function getDescription(): string|null
     {
         return $this->description;
     }
 
-    /**
-     * @param  string|null  $description
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withDescription(string|null $description): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -695,18 +600,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getAutoDeploy(): bool|null
     {
         return $this->autoDeploy;
     }
 
-    /**
-     * @param  bool|null  $autoDeploy
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withAutoDeploy(bool|null $autoDeploy): UpdateBulkEntitlementDataType
     {
         $new = clone $this;
@@ -725,7 +623,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateEntitledProductDataListType|null  $updatedEntitledProducts
-     * @return UpdateBulkEntitlementDataType
      */
     public function withUpdatedEntitledProducts(UpdateEntitledProductDataListType|null $updatedEntitledProducts): UpdateBulkEntitlementDataType
     {
@@ -745,7 +642,6 @@ class UpdateBulkEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType|null  $channelPartners
-     * @return UpdateBulkEntitlementDataType
      */
     public function withChannelPartners(ChannelPartnerDataListType|null $channelPartners): UpdateBulkEntitlementDataType
     {
@@ -755,18 +651,11 @@ class UpdateBulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getAllowPortalLogin(): bool|null
     {
         return $this->allowPortalLogin;
     }
 
-    /**
-     * @param  bool|null  $allowPortalLogin
-     * @return UpdateBulkEntitlementDataType
-     */
     public function withAllowPortalLogin(bool|null $allowPortalLogin): UpdateBulkEntitlementDataType
     {
         $new = clone $this;

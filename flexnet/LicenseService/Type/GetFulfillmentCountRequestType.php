@@ -47,7 +47,6 @@ class GetFulfillmentCountRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType|null  $queryParams
-     * @return GetFulfillmentCountRequestType
      */
     public function withQueryParams(FulfillmentsQueryParametersType|null $queryParams): GetFulfillmentCountRequestType
     {
@@ -57,18 +56,11 @@ class GetFulfillmentCountRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getExcludeInactiveObsoleteLineItems(): bool|null
     {
         return $this->excludeInactiveObsoleteLineItems;
     }
 
-    /**
-     * @param  bool|null  $excludeInactiveObsoleteLineItems
-     * @return GetFulfillmentCountRequestType
-     */
     public function withExcludeInactiveObsoleteLineItems(bool|null $excludeInactiveObsoleteLineItems): GetFulfillmentCountRequestType
     {
         $new = clone $this;

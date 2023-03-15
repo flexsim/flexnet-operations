@@ -39,7 +39,6 @@ class UpdateSimpleEntitlementRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType>  $simpleEntitlement
-     * @return UpdateSimpleEntitlementRequestType
      */
     public function withSimpleEntitlement(UpdateSimpleEntitlementDataType|array $simpleEntitlement): UpdateSimpleEntitlementRequestType
     {

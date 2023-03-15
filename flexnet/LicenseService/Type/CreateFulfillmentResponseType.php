@@ -55,7 +55,6 @@ class CreateFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return CreateFulfillmentResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): CreateFulfillmentResponseType
     {
@@ -75,7 +74,6 @@ class CreateFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedFulfillmentDataListType|null  $failedData
-     * @return CreateFulfillmentResponseType
      */
     public function withFailedData(FailedFulfillmentDataListType|null $failedData): CreateFulfillmentResponseType
     {
@@ -95,7 +93,6 @@ class CreateFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\CreatedFulfillmentDataListType|null  $responseData
-     * @return CreateFulfillmentResponseType
      */
     public function withResponseData(CreatedFulfillmentDataListType|null $responseData): CreateFulfillmentResponseType
     {

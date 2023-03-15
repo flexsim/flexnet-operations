@@ -63,7 +63,6 @@ class GetEntitlementAttributesResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return GetEntitlementAttributesResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): GetEntitlementAttributesResponseType
     {
@@ -83,7 +82,6 @@ class GetEntitlementAttributesResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorDataType|null  $entitlementAttributes
-     * @return GetEntitlementAttributesResponseType
      */
     public function withEntitlementAttributes(AttributeMetaDescriptorDataType|null $entitlementAttributes): GetEntitlementAttributesResponseType
     {
@@ -103,7 +101,6 @@ class GetEntitlementAttributesResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType|null  $policyAttributes
-     * @return GetEntitlementAttributesResponseType
      */
     public function withPolicyAttributes(PolicyAttributesDataType|null $policyAttributes): GetEntitlementAttributesResponseType
     {
@@ -113,18 +110,11 @@ class GetEntitlementAttributesResponseType implements ResultInterface
         return $new;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getNeedTimeZone(): bool|null
     {
         return $this->needTimeZone;
     }
 
-    /**
-     * @param  bool|null  $needTimeZone
-     * @return GetEntitlementAttributesResponseType
-     */
     public function withNeedTimeZone(bool|null $needTimeZone): GetEntitlementAttributesResponseType
     {
         $new = clone $this;

@@ -37,7 +37,6 @@ class TransferLineItemsListType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType>  $lineItemInfo
-     * @return TransferLineItemsListType
      */
     public function withLineItemInfo(TransferLineItemInfoType|array $lineItemInfo): TransferLineItemsListType
     {

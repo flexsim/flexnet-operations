@@ -18,7 +18,6 @@ class FailedLineItemStateDataType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType  $lineItem
-     * @param  string  $reason
      */
     public function __construct(LineItemStateDataType $lineItem, string $reason)
     {
@@ -28,7 +27,6 @@ class FailedLineItemStateDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType  $lineItem
-     * @param  string  $reason
      */
     public static function create(LineItemStateDataType $lineItem, string $reason)
     {
@@ -45,7 +43,6 @@ class FailedLineItemStateDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType  $lineItem
-     * @return FailedLineItemStateDataType
      */
     public function withLineItem(LineItemStateDataType $lineItem): FailedLineItemStateDataType
     {
@@ -55,18 +52,11 @@ class FailedLineItemStateDataType
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function getReason(): string
     {
         return $this->reason;
     }
 
-    /**
-     * @param  string  $reason
-     * @return FailedLineItemStateDataType
-     */
     public function withReason(string $reason): FailedLineItemStateDataType
     {
         $new = clone $this;

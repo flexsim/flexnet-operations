@@ -55,7 +55,6 @@ class RehostFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return RehostFulfillmentResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): RehostFulfillmentResponseType
     {
@@ -75,7 +74,6 @@ class RehostFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\RehostResponseDataType|null  $responseData
-     * @return RehostFulfillmentResponseType
      */
     public function withResponseData(RehostResponseDataType|null $responseData): RehostFulfillmentResponseType
     {
@@ -95,7 +93,6 @@ class RehostFulfillmentResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null  $failedData
-     * @return RehostFulfillmentResponseType
      */
     public function withFailedData(FailedRehostResponselistDataType|null $failedData): RehostFulfillmentResponseType
     {

@@ -55,7 +55,6 @@ class AdvancedFulfillmentLCResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return AdvancedFulfillmentLCResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): AdvancedFulfillmentLCResponseType
     {
@@ -75,7 +74,6 @@ class AdvancedFulfillmentLCResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataListType|null  $responseData
-     * @return AdvancedFulfillmentLCResponseType
      */
     public function withResponseData(AdvancedFmtLCResponseDataListType|null $responseData): AdvancedFulfillmentLCResponseType
     {
@@ -95,7 +93,6 @@ class AdvancedFulfillmentLCResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedAdvancedFmtLCResponseDataType|null  $failedData
-     * @return AdvancedFulfillmentLCResponseType
      */
     public function withFailedData(FailedAdvancedFmtLCResponseDataType|null $failedData): AdvancedFulfillmentLCResponseType
     {

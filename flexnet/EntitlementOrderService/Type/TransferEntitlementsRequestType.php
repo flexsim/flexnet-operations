@@ -39,7 +39,6 @@ class TransferEntitlementsRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementsListType  $entitlementList
-     * @return TransferEntitlementsRequestType
      */
     public function withEntitlementList(TransferEntitlementsListType $entitlementList): TransferEntitlementsRequestType
     {

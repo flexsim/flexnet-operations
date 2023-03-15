@@ -39,7 +39,6 @@ class SetEntitlementStateRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateDataType>  $entitlement
-     * @return SetEntitlementStateRequestType
      */
     public function withEntitlement(EntitlementStateDataType|array $entitlement): SetEntitlementStateRequestType
     {

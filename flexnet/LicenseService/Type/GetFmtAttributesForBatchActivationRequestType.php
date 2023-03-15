@@ -39,7 +39,6 @@ class GetFmtAttributesForBatchActivationRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\ActivationIdsListType  $activationIds
-     * @return GetFmtAttributesForBatchActivationRequestType
      */
     public function withActivationIds(ActivationIdsListType $activationIds): GetFmtAttributesForBatchActivationRequestType
     {

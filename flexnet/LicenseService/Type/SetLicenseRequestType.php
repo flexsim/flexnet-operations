@@ -39,7 +39,6 @@ class SetLicenseRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\OnholdFulfillmentListType  $onholdFulfillmentList
-     * @return SetLicenseRequestType
      */
     public function withOnholdFulfillmentList(OnholdFulfillmentListType $onholdFulfillmentList): SetLicenseRequestType
     {

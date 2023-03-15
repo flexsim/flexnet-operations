@@ -55,7 +55,6 @@ class TransferLineItemsResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @return TransferLineItemsResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): TransferLineItemsResponseType
     {
@@ -75,7 +74,6 @@ class TransferLineItemsResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemsListType|null  $responseData
-     * @return TransferLineItemsResponseType
      */
     public function withResponseData(TransferredLineItemsListType|null $responseData): TransferLineItemsResponseType
     {
@@ -95,7 +93,6 @@ class TransferLineItemsResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemListType|null  $failedData
-     * @return TransferLineItemsResponseType
      */
     public function withFailedData(FailedTransferLineItemListType|null $failedData): TransferLineItemsResponseType
     {

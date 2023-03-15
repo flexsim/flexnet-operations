@@ -47,7 +47,6 @@ class TransferHostResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @return TransferHostResponseType
      */
     public function withStatusInfo(StatusInfoType $statusInfo): TransferHostResponseType
     {
@@ -67,7 +66,6 @@ class TransferHostResponseType implements ResultInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\FailedTransferHostListDataType|null  $failedData
-     * @return TransferHostResponseType
      */
     public function withFailedData(FailedTransferHostListDataType|null $failedData): TransferHostResponseType
     {
