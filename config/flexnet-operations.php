@@ -22,11 +22,15 @@ return [
     */
 
     'entitlementOrderService' => [
-        'wsdl' => env('FLEXNET_URL').'/services/v4/EntitlementOrderService?wsdl',
+        'wsdl' => env('FLEXNET_URL').'/flexnet/services/v4/EntitlementOrderService?wsdl',
     ],
 
     'licenseService' => [
-        'wsdl' => env('FLEXNET_URL').'/services/v1/LicenseService?wsdl',
+        'wsdl' => env('FLEXNET_URL').'/flexnet/services/v1/LicenseService?wsdl',
+    ],
+
+    'licenseService' => [
+        'wsdl' => env('FLEXNET_URL').'/flexnet/services/v2/ProductPackagingService?wsdl',
     ],
 
 ];
