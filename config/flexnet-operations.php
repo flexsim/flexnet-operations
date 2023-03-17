@@ -29,7 +29,7 @@ return [
         'wsdl' => env('FLEXNET_URL').'/flexnet/services/v1/LicenseService?wsdl',
     ],
 
-    'licenseService' => [
+    'productPackagingService' => [
         'wsdl' => env('FLEXNET_URL').'/flexnet/services/v2/ProductPackagingService?wsdl',
     ],
 
