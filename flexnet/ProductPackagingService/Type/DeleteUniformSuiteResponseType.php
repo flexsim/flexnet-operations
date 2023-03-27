@@ -2,9 +2,9 @@
 
 namespace Flexnet\ProductPackagingService\Type;
 
-use Phpro\SoapClient\Type\ResultInterface;
+use Flexnet\ProductPackagingService\Result;
 
-class DeleteUniformSuiteResponseType implements ResultInterface
+class DeleteUniformSuiteResponseType extends Result
 {
     /**
      * @var \Flexnet\ProductPackagingService\Type\StatusInfoType

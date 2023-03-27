@@ -2,9 +2,9 @@
 
 namespace Flexnet\EntitlementOrderService\Type;
 
-use Phpro\SoapClient\Type\ResultInterface;
+use Flexnet\EntitlementOrderService\Result;
 
-class SetMaintenanceLineItemStateResponseType implements ResultInterface
+class SetMaintenanceLineItemStateResponseType extends Result
 {
     /**
      * @var \Flexnet\EntitlementOrderService\Type\StatusInfoType

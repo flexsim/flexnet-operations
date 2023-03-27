@@ -2,9 +2,9 @@
 
 namespace Flexnet\EntitlementOrderService\Type;
 
-use Phpro\SoapClient\Type\ResultInterface;
+use Flexnet\EntitlementOrderService\Result;
 
-class EmailEntitlementResponseType implements ResultInterface
+class EmailEntitlementResponseType extends Result
 {
     /**
      * @var \Flexnet\EntitlementOrderService\Type\StatusInfoType

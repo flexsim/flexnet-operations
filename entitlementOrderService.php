@@ -1,5 +1,6 @@
 <?php
 
+use Flexnet\EntitlementOrderService\Result;
 use Flexsim\FlexnetOperations\Assembler as FlexnetAssembler;
 use Phpro\SoapClient\CodeGenerator\Assembler;
 use Phpro\SoapClient\CodeGenerator\Config\Config;
@@ -48,7 +49,7 @@ return Config::create()
         new Rules\IsResultRule(
             $engine->getMetadata(),
             new Rules\MultiRule([
-                new Rules\AssembleRule(new Assembler\ResultAssembler()),
+                new Rules\AssembleRule(new FlexnetAssembler\ResultAssembler(Result::class)),
             ])
         )
     );

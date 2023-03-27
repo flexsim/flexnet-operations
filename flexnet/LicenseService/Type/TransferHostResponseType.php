@@ -2,9 +2,9 @@
 
 namespace Flexnet\LicenseService\Type;
 
-use Phpro\SoapClient\Type\ResultInterface;
+use Flexnet\LicenseService\Result;
 
-class TransferHostResponseType implements ResultInterface
+class TransferHostResponseType extends Result
 {
     /**
      * @var \Flexnet\LicenseService\Type\StatusInfoType

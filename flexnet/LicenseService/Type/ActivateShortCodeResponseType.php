@@ -2,9 +2,9 @@
 
 namespace Flexnet\LicenseService\Type;
 
-use Phpro\SoapClient\Type\ResultInterface;
+use Flexnet\LicenseService\Result;
 
-class ActivateShortCodeResponseType implements ResultInterface
+class ActivateShortCodeResponseType extends Result
 {
     /**
      * @var \Flexnet\LicenseService\Type\StatusInfoType

@@ -2,9 +2,9 @@
 
 namespace Flexnet\LicenseService\Type;
 
-use Phpro\SoapClient\Type\ResultInterface;
+use Flexnet\LicenseService\Result;
 
-class GetFulfillmentHistoryResponseType implements ResultInterface
+class GetFulfillmentHistoryResponseType extends Result
 {
     /**
      * @var \Flexnet\LicenseService\Type\StatusInfoType
