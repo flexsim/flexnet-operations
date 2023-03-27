@@ -2,7 +2,7 @@
 
 namespace Flexnet\LicenseService;
 
-use FailedOperation;
+use Flexsim\FlexnetOperations\Exceptions\FailedOperation;
 use Flexsim\FlexnetOperations\FlexnetResultInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 
