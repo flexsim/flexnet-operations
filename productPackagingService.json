@@ -1564,6 +1564,7 @@
                         "sequence": {
                             "element": {
                                 "_maxOccurs": "unbounded",
+                                "_minOccurs": "0",
                                 "_name": "featureBundle",
                                 "_type": "impl:featureBundleIdentifierWithCountDataType"
                             }

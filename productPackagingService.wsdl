@@ -582,7 +582,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
             </complexType>
             <complexType name="featureBundlesListType">
                 <sequence>
-                    <element maxOccurs="unbounded" name="featureBundle" type="impl:featureBundleIdentifierWithCountDataType"/>
+                    <element maxOccurs="unbounded" minOccurs="0" name="featureBundle" type="impl:featureBundleIdentifierWithCountDataType"/>
                 </sequence>
             </complexType>
             <complexType name="licenseModelPKType">
