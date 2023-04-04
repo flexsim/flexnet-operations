@@ -332,7 +332,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
             </complexType>
             <complexType name="featuresListType">
                 <sequence>
-                    <element maxOccurs="unbounded" name="feature" type="impl:featureIdentifierWithCountDataType"/>
+                    <element maxOccurs="unbounded" minOccurs="0" name="feature" type="impl:featureIdentifierWithCountDataType"/>
                 </sequence>
             </complexType>
             <complexType name="createFeatureBundleDataType">
@@ -1788,12 +1788,12 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
                 </sequence>
             </complexType>
             <complexType name="updateProductRelationshipDataType">
-                    <sequence>
-                        <element name="productToRelate" type="impl:productIdentifierType"/>
-                        <element name="relatedProduct" type="impl:productIdentifierType"/>
-                        <element name="relation" type="impl:relationshipType"/>
-                        <element name="newRelation" type="impl:relationshipType"/>
-                    </sequence>
+                <sequence>
+                    <element name="productToRelate" type="impl:productIdentifierType"/>
+                    <element name="relatedProduct" type="impl:productIdentifierType"/>
+                    <element name="relation" type="impl:relationshipType"/>
+                    <element name="newRelation" type="impl:relationshipType"/>
+                </sequence>
             </complexType>
             <complexType name="createProductRelationshipRequestType">
                 <sequence>

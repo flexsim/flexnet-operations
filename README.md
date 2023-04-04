@@ -46,6 +46,7 @@ echo $flexnetOperations->echoPhrase('Hello, Flexsim!');
 1. Fix types in wsdl files
    1. ProductPackagineService
       - featureBundlesListType - add minOccurs="0" to the "featureBundle" property
+      - featuresListType - add minOccurs="0" to the "feature" property
    2. LicenseService
       - fulfillmentHistoryDetailsType - add minOccurs="0" to the "record" property
 

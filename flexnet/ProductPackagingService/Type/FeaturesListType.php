@@ -5,40 +5,40 @@ namespace Flexnet\ProductPackagingService\Type;
 class FeaturesListType
 {
     /**
-     * @var \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>
+     * @var \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null
      */
     private $feature;
 
     /**
      * Constructor
      *
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>  $feature
+     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null  $feature
      */
-    public function __construct(FeatureIdentifierWithCountDataType|array $feature)
+    public function __construct(FeatureIdentifierWithCountDataType|array|null $feature = null)
     {
         $this->feature = $feature;
     }
 
     /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>  $feature
+     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null  $feature
      */
-    public static function create(FeatureIdentifierWithCountDataType|array $feature)
+    public static function create(FeatureIdentifierWithCountDataType|array|null $feature = null)
     {
         return new static(...\func_get_args());
     }
 
     /**
-     * @return \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>
+     * @return \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null
      */
-    public function getFeature(): FeatureIdentifierWithCountDataType|array
+    public function getFeature(): FeatureIdentifierWithCountDataType|array|null
     {
         return $this->feature;
     }
 
     /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>  $feature
+     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null  $feature
      */
-    public function withFeature(FeatureIdentifierWithCountDataType|array $feature): FeaturesListType
+    public function withFeature(FeatureIdentifierWithCountDataType|array|null $feature): FeaturesListType
     {
         $new = clone $this;
         $new->feature = $feature;
