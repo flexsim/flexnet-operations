@@ -18,36 +18,23 @@ class GetHostAttributesResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\GetHostAttributesDataType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, GetHostAttributesDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetHostAttributesDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\GetHostAttributesDataType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, GetHostAttributesDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetHostAttributesDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetHostAttributesResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetHostAttributesResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\GetHostAttributesDataType|null
-     */
-    public function getResponseData(): GetHostAttributesDataType|null
+    public function getResponseData(): ?GetHostAttributesDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\GetHostAttributesDataType|null  $responseData
-     */
-    public function withResponseData(GetHostAttributesDataType|null $responseData): GetHostAttributesResponseType
+    public function withResponseData(?GetHostAttributesDataType $responseData): GetHostAttributesResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

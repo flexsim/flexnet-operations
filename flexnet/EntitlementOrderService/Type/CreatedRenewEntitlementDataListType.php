@@ -14,7 +14,7 @@ class CreatedRenewEntitlementDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType>|null  $entitlementData
      */
-    public function __construct(CreatedRenewEntitlementDataType|array|null $entitlementData = null)
+    public function __construct(CreatedRenewEntitlementDataType|array $entitlementData = null)
     {
         $this->entitlementData = $entitlementData;
     }
@@ -22,7 +22,7 @@ class CreatedRenewEntitlementDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType>|null  $entitlementData
      */
-    public static function create(CreatedRenewEntitlementDataType|array|null $entitlementData = null)
+    public static function create(CreatedRenewEntitlementDataType|array $entitlementData = null)
     {
         return new static(...\func_get_args());
     }

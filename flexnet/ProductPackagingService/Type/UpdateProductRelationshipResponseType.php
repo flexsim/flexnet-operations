@@ -18,36 +18,23 @@ class UpdateProductRelationshipResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateProductRelationshipDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedUpdateProductRelationshipDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedUpdateProductRelationshipDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateProductRelationshipDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedUpdateProductRelationshipDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedUpdateProductRelationshipDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): UpdateProductRelationshipResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class UpdateProductRelationshipResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedUpdateProductRelationshipDataListType|null
-     */
-    public function getFailedData(): FailedUpdateProductRelationshipDataListType|null
+    public function getFailedData(): ?FailedUpdateProductRelationshipDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateProductRelationshipDataListType|null  $failedData
-     */
-    public function withFailedData(FailedUpdateProductRelationshipDataListType|null $failedData): UpdateProductRelationshipResponseType
+    public function withFailedData(?FailedUpdateProductRelationshipDataListType $failedData): UpdateProductRelationshipResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

@@ -13,33 +13,22 @@ class ConsolidateFulfillmentsRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierListType  $fulfillments
      */
     public function __construct(FulfillmentIdentifierListType $fulfillments)
     {
         $this->fulfillments = $fulfillments;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierListType  $fulfillments
-     */
     public static function create(FulfillmentIdentifierListType $fulfillments)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FulfillmentIdentifierListType
-     */
     public function getFulfillments(): FulfillmentIdentifierListType
     {
         return $this->fulfillments;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierListType  $fulfillments
-     */
     public function withFulfillments(FulfillmentIdentifierListType $fulfillments): ConsolidateFulfillmentsRequestType
     {
         $new = clone $this;

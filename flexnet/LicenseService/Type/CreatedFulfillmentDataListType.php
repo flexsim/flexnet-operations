@@ -20,7 +20,7 @@ class CreatedFulfillmentDataListType
      * @param  \Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedFulfillmentDataType>|null  $createdFulfillment
      * @param  \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array<\Flexnet\LicenseService\Type\VerifiedFulfillmentDataType>|null  $verifiedFulfillment
      */
-    public function __construct(CreatedFulfillmentDataType|array|null $createdFulfillment = null, VerifiedFulfillmentDataType|array|null $verifiedFulfillment = null)
+    public function __construct(CreatedFulfillmentDataType|array $createdFulfillment = null, VerifiedFulfillmentDataType|array $verifiedFulfillment = null)
     {
         $this->createdFulfillment = $createdFulfillment;
         $this->verifiedFulfillment = $verifiedFulfillment;
@@ -30,7 +30,7 @@ class CreatedFulfillmentDataListType
      * @param  \Flexnet\LicenseService\Type\CreatedFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreatedFulfillmentDataType>|null  $createdFulfillment
      * @param  \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType|array<\Flexnet\LicenseService\Type\VerifiedFulfillmentDataType>|null  $verifiedFulfillment
      */
-    public static function create(CreatedFulfillmentDataType|array|null $createdFulfillment = null, VerifiedFulfillmentDataType|array|null $verifiedFulfillment = null)
+    public static function create(CreatedFulfillmentDataType|array $createdFulfillment = null, VerifiedFulfillmentDataType|array $verifiedFulfillment = null)
     {
         return new static(...\func_get_args());
     }

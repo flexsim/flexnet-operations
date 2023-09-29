@@ -11,34 +11,23 @@ class LicenseTechnologyQueryParametersType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $name
      */
-    public function __construct(SimpleQueryType|null $name = null)
+    public function __construct(SimpleQueryType $name = null)
     {
         $this->name = $name;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $name
-     */
-    public static function create(SimpleQueryType|null $name = null)
+    public static function create(SimpleQueryType $name = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getName(): SimpleQueryType|null
+    public function getName(): ?SimpleQueryType
     {
         return $this->name;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $name
-     */
-    public function withName(SimpleQueryType|null $name): LicenseTechnologyQueryParametersType
+    public function withName(?SimpleQueryType $name): LicenseTechnologyQueryParametersType
     {
         $new = clone $this;
         $new->name = $name;

@@ -26,9 +26,6 @@ class UpdateProductRelationshipDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $productToRelate
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $relatedProduct
      */
     public function __construct(ProductIdentifierType $productToRelate, ProductIdentifierType $relatedProduct, string $relation, string $newRelation)
     {
@@ -38,26 +35,16 @@ class UpdateProductRelationshipDataType
         $this->newRelation = $newRelation;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $productToRelate
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $relatedProduct
-     */
     public static function create(ProductIdentifierType $productToRelate, ProductIdentifierType $relatedProduct, string $relation, string $newRelation)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\ProductIdentifierType
-     */
     public function getProductToRelate(): ProductIdentifierType
     {
         return $this->productToRelate;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $productToRelate
-     */
     public function withProductToRelate(ProductIdentifierType $productToRelate): UpdateProductRelationshipDataType
     {
         $new = clone $this;
@@ -66,17 +53,11 @@ class UpdateProductRelationshipDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\ProductIdentifierType
-     */
     public function getRelatedProduct(): ProductIdentifierType
     {
         return $this->relatedProduct;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $relatedProduct
-     */
     public function withRelatedProduct(ProductIdentifierType $relatedProduct): UpdateProductRelationshipDataType
     {
         $new = clone $this;

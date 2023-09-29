@@ -26,13 +26,8 @@ class FeatureOverrideParamsType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $vendorString
-     * @param  string|null  $notice
-     * @param  string|null  $serialNumber
-     * @param  \Flexnet\ProductPackagingService\Type\DupGroupDataType|null  $dupGroup
      */
-    public function __construct(string|null $vendorString = null, string|null $notice = null, string|null $serialNumber = null, DupGroupDataType|null $dupGroup = null)
+    public function __construct(string $vendorString = null, string $notice = null, string $serialNumber = null, DupGroupDataType $dupGroup = null)
     {
         $this->vendorString = $vendorString;
         $this->notice = $notice;
@@ -40,23 +35,17 @@ class FeatureOverrideParamsType
         $this->dupGroup = $dupGroup;
     }
 
-    /**
-     * @param  string|null  $vendorString
-     * @param  string|null  $notice
-     * @param  string|null  $serialNumber
-     * @param  \Flexnet\ProductPackagingService\Type\DupGroupDataType|null  $dupGroup
-     */
-    public static function create(string|null $vendorString = null, string|null $notice = null, string|null $serialNumber = null, DupGroupDataType|null $dupGroup = null)
+    public static function create(string $vendorString = null, string $notice = null, string $serialNumber = null, DupGroupDataType $dupGroup = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getVendorString(): string|null
+    public function getVendorString(): ?string
     {
         return $this->vendorString;
     }
 
-    public function withVendorString(string|null $vendorString): FeatureOverrideParamsType
+    public function withVendorString(?string $vendorString): FeatureOverrideParamsType
     {
         $new = clone $this;
         $new->vendorString = $vendorString;
@@ -64,12 +53,12 @@ class FeatureOverrideParamsType
         return $new;
     }
 
-    public function getNotice(): string|null
+    public function getNotice(): ?string
     {
         return $this->notice;
     }
 
-    public function withNotice(string|null $notice): FeatureOverrideParamsType
+    public function withNotice(?string $notice): FeatureOverrideParamsType
     {
         $new = clone $this;
         $new->notice = $notice;
@@ -77,12 +66,12 @@ class FeatureOverrideParamsType
         return $new;
     }
 
-    public function getSerialNumber(): string|null
+    public function getSerialNumber(): ?string
     {
         return $this->serialNumber;
     }
 
-    public function withSerialNumber(string|null $serialNumber): FeatureOverrideParamsType
+    public function withSerialNumber(?string $serialNumber): FeatureOverrideParamsType
     {
         $new = clone $this;
         $new->serialNumber = $serialNumber;
@@ -90,18 +79,12 @@ class FeatureOverrideParamsType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\DupGroupDataType|null
-     */
-    public function getDupGroup(): DupGroupDataType|null
+    public function getDupGroup(): ?DupGroupDataType
     {
         return $this->dupGroup;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\DupGroupDataType|null  $dupGroup
-     */
-    public function withDupGroup(DupGroupDataType|null $dupGroup): FeatureOverrideParamsType
+    public function withDupGroup(?DupGroupDataType $dupGroup): FeatureOverrideParamsType
     {
         $new = clone $this;
         $new->dupGroup = $dupGroup;

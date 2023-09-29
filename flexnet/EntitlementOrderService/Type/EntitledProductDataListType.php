@@ -14,7 +14,7 @@ class EntitledProductDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProduct
      */
-    public function __construct(EntitledProductDataType|array|null $entitledProduct = null)
+    public function __construct(EntitledProductDataType|array $entitledProduct = null)
     {
         $this->entitledProduct = $entitledProduct;
     }
@@ -22,7 +22,7 @@ class EntitledProductDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProduct
      */
-    public static function create(EntitledProductDataType|array|null $entitledProduct = null)
+    public static function create(EntitledProductDataType|array $entitledProduct = null)
     {
         return new static(...\func_get_args());
     }

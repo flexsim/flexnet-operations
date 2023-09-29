@@ -16,37 +16,24 @@ class FailedFeatureDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureDataType|null  $feature
-     * @param  string|null  $reason
      */
-    public function __construct(FeatureDataType|null $feature = null, string|null $reason = null)
+    public function __construct(FeatureDataType $feature = null, string $reason = null)
     {
         $this->feature = $feature;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureDataType|null  $feature
-     * @param  string|null  $reason
-     */
-    public static function create(FeatureDataType|null $feature = null, string|null $reason = null)
+    public static function create(FeatureDataType $feature = null, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FeatureDataType|null
-     */
-    public function getFeature(): FeatureDataType|null
+    public function getFeature(): ?FeatureDataType
     {
         return $this->feature;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureDataType|null  $feature
-     */
-    public function withFeature(FeatureDataType|null $feature): FailedFeatureDataType
+    public function withFeature(?FeatureDataType $feature): FailedFeatureDataType
     {
         $new = clone $this;
         $new->feature = $feature;
@@ -54,12 +41,12 @@ class FailedFeatureDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedFeatureDataType
+    public function withReason(?string $reason): FailedFeatureDataType
     {
         $new = clone $this;
         $new->reason = $reason;

@@ -16,8 +16,6 @@ class FailedSplitBulkEntitlementDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType  $bulkEntitlementInfo
      */
     public function __construct(SplitBulkEntitlementInfoType $bulkEntitlementInfo, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedSplitBulkEntitlementDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType  $bulkEntitlementInfo
-     */
     public static function create(SplitBulkEntitlementInfoType $bulkEntitlementInfo, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType
-     */
     public function getBulkEntitlementInfo(): SplitBulkEntitlementInfoType
     {
         return $this->bulkEntitlementInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType  $bulkEntitlementInfo
-     */
     public function withBulkEntitlementInfo(SplitBulkEntitlementInfoType $bulkEntitlementInfo): FailedSplitBulkEntitlementDataType
     {
         $new = clone $this;

@@ -26,13 +26,8 @@ class ProductCategoryDataType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $uniqueId
-     * @param  string|null  $name
-     * @param  string|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\CategoryAttributesDataType|null  $categoryAttributes
      */
-    public function __construct(string|null $uniqueId = null, string|null $name = null, string|null $description = null, CategoryAttributesDataType|null $categoryAttributes = null)
+    public function __construct(string $uniqueId = null, string $name = null, string $description = null, CategoryAttributesDataType $categoryAttributes = null)
     {
         $this->uniqueId = $uniqueId;
         $this->name = $name;
@@ -40,23 +35,17 @@ class ProductCategoryDataType
         $this->categoryAttributes = $categoryAttributes;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @param  string|null  $name
-     * @param  string|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\CategoryAttributesDataType|null  $categoryAttributes
-     */
-    public static function create(string|null $uniqueId = null, string|null $name = null, string|null $description = null, CategoryAttributesDataType|null $categoryAttributes = null)
+    public static function create(string $uniqueId = null, string $name = null, string $description = null, CategoryAttributesDataType $categoryAttributes = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUniqueId(): string|null
+    public function getUniqueId(): ?string
     {
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string|null $uniqueId): ProductCategoryDataType
+    public function withUniqueId(?string $uniqueId): ProductCategoryDataType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -64,12 +53,12 @@ class ProductCategoryDataType
         return $new;
     }
 
-    public function getName(): string|null
+    public function getName(): ?string
     {
         return $this->name;
     }
 
-    public function withName(string|null $name): ProductCategoryDataType
+    public function withName(?string $name): ProductCategoryDataType
     {
         $new = clone $this;
         $new->name = $name;
@@ -77,12 +66,12 @@ class ProductCategoryDataType
         return $new;
     }
 
-    public function getDescription(): string|null
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function withDescription(string|null $description): ProductCategoryDataType
+    public function withDescription(?string $description): ProductCategoryDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -90,18 +79,12 @@ class ProductCategoryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\CategoryAttributesDataType|null
-     */
-    public function getCategoryAttributes(): CategoryAttributesDataType|null
+    public function getCategoryAttributes(): ?CategoryAttributesDataType
     {
         return $this->categoryAttributes;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\CategoryAttributesDataType|null  $categoryAttributes
-     */
-    public function withCategoryAttributes(CategoryAttributesDataType|null $categoryAttributes): ProductCategoryDataType
+    public function withCategoryAttributes(?CategoryAttributesDataType $categoryAttributes): ProductCategoryDataType
     {
         $new = clone $this;
         $new->categoryAttributes = $categoryAttributes;

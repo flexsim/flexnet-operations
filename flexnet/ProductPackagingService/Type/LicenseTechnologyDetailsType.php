@@ -26,10 +26,6 @@ class LicenseTechnologyDetailsType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorsDetailsType  $licenseGenerators
-     * @param  \Flexnet\ProductPackagingService\Type\HostTypeListType  $hostTypes
      */
     public function __construct(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, LicenseGeneratorsDetailsType $licenseGenerators, HostTypeListType $hostTypes, string $state)
     {
@@ -39,27 +35,16 @@ class LicenseTechnologyDetailsType
         $this->state = $state;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorsDetailsType  $licenseGenerators
-     * @param  \Flexnet\ProductPackagingService\Type\HostTypeListType  $hostTypes
-     */
     public static function create(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, LicenseGeneratorsDetailsType $licenseGenerators, HostTypeListType $hostTypes, string $state)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType
-     */
     public function getLicenseTechnologyIdentifier(): LicenseTechnologyIdentifierType
     {
         return $this->licenseTechnologyIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
-     */
     public function withLicenseTechnologyIdentifier(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier): LicenseTechnologyDetailsType
     {
         $new = clone $this;
@@ -68,17 +53,11 @@ class LicenseTechnologyDetailsType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\LicenseGeneratorsDetailsType
-     */
     public function getLicenseGenerators(): LicenseGeneratorsDetailsType
     {
         return $this->licenseGenerators;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorsDetailsType  $licenseGenerators
-     */
     public function withLicenseGenerators(LicenseGeneratorsDetailsType $licenseGenerators): LicenseTechnologyDetailsType
     {
         $new = clone $this;
@@ -87,17 +66,11 @@ class LicenseTechnologyDetailsType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\HostTypeListType
-     */
     public function getHostTypes(): HostTypeListType
     {
         return $this->hostTypes;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\HostTypeListType  $hostTypes
-     */
     public function withHostTypes(HostTypeListType $hostTypes): LicenseTechnologyDetailsType
     {
         $new = clone $this;

@@ -16,31 +16,24 @@ class IdType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $id
-     * @param  bool|null  $autoGenerate
      */
-    public function __construct(string|null $id = null, bool|null $autoGenerate = null)
+    public function __construct(string $id = null, bool $autoGenerate = null)
     {
         $this->id = $id;
         $this->autoGenerate = $autoGenerate;
     }
 
-    /**
-     * @param  string|null  $id
-     * @param  bool|null  $autoGenerate
-     */
-    public static function create(string|null $id = null, bool|null $autoGenerate = null)
+    public static function create(string $id = null, bool $autoGenerate = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getId(): string|null
+    public function getId(): ?string
     {
         return $this->id;
     }
 
-    public function withId(string|null $id): IdType
+    public function withId(?string $id): IdType
     {
         $new = clone $this;
         $new->id = $id;
@@ -48,12 +41,12 @@ class IdType
         return $new;
     }
 
-    public function getAutoGenerate(): bool|null
+    public function getAutoGenerate(): ?bool
     {
         return $this->autoGenerate;
     }
 
-    public function withAutoGenerate(bool|null $autoGenerate): IdType
+    public function withAutoGenerate(?bool $autoGenerate): IdType
     {
         $new = clone $this;
         $new->autoGenerate = $autoGenerate;

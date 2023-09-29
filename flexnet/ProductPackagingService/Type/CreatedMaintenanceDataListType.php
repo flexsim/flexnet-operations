@@ -14,7 +14,7 @@ class CreatedMaintenanceDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType|array<\Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType>|null  $createdMaintenance
      */
-    public function __construct(CreatedMaintenaceDataType|array|null $createdMaintenance = null)
+    public function __construct(CreatedMaintenaceDataType|array $createdMaintenance = null)
     {
         $this->createdMaintenance = $createdMaintenance;
     }
@@ -22,7 +22,7 @@ class CreatedMaintenanceDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType|array<\Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType>|null  $createdMaintenance
      */
-    public static function create(CreatedMaintenaceDataType|array|null $createdMaintenance = null)
+    public static function create(CreatedMaintenaceDataType|array $createdMaintenance = null)
     {
         return new static(...\func_get_args());
     }

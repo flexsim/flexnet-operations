@@ -14,7 +14,7 @@ class StopGapResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\StopGapFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\StopGapFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function __construct(StopGapFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public function __construct(StopGapFulfillmentResponseDataType|array $fulfillmentData = null)
     {
         $this->fulfillmentData = $fulfillmentData;
     }
@@ -22,7 +22,7 @@ class StopGapResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\StopGapFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\StopGapFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public static function create(StopGapFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public static function create(StopGapFulfillmentResponseDataType|array $fulfillmentData = null)
     {
         return new static(...\func_get_args());
     }

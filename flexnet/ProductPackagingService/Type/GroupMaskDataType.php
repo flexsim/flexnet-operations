@@ -14,7 +14,7 @@ class GroupMaskDataType
      *
      * @param  string|array<string>|null  $option
      */
-    public function __construct(string|array|null $option = null)
+    public function __construct(string|array $option = null)
     {
         $this->option = $option;
     }
@@ -22,7 +22,7 @@ class GroupMaskDataType
     /**
      * @param  string|array<string>|null  $option
      */
-    public static function create(string|array|null $option = null)
+    public static function create(string|array $option = null)
     {
         return new static(...\func_get_args());
     }

@@ -14,7 +14,7 @@ class FailedPublisherErrorResponselistDataType
      *
      * @param  \Flexnet\LicenseService\Type\FailedPublisherErrorResponseDataType|array<\Flexnet\LicenseService\Type\FailedPublisherErrorResponseDataType>|null  $failedFulfillment
      */
-    public function __construct(FailedPublisherErrorResponseDataType|array|null $failedFulfillment = null)
+    public function __construct(FailedPublisherErrorResponseDataType|array $failedFulfillment = null)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
@@ -22,7 +22,7 @@ class FailedPublisherErrorResponselistDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedPublisherErrorResponseDataType|array<\Flexnet\LicenseService\Type\FailedPublisherErrorResponseDataType>|null  $failedFulfillment
      */
-    public static function create(FailedPublisherErrorResponseDataType|array|null $failedFulfillment = null)
+    public static function create(FailedPublisherErrorResponseDataType|array $failedFulfillment = null)
     {
         return new static(...\func_get_args());
     }

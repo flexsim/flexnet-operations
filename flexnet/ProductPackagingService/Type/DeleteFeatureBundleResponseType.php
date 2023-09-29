@@ -18,36 +18,23 @@ class DeleteFeatureBundleResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureBundleDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedDeleteFeatureBundleDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedDeleteFeatureBundleDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureBundleDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedDeleteFeatureBundleDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedDeleteFeatureBundleDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): DeleteFeatureBundleResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class DeleteFeatureBundleResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureBundleDataListType|null
-     */
-    public function getFailedData(): FailedDeleteFeatureBundleDataListType|null
+    public function getFailedData(): ?FailedDeleteFeatureBundleDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureBundleDataListType|null  $failedData
-     */
-    public function withFailedData(FailedDeleteFeatureBundleDataListType|null $failedData): DeleteFeatureBundleResponseType
+    public function withFailedData(?FailedDeleteFeatureBundleDataListType $failedData): DeleteFeatureBundleResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

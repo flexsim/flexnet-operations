@@ -18,36 +18,23 @@ class GetWebRegKeyCountResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyCountDataType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, WebRegKeyCountDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, WebRegKeyCountDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyCountDataType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, WebRegKeyCountDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, WebRegKeyCountDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetWebRegKeyCountResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetWebRegKeyCountResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\WebRegKeyCountDataType|null
-     */
-    public function getResponseData(): WebRegKeyCountDataType|null
+    public function getResponseData(): ?WebRegKeyCountDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyCountDataType|null  $responseData
-     */
-    public function withResponseData(WebRegKeyCountDataType|null $responseData): GetWebRegKeyCountResponseType
+    public function withResponseData(?WebRegKeyCountDataType $responseData): GetWebRegKeyCountResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

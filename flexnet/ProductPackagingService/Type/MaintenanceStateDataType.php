@@ -16,8 +16,6 @@ class MaintenanceStateDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenanceIdentifierType  $maintenanceIdentifier
      */
     public function __construct(MaintenanceIdentifierType $maintenanceIdentifier, string $stateToSet)
     {
@@ -25,25 +23,16 @@ class MaintenanceStateDataType
         $this->stateToSet = $stateToSet;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenanceIdentifierType  $maintenanceIdentifier
-     */
     public static function create(MaintenanceIdentifierType $maintenanceIdentifier, string $stateToSet)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\MaintenanceIdentifierType
-     */
     public function getMaintenanceIdentifier(): MaintenanceIdentifierType
     {
         return $this->maintenanceIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenanceIdentifierType  $maintenanceIdentifier
-     */
     public function withMaintenanceIdentifier(MaintenanceIdentifierType $maintenanceIdentifier): MaintenanceStateDataType
     {
         $new = clone $this;

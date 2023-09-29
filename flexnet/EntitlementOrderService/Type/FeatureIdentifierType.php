@@ -16,31 +16,24 @@ class FeatureIdentifierType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\EntitlementOrderService\Type\FeaturePKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, FeaturePKType|null $primaryKeys = null)
+    public function __construct(string $uniqueId = null, FeaturePKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\EntitlementOrderService\Type\FeaturePKType|null  $primaryKeys
-     */
-    public static function create(string|null $uniqueId = null, FeaturePKType|null $primaryKeys = null)
+    public static function create(string $uniqueId = null, FeaturePKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUniqueId(): string|null
+    public function getUniqueId(): ?string
     {
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string|null $uniqueId): FeatureIdentifierType
+    public function withUniqueId(?string $uniqueId): FeatureIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -48,18 +41,12 @@ class FeatureIdentifierType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FeaturePKType|null
-     */
-    public function getPrimaryKeys(): FeaturePKType|null
+    public function getPrimaryKeys(): ?FeaturePKType
     {
         return $this->primaryKeys;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FeaturePKType|null  $primaryKeys
-     */
-    public function withPrimaryKeys(FeaturePKType|null $primaryKeys): FeatureIdentifierType
+    public function withPrimaryKeys(?FeaturePKType $primaryKeys): FeatureIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

@@ -14,7 +14,7 @@ class FailedUnlinkMaintenanceLineItemListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType>|null  $failedUnlinkMaintenanceLineItem
      */
-    public function __construct(FailedUnlinkMaintenanceLineItemDataType|array|null $failedUnlinkMaintenanceLineItem = null)
+    public function __construct(FailedUnlinkMaintenanceLineItemDataType|array $failedUnlinkMaintenanceLineItem = null)
     {
         $this->failedUnlinkMaintenanceLineItem = $failedUnlinkMaintenanceLineItem;
     }
@@ -22,7 +22,7 @@ class FailedUnlinkMaintenanceLineItemListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType>|null  $failedUnlinkMaintenanceLineItem
      */
-    public static function create(FailedUnlinkMaintenanceLineItemDataType|array|null $failedUnlinkMaintenanceLineItem = null)
+    public static function create(FailedUnlinkMaintenanceLineItemDataType|array $failedUnlinkMaintenanceLineItem = null)
     {
         return new static(...\func_get_args());
     }

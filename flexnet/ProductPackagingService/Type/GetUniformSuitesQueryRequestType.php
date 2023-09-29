@@ -28,10 +28,8 @@ class GetUniformSuitesQueryRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\SuiteQueryParametersType|null  $queryParams
      */
-    public function __construct(int $pageNumber, int $batchSize, bool $returnContainedObjects, SuiteQueryParametersType|null $queryParams = null)
+    public function __construct(int $pageNumber, int $batchSize, bool $returnContainedObjects, SuiteQueryParametersType $queryParams = null)
     {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -39,26 +37,17 @@ class GetUniformSuitesQueryRequestType implements RequestInterface
         $this->queryParams = $queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SuiteQueryParametersType|null  $queryParams
-     */
-    public static function create(int $pageNumber, int $batchSize, bool $returnContainedObjects, SuiteQueryParametersType|null $queryParams = null)
+    public static function create(int $pageNumber, int $batchSize, bool $returnContainedObjects, SuiteQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SuiteQueryParametersType|null
-     */
-    public function getQueryParams(): SuiteQueryParametersType|null
+    public function getQueryParams(): ?SuiteQueryParametersType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SuiteQueryParametersType|null  $queryParams
-     */
-    public function withQueryParams(SuiteQueryParametersType|null $queryParams): GetUniformSuitesQueryRequestType
+    public function withQueryParams(?SuiteQueryParametersType $queryParams): GetUniformSuitesQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

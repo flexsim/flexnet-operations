@@ -14,7 +14,7 @@ class ProductStateChangeListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType>|null  $product
      */
-    public function __construct(ProductStateChangeDataType|array|null $product = null)
+    public function __construct(ProductStateChangeDataType|array $product = null)
     {
         $this->product = $product;
     }
@@ -22,7 +22,7 @@ class ProductStateChangeListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType>|null  $product
      */
-    public static function create(ProductStateChangeDataType|array|null $product = null)
+    public static function create(ProductStateChangeDataType|array $product = null)
     {
         return new static(...\func_get_args());
     }

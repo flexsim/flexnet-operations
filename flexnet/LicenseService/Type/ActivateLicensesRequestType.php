@@ -40,12 +40,8 @@ class ActivateLicensesRequestType implements RequestInterface
      * Constructor
      *
      * @param  \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem>  $lineItem
-     * @param  string|null  $shipToEmail
-     * @param  string|null  $shipToAddress
-     * @param  string|null  $soldTo
-     * @param  string|null  $owner
      */
-    public function __construct(TypeLineItem|array $lineItem, string $hostInfo, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $soldTo = null, string|null $owner = null)
+    public function __construct(TypeLineItem|array $lineItem, string $hostInfo, string $shipToEmail = null, string $shipToAddress = null, string $soldTo = null, string $owner = null)
     {
         $this->lineItem = $lineItem;
         $this->hostInfo = $hostInfo;
@@ -57,12 +53,8 @@ class ActivateLicensesRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\LicenseService\Type\TypeLineItem|array<\Flexnet\LicenseService\Type\TypeLineItem>  $lineItem
-     * @param  string|null  $shipToEmail
-     * @param  string|null  $shipToAddress
-     * @param  string|null  $soldTo
-     * @param  string|null  $owner
      */
-    public static function create(TypeLineItem|array $lineItem, string $hostInfo, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $soldTo = null, string|null $owner = null)
+    public static function create(TypeLineItem|array $lineItem, string $hostInfo, string $shipToEmail = null, string $shipToAddress = null, string $soldTo = null, string $owner = null)
     {
         return new static(...\func_get_args());
     }
@@ -86,12 +78,12 @@ class ActivateLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    public function getShipToEmail(): string|null
+    public function getShipToEmail(): ?string
     {
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(string|null $shipToEmail): ActivateLicensesRequestType
+    public function withShipToEmail(?string $shipToEmail): ActivateLicensesRequestType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -99,12 +91,12 @@ class ActivateLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    public function getShipToAddress(): string|null
+    public function getShipToAddress(): ?string
     {
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(string|null $shipToAddress): ActivateLicensesRequestType
+    public function withShipToAddress(?string $shipToAddress): ActivateLicensesRequestType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -112,12 +104,12 @@ class ActivateLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    public function getSoldTo(): string|null
+    public function getSoldTo(): ?string
     {
         return $this->soldTo;
     }
 
-    public function withSoldTo(string|null $soldTo): ActivateLicensesRequestType
+    public function withSoldTo(?string $soldTo): ActivateLicensesRequestType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -125,12 +117,12 @@ class ActivateLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    public function getOwner(): string|null
+    public function getOwner(): ?string
     {
         return $this->owner;
     }
 
-    public function withOwner(string|null $owner): ActivateLicensesRequestType
+    public function withOwner(?string $owner): ActivateLicensesRequestType
     {
         $new = clone $this;
         $new->owner = $owner;

@@ -23,22 +23,15 @@ class MapEntitlementsToUserRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\IdListType  $idList
-     * @param  string|null  $userAcct
      */
-    public function __construct(string $userId, IdListType $idList, string|null $userAcct = null)
+    public function __construct(string $userId, IdListType $idList, string $userAcct = null)
     {
         $this->userId = $userId;
         $this->idList = $idList;
         $this->userAcct = $userAcct;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\IdListType  $idList
-     * @param  string|null  $userAcct
-     */
-    public static function create(string $userId, IdListType $idList, string|null $userAcct = null)
+    public static function create(string $userId, IdListType $idList, string $userAcct = null)
     {
         return new static(...\func_get_args());
     }
@@ -56,17 +49,11 @@ class MapEntitlementsToUserRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\IdListType
-     */
     public function getIdList(): IdListType
     {
         return $this->idList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\IdListType  $idList
-     */
     public function withIdList(IdListType $idList): MapEntitlementsToUserRequestType
     {
         $new = clone $this;
@@ -75,12 +62,12 @@ class MapEntitlementsToUserRequestType implements RequestInterface
         return $new;
     }
 
-    public function getUserAcct(): string|null
+    public function getUserAcct(): ?string
     {
         return $this->userAcct;
     }
 
-    public function withUserAcct(string|null $userAcct): MapEntitlementsToUserRequestType
+    public function withUserAcct(?string $userAcct): MapEntitlementsToUserRequestType
     {
         $new = clone $this;
         $new->userAcct = $userAcct;

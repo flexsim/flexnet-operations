@@ -16,19 +16,14 @@ class FailedDeleteWebRegKeyDataType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $reason
      */
-    public function __construct(string $webRegKey, string|null $reason = null)
+    public function __construct(string $webRegKey, string $reason = null)
     {
         $this->webRegKey = $webRegKey;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  string|null  $reason
-     */
-    public static function create(string $webRegKey, string|null $reason = null)
+    public static function create(string $webRegKey, string $reason = null)
     {
         return new static(...\func_get_args());
     }
@@ -46,12 +41,12 @@ class FailedDeleteWebRegKeyDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedDeleteWebRegKeyDataType
+    public function withReason(?string $reason): FailedDeleteWebRegKeyDataType
     {
         $new = clone $this;
         $new->reason = $reason;

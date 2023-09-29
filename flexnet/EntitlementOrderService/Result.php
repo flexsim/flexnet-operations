@@ -9,7 +9,7 @@ use Phpro\SoapClient\Type\ResultInterface;
 /**
  * @method \Flexnet\EntitlementOrderService\Type\StatusInfoType getStatusInfo()
  */
-abstract class Result implements ResultInterface, FlexnetResultInterface
+abstract class Result implements FlexnetResultInterface, ResultInterface
 {
     public function throw(): static
     {

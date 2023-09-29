@@ -14,7 +14,7 @@ class ValueType
      *
      * @param  string|array<string>|null  $value
      */
-    public function __construct(string|array|null $value = null)
+    public function __construct(string|array $value = null)
     {
         $this->value = $value;
     }
@@ -22,7 +22,7 @@ class ValueType
     /**
      * @param  string|array<string>|null  $value
      */
-    public static function create(string|array|null $value = null)
+    public static function create(string|array $value = null)
     {
         return new static(...\func_get_args());
     }

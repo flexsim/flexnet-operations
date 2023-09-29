@@ -18,36 +18,23 @@ class GetFulfillmentAttributesResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\GetFulfillmentAttributesDataType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, GetFulfillmentAttributesDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetFulfillmentAttributesDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\GetFulfillmentAttributesDataType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, GetFulfillmentAttributesDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetFulfillmentAttributesDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetFulfillmentAttributesResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetFulfillmentAttributesResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\GetFulfillmentAttributesDataType|null
-     */
-    public function getResponseData(): GetFulfillmentAttributesDataType|null
+    public function getResponseData(): ?GetFulfillmentAttributesDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\GetFulfillmentAttributesDataType|null  $responseData
-     */
-    public function withResponseData(GetFulfillmentAttributesDataType|null $responseData): GetFulfillmentAttributesResponseType
+    public function withResponseData(?GetFulfillmentAttributesDataType $responseData): GetFulfillmentAttributesResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

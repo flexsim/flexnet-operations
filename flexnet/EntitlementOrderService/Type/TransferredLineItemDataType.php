@@ -16,9 +16,6 @@ class TransferredLineItemDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $transferredFromId
      */
     public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, EntitlementLineItemIdentifierType $transferredFromId)
     {
@@ -26,26 +23,16 @@ class TransferredLineItemDataType
         $this->transferredFromId = $transferredFromId;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $transferredFromId
-     */
     public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, EntitlementLineItemIdentifierType $transferredFromId)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
-     */
     public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): TransferredLineItemDataType
     {
         $new = clone $this;
@@ -54,17 +41,11 @@ class TransferredLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
-     */
     public function getTransferredFromId(): EntitlementLineItemIdentifierType
     {
         return $this->transferredFromId;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $transferredFromId
-     */
     public function withTransferredFromId(EntitlementLineItemIdentifierType $transferredFromId): TransferredLineItemDataType
     {
         $new = clone $this;

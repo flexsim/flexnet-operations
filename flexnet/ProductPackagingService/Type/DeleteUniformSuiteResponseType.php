@@ -18,36 +18,23 @@ class DeleteUniformSuiteResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedDeleteUniformSuiteDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedDeleteUniformSuiteDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedDeleteUniformSuiteDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedDeleteUniformSuiteDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): DeleteUniformSuiteResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class DeleteUniformSuiteResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataListType|null
-     */
-    public function getFailedData(): FailedDeleteUniformSuiteDataListType|null
+    public function getFailedData(): ?FailedDeleteUniformSuiteDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataListType|null  $failedData
-     */
-    public function withFailedData(FailedDeleteUniformSuiteDataListType|null $failedData): DeleteUniformSuiteResponseType
+    public function withFailedData(?FailedDeleteUniformSuiteDataListType $failedData): DeleteUniformSuiteResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

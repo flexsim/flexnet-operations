@@ -16,7 +16,7 @@ class RenewEntitlementRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType>|null  $entitlementData
      */
-    public function __construct(RenewEntitlementDataType|array|null $entitlementData = null)
+    public function __construct(RenewEntitlementDataType|array $entitlementData = null)
     {
         $this->entitlementData = $entitlementData;
     }
@@ -24,7 +24,7 @@ class RenewEntitlementRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType>|null  $entitlementData
      */
-    public static function create(RenewEntitlementDataType|array|null $entitlementData = null)
+    public static function create(RenewEntitlementDataType|array $entitlementData = null)
     {
         return new static(...\func_get_args());
     }

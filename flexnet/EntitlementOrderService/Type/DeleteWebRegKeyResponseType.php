@@ -18,36 +18,23 @@ class DeleteWebRegKeyResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedDeleteWebRegKeyListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedDeleteWebRegKeyListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedDeleteWebRegKeyListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedDeleteWebRegKeyListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): DeleteWebRegKeyResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class DeleteWebRegKeyResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyListType|null
-     */
-    public function getFailedData(): FailedDeleteWebRegKeyListType|null
+    public function getFailedData(): ?FailedDeleteWebRegKeyListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyListType|null  $failedData
-     */
-    public function withFailedData(FailedDeleteWebRegKeyListType|null $failedData): DeleteWebRegKeyResponseType
+    public function withFailedData(?FailedDeleteWebRegKeyListType $failedData): DeleteWebRegKeyResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

@@ -96,27 +96,8 @@ class RenewParametersDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
-     * @param  bool|null  $isPermanent
-     * @param  \Flexnet\EntitlementOrderService\Type\ExpirationTermsDataType|null  $expirationTerms
-     * @param  int|null  $numberOfCopies
-     * @param  \DateTimeInterface|null  $startDate
-     * @param  string|null  $startDateOption
-     * @param  \DateTimeInterface|null  $versionDate
-     * @param  \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null  $versionDateAttributes
-     * @param  string|null  $description
-     * @param  string|null  $orderId
-     * @param  string|null  $orderLineNumber
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $licenseModel
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel1
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel2
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
-     * @param  string|null  $FNPTimeZoneValue
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $lineItemAttributes
      */
-    public function __construct(IdType $activationId, bool|null $isPermanent = null, ExpirationTermsDataType|null $expirationTerms = null, int|null $numberOfCopies = null, \DateTimeInterface|null $startDate = null, string|null $startDateOption = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $description = null, string|null $orderId = null, string|null $orderLineNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, PolicyAttributesListType|null $policyAttributes = null, string|null $FNPTimeZoneValue = null, AttributeDescriptorDataType|null $lineItemAttributes = null)
+    public function __construct(IdType $activationId, bool $isPermanent = null, ExpirationTermsDataType $expirationTerms = null, int $numberOfCopies = null, \DateTimeInterface $startDate = null, string $startDateOption = null, \DateTimeInterface $versionDate = null, VersionDateAttributesType $versionDateAttributes = null, string $description = null, string $orderId = null, string $orderLineNumber = null, LicenseModelIdentifierType $licenseModel = null, LicenseModelIdentifierType $alternateLicenseModel1 = null, LicenseModelIdentifierType $alternateLicenseModel2 = null, AttributeDescriptorDataType $licenseModelAttributes = null, PolicyAttributesListType $policyAttributes = null, string $FNPTimeZoneValue = null, AttributeDescriptorDataType $lineItemAttributes = null)
     {
         $this->activationId = $activationId;
         $this->isPermanent = $isPermanent;
@@ -138,42 +119,16 @@ class RenewParametersDataType
         $this->lineItemAttributes = $lineItemAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
-     * @param  bool|null  $isPermanent
-     * @param  \Flexnet\EntitlementOrderService\Type\ExpirationTermsDataType|null  $expirationTerms
-     * @param  int|null  $numberOfCopies
-     * @param  \DateTimeInterface|null  $startDate
-     * @param  string|null  $startDateOption
-     * @param  \DateTimeInterface|null  $versionDate
-     * @param  \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null  $versionDateAttributes
-     * @param  string|null  $description
-     * @param  string|null  $orderId
-     * @param  string|null  $orderLineNumber
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $licenseModel
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel1
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel2
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
-     * @param  string|null  $FNPTimeZoneValue
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $lineItemAttributes
-     */
-    public static function create(IdType $activationId, bool|null $isPermanent = null, ExpirationTermsDataType|null $expirationTerms = null, int|null $numberOfCopies = null, \DateTimeInterface|null $startDate = null, string|null $startDateOption = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $description = null, string|null $orderId = null, string|null $orderLineNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, PolicyAttributesListType|null $policyAttributes = null, string|null $FNPTimeZoneValue = null, AttributeDescriptorDataType|null $lineItemAttributes = null)
+    public static function create(IdType $activationId, bool $isPermanent = null, ExpirationTermsDataType $expirationTerms = null, int $numberOfCopies = null, \DateTimeInterface $startDate = null, string $startDateOption = null, \DateTimeInterface $versionDate = null, VersionDateAttributesType $versionDateAttributes = null, string $description = null, string $orderId = null, string $orderLineNumber = null, LicenseModelIdentifierType $licenseModel = null, LicenseModelIdentifierType $alternateLicenseModel1 = null, LicenseModelIdentifierType $alternateLicenseModel2 = null, AttributeDescriptorDataType $licenseModelAttributes = null, PolicyAttributesListType $policyAttributes = null, string $FNPTimeZoneValue = null, AttributeDescriptorDataType $lineItemAttributes = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\IdType
-     */
     public function getActivationId(): IdType
     {
         return $this->activationId;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
-     */
     public function withActivationId(IdType $activationId): RenewParametersDataType
     {
         $new = clone $this;
@@ -182,12 +137,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    public function getIsPermanent(): bool|null
+    public function getIsPermanent(): ?bool
     {
         return $this->isPermanent;
     }
 
-    public function withIsPermanent(bool|null $isPermanent): RenewParametersDataType
+    public function withIsPermanent(?bool $isPermanent): RenewParametersDataType
     {
         $new = clone $this;
         $new->isPermanent = $isPermanent;
@@ -195,18 +150,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\ExpirationTermsDataType|null
-     */
-    public function getExpirationTerms(): ExpirationTermsDataType|null
+    public function getExpirationTerms(): ?ExpirationTermsDataType
     {
         return $this->expirationTerms;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ExpirationTermsDataType|null  $expirationTerms
-     */
-    public function withExpirationTerms(ExpirationTermsDataType|null $expirationTerms): RenewParametersDataType
+    public function withExpirationTerms(?ExpirationTermsDataType $expirationTerms): RenewParametersDataType
     {
         $new = clone $this;
         $new->expirationTerms = $expirationTerms;
@@ -214,12 +163,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    public function getNumberOfCopies(): int|null
+    public function getNumberOfCopies(): ?int
     {
         return $this->numberOfCopies;
     }
 
-    public function withNumberOfCopies(int|null $numberOfCopies): RenewParametersDataType
+    public function withNumberOfCopies(?int $numberOfCopies): RenewParametersDataType
     {
         $new = clone $this;
         $new->numberOfCopies = $numberOfCopies;
@@ -227,12 +176,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    public function getStartDate(): \DateTimeInterface|null
+    public function getStartDate(): ?\DateTimeInterface
     {
         return $this->startDate;
     }
 
-    public function withStartDate(\DateTimeInterface|null $startDate): RenewParametersDataType
+    public function withStartDate(?\DateTimeInterface $startDate): RenewParametersDataType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -240,12 +189,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    public function getStartDateOption(): string|null
+    public function getStartDateOption(): ?string
     {
         return $this->startDateOption;
     }
 
-    public function withStartDateOption(string|null $startDateOption): RenewParametersDataType
+    public function withStartDateOption(?string $startDateOption): RenewParametersDataType
     {
         $new = clone $this;
         $new->startDateOption = $startDateOption;
@@ -253,12 +202,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    public function getVersionDate(): \DateTimeInterface|null
+    public function getVersionDate(): ?\DateTimeInterface
     {
         return $this->versionDate;
     }
 
-    public function withVersionDate(\DateTimeInterface|null $versionDate): RenewParametersDataType
+    public function withVersionDate(?\DateTimeInterface $versionDate): RenewParametersDataType
     {
         $new = clone $this;
         $new->versionDate = $versionDate;
@@ -266,18 +215,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null
-     */
-    public function getVersionDateAttributes(): VersionDateAttributesType|null
+    public function getVersionDateAttributes(): ?VersionDateAttributesType
     {
         return $this->versionDateAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null  $versionDateAttributes
-     */
-    public function withVersionDateAttributes(VersionDateAttributesType|null $versionDateAttributes): RenewParametersDataType
+    public function withVersionDateAttributes(?VersionDateAttributesType $versionDateAttributes): RenewParametersDataType
     {
         $new = clone $this;
         $new->versionDateAttributes = $versionDateAttributes;
@@ -285,12 +228,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    public function getDescription(): string|null
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function withDescription(string|null $description): RenewParametersDataType
+    public function withDescription(?string $description): RenewParametersDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -298,12 +241,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    public function getOrderId(): string|null
+    public function getOrderId(): ?string
     {
         return $this->orderId;
     }
 
-    public function withOrderId(string|null $orderId): RenewParametersDataType
+    public function withOrderId(?string $orderId): RenewParametersDataType
     {
         $new = clone $this;
         $new->orderId = $orderId;
@@ -311,12 +254,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    public function getOrderLineNumber(): string|null
+    public function getOrderLineNumber(): ?string
     {
         return $this->orderLineNumber;
     }
 
-    public function withOrderLineNumber(string|null $orderLineNumber): RenewParametersDataType
+    public function withOrderLineNumber(?string $orderLineNumber): RenewParametersDataType
     {
         $new = clone $this;
         $new->orderLineNumber = $orderLineNumber;
@@ -324,18 +267,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null
-     */
-    public function getLicenseModel(): LicenseModelIdentifierType|null
+    public function getLicenseModel(): ?LicenseModelIdentifierType
     {
         return $this->licenseModel;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $licenseModel
-     */
-    public function withLicenseModel(LicenseModelIdentifierType|null $licenseModel): RenewParametersDataType
+    public function withLicenseModel(?LicenseModelIdentifierType $licenseModel): RenewParametersDataType
     {
         $new = clone $this;
         $new->licenseModel = $licenseModel;
@@ -343,18 +280,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null
-     */
-    public function getAlternateLicenseModel1(): LicenseModelIdentifierType|null
+    public function getAlternateLicenseModel1(): ?LicenseModelIdentifierType
     {
         return $this->alternateLicenseModel1;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel1
-     */
-    public function withAlternateLicenseModel1(LicenseModelIdentifierType|null $alternateLicenseModel1): RenewParametersDataType
+    public function withAlternateLicenseModel1(?LicenseModelIdentifierType $alternateLicenseModel1): RenewParametersDataType
     {
         $new = clone $this;
         $new->alternateLicenseModel1 = $alternateLicenseModel1;
@@ -362,18 +293,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null
-     */
-    public function getAlternateLicenseModel2(): LicenseModelIdentifierType|null
+    public function getAlternateLicenseModel2(): ?LicenseModelIdentifierType
     {
         return $this->alternateLicenseModel2;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel2
-     */
-    public function withAlternateLicenseModel2(LicenseModelIdentifierType|null $alternateLicenseModel2): RenewParametersDataType
+    public function withAlternateLicenseModel2(?LicenseModelIdentifierType $alternateLicenseModel2): RenewParametersDataType
     {
         $new = clone $this;
         $new->alternateLicenseModel2 = $alternateLicenseModel2;
@@ -381,18 +306,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null
-     */
-    public function getLicenseModelAttributes(): AttributeDescriptorDataType|null
+    public function getLicenseModelAttributes(): ?AttributeDescriptorDataType
     {
         return $this->licenseModelAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     */
-    public function withLicenseModelAttributes(AttributeDescriptorDataType|null $licenseModelAttributes): RenewParametersDataType
+    public function withLicenseModelAttributes(?AttributeDescriptorDataType $licenseModelAttributes): RenewParametersDataType
     {
         $new = clone $this;
         $new->licenseModelAttributes = $licenseModelAttributes;
@@ -400,18 +319,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null
-     */
-    public function getPolicyAttributes(): PolicyAttributesListType|null
+    public function getPolicyAttributes(): ?PolicyAttributesListType
     {
         return $this->policyAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
-     */
-    public function withPolicyAttributes(PolicyAttributesListType|null $policyAttributes): RenewParametersDataType
+    public function withPolicyAttributes(?PolicyAttributesListType $policyAttributes): RenewParametersDataType
     {
         $new = clone $this;
         $new->policyAttributes = $policyAttributes;
@@ -419,12 +332,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    public function getFNPTimeZoneValue(): string|null
+    public function getFNPTimeZoneValue(): ?string
     {
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(string|null $FNPTimeZoneValue): RenewParametersDataType
+    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): RenewParametersDataType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;
@@ -432,18 +345,12 @@ class RenewParametersDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null
-     */
-    public function getLineItemAttributes(): AttributeDescriptorDataType|null
+    public function getLineItemAttributes(): ?AttributeDescriptorDataType
     {
         return $this->lineItemAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $lineItemAttributes
-     */
-    public function withLineItemAttributes(AttributeDescriptorDataType|null $lineItemAttributes): RenewParametersDataType
+    public function withLineItemAttributes(?AttributeDescriptorDataType $lineItemAttributes): RenewParametersDataType
     {
         $new = clone $this;
         $new->lineItemAttributes = $lineItemAttributes;

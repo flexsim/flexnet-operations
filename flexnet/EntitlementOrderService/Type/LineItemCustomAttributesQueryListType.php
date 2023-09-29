@@ -14,7 +14,7 @@ class LineItemCustomAttributesQueryListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType>|null  $attribute
      */
-    public function __construct(LineItemCustomAttributeQueryType|array|null $attribute = null)
+    public function __construct(LineItemCustomAttributeQueryType|array $attribute = null)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class LineItemCustomAttributesQueryListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType>|null  $attribute
      */
-    public static function create(LineItemCustomAttributeQueryType|array|null $attribute = null)
+    public static function create(LineItemCustomAttributeQueryType|array $attribute = null)
     {
         return new static(...\func_get_args());
     }

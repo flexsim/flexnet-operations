@@ -23,39 +23,24 @@ class CreateChildLineItemFulfillmentResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\CreatedChildLIFmtResponseDataType|null  $responseData
-     * @param  \Flexnet\LicenseService\Type\FailedChildLIFmtResponseDataType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, CreatedChildLIFmtResponseDataType|null $responseData = null, FailedChildLIFmtResponseDataType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, CreatedChildLIFmtResponseDataType $responseData = null, FailedChildLIFmtResponseDataType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\CreatedChildLIFmtResponseDataType|null  $responseData
-     * @param  \Flexnet\LicenseService\Type\FailedChildLIFmtResponseDataType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, CreatedChildLIFmtResponseDataType|null $responseData = null, FailedChildLIFmtResponseDataType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, CreatedChildLIFmtResponseDataType $responseData = null, FailedChildLIFmtResponseDataType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): CreateChildLineItemFulfillmentResponseType
     {
         $new = clone $this;
@@ -64,18 +49,12 @@ class CreateChildLineItemFulfillmentResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\CreatedChildLIFmtResponseDataType|null
-     */
-    public function getResponseData(): CreatedChildLIFmtResponseDataType|null
+    public function getResponseData(): ?CreatedChildLIFmtResponseDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\CreatedChildLIFmtResponseDataType|null  $responseData
-     */
-    public function withResponseData(CreatedChildLIFmtResponseDataType|null $responseData): CreateChildLineItemFulfillmentResponseType
+    public function withResponseData(?CreatedChildLIFmtResponseDataType $responseData): CreateChildLineItemFulfillmentResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -83,18 +62,12 @@ class CreateChildLineItemFulfillmentResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FailedChildLIFmtResponseDataType|null
-     */
-    public function getFailedData(): FailedChildLIFmtResponseDataType|null
+    public function getFailedData(): ?FailedChildLIFmtResponseDataType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FailedChildLIFmtResponseDataType|null  $failedData
-     */
-    public function withFailedData(FailedChildLIFmtResponseDataType|null $failedData): CreateChildLineItemFulfillmentResponseType
+    public function withFailedData(?FailedChildLIFmtResponseDataType $failedData): CreateChildLineItemFulfillmentResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

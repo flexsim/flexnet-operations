@@ -23,39 +23,24 @@ class GetMatchingBulkEntsResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsResponseListType|null  $responseData
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedMatchingBulkEntsListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, GetMatchingBulkEntsResponseListType|null $responseData = null, FailedMatchingBulkEntsListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, GetMatchingBulkEntsResponseListType $responseData = null, FailedMatchingBulkEntsListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsResponseListType|null  $responseData
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedMatchingBulkEntsListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, GetMatchingBulkEntsResponseListType|null $responseData = null, FailedMatchingBulkEntsListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, GetMatchingBulkEntsResponseListType $responseData = null, FailedMatchingBulkEntsListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetMatchingBulkEntsResponseType
     {
         $new = clone $this;
@@ -64,18 +49,12 @@ class GetMatchingBulkEntsResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsResponseListType|null
-     */
-    public function getResponseData(): GetMatchingBulkEntsResponseListType|null
+    public function getResponseData(): ?GetMatchingBulkEntsResponseListType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsResponseListType|null  $responseData
-     */
-    public function withResponseData(GetMatchingBulkEntsResponseListType|null $responseData): GetMatchingBulkEntsResponseType
+    public function withResponseData(?GetMatchingBulkEntsResponseListType $responseData): GetMatchingBulkEntsResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -83,18 +62,12 @@ class GetMatchingBulkEntsResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FailedMatchingBulkEntsListType|null
-     */
-    public function getFailedData(): FailedMatchingBulkEntsListType|null
+    public function getFailedData(): ?FailedMatchingBulkEntsListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedMatchingBulkEntsListType|null  $failedData
-     */
-    public function withFailedData(FailedMatchingBulkEntsListType|null $failedData): GetMatchingBulkEntsResponseType
+    public function withFailedData(?FailedMatchingBulkEntsListType $failedData): GetMatchingBulkEntsResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

@@ -23,39 +23,24 @@ class PublisherErrorFulfillmentResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\PublisherErrorResponseDataType|null  $responseData
-     * @param  \Flexnet\LicenseService\Type\FailedPublisherErrorResponselistDataType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, PublisherErrorResponseDataType|null $responseData = null, FailedPublisherErrorResponselistDataType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, PublisherErrorResponseDataType $responseData = null, FailedPublisherErrorResponselistDataType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\PublisherErrorResponseDataType|null  $responseData
-     * @param  \Flexnet\LicenseService\Type\FailedPublisherErrorResponselistDataType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, PublisherErrorResponseDataType|null $responseData = null, FailedPublisherErrorResponselistDataType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, PublisherErrorResponseDataType $responseData = null, FailedPublisherErrorResponselistDataType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): PublisherErrorFulfillmentResponseType
     {
         $new = clone $this;
@@ -64,18 +49,12 @@ class PublisherErrorFulfillmentResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\PublisherErrorResponseDataType|null
-     */
-    public function getResponseData(): PublisherErrorResponseDataType|null
+    public function getResponseData(): ?PublisherErrorResponseDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\PublisherErrorResponseDataType|null  $responseData
-     */
-    public function withResponseData(PublisherErrorResponseDataType|null $responseData): PublisherErrorFulfillmentResponseType
+    public function withResponseData(?PublisherErrorResponseDataType $responseData): PublisherErrorFulfillmentResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -83,18 +62,12 @@ class PublisherErrorFulfillmentResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FailedPublisherErrorResponselistDataType|null
-     */
-    public function getFailedData(): FailedPublisherErrorResponselistDataType|null
+    public function getFailedData(): ?FailedPublisherErrorResponselistDataType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FailedPublisherErrorResponselistDataType|null  $failedData
-     */
-    public function withFailedData(FailedPublisherErrorResponselistDataType|null $failedData): PublisherErrorFulfillmentResponseType
+    public function withFailedData(?FailedPublisherErrorResponselistDataType $failedData): PublisherErrorFulfillmentResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

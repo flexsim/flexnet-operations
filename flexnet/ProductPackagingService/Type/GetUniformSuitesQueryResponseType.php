@@ -18,36 +18,23 @@ class GetUniformSuitesQueryResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\GetUniformSuitesQueryResponseDataType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, GetUniformSuitesQueryResponseDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetUniformSuitesQueryResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\GetUniformSuitesQueryResponseDataType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, GetUniformSuitesQueryResponseDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetUniformSuitesQueryResponseDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetUniformSuitesQueryResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetUniformSuitesQueryResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\GetUniformSuitesQueryResponseDataType|null
-     */
-    public function getResponseData(): GetUniformSuitesQueryResponseDataType|null
+    public function getResponseData(): ?GetUniformSuitesQueryResponseDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\GetUniformSuitesQueryResponseDataType|null  $responseData
-     */
-    public function withResponseData(GetUniformSuitesQueryResponseDataType|null $responseData): GetUniformSuitesQueryResponseType
+    public function withResponseData(?GetUniformSuitesQueryResponseDataType $responseData): GetUniformSuitesQueryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

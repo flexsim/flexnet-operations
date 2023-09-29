@@ -62,19 +62,9 @@ class CreateMaintenanceLineItemDataType
     /**
      * Constructor
      *
-     * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $maintenanceProduct
-     * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
-     * @param  string|null  $orderId
-     * @param  string|null  $orderLineNumber
-     * @param  \DateTimeInterface|null  $startDate
-     * @param  \DateTimeInterface|null  $expirationDate
-     * @param  bool|null  $isPermanent
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $parentLineItem
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $associatedLineItems
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $maintenanceLineItemAttributes
      */
-    public function __construct(IdType $activationId, ProductIdentifierType|null $maintenanceProduct = null, PartNumberIdentifierType|null $partNumber = null, string|null $orderId = null, string|null $orderLineNumber = null, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $expirationDate = null, bool|null $isPermanent = null, EntitlementLineItemIdentifierType|null $parentLineItem = null, EntitlementLineItemIdentifierType|array|null $associatedLineItems = null, AttributeDescriptorDataType|null $maintenanceLineItemAttributes = null)
+    public function __construct(IdType $activationId, ProductIdentifierType $maintenanceProduct = null, PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, EntitlementLineItemIdentifierType $parentLineItem = null, EntitlementLineItemIdentifierType|array $associatedLineItems = null, AttributeDescriptorDataType $maintenanceLineItemAttributes = null)
     {
         $this->activationId = $activationId;
         $this->maintenanceProduct = $maintenanceProduct;
@@ -90,34 +80,18 @@ class CreateMaintenanceLineItemDataType
     }
 
     /**
-     * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $maintenanceProduct
-     * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
-     * @param  string|null  $orderId
-     * @param  string|null  $orderLineNumber
-     * @param  \DateTimeInterface|null  $startDate
-     * @param  \DateTimeInterface|null  $expirationDate
-     * @param  bool|null  $isPermanent
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $parentLineItem
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $associatedLineItems
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $maintenanceLineItemAttributes
      */
-    public static function create(IdType $activationId, ProductIdentifierType|null $maintenanceProduct = null, PartNumberIdentifierType|null $partNumber = null, string|null $orderId = null, string|null $orderLineNumber = null, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $expirationDate = null, bool|null $isPermanent = null, EntitlementLineItemIdentifierType|null $parentLineItem = null, EntitlementLineItemIdentifierType|array|null $associatedLineItems = null, AttributeDescriptorDataType|null $maintenanceLineItemAttributes = null)
+    public static function create(IdType $activationId, ProductIdentifierType $maintenanceProduct = null, PartNumberIdentifierType $partNumber = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, bool $isPermanent = null, EntitlementLineItemIdentifierType $parentLineItem = null, EntitlementLineItemIdentifierType|array $associatedLineItems = null, AttributeDescriptorDataType $maintenanceLineItemAttributes = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\IdType
-     */
     public function getActivationId(): IdType
     {
         return $this->activationId;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
-     */
     public function withActivationId(IdType $activationId): CreateMaintenanceLineItemDataType
     {
         $new = clone $this;
@@ -126,18 +100,12 @@ class CreateMaintenanceLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null
-     */
-    public function getMaintenanceProduct(): ProductIdentifierType|null
+    public function getMaintenanceProduct(): ?ProductIdentifierType
     {
         return $this->maintenanceProduct;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $maintenanceProduct
-     */
-    public function withMaintenanceProduct(ProductIdentifierType|null $maintenanceProduct): CreateMaintenanceLineItemDataType
+    public function withMaintenanceProduct(?ProductIdentifierType $maintenanceProduct): CreateMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->maintenanceProduct = $maintenanceProduct;
@@ -145,18 +113,12 @@ class CreateMaintenanceLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null
-     */
-    public function getPartNumber(): PartNumberIdentifierType|null
+    public function getPartNumber(): ?PartNumberIdentifierType
     {
         return $this->partNumber;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
-     */
-    public function withPartNumber(PartNumberIdentifierType|null $partNumber): CreateMaintenanceLineItemDataType
+    public function withPartNumber(?PartNumberIdentifierType $partNumber): CreateMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -164,12 +126,12 @@ class CreateMaintenanceLineItemDataType
         return $new;
     }
 
-    public function getOrderId(): string|null
+    public function getOrderId(): ?string
     {
         return $this->orderId;
     }
 
-    public function withOrderId(string|null $orderId): CreateMaintenanceLineItemDataType
+    public function withOrderId(?string $orderId): CreateMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->orderId = $orderId;
@@ -177,12 +139,12 @@ class CreateMaintenanceLineItemDataType
         return $new;
     }
 
-    public function getOrderLineNumber(): string|null
+    public function getOrderLineNumber(): ?string
     {
         return $this->orderLineNumber;
     }
 
-    public function withOrderLineNumber(string|null $orderLineNumber): CreateMaintenanceLineItemDataType
+    public function withOrderLineNumber(?string $orderLineNumber): CreateMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->orderLineNumber = $orderLineNumber;
@@ -190,12 +152,12 @@ class CreateMaintenanceLineItemDataType
         return $new;
     }
 
-    public function getStartDate(): \DateTimeInterface|null
+    public function getStartDate(): ?\DateTimeInterface
     {
         return $this->startDate;
     }
 
-    public function withStartDate(\DateTimeInterface|null $startDate): CreateMaintenanceLineItemDataType
+    public function withStartDate(?\DateTimeInterface $startDate): CreateMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -203,12 +165,12 @@ class CreateMaintenanceLineItemDataType
         return $new;
     }
 
-    public function getExpirationDate(): \DateTimeInterface|null
+    public function getExpirationDate(): ?\DateTimeInterface
     {
         return $this->expirationDate;
     }
 
-    public function withExpirationDate(\DateTimeInterface|null $expirationDate): CreateMaintenanceLineItemDataType
+    public function withExpirationDate(?\DateTimeInterface $expirationDate): CreateMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->expirationDate = $expirationDate;
@@ -216,12 +178,12 @@ class CreateMaintenanceLineItemDataType
         return $new;
     }
 
-    public function getIsPermanent(): bool|null
+    public function getIsPermanent(): ?bool
     {
         return $this->isPermanent;
     }
 
-    public function withIsPermanent(bool|null $isPermanent): CreateMaintenanceLineItemDataType
+    public function withIsPermanent(?bool $isPermanent): CreateMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->isPermanent = $isPermanent;
@@ -229,18 +191,12 @@ class CreateMaintenanceLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null
-     */
-    public function getParentLineItem(): EntitlementLineItemIdentifierType|null
+    public function getParentLineItem(): ?EntitlementLineItemIdentifierType
     {
         return $this->parentLineItem;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $parentLineItem
-     */
-    public function withParentLineItem(EntitlementLineItemIdentifierType|null $parentLineItem): CreateMaintenanceLineItemDataType
+    public function withParentLineItem(?EntitlementLineItemIdentifierType $parentLineItem): CreateMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->parentLineItem = $parentLineItem;
@@ -267,18 +223,12 @@ class CreateMaintenanceLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null
-     */
-    public function getMaintenanceLineItemAttributes(): AttributeDescriptorDataType|null
+    public function getMaintenanceLineItemAttributes(): ?AttributeDescriptorDataType
     {
         return $this->maintenanceLineItemAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $maintenanceLineItemAttributes
-     */
-    public function withMaintenanceLineItemAttributes(AttributeDescriptorDataType|null $maintenanceLineItemAttributes): CreateMaintenanceLineItemDataType
+    public function withMaintenanceLineItemAttributes(?AttributeDescriptorDataType $maintenanceLineItemAttributes): CreateMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;

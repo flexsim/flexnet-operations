@@ -14,7 +14,7 @@ class AttributeDescriptorDataType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\AttributeDescriptorType>|null  $attribute
      */
-    public function __construct(AttributeDescriptorType|array|null $attribute = null)
+    public function __construct(AttributeDescriptorType|array $attribute = null)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class AttributeDescriptorDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\AttributeDescriptorType>|null  $attribute
      */
-    public static function create(AttributeDescriptorType|array|null $attribute = null)
+    public static function create(AttributeDescriptorType|array $attribute = null)
     {
         return new static(...\func_get_args());
     }

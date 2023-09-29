@@ -14,7 +14,7 @@ class FailedStopGapResponselistDataType
      *
      * @param  \Flexnet\LicenseService\Type\FailedStopGapResponseDataType|array<\Flexnet\LicenseService\Type\FailedStopGapResponseDataType>|null  $failedFulfillment
      */
-    public function __construct(FailedStopGapResponseDataType|array|null $failedFulfillment = null)
+    public function __construct(FailedStopGapResponseDataType|array $failedFulfillment = null)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
@@ -22,7 +22,7 @@ class FailedStopGapResponselistDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedStopGapResponseDataType|array<\Flexnet\LicenseService\Type\FailedStopGapResponseDataType>|null  $failedFulfillment
      */
-    public static function create(FailedStopGapResponseDataType|array|null $failedFulfillment = null)
+    public static function create(FailedStopGapResponseDataType|array $failedFulfillment = null)
     {
         return new static(...\func_get_args());
     }

@@ -16,37 +16,24 @@ class ReinstallPolicyDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType|null  $defaultPolicy
-     * @param  \Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType|null  $advancedPolicy
      */
-    public function __construct(PolicyDataType|null $defaultPolicy = null, AdvancedReinstallPolicyType|null $advancedPolicy = null)
+    public function __construct(PolicyDataType $defaultPolicy = null, AdvancedReinstallPolicyType $advancedPolicy = null)
     {
         $this->defaultPolicy = $defaultPolicy;
         $this->advancedPolicy = $advancedPolicy;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType|null  $defaultPolicy
-     * @param  \Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType|null  $advancedPolicy
-     */
-    public static function create(PolicyDataType|null $defaultPolicy = null, AdvancedReinstallPolicyType|null $advancedPolicy = null)
+    public static function create(PolicyDataType $defaultPolicy = null, AdvancedReinstallPolicyType $advancedPolicy = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\PolicyDataType|null
-     */
-    public function getDefaultPolicy(): PolicyDataType|null
+    public function getDefaultPolicy(): ?PolicyDataType
     {
         return $this->defaultPolicy;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyDataType|null  $defaultPolicy
-     */
-    public function withDefaultPolicy(PolicyDataType|null $defaultPolicy): ReinstallPolicyDataType
+    public function withDefaultPolicy(?PolicyDataType $defaultPolicy): ReinstallPolicyDataType
     {
         $new = clone $this;
         $new->defaultPolicy = $defaultPolicy;
@@ -54,18 +41,12 @@ class ReinstallPolicyDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType|null
-     */
-    public function getAdvancedPolicy(): AdvancedReinstallPolicyType|null
+    public function getAdvancedPolicy(): ?AdvancedReinstallPolicyType
     {
         return $this->advancedPolicy;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType|null  $advancedPolicy
-     */
-    public function withAdvancedPolicy(AdvancedReinstallPolicyType|null $advancedPolicy): ReinstallPolicyDataType
+    public function withAdvancedPolicy(?AdvancedReinstallPolicyType $advancedPolicy): ReinstallPolicyDataType
     {
         $new = clone $this;
         $new->advancedPolicy = $advancedPolicy;

@@ -66,20 +66,8 @@ class CreateChildLineItemFulfillmentDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\HostIdDetailsType  $hostIdDetails
-     * @param  \DateTimeInterface|null  $startDate
-     * @param  \DateTimeInterface|null  $versionDate
-     * @param  \DateTimeInterface|null  $versionStartDate
-     * @param  string|null  $soldTo
-     * @param  string|null  $shipToEmail
-     * @param  string|null  $shipToAddress
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  bool|null  $overridePolicy
-     * @param  string|null  $owner
-     * @param  string|null  $FNPTimeZoneValue
      */
-    public function __construct(string $activationId, HostIdDetailsType $hostIdDetails, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $versionDate = null, \DateTimeInterface|null $versionStartDate = null, string|null $soldTo = null, string|null $shipToEmail = null, string|null $shipToAddress = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, bool|null $overridePolicy = null, string|null $owner = null, string|null $FNPTimeZoneValue = null)
+    public function __construct(string $activationId, HostIdDetailsType $hostIdDetails, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $owner = null, string $FNPTimeZoneValue = null)
     {
         $this->activationId = $activationId;
         $this->hostIdDetails = $hostIdDetails;
@@ -95,20 +83,7 @@ class CreateChildLineItemFulfillmentDataType
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\HostIdDetailsType  $hostIdDetails
-     * @param  \DateTimeInterface|null  $startDate
-     * @param  \DateTimeInterface|null  $versionDate
-     * @param  \DateTimeInterface|null  $versionStartDate
-     * @param  string|null  $soldTo
-     * @param  string|null  $shipToEmail
-     * @param  string|null  $shipToAddress
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  bool|null  $overridePolicy
-     * @param  string|null  $owner
-     * @param  string|null  $FNPTimeZoneValue
-     */
-    public static function create(string $activationId, HostIdDetailsType $hostIdDetails, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $versionDate = null, \DateTimeInterface|null $versionStartDate = null, string|null $soldTo = null, string|null $shipToEmail = null, string|null $shipToAddress = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, bool|null $overridePolicy = null, string|null $owner = null, string|null $FNPTimeZoneValue = null)
+    public static function create(string $activationId, HostIdDetailsType $hostIdDetails, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $owner = null, string $FNPTimeZoneValue = null)
     {
         return new static(...\func_get_args());
     }
@@ -126,12 +101,12 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    public function getStartDate(): \DateTimeInterface|null
+    public function getStartDate(): ?\DateTimeInterface
     {
         return $this->startDate;
     }
 
-    public function withStartDate(\DateTimeInterface|null $startDate): CreateChildLineItemFulfillmentDataType
+    public function withStartDate(?\DateTimeInterface $startDate): CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -139,12 +114,12 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    public function getVersionDate(): \DateTimeInterface|null
+    public function getVersionDate(): ?\DateTimeInterface
     {
         return $this->versionDate;
     }
 
-    public function withVersionDate(\DateTimeInterface|null $versionDate): CreateChildLineItemFulfillmentDataType
+    public function withVersionDate(?\DateTimeInterface $versionDate): CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->versionDate = $versionDate;
@@ -152,12 +127,12 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    public function getVersionStartDate(): \DateTimeInterface|null
+    public function getVersionStartDate(): ?\DateTimeInterface
     {
         return $this->versionStartDate;
     }
 
-    public function withVersionStartDate(\DateTimeInterface|null $versionStartDate): CreateChildLineItemFulfillmentDataType
+    public function withVersionStartDate(?\DateTimeInterface $versionStartDate): CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->versionStartDate = $versionStartDate;
@@ -165,12 +140,12 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    public function getSoldTo(): string|null
+    public function getSoldTo(): ?string
     {
         return $this->soldTo;
     }
 
-    public function withSoldTo(string|null $soldTo): CreateChildLineItemFulfillmentDataType
+    public function withSoldTo(?string $soldTo): CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -178,12 +153,12 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    public function getShipToEmail(): string|null
+    public function getShipToEmail(): ?string
     {
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(string|null $shipToEmail): CreateChildLineItemFulfillmentDataType
+    public function withShipToEmail(?string $shipToEmail): CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -191,12 +166,12 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    public function getShipToAddress(): string|null
+    public function getShipToAddress(): ?string
     {
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(string|null $shipToAddress): CreateChildLineItemFulfillmentDataType
+    public function withShipToAddress(?string $shipToAddress): CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -204,18 +179,12 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null
-     */
-    public function getLicenseModelAttributes(): AttributeDescriptorDataType|null
+    public function getLicenseModelAttributes(): ?AttributeDescriptorDataType
     {
         return $this->licenseModelAttributes;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     */
-    public function withLicenseModelAttributes(AttributeDescriptorDataType|null $licenseModelAttributes): CreateChildLineItemFulfillmentDataType
+    public function withLicenseModelAttributes(?AttributeDescriptorDataType $licenseModelAttributes): CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->licenseModelAttributes = $licenseModelAttributes;
@@ -223,17 +192,11 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\HostIdDetailsType
-     */
     public function getHostIdDetails(): HostIdDetailsType
     {
         return $this->hostIdDetails;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\HostIdDetailsType  $hostIdDetails
-     */
     public function withHostIdDetails(HostIdDetailsType $hostIdDetails): CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
@@ -242,12 +205,12 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    public function getOverridePolicy(): bool|null
+    public function getOverridePolicy(): ?bool
     {
         return $this->overridePolicy;
     }
 
-    public function withOverridePolicy(bool|null $overridePolicy): CreateChildLineItemFulfillmentDataType
+    public function withOverridePolicy(?bool $overridePolicy): CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->overridePolicy = $overridePolicy;
@@ -255,12 +218,12 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    public function getOwner(): string|null
+    public function getOwner(): ?string
     {
         return $this->owner;
     }
 
-    public function withOwner(string|null $owner): CreateChildLineItemFulfillmentDataType
+    public function withOwner(?string $owner): CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->owner = $owner;
@@ -268,12 +231,12 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    public function getFNPTimeZoneValue(): string|null
+    public function getFNPTimeZoneValue(): ?string
     {
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(string|null $FNPTimeZoneValue): CreateChildLineItemFulfillmentDataType
+    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;

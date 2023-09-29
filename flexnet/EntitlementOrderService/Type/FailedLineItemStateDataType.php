@@ -16,8 +16,6 @@ class FailedLineItemStateDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType  $lineItem
      */
     public function __construct(LineItemStateDataType $lineItem, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedLineItemStateDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType  $lineItem
-     */
     public static function create(LineItemStateDataType $lineItem, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LineItemStateDataType
-     */
     public function getLineItem(): LineItemStateDataType
     {
         return $this->lineItem;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType  $lineItem
-     */
     public function withLineItem(LineItemStateDataType $lineItem): FailedLineItemStateDataType
     {
         $new = clone $this;

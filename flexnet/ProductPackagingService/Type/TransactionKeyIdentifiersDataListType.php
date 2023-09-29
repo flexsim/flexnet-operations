@@ -14,7 +14,7 @@ class TransactionKeyIdentifiersDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|array<\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType>|null  $transactionKeyIdentifier
      */
-    public function __construct(TrustedKeyIdentifierType|array|null $transactionKeyIdentifier = null)
+    public function __construct(TrustedKeyIdentifierType|array $transactionKeyIdentifier = null)
     {
         $this->transactionKeyIdentifier = $transactionKeyIdentifier;
     }
@@ -22,7 +22,7 @@ class TransactionKeyIdentifiersDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|array<\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType>|null  $transactionKeyIdentifier
      */
-    public static function create(TrustedKeyIdentifierType|array|null $transactionKeyIdentifier = null)
+    public static function create(TrustedKeyIdentifierType|array $transactionKeyIdentifier = null)
     {
         return new static(...\func_get_args());
     }

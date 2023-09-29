@@ -14,7 +14,7 @@ class EmergencyResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function __construct(EmergencyFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public function __construct(EmergencyFulfillmentResponseDataType|array $fulfillmentData = null)
     {
         $this->fulfillmentData = $fulfillmentData;
     }
@@ -22,7 +22,7 @@ class EmergencyResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public static function create(EmergencyFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public static function create(EmergencyFulfillmentResponseDataType|array $fulfillmentData = null)
     {
         return new static(...\func_get_args());
     }

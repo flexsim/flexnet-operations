@@ -31,11 +31,8 @@ class FeatureBundleQueryDataType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\FeaturesListType|null  $features
      */
-    public function __construct(string $uniqueId, string $name, string $state, string|null $description = null, FeaturesListType|null $features = null)
+    public function __construct(string $uniqueId, string $name, string $state, string $description = null, FeaturesListType $features = null)
     {
         $this->uniqueId = $uniqueId;
         $this->name = $name;
@@ -44,11 +41,7 @@ class FeatureBundleQueryDataType
         $this->features = $features;
     }
 
-    /**
-     * @param  string|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\FeaturesListType|null  $features
-     */
-    public static function create(string $uniqueId, string $name, string $state, string|null $description = null, FeaturesListType|null $features = null)
+    public static function create(string $uniqueId, string $name, string $state, string $description = null, FeaturesListType $features = null)
     {
         return new static(...\func_get_args());
     }
@@ -79,12 +72,12 @@ class FeatureBundleQueryDataType
         return $new;
     }
 
-    public function getDescription(): string|null
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function withDescription(string|null $description): FeatureBundleQueryDataType
+    public function withDescription(?string $description): FeatureBundleQueryDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -105,18 +98,12 @@ class FeatureBundleQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FeaturesListType|null
-     */
-    public function getFeatures(): FeaturesListType|null
+    public function getFeatures(): ?FeaturesListType
     {
         return $this->features;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeaturesListType|null  $features
-     */
-    public function withFeatures(FeaturesListType|null $features): FeatureBundleQueryDataType
+    public function withFeatures(?FeaturesListType $features): FeatureBundleQueryDataType
     {
         $new = clone $this;
         $new->features = $features;

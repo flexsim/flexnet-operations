@@ -14,7 +14,7 @@ class GetFeaturesQueryResponseDataType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FeatureQueryDataType|array<\Flexnet\ProductPackagingService\Type\FeatureQueryDataType>|null  $feature
      */
-    public function __construct(FeatureQueryDataType|array|null $feature = null)
+    public function __construct(FeatureQueryDataType|array $feature = null)
     {
         $this->feature = $feature;
     }
@@ -22,7 +22,7 @@ class GetFeaturesQueryResponseDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FeatureQueryDataType|array<\Flexnet\ProductPackagingService\Type\FeatureQueryDataType>|null  $feature
      */
-    public static function create(FeatureQueryDataType|array|null $feature = null)
+    public static function create(FeatureQueryDataType|array $feature = null)
     {
         return new static(...\func_get_args());
     }

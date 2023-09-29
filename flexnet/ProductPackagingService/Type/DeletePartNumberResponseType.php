@@ -18,36 +18,23 @@ class DeletePartNumberResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeletePartNumberDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedDeletePartNumberDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedDeletePartNumberDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeletePartNumberDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedDeletePartNumberDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedDeletePartNumberDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): DeletePartNumberResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class DeletePartNumberResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedDeletePartNumberDataListType|null
-     */
-    public function getFailedData(): FailedDeletePartNumberDataListType|null
+    public function getFailedData(): ?FailedDeletePartNumberDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeletePartNumberDataListType|null  $failedData
-     */
-    public function withFailedData(FailedDeletePartNumberDataListType|null $failedData): DeletePartNumberResponseType
+    public function withFailedData(?FailedDeletePartNumberDataListType $failedData): DeletePartNumberResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

@@ -18,36 +18,23 @@ class TransferHostResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\FailedTransferHostListDataType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedTransferHostListDataType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedTransferHostListDataType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\FailedTransferHostListDataType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedTransferHostListDataType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedTransferHostListDataType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): TransferHostResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class TransferHostResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FailedTransferHostListDataType|null
-     */
-    public function getFailedData(): FailedTransferHostListDataType|null
+    public function getFailedData(): ?FailedTransferHostListDataType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FailedTransferHostListDataType|null  $failedData
-     */
-    public function withFailedData(FailedTransferHostListDataType|null $failedData): TransferHostResponseType
+    public function withFailedData(?FailedTransferHostListDataType $failedData): TransferHostResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

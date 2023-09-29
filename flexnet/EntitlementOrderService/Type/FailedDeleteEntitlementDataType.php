@@ -16,36 +16,23 @@ class FailedDeleteEntitlementDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @param  string|null  $reason
      */
-    public function __construct(EntitlementIdentifierType $entitlementIdentifier, string|null $reason = null)
+    public function __construct(EntitlementIdentifierType $entitlementIdentifier, string $reason = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @param  string|null  $reason
-     */
-    public static function create(EntitlementIdentifierType $entitlementIdentifier, string|null $reason = null)
+    public static function create(EntitlementIdentifierType $entitlementIdentifier, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
-     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): FailedDeleteEntitlementDataType
     {
         $new = clone $this;
@@ -54,12 +41,12 @@ class FailedDeleteEntitlementDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedDeleteEntitlementDataType
+    public function withReason(?string $reason): FailedDeleteEntitlementDataType
     {
         $new = clone $this;
         $new->reason = $reason;

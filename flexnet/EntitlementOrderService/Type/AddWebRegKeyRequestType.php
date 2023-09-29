@@ -20,9 +20,8 @@ class AddWebRegKeyRequestType implements RequestInterface
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType>  $webRegKeyData
-     * @param  bool|null  $processSync
      */
-    public function __construct(AddWebRegKeyDataType|array $webRegKeyData, bool|null $processSync = null)
+    public function __construct(AddWebRegKeyDataType|array $webRegKeyData, bool $processSync = null)
     {
         $this->webRegKeyData = $webRegKeyData;
         $this->processSync = $processSync;
@@ -30,9 +29,8 @@ class AddWebRegKeyRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType>  $webRegKeyData
-     * @param  bool|null  $processSync
      */
-    public static function create(AddWebRegKeyDataType|array $webRegKeyData, bool|null $processSync = null)
+    public static function create(AddWebRegKeyDataType|array $webRegKeyData, bool $processSync = null)
     {
         return new static(...\func_get_args());
     }
@@ -56,12 +54,12 @@ class AddWebRegKeyRequestType implements RequestInterface
         return $new;
     }
 
-    public function getProcessSync(): bool|null
+    public function getProcessSync(): ?bool
     {
         return $this->processSync;
     }
 
-    public function withProcessSync(bool|null $processSync): AddWebRegKeyRequestType
+    public function withProcessSync(?bool $processSync): AddWebRegKeyRequestType
     {
         $new = clone $this;
         $new->processSync = $processSync;

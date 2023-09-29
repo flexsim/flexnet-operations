@@ -16,36 +16,23 @@ class FailedDeleteMaintenanceDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenanceIdentifierType  $maintenanceIdentifier
-     * @param  string|null  $reason
      */
-    public function __construct(MaintenanceIdentifierType $maintenanceIdentifier, string|null $reason = null)
+    public function __construct(MaintenanceIdentifierType $maintenanceIdentifier, string $reason = null)
     {
         $this->maintenanceIdentifier = $maintenanceIdentifier;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenanceIdentifierType  $maintenanceIdentifier
-     * @param  string|null  $reason
-     */
-    public static function create(MaintenanceIdentifierType $maintenanceIdentifier, string|null $reason = null)
+    public static function create(MaintenanceIdentifierType $maintenanceIdentifier, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\MaintenanceIdentifierType
-     */
     public function getMaintenanceIdentifier(): MaintenanceIdentifierType
     {
         return $this->maintenanceIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenanceIdentifierType  $maintenanceIdentifier
-     */
     public function withMaintenanceIdentifier(MaintenanceIdentifierType $maintenanceIdentifier): FailedDeleteMaintenanceDataType
     {
         $new = clone $this;
@@ -54,12 +41,12 @@ class FailedDeleteMaintenanceDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedDeleteMaintenanceDataType
+    public function withReason(?string $reason): FailedDeleteMaintenanceDataType
     {
         $new = clone $this;
         $new->reason = $reason;

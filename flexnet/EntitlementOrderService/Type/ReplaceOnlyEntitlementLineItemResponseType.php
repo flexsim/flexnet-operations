@@ -23,39 +23,24 @@ class ReplaceOnlyEntitlementLineItemResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataListType|null  $failedData
-     * @param  \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataListType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedAddEntitlementLineItemDataListType|null $failedData = null, AddedEntitlementLineItemDataListType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedAddEntitlementLineItemDataListType $failedData = null, AddedEntitlementLineItemDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataListType|null  $failedData
-     * @param  \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataListType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedAddEntitlementLineItemDataListType|null $failedData = null, AddedEntitlementLineItemDataListType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FailedAddEntitlementLineItemDataListType $failedData = null, AddedEntitlementLineItemDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): ReplaceOnlyEntitlementLineItemResponseType
     {
         $new = clone $this;
@@ -64,18 +49,12 @@ class ReplaceOnlyEntitlementLineItemResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataListType|null
-     */
-    public function getFailedData(): FailedAddEntitlementLineItemDataListType|null
+    public function getFailedData(): ?FailedAddEntitlementLineItemDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataListType|null  $failedData
-     */
-    public function withFailedData(FailedAddEntitlementLineItemDataListType|null $failedData): ReplaceOnlyEntitlementLineItemResponseType
+    public function withFailedData(?FailedAddEntitlementLineItemDataListType $failedData): ReplaceOnlyEntitlementLineItemResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -83,18 +62,12 @@ class ReplaceOnlyEntitlementLineItemResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataListType|null
-     */
-    public function getResponseData(): AddedEntitlementLineItemDataListType|null
+    public function getResponseData(): ?AddedEntitlementLineItemDataListType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataListType|null  $responseData
-     */
-    public function withResponseData(AddedEntitlementLineItemDataListType|null $responseData): ReplaceOnlyEntitlementLineItemResponseType
+    public function withResponseData(?AddedEntitlementLineItemDataListType $responseData): ReplaceOnlyEntitlementLineItemResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

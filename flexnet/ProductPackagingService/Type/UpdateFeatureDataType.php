@@ -36,15 +36,8 @@ class UpdateFeatureDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierType  $featureIdentifier
-     * @param  string|null  $featureName
-     * @param  string|null  $versionFormat
-     * @param  string|null  $version
-     * @param  string|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType|null  $featureOverrideParams
      */
-    public function __construct(FeatureIdentifierType $featureIdentifier, string|null $featureName = null, string|null $versionFormat = null, string|null $version = null, string|null $description = null, FeatureOverrideParamsType|null $featureOverrideParams = null)
+    public function __construct(FeatureIdentifierType $featureIdentifier, string $featureName = null, string $versionFormat = null, string $version = null, string $description = null, FeatureOverrideParamsType $featureOverrideParams = null)
     {
         $this->featureIdentifier = $featureIdentifier;
         $this->featureName = $featureName;
@@ -54,30 +47,16 @@ class UpdateFeatureDataType
         $this->featureOverrideParams = $featureOverrideParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierType  $featureIdentifier
-     * @param  string|null  $featureName
-     * @param  string|null  $versionFormat
-     * @param  string|null  $version
-     * @param  string|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType|null  $featureOverrideParams
-     */
-    public static function create(FeatureIdentifierType $featureIdentifier, string|null $featureName = null, string|null $versionFormat = null, string|null $version = null, string|null $description = null, FeatureOverrideParamsType|null $featureOverrideParams = null)
+    public static function create(FeatureIdentifierType $featureIdentifier, string $featureName = null, string $versionFormat = null, string $version = null, string $description = null, FeatureOverrideParamsType $featureOverrideParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FeatureIdentifierType
-     */
     public function getFeatureIdentifier(): FeatureIdentifierType
     {
         return $this->featureIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierType  $featureIdentifier
-     */
     public function withFeatureIdentifier(FeatureIdentifierType $featureIdentifier): UpdateFeatureDataType
     {
         $new = clone $this;
@@ -86,12 +65,12 @@ class UpdateFeatureDataType
         return $new;
     }
 
-    public function getFeatureName(): string|null
+    public function getFeatureName(): ?string
     {
         return $this->featureName;
     }
 
-    public function withFeatureName(string|null $featureName): UpdateFeatureDataType
+    public function withFeatureName(?string $featureName): UpdateFeatureDataType
     {
         $new = clone $this;
         $new->featureName = $featureName;
@@ -99,12 +78,12 @@ class UpdateFeatureDataType
         return $new;
     }
 
-    public function getVersionFormat(): string|null
+    public function getVersionFormat(): ?string
     {
         return $this->versionFormat;
     }
 
-    public function withVersionFormat(string|null $versionFormat): UpdateFeatureDataType
+    public function withVersionFormat(?string $versionFormat): UpdateFeatureDataType
     {
         $new = clone $this;
         $new->versionFormat = $versionFormat;
@@ -112,12 +91,12 @@ class UpdateFeatureDataType
         return $new;
     }
 
-    public function getVersion(): string|null
+    public function getVersion(): ?string
     {
         return $this->version;
     }
 
-    public function withVersion(string|null $version): UpdateFeatureDataType
+    public function withVersion(?string $version): UpdateFeatureDataType
     {
         $new = clone $this;
         $new->version = $version;
@@ -125,12 +104,12 @@ class UpdateFeatureDataType
         return $new;
     }
 
-    public function getDescription(): string|null
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function withDescription(string|null $description): UpdateFeatureDataType
+    public function withDescription(?string $description): UpdateFeatureDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -138,18 +117,12 @@ class UpdateFeatureDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType|null
-     */
-    public function getFeatureOverrideParams(): FeatureOverrideParamsType|null
+    public function getFeatureOverrideParams(): ?FeatureOverrideParamsType
     {
         return $this->featureOverrideParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType|null  $featureOverrideParams
-     */
-    public function withFeatureOverrideParams(FeatureOverrideParamsType|null $featureOverrideParams): UpdateFeatureDataType
+    public function withFeatureOverrideParams(?FeatureOverrideParamsType $featureOverrideParams): UpdateFeatureDataType
     {
         $new = clone $this;
         $new->featureOverrideParams = $featureOverrideParams;

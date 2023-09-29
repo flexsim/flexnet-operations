@@ -14,7 +14,7 @@ class ReturnResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function __construct(ReturnFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public function __construct(ReturnFulfillmentResponseDataType|array $fulfillmentData = null)
     {
         $this->fulfillmentData = $fulfillmentData;
     }
@@ -22,7 +22,7 @@ class ReturnResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public static function create(ReturnFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public static function create(ReturnFulfillmentResponseDataType|array $fulfillmentData = null)
     {
         return new static(...\func_get_args());
     }

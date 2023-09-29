@@ -21,10 +21,6 @@ class LicenseModelDetailsType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType  $licenseTechnology
-     * @param  \Flexnet\ProductPackagingService\Type\ModelAttributesType  $attributeDetails
      */
     public function __construct(LicenseModelIdentifierType $licenseModelIdentifier, LicenseTechnologyIdentifierType $licenseTechnology, ModelAttributesType $attributeDetails)
     {
@@ -33,27 +29,16 @@ class LicenseModelDetailsType
         $this->attributeDetails = $attributeDetails;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType  $licenseTechnology
-     * @param  \Flexnet\ProductPackagingService\Type\ModelAttributesType  $attributeDetails
-     */
     public static function create(LicenseModelIdentifierType $licenseModelIdentifier, LicenseTechnologyIdentifierType $licenseTechnology, ModelAttributesType $attributeDetails)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType
-     */
     public function getLicenseModelIdentifier(): LicenseModelIdentifierType
     {
         return $this->licenseModelIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
-     */
     public function withLicenseModelIdentifier(LicenseModelIdentifierType $licenseModelIdentifier): LicenseModelDetailsType
     {
         $new = clone $this;
@@ -62,17 +47,11 @@ class LicenseModelDetailsType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType
-     */
     public function getLicenseTechnology(): LicenseTechnologyIdentifierType
     {
         return $this->licenseTechnology;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType  $licenseTechnology
-     */
     public function withLicenseTechnology(LicenseTechnologyIdentifierType $licenseTechnology): LicenseModelDetailsType
     {
         $new = clone $this;
@@ -81,17 +60,11 @@ class LicenseModelDetailsType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\ModelAttributesType
-     */
     public function getAttributeDetails(): ModelAttributesType
     {
         return $this->attributeDetails;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ModelAttributesType  $attributeDetails
-     */
     public function withAttributeDetails(ModelAttributesType $attributeDetails): LicenseModelDetailsType
     {
         $new = clone $this;

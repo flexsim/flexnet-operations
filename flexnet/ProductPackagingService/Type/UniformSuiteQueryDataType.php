@@ -121,29 +121,8 @@ class UniformSuiteQueryDataType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $version
-     * @param  string|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|null  $licenseGenerator
-     * @param  \Flexnet\ProductPackagingService\Type\PackagePropertiesDataType|null  $packageProperties
-     * @param  \Flexnet\ProductPackagingService\Type\ProductsListType|null  $products
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseModelsListType|null  $licenseModels
-     * @param  \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|null  $trustedKey
-     * @param  \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|null  $virtualTrustedKey
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumbersListType|null  $partNumbers
-     * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|null  $hostType
-     * @param  \Flexnet\ProductPackagingService\Type\HostTypeListType|null  $hostTypes
-     * @param  bool|null  $usedOnDevice
-     * @param  string|null  $productCategory
-     * @param  \Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType|null  $customAttributes
-     * @param  bool|null  $allowDownloadObsoleteFrInAdmin
-     * @param  bool|null  $allowDownloadObsoleteFrInPortal
-     * @param  \DateTimeInterface|null  $creationDate
-     * @param  \DateTimeInterface|null  $lastModifiedDate
-     * @param  \Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType|null  $productAttributes
      */
-    public function __construct(string $uniqueId, string $suiteName, string $state, string|null $version = null, string|null $description = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, LicenseGeneratorIdentifierType|null $licenseGenerator = null, PackagePropertiesDataType|null $packageProperties = null, ProductsListType|null $products = null, LicenseModelsListType|null $licenseModels = null, TrustedKeyIdentifierType|null $trustedKey = null, TrustedKeyIdentifierType|null $virtualTrustedKey = null, PartNumbersListType|null $partNumbers = null, HostTypePKType|null $hostType = null, HostTypeListType|null $hostTypes = null, bool|null $usedOnDevice = null, string|null $productCategory = null, AttributeDescriptorDataType|null $customAttributes = null, bool|null $allowDownloadObsoleteFrInAdmin = null, bool|null $allowDownloadObsoleteFrInPortal = null, \DateTimeInterface|null $creationDate = null, \DateTimeInterface|null $lastModifiedDate = null, AttributeDescriptorDataType|null $productAttributes = null)
+    public function __construct(string $uniqueId, string $suiteName, string $state, string $version = null, string $description = null, LicenseTechnologyIdentifierType $licenseTechnology = null, LicenseGeneratorIdentifierType $licenseGenerator = null, PackagePropertiesDataType $packageProperties = null, ProductsListType $products = null, LicenseModelsListType $licenseModels = null, TrustedKeyIdentifierType $trustedKey = null, TrustedKeyIdentifierType $virtualTrustedKey = null, PartNumbersListType $partNumbers = null, HostTypePKType $hostType = null, HostTypeListType $hostTypes = null, bool $usedOnDevice = null, string $productCategory = null, AttributeDescriptorDataType $customAttributes = null, bool $allowDownloadObsoleteFrInAdmin = null, bool $allowDownloadObsoleteFrInPortal = null, \DateTimeInterface $creationDate = null, \DateTimeInterface $lastModifiedDate = null, AttributeDescriptorDataType $productAttributes = null)
     {
         $this->uniqueId = $uniqueId;
         $this->suiteName = $suiteName;
@@ -170,29 +149,7 @@ class UniformSuiteQueryDataType
         $this->productAttributes = $productAttributes;
     }
 
-    /**
-     * @param  string|null  $version
-     * @param  string|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|null  $licenseGenerator
-     * @param  \Flexnet\ProductPackagingService\Type\PackagePropertiesDataType|null  $packageProperties
-     * @param  \Flexnet\ProductPackagingService\Type\ProductsListType|null  $products
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseModelsListType|null  $licenseModels
-     * @param  \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|null  $trustedKey
-     * @param  \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|null  $virtualTrustedKey
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumbersListType|null  $partNumbers
-     * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|null  $hostType
-     * @param  \Flexnet\ProductPackagingService\Type\HostTypeListType|null  $hostTypes
-     * @param  bool|null  $usedOnDevice
-     * @param  string|null  $productCategory
-     * @param  \Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType|null  $customAttributes
-     * @param  bool|null  $allowDownloadObsoleteFrInAdmin
-     * @param  bool|null  $allowDownloadObsoleteFrInPortal
-     * @param  \DateTimeInterface|null  $creationDate
-     * @param  \DateTimeInterface|null  $lastModifiedDate
-     * @param  \Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType|null  $productAttributes
-     */
-    public static function create(string $uniqueId, string $suiteName, string $state, string|null $version = null, string|null $description = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, LicenseGeneratorIdentifierType|null $licenseGenerator = null, PackagePropertiesDataType|null $packageProperties = null, ProductsListType|null $products = null, LicenseModelsListType|null $licenseModels = null, TrustedKeyIdentifierType|null $trustedKey = null, TrustedKeyIdentifierType|null $virtualTrustedKey = null, PartNumbersListType|null $partNumbers = null, HostTypePKType|null $hostType = null, HostTypeListType|null $hostTypes = null, bool|null $usedOnDevice = null, string|null $productCategory = null, AttributeDescriptorDataType|null $customAttributes = null, bool|null $allowDownloadObsoleteFrInAdmin = null, bool|null $allowDownloadObsoleteFrInPortal = null, \DateTimeInterface|null $creationDate = null, \DateTimeInterface|null $lastModifiedDate = null, AttributeDescriptorDataType|null $productAttributes = null)
+    public static function create(string $uniqueId, string $suiteName, string $state, string $version = null, string $description = null, LicenseTechnologyIdentifierType $licenseTechnology = null, LicenseGeneratorIdentifierType $licenseGenerator = null, PackagePropertiesDataType $packageProperties = null, ProductsListType $products = null, LicenseModelsListType $licenseModels = null, TrustedKeyIdentifierType $trustedKey = null, TrustedKeyIdentifierType $virtualTrustedKey = null, PartNumbersListType $partNumbers = null, HostTypePKType $hostType = null, HostTypeListType $hostTypes = null, bool $usedOnDevice = null, string $productCategory = null, AttributeDescriptorDataType $customAttributes = null, bool $allowDownloadObsoleteFrInAdmin = null, bool $allowDownloadObsoleteFrInPortal = null, \DateTimeInterface $creationDate = null, \DateTimeInterface $lastModifiedDate = null, AttributeDescriptorDataType $productAttributes = null)
     {
         return new static(...\func_get_args());
     }
@@ -223,12 +180,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    public function getVersion(): string|null
+    public function getVersion(): ?string
     {
         return $this->version;
     }
 
-    public function withVersion(string|null $version): UniformSuiteQueryDataType
+    public function withVersion(?string $version): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->version = $version;
@@ -236,12 +193,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    public function getDescription(): string|null
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function withDescription(string|null $description): UniformSuiteQueryDataType
+    public function withDescription(?string $description): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -262,18 +219,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType|null
-     */
-    public function getLicenseTechnology(): LicenseTechnologyIdentifierType|null
+    public function getLicenseTechnology(): ?LicenseTechnologyIdentifierType
     {
         return $this->licenseTechnology;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
-     */
-    public function withLicenseTechnology(LicenseTechnologyIdentifierType|null $licenseTechnology): UniformSuiteQueryDataType
+    public function withLicenseTechnology(?LicenseTechnologyIdentifierType $licenseTechnology): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->licenseTechnology = $licenseTechnology;
@@ -281,18 +232,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|null
-     */
-    public function getLicenseGenerator(): LicenseGeneratorIdentifierType|null
+    public function getLicenseGenerator(): ?LicenseGeneratorIdentifierType
     {
         return $this->licenseGenerator;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|null  $licenseGenerator
-     */
-    public function withLicenseGenerator(LicenseGeneratorIdentifierType|null $licenseGenerator): UniformSuiteQueryDataType
+    public function withLicenseGenerator(?LicenseGeneratorIdentifierType $licenseGenerator): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->licenseGenerator = $licenseGenerator;
@@ -300,18 +245,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\PackagePropertiesDataType|null
-     */
-    public function getPackageProperties(): PackagePropertiesDataType|null
+    public function getPackageProperties(): ?PackagePropertiesDataType
     {
         return $this->packageProperties;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PackagePropertiesDataType|null  $packageProperties
-     */
-    public function withPackageProperties(PackagePropertiesDataType|null $packageProperties): UniformSuiteQueryDataType
+    public function withPackageProperties(?PackagePropertiesDataType $packageProperties): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->packageProperties = $packageProperties;
@@ -319,18 +258,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\ProductsListType|null
-     */
-    public function getProducts(): ProductsListType|null
+    public function getProducts(): ?ProductsListType
     {
         return $this->products;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductsListType|null  $products
-     */
-    public function withProducts(ProductsListType|null $products): UniformSuiteQueryDataType
+    public function withProducts(?ProductsListType $products): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->products = $products;
@@ -338,18 +271,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\LicenseModelsListType|null
-     */
-    public function getLicenseModels(): LicenseModelsListType|null
+    public function getLicenseModels(): ?LicenseModelsListType
     {
         return $this->licenseModels;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseModelsListType|null  $licenseModels
-     */
-    public function withLicenseModels(LicenseModelsListType|null $licenseModels): UniformSuiteQueryDataType
+    public function withLicenseModels(?LicenseModelsListType $licenseModels): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->licenseModels = $licenseModels;
@@ -357,18 +284,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|null
-     */
-    public function getTrustedKey(): TrustedKeyIdentifierType|null
+    public function getTrustedKey(): ?TrustedKeyIdentifierType
     {
         return $this->trustedKey;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|null  $trustedKey
-     */
-    public function withTrustedKey(TrustedKeyIdentifierType|null $trustedKey): UniformSuiteQueryDataType
+    public function withTrustedKey(?TrustedKeyIdentifierType $trustedKey): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->trustedKey = $trustedKey;
@@ -376,18 +297,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|null
-     */
-    public function getVirtualTrustedKey(): TrustedKeyIdentifierType|null
+    public function getVirtualTrustedKey(): ?TrustedKeyIdentifierType
     {
         return $this->virtualTrustedKey;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|null  $virtualTrustedKey
-     */
-    public function withVirtualTrustedKey(TrustedKeyIdentifierType|null $virtualTrustedKey): UniformSuiteQueryDataType
+    public function withVirtualTrustedKey(?TrustedKeyIdentifierType $virtualTrustedKey): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->virtualTrustedKey = $virtualTrustedKey;
@@ -395,18 +310,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\PartNumbersListType|null
-     */
-    public function getPartNumbers(): PartNumbersListType|null
+    public function getPartNumbers(): ?PartNumbersListType
     {
         return $this->partNumbers;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumbersListType|null  $partNumbers
-     */
-    public function withPartNumbers(PartNumbersListType|null $partNumbers): UniformSuiteQueryDataType
+    public function withPartNumbers(?PartNumbersListType $partNumbers): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->partNumbers = $partNumbers;
@@ -414,18 +323,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\HostTypePKType|null
-     */
-    public function getHostType(): HostTypePKType|null
+    public function getHostType(): ?HostTypePKType
     {
         return $this->hostType;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|null  $hostType
-     */
-    public function withHostType(HostTypePKType|null $hostType): UniformSuiteQueryDataType
+    public function withHostType(?HostTypePKType $hostType): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->hostType = $hostType;
@@ -433,18 +336,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\HostTypeListType|null
-     */
-    public function getHostTypes(): HostTypeListType|null
+    public function getHostTypes(): ?HostTypeListType
     {
         return $this->hostTypes;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\HostTypeListType|null  $hostTypes
-     */
-    public function withHostTypes(HostTypeListType|null $hostTypes): UniformSuiteQueryDataType
+    public function withHostTypes(?HostTypeListType $hostTypes): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->hostTypes = $hostTypes;
@@ -452,12 +349,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    public function getUsedOnDevice(): bool|null
+    public function getUsedOnDevice(): ?bool
     {
         return $this->usedOnDevice;
     }
 
-    public function withUsedOnDevice(bool|null $usedOnDevice): UniformSuiteQueryDataType
+    public function withUsedOnDevice(?bool $usedOnDevice): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->usedOnDevice = $usedOnDevice;
@@ -465,12 +362,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    public function getProductCategory(): string|null
+    public function getProductCategory(): ?string
     {
         return $this->productCategory;
     }
 
-    public function withProductCategory(string|null $productCategory): UniformSuiteQueryDataType
+    public function withProductCategory(?string $productCategory): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->productCategory = $productCategory;
@@ -478,18 +375,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType|null
-     */
-    public function getCustomAttributes(): AttributeDescriptorDataType|null
+    public function getCustomAttributes(): ?AttributeDescriptorDataType
     {
         return $this->customAttributes;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType|null  $customAttributes
-     */
-    public function withCustomAttributes(AttributeDescriptorDataType|null $customAttributes): UniformSuiteQueryDataType
+    public function withCustomAttributes(?AttributeDescriptorDataType $customAttributes): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->customAttributes = $customAttributes;
@@ -497,12 +388,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    public function getAllowDownloadObsoleteFrInAdmin(): bool|null
+    public function getAllowDownloadObsoleteFrInAdmin(): ?bool
     {
         return $this->allowDownloadObsoleteFrInAdmin;
     }
 
-    public function withAllowDownloadObsoleteFrInAdmin(bool|null $allowDownloadObsoleteFrInAdmin): UniformSuiteQueryDataType
+    public function withAllowDownloadObsoleteFrInAdmin(?bool $allowDownloadObsoleteFrInAdmin): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->allowDownloadObsoleteFrInAdmin = $allowDownloadObsoleteFrInAdmin;
@@ -510,12 +401,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    public function getAllowDownloadObsoleteFrInPortal(): bool|null
+    public function getAllowDownloadObsoleteFrInPortal(): ?bool
     {
         return $this->allowDownloadObsoleteFrInPortal;
     }
 
-    public function withAllowDownloadObsoleteFrInPortal(bool|null $allowDownloadObsoleteFrInPortal): UniformSuiteQueryDataType
+    public function withAllowDownloadObsoleteFrInPortal(?bool $allowDownloadObsoleteFrInPortal): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->allowDownloadObsoleteFrInPortal = $allowDownloadObsoleteFrInPortal;
@@ -523,12 +414,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    public function getCreationDate(): \DateTimeInterface|null
+    public function getCreationDate(): ?\DateTimeInterface
     {
         return $this->creationDate;
     }
 
-    public function withCreationDate(\DateTimeInterface|null $creationDate): UniformSuiteQueryDataType
+    public function withCreationDate(?\DateTimeInterface $creationDate): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->creationDate = $creationDate;
@@ -536,12 +427,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    public function getLastModifiedDate(): \DateTimeInterface|null
+    public function getLastModifiedDate(): ?\DateTimeInterface
     {
         return $this->lastModifiedDate;
     }
 
-    public function withLastModifiedDate(\DateTimeInterface|null $lastModifiedDate): UniformSuiteQueryDataType
+    public function withLastModifiedDate(?\DateTimeInterface $lastModifiedDate): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->lastModifiedDate = $lastModifiedDate;
@@ -549,18 +440,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType|null
-     */
-    public function getProductAttributes(): AttributeDescriptorDataType|null
+    public function getProductAttributes(): ?AttributeDescriptorDataType
     {
         return $this->productAttributes;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType|null  $productAttributes
-     */
-    public function withProductAttributes(AttributeDescriptorDataType|null $productAttributes): UniformSuiteQueryDataType
+    public function withProductAttributes(?AttributeDescriptorDataType $productAttributes): UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->productAttributes = $productAttributes;

@@ -26,10 +26,8 @@ class AttributeMetaDescriptorType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\ValueType|null  $validValues
      */
-    public function __construct(string $attributeName, string $attributeDataType, string $namespace, ValueType|null $validValues = null)
+    public function __construct(string $attributeName, string $attributeDataType, string $namespace, ValueType $validValues = null)
     {
         $this->attributeName = $attributeName;
         $this->attributeDataType = $attributeDataType;
@@ -37,10 +35,7 @@ class AttributeMetaDescriptorType
         $this->validValues = $validValues;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ValueType|null  $validValues
-     */
-    public static function create(string $attributeName, string $attributeDataType, string $namespace, ValueType|null $validValues = null)
+    public static function create(string $attributeName, string $attributeDataType, string $namespace, ValueType $validValues = null)
     {
         return new static(...\func_get_args());
     }
@@ -84,18 +79,12 @@ class AttributeMetaDescriptorType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\ValueType|null
-     */
-    public function getValidValues(): ValueType|null
+    public function getValidValues(): ?ValueType
     {
         return $this->validValues;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ValueType|null  $validValues
-     */
-    public function withValidValues(ValueType|null $validValues): AttributeMetaDescriptorType
+    public function withValidValues(?ValueType $validValues): AttributeMetaDescriptorType
     {
         $new = clone $this;
         $new->validValues = $validValues;

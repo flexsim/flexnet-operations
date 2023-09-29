@@ -18,36 +18,23 @@ class DeleteFeatureResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedDeleteFeatureDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedDeleteFeatureDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedDeleteFeatureDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedDeleteFeatureDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): DeleteFeatureResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class DeleteFeatureResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataListType|null
-     */
-    public function getFailedData(): FailedDeleteFeatureDataListType|null
+    public function getFailedData(): ?FailedDeleteFeatureDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataListType|null  $failedData
-     */
-    public function withFailedData(FailedDeleteFeatureDataListType|null $failedData): DeleteFeatureResponseType
+    public function withFailedData(?FailedDeleteFeatureDataListType $failedData): DeleteFeatureResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

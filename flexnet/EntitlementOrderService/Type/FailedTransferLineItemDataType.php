@@ -16,8 +16,6 @@ class FailedTransferLineItemDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType  $lineItemInfo
      */
     public function __construct(TransferLineItemInfoType $lineItemInfo, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedTransferLineItemDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType  $lineItemInfo
-     */
     public static function create(TransferLineItemInfoType $lineItemInfo, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType
-     */
     public function getLineItemInfo(): TransferLineItemInfoType
     {
         return $this->lineItemInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType  $lineItemInfo
-     */
     public function withLineItemInfo(TransferLineItemInfoType $lineItemInfo): FailedTransferLineItemDataType
     {
         $new = clone $this;

@@ -26,12 +26,8 @@ class ChannelPartnerDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $accountUnit
-     * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $contact
-     * @param  bool|null  $currentOwner
      */
-    public function __construct(string $tierName, AccountIdentifierType $accountUnit, UserIdentifierType|null $contact = null, bool|null $currentOwner = null)
+    public function __construct(string $tierName, AccountIdentifierType $accountUnit, UserIdentifierType $contact = null, bool $currentOwner = null)
     {
         $this->tierName = $tierName;
         $this->accountUnit = $accountUnit;
@@ -39,12 +35,7 @@ class ChannelPartnerDataType
         $this->currentOwner = $currentOwner;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $accountUnit
-     * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $contact
-     * @param  bool|null  $currentOwner
-     */
-    public static function create(string $tierName, AccountIdentifierType $accountUnit, UserIdentifierType|null $contact = null, bool|null $currentOwner = null)
+    public static function create(string $tierName, AccountIdentifierType $accountUnit, UserIdentifierType $contact = null, bool $currentOwner = null)
     {
         return new static(...\func_get_args());
     }
@@ -62,17 +53,11 @@ class ChannelPartnerDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AccountIdentifierType
-     */
     public function getAccountUnit(): AccountIdentifierType
     {
         return $this->accountUnit;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $accountUnit
-     */
     public function withAccountUnit(AccountIdentifierType $accountUnit): ChannelPartnerDataType
     {
         $new = clone $this;
@@ -81,18 +66,12 @@ class ChannelPartnerDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null
-     */
-    public function getContact(): UserIdentifierType|null
+    public function getContact(): ?UserIdentifierType
     {
         return $this->contact;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $contact
-     */
-    public function withContact(UserIdentifierType|null $contact): ChannelPartnerDataType
+    public function withContact(?UserIdentifierType $contact): ChannelPartnerDataType
     {
         $new = clone $this;
         $new->contact = $contact;
@@ -100,12 +79,12 @@ class ChannelPartnerDataType
         return $new;
     }
 
-    public function getCurrentOwner(): bool|null
+    public function getCurrentOwner(): ?bool
     {
         return $this->currentOwner;
     }
 
-    public function withCurrentOwner(bool|null $currentOwner): ChannelPartnerDataType
+    public function withCurrentOwner(?bool $currentOwner): ChannelPartnerDataType
     {
         $new = clone $this;
         $new->currentOwner = $currentOwner;

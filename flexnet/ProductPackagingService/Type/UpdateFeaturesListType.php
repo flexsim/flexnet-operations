@@ -19,7 +19,7 @@ class UpdateFeaturesListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null  $feature
      */
-    public function __construct(string $opType, FeatureIdentifierWithCountDataType|array|null $feature = null)
+    public function __construct(string $opType, FeatureIdentifierWithCountDataType|array $feature = null)
     {
         $this->opType = $opType;
         $this->feature = $feature;
@@ -28,7 +28,7 @@ class UpdateFeaturesListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null  $feature
      */
-    public static function create(string $opType, FeatureIdentifierWithCountDataType|array|null $feature = null)
+    public static function create(string $opType, FeatureIdentifierWithCountDataType|array $feature = null)
     {
         return new static(...\func_get_args());
     }

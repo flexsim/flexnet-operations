@@ -19,7 +19,7 @@ class UpdateEntitledProductDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
      */
-    public function __construct(string $opType, EntitledProductDataType|array|null $entitledProducts = null)
+    public function __construct(string $opType, EntitledProductDataType|array $entitledProducts = null)
     {
         $this->opType = $opType;
         $this->entitledProducts = $entitledProducts;
@@ -28,7 +28,7 @@ class UpdateEntitledProductDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
      */
-    public static function create(string $opType, EntitledProductDataType|array|null $entitledProducts = null)
+    public static function create(string $opType, EntitledProductDataType|array $entitledProducts = null)
     {
         return new static(...\func_get_args());
     }

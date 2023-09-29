@@ -18,36 +18,23 @@ class GetActivatableItemCountRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $queryParams
-     * @param  bool|null  $restrictToItemsReadyToActivate
      */
-    public function __construct(SearchActivatableItemDataType $queryParams, bool|null $restrictToItemsReadyToActivate = null)
+    public function __construct(SearchActivatableItemDataType $queryParams, bool $restrictToItemsReadyToActivate = null)
     {
         $this->queryParams = $queryParams;
         $this->restrictToItemsReadyToActivate = $restrictToItemsReadyToActivate;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $queryParams
-     * @param  bool|null  $restrictToItemsReadyToActivate
-     */
-    public static function create(SearchActivatableItemDataType $queryParams, bool|null $restrictToItemsReadyToActivate = null)
+    public static function create(SearchActivatableItemDataType $queryParams, bool $restrictToItemsReadyToActivate = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
-     */
     public function getQueryParams(): SearchActivatableItemDataType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $queryParams
-     */
     public function withQueryParams(SearchActivatableItemDataType $queryParams): GetActivatableItemCountRequestType
     {
         $new = clone $this;
@@ -56,12 +43,12 @@ class GetActivatableItemCountRequestType implements RequestInterface
         return $new;
     }
 
-    public function getRestrictToItemsReadyToActivate(): bool|null
+    public function getRestrictToItemsReadyToActivate(): ?bool
     {
         return $this->restrictToItemsReadyToActivate;
     }
 
-    public function withRestrictToItemsReadyToActivate(bool|null $restrictToItemsReadyToActivate): GetActivatableItemCountRequestType
+    public function withRestrictToItemsReadyToActivate(?bool $restrictToItemsReadyToActivate): GetActivatableItemCountRequestType
     {
         $new = clone $this;
         $new->restrictToItemsReadyToActivate = $restrictToItemsReadyToActivate;

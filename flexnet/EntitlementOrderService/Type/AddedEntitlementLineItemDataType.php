@@ -32,13 +32,12 @@ class AddedEntitlementLineItemDataType
     /**
      * Constructor
      *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
      * @param  string|array<string>|null  $lineItemUniqueIds
      * @param  string|array<string>|null  $maintenanceLineItemUniqueIds
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifiers
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $maintenanceLineItemIdentifiers
      */
-    public function __construct(EntitlementIdentifierType $entitlementIdentifier, string|array|null $lineItemUniqueIds = null, string|array|null $maintenanceLineItemUniqueIds = null, EntitlementLineItemIdentifierType|array|null $lineItemIdentifiers = null, EntitlementLineItemIdentifierType|array|null $maintenanceLineItemIdentifiers = null)
+    public function __construct(EntitlementIdentifierType $entitlementIdentifier, string|array $lineItemUniqueIds = null, string|array $maintenanceLineItemUniqueIds = null, EntitlementLineItemIdentifierType|array $lineItemIdentifiers = null, EntitlementLineItemIdentifierType|array $maintenanceLineItemIdentifiers = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->lineItemUniqueIds = $lineItemUniqueIds;
@@ -48,28 +47,21 @@ class AddedEntitlementLineItemDataType
     }
 
     /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
      * @param  string|array<string>|null  $lineItemUniqueIds
      * @param  string|array<string>|null  $maintenanceLineItemUniqueIds
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifiers
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $maintenanceLineItemIdentifiers
      */
-    public static function create(EntitlementIdentifierType $entitlementIdentifier, string|array|null $lineItemUniqueIds = null, string|array|null $maintenanceLineItemUniqueIds = null, EntitlementLineItemIdentifierType|array|null $lineItemIdentifiers = null, EntitlementLineItemIdentifierType|array|null $maintenanceLineItemIdentifiers = null)
+    public static function create(EntitlementIdentifierType $entitlementIdentifier, string|array $lineItemUniqueIds = null, string|array $maintenanceLineItemUniqueIds = null, EntitlementLineItemIdentifierType|array $lineItemIdentifiers = null, EntitlementLineItemIdentifierType|array $maintenanceLineItemIdentifiers = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
-     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): AddedEntitlementLineItemDataType
     {
         $new = clone $this;

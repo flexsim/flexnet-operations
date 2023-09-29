@@ -14,7 +14,7 @@ class FailedDeleteWebRegKeyListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType>|null  $failedWebRegKey
      */
-    public function __construct(FailedDeleteWebRegKeyDataType|array|null $failedWebRegKey = null)
+    public function __construct(FailedDeleteWebRegKeyDataType|array $failedWebRegKey = null)
     {
         $this->failedWebRegKey = $failedWebRegKey;
     }
@@ -22,7 +22,7 @@ class FailedDeleteWebRegKeyListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType>|null  $failedWebRegKey
      */
-    public static function create(FailedDeleteWebRegKeyDataType|array|null $failedWebRegKey = null)
+    public static function create(FailedDeleteWebRegKeyDataType|array $failedWebRegKey = null)
     {
         return new static(...\func_get_args());
     }

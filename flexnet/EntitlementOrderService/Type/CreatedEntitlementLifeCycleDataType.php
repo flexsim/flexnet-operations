@@ -22,10 +22,9 @@ class CreatedEntitlementLifeCycleDataType
     /**
      * Constructor
      *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType>|null  $createdLineItemData
      */
-    public function __construct(string $entitlementRecordRefNo, EntitlementIdentifierType $parentEntitlementIdentifier, LifeCycleLineItemDataType|array|null $createdLineItemData = null)
+    public function __construct(string $entitlementRecordRefNo, EntitlementIdentifierType $parentEntitlementIdentifier, LifeCycleLineItemDataType|array $createdLineItemData = null)
     {
         $this->entitlementRecordRefNo = $entitlementRecordRefNo;
         $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
@@ -33,10 +32,9 @@ class CreatedEntitlementLifeCycleDataType
     }
 
     /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType>|null  $createdLineItemData
      */
-    public static function create(string $entitlementRecordRefNo, EntitlementIdentifierType $parentEntitlementIdentifier, LifeCycleLineItemDataType|array|null $createdLineItemData = null)
+    public static function create(string $entitlementRecordRefNo, EntitlementIdentifierType $parentEntitlementIdentifier, LifeCycleLineItemDataType|array $createdLineItemData = null)
     {
         return new static(...\func_get_args());
     }
@@ -54,17 +52,11 @@ class CreatedEntitlementLifeCycleDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
-     */
     public function getParentEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->parentEntitlementIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $parentEntitlementIdentifier
-     */
     public function withParentEntitlementIdentifier(EntitlementIdentifierType $parentEntitlementIdentifier): CreatedEntitlementLifeCycleDataType
     {
         $new = clone $this;

@@ -18,36 +18,23 @@ class GetFmtAttributesForBatchActivationResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, GetFmtAttributesForBatchDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetFmtAttributesForBatchDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, GetFmtAttributesForBatchDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetFmtAttributesForBatchDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetFmtAttributesForBatchActivationResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetFmtAttributesForBatchActivationResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null
-     */
-    public function getResponseData(): GetFmtAttributesForBatchDataType|null
+    public function getResponseData(): ?GetFmtAttributesForBatchDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType|null  $responseData
-     */
-    public function withResponseData(GetFmtAttributesForBatchDataType|null $responseData): GetFmtAttributesForBatchActivationResponseType
+    public function withResponseData(?GetFmtAttributesForBatchDataType $responseData): GetFmtAttributesForBatchActivationResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

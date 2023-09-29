@@ -16,19 +16,14 @@ class PublisherErrorFulfillmentResponseDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|null  $fulfillment
      */
-    public function __construct(int $recordRefNo, FulfillmentDataType|null $fulfillment = null)
+    public function __construct(int $recordRefNo, FulfillmentDataType $fulfillment = null)
     {
         $this->recordRefNo = $recordRefNo;
         $this->fulfillment = $fulfillment;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|null  $fulfillment
-     */
-    public static function create(int $recordRefNo, FulfillmentDataType|null $fulfillment = null)
+    public static function create(int $recordRefNo, FulfillmentDataType $fulfillment = null)
     {
         return new static(...\func_get_args());
     }
@@ -46,18 +41,12 @@ class PublisherErrorFulfillmentResponseDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FulfillmentDataType|null
-     */
-    public function getFulfillment(): FulfillmentDataType|null
+    public function getFulfillment(): ?FulfillmentDataType
     {
         return $this->fulfillment;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|null  $fulfillment
-     */
-    public function withFulfillment(FulfillmentDataType|null $fulfillment): PublisherErrorFulfillmentResponseDataType
+    public function withFulfillment(?FulfillmentDataType $fulfillment): PublisherErrorFulfillmentResponseDataType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;

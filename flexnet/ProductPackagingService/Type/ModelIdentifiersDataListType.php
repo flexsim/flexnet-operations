@@ -14,7 +14,7 @@ class ModelIdentifiersDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelDetailsType|array<\Flexnet\ProductPackagingService\Type\LicenseModelDetailsType>|null  $licenseModel
      */
-    public function __construct(LicenseModelDetailsType|array|null $licenseModel = null)
+    public function __construct(LicenseModelDetailsType|array $licenseModel = null)
     {
         $this->licenseModel = $licenseModel;
     }
@@ -22,7 +22,7 @@ class ModelIdentifiersDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelDetailsType|array<\Flexnet\ProductPackagingService\Type\LicenseModelDetailsType>|null  $licenseModel
      */
-    public static function create(LicenseModelDetailsType|array|null $licenseModel = null)
+    public static function create(LicenseModelDetailsType|array $licenseModel = null)
     {
         return new static(...\func_get_args());
     }

@@ -16,8 +16,6 @@ class FailedMaintenanceLineItemStateDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType  $maintenanceLineItem
      */
     public function __construct(MaintenanceLineItemStateDataType $maintenanceLineItem, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedMaintenanceLineItemStateDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType  $maintenanceLineItem
-     */
     public static function create(MaintenanceLineItemStateDataType $maintenanceLineItem, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType
-     */
     public function getMaintenanceLineItem(): MaintenanceLineItemStateDataType
     {
         return $this->maintenanceLineItem;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType  $maintenanceLineItem
-     */
     public function withMaintenanceLineItem(MaintenanceLineItemStateDataType $maintenanceLineItem): FailedMaintenanceLineItemStateDataType
     {
         $new = clone $this;

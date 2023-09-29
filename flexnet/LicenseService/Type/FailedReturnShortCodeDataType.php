@@ -16,8 +16,6 @@ class FailedReturnShortCodeDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\ReturnShortCodeDataType  $shortCodeData
      */
     public function __construct(ReturnShortCodeDataType $shortCodeData, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedReturnShortCodeDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ReturnShortCodeDataType  $shortCodeData
-     */
     public static function create(ReturnShortCodeDataType $shortCodeData, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\ReturnShortCodeDataType
-     */
     public function getShortCodeData(): ReturnShortCodeDataType
     {
         return $this->shortCodeData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ReturnShortCodeDataType  $shortCodeData
-     */
     public function withShortCodeData(ReturnShortCodeDataType $shortCodeData): FailedReturnShortCodeDataType
     {
         $new = clone $this;

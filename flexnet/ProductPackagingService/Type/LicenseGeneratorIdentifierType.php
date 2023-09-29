@@ -16,31 +16,24 @@ class LicenseGeneratorIdentifierType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorPKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, LicenseGeneratorPKType|null $primaryKeys = null)
+    public function __construct(string $uniqueId = null, LicenseGeneratorPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorPKType|null  $primaryKeys
-     */
-    public static function create(string|null $uniqueId = null, LicenseGeneratorPKType|null $primaryKeys = null)
+    public static function create(string $uniqueId = null, LicenseGeneratorPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUniqueId(): string|null
+    public function getUniqueId(): ?string
     {
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string|null $uniqueId): LicenseGeneratorIdentifierType
+    public function withUniqueId(?string $uniqueId): LicenseGeneratorIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -48,18 +41,12 @@ class LicenseGeneratorIdentifierType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\LicenseGeneratorPKType|null
-     */
-    public function getPrimaryKeys(): LicenseGeneratorPKType|null
+    public function getPrimaryKeys(): ?LicenseGeneratorPKType
     {
         return $this->primaryKeys;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorPKType|null  $primaryKeys
-     */
-    public function withPrimaryKeys(LicenseGeneratorPKType|null $primaryKeys): LicenseGeneratorIdentifierType
+    public function withPrimaryKeys(?LicenseGeneratorPKType $primaryKeys): LicenseGeneratorIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

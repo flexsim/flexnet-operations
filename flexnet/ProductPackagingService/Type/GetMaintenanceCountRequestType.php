@@ -13,34 +13,23 @@ class GetMaintenanceCountRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenanceQueryParametersType|null  $queryParams
      */
-    public function __construct(MaintenanceQueryParametersType|null $queryParams = null)
+    public function __construct(MaintenanceQueryParametersType $queryParams = null)
     {
         $this->queryParams = $queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenanceQueryParametersType|null  $queryParams
-     */
-    public static function create(MaintenanceQueryParametersType|null $queryParams = null)
+    public static function create(MaintenanceQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\MaintenanceQueryParametersType|null
-     */
-    public function getQueryParams(): MaintenanceQueryParametersType|null
+    public function getQueryParams(): ?MaintenanceQueryParametersType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenanceQueryParametersType|null  $queryParams
-     */
-    public function withQueryParams(MaintenanceQueryParametersType|null $queryParams): GetMaintenanceCountRequestType
+    public function withQueryParams(?MaintenanceQueryParametersType $queryParams): GetMaintenanceCountRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

@@ -18,36 +18,23 @@ class GetLicenseTechnologyQueryResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyDataListType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, LicenseTechnologyDataListType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, LicenseTechnologyDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyDataListType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, LicenseTechnologyDataListType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, LicenseTechnologyDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetLicenseTechnologyQueryResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetLicenseTechnologyQueryResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\LicenseTechnologyDataListType|null
-     */
-    public function getResponseData(): LicenseTechnologyDataListType|null
+    public function getResponseData(): ?LicenseTechnologyDataListType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyDataListType|null  $responseData
-     */
-    public function withResponseData(LicenseTechnologyDataListType|null $responseData): GetLicenseTechnologyQueryResponseType
+    public function withResponseData(?LicenseTechnologyDataListType $responseData): GetLicenseTechnologyQueryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

@@ -28,13 +28,8 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\ConsolidatedLicenseIdListType  $consolidatedLicenseIdList
-     * @param  bool|null  $validateEmailAddresses
-     * @param  \Flexnet\LicenseService\Type\EmailContactListType|null  $emailIdList
-     * @param  string|null  $locale
      */
-    public function __construct(ConsolidatedLicenseIdListType $consolidatedLicenseIdList, bool|null $validateEmailAddresses = null, EmailContactListType|null $emailIdList = null, string|null $locale = null)
+    public function __construct(ConsolidatedLicenseIdListType $consolidatedLicenseIdList, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, string $locale = null)
     {
         $this->consolidatedLicenseIdList = $consolidatedLicenseIdList;
         $this->validateEmailAddresses = $validateEmailAddresses;
@@ -42,28 +37,16 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
         $this->locale = $locale;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ConsolidatedLicenseIdListType  $consolidatedLicenseIdList
-     * @param  bool|null  $validateEmailAddresses
-     * @param  \Flexnet\LicenseService\Type\EmailContactListType|null  $emailIdList
-     * @param  string|null  $locale
-     */
-    public static function create(ConsolidatedLicenseIdListType $consolidatedLicenseIdList, bool|null $validateEmailAddresses = null, EmailContactListType|null $emailIdList = null, string|null $locale = null)
+    public static function create(ConsolidatedLicenseIdListType $consolidatedLicenseIdList, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, string $locale = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\ConsolidatedLicenseIdListType
-     */
     public function getConsolidatedLicenseIdList(): ConsolidatedLicenseIdListType
     {
         return $this->consolidatedLicenseIdList;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ConsolidatedLicenseIdListType  $consolidatedLicenseIdList
-     */
     public function withConsolidatedLicenseIdList(ConsolidatedLicenseIdListType $consolidatedLicenseIdList): EmailConsolidatedLicensesRequestType
     {
         $new = clone $this;
@@ -72,12 +55,12 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    public function getValidateEmailAddresses(): bool|null
+    public function getValidateEmailAddresses(): ?bool
     {
         return $this->validateEmailAddresses;
     }
 
-    public function withValidateEmailAddresses(bool|null $validateEmailAddresses): EmailConsolidatedLicensesRequestType
+    public function withValidateEmailAddresses(?bool $validateEmailAddresses): EmailConsolidatedLicensesRequestType
     {
         $new = clone $this;
         $new->validateEmailAddresses = $validateEmailAddresses;
@@ -85,18 +68,12 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\EmailContactListType|null
-     */
-    public function getEmailIdList(): EmailContactListType|null
+    public function getEmailIdList(): ?EmailContactListType
     {
         return $this->emailIdList;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\EmailContactListType|null  $emailIdList
-     */
-    public function withEmailIdList(EmailContactListType|null $emailIdList): EmailConsolidatedLicensesRequestType
+    public function withEmailIdList(?EmailContactListType $emailIdList): EmailConsolidatedLicensesRequestType
     {
         $new = clone $this;
         $new->emailIdList = $emailIdList;
@@ -104,12 +81,12 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    public function getLocale(): string|null
+    public function getLocale(): ?string
     {
         return $this->locale;
     }
 
-    public function withLocale(string|null $locale): EmailConsolidatedLicensesRequestType
+    public function withLocale(?string $locale): EmailConsolidatedLicensesRequestType
     {
         $new = clone $this;
         $new->locale = $locale;

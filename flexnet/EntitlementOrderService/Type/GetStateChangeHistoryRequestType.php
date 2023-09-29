@@ -38,15 +38,8 @@ class GetStateChangeHistoryRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\FeatureListType|null  $featureList
-     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleListType|null  $featureBundleList
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductListType|null  $productList
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelListType|null  $licenseModelList
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementListType|null  $simpleEntitlementList
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementListType|null  $bulkEntitlementList
      */
-    public function __construct(FeatureListType|null $featureList = null, FeatureBundleListType|null $featureBundleList = null, ProductListType|null $productList = null, LicenseModelListType|null $licenseModelList = null, EntitlementListType|null $simpleEntitlementList = null, EntitlementListType|null $bulkEntitlementList = null)
+    public function __construct(FeatureListType $featureList = null, FeatureBundleListType $featureBundleList = null, ProductListType $productList = null, LicenseModelListType $licenseModelList = null, EntitlementListType $simpleEntitlementList = null, EntitlementListType $bulkEntitlementList = null)
     {
         $this->featureList = $featureList;
         $this->featureBundleList = $featureBundleList;
@@ -56,31 +49,17 @@ class GetStateChangeHistoryRequestType implements RequestInterface
         $this->bulkEntitlementList = $bulkEntitlementList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FeatureListType|null  $featureList
-     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleListType|null  $featureBundleList
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductListType|null  $productList
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelListType|null  $licenseModelList
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementListType|null  $simpleEntitlementList
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementListType|null  $bulkEntitlementList
-     */
-    public static function create(FeatureListType|null $featureList = null, FeatureBundleListType|null $featureBundleList = null, ProductListType|null $productList = null, LicenseModelListType|null $licenseModelList = null, EntitlementListType|null $simpleEntitlementList = null, EntitlementListType|null $bulkEntitlementList = null)
+    public static function create(FeatureListType $featureList = null, FeatureBundleListType $featureBundleList = null, ProductListType $productList = null, LicenseModelListType $licenseModelList = null, EntitlementListType $simpleEntitlementList = null, EntitlementListType $bulkEntitlementList = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FeatureListType|null
-     */
-    public function getFeatureList(): FeatureListType|null
+    public function getFeatureList(): ?FeatureListType
     {
         return $this->featureList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FeatureListType|null  $featureList
-     */
-    public function withFeatureList(FeatureListType|null $featureList): GetStateChangeHistoryRequestType
+    public function withFeatureList(?FeatureListType $featureList): GetStateChangeHistoryRequestType
     {
         $new = clone $this;
         $new->featureList = $featureList;
@@ -88,18 +67,12 @@ class GetStateChangeHistoryRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FeatureBundleListType|null
-     */
-    public function getFeatureBundleList(): FeatureBundleListType|null
+    public function getFeatureBundleList(): ?FeatureBundleListType
     {
         return $this->featureBundleList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleListType|null  $featureBundleList
-     */
-    public function withFeatureBundleList(FeatureBundleListType|null $featureBundleList): GetStateChangeHistoryRequestType
+    public function withFeatureBundleList(?FeatureBundleListType $featureBundleList): GetStateChangeHistoryRequestType
     {
         $new = clone $this;
         $new->featureBundleList = $featureBundleList;
@@ -107,18 +80,12 @@ class GetStateChangeHistoryRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\ProductListType|null
-     */
-    public function getProductList(): ProductListType|null
+    public function getProductList(): ?ProductListType
     {
         return $this->productList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductListType|null  $productList
-     */
-    public function withProductList(ProductListType|null $productList): GetStateChangeHistoryRequestType
+    public function withProductList(?ProductListType $productList): GetStateChangeHistoryRequestType
     {
         $new = clone $this;
         $new->productList = $productList;
@@ -126,18 +93,12 @@ class GetStateChangeHistoryRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelListType|null
-     */
-    public function getLicenseModelList(): LicenseModelListType|null
+    public function getLicenseModelList(): ?LicenseModelListType
     {
         return $this->licenseModelList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelListType|null  $licenseModelList
-     */
-    public function withLicenseModelList(LicenseModelListType|null $licenseModelList): GetStateChangeHistoryRequestType
+    public function withLicenseModelList(?LicenseModelListType $licenseModelList): GetStateChangeHistoryRequestType
     {
         $new = clone $this;
         $new->licenseModelList = $licenseModelList;
@@ -145,18 +106,12 @@ class GetStateChangeHistoryRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementListType|null
-     */
-    public function getSimpleEntitlementList(): EntitlementListType|null
+    public function getSimpleEntitlementList(): ?EntitlementListType
     {
         return $this->simpleEntitlementList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementListType|null  $simpleEntitlementList
-     */
-    public function withSimpleEntitlementList(EntitlementListType|null $simpleEntitlementList): GetStateChangeHistoryRequestType
+    public function withSimpleEntitlementList(?EntitlementListType $simpleEntitlementList): GetStateChangeHistoryRequestType
     {
         $new = clone $this;
         $new->simpleEntitlementList = $simpleEntitlementList;
@@ -164,18 +119,12 @@ class GetStateChangeHistoryRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementListType|null
-     */
-    public function getBulkEntitlementList(): EntitlementListType|null
+    public function getBulkEntitlementList(): ?EntitlementListType
     {
         return $this->bulkEntitlementList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementListType|null  $bulkEntitlementList
-     */
-    public function withBulkEntitlementList(EntitlementListType|null $bulkEntitlementList): GetStateChangeHistoryRequestType
+    public function withBulkEntitlementList(?EntitlementListType $bulkEntitlementList): GetStateChangeHistoryRequestType
     {
         $new = clone $this;
         $new->bulkEntitlementList = $bulkEntitlementList;

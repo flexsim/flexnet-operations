@@ -14,7 +14,7 @@ class FailedTransferHostListDataType
      *
      * @param  \Flexnet\LicenseService\Type\FailedTransferHostDataType|array<\Flexnet\LicenseService\Type\FailedTransferHostDataType>|null  $failedHost
      */
-    public function __construct(FailedTransferHostDataType|array|null $failedHost = null)
+    public function __construct(FailedTransferHostDataType|array $failedHost = null)
     {
         $this->failedHost = $failedHost;
     }
@@ -22,7 +22,7 @@ class FailedTransferHostListDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedTransferHostDataType|array<\Flexnet\LicenseService\Type\FailedTransferHostDataType>|null  $failedHost
      */
-    public static function create(FailedTransferHostDataType|array|null $failedHost = null)
+    public static function create(FailedTransferHostDataType|array $failedHost = null)
     {
         return new static(...\func_get_args());
     }

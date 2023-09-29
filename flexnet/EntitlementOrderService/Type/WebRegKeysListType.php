@@ -14,7 +14,7 @@ class WebRegKeysListType
      *
      * @param  string|array<string>|null  $webRegKey
      */
-    public function __construct(string|array|null $webRegKey = null)
+    public function __construct(string|array $webRegKey = null)
     {
         $this->webRegKey = $webRegKey;
     }
@@ -22,7 +22,7 @@ class WebRegKeysListType
     /**
      * @param  string|array<string>|null  $webRegKey
      */
-    public static function create(string|array|null $webRegKey = null)
+    public static function create(string|array $webRegKey = null)
     {
         return new static(...\func_get_args());
     }

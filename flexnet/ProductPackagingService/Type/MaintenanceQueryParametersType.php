@@ -41,16 +41,8 @@ class MaintenanceQueryParametersType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $maintenanceName
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $version
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $partNumber
-     * @param  \Flexnet\ProductPackagingService\Type\StateQueryType|null  $state
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $creationDate
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $lastModifiedDate
      */
-    public function __construct(SimpleQueryType|null $maintenanceName = null, SimpleQueryType|null $version = null, SimpleQueryType|null $description = null, SimpleQueryType|null $partNumber = null, StateQueryType|null $state = null, DateQueryType|null $creationDate = null, DateQueryType|null $lastModifiedDate = null)
+    public function __construct(SimpleQueryType $maintenanceName = null, SimpleQueryType $version = null, SimpleQueryType $description = null, SimpleQueryType $partNumber = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null)
     {
         $this->maintenanceName = $maintenanceName;
         $this->version = $version;
@@ -61,32 +53,17 @@ class MaintenanceQueryParametersType
         $this->lastModifiedDate = $lastModifiedDate;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $maintenanceName
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $version
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $partNumber
-     * @param  \Flexnet\ProductPackagingService\Type\StateQueryType|null  $state
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $creationDate
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $lastModifiedDate
-     */
-    public static function create(SimpleQueryType|null $maintenanceName = null, SimpleQueryType|null $version = null, SimpleQueryType|null $description = null, SimpleQueryType|null $partNumber = null, StateQueryType|null $state = null, DateQueryType|null $creationDate = null, DateQueryType|null $lastModifiedDate = null)
+    public static function create(SimpleQueryType $maintenanceName = null, SimpleQueryType $version = null, SimpleQueryType $description = null, SimpleQueryType $partNumber = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getMaintenanceName(): SimpleQueryType|null
+    public function getMaintenanceName(): ?SimpleQueryType
     {
         return $this->maintenanceName;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $maintenanceName
-     */
-    public function withMaintenanceName(SimpleQueryType|null $maintenanceName): MaintenanceQueryParametersType
+    public function withMaintenanceName(?SimpleQueryType $maintenanceName): MaintenanceQueryParametersType
     {
         $new = clone $this;
         $new->maintenanceName = $maintenanceName;
@@ -94,18 +71,12 @@ class MaintenanceQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getVersion(): SimpleQueryType|null
+    public function getVersion(): ?SimpleQueryType
     {
         return $this->version;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $version
-     */
-    public function withVersion(SimpleQueryType|null $version): MaintenanceQueryParametersType
+    public function withVersion(?SimpleQueryType $version): MaintenanceQueryParametersType
     {
         $new = clone $this;
         $new->version = $version;
@@ -113,18 +84,12 @@ class MaintenanceQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getDescription(): SimpleQueryType|null
+    public function getDescription(): ?SimpleQueryType
     {
         return $this->description;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $description
-     */
-    public function withDescription(SimpleQueryType|null $description): MaintenanceQueryParametersType
+    public function withDescription(?SimpleQueryType $description): MaintenanceQueryParametersType
     {
         $new = clone $this;
         $new->description = $description;
@@ -132,18 +97,12 @@ class MaintenanceQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getPartNumber(): SimpleQueryType|null
+    public function getPartNumber(): ?SimpleQueryType
     {
         return $this->partNumber;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $partNumber
-     */
-    public function withPartNumber(SimpleQueryType|null $partNumber): MaintenanceQueryParametersType
+    public function withPartNumber(?SimpleQueryType $partNumber): MaintenanceQueryParametersType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -151,18 +110,12 @@ class MaintenanceQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StateQueryType|null
-     */
-    public function getState(): StateQueryType|null
+    public function getState(): ?StateQueryType
     {
         return $this->state;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StateQueryType|null  $state
-     */
-    public function withState(StateQueryType|null $state): MaintenanceQueryParametersType
+    public function withState(?StateQueryType $state): MaintenanceQueryParametersType
     {
         $new = clone $this;
         $new->state = $state;
@@ -170,18 +123,12 @@ class MaintenanceQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\DateQueryType|null
-     */
-    public function getCreationDate(): DateQueryType|null
+    public function getCreationDate(): ?DateQueryType
     {
         return $this->creationDate;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $creationDate
-     */
-    public function withCreationDate(DateQueryType|null $creationDate): MaintenanceQueryParametersType
+    public function withCreationDate(?DateQueryType $creationDate): MaintenanceQueryParametersType
     {
         $new = clone $this;
         $new->creationDate = $creationDate;
@@ -189,18 +136,12 @@ class MaintenanceQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\DateQueryType|null
-     */
-    public function getLastModifiedDate(): DateQueryType|null
+    public function getLastModifiedDate(): ?DateQueryType
     {
         return $this->lastModifiedDate;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $lastModifiedDate
-     */
-    public function withLastModifiedDate(DateQueryType|null $lastModifiedDate): MaintenanceQueryParametersType
+    public function withLastModifiedDate(?DateQueryType $lastModifiedDate): MaintenanceQueryParametersType
     {
         $new = clone $this;
         $new->lastModifiedDate = $lastModifiedDate;

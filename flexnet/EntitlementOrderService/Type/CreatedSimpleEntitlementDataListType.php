@@ -14,7 +14,7 @@ class CreatedSimpleEntitlementDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType>|null  $createdSimpleEntitlement
      */
-    public function __construct(CreatedSimpleEntitlementDataType|array|null $createdSimpleEntitlement = null)
+    public function __construct(CreatedSimpleEntitlementDataType|array $createdSimpleEntitlement = null)
     {
         $this->createdSimpleEntitlement = $createdSimpleEntitlement;
     }
@@ -22,7 +22,7 @@ class CreatedSimpleEntitlementDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType>|null  $createdSimpleEntitlement
      */
-    public static function create(CreatedSimpleEntitlementDataType|array|null $createdSimpleEntitlement = null)
+    public static function create(CreatedSimpleEntitlementDataType|array $createdSimpleEntitlement = null)
     {
         return new static(...\func_get_args());
     }

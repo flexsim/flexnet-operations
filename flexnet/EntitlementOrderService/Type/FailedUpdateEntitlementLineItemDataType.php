@@ -16,37 +16,24 @@ class FailedUpdateEntitlementLineItemDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|null  $failedData
-     * @param  string|null  $reason
      */
-    public function __construct(UpdateEntitlementLineItemDataType|null $failedData = null, string|null $reason = null)
+    public function __construct(UpdateEntitlementLineItemDataType $failedData = null, string $reason = null)
     {
         $this->failedData = $failedData;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|null  $failedData
-     * @param  string|null  $reason
-     */
-    public static function create(UpdateEntitlementLineItemDataType|null $failedData = null, string|null $reason = null)
+    public static function create(UpdateEntitlementLineItemDataType $failedData = null, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|null
-     */
-    public function getFailedData(): UpdateEntitlementLineItemDataType|null
+    public function getFailedData(): ?UpdateEntitlementLineItemDataType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|null  $failedData
-     */
-    public function withFailedData(UpdateEntitlementLineItemDataType|null $failedData): FailedUpdateEntitlementLineItemDataType
+    public function withFailedData(?UpdateEntitlementLineItemDataType $failedData): FailedUpdateEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -54,12 +41,12 @@ class FailedUpdateEntitlementLineItemDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedUpdateEntitlementLineItemDataType
+    public function withReason(?string $reason): FailedUpdateEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->reason = $reason;

@@ -16,8 +16,6 @@ class FeatureIdentifierWithCountDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierType  $featureIdentifier
      */
     public function __construct(FeatureIdentifierType $featureIdentifier, int $count)
     {
@@ -25,25 +23,16 @@ class FeatureIdentifierWithCountDataType
         $this->count = $count;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierType  $featureIdentifier
-     */
     public static function create(FeatureIdentifierType $featureIdentifier, int $count)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FeatureIdentifierType
-     */
     public function getFeatureIdentifier(): FeatureIdentifierType
     {
         return $this->featureIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierType  $featureIdentifier
-     */
     public function withFeatureIdentifier(FeatureIdentifierType $featureIdentifier): FeatureIdentifierWithCountDataType
     {
         $new = clone $this;

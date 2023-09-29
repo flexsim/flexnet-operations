@@ -14,7 +14,7 @@ class CreatedFeatureBundleDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\CorrelationDataType|array<\Flexnet\ProductPackagingService\Type\CorrelationDataType>|null  $createdFeatureBundle
      */
-    public function __construct(CorrelationDataType|array|null $createdFeatureBundle = null)
+    public function __construct(CorrelationDataType|array $createdFeatureBundle = null)
     {
         $this->createdFeatureBundle = $createdFeatureBundle;
     }
@@ -22,7 +22,7 @@ class CreatedFeatureBundleDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CorrelationDataType|array<\Flexnet\ProductPackagingService\Type\CorrelationDataType>|null  $createdFeatureBundle
      */
-    public static function create(CorrelationDataType|array|null $createdFeatureBundle = null)
+    public static function create(CorrelationDataType|array $createdFeatureBundle = null)
     {
         return new static(...\func_get_args());
     }

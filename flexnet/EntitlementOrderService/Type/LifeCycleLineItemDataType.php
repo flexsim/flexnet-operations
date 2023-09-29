@@ -21,9 +21,6 @@ class LifeCycleLineItemDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType  $newLineItem
      */
     public function __construct(string $lineItemRecordRefNo, EntitlementLineItemIdentifierType $parentLineItemIdentifier, NewEntitlementLineItemDataType $newLineItem)
     {
@@ -32,10 +29,6 @@ class LifeCycleLineItemDataType
         $this->newLineItem = $newLineItem;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType  $newLineItem
-     */
     public static function create(string $lineItemRecordRefNo, EntitlementLineItemIdentifierType $parentLineItemIdentifier, NewEntitlementLineItemDataType $newLineItem)
     {
         return new static(...\func_get_args());
@@ -54,17 +47,11 @@ class LifeCycleLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
-     */
     public function getParentLineItemIdentifier(): EntitlementLineItemIdentifierType
     {
         return $this->parentLineItemIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
-     */
     public function withParentLineItemIdentifier(EntitlementLineItemIdentifierType $parentLineItemIdentifier): LifeCycleLineItemDataType
     {
         $new = clone $this;
@@ -73,17 +60,11 @@ class LifeCycleLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType
-     */
     public function getNewLineItem(): NewEntitlementLineItemDataType
     {
         return $this->newLineItem;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType  $newLineItem
-     */
     public function withNewLineItem(NewEntitlementLineItemDataType $newLineItem): LifeCycleLineItemDataType
     {
         $new = clone $this;

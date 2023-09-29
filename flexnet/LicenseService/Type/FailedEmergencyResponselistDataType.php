@@ -14,7 +14,7 @@ class FailedEmergencyResponselistDataType
      *
      * @param  \Flexnet\LicenseService\Type\FailedEmergencyResponseDataType|array<\Flexnet\LicenseService\Type\FailedEmergencyResponseDataType>|null  $failedFulfillment
      */
-    public function __construct(FailedEmergencyResponseDataType|array|null $failedFulfillment = null)
+    public function __construct(FailedEmergencyResponseDataType|array $failedFulfillment = null)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
@@ -22,7 +22,7 @@ class FailedEmergencyResponselistDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedEmergencyResponseDataType|array<\Flexnet\LicenseService\Type\FailedEmergencyResponseDataType>|null  $failedFulfillment
      */
-    public static function create(FailedEmergencyResponseDataType|array|null $failedFulfillment = null)
+    public static function create(FailedEmergencyResponseDataType|array $failedFulfillment = null)
     {
         return new static(...\func_get_args());
     }

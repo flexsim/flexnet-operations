@@ -19,35 +19,27 @@ class GetProductRelationshipsResponseType extends Result
     /**
      * Constructor
      *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
      * @param  \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>|null  $relationship
      */
-    public function __construct(StatusInfoType $statusInfo, ProductRelationshipDataType|array|null $relationship = null)
+    public function __construct(StatusInfoType $statusInfo, ProductRelationshipDataType|array $relationship = null)
     {
         $this->statusInfo = $statusInfo;
         $this->relationship = $relationship;
     }
 
     /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
      * @param  \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>|null  $relationship
      */
-    public static function create(StatusInfoType $statusInfo, ProductRelationshipDataType|array|null $relationship = null)
+    public static function create(StatusInfoType $statusInfo, ProductRelationshipDataType|array $relationship = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetProductRelationshipsResponseType
     {
         $new = clone $this;

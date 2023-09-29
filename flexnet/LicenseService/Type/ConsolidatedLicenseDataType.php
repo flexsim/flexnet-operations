@@ -46,14 +46,8 @@ class ConsolidatedLicenseDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierListType  $consolidatedFulfillments
-     * @param  string|null  $licenseText
-     * @param  string|null  $binaryLicense
-     * @param  string|null  $state
-     * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
      */
-    public function __construct(string $consolidatedLicenseId, string $soldTo, string $criteria, FulfillmentIdentifierListType $consolidatedFulfillments, string|null $licenseText = null, string|null $binaryLicense = null, string|null $state = null, LicenseFileDataListType|null $licenseFiles = null)
+    public function __construct(string $consolidatedLicenseId, string $soldTo, string $criteria, FulfillmentIdentifierListType $consolidatedFulfillments, string $licenseText = null, string $binaryLicense = null, string $state = null, LicenseFileDataListType $licenseFiles = null)
     {
         $this->consolidatedLicenseId = $consolidatedLicenseId;
         $this->soldTo = $soldTo;
@@ -65,14 +59,7 @@ class ConsolidatedLicenseDataType
         $this->licenseFiles = $licenseFiles;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierListType  $consolidatedFulfillments
-     * @param  string|null  $licenseText
-     * @param  string|null  $binaryLicense
-     * @param  string|null  $state
-     * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
-     */
-    public static function create(string $consolidatedLicenseId, string $soldTo, string $criteria, FulfillmentIdentifierListType $consolidatedFulfillments, string|null $licenseText = null, string|null $binaryLicense = null, string|null $state = null, LicenseFileDataListType|null $licenseFiles = null)
+    public static function create(string $consolidatedLicenseId, string $soldTo, string $criteria, FulfillmentIdentifierListType $consolidatedFulfillments, string $licenseText = null, string $binaryLicense = null, string $state = null, LicenseFileDataListType $licenseFiles = null)
     {
         return new static(...\func_get_args());
     }
@@ -90,12 +77,12 @@ class ConsolidatedLicenseDataType
         return $new;
     }
 
-    public function getLicenseText(): string|null
+    public function getLicenseText(): ?string
     {
         return $this->licenseText;
     }
 
-    public function withLicenseText(string|null $licenseText): ConsolidatedLicenseDataType
+    public function withLicenseText(?string $licenseText): ConsolidatedLicenseDataType
     {
         $new = clone $this;
         $new->licenseText = $licenseText;
@@ -103,12 +90,12 @@ class ConsolidatedLicenseDataType
         return $new;
     }
 
-    public function getBinaryLicense(): string|null
+    public function getBinaryLicense(): ?string
     {
         return $this->binaryLicense;
     }
 
-    public function withBinaryLicense(string|null $binaryLicense): ConsolidatedLicenseDataType
+    public function withBinaryLicense(?string $binaryLicense): ConsolidatedLicenseDataType
     {
         $new = clone $this;
         $new->binaryLicense = $binaryLicense;
@@ -142,12 +129,12 @@ class ConsolidatedLicenseDataType
         return $new;
     }
 
-    public function getState(): string|null
+    public function getState(): ?string
     {
         return $this->state;
     }
 
-    public function withState(string|null $state): ConsolidatedLicenseDataType
+    public function withState(?string $state): ConsolidatedLicenseDataType
     {
         $new = clone $this;
         $new->state = $state;
@@ -155,17 +142,11 @@ class ConsolidatedLicenseDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FulfillmentIdentifierListType
-     */
     public function getConsolidatedFulfillments(): FulfillmentIdentifierListType
     {
         return $this->consolidatedFulfillments;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierListType  $consolidatedFulfillments
-     */
     public function withConsolidatedFulfillments(FulfillmentIdentifierListType $consolidatedFulfillments): ConsolidatedLicenseDataType
     {
         $new = clone $this;
@@ -174,18 +155,12 @@ class ConsolidatedLicenseDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\LicenseFileDataListType|null
-     */
-    public function getLicenseFiles(): LicenseFileDataListType|null
+    public function getLicenseFiles(): ?LicenseFileDataListType
     {
         return $this->licenseFiles;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
-     */
-    public function withLicenseFiles(LicenseFileDataListType|null $licenseFiles): ConsolidatedLicenseDataType
+    public function withLicenseFiles(?LicenseFileDataListType $licenseFiles): ConsolidatedLicenseDataType
     {
         $new = clone $this;
         $new->licenseFiles = $licenseFiles;

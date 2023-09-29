@@ -16,36 +16,23 @@ class FailedDeleteFeatureDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierType  $featureIdentifier
-     * @param  string|null  $reason
      */
-    public function __construct(FeatureIdentifierType $featureIdentifier, string|null $reason = null)
+    public function __construct(FeatureIdentifierType $featureIdentifier, string $reason = null)
     {
         $this->featureIdentifier = $featureIdentifier;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierType  $featureIdentifier
-     * @param  string|null  $reason
-     */
-    public static function create(FeatureIdentifierType $featureIdentifier, string|null $reason = null)
+    public static function create(FeatureIdentifierType $featureIdentifier, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FeatureIdentifierType
-     */
     public function getFeatureIdentifier(): FeatureIdentifierType
     {
         return $this->featureIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierType  $featureIdentifier
-     */
     public function withFeatureIdentifier(FeatureIdentifierType $featureIdentifier): FailedDeleteFeatureDataType
     {
         $new = clone $this;
@@ -54,12 +41,12 @@ class FailedDeleteFeatureDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedDeleteFeatureDataType
+    public function withReason(?string $reason): FailedDeleteFeatureDataType
     {
         $new = clone $this;
         $new->reason = $reason;

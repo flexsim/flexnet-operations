@@ -41,14 +41,8 @@ class SplitBulkEntitlementInfoType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
-     * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $targetContact
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $matchingBulkEntIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $matchingLineItemIdentifier
      */
-    public function __construct(EntitlementIdentifierType $bulkEntIdentifier, int $numberOfWRKs, string $targetTierName, AccountIdentifierType $targetAccountUnit, UserIdentifierType|null $targetContact = null, EntitlementIdentifierType|null $matchingBulkEntIdentifier = null, EntitlementLineItemIdentifierType|null $matchingLineItemIdentifier = null)
+    public function __construct(EntitlementIdentifierType $bulkEntIdentifier, int $numberOfWRKs, string $targetTierName, AccountIdentifierType $targetAccountUnit, UserIdentifierType $targetContact = null, EntitlementIdentifierType $matchingBulkEntIdentifier = null, EntitlementLineItemIdentifierType $matchingLineItemIdentifier = null)
     {
         $this->bulkEntIdentifier = $bulkEntIdentifier;
         $this->numberOfWRKs = $numberOfWRKs;
@@ -59,29 +53,16 @@ class SplitBulkEntitlementInfoType
         $this->matchingLineItemIdentifier = $matchingLineItemIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
-     * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $targetContact
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $matchingBulkEntIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $matchingLineItemIdentifier
-     */
-    public static function create(EntitlementIdentifierType $bulkEntIdentifier, int $numberOfWRKs, string $targetTierName, AccountIdentifierType $targetAccountUnit, UserIdentifierType|null $targetContact = null, EntitlementIdentifierType|null $matchingBulkEntIdentifier = null, EntitlementLineItemIdentifierType|null $matchingLineItemIdentifier = null)
+    public static function create(EntitlementIdentifierType $bulkEntIdentifier, int $numberOfWRKs, string $targetTierName, AccountIdentifierType $targetAccountUnit, UserIdentifierType $targetContact = null, EntitlementIdentifierType $matchingBulkEntIdentifier = null, EntitlementLineItemIdentifierType $matchingLineItemIdentifier = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
-     */
     public function getBulkEntIdentifier(): EntitlementIdentifierType
     {
         return $this->bulkEntIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntIdentifier
-     */
     public function withBulkEntIdentifier(EntitlementIdentifierType $bulkEntIdentifier): SplitBulkEntitlementInfoType
     {
         $new = clone $this;
@@ -116,17 +97,11 @@ class SplitBulkEntitlementInfoType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AccountIdentifierType
-     */
     public function getTargetAccountUnit(): AccountIdentifierType
     {
         return $this->targetAccountUnit;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
-     */
     public function withTargetAccountUnit(AccountIdentifierType $targetAccountUnit): SplitBulkEntitlementInfoType
     {
         $new = clone $this;
@@ -135,18 +110,12 @@ class SplitBulkEntitlementInfoType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null
-     */
-    public function getTargetContact(): UserIdentifierType|null
+    public function getTargetContact(): ?UserIdentifierType
     {
         return $this->targetContact;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\UserIdentifierType|null  $targetContact
-     */
-    public function withTargetContact(UserIdentifierType|null $targetContact): SplitBulkEntitlementInfoType
+    public function withTargetContact(?UserIdentifierType $targetContact): SplitBulkEntitlementInfoType
     {
         $new = clone $this;
         $new->targetContact = $targetContact;
@@ -154,18 +123,12 @@ class SplitBulkEntitlementInfoType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null
-     */
-    public function getMatchingBulkEntIdentifier(): EntitlementIdentifierType|null
+    public function getMatchingBulkEntIdentifier(): ?EntitlementIdentifierType
     {
         return $this->matchingBulkEntIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $matchingBulkEntIdentifier
-     */
-    public function withMatchingBulkEntIdentifier(EntitlementIdentifierType|null $matchingBulkEntIdentifier): SplitBulkEntitlementInfoType
+    public function withMatchingBulkEntIdentifier(?EntitlementIdentifierType $matchingBulkEntIdentifier): SplitBulkEntitlementInfoType
     {
         $new = clone $this;
         $new->matchingBulkEntIdentifier = $matchingBulkEntIdentifier;
@@ -173,18 +136,12 @@ class SplitBulkEntitlementInfoType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null
-     */
-    public function getMatchingLineItemIdentifier(): EntitlementLineItemIdentifierType|null
+    public function getMatchingLineItemIdentifier(): ?EntitlementLineItemIdentifierType
     {
         return $this->matchingLineItemIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $matchingLineItemIdentifier
-     */
-    public function withMatchingLineItemIdentifier(EntitlementLineItemIdentifierType|null $matchingLineItemIdentifier): SplitBulkEntitlementInfoType
+    public function withMatchingLineItemIdentifier(?EntitlementLineItemIdentifierType $matchingLineItemIdentifier): SplitBulkEntitlementInfoType
     {
         $new = clone $this;
         $new->matchingLineItemIdentifier = $matchingLineItemIdentifier;

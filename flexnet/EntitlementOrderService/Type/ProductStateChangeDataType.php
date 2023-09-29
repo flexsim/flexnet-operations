@@ -17,35 +17,27 @@ class ProductStateChangeDataType
     /**
      * Constructor
      *
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType  $productIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public function __construct(ProductIdentifierType $productIdentifier, StateChangeDataType|array|null $stateChangeRecord = null)
+    public function __construct(ProductIdentifierType $productIdentifier, StateChangeDataType|array $stateChangeRecord = null)
     {
         $this->productIdentifier = $productIdentifier;
         $this->stateChangeRecord = $stateChangeRecord;
     }
 
     /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType  $productIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public static function create(ProductIdentifierType $productIdentifier, StateChangeDataType|array|null $stateChangeRecord = null)
+    public static function create(ProductIdentifierType $productIdentifier, StateChangeDataType|array $stateChangeRecord = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\ProductIdentifierType
-     */
     public function getProductIdentifier(): ProductIdentifierType
     {
         return $this->productIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType  $productIdentifier
-     */
     public function withProductIdentifier(ProductIdentifierType $productIdentifier): ProductStateChangeDataType
     {
         $new = clone $this;

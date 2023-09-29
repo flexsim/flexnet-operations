@@ -31,12 +31,8 @@ class AdvancedFulfillmentLCInfoType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $licenseText
-     * @param  string|null  $binaryLicense
-     * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
      */
-    public function __construct(string $uniqueId, string $fulfillmentId, string|null $licenseText = null, string|null $binaryLicense = null, LicenseFileDataListType|null $licenseFiles = null)
+    public function __construct(string $uniqueId, string $fulfillmentId, string $licenseText = null, string $binaryLicense = null, LicenseFileDataListType $licenseFiles = null)
     {
         $this->uniqueId = $uniqueId;
         $this->fulfillmentId = $fulfillmentId;
@@ -45,12 +41,7 @@ class AdvancedFulfillmentLCInfoType
         $this->licenseFiles = $licenseFiles;
     }
 
-    /**
-     * @param  string|null  $licenseText
-     * @param  string|null  $binaryLicense
-     * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
-     */
-    public static function create(string $uniqueId, string $fulfillmentId, string|null $licenseText = null, string|null $binaryLicense = null, LicenseFileDataListType|null $licenseFiles = null)
+    public static function create(string $uniqueId, string $fulfillmentId, string $licenseText = null, string $binaryLicense = null, LicenseFileDataListType $licenseFiles = null)
     {
         return new static(...\func_get_args());
     }
@@ -81,12 +72,12 @@ class AdvancedFulfillmentLCInfoType
         return $new;
     }
 
-    public function getLicenseText(): string|null
+    public function getLicenseText(): ?string
     {
         return $this->licenseText;
     }
 
-    public function withLicenseText(string|null $licenseText): AdvancedFulfillmentLCInfoType
+    public function withLicenseText(?string $licenseText): AdvancedFulfillmentLCInfoType
     {
         $new = clone $this;
         $new->licenseText = $licenseText;
@@ -94,12 +85,12 @@ class AdvancedFulfillmentLCInfoType
         return $new;
     }
 
-    public function getBinaryLicense(): string|null
+    public function getBinaryLicense(): ?string
     {
         return $this->binaryLicense;
     }
 
-    public function withBinaryLicense(string|null $binaryLicense): AdvancedFulfillmentLCInfoType
+    public function withBinaryLicense(?string $binaryLicense): AdvancedFulfillmentLCInfoType
     {
         $new = clone $this;
         $new->binaryLicense = $binaryLicense;
@@ -107,18 +98,12 @@ class AdvancedFulfillmentLCInfoType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\LicenseFileDataListType|null
-     */
-    public function getLicenseFiles(): LicenseFileDataListType|null
+    public function getLicenseFiles(): ?LicenseFileDataListType
     {
         return $this->licenseFiles;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
-     */
-    public function withLicenseFiles(LicenseFileDataListType|null $licenseFiles): AdvancedFulfillmentLCInfoType
+    public function withLicenseFiles(?LicenseFileDataListType $licenseFiles): AdvancedFulfillmentLCInfoType
     {
         $new = clone $this;
         $new->licenseFiles = $licenseFiles;

@@ -18,36 +18,23 @@ class SetMaintenanceStateResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedMaintenanceStateDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedMaintenanceStateDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedMaintenanceStateDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedMaintenanceStateDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedMaintenanceStateDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedMaintenanceStateDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): SetMaintenanceStateResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class SetMaintenanceStateResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedMaintenanceStateDataListType|null
-     */
-    public function getFailedData(): FailedMaintenanceStateDataListType|null
+    public function getFailedData(): ?FailedMaintenanceStateDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedMaintenanceStateDataListType|null  $failedData
-     */
-    public function withFailedData(FailedMaintenanceStateDataListType|null $failedData): SetMaintenanceStateResponseType
+    public function withFailedData(?FailedMaintenanceStateDataListType $failedData): SetMaintenanceStateResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

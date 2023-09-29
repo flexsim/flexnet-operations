@@ -14,7 +14,7 @@ class CustomAttributeDescriptorDataType
      *
      * @param  \Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array<\Flexnet\LicenseService\Type\CustomAttributeDescriptorType>|null  $attribute
      */
-    public function __construct(CustomAttributeDescriptorType|array|null $attribute = null)
+    public function __construct(CustomAttributeDescriptorType|array $attribute = null)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class CustomAttributeDescriptorDataType
     /**
      * @param  \Flexnet\LicenseService\Type\CustomAttributeDescriptorType|array<\Flexnet\LicenseService\Type\CustomAttributeDescriptorType>|null  $attribute
      */
-    public static function create(CustomAttributeDescriptorType|array|null $attribute = null)
+    public static function create(CustomAttributeDescriptorType|array $attribute = null)
     {
         return new static(...\func_get_args());
     }

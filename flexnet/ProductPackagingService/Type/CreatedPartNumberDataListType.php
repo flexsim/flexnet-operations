@@ -14,7 +14,7 @@ class CreatedPartNumberDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType|array<\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType>|null  $createdPartNumber
      */
-    public function __construct(CreatedPartNumberDataType|array|null $createdPartNumber = null)
+    public function __construct(CreatedPartNumberDataType|array $createdPartNumber = null)
     {
         $this->createdPartNumber = $createdPartNumber;
     }
@@ -22,7 +22,7 @@ class CreatedPartNumberDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType|array<\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType>|null  $createdPartNumber
      */
-    public static function create(CreatedPartNumberDataType|array|null $createdPartNumber = null)
+    public static function create(CreatedPartNumberDataType|array $createdPartNumber = null)
     {
         return new static(...\func_get_args());
     }

@@ -37,13 +37,9 @@ class AttributeDescriptorType
     /**
      * Constructor
      *
-     * @param  string|null  $stringValue
-     * @param  \DateTimeInterface|null  $dateValue
-     * @param  bool|null  $booleanValue
-     * @param  int|null  $integerValue
      * @param  string|array<string>|null  $arrayValue
      */
-    public function __construct(string $attributeName, string|null $stringValue = null, \DateTimeInterface|null $dateValue = null, bool|null $booleanValue = null, int|null $integerValue = null, string|array|null $arrayValue = null)
+    public function __construct(string $attributeName, string $stringValue = null, \DateTimeInterface $dateValue = null, bool $booleanValue = null, int $integerValue = null, string|array $arrayValue = null)
     {
         $this->attributeName = $attributeName;
         $this->stringValue = $stringValue;
@@ -54,13 +50,9 @@ class AttributeDescriptorType
     }
 
     /**
-     * @param  string|null  $stringValue
-     * @param  \DateTimeInterface|null  $dateValue
-     * @param  bool|null  $booleanValue
-     * @param  int|null  $integerValue
      * @param  string|array<string>|null  $arrayValue
      */
-    public static function create(string $attributeName, string|null $stringValue = null, \DateTimeInterface|null $dateValue = null, bool|null $booleanValue = null, int|null $integerValue = null, string|array|null $arrayValue = null)
+    public static function create(string $attributeName, string $stringValue = null, \DateTimeInterface $dateValue = null, bool $booleanValue = null, int $integerValue = null, string|array $arrayValue = null)
     {
         return new static(...\func_get_args());
     }
@@ -78,12 +70,12 @@ class AttributeDescriptorType
         return $new;
     }
 
-    public function getStringValue(): string|null
+    public function getStringValue(): ?string
     {
         return $this->stringValue;
     }
 
-    public function withStringValue(string|null $stringValue): AttributeDescriptorType
+    public function withStringValue(?string $stringValue): AttributeDescriptorType
     {
         $new = clone $this;
         $new->stringValue = $stringValue;
@@ -91,12 +83,12 @@ class AttributeDescriptorType
         return $new;
     }
 
-    public function getDateValue(): \DateTimeInterface|null
+    public function getDateValue(): ?\DateTimeInterface
     {
         return $this->dateValue;
     }
 
-    public function withDateValue(\DateTimeInterface|null $dateValue): AttributeDescriptorType
+    public function withDateValue(?\DateTimeInterface $dateValue): AttributeDescriptorType
     {
         $new = clone $this;
         $new->dateValue = $dateValue;
@@ -104,12 +96,12 @@ class AttributeDescriptorType
         return $new;
     }
 
-    public function getBooleanValue(): bool|null
+    public function getBooleanValue(): ?bool
     {
         return $this->booleanValue;
     }
 
-    public function withBooleanValue(bool|null $booleanValue): AttributeDescriptorType
+    public function withBooleanValue(?bool $booleanValue): AttributeDescriptorType
     {
         $new = clone $this;
         $new->booleanValue = $booleanValue;
@@ -117,12 +109,12 @@ class AttributeDescriptorType
         return $new;
     }
 
-    public function getIntegerValue(): int|null
+    public function getIntegerValue(): ?int
     {
         return $this->integerValue;
     }
 
-    public function withIntegerValue(int|null $integerValue): AttributeDescriptorType
+    public function withIntegerValue(?int $integerValue): AttributeDescriptorType
     {
         $new = clone $this;
         $new->integerValue = $integerValue;

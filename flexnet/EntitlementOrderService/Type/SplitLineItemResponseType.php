@@ -23,39 +23,24 @@ class SplitLineItemResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemResponseListType|null  $responseData
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, SplitLineItemResponseListType|null $responseData = null, FailedSplitLineItemListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, SplitLineItemResponseListType $responseData = null, FailedSplitLineItemListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemResponseListType|null  $responseData
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, SplitLineItemResponseListType|null $responseData = null, FailedSplitLineItemListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, SplitLineItemResponseListType $responseData = null, FailedSplitLineItemListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): SplitLineItemResponseType
     {
         $new = clone $this;
@@ -64,18 +49,12 @@ class SplitLineItemResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\SplitLineItemResponseListType|null
-     */
-    public function getResponseData(): SplitLineItemResponseListType|null
+    public function getResponseData(): ?SplitLineItemResponseListType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemResponseListType|null  $responseData
-     */
-    public function withResponseData(SplitLineItemResponseListType|null $responseData): SplitLineItemResponseType
+    public function withResponseData(?SplitLineItemResponseListType $responseData): SplitLineItemResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -83,18 +62,12 @@ class SplitLineItemResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemListType|null
-     */
-    public function getFailedData(): FailedSplitLineItemListType|null
+    public function getFailedData(): ?FailedSplitLineItemListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemListType|null  $failedData
-     */
-    public function withFailedData(FailedSplitLineItemListType|null $failedData): SplitLineItemResponseType
+    public function withFailedData(?FailedSplitLineItemListType $failedData): SplitLineItemResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

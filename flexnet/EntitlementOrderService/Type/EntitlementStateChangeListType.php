@@ -14,7 +14,7 @@ class EntitlementStateChangeListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType>|null  $entitlement
      */
-    public function __construct(EntitlementStateChangeDataType|array|null $entitlement = null)
+    public function __construct(EntitlementStateChangeDataType|array $entitlement = null)
     {
         $this->entitlement = $entitlement;
     }
@@ -22,7 +22,7 @@ class EntitlementStateChangeListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType>|null  $entitlement
      */
-    public static function create(EntitlementStateChangeDataType|array|null $entitlement = null)
+    public static function create(EntitlementStateChangeDataType|array $entitlement = null)
     {
         return new static(...\func_get_args());
     }

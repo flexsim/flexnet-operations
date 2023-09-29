@@ -14,7 +14,7 @@ class FailedUniformSuiteStateDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedUniformSuiteStateDataType|array<\Flexnet\ProductPackagingService\Type\FailedUniformSuiteStateDataType>|null  $failedUniformSuite
      */
-    public function __construct(FailedUniformSuiteStateDataType|array|null $failedUniformSuite = null)
+    public function __construct(FailedUniformSuiteStateDataType|array $failedUniformSuite = null)
     {
         $this->failedUniformSuite = $failedUniformSuite;
     }
@@ -22,7 +22,7 @@ class FailedUniformSuiteStateDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedUniformSuiteStateDataType|array<\Flexnet\ProductPackagingService\Type\FailedUniformSuiteStateDataType>|null  $failedUniformSuite
      */
-    public static function create(FailedUniformSuiteStateDataType|array|null $failedUniformSuite = null)
+    public static function create(FailedUniformSuiteStateDataType|array $failedUniformSuite = null)
     {
         return new static(...\func_get_args());
     }

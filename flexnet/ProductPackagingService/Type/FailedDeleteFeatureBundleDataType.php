@@ -16,36 +16,23 @@ class FailedDeleteFeatureBundleDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
-     * @param  string|null  $reason
      */
-    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier, string|null $reason = null)
+    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier, string $reason = null)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
-     * @param  string|null  $reason
-     */
-    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier, string|null $reason = null)
+    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType
-     */
     public function getFeatureBundleIdentifier(): FeatureBundleIdentifierType
     {
         return $this->featureBundleIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
-     */
     public function withFeatureBundleIdentifier(FeatureBundleIdentifierType $featureBundleIdentifier): FailedDeleteFeatureBundleDataType
     {
         $new = clone $this;
@@ -54,12 +41,12 @@ class FailedDeleteFeatureBundleDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedDeleteFeatureBundleDataType
+    public function withReason(?string $reason): FailedDeleteFeatureBundleDataType
     {
         $new = clone $this;
         $new->reason = $reason;

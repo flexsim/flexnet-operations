@@ -11,34 +11,23 @@ class Dictionary
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null  $Entries
      */
-    public function __construct(DictionaryEntriesCollection|null $Entries = null)
+    public function __construct(DictionaryEntriesCollection $Entries = null)
     {
         $this->Entries = $Entries;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null  $Entries
-     */
-    public static function create(DictionaryEntriesCollection|null $Entries = null)
+    public static function create(DictionaryEntriesCollection $Entries = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null
-     */
-    public function getEntries(): DictionaryEntriesCollection|null
+    public function getEntries(): ?DictionaryEntriesCollection
     {
         return $this->Entries;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\DictionaryEntriesCollection|null  $Entries
-     */
-    public function withEntries(DictionaryEntriesCollection|null $Entries): Dictionary
+    public function withEntries(?DictionaryEntriesCollection $Entries): Dictionary
     {
         $new = clone $this;
         $new->Entries = $Entries;

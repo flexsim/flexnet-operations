@@ -18,9 +18,8 @@ class EntitlementLifeCycleDataType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType>  $lineItemData
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
      */
-    public function __construct(LineItemLifeCycleDataType|array $lineItemData, EntitlementIdentifierType|null $parentEntitlementIdentifier = null)
+    public function __construct(LineItemLifeCycleDataType|array $lineItemData, EntitlementIdentifierType $parentEntitlementIdentifier = null)
     {
         $this->lineItemData = $lineItemData;
         $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
@@ -28,25 +27,18 @@ class EntitlementLifeCycleDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType>  $lineItemData
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
      */
-    public static function create(LineItemLifeCycleDataType|array $lineItemData, EntitlementIdentifierType|null $parentEntitlementIdentifier = null)
+    public static function create(LineItemLifeCycleDataType|array $lineItemData, EntitlementIdentifierType $parentEntitlementIdentifier = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null
-     */
-    public function getParentEntitlementIdentifier(): EntitlementIdentifierType|null
+    public function getParentEntitlementIdentifier(): ?EntitlementIdentifierType
     {
         return $this->parentEntitlementIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
-     */
-    public function withParentEntitlementIdentifier(EntitlementIdentifierType|null $parentEntitlementIdentifier): EntitlementLifeCycleDataType
+    public function withParentEntitlementIdentifier(?EntitlementIdentifierType $parentEntitlementIdentifier): EntitlementLifeCycleDataType
     {
         $new = clone $this;
         $new->parentEntitlementIdentifier = $parentEntitlementIdentifier;

@@ -23,39 +23,24 @@ class CreatePartNumberResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedPartNumberDataListType|null  $failedData
-     * @param  \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataListType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedPartNumberDataListType|null $failedData = null, CreatedPartNumberDataListType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedPartNumberDataListType $failedData = null, CreatedPartNumberDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedPartNumberDataListType|null  $failedData
-     * @param  \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataListType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedPartNumberDataListType|null $failedData = null, CreatedPartNumberDataListType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FailedPartNumberDataListType $failedData = null, CreatedPartNumberDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): CreatePartNumberResponseType
     {
         $new = clone $this;
@@ -64,18 +49,12 @@ class CreatePartNumberResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedPartNumberDataListType|null
-     */
-    public function getFailedData(): FailedPartNumberDataListType|null
+    public function getFailedData(): ?FailedPartNumberDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedPartNumberDataListType|null  $failedData
-     */
-    public function withFailedData(FailedPartNumberDataListType|null $failedData): CreatePartNumberResponseType
+    public function withFailedData(?FailedPartNumberDataListType $failedData): CreatePartNumberResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -83,18 +62,12 @@ class CreatePartNumberResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataListType|null
-     */
-    public function getResponseData(): CreatedPartNumberDataListType|null
+    public function getResponseData(): ?CreatedPartNumberDataListType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataListType|null  $responseData
-     */
-    public function withResponseData(CreatedPartNumberDataListType|null $responseData): CreatePartNumberResponseType
+    public function withResponseData(?CreatedPartNumberDataListType $responseData): CreatePartNumberResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

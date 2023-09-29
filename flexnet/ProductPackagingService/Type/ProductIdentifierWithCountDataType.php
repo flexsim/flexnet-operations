@@ -16,8 +16,6 @@ class ProductIdentifierWithCountDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $productIdentifier
      */
     public function __construct(ProductIdentifierType $productIdentifier, int $count)
     {
@@ -25,25 +23,16 @@ class ProductIdentifierWithCountDataType
         $this->count = $count;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $productIdentifier
-     */
     public static function create(ProductIdentifierType $productIdentifier, int $count)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\ProductIdentifierType
-     */
     public function getProductIdentifier(): ProductIdentifierType
     {
         return $this->productIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $productIdentifier
-     */
     public function withProductIdentifier(ProductIdentifierType $productIdentifier): ProductIdentifierWithCountDataType
     {
         $new = clone $this;

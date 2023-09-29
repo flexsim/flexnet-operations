@@ -16,36 +16,23 @@ class SplitLineItemDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $entitlementIdentifier
      */
-    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, EntitlementIdentifierType|null $entitlementIdentifier = null)
+    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, EntitlementIdentifierType $entitlementIdentifier = null)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->entitlementIdentifier = $entitlementIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $entitlementIdentifier
-     */
-    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, EntitlementIdentifierType|null $entitlementIdentifier = null)
+    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, EntitlementIdentifierType $entitlementIdentifier = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
-     */
     public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): SplitLineItemDataType
     {
         $new = clone $this;
@@ -54,18 +41,12 @@ class SplitLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null
-     */
-    public function getEntitlementIdentifier(): EntitlementIdentifierType|null
+    public function getEntitlementIdentifier(): ?EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $entitlementIdentifier
-     */
-    public function withEntitlementIdentifier(EntitlementIdentifierType|null $entitlementIdentifier): SplitLineItemDataType
+    public function withEntitlementIdentifier(?EntitlementIdentifierType $entitlementIdentifier): SplitLineItemDataType
     {
         $new = clone $this;
         $new->entitlementIdentifier = $entitlementIdentifier;

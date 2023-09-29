@@ -23,39 +23,24 @@ class RehostFulfillmentResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\RehostResponseDataType|null  $responseData
-     * @param  \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, RehostResponseDataType|null $responseData = null, FailedRehostResponselistDataType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, RehostResponseDataType $responseData = null, FailedRehostResponselistDataType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\RehostResponseDataType|null  $responseData
-     * @param  \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, RehostResponseDataType|null $responseData = null, FailedRehostResponselistDataType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, RehostResponseDataType $responseData = null, FailedRehostResponselistDataType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): RehostFulfillmentResponseType
     {
         $new = clone $this;
@@ -64,18 +49,12 @@ class RehostFulfillmentResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\RehostResponseDataType|null
-     */
-    public function getResponseData(): RehostResponseDataType|null
+    public function getResponseData(): ?RehostResponseDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\RehostResponseDataType|null  $responseData
-     */
-    public function withResponseData(RehostResponseDataType|null $responseData): RehostFulfillmentResponseType
+    public function withResponseData(?RehostResponseDataType $responseData): RehostFulfillmentResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -83,18 +62,12 @@ class RehostFulfillmentResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null
-     */
-    public function getFailedData(): FailedRehostResponselistDataType|null
+    public function getFailedData(): ?FailedRehostResponselistDataType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FailedRehostResponselistDataType|null  $failedData
-     */
-    public function withFailedData(FailedRehostResponselistDataType|null $failedData): RehostFulfillmentResponseType
+    public function withFailedData(?FailedRehostResponselistDataType $failedData): RehostFulfillmentResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

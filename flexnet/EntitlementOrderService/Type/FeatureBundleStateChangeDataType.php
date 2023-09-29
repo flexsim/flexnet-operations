@@ -17,35 +17,27 @@ class FeatureBundleStateChangeDataType
     /**
      * Constructor
      *
-     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier, StateChangeDataType|array|null $stateChangeRecord = null)
+    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier, StateChangeDataType|array $stateChangeRecord = null)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
         $this->stateChangeRecord = $stateChangeRecord;
     }
 
     /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier, StateChangeDataType|array|null $stateChangeRecord = null)
+    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier, StateChangeDataType|array $stateChangeRecord = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType
-     */
     public function getFeatureBundleIdentifier(): FeatureBundleIdentifierType
     {
         return $this->featureBundleIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
-     */
     public function withFeatureBundleIdentifier(FeatureBundleIdentifierType $featureBundleIdentifier): FeatureBundleStateChangeDataType
     {
         $new = clone $this;

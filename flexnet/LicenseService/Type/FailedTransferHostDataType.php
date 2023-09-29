@@ -16,37 +16,24 @@ class FailedTransferHostDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\TransferHostIdDataType|null  $hostIdentifier
-     * @param  string|null  $reason
      */
-    public function __construct(TransferHostIdDataType|null $hostIdentifier = null, string|null $reason = null)
+    public function __construct(TransferHostIdDataType $hostIdentifier = null, string $reason = null)
     {
         $this->hostIdentifier = $hostIdentifier;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\TransferHostIdDataType|null  $hostIdentifier
-     * @param  string|null  $reason
-     */
-    public static function create(TransferHostIdDataType|null $hostIdentifier = null, string|null $reason = null)
+    public static function create(TransferHostIdDataType $hostIdentifier = null, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\TransferHostIdDataType|null
-     */
-    public function getHostIdentifier(): TransferHostIdDataType|null
+    public function getHostIdentifier(): ?TransferHostIdDataType
     {
         return $this->hostIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\TransferHostIdDataType|null  $hostIdentifier
-     */
-    public function withHostIdentifier(TransferHostIdDataType|null $hostIdentifier): FailedTransferHostDataType
+    public function withHostIdentifier(?TransferHostIdDataType $hostIdentifier): FailedTransferHostDataType
     {
         $new = clone $this;
         $new->hostIdentifier = $hostIdentifier;
@@ -54,12 +41,12 @@ class FailedTransferHostDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedTransferHostDataType
+    public function withReason(?string $reason): FailedTransferHostDataType
     {
         $new = clone $this;
         $new->reason = $reason;

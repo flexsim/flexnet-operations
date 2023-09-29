@@ -18,36 +18,23 @@ class GetMaintenanceQueryResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\GetMaintenanceQueryResponseDataType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, GetMaintenanceQueryResponseDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetMaintenanceQueryResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\GetMaintenanceQueryResponseDataType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, GetMaintenanceQueryResponseDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetMaintenanceQueryResponseDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetMaintenanceQueryResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetMaintenanceQueryResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\GetMaintenanceQueryResponseDataType|null
-     */
-    public function getResponseData(): GetMaintenanceQueryResponseDataType|null
+    public function getResponseData(): ?GetMaintenanceQueryResponseDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\GetMaintenanceQueryResponseDataType|null  $responseData
-     */
-    public function withResponseData(GetMaintenanceQueryResponseDataType|null $responseData): GetMaintenanceQueryResponseType
+    public function withResponseData(?GetMaintenanceQueryResponseDataType $responseData): GetMaintenanceQueryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

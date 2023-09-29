@@ -18,36 +18,23 @@ class GetFeatureBundlesQueryResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\GetFeatureBundlesQueryResponseDataType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, GetFeatureBundlesQueryResponseDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetFeatureBundlesQueryResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\GetFeatureBundlesQueryResponseDataType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, GetFeatureBundlesQueryResponseDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetFeatureBundlesQueryResponseDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetFeatureBundlesQueryResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetFeatureBundlesQueryResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\GetFeatureBundlesQueryResponseDataType|null
-     */
-    public function getResponseData(): GetFeatureBundlesQueryResponseDataType|null
+    public function getResponseData(): ?GetFeatureBundlesQueryResponseDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\GetFeatureBundlesQueryResponseDataType|null  $responseData
-     */
-    public function withResponseData(GetFeatureBundlesQueryResponseDataType|null $responseData): GetFeatureBundlesQueryResponseType
+    public function withResponseData(?GetFeatureBundlesQueryResponseDataType $responseData): GetFeatureBundlesQueryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

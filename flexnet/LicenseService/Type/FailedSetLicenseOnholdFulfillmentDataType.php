@@ -16,8 +16,6 @@ class FailedSetLicenseOnholdFulfillmentDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\OnHoldFmtLicenseDataType  $onholdFmtLicenseData
      */
     public function __construct(OnHoldFmtLicenseDataType $onholdFmtLicenseData, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedSetLicenseOnholdFulfillmentDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\OnHoldFmtLicenseDataType  $onholdFmtLicenseData
-     */
     public static function create(OnHoldFmtLicenseDataType $onholdFmtLicenseData, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\OnHoldFmtLicenseDataType
-     */
     public function getOnholdFmtLicenseData(): OnHoldFmtLicenseDataType
     {
         return $this->onholdFmtLicenseData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\OnHoldFmtLicenseDataType  $onholdFmtLicenseData
-     */
     public function withOnholdFmtLicenseData(OnHoldFmtLicenseDataType $onholdFmtLicenseData): FailedSetLicenseOnholdFulfillmentDataType
     {
         $new = clone $this;

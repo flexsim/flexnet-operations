@@ -14,7 +14,7 @@ class FailedAddWebRegKeyDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataType>|null  $failedWebRegKeyData
      */
-    public function __construct(FailedAddWebRegKeyDataType|array|null $failedWebRegKeyData = null)
+    public function __construct(FailedAddWebRegKeyDataType|array $failedWebRegKeyData = null)
     {
         $this->failedWebRegKeyData = $failedWebRegKeyData;
     }
@@ -22,7 +22,7 @@ class FailedAddWebRegKeyDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataType>|null  $failedWebRegKeyData
      */
-    public static function create(FailedAddWebRegKeyDataType|array|null $failedWebRegKeyData = null)
+    public static function create(FailedAddWebRegKeyDataType|array $failedWebRegKeyData = null)
     {
         return new static(...\func_get_args());
     }

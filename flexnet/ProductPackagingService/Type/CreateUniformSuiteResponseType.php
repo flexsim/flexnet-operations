@@ -23,39 +23,24 @@ class CreateUniformSuiteResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedUniformSuiteDataListType|null  $failedData
-     * @param  \Flexnet\ProductPackagingService\Type\CreatedUniformSuiteDataListType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedUniformSuiteDataListType|null $failedData = null, CreatedUniformSuiteDataListType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedUniformSuiteDataListType $failedData = null, CreatedUniformSuiteDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedUniformSuiteDataListType|null  $failedData
-     * @param  \Flexnet\ProductPackagingService\Type\CreatedUniformSuiteDataListType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedUniformSuiteDataListType|null $failedData = null, CreatedUniformSuiteDataListType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FailedUniformSuiteDataListType $failedData = null, CreatedUniformSuiteDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): CreateUniformSuiteResponseType
     {
         $new = clone $this;
@@ -64,18 +49,12 @@ class CreateUniformSuiteResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedUniformSuiteDataListType|null
-     */
-    public function getFailedData(): FailedUniformSuiteDataListType|null
+    public function getFailedData(): ?FailedUniformSuiteDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedUniformSuiteDataListType|null  $failedData
-     */
-    public function withFailedData(FailedUniformSuiteDataListType|null $failedData): CreateUniformSuiteResponseType
+    public function withFailedData(?FailedUniformSuiteDataListType $failedData): CreateUniformSuiteResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -83,18 +62,12 @@ class CreateUniformSuiteResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\CreatedUniformSuiteDataListType|null
-     */
-    public function getResponseData(): CreatedUniformSuiteDataListType|null
+    public function getResponseData(): ?CreatedUniformSuiteDataListType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\CreatedUniformSuiteDataListType|null  $responseData
-     */
-    public function withResponseData(CreatedUniformSuiteDataListType|null $responseData): CreateUniformSuiteResponseType
+    public function withResponseData(?CreatedUniformSuiteDataListType $responseData): CreateUniformSuiteResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

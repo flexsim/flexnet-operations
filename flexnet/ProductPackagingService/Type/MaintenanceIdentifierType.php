@@ -16,31 +16,24 @@ class MaintenanceIdentifierType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenancePKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, MaintenancePKType|null $primaryKeys = null)
+    public function __construct(string $uniqueId = null, MaintenancePKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenancePKType|null  $primaryKeys
-     */
-    public static function create(string|null $uniqueId = null, MaintenancePKType|null $primaryKeys = null)
+    public static function create(string $uniqueId = null, MaintenancePKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUniqueId(): string|null
+    public function getUniqueId(): ?string
     {
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string|null $uniqueId): MaintenanceIdentifierType
+    public function withUniqueId(?string $uniqueId): MaintenanceIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -48,18 +41,12 @@ class MaintenanceIdentifierType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\MaintenancePKType|null
-     */
-    public function getPrimaryKeys(): MaintenancePKType|null
+    public function getPrimaryKeys(): ?MaintenancePKType
     {
         return $this->primaryKeys;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenancePKType|null  $primaryKeys
-     */
-    public function withPrimaryKeys(MaintenancePKType|null $primaryKeys): MaintenanceIdentifierType
+    public function withPrimaryKeys(?MaintenancePKType $primaryKeys): MaintenanceIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

@@ -13,34 +13,23 @@ class GetConsolidatedFulfillmentCountRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
      */
-    public function __construct(ConsolidatedFulfillmentsQPType|null $queryParams = null)
+    public function __construct(ConsolidatedFulfillmentsQPType $queryParams = null)
     {
         $this->queryParams = $queryParams;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
-     */
-    public static function create(ConsolidatedFulfillmentsQPType|null $queryParams = null)
+    public static function create(ConsolidatedFulfillmentsQPType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null
-     */
-    public function getQueryParams(): ConsolidatedFulfillmentsQPType|null
+    public function getQueryParams(): ?ConsolidatedFulfillmentsQPType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
-     */
-    public function withQueryParams(ConsolidatedFulfillmentsQPType|null $queryParams): GetConsolidatedFulfillmentCountRequestType
+    public function withQueryParams(?ConsolidatedFulfillmentsQPType $queryParams): GetConsolidatedFulfillmentCountRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

@@ -14,7 +14,7 @@ class FailedReturnResponselistDataType
      *
      * @param  \Flexnet\LicenseService\Type\FailedReturnResponseDataType|array<\Flexnet\LicenseService\Type\FailedReturnResponseDataType>|null  $failedFulfillment
      */
-    public function __construct(FailedReturnResponseDataType|array|null $failedFulfillment = null)
+    public function __construct(FailedReturnResponseDataType|array $failedFulfillment = null)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
@@ -22,7 +22,7 @@ class FailedReturnResponselistDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedReturnResponseDataType|array<\Flexnet\LicenseService\Type\FailedReturnResponseDataType>|null  $failedFulfillment
      */
-    public static function create(FailedReturnResponseDataType|array|null $failedFulfillment = null)
+    public static function create(FailedReturnResponseDataType|array $failedFulfillment = null)
     {
         return new static(...\func_get_args());
     }

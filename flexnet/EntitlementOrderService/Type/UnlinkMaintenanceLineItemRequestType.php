@@ -13,33 +13,22 @@ class UnlinkMaintenanceLineItemRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemListType  $unlinkMaintenanceLineItemList
      */
     public function __construct(UnlinkMaintenanceLineItemListType $unlinkMaintenanceLineItemList)
     {
         $this->unlinkMaintenanceLineItemList = $unlinkMaintenanceLineItemList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemListType  $unlinkMaintenanceLineItemList
-     */
     public static function create(UnlinkMaintenanceLineItemListType $unlinkMaintenanceLineItemList)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemListType
-     */
     public function getUnlinkMaintenanceLineItemList(): UnlinkMaintenanceLineItemListType
     {
         return $this->unlinkMaintenanceLineItemList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemListType  $unlinkMaintenanceLineItemList
-     */
     public function withUnlinkMaintenanceLineItemList(UnlinkMaintenanceLineItemListType $unlinkMaintenanceLineItemList): UnlinkMaintenanceLineItemRequestType
     {
         $new = clone $this;

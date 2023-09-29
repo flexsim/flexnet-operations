@@ -26,10 +26,8 @@ class UserPKType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $phoneNumber
      */
-    public function __construct(string $firstName, string $lastName, string $emailAddress, string|null $phoneNumber = null)
+    public function __construct(string $firstName, string $lastName, string $emailAddress, string $phoneNumber = null)
     {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
@@ -37,10 +35,7 @@ class UserPKType
         $this->phoneNumber = $phoneNumber;
     }
 
-    /**
-     * @param  string|null  $phoneNumber
-     */
-    public static function create(string $firstName, string $lastName, string $emailAddress, string|null $phoneNumber = null)
+    public static function create(string $firstName, string $lastName, string $emailAddress, string $phoneNumber = null)
     {
         return new static(...\func_get_args());
     }
@@ -84,12 +79,12 @@ class UserPKType
         return $new;
     }
 
-    public function getPhoneNumber(): string|null
+    public function getPhoneNumber(): ?string
     {
         return $this->phoneNumber;
     }
 
-    public function withPhoneNumber(string|null $phoneNumber): UserPKType
+    public function withPhoneNumber(?string $phoneNumber): UserPKType
     {
         $new = clone $this;
         $new->phoneNumber = $phoneNumber;

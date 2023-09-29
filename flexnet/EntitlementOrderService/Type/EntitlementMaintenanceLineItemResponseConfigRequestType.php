@@ -91,26 +91,8 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
 
     /**
      * Constructor
-     *
-     * @param  bool|null  $activationId
-     * @param  bool|null  $state
-     * @param  bool|null  $orderId
-     * @param  bool|null  $orderLineNumber
-     * @param  bool|null  $entitlementId
-     * @param  bool|null  $maintenanceProduct
-     * @param  bool|null  $maintenancePartNumber
-     * @param  bool|null  $maintenancePartNumberDescription
-     * @param  bool|null  $startDate
-     * @param  bool|null  $isPermanent
-     * @param  bool|null  $expirationDate
-     * @param  bool|null  $createdOnDateTime
-     * @param  bool|null  $lastModifiedDateTime
-     * @param  bool|null  $maintenanceLineItemAttributes
-     * @param  bool|null  $linkedEntitlementLineItem
-     * @param  bool|null  $fetchCreatedBy
-     * @param  bool|null  $fetchLastModifiedBy
      */
-    public function __construct(bool|null $activationId = null, bool|null $state = null, bool|null $orderId = null, bool|null $orderLineNumber = null, bool|null $entitlementId = null, bool|null $maintenanceProduct = null, bool|null $maintenancePartNumber = null, bool|null $maintenancePartNumberDescription = null, bool|null $startDate = null, bool|null $isPermanent = null, bool|null $expirationDate = null, bool|null $createdOnDateTime = null, bool|null $lastModifiedDateTime = null, bool|null $maintenanceLineItemAttributes = null, bool|null $linkedEntitlementLineItem = null, bool|null $fetchCreatedBy = null, bool|null $fetchLastModifiedBy = null)
+    public function __construct(bool $activationId = null, bool $state = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $maintenanceProduct = null, bool $maintenancePartNumber = null, bool $maintenancePartNumberDescription = null, bool $startDate = null, bool $isPermanent = null, bool $expirationDate = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $maintenanceLineItemAttributes = null, bool $linkedEntitlementLineItem = null, bool $fetchCreatedBy = null, bool $fetchLastModifiedBy = null)
     {
         $this->activationId = $activationId;
         $this->state = $state;
@@ -131,36 +113,17 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         $this->fetchLastModifiedBy = $fetchLastModifiedBy;
     }
 
-    /**
-     * @param  bool|null  $activationId
-     * @param  bool|null  $state
-     * @param  bool|null  $orderId
-     * @param  bool|null  $orderLineNumber
-     * @param  bool|null  $entitlementId
-     * @param  bool|null  $maintenanceProduct
-     * @param  bool|null  $maintenancePartNumber
-     * @param  bool|null  $maintenancePartNumberDescription
-     * @param  bool|null  $startDate
-     * @param  bool|null  $isPermanent
-     * @param  bool|null  $expirationDate
-     * @param  bool|null  $createdOnDateTime
-     * @param  bool|null  $lastModifiedDateTime
-     * @param  bool|null  $maintenanceLineItemAttributes
-     * @param  bool|null  $linkedEntitlementLineItem
-     * @param  bool|null  $fetchCreatedBy
-     * @param  bool|null  $fetchLastModifiedBy
-     */
-    public static function create(bool|null $activationId = null, bool|null $state = null, bool|null $orderId = null, bool|null $orderLineNumber = null, bool|null $entitlementId = null, bool|null $maintenanceProduct = null, bool|null $maintenancePartNumber = null, bool|null $maintenancePartNumberDescription = null, bool|null $startDate = null, bool|null $isPermanent = null, bool|null $expirationDate = null, bool|null $createdOnDateTime = null, bool|null $lastModifiedDateTime = null, bool|null $maintenanceLineItemAttributes = null, bool|null $linkedEntitlementLineItem = null, bool|null $fetchCreatedBy = null, bool|null $fetchLastModifiedBy = null)
+    public static function create(bool $activationId = null, bool $state = null, bool $orderId = null, bool $orderLineNumber = null, bool $entitlementId = null, bool $maintenanceProduct = null, bool $maintenancePartNumber = null, bool $maintenancePartNumberDescription = null, bool $startDate = null, bool $isPermanent = null, bool $expirationDate = null, bool $createdOnDateTime = null, bool $lastModifiedDateTime = null, bool $maintenanceLineItemAttributes = null, bool $linkedEntitlementLineItem = null, bool $fetchCreatedBy = null, bool $fetchLastModifiedBy = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getActivationId(): bool|null
+    public function getActivationId(): ?bool
     {
         return $this->activationId;
     }
 
-    public function withActivationId(bool|null $activationId): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withActivationId(?bool $activationId): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -168,12 +131,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getState(): bool|null
+    public function getState(): ?bool
     {
         return $this->state;
     }
 
-    public function withState(bool|null $state): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withState(?bool $state): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->state = $state;
@@ -181,12 +144,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getOrderId(): bool|null
+    public function getOrderId(): ?bool
     {
         return $this->orderId;
     }
 
-    public function withOrderId(bool|null $orderId): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withOrderId(?bool $orderId): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->orderId = $orderId;
@@ -194,12 +157,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getOrderLineNumber(): bool|null
+    public function getOrderLineNumber(): ?bool
     {
         return $this->orderLineNumber;
     }
 
-    public function withOrderLineNumber(bool|null $orderLineNumber): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withOrderLineNumber(?bool $orderLineNumber): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->orderLineNumber = $orderLineNumber;
@@ -207,12 +170,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getEntitlementId(): bool|null
+    public function getEntitlementId(): ?bool
     {
         return $this->entitlementId;
     }
 
-    public function withEntitlementId(bool|null $entitlementId): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withEntitlementId(?bool $entitlementId): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->entitlementId = $entitlementId;
@@ -220,12 +183,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getMaintenanceProduct(): bool|null
+    public function getMaintenanceProduct(): ?bool
     {
         return $this->maintenanceProduct;
     }
 
-    public function withMaintenanceProduct(bool|null $maintenanceProduct): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withMaintenanceProduct(?bool $maintenanceProduct): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->maintenanceProduct = $maintenanceProduct;
@@ -233,12 +196,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getMaintenancePartNumber(): bool|null
+    public function getMaintenancePartNumber(): ?bool
     {
         return $this->maintenancePartNumber;
     }
 
-    public function withMaintenancePartNumber(bool|null $maintenancePartNumber): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withMaintenancePartNumber(?bool $maintenancePartNumber): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->maintenancePartNumber = $maintenancePartNumber;
@@ -246,12 +209,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getMaintenancePartNumberDescription(): bool|null
+    public function getMaintenancePartNumberDescription(): ?bool
     {
         return $this->maintenancePartNumberDescription;
     }
 
-    public function withMaintenancePartNumberDescription(bool|null $maintenancePartNumberDescription): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withMaintenancePartNumberDescription(?bool $maintenancePartNumberDescription): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->maintenancePartNumberDescription = $maintenancePartNumberDescription;
@@ -259,12 +222,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getStartDate(): bool|null
+    public function getStartDate(): ?bool
     {
         return $this->startDate;
     }
 
-    public function withStartDate(bool|null $startDate): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withStartDate(?bool $startDate): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -272,12 +235,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getIsPermanent(): bool|null
+    public function getIsPermanent(): ?bool
     {
         return $this->isPermanent;
     }
 
-    public function withIsPermanent(bool|null $isPermanent): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withIsPermanent(?bool $isPermanent): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->isPermanent = $isPermanent;
@@ -285,12 +248,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getExpirationDate(): bool|null
+    public function getExpirationDate(): ?bool
     {
         return $this->expirationDate;
     }
 
-    public function withExpirationDate(bool|null $expirationDate): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withExpirationDate(?bool $expirationDate): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->expirationDate = $expirationDate;
@@ -298,12 +261,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getCreatedOnDateTime(): bool|null
+    public function getCreatedOnDateTime(): ?bool
     {
         return $this->createdOnDateTime;
     }
 
-    public function withCreatedOnDateTime(bool|null $createdOnDateTime): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withCreatedOnDateTime(?bool $createdOnDateTime): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->createdOnDateTime = $createdOnDateTime;
@@ -311,12 +274,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getLastModifiedDateTime(): bool|null
+    public function getLastModifiedDateTime(): ?bool
     {
         return $this->lastModifiedDateTime;
     }
 
-    public function withLastModifiedDateTime(bool|null $lastModifiedDateTime): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withLastModifiedDateTime(?bool $lastModifiedDateTime): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->lastModifiedDateTime = $lastModifiedDateTime;
@@ -324,12 +287,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getMaintenanceLineItemAttributes(): bool|null
+    public function getMaintenanceLineItemAttributes(): ?bool
     {
         return $this->maintenanceLineItemAttributes;
     }
 
-    public function withMaintenanceLineItemAttributes(bool|null $maintenanceLineItemAttributes): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withMaintenanceLineItemAttributes(?bool $maintenanceLineItemAttributes): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->maintenanceLineItemAttributes = $maintenanceLineItemAttributes;
@@ -337,12 +300,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getLinkedEntitlementLineItem(): bool|null
+    public function getLinkedEntitlementLineItem(): ?bool
     {
         return $this->linkedEntitlementLineItem;
     }
 
-    public function withLinkedEntitlementLineItem(bool|null $linkedEntitlementLineItem): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withLinkedEntitlementLineItem(?bool $linkedEntitlementLineItem): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->linkedEntitlementLineItem = $linkedEntitlementLineItem;
@@ -350,12 +313,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getFetchCreatedBy(): bool|null
+    public function getFetchCreatedBy(): ?bool
     {
         return $this->fetchCreatedBy;
     }
 
-    public function withFetchCreatedBy(bool|null $fetchCreatedBy): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withFetchCreatedBy(?bool $fetchCreatedBy): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->fetchCreatedBy = $fetchCreatedBy;
@@ -363,12 +326,12 @@ class EntitlementMaintenanceLineItemResponseConfigRequestType
         return $new;
     }
 
-    public function getFetchLastModifiedBy(): bool|null
+    public function getFetchLastModifiedBy(): ?bool
     {
         return $this->fetchLastModifiedBy;
     }
 
-    public function withFetchLastModifiedBy(bool|null $fetchLastModifiedBy): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function withFetchLastModifiedBy(?bool $fetchLastModifiedBy): EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         $new = clone $this;
         $new->fetchLastModifiedBy = $fetchLastModifiedBy;

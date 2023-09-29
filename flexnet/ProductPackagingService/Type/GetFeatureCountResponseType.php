@@ -18,36 +18,23 @@ class GetFeatureCountResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\GetCountResponseDataType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, GetCountResponseDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetCountResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\GetCountResponseDataType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, GetCountResponseDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetCountResponseDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetFeatureCountResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetFeatureCountResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\GetCountResponseDataType|null
-     */
-    public function getResponseData(): GetCountResponseDataType|null
+    public function getResponseData(): ?GetCountResponseDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\GetCountResponseDataType|null  $responseData
-     */
-    public function withResponseData(GetCountResponseDataType|null $responseData): GetFeatureCountResponseType
+    public function withResponseData(?GetCountResponseDataType $responseData): GetFeatureCountResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

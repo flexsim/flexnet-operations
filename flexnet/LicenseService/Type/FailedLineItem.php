@@ -11,28 +11,23 @@ class FailedLineItem
 
     /**
      * Constructor
-     *
-     * @param  string|null  $activationId
      */
-    public function __construct(string|null $activationId = null)
+    public function __construct(string $activationId = null)
     {
         $this->activationId = $activationId;
     }
 
-    /**
-     * @param  string|null  $activationId
-     */
-    public static function create(string|null $activationId = null)
+    public static function create(string $activationId = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getActivationId(): string|null
+    public function getActivationId(): ?string
     {
         return $this->activationId;
     }
 
-    public function withActivationId(string|null $activationId): FailedLineItem
+    public function withActivationId(?string $activationId): FailedLineItem
     {
         $new = clone $this;
         $new->activationId = $activationId;

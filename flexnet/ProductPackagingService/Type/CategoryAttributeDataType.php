@@ -31,11 +31,8 @@ class CategoryAttributeDataType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $maxLength
-     * @param  \Flexnet\ProductPackagingService\Type\ValueType|null  $validValues
      */
-    public function __construct(string $attributeName, bool $isRequired, string $dataType, string|null $maxLength = null, ValueType|null $validValues = null)
+    public function __construct(string $attributeName, bool $isRequired, string $dataType, string $maxLength = null, ValueType $validValues = null)
     {
         $this->attributeName = $attributeName;
         $this->isRequired = $isRequired;
@@ -44,11 +41,7 @@ class CategoryAttributeDataType
         $this->validValues = $validValues;
     }
 
-    /**
-     * @param  string|null  $maxLength
-     * @param  \Flexnet\ProductPackagingService\Type\ValueType|null  $validValues
-     */
-    public static function create(string $attributeName, bool $isRequired, string $dataType, string|null $maxLength = null, ValueType|null $validValues = null)
+    public static function create(string $attributeName, bool $isRequired, string $dataType, string $maxLength = null, ValueType $validValues = null)
     {
         return new static(...\func_get_args());
     }
@@ -92,12 +85,12 @@ class CategoryAttributeDataType
         return $new;
     }
 
-    public function getMaxLength(): string|null
+    public function getMaxLength(): ?string
     {
         return $this->maxLength;
     }
 
-    public function withMaxLength(string|null $maxLength): CategoryAttributeDataType
+    public function withMaxLength(?string $maxLength): CategoryAttributeDataType
     {
         $new = clone $this;
         $new->maxLength = $maxLength;
@@ -105,18 +98,12 @@ class CategoryAttributeDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\ValueType|null
-     */
-    public function getValidValues(): ValueType|null
+    public function getValidValues(): ?ValueType
     {
         return $this->validValues;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ValueType|null  $validValues
-     */
-    public function withValidValues(ValueType|null $validValues): CategoryAttributeDataType
+    public function withValidValues(?ValueType $validValues): CategoryAttributeDataType
     {
         $new = clone $this;
         $new->validValues = $validValues;

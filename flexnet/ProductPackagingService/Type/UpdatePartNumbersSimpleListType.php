@@ -19,7 +19,7 @@ class UpdatePartNumbersSimpleListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType>|null  $partNumber
      */
-    public function __construct(string $opType, PartNumberIdentifierType|array|null $partNumber = null)
+    public function __construct(string $opType, PartNumberIdentifierType|array $partNumber = null)
     {
         $this->opType = $opType;
         $this->partNumber = $partNumber;
@@ -28,7 +28,7 @@ class UpdatePartNumbersSimpleListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType>|null  $partNumber
      */
-    public static function create(string $opType, PartNumberIdentifierType|array|null $partNumber = null)
+    public static function create(string $opType, PartNumberIdentifierType|array $partNumber = null)
     {
         return new static(...\func_get_args());
     }

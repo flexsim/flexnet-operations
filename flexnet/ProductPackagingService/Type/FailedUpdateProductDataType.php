@@ -16,36 +16,23 @@ class FailedUpdateProductDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\UpdateProductDataType  $product
-     * @param  string|null  $reason
      */
-    public function __construct(UpdateProductDataType $product, string|null $reason = null)
+    public function __construct(UpdateProductDataType $product, string $reason = null)
     {
         $this->product = $product;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\UpdateProductDataType  $product
-     * @param  string|null  $reason
-     */
-    public static function create(UpdateProductDataType $product, string|null $reason = null)
+    public static function create(UpdateProductDataType $product, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\UpdateProductDataType
-     */
     public function getProduct(): UpdateProductDataType
     {
         return $this->product;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\UpdateProductDataType  $product
-     */
     public function withProduct(UpdateProductDataType $product): FailedUpdateProductDataType
     {
         $new = clone $this;
@@ -54,12 +41,12 @@ class FailedUpdateProductDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedUpdateProductDataType
+    public function withReason(?string $reason): FailedUpdateProductDataType
     {
         $new = clone $this;
         $new->reason = $reason;

@@ -16,37 +16,24 @@ class FailedUpdateBulkEntitlementDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementDataType|null  $bulkEntitlement
-     * @param  string|null  $reason
      */
-    public function __construct(UpdateBulkEntitlementDataType|null $bulkEntitlement = null, string|null $reason = null)
+    public function __construct(UpdateBulkEntitlementDataType $bulkEntitlement = null, string $reason = null)
     {
         $this->bulkEntitlement = $bulkEntitlement;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementDataType|null  $bulkEntitlement
-     * @param  string|null  $reason
-     */
-    public static function create(UpdateBulkEntitlementDataType|null $bulkEntitlement = null, string|null $reason = null)
+    public static function create(UpdateBulkEntitlementDataType $bulkEntitlement = null, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementDataType|null
-     */
-    public function getBulkEntitlement(): UpdateBulkEntitlementDataType|null
+    public function getBulkEntitlement(): ?UpdateBulkEntitlementDataType
     {
         return $this->bulkEntitlement;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementDataType|null  $bulkEntitlement
-     */
-    public function withBulkEntitlement(UpdateBulkEntitlementDataType|null $bulkEntitlement): FailedUpdateBulkEntitlementDataType
+    public function withBulkEntitlement(?UpdateBulkEntitlementDataType $bulkEntitlement): FailedUpdateBulkEntitlementDataType
     {
         $new = clone $this;
         $new->bulkEntitlement = $bulkEntitlement;
@@ -54,12 +41,12 @@ class FailedUpdateBulkEntitlementDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedUpdateBulkEntitlementDataType
+    public function withReason(?string $reason): FailedUpdateBulkEntitlementDataType
     {
         $new = clone $this;
         $new->reason = $reason;

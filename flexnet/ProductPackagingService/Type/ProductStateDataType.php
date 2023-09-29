@@ -16,8 +16,6 @@ class ProductStateDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $productIdentifier
      */
     public function __construct(ProductIdentifierType $productIdentifier, string $stateToSet)
     {
@@ -25,25 +23,16 @@ class ProductStateDataType
         $this->stateToSet = $stateToSet;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $productIdentifier
-     */
     public static function create(ProductIdentifierType $productIdentifier, string $stateToSet)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\ProductIdentifierType
-     */
     public function getProductIdentifier(): ProductIdentifierType
     {
         return $this->productIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $productIdentifier
-     */
     public function withProductIdentifier(ProductIdentifierType $productIdentifier): ProductStateDataType
     {
         $new = clone $this;

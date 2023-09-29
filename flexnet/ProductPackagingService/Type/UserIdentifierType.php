@@ -21,34 +21,25 @@ class UserIdentifierType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $uniqueId
-     * @param  string|null  $userName
-     * @param  \Flexnet\ProductPackagingService\Type\UserPKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, string|null $userName = null, UserPKType|null $primaryKeys = null)
+    public function __construct(string $uniqueId = null, string $userName = null, UserPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->userName = $userName;
         $this->primaryKeys = $primaryKeys;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @param  string|null  $userName
-     * @param  \Flexnet\ProductPackagingService\Type\UserPKType|null  $primaryKeys
-     */
-    public static function create(string|null $uniqueId = null, string|null $userName = null, UserPKType|null $primaryKeys = null)
+    public static function create(string $uniqueId = null, string $userName = null, UserPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUniqueId(): string|null
+    public function getUniqueId(): ?string
     {
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string|null $uniqueId): UserIdentifierType
+    public function withUniqueId(?string $uniqueId): UserIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -56,12 +47,12 @@ class UserIdentifierType
         return $new;
     }
 
-    public function getUserName(): string|null
+    public function getUserName(): ?string
     {
         return $this->userName;
     }
 
-    public function withUserName(string|null $userName): UserIdentifierType
+    public function withUserName(?string $userName): UserIdentifierType
     {
         $new = clone $this;
         $new->userName = $userName;
@@ -69,18 +60,12 @@ class UserIdentifierType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\UserPKType|null
-     */
-    public function getPrimaryKeys(): UserPKType|null
+    public function getPrimaryKeys(): ?UserPKType
     {
         return $this->primaryKeys;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\UserPKType|null  $primaryKeys
-     */
-    public function withPrimaryKeys(UserPKType|null $primaryKeys): UserIdentifierType
+    public function withPrimaryKeys(?UserPKType $primaryKeys): UserIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

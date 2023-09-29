@@ -18,36 +18,23 @@ class GetProductsQueryResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\GetProductsQueryResponseDataType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, GetProductsQueryResponseDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetProductsQueryResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\GetProductsQueryResponseDataType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, GetProductsQueryResponseDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetProductsQueryResponseDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetProductsQueryResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetProductsQueryResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\GetProductsQueryResponseDataType|null
-     */
-    public function getResponseData(): GetProductsQueryResponseDataType|null
+    public function getResponseData(): ?GetProductsQueryResponseDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\GetProductsQueryResponseDataType|null  $responseData
-     */
-    public function withResponseData(GetProductsQueryResponseDataType|null $responseData): GetProductsQueryResponseType
+    public function withResponseData(?GetProductsQueryResponseDataType $responseData): GetProductsQueryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

@@ -16,36 +16,23 @@ class FailedUpdateFeatureBundleDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType  $featureBundle
-     * @param  string|null  $reason
      */
-    public function __construct(UpdateFeatureBundleDataType $featureBundle, string|null $reason = null)
+    public function __construct(UpdateFeatureBundleDataType $featureBundle, string $reason = null)
     {
         $this->featureBundle = $featureBundle;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType  $featureBundle
-     * @param  string|null  $reason
-     */
-    public static function create(UpdateFeatureBundleDataType $featureBundle, string|null $reason = null)
+    public static function create(UpdateFeatureBundleDataType $featureBundle, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType
-     */
     public function getFeatureBundle(): UpdateFeatureBundleDataType
     {
         return $this->featureBundle;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType  $featureBundle
-     */
     public function withFeatureBundle(UpdateFeatureBundleDataType $featureBundle): FailedUpdateFeatureBundleDataType
     {
         $new = clone $this;
@@ -54,12 +41,12 @@ class FailedUpdateFeatureBundleDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedUpdateFeatureBundleDataType
+    public function withReason(?string $reason): FailedUpdateFeatureBundleDataType
     {
         $new = clone $this;
         $new->reason = $reason;

@@ -16,37 +16,24 @@ class FailedRemoveEntitlementLineItemDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|null  $failedData
-     * @param  string|null  $reason
      */
-    public function __construct(RemoveEntitlementLineItemDataType|null $failedData = null, string|null $reason = null)
+    public function __construct(RemoveEntitlementLineItemDataType $failedData = null, string $reason = null)
     {
         $this->failedData = $failedData;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|null  $failedData
-     * @param  string|null  $reason
-     */
-    public static function create(RemoveEntitlementLineItemDataType|null $failedData = null, string|null $reason = null)
+    public static function create(RemoveEntitlementLineItemDataType $failedData = null, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|null
-     */
-    public function getFailedData(): RemoveEntitlementLineItemDataType|null
+    public function getFailedData(): ?RemoveEntitlementLineItemDataType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|null  $failedData
-     */
-    public function withFailedData(RemoveEntitlementLineItemDataType|null $failedData): FailedRemoveEntitlementLineItemDataType
+    public function withFailedData(?RemoveEntitlementLineItemDataType $failedData): FailedRemoveEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -54,12 +41,12 @@ class FailedRemoveEntitlementLineItemDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedRemoveEntitlementLineItemDataType
+    public function withReason(?string $reason): FailedRemoveEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->reason = $reason;

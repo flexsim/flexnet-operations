@@ -23,36 +23,25 @@ class GetPartNumbersQueryRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType|null  $queryParams
      */
-    public function __construct(int $pageNumber, int $batchSize, PartNumberQueryParametersType|null $queryParams = null)
+    public function __construct(int $pageNumber, int $batchSize, PartNumberQueryParametersType $queryParams = null)
     {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
         $this->queryParams = $queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType|null  $queryParams
-     */
-    public static function create(int $pageNumber, int $batchSize, PartNumberQueryParametersType|null $queryParams = null)
+    public static function create(int $pageNumber, int $batchSize, PartNumberQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType|null
-     */
-    public function getQueryParams(): PartNumberQueryParametersType|null
+    public function getQueryParams(): ?PartNumberQueryParametersType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType|null  $queryParams
-     */
-    public function withQueryParams(PartNumberQueryParametersType|null $queryParams): GetPartNumbersQueryRequestType
+    public function withQueryParams(?PartNumberQueryParametersType $queryParams): GetPartNumbersQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

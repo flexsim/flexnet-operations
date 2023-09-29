@@ -20,9 +20,8 @@ class CreateSimpleEntitlementRequestType implements RequestInterface
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType>  $simpleEntitlement
-     * @param  string|null  $opType
      */
-    public function __construct(CreateSimpleEntitlementDataType|array $simpleEntitlement, string|null $opType = null)
+    public function __construct(CreateSimpleEntitlementDataType|array $simpleEntitlement, string $opType = null)
     {
         $this->simpleEntitlement = $simpleEntitlement;
         $this->opType = $opType;
@@ -30,9 +29,8 @@ class CreateSimpleEntitlementRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType>  $simpleEntitlement
-     * @param  string|null  $opType
      */
-    public static function create(CreateSimpleEntitlementDataType|array $simpleEntitlement, string|null $opType = null)
+    public static function create(CreateSimpleEntitlementDataType|array $simpleEntitlement, string $opType = null)
     {
         return new static(...\func_get_args());
     }
@@ -56,12 +54,12 @@ class CreateSimpleEntitlementRequestType implements RequestInterface
         return $new;
     }
 
-    public function getOpType(): string|null
+    public function getOpType(): ?string
     {
         return $this->opType;
     }
 
-    public function withOpType(string|null $opType): CreateSimpleEntitlementRequestType
+    public function withOpType(?string $opType): CreateSimpleEntitlementRequestType
     {
         $new = clone $this;
         $new->opType = $opType;

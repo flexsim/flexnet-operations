@@ -17,35 +17,27 @@ class TransferredEntitlementDataType
     /**
      * Constructor
      *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType|array<\Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType>|null  $lineItemIdentifierMap
      */
-    public function __construct(EntitlementIdentifierType $entitlementIdentifier, TransferredLineItemMapType|array|null $lineItemIdentifierMap = null)
+    public function __construct(EntitlementIdentifierType $entitlementIdentifier, TransferredLineItemMapType|array $lineItemIdentifierMap = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->lineItemIdentifierMap = $lineItemIdentifierMap;
     }
 
     /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
      * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType|array<\Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType>|null  $lineItemIdentifierMap
      */
-    public static function create(EntitlementIdentifierType $entitlementIdentifier, TransferredLineItemMapType|array|null $lineItemIdentifierMap = null)
+    public static function create(EntitlementIdentifierType $entitlementIdentifier, TransferredLineItemMapType|array $lineItemIdentifierMap = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
-     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): TransferredEntitlementDataType
     {
         $new = clone $this;

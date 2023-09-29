@@ -16,36 +16,23 @@ class FailedDeleteProductDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $productIdentifier
-     * @param  string|null  $reason
      */
-    public function __construct(ProductIdentifierType $productIdentifier, string|null $reason = null)
+    public function __construct(ProductIdentifierType $productIdentifier, string $reason = null)
     {
         $this->productIdentifier = $productIdentifier;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $productIdentifier
-     * @param  string|null  $reason
-     */
-    public static function create(ProductIdentifierType $productIdentifier, string|null $reason = null)
+    public static function create(ProductIdentifierType $productIdentifier, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\ProductIdentifierType
-     */
     public function getProductIdentifier(): ProductIdentifierType
     {
         return $this->productIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType  $productIdentifier
-     */
     public function withProductIdentifier(ProductIdentifierType $productIdentifier): FailedDeleteProductDataType
     {
         $new = clone $this;
@@ -54,12 +41,12 @@ class FailedDeleteProductDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedDeleteProductDataType
+    public function withReason(?string $reason): FailedDeleteProductDataType
     {
         $new = clone $this;
         $new->reason = $reason;

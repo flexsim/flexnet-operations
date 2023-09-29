@@ -16,37 +16,24 @@ class ExpirationTermsDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $term
-     * @param  \DateTimeInterface|null  $expirationDate
      */
-    public function __construct(DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null)
+    public function __construct(DurationType $term = null, \DateTimeInterface $expirationDate = null)
     {
         $this->term = $term;
         $this->expirationDate = $expirationDate;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $term
-     * @param  \DateTimeInterface|null  $expirationDate
-     */
-    public static function create(DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null)
+    public static function create(DurationType $term = null, \DateTimeInterface $expirationDate = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\DurationType|null
-     */
-    public function getTerm(): DurationType|null
+    public function getTerm(): ?DurationType
     {
         return $this->term;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $term
-     */
-    public function withTerm(DurationType|null $term): ExpirationTermsDataType
+    public function withTerm(?DurationType $term): ExpirationTermsDataType
     {
         $new = clone $this;
         $new->term = $term;
@@ -54,12 +41,12 @@ class ExpirationTermsDataType
         return $new;
     }
 
-    public function getExpirationDate(): \DateTimeInterface|null
+    public function getExpirationDate(): ?\DateTimeInterface
     {
         return $this->expirationDate;
     }
 
-    public function withExpirationDate(\DateTimeInterface|null $expirationDate): ExpirationTermsDataType
+    public function withExpirationDate(?\DateTimeInterface $expirationDate): ExpirationTermsDataType
     {
         $new = clone $this;
         $new->expirationDate = $expirationDate;

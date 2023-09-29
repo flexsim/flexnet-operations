@@ -86,24 +86,8 @@ class CreateFulfillmentDataType
 
     /**
      * Constructor
-     *
-     * @param  int|null  $fulfillCount
-     * @param  int|null  $overDraftCount
-     * @param  \DateTimeInterface|null  $startDate
-     * @param  \DateTimeInterface|null  $versionDate
-     * @param  \DateTimeInterface|null  $versionStartDate
-     * @param  string|null  $soldTo
-     * @param  string|null  $shipToEmail
-     * @param  string|null  $shipToAddress
-     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
-     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
-     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  bool|null  $overridePolicy
-     * @param  string|null  $owner
-     * @param  string|null  $FNPTimeZoneValue
      */
-    public function __construct(string $activationId, int|null $fulfillCount = null, int|null $overDraftCount = null, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $versionDate = null, \DateTimeInterface|null $versionStartDate = null, string|null $soldTo = null, string|null $shipToEmail = null, string|null $shipToAddress = null, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, bool|null $overridePolicy = null, string|null $owner = null, string|null $FNPTimeZoneValue = null)
+    public function __construct(string $activationId, int $fulfillCount = null, int $overDraftCount = null, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, ServerIDsType $serverIds = null, NodeIDsType $nodeIds = null, CustomHostIDType $customHost = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $owner = null, string $FNPTimeZoneValue = null)
     {
         $this->activationId = $activationId;
         $this->fulfillCount = $fulfillCount;
@@ -123,24 +107,7 @@ class CreateFulfillmentDataType
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
     }
 
-    /**
-     * @param  int|null  $fulfillCount
-     * @param  int|null  $overDraftCount
-     * @param  \DateTimeInterface|null  $startDate
-     * @param  \DateTimeInterface|null  $versionDate
-     * @param  \DateTimeInterface|null  $versionStartDate
-     * @param  string|null  $soldTo
-     * @param  string|null  $shipToEmail
-     * @param  string|null  $shipToAddress
-     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
-     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
-     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  bool|null  $overridePolicy
-     * @param  string|null  $owner
-     * @param  string|null  $FNPTimeZoneValue
-     */
-    public static function create(string $activationId, int|null $fulfillCount = null, int|null $overDraftCount = null, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $versionDate = null, \DateTimeInterface|null $versionStartDate = null, string|null $soldTo = null, string|null $shipToEmail = null, string|null $shipToAddress = null, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, bool|null $overridePolicy = null, string|null $owner = null, string|null $FNPTimeZoneValue = null)
+    public static function create(string $activationId, int $fulfillCount = null, int $overDraftCount = null, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, ServerIDsType $serverIds = null, NodeIDsType $nodeIds = null, CustomHostIDType $customHost = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $owner = null, string $FNPTimeZoneValue = null)
     {
         return new static(...\func_get_args());
     }
@@ -158,12 +125,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    public function getFulfillCount(): int|null
+    public function getFulfillCount(): ?int
     {
         return $this->fulfillCount;
     }
 
-    public function withFulfillCount(int|null $fulfillCount): CreateFulfillmentDataType
+    public function withFulfillCount(?int $fulfillCount): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillCount = $fulfillCount;
@@ -171,12 +138,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    public function getOverDraftCount(): int|null
+    public function getOverDraftCount(): ?int
     {
         return $this->overDraftCount;
     }
 
-    public function withOverDraftCount(int|null $overDraftCount): CreateFulfillmentDataType
+    public function withOverDraftCount(?int $overDraftCount): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->overDraftCount = $overDraftCount;
@@ -184,12 +151,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    public function getStartDate(): \DateTimeInterface|null
+    public function getStartDate(): ?\DateTimeInterface
     {
         return $this->startDate;
     }
 
-    public function withStartDate(\DateTimeInterface|null $startDate): CreateFulfillmentDataType
+    public function withStartDate(?\DateTimeInterface $startDate): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -197,12 +164,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    public function getVersionDate(): \DateTimeInterface|null
+    public function getVersionDate(): ?\DateTimeInterface
     {
         return $this->versionDate;
     }
 
-    public function withVersionDate(\DateTimeInterface|null $versionDate): CreateFulfillmentDataType
+    public function withVersionDate(?\DateTimeInterface $versionDate): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->versionDate = $versionDate;
@@ -210,12 +177,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    public function getVersionStartDate(): \DateTimeInterface|null
+    public function getVersionStartDate(): ?\DateTimeInterface
     {
         return $this->versionStartDate;
     }
 
-    public function withVersionStartDate(\DateTimeInterface|null $versionStartDate): CreateFulfillmentDataType
+    public function withVersionStartDate(?\DateTimeInterface $versionStartDate): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->versionStartDate = $versionStartDate;
@@ -223,12 +190,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    public function getSoldTo(): string|null
+    public function getSoldTo(): ?string
     {
         return $this->soldTo;
     }
 
-    public function withSoldTo(string|null $soldTo): CreateFulfillmentDataType
+    public function withSoldTo(?string $soldTo): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -236,12 +203,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    public function getShipToEmail(): string|null
+    public function getShipToEmail(): ?string
     {
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(string|null $shipToEmail): CreateFulfillmentDataType
+    public function withShipToEmail(?string $shipToEmail): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -249,12 +216,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    public function getShipToAddress(): string|null
+    public function getShipToAddress(): ?string
     {
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(string|null $shipToAddress): CreateFulfillmentDataType
+    public function withShipToAddress(?string $shipToAddress): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -262,18 +229,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\ServerIDsType|null
-     */
-    public function getServerIds(): ServerIDsType|null
+    public function getServerIds(): ?ServerIDsType
     {
         return $this->serverIds;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
-     */
-    public function withServerIds(ServerIDsType|null $serverIds): CreateFulfillmentDataType
+    public function withServerIds(?ServerIDsType $serverIds): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->serverIds = $serverIds;
@@ -281,18 +242,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\NodeIDsType|null
-     */
-    public function getNodeIds(): NodeIDsType|null
+    public function getNodeIds(): ?NodeIDsType
     {
         return $this->nodeIds;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
-     */
-    public function withNodeIds(NodeIDsType|null $nodeIds): CreateFulfillmentDataType
+    public function withNodeIds(?NodeIDsType $nodeIds): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->nodeIds = $nodeIds;
@@ -300,18 +255,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\CustomHostIDType|null
-     */
-    public function getCustomHost(): CustomHostIDType|null
+    public function getCustomHost(): ?CustomHostIDType
     {
         return $this->customHost;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
-     */
-    public function withCustomHost(CustomHostIDType|null $customHost): CreateFulfillmentDataType
+    public function withCustomHost(?CustomHostIDType $customHost): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->customHost = $customHost;
@@ -319,18 +268,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null
-     */
-    public function getLicenseModelAttributes(): AttributeDescriptorDataType|null
+    public function getLicenseModelAttributes(): ?AttributeDescriptorDataType
     {
         return $this->licenseModelAttributes;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     */
-    public function withLicenseModelAttributes(AttributeDescriptorDataType|null $licenseModelAttributes): CreateFulfillmentDataType
+    public function withLicenseModelAttributes(?AttributeDescriptorDataType $licenseModelAttributes): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->licenseModelAttributes = $licenseModelAttributes;
@@ -338,12 +281,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    public function getOverridePolicy(): bool|null
+    public function getOverridePolicy(): ?bool
     {
         return $this->overridePolicy;
     }
 
-    public function withOverridePolicy(bool|null $overridePolicy): CreateFulfillmentDataType
+    public function withOverridePolicy(?bool $overridePolicy): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->overridePolicy = $overridePolicy;
@@ -351,12 +294,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    public function getOwner(): string|null
+    public function getOwner(): ?string
     {
         return $this->owner;
     }
 
-    public function withOwner(string|null $owner): CreateFulfillmentDataType
+    public function withOwner(?string $owner): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->owner = $owner;
@@ -364,12 +307,12 @@ class CreateFulfillmentDataType
         return $new;
     }
 
-    public function getFNPTimeZoneValue(): string|null
+    public function getFNPTimeZoneValue(): ?string
     {
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(string|null $FNPTimeZoneValue): CreateFulfillmentDataType
+    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): CreateFulfillmentDataType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;

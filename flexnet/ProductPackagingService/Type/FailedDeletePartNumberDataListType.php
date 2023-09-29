@@ -14,7 +14,7 @@ class FailedDeletePartNumberDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeletePartNumberDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeletePartNumberDataType>|null  $failedPartNumber
      */
-    public function __construct(FailedDeletePartNumberDataType|array|null $failedPartNumber = null)
+    public function __construct(FailedDeletePartNumberDataType|array $failedPartNumber = null)
     {
         $this->failedPartNumber = $failedPartNumber;
     }
@@ -22,7 +22,7 @@ class FailedDeletePartNumberDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeletePartNumberDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeletePartNumberDataType>|null  $failedPartNumber
      */
-    public static function create(FailedDeletePartNumberDataType|array|null $failedPartNumber = null)
+    public static function create(FailedDeletePartNumberDataType|array $failedPartNumber = null)
     {
         return new static(...\func_get_args());
     }

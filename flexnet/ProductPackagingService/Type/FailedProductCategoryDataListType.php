@@ -14,7 +14,7 @@ class FailedProductCategoryDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType>|null  $failedProductCategory
      */
-    public function __construct(FailedProductCategoryDataType|array|null $failedProductCategory = null)
+    public function __construct(FailedProductCategoryDataType|array $failedProductCategory = null)
     {
         $this->failedProductCategory = $failedProductCategory;
     }
@@ -22,7 +22,7 @@ class FailedProductCategoryDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType>|null  $failedProductCategory
      */
-    public static function create(FailedProductCategoryDataType|array|null $failedProductCategory = null)
+    public static function create(FailedProductCategoryDataType|array $failedProductCategory = null)
     {
         return new static(...\func_get_args());
     }

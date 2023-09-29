@@ -14,7 +14,7 @@ class SuiteCustomAttributesQueryListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType|array<\Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType>|null  $attribute
      */
-    public function __construct(SuiteCustomAttributeQueryType|array|null $attribute = null)
+    public function __construct(SuiteCustomAttributeQueryType|array $attribute = null)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class SuiteCustomAttributesQueryListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType|array<\Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType>|null  $attribute
      */
-    public static function create(SuiteCustomAttributeQueryType|array|null $attribute = null)
+    public static function create(SuiteCustomAttributeQueryType|array $attribute = null)
     {
         return new static(...\func_get_args());
     }

@@ -23,10 +23,8 @@ class WebRegKeyDataType
      * Constructor
      *
      * @param  string|array<string>|null  $webRegKey
-     * @param  bool|null  $autoGenerate
-     * @param  int|null  $numAutoGenerate
      */
-    public function __construct(string|array|null $webRegKey = null, bool|null $autoGenerate = null, int|null $numAutoGenerate = null)
+    public function __construct(string|array $webRegKey = null, bool $autoGenerate = null, int $numAutoGenerate = null)
     {
         $this->webRegKey = $webRegKey;
         $this->autoGenerate = $autoGenerate;
@@ -35,10 +33,8 @@ class WebRegKeyDataType
 
     /**
      * @param  string|array<string>|null  $webRegKey
-     * @param  bool|null  $autoGenerate
-     * @param  int|null  $numAutoGenerate
      */
-    public static function create(string|array|null $webRegKey = null, bool|null $autoGenerate = null, int|null $numAutoGenerate = null)
+    public static function create(string|array $webRegKey = null, bool $autoGenerate = null, int $numAutoGenerate = null)
     {
         return new static(...\func_get_args());
     }
@@ -62,12 +58,12 @@ class WebRegKeyDataType
         return $new;
     }
 
-    public function getAutoGenerate(): bool|null
+    public function getAutoGenerate(): ?bool
     {
         return $this->autoGenerate;
     }
 
-    public function withAutoGenerate(bool|null $autoGenerate): WebRegKeyDataType
+    public function withAutoGenerate(?bool $autoGenerate): WebRegKeyDataType
     {
         $new = clone $this;
         $new->autoGenerate = $autoGenerate;
@@ -75,12 +71,12 @@ class WebRegKeyDataType
         return $new;
     }
 
-    public function getNumAutoGenerate(): int|null
+    public function getNumAutoGenerate(): ?int
     {
         return $this->numAutoGenerate;
     }
 
-    public function withNumAutoGenerate(int|null $numAutoGenerate): WebRegKeyDataType
+    public function withNumAutoGenerate(?int $numAutoGenerate): WebRegKeyDataType
     {
         $new = clone $this;
         $new->numAutoGenerate = $numAutoGenerate;

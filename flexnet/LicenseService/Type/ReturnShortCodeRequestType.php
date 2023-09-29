@@ -18,37 +18,24 @@ class ReturnShortCodeRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\ReturnShortCodeDataType|null  $shortCodeData
-     * @param  string|null  $returnReason
      */
-    public function __construct(ReturnShortCodeDataType|null $shortCodeData = null, string|null $returnReason = null)
+    public function __construct(ReturnShortCodeDataType $shortCodeData = null, string $returnReason = null)
     {
         $this->shortCodeData = $shortCodeData;
         $this->returnReason = $returnReason;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ReturnShortCodeDataType|null  $shortCodeData
-     * @param  string|null  $returnReason
-     */
-    public static function create(ReturnShortCodeDataType|null $shortCodeData = null, string|null $returnReason = null)
+    public static function create(ReturnShortCodeDataType $shortCodeData = null, string $returnReason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\ReturnShortCodeDataType|null
-     */
-    public function getShortCodeData(): ReturnShortCodeDataType|null
+    public function getShortCodeData(): ?ReturnShortCodeDataType
     {
         return $this->shortCodeData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ReturnShortCodeDataType|null  $shortCodeData
-     */
-    public function withShortCodeData(ReturnShortCodeDataType|null $shortCodeData): ReturnShortCodeRequestType
+    public function withShortCodeData(?ReturnShortCodeDataType $shortCodeData): ReturnShortCodeRequestType
     {
         $new = clone $this;
         $new->shortCodeData = $shortCodeData;
@@ -56,12 +43,12 @@ class ReturnShortCodeRequestType implements RequestInterface
         return $new;
     }
 
-    public function getReturnReason(): string|null
+    public function getReturnReason(): ?string
     {
         return $this->returnReason;
     }
 
-    public function withReturnReason(string|null $returnReason): ReturnShortCodeRequestType
+    public function withReturnReason(?string $returnReason): ReturnShortCodeRequestType
     {
         $new = clone $this;
         $new->returnReason = $returnReason;

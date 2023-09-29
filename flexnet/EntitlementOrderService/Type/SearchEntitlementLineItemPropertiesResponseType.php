@@ -19,35 +19,27 @@ class SearchEntitlementLineItemPropertiesResponseType extends Result
     /**
      * Constructor
      *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemPropertiesType>|null  $entitlementLineItem
      */
-    public function __construct(StatusInfoType $statusInfo, EntitlementLineItemPropertiesType|array|null $entitlementLineItem = null)
+    public function __construct(StatusInfoType $statusInfo, EntitlementLineItemPropertiesType|array $entitlementLineItem = null)
     {
         $this->statusInfo = $statusInfo;
         $this->entitlementLineItem = $entitlementLineItem;
     }
 
     /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemPropertiesType>|null  $entitlementLineItem
      */
-    public static function create(StatusInfoType $statusInfo, EntitlementLineItemPropertiesType|array|null $entitlementLineItem = null)
+    public static function create(StatusInfoType $statusInfo, EntitlementLineItemPropertiesType|array $entitlementLineItem = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): SearchEntitlementLineItemPropertiesResponseType
     {
         $new = clone $this;

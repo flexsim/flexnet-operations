@@ -18,37 +18,24 @@ class GetFulfillmentCountRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType|null  $queryParams
-     * @param  bool|null  $excludeInactiveObsoleteLineItems
      */
-    public function __construct(FulfillmentsQueryParametersType|null $queryParams = null, bool|null $excludeInactiveObsoleteLineItems = null)
+    public function __construct(FulfillmentsQueryParametersType $queryParams = null, bool $excludeInactiveObsoleteLineItems = null)
     {
         $this->queryParams = $queryParams;
         $this->excludeInactiveObsoleteLineItems = $excludeInactiveObsoleteLineItems;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType|null  $queryParams
-     * @param  bool|null  $excludeInactiveObsoleteLineItems
-     */
-    public static function create(FulfillmentsQueryParametersType|null $queryParams = null, bool|null $excludeInactiveObsoleteLineItems = null)
+    public static function create(FulfillmentsQueryParametersType $queryParams = null, bool $excludeInactiveObsoleteLineItems = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType|null
-     */
-    public function getQueryParams(): FulfillmentsQueryParametersType|null
+    public function getQueryParams(): ?FulfillmentsQueryParametersType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType|null  $queryParams
-     */
-    public function withQueryParams(FulfillmentsQueryParametersType|null $queryParams): GetFulfillmentCountRequestType
+    public function withQueryParams(?FulfillmentsQueryParametersType $queryParams): GetFulfillmentCountRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -56,12 +43,12 @@ class GetFulfillmentCountRequestType implements RequestInterface
         return $new;
     }
 
-    public function getExcludeInactiveObsoleteLineItems(): bool|null
+    public function getExcludeInactiveObsoleteLineItems(): ?bool
     {
         return $this->excludeInactiveObsoleteLineItems;
     }
 
-    public function withExcludeInactiveObsoleteLineItems(bool|null $excludeInactiveObsoleteLineItems): GetFulfillmentCountRequestType
+    public function withExcludeInactiveObsoleteLineItems(?bool $excludeInactiveObsoleteLineItems): GetFulfillmentCountRequestType
     {
         $new = clone $this;
         $new->excludeInactiveObsoleteLineItems = $excludeInactiveObsoleteLineItems;

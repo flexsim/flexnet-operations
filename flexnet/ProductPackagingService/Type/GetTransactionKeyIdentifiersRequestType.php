@@ -13,34 +13,23 @@ class GetTransactionKeyIdentifiersRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\IdentifierQueryParametersType|null  $queryParams
      */
-    public function __construct(IdentifierQueryParametersType|null $queryParams = null)
+    public function __construct(IdentifierQueryParametersType $queryParams = null)
     {
         $this->queryParams = $queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\IdentifierQueryParametersType|null  $queryParams
-     */
-    public static function create(IdentifierQueryParametersType|null $queryParams = null)
+    public static function create(IdentifierQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\IdentifierQueryParametersType|null
-     */
-    public function getQueryParams(): IdentifierQueryParametersType|null
+    public function getQueryParams(): ?IdentifierQueryParametersType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\IdentifierQueryParametersType|null  $queryParams
-     */
-    public function withQueryParams(IdentifierQueryParametersType|null $queryParams): GetTransactionKeyIdentifiersRequestType
+    public function withQueryParams(?IdentifierQueryParametersType $queryParams): GetTransactionKeyIdentifiersRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

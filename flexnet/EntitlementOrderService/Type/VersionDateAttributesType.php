@@ -16,19 +16,14 @@ class VersionDateAttributesType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $duration
      */
-    public function __construct(string $versionOption, DurationType|null $duration = null)
+    public function __construct(string $versionOption, DurationType $duration = null)
     {
         $this->versionOption = $versionOption;
         $this->duration = $duration;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $duration
-     */
-    public static function create(string $versionOption, DurationType|null $duration = null)
+    public static function create(string $versionOption, DurationType $duration = null)
     {
         return new static(...\func_get_args());
     }
@@ -46,18 +41,12 @@ class VersionDateAttributesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\DurationType|null
-     */
-    public function getDuration(): DurationType|null
+    public function getDuration(): ?DurationType
     {
         return $this->duration;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $duration
-     */
-    public function withDuration(DurationType|null $duration): VersionDateAttributesType
+    public function withDuration(?DurationType $duration): VersionDateAttributesType
     {
         $new = clone $this;
         $new->duration = $duration;

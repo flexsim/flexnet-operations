@@ -20,9 +20,8 @@ class AddOnlyEntitlementLineItemRequestType implements RequestInterface
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
-     * @param  string|null  $opType
      */
-    public function __construct(AddEntitlementLineItemDataType|array $lineItem, string|null $opType = null)
+    public function __construct(AddEntitlementLineItemDataType|array $lineItem, string $opType = null)
     {
         $this->lineItem = $lineItem;
         $this->opType = $opType;
@@ -30,9 +29,8 @@ class AddOnlyEntitlementLineItemRequestType implements RequestInterface
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
-     * @param  string|null  $opType
      */
-    public static function create(AddEntitlementLineItemDataType|array $lineItem, string|null $opType = null)
+    public static function create(AddEntitlementLineItemDataType|array $lineItem, string $opType = null)
     {
         return new static(...\func_get_args());
     }
@@ -56,12 +54,12 @@ class AddOnlyEntitlementLineItemRequestType implements RequestInterface
         return $new;
     }
 
-    public function getOpType(): string|null
+    public function getOpType(): ?string
     {
         return $this->opType;
     }
 
-    public function withOpType(string|null $opType): AddOnlyEntitlementLineItemRequestType
+    public function withOpType(?string $opType): AddOnlyEntitlementLineItemRequestType
     {
         $new = clone $this;
         $new->opType = $opType;

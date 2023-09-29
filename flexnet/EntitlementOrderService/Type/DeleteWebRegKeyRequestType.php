@@ -13,33 +13,22 @@ class DeleteWebRegKeyRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeysListType  $webRegKeyList
      */
     public function __construct(WebRegKeysListType $webRegKeyList)
     {
         $this->webRegKeyList = $webRegKeyList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeysListType  $webRegKeyList
-     */
     public static function create(WebRegKeysListType $webRegKeyList)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\WebRegKeysListType
-     */
     public function getWebRegKeyList(): WebRegKeysListType
     {
         return $this->webRegKeyList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeysListType  $webRegKeyList
-     */
     public function withWebRegKeyList(WebRegKeysListType $webRegKeyList): DeleteWebRegKeyRequestType
     {
         $new = clone $this;

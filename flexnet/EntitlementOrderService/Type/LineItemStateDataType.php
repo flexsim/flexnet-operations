@@ -21,37 +21,24 @@ class LineItemStateDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  bool|null  $includeChildItems
      */
-    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet, bool|null $includeChildItems = null)
+    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet, bool $includeChildItems = null)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->stateToSet = $stateToSet;
         $this->includeChildItems = $includeChildItems;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  bool|null  $includeChildItems
-     */
-    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet, bool|null $includeChildItems = null)
+    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet, bool $includeChildItems = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
-     */
     public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): LineItemStateDataType
     {
         $new = clone $this;
@@ -73,12 +60,12 @@ class LineItemStateDataType
         return $new;
     }
 
-    public function getIncludeChildItems(): bool|null
+    public function getIncludeChildItems(): ?bool
     {
         return $this->includeChildItems;
     }
 
-    public function withIncludeChildItems(bool|null $includeChildItems): LineItemStateDataType
+    public function withIncludeChildItems(?bool $includeChildItems): LineItemStateDataType
     {
         $new = clone $this;
         $new->includeChildItems = $includeChildItems;

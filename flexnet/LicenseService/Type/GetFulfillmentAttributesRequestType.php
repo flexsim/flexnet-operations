@@ -13,33 +13,22 @@ class GetFulfillmentAttributesRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
      */
     public function __construct(LicenseModelIdentifierType $licenseModelIdentifier)
     {
         $this->licenseModelIdentifier = $licenseModelIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
-     */
     public static function create(LicenseModelIdentifierType $licenseModelIdentifier)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\LicenseModelIdentifierType
-     */
     public function getLicenseModelIdentifier(): LicenseModelIdentifierType
     {
         return $this->licenseModelIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\LicenseModelIdentifierType  $licenseModelIdentifier
-     */
     public function withLicenseModelIdentifier(LicenseModelIdentifierType $licenseModelIdentifier): GetFulfillmentAttributesRequestType
     {
         $new = clone $this;

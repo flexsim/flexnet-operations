@@ -26,12 +26,8 @@ class LicenseFileDataType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $licenseText
-     * @param  string|null  $binaryLicense
-     * @param  string|null  $fileName
      */
-    public function __construct(string $licenseFileDefinitionName, string|null $licenseText = null, string|null $binaryLicense = null, string|null $fileName = null)
+    public function __construct(string $licenseFileDefinitionName, string $licenseText = null, string $binaryLicense = null, string $fileName = null)
     {
         $this->licenseFileDefinitionName = $licenseFileDefinitionName;
         $this->licenseText = $licenseText;
@@ -39,12 +35,7 @@ class LicenseFileDataType
         $this->fileName = $fileName;
     }
 
-    /**
-     * @param  string|null  $licenseText
-     * @param  string|null  $binaryLicense
-     * @param  string|null  $fileName
-     */
-    public static function create(string $licenseFileDefinitionName, string|null $licenseText = null, string|null $binaryLicense = null, string|null $fileName = null)
+    public static function create(string $licenseFileDefinitionName, string $licenseText = null, string $binaryLicense = null, string $fileName = null)
     {
         return new static(...\func_get_args());
     }
@@ -62,12 +53,12 @@ class LicenseFileDataType
         return $new;
     }
 
-    public function getLicenseText(): string|null
+    public function getLicenseText(): ?string
     {
         return $this->licenseText;
     }
 
-    public function withLicenseText(string|null $licenseText): LicenseFileDataType
+    public function withLicenseText(?string $licenseText): LicenseFileDataType
     {
         $new = clone $this;
         $new->licenseText = $licenseText;
@@ -75,12 +66,12 @@ class LicenseFileDataType
         return $new;
     }
 
-    public function getBinaryLicense(): string|null
+    public function getBinaryLicense(): ?string
     {
         return $this->binaryLicense;
     }
 
-    public function withBinaryLicense(string|null $binaryLicense): LicenseFileDataType
+    public function withBinaryLicense(?string $binaryLicense): LicenseFileDataType
     {
         $new = clone $this;
         $new->binaryLicense = $binaryLicense;
@@ -88,12 +79,12 @@ class LicenseFileDataType
         return $new;
     }
 
-    public function getFileName(): string|null
+    public function getFileName(): ?string
     {
         return $this->fileName;
     }
 
-    public function withFileName(string|null $fileName): LicenseFileDataType
+    public function withFileName(?string $fileName): LicenseFileDataType
     {
         $new = clone $this;
         $new->fileName = $fileName;

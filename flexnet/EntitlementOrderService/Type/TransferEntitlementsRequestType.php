@@ -13,33 +13,22 @@ class TransferEntitlementsRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementsListType  $entitlementList
      */
     public function __construct(TransferEntitlementsListType $entitlementList)
     {
         $this->entitlementList = $entitlementList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementsListType  $entitlementList
-     */
     public static function create(TransferEntitlementsListType $entitlementList)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\TransferEntitlementsListType
-     */
     public function getEntitlementList(): TransferEntitlementsListType
     {
         return $this->entitlementList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementsListType  $entitlementList
-     */
     public function withEntitlementList(TransferEntitlementsListType $entitlementList): TransferEntitlementsRequestType
     {
         $new = clone $this;

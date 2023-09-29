@@ -18,36 +18,23 @@ class SetUniformSuiteStateResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedUniformSuiteStateDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedUniformSuiteStateDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedUniformSuiteStateDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedUniformSuiteStateDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedUniformSuiteStateDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedUniformSuiteStateDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): SetUniformSuiteStateResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class SetUniformSuiteStateResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedUniformSuiteStateDataListType|null
-     */
-    public function getFailedData(): FailedUniformSuiteStateDataListType|null
+    public function getFailedData(): ?FailedUniformSuiteStateDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedUniformSuiteStateDataListType|null  $failedData
-     */
-    public function withFailedData(FailedUniformSuiteStateDataListType|null $failedData): SetUniformSuiteStateResponseType
+    public function withFailedData(?FailedUniformSuiteStateDataListType $failedData): SetUniformSuiteStateResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

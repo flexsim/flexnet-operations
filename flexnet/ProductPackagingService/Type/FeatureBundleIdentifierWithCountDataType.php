@@ -16,8 +16,6 @@ class FeatureBundleIdentifierWithCountDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
      */
     public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier, int $count)
     {
@@ -25,25 +23,16 @@ class FeatureBundleIdentifierWithCountDataType
         $this->count = $count;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
-     */
     public static function create(FeatureBundleIdentifierType $featureBundleIdentifier, int $count)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType
-     */
     public function getFeatureBundleIdentifier(): FeatureBundleIdentifierType
     {
         return $this->featureBundleIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType  $featureBundleIdentifier
-     */
     public function withFeatureBundleIdentifier(FeatureBundleIdentifierType $featureBundleIdentifier): FeatureBundleIdentifierWithCountDataType
     {
         $new = clone $this;

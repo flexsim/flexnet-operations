@@ -23,37 +23,24 @@ class SearchEntitlementRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType  $entitlementSearchCriteria
-     * @param  int|null  $pageNumber
      */
-    public function __construct(SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int|null $pageNumber = null)
+    public function __construct(SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int $pageNumber = null)
     {
         $this->entitlementSearchCriteria = $entitlementSearchCriteria;
         $this->batchSize = $batchSize;
         $this->pageNumber = $pageNumber;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType  $entitlementSearchCriteria
-     * @param  int|null  $pageNumber
-     */
-    public static function create(SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int|null $pageNumber = null)
+    public static function create(SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int $pageNumber = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType
-     */
     public function getEntitlementSearchCriteria(): SearchEntitlementDataType
     {
         return $this->entitlementSearchCriteria;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType  $entitlementSearchCriteria
-     */
     public function withEntitlementSearchCriteria(SearchEntitlementDataType $entitlementSearchCriteria): SearchEntitlementRequestType
     {
         $new = clone $this;
@@ -75,12 +62,12 @@ class SearchEntitlementRequestType implements RequestInterface
         return $new;
     }
 
-    public function getPageNumber(): int|null
+    public function getPageNumber(): ?int
     {
         return $this->pageNumber;
     }
 
-    public function withPageNumber(int|null $pageNumber): SearchEntitlementRequestType
+    public function withPageNumber(?int $pageNumber): SearchEntitlementRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;

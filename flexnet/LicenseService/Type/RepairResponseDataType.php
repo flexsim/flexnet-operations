@@ -14,7 +14,7 @@ class RepairResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function __construct(RepairFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public function __construct(RepairFulfillmentResponseDataType|array $fulfillmentData = null)
     {
         $this->fulfillmentData = $fulfillmentData;
     }
@@ -22,7 +22,7 @@ class RepairResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public static function create(RepairFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public static function create(RepairFulfillmentResponseDataType|array $fulfillmentData = null)
     {
         return new static(...\func_get_args());
     }

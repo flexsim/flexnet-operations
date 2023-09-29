@@ -16,8 +16,6 @@ class FailedTransferEntitlementDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType  $entitlementInfo
      */
     public function __construct(TransferEntitlementInfoType $entitlementInfo, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedTransferEntitlementDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType  $entitlementInfo
-     */
     public static function create(TransferEntitlementInfoType $entitlementInfo, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType
-     */
     public function getEntitlementInfo(): TransferEntitlementInfoType
     {
         return $this->entitlementInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType  $entitlementInfo
-     */
     public function withEntitlementInfo(TransferEntitlementInfoType $entitlementInfo): FailedTransferEntitlementDataType
     {
         $new = clone $this;

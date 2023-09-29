@@ -14,7 +14,7 @@ class AddedEntitlementLineItemDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType>|null  $addedLineItems
      */
-    public function __construct(AddedEntitlementLineItemDataType|array|null $addedLineItems = null)
+    public function __construct(AddedEntitlementLineItemDataType|array $addedLineItems = null)
     {
         $this->addedLineItems = $addedLineItems;
     }
@@ -22,7 +22,7 @@ class AddedEntitlementLineItemDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType>|null  $addedLineItems
      */
-    public static function create(AddedEntitlementLineItemDataType|array|null $addedLineItems = null)
+    public static function create(AddedEntitlementLineItemDataType|array $addedLineItems = null)
     {
         return new static(...\func_get_args());
     }

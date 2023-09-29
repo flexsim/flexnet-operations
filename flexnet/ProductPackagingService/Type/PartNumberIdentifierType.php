@@ -16,31 +16,24 @@ class PartNumberIdentifierType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberPKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, PartNumberPKType|null $primaryKeys = null)
+    public function __construct(string $uniqueId = null, PartNumberPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberPKType|null  $primaryKeys
-     */
-    public static function create(string|null $uniqueId = null, PartNumberPKType|null $primaryKeys = null)
+    public static function create(string $uniqueId = null, PartNumberPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUniqueId(): string|null
+    public function getUniqueId(): ?string
     {
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string|null $uniqueId): PartNumberIdentifierType
+    public function withUniqueId(?string $uniqueId): PartNumberIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -48,18 +41,12 @@ class PartNumberIdentifierType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\PartNumberPKType|null
-     */
-    public function getPrimaryKeys(): PartNumberPKType|null
+    public function getPrimaryKeys(): ?PartNumberPKType
     {
         return $this->primaryKeys;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberPKType|null  $primaryKeys
-     */
-    public function withPrimaryKeys(PartNumberPKType|null $primaryKeys): PartNumberIdentifierType
+    public function withPrimaryKeys(?PartNumberPKType $primaryKeys): PartNumberIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

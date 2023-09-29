@@ -16,31 +16,24 @@ class LicenseModelIdentifierType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\LicenseService\Type\LicenseModelPKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, LicenseModelPKType|null $primaryKeys = null)
+    public function __construct(string $uniqueId = null, LicenseModelPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\LicenseService\Type\LicenseModelPKType|null  $primaryKeys
-     */
-    public static function create(string|null $uniqueId = null, LicenseModelPKType|null $primaryKeys = null)
+    public static function create(string $uniqueId = null, LicenseModelPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUniqueId(): string|null
+    public function getUniqueId(): ?string
     {
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string|null $uniqueId): LicenseModelIdentifierType
+    public function withUniqueId(?string $uniqueId): LicenseModelIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -48,18 +41,12 @@ class LicenseModelIdentifierType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\LicenseModelPKType|null
-     */
-    public function getPrimaryKeys(): LicenseModelPKType|null
+    public function getPrimaryKeys(): ?LicenseModelPKType
     {
         return $this->primaryKeys;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\LicenseModelPKType|null  $primaryKeys
-     */
-    public function withPrimaryKeys(LicenseModelPKType|null $primaryKeys): LicenseModelIdentifierType
+    public function withPrimaryKeys(?LicenseModelPKType $primaryKeys): LicenseModelIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

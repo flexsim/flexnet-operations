@@ -18,9 +18,8 @@ class RenewEntitlementDataType
      * Constructor
      *
      * @param  \Flexnet\EntitlementOrderService\Type\RenewLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewLineItemDataType>  $renewLineItemData
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
      */
-    public function __construct(RenewLineItemDataType|array $renewLineItemData, EntitlementIdentifierType|null $parentEntitlementIdentifier = null)
+    public function __construct(RenewLineItemDataType|array $renewLineItemData, EntitlementIdentifierType $parentEntitlementIdentifier = null)
     {
         $this->renewLineItemData = $renewLineItemData;
         $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
@@ -28,25 +27,18 @@ class RenewEntitlementDataType
 
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\RenewLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewLineItemDataType>  $renewLineItemData
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
      */
-    public static function create(RenewLineItemDataType|array $renewLineItemData, EntitlementIdentifierType|null $parentEntitlementIdentifier = null)
+    public static function create(RenewLineItemDataType|array $renewLineItemData, EntitlementIdentifierType $parentEntitlementIdentifier = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null
-     */
-    public function getParentEntitlementIdentifier(): EntitlementIdentifierType|null
+    public function getParentEntitlementIdentifier(): ?EntitlementIdentifierType
     {
         return $this->parentEntitlementIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|null  $parentEntitlementIdentifier
-     */
-    public function withParentEntitlementIdentifier(EntitlementIdentifierType|null $parentEntitlementIdentifier): RenewEntitlementDataType
+    public function withParentEntitlementIdentifier(?EntitlementIdentifierType $parentEntitlementIdentifier): RenewEntitlementDataType
     {
         $new = clone $this;
         $new->parentEntitlementIdentifier = $parentEntitlementIdentifier;

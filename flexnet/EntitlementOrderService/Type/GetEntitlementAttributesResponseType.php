@@ -28,13 +28,8 @@ class GetEntitlementAttributesResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorDataType|null  $entitlementAttributes
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType|null  $policyAttributes
-     * @param  bool|null  $needTimeZone
      */
-    public function __construct(StatusInfoType $statusInfo, AttributeMetaDescriptorDataType|null $entitlementAttributes = null, PolicyAttributesDataType|null $policyAttributes = null, bool|null $needTimeZone = null)
+    public function __construct(StatusInfoType $statusInfo, AttributeMetaDescriptorDataType $entitlementAttributes = null, PolicyAttributesDataType $policyAttributes = null, bool $needTimeZone = null)
     {
         $this->statusInfo = $statusInfo;
         $this->entitlementAttributes = $entitlementAttributes;
@@ -42,28 +37,16 @@ class GetEntitlementAttributesResponseType extends Result
         $this->needTimeZone = $needTimeZone;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorDataType|null  $entitlementAttributes
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType|null  $policyAttributes
-     * @param  bool|null  $needTimeZone
-     */
-    public static function create(StatusInfoType $statusInfo, AttributeMetaDescriptorDataType|null $entitlementAttributes = null, PolicyAttributesDataType|null $policyAttributes = null, bool|null $needTimeZone = null)
+    public static function create(StatusInfoType $statusInfo, AttributeMetaDescriptorDataType $entitlementAttributes = null, PolicyAttributesDataType $policyAttributes = null, bool $needTimeZone = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetEntitlementAttributesResponseType
     {
         $new = clone $this;
@@ -72,18 +55,12 @@ class GetEntitlementAttributesResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorDataType|null
-     */
-    public function getEntitlementAttributes(): AttributeMetaDescriptorDataType|null
+    public function getEntitlementAttributes(): ?AttributeMetaDescriptorDataType
     {
         return $this->entitlementAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorDataType|null  $entitlementAttributes
-     */
-    public function withEntitlementAttributes(AttributeMetaDescriptorDataType|null $entitlementAttributes): GetEntitlementAttributesResponseType
+    public function withEntitlementAttributes(?AttributeMetaDescriptorDataType $entitlementAttributes): GetEntitlementAttributesResponseType
     {
         $new = clone $this;
         $new->entitlementAttributes = $entitlementAttributes;
@@ -91,18 +68,12 @@ class GetEntitlementAttributesResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType|null
-     */
-    public function getPolicyAttributes(): PolicyAttributesDataType|null
+    public function getPolicyAttributes(): ?PolicyAttributesDataType
     {
         return $this->policyAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType|null  $policyAttributes
-     */
-    public function withPolicyAttributes(PolicyAttributesDataType|null $policyAttributes): GetEntitlementAttributesResponseType
+    public function withPolicyAttributes(?PolicyAttributesDataType $policyAttributes): GetEntitlementAttributesResponseType
     {
         $new = clone $this;
         $new->policyAttributes = $policyAttributes;
@@ -110,12 +81,12 @@ class GetEntitlementAttributesResponseType extends Result
         return $new;
     }
 
-    public function getNeedTimeZone(): bool|null
+    public function getNeedTimeZone(): ?bool
     {
         return $this->needTimeZone;
     }
 
-    public function withNeedTimeZone(bool|null $needTimeZone): GetEntitlementAttributesResponseType
+    public function withNeedTimeZone(?bool $needTimeZone): GetEntitlementAttributesResponseType
     {
         $new = clone $this;
         $new->needTimeZone = $needTimeZone;

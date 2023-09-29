@@ -26,10 +26,8 @@ class StateChangeDataType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $description
      */
-    public function __construct(string $eventName, \DateTimeInterface $eventDate, string $userId, string|null $description = null)
+    public function __construct(string $eventName, \DateTimeInterface $eventDate, string $userId, string $description = null)
     {
         $this->eventName = $eventName;
         $this->eventDate = $eventDate;
@@ -37,10 +35,7 @@ class StateChangeDataType
         $this->description = $description;
     }
 
-    /**
-     * @param  string|null  $description
-     */
-    public static function create(string $eventName, \DateTimeInterface $eventDate, string $userId, string|null $description = null)
+    public static function create(string $eventName, \DateTimeInterface $eventDate, string $userId, string $description = null)
     {
         return new static(...\func_get_args());
     }
@@ -84,12 +79,12 @@ class StateChangeDataType
         return $new;
     }
 
-    public function getDescription(): string|null
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function withDescription(string|null $description): StateChangeDataType
+    public function withDescription(?string $description): StateChangeDataType
     {
         $new = clone $this;
         $new->description = $description;

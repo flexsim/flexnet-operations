@@ -16,19 +16,14 @@ class FeaturePKType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $version
      */
-    public function __construct(string $name, string|null $version = null)
+    public function __construct(string $name, string $version = null)
     {
         $this->name = $name;
         $this->version = $version;
     }
 
-    /**
-     * @param  string|null  $version
-     */
-    public static function create(string $name, string|null $version = null)
+    public static function create(string $name, string $version = null)
     {
         return new static(...\func_get_args());
     }
@@ -46,12 +41,12 @@ class FeaturePKType
         return $new;
     }
 
-    public function getVersion(): string|null
+    public function getVersion(): ?string
     {
         return $this->version;
     }
 
-    public function withVersion(string|null $version): FeaturePKType
+    public function withVersion(?string $version): FeaturePKType
     {
         $new = clone $this;
         $new->version = $version;

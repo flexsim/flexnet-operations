@@ -19,35 +19,27 @@ class GetFulfillmentPropertiesResponseType extends Result
     /**
      * Constructor
      *
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @param  \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array<\Flexnet\LicenseService\Type\FulfillmentPropertiesType>|null  $fulfillment
      */
-    public function __construct(StatusInfoType $statusInfo, FulfillmentPropertiesType|array|null $fulfillment = null)
+    public function __construct(StatusInfoType $statusInfo, FulfillmentPropertiesType|array $fulfillment = null)
     {
         $this->statusInfo = $statusInfo;
         $this->fulfillment = $fulfillment;
     }
 
     /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
      * @param  \Flexnet\LicenseService\Type\FulfillmentPropertiesType|array<\Flexnet\LicenseService\Type\FulfillmentPropertiesType>|null  $fulfillment
      */
-    public static function create(StatusInfoType $statusInfo, FulfillmentPropertiesType|array|null $fulfillment = null)
+    public static function create(StatusInfoType $statusInfo, FulfillmentPropertiesType|array $fulfillment = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetFulfillmentPropertiesResponseType
     {
         $new = clone $this;

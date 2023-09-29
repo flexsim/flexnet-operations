@@ -11,34 +11,23 @@ class WebRegKeysDataListType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyType|null  $webRegKeys
      */
-    public function __construct(WebRegKeyType|null $webRegKeys = null)
+    public function __construct(WebRegKeyType $webRegKeys = null)
     {
         $this->webRegKeys = $webRegKeys;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyType|null  $webRegKeys
-     */
-    public static function create(WebRegKeyType|null $webRegKeys = null)
+    public static function create(WebRegKeyType $webRegKeys = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\WebRegKeyType|null
-     */
-    public function getWebRegKeys(): WebRegKeyType|null
+    public function getWebRegKeys(): ?WebRegKeyType
     {
         return $this->webRegKeys;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\WebRegKeyType|null  $webRegKeys
-     */
-    public function withWebRegKeys(WebRegKeyType|null $webRegKeys): WebRegKeysDataListType
+    public function withWebRegKeys(?WebRegKeyType $webRegKeys): WebRegKeysDataListType
     {
         $new = clone $this;
         $new->webRegKeys = $webRegKeys;

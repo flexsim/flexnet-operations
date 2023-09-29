@@ -14,7 +14,7 @@ class FulfillmentHistoryDetailsType
      *
      * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>|null  $record
      */
-    public function __construct(FulfillmentHistoryRecordType|array|null $record = null)
+    public function __construct(FulfillmentHistoryRecordType|array $record = null)
     {
         $this->record = $record;
     }
@@ -22,7 +22,7 @@ class FulfillmentHistoryDetailsType
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType|array<\Flexnet\LicenseService\Type\FulfillmentHistoryRecordType>|null  $record
      */
-    public static function create(FulfillmentHistoryRecordType|array|null $record = null)
+    public static function create(FulfillmentHistoryRecordType|array $record = null)
     {
         return new static(...\func_get_args());
     }

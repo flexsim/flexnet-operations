@@ -16,19 +16,14 @@ class CreateProductCategoryDataType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $description
      */
-    public function __construct(string $name, string|null $description = null)
+    public function __construct(string $name, string $description = null)
     {
         $this->name = $name;
         $this->description = $description;
     }
 
-    /**
-     * @param  string|null  $description
-     */
-    public static function create(string $name, string|null $description = null)
+    public static function create(string $name, string $description = null)
     {
         return new static(...\func_get_args());
     }
@@ -46,12 +41,12 @@ class CreateProductCategoryDataType
         return $new;
     }
 
-    public function getDescription(): string|null
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function withDescription(string|null $description): CreateProductCategoryDataType
+    public function withDescription(?string $description): CreateProductCategoryDataType
     {
         $new = clone $this;
         $new->description = $description;

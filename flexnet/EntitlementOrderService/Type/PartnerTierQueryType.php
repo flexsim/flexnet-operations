@@ -26,11 +26,8 @@ class PartnerTierQueryType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $partnerTier
-     * @param  bool|null  $isSearchByName
      */
-    public function __construct(string $value, string $searchType, string|null $partnerTier = null, bool|null $isSearchByName = null)
+    public function __construct(string $value, string $searchType, string $partnerTier = null, bool $isSearchByName = null)
     {
         $this->value = $value;
         $this->searchType = $searchType;
@@ -38,11 +35,7 @@ class PartnerTierQueryType
         $this->isSearchByName = $isSearchByName;
     }
 
-    /**
-     * @param  string|null  $partnerTier
-     * @param  bool|null  $isSearchByName
-     */
-    public static function create(string $value, string $searchType, string|null $partnerTier = null, bool|null $isSearchByName = null)
+    public static function create(string $value, string $searchType, string $partnerTier = null, bool $isSearchByName = null)
     {
         return new static(...\func_get_args());
     }
@@ -73,12 +66,12 @@ class PartnerTierQueryType
         return $new;
     }
 
-    public function getPartnerTier(): string|null
+    public function getPartnerTier(): ?string
     {
         return $this->partnerTier;
     }
 
-    public function withPartnerTier(string|null $partnerTier): PartnerTierQueryType
+    public function withPartnerTier(?string $partnerTier): PartnerTierQueryType
     {
         $new = clone $this;
         $new->partnerTier = $partnerTier;
@@ -86,12 +79,12 @@ class PartnerTierQueryType
         return $new;
     }
 
-    public function getIsSearchByName(): bool|null
+    public function getIsSearchByName(): ?bool
     {
         return $this->isSearchByName;
     }
 
-    public function withIsSearchByName(bool|null $isSearchByName): PartnerTierQueryType
+    public function withIsSearchByName(?bool $isSearchByName): PartnerTierQueryType
     {
         $new = clone $this;
         $new->isSearchByName = $isSearchByName;

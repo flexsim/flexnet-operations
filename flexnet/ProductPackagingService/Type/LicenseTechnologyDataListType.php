@@ -14,7 +14,7 @@ class LicenseTechnologyDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType|array<\Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType>|null  $licenseTechnology
      */
-    public function __construct(LicenseTechnologyDetailsType|array|null $licenseTechnology = null)
+    public function __construct(LicenseTechnologyDetailsType|array $licenseTechnology = null)
     {
         $this->licenseTechnology = $licenseTechnology;
     }
@@ -22,7 +22,7 @@ class LicenseTechnologyDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType|array<\Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType>|null  $licenseTechnology
      */
-    public static function create(LicenseTechnologyDetailsType|array|null $licenseTechnology = null)
+    public static function create(LicenseTechnologyDetailsType|array $licenseTechnology = null)
     {
         return new static(...\func_get_args());
     }

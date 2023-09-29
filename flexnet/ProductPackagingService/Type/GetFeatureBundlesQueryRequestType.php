@@ -28,10 +28,8 @@ class GetFeatureBundlesQueryRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleQueryParametersType|null  $queryParams
      */
-    public function __construct(int $pageNumber, int $batchSize, bool $returnContainedObjects, FeatureBundleQueryParametersType|null $queryParams = null)
+    public function __construct(int $pageNumber, int $batchSize, bool $returnContainedObjects, FeatureBundleQueryParametersType $queryParams = null)
     {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -39,26 +37,17 @@ class GetFeatureBundlesQueryRequestType implements RequestInterface
         $this->queryParams = $queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleQueryParametersType|null  $queryParams
-     */
-    public static function create(int $pageNumber, int $batchSize, bool $returnContainedObjects, FeatureBundleQueryParametersType|null $queryParams = null)
+    public static function create(int $pageNumber, int $batchSize, bool $returnContainedObjects, FeatureBundleQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FeatureBundleQueryParametersType|null
-     */
-    public function getQueryParams(): FeatureBundleQueryParametersType|null
+    public function getQueryParams(): ?FeatureBundleQueryParametersType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleQueryParametersType|null  $queryParams
-     */
-    public function withQueryParams(FeatureBundleQueryParametersType|null $queryParams): GetFeatureBundlesQueryRequestType
+    public function withQueryParams(?FeatureBundleQueryParametersType $queryParams): GetFeatureBundlesQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

@@ -23,39 +23,24 @@ class CreateFeatureResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedFeatureDataListType|null  $failedData
-     * @param  \Flexnet\ProductPackagingService\Type\CreatedFeatureDataListType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedFeatureDataListType|null $failedData = null, CreatedFeatureDataListType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedFeatureDataListType $failedData = null, CreatedFeatureDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedFeatureDataListType|null  $failedData
-     * @param  \Flexnet\ProductPackagingService\Type\CreatedFeatureDataListType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedFeatureDataListType|null $failedData = null, CreatedFeatureDataListType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, FailedFeatureDataListType $failedData = null, CreatedFeatureDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): CreateFeatureResponseType
     {
         $new = clone $this;
@@ -64,18 +49,12 @@ class CreateFeatureResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedFeatureDataListType|null
-     */
-    public function getFailedData(): FailedFeatureDataListType|null
+    public function getFailedData(): ?FailedFeatureDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedFeatureDataListType|null  $failedData
-     */
-    public function withFailedData(FailedFeatureDataListType|null $failedData): CreateFeatureResponseType
+    public function withFailedData(?FailedFeatureDataListType $failedData): CreateFeatureResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -83,18 +62,12 @@ class CreateFeatureResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\CreatedFeatureDataListType|null
-     */
-    public function getResponseData(): CreatedFeatureDataListType|null
+    public function getResponseData(): ?CreatedFeatureDataListType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\CreatedFeatureDataListType|null  $responseData
-     */
-    public function withResponseData(CreatedFeatureDataListType|null $responseData): CreateFeatureResponseType
+    public function withResponseData(?CreatedFeatureDataListType $responseData): CreateFeatureResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

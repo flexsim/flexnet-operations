@@ -14,7 +14,7 @@ class PublisherErrorResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function __construct(PublisherErrorFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public function __construct(PublisherErrorFulfillmentResponseDataType|array $fulfillmentData = null)
     {
         $this->fulfillmentData = $fulfillmentData;
     }
@@ -22,7 +22,7 @@ class PublisherErrorResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public static function create(PublisherErrorFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public static function create(PublisherErrorFulfillmentResponseDataType|array $fulfillmentData = null)
     {
         return new static(...\func_get_args());
     }

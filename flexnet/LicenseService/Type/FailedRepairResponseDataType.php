@@ -16,8 +16,6 @@ class FailedRepairResponseDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType  $fulfillment
      */
     public function __construct(RepairFulfillmentDataType $fulfillment, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedRepairResponseDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType  $fulfillment
-     */
     public static function create(RepairFulfillmentDataType $fulfillment, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\RepairFulfillmentDataType
-     */
     public function getFulfillment(): RepairFulfillmentDataType
     {
         return $this->fulfillment;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType  $fulfillment
-     */
     public function withFulfillment(RepairFulfillmentDataType $fulfillment): FailedRepairResponseDataType
     {
         $new = clone $this;

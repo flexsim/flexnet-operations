@@ -36,12 +36,8 @@ class PartNumberDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType  $partNumberIdentifier
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType|null  $mappedProduct
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|null  $mappedLicenseModel
      */
-    public function __construct(PartNumberIdentifierType $partNumberIdentifier, string $description, \DateTimeInterface $creationDate, \DateTimeInterface $lastModifiedDate, ProductIdentifierType|null $mappedProduct = null, LicenseModelIdentifierType|null $mappedLicenseModel = null)
+    public function __construct(PartNumberIdentifierType $partNumberIdentifier, string $description, \DateTimeInterface $creationDate, \DateTimeInterface $lastModifiedDate, ProductIdentifierType $mappedProduct = null, LicenseModelIdentifierType $mappedLicenseModel = null)
     {
         $this->partNumberIdentifier = $partNumberIdentifier;
         $this->description = $description;
@@ -51,27 +47,16 @@ class PartNumberDataType
         $this->mappedLicenseModel = $mappedLicenseModel;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType  $partNumberIdentifier
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType|null  $mappedProduct
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|null  $mappedLicenseModel
-     */
-    public static function create(PartNumberIdentifierType $partNumberIdentifier, string $description, \DateTimeInterface $creationDate, \DateTimeInterface $lastModifiedDate, ProductIdentifierType|null $mappedProduct = null, LicenseModelIdentifierType|null $mappedLicenseModel = null)
+    public static function create(PartNumberIdentifierType $partNumberIdentifier, string $description, \DateTimeInterface $creationDate, \DateTimeInterface $lastModifiedDate, ProductIdentifierType $mappedProduct = null, LicenseModelIdentifierType $mappedLicenseModel = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType
-     */
     public function getPartNumberIdentifier(): PartNumberIdentifierType
     {
         return $this->partNumberIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType  $partNumberIdentifier
-     */
     public function withPartNumberIdentifier(PartNumberIdentifierType $partNumberIdentifier): PartNumberDataType
     {
         $new = clone $this;
@@ -119,18 +104,12 @@ class PartNumberDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\ProductIdentifierType|null
-     */
-    public function getMappedProduct(): ProductIdentifierType|null
+    public function getMappedProduct(): ?ProductIdentifierType
     {
         return $this->mappedProduct;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierType|null  $mappedProduct
-     */
-    public function withMappedProduct(ProductIdentifierType|null $mappedProduct): PartNumberDataType
+    public function withMappedProduct(?ProductIdentifierType $mappedProduct): PartNumberDataType
     {
         $new = clone $this;
         $new->mappedProduct = $mappedProduct;
@@ -138,18 +117,12 @@ class PartNumberDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|null
-     */
-    public function getMappedLicenseModel(): LicenseModelIdentifierType|null
+    public function getMappedLicenseModel(): ?LicenseModelIdentifierType
     {
         return $this->mappedLicenseModel;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|null  $mappedLicenseModel
-     */
-    public function withMappedLicenseModel(LicenseModelIdentifierType|null $mappedLicenseModel): PartNumberDataType
+    public function withMappedLicenseModel(?LicenseModelIdentifierType $mappedLicenseModel): PartNumberDataType
     {
         $new = clone $this;
         $new->mappedLicenseModel = $mappedLicenseModel;

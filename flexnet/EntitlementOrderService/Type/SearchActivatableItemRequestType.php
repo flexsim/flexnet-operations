@@ -23,37 +23,24 @@ class SearchActivatableItemRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $activatableItemSearchCriteria
-     * @param  int|null  $pageNumber
      */
-    public function __construct(SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int|null $pageNumber = null)
+    public function __construct(SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int $pageNumber = null)
     {
         $this->activatableItemSearchCriteria = $activatableItemSearchCriteria;
         $this->batchSize = $batchSize;
         $this->pageNumber = $pageNumber;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $activatableItemSearchCriteria
-     * @param  int|null  $pageNumber
-     */
-    public static function create(SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int|null $pageNumber = null)
+    public static function create(SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int $pageNumber = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
-     */
     public function getActivatableItemSearchCriteria(): SearchActivatableItemDataType
     {
         return $this->activatableItemSearchCriteria;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType  $activatableItemSearchCriteria
-     */
     public function withActivatableItemSearchCriteria(SearchActivatableItemDataType $activatableItemSearchCriteria): SearchActivatableItemRequestType
     {
         $new = clone $this;
@@ -75,12 +62,12 @@ class SearchActivatableItemRequestType implements RequestInterface
         return $new;
     }
 
-    public function getPageNumber(): int|null
+    public function getPageNumber(): ?int
     {
         return $this->pageNumber;
     }
 
-    public function withPageNumber(int|null $pageNumber): SearchActivatableItemRequestType
+    public function withPageNumber(?int $pageNumber): SearchActivatableItemRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;

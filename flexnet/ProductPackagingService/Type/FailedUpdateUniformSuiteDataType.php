@@ -16,36 +16,23 @@ class FailedUpdateUniformSuiteDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\UpdateUniformSuiteDataType  $uniformSuite
-     * @param  string|null  $reason
      */
-    public function __construct(UpdateUniformSuiteDataType $uniformSuite, string|null $reason = null)
+    public function __construct(UpdateUniformSuiteDataType $uniformSuite, string $reason = null)
     {
         $this->uniformSuite = $uniformSuite;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\UpdateUniformSuiteDataType  $uniformSuite
-     * @param  string|null  $reason
-     */
-    public static function create(UpdateUniformSuiteDataType $uniformSuite, string|null $reason = null)
+    public static function create(UpdateUniformSuiteDataType $uniformSuite, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\UpdateUniformSuiteDataType
-     */
     public function getUniformSuite(): UpdateUniformSuiteDataType
     {
         return $this->uniformSuite;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\UpdateUniformSuiteDataType  $uniformSuite
-     */
     public function withUniformSuite(UpdateUniformSuiteDataType $uniformSuite): FailedUpdateUniformSuiteDataType
     {
         $new = clone $this;
@@ -54,12 +41,12 @@ class FailedUpdateUniformSuiteDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedUpdateUniformSuiteDataType
+    public function withReason(?string $reason): FailedUpdateUniformSuiteDataType
     {
         $new = clone $this;
         $new->reason = $reason;

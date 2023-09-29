@@ -18,36 +18,23 @@ class DeleteMaintenanceResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteMaintenanceDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedDeleteMaintenanceDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedDeleteMaintenanceDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteMaintenanceDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedDeleteMaintenanceDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedDeleteMaintenanceDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): DeleteMaintenanceResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class DeleteMaintenanceResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedDeleteMaintenanceDataListType|null
-     */
-    public function getFailedData(): FailedDeleteMaintenanceDataListType|null
+    public function getFailedData(): ?FailedDeleteMaintenanceDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteMaintenanceDataListType|null  $failedData
-     */
-    public function withFailedData(FailedDeleteMaintenanceDataListType|null $failedData): DeleteMaintenanceResponseType
+    public function withFailedData(?FailedDeleteMaintenanceDataListType $failedData): DeleteMaintenanceResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

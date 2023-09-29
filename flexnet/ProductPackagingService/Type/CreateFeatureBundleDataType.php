@@ -21,22 +21,15 @@ class CreateFeatureBundleDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\FeaturesListType  $features
-     * @param  string|null  $description
      */
-    public function __construct(string $name, FeaturesListType $features, string|null $description = null)
+    public function __construct(string $name, FeaturesListType $features, string $description = null)
     {
         $this->name = $name;
         $this->features = $features;
         $this->description = $description;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeaturesListType  $features
-     * @param  string|null  $description
-     */
-    public static function create(string $name, FeaturesListType $features, string|null $description = null)
+    public static function create(string $name, FeaturesListType $features, string $description = null)
     {
         return new static(...\func_get_args());
     }
@@ -54,12 +47,12 @@ class CreateFeatureBundleDataType
         return $new;
     }
 
-    public function getDescription(): string|null
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function withDescription(string|null $description): CreateFeatureBundleDataType
+    public function withDescription(?string $description): CreateFeatureBundleDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -67,17 +60,11 @@ class CreateFeatureBundleDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FeaturesListType
-     */
     public function getFeatures(): FeaturesListType
     {
         return $this->features;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeaturesListType  $features
-     */
     public function withFeatures(FeaturesListType $features): CreateFeatureBundleDataType
     {
         $new = clone $this;

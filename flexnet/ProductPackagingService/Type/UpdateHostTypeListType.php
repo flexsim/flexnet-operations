@@ -19,7 +19,7 @@ class UpdateHostTypeListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|array<\Flexnet\ProductPackagingService\Type\HostTypePKType>|null  $hostType
      */
-    public function __construct(string $opType, HostTypePKType|array|null $hostType = null)
+    public function __construct(string $opType, HostTypePKType|array $hostType = null)
     {
         $this->opType = $opType;
         $this->hostType = $hostType;
@@ -28,7 +28,7 @@ class UpdateHostTypeListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|array<\Flexnet\ProductPackagingService\Type\HostTypePKType>|null  $hostType
      */
-    public static function create(string $opType, HostTypePKType|array|null $hostType = null)
+    public static function create(string $opType, HostTypePKType|array $hostType = null)
     {
         return new static(...\func_get_args());
     }

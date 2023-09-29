@@ -14,7 +14,7 @@ class RehostResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function __construct(RehostFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public function __construct(RehostFulfillmentResponseDataType|array $fulfillmentData = null)
     {
         $this->fulfillmentData = $fulfillmentData;
     }
@@ -22,7 +22,7 @@ class RehostResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public static function create(RehostFulfillmentResponseDataType|array|null $fulfillmentData = null)
+    public static function create(RehostFulfillmentResponseDataType|array $fulfillmentData = null)
     {
         return new static(...\func_get_args());
     }

@@ -16,37 +16,24 @@ class FailedDeleteMaintenanceLineItemDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|null  $failedData
-     * @param  string|null  $reason
      */
-    public function __construct(DeleteMaintenanceLineItemDataType|null $failedData = null, string|null $reason = null)
+    public function __construct(DeleteMaintenanceLineItemDataType $failedData = null, string $reason = null)
     {
         $this->failedData = $failedData;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|null  $failedData
-     * @param  string|null  $reason
-     */
-    public static function create(DeleteMaintenanceLineItemDataType|null $failedData = null, string|null $reason = null)
+    public static function create(DeleteMaintenanceLineItemDataType $failedData = null, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|null
-     */
-    public function getFailedData(): DeleteMaintenanceLineItemDataType|null
+    public function getFailedData(): ?DeleteMaintenanceLineItemDataType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|null  $failedData
-     */
-    public function withFailedData(DeleteMaintenanceLineItemDataType|null $failedData): FailedDeleteMaintenanceLineItemDataType
+    public function withFailedData(?DeleteMaintenanceLineItemDataType $failedData): FailedDeleteMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -54,12 +41,12 @@ class FailedDeleteMaintenanceLineItemDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedDeleteMaintenanceLineItemDataType
+    public function withReason(?string $reason): FailedDeleteMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->reason = $reason;

@@ -14,7 +14,7 @@ class FailedDeleteFeatureBundleDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureBundleDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteFeatureBundleDataType>|null  $failedFeatureBundle
      */
-    public function __construct(FailedDeleteFeatureBundleDataType|array|null $failedFeatureBundle = null)
+    public function __construct(FailedDeleteFeatureBundleDataType|array $failedFeatureBundle = null)
     {
         $this->failedFeatureBundle = $failedFeatureBundle;
     }
@@ -22,7 +22,7 @@ class FailedDeleteFeatureBundleDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureBundleDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteFeatureBundleDataType>|null  $failedFeatureBundle
      */
-    public static function create(FailedDeleteFeatureBundleDataType|array|null $failedFeatureBundle = null)
+    public static function create(FailedDeleteFeatureBundleDataType|array $failedFeatureBundle = null)
     {
         return new static(...\func_get_args());
     }

@@ -23,39 +23,24 @@ class SplitBulkEntitlementResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementResponseListType|null  $responseData
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, SplitBulkEntitlementResponseListType|null $responseData = null, FailedSplitBulkEntitlementListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, SplitBulkEntitlementResponseListType $responseData = null, FailedSplitBulkEntitlementListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementResponseListType|null  $responseData
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, SplitBulkEntitlementResponseListType|null $responseData = null, FailedSplitBulkEntitlementListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, SplitBulkEntitlementResponseListType $responseData = null, FailedSplitBulkEntitlementListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): SplitBulkEntitlementResponseType
     {
         $new = clone $this;
@@ -64,18 +49,12 @@ class SplitBulkEntitlementResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementResponseListType|null
-     */
-    public function getResponseData(): SplitBulkEntitlementResponseListType|null
+    public function getResponseData(): ?SplitBulkEntitlementResponseListType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementResponseListType|null  $responseData
-     */
-    public function withResponseData(SplitBulkEntitlementResponseListType|null $responseData): SplitBulkEntitlementResponseType
+    public function withResponseData(?SplitBulkEntitlementResponseListType $responseData): SplitBulkEntitlementResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -83,18 +62,12 @@ class SplitBulkEntitlementResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementListType|null
-     */
-    public function getFailedData(): FailedSplitBulkEntitlementListType|null
+    public function getFailedData(): ?FailedSplitBulkEntitlementListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementListType|null  $failedData
-     */
-    public function withFailedData(FailedSplitBulkEntitlementListType|null $failedData): SplitBulkEntitlementResponseType
+    public function withFailedData(?FailedSplitBulkEntitlementListType $failedData): SplitBulkEntitlementResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

@@ -16,8 +16,6 @@ class FulfillmentHistoryDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryDetailsType  $historyDetails
      */
     public function __construct(string $activationId, FulfillmentHistoryDetailsType $historyDetails)
     {
@@ -25,9 +23,6 @@ class FulfillmentHistoryDataType
         $this->historyDetails = $historyDetails;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryDetailsType  $historyDetails
-     */
     public static function create(string $activationId, FulfillmentHistoryDetailsType $historyDetails)
     {
         return new static(...\func_get_args());
@@ -46,17 +41,11 @@ class FulfillmentHistoryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FulfillmentHistoryDetailsType
-     */
     public function getHistoryDetails(): FulfillmentHistoryDetailsType
     {
         return $this->historyDetails;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentHistoryDetailsType  $historyDetails
-     */
     public function withHistoryDetails(FulfillmentHistoryDetailsType $historyDetails): FulfillmentHistoryDataType
     {
         $new = clone $this;

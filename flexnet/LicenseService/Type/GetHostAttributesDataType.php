@@ -11,34 +11,23 @@ class GetHostAttributesDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null  $hostAttributes
      */
-    public function __construct(AttributeMetaDescriptorDataType|null $hostAttributes = null)
+    public function __construct(AttributeMetaDescriptorDataType $hostAttributes = null)
     {
         $this->hostAttributes = $hostAttributes;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null  $hostAttributes
-     */
-    public static function create(AttributeMetaDescriptorDataType|null $hostAttributes = null)
+    public static function create(AttributeMetaDescriptorDataType $hostAttributes = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null
-     */
-    public function getHostAttributes(): AttributeMetaDescriptorDataType|null
+    public function getHostAttributes(): ?AttributeMetaDescriptorDataType
     {
         return $this->hostAttributes;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType|null  $hostAttributes
-     */
-    public function withHostAttributes(AttributeMetaDescriptorDataType|null $hostAttributes): GetHostAttributesDataType
+    public function withHostAttributes(?AttributeMetaDescriptorDataType $hostAttributes): GetHostAttributesDataType
     {
         $new = clone $this;
         $new->hostAttributes = $hostAttributes;

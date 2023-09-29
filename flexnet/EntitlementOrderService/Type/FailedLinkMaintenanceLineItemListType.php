@@ -14,7 +14,7 @@ class FailedLinkMaintenanceLineItemListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedLinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedLinkMaintenanceLineItemDataType>|null  $failedLinkMaintenanceLineItem
      */
-    public function __construct(FailedLinkMaintenanceLineItemDataType|array|null $failedLinkMaintenanceLineItem = null)
+    public function __construct(FailedLinkMaintenanceLineItemDataType|array $failedLinkMaintenanceLineItem = null)
     {
         $this->failedLinkMaintenanceLineItem = $failedLinkMaintenanceLineItem;
     }
@@ -22,7 +22,7 @@ class FailedLinkMaintenanceLineItemListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedLinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedLinkMaintenanceLineItemDataType>|null  $failedLinkMaintenanceLineItem
      */
-    public static function create(FailedLinkMaintenanceLineItemDataType|array|null $failedLinkMaintenanceLineItem = null)
+    public static function create(FailedLinkMaintenanceLineItemDataType|array $failedLinkMaintenanceLineItem = null)
     {
         return new static(...\func_get_args());
     }

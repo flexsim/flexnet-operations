@@ -18,36 +18,23 @@ class GetStateChangeHistoryResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\StateChangeResponseType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, StateChangeResponseType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, StateChangeResponseType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\StateChangeResponseType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, StateChangeResponseType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, StateChangeResponseType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetStateChangeHistoryResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetStateChangeHistoryResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StateChangeResponseType|null
-     */
-    public function getResponseData(): StateChangeResponseType|null
+    public function getResponseData(): ?StateChangeResponseType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StateChangeResponseType|null  $responseData
-     */
-    public function withResponseData(StateChangeResponseType|null $responseData): GetStateChangeHistoryResponseType
+    public function withResponseData(?StateChangeResponseType $responseData): GetStateChangeHistoryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

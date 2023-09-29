@@ -18,36 +18,23 @@ class GetHostAttributesRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
-     * @param  \Flexnet\LicenseService\Type\HostTypePKType|null  $hostType
      */
-    public function __construct(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, HostTypePKType|null $hostType = null)
+    public function __construct(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, HostTypePKType $hostType = null)
     {
         $this->licenseTechnologyIdentifier = $licenseTechnologyIdentifier;
         $this->hostType = $hostType;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
-     * @param  \Flexnet\LicenseService\Type\HostTypePKType|null  $hostType
-     */
-    public static function create(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, HostTypePKType|null $hostType = null)
+    public static function create(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, HostTypePKType $hostType = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType
-     */
     public function getLicenseTechnologyIdentifier(): LicenseTechnologyIdentifierType
     {
         return $this->licenseTechnologyIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType  $licenseTechnologyIdentifier
-     */
     public function withLicenseTechnologyIdentifier(LicenseTechnologyIdentifierType $licenseTechnologyIdentifier): GetHostAttributesRequestType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetHostAttributesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\HostTypePKType|null
-     */
-    public function getHostType(): HostTypePKType|null
+    public function getHostType(): ?HostTypePKType
     {
         return $this->hostType;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\HostTypePKType|null  $hostType
-     */
-    public function withHostType(HostTypePKType|null $hostType): GetHostAttributesRequestType
+    public function withHostType(?HostTypePKType $hostType): GetHostAttributesRequestType
     {
         $new = clone $this;
         $new->hostType = $hostType;

@@ -18,36 +18,23 @@ class UpdateEntitlementLineItemResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedUpdateEntitlementLineItemDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedUpdateEntitlementLineItemDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedUpdateEntitlementLineItemDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedUpdateEntitlementLineItemDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedUpdateEntitlementLineItemDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedUpdateEntitlementLineItemDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): UpdateEntitlementLineItemResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class UpdateEntitlementLineItemResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FailedUpdateEntitlementLineItemDataListType|null
-     */
-    public function getFailedData(): FailedUpdateEntitlementLineItemDataListType|null
+    public function getFailedData(): ?FailedUpdateEntitlementLineItemDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedUpdateEntitlementLineItemDataListType|null  $failedData
-     */
-    public function withFailedData(FailedUpdateEntitlementLineItemDataListType|null $failedData): UpdateEntitlementLineItemResponseType
+    public function withFailedData(?FailedUpdateEntitlementLineItemDataListType $failedData): UpdateEntitlementLineItemResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

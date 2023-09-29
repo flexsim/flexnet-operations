@@ -14,7 +14,7 @@ class GetFeatureBundlesQueryResponseDataType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleQueryDataType|array<\Flexnet\ProductPackagingService\Type\FeatureBundleQueryDataType>|null  $featureBundle
      */
-    public function __construct(FeatureBundleQueryDataType|array|null $featureBundle = null)
+    public function __construct(FeatureBundleQueryDataType|array $featureBundle = null)
     {
         $this->featureBundle = $featureBundle;
     }
@@ -22,7 +22,7 @@ class GetFeatureBundlesQueryResponseDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleQueryDataType|array<\Flexnet\ProductPackagingService\Type\FeatureBundleQueryDataType>|null  $featureBundle
      */
-    public static function create(FeatureBundleQueryDataType|array|null $featureBundle = null)
+    public static function create(FeatureBundleQueryDataType|array $featureBundle = null)
     {
         return new static(...\func_get_args());
     }

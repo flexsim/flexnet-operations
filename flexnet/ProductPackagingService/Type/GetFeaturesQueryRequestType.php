@@ -23,36 +23,25 @@ class GetFeaturesQueryRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureQueryParametersType|null  $queryParams
      */
-    public function __construct(int $pageNumber, int $batchSize, FeatureQueryParametersType|null $queryParams = null)
+    public function __construct(int $pageNumber, int $batchSize, FeatureQueryParametersType $queryParams = null)
     {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
         $this->queryParams = $queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureQueryParametersType|null  $queryParams
-     */
-    public static function create(int $pageNumber, int $batchSize, FeatureQueryParametersType|null $queryParams = null)
+    public static function create(int $pageNumber, int $batchSize, FeatureQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FeatureQueryParametersType|null
-     */
-    public function getQueryParams(): FeatureQueryParametersType|null
+    public function getQueryParams(): ?FeatureQueryParametersType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureQueryParametersType|null  $queryParams
-     */
-    public function withQueryParams(FeatureQueryParametersType|null $queryParams): GetFeaturesQueryRequestType
+    public function withQueryParams(?FeatureQueryParametersType $queryParams): GetFeaturesQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

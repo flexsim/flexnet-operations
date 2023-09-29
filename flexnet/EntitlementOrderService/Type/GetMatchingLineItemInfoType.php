@@ -21,9 +21,6 @@ class GetMatchingLineItemInfoType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
      */
     public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, string $targetTierName, AccountIdentifierType $targetAccountUnit)
     {
@@ -32,26 +29,16 @@ class GetMatchingLineItemInfoType
         $this->targetAccountUnit = $targetAccountUnit;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
-     */
     public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, string $targetTierName, AccountIdentifierType $targetAccountUnit)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
-     */
     public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $lineItemIdentifier
-     */
     public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): GetMatchingLineItemInfoType
     {
         $new = clone $this;
@@ -73,17 +60,11 @@ class GetMatchingLineItemInfoType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AccountIdentifierType
-     */
     public function getTargetAccountUnit(): AccountIdentifierType
     {
         return $this->targetAccountUnit;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
-     */
     public function withTargetAccountUnit(AccountIdentifierType $targetAccountUnit): GetMatchingLineItemInfoType
     {
         $new = clone $this;

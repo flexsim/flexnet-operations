@@ -14,7 +14,7 @@ class GetProductsQueryResponseDataType
      *
      * @param  \Flexnet\ProductPackagingService\Type\ProductQueryDataType|array<\Flexnet\ProductPackagingService\Type\ProductQueryDataType>|null  $product
      */
-    public function __construct(ProductQueryDataType|array|null $product = null)
+    public function __construct(ProductQueryDataType|array $product = null)
     {
         $this->product = $product;
     }
@@ -22,7 +22,7 @@ class GetProductsQueryResponseDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductQueryDataType|array<\Flexnet\ProductPackagingService\Type\ProductQueryDataType>|null  $product
      */
-    public static function create(ProductQueryDataType|array|null $product = null)
+    public static function create(ProductQueryDataType|array $product = null)
     {
         return new static(...\func_get_args());
     }

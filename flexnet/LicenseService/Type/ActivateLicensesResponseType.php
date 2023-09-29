@@ -23,39 +23,24 @@ class ActivateLicensesResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\FailedLineItem|null  $failedData
-     * @param  string|null  $resultData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedLineItem|null $failedData = null, string|null $resultData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedLineItem $failedData = null, string $resultData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
         $this->resultData = $resultData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\FailedLineItem|null  $failedData
-     * @param  string|null  $resultData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedLineItem|null $failedData = null, string|null $resultData = null)
+    public static function create(StatusInfoType $statusInfo, FailedLineItem $failedData = null, string $resultData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): ActivateLicensesResponseType
     {
         $new = clone $this;
@@ -64,18 +49,12 @@ class ActivateLicensesResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FailedLineItem|null
-     */
-    public function getFailedData(): FailedLineItem|null
+    public function getFailedData(): ?FailedLineItem
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FailedLineItem|null  $failedData
-     */
-    public function withFailedData(FailedLineItem|null $failedData): ActivateLicensesResponseType
+    public function withFailedData(?FailedLineItem $failedData): ActivateLicensesResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -83,12 +62,12 @@ class ActivateLicensesResponseType extends Result
         return $new;
     }
 
-    public function getResultData(): string|null
+    public function getResultData(): ?string
     {
         return $this->resultData;
     }
 
-    public function withResultData(string|null $resultData): ActivateLicensesResponseType
+    public function withResultData(?string $resultData): ActivateLicensesResponseType
     {
         $new = clone $this;
         $new->resultData = $resultData;

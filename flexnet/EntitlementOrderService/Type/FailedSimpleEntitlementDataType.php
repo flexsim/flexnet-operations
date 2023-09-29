@@ -16,37 +16,24 @@ class FailedSimpleEntitlementDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|null  $simpleEntitlement
-     * @param  string|null  $reason
      */
-    public function __construct(CreateSimpleEntitlementDataType|null $simpleEntitlement = null, string|null $reason = null)
+    public function __construct(CreateSimpleEntitlementDataType $simpleEntitlement = null, string $reason = null)
     {
         $this->simpleEntitlement = $simpleEntitlement;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|null  $simpleEntitlement
-     * @param  string|null  $reason
-     */
-    public static function create(CreateSimpleEntitlementDataType|null $simpleEntitlement = null, string|null $reason = null)
+    public static function create(CreateSimpleEntitlementDataType $simpleEntitlement = null, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|null
-     */
-    public function getSimpleEntitlement(): CreateSimpleEntitlementDataType|null
+    public function getSimpleEntitlement(): ?CreateSimpleEntitlementDataType
     {
         return $this->simpleEntitlement;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|null  $simpleEntitlement
-     */
-    public function withSimpleEntitlement(CreateSimpleEntitlementDataType|null $simpleEntitlement): FailedSimpleEntitlementDataType
+    public function withSimpleEntitlement(?CreateSimpleEntitlementDataType $simpleEntitlement): FailedSimpleEntitlementDataType
     {
         $new = clone $this;
         $new->simpleEntitlement = $simpleEntitlement;
@@ -54,12 +41,12 @@ class FailedSimpleEntitlementDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedSimpleEntitlementDataType
+    public function withReason(?string $reason): FailedSimpleEntitlementDataType
     {
         $new = clone $this;
         $new->reason = $reason;

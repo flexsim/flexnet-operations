@@ -18,36 +18,23 @@ class SetMaintenanceLineItemStateResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataListType|null  $failedMaintenanceData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedMaintenanceLineItemStateDataListType|null $failedMaintenanceData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedMaintenanceLineItemStateDataListType $failedMaintenanceData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedMaintenanceData = $failedMaintenanceData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataListType|null  $failedMaintenanceData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedMaintenanceLineItemStateDataListType|null $failedMaintenanceData = null)
+    public static function create(StatusInfoType $statusInfo, FailedMaintenanceLineItemStateDataListType $failedMaintenanceData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): SetMaintenanceLineItemStateResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class SetMaintenanceLineItemStateResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataListType|null
-     */
-    public function getFailedMaintenanceData(): FailedMaintenanceLineItemStateDataListType|null
+    public function getFailedMaintenanceData(): ?FailedMaintenanceLineItemStateDataListType
     {
         return $this->failedMaintenanceData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataListType|null  $failedMaintenanceData
-     */
-    public function withFailedMaintenanceData(FailedMaintenanceLineItemStateDataListType|null $failedMaintenanceData): SetMaintenanceLineItemStateResponseType
+    public function withFailedMaintenanceData(?FailedMaintenanceLineItemStateDataListType $failedMaintenanceData): SetMaintenanceLineItemStateResponseType
     {
         $new = clone $this;
         $new->failedMaintenanceData = $failedMaintenanceData;

@@ -21,20 +21,15 @@ class PackagePropertiesDataType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $version
      */
-    public function __construct(string $name, string $versionFormat, string|null $version = null)
+    public function __construct(string $name, string $versionFormat, string $version = null)
     {
         $this->name = $name;
         $this->versionFormat = $versionFormat;
         $this->version = $version;
     }
 
-    /**
-     * @param  string|null  $version
-     */
-    public static function create(string $name, string $versionFormat, string|null $version = null)
+    public static function create(string $name, string $versionFormat, string $version = null)
     {
         return new static(...\func_get_args());
     }
@@ -52,12 +47,12 @@ class PackagePropertiesDataType
         return $new;
     }
 
-    public function getVersion(): string|null
+    public function getVersion(): ?string
     {
         return $this->version;
     }
 
-    public function withVersion(string|null $version): PackagePropertiesDataType
+    public function withVersion(?string $version): PackagePropertiesDataType
     {
         $new = clone $this;
         $new->version = $version;

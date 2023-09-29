@@ -14,7 +14,7 @@ class CreatedUniformSuiteDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\CreatedUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\CreatedUniformSuiteDataType>|null  $createdUniformSuite
      */
-    public function __construct(CreatedUniformSuiteDataType|array|null $createdUniformSuite = null)
+    public function __construct(CreatedUniformSuiteDataType|array $createdUniformSuite = null)
     {
         $this->createdUniformSuite = $createdUniformSuite;
     }
@@ -22,7 +22,7 @@ class CreatedUniformSuiteDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatedUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\CreatedUniformSuiteDataType>|null  $createdUniformSuite
      */
-    public static function create(CreatedUniformSuiteDataType|array|null $createdUniformSuite = null)
+    public static function create(CreatedUniformSuiteDataType|array $createdUniformSuite = null)
     {
         return new static(...\func_get_args());
     }

@@ -16,37 +16,24 @@ class FailedProductCategoryDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType|null  $productCategory
-     * @param  string|null  $reason
      */
-    public function __construct(CreateProductCategoryDataType|null $productCategory = null, string|null $reason = null)
+    public function __construct(CreateProductCategoryDataType $productCategory = null, string $reason = null)
     {
         $this->productCategory = $productCategory;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType|null  $productCategory
-     * @param  string|null  $reason
-     */
-    public static function create(CreateProductCategoryDataType|null $productCategory = null, string|null $reason = null)
+    public static function create(CreateProductCategoryDataType $productCategory = null, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType|null
-     */
-    public function getProductCategory(): CreateProductCategoryDataType|null
+    public function getProductCategory(): ?CreateProductCategoryDataType
     {
         return $this->productCategory;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType|null  $productCategory
-     */
-    public function withProductCategory(CreateProductCategoryDataType|null $productCategory): FailedProductCategoryDataType
+    public function withProductCategory(?CreateProductCategoryDataType $productCategory): FailedProductCategoryDataType
     {
         $new = clone $this;
         $new->productCategory = $productCategory;
@@ -54,12 +41,12 @@ class FailedProductCategoryDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedProductCategoryDataType
+    public function withReason(?string $reason): FailedProductCategoryDataType
     {
         $new = clone $this;
         $new->reason = $reason;

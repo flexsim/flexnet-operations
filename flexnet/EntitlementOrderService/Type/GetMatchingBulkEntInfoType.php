@@ -21,9 +21,6 @@ class GetMatchingBulkEntInfoType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
      */
     public function __construct(EntitlementIdentifierType $bulkEntIdentifier, string $targetTierName, AccountIdentifierType $targetAccountUnit)
     {
@@ -32,26 +29,16 @@ class GetMatchingBulkEntInfoType
         $this->targetAccountUnit = $targetAccountUnit;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
-     */
     public static function create(EntitlementIdentifierType $bulkEntIdentifier, string $targetTierName, AccountIdentifierType $targetAccountUnit)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
-     */
     public function getBulkEntIdentifier(): EntitlementIdentifierType
     {
         return $this->bulkEntIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $bulkEntIdentifier
-     */
     public function withBulkEntIdentifier(EntitlementIdentifierType $bulkEntIdentifier): GetMatchingBulkEntInfoType
     {
         $new = clone $this;
@@ -73,17 +60,11 @@ class GetMatchingBulkEntInfoType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AccountIdentifierType
-     */
     public function getTargetAccountUnit(): AccountIdentifierType
     {
         return $this->targetAccountUnit;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AccountIdentifierType  $targetAccountUnit
-     */
     public function withTargetAccountUnit(AccountIdentifierType $targetAccountUnit): GetMatchingBulkEntInfoType
     {
         $new = clone $this;

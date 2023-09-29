@@ -14,7 +14,7 @@ class LicenseGeneratorsDetailsType
      *
      * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType>|null  $licenseGeneratorIdentifier
      */
-    public function __construct(LicenseGeneratorIdentifierType|array|null $licenseGeneratorIdentifier = null)
+    public function __construct(LicenseGeneratorIdentifierType|array $licenseGeneratorIdentifier = null)
     {
         $this->licenseGeneratorIdentifier = $licenseGeneratorIdentifier;
     }
@@ -22,7 +22,7 @@ class LicenseGeneratorsDetailsType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType>|null  $licenseGeneratorIdentifier
      */
-    public static function create(LicenseGeneratorIdentifierType|array|null $licenseGeneratorIdentifier = null)
+    public static function create(LicenseGeneratorIdentifierType|array $licenseGeneratorIdentifier = null)
     {
         return new static(...\func_get_args());
     }

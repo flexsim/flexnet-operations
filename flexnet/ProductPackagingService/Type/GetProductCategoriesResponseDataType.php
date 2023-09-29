@@ -14,7 +14,7 @@ class GetProductCategoriesResponseDataType
      *
      * @param  \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>|null  $productCategory
      */
-    public function __construct(ProductCategoryDataType|array|null $productCategory = null)
+    public function __construct(ProductCategoryDataType|array $productCategory = null)
     {
         $this->productCategory = $productCategory;
     }
@@ -22,7 +22,7 @@ class GetProductCategoriesResponseDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>|null  $productCategory
      */
-    public static function create(ProductCategoryDataType|array|null $productCategory = null)
+    public static function create(ProductCategoryDataType|array $productCategory = null)
     {
         return new static(...\func_get_args());
     }

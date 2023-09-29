@@ -28,11 +28,8 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
-     * @param  bool|null  $includeLicenseText
      */
-    public function __construct(int $pageNumber, int $batchSize, ConsolidatedFulfillmentsQPType|null $queryParams = null, bool|null $includeLicenseText = null)
+    public function __construct(int $pageNumber, int $batchSize, ConsolidatedFulfillmentsQPType $queryParams = null, bool $includeLicenseText = null)
     {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -40,27 +37,17 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
         $this->includeLicenseText = $includeLicenseText;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
-     * @param  bool|null  $includeLicenseText
-     */
-    public static function create(int $pageNumber, int $batchSize, ConsolidatedFulfillmentsQPType|null $queryParams = null, bool|null $includeLicenseText = null)
+    public static function create(int $pageNumber, int $batchSize, ConsolidatedFulfillmentsQPType $queryParams = null, bool $includeLicenseText = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null
-     */
-    public function getQueryParams(): ConsolidatedFulfillmentsQPType|null
+    public function getQueryParams(): ?ConsolidatedFulfillmentsQPType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType|null  $queryParams
-     */
-    public function withQueryParams(ConsolidatedFulfillmentsQPType|null $queryParams): GetConsolidatedFulfillmentsQueryRequestType
+    public function withQueryParams(?ConsolidatedFulfillmentsQPType $queryParams): GetConsolidatedFulfillmentsQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -94,12 +81,12 @@ class GetConsolidatedFulfillmentsQueryRequestType implements RequestInterface
         return $new;
     }
 
-    public function getIncludeLicenseText(): bool|null
+    public function getIncludeLicenseText(): ?bool
     {
         return $this->includeLicenseText;
     }
 
-    public function withIncludeLicenseText(bool|null $includeLicenseText): GetConsolidatedFulfillmentsQueryRequestType
+    public function withIncludeLicenseText(?bool $includeLicenseText): GetConsolidatedFulfillmentsQueryRequestType
     {
         $new = clone $this;
         $new->includeLicenseText = $includeLicenseText;

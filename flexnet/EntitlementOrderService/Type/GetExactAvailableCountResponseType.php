@@ -18,36 +18,23 @@ class GetExactAvailableCountResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  int|null  $count
      */
-    public function __construct(StatusInfoType $statusInfo, int|null $count = null)
+    public function __construct(StatusInfoType $statusInfo, int $count = null)
     {
         $this->statusInfo = $statusInfo;
         $this->count = $count;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  int|null  $count
-     */
-    public static function create(StatusInfoType $statusInfo, int|null $count = null)
+    public static function create(StatusInfoType $statusInfo, int $count = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetExactAvailableCountResponseType
     {
         $new = clone $this;
@@ -56,12 +43,12 @@ class GetExactAvailableCountResponseType extends Result
         return $new;
     }
 
-    public function getCount(): int|null
+    public function getCount(): ?int
     {
         return $this->count;
     }
 
-    public function withCount(int|null $count): GetExactAvailableCountResponseType
+    public function withCount(?int $count): GetExactAvailableCountResponseType
     {
         $new = clone $this;
         $new->count = $count;

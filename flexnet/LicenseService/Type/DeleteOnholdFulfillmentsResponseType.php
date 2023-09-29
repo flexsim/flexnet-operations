@@ -18,36 +18,23 @@ class DeleteOnholdFulfillmentsResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedOnholdFulfillmentListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedOnholdFulfillmentListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedOnholdFulfillmentListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedOnholdFulfillmentListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): DeleteOnholdFulfillmentsResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class DeleteOnholdFulfillmentsResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null
-     */
-    public function getFailedData(): FailedOnholdFulfillmentListType|null
+    public function getFailedData(): ?FailedOnholdFulfillmentListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FailedOnholdFulfillmentListType|null  $failedData
-     */
-    public function withFailedData(FailedOnholdFulfillmentListType|null $failedData): DeleteOnholdFulfillmentsResponseType
+    public function withFailedData(?FailedOnholdFulfillmentListType $failedData): DeleteOnholdFulfillmentsResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

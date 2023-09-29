@@ -14,7 +14,7 @@ class FailedAddEntitlementLineItemDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataType>|null  $failedLineItemData
      */
-    public function __construct(FailedAddEntitlementLineItemDataType|array|null $failedLineItemData = null)
+    public function __construct(FailedAddEntitlementLineItemDataType|array $failedLineItemData = null)
     {
         $this->failedLineItemData = $failedLineItemData;
     }
@@ -22,7 +22,7 @@ class FailedAddEntitlementLineItemDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataType>|null  $failedLineItemData
      */
-    public static function create(FailedAddEntitlementLineItemDataType|array|null $failedLineItemData = null)
+    public static function create(FailedAddEntitlementLineItemDataType|array $failedLineItemData = null)
     {
         return new static(...\func_get_args());
     }

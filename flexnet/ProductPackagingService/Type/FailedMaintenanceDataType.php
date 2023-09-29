@@ -16,37 +16,24 @@ class FailedMaintenanceDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType|null  $maintenance
-     * @param  string|null  $reason
      */
-    public function __construct(CreateMaintenanceDataType|null $maintenance = null, string|null $reason = null)
+    public function __construct(CreateMaintenanceDataType $maintenance = null, string $reason = null)
     {
         $this->maintenance = $maintenance;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType|null  $maintenance
-     * @param  string|null  $reason
-     */
-    public static function create(CreateMaintenanceDataType|null $maintenance = null, string|null $reason = null)
+    public static function create(CreateMaintenanceDataType $maintenance = null, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType|null
-     */
-    public function getMaintenance(): CreateMaintenanceDataType|null
+    public function getMaintenance(): ?CreateMaintenanceDataType
     {
         return $this->maintenance;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType|null  $maintenance
-     */
-    public function withMaintenance(CreateMaintenanceDataType|null $maintenance): FailedMaintenanceDataType
+    public function withMaintenance(?CreateMaintenanceDataType $maintenance): FailedMaintenanceDataType
     {
         $new = clone $this;
         $new->maintenance = $maintenance;
@@ -54,12 +41,12 @@ class FailedMaintenanceDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedMaintenanceDataType
+    public function withReason(?string $reason): FailedMaintenanceDataType
     {
         $new = clone $this;
         $new->reason = $reason;

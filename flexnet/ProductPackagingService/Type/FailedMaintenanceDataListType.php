@@ -14,7 +14,7 @@ class FailedMaintenanceDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType>|null  $failedMaintenance
      */
-    public function __construct(FailedMaintenanceDataType|array|null $failedMaintenance = null)
+    public function __construct(FailedMaintenanceDataType|array $failedMaintenance = null)
     {
         $this->failedMaintenance = $failedMaintenance;
     }
@@ -22,7 +22,7 @@ class FailedMaintenanceDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType>|null  $failedMaintenance
      */
-    public static function create(FailedMaintenanceDataType|array|null $failedMaintenance = null)
+    public static function create(FailedMaintenanceDataType|array $failedMaintenance = null)
     {
         return new static(...\func_get_args());
     }

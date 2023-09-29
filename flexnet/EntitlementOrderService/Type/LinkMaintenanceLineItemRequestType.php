@@ -13,33 +13,22 @@ class LinkMaintenanceLineItemRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemListType  $linkMaintenanceLineItemList
      */
     public function __construct(LinkMaintenanceLineItemListType $linkMaintenanceLineItemList)
     {
         $this->linkMaintenanceLineItemList = $linkMaintenanceLineItemList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemListType  $linkMaintenanceLineItemList
-     */
     public static function create(LinkMaintenanceLineItemListType $linkMaintenanceLineItemList)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemListType
-     */
     public function getLinkMaintenanceLineItemList(): LinkMaintenanceLineItemListType
     {
         return $this->linkMaintenanceLineItemList;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemListType  $linkMaintenanceLineItemList
-     */
     public function withLinkMaintenanceLineItemList(LinkMaintenanceLineItemListType $linkMaintenanceLineItemList): LinkMaintenanceLineItemRequestType
     {
         $new = clone $this;

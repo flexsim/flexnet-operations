@@ -14,7 +14,7 @@ class FailedUpdateFeatureBundleDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateFeatureBundleDataType|array<\Flexnet\ProductPackagingService\Type\FailedUpdateFeatureBundleDataType>|null  $failedFeatureBundle
      */
-    public function __construct(FailedUpdateFeatureBundleDataType|array|null $failedFeatureBundle = null)
+    public function __construct(FailedUpdateFeatureBundleDataType|array $failedFeatureBundle = null)
     {
         $this->failedFeatureBundle = $failedFeatureBundle;
     }
@@ -22,7 +22,7 @@ class FailedUpdateFeatureBundleDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateFeatureBundleDataType|array<\Flexnet\ProductPackagingService\Type\FailedUpdateFeatureBundleDataType>|null  $failedFeatureBundle
      */
-    public static function create(FailedUpdateFeatureBundleDataType|array|null $failedFeatureBundle = null)
+    public static function create(FailedUpdateFeatureBundleDataType|array $failedFeatureBundle = null)
     {
         return new static(...\func_get_args());
     }

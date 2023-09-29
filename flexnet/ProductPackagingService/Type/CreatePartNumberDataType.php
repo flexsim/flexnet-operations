@@ -16,19 +16,14 @@ class CreatePartNumberDataType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $description
      */
-    public function __construct(string $partId, string|null $description = null)
+    public function __construct(string $partId, string $description = null)
     {
         $this->partId = $partId;
         $this->description = $description;
     }
 
-    /**
-     * @param  string|null  $description
-     */
-    public static function create(string $partId, string|null $description = null)
+    public static function create(string $partId, string $description = null)
     {
         return new static(...\func_get_args());
     }
@@ -46,12 +41,12 @@ class CreatePartNumberDataType
         return $new;
     }
 
-    public function getDescription(): string|null
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function withDescription(string|null $description): CreatePartNumberDataType
+    public function withDescription(?string $description): CreatePartNumberDataType
     {
         $new = clone $this;
         $new->description = $description;

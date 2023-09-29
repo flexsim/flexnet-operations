@@ -19,7 +19,6 @@ class HandleProductCategoryToAcctRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param  \Flexnet\ProductPackagingService\Type\AccountIdentifierType  $acct
      * @param  \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>  $productCategory
      */
     public function __construct(AccountIdentifierType $acct, ProductCategoryDataType|array $productCategory)
@@ -29,7 +28,6 @@ class HandleProductCategoryToAcctRequestType implements RequestInterface
     }
 
     /**
-     * @param  \Flexnet\ProductPackagingService\Type\AccountIdentifierType  $acct
      * @param  \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>  $productCategory
      */
     public static function create(AccountIdentifierType $acct, ProductCategoryDataType|array $productCategory)
@@ -37,17 +35,11 @@ class HandleProductCategoryToAcctRequestType implements RequestInterface
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\AccountIdentifierType
-     */
     public function getAcct(): AccountIdentifierType
     {
         return $this->acct;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\AccountIdentifierType  $acct
-     */
     public function withAcct(AccountIdentifierType $acct): HandleProductCategoryToAcctRequestType
     {
         $new = clone $this;

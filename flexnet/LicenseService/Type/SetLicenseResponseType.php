@@ -18,36 +18,23 @@ class SetLicenseResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedSetLicenseOnholdFulfillmentListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedSetLicenseOnholdFulfillmentListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedSetLicenseOnholdFulfillmentListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedSetLicenseOnholdFulfillmentListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): SetLicenseResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class SetLicenseResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null
-     */
-    public function getFailedData(): FailedSetLicenseOnholdFulfillmentListType|null
+    public function getFailedData(): ?FailedSetLicenseOnholdFulfillmentListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType|null  $failedData
-     */
-    public function withFailedData(FailedSetLicenseOnholdFulfillmentListType|null $failedData): SetLicenseResponseType
+    public function withFailedData(?FailedSetLicenseOnholdFulfillmentListType $failedData): SetLicenseResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

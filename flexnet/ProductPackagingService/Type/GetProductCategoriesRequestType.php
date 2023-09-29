@@ -23,30 +23,25 @@ class GetProductCategoriesRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  int|null  $pageNumber
      */
-    public function __construct(int $batchSize, bool $returnContainedObjects, int|null $pageNumber = null)
+    public function __construct(int $batchSize, bool $returnContainedObjects, int $pageNumber = null)
     {
         $this->batchSize = $batchSize;
         $this->returnContainedObjects = $returnContainedObjects;
         $this->pageNumber = $pageNumber;
     }
 
-    /**
-     * @param  int|null  $pageNumber
-     */
-    public static function create(int $batchSize, bool $returnContainedObjects, int|null $pageNumber = null)
+    public static function create(int $batchSize, bool $returnContainedObjects, int $pageNumber = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getPageNumber(): int|null
+    public function getPageNumber(): ?int
     {
         return $this->pageNumber;
     }
 
-    public function withPageNumber(int|null $pageNumber): GetProductCategoriesRequestType
+    public function withPageNumber(?int $pageNumber): GetProductCategoriesRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;

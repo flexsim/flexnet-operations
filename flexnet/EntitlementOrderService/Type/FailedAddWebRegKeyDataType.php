@@ -16,37 +16,24 @@ class FailedAddWebRegKeyDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|null  $webRegKeyData
-     * @param  string|null  $reason
      */
-    public function __construct(AddWebRegKeyDataType|null $webRegKeyData = null, string|null $reason = null)
+    public function __construct(AddWebRegKeyDataType $webRegKeyData = null, string $reason = null)
     {
         $this->webRegKeyData = $webRegKeyData;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|null  $webRegKeyData
-     * @param  string|null  $reason
-     */
-    public static function create(AddWebRegKeyDataType|null $webRegKeyData = null, string|null $reason = null)
+    public static function create(AddWebRegKeyDataType $webRegKeyData = null, string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|null
-     */
-    public function getWebRegKeyData(): AddWebRegKeyDataType|null
+    public function getWebRegKeyData(): ?AddWebRegKeyDataType
     {
         return $this->webRegKeyData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|null  $webRegKeyData
-     */
-    public function withWebRegKeyData(AddWebRegKeyDataType|null $webRegKeyData): FailedAddWebRegKeyDataType
+    public function withWebRegKeyData(?AddWebRegKeyDataType $webRegKeyData): FailedAddWebRegKeyDataType
     {
         $new = clone $this;
         $new->webRegKeyData = $webRegKeyData;
@@ -54,12 +41,12 @@ class FailedAddWebRegKeyDataType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): FailedAddWebRegKeyDataType
+    public function withReason(?string $reason): FailedAddWebRegKeyDataType
     {
         $new = clone $this;
         $new->reason = $reason;

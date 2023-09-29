@@ -16,31 +16,24 @@ class FeatureBundleIdentifierType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundlePKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, FeatureBundlePKType|null $primaryKeys = null)
+    public function __construct(string $uniqueId = null, FeatureBundlePKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundlePKType|null  $primaryKeys
-     */
-    public static function create(string|null $uniqueId = null, FeatureBundlePKType|null $primaryKeys = null)
+    public static function create(string $uniqueId = null, FeatureBundlePKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUniqueId(): string|null
+    public function getUniqueId(): ?string
     {
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string|null $uniqueId): FeatureBundleIdentifierType
+    public function withUniqueId(?string $uniqueId): FeatureBundleIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -48,18 +41,12 @@ class FeatureBundleIdentifierType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FeatureBundlePKType|null
-     */
-    public function getPrimaryKeys(): FeatureBundlePKType|null
+    public function getPrimaryKeys(): ?FeatureBundlePKType
     {
         return $this->primaryKeys;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundlePKType|null  $primaryKeys
-     */
-    public function withPrimaryKeys(FeatureBundlePKType|null $primaryKeys): FeatureBundleIdentifierType
+    public function withPrimaryKeys(?FeatureBundlePKType $primaryKeys): FeatureBundleIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

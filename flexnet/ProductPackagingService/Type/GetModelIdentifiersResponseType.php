@@ -18,36 +18,23 @@ class GetModelIdentifiersResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\ModelIdentifiersDataListType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, ModelIdentifiersDataListType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, ModelIdentifiersDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\ModelIdentifiersDataListType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, ModelIdentifiersDataListType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, ModelIdentifiersDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetModelIdentifiersResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetModelIdentifiersResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\ModelIdentifiersDataListType|null
-     */
-    public function getResponseData(): ModelIdentifiersDataListType|null
+    public function getResponseData(): ?ModelIdentifiersDataListType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ModelIdentifiersDataListType|null  $responseData
-     */
-    public function withResponseData(ModelIdentifiersDataListType|null $responseData): GetModelIdentifiersResponseType
+    public function withResponseData(?ModelIdentifiersDataListType $responseData): GetModelIdentifiersResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

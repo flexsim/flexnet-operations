@@ -18,36 +18,23 @@ class GetTransactionKeyIdentifiersResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\TransactionKeyIdentifiersDataListType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, TransactionKeyIdentifiersDataListType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, TransactionKeyIdentifiersDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\TransactionKeyIdentifiersDataListType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, TransactionKeyIdentifiersDataListType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, TransactionKeyIdentifiersDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetTransactionKeyIdentifiersResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetTransactionKeyIdentifiersResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\TransactionKeyIdentifiersDataListType|null
-     */
-    public function getResponseData(): TransactionKeyIdentifiersDataListType|null
+    public function getResponseData(): ?TransactionKeyIdentifiersDataListType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\TransactionKeyIdentifiersDataListType|null  $responseData
-     */
-    public function withResponseData(TransactionKeyIdentifiersDataListType|null $responseData): GetTransactionKeyIdentifiersResponseType
+    public function withResponseData(?TransactionKeyIdentifiersDataListType $responseData): GetTransactionKeyIdentifiersResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

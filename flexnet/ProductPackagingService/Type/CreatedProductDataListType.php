@@ -14,7 +14,7 @@ class CreatedProductDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\CreatedProductDataType|array<\Flexnet\ProductPackagingService\Type\CreatedProductDataType>|null  $createdProduct
      */
-    public function __construct(CreatedProductDataType|array|null $createdProduct = null)
+    public function __construct(CreatedProductDataType|array $createdProduct = null)
     {
         $this->createdProduct = $createdProduct;
     }
@@ -22,7 +22,7 @@ class CreatedProductDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatedProductDataType|array<\Flexnet\ProductPackagingService\Type\CreatedProductDataType>|null  $createdProduct
      */
-    public static function create(CreatedProductDataType|array|null $createdProduct = null)
+    public static function create(CreatedProductDataType|array $createdProduct = null)
     {
         return new static(...\func_get_args());
     }

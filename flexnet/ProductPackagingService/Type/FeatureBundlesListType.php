@@ -14,7 +14,7 @@ class FeatureBundlesListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType>|null  $featureBundle
      */
-    public function __construct(FeatureBundleIdentifierWithCountDataType|array|null $featureBundle = null)
+    public function __construct(FeatureBundleIdentifierWithCountDataType|array $featureBundle = null)
     {
         $this->featureBundle = $featureBundle;
     }
@@ -22,7 +22,7 @@ class FeatureBundlesListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType>|null  $featureBundle
      */
-    public static function create(FeatureBundleIdentifierWithCountDataType|array|null $featureBundle = null)
+    public static function create(FeatureBundleIdentifierWithCountDataType|array $featureBundle = null)
     {
         return new static(...\func_get_args());
     }

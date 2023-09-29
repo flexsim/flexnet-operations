@@ -16,37 +16,24 @@ class EntitlementDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType|null  $simpleEntitlement
-     * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementDataType|null  $bulkEntitlement
      */
-    public function __construct(SimpleEntitlementDataType|null $simpleEntitlement = null, BulkEntitlementDataType|null $bulkEntitlement = null)
+    public function __construct(SimpleEntitlementDataType $simpleEntitlement = null, BulkEntitlementDataType $bulkEntitlement = null)
     {
         $this->simpleEntitlement = $simpleEntitlement;
         $this->bulkEntitlement = $bulkEntitlement;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType|null  $simpleEntitlement
-     * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementDataType|null  $bulkEntitlement
-     */
-    public static function create(SimpleEntitlementDataType|null $simpleEntitlement = null, BulkEntitlementDataType|null $bulkEntitlement = null)
+    public static function create(SimpleEntitlementDataType $simpleEntitlement = null, BulkEntitlementDataType $bulkEntitlement = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType|null
-     */
-    public function getSimpleEntitlement(): SimpleEntitlementDataType|null
+    public function getSimpleEntitlement(): ?SimpleEntitlementDataType
     {
         return $this->simpleEntitlement;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType|null  $simpleEntitlement
-     */
-    public function withSimpleEntitlement(SimpleEntitlementDataType|null $simpleEntitlement): EntitlementDataType
+    public function withSimpleEntitlement(?SimpleEntitlementDataType $simpleEntitlement): EntitlementDataType
     {
         $new = clone $this;
         $new->simpleEntitlement = $simpleEntitlement;
@@ -54,18 +41,12 @@ class EntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\BulkEntitlementDataType|null
-     */
-    public function getBulkEntitlement(): BulkEntitlementDataType|null
+    public function getBulkEntitlement(): ?BulkEntitlementDataType
     {
         return $this->bulkEntitlement;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementDataType|null  $bulkEntitlement
-     */
-    public function withBulkEntitlement(BulkEntitlementDataType|null $bulkEntitlement): EntitlementDataType
+    public function withBulkEntitlement(?BulkEntitlementDataType $bulkEntitlement): EntitlementDataType
     {
         $new = clone $this;
         $new->bulkEntitlement = $bulkEntitlement;

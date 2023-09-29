@@ -51,15 +51,8 @@ class MaintenanceQueryDataType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $version
-     * @param  string|null  $description
-     * @param  bool|null  $allowUpgrades
-     * @param  bool|null  $allowUpsells
-     * @param  bool|null  $allowRenewals
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType|null  $partNumbers
      */
-    public function __construct(string $uniqueId, string $maintenanceName, string $state, string|null $version = null, string|null $description = null, bool|null $allowUpgrades = null, bool|null $allowUpsells = null, bool|null $allowRenewals = null, PartNumbersSimpleListType|null $partNumbers = null)
+    public function __construct(string $uniqueId, string $maintenanceName, string $state, string $version = null, string $description = null, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, PartNumbersSimpleListType $partNumbers = null)
     {
         $this->uniqueId = $uniqueId;
         $this->maintenanceName = $maintenanceName;
@@ -72,15 +65,7 @@ class MaintenanceQueryDataType
         $this->partNumbers = $partNumbers;
     }
 
-    /**
-     * @param  string|null  $version
-     * @param  string|null  $description
-     * @param  bool|null  $allowUpgrades
-     * @param  bool|null  $allowUpsells
-     * @param  bool|null  $allowRenewals
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType|null  $partNumbers
-     */
-    public static function create(string $uniqueId, string $maintenanceName, string $state, string|null $version = null, string|null $description = null, bool|null $allowUpgrades = null, bool|null $allowUpsells = null, bool|null $allowRenewals = null, PartNumbersSimpleListType|null $partNumbers = null)
+    public static function create(string $uniqueId, string $maintenanceName, string $state, string $version = null, string $description = null, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, PartNumbersSimpleListType $partNumbers = null)
     {
         return new static(...\func_get_args());
     }
@@ -111,12 +96,12 @@ class MaintenanceQueryDataType
         return $new;
     }
 
-    public function getVersion(): string|null
+    public function getVersion(): ?string
     {
         return $this->version;
     }
 
-    public function withVersion(string|null $version): MaintenanceQueryDataType
+    public function withVersion(?string $version): MaintenanceQueryDataType
     {
         $new = clone $this;
         $new->version = $version;
@@ -124,12 +109,12 @@ class MaintenanceQueryDataType
         return $new;
     }
 
-    public function getDescription(): string|null
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function withDescription(string|null $description): MaintenanceQueryDataType
+    public function withDescription(?string $description): MaintenanceQueryDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -150,12 +135,12 @@ class MaintenanceQueryDataType
         return $new;
     }
 
-    public function getAllowUpgrades(): bool|null
+    public function getAllowUpgrades(): ?bool
     {
         return $this->allowUpgrades;
     }
 
-    public function withAllowUpgrades(bool|null $allowUpgrades): MaintenanceQueryDataType
+    public function withAllowUpgrades(?bool $allowUpgrades): MaintenanceQueryDataType
     {
         $new = clone $this;
         $new->allowUpgrades = $allowUpgrades;
@@ -163,12 +148,12 @@ class MaintenanceQueryDataType
         return $new;
     }
 
-    public function getAllowUpsells(): bool|null
+    public function getAllowUpsells(): ?bool
     {
         return $this->allowUpsells;
     }
 
-    public function withAllowUpsells(bool|null $allowUpsells): MaintenanceQueryDataType
+    public function withAllowUpsells(?bool $allowUpsells): MaintenanceQueryDataType
     {
         $new = clone $this;
         $new->allowUpsells = $allowUpsells;
@@ -176,12 +161,12 @@ class MaintenanceQueryDataType
         return $new;
     }
 
-    public function getAllowRenewals(): bool|null
+    public function getAllowRenewals(): ?bool
     {
         return $this->allowRenewals;
     }
 
-    public function withAllowRenewals(bool|null $allowRenewals): MaintenanceQueryDataType
+    public function withAllowRenewals(?bool $allowRenewals): MaintenanceQueryDataType
     {
         $new = clone $this;
         $new->allowRenewals = $allowRenewals;
@@ -189,18 +174,12 @@ class MaintenanceQueryDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType|null
-     */
-    public function getPartNumbers(): PartNumbersSimpleListType|null
+    public function getPartNumbers(): ?PartNumbersSimpleListType
     {
         return $this->partNumbers;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType|null  $partNumbers
-     */
-    public function withPartNumbers(PartNumbersSimpleListType|null $partNumbers): MaintenanceQueryDataType
+    public function withPartNumbers(?PartNumbersSimpleListType $partNumbers): MaintenanceQueryDataType
     {
         $new = clone $this;
         $new->partNumbers = $partNumbers;

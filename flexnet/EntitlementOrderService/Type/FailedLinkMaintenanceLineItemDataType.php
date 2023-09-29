@@ -16,8 +16,6 @@ class FailedLinkMaintenanceLineItemDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType  $linkMaintenanceLineItem
      */
     public function __construct(LinkMaintenanceLineItemDataType $linkMaintenanceLineItem, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedLinkMaintenanceLineItemDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType  $linkMaintenanceLineItem
-     */
     public static function create(LinkMaintenanceLineItemDataType $linkMaintenanceLineItem, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType
-     */
     public function getLinkMaintenanceLineItem(): LinkMaintenanceLineItemDataType
     {
         return $this->linkMaintenanceLineItem;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType  $linkMaintenanceLineItem
-     */
     public function withLinkMaintenanceLineItem(LinkMaintenanceLineItemDataType $linkMaintenanceLineItem): FailedLinkMaintenanceLineItemDataType
     {
         $new = clone $this;

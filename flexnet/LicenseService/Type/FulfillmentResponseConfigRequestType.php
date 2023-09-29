@@ -226,53 +226,8 @@ class FulfillmentResponseConfigRequestType
 
     /**
      * Constructor
-     *
-     * @param  bool|null  $fulfillmentId
-     * @param  bool|null  $fulfillmentType
-     * @param  bool|null  $state
-     * @param  bool|null  $entitlementId
-     * @param  bool|null  $lineitemId
-     * @param  bool|null  $product
-     * @param  bool|null  $productDescription
-     * @param  bool|null  $partNumber
-     * @param  bool|null  $partNumberDescription
-     * @param  bool|null  $licenseTechnology
-     * @param  bool|null  $licenseModel
-     * @param  bool|null  $soldTo
-     * @param  bool|null  $soldToDisplayName
-     * @param  bool|null  $shipToEmail
-     * @param  bool|null  $shipToAddress
-     * @param  bool|null  $licenseHost
-     * @param  bool|null  $fulfilledCount
-     * @param  bool|null  $overDraftCount
-     * @param  bool|null  $fulfillDate
-     * @param  bool|null  $fulfillDateTime
-     * @param  bool|null  $isPermanent
-     * @param  bool|null  $startDate
-     * @param  bool|null  $expirationDate
-     * @param  bool|null  $versionDate
-     * @param  bool|null  $licenseFileType
-     * @param  bool|null  $licenseText
-     * @param  bool|null  $binaryLicense
-     * @param  bool|null  $supportAction
-     * @param  bool|null  $lastModifiedDateTime
-     * @param  bool|null  $parentFulfillmentId
-     * @param  bool|null  $fulfillmentSource
-     * @param  bool|null  $orderId
-     * @param  bool|null  $orderLineNumber
-     * @param  bool|null  $lineitemDescription
-     * @param  bool|null  $totalCopies
-     * @param  bool|null  $numberOfRemainingCopies
-     * @param  bool|null  $isTrusted
-     * @param  \Flexnet\LicenseService\Type\CustomAttributeDescriptorDataType|null  $customAttributes
-     * @param  \Flexnet\LicenseService\Type\CustomAttributeDescriptorDataType|null  $customHostAttributes
-     * @param  bool|null  $migrationId
-     * @param  bool|null  $vendorDaemonName
-     * @param  bool|null  $licenseFiles
-     * @param  bool|null  $FNPTimeZoneValue
-     * @param  bool|null  $activationType
      */
-    public function __construct(bool|null $fulfillmentId = null, bool|null $fulfillmentType = null, bool|null $state = null, bool|null $entitlementId = null, bool|null $lineitemId = null, bool|null $product = null, bool|null $productDescription = null, bool|null $partNumber = null, bool|null $partNumberDescription = null, bool|null $licenseTechnology = null, bool|null $licenseModel = null, bool|null $soldTo = null, bool|null $soldToDisplayName = null, bool|null $shipToEmail = null, bool|null $shipToAddress = null, bool|null $licenseHost = null, bool|null $fulfilledCount = null, bool|null $overDraftCount = null, bool|null $fulfillDate = null, bool|null $fulfillDateTime = null, bool|null $isPermanent = null, bool|null $startDate = null, bool|null $expirationDate = null, bool|null $versionDate = null, bool|null $licenseFileType = null, bool|null $licenseText = null, bool|null $binaryLicense = null, bool|null $supportAction = null, bool|null $lastModifiedDateTime = null, bool|null $parentFulfillmentId = null, bool|null $fulfillmentSource = null, bool|null $orderId = null, bool|null $orderLineNumber = null, bool|null $lineitemDescription = null, bool|null $totalCopies = null, bool|null $numberOfRemainingCopies = null, bool|null $isTrusted = null, CustomAttributeDescriptorDataType|null $customAttributes = null, CustomAttributeDescriptorDataType|null $customHostAttributes = null, bool|null $migrationId = null, bool|null $vendorDaemonName = null, bool|null $licenseFiles = null, bool|null $FNPTimeZoneValue = null, bool|null $activationType = null)
+    public function __construct(bool $fulfillmentId = null, bool $fulfillmentType = null, bool $state = null, bool $entitlementId = null, bool $lineitemId = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseTechnology = null, bool $licenseModel = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $licenseHost = null, bool $fulfilledCount = null, bool $overDraftCount = null, bool $fulfillDate = null, bool $fulfillDateTime = null, bool $isPermanent = null, bool $startDate = null, bool $expirationDate = null, bool $versionDate = null, bool $licenseFileType = null, bool $licenseText = null, bool $binaryLicense = null, bool $supportAction = null, bool $lastModifiedDateTime = null, bool $parentFulfillmentId = null, bool $fulfillmentSource = null, bool $orderId = null, bool $orderLineNumber = null, bool $lineitemDescription = null, bool $totalCopies = null, bool $numberOfRemainingCopies = null, bool $isTrusted = null, CustomAttributeDescriptorDataType $customAttributes = null, CustomAttributeDescriptorDataType $customHostAttributes = null, bool $migrationId = null, bool $vendorDaemonName = null, bool $licenseFiles = null, bool $FNPTimeZoneValue = null, bool $activationType = null)
     {
         $this->fulfillmentId = $fulfillmentId;
         $this->fulfillmentType = $fulfillmentType;
@@ -320,63 +275,17 @@ class FulfillmentResponseConfigRequestType
         $this->activationType = $activationType;
     }
 
-    /**
-     * @param  bool|null  $fulfillmentId
-     * @param  bool|null  $fulfillmentType
-     * @param  bool|null  $state
-     * @param  bool|null  $entitlementId
-     * @param  bool|null  $lineitemId
-     * @param  bool|null  $product
-     * @param  bool|null  $productDescription
-     * @param  bool|null  $partNumber
-     * @param  bool|null  $partNumberDescription
-     * @param  bool|null  $licenseTechnology
-     * @param  bool|null  $licenseModel
-     * @param  bool|null  $soldTo
-     * @param  bool|null  $soldToDisplayName
-     * @param  bool|null  $shipToEmail
-     * @param  bool|null  $shipToAddress
-     * @param  bool|null  $licenseHost
-     * @param  bool|null  $fulfilledCount
-     * @param  bool|null  $overDraftCount
-     * @param  bool|null  $fulfillDate
-     * @param  bool|null  $fulfillDateTime
-     * @param  bool|null  $isPermanent
-     * @param  bool|null  $startDate
-     * @param  bool|null  $expirationDate
-     * @param  bool|null  $versionDate
-     * @param  bool|null  $licenseFileType
-     * @param  bool|null  $licenseText
-     * @param  bool|null  $binaryLicense
-     * @param  bool|null  $supportAction
-     * @param  bool|null  $lastModifiedDateTime
-     * @param  bool|null  $parentFulfillmentId
-     * @param  bool|null  $fulfillmentSource
-     * @param  bool|null  $orderId
-     * @param  bool|null  $orderLineNumber
-     * @param  bool|null  $lineitemDescription
-     * @param  bool|null  $totalCopies
-     * @param  bool|null  $numberOfRemainingCopies
-     * @param  bool|null  $isTrusted
-     * @param  \Flexnet\LicenseService\Type\CustomAttributeDescriptorDataType|null  $customAttributes
-     * @param  \Flexnet\LicenseService\Type\CustomAttributeDescriptorDataType|null  $customHostAttributes
-     * @param  bool|null  $migrationId
-     * @param  bool|null  $vendorDaemonName
-     * @param  bool|null  $licenseFiles
-     * @param  bool|null  $FNPTimeZoneValue
-     * @param  bool|null  $activationType
-     */
-    public static function create(bool|null $fulfillmentId = null, bool|null $fulfillmentType = null, bool|null $state = null, bool|null $entitlementId = null, bool|null $lineitemId = null, bool|null $product = null, bool|null $productDescription = null, bool|null $partNumber = null, bool|null $partNumberDescription = null, bool|null $licenseTechnology = null, bool|null $licenseModel = null, bool|null $soldTo = null, bool|null $soldToDisplayName = null, bool|null $shipToEmail = null, bool|null $shipToAddress = null, bool|null $licenseHost = null, bool|null $fulfilledCount = null, bool|null $overDraftCount = null, bool|null $fulfillDate = null, bool|null $fulfillDateTime = null, bool|null $isPermanent = null, bool|null $startDate = null, bool|null $expirationDate = null, bool|null $versionDate = null, bool|null $licenseFileType = null, bool|null $licenseText = null, bool|null $binaryLicense = null, bool|null $supportAction = null, bool|null $lastModifiedDateTime = null, bool|null $parentFulfillmentId = null, bool|null $fulfillmentSource = null, bool|null $orderId = null, bool|null $orderLineNumber = null, bool|null $lineitemDescription = null, bool|null $totalCopies = null, bool|null $numberOfRemainingCopies = null, bool|null $isTrusted = null, CustomAttributeDescriptorDataType|null $customAttributes = null, CustomAttributeDescriptorDataType|null $customHostAttributes = null, bool|null $migrationId = null, bool|null $vendorDaemonName = null, bool|null $licenseFiles = null, bool|null $FNPTimeZoneValue = null, bool|null $activationType = null)
+    public static function create(bool $fulfillmentId = null, bool $fulfillmentType = null, bool $state = null, bool $entitlementId = null, bool $lineitemId = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseTechnology = null, bool $licenseModel = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $licenseHost = null, bool $fulfilledCount = null, bool $overDraftCount = null, bool $fulfillDate = null, bool $fulfillDateTime = null, bool $isPermanent = null, bool $startDate = null, bool $expirationDate = null, bool $versionDate = null, bool $licenseFileType = null, bool $licenseText = null, bool $binaryLicense = null, bool $supportAction = null, bool $lastModifiedDateTime = null, bool $parentFulfillmentId = null, bool $fulfillmentSource = null, bool $orderId = null, bool $orderLineNumber = null, bool $lineitemDescription = null, bool $totalCopies = null, bool $numberOfRemainingCopies = null, bool $isTrusted = null, CustomAttributeDescriptorDataType $customAttributes = null, CustomAttributeDescriptorDataType $customHostAttributes = null, bool $migrationId = null, bool $vendorDaemonName = null, bool $licenseFiles = null, bool $FNPTimeZoneValue = null, bool $activationType = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFulfillmentId(): bool|null
+    public function getFulfillmentId(): ?bool
     {
         return $this->fulfillmentId;
     }
 
-    public function withFulfillmentId(bool|null $fulfillmentId): FulfillmentResponseConfigRequestType
+    public function withFulfillmentId(?bool $fulfillmentId): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->fulfillmentId = $fulfillmentId;
@@ -384,12 +293,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getFulfillmentType(): bool|null
+    public function getFulfillmentType(): ?bool
     {
         return $this->fulfillmentType;
     }
 
-    public function withFulfillmentType(bool|null $fulfillmentType): FulfillmentResponseConfigRequestType
+    public function withFulfillmentType(?bool $fulfillmentType): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->fulfillmentType = $fulfillmentType;
@@ -397,12 +306,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getState(): bool|null
+    public function getState(): ?bool
     {
         return $this->state;
     }
 
-    public function withState(bool|null $state): FulfillmentResponseConfigRequestType
+    public function withState(?bool $state): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->state = $state;
@@ -410,12 +319,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getEntitlementId(): bool|null
+    public function getEntitlementId(): ?bool
     {
         return $this->entitlementId;
     }
 
-    public function withEntitlementId(bool|null $entitlementId): FulfillmentResponseConfigRequestType
+    public function withEntitlementId(?bool $entitlementId): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->entitlementId = $entitlementId;
@@ -423,12 +332,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getLineitemId(): bool|null
+    public function getLineitemId(): ?bool
     {
         return $this->lineitemId;
     }
 
-    public function withLineitemId(bool|null $lineitemId): FulfillmentResponseConfigRequestType
+    public function withLineitemId(?bool $lineitemId): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->lineitemId = $lineitemId;
@@ -436,12 +345,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getProduct(): bool|null
+    public function getProduct(): ?bool
     {
         return $this->product;
     }
 
-    public function withProduct(bool|null $product): FulfillmentResponseConfigRequestType
+    public function withProduct(?bool $product): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->product = $product;
@@ -449,12 +358,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getProductDescription(): bool|null
+    public function getProductDescription(): ?bool
     {
         return $this->productDescription;
     }
 
-    public function withProductDescription(bool|null $productDescription): FulfillmentResponseConfigRequestType
+    public function withProductDescription(?bool $productDescription): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->productDescription = $productDescription;
@@ -462,12 +371,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getPartNumber(): bool|null
+    public function getPartNumber(): ?bool
     {
         return $this->partNumber;
     }
 
-    public function withPartNumber(bool|null $partNumber): FulfillmentResponseConfigRequestType
+    public function withPartNumber(?bool $partNumber): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -475,12 +384,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getPartNumberDescription(): bool|null
+    public function getPartNumberDescription(): ?bool
     {
         return $this->partNumberDescription;
     }
 
-    public function withPartNumberDescription(bool|null $partNumberDescription): FulfillmentResponseConfigRequestType
+    public function withPartNumberDescription(?bool $partNumberDescription): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->partNumberDescription = $partNumberDescription;
@@ -488,12 +397,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getLicenseTechnology(): bool|null
+    public function getLicenseTechnology(): ?bool
     {
         return $this->licenseTechnology;
     }
 
-    public function withLicenseTechnology(bool|null $licenseTechnology): FulfillmentResponseConfigRequestType
+    public function withLicenseTechnology(?bool $licenseTechnology): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->licenseTechnology = $licenseTechnology;
@@ -501,12 +410,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getLicenseModel(): bool|null
+    public function getLicenseModel(): ?bool
     {
         return $this->licenseModel;
     }
 
-    public function withLicenseModel(bool|null $licenseModel): FulfillmentResponseConfigRequestType
+    public function withLicenseModel(?bool $licenseModel): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->licenseModel = $licenseModel;
@@ -514,12 +423,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getSoldTo(): bool|null
+    public function getSoldTo(): ?bool
     {
         return $this->soldTo;
     }
 
-    public function withSoldTo(bool|null $soldTo): FulfillmentResponseConfigRequestType
+    public function withSoldTo(?bool $soldTo): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -527,12 +436,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getSoldToDisplayName(): bool|null
+    public function getSoldToDisplayName(): ?bool
     {
         return $this->soldToDisplayName;
     }
 
-    public function withSoldToDisplayName(bool|null $soldToDisplayName): FulfillmentResponseConfigRequestType
+    public function withSoldToDisplayName(?bool $soldToDisplayName): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->soldToDisplayName = $soldToDisplayName;
@@ -540,12 +449,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getShipToEmail(): bool|null
+    public function getShipToEmail(): ?bool
     {
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(bool|null $shipToEmail): FulfillmentResponseConfigRequestType
+    public function withShipToEmail(?bool $shipToEmail): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -553,12 +462,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getShipToAddress(): bool|null
+    public function getShipToAddress(): ?bool
     {
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(bool|null $shipToAddress): FulfillmentResponseConfigRequestType
+    public function withShipToAddress(?bool $shipToAddress): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -566,12 +475,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getLicenseHost(): bool|null
+    public function getLicenseHost(): ?bool
     {
         return $this->licenseHost;
     }
 
-    public function withLicenseHost(bool|null $licenseHost): FulfillmentResponseConfigRequestType
+    public function withLicenseHost(?bool $licenseHost): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->licenseHost = $licenseHost;
@@ -579,12 +488,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getFulfilledCount(): bool|null
+    public function getFulfilledCount(): ?bool
     {
         return $this->fulfilledCount;
     }
 
-    public function withFulfilledCount(bool|null $fulfilledCount): FulfillmentResponseConfigRequestType
+    public function withFulfilledCount(?bool $fulfilledCount): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->fulfilledCount = $fulfilledCount;
@@ -592,12 +501,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getOverDraftCount(): bool|null
+    public function getOverDraftCount(): ?bool
     {
         return $this->overDraftCount;
     }
 
-    public function withOverDraftCount(bool|null $overDraftCount): FulfillmentResponseConfigRequestType
+    public function withOverDraftCount(?bool $overDraftCount): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->overDraftCount = $overDraftCount;
@@ -605,12 +514,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getFulfillDate(): bool|null
+    public function getFulfillDate(): ?bool
     {
         return $this->fulfillDate;
     }
 
-    public function withFulfillDate(bool|null $fulfillDate): FulfillmentResponseConfigRequestType
+    public function withFulfillDate(?bool $fulfillDate): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->fulfillDate = $fulfillDate;
@@ -618,12 +527,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getFulfillDateTime(): bool|null
+    public function getFulfillDateTime(): ?bool
     {
         return $this->fulfillDateTime;
     }
 
-    public function withFulfillDateTime(bool|null $fulfillDateTime): FulfillmentResponseConfigRequestType
+    public function withFulfillDateTime(?bool $fulfillDateTime): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->fulfillDateTime = $fulfillDateTime;
@@ -631,12 +540,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getIsPermanent(): bool|null
+    public function getIsPermanent(): ?bool
     {
         return $this->isPermanent;
     }
 
-    public function withIsPermanent(bool|null $isPermanent): FulfillmentResponseConfigRequestType
+    public function withIsPermanent(?bool $isPermanent): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->isPermanent = $isPermanent;
@@ -644,12 +553,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getStartDate(): bool|null
+    public function getStartDate(): ?bool
     {
         return $this->startDate;
     }
 
-    public function withStartDate(bool|null $startDate): FulfillmentResponseConfigRequestType
+    public function withStartDate(?bool $startDate): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -657,12 +566,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getExpirationDate(): bool|null
+    public function getExpirationDate(): ?bool
     {
         return $this->expirationDate;
     }
 
-    public function withExpirationDate(bool|null $expirationDate): FulfillmentResponseConfigRequestType
+    public function withExpirationDate(?bool $expirationDate): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->expirationDate = $expirationDate;
@@ -670,12 +579,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getVersionDate(): bool|null
+    public function getVersionDate(): ?bool
     {
         return $this->versionDate;
     }
 
-    public function withVersionDate(bool|null $versionDate): FulfillmentResponseConfigRequestType
+    public function withVersionDate(?bool $versionDate): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->versionDate = $versionDate;
@@ -683,12 +592,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getLicenseFileType(): bool|null
+    public function getLicenseFileType(): ?bool
     {
         return $this->licenseFileType;
     }
 
-    public function withLicenseFileType(bool|null $licenseFileType): FulfillmentResponseConfigRequestType
+    public function withLicenseFileType(?bool $licenseFileType): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->licenseFileType = $licenseFileType;
@@ -696,12 +605,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getLicenseText(): bool|null
+    public function getLicenseText(): ?bool
     {
         return $this->licenseText;
     }
 
-    public function withLicenseText(bool|null $licenseText): FulfillmentResponseConfigRequestType
+    public function withLicenseText(?bool $licenseText): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->licenseText = $licenseText;
@@ -709,12 +618,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getBinaryLicense(): bool|null
+    public function getBinaryLicense(): ?bool
     {
         return $this->binaryLicense;
     }
 
-    public function withBinaryLicense(bool|null $binaryLicense): FulfillmentResponseConfigRequestType
+    public function withBinaryLicense(?bool $binaryLicense): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->binaryLicense = $binaryLicense;
@@ -722,12 +631,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getSupportAction(): bool|null
+    public function getSupportAction(): ?bool
     {
         return $this->supportAction;
     }
 
-    public function withSupportAction(bool|null $supportAction): FulfillmentResponseConfigRequestType
+    public function withSupportAction(?bool $supportAction): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->supportAction = $supportAction;
@@ -735,12 +644,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getLastModifiedDateTime(): bool|null
+    public function getLastModifiedDateTime(): ?bool
     {
         return $this->lastModifiedDateTime;
     }
 
-    public function withLastModifiedDateTime(bool|null $lastModifiedDateTime): FulfillmentResponseConfigRequestType
+    public function withLastModifiedDateTime(?bool $lastModifiedDateTime): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->lastModifiedDateTime = $lastModifiedDateTime;
@@ -748,12 +657,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getParentFulfillmentId(): bool|null
+    public function getParentFulfillmentId(): ?bool
     {
         return $this->parentFulfillmentId;
     }
 
-    public function withParentFulfillmentId(bool|null $parentFulfillmentId): FulfillmentResponseConfigRequestType
+    public function withParentFulfillmentId(?bool $parentFulfillmentId): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->parentFulfillmentId = $parentFulfillmentId;
@@ -761,12 +670,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getFulfillmentSource(): bool|null
+    public function getFulfillmentSource(): ?bool
     {
         return $this->fulfillmentSource;
     }
 
-    public function withFulfillmentSource(bool|null $fulfillmentSource): FulfillmentResponseConfigRequestType
+    public function withFulfillmentSource(?bool $fulfillmentSource): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->fulfillmentSource = $fulfillmentSource;
@@ -774,12 +683,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getOrderId(): bool|null
+    public function getOrderId(): ?bool
     {
         return $this->orderId;
     }
 
-    public function withOrderId(bool|null $orderId): FulfillmentResponseConfigRequestType
+    public function withOrderId(?bool $orderId): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->orderId = $orderId;
@@ -787,12 +696,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getOrderLineNumber(): bool|null
+    public function getOrderLineNumber(): ?bool
     {
         return $this->orderLineNumber;
     }
 
-    public function withOrderLineNumber(bool|null $orderLineNumber): FulfillmentResponseConfigRequestType
+    public function withOrderLineNumber(?bool $orderLineNumber): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->orderLineNumber = $orderLineNumber;
@@ -800,12 +709,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getLineitemDescription(): bool|null
+    public function getLineitemDescription(): ?bool
     {
         return $this->lineitemDescription;
     }
 
-    public function withLineitemDescription(bool|null $lineitemDescription): FulfillmentResponseConfigRequestType
+    public function withLineitemDescription(?bool $lineitemDescription): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->lineitemDescription = $lineitemDescription;
@@ -813,12 +722,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getTotalCopies(): bool|null
+    public function getTotalCopies(): ?bool
     {
         return $this->totalCopies;
     }
 
-    public function withTotalCopies(bool|null $totalCopies): FulfillmentResponseConfigRequestType
+    public function withTotalCopies(?bool $totalCopies): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->totalCopies = $totalCopies;
@@ -826,12 +735,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getNumberOfRemainingCopies(): bool|null
+    public function getNumberOfRemainingCopies(): ?bool
     {
         return $this->numberOfRemainingCopies;
     }
 
-    public function withNumberOfRemainingCopies(bool|null $numberOfRemainingCopies): FulfillmentResponseConfigRequestType
+    public function withNumberOfRemainingCopies(?bool $numberOfRemainingCopies): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->numberOfRemainingCopies = $numberOfRemainingCopies;
@@ -839,12 +748,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getIsTrusted(): bool|null
+    public function getIsTrusted(): ?bool
     {
         return $this->isTrusted;
     }
 
-    public function withIsTrusted(bool|null $isTrusted): FulfillmentResponseConfigRequestType
+    public function withIsTrusted(?bool $isTrusted): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->isTrusted = $isTrusted;
@@ -852,18 +761,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\CustomAttributeDescriptorDataType|null
-     */
-    public function getCustomAttributes(): CustomAttributeDescriptorDataType|null
+    public function getCustomAttributes(): ?CustomAttributeDescriptorDataType
     {
         return $this->customAttributes;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\CustomAttributeDescriptorDataType|null  $customAttributes
-     */
-    public function withCustomAttributes(CustomAttributeDescriptorDataType|null $customAttributes): FulfillmentResponseConfigRequestType
+    public function withCustomAttributes(?CustomAttributeDescriptorDataType $customAttributes): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->customAttributes = $customAttributes;
@@ -871,18 +774,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\CustomAttributeDescriptorDataType|null
-     */
-    public function getCustomHostAttributes(): CustomAttributeDescriptorDataType|null
+    public function getCustomHostAttributes(): ?CustomAttributeDescriptorDataType
     {
         return $this->customHostAttributes;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\CustomAttributeDescriptorDataType|null  $customHostAttributes
-     */
-    public function withCustomHostAttributes(CustomAttributeDescriptorDataType|null $customHostAttributes): FulfillmentResponseConfigRequestType
+    public function withCustomHostAttributes(?CustomAttributeDescriptorDataType $customHostAttributes): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->customHostAttributes = $customHostAttributes;
@@ -890,12 +787,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getMigrationId(): bool|null
+    public function getMigrationId(): ?bool
     {
         return $this->migrationId;
     }
 
-    public function withMigrationId(bool|null $migrationId): FulfillmentResponseConfigRequestType
+    public function withMigrationId(?bool $migrationId): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->migrationId = $migrationId;
@@ -903,12 +800,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getVendorDaemonName(): bool|null
+    public function getVendorDaemonName(): ?bool
     {
         return $this->vendorDaemonName;
     }
 
-    public function withVendorDaemonName(bool|null $vendorDaemonName): FulfillmentResponseConfigRequestType
+    public function withVendorDaemonName(?bool $vendorDaemonName): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->vendorDaemonName = $vendorDaemonName;
@@ -916,12 +813,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getLicenseFiles(): bool|null
+    public function getLicenseFiles(): ?bool
     {
         return $this->licenseFiles;
     }
 
-    public function withLicenseFiles(bool|null $licenseFiles): FulfillmentResponseConfigRequestType
+    public function withLicenseFiles(?bool $licenseFiles): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->licenseFiles = $licenseFiles;
@@ -929,12 +826,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getFNPTimeZoneValue(): bool|null
+    public function getFNPTimeZoneValue(): ?bool
     {
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(bool|null $FNPTimeZoneValue): FulfillmentResponseConfigRequestType
+    public function withFNPTimeZoneValue(?bool $FNPTimeZoneValue): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;
@@ -942,12 +839,12 @@ class FulfillmentResponseConfigRequestType
         return $new;
     }
 
-    public function getActivationType(): bool|null
+    public function getActivationType(): ?bool
     {
         return $this->activationType;
     }
 
-    public function withActivationType(bool|null $activationType): FulfillmentResponseConfigRequestType
+    public function withActivationType(?bool $activationType): FulfillmentResponseConfigRequestType
     {
         $new = clone $this;
         $new->activationType = $activationType;

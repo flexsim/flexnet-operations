@@ -156,39 +156,8 @@ class BulkEntitlementDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\IdType  $entitlementId
-     * @param  string|null  $soldTo
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
-     * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $licenseModel
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel1
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel2
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  string|null  $FNPTimeZoneValue
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
-     * @param  string|null  $shipToEmail
-     * @param  string|null  $shipToAddress
-     * @param  string|null  $orderId
-     * @param  string|null  $orderLineNumber
-     * @param  string|null  $startDateOption
-     * @param  bool|null  $isPermanent
-     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $term
-     * @param  \DateTimeInterface|null  $expirationDate
-     * @param  \DateTimeInterface|null  $versionDate
-     * @param  \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null  $versionDateAttributes
-     * @param  string|null  $description
-     * @param  int|null  $numberOfCopies
-     * @param  string|null  $bulkEntitlementType
-     * @param  bool|null  $autoDeploy
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataListType|null  $entitledProducts
-     * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType|null  $channelPartners
-     * @param  bool|null  $allowPortalLogin
-     * @param  string|null  $state
-     * @param  string|null  $createdUserId
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
      */
-    public function __construct(IdType $entitlementId, string|null $soldTo = null, ProductIdentifierType|null $product = null, PartNumberIdentifierType|null $partNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, PolicyAttributesListType|null $policyAttributes = null, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $orderId = null, string|null $orderLineNumber = null, string|null $startDateOption = null, bool|null $isPermanent = null, DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $description = null, int|null $numberOfCopies = null, string|null $bulkEntitlementType = null, bool|null $autoDeploy = null, EntitledProductDataListType|null $entitledProducts = null, ChannelPartnerDataListType|null $channelPartners = null, bool|null $allowPortalLogin = null, string|null $state = null, string|null $createdUserId = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null)
+    public function __construct(IdType $entitlementId, string $soldTo = null, ProductIdentifierType $product = null, PartNumberIdentifierType $partNumber = null, LicenseModelIdentifierType $licenseModel = null, LicenseModelIdentifierType $alternateLicenseModel1 = null, LicenseModelIdentifierType $alternateLicenseModel2 = null, AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, PolicyAttributesListType $policyAttributes = null, string $shipToEmail = null, string $shipToAddress = null, string $orderId = null, string $orderLineNumber = null, string $startDateOption = null, bool $isPermanent = null, DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, VersionDateAttributesType $versionDateAttributes = null, string $description = null, int $numberOfCopies = null, string $bulkEntitlementType = null, bool $autoDeploy = null, EntitledProductDataListType $entitledProducts = null, ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, string $state = null, string $createdUserId = null, LicenseTechnologyIdentifierType $licenseTechnology = null)
     {
         $this->entitlementId = $entitlementId;
         $this->soldTo = $soldTo;
@@ -222,54 +191,16 @@ class BulkEntitlementDataType
         $this->licenseTechnology = $licenseTechnology;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\IdType  $entitlementId
-     * @param  string|null  $soldTo
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
-     * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $licenseModel
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel1
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel2
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  string|null  $FNPTimeZoneValue
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
-     * @param  string|null  $shipToEmail
-     * @param  string|null  $shipToAddress
-     * @param  string|null  $orderId
-     * @param  string|null  $orderLineNumber
-     * @param  string|null  $startDateOption
-     * @param  bool|null  $isPermanent
-     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $term
-     * @param  \DateTimeInterface|null  $expirationDate
-     * @param  \DateTimeInterface|null  $versionDate
-     * @param  \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null  $versionDateAttributes
-     * @param  string|null  $description
-     * @param  int|null  $numberOfCopies
-     * @param  string|null  $bulkEntitlementType
-     * @param  bool|null  $autoDeploy
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataListType|null  $entitledProducts
-     * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType|null  $channelPartners
-     * @param  bool|null  $allowPortalLogin
-     * @param  string|null  $state
-     * @param  string|null  $createdUserId
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
-     */
-    public static function create(IdType $entitlementId, string|null $soldTo = null, ProductIdentifierType|null $product = null, PartNumberIdentifierType|null $partNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, PolicyAttributesListType|null $policyAttributes = null, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $orderId = null, string|null $orderLineNumber = null, string|null $startDateOption = null, bool|null $isPermanent = null, DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $description = null, int|null $numberOfCopies = null, string|null $bulkEntitlementType = null, bool|null $autoDeploy = null, EntitledProductDataListType|null $entitledProducts = null, ChannelPartnerDataListType|null $channelPartners = null, bool|null $allowPortalLogin = null, string|null $state = null, string|null $createdUserId = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null)
+    public static function create(IdType $entitlementId, string $soldTo = null, ProductIdentifierType $product = null, PartNumberIdentifierType $partNumber = null, LicenseModelIdentifierType $licenseModel = null, LicenseModelIdentifierType $alternateLicenseModel1 = null, LicenseModelIdentifierType $alternateLicenseModel2 = null, AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, PolicyAttributesListType $policyAttributes = null, string $shipToEmail = null, string $shipToAddress = null, string $orderId = null, string $orderLineNumber = null, string $startDateOption = null, bool $isPermanent = null, DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, VersionDateAttributesType $versionDateAttributes = null, string $description = null, int $numberOfCopies = null, string $bulkEntitlementType = null, bool $autoDeploy = null, EntitledProductDataListType $entitledProducts = null, ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, string $state = null, string $createdUserId = null, LicenseTechnologyIdentifierType $licenseTechnology = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\IdType
-     */
     public function getEntitlementId(): IdType
     {
         return $this->entitlementId;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\IdType  $entitlementId
-     */
     public function withEntitlementId(IdType $entitlementId): BulkEntitlementDataType
     {
         $new = clone $this;
@@ -278,12 +209,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getSoldTo(): string|null
+    public function getSoldTo(): ?string
     {
         return $this->soldTo;
     }
 
-    public function withSoldTo(string|null $soldTo): BulkEntitlementDataType
+    public function withSoldTo(?string $soldTo): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -291,18 +222,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null
-     */
-    public function getProduct(): ProductIdentifierType|null
+    public function getProduct(): ?ProductIdentifierType
     {
         return $this->product;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
-     */
-    public function withProduct(ProductIdentifierType|null $product): BulkEntitlementDataType
+    public function withProduct(?ProductIdentifierType $product): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->product = $product;
@@ -310,18 +235,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null
-     */
-    public function getPartNumber(): PartNumberIdentifierType|null
+    public function getPartNumber(): ?PartNumberIdentifierType
     {
         return $this->partNumber;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
-     */
-    public function withPartNumber(PartNumberIdentifierType|null $partNumber): BulkEntitlementDataType
+    public function withPartNumber(?PartNumberIdentifierType $partNumber): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -329,18 +248,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null
-     */
-    public function getLicenseModel(): LicenseModelIdentifierType|null
+    public function getLicenseModel(): ?LicenseModelIdentifierType
     {
         return $this->licenseModel;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $licenseModel
-     */
-    public function withLicenseModel(LicenseModelIdentifierType|null $licenseModel): BulkEntitlementDataType
+    public function withLicenseModel(?LicenseModelIdentifierType $licenseModel): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->licenseModel = $licenseModel;
@@ -348,18 +261,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null
-     */
-    public function getAlternateLicenseModel1(): LicenseModelIdentifierType|null
+    public function getAlternateLicenseModel1(): ?LicenseModelIdentifierType
     {
         return $this->alternateLicenseModel1;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel1
-     */
-    public function withAlternateLicenseModel1(LicenseModelIdentifierType|null $alternateLicenseModel1): BulkEntitlementDataType
+    public function withAlternateLicenseModel1(?LicenseModelIdentifierType $alternateLicenseModel1): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->alternateLicenseModel1 = $alternateLicenseModel1;
@@ -367,18 +274,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null
-     */
-    public function getAlternateLicenseModel2(): LicenseModelIdentifierType|null
+    public function getAlternateLicenseModel2(): ?LicenseModelIdentifierType
     {
         return $this->alternateLicenseModel2;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel2
-     */
-    public function withAlternateLicenseModel2(LicenseModelIdentifierType|null $alternateLicenseModel2): BulkEntitlementDataType
+    public function withAlternateLicenseModel2(?LicenseModelIdentifierType $alternateLicenseModel2): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->alternateLicenseModel2 = $alternateLicenseModel2;
@@ -386,18 +287,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null
-     */
-    public function getLicenseModelAttributes(): AttributeDescriptorDataType|null
+    public function getLicenseModelAttributes(): ?AttributeDescriptorDataType
     {
         return $this->licenseModelAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     */
-    public function withLicenseModelAttributes(AttributeDescriptorDataType|null $licenseModelAttributes): BulkEntitlementDataType
+    public function withLicenseModelAttributes(?AttributeDescriptorDataType $licenseModelAttributes): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->licenseModelAttributes = $licenseModelAttributes;
@@ -405,12 +300,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getFNPTimeZoneValue(): string|null
+    public function getFNPTimeZoneValue(): ?string
     {
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(string|null $FNPTimeZoneValue): BulkEntitlementDataType
+    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;
@@ -418,18 +313,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null
-     */
-    public function getPolicyAttributes(): PolicyAttributesListType|null
+    public function getPolicyAttributes(): ?PolicyAttributesListType
     {
         return $this->policyAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
-     */
-    public function withPolicyAttributes(PolicyAttributesListType|null $policyAttributes): BulkEntitlementDataType
+    public function withPolicyAttributes(?PolicyAttributesListType $policyAttributes): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->policyAttributes = $policyAttributes;
@@ -437,12 +326,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getShipToEmail(): string|null
+    public function getShipToEmail(): ?string
     {
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(string|null $shipToEmail): BulkEntitlementDataType
+    public function withShipToEmail(?string $shipToEmail): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -450,12 +339,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getShipToAddress(): string|null
+    public function getShipToAddress(): ?string
     {
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(string|null $shipToAddress): BulkEntitlementDataType
+    public function withShipToAddress(?string $shipToAddress): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -463,12 +352,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getOrderId(): string|null
+    public function getOrderId(): ?string
     {
         return $this->orderId;
     }
 
-    public function withOrderId(string|null $orderId): BulkEntitlementDataType
+    public function withOrderId(?string $orderId): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->orderId = $orderId;
@@ -476,12 +365,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getOrderLineNumber(): string|null
+    public function getOrderLineNumber(): ?string
     {
         return $this->orderLineNumber;
     }
 
-    public function withOrderLineNumber(string|null $orderLineNumber): BulkEntitlementDataType
+    public function withOrderLineNumber(?string $orderLineNumber): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->orderLineNumber = $orderLineNumber;
@@ -489,12 +378,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getStartDateOption(): string|null
+    public function getStartDateOption(): ?string
     {
         return $this->startDateOption;
     }
 
-    public function withStartDateOption(string|null $startDateOption): BulkEntitlementDataType
+    public function withStartDateOption(?string $startDateOption): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->startDateOption = $startDateOption;
@@ -502,12 +391,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getIsPermanent(): bool|null
+    public function getIsPermanent(): ?bool
     {
         return $this->isPermanent;
     }
 
-    public function withIsPermanent(bool|null $isPermanent): BulkEntitlementDataType
+    public function withIsPermanent(?bool $isPermanent): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->isPermanent = $isPermanent;
@@ -515,18 +404,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\DurationType|null
-     */
-    public function getTerm(): DurationType|null
+    public function getTerm(): ?DurationType
     {
         return $this->term;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $term
-     */
-    public function withTerm(DurationType|null $term): BulkEntitlementDataType
+    public function withTerm(?DurationType $term): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->term = $term;
@@ -534,12 +417,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getExpirationDate(): \DateTimeInterface|null
+    public function getExpirationDate(): ?\DateTimeInterface
     {
         return $this->expirationDate;
     }
 
-    public function withExpirationDate(\DateTimeInterface|null $expirationDate): BulkEntitlementDataType
+    public function withExpirationDate(?\DateTimeInterface $expirationDate): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->expirationDate = $expirationDate;
@@ -547,12 +430,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getVersionDate(): \DateTimeInterface|null
+    public function getVersionDate(): ?\DateTimeInterface
     {
         return $this->versionDate;
     }
 
-    public function withVersionDate(\DateTimeInterface|null $versionDate): BulkEntitlementDataType
+    public function withVersionDate(?\DateTimeInterface $versionDate): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->versionDate = $versionDate;
@@ -560,18 +443,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null
-     */
-    public function getVersionDateAttributes(): VersionDateAttributesType|null
+    public function getVersionDateAttributes(): ?VersionDateAttributesType
     {
         return $this->versionDateAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null  $versionDateAttributes
-     */
-    public function withVersionDateAttributes(VersionDateAttributesType|null $versionDateAttributes): BulkEntitlementDataType
+    public function withVersionDateAttributes(?VersionDateAttributesType $versionDateAttributes): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->versionDateAttributes = $versionDateAttributes;
@@ -579,12 +456,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getDescription(): string|null
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function withDescription(string|null $description): BulkEntitlementDataType
+    public function withDescription(?string $description): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -592,12 +469,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getNumberOfCopies(): int|null
+    public function getNumberOfCopies(): ?int
     {
         return $this->numberOfCopies;
     }
 
-    public function withNumberOfCopies(int|null $numberOfCopies): BulkEntitlementDataType
+    public function withNumberOfCopies(?int $numberOfCopies): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->numberOfCopies = $numberOfCopies;
@@ -605,12 +482,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getBulkEntitlementType(): string|null
+    public function getBulkEntitlementType(): ?string
     {
         return $this->bulkEntitlementType;
     }
 
-    public function withBulkEntitlementType(string|null $bulkEntitlementType): BulkEntitlementDataType
+    public function withBulkEntitlementType(?string $bulkEntitlementType): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->bulkEntitlementType = $bulkEntitlementType;
@@ -618,12 +495,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getAutoDeploy(): bool|null
+    public function getAutoDeploy(): ?bool
     {
         return $this->autoDeploy;
     }
 
-    public function withAutoDeploy(bool|null $autoDeploy): BulkEntitlementDataType
+    public function withAutoDeploy(?bool $autoDeploy): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->autoDeploy = $autoDeploy;
@@ -631,18 +508,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitledProductDataListType|null
-     */
-    public function getEntitledProducts(): EntitledProductDataListType|null
+    public function getEntitledProducts(): ?EntitledProductDataListType
     {
         return $this->entitledProducts;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataListType|null  $entitledProducts
-     */
-    public function withEntitledProducts(EntitledProductDataListType|null $entitledProducts): BulkEntitlementDataType
+    public function withEntitledProducts(?EntitledProductDataListType $entitledProducts): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->entitledProducts = $entitledProducts;
@@ -650,18 +521,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType|null
-     */
-    public function getChannelPartners(): ChannelPartnerDataListType|null
+    public function getChannelPartners(): ?ChannelPartnerDataListType
     {
         return $this->channelPartners;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType|null  $channelPartners
-     */
-    public function withChannelPartners(ChannelPartnerDataListType|null $channelPartners): BulkEntitlementDataType
+    public function withChannelPartners(?ChannelPartnerDataListType $channelPartners): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->channelPartners = $channelPartners;
@@ -669,12 +534,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getAllowPortalLogin(): bool|null
+    public function getAllowPortalLogin(): ?bool
     {
         return $this->allowPortalLogin;
     }
 
-    public function withAllowPortalLogin(bool|null $allowPortalLogin): BulkEntitlementDataType
+    public function withAllowPortalLogin(?bool $allowPortalLogin): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->allowPortalLogin = $allowPortalLogin;
@@ -682,12 +547,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getState(): string|null
+    public function getState(): ?string
     {
         return $this->state;
     }
 
-    public function withState(string|null $state): BulkEntitlementDataType
+    public function withState(?string $state): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->state = $state;
@@ -695,12 +560,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    public function getCreatedUserId(): string|null
+    public function getCreatedUserId(): ?string
     {
         return $this->createdUserId;
     }
 
-    public function withCreatedUserId(string|null $createdUserId): BulkEntitlementDataType
+    public function withCreatedUserId(?string $createdUserId): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->createdUserId = $createdUserId;
@@ -708,18 +573,12 @@ class BulkEntitlementDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType|null
-     */
-    public function getLicenseTechnology(): LicenseTechnologyIdentifierType|null
+    public function getLicenseTechnology(): ?LicenseTechnologyIdentifierType
     {
         return $this->licenseTechnology;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
-     */
-    public function withLicenseTechnology(LicenseTechnologyIdentifierType|null $licenseTechnology): BulkEntitlementDataType
+    public function withLicenseTechnology(?LicenseTechnologyIdentifierType $licenseTechnology): BulkEntitlementDataType
     {
         $new = clone $this;
         $new->licenseTechnology = $licenseTechnology;

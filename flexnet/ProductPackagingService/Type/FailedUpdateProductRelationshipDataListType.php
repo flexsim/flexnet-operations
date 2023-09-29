@@ -14,7 +14,7 @@ class FailedUpdateProductRelationshipDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\FailedUpdateProductRelationshipDataType>|null  $failedRelationship
      */
-    public function __construct(FailedUpdateProductRelationshipDataType|array|null $failedRelationship = null)
+    public function __construct(FailedUpdateProductRelationshipDataType|array $failedRelationship = null)
     {
         $this->failedRelationship = $failedRelationship;
     }
@@ -22,7 +22,7 @@ class FailedUpdateProductRelationshipDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\FailedUpdateProductRelationshipDataType>|null  $failedRelationship
      */
-    public static function create(FailedUpdateProductRelationshipDataType|array|null $failedRelationship = null)
+    public static function create(FailedUpdateProductRelationshipDataType|array $failedRelationship = null)
     {
         return new static(...\func_get_args());
     }

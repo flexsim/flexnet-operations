@@ -19,7 +19,6 @@ class HandleProductCategoriesToUserRequestType implements RequestInterface
     /**
      * Constructor
      *
-     * @param  \Flexnet\ProductPackagingService\Type\UserIdentifierType  $user
      * @param  \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>  $productCategory
      */
     public function __construct(UserIdentifierType $user, ProductCategoryDataType|array $productCategory)
@@ -29,7 +28,6 @@ class HandleProductCategoriesToUserRequestType implements RequestInterface
     }
 
     /**
-     * @param  \Flexnet\ProductPackagingService\Type\UserIdentifierType  $user
      * @param  \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>  $productCategory
      */
     public static function create(UserIdentifierType $user, ProductCategoryDataType|array $productCategory)
@@ -37,17 +35,11 @@ class HandleProductCategoriesToUserRequestType implements RequestInterface
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\UserIdentifierType
-     */
     public function getUser(): UserIdentifierType
     {
         return $this->user;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\UserIdentifierType  $user
-     */
     public function withUser(UserIdentifierType $user): HandleProductCategoriesToUserRequestType
     {
         $new = clone $this;

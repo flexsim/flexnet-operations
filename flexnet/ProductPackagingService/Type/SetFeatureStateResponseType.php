@@ -18,36 +18,23 @@ class SetFeatureStateResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedFeatureStateDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedFeatureStateDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedFeatureStateDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedFeatureStateDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedFeatureStateDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedFeatureStateDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): SetFeatureStateResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class SetFeatureStateResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedFeatureStateDataListType|null
-     */
-    public function getFailedData(): FailedFeatureStateDataListType|null
+    public function getFailedData(): ?FailedFeatureStateDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedFeatureStateDataListType|null  $failedData
-     */
-    public function withFailedData(FailedFeatureStateDataListType|null $failedData): SetFeatureStateResponseType
+    public function withFailedData(?FailedFeatureStateDataListType $failedData): SetFeatureStateResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

@@ -23,39 +23,24 @@ class TransferLineItemsResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemsListType|null  $responseData
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, TransferredLineItemsListType|null $responseData = null, FailedTransferLineItemListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, TransferredLineItemsListType $responseData = null, FailedTransferLineItemListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemsListType|null  $responseData
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, TransferredLineItemsListType|null $responseData = null, FailedTransferLineItemListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, TransferredLineItemsListType $responseData = null, FailedTransferLineItemListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): TransferLineItemsResponseType
     {
         $new = clone $this;
@@ -64,18 +49,12 @@ class TransferLineItemsResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\TransferredLineItemsListType|null
-     */
-    public function getResponseData(): TransferredLineItemsListType|null
+    public function getResponseData(): ?TransferredLineItemsListType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemsListType|null  $responseData
-     */
-    public function withResponseData(TransferredLineItemsListType|null $responseData): TransferLineItemsResponseType
+    public function withResponseData(?TransferredLineItemsListType $responseData): TransferLineItemsResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -83,18 +62,12 @@ class TransferLineItemsResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemListType|null
-     */
-    public function getFailedData(): FailedTransferLineItemListType|null
+    public function getFailedData(): ?FailedTransferLineItemListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemListType|null  $failedData
-     */
-    public function withFailedData(FailedTransferLineItemListType|null $failedData): TransferLineItemsResponseType
+    public function withFailedData(?FailedTransferLineItemListType $failedData): TransferLineItemsResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

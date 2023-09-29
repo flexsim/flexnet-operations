@@ -19,35 +19,27 @@ class SearchEntitlementResponseType extends Result
     /**
      * Constructor
      *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementDataType>|null  $entitlement
      */
-    public function __construct(StatusInfoType $statusInfo, EntitlementDataType|array|null $entitlement = null)
+    public function __construct(StatusInfoType $statusInfo, EntitlementDataType|array $entitlement = null)
     {
         $this->statusInfo = $statusInfo;
         $this->entitlement = $entitlement;
     }
 
     /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementDataType>|null  $entitlement
      */
-    public static function create(StatusInfoType $statusInfo, EntitlementDataType|array|null $entitlement = null)
+    public static function create(StatusInfoType $statusInfo, EntitlementDataType|array $entitlement = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): SearchEntitlementResponseType
     {
         $new = clone $this;

@@ -26,11 +26,8 @@ class ReturnShortCodeDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
-     * @param  bool|null  $overridePolicy
      */
-    public function __construct(string $shortCode, string $webRegKey, PublisherAttributesListDataType|null $publisherAttributes = null, bool|null $overridePolicy = null)
+    public function __construct(string $shortCode, string $webRegKey, PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null)
     {
         $this->shortCode = $shortCode;
         $this->webRegKey = $webRegKey;
@@ -38,11 +35,7 @@ class ReturnShortCodeDataType
         $this->overridePolicy = $overridePolicy;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
-     * @param  bool|null  $overridePolicy
-     */
-    public static function create(string $shortCode, string $webRegKey, PublisherAttributesListDataType|null $publisherAttributes = null, bool|null $overridePolicy = null)
+    public static function create(string $shortCode, string $webRegKey, PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null)
     {
         return new static(...\func_get_args());
     }
@@ -73,18 +66,12 @@ class ReturnShortCodeDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null
-     */
-    public function getPublisherAttributes(): PublisherAttributesListDataType|null
+    public function getPublisherAttributes(): ?PublisherAttributesListDataType
     {
         return $this->publisherAttributes;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\PublisherAttributesListDataType|null  $publisherAttributes
-     */
-    public function withPublisherAttributes(PublisherAttributesListDataType|null $publisherAttributes): ReturnShortCodeDataType
+    public function withPublisherAttributes(?PublisherAttributesListDataType $publisherAttributes): ReturnShortCodeDataType
     {
         $new = clone $this;
         $new->publisherAttributes = $publisherAttributes;
@@ -92,12 +79,12 @@ class ReturnShortCodeDataType
         return $new;
     }
 
-    public function getOverridePolicy(): bool|null
+    public function getOverridePolicy(): ?bool
     {
         return $this->overridePolicy;
     }
 
-    public function withOverridePolicy(bool|null $overridePolicy): ReturnShortCodeDataType
+    public function withOverridePolicy(?bool $overridePolicy): ReturnShortCodeDataType
     {
         $new = clone $this;
         $new->overridePolicy = $overridePolicy;

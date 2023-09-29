@@ -14,7 +14,7 @@ class FailedFulfillmentDataListType
      *
      * @param  \Flexnet\LicenseService\Type\FailedFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedFulfillmentDataType>|null  $failedFulfillment
      */
-    public function __construct(FailedFulfillmentDataType|array|null $failedFulfillment = null)
+    public function __construct(FailedFulfillmentDataType|array $failedFulfillment = null)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
@@ -22,7 +22,7 @@ class FailedFulfillmentDataListType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedFulfillmentDataType>|null  $failedFulfillment
      */
-    public static function create(FailedFulfillmentDataType|array|null $failedFulfillment = null)
+    public static function create(FailedFulfillmentDataType|array $failedFulfillment = null)
     {
         return new static(...\func_get_args());
     }

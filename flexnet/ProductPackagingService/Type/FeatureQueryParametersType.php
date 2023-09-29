@@ -41,16 +41,8 @@ class FeatureQueryParametersType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $featureName
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $version
-     * @param  \Flexnet\ProductPackagingService\Type\VersionFormatQueryType|null  $versionFormat
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\StateQueryType|null  $state
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $creationDate
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $lastModifiedDate
      */
-    public function __construct(SimpleQueryType|null $featureName = null, SimpleQueryType|null $version = null, VersionFormatQueryType|null $versionFormat = null, SimpleQueryType|null $description = null, StateQueryType|null $state = null, DateQueryType|null $creationDate = null, DateQueryType|null $lastModifiedDate = null)
+    public function __construct(SimpleQueryType $featureName = null, SimpleQueryType $version = null, VersionFormatQueryType $versionFormat = null, SimpleQueryType $description = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null)
     {
         $this->featureName = $featureName;
         $this->version = $version;
@@ -61,32 +53,17 @@ class FeatureQueryParametersType
         $this->lastModifiedDate = $lastModifiedDate;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $featureName
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $version
-     * @param  \Flexnet\ProductPackagingService\Type\VersionFormatQueryType|null  $versionFormat
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\StateQueryType|null  $state
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $creationDate
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $lastModifiedDate
-     */
-    public static function create(SimpleQueryType|null $featureName = null, SimpleQueryType|null $version = null, VersionFormatQueryType|null $versionFormat = null, SimpleQueryType|null $description = null, StateQueryType|null $state = null, DateQueryType|null $creationDate = null, DateQueryType|null $lastModifiedDate = null)
+    public static function create(SimpleQueryType $featureName = null, SimpleQueryType $version = null, VersionFormatQueryType $versionFormat = null, SimpleQueryType $description = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getFeatureName(): SimpleQueryType|null
+    public function getFeatureName(): ?SimpleQueryType
     {
         return $this->featureName;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $featureName
-     */
-    public function withFeatureName(SimpleQueryType|null $featureName): FeatureQueryParametersType
+    public function withFeatureName(?SimpleQueryType $featureName): FeatureQueryParametersType
     {
         $new = clone $this;
         $new->featureName = $featureName;
@@ -94,18 +71,12 @@ class FeatureQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getVersion(): SimpleQueryType|null
+    public function getVersion(): ?SimpleQueryType
     {
         return $this->version;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $version
-     */
-    public function withVersion(SimpleQueryType|null $version): FeatureQueryParametersType
+    public function withVersion(?SimpleQueryType $version): FeatureQueryParametersType
     {
         $new = clone $this;
         $new->version = $version;
@@ -113,18 +84,12 @@ class FeatureQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\VersionFormatQueryType|null
-     */
-    public function getVersionFormat(): VersionFormatQueryType|null
+    public function getVersionFormat(): ?VersionFormatQueryType
     {
         return $this->versionFormat;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\VersionFormatQueryType|null  $versionFormat
-     */
-    public function withVersionFormat(VersionFormatQueryType|null $versionFormat): FeatureQueryParametersType
+    public function withVersionFormat(?VersionFormatQueryType $versionFormat): FeatureQueryParametersType
     {
         $new = clone $this;
         $new->versionFormat = $versionFormat;
@@ -132,18 +97,12 @@ class FeatureQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getDescription(): SimpleQueryType|null
+    public function getDescription(): ?SimpleQueryType
     {
         return $this->description;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $description
-     */
-    public function withDescription(SimpleQueryType|null $description): FeatureQueryParametersType
+    public function withDescription(?SimpleQueryType $description): FeatureQueryParametersType
     {
         $new = clone $this;
         $new->description = $description;
@@ -151,18 +110,12 @@ class FeatureQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StateQueryType|null
-     */
-    public function getState(): StateQueryType|null
+    public function getState(): ?StateQueryType
     {
         return $this->state;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StateQueryType|null  $state
-     */
-    public function withState(StateQueryType|null $state): FeatureQueryParametersType
+    public function withState(?StateQueryType $state): FeatureQueryParametersType
     {
         $new = clone $this;
         $new->state = $state;
@@ -170,18 +123,12 @@ class FeatureQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\DateQueryType|null
-     */
-    public function getCreationDate(): DateQueryType|null
+    public function getCreationDate(): ?DateQueryType
     {
         return $this->creationDate;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $creationDate
-     */
-    public function withCreationDate(DateQueryType|null $creationDate): FeatureQueryParametersType
+    public function withCreationDate(?DateQueryType $creationDate): FeatureQueryParametersType
     {
         $new = clone $this;
         $new->creationDate = $creationDate;
@@ -189,18 +136,12 @@ class FeatureQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\DateQueryType|null
-     */
-    public function getLastModifiedDate(): DateQueryType|null
+    public function getLastModifiedDate(): ?DateQueryType
     {
         return $this->lastModifiedDate;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $lastModifiedDate
-     */
-    public function withLastModifiedDate(DateQueryType|null $lastModifiedDate): FeatureQueryParametersType
+    public function withLastModifiedDate(?DateQueryType $lastModifiedDate): FeatureQueryParametersType
     {
         $new = clone $this;
         $new->lastModifiedDate = $lastModifiedDate;

@@ -13,34 +13,23 @@ class GetPartNumberCountRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType|null  $queryParams
      */
-    public function __construct(PartNumberQueryParametersType|null $queryParams = null)
+    public function __construct(PartNumberQueryParametersType $queryParams = null)
     {
         $this->queryParams = $queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType|null  $queryParams
-     */
-    public static function create(PartNumberQueryParametersType|null $queryParams = null)
+    public static function create(PartNumberQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType|null
-     */
-    public function getQueryParams(): PartNumberQueryParametersType|null
+    public function getQueryParams(): ?PartNumberQueryParametersType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType|null  $queryParams
-     */
-    public function withQueryParams(PartNumberQueryParametersType|null $queryParams): GetPartNumberCountRequestType
+    public function withQueryParams(?PartNumberQueryParametersType $queryParams): GetPartNumberCountRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

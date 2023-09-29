@@ -14,7 +14,7 @@ class FailedRemoveEntitlementLineItemDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataType>|null  $failedData
      */
-    public function __construct(FailedRemoveEntitlementLineItemDataType|array|null $failedData = null)
+    public function __construct(FailedRemoveEntitlementLineItemDataType|array $failedData = null)
     {
         $this->failedData = $failedData;
     }
@@ -22,7 +22,7 @@ class FailedRemoveEntitlementLineItemDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataType>|null  $failedData
      */
-    public static function create(FailedRemoveEntitlementLineItemDataType|array|null $failedData = null)
+    public static function create(FailedRemoveEntitlementLineItemDataType|array $failedData = null)
     {
         return new static(...\func_get_args());
     }

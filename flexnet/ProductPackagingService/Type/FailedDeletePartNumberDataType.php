@@ -16,8 +16,6 @@ class FailedDeletePartNumberDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType  $partNumber
      */
     public function __construct(PartNumberIdentifierType $partNumber, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedDeletePartNumberDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType  $partNumber
-     */
     public static function create(PartNumberIdentifierType $partNumber, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType
-     */
     public function getPartNumber(): PartNumberIdentifierType
     {
         return $this->partNumber;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType  $partNumber
-     */
     public function withPartNumber(PartNumberIdentifierType $partNumber): FailedDeletePartNumberDataType
     {
         $new = clone $this;

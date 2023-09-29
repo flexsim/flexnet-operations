@@ -18,36 +18,23 @@ class GetPartNumberCountResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberCountDataType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, PartNumberCountDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, PartNumberCountDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberCountDataType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, PartNumberCountDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, PartNumberCountDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetPartNumberCountResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetPartNumberCountResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\PartNumberCountDataType|null
-     */
-    public function getResponseData(): PartNumberCountDataType|null
+    public function getResponseData(): ?PartNumberCountDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\PartNumberCountDataType|null  $responseData
-     */
-    public function withResponseData(PartNumberCountDataType|null $responseData): GetPartNumberCountResponseType
+    public function withResponseData(?PartNumberCountDataType $responseData): GetPartNumberCountResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

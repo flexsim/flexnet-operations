@@ -16,8 +16,6 @@ class FailedFeatureBundleStateDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleStateDataType  $featureBundle
      */
     public function __construct(FeatureBundleStateDataType $featureBundle, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedFeatureBundleStateDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleStateDataType  $featureBundle
-     */
     public static function create(FeatureBundleStateDataType $featureBundle, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FeatureBundleStateDataType
-     */
     public function getFeatureBundle(): FeatureBundleStateDataType
     {
         return $this->featureBundle;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleStateDataType  $featureBundle
-     */
     public function withFeatureBundle(FeatureBundleStateDataType $featureBundle): FailedFeatureBundleStateDataType
     {
         $new = clone $this;

@@ -16,19 +16,14 @@ class TransferredLineItemMapType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $transferredFromId
      */
-    public function __construct(string $activationId, string|null $transferredFromId = null)
+    public function __construct(string $activationId, string $transferredFromId = null)
     {
         $this->activationId = $activationId;
         $this->transferredFromId = $transferredFromId;
     }
 
-    /**
-     * @param  string|null  $transferredFromId
-     */
-    public static function create(string $activationId, string|null $transferredFromId = null)
+    public static function create(string $activationId, string $transferredFromId = null)
     {
         return new static(...\func_get_args());
     }
@@ -46,12 +41,12 @@ class TransferredLineItemMapType
         return $new;
     }
 
-    public function getTransferredFromId(): string|null
+    public function getTransferredFromId(): ?string
     {
         return $this->transferredFromId;
     }
 
-    public function withTransferredFromId(string|null $transferredFromId): TransferredLineItemMapType
+    public function withTransferredFromId(?string $transferredFromId): TransferredLineItemMapType
     {
         $new = clone $this;
         $new->transferredFromId = $transferredFromId;

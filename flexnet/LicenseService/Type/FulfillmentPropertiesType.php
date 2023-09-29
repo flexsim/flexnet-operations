@@ -231,54 +231,8 @@ class FulfillmentPropertiesType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null  $fulfillmentId
-     * @param  string|null  $fulfillmentType
-     * @param  string|null  $state
-     * @param  \Flexnet\LicenseService\Type\EntitlementIdentifierType|null  $entitlementId
-     * @param  \Flexnet\LicenseService\Type\EntitlementLineItemIdentifierType|null  $lineitemId
-     * @param  \Flexnet\LicenseService\Type\ProductIdentifierType|null  $product
-     * @param  string|null  $productDescription
-     * @param  \Flexnet\LicenseService\Type\PartNumberIdentifierType|null  $partNumber
-     * @param  string|null  $partNumberDescription
-     * @param  \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
-     * @param  \Flexnet\LicenseService\Type\LicenseModelIdentifierType|null  $licenseModel
-     * @param  \Flexnet\LicenseService\Type\AccountIdentifierType|null  $soldTo
-     * @param  string|null  $soldToDisplayName
-     * @param  string|null  $shipToEmail
-     * @param  string|null  $shipToAddress
-     * @param  string|null  $licenseHost
-     * @param  int|null  $fulfilledCount
-     * @param  int|null  $overDraftCount
-     * @param  \DateTimeInterface|null  $fulfillDate
-     * @param  \DateTimeInterface|null  $fulfillDateTime
-     * @param  bool|null  $isPermanent
-     * @param  \DateTimeInterface|null  $startDate
-     * @param  \DateTimeInterface|null  $expirationDate
-     * @param  \DateTimeInterface|null  $versionDate
-     * @param  string|null  $licenseFileType
-     * @param  string|null  $licenseText
-     * @param  string|null  $binaryLicense
-     * @param  string|null  $supportAction
-     * @param  \DateTimeInterface|null  $lastModifiedDateTime
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null  $parentFulfillmentId
-     * @param  string|null  $fulfillmentSource
-     * @param  string|null  $orderId
-     * @param  string|null  $orderLineNumber
-     * @param  string|null  $lineitemDescription
-     * @param  int|null  $totalCopies
-     * @param  int|null  $numberOfRemainingCopies
-     * @param  bool|null  $isTrusted
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $customAttributes
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $customHostAttributes
-     * @param  string|null  $migrationId
-     * @param  string|null  $vendorDaemonName
-     * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
-     * @param  \Flexnet\LicenseService\Type\EntitledProductDataListType|null  $entitledProducts
-     * @param  string|null  $FNPTimeZoneValue
-     * @param  string|null  $activationType
      */
-    public function __construct(FulfillmentIdentifierType|null $fulfillmentId = null, string|null $fulfillmentType = null, string|null $state = null, EntitlementIdentifierType|null $entitlementId = null, EntitlementLineItemIdentifierType|null $lineitemId = null, ProductIdentifierType|null $product = null, string|null $productDescription = null, PartNumberIdentifierType|null $partNumber = null, string|null $partNumberDescription = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, LicenseModelIdentifierType|null $licenseModel = null, AccountIdentifierType|null $soldTo = null, string|null $soldToDisplayName = null, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $licenseHost = null, int|null $fulfilledCount = null, int|null $overDraftCount = null, \DateTimeInterface|null $fulfillDate = null, \DateTimeInterface|null $fulfillDateTime = null, bool|null $isPermanent = null, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, string|null $licenseFileType = null, string|null $licenseText = null, string|null $binaryLicense = null, string|null $supportAction = null, \DateTimeInterface|null $lastModifiedDateTime = null, FulfillmentIdentifierType|null $parentFulfillmentId = null, string|null $fulfillmentSource = null, string|null $orderId = null, string|null $orderLineNumber = null, string|null $lineitemDescription = null, int|null $totalCopies = null, int|null $numberOfRemainingCopies = null, bool|null $isTrusted = null, AttributeDescriptorDataType|null $customAttributes = null, AttributeDescriptorDataType|null $customHostAttributes = null, string|null $migrationId = null, string|null $vendorDaemonName = null, LicenseFileDataListType|null $licenseFiles = null, EntitledProductDataListType|null $entitledProducts = null, string|null $FNPTimeZoneValue = null, string|null $activationType = null)
+    public function __construct(FulfillmentIdentifierType $fulfillmentId = null, string $fulfillmentType = null, string $state = null, EntitlementIdentifierType $entitlementId = null, EntitlementLineItemIdentifierType $lineitemId = null, ProductIdentifierType $product = null, string $productDescription = null, PartNumberIdentifierType $partNumber = null, string $partNumberDescription = null, LicenseTechnologyIdentifierType $licenseTechnology = null, LicenseModelIdentifierType $licenseModel = null, AccountIdentifierType $soldTo = null, string $soldToDisplayName = null, string $shipToEmail = null, string $shipToAddress = null, string $licenseHost = null, int $fulfilledCount = null, int $overDraftCount = null, \DateTimeInterface $fulfillDate = null, \DateTimeInterface $fulfillDateTime = null, bool $isPermanent = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, string $licenseFileType = null, string $licenseText = null, string $binaryLicense = null, string $supportAction = null, \DateTimeInterface $lastModifiedDateTime = null, FulfillmentIdentifierType $parentFulfillmentId = null, string $fulfillmentSource = null, string $orderId = null, string $orderLineNumber = null, string $lineitemDescription = null, int $totalCopies = null, int $numberOfRemainingCopies = null, bool $isTrusted = null, AttributeDescriptorDataType $customAttributes = null, AttributeDescriptorDataType $customHostAttributes = null, string $migrationId = null, string $vendorDaemonName = null, LicenseFileDataListType $licenseFiles = null, EntitledProductDataListType $entitledProducts = null, string $FNPTimeZoneValue = null, string $activationType = null)
     {
         $this->fulfillmentId = $fulfillmentId;
         $this->fulfillmentType = $fulfillmentType;
@@ -327,70 +281,17 @@ class FulfillmentPropertiesType
         $this->activationType = $activationType;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null  $fulfillmentId
-     * @param  string|null  $fulfillmentType
-     * @param  string|null  $state
-     * @param  \Flexnet\LicenseService\Type\EntitlementIdentifierType|null  $entitlementId
-     * @param  \Flexnet\LicenseService\Type\EntitlementLineItemIdentifierType|null  $lineitemId
-     * @param  \Flexnet\LicenseService\Type\ProductIdentifierType|null  $product
-     * @param  string|null  $productDescription
-     * @param  \Flexnet\LicenseService\Type\PartNumberIdentifierType|null  $partNumber
-     * @param  string|null  $partNumberDescription
-     * @param  \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
-     * @param  \Flexnet\LicenseService\Type\LicenseModelIdentifierType|null  $licenseModel
-     * @param  \Flexnet\LicenseService\Type\AccountIdentifierType|null  $soldTo
-     * @param  string|null  $soldToDisplayName
-     * @param  string|null  $shipToEmail
-     * @param  string|null  $shipToAddress
-     * @param  string|null  $licenseHost
-     * @param  int|null  $fulfilledCount
-     * @param  int|null  $overDraftCount
-     * @param  \DateTimeInterface|null  $fulfillDate
-     * @param  \DateTimeInterface|null  $fulfillDateTime
-     * @param  bool|null  $isPermanent
-     * @param  \DateTimeInterface|null  $startDate
-     * @param  \DateTimeInterface|null  $expirationDate
-     * @param  \DateTimeInterface|null  $versionDate
-     * @param  string|null  $licenseFileType
-     * @param  string|null  $licenseText
-     * @param  string|null  $binaryLicense
-     * @param  string|null  $supportAction
-     * @param  \DateTimeInterface|null  $lastModifiedDateTime
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null  $parentFulfillmentId
-     * @param  string|null  $fulfillmentSource
-     * @param  string|null  $orderId
-     * @param  string|null  $orderLineNumber
-     * @param  string|null  $lineitemDescription
-     * @param  int|null  $totalCopies
-     * @param  int|null  $numberOfRemainingCopies
-     * @param  bool|null  $isTrusted
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $customAttributes
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $customHostAttributes
-     * @param  string|null  $migrationId
-     * @param  string|null  $vendorDaemonName
-     * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
-     * @param  \Flexnet\LicenseService\Type\EntitledProductDataListType|null  $entitledProducts
-     * @param  string|null  $FNPTimeZoneValue
-     * @param  string|null  $activationType
-     */
-    public static function create(FulfillmentIdentifierType|null $fulfillmentId = null, string|null $fulfillmentType = null, string|null $state = null, EntitlementIdentifierType|null $entitlementId = null, EntitlementLineItemIdentifierType|null $lineitemId = null, ProductIdentifierType|null $product = null, string|null $productDescription = null, PartNumberIdentifierType|null $partNumber = null, string|null $partNumberDescription = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, LicenseModelIdentifierType|null $licenseModel = null, AccountIdentifierType|null $soldTo = null, string|null $soldToDisplayName = null, string|null $shipToEmail = null, string|null $shipToAddress = null, string|null $licenseHost = null, int|null $fulfilledCount = null, int|null $overDraftCount = null, \DateTimeInterface|null $fulfillDate = null, \DateTimeInterface|null $fulfillDateTime = null, bool|null $isPermanent = null, \DateTimeInterface|null $startDate = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, string|null $licenseFileType = null, string|null $licenseText = null, string|null $binaryLicense = null, string|null $supportAction = null, \DateTimeInterface|null $lastModifiedDateTime = null, FulfillmentIdentifierType|null $parentFulfillmentId = null, string|null $fulfillmentSource = null, string|null $orderId = null, string|null $orderLineNumber = null, string|null $lineitemDescription = null, int|null $totalCopies = null, int|null $numberOfRemainingCopies = null, bool|null $isTrusted = null, AttributeDescriptorDataType|null $customAttributes = null, AttributeDescriptorDataType|null $customHostAttributes = null, string|null $migrationId = null, string|null $vendorDaemonName = null, LicenseFileDataListType|null $licenseFiles = null, EntitledProductDataListType|null $entitledProducts = null, string|null $FNPTimeZoneValue = null, string|null $activationType = null)
+    public static function create(FulfillmentIdentifierType $fulfillmentId = null, string $fulfillmentType = null, string $state = null, EntitlementIdentifierType $entitlementId = null, EntitlementLineItemIdentifierType $lineitemId = null, ProductIdentifierType $product = null, string $productDescription = null, PartNumberIdentifierType $partNumber = null, string $partNumberDescription = null, LicenseTechnologyIdentifierType $licenseTechnology = null, LicenseModelIdentifierType $licenseModel = null, AccountIdentifierType $soldTo = null, string $soldToDisplayName = null, string $shipToEmail = null, string $shipToAddress = null, string $licenseHost = null, int $fulfilledCount = null, int $overDraftCount = null, \DateTimeInterface $fulfillDate = null, \DateTimeInterface $fulfillDateTime = null, bool $isPermanent = null, \DateTimeInterface $startDate = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, string $licenseFileType = null, string $licenseText = null, string $binaryLicense = null, string $supportAction = null, \DateTimeInterface $lastModifiedDateTime = null, FulfillmentIdentifierType $parentFulfillmentId = null, string $fulfillmentSource = null, string $orderId = null, string $orderLineNumber = null, string $lineitemDescription = null, int $totalCopies = null, int $numberOfRemainingCopies = null, bool $isTrusted = null, AttributeDescriptorDataType $customAttributes = null, AttributeDescriptorDataType $customHostAttributes = null, string $migrationId = null, string $vendorDaemonName = null, LicenseFileDataListType $licenseFiles = null, EntitledProductDataListType $entitledProducts = null, string $FNPTimeZoneValue = null, string $activationType = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null
-     */
-    public function getFulfillmentId(): FulfillmentIdentifierType|null
+    public function getFulfillmentId(): ?FulfillmentIdentifierType
     {
         return $this->fulfillmentId;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null  $fulfillmentId
-     */
-    public function withFulfillmentId(FulfillmentIdentifierType|null $fulfillmentId): FulfillmentPropertiesType
+    public function withFulfillmentId(?FulfillmentIdentifierType $fulfillmentId): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->fulfillmentId = $fulfillmentId;
@@ -398,12 +299,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getFulfillmentType(): string|null
+    public function getFulfillmentType(): ?string
     {
         return $this->fulfillmentType;
     }
 
-    public function withFulfillmentType(string|null $fulfillmentType): FulfillmentPropertiesType
+    public function withFulfillmentType(?string $fulfillmentType): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->fulfillmentType = $fulfillmentType;
@@ -411,12 +312,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getState(): string|null
+    public function getState(): ?string
     {
         return $this->state;
     }
 
-    public function withState(string|null $state): FulfillmentPropertiesType
+    public function withState(?string $state): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->state = $state;
@@ -424,18 +325,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\EntitlementIdentifierType|null
-     */
-    public function getEntitlementId(): EntitlementIdentifierType|null
+    public function getEntitlementId(): ?EntitlementIdentifierType
     {
         return $this->entitlementId;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\EntitlementIdentifierType|null  $entitlementId
-     */
-    public function withEntitlementId(EntitlementIdentifierType|null $entitlementId): FulfillmentPropertiesType
+    public function withEntitlementId(?EntitlementIdentifierType $entitlementId): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->entitlementId = $entitlementId;
@@ -443,18 +338,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\EntitlementLineItemIdentifierType|null
-     */
-    public function getLineitemId(): EntitlementLineItemIdentifierType|null
+    public function getLineitemId(): ?EntitlementLineItemIdentifierType
     {
         return $this->lineitemId;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\EntitlementLineItemIdentifierType|null  $lineitemId
-     */
-    public function withLineitemId(EntitlementLineItemIdentifierType|null $lineitemId): FulfillmentPropertiesType
+    public function withLineitemId(?EntitlementLineItemIdentifierType $lineitemId): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->lineitemId = $lineitemId;
@@ -462,18 +351,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\ProductIdentifierType|null
-     */
-    public function getProduct(): ProductIdentifierType|null
+    public function getProduct(): ?ProductIdentifierType
     {
         return $this->product;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ProductIdentifierType|null  $product
-     */
-    public function withProduct(ProductIdentifierType|null $product): FulfillmentPropertiesType
+    public function withProduct(?ProductIdentifierType $product): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->product = $product;
@@ -481,12 +364,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getProductDescription(): string|null
+    public function getProductDescription(): ?string
     {
         return $this->productDescription;
     }
 
-    public function withProductDescription(string|null $productDescription): FulfillmentPropertiesType
+    public function withProductDescription(?string $productDescription): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->productDescription = $productDescription;
@@ -494,18 +377,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\PartNumberIdentifierType|null
-     */
-    public function getPartNumber(): PartNumberIdentifierType|null
+    public function getPartNumber(): ?PartNumberIdentifierType
     {
         return $this->partNumber;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\PartNumberIdentifierType|null  $partNumber
-     */
-    public function withPartNumber(PartNumberIdentifierType|null $partNumber): FulfillmentPropertiesType
+    public function withPartNumber(?PartNumberIdentifierType $partNumber): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -513,12 +390,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getPartNumberDescription(): string|null
+    public function getPartNumberDescription(): ?string
     {
         return $this->partNumberDescription;
     }
 
-    public function withPartNumberDescription(string|null $partNumberDescription): FulfillmentPropertiesType
+    public function withPartNumberDescription(?string $partNumberDescription): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->partNumberDescription = $partNumberDescription;
@@ -526,18 +403,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType|null
-     */
-    public function getLicenseTechnology(): LicenseTechnologyIdentifierType|null
+    public function getLicenseTechnology(): ?LicenseTechnologyIdentifierType
     {
         return $this->licenseTechnology;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
-     */
-    public function withLicenseTechnology(LicenseTechnologyIdentifierType|null $licenseTechnology): FulfillmentPropertiesType
+    public function withLicenseTechnology(?LicenseTechnologyIdentifierType $licenseTechnology): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->licenseTechnology = $licenseTechnology;
@@ -545,18 +416,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\LicenseModelIdentifierType|null
-     */
-    public function getLicenseModel(): LicenseModelIdentifierType|null
+    public function getLicenseModel(): ?LicenseModelIdentifierType
     {
         return $this->licenseModel;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\LicenseModelIdentifierType|null  $licenseModel
-     */
-    public function withLicenseModel(LicenseModelIdentifierType|null $licenseModel): FulfillmentPropertiesType
+    public function withLicenseModel(?LicenseModelIdentifierType $licenseModel): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->licenseModel = $licenseModel;
@@ -564,18 +429,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\AccountIdentifierType|null
-     */
-    public function getSoldTo(): AccountIdentifierType|null
+    public function getSoldTo(): ?AccountIdentifierType
     {
         return $this->soldTo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\AccountIdentifierType|null  $soldTo
-     */
-    public function withSoldTo(AccountIdentifierType|null $soldTo): FulfillmentPropertiesType
+    public function withSoldTo(?AccountIdentifierType $soldTo): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -583,12 +442,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getSoldToDisplayName(): string|null
+    public function getSoldToDisplayName(): ?string
     {
         return $this->soldToDisplayName;
     }
 
-    public function withSoldToDisplayName(string|null $soldToDisplayName): FulfillmentPropertiesType
+    public function withSoldToDisplayName(?string $soldToDisplayName): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->soldToDisplayName = $soldToDisplayName;
@@ -596,12 +455,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getShipToEmail(): string|null
+    public function getShipToEmail(): ?string
     {
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(string|null $shipToEmail): FulfillmentPropertiesType
+    public function withShipToEmail(?string $shipToEmail): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -609,12 +468,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getShipToAddress(): string|null
+    public function getShipToAddress(): ?string
     {
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(string|null $shipToAddress): FulfillmentPropertiesType
+    public function withShipToAddress(?string $shipToAddress): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -622,12 +481,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getLicenseHost(): string|null
+    public function getLicenseHost(): ?string
     {
         return $this->licenseHost;
     }
 
-    public function withLicenseHost(string|null $licenseHost): FulfillmentPropertiesType
+    public function withLicenseHost(?string $licenseHost): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->licenseHost = $licenseHost;
@@ -635,12 +494,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getFulfilledCount(): int|null
+    public function getFulfilledCount(): ?int
     {
         return $this->fulfilledCount;
     }
 
-    public function withFulfilledCount(int|null $fulfilledCount): FulfillmentPropertiesType
+    public function withFulfilledCount(?int $fulfilledCount): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->fulfilledCount = $fulfilledCount;
@@ -648,12 +507,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getOverDraftCount(): int|null
+    public function getOverDraftCount(): ?int
     {
         return $this->overDraftCount;
     }
 
-    public function withOverDraftCount(int|null $overDraftCount): FulfillmentPropertiesType
+    public function withOverDraftCount(?int $overDraftCount): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->overDraftCount = $overDraftCount;
@@ -661,12 +520,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getFulfillDate(): \DateTimeInterface|null
+    public function getFulfillDate(): ?\DateTimeInterface
     {
         return $this->fulfillDate;
     }
 
-    public function withFulfillDate(\DateTimeInterface|null $fulfillDate): FulfillmentPropertiesType
+    public function withFulfillDate(?\DateTimeInterface $fulfillDate): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->fulfillDate = $fulfillDate;
@@ -674,12 +533,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getFulfillDateTime(): \DateTimeInterface|null
+    public function getFulfillDateTime(): ?\DateTimeInterface
     {
         return $this->fulfillDateTime;
     }
 
-    public function withFulfillDateTime(\DateTimeInterface|null $fulfillDateTime): FulfillmentPropertiesType
+    public function withFulfillDateTime(?\DateTimeInterface $fulfillDateTime): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->fulfillDateTime = $fulfillDateTime;
@@ -687,12 +546,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getIsPermanent(): bool|null
+    public function getIsPermanent(): ?bool
     {
         return $this->isPermanent;
     }
 
-    public function withIsPermanent(bool|null $isPermanent): FulfillmentPropertiesType
+    public function withIsPermanent(?bool $isPermanent): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->isPermanent = $isPermanent;
@@ -700,12 +559,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getStartDate(): \DateTimeInterface|null
+    public function getStartDate(): ?\DateTimeInterface
     {
         return $this->startDate;
     }
 
-    public function withStartDate(\DateTimeInterface|null $startDate): FulfillmentPropertiesType
+    public function withStartDate(?\DateTimeInterface $startDate): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -713,12 +572,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getExpirationDate(): \DateTimeInterface|null
+    public function getExpirationDate(): ?\DateTimeInterface
     {
         return $this->expirationDate;
     }
 
-    public function withExpirationDate(\DateTimeInterface|null $expirationDate): FulfillmentPropertiesType
+    public function withExpirationDate(?\DateTimeInterface $expirationDate): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->expirationDate = $expirationDate;
@@ -726,12 +585,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getVersionDate(): \DateTimeInterface|null
+    public function getVersionDate(): ?\DateTimeInterface
     {
         return $this->versionDate;
     }
 
-    public function withVersionDate(\DateTimeInterface|null $versionDate): FulfillmentPropertiesType
+    public function withVersionDate(?\DateTimeInterface $versionDate): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->versionDate = $versionDate;
@@ -739,12 +598,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getLicenseFileType(): string|null
+    public function getLicenseFileType(): ?string
     {
         return $this->licenseFileType;
     }
 
-    public function withLicenseFileType(string|null $licenseFileType): FulfillmentPropertiesType
+    public function withLicenseFileType(?string $licenseFileType): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->licenseFileType = $licenseFileType;
@@ -752,12 +611,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getLicenseText(): string|null
+    public function getLicenseText(): ?string
     {
         return $this->licenseText;
     }
 
-    public function withLicenseText(string|null $licenseText): FulfillmentPropertiesType
+    public function withLicenseText(?string $licenseText): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->licenseText = $licenseText;
@@ -765,12 +624,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getBinaryLicense(): string|null
+    public function getBinaryLicense(): ?string
     {
         return $this->binaryLicense;
     }
 
-    public function withBinaryLicense(string|null $binaryLicense): FulfillmentPropertiesType
+    public function withBinaryLicense(?string $binaryLicense): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->binaryLicense = $binaryLicense;
@@ -778,12 +637,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getSupportAction(): string|null
+    public function getSupportAction(): ?string
     {
         return $this->supportAction;
     }
 
-    public function withSupportAction(string|null $supportAction): FulfillmentPropertiesType
+    public function withSupportAction(?string $supportAction): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->supportAction = $supportAction;
@@ -791,12 +650,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getLastModifiedDateTime(): \DateTimeInterface|null
+    public function getLastModifiedDateTime(): ?\DateTimeInterface
     {
         return $this->lastModifiedDateTime;
     }
 
-    public function withLastModifiedDateTime(\DateTimeInterface|null $lastModifiedDateTime): FulfillmentPropertiesType
+    public function withLastModifiedDateTime(?\DateTimeInterface $lastModifiedDateTime): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->lastModifiedDateTime = $lastModifiedDateTime;
@@ -804,18 +663,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null
-     */
-    public function getParentFulfillmentId(): FulfillmentIdentifierType|null
+    public function getParentFulfillmentId(): ?FulfillmentIdentifierType
     {
         return $this->parentFulfillmentId;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|null  $parentFulfillmentId
-     */
-    public function withParentFulfillmentId(FulfillmentIdentifierType|null $parentFulfillmentId): FulfillmentPropertiesType
+    public function withParentFulfillmentId(?FulfillmentIdentifierType $parentFulfillmentId): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->parentFulfillmentId = $parentFulfillmentId;
@@ -823,12 +676,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getFulfillmentSource(): string|null
+    public function getFulfillmentSource(): ?string
     {
         return $this->fulfillmentSource;
     }
 
-    public function withFulfillmentSource(string|null $fulfillmentSource): FulfillmentPropertiesType
+    public function withFulfillmentSource(?string $fulfillmentSource): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->fulfillmentSource = $fulfillmentSource;
@@ -836,12 +689,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getOrderId(): string|null
+    public function getOrderId(): ?string
     {
         return $this->orderId;
     }
 
-    public function withOrderId(string|null $orderId): FulfillmentPropertiesType
+    public function withOrderId(?string $orderId): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->orderId = $orderId;
@@ -849,12 +702,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getOrderLineNumber(): string|null
+    public function getOrderLineNumber(): ?string
     {
         return $this->orderLineNumber;
     }
 
-    public function withOrderLineNumber(string|null $orderLineNumber): FulfillmentPropertiesType
+    public function withOrderLineNumber(?string $orderLineNumber): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->orderLineNumber = $orderLineNumber;
@@ -862,12 +715,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getLineitemDescription(): string|null
+    public function getLineitemDescription(): ?string
     {
         return $this->lineitemDescription;
     }
 
-    public function withLineitemDescription(string|null $lineitemDescription): FulfillmentPropertiesType
+    public function withLineitemDescription(?string $lineitemDescription): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->lineitemDescription = $lineitemDescription;
@@ -875,12 +728,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getTotalCopies(): int|null
+    public function getTotalCopies(): ?int
     {
         return $this->totalCopies;
     }
 
-    public function withTotalCopies(int|null $totalCopies): FulfillmentPropertiesType
+    public function withTotalCopies(?int $totalCopies): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->totalCopies = $totalCopies;
@@ -888,12 +741,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getNumberOfRemainingCopies(): int|null
+    public function getNumberOfRemainingCopies(): ?int
     {
         return $this->numberOfRemainingCopies;
     }
 
-    public function withNumberOfRemainingCopies(int|null $numberOfRemainingCopies): FulfillmentPropertiesType
+    public function withNumberOfRemainingCopies(?int $numberOfRemainingCopies): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->numberOfRemainingCopies = $numberOfRemainingCopies;
@@ -901,12 +754,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getIsTrusted(): bool|null
+    public function getIsTrusted(): ?bool
     {
         return $this->isTrusted;
     }
 
-    public function withIsTrusted(bool|null $isTrusted): FulfillmentPropertiesType
+    public function withIsTrusted(?bool $isTrusted): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->isTrusted = $isTrusted;
@@ -914,18 +767,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null
-     */
-    public function getCustomAttributes(): AttributeDescriptorDataType|null
+    public function getCustomAttributes(): ?AttributeDescriptorDataType
     {
         return $this->customAttributes;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $customAttributes
-     */
-    public function withCustomAttributes(AttributeDescriptorDataType|null $customAttributes): FulfillmentPropertiesType
+    public function withCustomAttributes(?AttributeDescriptorDataType $customAttributes): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->customAttributes = $customAttributes;
@@ -933,18 +780,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null
-     */
-    public function getCustomHostAttributes(): AttributeDescriptorDataType|null
+    public function getCustomHostAttributes(): ?AttributeDescriptorDataType
     {
         return $this->customHostAttributes;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\AttributeDescriptorDataType|null  $customHostAttributes
-     */
-    public function withCustomHostAttributes(AttributeDescriptorDataType|null $customHostAttributes): FulfillmentPropertiesType
+    public function withCustomHostAttributes(?AttributeDescriptorDataType $customHostAttributes): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->customHostAttributes = $customHostAttributes;
@@ -952,12 +793,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getMigrationId(): string|null
+    public function getMigrationId(): ?string
     {
         return $this->migrationId;
     }
 
-    public function withMigrationId(string|null $migrationId): FulfillmentPropertiesType
+    public function withMigrationId(?string $migrationId): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->migrationId = $migrationId;
@@ -965,12 +806,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getVendorDaemonName(): string|null
+    public function getVendorDaemonName(): ?string
     {
         return $this->vendorDaemonName;
     }
 
-    public function withVendorDaemonName(string|null $vendorDaemonName): FulfillmentPropertiesType
+    public function withVendorDaemonName(?string $vendorDaemonName): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->vendorDaemonName = $vendorDaemonName;
@@ -978,18 +819,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\LicenseFileDataListType|null
-     */
-    public function getLicenseFiles(): LicenseFileDataListType|null
+    public function getLicenseFiles(): ?LicenseFileDataListType
     {
         return $this->licenseFiles;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\LicenseFileDataListType|null  $licenseFiles
-     */
-    public function withLicenseFiles(LicenseFileDataListType|null $licenseFiles): FulfillmentPropertiesType
+    public function withLicenseFiles(?LicenseFileDataListType $licenseFiles): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->licenseFiles = $licenseFiles;
@@ -997,18 +832,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\EntitledProductDataListType|null
-     */
-    public function getEntitledProducts(): EntitledProductDataListType|null
+    public function getEntitledProducts(): ?EntitledProductDataListType
     {
         return $this->entitledProducts;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\EntitledProductDataListType|null  $entitledProducts
-     */
-    public function withEntitledProducts(EntitledProductDataListType|null $entitledProducts): FulfillmentPropertiesType
+    public function withEntitledProducts(?EntitledProductDataListType $entitledProducts): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->entitledProducts = $entitledProducts;
@@ -1016,12 +845,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getFNPTimeZoneValue(): string|null
+    public function getFNPTimeZoneValue(): ?string
     {
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(string|null $FNPTimeZoneValue): FulfillmentPropertiesType
+    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;
@@ -1029,12 +858,12 @@ class FulfillmentPropertiesType
         return $new;
     }
 
-    public function getActivationType(): string|null
+    public function getActivationType(): ?string
     {
         return $this->activationType;
     }
 
-    public function withActivationType(string|null $activationType): FulfillmentPropertiesType
+    public function withActivationType(?string $activationType): FulfillmentPropertiesType
     {
         $new = clone $this;
         $new->activationType = $activationType;

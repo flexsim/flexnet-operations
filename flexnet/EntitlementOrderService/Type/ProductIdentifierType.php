@@ -16,31 +16,24 @@ class ProductIdentifierType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductPKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, ProductPKType|null $primaryKeys = null)
+    public function __construct(string $uniqueId = null, ProductPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductPKType|null  $primaryKeys
-     */
-    public static function create(string|null $uniqueId = null, ProductPKType|null $primaryKeys = null)
+    public static function create(string $uniqueId = null, ProductPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUniqueId(): string|null
+    public function getUniqueId(): ?string
     {
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string|null $uniqueId): ProductIdentifierType
+    public function withUniqueId(?string $uniqueId): ProductIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -48,18 +41,12 @@ class ProductIdentifierType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\ProductPKType|null
-     */
-    public function getPrimaryKeys(): ProductPKType|null
+    public function getPrimaryKeys(): ?ProductPKType
     {
         return $this->primaryKeys;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductPKType|null  $primaryKeys
-     */
-    public function withPrimaryKeys(ProductPKType|null $primaryKeys): ProductIdentifierType
+    public function withPrimaryKeys(?ProductPKType $primaryKeys): ProductIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

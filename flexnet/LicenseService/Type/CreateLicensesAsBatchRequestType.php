@@ -28,13 +28,8 @@ class CreateLicensesAsBatchRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\ActivationIdsListType  $activationIds
-     * @param  \Flexnet\LicenseService\Type\HostIdDataSetType  $hostIdDataSet
-     * @param  \Flexnet\LicenseService\Type\CommonBatchDataSetType  $commonBatchDataSet
-     * @param  \Flexnet\LicenseService\Type\CountDataSetType|null  $countDataSet
      */
-    public function __construct(ActivationIdsListType $activationIds, HostIdDataSetType $hostIdDataSet, CommonBatchDataSetType $commonBatchDataSet, CountDataSetType|null $countDataSet = null)
+    public function __construct(ActivationIdsListType $activationIds, HostIdDataSetType $hostIdDataSet, CommonBatchDataSetType $commonBatchDataSet, CountDataSetType $countDataSet = null)
     {
         $this->activationIds = $activationIds;
         $this->hostIdDataSet = $hostIdDataSet;
@@ -42,28 +37,16 @@ class CreateLicensesAsBatchRequestType implements RequestInterface
         $this->countDataSet = $countDataSet;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ActivationIdsListType  $activationIds
-     * @param  \Flexnet\LicenseService\Type\HostIdDataSetType  $hostIdDataSet
-     * @param  \Flexnet\LicenseService\Type\CommonBatchDataSetType  $commonBatchDataSet
-     * @param  \Flexnet\LicenseService\Type\CountDataSetType|null  $countDataSet
-     */
-    public static function create(ActivationIdsListType $activationIds, HostIdDataSetType $hostIdDataSet, CommonBatchDataSetType $commonBatchDataSet, CountDataSetType|null $countDataSet = null)
+    public static function create(ActivationIdsListType $activationIds, HostIdDataSetType $hostIdDataSet, CommonBatchDataSetType $commonBatchDataSet, CountDataSetType $countDataSet = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\ActivationIdsListType
-     */
     public function getActivationIds(): ActivationIdsListType
     {
         return $this->activationIds;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ActivationIdsListType  $activationIds
-     */
     public function withActivationIds(ActivationIdsListType $activationIds): CreateLicensesAsBatchRequestType
     {
         $new = clone $this;
@@ -72,17 +55,11 @@ class CreateLicensesAsBatchRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\HostIdDataSetType
-     */
     public function getHostIdDataSet(): HostIdDataSetType
     {
         return $this->hostIdDataSet;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\HostIdDataSetType  $hostIdDataSet
-     */
     public function withHostIdDataSet(HostIdDataSetType $hostIdDataSet): CreateLicensesAsBatchRequestType
     {
         $new = clone $this;
@@ -91,18 +68,12 @@ class CreateLicensesAsBatchRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\CountDataSetType|null
-     */
-    public function getCountDataSet(): CountDataSetType|null
+    public function getCountDataSet(): ?CountDataSetType
     {
         return $this->countDataSet;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\CountDataSetType|null  $countDataSet
-     */
-    public function withCountDataSet(CountDataSetType|null $countDataSet): CreateLicensesAsBatchRequestType
+    public function withCountDataSet(?CountDataSetType $countDataSet): CreateLicensesAsBatchRequestType
     {
         $new = clone $this;
         $new->countDataSet = $countDataSet;
@@ -110,17 +81,11 @@ class CreateLicensesAsBatchRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\CommonBatchDataSetType
-     */
     public function getCommonBatchDataSet(): CommonBatchDataSetType
     {
         return $this->commonBatchDataSet;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\CommonBatchDataSetType  $commonBatchDataSet
-     */
     public function withCommonBatchDataSet(CommonBatchDataSetType $commonBatchDataSet): CreateLicensesAsBatchRequestType
     {
         $new = clone $this;

@@ -18,36 +18,23 @@ class SetEntitlementStateResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementStateDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedEntitlementStateDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedEntitlementStateDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementStateDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedEntitlementStateDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedEntitlementStateDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): SetEntitlementStateResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class SetEntitlementStateResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FailedEntitlementStateDataListType|null
-     */
-    public function getFailedData(): FailedEntitlementStateDataListType|null
+    public function getFailedData(): ?FailedEntitlementStateDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementStateDataListType|null  $failedData
-     */
-    public function withFailedData(FailedEntitlementStateDataListType|null $failedData): SetEntitlementStateResponseType
+    public function withFailedData(?FailedEntitlementStateDataListType $failedData): SetEntitlementStateResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

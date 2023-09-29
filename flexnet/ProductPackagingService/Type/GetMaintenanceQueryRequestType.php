@@ -28,10 +28,8 @@ class GetMaintenanceQueryRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenanceQueryParametersType|null  $queryParams
      */
-    public function __construct(int $pageNumber, int $batchSize, bool $returnContainedObjects, MaintenanceQueryParametersType|null $queryParams = null)
+    public function __construct(int $pageNumber, int $batchSize, bool $returnContainedObjects, MaintenanceQueryParametersType $queryParams = null)
     {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -39,26 +37,17 @@ class GetMaintenanceQueryRequestType implements RequestInterface
         $this->queryParams = $queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenanceQueryParametersType|null  $queryParams
-     */
-    public static function create(int $pageNumber, int $batchSize, bool $returnContainedObjects, MaintenanceQueryParametersType|null $queryParams = null)
+    public static function create(int $pageNumber, int $batchSize, bool $returnContainedObjects, MaintenanceQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\MaintenanceQueryParametersType|null
-     */
-    public function getQueryParams(): MaintenanceQueryParametersType|null
+    public function getQueryParams(): ?MaintenanceQueryParametersType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\MaintenanceQueryParametersType|null  $queryParams
-     */
-    public function withQueryParams(MaintenanceQueryParametersType|null $queryParams): GetMaintenanceQueryRequestType
+    public function withQueryParams(?MaintenanceQueryParametersType $queryParams): GetMaintenanceQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

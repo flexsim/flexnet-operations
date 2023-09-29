@@ -28,11 +28,8 @@ class MergeEntitlementsRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  bool|null  $mergeUsers
-     * @param  bool|null  $mergeEntitlements
      */
-    public function __construct(string $accountFrom, string $accountTo, bool|null $mergeUsers = null, bool|null $mergeEntitlements = null)
+    public function __construct(string $accountFrom, string $accountTo, bool $mergeUsers = null, bool $mergeEntitlements = null)
     {
         $this->accountFrom = $accountFrom;
         $this->accountTo = $accountTo;
@@ -40,11 +37,7 @@ class MergeEntitlementsRequestType implements RequestInterface
         $this->mergeEntitlements = $mergeEntitlements;
     }
 
-    /**
-     * @param  bool|null  $mergeUsers
-     * @param  bool|null  $mergeEntitlements
-     */
-    public static function create(string $accountFrom, string $accountTo, bool|null $mergeUsers = null, bool|null $mergeEntitlements = null)
+    public static function create(string $accountFrom, string $accountTo, bool $mergeUsers = null, bool $mergeEntitlements = null)
     {
         return new static(...\func_get_args());
     }
@@ -75,12 +68,12 @@ class MergeEntitlementsRequestType implements RequestInterface
         return $new;
     }
 
-    public function getMergeUsers(): bool|null
+    public function getMergeUsers(): ?bool
     {
         return $this->mergeUsers;
     }
 
-    public function withMergeUsers(bool|null $mergeUsers): MergeEntitlementsRequestType
+    public function withMergeUsers(?bool $mergeUsers): MergeEntitlementsRequestType
     {
         $new = clone $this;
         $new->mergeUsers = $mergeUsers;
@@ -88,12 +81,12 @@ class MergeEntitlementsRequestType implements RequestInterface
         return $new;
     }
 
-    public function getMergeEntitlements(): bool|null
+    public function getMergeEntitlements(): ?bool
     {
         return $this->mergeEntitlements;
     }
 
-    public function withMergeEntitlements(bool|null $mergeEntitlements): MergeEntitlementsRequestType
+    public function withMergeEntitlements(?bool $mergeEntitlements): MergeEntitlementsRequestType
     {
         $new = clone $this;
         $new->mergeEntitlements = $mergeEntitlements;

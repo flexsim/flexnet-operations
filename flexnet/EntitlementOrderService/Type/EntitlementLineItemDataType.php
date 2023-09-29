@@ -181,43 +181,8 @@ class EntitlementLineItemDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
-     * @param  string|null  $description
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
-     * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $licenseModel
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel1
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel2
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  string|null  $FNPTimeZoneValue
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
-     * @param  string|null  $orderId
-     * @param  string|null  $orderLineNumber
-     * @param  \DateTimeInterface|null  $startDate
-     * @param  string|null  $startDateOption
-     * @param  bool|null  $isPermanent
-     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $term
-     * @param  \DateTimeInterface|null  $expirationDate
-     * @param  \DateTimeInterface|null  $versionDate
-     * @param  \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null  $versionDateAttributes
-     * @param  string|null  $lineItemType
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataListType|null  $entitledProducts
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $lineItemAttributes
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductCategoryDataType|null  $productLine
-     * @param  int|null  $numberOfRemainingCopies
-     * @param  int|null  $fulfilledCount
-     * @param  int|null  $availableExtraActivations
-     * @param  bool|null  $isTrustedType
-     * @param  string|null  $state
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $parentLineItem
-     * @param  \DateTimeInterface|null  $createdOnDateTime
-     * @param  \DateTimeInterface|null  $lastModifiedDateTime
-     * @param  int|null  $overdraftMax
-     * @param  int|null  $remainingOverdraftCount
      */
-    public function __construct(IdType $activationId, int $numberOfCopies, string|null $description = null, ProductIdentifierType|null $product = null, PartNumberIdentifierType|null $partNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, PolicyAttributesListType|null $policyAttributes = null, string|null $orderId = null, string|null $orderLineNumber = null, \DateTimeInterface|null $startDate = null, string|null $startDateOption = null, bool|null $isPermanent = null, DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $lineItemType = null, EntitledProductDataListType|null $entitledProducts = null, AttributeDescriptorDataType|null $lineItemAttributes = null, ProductCategoryDataType|null $productLine = null, int|null $numberOfRemainingCopies = null, int|null $fulfilledCount = null, int|null $availableExtraActivations = null, bool|null $isTrustedType = null, string|null $state = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, EntitlementLineItemIdentifierType|null $parentLineItem = null, \DateTimeInterface|null $createdOnDateTime = null, \DateTimeInterface|null $lastModifiedDateTime = null, int|null $overdraftMax = null, int|null $remainingOverdraftCount = null)
+    public function __construct(IdType $activationId, int $numberOfCopies, string $description = null, ProductIdentifierType $product = null, PartNumberIdentifierType $partNumber = null, LicenseModelIdentifierType $licenseModel = null, LicenseModelIdentifierType $alternateLicenseModel1 = null, LicenseModelIdentifierType $alternateLicenseModel2 = null, AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, PolicyAttributesListType $policyAttributes = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, string $startDateOption = null, bool $isPermanent = null, DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, VersionDateAttributesType $versionDateAttributes = null, string $lineItemType = null, EntitledProductDataListType $entitledProducts = null, AttributeDescriptorDataType $lineItemAttributes = null, ProductCategoryDataType $productLine = null, int $numberOfRemainingCopies = null, int $fulfilledCount = null, int $availableExtraActivations = null, bool $isTrustedType = null, string $state = null, LicenseTechnologyIdentifierType $licenseTechnology = null, EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, int $overdraftMax = null, int $remainingOverdraftCount = null)
     {
         $this->activationId = $activationId;
         $this->numberOfCopies = $numberOfCopies;
@@ -256,58 +221,16 @@ class EntitlementLineItemDataType
         $this->remainingOverdraftCount = $remainingOverdraftCount;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
-     * @param  string|null  $description
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
-     * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $licenseModel
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel1
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel2
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     * @param  string|null  $FNPTimeZoneValue
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
-     * @param  string|null  $orderId
-     * @param  string|null  $orderLineNumber
-     * @param  \DateTimeInterface|null  $startDate
-     * @param  string|null  $startDateOption
-     * @param  bool|null  $isPermanent
-     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $term
-     * @param  \DateTimeInterface|null  $expirationDate
-     * @param  \DateTimeInterface|null  $versionDate
-     * @param  \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null  $versionDateAttributes
-     * @param  string|null  $lineItemType
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataListType|null  $entitledProducts
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $lineItemAttributes
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductCategoryDataType|null  $productLine
-     * @param  int|null  $numberOfRemainingCopies
-     * @param  int|null  $fulfilledCount
-     * @param  int|null  $availableExtraActivations
-     * @param  bool|null  $isTrustedType
-     * @param  string|null  $state
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $parentLineItem
-     * @param  \DateTimeInterface|null  $createdOnDateTime
-     * @param  \DateTimeInterface|null  $lastModifiedDateTime
-     * @param  int|null  $overdraftMax
-     * @param  int|null  $remainingOverdraftCount
-     */
-    public static function create(IdType $activationId, int $numberOfCopies, string|null $description = null, ProductIdentifierType|null $product = null, PartNumberIdentifierType|null $partNumber = null, LicenseModelIdentifierType|null $licenseModel = null, LicenseModelIdentifierType|null $alternateLicenseModel1 = null, LicenseModelIdentifierType|null $alternateLicenseModel2 = null, AttributeDescriptorDataType|null $licenseModelAttributes = null, string|null $FNPTimeZoneValue = null, PolicyAttributesListType|null $policyAttributes = null, string|null $orderId = null, string|null $orderLineNumber = null, \DateTimeInterface|null $startDate = null, string|null $startDateOption = null, bool|null $isPermanent = null, DurationType|null $term = null, \DateTimeInterface|null $expirationDate = null, \DateTimeInterface|null $versionDate = null, VersionDateAttributesType|null $versionDateAttributes = null, string|null $lineItemType = null, EntitledProductDataListType|null $entitledProducts = null, AttributeDescriptorDataType|null $lineItemAttributes = null, ProductCategoryDataType|null $productLine = null, int|null $numberOfRemainingCopies = null, int|null $fulfilledCount = null, int|null $availableExtraActivations = null, bool|null $isTrustedType = null, string|null $state = null, LicenseTechnologyIdentifierType|null $licenseTechnology = null, EntitlementLineItemIdentifierType|null $parentLineItem = null, \DateTimeInterface|null $createdOnDateTime = null, \DateTimeInterface|null $lastModifiedDateTime = null, int|null $overdraftMax = null, int|null $remainingOverdraftCount = null)
+    public static function create(IdType $activationId, int $numberOfCopies, string $description = null, ProductIdentifierType $product = null, PartNumberIdentifierType $partNumber = null, LicenseModelIdentifierType $licenseModel = null, LicenseModelIdentifierType $alternateLicenseModel1 = null, LicenseModelIdentifierType $alternateLicenseModel2 = null, AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, PolicyAttributesListType $policyAttributes = null, string $orderId = null, string $orderLineNumber = null, \DateTimeInterface $startDate = null, string $startDateOption = null, bool $isPermanent = null, DurationType $term = null, \DateTimeInterface $expirationDate = null, \DateTimeInterface $versionDate = null, VersionDateAttributesType $versionDateAttributes = null, string $lineItemType = null, EntitledProductDataListType $entitledProducts = null, AttributeDescriptorDataType $lineItemAttributes = null, ProductCategoryDataType $productLine = null, int $numberOfRemainingCopies = null, int $fulfilledCount = null, int $availableExtraActivations = null, bool $isTrustedType = null, string $state = null, LicenseTechnologyIdentifierType $licenseTechnology = null, EntitlementLineItemIdentifierType $parentLineItem = null, \DateTimeInterface $createdOnDateTime = null, \DateTimeInterface $lastModifiedDateTime = null, int $overdraftMax = null, int $remainingOverdraftCount = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\IdType
-     */
     public function getActivationId(): IdType
     {
         return $this->activationId;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\IdType  $activationId
-     */
     public function withActivationId(IdType $activationId): EntitlementLineItemDataType
     {
         $new = clone $this;
@@ -316,12 +239,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getDescription(): string|null
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function withDescription(string|null $description): EntitlementLineItemDataType
+    public function withDescription(?string $description): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -329,18 +252,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null
-     */
-    public function getProduct(): ProductIdentifierType|null
+    public function getProduct(): ?ProductIdentifierType
     {
         return $this->product;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
-     */
-    public function withProduct(ProductIdentifierType|null $product): EntitlementLineItemDataType
+    public function withProduct(?ProductIdentifierType $product): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->product = $product;
@@ -348,18 +265,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null
-     */
-    public function getPartNumber(): PartNumberIdentifierType|null
+    public function getPartNumber(): ?PartNumberIdentifierType
     {
         return $this->partNumber;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType|null  $partNumber
-     */
-    public function withPartNumber(PartNumberIdentifierType|null $partNumber): EntitlementLineItemDataType
+    public function withPartNumber(?PartNumberIdentifierType $partNumber): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -367,18 +278,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null
-     */
-    public function getLicenseModel(): LicenseModelIdentifierType|null
+    public function getLicenseModel(): ?LicenseModelIdentifierType
     {
         return $this->licenseModel;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $licenseModel
-     */
-    public function withLicenseModel(LicenseModelIdentifierType|null $licenseModel): EntitlementLineItemDataType
+    public function withLicenseModel(?LicenseModelIdentifierType $licenseModel): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->licenseModel = $licenseModel;
@@ -386,18 +291,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null
-     */
-    public function getAlternateLicenseModel1(): LicenseModelIdentifierType|null
+    public function getAlternateLicenseModel1(): ?LicenseModelIdentifierType
     {
         return $this->alternateLicenseModel1;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel1
-     */
-    public function withAlternateLicenseModel1(LicenseModelIdentifierType|null $alternateLicenseModel1): EntitlementLineItemDataType
+    public function withAlternateLicenseModel1(?LicenseModelIdentifierType $alternateLicenseModel1): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->alternateLicenseModel1 = $alternateLicenseModel1;
@@ -405,18 +304,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null
-     */
-    public function getAlternateLicenseModel2(): LicenseModelIdentifierType|null
+    public function getAlternateLicenseModel2(): ?LicenseModelIdentifierType
     {
         return $this->alternateLicenseModel2;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType|null  $alternateLicenseModel2
-     */
-    public function withAlternateLicenseModel2(LicenseModelIdentifierType|null $alternateLicenseModel2): EntitlementLineItemDataType
+    public function withAlternateLicenseModel2(?LicenseModelIdentifierType $alternateLicenseModel2): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->alternateLicenseModel2 = $alternateLicenseModel2;
@@ -424,18 +317,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null
-     */
-    public function getLicenseModelAttributes(): AttributeDescriptorDataType|null
+    public function getLicenseModelAttributes(): ?AttributeDescriptorDataType
     {
         return $this->licenseModelAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $licenseModelAttributes
-     */
-    public function withLicenseModelAttributes(AttributeDescriptorDataType|null $licenseModelAttributes): EntitlementLineItemDataType
+    public function withLicenseModelAttributes(?AttributeDescriptorDataType $licenseModelAttributes): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->licenseModelAttributes = $licenseModelAttributes;
@@ -443,12 +330,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getFNPTimeZoneValue(): string|null
+    public function getFNPTimeZoneValue(): ?string
     {
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(string|null $FNPTimeZoneValue): EntitlementLineItemDataType
+    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;
@@ -456,18 +343,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null
-     */
-    public function getPolicyAttributes(): PolicyAttributesListType|null
+    public function getPolicyAttributes(): ?PolicyAttributesListType
     {
         return $this->policyAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType|null  $policyAttributes
-     */
-    public function withPolicyAttributes(PolicyAttributesListType|null $policyAttributes): EntitlementLineItemDataType
+    public function withPolicyAttributes(?PolicyAttributesListType $policyAttributes): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->policyAttributes = $policyAttributes;
@@ -475,12 +356,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getOrderId(): string|null
+    public function getOrderId(): ?string
     {
         return $this->orderId;
     }
 
-    public function withOrderId(string|null $orderId): EntitlementLineItemDataType
+    public function withOrderId(?string $orderId): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->orderId = $orderId;
@@ -488,12 +369,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getOrderLineNumber(): string|null
+    public function getOrderLineNumber(): ?string
     {
         return $this->orderLineNumber;
     }
 
-    public function withOrderLineNumber(string|null $orderLineNumber): EntitlementLineItemDataType
+    public function withOrderLineNumber(?string $orderLineNumber): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->orderLineNumber = $orderLineNumber;
@@ -514,12 +395,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getStartDate(): \DateTimeInterface|null
+    public function getStartDate(): ?\DateTimeInterface
     {
         return $this->startDate;
     }
 
-    public function withStartDate(\DateTimeInterface|null $startDate): EntitlementLineItemDataType
+    public function withStartDate(?\DateTimeInterface $startDate): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -527,12 +408,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getStartDateOption(): string|null
+    public function getStartDateOption(): ?string
     {
         return $this->startDateOption;
     }
 
-    public function withStartDateOption(string|null $startDateOption): EntitlementLineItemDataType
+    public function withStartDateOption(?string $startDateOption): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->startDateOption = $startDateOption;
@@ -540,12 +421,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getIsPermanent(): bool|null
+    public function getIsPermanent(): ?bool
     {
         return $this->isPermanent;
     }
 
-    public function withIsPermanent(bool|null $isPermanent): EntitlementLineItemDataType
+    public function withIsPermanent(?bool $isPermanent): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->isPermanent = $isPermanent;
@@ -553,18 +434,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\DurationType|null
-     */
-    public function getTerm(): DurationType|null
+    public function getTerm(): ?DurationType
     {
         return $this->term;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\DurationType|null  $term
-     */
-    public function withTerm(DurationType|null $term): EntitlementLineItemDataType
+    public function withTerm(?DurationType $term): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->term = $term;
@@ -572,12 +447,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getExpirationDate(): \DateTimeInterface|null
+    public function getExpirationDate(): ?\DateTimeInterface
     {
         return $this->expirationDate;
     }
 
-    public function withExpirationDate(\DateTimeInterface|null $expirationDate): EntitlementLineItemDataType
+    public function withExpirationDate(?\DateTimeInterface $expirationDate): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->expirationDate = $expirationDate;
@@ -585,12 +460,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getVersionDate(): \DateTimeInterface|null
+    public function getVersionDate(): ?\DateTimeInterface
     {
         return $this->versionDate;
     }
 
-    public function withVersionDate(\DateTimeInterface|null $versionDate): EntitlementLineItemDataType
+    public function withVersionDate(?\DateTimeInterface $versionDate): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->versionDate = $versionDate;
@@ -598,18 +473,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null
-     */
-    public function getVersionDateAttributes(): VersionDateAttributesType|null
+    public function getVersionDateAttributes(): ?VersionDateAttributesType
     {
         return $this->versionDateAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\VersionDateAttributesType|null  $versionDateAttributes
-     */
-    public function withVersionDateAttributes(VersionDateAttributesType|null $versionDateAttributes): EntitlementLineItemDataType
+    public function withVersionDateAttributes(?VersionDateAttributesType $versionDateAttributes): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->versionDateAttributes = $versionDateAttributes;
@@ -617,12 +486,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getLineItemType(): string|null
+    public function getLineItemType(): ?string
     {
         return $this->lineItemType;
     }
 
-    public function withLineItemType(string|null $lineItemType): EntitlementLineItemDataType
+    public function withLineItemType(?string $lineItemType): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->lineItemType = $lineItemType;
@@ -630,18 +499,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitledProductDataListType|null
-     */
-    public function getEntitledProducts(): EntitledProductDataListType|null
+    public function getEntitledProducts(): ?EntitledProductDataListType
     {
         return $this->entitledProducts;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataListType|null  $entitledProducts
-     */
-    public function withEntitledProducts(EntitledProductDataListType|null $entitledProducts): EntitlementLineItemDataType
+    public function withEntitledProducts(?EntitledProductDataListType $entitledProducts): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->entitledProducts = $entitledProducts;
@@ -649,18 +512,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null
-     */
-    public function getLineItemAttributes(): AttributeDescriptorDataType|null
+    public function getLineItemAttributes(): ?AttributeDescriptorDataType
     {
         return $this->lineItemAttributes;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType|null  $lineItemAttributes
-     */
-    public function withLineItemAttributes(AttributeDescriptorDataType|null $lineItemAttributes): EntitlementLineItemDataType
+    public function withLineItemAttributes(?AttributeDescriptorDataType $lineItemAttributes): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->lineItemAttributes = $lineItemAttributes;
@@ -668,18 +525,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\ProductCategoryDataType|null
-     */
-    public function getProductLine(): ProductCategoryDataType|null
+    public function getProductLine(): ?ProductCategoryDataType
     {
         return $this->productLine;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductCategoryDataType|null  $productLine
-     */
-    public function withProductLine(ProductCategoryDataType|null $productLine): EntitlementLineItemDataType
+    public function withProductLine(?ProductCategoryDataType $productLine): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->productLine = $productLine;
@@ -687,12 +538,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getNumberOfRemainingCopies(): int|null
+    public function getNumberOfRemainingCopies(): ?int
     {
         return $this->numberOfRemainingCopies;
     }
 
-    public function withNumberOfRemainingCopies(int|null $numberOfRemainingCopies): EntitlementLineItemDataType
+    public function withNumberOfRemainingCopies(?int $numberOfRemainingCopies): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->numberOfRemainingCopies = $numberOfRemainingCopies;
@@ -700,12 +551,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getFulfilledCount(): int|null
+    public function getFulfilledCount(): ?int
     {
         return $this->fulfilledCount;
     }
 
-    public function withFulfilledCount(int|null $fulfilledCount): EntitlementLineItemDataType
+    public function withFulfilledCount(?int $fulfilledCount): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->fulfilledCount = $fulfilledCount;
@@ -713,12 +564,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getAvailableExtraActivations(): int|null
+    public function getAvailableExtraActivations(): ?int
     {
         return $this->availableExtraActivations;
     }
 
-    public function withAvailableExtraActivations(int|null $availableExtraActivations): EntitlementLineItemDataType
+    public function withAvailableExtraActivations(?int $availableExtraActivations): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->availableExtraActivations = $availableExtraActivations;
@@ -726,12 +577,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getIsTrustedType(): bool|null
+    public function getIsTrustedType(): ?bool
     {
         return $this->isTrustedType;
     }
 
-    public function withIsTrustedType(bool|null $isTrustedType): EntitlementLineItemDataType
+    public function withIsTrustedType(?bool $isTrustedType): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->isTrustedType = $isTrustedType;
@@ -739,12 +590,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getState(): string|null
+    public function getState(): ?string
     {
         return $this->state;
     }
 
-    public function withState(string|null $state): EntitlementLineItemDataType
+    public function withState(?string $state): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->state = $state;
@@ -752,18 +603,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType|null
-     */
-    public function getLicenseTechnology(): LicenseTechnologyIdentifierType|null
+    public function getLicenseTechnology(): ?LicenseTechnologyIdentifierType
     {
         return $this->licenseTechnology;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType|null  $licenseTechnology
-     */
-    public function withLicenseTechnology(LicenseTechnologyIdentifierType|null $licenseTechnology): EntitlementLineItemDataType
+    public function withLicenseTechnology(?LicenseTechnologyIdentifierType $licenseTechnology): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->licenseTechnology = $licenseTechnology;
@@ -771,18 +616,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null
-     */
-    public function getParentLineItem(): EntitlementLineItemIdentifierType|null
+    public function getParentLineItem(): ?EntitlementLineItemIdentifierType
     {
         return $this->parentLineItem;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $parentLineItem
-     */
-    public function withParentLineItem(EntitlementLineItemIdentifierType|null $parentLineItem): EntitlementLineItemDataType
+    public function withParentLineItem(?EntitlementLineItemIdentifierType $parentLineItem): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->parentLineItem = $parentLineItem;
@@ -790,12 +629,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getCreatedOnDateTime(): \DateTimeInterface|null
+    public function getCreatedOnDateTime(): ?\DateTimeInterface
     {
         return $this->createdOnDateTime;
     }
 
-    public function withCreatedOnDateTime(\DateTimeInterface|null $createdOnDateTime): EntitlementLineItemDataType
+    public function withCreatedOnDateTime(?\DateTimeInterface $createdOnDateTime): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->createdOnDateTime = $createdOnDateTime;
@@ -803,12 +642,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getLastModifiedDateTime(): \DateTimeInterface|null
+    public function getLastModifiedDateTime(): ?\DateTimeInterface
     {
         return $this->lastModifiedDateTime;
     }
 
-    public function withLastModifiedDateTime(\DateTimeInterface|null $lastModifiedDateTime): EntitlementLineItemDataType
+    public function withLastModifiedDateTime(?\DateTimeInterface $lastModifiedDateTime): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->lastModifiedDateTime = $lastModifiedDateTime;
@@ -816,12 +655,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getOverdraftMax(): int|null
+    public function getOverdraftMax(): ?int
     {
         return $this->overdraftMax;
     }
 
-    public function withOverdraftMax(int|null $overdraftMax): EntitlementLineItemDataType
+    public function withOverdraftMax(?int $overdraftMax): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->overdraftMax = $overdraftMax;
@@ -829,12 +668,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getRemainingOverdraftCount(): int|null
+    public function getRemainingOverdraftCount(): ?int
     {
         return $this->remainingOverdraftCount;
     }
 
-    public function withRemainingOverdraftCount(int|null $remainingOverdraftCount): EntitlementLineItemDataType
+    public function withRemainingOverdraftCount(?int $remainingOverdraftCount): EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->remainingOverdraftCount = $remainingOverdraftCount;

@@ -14,7 +14,7 @@ class LicenseModelStateChangeListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType>|null  $licenseModel
      */
-    public function __construct(LicenseModelStateChangeDataType|array|null $licenseModel = null)
+    public function __construct(LicenseModelStateChangeDataType|array $licenseModel = null)
     {
         $this->licenseModel = $licenseModel;
     }
@@ -22,7 +22,7 @@ class LicenseModelStateChangeListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType>|null  $licenseModel
      */
-    public static function create(LicenseModelStateChangeDataType|array|null $licenseModel = null)
+    public static function create(LicenseModelStateChangeDataType|array $licenseModel = null)
     {
         return new static(...\func_get_args());
     }

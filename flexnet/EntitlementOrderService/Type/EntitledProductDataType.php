@@ -16,35 +16,24 @@ class EntitledProductDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
      */
-    public function __construct(int $quantity, ProductIdentifierType|null $product = null)
+    public function __construct(int $quantity, ProductIdentifierType $product = null)
     {
         $this->quantity = $quantity;
         $this->product = $product;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
-     */
-    public static function create(int $quantity, ProductIdentifierType|null $product = null)
+    public static function create(int $quantity, ProductIdentifierType $product = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null
-     */
-    public function getProduct(): ProductIdentifierType|null
+    public function getProduct(): ?ProductIdentifierType
     {
         return $this->product;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|null  $product
-     */
-    public function withProduct(ProductIdentifierType|null $product): EntitledProductDataType
+    public function withProduct(?ProductIdentifierType $product): EntitledProductDataType
     {
         $new = clone $this;
         $new->product = $product;

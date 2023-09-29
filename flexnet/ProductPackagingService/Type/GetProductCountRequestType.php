@@ -13,34 +13,23 @@ class GetProductCountRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\ProductQueryParametersType|null  $queryParams
      */
-    public function __construct(ProductQueryParametersType|null $queryParams = null)
+    public function __construct(ProductQueryParametersType $queryParams = null)
     {
         $this->queryParams = $queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductQueryParametersType|null  $queryParams
-     */
-    public static function create(ProductQueryParametersType|null $queryParams = null)
+    public static function create(ProductQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\ProductQueryParametersType|null
-     */
-    public function getQueryParams(): ProductQueryParametersType|null
+    public function getQueryParams(): ?ProductQueryParametersType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductQueryParametersType|null  $queryParams
-     */
-    public function withQueryParams(ProductQueryParametersType|null $queryParams): GetProductCountRequestType
+    public function withQueryParams(?ProductQueryParametersType $queryParams): GetProductCountRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

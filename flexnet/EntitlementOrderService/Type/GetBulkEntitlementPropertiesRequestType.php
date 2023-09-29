@@ -28,12 +28,8 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
-     * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType  $bulkEntitlementResponseConfig
-     * @param  int|null  $pageNumber
      */
-    public function __construct(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int|null $pageNumber = null)
+    public function __construct(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int $pageNumber = null)
     {
         $this->bulkEntitlementSearchCriteria = $bulkEntitlementSearchCriteria;
         $this->bulkEntitlementResponseConfig = $bulkEntitlementResponseConfig;
@@ -41,27 +37,16 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         $this->pageNumber = $pageNumber;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
-     * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType  $bulkEntitlementResponseConfig
-     * @param  int|null  $pageNumber
-     */
-    public static function create(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int|null $pageNumber = null)
+    public static function create(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int $pageNumber = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType
-     */
     public function getBulkEntitlementSearchCriteria(): SearchBulkEntitlementDataType
     {
         return $this->bulkEntitlementSearchCriteria;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType  $bulkEntitlementSearchCriteria
-     */
     public function withBulkEntitlementSearchCriteria(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria): GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;
@@ -70,17 +55,11 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
-     */
     public function getBulkEntitlementResponseConfig(): BulkEntitlementResponseConfigRequestType
     {
         return $this->bulkEntitlementResponseConfig;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType  $bulkEntitlementResponseConfig
-     */
     public function withBulkEntitlementResponseConfig(BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig): GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;
@@ -102,12 +81,12 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         return $new;
     }
 
-    public function getPageNumber(): int|null
+    public function getPageNumber(): ?int
     {
         return $this->pageNumber;
     }
 
-    public function withPageNumber(int|null $pageNumber): GetBulkEntitlementPropertiesRequestType
+    public function withPageNumber(?int $pageNumber): GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;

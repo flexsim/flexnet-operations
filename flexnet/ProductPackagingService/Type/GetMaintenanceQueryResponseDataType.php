@@ -14,7 +14,7 @@ class GetMaintenanceQueryResponseDataType
      *
      * @param  \Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType|array<\Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType>|null  $maintenance
      */
-    public function __construct(MaintenanceQueryDataType|array|null $maintenance = null)
+    public function __construct(MaintenanceQueryDataType|array $maintenance = null)
     {
         $this->maintenance = $maintenance;
     }
@@ -22,7 +22,7 @@ class GetMaintenanceQueryResponseDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType|array<\Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType>|null  $maintenance
      */
-    public static function create(MaintenanceQueryDataType|array|null $maintenance = null)
+    public static function create(MaintenanceQueryDataType|array $maintenance = null)
     {
         return new static(...\func_get_args());
     }

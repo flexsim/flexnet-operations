@@ -16,19 +16,14 @@ class DupGroupDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\GroupMaskDataType|null  $groupMask
      */
-    public function __construct(string $dupGroupOption, GroupMaskDataType|null $groupMask = null)
+    public function __construct(string $dupGroupOption, GroupMaskDataType $groupMask = null)
     {
         $this->dupGroupOption = $dupGroupOption;
         $this->groupMask = $groupMask;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\GroupMaskDataType|null  $groupMask
-     */
-    public static function create(string $dupGroupOption, GroupMaskDataType|null $groupMask = null)
+    public static function create(string $dupGroupOption, GroupMaskDataType $groupMask = null)
     {
         return new static(...\func_get_args());
     }
@@ -46,18 +41,12 @@ class DupGroupDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\GroupMaskDataType|null
-     */
-    public function getGroupMask(): GroupMaskDataType|null
+    public function getGroupMask(): ?GroupMaskDataType
     {
         return $this->groupMask;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\GroupMaskDataType|null  $groupMask
-     */
-    public function withGroupMask(GroupMaskDataType|null $groupMask): DupGroupDataType
+    public function withGroupMask(?GroupMaskDataType $groupMask): DupGroupDataType
     {
         $new = clone $this;
         $new->groupMask = $groupMask;

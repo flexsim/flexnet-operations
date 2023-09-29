@@ -61,20 +61,8 @@ class SuiteQueryParametersType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $suiteName
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $version
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $partNumber
-     * @param  \Flexnet\ProductPackagingService\Type\StateQueryType|null  $state
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $creationDate
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $lastModifiedDate
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $licenseTechnology
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $hostType
-     * @param  bool|null  $usedOnDevice
-     * @param  \Flexnet\ProductPackagingService\Type\SuiteCustomAttributesQueryListType|null  $productAttributes
      */
-    public function __construct(SimpleQueryType|null $suiteName = null, SimpleQueryType|null $version = null, SimpleQueryType|null $description = null, SimpleQueryType|null $partNumber = null, StateQueryType|null $state = null, DateQueryType|null $creationDate = null, DateQueryType|null $lastModifiedDate = null, SimpleQueryType|null $licenseTechnology = null, SimpleQueryType|null $hostType = null, bool|null $usedOnDevice = null, SuiteCustomAttributesQueryListType|null $productAttributes = null)
+    public function __construct(SimpleQueryType $suiteName = null, SimpleQueryType $version = null, SimpleQueryType $description = null, SimpleQueryType $partNumber = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null, SimpleQueryType $licenseTechnology = null, SimpleQueryType $hostType = null, bool $usedOnDevice = null, SuiteCustomAttributesQueryListType $productAttributes = null)
     {
         $this->suiteName = $suiteName;
         $this->version = $version;
@@ -89,36 +77,17 @@ class SuiteQueryParametersType
         $this->productAttributes = $productAttributes;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $suiteName
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $version
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $description
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $partNumber
-     * @param  \Flexnet\ProductPackagingService\Type\StateQueryType|null  $state
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $creationDate
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $lastModifiedDate
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $licenseTechnology
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $hostType
-     * @param  bool|null  $usedOnDevice
-     * @param  \Flexnet\ProductPackagingService\Type\SuiteCustomAttributesQueryListType|null  $productAttributes
-     */
-    public static function create(SimpleQueryType|null $suiteName = null, SimpleQueryType|null $version = null, SimpleQueryType|null $description = null, SimpleQueryType|null $partNumber = null, StateQueryType|null $state = null, DateQueryType|null $creationDate = null, DateQueryType|null $lastModifiedDate = null, SimpleQueryType|null $licenseTechnology = null, SimpleQueryType|null $hostType = null, bool|null $usedOnDevice = null, SuiteCustomAttributesQueryListType|null $productAttributes = null)
+    public static function create(SimpleQueryType $suiteName = null, SimpleQueryType $version = null, SimpleQueryType $description = null, SimpleQueryType $partNumber = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null, SimpleQueryType $licenseTechnology = null, SimpleQueryType $hostType = null, bool $usedOnDevice = null, SuiteCustomAttributesQueryListType $productAttributes = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getSuiteName(): SimpleQueryType|null
+    public function getSuiteName(): ?SimpleQueryType
     {
         return $this->suiteName;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $suiteName
-     */
-    public function withSuiteName(SimpleQueryType|null $suiteName): SuiteQueryParametersType
+    public function withSuiteName(?SimpleQueryType $suiteName): SuiteQueryParametersType
     {
         $new = clone $this;
         $new->suiteName = $suiteName;
@@ -126,18 +95,12 @@ class SuiteQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getVersion(): SimpleQueryType|null
+    public function getVersion(): ?SimpleQueryType
     {
         return $this->version;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $version
-     */
-    public function withVersion(SimpleQueryType|null $version): SuiteQueryParametersType
+    public function withVersion(?SimpleQueryType $version): SuiteQueryParametersType
     {
         $new = clone $this;
         $new->version = $version;
@@ -145,18 +108,12 @@ class SuiteQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getDescription(): SimpleQueryType|null
+    public function getDescription(): ?SimpleQueryType
     {
         return $this->description;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $description
-     */
-    public function withDescription(SimpleQueryType|null $description): SuiteQueryParametersType
+    public function withDescription(?SimpleQueryType $description): SuiteQueryParametersType
     {
         $new = clone $this;
         $new->description = $description;
@@ -164,18 +121,12 @@ class SuiteQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getPartNumber(): SimpleQueryType|null
+    public function getPartNumber(): ?SimpleQueryType
     {
         return $this->partNumber;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $partNumber
-     */
-    public function withPartNumber(SimpleQueryType|null $partNumber): SuiteQueryParametersType
+    public function withPartNumber(?SimpleQueryType $partNumber): SuiteQueryParametersType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -183,18 +134,12 @@ class SuiteQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StateQueryType|null
-     */
-    public function getState(): StateQueryType|null
+    public function getState(): ?StateQueryType
     {
         return $this->state;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StateQueryType|null  $state
-     */
-    public function withState(StateQueryType|null $state): SuiteQueryParametersType
+    public function withState(?StateQueryType $state): SuiteQueryParametersType
     {
         $new = clone $this;
         $new->state = $state;
@@ -202,18 +147,12 @@ class SuiteQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\DateQueryType|null
-     */
-    public function getCreationDate(): DateQueryType|null
+    public function getCreationDate(): ?DateQueryType
     {
         return $this->creationDate;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $creationDate
-     */
-    public function withCreationDate(DateQueryType|null $creationDate): SuiteQueryParametersType
+    public function withCreationDate(?DateQueryType $creationDate): SuiteQueryParametersType
     {
         $new = clone $this;
         $new->creationDate = $creationDate;
@@ -221,18 +160,12 @@ class SuiteQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\DateQueryType|null
-     */
-    public function getLastModifiedDate(): DateQueryType|null
+    public function getLastModifiedDate(): ?DateQueryType
     {
         return $this->lastModifiedDate;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\DateQueryType|null  $lastModifiedDate
-     */
-    public function withLastModifiedDate(DateQueryType|null $lastModifiedDate): SuiteQueryParametersType
+    public function withLastModifiedDate(?DateQueryType $lastModifiedDate): SuiteQueryParametersType
     {
         $new = clone $this;
         $new->lastModifiedDate = $lastModifiedDate;
@@ -240,18 +173,12 @@ class SuiteQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getLicenseTechnology(): SimpleQueryType|null
+    public function getLicenseTechnology(): ?SimpleQueryType
     {
         return $this->licenseTechnology;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $licenseTechnology
-     */
-    public function withLicenseTechnology(SimpleQueryType|null $licenseTechnology): SuiteQueryParametersType
+    public function withLicenseTechnology(?SimpleQueryType $licenseTechnology): SuiteQueryParametersType
     {
         $new = clone $this;
         $new->licenseTechnology = $licenseTechnology;
@@ -259,18 +186,12 @@ class SuiteQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SimpleQueryType|null
-     */
-    public function getHostType(): SimpleQueryType|null
+    public function getHostType(): ?SimpleQueryType
     {
         return $this->hostType;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SimpleQueryType|null  $hostType
-     */
-    public function withHostType(SimpleQueryType|null $hostType): SuiteQueryParametersType
+    public function withHostType(?SimpleQueryType $hostType): SuiteQueryParametersType
     {
         $new = clone $this;
         $new->hostType = $hostType;
@@ -278,12 +199,12 @@ class SuiteQueryParametersType
         return $new;
     }
 
-    public function getUsedOnDevice(): bool|null
+    public function getUsedOnDevice(): ?bool
     {
         return $this->usedOnDevice;
     }
 
-    public function withUsedOnDevice(bool|null $usedOnDevice): SuiteQueryParametersType
+    public function withUsedOnDevice(?bool $usedOnDevice): SuiteQueryParametersType
     {
         $new = clone $this;
         $new->usedOnDevice = $usedOnDevice;
@@ -291,18 +212,12 @@ class SuiteQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SuiteCustomAttributesQueryListType|null
-     */
-    public function getProductAttributes(): SuiteCustomAttributesQueryListType|null
+    public function getProductAttributes(): ?SuiteCustomAttributesQueryListType
     {
         return $this->productAttributes;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SuiteCustomAttributesQueryListType|null  $productAttributes
-     */
-    public function withProductAttributes(SuiteCustomAttributesQueryListType|null $productAttributes): SuiteQueryParametersType
+    public function withProductAttributes(?SuiteCustomAttributesQueryListType $productAttributes): SuiteQueryParametersType
     {
         $new = clone $this;
         $new->productAttributes = $productAttributes;

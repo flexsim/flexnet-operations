@@ -18,36 +18,23 @@ class SetLineItemStateResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedLineItemStateDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedLineItemStateDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedLineItemStateDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedLineItemStateDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): SetLineItemStateResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class SetLineItemStateResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataListType|null
-     */
-    public function getFailedData(): FailedLineItemStateDataListType|null
+    public function getFailedData(): ?FailedLineItemStateDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataListType|null  $failedData
-     */
-    public function withFailedData(FailedLineItemStateDataListType|null $failedData): SetLineItemStateResponseType
+    public function withFailedData(?FailedLineItemStateDataListType $failedData): SetLineItemStateResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

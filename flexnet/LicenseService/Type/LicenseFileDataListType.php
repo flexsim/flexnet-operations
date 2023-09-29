@@ -14,7 +14,7 @@ class LicenseFileDataListType
      *
      * @param  \Flexnet\LicenseService\Type\LicenseFileDataType|array<\Flexnet\LicenseService\Type\LicenseFileDataType>|null  $licenseFile
      */
-    public function __construct(LicenseFileDataType|array|null $licenseFile = null)
+    public function __construct(LicenseFileDataType|array $licenseFile = null)
     {
         $this->licenseFile = $licenseFile;
     }
@@ -22,7 +22,7 @@ class LicenseFileDataListType
     /**
      * @param  \Flexnet\LicenseService\Type\LicenseFileDataType|array<\Flexnet\LicenseService\Type\LicenseFileDataType>|null  $licenseFile
      */
-    public static function create(LicenseFileDataType|array|null $licenseFile = null)
+    public static function create(LicenseFileDataType|array $licenseFile = null)
     {
         return new static(...\func_get_args());
     }

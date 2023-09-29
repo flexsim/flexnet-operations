@@ -41,16 +41,8 @@ class RehostFulfillmentDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
-     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
-     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
-     * @param  int|null  $partialCount
-     * @param  int|null  $overDraftCount
-     * @param  bool|null  $overridePolicy
      */
-    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null, int|null $partialCount = null, int|null $overDraftCount = null, bool|null $overridePolicy = null)
+    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, ServerIDsType $serverIds = null, NodeIDsType $nodeIds = null, CustomHostIDType $customHost = null, int $partialCount = null, int $overDraftCount = null, bool $overridePolicy = null)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->serverIds = $serverIds;
@@ -61,31 +53,16 @@ class RehostFulfillmentDataType
         $this->overridePolicy = $overridePolicy;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
-     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
-     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
-     * @param  int|null  $partialCount
-     * @param  int|null  $overDraftCount
-     * @param  bool|null  $overridePolicy
-     */
-    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, ServerIDsType|null $serverIds = null, NodeIDsType|null $nodeIds = null, CustomHostIDType|null $customHost = null, int|null $partialCount = null, int|null $overDraftCount = null, bool|null $overridePolicy = null)
+    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, ServerIDsType $serverIds = null, NodeIDsType $nodeIds = null, CustomHostIDType $customHost = null, int $partialCount = null, int $overDraftCount = null, bool $overridePolicy = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\FulfillmentIdentifierType
-     */
     public function getFulfillmentIdentifier(): FulfillmentIdentifierType
     {
         return $this->fulfillmentIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType  $fulfillmentIdentifier
-     */
     public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): RehostFulfillmentDataType
     {
         $new = clone $this;
@@ -94,18 +71,12 @@ class RehostFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\ServerIDsType|null
-     */
-    public function getServerIds(): ServerIDsType|null
+    public function getServerIds(): ?ServerIDsType
     {
         return $this->serverIds;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\ServerIDsType|null  $serverIds
-     */
-    public function withServerIds(ServerIDsType|null $serverIds): RehostFulfillmentDataType
+    public function withServerIds(?ServerIDsType $serverIds): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->serverIds = $serverIds;
@@ -113,18 +84,12 @@ class RehostFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\NodeIDsType|null
-     */
-    public function getNodeIds(): NodeIDsType|null
+    public function getNodeIds(): ?NodeIDsType
     {
         return $this->nodeIds;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\NodeIDsType|null  $nodeIds
-     */
-    public function withNodeIds(NodeIDsType|null $nodeIds): RehostFulfillmentDataType
+    public function withNodeIds(?NodeIDsType $nodeIds): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->nodeIds = $nodeIds;
@@ -132,18 +97,12 @@ class RehostFulfillmentDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\CustomHostIDType|null
-     */
-    public function getCustomHost(): CustomHostIDType|null
+    public function getCustomHost(): ?CustomHostIDType
     {
         return $this->customHost;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\CustomHostIDType|null  $customHost
-     */
-    public function withCustomHost(CustomHostIDType|null $customHost): RehostFulfillmentDataType
+    public function withCustomHost(?CustomHostIDType $customHost): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->customHost = $customHost;
@@ -151,12 +110,12 @@ class RehostFulfillmentDataType
         return $new;
     }
 
-    public function getPartialCount(): int|null
+    public function getPartialCount(): ?int
     {
         return $this->partialCount;
     }
 
-    public function withPartialCount(int|null $partialCount): RehostFulfillmentDataType
+    public function withPartialCount(?int $partialCount): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->partialCount = $partialCount;
@@ -164,12 +123,12 @@ class RehostFulfillmentDataType
         return $new;
     }
 
-    public function getOverDraftCount(): int|null
+    public function getOverDraftCount(): ?int
     {
         return $this->overDraftCount;
     }
 
-    public function withOverDraftCount(int|null $overDraftCount): RehostFulfillmentDataType
+    public function withOverDraftCount(?int $overDraftCount): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->overDraftCount = $overDraftCount;
@@ -177,12 +136,12 @@ class RehostFulfillmentDataType
         return $new;
     }
 
-    public function getOverridePolicy(): bool|null
+    public function getOverridePolicy(): ?bool
     {
         return $this->overridePolicy;
     }
 
-    public function withOverridePolicy(bool|null $overridePolicy): RehostFulfillmentDataType
+    public function withOverridePolicy(?bool $overridePolicy): RehostFulfillmentDataType
     {
         $new = clone $this;
         $new->overridePolicy = $overridePolicy;

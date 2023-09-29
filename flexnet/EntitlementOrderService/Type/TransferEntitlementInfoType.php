@@ -36,14 +36,8 @@ class TransferEntitlementInfoType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @param  bool|null  $retainExistingIds
-     * @param  bool|null  $returnActiveFulfillments
-     * @param  bool|null  $forceTransferEvenIfNoTargetUsers
-     * @param  bool|null  $forceTransferEvenIfParentAndChildSeparated
      */
-    public function __construct(EntitlementIdentifierType $entitlementIdentifier, string $accountTo, bool|null $retainExistingIds = null, bool|null $returnActiveFulfillments = null, bool|null $forceTransferEvenIfNoTargetUsers = null, bool|null $forceTransferEvenIfParentAndChildSeparated = null)
+    public function __construct(EntitlementIdentifierType $entitlementIdentifier, string $accountTo, bool $retainExistingIds = null, bool $returnActiveFulfillments = null, bool $forceTransferEvenIfNoTargetUsers = null, bool $forceTransferEvenIfParentAndChildSeparated = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->accountTo = $accountTo;
@@ -53,29 +47,16 @@ class TransferEntitlementInfoType
         $this->forceTransferEvenIfParentAndChildSeparated = $forceTransferEvenIfParentAndChildSeparated;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     * @param  bool|null  $retainExistingIds
-     * @param  bool|null  $returnActiveFulfillments
-     * @param  bool|null  $forceTransferEvenIfNoTargetUsers
-     * @param  bool|null  $forceTransferEvenIfParentAndChildSeparated
-     */
-    public static function create(EntitlementIdentifierType $entitlementIdentifier, string $accountTo, bool|null $retainExistingIds = null, bool|null $returnActiveFulfillments = null, bool|null $forceTransferEvenIfNoTargetUsers = null, bool|null $forceTransferEvenIfParentAndChildSeparated = null)
+    public static function create(EntitlementIdentifierType $entitlementIdentifier, string $accountTo, bool $retainExistingIds = null, bool $returnActiveFulfillments = null, bool $forceTransferEvenIfNoTargetUsers = null, bool $forceTransferEvenIfParentAndChildSeparated = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
-     */
     public function getEntitlementIdentifier(): EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType  $entitlementIdentifier
-     */
     public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): TransferEntitlementInfoType
     {
         $new = clone $this;
@@ -97,12 +78,12 @@ class TransferEntitlementInfoType
         return $new;
     }
 
-    public function getRetainExistingIds(): bool|null
+    public function getRetainExistingIds(): ?bool
     {
         return $this->retainExistingIds;
     }
 
-    public function withRetainExistingIds(bool|null $retainExistingIds): TransferEntitlementInfoType
+    public function withRetainExistingIds(?bool $retainExistingIds): TransferEntitlementInfoType
     {
         $new = clone $this;
         $new->retainExistingIds = $retainExistingIds;
@@ -110,12 +91,12 @@ class TransferEntitlementInfoType
         return $new;
     }
 
-    public function getReturnActiveFulfillments(): bool|null
+    public function getReturnActiveFulfillments(): ?bool
     {
         return $this->returnActiveFulfillments;
     }
 
-    public function withReturnActiveFulfillments(bool|null $returnActiveFulfillments): TransferEntitlementInfoType
+    public function withReturnActiveFulfillments(?bool $returnActiveFulfillments): TransferEntitlementInfoType
     {
         $new = clone $this;
         $new->returnActiveFulfillments = $returnActiveFulfillments;
@@ -123,12 +104,12 @@ class TransferEntitlementInfoType
         return $new;
     }
 
-    public function getForceTransferEvenIfNoTargetUsers(): bool|null
+    public function getForceTransferEvenIfNoTargetUsers(): ?bool
     {
         return $this->forceTransferEvenIfNoTargetUsers;
     }
 
-    public function withForceTransferEvenIfNoTargetUsers(bool|null $forceTransferEvenIfNoTargetUsers): TransferEntitlementInfoType
+    public function withForceTransferEvenIfNoTargetUsers(?bool $forceTransferEvenIfNoTargetUsers): TransferEntitlementInfoType
     {
         $new = clone $this;
         $new->forceTransferEvenIfNoTargetUsers = $forceTransferEvenIfNoTargetUsers;
@@ -136,12 +117,12 @@ class TransferEntitlementInfoType
         return $new;
     }
 
-    public function getForceTransferEvenIfParentAndChildSeparated(): bool|null
+    public function getForceTransferEvenIfParentAndChildSeparated(): ?bool
     {
         return $this->forceTransferEvenIfParentAndChildSeparated;
     }
 
-    public function withForceTransferEvenIfParentAndChildSeparated(bool|null $forceTransferEvenIfParentAndChildSeparated): TransferEntitlementInfoType
+    public function withForceTransferEvenIfParentAndChildSeparated(?bool $forceTransferEvenIfParentAndChildSeparated): TransferEntitlementInfoType
     {
         $new = clone $this;
         $new->forceTransferEvenIfParentAndChildSeparated = $forceTransferEvenIfParentAndChildSeparated;

@@ -13,34 +13,23 @@ class GetUniformSuiteCountRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\SuiteQueryParametersType|null  $queryParams
      */
-    public function __construct(SuiteQueryParametersType|null $queryParams = null)
+    public function __construct(SuiteQueryParametersType $queryParams = null)
     {
         $this->queryParams = $queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SuiteQueryParametersType|null  $queryParams
-     */
-    public static function create(SuiteQueryParametersType|null $queryParams = null)
+    public static function create(SuiteQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SuiteQueryParametersType|null
-     */
-    public function getQueryParams(): SuiteQueryParametersType|null
+    public function getQueryParams(): ?SuiteQueryParametersType
     {
         return $this->queryParams;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SuiteQueryParametersType|null  $queryParams
-     */
-    public function withQueryParams(SuiteQueryParametersType|null $queryParams): GetUniformSuiteCountRequestType
+    public function withQueryParams(?SuiteQueryParametersType $queryParams): GetUniformSuiteCountRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

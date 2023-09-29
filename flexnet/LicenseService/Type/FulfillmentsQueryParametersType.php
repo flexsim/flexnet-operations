@@ -101,28 +101,8 @@ class FulfillmentsQueryParametersType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $entitlementId
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $activationId
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $fulfillmentId
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $product
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $hostId
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $nodeLockHostId
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $soldTo
-     * @param  \Flexnet\LicenseService\Type\DateQueryType|null  $fulfillDate
-     * @param  \Flexnet\LicenseService\Type\DateTimeQueryType|null  $fulfillDateTime
-     * @param  \Flexnet\LicenseService\Type\DateQueryType|null  $startDate
-     * @param  \Flexnet\LicenseService\Type\DateQueryType|null  $expirationDate
-     * @param  \Flexnet\LicenseService\Type\DateTimeQueryType|null  $lastModifiedDateTime
-     * @param  \Flexnet\LicenseService\Type\StateQueryType|null  $state
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $licenseTechnology
-     * @param  string|null  $userId
-     * @param  string|null  $fulfillmentSource
-     * @param  \Flexnet\LicenseService\Type\CustomAttributesQueryListType|null  $customAttributes
-     * @param  \Flexnet\LicenseService\Type\CustomAttributesQueryListType|null  $customHostAttributes
-     * @param  string|null  $activationType
      */
-    public function __construct(SimpleQueryType|null $entitlementId = null, SimpleQueryType|null $activationId = null, SimpleQueryType|null $fulfillmentId = null, SimpleQueryType|null $product = null, SimpleQueryType|null $hostId = null, SimpleQueryType|null $nodeLockHostId = null, SimpleQueryType|null $soldTo = null, DateQueryType|null $fulfillDate = null, DateTimeQueryType|null $fulfillDateTime = null, DateQueryType|null $startDate = null, DateQueryType|null $expirationDate = null, DateTimeQueryType|null $lastModifiedDateTime = null, StateQueryType|null $state = null, SimpleQueryType|null $licenseTechnology = null, string|null $userId = null, string|null $fulfillmentSource = null, CustomAttributesQueryListType|null $customAttributes = null, CustomAttributesQueryListType|null $customHostAttributes = null, string|null $activationType = null)
+    public function __construct(SimpleQueryType $entitlementId = null, SimpleQueryType $activationId = null, SimpleQueryType $fulfillmentId = null, SimpleQueryType $product = null, SimpleQueryType $hostId = null, SimpleQueryType $nodeLockHostId = null, SimpleQueryType $soldTo = null, DateQueryType $fulfillDate = null, DateTimeQueryType $fulfillDateTime = null, DateQueryType $startDate = null, DateQueryType $expirationDate = null, DateTimeQueryType $lastModifiedDateTime = null, StateQueryType $state = null, SimpleQueryType $licenseTechnology = null, string $userId = null, string $fulfillmentSource = null, CustomAttributesQueryListType $customAttributes = null, CustomAttributesQueryListType $customHostAttributes = null, string $activationType = null)
     {
         $this->entitlementId = $entitlementId;
         $this->activationId = $activationId;
@@ -145,44 +125,17 @@ class FulfillmentsQueryParametersType
         $this->activationType = $activationType;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $entitlementId
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $activationId
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $fulfillmentId
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $product
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $hostId
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $nodeLockHostId
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $soldTo
-     * @param  \Flexnet\LicenseService\Type\DateQueryType|null  $fulfillDate
-     * @param  \Flexnet\LicenseService\Type\DateTimeQueryType|null  $fulfillDateTime
-     * @param  \Flexnet\LicenseService\Type\DateQueryType|null  $startDate
-     * @param  \Flexnet\LicenseService\Type\DateQueryType|null  $expirationDate
-     * @param  \Flexnet\LicenseService\Type\DateTimeQueryType|null  $lastModifiedDateTime
-     * @param  \Flexnet\LicenseService\Type\StateQueryType|null  $state
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $licenseTechnology
-     * @param  string|null  $userId
-     * @param  string|null  $fulfillmentSource
-     * @param  \Flexnet\LicenseService\Type\CustomAttributesQueryListType|null  $customAttributes
-     * @param  \Flexnet\LicenseService\Type\CustomAttributesQueryListType|null  $customHostAttributes
-     * @param  string|null  $activationType
-     */
-    public static function create(SimpleQueryType|null $entitlementId = null, SimpleQueryType|null $activationId = null, SimpleQueryType|null $fulfillmentId = null, SimpleQueryType|null $product = null, SimpleQueryType|null $hostId = null, SimpleQueryType|null $nodeLockHostId = null, SimpleQueryType|null $soldTo = null, DateQueryType|null $fulfillDate = null, DateTimeQueryType|null $fulfillDateTime = null, DateQueryType|null $startDate = null, DateQueryType|null $expirationDate = null, DateTimeQueryType|null $lastModifiedDateTime = null, StateQueryType|null $state = null, SimpleQueryType|null $licenseTechnology = null, string|null $userId = null, string|null $fulfillmentSource = null, CustomAttributesQueryListType|null $customAttributes = null, CustomAttributesQueryListType|null $customHostAttributes = null, string|null $activationType = null)
+    public static function create(SimpleQueryType $entitlementId = null, SimpleQueryType $activationId = null, SimpleQueryType $fulfillmentId = null, SimpleQueryType $product = null, SimpleQueryType $hostId = null, SimpleQueryType $nodeLockHostId = null, SimpleQueryType $soldTo = null, DateQueryType $fulfillDate = null, DateTimeQueryType $fulfillDateTime = null, DateQueryType $startDate = null, DateQueryType $expirationDate = null, DateTimeQueryType $lastModifiedDateTime = null, StateQueryType $state = null, SimpleQueryType $licenseTechnology = null, string $userId = null, string $fulfillmentSource = null, CustomAttributesQueryListType $customAttributes = null, CustomAttributesQueryListType $customHostAttributes = null, string $activationType = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\SimpleQueryType|null
-     */
-    public function getEntitlementId(): SimpleQueryType|null
+    public function getEntitlementId(): ?SimpleQueryType
     {
         return $this->entitlementId;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $entitlementId
-     */
-    public function withEntitlementId(SimpleQueryType|null $entitlementId): FulfillmentsQueryParametersType
+    public function withEntitlementId(?SimpleQueryType $entitlementId): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->entitlementId = $entitlementId;
@@ -190,18 +143,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\SimpleQueryType|null
-     */
-    public function getActivationId(): SimpleQueryType|null
+    public function getActivationId(): ?SimpleQueryType
     {
         return $this->activationId;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $activationId
-     */
-    public function withActivationId(SimpleQueryType|null $activationId): FulfillmentsQueryParametersType
+    public function withActivationId(?SimpleQueryType $activationId): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -209,18 +156,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\SimpleQueryType|null
-     */
-    public function getFulfillmentId(): SimpleQueryType|null
+    public function getFulfillmentId(): ?SimpleQueryType
     {
         return $this->fulfillmentId;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $fulfillmentId
-     */
-    public function withFulfillmentId(SimpleQueryType|null $fulfillmentId): FulfillmentsQueryParametersType
+    public function withFulfillmentId(?SimpleQueryType $fulfillmentId): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->fulfillmentId = $fulfillmentId;
@@ -228,18 +169,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\SimpleQueryType|null
-     */
-    public function getProduct(): SimpleQueryType|null
+    public function getProduct(): ?SimpleQueryType
     {
         return $this->product;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $product
-     */
-    public function withProduct(SimpleQueryType|null $product): FulfillmentsQueryParametersType
+    public function withProduct(?SimpleQueryType $product): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->product = $product;
@@ -247,18 +182,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\SimpleQueryType|null
-     */
-    public function getHostId(): SimpleQueryType|null
+    public function getHostId(): ?SimpleQueryType
     {
         return $this->hostId;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $hostId
-     */
-    public function withHostId(SimpleQueryType|null $hostId): FulfillmentsQueryParametersType
+    public function withHostId(?SimpleQueryType $hostId): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->hostId = $hostId;
@@ -266,18 +195,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\SimpleQueryType|null
-     */
-    public function getNodeLockHostId(): SimpleQueryType|null
+    public function getNodeLockHostId(): ?SimpleQueryType
     {
         return $this->nodeLockHostId;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $nodeLockHostId
-     */
-    public function withNodeLockHostId(SimpleQueryType|null $nodeLockHostId): FulfillmentsQueryParametersType
+    public function withNodeLockHostId(?SimpleQueryType $nodeLockHostId): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->nodeLockHostId = $nodeLockHostId;
@@ -285,18 +208,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\SimpleQueryType|null
-     */
-    public function getSoldTo(): SimpleQueryType|null
+    public function getSoldTo(): ?SimpleQueryType
     {
         return $this->soldTo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $soldTo
-     */
-    public function withSoldTo(SimpleQueryType|null $soldTo): FulfillmentsQueryParametersType
+    public function withSoldTo(?SimpleQueryType $soldTo): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -304,18 +221,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\DateQueryType|null
-     */
-    public function getFulfillDate(): DateQueryType|null
+    public function getFulfillDate(): ?DateQueryType
     {
         return $this->fulfillDate;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\DateQueryType|null  $fulfillDate
-     */
-    public function withFulfillDate(DateQueryType|null $fulfillDate): FulfillmentsQueryParametersType
+    public function withFulfillDate(?DateQueryType $fulfillDate): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->fulfillDate = $fulfillDate;
@@ -323,18 +234,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\DateTimeQueryType|null
-     */
-    public function getFulfillDateTime(): DateTimeQueryType|null
+    public function getFulfillDateTime(): ?DateTimeQueryType
     {
         return $this->fulfillDateTime;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\DateTimeQueryType|null  $fulfillDateTime
-     */
-    public function withFulfillDateTime(DateTimeQueryType|null $fulfillDateTime): FulfillmentsQueryParametersType
+    public function withFulfillDateTime(?DateTimeQueryType $fulfillDateTime): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->fulfillDateTime = $fulfillDateTime;
@@ -342,18 +247,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\DateQueryType|null
-     */
-    public function getStartDate(): DateQueryType|null
+    public function getStartDate(): ?DateQueryType
     {
         return $this->startDate;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\DateQueryType|null  $startDate
-     */
-    public function withStartDate(DateQueryType|null $startDate): FulfillmentsQueryParametersType
+    public function withStartDate(?DateQueryType $startDate): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -361,18 +260,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\DateQueryType|null
-     */
-    public function getExpirationDate(): DateQueryType|null
+    public function getExpirationDate(): ?DateQueryType
     {
         return $this->expirationDate;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\DateQueryType|null  $expirationDate
-     */
-    public function withExpirationDate(DateQueryType|null $expirationDate): FulfillmentsQueryParametersType
+    public function withExpirationDate(?DateQueryType $expirationDate): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->expirationDate = $expirationDate;
@@ -380,18 +273,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\DateTimeQueryType|null
-     */
-    public function getLastModifiedDateTime(): DateTimeQueryType|null
+    public function getLastModifiedDateTime(): ?DateTimeQueryType
     {
         return $this->lastModifiedDateTime;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\DateTimeQueryType|null  $lastModifiedDateTime
-     */
-    public function withLastModifiedDateTime(DateTimeQueryType|null $lastModifiedDateTime): FulfillmentsQueryParametersType
+    public function withLastModifiedDateTime(?DateTimeQueryType $lastModifiedDateTime): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->lastModifiedDateTime = $lastModifiedDateTime;
@@ -399,18 +286,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StateQueryType|null
-     */
-    public function getState(): StateQueryType|null
+    public function getState(): ?StateQueryType
     {
         return $this->state;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StateQueryType|null  $state
-     */
-    public function withState(StateQueryType|null $state): FulfillmentsQueryParametersType
+    public function withState(?StateQueryType $state): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->state = $state;
@@ -418,18 +299,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\SimpleQueryType|null
-     */
-    public function getLicenseTechnology(): SimpleQueryType|null
+    public function getLicenseTechnology(): ?SimpleQueryType
     {
         return $this->licenseTechnology;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\SimpleQueryType|null  $licenseTechnology
-     */
-    public function withLicenseTechnology(SimpleQueryType|null $licenseTechnology): FulfillmentsQueryParametersType
+    public function withLicenseTechnology(?SimpleQueryType $licenseTechnology): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->licenseTechnology = $licenseTechnology;
@@ -437,12 +312,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    public function getUserId(): string|null
+    public function getUserId(): ?string
     {
         return $this->userId;
     }
 
-    public function withUserId(string|null $userId): FulfillmentsQueryParametersType
+    public function withUserId(?string $userId): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->userId = $userId;
@@ -450,12 +325,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    public function getFulfillmentSource(): string|null
+    public function getFulfillmentSource(): ?string
     {
         return $this->fulfillmentSource;
     }
 
-    public function withFulfillmentSource(string|null $fulfillmentSource): FulfillmentsQueryParametersType
+    public function withFulfillmentSource(?string $fulfillmentSource): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->fulfillmentSource = $fulfillmentSource;
@@ -463,18 +338,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\CustomAttributesQueryListType|null
-     */
-    public function getCustomAttributes(): CustomAttributesQueryListType|null
+    public function getCustomAttributes(): ?CustomAttributesQueryListType
     {
         return $this->customAttributes;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\CustomAttributesQueryListType|null  $customAttributes
-     */
-    public function withCustomAttributes(CustomAttributesQueryListType|null $customAttributes): FulfillmentsQueryParametersType
+    public function withCustomAttributes(?CustomAttributesQueryListType $customAttributes): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->customAttributes = $customAttributes;
@@ -482,18 +351,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\CustomAttributesQueryListType|null
-     */
-    public function getCustomHostAttributes(): CustomAttributesQueryListType|null
+    public function getCustomHostAttributes(): ?CustomAttributesQueryListType
     {
         return $this->customHostAttributes;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\CustomAttributesQueryListType|null  $customHostAttributes
-     */
-    public function withCustomHostAttributes(CustomAttributesQueryListType|null $customHostAttributes): FulfillmentsQueryParametersType
+    public function withCustomHostAttributes(?CustomAttributesQueryListType $customHostAttributes): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->customHostAttributes = $customHostAttributes;
@@ -501,12 +364,12 @@ class FulfillmentsQueryParametersType
         return $new;
     }
 
-    public function getActivationType(): string|null
+    public function getActivationType(): ?string
     {
         return $this->activationType;
     }
 
-    public function withActivationType(string|null $activationType): FulfillmentsQueryParametersType
+    public function withActivationType(?string $activationType): FulfillmentsQueryParametersType
     {
         $new = clone $this;
         $new->activationType = $activationType;

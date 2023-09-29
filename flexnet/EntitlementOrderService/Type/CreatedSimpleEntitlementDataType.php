@@ -47,7 +47,7 @@ class CreatedSimpleEntitlementDataType
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifiers
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $maintenanceLineItemIdentifiers
      */
-    public function __construct(string $recordRefNo, string $uniqueId, string $entitlementId, string|array|null $lineItemUniqueIds = null, string|array|null $maintenanceLineItemUniqueIds = null, EntitlementLineItemIdentifierType|array|null $lineItemIdentifiers = null, EntitlementLineItemIdentifierType|array|null $maintenanceLineItemIdentifiers = null)
+    public function __construct(string $recordRefNo, string $uniqueId, string $entitlementId, string|array $lineItemUniqueIds = null, string|array $maintenanceLineItemUniqueIds = null, EntitlementLineItemIdentifierType|array $lineItemIdentifiers = null, EntitlementLineItemIdentifierType|array $maintenanceLineItemIdentifiers = null)
     {
         $this->recordRefNo = $recordRefNo;
         $this->uniqueId = $uniqueId;
@@ -64,7 +64,7 @@ class CreatedSimpleEntitlementDataType
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifiers
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $maintenanceLineItemIdentifiers
      */
-    public static function create(string $recordRefNo, string $uniqueId, string $entitlementId, string|array|null $lineItemUniqueIds = null, string|array|null $maintenanceLineItemUniqueIds = null, EntitlementLineItemIdentifierType|array|null $lineItemIdentifiers = null, EntitlementLineItemIdentifierType|array|null $maintenanceLineItemIdentifiers = null)
+    public static function create(string $recordRefNo, string $uniqueId, string $entitlementId, string|array $lineItemUniqueIds = null, string|array $maintenanceLineItemUniqueIds = null, EntitlementLineItemIdentifierType|array $lineItemIdentifiers = null, EntitlementLineItemIdentifierType|array $maintenanceLineItemIdentifiers = null)
     {
         return new static(...\func_get_args());
     }

@@ -14,7 +14,7 @@ class FeatureBundleStateChangeListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeDataType>|null  $featureBundle
      */
-    public function __construct(FeatureBundleStateChangeDataType|array|null $featureBundle = null)
+    public function __construct(FeatureBundleStateChangeDataType|array $featureBundle = null)
     {
         $this->featureBundle = $featureBundle;
     }
@@ -22,7 +22,7 @@ class FeatureBundleStateChangeListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeDataType>|null  $featureBundle
      */
-    public static function create(FeatureBundleStateChangeDataType|array|null $featureBundle = null)
+    public static function create(FeatureBundleStateChangeDataType|array $featureBundle = null)
     {
         return new static(...\func_get_args());
     }

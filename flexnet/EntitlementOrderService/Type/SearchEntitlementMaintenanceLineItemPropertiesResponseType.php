@@ -19,35 +19,27 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType extends Result
     /**
      * Constructor
      *
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType>|null  $entitlementMaintenanceLineItem
      */
-    public function __construct(StatusInfoType $statusInfo, EntitlementMaintenanceLineItemPropertiesType|array|null $entitlementMaintenanceLineItem = null)
+    public function __construct(StatusInfoType $statusInfo, EntitlementMaintenanceLineItemPropertiesType|array $entitlementMaintenanceLineItem = null)
     {
         $this->statusInfo = $statusInfo;
         $this->entitlementMaintenanceLineItem = $entitlementMaintenanceLineItem;
     }
 
     /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType>|null  $entitlementMaintenanceLineItem
      */
-    public static function create(StatusInfoType $statusInfo, EntitlementMaintenanceLineItemPropertiesType|array|null $entitlementMaintenanceLineItem = null)
+    public static function create(StatusInfoType $statusInfo, EntitlementMaintenanceLineItemPropertiesType|array $entitlementMaintenanceLineItem = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): SearchEntitlementMaintenanceLineItemPropertiesResponseType
     {
         $new = clone $this;

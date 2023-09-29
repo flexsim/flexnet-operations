@@ -16,7 +16,7 @@ class EntitlementLifeCycleRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType>|null  $entitlementData
      */
-    public function __construct(EntitlementLifeCycleDataType|array|null $entitlementData = null)
+    public function __construct(EntitlementLifeCycleDataType|array $entitlementData = null)
     {
         $this->entitlementData = $entitlementData;
     }
@@ -24,7 +24,7 @@ class EntitlementLifeCycleRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType>|null  $entitlementData
      */
-    public static function create(EntitlementLifeCycleDataType|array|null $entitlementData = null)
+    public static function create(EntitlementLifeCycleDataType|array $entitlementData = null)
     {
         return new static(...\func_get_args());
     }

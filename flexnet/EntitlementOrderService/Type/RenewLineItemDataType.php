@@ -31,14 +31,8 @@ class RenewLineItemDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\RenewParametersDataType  $renewParameters
-     * @param  bool|null  $isFull
-     * @param  bool|null  $allowActivationsOnParent
-     * @param  bool|null  $autoDeploy
      */
-    public function __construct(EntitlementLineItemIdentifierType $parentLineItemIdentifier, RenewParametersDataType $renewParameters, bool|null $isFull = null, bool|null $allowActivationsOnParent = null, bool|null $autoDeploy = null)
+    public function __construct(EntitlementLineItemIdentifierType $parentLineItemIdentifier, RenewParametersDataType $renewParameters, bool $isFull = null, bool $allowActivationsOnParent = null, bool $autoDeploy = null)
     {
         $this->parentLineItemIdentifier = $parentLineItemIdentifier;
         $this->renewParameters = $renewParameters;
@@ -47,29 +41,16 @@ class RenewLineItemDataType
         $this->autoDeploy = $autoDeploy;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
-     * @param  \Flexnet\EntitlementOrderService\Type\RenewParametersDataType  $renewParameters
-     * @param  bool|null  $isFull
-     * @param  bool|null  $allowActivationsOnParent
-     * @param  bool|null  $autoDeploy
-     */
-    public static function create(EntitlementLineItemIdentifierType $parentLineItemIdentifier, RenewParametersDataType $renewParameters, bool|null $isFull = null, bool|null $allowActivationsOnParent = null, bool|null $autoDeploy = null)
+    public static function create(EntitlementLineItemIdentifierType $parentLineItemIdentifier, RenewParametersDataType $renewParameters, bool $isFull = null, bool $allowActivationsOnParent = null, bool $autoDeploy = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
-     */
     public function getParentLineItemIdentifier(): EntitlementLineItemIdentifierType
     {
         return $this->parentLineItemIdentifier;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType  $parentLineItemIdentifier
-     */
     public function withParentLineItemIdentifier(EntitlementLineItemIdentifierType $parentLineItemIdentifier): RenewLineItemDataType
     {
         $new = clone $this;
@@ -78,17 +59,11 @@ class RenewLineItemDataType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\RenewParametersDataType
-     */
     public function getRenewParameters(): RenewParametersDataType
     {
         return $this->renewParameters;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\RenewParametersDataType  $renewParameters
-     */
     public function withRenewParameters(RenewParametersDataType $renewParameters): RenewLineItemDataType
     {
         $new = clone $this;
@@ -97,12 +72,12 @@ class RenewLineItemDataType
         return $new;
     }
 
-    public function getIsFull(): bool|null
+    public function getIsFull(): ?bool
     {
         return $this->isFull;
     }
 
-    public function withIsFull(bool|null $isFull): RenewLineItemDataType
+    public function withIsFull(?bool $isFull): RenewLineItemDataType
     {
         $new = clone $this;
         $new->isFull = $isFull;
@@ -110,12 +85,12 @@ class RenewLineItemDataType
         return $new;
     }
 
-    public function getAllowActivationsOnParent(): bool|null
+    public function getAllowActivationsOnParent(): ?bool
     {
         return $this->allowActivationsOnParent;
     }
 
-    public function withAllowActivationsOnParent(bool|null $allowActivationsOnParent): RenewLineItemDataType
+    public function withAllowActivationsOnParent(?bool $allowActivationsOnParent): RenewLineItemDataType
     {
         $new = clone $this;
         $new->allowActivationsOnParent = $allowActivationsOnParent;
@@ -123,12 +98,12 @@ class RenewLineItemDataType
         return $new;
     }
 
-    public function getAutoDeploy(): bool|null
+    public function getAutoDeploy(): ?bool
     {
         return $this->autoDeploy;
     }
 
-    public function withAutoDeploy(bool|null $autoDeploy): RenewLineItemDataType
+    public function withAutoDeploy(?bool $autoDeploy): RenewLineItemDataType
     {
         $new = clone $this;
         $new->autoDeploy = $autoDeploy;

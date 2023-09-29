@@ -16,8 +16,6 @@ class FailedFulfillmentDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\CreateFulfillmentDataType  $fulfillment
      */
     public function __construct(CreateFulfillmentDataType $fulfillment, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedFulfillmentDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\CreateFulfillmentDataType  $fulfillment
-     */
     public static function create(CreateFulfillmentDataType $fulfillment, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\CreateFulfillmentDataType
-     */
     public function getFulfillment(): CreateFulfillmentDataType
     {
         return $this->fulfillment;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\CreateFulfillmentDataType  $fulfillment
-     */
     public function withFulfillment(CreateFulfillmentDataType $fulfillment): FailedFulfillmentDataType
     {
         $new = clone $this;

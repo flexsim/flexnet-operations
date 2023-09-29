@@ -16,31 +16,24 @@ class SuiteIdentifierType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\ProductPackagingService\Type\SuitePKType|null  $primaryKeys
      */
-    public function __construct(string|null $uniqueId = null, SuitePKType|null $primaryKeys = null)
+    public function __construct(string $uniqueId = null, SuitePKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    /**
-     * @param  string|null  $uniqueId
-     * @param  \Flexnet\ProductPackagingService\Type\SuitePKType|null  $primaryKeys
-     */
-    public static function create(string|null $uniqueId = null, SuitePKType|null $primaryKeys = null)
+    public static function create(string $uniqueId = null, SuitePKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUniqueId(): string|null
+    public function getUniqueId(): ?string
     {
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string|null $uniqueId): SuiteIdentifierType
+    public function withUniqueId(?string $uniqueId): SuiteIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -48,18 +41,12 @@ class SuiteIdentifierType
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\SuitePKType|null
-     */
-    public function getPrimaryKeys(): SuitePKType|null
+    public function getPrimaryKeys(): ?SuitePKType
     {
         return $this->primaryKeys;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\SuitePKType|null  $primaryKeys
-     */
-    public function withPrimaryKeys(SuitePKType|null $primaryKeys): SuiteIdentifierType
+    public function withPrimaryKeys(?SuitePKType $primaryKeys): SuiteIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

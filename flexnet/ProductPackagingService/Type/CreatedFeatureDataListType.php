@@ -14,7 +14,7 @@ class CreatedFeatureDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\CreatedFeatureDataType|array<\Flexnet\ProductPackagingService\Type\CreatedFeatureDataType>|null  $createdFeature
      */
-    public function __construct(CreatedFeatureDataType|array|null $createdFeature = null)
+    public function __construct(CreatedFeatureDataType|array $createdFeature = null)
     {
         $this->createdFeature = $createdFeature;
     }
@@ -22,7 +22,7 @@ class CreatedFeatureDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatedFeatureDataType|array<\Flexnet\ProductPackagingService\Type\CreatedFeatureDataType>|null  $createdFeature
      */
-    public static function create(CreatedFeatureDataType|array|null $createdFeature = null)
+    public static function create(CreatedFeatureDataType|array $createdFeature = null)
     {
         return new static(...\func_get_args());
     }

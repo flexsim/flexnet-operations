@@ -18,36 +18,23 @@ class GetFulfillmentsQueryResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\GetFulfillmentsQueryResponseDataType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, GetFulfillmentsQueryResponseDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetFulfillmentsQueryResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\LicenseService\Type\GetFulfillmentsQueryResponseDataType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, GetFulfillmentsQueryResponseDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetFulfillmentsQueryResponseDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetFulfillmentsQueryResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetFulfillmentsQueryResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\GetFulfillmentsQueryResponseDataType|null
-     */
-    public function getResponseData(): GetFulfillmentsQueryResponseDataType|null
+    public function getResponseData(): ?GetFulfillmentsQueryResponseDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\GetFulfillmentsQueryResponseDataType|null  $responseData
-     */
-    public function withResponseData(GetFulfillmentsQueryResponseDataType|null $responseData): GetFulfillmentsQueryResponseType
+    public function withResponseData(?GetFulfillmentsQueryResponseDataType $responseData): GetFulfillmentsQueryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

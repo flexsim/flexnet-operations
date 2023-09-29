@@ -16,19 +16,14 @@ class StatusInfoType
 
     /**
      * Constructor
-     *
-     * @param  string|null  $reason
      */
-    public function __construct(string $status, string|null $reason = null)
+    public function __construct(string $status, string $reason = null)
     {
         $this->status = $status;
         $this->reason = $reason;
     }
 
-    /**
-     * @param  string|null  $reason
-     */
-    public static function create(string $status, string|null $reason = null)
+    public static function create(string $status, string $reason = null)
     {
         return new static(...\func_get_args());
     }
@@ -46,12 +41,12 @@ class StatusInfoType
         return $new;
     }
 
-    public function getReason(): string|null
+    public function getReason(): ?string
     {
         return $this->reason;
     }
 
-    public function withReason(string|null $reason): StatusInfoType
+    public function withReason(?string $reason): StatusInfoType
     {
         $new = clone $this;
         $new->reason = $reason;

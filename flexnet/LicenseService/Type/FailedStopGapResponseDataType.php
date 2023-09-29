@@ -16,8 +16,6 @@ class FailedStopGapResponseDataType
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\LicenseService\Type\StopGapFulfillmentDataType  $fulfillment
      */
     public function __construct(StopGapFulfillmentDataType $fulfillment, string $reason)
     {
@@ -25,25 +23,16 @@ class FailedStopGapResponseDataType
         $this->reason = $reason;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StopGapFulfillmentDataType  $fulfillment
-     */
     public static function create(StopGapFulfillmentDataType $fulfillment, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\LicenseService\Type\StopGapFulfillmentDataType
-     */
     public function getFulfillment(): StopGapFulfillmentDataType
     {
         return $this->fulfillment;
     }
 
-    /**
-     * @param  \Flexnet\LicenseService\Type\StopGapFulfillmentDataType  $fulfillment
-     */
     public function withFulfillment(StopGapFulfillmentDataType $fulfillment): FailedStopGapResponseDataType
     {
         $new = clone $this;

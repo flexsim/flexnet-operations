@@ -18,36 +18,23 @@ class UpdateFeatureBundleResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateFeatureBundleDataListType|null  $failedData
      */
-    public function __construct(StatusInfoType $statusInfo, FailedUpdateFeatureBundleDataListType|null $failedData = null)
+    public function __construct(StatusInfoType $statusInfo, FailedUpdateFeatureBundleDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateFeatureBundleDataListType|null  $failedData
-     */
-    public static function create(StatusInfoType $statusInfo, FailedUpdateFeatureBundleDataListType|null $failedData = null)
+    public static function create(StatusInfoType $statusInfo, FailedUpdateFeatureBundleDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): UpdateFeatureBundleResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class UpdateFeatureBundleResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\FailedUpdateFeatureBundleDataListType|null
-     */
-    public function getFailedData(): FailedUpdateFeatureBundleDataListType|null
+    public function getFailedData(): ?FailedUpdateFeatureBundleDataListType
     {
         return $this->failedData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateFeatureBundleDataListType|null  $failedData
-     */
-    public function withFailedData(FailedUpdateFeatureBundleDataListType|null $failedData): UpdateFeatureBundleResponseType
+    public function withFailedData(?FailedUpdateFeatureBundleDataListType $failedData): UpdateFeatureBundleResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

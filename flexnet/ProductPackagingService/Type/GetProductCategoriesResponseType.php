@@ -18,36 +18,23 @@ class GetProductCategoriesResponseType extends Result
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\GetProductCategoriesResponseDataType|null  $responseData
      */
-    public function __construct(StatusInfoType $statusInfo, GetProductCategoriesResponseDataType|null $responseData = null)
+    public function __construct(StatusInfoType $statusInfo, GetProductCategoriesResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\GetProductCategoriesResponseDataType|null  $responseData
-     */
-    public static function create(StatusInfoType $statusInfo, GetProductCategoriesResponseDataType|null $responseData = null)
+    public static function create(StatusInfoType $statusInfo, GetProductCategoriesResponseDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\StatusInfoType
-     */
     public function getStatusInfo(): StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     */
     public function withStatusInfo(StatusInfoType $statusInfo): GetProductCategoriesResponseType
     {
         $new = clone $this;
@@ -56,18 +43,12 @@ class GetProductCategoriesResponseType extends Result
         return $new;
     }
 
-    /**
-     * @return \Flexnet\ProductPackagingService\Type\GetProductCategoriesResponseDataType|null
-     */
-    public function getResponseData(): GetProductCategoriesResponseDataType|null
+    public function getResponseData(): ?GetProductCategoriesResponseDataType
     {
         return $this->responseData;
     }
 
-    /**
-     * @param  \Flexnet\ProductPackagingService\Type\GetProductCategoriesResponseDataType|null  $responseData
-     */
-    public function withResponseData(GetProductCategoriesResponseDataType|null $responseData): GetProductCategoriesResponseType
+    public function withResponseData(?GetProductCategoriesResponseDataType $responseData): GetProductCategoriesResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

@@ -13,34 +13,23 @@ class GetExactAvailableCountRequestType implements RequestInterface
 
     /**
      * Constructor
-     *
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $activationId
      */
-    public function __construct(EntitlementLineItemIdentifierType|null $activationId = null)
+    public function __construct(EntitlementLineItemIdentifierType $activationId = null)
     {
         $this->activationId = $activationId;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $activationId
-     */
-    public static function create(EntitlementLineItemIdentifierType|null $activationId = null)
+    public static function create(EntitlementLineItemIdentifierType $activationId = null)
     {
         return new static(...\func_get_args());
     }
 
-    /**
-     * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null
-     */
-    public function getActivationId(): EntitlementLineItemIdentifierType|null
+    public function getActivationId(): ?EntitlementLineItemIdentifierType
     {
         return $this->activationId;
     }
 
-    /**
-     * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|null  $activationId
-     */
-    public function withActivationId(EntitlementLineItemIdentifierType|null $activationId): GetExactAvailableCountRequestType
+    public function withActivationId(?EntitlementLineItemIdentifierType $activationId): GetExactAvailableCountRequestType
     {
         $new = clone $this;
         $new->activationId = $activationId;
