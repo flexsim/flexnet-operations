@@ -5279,6 +5279,7 @@
                                 },
                                 {
                                     "_maxOccurs": "unbounded",
+                                    "_minOccurs": "0",
                                     "_name": "relationship",
                                     "_type": "impl:productRelationshipDataType"
                                 }

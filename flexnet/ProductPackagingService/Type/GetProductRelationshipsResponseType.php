@@ -12,7 +12,7 @@ class GetProductRelationshipsResponseType extends Result
     private $statusInfo;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>
+     * @var \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>|null
      */
     private $relationship;
 
@@ -20,9 +20,9 @@ class GetProductRelationshipsResponseType extends Result
      * Constructor
      *
      * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>  $relationship
+     * @param  \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>|null  $relationship
      */
-    public function __construct(StatusInfoType $statusInfo, ProductRelationshipDataType|array $relationship)
+    public function __construct(StatusInfoType $statusInfo, ProductRelationshipDataType|array|null $relationship = null)
     {
         $this->statusInfo = $statusInfo;
         $this->relationship = $relationship;
@@ -30,9 +30,9 @@ class GetProductRelationshipsResponseType extends Result
 
     /**
      * @param  \Flexnet\ProductPackagingService\Type\StatusInfoType  $statusInfo
-     * @param  \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>  $relationship
+     * @param  \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>|null  $relationship
      */
-    public static function create(StatusInfoType $statusInfo, ProductRelationshipDataType|array $relationship)
+    public static function create(StatusInfoType $statusInfo, ProductRelationshipDataType|array|null $relationship = null)
     {
         return new static(...\func_get_args());
     }
@@ -57,17 +57,17 @@ class GetProductRelationshipsResponseType extends Result
     }
 
     /**
-     * @return \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>
+     * @return \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>|null
      */
-    public function getRelationship(): ProductRelationshipDataType|array
+    public function getRelationship(): ProductRelationshipDataType|array|null
     {
         return $this->relationship;
     }
 
     /**
-     * @param  \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>  $relationship
+     * @param  \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>|null  $relationship
      */
-    public function withRelationship(ProductRelationshipDataType|array $relationship): GetProductRelationshipsResponseType
+    public function withRelationship(ProductRelationshipDataType|array|null $relationship): GetProductRelationshipsResponseType
     {
         $new = clone $this;
         $new->relationship = $relationship;

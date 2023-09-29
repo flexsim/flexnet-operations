@@ -1865,7 +1865,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
             <complexType name="getProductRelationshipsResponseType">
                 <sequence>
                     <element name="statusInfo" type="impl:StatusInfoType"/>
-                    <element maxOccurs="unbounded" name="relationship" type="impl:productRelationshipDataType"/>
+                    <element maxOccurs="unbounded" minOccurs="0" name="relationship" type="impl:productRelationshipDataType"/>
                 </sequence>
             </complexType>
             <element name="getProductRelationshipsResponse" type="impl:getProductRelationshipsResponseType"/>
