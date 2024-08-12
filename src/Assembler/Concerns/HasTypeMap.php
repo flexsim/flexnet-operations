@@ -62,10 +62,10 @@ trait HasTypeMap
                 'unbounded' => '|array',
                 default => '',
             }
-            .match (Arr::get($typeElements, $property->getName().'._minOccurs')) {
-                '0' => '|null',
-                default => '',
-            };
+        .match (Arr::get($typeElements, $property->getName().'._minOccurs')) {
+            '0' => '|null',
+            default => '',
+        };
 
         $basePropertyType = $property->getType();
         $docType = str_replace('|array', "|array<$basePropertyType>", $fullType);

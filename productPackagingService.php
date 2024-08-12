@@ -23,9 +23,9 @@ return Config::create()
     ->setClassMapName('ProductPackagingServiceClassmap')
     ->setClassMapNamespace('Flexnet\\ProductPackagingService')
     ->setRuleSet(new RuleSet([
-        new Rules\AssembleRule(new Assembler\ClassMapAssembler()),
-        new Rules\AssembleRule(new Assembler\ClientConstructorAssembler()),
-        new Rules\AssembleRule(new Assembler\ClientMethodAssembler()),
+        new Rules\AssembleRule(new Assembler\ClassMapAssembler),
+        new Rules\AssembleRule(new Assembler\ClientConstructorAssembler),
+        new Rules\AssembleRule(new Assembler\ClientMethodAssembler),
     ]))
     ->addRule(new Rules\AssembleRule(new FlexnetAssembler\PropertyAssembler(__DIR__.'/productPackagingService.json')))
     ->addRule(new Rules\AssembleRule(new FlexnetAssembler\ConstructorAssembler(
@@ -41,7 +41,7 @@ return Config::create()
         new Rules\IsRequestRule(
             $engine->getMetadata(),
             new Rules\MultiRule([
-                new Rules\AssembleRule(new Assembler\RequestAssembler()),
+                new Rules\AssembleRule(new Assembler\RequestAssembler),
             ])
         )
     )
