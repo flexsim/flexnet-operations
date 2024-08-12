@@ -14,7 +14,7 @@ class FailedLineItemStateDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataType>|null  $failedLineItem
      */
-    public function __construct(FailedLineItemStateDataType|array $failedLineItem = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataType|array|null $failedLineItem = null)
     {
         $this->failedLineItem = $failedLineItem;
     }
@@ -22,7 +22,7 @@ class FailedLineItemStateDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataType>|null  $failedLineItem
      */
-    public static function create(FailedLineItemStateDataType|array $failedLineItem = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataType|array|null $failedLineItem = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedLineItemStateDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataType>|null
      */
-    public function getFailedLineItem(): FailedLineItemStateDataType|array|null
+    public function getFailedLineItem(): \Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataType|array|null
     {
         return $this->failedLineItem;
     }
@@ -38,7 +38,7 @@ class FailedLineItemStateDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataType>|null  $failedLineItem
      */
-    public function withFailedLineItem(FailedLineItemStateDataType|array|null $failedLineItem): FailedLineItemStateDataListType
+    public function withFailedLineItem(\Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataType|array|null $failedLineItem): \Flexnet\EntitlementOrderService\Type\FailedLineItemStateDataListType
     {
         $new = clone $this;
         $new->failedLineItem = $failedLineItem;

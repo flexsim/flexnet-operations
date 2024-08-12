@@ -17,23 +17,23 @@ class FailedDeleteProductDataType
     /**
      * Constructor
      */
-    public function __construct(ProductIdentifierType $productIdentifier, string $reason = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier, ?string $reason = null)
     {
         $this->productIdentifier = $productIdentifier;
         $this->reason = $reason;
     }
 
-    public static function create(ProductIdentifierType $productIdentifier, string $reason = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getProductIdentifier(): ProductIdentifierType
+    public function getProductIdentifier(): \Flexnet\ProductPackagingService\Type\ProductIdentifierType
     {
         return $this->productIdentifier;
     }
 
-    public function withProductIdentifier(ProductIdentifierType $productIdentifier): FailedDeleteProductDataType
+    public function withProductIdentifier(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier): \Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType
     {
         $new = clone $this;
         $new->productIdentifier = $productIdentifier;
@@ -46,7 +46,7 @@ class FailedDeleteProductDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedDeleteProductDataType
+    public function withReason(?string $reason): \Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType
     {
         $new = clone $this;
         $new->reason = $reason;

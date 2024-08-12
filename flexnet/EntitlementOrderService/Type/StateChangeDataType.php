@@ -5,7 +5,7 @@ namespace Flexnet\EntitlementOrderService\Type;
 class StateChangeDataType
 {
     /**
-     * @var string
+     * @var \Flexnet\EntitlementOrderService\Type\StateChangeEventType
      */
     private $eventName;
 
@@ -27,7 +27,7 @@ class StateChangeDataType
     /**
      * Constructor
      */
-    public function __construct(string $eventName, \DateTimeInterface $eventDate, string $userId, string $description = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\StateChangeEventType $eventName, \DateTimeInterface $eventDate, string $userId, ?string $description = null)
     {
         $this->eventName = $eventName;
         $this->eventDate = $eventDate;
@@ -35,17 +35,17 @@ class StateChangeDataType
         $this->description = $description;
     }
 
-    public static function create(string $eventName, \DateTimeInterface $eventDate, string $userId, string $description = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\StateChangeEventType $eventName, \DateTimeInterface $eventDate, string $userId, ?string $description = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getEventName(): string
+    public function getEventName(): \Flexnet\EntitlementOrderService\Type\StateChangeEventType
     {
         return $this->eventName;
     }
 
-    public function withEventName(string $eventName): StateChangeDataType
+    public function withEventName(\Flexnet\EntitlementOrderService\Type\StateChangeEventType $eventName): \Flexnet\EntitlementOrderService\Type\StateChangeDataType
     {
         $new = clone $this;
         $new->eventName = $eventName;
@@ -58,7 +58,7 @@ class StateChangeDataType
         return $this->eventDate;
     }
 
-    public function withEventDate(\DateTimeInterface $eventDate): StateChangeDataType
+    public function withEventDate(\DateTimeInterface $eventDate): \Flexnet\EntitlementOrderService\Type\StateChangeDataType
     {
         $new = clone $this;
         $new->eventDate = $eventDate;
@@ -71,7 +71,7 @@ class StateChangeDataType
         return $this->userId;
     }
 
-    public function withUserId(string $userId): StateChangeDataType
+    public function withUserId(string $userId): \Flexnet\EntitlementOrderService\Type\StateChangeDataType
     {
         $new = clone $this;
         $new->userId = $userId;
@@ -84,7 +84,7 @@ class StateChangeDataType
         return $this->description;
     }
 
-    public function withDescription(?string $description): StateChangeDataType
+    public function withDescription(?string $description): \Flexnet\EntitlementOrderService\Type\StateChangeDataType
     {
         $new = clone $this;
         $new->description = $description;

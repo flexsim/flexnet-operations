@@ -10,7 +10,7 @@ class UpdateEntitledProductDataListType
     private $entitledProducts;
 
     /**
-     * @var string
+     * @var \Flexnet\EntitlementOrderService\Type\CollectionOperationType
      */
     private $opType;
 
@@ -19,7 +19,7 @@ class UpdateEntitledProductDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
      */
-    public function __construct(string $opType, EntitledProductDataType|array $entitledProducts = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\CollectionOperationType $opType, \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array|null $entitledProducts = null)
     {
         $this->opType = $opType;
         $this->entitledProducts = $entitledProducts;
@@ -28,7 +28,7 @@ class UpdateEntitledProductDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
      */
-    public static function create(string $opType, EntitledProductDataType|array $entitledProducts = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\CollectionOperationType $opType, \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array|null $entitledProducts = null)
     {
         return new static(...\func_get_args());
     }
@@ -36,7 +36,7 @@ class UpdateEntitledProductDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null
      */
-    public function getEntitledProducts(): EntitledProductDataType|array|null
+    public function getEntitledProducts(): \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array|null
     {
         return $this->entitledProducts;
     }
@@ -44,7 +44,7 @@ class UpdateEntitledProductDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProducts
      */
-    public function withEntitledProducts(EntitledProductDataType|array|null $entitledProducts): UpdateEntitledProductDataListType
+    public function withEntitledProducts(\Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array|null $entitledProducts): \Flexnet\EntitlementOrderService\Type\UpdateEntitledProductDataListType
     {
         $new = clone $this;
         $new->entitledProducts = $entitledProducts;
@@ -52,12 +52,12 @@ class UpdateEntitledProductDataListType
         return $new;
     }
 
-    public function getOpType(): string
+    public function getOpType(): \Flexnet\EntitlementOrderService\Type\CollectionOperationType
     {
         return $this->opType;
     }
 
-    public function withOpType(string $opType): UpdateEntitledProductDataListType
+    public function withOpType(\Flexnet\EntitlementOrderService\Type\CollectionOperationType $opType): \Flexnet\EntitlementOrderService\Type\UpdateEntitledProductDataListType
     {
         $new = clone $this;
         $new->opType = $opType;

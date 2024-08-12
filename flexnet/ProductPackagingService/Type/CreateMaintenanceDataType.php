@@ -42,7 +42,7 @@ class CreateMaintenanceDataType
     /**
      * Constructor
      */
-    public function __construct(string $maintenanceName, string $version = null, string $description = null, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, PartNumbersSimpleListType $partNumbers = null)
+    public function __construct(string $maintenanceName, ?string $version = null, ?string $description = null, ?bool $allowUpgrades = null, ?bool $allowUpsells = null, ?bool $allowRenewals = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType $partNumbers = null)
     {
         $this->maintenanceName = $maintenanceName;
         $this->version = $version;
@@ -53,7 +53,7 @@ class CreateMaintenanceDataType
         $this->partNumbers = $partNumbers;
     }
 
-    public static function create(string $maintenanceName, string $version = null, string $description = null, bool $allowUpgrades = null, bool $allowUpsells = null, bool $allowRenewals = null, PartNumbersSimpleListType $partNumbers = null)
+    public static function create(string $maintenanceName, ?string $version = null, ?string $description = null, ?bool $allowUpgrades = null, ?bool $allowUpsells = null, ?bool $allowRenewals = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType $partNumbers = null)
     {
         return new static(...\func_get_args());
     }
@@ -63,7 +63,7 @@ class CreateMaintenanceDataType
         return $this->maintenanceName;
     }
 
-    public function withMaintenanceName(string $maintenanceName): CreateMaintenanceDataType
+    public function withMaintenanceName(string $maintenanceName): \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType
     {
         $new = clone $this;
         $new->maintenanceName = $maintenanceName;
@@ -76,7 +76,7 @@ class CreateMaintenanceDataType
         return $this->version;
     }
 
-    public function withVersion(?string $version): CreateMaintenanceDataType
+    public function withVersion(?string $version): \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType
     {
         $new = clone $this;
         $new->version = $version;
@@ -89,7 +89,7 @@ class CreateMaintenanceDataType
         return $this->description;
     }
 
-    public function withDescription(?string $description): CreateMaintenanceDataType
+    public function withDescription(?string $description): \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -102,7 +102,7 @@ class CreateMaintenanceDataType
         return $this->allowUpgrades;
     }
 
-    public function withAllowUpgrades(?bool $allowUpgrades): CreateMaintenanceDataType
+    public function withAllowUpgrades(?bool $allowUpgrades): \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType
     {
         $new = clone $this;
         $new->allowUpgrades = $allowUpgrades;
@@ -115,7 +115,7 @@ class CreateMaintenanceDataType
         return $this->allowUpsells;
     }
 
-    public function withAllowUpsells(?bool $allowUpsells): CreateMaintenanceDataType
+    public function withAllowUpsells(?bool $allowUpsells): \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType
     {
         $new = clone $this;
         $new->allowUpsells = $allowUpsells;
@@ -128,7 +128,7 @@ class CreateMaintenanceDataType
         return $this->allowRenewals;
     }
 
-    public function withAllowRenewals(?bool $allowRenewals): CreateMaintenanceDataType
+    public function withAllowRenewals(?bool $allowRenewals): \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType
     {
         $new = clone $this;
         $new->allowRenewals = $allowRenewals;
@@ -136,12 +136,12 @@ class CreateMaintenanceDataType
         return $new;
     }
 
-    public function getPartNumbers(): ?PartNumbersSimpleListType
+    public function getPartNumbers(): ?\Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType
     {
         return $this->partNumbers;
     }
 
-    public function withPartNumbers(?PartNumbersSimpleListType $partNumbers): CreateMaintenanceDataType
+    public function withPartNumbers(?\Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType $partNumbers): \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType
     {
         $new = clone $this;
         $new->partNumbers = $partNumbers;

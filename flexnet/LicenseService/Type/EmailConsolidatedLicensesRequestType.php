@@ -29,7 +29,7 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(ConsolidatedLicenseIdListType $consolidatedLicenseIdList, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, string $locale = null)
+    public function __construct(\Flexnet\LicenseService\Type\ConsolidatedLicenseIdListType $consolidatedLicenseIdList, ?bool $validateEmailAddresses = null, ?\Flexnet\LicenseService\Type\EmailContactListType $emailIdList = null, ?string $locale = null)
     {
         $this->consolidatedLicenseIdList = $consolidatedLicenseIdList;
         $this->validateEmailAddresses = $validateEmailAddresses;
@@ -37,17 +37,17 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
         $this->locale = $locale;
     }
 
-    public static function create(ConsolidatedLicenseIdListType $consolidatedLicenseIdList, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, string $locale = null)
+    public static function create(\Flexnet\LicenseService\Type\ConsolidatedLicenseIdListType $consolidatedLicenseIdList, ?bool $validateEmailAddresses = null, ?\Flexnet\LicenseService\Type\EmailContactListType $emailIdList = null, ?string $locale = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getConsolidatedLicenseIdList(): ConsolidatedLicenseIdListType
+    public function getConsolidatedLicenseIdList(): \Flexnet\LicenseService\Type\ConsolidatedLicenseIdListType
     {
         return $this->consolidatedLicenseIdList;
     }
 
-    public function withConsolidatedLicenseIdList(ConsolidatedLicenseIdListType $consolidatedLicenseIdList): EmailConsolidatedLicensesRequestType
+    public function withConsolidatedLicenseIdList(\Flexnet\LicenseService\Type\ConsolidatedLicenseIdListType $consolidatedLicenseIdList): \Flexnet\LicenseService\Type\EmailConsolidatedLicensesRequestType
     {
         $new = clone $this;
         $new->consolidatedLicenseIdList = $consolidatedLicenseIdList;
@@ -60,7 +60,7 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
         return $this->validateEmailAddresses;
     }
 
-    public function withValidateEmailAddresses(?bool $validateEmailAddresses): EmailConsolidatedLicensesRequestType
+    public function withValidateEmailAddresses(?bool $validateEmailAddresses): \Flexnet\LicenseService\Type\EmailConsolidatedLicensesRequestType
     {
         $new = clone $this;
         $new->validateEmailAddresses = $validateEmailAddresses;
@@ -68,12 +68,12 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
         return $new;
     }
 
-    public function getEmailIdList(): ?EmailContactListType
+    public function getEmailIdList(): ?\Flexnet\LicenseService\Type\EmailContactListType
     {
         return $this->emailIdList;
     }
 
-    public function withEmailIdList(?EmailContactListType $emailIdList): EmailConsolidatedLicensesRequestType
+    public function withEmailIdList(?\Flexnet\LicenseService\Type\EmailContactListType $emailIdList): \Flexnet\LicenseService\Type\EmailConsolidatedLicensesRequestType
     {
         $new = clone $this;
         $new->emailIdList = $emailIdList;
@@ -86,7 +86,7 @@ class EmailConsolidatedLicensesRequestType implements RequestInterface
         return $this->locale;
     }
 
-    public function withLocale(?string $locale): EmailConsolidatedLicensesRequestType
+    public function withLocale(?string $locale): \Flexnet\LicenseService\Type\EmailConsolidatedLicensesRequestType
     {
         $new = clone $this;
         $new->locale = $locale;

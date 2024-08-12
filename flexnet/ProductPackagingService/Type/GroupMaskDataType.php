@@ -5,40 +5,40 @@ namespace Flexnet\ProductPackagingService\Type;
 class GroupMaskDataType
 {
     /**
-     * @var string|array<string>|null
+     * @var \Flexnet\ProductPackagingService\Type\GroupMaskType|array<\Flexnet\ProductPackagingService\Type\GroupMaskType>|null
      */
     private $option;
 
     /**
      * Constructor
      *
-     * @param  string|array<string>|null  $option
+     * @param  \Flexnet\ProductPackagingService\Type\GroupMaskType|array<\Flexnet\ProductPackagingService\Type\GroupMaskType>|null  $option
      */
-    public function __construct(string|array $option = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\GroupMaskType|array|null $option = null)
     {
         $this->option = $option;
     }
 
     /**
-     * @param  string|array<string>|null  $option
+     * @param  \Flexnet\ProductPackagingService\Type\GroupMaskType|array<\Flexnet\ProductPackagingService\Type\GroupMaskType>|null  $option
      */
-    public static function create(string|array $option = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\GroupMaskType|array|null $option = null)
     {
         return new static(...\func_get_args());
     }
 
     /**
-     * @return string|array<string>|null
+     * @return \Flexnet\ProductPackagingService\Type\GroupMaskType|array<\Flexnet\ProductPackagingService\Type\GroupMaskType>|null
      */
-    public function getOption(): string|array|null
+    public function getOption(): \Flexnet\ProductPackagingService\Type\GroupMaskType|array|null
     {
         return $this->option;
     }
 
     /**
-     * @param  string|array<string>|null  $option
+     * @param  \Flexnet\ProductPackagingService\Type\GroupMaskType|array<\Flexnet\ProductPackagingService\Type\GroupMaskType>|null  $option
      */
-    public function withOption(string|array|null $option): GroupMaskDataType
+    public function withOption(\Flexnet\ProductPackagingService\Type\GroupMaskType|array|null $option): \Flexnet\ProductPackagingService\Type\GroupMaskDataType
     {
         $new = clone $this;
         $new->option = $option;

@@ -17,23 +17,23 @@ class FailedRepairResponseDataType
     /**
      * Constructor
      */
-    public function __construct(RepairFulfillmentDataType $fulfillment, string $reason)
+    public function __construct(\Flexnet\LicenseService\Type\RepairFulfillmentDataType $fulfillment, string $reason)
     {
         $this->fulfillment = $fulfillment;
         $this->reason = $reason;
     }
 
-    public static function create(RepairFulfillmentDataType $fulfillment, string $reason)
+    public static function create(\Flexnet\LicenseService\Type\RepairFulfillmentDataType $fulfillment, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFulfillment(): RepairFulfillmentDataType
+    public function getFulfillment(): \Flexnet\LicenseService\Type\RepairFulfillmentDataType
     {
         return $this->fulfillment;
     }
 
-    public function withFulfillment(RepairFulfillmentDataType $fulfillment): FailedRepairResponseDataType
+    public function withFulfillment(\Flexnet\LicenseService\Type\RepairFulfillmentDataType $fulfillment): \Flexnet\LicenseService\Type\FailedRepairResponseDataType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;
@@ -46,7 +46,7 @@ class FailedRepairResponseDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedRepairResponseDataType
+    public function withReason(string $reason): \Flexnet\LicenseService\Type\FailedRepairResponseDataType
     {
         $new = clone $this;
         $new->reason = $reason;

@@ -24,24 +24,24 @@ class TransferHostRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(TransferHostList $sourceHosts, string $soldTo = null, bool $poolEntitlements = null)
+    public function __construct(\Flexnet\LicenseService\Type\TransferHostList $sourceHosts, ?string $soldTo = null, ?bool $poolEntitlements = null)
     {
         $this->sourceHosts = $sourceHosts;
         $this->soldTo = $soldTo;
         $this->poolEntitlements = $poolEntitlements;
     }
 
-    public static function create(TransferHostList $sourceHosts, string $soldTo = null, bool $poolEntitlements = null)
+    public static function create(\Flexnet\LicenseService\Type\TransferHostList $sourceHosts, ?string $soldTo = null, ?bool $poolEntitlements = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getSourceHosts(): TransferHostList
+    public function getSourceHosts(): \Flexnet\LicenseService\Type\TransferHostList
     {
         return $this->sourceHosts;
     }
 
-    public function withSourceHosts(TransferHostList $sourceHosts): TransferHostRequestType
+    public function withSourceHosts(\Flexnet\LicenseService\Type\TransferHostList $sourceHosts): \Flexnet\LicenseService\Type\TransferHostRequestType
     {
         $new = clone $this;
         $new->sourceHosts = $sourceHosts;
@@ -54,7 +54,7 @@ class TransferHostRequestType implements RequestInterface
         return $this->soldTo;
     }
 
-    public function withSoldTo(?string $soldTo): TransferHostRequestType
+    public function withSoldTo(?string $soldTo): \Flexnet\LicenseService\Type\TransferHostRequestType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -67,7 +67,7 @@ class TransferHostRequestType implements RequestInterface
         return $this->poolEntitlements;
     }
 
-    public function withPoolEntitlements(?bool $poolEntitlements): TransferHostRequestType
+    public function withPoolEntitlements(?bool $poolEntitlements): \Flexnet\LicenseService\Type\TransferHostRequestType
     {
         $new = clone $this;
         $new->poolEntitlements = $poolEntitlements;

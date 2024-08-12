@@ -10,30 +10,30 @@ class FeatureIdentifierWithCountDataType
     private $featureIdentifier;
 
     /**
-     * @var int
+     * @var \Flexnet\ProductPackagingService\Type\PositiveInteger
      */
     private $count;
 
     /**
      * Constructor
      */
-    public function __construct(FeatureIdentifierType $featureIdentifier, int $count)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, \Flexnet\ProductPackagingService\Type\PositiveInteger $count)
     {
         $this->featureIdentifier = $featureIdentifier;
         $this->count = $count;
     }
 
-    public static function create(FeatureIdentifierType $featureIdentifier, int $count)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, \Flexnet\ProductPackagingService\Type\PositiveInteger $count)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFeatureIdentifier(): FeatureIdentifierType
+    public function getFeatureIdentifier(): \Flexnet\ProductPackagingService\Type\FeatureIdentifierType
     {
         return $this->featureIdentifier;
     }
 
-    public function withFeatureIdentifier(FeatureIdentifierType $featureIdentifier): FeatureIdentifierWithCountDataType
+    public function withFeatureIdentifier(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier): \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType
     {
         $new = clone $this;
         $new->featureIdentifier = $featureIdentifier;
@@ -41,12 +41,12 @@ class FeatureIdentifierWithCountDataType
         return $new;
     }
 
-    public function getCount(): int
+    public function getCount(): \Flexnet\ProductPackagingService\Type\PositiveInteger
     {
         return $this->count;
     }
 
-    public function withCount(int $count): FeatureIdentifierWithCountDataType
+    public function withCount(\Flexnet\ProductPackagingService\Type\PositiveInteger $count): \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType
     {
         $new = clone $this;
         $new->count = $count;

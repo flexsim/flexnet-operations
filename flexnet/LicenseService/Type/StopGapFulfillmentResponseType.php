@@ -24,24 +24,24 @@ class StopGapFulfillmentResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, StopGapResponseDataType $responseData = null, FailedStopGapResponselistDataType $failedData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\StopGapResponseDataType $responseData = null, ?\Flexnet\LicenseService\Type\FailedStopGapResponselistDataType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
         $this->failedData = $failedData;
     }
 
-    public static function create(StatusInfoType $statusInfo, StopGapResponseDataType $responseData = null, FailedStopGapResponselistDataType $failedData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\StopGapResponseDataType $responseData = null, ?\Flexnet\LicenseService\Type\FailedStopGapResponselistDataType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): StopGapFulfillmentResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\StopGapFulfillmentResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -49,12 +49,12 @@ class StopGapFulfillmentResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?StopGapResponseDataType
+    public function getResponseData(): ?\Flexnet\LicenseService\Type\StopGapResponseDataType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?StopGapResponseDataType $responseData): StopGapFulfillmentResponseType
+    public function withResponseData(?\Flexnet\LicenseService\Type\StopGapResponseDataType $responseData): \Flexnet\LicenseService\Type\StopGapFulfillmentResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -62,12 +62,12 @@ class StopGapFulfillmentResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedStopGapResponselistDataType
+    public function getFailedData(): ?\Flexnet\LicenseService\Type\FailedStopGapResponselistDataType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedStopGapResponselistDataType $failedData): StopGapFulfillmentResponseType
+    public function withFailedData(?\Flexnet\LicenseService\Type\FailedStopGapResponselistDataType $failedData): \Flexnet\LicenseService\Type\StopGapFulfillmentResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

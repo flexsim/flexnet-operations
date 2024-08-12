@@ -5,35 +5,35 @@ namespace Flexnet\ProductPackagingService\Type;
 class StateQueryType
 {
     /**
-     * @var string
+     * @var \Flexnet\ProductPackagingService\Type\StateType
      */
     private $value;
 
     /**
-     * @var string
+     * @var \Flexnet\ProductPackagingService\Type\SimpleSearchType
      */
     private $searchType;
 
     /**
      * Constructor
      */
-    public function __construct(string $value, string $searchType)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StateType $value, \Flexnet\ProductPackagingService\Type\SimpleSearchType $searchType)
     {
         $this->value = $value;
         $this->searchType = $searchType;
     }
 
-    public static function create(string $value, string $searchType)
+    public static function create(\Flexnet\ProductPackagingService\Type\StateType $value, \Flexnet\ProductPackagingService\Type\SimpleSearchType $searchType)
     {
         return new static(...\func_get_args());
     }
 
-    public function getValue(): string
+    public function getValue(): \Flexnet\ProductPackagingService\Type\StateType
     {
         return $this->value;
     }
 
-    public function withValue(string $value): StateQueryType
+    public function withValue(\Flexnet\ProductPackagingService\Type\StateType $value): \Flexnet\ProductPackagingService\Type\StateQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -41,12 +41,12 @@ class StateQueryType
         return $new;
     }
 
-    public function getSearchType(): string
+    public function getSearchType(): \Flexnet\ProductPackagingService\Type\SimpleSearchType
     {
         return $this->searchType;
     }
 
-    public function withSearchType(string $searchType): StateQueryType
+    public function withSearchType(\Flexnet\ProductPackagingService\Type\SimpleSearchType $searchType): \Flexnet\ProductPackagingService\Type\StateQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;

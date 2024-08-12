@@ -19,23 +19,23 @@ class GetConsolidatedFulfillmentCountResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, GetConsolidatedFulfillmentCountResponseDataType $responseData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, GetConsolidatedFulfillmentCountResponseDataType $responseData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): GetConsolidatedFulfillmentCountResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class GetConsolidatedFulfillmentCountResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?GetConsolidatedFulfillmentCountResponseDataType
+    public function getResponseData(): ?\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?GetConsolidatedFulfillmentCountResponseDataType $responseData): GetConsolidatedFulfillmentCountResponseType
+    public function withResponseData(?\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseDataType $responseData): \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

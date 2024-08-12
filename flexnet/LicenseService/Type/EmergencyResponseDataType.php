@@ -14,7 +14,7 @@ class EmergencyResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function __construct(EmergencyFulfillmentResponseDataType|array $fulfillmentData = null)
+    public function __construct(\Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType|array|null $fulfillmentData = null)
     {
         $this->fulfillmentData = $fulfillmentData;
     }
@@ -22,7 +22,7 @@ class EmergencyResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public static function create(EmergencyFulfillmentResponseDataType|array $fulfillmentData = null)
+    public static function create(\Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType|array|null $fulfillmentData = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class EmergencyResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType>|null
      */
-    public function getFulfillmentData(): EmergencyFulfillmentResponseDataType|array|null
+    public function getFulfillmentData(): \Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType|array|null
     {
         return $this->fulfillmentData;
     }
@@ -38,7 +38,7 @@ class EmergencyResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function withFulfillmentData(EmergencyFulfillmentResponseDataType|array|null $fulfillmentData): EmergencyResponseDataType
+    public function withFulfillmentData(\Flexnet\LicenseService\Type\EmergencyFulfillmentResponseDataType|array|null $fulfillmentData): \Flexnet\LicenseService\Type\EmergencyResponseDataType
     {
         $new = clone $this;
         $new->fulfillmentData = $fulfillmentData;

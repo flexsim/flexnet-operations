@@ -15,31 +15,31 @@ class ProductRelationshipDataType
     private $relatedProduct;
 
     /**
-     * @var string
+     * @var \Flexnet\ProductPackagingService\Type\RelationshipType
      */
     private $relation;
 
     /**
      * Constructor
      */
-    public function __construct(ProductIdentifierType $productToRelate, ProductIdentifierType $relatedProduct, string $relation)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productToRelate, \Flexnet\ProductPackagingService\Type\ProductIdentifierType $relatedProduct, \Flexnet\ProductPackagingService\Type\RelationshipType $relation)
     {
         $this->productToRelate = $productToRelate;
         $this->relatedProduct = $relatedProduct;
         $this->relation = $relation;
     }
 
-    public static function create(ProductIdentifierType $productToRelate, ProductIdentifierType $relatedProduct, string $relation)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productToRelate, \Flexnet\ProductPackagingService\Type\ProductIdentifierType $relatedProduct, \Flexnet\ProductPackagingService\Type\RelationshipType $relation)
     {
         return new static(...\func_get_args());
     }
 
-    public function getProductToRelate(): ProductIdentifierType
+    public function getProductToRelate(): \Flexnet\ProductPackagingService\Type\ProductIdentifierType
     {
         return $this->productToRelate;
     }
 
-    public function withProductToRelate(ProductIdentifierType $productToRelate): ProductRelationshipDataType
+    public function withProductToRelate(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productToRelate): \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType
     {
         $new = clone $this;
         $new->productToRelate = $productToRelate;
@@ -47,12 +47,12 @@ class ProductRelationshipDataType
         return $new;
     }
 
-    public function getRelatedProduct(): ProductIdentifierType
+    public function getRelatedProduct(): \Flexnet\ProductPackagingService\Type\ProductIdentifierType
     {
         return $this->relatedProduct;
     }
 
-    public function withRelatedProduct(ProductIdentifierType $relatedProduct): ProductRelationshipDataType
+    public function withRelatedProduct(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $relatedProduct): \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType
     {
         $new = clone $this;
         $new->relatedProduct = $relatedProduct;
@@ -60,12 +60,12 @@ class ProductRelationshipDataType
         return $new;
     }
 
-    public function getRelation(): string
+    public function getRelation(): \Flexnet\ProductPackagingService\Type\RelationshipType
     {
         return $this->relation;
     }
 
-    public function withRelation(string $relation): ProductRelationshipDataType
+    public function withRelation(\Flexnet\ProductPackagingService\Type\RelationshipType $relation): \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType
     {
         $new = clone $this;
         $new->relation = $relation;

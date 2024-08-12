@@ -14,7 +14,7 @@ class FeatureListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureIdentifierType|array<\Flexnet\EntitlementOrderService\Type\FeatureIdentifierType>  $featureIdentifier
      */
-    public function __construct(FeatureIdentifierType|array $featureIdentifier)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FeatureIdentifierType|array $featureIdentifier)
     {
         $this->featureIdentifier = $featureIdentifier;
     }
@@ -22,7 +22,7 @@ class FeatureListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureIdentifierType|array<\Flexnet\EntitlementOrderService\Type\FeatureIdentifierType>  $featureIdentifier
      */
-    public static function create(FeatureIdentifierType|array $featureIdentifier)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FeatureIdentifierType|array $featureIdentifier)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FeatureListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FeatureIdentifierType|array<\Flexnet\EntitlementOrderService\Type\FeatureIdentifierType>
      */
-    public function getFeatureIdentifier(): FeatureIdentifierType|array
+    public function getFeatureIdentifier(): \Flexnet\EntitlementOrderService\Type\FeatureIdentifierType|array
     {
         return $this->featureIdentifier;
     }
@@ -38,7 +38,7 @@ class FeatureListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureIdentifierType|array<\Flexnet\EntitlementOrderService\Type\FeatureIdentifierType>  $featureIdentifier
      */
-    public function withFeatureIdentifier(FeatureIdentifierType|array $featureIdentifier): FeatureListType
+    public function withFeatureIdentifier(\Flexnet\EntitlementOrderService\Type\FeatureIdentifierType|array $featureIdentifier): \Flexnet\EntitlementOrderService\Type\FeatureListType
     {
         $new = clone $this;
         $new->featureIdentifier = $featureIdentifier;

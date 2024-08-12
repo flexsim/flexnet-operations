@@ -14,404 +14,584 @@ class LicenseServiceClient
      */
     private $caller;
 
-    public function __construct(Caller $caller)
+    public function __construct(\Phpro\SoapClient\Caller\Caller $caller)
     {
         $this->caller = $caller;
     }
 
     /**
-     * @param  RequestInterface|Type\GetFulfillmentCountRequestType  $getFulfillmentCountRequest
-     * @return ResultInterface|Type\GetFulfillmentCountResponseType
+     * @param  RequestInterface & Type\GetFulfillmentCountRequestType  $getFulfillmentCountRequest
+     * @return ResultInterface & Type\GetFulfillmentCountResponseType
      *
      * @throws SoapException
      */
-    public function getFulfillmentCount(Type\GetFulfillmentCountRequestType $getFulfillmentCountRequest): Type\GetFulfillmentCountResponseType
+    public function getFulfillmentCount(\Flexnet\LicenseService\Type\GetFulfillmentCountRequestType $getFulfillmentCountRequest): \Flexnet\LicenseService\Type\GetFulfillmentCountResponseType
     {
-        return ($this->caller)('getFulfillmentCount', $getFulfillmentCountRequest);
+        $response = ($this->caller)('getFulfillmentCount', $getFulfillmentCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\GetFulfillmentCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetFulfillmentsQueryRequestType  $getFulfillmentsQueryRequest
-     * @return ResultInterface|Type\GetFulfillmentsQueryResponseType
+     * @param  RequestInterface & Type\GetFulfillmentsQueryRequestType  $getFulfillmentsQueryRequest
+     * @return ResultInterface & Type\GetFulfillmentsQueryResponseType
      *
      * @throws SoapException
      */
-    public function getFulfillmentsQuery(Type\GetFulfillmentsQueryRequestType $getFulfillmentsQueryRequest): Type\GetFulfillmentsQueryResponseType
+    public function getFulfillmentsQuery(\Flexnet\LicenseService\Type\GetFulfillmentsQueryRequestType $getFulfillmentsQueryRequest): \Flexnet\LicenseService\Type\GetFulfillmentsQueryResponseType
     {
-        return ($this->caller)('getFulfillmentsQuery', $getFulfillmentsQueryRequest);
+        $response = ($this->caller)('getFulfillmentsQuery', $getFulfillmentsQueryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\GetFulfillmentsQueryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetFulfillmentPropertiesRequestType  $getFulfillmentPropertiesRequest
-     * @return ResultInterface|Type\GetFulfillmentPropertiesResponseType
+     * @param  RequestInterface & Type\GetFulfillmentPropertiesRequestType  $getFulfillmentPropertiesRequest
+     * @return ResultInterface & Type\GetFulfillmentPropertiesResponseType
      *
      * @throws SoapException
      */
-    public function getFulfillmentPropertiesQuery(Type\GetFulfillmentPropertiesRequestType $getFulfillmentPropertiesRequest): Type\GetFulfillmentPropertiesResponseType
+    public function getFulfillmentPropertiesQuery(\Flexnet\LicenseService\Type\GetFulfillmentPropertiesRequestType $getFulfillmentPropertiesRequest): \Flexnet\LicenseService\Type\GetFulfillmentPropertiesResponseType
     {
-        return ($this->caller)('getFulfillmentPropertiesQuery', $getFulfillmentPropertiesRequest);
+        $response = ($this->caller)('getFulfillmentPropertiesQuery', $getFulfillmentPropertiesRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\GetFulfillmentPropertiesResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\RehostFulfillmentRequestType  $rehostLicenseRequest
-     * @return ResultInterface|Type\RehostFulfillmentResponseType
+     * @param  RequestInterface & Type\RehostFulfillmentRequestType  $rehostLicenseRequest
+     * @return ResultInterface & Type\RehostFulfillmentResponseType
      *
      * @throws SoapException
      */
-    public function rehostLicense(Type\RehostFulfillmentRequestType $rehostLicenseRequest): Type\RehostFulfillmentResponseType
+    public function rehostLicense(\Flexnet\LicenseService\Type\RehostFulfillmentRequestType $rehostLicenseRequest): \Flexnet\LicenseService\Type\RehostFulfillmentResponseType
     {
-        return ($this->caller)('rehostLicense', $rehostLicenseRequest);
+        $response = ($this->caller)('rehostLicense', $rehostLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\RehostFulfillmentResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\ReturnFulfillmentRequestType  $returnLicenseRequest
-     * @return ResultInterface|Type\ReturnFulfillmentResponseType
+     * @param  RequestInterface & Type\ReturnFulfillmentRequestType  $returnLicenseRequest
+     * @return ResultInterface & Type\ReturnFulfillmentResponseType
      *
      * @throws SoapException
      */
-    public function returnLicense(Type\ReturnFulfillmentRequestType $returnLicenseRequest): Type\ReturnFulfillmentResponseType
+    public function returnLicense(\Flexnet\LicenseService\Type\ReturnFulfillmentRequestType $returnLicenseRequest): \Flexnet\LicenseService\Type\ReturnFulfillmentResponseType
     {
-        return ($this->caller)('returnLicense', $returnLicenseRequest);
+        $response = ($this->caller)('returnLicense', $returnLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\ReturnFulfillmentResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\RepairFulfillmentRequestType  $repairLicenseRequest
-     * @return ResultInterface|Type\RepairFulfillmentResponseType
+     * @param  RequestInterface & Type\RepairFulfillmentRequestType  $repairLicenseRequest
+     * @return ResultInterface & Type\RepairFulfillmentResponseType
      *
      * @throws SoapException
      */
-    public function repairLicense(Type\RepairFulfillmentRequestType $repairLicenseRequest): Type\RepairFulfillmentResponseType
+    public function repairLicense(\Flexnet\LicenseService\Type\RepairFulfillmentRequestType $repairLicenseRequest): \Flexnet\LicenseService\Type\RepairFulfillmentResponseType
     {
-        return ($this->caller)('repairLicense', $repairLicenseRequest);
+        $response = ($this->caller)('repairLicense', $repairLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\RepairFulfillmentResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\EmergencyFulfillmentRequestType  $emergencyLicenseRequest
-     * @return ResultInterface|Type\EmergencyFulfillmentResponseType
+     * @param  RequestInterface & Type\EmergencyFulfillmentRequestType  $emergencyLicenseRequest
+     * @return ResultInterface & Type\EmergencyFulfillmentResponseType
      *
      * @throws SoapException
      */
-    public function emergencyLicense(Type\EmergencyFulfillmentRequestType $emergencyLicenseRequest): Type\EmergencyFulfillmentResponseType
+    public function emergencyLicense(\Flexnet\LicenseService\Type\EmergencyFulfillmentRequestType $emergencyLicenseRequest): \Flexnet\LicenseService\Type\EmergencyFulfillmentResponseType
     {
-        return ($this->caller)('emergencyLicense', $emergencyLicenseRequest);
+        $response = ($this->caller)('emergencyLicense', $emergencyLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\EmergencyFulfillmentResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\PublisherErrorFulfillmentRequestType  $publisherErrorLicenseRequest
-     * @return ResultInterface|Type\PublisherErrorFulfillmentResponseType
+     * @param  RequestInterface & Type\PublisherErrorFulfillmentRequestType  $publisherErrorLicenseRequest
+     * @return ResultInterface & Type\PublisherErrorFulfillmentResponseType
      *
      * @throws SoapException
      */
-    public function publisherErrorLicense(Type\PublisherErrorFulfillmentRequestType $publisherErrorLicenseRequest): Type\PublisherErrorFulfillmentResponseType
+    public function publisherErrorLicense(\Flexnet\LicenseService\Type\PublisherErrorFulfillmentRequestType $publisherErrorLicenseRequest): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseType
     {
-        return ($this->caller)('publisherErrorLicense', $publisherErrorLicenseRequest);
+        $response = ($this->caller)('publisherErrorLicense', $publisherErrorLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\StopGapFulfillmentRequestType  $stopGapLicenseRequest
-     * @return ResultInterface|Type\StopGapFulfillmentResponseType
+     * @param  RequestInterface & Type\StopGapFulfillmentRequestType  $stopGapLicenseRequest
+     * @return ResultInterface & Type\StopGapFulfillmentResponseType
      *
      * @throws SoapException
      */
-    public function stopGapLicense(Type\StopGapFulfillmentRequestType $stopGapLicenseRequest): Type\StopGapFulfillmentResponseType
+    public function stopGapLicense(\Flexnet\LicenseService\Type\StopGapFulfillmentRequestType $stopGapLicenseRequest): \Flexnet\LicenseService\Type\StopGapFulfillmentResponseType
     {
-        return ($this->caller)('stopGapLicense', $stopGapLicenseRequest);
+        $response = ($this->caller)('stopGapLicense', $stopGapLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\StopGapFulfillmentResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetFulfillmentAttributesRequestType  $getFulfillmentAttributesRequest
-     * @return ResultInterface|Type\GetFulfillmentAttributesResponseType
+     * @param  RequestInterface & Type\GetFulfillmentAttributesRequestType  $getFulfillmentAttributesRequest
+     * @return ResultInterface & Type\GetFulfillmentAttributesResponseType
      *
      * @throws SoapException
      */
-    public function getFulfillmentAttributesFromModel(Type\GetFulfillmentAttributesRequestType $getFulfillmentAttributesRequest): Type\GetFulfillmentAttributesResponseType
+    public function getFulfillmentAttributesFromModel(\Flexnet\LicenseService\Type\GetFulfillmentAttributesRequestType $getFulfillmentAttributesRequest): \Flexnet\LicenseService\Type\GetFulfillmentAttributesResponseType
     {
-        return ($this->caller)('getFulfillmentAttributesFromModel', $getFulfillmentAttributesRequest);
+        $response = ($this->caller)('getFulfillmentAttributesFromModel', $getFulfillmentAttributesRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\GetFulfillmentAttributesResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetHostAttributesRequestType  $getHostAttributesRequest
-     * @return ResultInterface|Type\GetHostAttributesResponseType
+     * @param  RequestInterface & Type\GetHostAttributesRequestType  $getHostAttributesRequest
+     * @return ResultInterface & Type\GetHostAttributesResponseType
      *
      * @throws SoapException
      */
-    public function getHostAttributesFromLicenseTechnology(Type\GetHostAttributesRequestType $getHostAttributesRequest): Type\GetHostAttributesResponseType
+    public function getHostAttributesFromLicenseTechnology(\Flexnet\LicenseService\Type\GetHostAttributesRequestType $getHostAttributesRequest): \Flexnet\LicenseService\Type\GetHostAttributesResponseType
     {
-        return ($this->caller)('getHostAttributesFromLicenseTechnology', $getHostAttributesRequest);
+        $response = ($this->caller)('getHostAttributesFromLicenseTechnology', $getHostAttributesRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\GetHostAttributesResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateFulfillmentRequestType  $verifyCreateLicenseRequest
-     * @return ResultInterface|Type\CreateFulfillmentResponseType
+     * @param  RequestInterface & Type\CreateFulfillmentRequestType  $verifyCreateLicenseRequest
+     * @return ResultInterface & Type\CreateFulfillmentResponseType
      *
      * @throws SoapException
      */
-    public function verifyCreateLicense(Type\CreateFulfillmentRequestType $verifyCreateLicenseRequest): Type\CreateFulfillmentResponseType
+    public function verifyCreateLicense(\Flexnet\LicenseService\Type\CreateFulfillmentRequestType $verifyCreateLicenseRequest): \Flexnet\LicenseService\Type\CreateFulfillmentResponseType
     {
-        return ($this->caller)('verifyCreateLicense', $verifyCreateLicenseRequest);
+        $response = ($this->caller)('verifyCreateLicense', $verifyCreateLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\CreateFulfillmentResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateFulfillmentRequestType  $createLicenseRequest
-     * @return ResultInterface|Type\CreateFulfillmentResponseType
+     * @param  RequestInterface & Type\CreateFulfillmentRequestType  $createLicenseRequest
+     * @return ResultInterface & Type\CreateFulfillmentResponseType
      *
      * @throws SoapException
      */
-    public function createLicense(Type\CreateFulfillmentRequestType $createLicenseRequest): Type\CreateFulfillmentResponseType
+    public function createLicense(\Flexnet\LicenseService\Type\CreateFulfillmentRequestType $createLicenseRequest): \Flexnet\LicenseService\Type\CreateFulfillmentResponseType
     {
-        return ($this->caller)('createLicense', $createLicenseRequest);
+        $response = ($this->caller)('createLicense', $createLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\CreateFulfillmentResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\ActivateShortCodeRequestType  $activateShortCodeRequest
-     * @return ResultInterface|Type\ActivateShortCodeResponseType
+     * @param  RequestInterface & Type\ActivateShortCodeRequestType  $activateShortCodeRequest
+     * @return ResultInterface & Type\ActivateShortCodeResponseType
      *
      * @throws SoapException
      */
-    public function activateShortCode(Type\ActivateShortCodeRequestType $activateShortCodeRequest): Type\ActivateShortCodeResponseType
+    public function activateShortCode(\Flexnet\LicenseService\Type\ActivateShortCodeRequestType $activateShortCodeRequest): \Flexnet\LicenseService\Type\ActivateShortCodeResponseType
     {
-        return ($this->caller)('activateShortCode', $activateShortCodeRequest);
+        $response = ($this->caller)('activateShortCode', $activateShortCodeRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\ActivateShortCodeResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\RepairShortCodeRequestType  $repairShortCodeRequest
-     * @return ResultInterface|Type\RepairShortCodeResponseType
+     * @param  RequestInterface & Type\RepairShortCodeRequestType  $repairShortCodeRequest
+     * @return ResultInterface & Type\RepairShortCodeResponseType
      *
      * @throws SoapException
      */
-    public function repairShortCode(Type\RepairShortCodeRequestType $repairShortCodeRequest): Type\RepairShortCodeResponseType
+    public function repairShortCode(\Flexnet\LicenseService\Type\RepairShortCodeRequestType $repairShortCodeRequest): \Flexnet\LicenseService\Type\RepairShortCodeResponseType
     {
-        return ($this->caller)('repairShortCode', $repairShortCodeRequest);
+        $response = ($this->caller)('repairShortCode', $repairShortCodeRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\RepairShortCodeResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\ReturnShortCodeRequestType  $returnShortCodeRequest
-     * @return ResultInterface|Type\ReturnShortCodeResponseType
+     * @param  RequestInterface & Type\ReturnShortCodeRequestType  $returnShortCodeRequest
+     * @return ResultInterface & Type\ReturnShortCodeResponseType
      *
      * @throws SoapException
      */
-    public function returnShortCode(Type\ReturnShortCodeRequestType $returnShortCodeRequest): Type\ReturnShortCodeResponseType
+    public function returnShortCode(\Flexnet\LicenseService\Type\ReturnShortCodeRequestType $returnShortCodeRequest): \Flexnet\LicenseService\Type\ReturnShortCodeResponseType
     {
-        return ($this->caller)('returnShortCode', $returnShortCodeRequest);
+        $response = ($this->caller)('returnShortCode', $returnShortCodeRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\ReturnShortCodeResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\EmailLicenseRequestType  $emailLicenseRequest
-     * @return ResultInterface|Type\EmailLicenseResponseType
+     * @param  RequestInterface & Type\EmailLicenseRequestType  $emailLicenseRequest
+     * @return ResultInterface & Type\EmailLicenseResponseType
      *
      * @throws SoapException
      */
-    public function emailLicense(Type\EmailLicenseRequestType $emailLicenseRequest): Type\EmailLicenseResponseType
+    public function emailLicense(\Flexnet\LicenseService\Type\EmailLicenseRequestType $emailLicenseRequest): \Flexnet\LicenseService\Type\EmailLicenseResponseType
     {
-        return ($this->caller)('emailLicense', $emailLicenseRequest);
+        $response = ($this->caller)('emailLicense', $emailLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\EmailLicenseResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\ConsolidateFulfillmentsRequestType  $consolidateFulfillmentsRequest
-     * @return ResultInterface|Type\ConsolidateFulfillmentsResponseType
+     * @param  RequestInterface & Type\ConsolidateFulfillmentsRequestType  $consolidateFulfillmentsRequest
+     * @return ResultInterface & Type\ConsolidateFulfillmentsResponseType
      *
      * @throws SoapException
      */
-    public function consolidateFulfillments(Type\ConsolidateFulfillmentsRequestType $consolidateFulfillmentsRequest): Type\ConsolidateFulfillmentsResponseType
+    public function consolidateFulfillments(\Flexnet\LicenseService\Type\ConsolidateFulfillmentsRequestType $consolidateFulfillmentsRequest): \Flexnet\LicenseService\Type\ConsolidateFulfillmentsResponseType
     {
-        return ($this->caller)('consolidateFulfillments', $consolidateFulfillmentsRequest);
+        $response = ($this->caller)('consolidateFulfillments', $consolidateFulfillmentsRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\ConsolidateFulfillmentsResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetConsolidatedFulfillmentCountRequestType  $getConsolidatedFulfillmentCountRequest
-     * @return ResultInterface|Type\GetConsolidatedFulfillmentCountResponseType
+     * @param  RequestInterface & Type\GetConsolidatedFulfillmentCountRequestType  $getConsolidatedFulfillmentCountRequest
+     * @return ResultInterface & Type\GetConsolidatedFulfillmentCountResponseType
      *
      * @throws SoapException
      */
-    public function getConsolidatedFulfillmentCount(Type\GetConsolidatedFulfillmentCountRequestType $getConsolidatedFulfillmentCountRequest): Type\GetConsolidatedFulfillmentCountResponseType
+    public function getConsolidatedFulfillmentCount(\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountRequestType $getConsolidatedFulfillmentCountRequest): \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseType
     {
-        return ($this->caller)('getConsolidatedFulfillmentCount', $getConsolidatedFulfillmentCountRequest);
+        $response = ($this->caller)('getConsolidatedFulfillmentCount', $getConsolidatedFulfillmentCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetConsolidatedFulfillmentsQueryRequestType  $getConsolidatedFulfillmentsQueryRequest
-     * @return ResultInterface|Type\GetConsolidatedFulfillmentsQueryResponseType
+     * @param  RequestInterface & Type\GetConsolidatedFulfillmentsQueryRequestType  $getConsolidatedFulfillmentsQueryRequest
+     * @return ResultInterface & Type\GetConsolidatedFulfillmentsQueryResponseType
      *
      * @throws SoapException
      */
-    public function getConsolidatedFulfillmentsQuery(Type\GetConsolidatedFulfillmentsQueryRequestType $getConsolidatedFulfillmentsQueryRequest): Type\GetConsolidatedFulfillmentsQueryResponseType
+    public function getConsolidatedFulfillmentsQuery(\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryRequestType $getConsolidatedFulfillmentsQueryRequest): \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryResponseType
     {
-        return ($this->caller)('getConsolidatedFulfillmentsQuery', $getConsolidatedFulfillmentsQueryRequest);
+        $response = ($this->caller)('getConsolidatedFulfillmentsQuery', $getConsolidatedFulfillmentsQueryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetFmtAttributesForBatchActivationRequestType  $getFmtAttributesForBatchActivationRequest
-     * @return ResultInterface|Type\GetFmtAttributesForBatchActivationResponseType
+     * @param  RequestInterface & Type\GetFmtAttributesForBatchActivationRequestType  $getFmtAttributesForBatchActivationRequest
+     * @return ResultInterface & Type\GetFmtAttributesForBatchActivationResponseType
      *
      * @throws SoapException
      */
-    public function getFulfillmentAttributesForBatchActivation(Type\GetFmtAttributesForBatchActivationRequestType $getFmtAttributesForBatchActivationRequest): Type\GetFmtAttributesForBatchActivationResponseType
+    public function getFulfillmentAttributesForBatchActivation(\Flexnet\LicenseService\Type\GetFmtAttributesForBatchActivationRequestType $getFmtAttributesForBatchActivationRequest): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchActivationResponseType
     {
-        return ($this->caller)('getFulfillmentAttributesForBatchActivation', $getFmtAttributesForBatchActivationRequest);
+        $response = ($this->caller)('getFulfillmentAttributesForBatchActivation', $getFmtAttributesForBatchActivationRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\GetFmtAttributesForBatchActivationResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateLicensesAsBatchRequestType  $createLicensesAsBatchRequest
-     * @return ResultInterface|Type\CreateLicensesAsBatchResponseType
+     * @param  RequestInterface & Type\CreateLicensesAsBatchRequestType  $createLicensesAsBatchRequest
+     * @return ResultInterface & Type\CreateLicensesAsBatchResponseType
      *
      * @throws SoapException
      */
-    public function createLicensesAsBatch(Type\CreateLicensesAsBatchRequestType $createLicensesAsBatchRequest): Type\CreateLicensesAsBatchResponseType
+    public function createLicensesAsBatch(\Flexnet\LicenseService\Type\CreateLicensesAsBatchRequestType $createLicensesAsBatchRequest): \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseType
     {
-        return ($this->caller)('createLicensesAsBatch', $createLicensesAsBatchRequest);
+        $response = ($this->caller)('createLicensesAsBatch', $createLicensesAsBatchRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateLicensesAsBatchRequestType  $createLicensesAsBatchAndConsolidateRequest
-     * @return ResultInterface|Type\ConsolidateFulfillmentsResponseType
+     * @param  RequestInterface & Type\CreateLicensesAsBatchRequestType  $createLicensesAsBatchAndConsolidateRequest
+     * @return ResultInterface & Type\ConsolidateFulfillmentsResponseType
      *
      * @throws SoapException
      */
-    public function createLicensesAsBatchAndConsolidate(Type\CreateLicensesAsBatchRequestType $createLicensesAsBatchAndConsolidateRequest): Type\ConsolidateFulfillmentsResponseType
+    public function createLicensesAsBatchAndConsolidate(\Flexnet\LicenseService\Type\CreateLicensesAsBatchRequestType $createLicensesAsBatchAndConsolidateRequest): \Flexnet\LicenseService\Type\ConsolidateFulfillmentsResponseType
     {
-        return ($this->caller)('createLicensesAsBatchAndConsolidate', $createLicensesAsBatchAndConsolidateRequest);
+        $response = ($this->caller)('createLicensesAsBatchAndConsolidate', $createLicensesAsBatchAndConsolidateRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\ConsolidateFulfillmentsResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\EmailConsolidatedLicensesRequestType  $emailConsolidatedLicensesRequest
-     * @return ResultInterface|Type\EmailConsolidatedLicensesResponseType
+     * @param  RequestInterface & Type\EmailConsolidatedLicensesRequestType  $emailConsolidatedLicensesRequest
+     * @return ResultInterface & Type\EmailConsolidatedLicensesResponseType
      *
      * @throws SoapException
      */
-    public function emailConsolidatedLicenses(Type\EmailConsolidatedLicensesRequestType $emailConsolidatedLicensesRequest): Type\EmailConsolidatedLicensesResponseType
+    public function emailConsolidatedLicenses(\Flexnet\LicenseService\Type\EmailConsolidatedLicensesRequestType $emailConsolidatedLicensesRequest): \Flexnet\LicenseService\Type\EmailConsolidatedLicensesResponseType
     {
-        return ($this->caller)('emailConsolidatedLicenses', $emailConsolidatedLicensesRequest);
+        $response = ($this->caller)('emailConsolidatedLicenses', $emailConsolidatedLicensesRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\EmailConsolidatedLicensesResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\TrustedRequestType  $manualActivationRequest
-     * @return ResultInterface|Type\TrustedResponseType
+     * @param  RequestInterface & Type\TrustedRequestType  $manualActivationRequest
+     * @return ResultInterface & Type\TrustedResponseType
      *
      * @throws SoapException
      */
-    public function manualActivation(Type\TrustedRequestType $manualActivationRequest): Type\TrustedResponseType
+    public function manualActivation(\Flexnet\LicenseService\Type\TrustedRequestType $manualActivationRequest): \Flexnet\LicenseService\Type\TrustedResponseType
     {
-        return ($this->caller)('manualActivation', $manualActivationRequest);
+        $response = ($this->caller)('manualActivation', $manualActivationRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\TrustedResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\TrustedRequestType  $manualRepairRequest
-     * @return ResultInterface|Type\TrustedResponseType
+     * @param  RequestInterface & Type\TrustedRequestType  $manualRepairRequest
+     * @return ResultInterface & Type\TrustedResponseType
      *
      * @throws SoapException
      */
-    public function manualRepair(Type\TrustedRequestType $manualRepairRequest): Type\TrustedResponseType
+    public function manualRepair(\Flexnet\LicenseService\Type\TrustedRequestType $manualRepairRequest): \Flexnet\LicenseService\Type\TrustedResponseType
     {
-        return ($this->caller)('manualRepair', $manualRepairRequest);
+        $response = ($this->caller)('manualRepair', $manualRepairRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\TrustedResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\TrustedRequestType  $manualReturnRequest
-     * @return ResultInterface|Type\TrustedResponseType
+     * @param  RequestInterface & Type\TrustedRequestType  $manualReturnRequest
+     * @return ResultInterface & Type\TrustedResponseType
      *
      * @throws SoapException
      */
-    public function manualReturn(Type\TrustedRequestType $manualReturnRequest): Type\TrustedResponseType
+    public function manualReturn(\Flexnet\LicenseService\Type\TrustedRequestType $manualReturnRequest): \Flexnet\LicenseService\Type\TrustedResponseType
     {
-        return ($this->caller)('manualReturn', $manualReturnRequest);
+        $response = ($this->caller)('manualReturn', $manualReturnRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\TrustedResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetFulfillmentHistoryRequestType  $getFulfillmentHistoryRequest
-     * @return ResultInterface|Type\GetFulfillmentHistoryResponseType
+     * @param  RequestInterface & Type\GetFulfillmentHistoryRequestType  $getFulfillmentHistoryRequest
+     * @return ResultInterface & Type\GetFulfillmentHistoryResponseType
      *
      * @throws SoapException
      */
-    public function getFulfillmentHistory(Type\GetFulfillmentHistoryRequestType $getFulfillmentHistoryRequest): Type\GetFulfillmentHistoryResponseType
+    public function getFulfillmentHistory(\Flexnet\LicenseService\Type\GetFulfillmentHistoryRequestType $getFulfillmentHistoryRequest): \Flexnet\LicenseService\Type\GetFulfillmentHistoryResponseType
     {
-        return ($this->caller)('getFulfillmentHistory', $getFulfillmentHistoryRequest);
+        $response = ($this->caller)('getFulfillmentHistory', $getFulfillmentHistoryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\GetFulfillmentHistoryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateChildLineItemFulfillmentRequestType  $createChildLineItemFulfillmentRequest
-     * @return ResultInterface|Type\CreateChildLineItemFulfillmentResponseType
+     * @param  RequestInterface & Type\CreateChildLineItemFulfillmentRequestType  $createChildLineItemFulfillmentRequest
+     * @return ResultInterface & Type\CreateChildLineItemFulfillmentResponseType
      *
      * @throws SoapException
      */
-    public function createChildLineItemFulfillment(Type\CreateChildLineItemFulfillmentRequestType $createChildLineItemFulfillmentRequest): Type\CreateChildLineItemFulfillmentResponseType
+    public function createChildLineItemFulfillment(\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentRequestType $createChildLineItemFulfillmentRequest): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentResponseType
     {
-        return ($this->caller)('createChildLineItemFulfillment', $createChildLineItemFulfillmentRequest);
+        $response = ($this->caller)('createChildLineItemFulfillment', $createChildLineItemFulfillmentRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\AdvancedFulfillmentLCRequestType  $upgradeFulfillmentRequest
-     * @return ResultInterface|Type\AdvancedFulfillmentLCResponseType
+     * @param  RequestInterface & Type\AdvancedFulfillmentLCRequestType  $upgradeFulfillmentRequest
+     * @return ResultInterface & Type\AdvancedFulfillmentLCResponseType
      *
      * @throws SoapException
      */
-    public function upgradeFulfillment(Type\AdvancedFulfillmentLCRequestType $upgradeFulfillmentRequest): Type\AdvancedFulfillmentLCResponseType
+    public function upgradeFulfillment(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCRequestType $upgradeFulfillmentRequest): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCResponseType
     {
-        return ($this->caller)('upgradeFulfillment', $upgradeFulfillmentRequest);
+        $response = ($this->caller)('upgradeFulfillment', $upgradeFulfillmentRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\AdvancedFulfillmentLCRequestType  $upsellFulfillmentRequest
-     * @return ResultInterface|Type\AdvancedFulfillmentLCResponseType
+     * @param  RequestInterface & Type\AdvancedFulfillmentLCRequestType  $upsellFulfillmentRequest
+     * @return ResultInterface & Type\AdvancedFulfillmentLCResponseType
      *
      * @throws SoapException
      */
-    public function upsellFulfillment(Type\AdvancedFulfillmentLCRequestType $upsellFulfillmentRequest): Type\AdvancedFulfillmentLCResponseType
+    public function upsellFulfillment(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCRequestType $upsellFulfillmentRequest): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCResponseType
     {
-        return ($this->caller)('upsellFulfillment', $upsellFulfillmentRequest);
+        $response = ($this->caller)('upsellFulfillment', $upsellFulfillmentRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\AdvancedFulfillmentLCRequestType  $renewFulfillmentRequest
-     * @return ResultInterface|Type\AdvancedFulfillmentLCResponseType
+     * @param  RequestInterface & Type\AdvancedFulfillmentLCRequestType  $renewFulfillmentRequest
+     * @return ResultInterface & Type\AdvancedFulfillmentLCResponseType
      *
      * @throws SoapException
      */
-    public function renewFulfillment(Type\AdvancedFulfillmentLCRequestType $renewFulfillmentRequest): Type\AdvancedFulfillmentLCResponseType
+    public function renewFulfillment(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCRequestType $renewFulfillmentRequest): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCResponseType
     {
-        return ($this->caller)('renewFulfillment', $renewFulfillmentRequest);
+        $response = ($this->caller)('renewFulfillment', $renewFulfillmentRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SetLicenseRequestType  $setLicenseRequest
-     * @return ResultInterface|Type\SetLicenseResponseType
+     * @param  RequestInterface & Type\SetLicenseRequestType  $setLicenseRequest
+     * @return ResultInterface & Type\SetLicenseResponseType
      *
      * @throws SoapException
      */
-    public function setLicense(Type\SetLicenseRequestType $setLicenseRequest): Type\SetLicenseResponseType
+    public function setLicense(\Flexnet\LicenseService\Type\SetLicenseRequestType $setLicenseRequest): \Flexnet\LicenseService\Type\SetLicenseResponseType
     {
-        return ($this->caller)('setLicense', $setLicenseRequest);
+        $response = ($this->caller)('setLicense', $setLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\SetLicenseResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\DeleteOnholdFulfillmentsRequestType  $deleteOnholdFulfillmentsRequest
-     * @return ResultInterface|Type\DeleteOnholdFulfillmentsResponseType
+     * @param  RequestInterface & Type\DeleteOnholdFulfillmentsRequestType  $deleteOnholdFulfillmentsRequest
+     * @return ResultInterface & Type\DeleteOnholdFulfillmentsResponseType
      *
      * @throws SoapException
      */
-    public function deleteOnholdFulfillments(Type\DeleteOnholdFulfillmentsRequestType $deleteOnholdFulfillmentsRequest): Type\DeleteOnholdFulfillmentsResponseType
+    public function deleteOnholdFulfillments(\Flexnet\LicenseService\Type\DeleteOnholdFulfillmentsRequestType $deleteOnholdFulfillmentsRequest): \Flexnet\LicenseService\Type\DeleteOnholdFulfillmentsResponseType
     {
-        return ($this->caller)('deleteOnholdFulfillments', $deleteOnholdFulfillmentsRequest);
+        $response = ($this->caller)('deleteOnholdFulfillments', $deleteOnholdFulfillmentsRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\DeleteOnholdFulfillmentsResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\ActivateLicensesRequestType  $activateLicensesRequest
-     * @return ResultInterface|Type\ActivateLicensesResponseType
+     * @param  RequestInterface & Type\ActivateLicensesRequestType  $activateLicensesRequest
+     * @return ResultInterface & Type\ActivateLicensesResponseType
      *
      * @throws SoapException
      */
-    public function offlineFNPTrustedStorageActivation(Type\ActivateLicensesRequestType $activateLicensesRequest): Type\ActivateLicensesResponseType
+    public function offlineFNPTrustedStorageActivation(\Flexnet\LicenseService\Type\ActivateLicensesRequestType $activateLicensesRequest): \Flexnet\LicenseService\Type\ActivateLicensesResponseType
     {
-        return ($this->caller)('offlineFNPTrustedStorageActivation', $activateLicensesRequest);
+        $response = ($this->caller)('offlineFNPTrustedStorageActivation', $activateLicensesRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\ActivateLicensesResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\TransferHostRequestType  $transferHostRequest
-     * @return ResultInterface|Type\TransferHostResponseType
+     * @param  RequestInterface & Type\TransferHostRequestType  $transferHostRequest
+     * @return ResultInterface & Type\TransferHostResponseType
      *
      * @throws SoapException
      */
-    public function transferHost(Type\TransferHostRequestType $transferHostRequest): Type\TransferHostResponseType
+    public function transferHost(\Flexnet\LicenseService\Type\TransferHostRequestType $transferHostRequest): \Flexnet\LicenseService\Type\TransferHostResponseType
     {
-        return ($this->caller)('transferHost', $transferHostRequest);
+        $response = ($this->caller)('transferHost', $transferHostRequest);
+
+        \Psl\Type\instance_of(\Flexnet\LicenseService\Type\TransferHostResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 }

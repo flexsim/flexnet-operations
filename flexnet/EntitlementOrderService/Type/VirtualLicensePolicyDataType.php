@@ -27,7 +27,7 @@ class VirtualLicensePolicyDataType
         return $this->isVirtualLicense;
     }
 
-    public function withIsVirtualLicense(bool $isVirtualLicense): VirtualLicensePolicyDataType
+    public function withIsVirtualLicense(bool $isVirtualLicense): \Flexnet\EntitlementOrderService\Type\VirtualLicensePolicyDataType
     {
         $new = clone $this;
         $new->isVirtualLicense = $isVirtualLicense;

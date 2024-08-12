@@ -33,7 +33,7 @@ class FailedIdDataType
         return $this->id;
     }
 
-    public function withId(string $id): FailedIdDataType
+    public function withId(string $id): \Flexnet\EntitlementOrderService\Type\FailedIdDataType
     {
         $new = clone $this;
         $new->id = $id;
@@ -46,7 +46,7 @@ class FailedIdDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedIdDataType
+    public function withReason(string $reason): \Flexnet\EntitlementOrderService\Type\FailedIdDataType
     {
         $new = clone $this;
         $new->reason = $reason;

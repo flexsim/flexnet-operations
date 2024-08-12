@@ -39,7 +39,7 @@ class GetFulfillmentsQueryRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(int $pageNumber, int $batchSize, FulfillmentsQueryParametersType $queryParams = null, bool $includeLicenseText = null, bool $excludeInactiveObsoleteLineItems = null, bool $includeConsolidatedHostLicense = null)
+    public function __construct(int $pageNumber, int $batchSize, ?\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams = null, ?bool $includeLicenseText = null, ?bool $excludeInactiveObsoleteLineItems = null, ?bool $includeConsolidatedHostLicense = null)
     {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -49,17 +49,17 @@ class GetFulfillmentsQueryRequestType implements RequestInterface
         $this->includeConsolidatedHostLicense = $includeConsolidatedHostLicense;
     }
 
-    public static function create(int $pageNumber, int $batchSize, FulfillmentsQueryParametersType $queryParams = null, bool $includeLicenseText = null, bool $excludeInactiveObsoleteLineItems = null, bool $includeConsolidatedHostLicense = null)
+    public static function create(int $pageNumber, int $batchSize, ?\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams = null, ?bool $includeLicenseText = null, ?bool $excludeInactiveObsoleteLineItems = null, ?bool $includeConsolidatedHostLicense = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): ?FulfillmentsQueryParametersType
+    public function getQueryParams(): ?\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(?FulfillmentsQueryParametersType $queryParams): GetFulfillmentsQueryRequestType
+    public function withQueryParams(?\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams): \Flexnet\LicenseService\Type\GetFulfillmentsQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -72,7 +72,7 @@ class GetFulfillmentsQueryRequestType implements RequestInterface
         return $this->pageNumber;
     }
 
-    public function withPageNumber(int $pageNumber): GetFulfillmentsQueryRequestType
+    public function withPageNumber(int $pageNumber): \Flexnet\LicenseService\Type\GetFulfillmentsQueryRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;
@@ -85,7 +85,7 @@ class GetFulfillmentsQueryRequestType implements RequestInterface
         return $this->batchSize;
     }
 
-    public function withBatchSize(int $batchSize): GetFulfillmentsQueryRequestType
+    public function withBatchSize(int $batchSize): \Flexnet\LicenseService\Type\GetFulfillmentsQueryRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;
@@ -98,7 +98,7 @@ class GetFulfillmentsQueryRequestType implements RequestInterface
         return $this->includeLicenseText;
     }
 
-    public function withIncludeLicenseText(?bool $includeLicenseText): GetFulfillmentsQueryRequestType
+    public function withIncludeLicenseText(?bool $includeLicenseText): \Flexnet\LicenseService\Type\GetFulfillmentsQueryRequestType
     {
         $new = clone $this;
         $new->includeLicenseText = $includeLicenseText;
@@ -111,7 +111,7 @@ class GetFulfillmentsQueryRequestType implements RequestInterface
         return $this->excludeInactiveObsoleteLineItems;
     }
 
-    public function withExcludeInactiveObsoleteLineItems(?bool $excludeInactiveObsoleteLineItems): GetFulfillmentsQueryRequestType
+    public function withExcludeInactiveObsoleteLineItems(?bool $excludeInactiveObsoleteLineItems): \Flexnet\LicenseService\Type\GetFulfillmentsQueryRequestType
     {
         $new = clone $this;
         $new->excludeInactiveObsoleteLineItems = $excludeInactiveObsoleteLineItems;
@@ -124,7 +124,7 @@ class GetFulfillmentsQueryRequestType implements RequestInterface
         return $this->includeConsolidatedHostLicense;
     }
 
-    public function withIncludeConsolidatedHostLicense(?bool $includeConsolidatedHostLicense): GetFulfillmentsQueryRequestType
+    public function withIncludeConsolidatedHostLicense(?bool $includeConsolidatedHostLicense): \Flexnet\LicenseService\Type\GetFulfillmentsQueryRequestType
     {
         $new = clone $this;
         $new->includeConsolidatedHostLicense = $includeConsolidatedHostLicense;

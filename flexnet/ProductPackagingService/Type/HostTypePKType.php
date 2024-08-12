@@ -27,7 +27,7 @@ class HostTypePKType
         return $this->name;
     }
 
-    public function withName(string $name): HostTypePKType
+    public function withName(string $name): \Flexnet\ProductPackagingService\Type\HostTypePKType
     {
         $new = clone $this;
         $new->name = $name;

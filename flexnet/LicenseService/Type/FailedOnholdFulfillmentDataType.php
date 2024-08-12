@@ -17,23 +17,23 @@ class FailedOnholdFulfillmentDataType
     /**
      * Constructor
      */
-    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, string $reason)
+    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, string $reason)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->reason = $reason;
     }
 
-    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, string $reason)
+    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFulfillmentIdentifier(): FulfillmentIdentifierType
+    public function getFulfillmentIdentifier(): \Flexnet\LicenseService\Type\FulfillmentIdentifierType
     {
         return $this->fulfillmentIdentifier;
     }
 
-    public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): FailedOnholdFulfillmentDataType
+    public function withFulfillmentIdentifier(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier): \Flexnet\LicenseService\Type\FailedOnholdFulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillmentIdentifier = $fulfillmentIdentifier;
@@ -46,7 +46,7 @@ class FailedOnholdFulfillmentDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedOnholdFulfillmentDataType
+    public function withReason(string $reason): \Flexnet\LicenseService\Type\FailedOnholdFulfillmentDataType
     {
         $new = clone $this;
         $new->reason = $reason;

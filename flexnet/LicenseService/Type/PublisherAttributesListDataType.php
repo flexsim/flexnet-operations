@@ -14,7 +14,7 @@ class PublisherAttributesListDataType
      *
      * @param  \Flexnet\LicenseService\Type\SimpleAttributeDataType|array<\Flexnet\LicenseService\Type\SimpleAttributeDataType>  $attribute
      */
-    public function __construct(SimpleAttributeDataType|array $attribute)
+    public function __construct(\Flexnet\LicenseService\Type\SimpleAttributeDataType|array $attribute)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class PublisherAttributesListDataType
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleAttributeDataType|array<\Flexnet\LicenseService\Type\SimpleAttributeDataType>  $attribute
      */
-    public static function create(SimpleAttributeDataType|array $attribute)
+    public static function create(\Flexnet\LicenseService\Type\SimpleAttributeDataType|array $attribute)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class PublisherAttributesListDataType
     /**
      * @return \Flexnet\LicenseService\Type\SimpleAttributeDataType|array<\Flexnet\LicenseService\Type\SimpleAttributeDataType>
      */
-    public function getAttribute(): SimpleAttributeDataType|array
+    public function getAttribute(): \Flexnet\LicenseService\Type\SimpleAttributeDataType|array
     {
         return $this->attribute;
     }
@@ -38,7 +38,7 @@ class PublisherAttributesListDataType
     /**
      * @param  \Flexnet\LicenseService\Type\SimpleAttributeDataType|array<\Flexnet\LicenseService\Type\SimpleAttributeDataType>  $attribute
      */
-    public function withAttribute(SimpleAttributeDataType|array $attribute): PublisherAttributesListDataType
+    public function withAttribute(\Flexnet\LicenseService\Type\SimpleAttributeDataType|array $attribute): \Flexnet\LicenseService\Type\PublisherAttributesListDataType
     {
         $new = clone $this;
         $new->attribute = $attribute;

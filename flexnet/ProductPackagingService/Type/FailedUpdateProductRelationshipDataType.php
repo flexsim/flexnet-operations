@@ -17,23 +17,23 @@ class FailedUpdateProductRelationshipDataType
     /**
      * Constructor
      */
-    public function __construct(UpdateProductRelationshipDataType $relationship, string $reason)
+    public function __construct(\Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType $relationship, string $reason)
     {
         $this->relationship = $relationship;
         $this->reason = $reason;
     }
 
-    public static function create(UpdateProductRelationshipDataType $relationship, string $reason)
+    public static function create(\Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType $relationship, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getRelationship(): UpdateProductRelationshipDataType
+    public function getRelationship(): \Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType
     {
         return $this->relationship;
     }
 
-    public function withRelationship(UpdateProductRelationshipDataType $relationship): FailedUpdateProductRelationshipDataType
+    public function withRelationship(\Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType $relationship): \Flexnet\ProductPackagingService\Type\FailedUpdateProductRelationshipDataType
     {
         $new = clone $this;
         $new->relationship = $relationship;
@@ -46,7 +46,7 @@ class FailedUpdateProductRelationshipDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedUpdateProductRelationshipDataType
+    public function withReason(string $reason): \Flexnet\ProductPackagingService\Type\FailedUpdateProductRelationshipDataType
     {
         $new = clone $this;
         $new->reason = $reason;

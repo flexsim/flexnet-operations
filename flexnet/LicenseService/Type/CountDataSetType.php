@@ -14,7 +14,7 @@ class CountDataSetType
      *
      * @param  \Flexnet\LicenseService\Type\CountDataType|array<\Flexnet\LicenseService\Type\CountDataType>  $countData
      */
-    public function __construct(CountDataType|array $countData)
+    public function __construct(\Flexnet\LicenseService\Type\CountDataType|array $countData)
     {
         $this->countData = $countData;
     }
@@ -22,7 +22,7 @@ class CountDataSetType
     /**
      * @param  \Flexnet\LicenseService\Type\CountDataType|array<\Flexnet\LicenseService\Type\CountDataType>  $countData
      */
-    public static function create(CountDataType|array $countData)
+    public static function create(\Flexnet\LicenseService\Type\CountDataType|array $countData)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class CountDataSetType
     /**
      * @return \Flexnet\LicenseService\Type\CountDataType|array<\Flexnet\LicenseService\Type\CountDataType>
      */
-    public function getCountData(): CountDataType|array
+    public function getCountData(): \Flexnet\LicenseService\Type\CountDataType|array
     {
         return $this->countData;
     }
@@ -38,7 +38,7 @@ class CountDataSetType
     /**
      * @param  \Flexnet\LicenseService\Type\CountDataType|array<\Flexnet\LicenseService\Type\CountDataType>  $countData
      */
-    public function withCountData(CountDataType|array $countData): CountDataSetType
+    public function withCountData(\Flexnet\LicenseService\Type\CountDataType|array $countData): \Flexnet\LicenseService\Type\CountDataSetType
     {
         $new = clone $this;
         $new->countData = $countData;

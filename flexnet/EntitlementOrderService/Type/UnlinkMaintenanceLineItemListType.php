@@ -14,7 +14,7 @@ class UnlinkMaintenanceLineItemListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType>  $unlinkMaintenanceLineItem
      */
-    public function __construct(UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem)
     {
         $this->unlinkMaintenanceLineItem = $unlinkMaintenanceLineItem;
     }
@@ -22,7 +22,7 @@ class UnlinkMaintenanceLineItemListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType>  $unlinkMaintenanceLineItem
      */
-    public static function create(UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem)
+    public static function create(\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class UnlinkMaintenanceLineItemListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType>
      */
-    public function getUnlinkMaintenanceLineItem(): UnlinkMaintenanceLineItemDataType|array
+    public function getUnlinkMaintenanceLineItem(): \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|array
     {
         return $this->unlinkMaintenanceLineItem;
     }
@@ -38,7 +38,7 @@ class UnlinkMaintenanceLineItemListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType>  $unlinkMaintenanceLineItem
      */
-    public function withUnlinkMaintenanceLineItem(UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem): UnlinkMaintenanceLineItemListType
+    public function withUnlinkMaintenanceLineItem(\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType|array $unlinkMaintenanceLineItem): \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemListType
     {
         $new = clone $this;
         $new->unlinkMaintenanceLineItem = $unlinkMaintenanceLineItem;

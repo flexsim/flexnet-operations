@@ -29,7 +29,7 @@ class MergeEntitlementsRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(string $accountFrom, string $accountTo, bool $mergeUsers = null, bool $mergeEntitlements = null)
+    public function __construct(string $accountFrom, string $accountTo, ?bool $mergeUsers = null, ?bool $mergeEntitlements = null)
     {
         $this->accountFrom = $accountFrom;
         $this->accountTo = $accountTo;
@@ -37,7 +37,7 @@ class MergeEntitlementsRequestType implements RequestInterface
         $this->mergeEntitlements = $mergeEntitlements;
     }
 
-    public static function create(string $accountFrom, string $accountTo, bool $mergeUsers = null, bool $mergeEntitlements = null)
+    public static function create(string $accountFrom, string $accountTo, ?bool $mergeUsers = null, ?bool $mergeEntitlements = null)
     {
         return new static(...\func_get_args());
     }
@@ -47,7 +47,7 @@ class MergeEntitlementsRequestType implements RequestInterface
         return $this->accountFrom;
     }
 
-    public function withAccountFrom(string $accountFrom): MergeEntitlementsRequestType
+    public function withAccountFrom(string $accountFrom): \Flexnet\EntitlementOrderService\Type\MergeEntitlementsRequestType
     {
         $new = clone $this;
         $new->accountFrom = $accountFrom;
@@ -60,7 +60,7 @@ class MergeEntitlementsRequestType implements RequestInterface
         return $this->accountTo;
     }
 
-    public function withAccountTo(string $accountTo): MergeEntitlementsRequestType
+    public function withAccountTo(string $accountTo): \Flexnet\EntitlementOrderService\Type\MergeEntitlementsRequestType
     {
         $new = clone $this;
         $new->accountTo = $accountTo;
@@ -73,7 +73,7 @@ class MergeEntitlementsRequestType implements RequestInterface
         return $this->mergeUsers;
     }
 
-    public function withMergeUsers(?bool $mergeUsers): MergeEntitlementsRequestType
+    public function withMergeUsers(?bool $mergeUsers): \Flexnet\EntitlementOrderService\Type\MergeEntitlementsRequestType
     {
         $new = clone $this;
         $new->mergeUsers = $mergeUsers;
@@ -86,7 +86,7 @@ class MergeEntitlementsRequestType implements RequestInterface
         return $this->mergeEntitlements;
     }
 
-    public function withMergeEntitlements(?bool $mergeEntitlements): MergeEntitlementsRequestType
+    public function withMergeEntitlements(?bool $mergeEntitlements): \Flexnet\EntitlementOrderService\Type\MergeEntitlementsRequestType
     {
         $new = clone $this;
         $new->mergeEntitlements = $mergeEntitlements;

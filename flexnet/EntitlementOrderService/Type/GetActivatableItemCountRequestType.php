@@ -19,23 +19,23 @@ class GetActivatableItemCountRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(SearchActivatableItemDataType $queryParams, bool $restrictToItemsReadyToActivate = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType $queryParams, ?bool $restrictToItemsReadyToActivate = null)
     {
         $this->queryParams = $queryParams;
         $this->restrictToItemsReadyToActivate = $restrictToItemsReadyToActivate;
     }
 
-    public static function create(SearchActivatableItemDataType $queryParams, bool $restrictToItemsReadyToActivate = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType $queryParams, ?bool $restrictToItemsReadyToActivate = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): SearchActivatableItemDataType
+    public function getQueryParams(): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(SearchActivatableItemDataType $queryParams): GetActivatableItemCountRequestType
+    public function withQueryParams(\Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType $queryParams): \Flexnet\EntitlementOrderService\Type\GetActivatableItemCountRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -48,7 +48,7 @@ class GetActivatableItemCountRequestType implements RequestInterface
         return $this->restrictToItemsReadyToActivate;
     }
 
-    public function withRestrictToItemsReadyToActivate(?bool $restrictToItemsReadyToActivate): GetActivatableItemCountRequestType
+    public function withRestrictToItemsReadyToActivate(?bool $restrictToItemsReadyToActivate): \Flexnet\EntitlementOrderService\Type\GetActivatableItemCountRequestType
     {
         $new = clone $this;
         $new->restrictToItemsReadyToActivate = $restrictToItemsReadyToActivate;

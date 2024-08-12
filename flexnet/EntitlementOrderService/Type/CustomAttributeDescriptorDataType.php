@@ -14,7 +14,7 @@ class CustomAttributeDescriptorDataType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType>|null  $attribute
      */
-    public function __construct(CustomAttributeDescriptorType|array $attribute = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType|array|null $attribute = null)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class CustomAttributeDescriptorDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType>|null  $attribute
      */
-    public static function create(CustomAttributeDescriptorType|array $attribute = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType|array|null $attribute = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class CustomAttributeDescriptorDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType>|null
      */
-    public function getAttribute(): CustomAttributeDescriptorType|array|null
+    public function getAttribute(): \Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType|array|null
     {
         return $this->attribute;
     }
@@ -38,7 +38,7 @@ class CustomAttributeDescriptorDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType>|null  $attribute
      */
-    public function withAttribute(CustomAttributeDescriptorType|array|null $attribute): CustomAttributeDescriptorDataType
+    public function withAttribute(\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorType|array|null $attribute): \Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorDataType
     {
         $new = clone $this;
         $new->attribute = $attribute;

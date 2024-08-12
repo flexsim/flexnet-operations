@@ -10,7 +10,7 @@ class AttributeMetaDescriptorType
     private $attributeName;
 
     /**
-     * @var string
+     * @var \Flexnet\EntitlementOrderService\Type\AttributeDataType
      */
     private $attributeDataType;
 
@@ -27,7 +27,7 @@ class AttributeMetaDescriptorType
     /**
      * Constructor
      */
-    public function __construct(string $attributeName, string $attributeDataType, string $namespace, ValueType $validValues = null)
+    public function __construct(string $attributeName, \Flexnet\EntitlementOrderService\Type\AttributeDataType $attributeDataType, string $namespace, ?\Flexnet\EntitlementOrderService\Type\ValueType $validValues = null)
     {
         $this->attributeName = $attributeName;
         $this->attributeDataType = $attributeDataType;
@@ -35,7 +35,7 @@ class AttributeMetaDescriptorType
         $this->validValues = $validValues;
     }
 
-    public static function create(string $attributeName, string $attributeDataType, string $namespace, ValueType $validValues = null)
+    public static function create(string $attributeName, \Flexnet\EntitlementOrderService\Type\AttributeDataType $attributeDataType, string $namespace, ?\Flexnet\EntitlementOrderService\Type\ValueType $validValues = null)
     {
         return new static(...\func_get_args());
     }
@@ -45,7 +45,7 @@ class AttributeMetaDescriptorType
         return $this->attributeName;
     }
 
-    public function withAttributeName(string $attributeName): AttributeMetaDescriptorType
+    public function withAttributeName(string $attributeName): \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType
     {
         $new = clone $this;
         $new->attributeName = $attributeName;
@@ -53,12 +53,12 @@ class AttributeMetaDescriptorType
         return $new;
     }
 
-    public function getAttributeDataType(): string
+    public function getAttributeDataType(): \Flexnet\EntitlementOrderService\Type\AttributeDataType
     {
         return $this->attributeDataType;
     }
 
-    public function withAttributeDataType(string $attributeDataType): AttributeMetaDescriptorType
+    public function withAttributeDataType(\Flexnet\EntitlementOrderService\Type\AttributeDataType $attributeDataType): \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType
     {
         $new = clone $this;
         $new->attributeDataType = $attributeDataType;
@@ -71,7 +71,7 @@ class AttributeMetaDescriptorType
         return $this->namespace;
     }
 
-    public function withNamespace(string $namespace): AttributeMetaDescriptorType
+    public function withNamespace(string $namespace): \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType
     {
         $new = clone $this;
         $new->namespace = $namespace;
@@ -79,12 +79,12 @@ class AttributeMetaDescriptorType
         return $new;
     }
 
-    public function getValidValues(): ?ValueType
+    public function getValidValues(): ?\Flexnet\EntitlementOrderService\Type\ValueType
     {
         return $this->validValues;
     }
 
-    public function withValidValues(?ValueType $validValues): AttributeMetaDescriptorType
+    public function withValidValues(?\Flexnet\EntitlementOrderService\Type\ValueType $validValues): \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType
     {
         $new = clone $this;
         $new->validValues = $validValues;

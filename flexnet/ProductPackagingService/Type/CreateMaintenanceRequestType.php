@@ -16,7 +16,7 @@ class CreateMaintenanceRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType>  $maintenance
      */
-    public function __construct(CreateMaintenanceDataType|array $maintenance)
+    public function __construct(\Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType|array $maintenance)
     {
         $this->maintenance = $maintenance;
     }
@@ -24,7 +24,7 @@ class CreateMaintenanceRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType>  $maintenance
      */
-    public static function create(CreateMaintenanceDataType|array $maintenance)
+    public static function create(\Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType|array $maintenance)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class CreateMaintenanceRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType>
      */
-    public function getMaintenance(): CreateMaintenanceDataType|array
+    public function getMaintenance(): \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType|array
     {
         return $this->maintenance;
     }
@@ -40,7 +40,7 @@ class CreateMaintenanceRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType>  $maintenance
      */
-    public function withMaintenance(CreateMaintenanceDataType|array $maintenance): CreateMaintenanceRequestType
+    public function withMaintenance(\Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType|array $maintenance): \Flexnet\ProductPackagingService\Type\CreateMaintenanceRequestType
     {
         $new = clone $this;
         $new->maintenance = $maintenance;

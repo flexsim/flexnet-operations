@@ -14,7 +14,7 @@ class RepairResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function __construct(RepairFulfillmentResponseDataType|array $fulfillmentData = null)
+    public function __construct(\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array|null $fulfillmentData = null)
     {
         $this->fulfillmentData = $fulfillmentData;
     }
@@ -22,7 +22,7 @@ class RepairResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public static function create(RepairFulfillmentResponseDataType|array $fulfillmentData = null)
+    public static function create(\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array|null $fulfillmentData = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class RepairResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null
      */
-    public function getFulfillmentData(): RepairFulfillmentResponseDataType|array|null
+    public function getFulfillmentData(): \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array|null
     {
         return $this->fulfillmentData;
     }
@@ -38,7 +38,7 @@ class RepairResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function withFulfillmentData(RepairFulfillmentResponseDataType|array|null $fulfillmentData): RepairResponseDataType
+    public function withFulfillmentData(\Flexnet\LicenseService\Type\RepairFulfillmentResponseDataType|array|null $fulfillmentData): \Flexnet\LicenseService\Type\RepairResponseDataType
     {
         $new = clone $this;
         $new->fulfillmentData = $fulfillmentData;

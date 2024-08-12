@@ -14,7 +14,7 @@ class FailedMaintenanceLineItemStateDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType>|null  $failedMaintenanceLineItem
      */
-    public function __construct(FailedMaintenanceLineItemStateDataType|array $failedMaintenanceLineItem = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType|array|null $failedMaintenanceLineItem = null)
     {
         $this->failedMaintenanceLineItem = $failedMaintenanceLineItem;
     }
@@ -22,7 +22,7 @@ class FailedMaintenanceLineItemStateDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType>|null  $failedMaintenanceLineItem
      */
-    public static function create(FailedMaintenanceLineItemStateDataType|array $failedMaintenanceLineItem = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType|array|null $failedMaintenanceLineItem = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedMaintenanceLineItemStateDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType>|null
      */
-    public function getFailedMaintenanceLineItem(): FailedMaintenanceLineItemStateDataType|array|null
+    public function getFailedMaintenanceLineItem(): \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType|array|null
     {
         return $this->failedMaintenanceLineItem;
     }
@@ -38,7 +38,7 @@ class FailedMaintenanceLineItemStateDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType>|null  $failedMaintenanceLineItem
      */
-    public function withFailedMaintenanceLineItem(FailedMaintenanceLineItemStateDataType|array|null $failedMaintenanceLineItem): FailedMaintenanceLineItemStateDataListType
+    public function withFailedMaintenanceLineItem(\Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType|array|null $failedMaintenanceLineItem): \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataListType
     {
         $new = clone $this;
         $new->failedMaintenanceLineItem = $failedMaintenanceLineItem;

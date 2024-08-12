@@ -27,7 +27,7 @@ class VerifiedFulfillmentDataType
         return $this->recordRefNo;
     }
 
-    public function withRecordRefNo(string $recordRefNo): VerifiedFulfillmentDataType
+    public function withRecordRefNo(string $recordRefNo): \Flexnet\LicenseService\Type\VerifiedFulfillmentDataType
     {
         $new = clone $this;
         $new->recordRefNo = $recordRefNo;

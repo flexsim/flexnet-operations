@@ -14,7 +14,7 @@ class AddedEntitlementLineItemDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType>|null  $addedLineItems
      */
-    public function __construct(AddedEntitlementLineItemDataType|array $addedLineItems = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType|array|null $addedLineItems = null)
     {
         $this->addedLineItems = $addedLineItems;
     }
@@ -22,7 +22,7 @@ class AddedEntitlementLineItemDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType>|null  $addedLineItems
      */
-    public static function create(AddedEntitlementLineItemDataType|array $addedLineItems = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType|array|null $addedLineItems = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class AddedEntitlementLineItemDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType>|null
      */
-    public function getAddedLineItems(): AddedEntitlementLineItemDataType|array|null
+    public function getAddedLineItems(): \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType|array|null
     {
         return $this->addedLineItems;
     }
@@ -38,7 +38,7 @@ class AddedEntitlementLineItemDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType>|null  $addedLineItems
      */
-    public function withAddedLineItems(AddedEntitlementLineItemDataType|array|null $addedLineItems): AddedEntitlementLineItemDataListType
+    public function withAddedLineItems(\Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType|array|null $addedLineItems): \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataListType
     {
         $new = clone $this;
         $new->addedLineItems = $addedLineItems;

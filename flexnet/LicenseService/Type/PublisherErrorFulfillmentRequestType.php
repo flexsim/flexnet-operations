@@ -16,7 +16,7 @@ class PublisherErrorFulfillmentRequestType implements RequestInterface
      *
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType>  $fulfillment
      */
-    public function __construct(PublisherErrorFulfillmentDataType|array $fulfillment)
+    public function __construct(\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -24,7 +24,7 @@ class PublisherErrorFulfillmentRequestType implements RequestInterface
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType>  $fulfillment
      */
-    public static function create(PublisherErrorFulfillmentDataType|array $fulfillment)
+    public static function create(\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class PublisherErrorFulfillmentRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType>
      */
-    public function getFulfillment(): PublisherErrorFulfillmentDataType|array
+    public function getFulfillment(): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array
     {
         return $this->fulfillment;
     }
@@ -40,7 +40,7 @@ class PublisherErrorFulfillmentRequestType implements RequestInterface
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType>  $fulfillment
      */
-    public function withFulfillment(PublisherErrorFulfillmentDataType|array $fulfillment): PublisherErrorFulfillmentRequestType
+    public function withFulfillment(\Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType|array $fulfillment): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentRequestType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;

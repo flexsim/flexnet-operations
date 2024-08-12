@@ -14,7 +14,7 @@ class FailedMatchingLineItemsListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType>  $failedLineItem
      */
-    public function __construct(FailedMatchingLineItemDataType|array $failedLineItem)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType|array $failedLineItem)
     {
         $this->failedLineItem = $failedLineItem;
     }
@@ -22,7 +22,7 @@ class FailedMatchingLineItemsListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType>  $failedLineItem
      */
-    public static function create(FailedMatchingLineItemDataType|array $failedLineItem)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType|array $failedLineItem)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedMatchingLineItemsListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType>
      */
-    public function getFailedLineItem(): FailedMatchingLineItemDataType|array
+    public function getFailedLineItem(): \Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType|array
     {
         return $this->failedLineItem;
     }
@@ -38,7 +38,7 @@ class FailedMatchingLineItemsListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType>  $failedLineItem
      */
-    public function withFailedLineItem(FailedMatchingLineItemDataType|array $failedLineItem): FailedMatchingLineItemsListType
+    public function withFailedLineItem(\Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType|array $failedLineItem): \Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemsListType
     {
         $new = clone $this;
         $new->failedLineItem = $failedLineItem;

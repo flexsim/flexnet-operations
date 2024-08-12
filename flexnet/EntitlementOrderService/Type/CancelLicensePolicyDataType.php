@@ -27,7 +27,7 @@ class CancelLicensePolicyDataType
         return $this->isCancelLicense;
     }
 
-    public function withIsCancelLicense(bool $isCancelLicense): CancelLicensePolicyDataType
+    public function withIsCancelLicense(bool $isCancelLicense): \Flexnet\EntitlementOrderService\Type\CancelLicensePolicyDataType
     {
         $new = clone $this;
         $new->isCancelLicense = $isCancelLicense;

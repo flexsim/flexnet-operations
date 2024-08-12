@@ -32,7 +32,7 @@ class StopGapFulfillmentDataType
     /**
      * Constructor
      */
-    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, string $shipToEmail = null, string $shipToAddress = null)
+    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, ?string $shipToEmail = null, ?string $shipToAddress = null)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->startDate = $startDate;
@@ -41,17 +41,17 @@ class StopGapFulfillmentDataType
         $this->shipToAddress = $shipToAddress;
     }
 
-    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, string $shipToEmail = null, string $shipToAddress = null)
+    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, ?string $shipToEmail = null, ?string $shipToAddress = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFulfillmentIdentifier(): FulfillmentIdentifierType
+    public function getFulfillmentIdentifier(): \Flexnet\LicenseService\Type\FulfillmentIdentifierType
     {
         return $this->fulfillmentIdentifier;
     }
 
-    public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): StopGapFulfillmentDataType
+    public function withFulfillmentIdentifier(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier): \Flexnet\LicenseService\Type\StopGapFulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillmentIdentifier = $fulfillmentIdentifier;
@@ -64,7 +64,7 @@ class StopGapFulfillmentDataType
         return $this->startDate;
     }
 
-    public function withStartDate(\DateTimeInterface $startDate): StopGapFulfillmentDataType
+    public function withStartDate(\DateTimeInterface $startDate): \Flexnet\LicenseService\Type\StopGapFulfillmentDataType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -77,7 +77,7 @@ class StopGapFulfillmentDataType
         return $this->endDate;
     }
 
-    public function withEndDate(\DateTimeInterface $endDate): StopGapFulfillmentDataType
+    public function withEndDate(\DateTimeInterface $endDate): \Flexnet\LicenseService\Type\StopGapFulfillmentDataType
     {
         $new = clone $this;
         $new->endDate = $endDate;
@@ -90,7 +90,7 @@ class StopGapFulfillmentDataType
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(?string $shipToEmail): StopGapFulfillmentDataType
+    public function withShipToEmail(?string $shipToEmail): \Flexnet\LicenseService\Type\StopGapFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -103,7 +103,7 @@ class StopGapFulfillmentDataType
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(?string $shipToAddress): StopGapFulfillmentDataType
+    public function withShipToAddress(?string $shipToAddress): \Flexnet\LicenseService\Type\StopGapFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;

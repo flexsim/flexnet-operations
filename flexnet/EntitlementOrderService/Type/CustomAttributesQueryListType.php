@@ -14,7 +14,7 @@ class CustomAttributesQueryListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType>|null  $attribute
      */
-    public function __construct(CustomAttributeQueryType|array $attribute = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType|array|null $attribute = null)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class CustomAttributesQueryListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType>|null  $attribute
      */
-    public static function create(CustomAttributeQueryType|array $attribute = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType|array|null $attribute = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class CustomAttributesQueryListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType>|null
      */
-    public function getAttribute(): CustomAttributeQueryType|array|null
+    public function getAttribute(): \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType|array|null
     {
         return $this->attribute;
     }
@@ -38,7 +38,7 @@ class CustomAttributesQueryListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType>|null  $attribute
      */
-    public function withAttribute(CustomAttributeQueryType|array|null $attribute): CustomAttributesQueryListType
+    public function withAttribute(\Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType|array|null $attribute): \Flexnet\EntitlementOrderService\Type\CustomAttributesQueryListType
     {
         $new = clone $this;
         $new->attribute = $attribute;

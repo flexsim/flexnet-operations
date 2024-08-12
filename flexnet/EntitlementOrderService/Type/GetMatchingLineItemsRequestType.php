@@ -14,22 +14,22 @@ class GetMatchingLineItemsRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(GetMatchingLineItemsListType $lineItemList)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsListType $lineItemList)
     {
         $this->lineItemList = $lineItemList;
     }
 
-    public static function create(GetMatchingLineItemsListType $lineItemList)
+    public static function create(\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsListType $lineItemList)
     {
         return new static(...\func_get_args());
     }
 
-    public function getLineItemList(): GetMatchingLineItemsListType
+    public function getLineItemList(): \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsListType
     {
         return $this->lineItemList;
     }
 
-    public function withLineItemList(GetMatchingLineItemsListType $lineItemList): GetMatchingLineItemsRequestType
+    public function withLineItemList(\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsListType $lineItemList): \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsRequestType
     {
         $new = clone $this;
         $new->lineItemList = $lineItemList;

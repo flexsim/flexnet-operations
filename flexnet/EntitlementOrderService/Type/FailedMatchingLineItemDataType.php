@@ -17,23 +17,23 @@ class FailedMatchingLineItemDataType
     /**
      * Constructor
      */
-    public function __construct(GetMatchingLineItemInfoType $lineItemInfo, string $reason)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType $lineItemInfo, string $reason)
     {
         $this->lineItemInfo = $lineItemInfo;
         $this->reason = $reason;
     }
 
-    public static function create(GetMatchingLineItemInfoType $lineItemInfo, string $reason)
+    public static function create(\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType $lineItemInfo, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getLineItemInfo(): GetMatchingLineItemInfoType
+    public function getLineItemInfo(): \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType
     {
         return $this->lineItemInfo;
     }
 
-    public function withLineItemInfo(GetMatchingLineItemInfoType $lineItemInfo): FailedMatchingLineItemDataType
+    public function withLineItemInfo(\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType $lineItemInfo): \Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType
     {
         $new = clone $this;
         $new->lineItemInfo = $lineItemInfo;
@@ -46,7 +46,7 @@ class FailedMatchingLineItemDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedMatchingLineItemDataType
+    public function withReason(string $reason): \Flexnet\EntitlementOrderService\Type\FailedMatchingLineItemDataType
     {
         $new = clone $this;
         $new->reason = $reason;

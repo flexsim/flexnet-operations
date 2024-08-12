@@ -12,22 +12,22 @@ class DeleteFeatureBundleDataType
     /**
      * Constructor
      */
-    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
     }
 
-    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFeatureBundleIdentifier(): FeatureBundleIdentifierType
+    public function getFeatureBundleIdentifier(): \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType
     {
         return $this->featureBundleIdentifier;
     }
 
-    public function withFeatureBundleIdentifier(FeatureBundleIdentifierType $featureBundleIdentifier): DeleteFeatureBundleDataType
+    public function withFeatureBundleIdentifier(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier): \Flexnet\ProductPackagingService\Type\DeleteFeatureBundleDataType
     {
         $new = clone $this;
         $new->featureBundleIdentifier = $featureBundleIdentifier;

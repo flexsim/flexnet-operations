@@ -21,7 +21,7 @@ class SearchActivatableItemResponseType extends Result
      *
      * @param  \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType|array<\Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType>|null  $activatableItem
      */
-    public function __construct(StatusInfoType $statusInfo, ActivatableItemDetailType|array $activatableItem = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType|array|null $activatableItem = null)
     {
         $this->statusInfo = $statusInfo;
         $this->activatableItem = $activatableItem;
@@ -30,17 +30,17 @@ class SearchActivatableItemResponseType extends Result
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType|array<\Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType>|null  $activatableItem
      */
-    public static function create(StatusInfoType $statusInfo, ActivatableItemDetailType|array $activatableItem = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType|array|null $activatableItem = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\EntitlementOrderService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): SearchActivatableItemResponseType
+    public function withStatusInfo(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -51,7 +51,7 @@ class SearchActivatableItemResponseType extends Result
     /**
      * @return \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType|array<\Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType>|null
      */
-    public function getActivatableItem(): ActivatableItemDetailType|array|null
+    public function getActivatableItem(): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType|array|null
     {
         return $this->activatableItem;
     }
@@ -59,7 +59,7 @@ class SearchActivatableItemResponseType extends Result
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType|array<\Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType>|null  $activatableItem
      */
-    public function withActivatableItem(ActivatableItemDetailType|array|null $activatableItem): SearchActivatableItemResponseType
+    public function withActivatableItem(\Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType|array|null $activatableItem): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemResponseType
     {
         $new = clone $this;
         $new->activatableItem = $activatableItem;

@@ -33,7 +33,7 @@ class DictionaryEntry
         return $this->Key;
     }
 
-    public function withKey(string $Key): DictionaryEntry
+    public function withKey(string $Key): \Flexnet\LicenseService\Type\DictionaryEntry
     {
         $new = clone $this;
         $new->Key = $Key;
@@ -46,7 +46,7 @@ class DictionaryEntry
         return $this->Value;
     }
 
-    public function withValue(string $Value): DictionaryEntry
+    public function withValue(string $Value): \Flexnet\LicenseService\Type\DictionaryEntry
     {
         $new = clone $this;
         $new->Value = $Value;

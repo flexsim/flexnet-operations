@@ -24,24 +24,24 @@ class TransferEntitlementsResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, TransferredEntitlementsListType $responseData = null, FailedTransferEntitlementListType $failedData = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, ?\Flexnet\EntitlementOrderService\Type\TransferredEntitlementsListType $responseData = null, ?\Flexnet\EntitlementOrderService\Type\FailedTransferEntitlementListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
         $this->failedData = $failedData;
     }
 
-    public static function create(StatusInfoType $statusInfo, TransferredEntitlementsListType $responseData = null, FailedTransferEntitlementListType $failedData = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, ?\Flexnet\EntitlementOrderService\Type\TransferredEntitlementsListType $responseData = null, ?\Flexnet\EntitlementOrderService\Type\FailedTransferEntitlementListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\EntitlementOrderService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): TransferEntitlementsResponseType
+    public function withStatusInfo(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo): \Flexnet\EntitlementOrderService\Type\TransferEntitlementsResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -49,12 +49,12 @@ class TransferEntitlementsResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?TransferredEntitlementsListType
+    public function getResponseData(): ?\Flexnet\EntitlementOrderService\Type\TransferredEntitlementsListType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?TransferredEntitlementsListType $responseData): TransferEntitlementsResponseType
+    public function withResponseData(?\Flexnet\EntitlementOrderService\Type\TransferredEntitlementsListType $responseData): \Flexnet\EntitlementOrderService\Type\TransferEntitlementsResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -62,12 +62,12 @@ class TransferEntitlementsResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedTransferEntitlementListType
+    public function getFailedData(): ?\Flexnet\EntitlementOrderService\Type\FailedTransferEntitlementListType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedTransferEntitlementListType $failedData): TransferEntitlementsResponseType
+    public function withFailedData(?\Flexnet\EntitlementOrderService\Type\FailedTransferEntitlementListType $failedData): \Flexnet\EntitlementOrderService\Type\TransferEntitlementsResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

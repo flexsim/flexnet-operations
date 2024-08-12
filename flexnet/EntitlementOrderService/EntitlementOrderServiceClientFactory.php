@@ -15,7 +15,7 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class EntitlementOrderServiceClientFactory
 {
-    public static function factory(string $wsdl, string $username, string $password): EntitlementOrderServiceClient
+    public static function factory(string $wsdl, string $username, string $password): \Flexnet\EntitlementOrderService\EntitlementOrderServiceClient
     {
         $engine = DefaultEngineFactory::create(
             ExtSoapOptions::defaults($wsdl, [])
@@ -30,7 +30,7 @@ class EntitlementOrderServiceClientFactory
             )
         );
 
-        $eventDispatcher = new EventDispatcher();
+        $eventDispatcher = new EventDispatcher;
         $caller = new EventDispatchingCaller(new EngineCaller($engine), $eventDispatcher);
 
         return new EntitlementOrderServiceClient($caller);

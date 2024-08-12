@@ -27,7 +27,7 @@ class PartNumberPKType
         return $this->partId;
     }
 
-    public function withPartId(string $partId): PartNumberPKType
+    public function withPartId(string $partId): \Flexnet\ProductPackagingService\Type\PartNumberPKType
     {
         $new = clone $this;
         $new->partId = $partId;

@@ -14,7 +14,7 @@ class CreatedMaintenanceDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType|array<\Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType>|null  $createdMaintenance
      */
-    public function __construct(CreatedMaintenaceDataType|array $createdMaintenance = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType|array|null $createdMaintenance = null)
     {
         $this->createdMaintenance = $createdMaintenance;
     }
@@ -22,7 +22,7 @@ class CreatedMaintenanceDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType|array<\Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType>|null  $createdMaintenance
      */
-    public static function create(CreatedMaintenaceDataType|array $createdMaintenance = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType|array|null $createdMaintenance = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class CreatedMaintenanceDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType|array<\Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType>|null
      */
-    public function getCreatedMaintenance(): CreatedMaintenaceDataType|array|null
+    public function getCreatedMaintenance(): \Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType|array|null
     {
         return $this->createdMaintenance;
     }
@@ -38,7 +38,7 @@ class CreatedMaintenanceDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType|array<\Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType>|null  $createdMaintenance
      */
-    public function withCreatedMaintenance(CreatedMaintenaceDataType|array|null $createdMaintenance): CreatedMaintenanceDataListType
+    public function withCreatedMaintenance(\Flexnet\ProductPackagingService\Type\CreatedMaintenaceDataType|array|null $createdMaintenance): \Flexnet\ProductPackagingService\Type\CreatedMaintenanceDataListType
     {
         $new = clone $this;
         $new->createdMaintenance = $createdMaintenance;

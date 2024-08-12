@@ -17,13 +17,13 @@ class ProductIdentifierType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, ProductPKType $primaryKeys = null)
+    public function __construct(?string $uniqueId = null, ?\Flexnet\ProductPackagingService\Type\ProductPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    public static function create(string $uniqueId = null, ProductPKType $primaryKeys = null)
+    public static function create(?string $uniqueId = null, ?\Flexnet\ProductPackagingService\Type\ProductPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class ProductIdentifierType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): ProductIdentifierType
+    public function withUniqueId(?string $uniqueId): \Flexnet\ProductPackagingService\Type\ProductIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -41,12 +41,12 @@ class ProductIdentifierType
         return $new;
     }
 
-    public function getPrimaryKeys(): ?ProductPKType
+    public function getPrimaryKeys(): ?\Flexnet\ProductPackagingService\Type\ProductPKType
     {
         return $this->primaryKeys;
     }
 
-    public function withPrimaryKeys(?ProductPKType $primaryKeys): ProductIdentifierType
+    public function withPrimaryKeys(?\Flexnet\ProductPackagingService\Type\ProductPKType $primaryKeys): \Flexnet\ProductPackagingService\Type\ProductIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

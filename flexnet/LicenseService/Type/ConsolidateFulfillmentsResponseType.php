@@ -19,23 +19,23 @@ class ConsolidateFulfillmentsResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, ConsolidatedResponseDataType $responseData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\ConsolidatedResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, ConsolidatedResponseDataType $responseData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\ConsolidatedResponseDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): ConsolidateFulfillmentsResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\ConsolidateFulfillmentsResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class ConsolidateFulfillmentsResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?ConsolidatedResponseDataType
+    public function getResponseData(): ?\Flexnet\LicenseService\Type\ConsolidatedResponseDataType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?ConsolidatedResponseDataType $responseData): ConsolidateFulfillmentsResponseType
+    public function withResponseData(?\Flexnet\LicenseService\Type\ConsolidatedResponseDataType $responseData): \Flexnet\LicenseService\Type\ConsolidateFulfillmentsResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

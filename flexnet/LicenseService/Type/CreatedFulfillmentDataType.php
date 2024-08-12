@@ -25,7 +25,7 @@ class CreatedFulfillmentDataType
     private $licenseText;
 
     /**
-     * @var string|null
+     * @var \Flexnet\LicenseService\Type\Base64Binary|null
      */
     private $binaryLicense;
 
@@ -37,7 +37,7 @@ class CreatedFulfillmentDataType
     /**
      * Constructor
      */
-    public function __construct(string $recordRefNo, string $uniqueId, string $fulfillmentId, string $licenseText = null, string $binaryLicense = null, LicenseFileDataListType $licenseFiles = null)
+    public function __construct(string $recordRefNo, string $uniqueId, string $fulfillmentId, ?string $licenseText = null, ?\Flexnet\LicenseService\Type\Base64Binary $binaryLicense = null, ?\Flexnet\LicenseService\Type\LicenseFileDataListType $licenseFiles = null)
     {
         $this->recordRefNo = $recordRefNo;
         $this->uniqueId = $uniqueId;
@@ -47,7 +47,7 @@ class CreatedFulfillmentDataType
         $this->licenseFiles = $licenseFiles;
     }
 
-    public static function create(string $recordRefNo, string $uniqueId, string $fulfillmentId, string $licenseText = null, string $binaryLicense = null, LicenseFileDataListType $licenseFiles = null)
+    public static function create(string $recordRefNo, string $uniqueId, string $fulfillmentId, ?string $licenseText = null, ?\Flexnet\LicenseService\Type\Base64Binary $binaryLicense = null, ?\Flexnet\LicenseService\Type\LicenseFileDataListType $licenseFiles = null)
     {
         return new static(...\func_get_args());
     }
@@ -57,7 +57,7 @@ class CreatedFulfillmentDataType
         return $this->recordRefNo;
     }
 
-    public function withRecordRefNo(string $recordRefNo): CreatedFulfillmentDataType
+    public function withRecordRefNo(string $recordRefNo): \Flexnet\LicenseService\Type\CreatedFulfillmentDataType
     {
         $new = clone $this;
         $new->recordRefNo = $recordRefNo;
@@ -70,7 +70,7 @@ class CreatedFulfillmentDataType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string $uniqueId): CreatedFulfillmentDataType
+    public function withUniqueId(string $uniqueId): \Flexnet\LicenseService\Type\CreatedFulfillmentDataType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -83,7 +83,7 @@ class CreatedFulfillmentDataType
         return $this->fulfillmentId;
     }
 
-    public function withFulfillmentId(string $fulfillmentId): CreatedFulfillmentDataType
+    public function withFulfillmentId(string $fulfillmentId): \Flexnet\LicenseService\Type\CreatedFulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillmentId = $fulfillmentId;
@@ -96,7 +96,7 @@ class CreatedFulfillmentDataType
         return $this->licenseText;
     }
 
-    public function withLicenseText(?string $licenseText): CreatedFulfillmentDataType
+    public function withLicenseText(?string $licenseText): \Flexnet\LicenseService\Type\CreatedFulfillmentDataType
     {
         $new = clone $this;
         $new->licenseText = $licenseText;
@@ -104,12 +104,12 @@ class CreatedFulfillmentDataType
         return $new;
     }
 
-    public function getBinaryLicense(): ?string
+    public function getBinaryLicense(): ?\Flexnet\LicenseService\Type\Base64Binary
     {
         return $this->binaryLicense;
     }
 
-    public function withBinaryLicense(?string $binaryLicense): CreatedFulfillmentDataType
+    public function withBinaryLicense(?\Flexnet\LicenseService\Type\Base64Binary $binaryLicense): \Flexnet\LicenseService\Type\CreatedFulfillmentDataType
     {
         $new = clone $this;
         $new->binaryLicense = $binaryLicense;
@@ -117,12 +117,12 @@ class CreatedFulfillmentDataType
         return $new;
     }
 
-    public function getLicenseFiles(): ?LicenseFileDataListType
+    public function getLicenseFiles(): ?\Flexnet\LicenseService\Type\LicenseFileDataListType
     {
         return $this->licenseFiles;
     }
 
-    public function withLicenseFiles(?LicenseFileDataListType $licenseFiles): CreatedFulfillmentDataType
+    public function withLicenseFiles(?\Flexnet\LicenseService\Type\LicenseFileDataListType $licenseFiles): \Flexnet\LicenseService\Type\CreatedFulfillmentDataType
     {
         $new = clone $this;
         $new->licenseFiles = $licenseFiles;

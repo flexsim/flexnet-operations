@@ -14,22 +14,22 @@ class MergeEntitlementsResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo)
     {
         $this->statusInfo = $statusInfo;
     }
 
-    public static function create(StatusInfoType $statusInfo)
+    public static function create(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\EntitlementOrderService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): MergeEntitlementsResponseType
+    public function withStatusInfo(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo): \Flexnet\EntitlementOrderService\Type\MergeEntitlementsResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;

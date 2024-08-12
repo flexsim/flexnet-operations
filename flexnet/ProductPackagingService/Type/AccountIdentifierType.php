@@ -17,13 +17,13 @@ class AccountIdentifierType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, AccountPKType $primaryKeys = null)
+    public function __construct(?string $uniqueId = null, ?\Flexnet\ProductPackagingService\Type\AccountPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    public static function create(string $uniqueId = null, AccountPKType $primaryKeys = null)
+    public static function create(?string $uniqueId = null, ?\Flexnet\ProductPackagingService\Type\AccountPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class AccountIdentifierType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): AccountIdentifierType
+    public function withUniqueId(?string $uniqueId): \Flexnet\ProductPackagingService\Type\AccountIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -41,12 +41,12 @@ class AccountIdentifierType
         return $new;
     }
 
-    public function getPrimaryKeys(): ?AccountPKType
+    public function getPrimaryKeys(): ?\Flexnet\ProductPackagingService\Type\AccountPKType
     {
         return $this->primaryKeys;
     }
 
-    public function withPrimaryKeys(?AccountPKType $primaryKeys): AccountIdentifierType
+    public function withPrimaryKeys(?\Flexnet\ProductPackagingService\Type\AccountPKType $primaryKeys): \Flexnet\ProductPackagingService\Type\AccountIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

@@ -17,23 +17,23 @@ class FailedProductDataType
     /**
      * Constructor
      */
-    public function __construct(CreateProductDataType $product = null, string $reason = null)
+    public function __construct(?\Flexnet\ProductPackagingService\Type\CreateProductDataType $product = null, ?string $reason = null)
     {
         $this->product = $product;
         $this->reason = $reason;
     }
 
-    public static function create(CreateProductDataType $product = null, string $reason = null)
+    public static function create(?\Flexnet\ProductPackagingService\Type\CreateProductDataType $product = null, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getProduct(): ?CreateProductDataType
+    public function getProduct(): ?\Flexnet\ProductPackagingService\Type\CreateProductDataType
     {
         return $this->product;
     }
 
-    public function withProduct(?CreateProductDataType $product): FailedProductDataType
+    public function withProduct(?\Flexnet\ProductPackagingService\Type\CreateProductDataType $product): \Flexnet\ProductPackagingService\Type\FailedProductDataType
     {
         $new = clone $this;
         $new->product = $product;
@@ -46,7 +46,7 @@ class FailedProductDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedProductDataType
+    public function withReason(?string $reason): \Flexnet\ProductPackagingService\Type\FailedProductDataType
     {
         $new = clone $this;
         $new->reason = $reason;

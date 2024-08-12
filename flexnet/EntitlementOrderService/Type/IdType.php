@@ -17,13 +17,13 @@ class IdType
     /**
      * Constructor
      */
-    public function __construct(string $id = null, bool $autoGenerate = null)
+    public function __construct(?string $id = null, ?bool $autoGenerate = null)
     {
         $this->id = $id;
         $this->autoGenerate = $autoGenerate;
     }
 
-    public static function create(string $id = null, bool $autoGenerate = null)
+    public static function create(?string $id = null, ?bool $autoGenerate = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class IdType
         return $this->id;
     }
 
-    public function withId(?string $id): IdType
+    public function withId(?string $id): \Flexnet\EntitlementOrderService\Type\IdType
     {
         $new = clone $this;
         $new->id = $id;
@@ -46,7 +46,7 @@ class IdType
         return $this->autoGenerate;
     }
 
-    public function withAutoGenerate(?bool $autoGenerate): IdType
+    public function withAutoGenerate(?bool $autoGenerate): \Flexnet\EntitlementOrderService\Type\IdType
     {
         $new = clone $this;
         $new->autoGenerate = $autoGenerate;

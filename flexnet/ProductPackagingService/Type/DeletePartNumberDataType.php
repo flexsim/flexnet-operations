@@ -12,22 +12,22 @@ class DeletePartNumberDataType
     /**
      * Constructor
      */
-    public function __construct(PartNumberIdentifierType $partNumberIdentifier)
+    public function __construct(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType $partNumberIdentifier)
     {
         $this->partNumberIdentifier = $partNumberIdentifier;
     }
 
-    public static function create(PartNumberIdentifierType $partNumberIdentifier)
+    public static function create(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType $partNumberIdentifier)
     {
         return new static(...\func_get_args());
     }
 
-    public function getPartNumberIdentifier(): PartNumberIdentifierType
+    public function getPartNumberIdentifier(): \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType
     {
         return $this->partNumberIdentifier;
     }
 
-    public function withPartNumberIdentifier(PartNumberIdentifierType $partNumberIdentifier): DeletePartNumberDataType
+    public function withPartNumberIdentifier(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType $partNumberIdentifier): \Flexnet\ProductPackagingService\Type\DeletePartNumberDataType
     {
         $new = clone $this;
         $new->partNumberIdentifier = $partNumberIdentifier;

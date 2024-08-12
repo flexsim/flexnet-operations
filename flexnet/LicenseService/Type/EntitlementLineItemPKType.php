@@ -27,7 +27,7 @@ class EntitlementLineItemPKType
         return $this->activationId;
     }
 
-    public function withActivationId(string $activationId): EntitlementLineItemPKType
+    public function withActivationId(string $activationId): \Flexnet\LicenseService\Type\EntitlementLineItemPKType
     {
         $new = clone $this;
         $new->activationId = $activationId;

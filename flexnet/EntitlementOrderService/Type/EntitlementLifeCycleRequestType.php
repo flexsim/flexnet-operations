@@ -16,7 +16,7 @@ class EntitlementLifeCycleRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType>|null  $entitlementData
      */
-    public function __construct(EntitlementLifeCycleDataType|array $entitlementData = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array|null $entitlementData = null)
     {
         $this->entitlementData = $entitlementData;
     }
@@ -24,7 +24,7 @@ class EntitlementLifeCycleRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType>|null  $entitlementData
      */
-    public static function create(EntitlementLifeCycleDataType|array $entitlementData = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array|null $entitlementData = null)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class EntitlementLifeCycleRequestType implements RequestInterface
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType>|null
      */
-    public function getEntitlementData(): EntitlementLifeCycleDataType|array|null
+    public function getEntitlementData(): \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array|null
     {
         return $this->entitlementData;
     }
@@ -40,7 +40,7 @@ class EntitlementLifeCycleRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType>|null  $entitlementData
      */
-    public function withEntitlementData(EntitlementLifeCycleDataType|array|null $entitlementData): EntitlementLifeCycleRequestType
+    public function withEntitlementData(\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType|array|null $entitlementData): \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleRequestType
     {
         $new = clone $this;
         $new->entitlementData = $entitlementData;

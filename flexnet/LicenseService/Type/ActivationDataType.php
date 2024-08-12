@@ -27,7 +27,7 @@ class ActivationDataType
         return $this->activationData;
     }
 
-    public function withActivationData(string $activationData): ActivationDataType
+    public function withActivationData(string $activationData): \Flexnet\LicenseService\Type\ActivationDataType
     {
         $new = clone $this;
         $new->activationData = $activationData;

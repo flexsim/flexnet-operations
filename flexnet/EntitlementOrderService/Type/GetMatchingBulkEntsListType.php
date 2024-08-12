@@ -14,7 +14,7 @@ class GetMatchingBulkEntsListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType|array<\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType>  $bulkEntInfo
      */
-    public function __construct(GetMatchingBulkEntInfoType|array $bulkEntInfo)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType|array $bulkEntInfo)
     {
         $this->bulkEntInfo = $bulkEntInfo;
     }
@@ -22,7 +22,7 @@ class GetMatchingBulkEntsListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType|array<\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType>  $bulkEntInfo
      */
-    public static function create(GetMatchingBulkEntInfoType|array $bulkEntInfo)
+    public static function create(\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType|array $bulkEntInfo)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class GetMatchingBulkEntsListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType|array<\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType>
      */
-    public function getBulkEntInfo(): GetMatchingBulkEntInfoType|array
+    public function getBulkEntInfo(): \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType|array
     {
         return $this->bulkEntInfo;
     }
@@ -38,7 +38,7 @@ class GetMatchingBulkEntsListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType|array<\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType>  $bulkEntInfo
      */
-    public function withBulkEntInfo(GetMatchingBulkEntInfoType|array $bulkEntInfo): GetMatchingBulkEntsListType
+    public function withBulkEntInfo(\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType|array $bulkEntInfo): \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsListType
     {
         $new = clone $this;
         $new->bulkEntInfo = $bulkEntInfo;

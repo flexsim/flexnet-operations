@@ -14,7 +14,7 @@ class CategoryAttributesDataType
      *
      * @param  \Flexnet\ProductPackagingService\Type\CategoryAttributeDataType|array<\Flexnet\ProductPackagingService\Type\CategoryAttributeDataType>  $categoryAttribute
      */
-    public function __construct(CategoryAttributeDataType|array $categoryAttribute)
+    public function __construct(\Flexnet\ProductPackagingService\Type\CategoryAttributeDataType|array $categoryAttribute)
     {
         $this->categoryAttribute = $categoryAttribute;
     }
@@ -22,7 +22,7 @@ class CategoryAttributesDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CategoryAttributeDataType|array<\Flexnet\ProductPackagingService\Type\CategoryAttributeDataType>  $categoryAttribute
      */
-    public static function create(CategoryAttributeDataType|array $categoryAttribute)
+    public static function create(\Flexnet\ProductPackagingService\Type\CategoryAttributeDataType|array $categoryAttribute)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class CategoryAttributesDataType
     /**
      * @return \Flexnet\ProductPackagingService\Type\CategoryAttributeDataType|array<\Flexnet\ProductPackagingService\Type\CategoryAttributeDataType>
      */
-    public function getCategoryAttribute(): CategoryAttributeDataType|array
+    public function getCategoryAttribute(): \Flexnet\ProductPackagingService\Type\CategoryAttributeDataType|array
     {
         return $this->categoryAttribute;
     }
@@ -38,7 +38,7 @@ class CategoryAttributesDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CategoryAttributeDataType|array<\Flexnet\ProductPackagingService\Type\CategoryAttributeDataType>  $categoryAttribute
      */
-    public function withCategoryAttribute(CategoryAttributeDataType|array $categoryAttribute): CategoryAttributesDataType
+    public function withCategoryAttribute(\Flexnet\ProductPackagingService\Type\CategoryAttributeDataType|array $categoryAttribute): \Flexnet\ProductPackagingService\Type\CategoryAttributesDataType
     {
         $new = clone $this;
         $new->categoryAttribute = $categoryAttribute;

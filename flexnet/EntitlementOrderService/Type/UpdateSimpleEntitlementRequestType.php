@@ -16,7 +16,7 @@ class UpdateSimpleEntitlementRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType>  $simpleEntitlement
      */
-    public function __construct(UpdateSimpleEntitlementDataType|array $simpleEntitlement)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array $simpleEntitlement)
     {
         $this->simpleEntitlement = $simpleEntitlement;
     }
@@ -24,7 +24,7 @@ class UpdateSimpleEntitlementRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType>  $simpleEntitlement
      */
-    public static function create(UpdateSimpleEntitlementDataType|array $simpleEntitlement)
+    public static function create(\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array $simpleEntitlement)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class UpdateSimpleEntitlementRequestType implements RequestInterface
     /**
      * @return \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType>
      */
-    public function getSimpleEntitlement(): UpdateSimpleEntitlementDataType|array
+    public function getSimpleEntitlement(): \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array
     {
         return $this->simpleEntitlement;
     }
@@ -40,7 +40,7 @@ class UpdateSimpleEntitlementRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType>  $simpleEntitlement
      */
-    public function withSimpleEntitlement(UpdateSimpleEntitlementDataType|array $simpleEntitlement): UpdateSimpleEntitlementRequestType
+    public function withSimpleEntitlement(\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementDataType|array $simpleEntitlement): \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementRequestType
     {
         $new = clone $this;
         $new->simpleEntitlement = $simpleEntitlement;

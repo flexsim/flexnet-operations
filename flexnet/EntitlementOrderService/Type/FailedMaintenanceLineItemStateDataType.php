@@ -17,23 +17,23 @@ class FailedMaintenanceLineItemStateDataType
     /**
      * Constructor
      */
-    public function __construct(MaintenanceLineItemStateDataType $maintenanceLineItem, string $reason)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType $maintenanceLineItem, string $reason)
     {
         $this->maintenanceLineItem = $maintenanceLineItem;
         $this->reason = $reason;
     }
 
-    public static function create(MaintenanceLineItemStateDataType $maintenanceLineItem, string $reason)
+    public static function create(\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType $maintenanceLineItem, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getMaintenanceLineItem(): MaintenanceLineItemStateDataType
+    public function getMaintenanceLineItem(): \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType
     {
         return $this->maintenanceLineItem;
     }
 
-    public function withMaintenanceLineItem(MaintenanceLineItemStateDataType $maintenanceLineItem): FailedMaintenanceLineItemStateDataType
+    public function withMaintenanceLineItem(\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType $maintenanceLineItem): \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType
     {
         $new = clone $this;
         $new->maintenanceLineItem = $maintenanceLineItem;
@@ -46,7 +46,7 @@ class FailedMaintenanceLineItemStateDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedMaintenanceLineItemStateDataType
+    public function withReason(string $reason): \Flexnet\EntitlementOrderService\Type\FailedMaintenanceLineItemStateDataType
     {
         $new = clone $this;
         $new->reason = $reason;

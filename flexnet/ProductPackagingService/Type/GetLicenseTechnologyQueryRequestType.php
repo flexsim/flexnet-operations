@@ -14,22 +14,22 @@ class GetLicenseTechnologyQueryRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(LicenseTechnologyQueryParametersType $queryParams = null)
+    public function __construct(?\Flexnet\ProductPackagingService\Type\LicenseTechnologyQueryParametersType $queryParams = null)
     {
         $this->queryParams = $queryParams;
     }
 
-    public static function create(LicenseTechnologyQueryParametersType $queryParams = null)
+    public static function create(?\Flexnet\ProductPackagingService\Type\LicenseTechnologyQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): ?LicenseTechnologyQueryParametersType
+    public function getQueryParams(): ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyQueryParametersType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(?LicenseTechnologyQueryParametersType $queryParams): GetLicenseTechnologyQueryRequestType
+    public function withQueryParams(?\Flexnet\ProductPackagingService\Type\LicenseTechnologyQueryParametersType $queryParams): \Flexnet\ProductPackagingService\Type\GetLicenseTechnologyQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

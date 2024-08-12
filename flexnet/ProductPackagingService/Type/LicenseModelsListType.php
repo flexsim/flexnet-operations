@@ -14,7 +14,7 @@ class LicenseModelsListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType>  $licenseModel
      */
-    public function __construct(LicenseModelIdentifierType|array $licenseModel)
+    public function __construct(\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array $licenseModel)
     {
         $this->licenseModel = $licenseModel;
     }
@@ -22,7 +22,7 @@ class LicenseModelsListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType>  $licenseModel
      */
-    public static function create(LicenseModelIdentifierType|array $licenseModel)
+    public static function create(\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array $licenseModel)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class LicenseModelsListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType>
      */
-    public function getLicenseModel(): LicenseModelIdentifierType|array
+    public function getLicenseModel(): \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array
     {
         return $this->licenseModel;
     }
@@ -38,7 +38,7 @@ class LicenseModelsListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType>  $licenseModel
      */
-    public function withLicenseModel(LicenseModelIdentifierType|array $licenseModel): LicenseModelsListType
+    public function withLicenseModel(\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array $licenseModel): \Flexnet\ProductPackagingService\Type\LicenseModelsListType
     {
         $new = clone $this;
         $new->licenseModel = $licenseModel;

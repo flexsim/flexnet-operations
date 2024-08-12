@@ -14,22 +14,22 @@ class GetFmtAttributesForBatchActivationRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(ActivationIdsListType $activationIds)
+    public function __construct(\Flexnet\LicenseService\Type\ActivationIdsListType $activationIds)
     {
         $this->activationIds = $activationIds;
     }
 
-    public static function create(ActivationIdsListType $activationIds)
+    public static function create(\Flexnet\LicenseService\Type\ActivationIdsListType $activationIds)
     {
         return new static(...\func_get_args());
     }
 
-    public function getActivationIds(): ActivationIdsListType
+    public function getActivationIds(): \Flexnet\LicenseService\Type\ActivationIdsListType
     {
         return $this->activationIds;
     }
 
-    public function withActivationIds(ActivationIdsListType $activationIds): GetFmtAttributesForBatchActivationRequestType
+    public function withActivationIds(\Flexnet\LicenseService\Type\ActivationIdsListType $activationIds): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchActivationRequestType
     {
         $new = clone $this;
         $new->activationIds = $activationIds;

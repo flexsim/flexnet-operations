@@ -10,30 +10,30 @@ class ProductStateDataType
     private $productIdentifier;
 
     /**
-     * @var string
+     * @var \Flexnet\ProductPackagingService\Type\StateType
      */
     private $stateToSet;
 
     /**
      * Constructor
      */
-    public function __construct(ProductIdentifierType $productIdentifier, string $stateToSet)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier, \Flexnet\ProductPackagingService\Type\StateType $stateToSet)
     {
         $this->productIdentifier = $productIdentifier;
         $this->stateToSet = $stateToSet;
     }
 
-    public static function create(ProductIdentifierType $productIdentifier, string $stateToSet)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier, \Flexnet\ProductPackagingService\Type\StateType $stateToSet)
     {
         return new static(...\func_get_args());
     }
 
-    public function getProductIdentifier(): ProductIdentifierType
+    public function getProductIdentifier(): \Flexnet\ProductPackagingService\Type\ProductIdentifierType
     {
         return $this->productIdentifier;
     }
 
-    public function withProductIdentifier(ProductIdentifierType $productIdentifier): ProductStateDataType
+    public function withProductIdentifier(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier): \Flexnet\ProductPackagingService\Type\ProductStateDataType
     {
         $new = clone $this;
         $new->productIdentifier = $productIdentifier;
@@ -41,12 +41,12 @@ class ProductStateDataType
         return $new;
     }
 
-    public function getStateToSet(): string
+    public function getStateToSet(): \Flexnet\ProductPackagingService\Type\StateType
     {
         return $this->stateToSet;
     }
 
-    public function withStateToSet(string $stateToSet): ProductStateDataType
+    public function withStateToSet(\Flexnet\ProductPackagingService\Type\StateType $stateToSet): \Flexnet\ProductPackagingService\Type\ProductStateDataType
     {
         $new = clone $this;
         $new->stateToSet = $stateToSet;

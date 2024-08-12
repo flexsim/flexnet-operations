@@ -19,23 +19,23 @@ class GetLicenseTechnologyQueryResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, LicenseTechnologyDataListType $responseData = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, LicenseTechnologyDataListType $responseData = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): GetLicenseTechnologyQueryResponseType
+    public function withStatusInfo(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo): \Flexnet\ProductPackagingService\Type\GetLicenseTechnologyQueryResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class GetLicenseTechnologyQueryResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?LicenseTechnologyDataListType
+    public function getResponseData(): ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyDataListType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?LicenseTechnologyDataListType $responseData): GetLicenseTechnologyQueryResponseType
+    public function withResponseData(?\Flexnet\ProductPackagingService\Type\LicenseTechnologyDataListType $responseData): \Flexnet\ProductPackagingService\Type\GetLicenseTechnologyQueryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

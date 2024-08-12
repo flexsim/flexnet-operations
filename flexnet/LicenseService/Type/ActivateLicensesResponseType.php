@@ -24,24 +24,24 @@ class ActivateLicensesResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedLineItem $failedData = null, string $resultData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\FailedLineItem $failedData = null, ?string $resultData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
         $this->resultData = $resultData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedLineItem $failedData = null, string $resultData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\FailedLineItem $failedData = null, ?string $resultData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): ActivateLicensesResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\ActivateLicensesResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -49,12 +49,12 @@ class ActivateLicensesResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedLineItem
+    public function getFailedData(): ?\Flexnet\LicenseService\Type\FailedLineItem
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedLineItem $failedData): ActivateLicensesResponseType
+    public function withFailedData(?\Flexnet\LicenseService\Type\FailedLineItem $failedData): \Flexnet\LicenseService\Type\ActivateLicensesResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -67,7 +67,7 @@ class ActivateLicensesResponseType extends Result
         return $this->resultData;
     }
 
-    public function withResultData(?string $resultData): ActivateLicensesResponseType
+    public function withResultData(?string $resultData): \Flexnet\LicenseService\Type\ActivateLicensesResponseType
     {
         $new = clone $this;
         $new->resultData = $resultData;

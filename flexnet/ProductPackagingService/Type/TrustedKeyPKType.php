@@ -27,7 +27,7 @@ class TrustedKeyPKType
         return $this->keyName;
     }
 
-    public function withKeyName(string $keyName): TrustedKeyPKType
+    public function withKeyName(string $keyName): \Flexnet\ProductPackagingService\Type\TrustedKeyPKType
     {
         $new = clone $this;
         $new->keyName = $keyName;

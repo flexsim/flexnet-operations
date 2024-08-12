@@ -24,24 +24,24 @@ class SearchEntitlementRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int $pageNumber = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, ?int $pageNumber = null)
     {
         $this->entitlementSearchCriteria = $entitlementSearchCriteria;
         $this->batchSize = $batchSize;
         $this->pageNumber = $pageNumber;
     }
 
-    public static function create(SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, int $pageNumber = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType $entitlementSearchCriteria, int $batchSize, ?int $pageNumber = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getEntitlementSearchCriteria(): SearchEntitlementDataType
+    public function getEntitlementSearchCriteria(): \Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType
     {
         return $this->entitlementSearchCriteria;
     }
 
-    public function withEntitlementSearchCriteria(SearchEntitlementDataType $entitlementSearchCriteria): SearchEntitlementRequestType
+    public function withEntitlementSearchCriteria(\Flexnet\EntitlementOrderService\Type\SearchEntitlementDataType $entitlementSearchCriteria): \Flexnet\EntitlementOrderService\Type\SearchEntitlementRequestType
     {
         $new = clone $this;
         $new->entitlementSearchCriteria = $entitlementSearchCriteria;
@@ -54,7 +54,7 @@ class SearchEntitlementRequestType implements RequestInterface
         return $this->batchSize;
     }
 
-    public function withBatchSize(int $batchSize): SearchEntitlementRequestType
+    public function withBatchSize(int $batchSize): \Flexnet\EntitlementOrderService\Type\SearchEntitlementRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;
@@ -67,7 +67,7 @@ class SearchEntitlementRequestType implements RequestInterface
         return $this->pageNumber;
     }
 
-    public function withPageNumber(?int $pageNumber): SearchEntitlementRequestType
+    public function withPageNumber(?int $pageNumber): \Flexnet\EntitlementOrderService\Type\SearchEntitlementRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;

@@ -14,7 +14,7 @@ class FailedProductDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedProductDataType|array<\Flexnet\ProductPackagingService\Type\FailedProductDataType>|null  $failedProduct
      */
-    public function __construct(FailedProductDataType|array $failedProduct = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FailedProductDataType|array|null $failedProduct = null)
     {
         $this->failedProduct = $failedProduct;
     }
@@ -22,7 +22,7 @@ class FailedProductDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedProductDataType|array<\Flexnet\ProductPackagingService\Type\FailedProductDataType>|null  $failedProduct
      */
-    public static function create(FailedProductDataType|array $failedProduct = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\FailedProductDataType|array|null $failedProduct = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedProductDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\FailedProductDataType|array<\Flexnet\ProductPackagingService\Type\FailedProductDataType>|null
      */
-    public function getFailedProduct(): FailedProductDataType|array|null
+    public function getFailedProduct(): \Flexnet\ProductPackagingService\Type\FailedProductDataType|array|null
     {
         return $this->failedProduct;
     }
@@ -38,7 +38,7 @@ class FailedProductDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedProductDataType|array<\Flexnet\ProductPackagingService\Type\FailedProductDataType>|null  $failedProduct
      */
-    public function withFailedProduct(FailedProductDataType|array|null $failedProduct): FailedProductDataListType
+    public function withFailedProduct(\Flexnet\ProductPackagingService\Type\FailedProductDataType|array|null $failedProduct): \Flexnet\ProductPackagingService\Type\FailedProductDataListType
     {
         $new = clone $this;
         $new->failedProduct = $failedProduct;

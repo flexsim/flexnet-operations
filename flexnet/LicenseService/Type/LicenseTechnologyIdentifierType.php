@@ -17,13 +17,13 @@ class LicenseTechnologyIdentifierType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, LicenseTechnologyPKType $primaryKeys = null)
+    public function __construct(?string $uniqueId = null, ?\Flexnet\LicenseService\Type\LicenseTechnologyPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    public static function create(string $uniqueId = null, LicenseTechnologyPKType $primaryKeys = null)
+    public static function create(?string $uniqueId = null, ?\Flexnet\LicenseService\Type\LicenseTechnologyPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class LicenseTechnologyIdentifierType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): LicenseTechnologyIdentifierType
+    public function withUniqueId(?string $uniqueId): \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -41,12 +41,12 @@ class LicenseTechnologyIdentifierType
         return $new;
     }
 
-    public function getPrimaryKeys(): ?LicenseTechnologyPKType
+    public function getPrimaryKeys(): ?\Flexnet\LicenseService\Type\LicenseTechnologyPKType
     {
         return $this->primaryKeys;
     }
 
-    public function withPrimaryKeys(?LicenseTechnologyPKType $primaryKeys): LicenseTechnologyIdentifierType
+    public function withPrimaryKeys(?\Flexnet\LicenseService\Type\LicenseTechnologyPKType $primaryKeys): \Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

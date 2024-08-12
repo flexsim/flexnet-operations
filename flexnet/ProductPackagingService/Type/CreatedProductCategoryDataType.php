@@ -33,7 +33,7 @@ class CreatedProductCategoryDataType
         return $this->recordRefNo;
     }
 
-    public function withRecordRefNo(string $recordRefNo): CreatedProductCategoryDataType
+    public function withRecordRefNo(string $recordRefNo): \Flexnet\ProductPackagingService\Type\CreatedProductCategoryDataType
     {
         $new = clone $this;
         $new->recordRefNo = $recordRefNo;
@@ -46,7 +46,7 @@ class CreatedProductCategoryDataType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string $uniqueId): CreatedProductCategoryDataType
+    public function withUniqueId(string $uniqueId): \Flexnet\ProductPackagingService\Type\CreatedProductCategoryDataType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;

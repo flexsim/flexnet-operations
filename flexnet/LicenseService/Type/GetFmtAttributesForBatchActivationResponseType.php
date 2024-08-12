@@ -19,23 +19,23 @@ class GetFmtAttributesForBatchActivationResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, GetFmtAttributesForBatchDataType $responseData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, GetFmtAttributesForBatchDataType $responseData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): GetFmtAttributesForBatchActivationResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchActivationResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class GetFmtAttributesForBatchActivationResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?GetFmtAttributesForBatchDataType
+    public function getResponseData(): ?\Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?GetFmtAttributesForBatchDataType $responseData): GetFmtAttributesForBatchActivationResponseType
+    public function withResponseData(?\Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType $responseData): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchActivationResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

@@ -14,7 +14,7 @@ class FailedTransferLineItemListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType>  $failedLineItem
      */
-    public function __construct(FailedTransferLineItemDataType|array $failedLineItem)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType|array $failedLineItem)
     {
         $this->failedLineItem = $failedLineItem;
     }
@@ -22,7 +22,7 @@ class FailedTransferLineItemListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType>  $failedLineItem
      */
-    public static function create(FailedTransferLineItemDataType|array $failedLineItem)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType|array $failedLineItem)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedTransferLineItemListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType>
      */
-    public function getFailedLineItem(): FailedTransferLineItemDataType|array
+    public function getFailedLineItem(): \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType|array
     {
         return $this->failedLineItem;
     }
@@ -38,7 +38,7 @@ class FailedTransferLineItemListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType>  $failedLineItem
      */
-    public function withFailedLineItem(FailedTransferLineItemDataType|array $failedLineItem): FailedTransferLineItemListType
+    public function withFailedLineItem(\Flexnet\EntitlementOrderService\Type\FailedTransferLineItemDataType|array $failedLineItem): \Flexnet\EntitlementOrderService\Type\FailedTransferLineItemListType
     {
         $new = clone $this;
         $new->failedLineItem = $failedLineItem;

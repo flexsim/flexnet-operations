@@ -27,7 +27,7 @@ class TypeLineItem
     /**
      * Constructor
      */
-    public function __construct(string $activationId, string $Reason = null, string $Count = null, Dictionary $VendorDictionary = null)
+    public function __construct(string $activationId, ?string $Reason = null, ?string $Count = null, ?\Flexnet\LicenseService\Type\Dictionary $VendorDictionary = null)
     {
         $this->activationId = $activationId;
         $this->Reason = $Reason;
@@ -35,7 +35,7 @@ class TypeLineItem
         $this->VendorDictionary = $VendorDictionary;
     }
 
-    public static function create(string $activationId, string $Reason = null, string $Count = null, Dictionary $VendorDictionary = null)
+    public static function create(string $activationId, ?string $Reason = null, ?string $Count = null, ?\Flexnet\LicenseService\Type\Dictionary $VendorDictionary = null)
     {
         return new static(...\func_get_args());
     }
@@ -45,7 +45,7 @@ class TypeLineItem
         return $this->activationId;
     }
 
-    public function withActivationId(string $activationId): TypeLineItem
+    public function withActivationId(string $activationId): \Flexnet\LicenseService\Type\TypeLineItem
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -58,7 +58,7 @@ class TypeLineItem
         return $this->Reason;
     }
 
-    public function withReason(?string $Reason): TypeLineItem
+    public function withReason(?string $Reason): \Flexnet\LicenseService\Type\TypeLineItem
     {
         $new = clone $this;
         $new->Reason = $Reason;
@@ -71,7 +71,7 @@ class TypeLineItem
         return $this->Count;
     }
 
-    public function withCount(?string $Count): TypeLineItem
+    public function withCount(?string $Count): \Flexnet\LicenseService\Type\TypeLineItem
     {
         $new = clone $this;
         $new->Count = $Count;
@@ -79,12 +79,12 @@ class TypeLineItem
         return $new;
     }
 
-    public function getVendorDictionary(): ?Dictionary
+    public function getVendorDictionary(): ?\Flexnet\LicenseService\Type\Dictionary
     {
         return $this->VendorDictionary;
     }
 
-    public function withVendorDictionary(?Dictionary $VendorDictionary): TypeLineItem
+    public function withVendorDictionary(?\Flexnet\LicenseService\Type\Dictionary $VendorDictionary): \Flexnet\LicenseService\Type\TypeLineItem
     {
         $new = clone $this;
         $new->VendorDictionary = $VendorDictionary;

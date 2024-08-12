@@ -17,23 +17,23 @@ class FailedTransferHostDataType
     /**
      * Constructor
      */
-    public function __construct(TransferHostIdDataType $hostIdentifier = null, string $reason = null)
+    public function __construct(?\Flexnet\LicenseService\Type\TransferHostIdDataType $hostIdentifier = null, ?string $reason = null)
     {
         $this->hostIdentifier = $hostIdentifier;
         $this->reason = $reason;
     }
 
-    public static function create(TransferHostIdDataType $hostIdentifier = null, string $reason = null)
+    public static function create(?\Flexnet\LicenseService\Type\TransferHostIdDataType $hostIdentifier = null, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getHostIdentifier(): ?TransferHostIdDataType
+    public function getHostIdentifier(): ?\Flexnet\LicenseService\Type\TransferHostIdDataType
     {
         return $this->hostIdentifier;
     }
 
-    public function withHostIdentifier(?TransferHostIdDataType $hostIdentifier): FailedTransferHostDataType
+    public function withHostIdentifier(?\Flexnet\LicenseService\Type\TransferHostIdDataType $hostIdentifier): \Flexnet\LicenseService\Type\FailedTransferHostDataType
     {
         $new = clone $this;
         $new->hostIdentifier = $hostIdentifier;
@@ -46,7 +46,7 @@ class FailedTransferHostDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedTransferHostDataType
+    public function withReason(?string $reason): \Flexnet\LicenseService\Type\FailedTransferHostDataType
     {
         $new = clone $this;
         $new->reason = $reason;

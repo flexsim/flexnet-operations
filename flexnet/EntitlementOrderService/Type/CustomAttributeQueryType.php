@@ -32,7 +32,7 @@ class CustomAttributeQueryType
     /**
      * Constructor
      */
-    public function __construct(string $attributeName, SimpleQueryType $stringValue = null, NumberQueryType $numberValue = null, DateQueryType $dateValue = null, bool $booleanValue = null)
+    public function __construct(string $attributeName, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $stringValue = null, ?\Flexnet\EntitlementOrderService\Type\NumberQueryType $numberValue = null, ?\Flexnet\EntitlementOrderService\Type\DateQueryType $dateValue = null, ?bool $booleanValue = null)
     {
         $this->attributeName = $attributeName;
         $this->stringValue = $stringValue;
@@ -41,7 +41,7 @@ class CustomAttributeQueryType
         $this->booleanValue = $booleanValue;
     }
 
-    public static function create(string $attributeName, SimpleQueryType $stringValue = null, NumberQueryType $numberValue = null, DateQueryType $dateValue = null, bool $booleanValue = null)
+    public static function create(string $attributeName, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $stringValue = null, ?\Flexnet\EntitlementOrderService\Type\NumberQueryType $numberValue = null, ?\Flexnet\EntitlementOrderService\Type\DateQueryType $dateValue = null, ?bool $booleanValue = null)
     {
         return new static(...\func_get_args());
     }
@@ -51,7 +51,7 @@ class CustomAttributeQueryType
         return $this->attributeName;
     }
 
-    public function withAttributeName(string $attributeName): CustomAttributeQueryType
+    public function withAttributeName(string $attributeName): \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType
     {
         $new = clone $this;
         $new->attributeName = $attributeName;
@@ -59,12 +59,12 @@ class CustomAttributeQueryType
         return $new;
     }
 
-    public function getStringValue(): ?SimpleQueryType
+    public function getStringValue(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->stringValue;
     }
 
-    public function withStringValue(?SimpleQueryType $stringValue): CustomAttributeQueryType
+    public function withStringValue(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $stringValue): \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType
     {
         $new = clone $this;
         $new->stringValue = $stringValue;
@@ -72,12 +72,12 @@ class CustomAttributeQueryType
         return $new;
     }
 
-    public function getNumberValue(): ?NumberQueryType
+    public function getNumberValue(): ?\Flexnet\EntitlementOrderService\Type\NumberQueryType
     {
         return $this->numberValue;
     }
 
-    public function withNumberValue(?NumberQueryType $numberValue): CustomAttributeQueryType
+    public function withNumberValue(?\Flexnet\EntitlementOrderService\Type\NumberQueryType $numberValue): \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType
     {
         $new = clone $this;
         $new->numberValue = $numberValue;
@@ -85,12 +85,12 @@ class CustomAttributeQueryType
         return $new;
     }
 
-    public function getDateValue(): ?DateQueryType
+    public function getDateValue(): ?\Flexnet\EntitlementOrderService\Type\DateQueryType
     {
         return $this->dateValue;
     }
 
-    public function withDateValue(?DateQueryType $dateValue): CustomAttributeQueryType
+    public function withDateValue(?\Flexnet\EntitlementOrderService\Type\DateQueryType $dateValue): \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType
     {
         $new = clone $this;
         $new->dateValue = $dateValue;
@@ -103,7 +103,7 @@ class CustomAttributeQueryType
         return $this->booleanValue;
     }
 
-    public function withBooleanValue(?bool $booleanValue): CustomAttributeQueryType
+    public function withBooleanValue(?bool $booleanValue): \Flexnet\EntitlementOrderService\Type\CustomAttributeQueryType
     {
         $new = clone $this;
         $new->booleanValue = $booleanValue;

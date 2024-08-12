@@ -10,7 +10,7 @@ class UpdateLicenseModelsListType
     private $licenseModelIdentifiers;
 
     /**
-     * @var string
+     * @var \Flexnet\ProductPackagingService\Type\CollectionOperationType
      */
     private $opType;
 
@@ -19,7 +19,7 @@ class UpdateLicenseModelsListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType>  $licenseModelIdentifiers
      */
-    public function __construct(LicenseModelIdentifierType|array $licenseModelIdentifiers, string $opType)
+    public function __construct(\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers, \Flexnet\ProductPackagingService\Type\CollectionOperationType $opType)
     {
         $this->licenseModelIdentifiers = $licenseModelIdentifiers;
         $this->opType = $opType;
@@ -28,7 +28,7 @@ class UpdateLicenseModelsListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType>  $licenseModelIdentifiers
      */
-    public static function create(LicenseModelIdentifierType|array $licenseModelIdentifiers, string $opType)
+    public static function create(\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers, \Flexnet\ProductPackagingService\Type\CollectionOperationType $opType)
     {
         return new static(...\func_get_args());
     }
@@ -36,7 +36,7 @@ class UpdateLicenseModelsListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType>
      */
-    public function getLicenseModelIdentifiers(): LicenseModelIdentifierType|array
+    public function getLicenseModelIdentifiers(): \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array
     {
         return $this->licenseModelIdentifiers;
     }
@@ -44,7 +44,7 @@ class UpdateLicenseModelsListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType>  $licenseModelIdentifiers
      */
-    public function withLicenseModelIdentifiers(LicenseModelIdentifierType|array $licenseModelIdentifiers): UpdateLicenseModelsListType
+    public function withLicenseModelIdentifiers(\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers): \Flexnet\ProductPackagingService\Type\UpdateLicenseModelsListType
     {
         $new = clone $this;
         $new->licenseModelIdentifiers = $licenseModelIdentifiers;
@@ -52,12 +52,12 @@ class UpdateLicenseModelsListType
         return $new;
     }
 
-    public function getOpType(): string
+    public function getOpType(): \Flexnet\ProductPackagingService\Type\CollectionOperationType
     {
         return $this->opType;
     }
 
-    public function withOpType(string $opType): UpdateLicenseModelsListType
+    public function withOpType(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType): \Flexnet\ProductPackagingService\Type\UpdateLicenseModelsListType
     {
         $new = clone $this;
         $new->opType = $opType;

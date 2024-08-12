@@ -19,7 +19,7 @@ class CountDataType
      *
      * @param  \Flexnet\LicenseService\Type\CountForHostsType|array<\Flexnet\LicenseService\Type\CountForHostsType>  $countForHosts
      */
-    public function __construct(string $activationId, CountForHostsType|array $countForHosts)
+    public function __construct(string $activationId, \Flexnet\LicenseService\Type\CountForHostsType|array $countForHosts)
     {
         $this->activationId = $activationId;
         $this->countForHosts = $countForHosts;
@@ -28,7 +28,7 @@ class CountDataType
     /**
      * @param  \Flexnet\LicenseService\Type\CountForHostsType|array<\Flexnet\LicenseService\Type\CountForHostsType>  $countForHosts
      */
-    public static function create(string $activationId, CountForHostsType|array $countForHosts)
+    public static function create(string $activationId, \Flexnet\LicenseService\Type\CountForHostsType|array $countForHosts)
     {
         return new static(...\func_get_args());
     }
@@ -38,7 +38,7 @@ class CountDataType
         return $this->activationId;
     }
 
-    public function withActivationId(string $activationId): CountDataType
+    public function withActivationId(string $activationId): \Flexnet\LicenseService\Type\CountDataType
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -49,7 +49,7 @@ class CountDataType
     /**
      * @return \Flexnet\LicenseService\Type\CountForHostsType|array<\Flexnet\LicenseService\Type\CountForHostsType>
      */
-    public function getCountForHosts(): CountForHostsType|array
+    public function getCountForHosts(): \Flexnet\LicenseService\Type\CountForHostsType|array
     {
         return $this->countForHosts;
     }
@@ -57,7 +57,7 @@ class CountDataType
     /**
      * @param  \Flexnet\LicenseService\Type\CountForHostsType|array<\Flexnet\LicenseService\Type\CountForHostsType>  $countForHosts
      */
-    public function withCountForHosts(CountForHostsType|array $countForHosts): CountDataType
+    public function withCountForHosts(\Flexnet\LicenseService\Type\CountForHostsType|array $countForHosts): \Flexnet\LicenseService\Type\CountDataType
     {
         $new = clone $this;
         $new->countForHosts = $countForHosts;

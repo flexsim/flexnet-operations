@@ -17,23 +17,23 @@ class FailedAddWebRegKeyDataType
     /**
      * Constructor
      */
-    public function __construct(AddWebRegKeyDataType $webRegKeyData = null, string $reason = null)
+    public function __construct(?\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType $webRegKeyData = null, ?string $reason = null)
     {
         $this->webRegKeyData = $webRegKeyData;
         $this->reason = $reason;
     }
 
-    public static function create(AddWebRegKeyDataType $webRegKeyData = null, string $reason = null)
+    public static function create(?\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType $webRegKeyData = null, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getWebRegKeyData(): ?AddWebRegKeyDataType
+    public function getWebRegKeyData(): ?\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType
     {
         return $this->webRegKeyData;
     }
 
-    public function withWebRegKeyData(?AddWebRegKeyDataType $webRegKeyData): FailedAddWebRegKeyDataType
+    public function withWebRegKeyData(?\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType $webRegKeyData): \Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataType
     {
         $new = clone $this;
         $new->webRegKeyData = $webRegKeyData;
@@ -46,7 +46,7 @@ class FailedAddWebRegKeyDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedAddWebRegKeyDataType
+    public function withReason(?string $reason): \Flexnet\EntitlementOrderService\Type\FailedAddWebRegKeyDataType
     {
         $new = clone $this;
         $new->reason = $reason;

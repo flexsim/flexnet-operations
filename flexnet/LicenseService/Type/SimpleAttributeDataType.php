@@ -33,7 +33,7 @@ class SimpleAttributeDataType
         return $this->attributeName;
     }
 
-    public function withAttributeName(string $attributeName): SimpleAttributeDataType
+    public function withAttributeName(string $attributeName): \Flexnet\LicenseService\Type\SimpleAttributeDataType
     {
         $new = clone $this;
         $new->attributeName = $attributeName;
@@ -46,7 +46,7 @@ class SimpleAttributeDataType
         return $this->attributeValue;
     }
 
-    public function withAttributeValue(string $attributeValue): SimpleAttributeDataType
+    public function withAttributeValue(string $attributeValue): \Flexnet\LicenseService\Type\SimpleAttributeDataType
     {
         $new = clone $this;
         $new->attributeValue = $attributeValue;

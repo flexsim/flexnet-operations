@@ -33,7 +33,7 @@ class CreatedFeatureDataType
         return $this->recordRefNo;
     }
 
-    public function withRecordRefNo(string $recordRefNo): CreatedFeatureDataType
+    public function withRecordRefNo(string $recordRefNo): \Flexnet\ProductPackagingService\Type\CreatedFeatureDataType
     {
         $new = clone $this;
         $new->recordRefNo = $recordRefNo;
@@ -46,7 +46,7 @@ class CreatedFeatureDataType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string $uniqueId): CreatedFeatureDataType
+    public function withUniqueId(string $uniqueId): \Flexnet\ProductPackagingService\Type\CreatedFeatureDataType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;

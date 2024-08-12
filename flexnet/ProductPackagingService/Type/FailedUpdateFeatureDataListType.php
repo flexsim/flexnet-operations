@@ -14,7 +14,7 @@ class FailedUpdateFeatureDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataType|array<\Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataType>|null  $failedFeature
      */
-    public function __construct(FailedUpdateFeatureDataType|array $failedFeature = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataType|array|null $failedFeature = null)
     {
         $this->failedFeature = $failedFeature;
     }
@@ -22,7 +22,7 @@ class FailedUpdateFeatureDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataType|array<\Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataType>|null  $failedFeature
      */
-    public static function create(FailedUpdateFeatureDataType|array $failedFeature = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataType|array|null $failedFeature = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedUpdateFeatureDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataType|array<\Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataType>|null
      */
-    public function getFailedFeature(): FailedUpdateFeatureDataType|array|null
+    public function getFailedFeature(): \Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataType|array|null
     {
         return $this->failedFeature;
     }
@@ -38,7 +38,7 @@ class FailedUpdateFeatureDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataType|array<\Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataType>|null  $failedFeature
      */
-    public function withFailedFeature(FailedUpdateFeatureDataType|array|null $failedFeature): FailedUpdateFeatureDataListType
+    public function withFailedFeature(\Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataType|array|null $failedFeature): \Flexnet\ProductPackagingService\Type\FailedUpdateFeatureDataListType
     {
         $new = clone $this;
         $new->failedFeature = $failedFeature;

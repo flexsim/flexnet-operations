@@ -10,7 +10,7 @@ class UpdateProductsListType
     private $productIdentifier;
 
     /**
-     * @var string
+     * @var \Flexnet\ProductPackagingService\Type\CollectionOperationType
      */
     private $opType;
 
@@ -19,7 +19,7 @@ class UpdateProductsListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType>  $productIdentifier
      */
-    public function __construct(ProductIdentifierWithCountDataType|array $productIdentifier, string $opType)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array $productIdentifier, \Flexnet\ProductPackagingService\Type\CollectionOperationType $opType)
     {
         $this->productIdentifier = $productIdentifier;
         $this->opType = $opType;
@@ -28,7 +28,7 @@ class UpdateProductsListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType>  $productIdentifier
      */
-    public static function create(ProductIdentifierWithCountDataType|array $productIdentifier, string $opType)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array $productIdentifier, \Flexnet\ProductPackagingService\Type\CollectionOperationType $opType)
     {
         return new static(...\func_get_args());
     }
@@ -36,7 +36,7 @@ class UpdateProductsListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType>
      */
-    public function getProductIdentifier(): ProductIdentifierWithCountDataType|array
+    public function getProductIdentifier(): \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array
     {
         return $this->productIdentifier;
     }
@@ -44,7 +44,7 @@ class UpdateProductsListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType>  $productIdentifier
      */
-    public function withProductIdentifier(ProductIdentifierWithCountDataType|array $productIdentifier): UpdateProductsListType
+    public function withProductIdentifier(\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array $productIdentifier): \Flexnet\ProductPackagingService\Type\UpdateProductsListType
     {
         $new = clone $this;
         $new->productIdentifier = $productIdentifier;
@@ -52,12 +52,12 @@ class UpdateProductsListType
         return $new;
     }
 
-    public function getOpType(): string
+    public function getOpType(): \Flexnet\ProductPackagingService\Type\CollectionOperationType
     {
         return $this->opType;
     }
 
-    public function withOpType(string $opType): UpdateProductsListType
+    public function withOpType(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType): \Flexnet\ProductPackagingService\Type\UpdateProductsListType
     {
         $new = clone $this;
         $new->opType = $opType;

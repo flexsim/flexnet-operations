@@ -16,7 +16,7 @@ class CreateFeatureRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\FeatureDataType|array<\Flexnet\ProductPackagingService\Type\FeatureDataType>  $feature
      */
-    public function __construct(FeatureDataType|array $feature)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureDataType|array $feature)
     {
         $this->feature = $feature;
     }
@@ -24,7 +24,7 @@ class CreateFeatureRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FeatureDataType|array<\Flexnet\ProductPackagingService\Type\FeatureDataType>  $feature
      */
-    public static function create(FeatureDataType|array $feature)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureDataType|array $feature)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class CreateFeatureRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\FeatureDataType|array<\Flexnet\ProductPackagingService\Type\FeatureDataType>
      */
-    public function getFeature(): FeatureDataType|array
+    public function getFeature(): \Flexnet\ProductPackagingService\Type\FeatureDataType|array
     {
         return $this->feature;
     }
@@ -40,7 +40,7 @@ class CreateFeatureRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FeatureDataType|array<\Flexnet\ProductPackagingService\Type\FeatureDataType>  $feature
      */
-    public function withFeature(FeatureDataType|array $feature): CreateFeatureRequestType
+    public function withFeature(\Flexnet\ProductPackagingService\Type\FeatureDataType|array $feature): \Flexnet\ProductPackagingService\Type\CreateFeatureRequestType
     {
         $new = clone $this;
         $new->feature = $feature;

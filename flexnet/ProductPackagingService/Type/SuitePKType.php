@@ -33,7 +33,7 @@ class SuitePKType
         return $this->name;
     }
 
-    public function withName(string $name): SuitePKType
+    public function withName(string $name): \Flexnet\ProductPackagingService\Type\SuitePKType
     {
         $new = clone $this;
         $new->name = $name;
@@ -46,7 +46,7 @@ class SuitePKType
         return $this->version;
     }
 
-    public function withVersion(string $version): SuitePKType
+    public function withVersion(string $version): \Flexnet\ProductPackagingService\Type\SuitePKType
     {
         $new = clone $this;
         $new->version = $version;

@@ -19,23 +19,23 @@ class GetFulfillmentAttributesResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, GetFulfillmentAttributesDataType $responseData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\GetFulfillmentAttributesDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, GetFulfillmentAttributesDataType $responseData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\GetFulfillmentAttributesDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): GetFulfillmentAttributesResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\GetFulfillmentAttributesResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class GetFulfillmentAttributesResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?GetFulfillmentAttributesDataType
+    public function getResponseData(): ?\Flexnet\LicenseService\Type\GetFulfillmentAttributesDataType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?GetFulfillmentAttributesDataType $responseData): GetFulfillmentAttributesResponseType
+    public function withResponseData(?\Flexnet\LicenseService\Type\GetFulfillmentAttributesDataType $responseData): \Flexnet\LicenseService\Type\GetFulfillmentAttributesResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

@@ -38,7 +38,7 @@ class ActivationIdsListType
     /**
      * @param  string|array<string>  $activationId
      */
-    public function withActivationId(string|array $activationId): ActivationIdsListType
+    public function withActivationId(string|array $activationId): \Flexnet\LicenseService\Type\ActivationIdsListType
     {
         $new = clone $this;
         $new->activationId = $activationId;

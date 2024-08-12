@@ -15,7 +15,7 @@ class FeatureQueryDataType
     private $featureName;
 
     /**
-     * @var string
+     * @var \Flexnet\ProductPackagingService\Type\VersionFormatType
      */
     private $versionFormat;
 
@@ -30,7 +30,7 @@ class FeatureQueryDataType
     private $description;
 
     /**
-     * @var string
+     * @var \Flexnet\ProductPackagingService\Type\StateType
      */
     private $state;
 
@@ -42,7 +42,7 @@ class FeatureQueryDataType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId, string $featureName, string $versionFormat, string $state, string $version = null, string $description = null, FeatureOverrideParamsType $featureOverrideParams = null)
+    public function __construct(string $uniqueId, string $featureName, \Flexnet\ProductPackagingService\Type\VersionFormatType $versionFormat, \Flexnet\ProductPackagingService\Type\StateType $state, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType $featureOverrideParams = null)
     {
         $this->uniqueId = $uniqueId;
         $this->featureName = $featureName;
@@ -53,7 +53,7 @@ class FeatureQueryDataType
         $this->featureOverrideParams = $featureOverrideParams;
     }
 
-    public static function create(string $uniqueId, string $featureName, string $versionFormat, string $state, string $version = null, string $description = null, FeatureOverrideParamsType $featureOverrideParams = null)
+    public static function create(string $uniqueId, string $featureName, \Flexnet\ProductPackagingService\Type\VersionFormatType $versionFormat, \Flexnet\ProductPackagingService\Type\StateType $state, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType $featureOverrideParams = null)
     {
         return new static(...\func_get_args());
     }
@@ -63,7 +63,7 @@ class FeatureQueryDataType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string $uniqueId): FeatureQueryDataType
+    public function withUniqueId(string $uniqueId): \Flexnet\ProductPackagingService\Type\FeatureQueryDataType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -76,7 +76,7 @@ class FeatureQueryDataType
         return $this->featureName;
     }
 
-    public function withFeatureName(string $featureName): FeatureQueryDataType
+    public function withFeatureName(string $featureName): \Flexnet\ProductPackagingService\Type\FeatureQueryDataType
     {
         $new = clone $this;
         $new->featureName = $featureName;
@@ -84,12 +84,12 @@ class FeatureQueryDataType
         return $new;
     }
 
-    public function getVersionFormat(): string
+    public function getVersionFormat(): \Flexnet\ProductPackagingService\Type\VersionFormatType
     {
         return $this->versionFormat;
     }
 
-    public function withVersionFormat(string $versionFormat): FeatureQueryDataType
+    public function withVersionFormat(\Flexnet\ProductPackagingService\Type\VersionFormatType $versionFormat): \Flexnet\ProductPackagingService\Type\FeatureQueryDataType
     {
         $new = clone $this;
         $new->versionFormat = $versionFormat;
@@ -102,7 +102,7 @@ class FeatureQueryDataType
         return $this->version;
     }
 
-    public function withVersion(?string $version): FeatureQueryDataType
+    public function withVersion(?string $version): \Flexnet\ProductPackagingService\Type\FeatureQueryDataType
     {
         $new = clone $this;
         $new->version = $version;
@@ -115,7 +115,7 @@ class FeatureQueryDataType
         return $this->description;
     }
 
-    public function withDescription(?string $description): FeatureQueryDataType
+    public function withDescription(?string $description): \Flexnet\ProductPackagingService\Type\FeatureQueryDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -123,12 +123,12 @@ class FeatureQueryDataType
         return $new;
     }
 
-    public function getState(): string
+    public function getState(): \Flexnet\ProductPackagingService\Type\StateType
     {
         return $this->state;
     }
 
-    public function withState(string $state): FeatureQueryDataType
+    public function withState(\Flexnet\ProductPackagingService\Type\StateType $state): \Flexnet\ProductPackagingService\Type\FeatureQueryDataType
     {
         $new = clone $this;
         $new->state = $state;
@@ -136,12 +136,12 @@ class FeatureQueryDataType
         return $new;
     }
 
-    public function getFeatureOverrideParams(): ?FeatureOverrideParamsType
+    public function getFeatureOverrideParams(): ?\Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType
     {
         return $this->featureOverrideParams;
     }
 
-    public function withFeatureOverrideParams(?FeatureOverrideParamsType $featureOverrideParams): FeatureQueryDataType
+    public function withFeatureOverrideParams(?\Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType $featureOverrideParams): \Flexnet\ProductPackagingService\Type\FeatureQueryDataType
     {
         $new = clone $this;
         $new->featureOverrideParams = $featureOverrideParams;

@@ -33,7 +33,7 @@ class ProductPKType
         return $this->name;
     }
 
-    public function withName(string $name): ProductPKType
+    public function withName(string $name): \Flexnet\EntitlementOrderService\Type\ProductPKType
     {
         $new = clone $this;
         $new->name = $name;
@@ -46,7 +46,7 @@ class ProductPKType
         return $this->version;
     }
 
-    public function withVersion(string $version): ProductPKType
+    public function withVersion(string $version): \Flexnet\EntitlementOrderService\Type\ProductPKType
     {
         $new = clone $this;
         $new->version = $version;

@@ -14,7 +14,7 @@ class TransactionKeyIdentifiersDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|array<\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType>|null  $transactionKeyIdentifier
      */
-    public function __construct(TrustedKeyIdentifierType|array $transactionKeyIdentifier = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|array|null $transactionKeyIdentifier = null)
     {
         $this->transactionKeyIdentifier = $transactionKeyIdentifier;
     }
@@ -22,7 +22,7 @@ class TransactionKeyIdentifiersDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|array<\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType>|null  $transactionKeyIdentifier
      */
-    public static function create(TrustedKeyIdentifierType|array $transactionKeyIdentifier = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|array|null $transactionKeyIdentifier = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class TransactionKeyIdentifiersDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|array<\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType>|null
      */
-    public function getTransactionKeyIdentifier(): TrustedKeyIdentifierType|array|null
+    public function getTransactionKeyIdentifier(): \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|array|null
     {
         return $this->transactionKeyIdentifier;
     }
@@ -38,7 +38,7 @@ class TransactionKeyIdentifiersDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|array<\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType>|null  $transactionKeyIdentifier
      */
-    public function withTransactionKeyIdentifier(TrustedKeyIdentifierType|array|null $transactionKeyIdentifier): TransactionKeyIdentifiersDataListType
+    public function withTransactionKeyIdentifier(\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType|array|null $transactionKeyIdentifier): \Flexnet\ProductPackagingService\Type\TransactionKeyIdentifiersDataListType
     {
         $new = clone $this;
         $new->transactionKeyIdentifier = $transactionKeyIdentifier;

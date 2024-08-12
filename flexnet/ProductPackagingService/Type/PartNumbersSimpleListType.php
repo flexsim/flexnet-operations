@@ -14,7 +14,7 @@ class PartNumbersSimpleListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType>  $partNumber
      */
-    public function __construct(PartNumberIdentifierType|array $partNumber)
+    public function __construct(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array $partNumber)
     {
         $this->partNumber = $partNumber;
     }
@@ -22,7 +22,7 @@ class PartNumbersSimpleListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType>  $partNumber
      */
-    public static function create(PartNumberIdentifierType|array $partNumber)
+    public static function create(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array $partNumber)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class PartNumbersSimpleListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType>
      */
-    public function getPartNumber(): PartNumberIdentifierType|array
+    public function getPartNumber(): \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array
     {
         return $this->partNumber;
     }
@@ -38,7 +38,7 @@ class PartNumbersSimpleListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType>  $partNumber
      */
-    public function withPartNumber(PartNumberIdentifierType|array $partNumber): PartNumbersSimpleListType
+    public function withPartNumber(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array $partNumber): \Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;

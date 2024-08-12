@@ -27,7 +27,7 @@ class ReturnedShortCodeDataType
         return $this->shortCode;
     }
 
-    public function withShortCode(string $shortCode): ReturnedShortCodeDataType
+    public function withShortCode(string $shortCode): \Flexnet\LicenseService\Type\ReturnedShortCodeDataType
     {
         $new = clone $this;
         $new->shortCode = $shortCode;

@@ -16,7 +16,7 @@ class DeletePartNumberRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\DeletePartNumberDataType|array<\Flexnet\ProductPackagingService\Type\DeletePartNumberDataType>  $partNumber
      */
-    public function __construct(DeletePartNumberDataType|array $partNumber)
+    public function __construct(\Flexnet\ProductPackagingService\Type\DeletePartNumberDataType|array $partNumber)
     {
         $this->partNumber = $partNumber;
     }
@@ -24,7 +24,7 @@ class DeletePartNumberRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\DeletePartNumberDataType|array<\Flexnet\ProductPackagingService\Type\DeletePartNumberDataType>  $partNumber
      */
-    public static function create(DeletePartNumberDataType|array $partNumber)
+    public static function create(\Flexnet\ProductPackagingService\Type\DeletePartNumberDataType|array $partNumber)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class DeletePartNumberRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\DeletePartNumberDataType|array<\Flexnet\ProductPackagingService\Type\DeletePartNumberDataType>
      */
-    public function getPartNumber(): DeletePartNumberDataType|array
+    public function getPartNumber(): \Flexnet\ProductPackagingService\Type\DeletePartNumberDataType|array
     {
         return $this->partNumber;
     }
@@ -40,7 +40,7 @@ class DeletePartNumberRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\DeletePartNumberDataType|array<\Flexnet\ProductPackagingService\Type\DeletePartNumberDataType>  $partNumber
      */
-    public function withPartNumber(DeletePartNumberDataType|array $partNumber): DeletePartNumberRequestType
+    public function withPartNumber(\Flexnet\ProductPackagingService\Type\DeletePartNumberDataType|array $partNumber): \Flexnet\ProductPackagingService\Type\DeletePartNumberRequestType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;

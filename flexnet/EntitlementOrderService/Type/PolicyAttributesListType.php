@@ -47,7 +47,7 @@ class PolicyAttributesListType
     /**
      * Constructor
      */
-    public function __construct(PolicyDataType $rehostsPolicy = null, PolicyDataType $returnsPolicy = null, PolicyDataType $repairsPolicy = null, ExtraActivationDataType $extraActivationsPolicy = null, CancelLicensePolicyDataType $cancelLicensePolicy = null, VirtualLicensePolicyDataType $virtualLicensePolicy = null, ReinstallPolicyDataType $reinstallPolicy = null, AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy = null)
+    public function __construct(?\Flexnet\EntitlementOrderService\Type\PolicyDataType $rehostsPolicy = null, ?\Flexnet\EntitlementOrderService\Type\PolicyDataType $returnsPolicy = null, ?\Flexnet\EntitlementOrderService\Type\PolicyDataType $repairsPolicy = null, ?\Flexnet\EntitlementOrderService\Type\ExtraActivationDataType $extraActivationsPolicy = null, ?\Flexnet\EntitlementOrderService\Type\CancelLicensePolicyDataType $cancelLicensePolicy = null, ?\Flexnet\EntitlementOrderService\Type\VirtualLicensePolicyDataType $virtualLicensePolicy = null, ?\Flexnet\EntitlementOrderService\Type\ReinstallPolicyDataType $reinstallPolicy = null, ?\Flexnet\EntitlementOrderService\Type\AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy = null)
     {
         $this->rehostsPolicy = $rehostsPolicy;
         $this->returnsPolicy = $returnsPolicy;
@@ -59,17 +59,17 @@ class PolicyAttributesListType
         $this->acpiGenerationIdLicensePolicy = $acpiGenerationIdLicensePolicy;
     }
 
-    public static function create(PolicyDataType $rehostsPolicy = null, PolicyDataType $returnsPolicy = null, PolicyDataType $repairsPolicy = null, ExtraActivationDataType $extraActivationsPolicy = null, CancelLicensePolicyDataType $cancelLicensePolicy = null, VirtualLicensePolicyDataType $virtualLicensePolicy = null, ReinstallPolicyDataType $reinstallPolicy = null, AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy = null)
+    public static function create(?\Flexnet\EntitlementOrderService\Type\PolicyDataType $rehostsPolicy = null, ?\Flexnet\EntitlementOrderService\Type\PolicyDataType $returnsPolicy = null, ?\Flexnet\EntitlementOrderService\Type\PolicyDataType $repairsPolicy = null, ?\Flexnet\EntitlementOrderService\Type\ExtraActivationDataType $extraActivationsPolicy = null, ?\Flexnet\EntitlementOrderService\Type\CancelLicensePolicyDataType $cancelLicensePolicy = null, ?\Flexnet\EntitlementOrderService\Type\VirtualLicensePolicyDataType $virtualLicensePolicy = null, ?\Flexnet\EntitlementOrderService\Type\ReinstallPolicyDataType $reinstallPolicy = null, ?\Flexnet\EntitlementOrderService\Type\AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getRehostsPolicy(): ?PolicyDataType
+    public function getRehostsPolicy(): ?\Flexnet\EntitlementOrderService\Type\PolicyDataType
     {
         return $this->rehostsPolicy;
     }
 
-    public function withRehostsPolicy(?PolicyDataType $rehostsPolicy): PolicyAttributesListType
+    public function withRehostsPolicy(?\Flexnet\EntitlementOrderService\Type\PolicyDataType $rehostsPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType
     {
         $new = clone $this;
         $new->rehostsPolicy = $rehostsPolicy;
@@ -77,12 +77,12 @@ class PolicyAttributesListType
         return $new;
     }
 
-    public function getReturnsPolicy(): ?PolicyDataType
+    public function getReturnsPolicy(): ?\Flexnet\EntitlementOrderService\Type\PolicyDataType
     {
         return $this->returnsPolicy;
     }
 
-    public function withReturnsPolicy(?PolicyDataType $returnsPolicy): PolicyAttributesListType
+    public function withReturnsPolicy(?\Flexnet\EntitlementOrderService\Type\PolicyDataType $returnsPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType
     {
         $new = clone $this;
         $new->returnsPolicy = $returnsPolicy;
@@ -90,12 +90,12 @@ class PolicyAttributesListType
         return $new;
     }
 
-    public function getRepairsPolicy(): ?PolicyDataType
+    public function getRepairsPolicy(): ?\Flexnet\EntitlementOrderService\Type\PolicyDataType
     {
         return $this->repairsPolicy;
     }
 
-    public function withRepairsPolicy(?PolicyDataType $repairsPolicy): PolicyAttributesListType
+    public function withRepairsPolicy(?\Flexnet\EntitlementOrderService\Type\PolicyDataType $repairsPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType
     {
         $new = clone $this;
         $new->repairsPolicy = $repairsPolicy;
@@ -103,12 +103,12 @@ class PolicyAttributesListType
         return $new;
     }
 
-    public function getExtraActivationsPolicy(): ?ExtraActivationDataType
+    public function getExtraActivationsPolicy(): ?\Flexnet\EntitlementOrderService\Type\ExtraActivationDataType
     {
         return $this->extraActivationsPolicy;
     }
 
-    public function withExtraActivationsPolicy(?ExtraActivationDataType $extraActivationsPolicy): PolicyAttributesListType
+    public function withExtraActivationsPolicy(?\Flexnet\EntitlementOrderService\Type\ExtraActivationDataType $extraActivationsPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType
     {
         $new = clone $this;
         $new->extraActivationsPolicy = $extraActivationsPolicy;
@@ -116,12 +116,12 @@ class PolicyAttributesListType
         return $new;
     }
 
-    public function getCancelLicensePolicy(): ?CancelLicensePolicyDataType
+    public function getCancelLicensePolicy(): ?\Flexnet\EntitlementOrderService\Type\CancelLicensePolicyDataType
     {
         return $this->cancelLicensePolicy;
     }
 
-    public function withCancelLicensePolicy(?CancelLicensePolicyDataType $cancelLicensePolicy): PolicyAttributesListType
+    public function withCancelLicensePolicy(?\Flexnet\EntitlementOrderService\Type\CancelLicensePolicyDataType $cancelLicensePolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType
     {
         $new = clone $this;
         $new->cancelLicensePolicy = $cancelLicensePolicy;
@@ -129,12 +129,12 @@ class PolicyAttributesListType
         return $new;
     }
 
-    public function getVirtualLicensePolicy(): ?VirtualLicensePolicyDataType
+    public function getVirtualLicensePolicy(): ?\Flexnet\EntitlementOrderService\Type\VirtualLicensePolicyDataType
     {
         return $this->virtualLicensePolicy;
     }
 
-    public function withVirtualLicensePolicy(?VirtualLicensePolicyDataType $virtualLicensePolicy): PolicyAttributesListType
+    public function withVirtualLicensePolicy(?\Flexnet\EntitlementOrderService\Type\VirtualLicensePolicyDataType $virtualLicensePolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType
     {
         $new = clone $this;
         $new->virtualLicensePolicy = $virtualLicensePolicy;
@@ -142,12 +142,12 @@ class PolicyAttributesListType
         return $new;
     }
 
-    public function getReinstallPolicy(): ?ReinstallPolicyDataType
+    public function getReinstallPolicy(): ?\Flexnet\EntitlementOrderService\Type\ReinstallPolicyDataType
     {
         return $this->reinstallPolicy;
     }
 
-    public function withReinstallPolicy(?ReinstallPolicyDataType $reinstallPolicy): PolicyAttributesListType
+    public function withReinstallPolicy(?\Flexnet\EntitlementOrderService\Type\ReinstallPolicyDataType $reinstallPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType
     {
         $new = clone $this;
         $new->reinstallPolicy = $reinstallPolicy;
@@ -155,12 +155,12 @@ class PolicyAttributesListType
         return $new;
     }
 
-    public function getAcpiGenerationIdLicensePolicy(): ?AcpiGenerationIdLicensePolicyDataType
+    public function getAcpiGenerationIdLicensePolicy(): ?\Flexnet\EntitlementOrderService\Type\AcpiGenerationIdLicensePolicyDataType
     {
         return $this->acpiGenerationIdLicensePolicy;
     }
 
-    public function withAcpiGenerationIdLicensePolicy(?AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy): PolicyAttributesListType
+    public function withAcpiGenerationIdLicensePolicy(?\Flexnet\EntitlementOrderService\Type\AcpiGenerationIdLicensePolicyDataType $acpiGenerationIdLicensePolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesListType
     {
         $new = clone $this;
         $new->acpiGenerationIdLicensePolicy = $acpiGenerationIdLicensePolicy;

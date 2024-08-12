@@ -16,7 +16,7 @@ class DeleteFeatureRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\DeleteFeatureDataType|array<\Flexnet\ProductPackagingService\Type\DeleteFeatureDataType>  $feature
      */
-    public function __construct(DeleteFeatureDataType|array $feature)
+    public function __construct(\Flexnet\ProductPackagingService\Type\DeleteFeatureDataType|array $feature)
     {
         $this->feature = $feature;
     }
@@ -24,7 +24,7 @@ class DeleteFeatureRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\DeleteFeatureDataType|array<\Flexnet\ProductPackagingService\Type\DeleteFeatureDataType>  $feature
      */
-    public static function create(DeleteFeatureDataType|array $feature)
+    public static function create(\Flexnet\ProductPackagingService\Type\DeleteFeatureDataType|array $feature)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class DeleteFeatureRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\DeleteFeatureDataType|array<\Flexnet\ProductPackagingService\Type\DeleteFeatureDataType>
      */
-    public function getFeature(): DeleteFeatureDataType|array
+    public function getFeature(): \Flexnet\ProductPackagingService\Type\DeleteFeatureDataType|array
     {
         return $this->feature;
     }
@@ -40,7 +40,7 @@ class DeleteFeatureRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\DeleteFeatureDataType|array<\Flexnet\ProductPackagingService\Type\DeleteFeatureDataType>  $feature
      */
-    public function withFeature(DeleteFeatureDataType|array $feature): DeleteFeatureRequestType
+    public function withFeature(\Flexnet\ProductPackagingService\Type\DeleteFeatureDataType|array $feature): \Flexnet\ProductPackagingService\Type\DeleteFeatureRequestType
     {
         $new = clone $this;
         $new->feature = $feature;

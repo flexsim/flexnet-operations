@@ -17,23 +17,23 @@ class FailedMaintenanceDataType
     /**
      * Constructor
      */
-    public function __construct(CreateMaintenanceDataType $maintenance = null, string $reason = null)
+    public function __construct(?\Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType $maintenance = null, ?string $reason = null)
     {
         $this->maintenance = $maintenance;
         $this->reason = $reason;
     }
 
-    public static function create(CreateMaintenanceDataType $maintenance = null, string $reason = null)
+    public static function create(?\Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType $maintenance = null, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getMaintenance(): ?CreateMaintenanceDataType
+    public function getMaintenance(): ?\Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType
     {
         return $this->maintenance;
     }
 
-    public function withMaintenance(?CreateMaintenanceDataType $maintenance): FailedMaintenanceDataType
+    public function withMaintenance(?\Flexnet\ProductPackagingService\Type\CreateMaintenanceDataType $maintenance): \Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType
     {
         $new = clone $this;
         $new->maintenance = $maintenance;
@@ -46,7 +46,7 @@ class FailedMaintenanceDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedMaintenanceDataType
+    public function withReason(?string $reason): \Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType
     {
         $new = clone $this;
         $new->reason = $reason;

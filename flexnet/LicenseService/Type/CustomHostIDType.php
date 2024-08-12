@@ -22,14 +22,14 @@ class CustomHostIDType
     /**
      * Constructor
      */
-    public function __construct(string $hostId = null, AttributeDescriptorDataType $hostAttributes = null, HostTypePKType $hostType = null)
+    public function __construct(?string $hostId = null, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $hostAttributes = null, ?\Flexnet\LicenseService\Type\HostTypePKType $hostType = null)
     {
         $this->hostId = $hostId;
         $this->hostAttributes = $hostAttributes;
         $this->hostType = $hostType;
     }
 
-    public static function create(string $hostId = null, AttributeDescriptorDataType $hostAttributes = null, HostTypePKType $hostType = null)
+    public static function create(?string $hostId = null, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $hostAttributes = null, ?\Flexnet\LicenseService\Type\HostTypePKType $hostType = null)
     {
         return new static(...\func_get_args());
     }
@@ -39,7 +39,7 @@ class CustomHostIDType
         return $this->hostId;
     }
 
-    public function withHostId(?string $hostId): CustomHostIDType
+    public function withHostId(?string $hostId): \Flexnet\LicenseService\Type\CustomHostIDType
     {
         $new = clone $this;
         $new->hostId = $hostId;
@@ -47,12 +47,12 @@ class CustomHostIDType
         return $new;
     }
 
-    public function getHostAttributes(): ?AttributeDescriptorDataType
+    public function getHostAttributes(): ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType
     {
         return $this->hostAttributes;
     }
 
-    public function withHostAttributes(?AttributeDescriptorDataType $hostAttributes): CustomHostIDType
+    public function withHostAttributes(?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $hostAttributes): \Flexnet\LicenseService\Type\CustomHostIDType
     {
         $new = clone $this;
         $new->hostAttributes = $hostAttributes;
@@ -60,12 +60,12 @@ class CustomHostIDType
         return $new;
     }
 
-    public function getHostType(): ?HostTypePKType
+    public function getHostType(): ?\Flexnet\LicenseService\Type\HostTypePKType
     {
         return $this->hostType;
     }
 
-    public function withHostType(?HostTypePKType $hostType): CustomHostIDType
+    public function withHostType(?\Flexnet\LicenseService\Type\HostTypePKType $hostType): \Flexnet\LicenseService\Type\CustomHostIDType
     {
         $new = clone $this;
         $new->hostType = $hostType;

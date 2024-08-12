@@ -10,30 +10,30 @@ class ProductIdentifierWithCountDataType
     private $productIdentifier;
 
     /**
-     * @var int
+     * @var \Flexnet\ProductPackagingService\Type\PositiveInteger
      */
     private $count;
 
     /**
      * Constructor
      */
-    public function __construct(ProductIdentifierType $productIdentifier, int $count)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier, \Flexnet\ProductPackagingService\Type\PositiveInteger $count)
     {
         $this->productIdentifier = $productIdentifier;
         $this->count = $count;
     }
 
-    public static function create(ProductIdentifierType $productIdentifier, int $count)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier, \Flexnet\ProductPackagingService\Type\PositiveInteger $count)
     {
         return new static(...\func_get_args());
     }
 
-    public function getProductIdentifier(): ProductIdentifierType
+    public function getProductIdentifier(): \Flexnet\ProductPackagingService\Type\ProductIdentifierType
     {
         return $this->productIdentifier;
     }
 
-    public function withProductIdentifier(ProductIdentifierType $productIdentifier): ProductIdentifierWithCountDataType
+    public function withProductIdentifier(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier): \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType
     {
         $new = clone $this;
         $new->productIdentifier = $productIdentifier;
@@ -41,12 +41,12 @@ class ProductIdentifierWithCountDataType
         return $new;
     }
 
-    public function getCount(): int
+    public function getCount(): \Flexnet\ProductPackagingService\Type\PositiveInteger
     {
         return $this->count;
     }
 
-    public function withCount(int $count): ProductIdentifierWithCountDataType
+    public function withCount(\Flexnet\ProductPackagingService\Type\PositiveInteger $count): \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType
     {
         $new = clone $this;
         $new->count = $count;

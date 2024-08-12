@@ -5,7 +5,7 @@ namespace Flexnet\ProductPackagingService\Type;
 class DupGroupDataType
 {
     /**
-     * @var string
+     * @var \Flexnet\ProductPackagingService\Type\DupGroupType
      */
     private $dupGroupOption;
 
@@ -17,23 +17,23 @@ class DupGroupDataType
     /**
      * Constructor
      */
-    public function __construct(string $dupGroupOption, GroupMaskDataType $groupMask = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\DupGroupType $dupGroupOption, ?\Flexnet\ProductPackagingService\Type\GroupMaskDataType $groupMask = null)
     {
         $this->dupGroupOption = $dupGroupOption;
         $this->groupMask = $groupMask;
     }
 
-    public static function create(string $dupGroupOption, GroupMaskDataType $groupMask = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\DupGroupType $dupGroupOption, ?\Flexnet\ProductPackagingService\Type\GroupMaskDataType $groupMask = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getDupGroupOption(): string
+    public function getDupGroupOption(): \Flexnet\ProductPackagingService\Type\DupGroupType
     {
         return $this->dupGroupOption;
     }
 
-    public function withDupGroupOption(string $dupGroupOption): DupGroupDataType
+    public function withDupGroupOption(\Flexnet\ProductPackagingService\Type\DupGroupType $dupGroupOption): \Flexnet\ProductPackagingService\Type\DupGroupDataType
     {
         $new = clone $this;
         $new->dupGroupOption = $dupGroupOption;
@@ -41,12 +41,12 @@ class DupGroupDataType
         return $new;
     }
 
-    public function getGroupMask(): ?GroupMaskDataType
+    public function getGroupMask(): ?\Flexnet\ProductPackagingService\Type\GroupMaskDataType
     {
         return $this->groupMask;
     }
 
-    public function withGroupMask(?GroupMaskDataType $groupMask): DupGroupDataType
+    public function withGroupMask(?\Flexnet\ProductPackagingService\Type\GroupMaskDataType $groupMask): \Flexnet\ProductPackagingService\Type\DupGroupDataType
     {
         $new = clone $this;
         $new->groupMask = $groupMask;

@@ -14,7 +14,7 @@ class LicenseModelStateChangeListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType>|null  $licenseModel
      */
-    public function __construct(LicenseModelStateChangeDataType|array $licenseModel = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array|null $licenseModel = null)
     {
         $this->licenseModel = $licenseModel;
     }
@@ -22,7 +22,7 @@ class LicenseModelStateChangeListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType>|null  $licenseModel
      */
-    public static function create(LicenseModelStateChangeDataType|array $licenseModel = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array|null $licenseModel = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class LicenseModelStateChangeListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType>|null
      */
-    public function getLicenseModel(): LicenseModelStateChangeDataType|array|null
+    public function getLicenseModel(): \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array|null
     {
         return $this->licenseModel;
     }
@@ -38,7 +38,7 @@ class LicenseModelStateChangeListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType>|null  $licenseModel
      */
-    public function withLicenseModel(LicenseModelStateChangeDataType|array|null $licenseModel): LicenseModelStateChangeListType
+    public function withLicenseModel(\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType|array|null $licenseModel): \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeListType
     {
         $new = clone $this;
         $new->licenseModel = $licenseModel;

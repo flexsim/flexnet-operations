@@ -16,7 +16,7 @@ class UpdateProductRelationshipRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType>  $relationship
      */
-    public function __construct(UpdateProductRelationshipDataType|array $relationship)
+    public function __construct(\Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType|array $relationship)
     {
         $this->relationship = $relationship;
     }
@@ -24,7 +24,7 @@ class UpdateProductRelationshipRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType>  $relationship
      */
-    public static function create(UpdateProductRelationshipDataType|array $relationship)
+    public static function create(\Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType|array $relationship)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class UpdateProductRelationshipRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType>
      */
-    public function getRelationship(): UpdateProductRelationshipDataType|array
+    public function getRelationship(): \Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType|array
     {
         return $this->relationship;
     }
@@ -40,7 +40,7 @@ class UpdateProductRelationshipRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType>  $relationship
      */
-    public function withRelationship(UpdateProductRelationshipDataType|array $relationship): UpdateProductRelationshipRequestType
+    public function withRelationship(\Flexnet\ProductPackagingService\Type\UpdateProductRelationshipDataType|array $relationship): \Flexnet\ProductPackagingService\Type\UpdateProductRelationshipRequestType
     {
         $new = clone $this;
         $new->relationship = $relationship;

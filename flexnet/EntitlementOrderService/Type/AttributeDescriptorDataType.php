@@ -14,7 +14,7 @@ class AttributeDescriptorDataType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\AttributeDescriptorType>|null  $attribute
      */
-    public function __construct(AttributeDescriptorType|array $attribute = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\AttributeDescriptorType|array|null $attribute = null)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class AttributeDescriptorDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\AttributeDescriptorType>|null  $attribute
      */
-    public static function create(AttributeDescriptorType|array $attribute = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\AttributeDescriptorType|array|null $attribute = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class AttributeDescriptorDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\AttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\AttributeDescriptorType>|null
      */
-    public function getAttribute(): AttributeDescriptorType|array|null
+    public function getAttribute(): \Flexnet\EntitlementOrderService\Type\AttributeDescriptorType|array|null
     {
         return $this->attribute;
     }
@@ -38,7 +38,7 @@ class AttributeDescriptorDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeDescriptorType|array<\Flexnet\EntitlementOrderService\Type\AttributeDescriptorType>|null  $attribute
      */
-    public function withAttribute(AttributeDescriptorType|array|null $attribute): AttributeDescriptorDataType
+    public function withAttribute(\Flexnet\EntitlementOrderService\Type\AttributeDescriptorType|array|null $attribute): \Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType
     {
         $new = clone $this;
         $new->attribute = $attribute;

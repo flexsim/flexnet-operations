@@ -14,7 +14,7 @@ class AttributeMetaDescriptorDataType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType|array<\Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType>|null  $attribute
      */
-    public function __construct(AttributeMetaDescriptorType|array $attribute = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType|array|null $attribute = null)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class AttributeMetaDescriptorDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType|array<\Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType>|null  $attribute
      */
-    public static function create(AttributeMetaDescriptorType|array $attribute = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType|array|null $attribute = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class AttributeMetaDescriptorDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType|array<\Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType>|null
      */
-    public function getAttribute(): AttributeMetaDescriptorType|array|null
+    public function getAttribute(): \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType|array|null
     {
         return $this->attribute;
     }
@@ -38,7 +38,7 @@ class AttributeMetaDescriptorDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType|array<\Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType>|null  $attribute
      */
-    public function withAttribute(AttributeMetaDescriptorType|array|null $attribute): AttributeMetaDescriptorDataType
+    public function withAttribute(\Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType|array|null $attribute): \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorDataType
     {
         $new = clone $this;
         $new->attribute = $attribute;

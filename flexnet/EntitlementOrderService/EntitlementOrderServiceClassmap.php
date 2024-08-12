@@ -7,7 +7,7 @@ use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 
 class EntitlementOrderServiceClassmap
 {
-    public static function getCollection(): ClassMapCollection
+    public static function getCollection(): \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
         return new ClassMapCollection(
             new ClassMap('idType', Type\IdType::class),

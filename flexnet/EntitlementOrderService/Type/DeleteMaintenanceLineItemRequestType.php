@@ -16,7 +16,7 @@ class DeleteMaintenanceLineItemRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType>  $maintenanceLineItemData
      */
-    public function __construct(DeleteMaintenanceLineItemDataType|array $maintenanceLineItemData)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|array $maintenanceLineItemData)
     {
         $this->maintenanceLineItemData = $maintenanceLineItemData;
     }
@@ -24,7 +24,7 @@ class DeleteMaintenanceLineItemRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType>  $maintenanceLineItemData
      */
-    public static function create(DeleteMaintenanceLineItemDataType|array $maintenanceLineItemData)
+    public static function create(\Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|array $maintenanceLineItemData)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class DeleteMaintenanceLineItemRequestType implements RequestInterface
     /**
      * @return \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType>
      */
-    public function getMaintenanceLineItemData(): DeleteMaintenanceLineItemDataType|array
+    public function getMaintenanceLineItemData(): \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|array
     {
         return $this->maintenanceLineItemData;
     }
@@ -40,7 +40,7 @@ class DeleteMaintenanceLineItemRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType>  $maintenanceLineItemData
      */
-    public function withMaintenanceLineItemData(DeleteMaintenanceLineItemDataType|array $maintenanceLineItemData): DeleteMaintenanceLineItemRequestType
+    public function withMaintenanceLineItemData(\Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType|array $maintenanceLineItemData): \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemRequestType
     {
         $new = clone $this;
         $new->maintenanceLineItemData = $maintenanceLineItemData;

@@ -19,23 +19,23 @@ class GetPartNumbersQueryResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, PartNumberDataListType $responseData = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\PartNumberDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, PartNumberDataListType $responseData = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\PartNumberDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): GetPartNumbersQueryResponseType
+    public function withStatusInfo(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo): \Flexnet\ProductPackagingService\Type\GetPartNumbersQueryResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class GetPartNumbersQueryResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?PartNumberDataListType
+    public function getResponseData(): ?\Flexnet\ProductPackagingService\Type\PartNumberDataListType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?PartNumberDataListType $responseData): GetPartNumbersQueryResponseType
+    public function withResponseData(?\Flexnet\ProductPackagingService\Type\PartNumberDataListType $responseData): \Flexnet\ProductPackagingService\Type\GetPartNumbersQueryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

@@ -10,20 +10,20 @@ class SimpleQueryType
     private $value;
 
     /**
-     * @var string
+     * @var \Flexnet\EntitlementOrderService\Type\SimpleSearchType
      */
     private $searchType;
 
     /**
      * Constructor
      */
-    public function __construct(string $value, string $searchType)
+    public function __construct(string $value, \Flexnet\EntitlementOrderService\Type\SimpleSearchType $searchType)
     {
         $this->value = $value;
         $this->searchType = $searchType;
     }
 
-    public static function create(string $value, string $searchType)
+    public static function create(string $value, \Flexnet\EntitlementOrderService\Type\SimpleSearchType $searchType)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class SimpleQueryType
         return $this->value;
     }
 
-    public function withValue(string $value): SimpleQueryType
+    public function withValue(string $value): \Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -41,12 +41,12 @@ class SimpleQueryType
         return $new;
     }
 
-    public function getSearchType(): string
+    public function getSearchType(): \Flexnet\EntitlementOrderService\Type\SimpleSearchType
     {
         return $this->searchType;
     }
 
-    public function withSearchType(string $searchType): SimpleQueryType
+    public function withSearchType(\Flexnet\EntitlementOrderService\Type\SimpleSearchType $searchType): \Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;

@@ -22,24 +22,24 @@ class GetMatchingBulkEntInfoType
     /**
      * Constructor
      */
-    public function __construct(EntitlementIdentifierType $bulkEntIdentifier, string $targetTierName, AccountIdentifierType $targetAccountUnit)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $bulkEntIdentifier, string $targetTierName, \Flexnet\EntitlementOrderService\Type\AccountIdentifierType $targetAccountUnit)
     {
         $this->bulkEntIdentifier = $bulkEntIdentifier;
         $this->targetTierName = $targetTierName;
         $this->targetAccountUnit = $targetAccountUnit;
     }
 
-    public static function create(EntitlementIdentifierType $bulkEntIdentifier, string $targetTierName, AccountIdentifierType $targetAccountUnit)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $bulkEntIdentifier, string $targetTierName, \Flexnet\EntitlementOrderService\Type\AccountIdentifierType $targetAccountUnit)
     {
         return new static(...\func_get_args());
     }
 
-    public function getBulkEntIdentifier(): EntitlementIdentifierType
+    public function getBulkEntIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->bulkEntIdentifier;
     }
 
-    public function withBulkEntIdentifier(EntitlementIdentifierType $bulkEntIdentifier): GetMatchingBulkEntInfoType
+    public function withBulkEntIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $bulkEntIdentifier): \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType
     {
         $new = clone $this;
         $new->bulkEntIdentifier = $bulkEntIdentifier;
@@ -52,7 +52,7 @@ class GetMatchingBulkEntInfoType
         return $this->targetTierName;
     }
 
-    public function withTargetTierName(string $targetTierName): GetMatchingBulkEntInfoType
+    public function withTargetTierName(string $targetTierName): \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType
     {
         $new = clone $this;
         $new->targetTierName = $targetTierName;
@@ -60,12 +60,12 @@ class GetMatchingBulkEntInfoType
         return $new;
     }
 
-    public function getTargetAccountUnit(): AccountIdentifierType
+    public function getTargetAccountUnit(): \Flexnet\EntitlementOrderService\Type\AccountIdentifierType
     {
         return $this->targetAccountUnit;
     }
 
-    public function withTargetAccountUnit(AccountIdentifierType $targetAccountUnit): GetMatchingBulkEntInfoType
+    public function withTargetAccountUnit(\Flexnet\EntitlementOrderService\Type\AccountIdentifierType $targetAccountUnit): \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntInfoType
     {
         $new = clone $this;
         $new->targetAccountUnit = $targetAccountUnit;

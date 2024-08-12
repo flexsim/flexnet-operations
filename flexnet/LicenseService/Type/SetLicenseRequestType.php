@@ -14,22 +14,22 @@ class SetLicenseRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(OnholdFulfillmentListType $onholdFulfillmentList)
+    public function __construct(\Flexnet\LicenseService\Type\OnholdFulfillmentListType $onholdFulfillmentList)
     {
         $this->onholdFulfillmentList = $onholdFulfillmentList;
     }
 
-    public static function create(OnholdFulfillmentListType $onholdFulfillmentList)
+    public static function create(\Flexnet\LicenseService\Type\OnholdFulfillmentListType $onholdFulfillmentList)
     {
         return new static(...\func_get_args());
     }
 
-    public function getOnholdFulfillmentList(): OnholdFulfillmentListType
+    public function getOnholdFulfillmentList(): \Flexnet\LicenseService\Type\OnholdFulfillmentListType
     {
         return $this->onholdFulfillmentList;
     }
 
-    public function withOnholdFulfillmentList(OnholdFulfillmentListType $onholdFulfillmentList): SetLicenseRequestType
+    public function withOnholdFulfillmentList(\Flexnet\LicenseService\Type\OnholdFulfillmentListType $onholdFulfillmentList): \Flexnet\LicenseService\Type\SetLicenseRequestType
     {
         $new = clone $this;
         $new->onholdFulfillmentList = $onholdFulfillmentList;

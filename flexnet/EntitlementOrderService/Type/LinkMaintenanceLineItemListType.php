@@ -14,7 +14,7 @@ class LinkMaintenanceLineItemListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType>  $linkMaintenanceLineItem
      */
-    public function __construct(LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem)
     {
         $this->linkMaintenanceLineItem = $linkMaintenanceLineItem;
     }
@@ -22,7 +22,7 @@ class LinkMaintenanceLineItemListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType>  $linkMaintenanceLineItem
      */
-    public static function create(LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem)
+    public static function create(\Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class LinkMaintenanceLineItemListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType>
      */
-    public function getLinkMaintenanceLineItem(): LinkMaintenanceLineItemDataType|array
+    public function getLinkMaintenanceLineItem(): \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType|array
     {
         return $this->linkMaintenanceLineItem;
     }
@@ -38,7 +38,7 @@ class LinkMaintenanceLineItemListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType>  $linkMaintenanceLineItem
      */
-    public function withLinkMaintenanceLineItem(LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem): LinkMaintenanceLineItemListType
+    public function withLinkMaintenanceLineItem(\Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemDataType|array $linkMaintenanceLineItem): \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemListType
     {
         $new = clone $this;
         $new->linkMaintenanceLineItem = $linkMaintenanceLineItem;

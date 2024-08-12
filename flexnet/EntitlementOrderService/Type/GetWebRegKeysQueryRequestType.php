@@ -24,24 +24,24 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
     {
         $this->bulkEntitlementIdentifier = $bulkEntitlementIdentifier;
         $this->batchSize = $batchSize;
         $this->pageNumber = $pageNumber;
     }
 
-    public static function create(EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $bulkEntitlementIdentifier, int $batchSize, int $pageNumber)
     {
         return new static(...\func_get_args());
     }
 
-    public function getBulkEntitlementIdentifier(): EntitlementIdentifierType
+    public function getBulkEntitlementIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->bulkEntitlementIdentifier;
     }
 
-    public function withBulkEntitlementIdentifier(EntitlementIdentifierType $bulkEntitlementIdentifier): GetWebRegKeysQueryRequestType
+    public function withBulkEntitlementIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $bulkEntitlementIdentifier): \Flexnet\EntitlementOrderService\Type\GetWebRegKeysQueryRequestType
     {
         $new = clone $this;
         $new->bulkEntitlementIdentifier = $bulkEntitlementIdentifier;
@@ -54,7 +54,7 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
         return $this->batchSize;
     }
 
-    public function withBatchSize(int $batchSize): GetWebRegKeysQueryRequestType
+    public function withBatchSize(int $batchSize): \Flexnet\EntitlementOrderService\Type\GetWebRegKeysQueryRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;
@@ -67,7 +67,7 @@ class GetWebRegKeysQueryRequestType implements RequestInterface
         return $this->pageNumber;
     }
 
-    public function withPageNumber(int $pageNumber): GetWebRegKeysQueryRequestType
+    public function withPageNumber(int $pageNumber): \Flexnet\EntitlementOrderService\Type\GetWebRegKeysQueryRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;

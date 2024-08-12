@@ -14,7 +14,7 @@ class LicenseGeneratorsDetailsType
      *
      * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType>|null  $licenseGeneratorIdentifier
      */
-    public function __construct(LicenseGeneratorIdentifierType|array $licenseGeneratorIdentifier = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|array|null $licenseGeneratorIdentifier = null)
     {
         $this->licenseGeneratorIdentifier = $licenseGeneratorIdentifier;
     }
@@ -22,7 +22,7 @@ class LicenseGeneratorsDetailsType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType>|null  $licenseGeneratorIdentifier
      */
-    public static function create(LicenseGeneratorIdentifierType|array $licenseGeneratorIdentifier = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|array|null $licenseGeneratorIdentifier = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class LicenseGeneratorsDetailsType
     /**
      * @return \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType>|null
      */
-    public function getLicenseGeneratorIdentifier(): LicenseGeneratorIdentifierType|array|null
+    public function getLicenseGeneratorIdentifier(): \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|array|null
     {
         return $this->licenseGeneratorIdentifier;
     }
@@ -38,7 +38,7 @@ class LicenseGeneratorsDetailsType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType>|null  $licenseGeneratorIdentifier
      */
-    public function withLicenseGeneratorIdentifier(LicenseGeneratorIdentifierType|array|null $licenseGeneratorIdentifier): LicenseGeneratorsDetailsType
+    public function withLicenseGeneratorIdentifier(\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType|array|null $licenseGeneratorIdentifier): \Flexnet\ProductPackagingService\Type\LicenseGeneratorsDetailsType
     {
         $new = clone $this;
         $new->licenseGeneratorIdentifier = $licenseGeneratorIdentifier;

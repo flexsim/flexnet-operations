@@ -19,23 +19,23 @@ class UpdateUniformSuiteResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedUpdateUniformSuiteDataListType $failedData = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedUpdateUniformSuiteDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedUpdateUniformSuiteDataListType $failedData = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedUpdateUniformSuiteDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): UpdateUniformSuiteResponseType
+    public function withStatusInfo(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo): \Flexnet\ProductPackagingService\Type\UpdateUniformSuiteResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class UpdateUniformSuiteResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedUpdateUniformSuiteDataListType
+    public function getFailedData(): ?\Flexnet\ProductPackagingService\Type\FailedUpdateUniformSuiteDataListType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedUpdateUniformSuiteDataListType $failedData): UpdateUniformSuiteResponseType
+    public function withFailedData(?\Flexnet\ProductPackagingService\Type\FailedUpdateUniformSuiteDataListType $failedData): \Flexnet\ProductPackagingService\Type\UpdateUniformSuiteResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

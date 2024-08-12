@@ -38,7 +38,7 @@ class WebRegKeyType
     /**
      * @param  string|array<string>  $webRegKey
      */
-    public function withWebRegKey(string|array $webRegKey): WebRegKeyType
+    public function withWebRegKey(string|array $webRegKey): \Flexnet\EntitlementOrderService\Type\WebRegKeyType
     {
         $new = clone $this;
         $new->webRegKey = $webRegKey;

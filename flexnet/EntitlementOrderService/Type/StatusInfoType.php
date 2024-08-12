@@ -5,7 +5,7 @@ namespace Flexnet\EntitlementOrderService\Type;
 class StatusInfoType
 {
     /**
-     * @var string
+     * @var \Flexnet\EntitlementOrderService\Type\StatusType
      */
     private $status;
 
@@ -17,23 +17,23 @@ class StatusInfoType
     /**
      * Constructor
      */
-    public function __construct(string $status, string $reason = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\StatusType $status, ?string $reason = null)
     {
         $this->status = $status;
         $this->reason = $reason;
     }
 
-    public static function create(string $status, string $reason = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\StatusType $status, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatus(): string
+    public function getStatus(): \Flexnet\EntitlementOrderService\Type\StatusType
     {
         return $this->status;
     }
 
-    public function withStatus(string $status): StatusInfoType
+    public function withStatus(\Flexnet\EntitlementOrderService\Type\StatusType $status): \Flexnet\EntitlementOrderService\Type\StatusInfoType
     {
         $new = clone $this;
         $new->status = $status;
@@ -46,7 +46,7 @@ class StatusInfoType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): StatusInfoType
+    public function withReason(?string $reason): \Flexnet\EntitlementOrderService\Type\StatusInfoType
     {
         $new = clone $this;
         $new->reason = $reason;

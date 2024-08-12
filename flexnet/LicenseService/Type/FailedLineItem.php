@@ -12,12 +12,12 @@ class FailedLineItem
     /**
      * Constructor
      */
-    public function __construct(string $activationId = null)
+    public function __construct(?string $activationId = null)
     {
         $this->activationId = $activationId;
     }
 
-    public static function create(string $activationId = null)
+    public static function create(?string $activationId = null)
     {
         return new static(...\func_get_args());
     }
@@ -27,7 +27,7 @@ class FailedLineItem
         return $this->activationId;
     }
 
-    public function withActivationId(?string $activationId): FailedLineItem
+    public function withActivationId(?string $activationId): \Flexnet\LicenseService\Type\FailedLineItem
     {
         $new = clone $this;
         $new->activationId = $activationId;

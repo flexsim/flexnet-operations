@@ -17,23 +17,23 @@ class FailedFeatureBundleStateDataType
     /**
      * Constructor
      */
-    public function __construct(FeatureBundleStateDataType $featureBundle, string $reason)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureBundleStateDataType $featureBundle, string $reason)
     {
         $this->featureBundle = $featureBundle;
         $this->reason = $reason;
     }
 
-    public static function create(FeatureBundleStateDataType $featureBundle, string $reason)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureBundleStateDataType $featureBundle, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFeatureBundle(): FeatureBundleStateDataType
+    public function getFeatureBundle(): \Flexnet\ProductPackagingService\Type\FeatureBundleStateDataType
     {
         return $this->featureBundle;
     }
 
-    public function withFeatureBundle(FeatureBundleStateDataType $featureBundle): FailedFeatureBundleStateDataType
+    public function withFeatureBundle(\Flexnet\ProductPackagingService\Type\FeatureBundleStateDataType $featureBundle): \Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType
     {
         $new = clone $this;
         $new->featureBundle = $featureBundle;
@@ -46,7 +46,7 @@ class FailedFeatureBundleStateDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedFeatureBundleStateDataType
+    public function withReason(string $reason): \Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType
     {
         $new = clone $this;
         $new->reason = $reason;

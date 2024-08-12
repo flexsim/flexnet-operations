@@ -19,23 +19,23 @@ class SetProductStateResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedProductStateDataListType $failedData = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedProductStateDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedProductStateDataListType $failedData = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedProductStateDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): SetProductStateResponseType
+    public function withStatusInfo(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo): \Flexnet\ProductPackagingService\Type\SetProductStateResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class SetProductStateResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedProductStateDataListType
+    public function getFailedData(): ?\Flexnet\ProductPackagingService\Type\FailedProductStateDataListType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedProductStateDataListType $failedData): SetProductStateResponseType
+    public function withFailedData(?\Flexnet\ProductPackagingService\Type\FailedProductStateDataListType $failedData): \Flexnet\ProductPackagingService\Type\SetProductStateResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

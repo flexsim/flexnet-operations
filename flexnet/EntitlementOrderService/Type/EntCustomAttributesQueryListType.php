@@ -14,7 +14,7 @@ class EntCustomAttributesQueryListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType>|null  $attribute
      */
-    public function __construct(EntCustomAttributeQueryType|array $attribute = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType|array|null $attribute = null)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class EntCustomAttributesQueryListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType>|null  $attribute
      */
-    public static function create(EntCustomAttributeQueryType|array $attribute = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType|array|null $attribute = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class EntCustomAttributesQueryListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType>|null
      */
-    public function getAttribute(): EntCustomAttributeQueryType|array|null
+    public function getAttribute(): \Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType|array|null
     {
         return $this->attribute;
     }
@@ -38,7 +38,7 @@ class EntCustomAttributesQueryListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType>|null  $attribute
      */
-    public function withAttribute(EntCustomAttributeQueryType|array|null $attribute): EntCustomAttributesQueryListType
+    public function withAttribute(\Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType|array|null $attribute): \Flexnet\EntitlementOrderService\Type\EntCustomAttributesQueryListType
     {
         $new = clone $this;
         $new->attribute = $attribute;

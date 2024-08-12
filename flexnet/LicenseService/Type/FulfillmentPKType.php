@@ -27,7 +27,7 @@ class FulfillmentPKType
         return $this->fulfillmentId;
     }
 
-    public function withFulfillmentId(string $fulfillmentId): FulfillmentPKType
+    public function withFulfillmentId(string $fulfillmentId): \Flexnet\LicenseService\Type\FulfillmentPKType
     {
         $new = clone $this;
         $new->fulfillmentId = $fulfillmentId;

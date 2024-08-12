@@ -17,23 +17,23 @@ class FailedPartNumberDataType
     /**
      * Constructor
      */
-    public function __construct(CreatePartNumberDataType $partNumber = null, string $reason = null)
+    public function __construct(?\Flexnet\ProductPackagingService\Type\CreatePartNumberDataType $partNumber = null, ?string $reason = null)
     {
         $this->partNumber = $partNumber;
         $this->reason = $reason;
     }
 
-    public static function create(CreatePartNumberDataType $partNumber = null, string $reason = null)
+    public static function create(?\Flexnet\ProductPackagingService\Type\CreatePartNumberDataType $partNumber = null, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getPartNumber(): ?CreatePartNumberDataType
+    public function getPartNumber(): ?\Flexnet\ProductPackagingService\Type\CreatePartNumberDataType
     {
         return $this->partNumber;
     }
 
-    public function withPartNumber(?CreatePartNumberDataType $partNumber): FailedPartNumberDataType
+    public function withPartNumber(?\Flexnet\ProductPackagingService\Type\CreatePartNumberDataType $partNumber): \Flexnet\ProductPackagingService\Type\FailedPartNumberDataType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -46,7 +46,7 @@ class FailedPartNumberDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedPartNumberDataType
+    public function withReason(?string $reason): \Flexnet\ProductPackagingService\Type\FailedPartNumberDataType
     {
         $new = clone $this;
         $new->reason = $reason;

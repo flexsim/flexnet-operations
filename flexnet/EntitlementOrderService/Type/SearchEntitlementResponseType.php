@@ -21,7 +21,7 @@ class SearchEntitlementResponseType extends Result
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementDataType>|null  $entitlement
      */
-    public function __construct(StatusInfoType $statusInfo, EntitlementDataType|array $entitlement = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, \Flexnet\EntitlementOrderService\Type\EntitlementDataType|array|null $entitlement = null)
     {
         $this->statusInfo = $statusInfo;
         $this->entitlement = $entitlement;
@@ -30,17 +30,17 @@ class SearchEntitlementResponseType extends Result
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementDataType>|null  $entitlement
      */
-    public static function create(StatusInfoType $statusInfo, EntitlementDataType|array $entitlement = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, \Flexnet\EntitlementOrderService\Type\EntitlementDataType|array|null $entitlement = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\EntitlementOrderService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): SearchEntitlementResponseType
+    public function withStatusInfo(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo): \Flexnet\EntitlementOrderService\Type\SearchEntitlementResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -51,7 +51,7 @@ class SearchEntitlementResponseType extends Result
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementDataType>|null
      */
-    public function getEntitlement(): EntitlementDataType|array|null
+    public function getEntitlement(): \Flexnet\EntitlementOrderService\Type\EntitlementDataType|array|null
     {
         return $this->entitlement;
     }
@@ -59,7 +59,7 @@ class SearchEntitlementResponseType extends Result
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementDataType>|null  $entitlement
      */
-    public function withEntitlement(EntitlementDataType|array|null $entitlement): SearchEntitlementResponseType
+    public function withEntitlement(\Flexnet\EntitlementOrderService\Type\EntitlementDataType|array|null $entitlement): \Flexnet\EntitlementOrderService\Type\SearchEntitlementResponseType
     {
         $new = clone $this;
         $new->entitlement = $entitlement;

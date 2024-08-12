@@ -14,7 +14,7 @@ class TransferLineItemsListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType>  $lineItemInfo
      */
-    public function __construct(TransferLineItemInfoType|array $lineItemInfo)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType|array $lineItemInfo)
     {
         $this->lineItemInfo = $lineItemInfo;
     }
@@ -22,7 +22,7 @@ class TransferLineItemsListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType>  $lineItemInfo
      */
-    public static function create(TransferLineItemInfoType|array $lineItemInfo)
+    public static function create(\Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType|array $lineItemInfo)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class TransferLineItemsListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType>
      */
-    public function getLineItemInfo(): TransferLineItemInfoType|array
+    public function getLineItemInfo(): \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType|array
     {
         return $this->lineItemInfo;
     }
@@ -38,7 +38,7 @@ class TransferLineItemsListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType>  $lineItemInfo
      */
-    public function withLineItemInfo(TransferLineItemInfoType|array $lineItemInfo): TransferLineItemsListType
+    public function withLineItemInfo(\Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType|array $lineItemInfo): \Flexnet\EntitlementOrderService\Type\TransferLineItemsListType
     {
         $new = clone $this;
         $new->lineItemInfo = $lineItemInfo;

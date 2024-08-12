@@ -33,7 +33,7 @@ class MaintenancePKType
         return $this->name;
     }
 
-    public function withName(string $name): MaintenancePKType
+    public function withName(string $name): \Flexnet\ProductPackagingService\Type\MaintenancePKType
     {
         $new = clone $this;
         $new->name = $name;
@@ -46,7 +46,7 @@ class MaintenancePKType
         return $this->version;
     }
 
-    public function withVersion(string $version): MaintenancePKType
+    public function withVersion(string $version): \Flexnet\ProductPackagingService\Type\MaintenancePKType
     {
         $new = clone $this;
         $new->version = $version;

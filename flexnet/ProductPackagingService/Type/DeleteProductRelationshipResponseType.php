@@ -19,23 +19,23 @@ class DeleteProductRelationshipResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedProductRelationshipDataListType $failedData = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedProductRelationshipDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedProductRelationshipDataListType $failedData = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedProductRelationshipDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): DeleteProductRelationshipResponseType
+    public function withStatusInfo(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo): \Flexnet\ProductPackagingService\Type\DeleteProductRelationshipResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class DeleteProductRelationshipResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedProductRelationshipDataListType
+    public function getFailedData(): ?\Flexnet\ProductPackagingService\Type\FailedProductRelationshipDataListType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedProductRelationshipDataListType $failedData): DeleteProductRelationshipResponseType
+    public function withFailedData(?\Flexnet\ProductPackagingService\Type\FailedProductRelationshipDataListType $failedData): \Flexnet\ProductPackagingService\Type\DeleteProductRelationshipResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

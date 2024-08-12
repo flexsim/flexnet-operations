@@ -14,7 +14,7 @@ class SplitLineItemResponseListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\SplitLineItemDataType>  $splitLineItem
      */
-    public function __construct(SplitLineItemDataType|array $splitLineItem)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\SplitLineItemDataType|array $splitLineItem)
     {
         $this->splitLineItem = $splitLineItem;
     }
@@ -22,7 +22,7 @@ class SplitLineItemResponseListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\SplitLineItemDataType>  $splitLineItem
      */
-    public static function create(SplitLineItemDataType|array $splitLineItem)
+    public static function create(\Flexnet\EntitlementOrderService\Type\SplitLineItemDataType|array $splitLineItem)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class SplitLineItemResponseListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\SplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\SplitLineItemDataType>
      */
-    public function getSplitLineItem(): SplitLineItemDataType|array
+    public function getSplitLineItem(): \Flexnet\EntitlementOrderService\Type\SplitLineItemDataType|array
     {
         return $this->splitLineItem;
     }
@@ -38,7 +38,7 @@ class SplitLineItemResponseListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\SplitLineItemDataType>  $splitLineItem
      */
-    public function withSplitLineItem(SplitLineItemDataType|array $splitLineItem): SplitLineItemResponseListType
+    public function withSplitLineItem(\Flexnet\EntitlementOrderService\Type\SplitLineItemDataType|array $splitLineItem): \Flexnet\EntitlementOrderService\Type\SplitLineItemResponseListType
     {
         $new = clone $this;
         $new->splitLineItem = $splitLineItem;

@@ -14,7 +14,7 @@ class ModelIdentifiersDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelDetailsType|array<\Flexnet\ProductPackagingService\Type\LicenseModelDetailsType>|null  $licenseModel
      */
-    public function __construct(LicenseModelDetailsType|array $licenseModel = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\LicenseModelDetailsType|array|null $licenseModel = null)
     {
         $this->licenseModel = $licenseModel;
     }
@@ -22,7 +22,7 @@ class ModelIdentifiersDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelDetailsType|array<\Flexnet\ProductPackagingService\Type\LicenseModelDetailsType>|null  $licenseModel
      */
-    public static function create(LicenseModelDetailsType|array $licenseModel = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\LicenseModelDetailsType|array|null $licenseModel = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class ModelIdentifiersDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\LicenseModelDetailsType|array<\Flexnet\ProductPackagingService\Type\LicenseModelDetailsType>|null
      */
-    public function getLicenseModel(): LicenseModelDetailsType|array|null
+    public function getLicenseModel(): \Flexnet\ProductPackagingService\Type\LicenseModelDetailsType|array|null
     {
         return $this->licenseModel;
     }
@@ -38,7 +38,7 @@ class ModelIdentifiersDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelDetailsType|array<\Flexnet\ProductPackagingService\Type\LicenseModelDetailsType>|null  $licenseModel
      */
-    public function withLicenseModel(LicenseModelDetailsType|array|null $licenseModel): ModelIdentifiersDataListType
+    public function withLicenseModel(\Flexnet\ProductPackagingService\Type\LicenseModelDetailsType|array|null $licenseModel): \Flexnet\ProductPackagingService\Type\ModelIdentifiersDataListType
     {
         $new = clone $this;
         $new->licenseModel = $licenseModel;

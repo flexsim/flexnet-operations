@@ -16,7 +16,7 @@ class DeleteUniformSuiteRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\DeleteUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\DeleteUniformSuiteDataType>  $uniformSuite
      */
-    public function __construct(DeleteUniformSuiteDataType|array $uniformSuite)
+    public function __construct(\Flexnet\ProductPackagingService\Type\DeleteUniformSuiteDataType|array $uniformSuite)
     {
         $this->uniformSuite = $uniformSuite;
     }
@@ -24,7 +24,7 @@ class DeleteUniformSuiteRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\DeleteUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\DeleteUniformSuiteDataType>  $uniformSuite
      */
-    public static function create(DeleteUniformSuiteDataType|array $uniformSuite)
+    public static function create(\Flexnet\ProductPackagingService\Type\DeleteUniformSuiteDataType|array $uniformSuite)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class DeleteUniformSuiteRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\DeleteUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\DeleteUniformSuiteDataType>
      */
-    public function getUniformSuite(): DeleteUniformSuiteDataType|array
+    public function getUniformSuite(): \Flexnet\ProductPackagingService\Type\DeleteUniformSuiteDataType|array
     {
         return $this->uniformSuite;
     }
@@ -40,7 +40,7 @@ class DeleteUniformSuiteRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\DeleteUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\DeleteUniformSuiteDataType>  $uniformSuite
      */
-    public function withUniformSuite(DeleteUniformSuiteDataType|array $uniformSuite): DeleteUniformSuiteRequestType
+    public function withUniformSuite(\Flexnet\ProductPackagingService\Type\DeleteUniformSuiteDataType|array $uniformSuite): \Flexnet\ProductPackagingService\Type\DeleteUniformSuiteRequestType
     {
         $new = clone $this;
         $new->uniformSuite = $uniformSuite;

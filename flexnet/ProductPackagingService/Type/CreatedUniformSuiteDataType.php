@@ -33,7 +33,7 @@ class CreatedUniformSuiteDataType
         return $this->recordRefNo;
     }
 
-    public function withRecordRefNo(string $recordRefNo): CreatedUniformSuiteDataType
+    public function withRecordRefNo(string $recordRefNo): \Flexnet\ProductPackagingService\Type\CreatedUniformSuiteDataType
     {
         $new = clone $this;
         $new->recordRefNo = $recordRefNo;
@@ -46,7 +46,7 @@ class CreatedUniformSuiteDataType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string $uniqueId): CreatedUniformSuiteDataType
+    public function withUniqueId(string $uniqueId): \Flexnet\ProductPackagingService\Type\CreatedUniformSuiteDataType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;

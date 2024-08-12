@@ -22,14 +22,14 @@ class ProductCategoryDataType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, string $name = null, string $description = null)
+    public function __construct(?string $uniqueId = null, ?string $name = null, ?string $description = null)
     {
         $this->uniqueId = $uniqueId;
         $this->name = $name;
         $this->description = $description;
     }
 
-    public static function create(string $uniqueId = null, string $name = null, string $description = null)
+    public static function create(?string $uniqueId = null, ?string $name = null, ?string $description = null)
     {
         return new static(...\func_get_args());
     }
@@ -39,7 +39,7 @@ class ProductCategoryDataType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): ProductCategoryDataType
+    public function withUniqueId(?string $uniqueId): \Flexnet\EntitlementOrderService\Type\ProductCategoryDataType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -52,7 +52,7 @@ class ProductCategoryDataType
         return $this->name;
     }
 
-    public function withName(?string $name): ProductCategoryDataType
+    public function withName(?string $name): \Flexnet\EntitlementOrderService\Type\ProductCategoryDataType
     {
         $new = clone $this;
         $new->name = $name;
@@ -65,7 +65,7 @@ class ProductCategoryDataType
         return $this->description;
     }
 
-    public function withDescription(?string $description): ProductCategoryDataType
+    public function withDescription(?string $description): \Flexnet\EntitlementOrderService\Type\ProductCategoryDataType
     {
         $new = clone $this;
         $new->description = $description;

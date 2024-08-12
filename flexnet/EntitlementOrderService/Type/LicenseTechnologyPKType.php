@@ -27,7 +27,7 @@ class LicenseTechnologyPKType
         return $this->name;
     }
 
-    public function withName(string $name): LicenseTechnologyPKType
+    public function withName(string $name): \Flexnet\EntitlementOrderService\Type\LicenseTechnologyPKType
     {
         $new = clone $this;
         $new->name = $name;

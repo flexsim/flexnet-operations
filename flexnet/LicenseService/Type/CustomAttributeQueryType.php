@@ -32,7 +32,7 @@ class CustomAttributeQueryType
     /**
      * Constructor
      */
-    public function __construct(string $attributeName, SimpleQueryType $stringValue = null, NumberQueryType $numberValue = null, DateQueryType $dateValue = null, bool $booleanValue = null)
+    public function __construct(string $attributeName, ?\Flexnet\LicenseService\Type\SimpleQueryType $stringValue = null, ?\Flexnet\LicenseService\Type\NumberQueryType $numberValue = null, ?\Flexnet\LicenseService\Type\DateQueryType $dateValue = null, ?bool $booleanValue = null)
     {
         $this->attributeName = $attributeName;
         $this->stringValue = $stringValue;
@@ -41,7 +41,7 @@ class CustomAttributeQueryType
         $this->booleanValue = $booleanValue;
     }
 
-    public static function create(string $attributeName, SimpleQueryType $stringValue = null, NumberQueryType $numberValue = null, DateQueryType $dateValue = null, bool $booleanValue = null)
+    public static function create(string $attributeName, ?\Flexnet\LicenseService\Type\SimpleQueryType $stringValue = null, ?\Flexnet\LicenseService\Type\NumberQueryType $numberValue = null, ?\Flexnet\LicenseService\Type\DateQueryType $dateValue = null, ?bool $booleanValue = null)
     {
         return new static(...\func_get_args());
     }
@@ -51,7 +51,7 @@ class CustomAttributeQueryType
         return $this->attributeName;
     }
 
-    public function withAttributeName(string $attributeName): CustomAttributeQueryType
+    public function withAttributeName(string $attributeName): \Flexnet\LicenseService\Type\CustomAttributeQueryType
     {
         $new = clone $this;
         $new->attributeName = $attributeName;
@@ -59,12 +59,12 @@ class CustomAttributeQueryType
         return $new;
     }
 
-    public function getStringValue(): ?SimpleQueryType
+    public function getStringValue(): ?\Flexnet\LicenseService\Type\SimpleQueryType
     {
         return $this->stringValue;
     }
 
-    public function withStringValue(?SimpleQueryType $stringValue): CustomAttributeQueryType
+    public function withStringValue(?\Flexnet\LicenseService\Type\SimpleQueryType $stringValue): \Flexnet\LicenseService\Type\CustomAttributeQueryType
     {
         $new = clone $this;
         $new->stringValue = $stringValue;
@@ -72,12 +72,12 @@ class CustomAttributeQueryType
         return $new;
     }
 
-    public function getNumberValue(): ?NumberQueryType
+    public function getNumberValue(): ?\Flexnet\LicenseService\Type\NumberQueryType
     {
         return $this->numberValue;
     }
 
-    public function withNumberValue(?NumberQueryType $numberValue): CustomAttributeQueryType
+    public function withNumberValue(?\Flexnet\LicenseService\Type\NumberQueryType $numberValue): \Flexnet\LicenseService\Type\CustomAttributeQueryType
     {
         $new = clone $this;
         $new->numberValue = $numberValue;
@@ -85,12 +85,12 @@ class CustomAttributeQueryType
         return $new;
     }
 
-    public function getDateValue(): ?DateQueryType
+    public function getDateValue(): ?\Flexnet\LicenseService\Type\DateQueryType
     {
         return $this->dateValue;
     }
 
-    public function withDateValue(?DateQueryType $dateValue): CustomAttributeQueryType
+    public function withDateValue(?\Flexnet\LicenseService\Type\DateQueryType $dateValue): \Flexnet\LicenseService\Type\CustomAttributeQueryType
     {
         $new = clone $this;
         $new->dateValue = $dateValue;
@@ -103,7 +103,7 @@ class CustomAttributeQueryType
         return $this->booleanValue;
     }
 
-    public function withBooleanValue(?bool $booleanValue): CustomAttributeQueryType
+    public function withBooleanValue(?bool $booleanValue): \Flexnet\LicenseService\Type\CustomAttributeQueryType
     {
         $new = clone $this;
         $new->booleanValue = $booleanValue;

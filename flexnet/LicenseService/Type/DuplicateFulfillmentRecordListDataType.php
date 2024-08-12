@@ -14,7 +14,7 @@ class DuplicateFulfillmentRecordListDataType
      *
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>  $fulfillment
      */
-    public function __construct(FulfillmentIdentifierType|array $fulfillment)
+    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdentifierType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -22,7 +22,7 @@ class DuplicateFulfillmentRecordListDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>  $fulfillment
      */
-    public static function create(FulfillmentIdentifierType|array $fulfillment)
+    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdentifierType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class DuplicateFulfillmentRecordListDataType
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>
      */
-    public function getFulfillment(): FulfillmentIdentifierType|array
+    public function getFulfillment(): \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array
     {
         return $this->fulfillment;
     }
@@ -38,7 +38,7 @@ class DuplicateFulfillmentRecordListDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>  $fulfillment
      */
-    public function withFulfillment(FulfillmentIdentifierType|array $fulfillment): DuplicateFulfillmentRecordListDataType
+    public function withFulfillment(\Flexnet\LicenseService\Type\FulfillmentIdentifierType|array $fulfillment): \Flexnet\LicenseService\Type\DuplicateFulfillmentRecordListDataType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;

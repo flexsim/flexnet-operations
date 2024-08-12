@@ -30,7 +30,7 @@ class SearchActivatableItemDataType
     private $productVersion;
 
     /**
-     * @var string|null
+     * @var \Flexnet\EntitlementOrderService\Type\ProductType|null
      */
     private $productType;
 
@@ -110,7 +110,7 @@ class SearchActivatableItemDataType
     private $parentBulkEntSoldTo;
 
     /**
-     * @var string|null
+     * @var \Flexnet\EntitlementOrderService\Type\ActivatableItemType|null
      */
     private $activatableItemType;
 
@@ -152,7 +152,7 @@ class SearchActivatableItemDataType
     /**
      * Constructor
      */
-    public function __construct(SimpleQueryType $parentBulkEntitlementId = null, SimpleQueryType $entitlementId = null, SimpleQueryType $activationId = null, SimpleQueryType $productName = null, SimpleQueryType $productVersion = null, string $productType = null, SimpleQueryType $partNumber = null, DateQueryType $startDate = null, bool $isPermanent = null, DateQueryType $expirationDate = null, DateQueryType $versionDate = null, SimpleQueryType $licenseTechnology = null, SimpleQueryType $orderId = null, SimpleQueryType $orderLineNumber = null, bool $withNoOrderId = null, bool $restrictToItemsWithCount = null, NumberQueryType $fulfilledAmount = null, string $userId = null, CustomAttributesQueryListType $customAttributes = null, SimpleQueryType $soldTo = null, SimpleQueryType $parentBulkEntSoldTo = null, string $activatableItemType = null, bool $allowPortalLogin = null, PartnerTierQueryType $accountUnitName = null, SimpleQueryType $currentOwnerName = null, SimpleQueryType $lineItemParentLineItemId = null, DateTimeQueryType $createdOnDateTime = null, DateTimeQueryType $lastModifiedDateTime = null, LineItemCustomAttributesQueryListType $lineItemAttributes = null)
+    public function __construct(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $parentBulkEntitlementId = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $entitlementId = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $activationId = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $productName = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $productVersion = null, ?\Flexnet\EntitlementOrderService\Type\ProductType $productType = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $partNumber = null, ?\Flexnet\EntitlementOrderService\Type\DateQueryType $startDate = null, ?bool $isPermanent = null, ?\Flexnet\EntitlementOrderService\Type\DateQueryType $expirationDate = null, ?\Flexnet\EntitlementOrderService\Type\DateQueryType $versionDate = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $licenseTechnology = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $orderId = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $orderLineNumber = null, ?bool $withNoOrderId = null, ?bool $restrictToItemsWithCount = null, ?\Flexnet\EntitlementOrderService\Type\NumberQueryType $fulfilledAmount = null, ?string $userId = null, ?\Flexnet\EntitlementOrderService\Type\CustomAttributesQueryListType $customAttributes = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $soldTo = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $parentBulkEntSoldTo = null, ?\Flexnet\EntitlementOrderService\Type\ActivatableItemType $activatableItemType = null, ?bool $allowPortalLogin = null, ?\Flexnet\EntitlementOrderService\Type\PartnerTierQueryType $accountUnitName = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $currentOwnerName = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $lineItemParentLineItemId = null, ?\Flexnet\EntitlementOrderService\Type\DateTimeQueryType $createdOnDateTime = null, ?\Flexnet\EntitlementOrderService\Type\DateTimeQueryType $lastModifiedDateTime = null, ?\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributesQueryListType $lineItemAttributes = null)
     {
         $this->parentBulkEntitlementId = $parentBulkEntitlementId;
         $this->entitlementId = $entitlementId;
@@ -185,17 +185,17 @@ class SearchActivatableItemDataType
         $this->lineItemAttributes = $lineItemAttributes;
     }
 
-    public static function create(SimpleQueryType $parentBulkEntitlementId = null, SimpleQueryType $entitlementId = null, SimpleQueryType $activationId = null, SimpleQueryType $productName = null, SimpleQueryType $productVersion = null, string $productType = null, SimpleQueryType $partNumber = null, DateQueryType $startDate = null, bool $isPermanent = null, DateQueryType $expirationDate = null, DateQueryType $versionDate = null, SimpleQueryType $licenseTechnology = null, SimpleQueryType $orderId = null, SimpleQueryType $orderLineNumber = null, bool $withNoOrderId = null, bool $restrictToItemsWithCount = null, NumberQueryType $fulfilledAmount = null, string $userId = null, CustomAttributesQueryListType $customAttributes = null, SimpleQueryType $soldTo = null, SimpleQueryType $parentBulkEntSoldTo = null, string $activatableItemType = null, bool $allowPortalLogin = null, PartnerTierQueryType $accountUnitName = null, SimpleQueryType $currentOwnerName = null, SimpleQueryType $lineItemParentLineItemId = null, DateTimeQueryType $createdOnDateTime = null, DateTimeQueryType $lastModifiedDateTime = null, LineItemCustomAttributesQueryListType $lineItemAttributes = null)
+    public static function create(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $parentBulkEntitlementId = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $entitlementId = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $activationId = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $productName = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $productVersion = null, ?\Flexnet\EntitlementOrderService\Type\ProductType $productType = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $partNumber = null, ?\Flexnet\EntitlementOrderService\Type\DateQueryType $startDate = null, ?bool $isPermanent = null, ?\Flexnet\EntitlementOrderService\Type\DateQueryType $expirationDate = null, ?\Flexnet\EntitlementOrderService\Type\DateQueryType $versionDate = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $licenseTechnology = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $orderId = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $orderLineNumber = null, ?bool $withNoOrderId = null, ?bool $restrictToItemsWithCount = null, ?\Flexnet\EntitlementOrderService\Type\NumberQueryType $fulfilledAmount = null, ?string $userId = null, ?\Flexnet\EntitlementOrderService\Type\CustomAttributesQueryListType $customAttributes = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $soldTo = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $parentBulkEntSoldTo = null, ?\Flexnet\EntitlementOrderService\Type\ActivatableItemType $activatableItemType = null, ?bool $allowPortalLogin = null, ?\Flexnet\EntitlementOrderService\Type\PartnerTierQueryType $accountUnitName = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $currentOwnerName = null, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $lineItemParentLineItemId = null, ?\Flexnet\EntitlementOrderService\Type\DateTimeQueryType $createdOnDateTime = null, ?\Flexnet\EntitlementOrderService\Type\DateTimeQueryType $lastModifiedDateTime = null, ?\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributesQueryListType $lineItemAttributes = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getParentBulkEntitlementId(): ?SimpleQueryType
+    public function getParentBulkEntitlementId(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->parentBulkEntitlementId;
     }
 
-    public function withParentBulkEntitlementId(?SimpleQueryType $parentBulkEntitlementId): SearchActivatableItemDataType
+    public function withParentBulkEntitlementId(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $parentBulkEntitlementId): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->parentBulkEntitlementId = $parentBulkEntitlementId;
@@ -203,12 +203,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getEntitlementId(): ?SimpleQueryType
+    public function getEntitlementId(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->entitlementId;
     }
 
-    public function withEntitlementId(?SimpleQueryType $entitlementId): SearchActivatableItemDataType
+    public function withEntitlementId(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $entitlementId): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->entitlementId = $entitlementId;
@@ -216,12 +216,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getActivationId(): ?SimpleQueryType
+    public function getActivationId(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->activationId;
     }
 
-    public function withActivationId(?SimpleQueryType $activationId): SearchActivatableItemDataType
+    public function withActivationId(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $activationId): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -229,12 +229,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getProductName(): ?SimpleQueryType
+    public function getProductName(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->productName;
     }
 
-    public function withProductName(?SimpleQueryType $productName): SearchActivatableItemDataType
+    public function withProductName(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $productName): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->productName = $productName;
@@ -242,12 +242,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getProductVersion(): ?SimpleQueryType
+    public function getProductVersion(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->productVersion;
     }
 
-    public function withProductVersion(?SimpleQueryType $productVersion): SearchActivatableItemDataType
+    public function withProductVersion(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $productVersion): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->productVersion = $productVersion;
@@ -255,12 +255,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getProductType(): ?string
+    public function getProductType(): ?\Flexnet\EntitlementOrderService\Type\ProductType
     {
         return $this->productType;
     }
 
-    public function withProductType(?string $productType): SearchActivatableItemDataType
+    public function withProductType(?\Flexnet\EntitlementOrderService\Type\ProductType $productType): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->productType = $productType;
@@ -268,12 +268,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getPartNumber(): ?SimpleQueryType
+    public function getPartNumber(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->partNumber;
     }
 
-    public function withPartNumber(?SimpleQueryType $partNumber): SearchActivatableItemDataType
+    public function withPartNumber(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $partNumber): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -281,12 +281,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getStartDate(): ?DateQueryType
+    public function getStartDate(): ?\Flexnet\EntitlementOrderService\Type\DateQueryType
     {
         return $this->startDate;
     }
 
-    public function withStartDate(?DateQueryType $startDate): SearchActivatableItemDataType
+    public function withStartDate(?\Flexnet\EntitlementOrderService\Type\DateQueryType $startDate): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -299,7 +299,7 @@ class SearchActivatableItemDataType
         return $this->isPermanent;
     }
 
-    public function withIsPermanent(?bool $isPermanent): SearchActivatableItemDataType
+    public function withIsPermanent(?bool $isPermanent): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->isPermanent = $isPermanent;
@@ -307,12 +307,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getExpirationDate(): ?DateQueryType
+    public function getExpirationDate(): ?\Flexnet\EntitlementOrderService\Type\DateQueryType
     {
         return $this->expirationDate;
     }
 
-    public function withExpirationDate(?DateQueryType $expirationDate): SearchActivatableItemDataType
+    public function withExpirationDate(?\Flexnet\EntitlementOrderService\Type\DateQueryType $expirationDate): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->expirationDate = $expirationDate;
@@ -320,12 +320,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getVersionDate(): ?DateQueryType
+    public function getVersionDate(): ?\Flexnet\EntitlementOrderService\Type\DateQueryType
     {
         return $this->versionDate;
     }
 
-    public function withVersionDate(?DateQueryType $versionDate): SearchActivatableItemDataType
+    public function withVersionDate(?\Flexnet\EntitlementOrderService\Type\DateQueryType $versionDate): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->versionDate = $versionDate;
@@ -333,12 +333,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getLicenseTechnology(): ?SimpleQueryType
+    public function getLicenseTechnology(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->licenseTechnology;
     }
 
-    public function withLicenseTechnology(?SimpleQueryType $licenseTechnology): SearchActivatableItemDataType
+    public function withLicenseTechnology(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $licenseTechnology): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->licenseTechnology = $licenseTechnology;
@@ -346,12 +346,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getOrderId(): ?SimpleQueryType
+    public function getOrderId(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->orderId;
     }
 
-    public function withOrderId(?SimpleQueryType $orderId): SearchActivatableItemDataType
+    public function withOrderId(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $orderId): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->orderId = $orderId;
@@ -359,12 +359,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getOrderLineNumber(): ?SimpleQueryType
+    public function getOrderLineNumber(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->orderLineNumber;
     }
 
-    public function withOrderLineNumber(?SimpleQueryType $orderLineNumber): SearchActivatableItemDataType
+    public function withOrderLineNumber(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $orderLineNumber): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->orderLineNumber = $orderLineNumber;
@@ -377,7 +377,7 @@ class SearchActivatableItemDataType
         return $this->withNoOrderId;
     }
 
-    public function withWithNoOrderId(?bool $withNoOrderId): SearchActivatableItemDataType
+    public function withWithNoOrderId(?bool $withNoOrderId): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->withNoOrderId = $withNoOrderId;
@@ -390,7 +390,7 @@ class SearchActivatableItemDataType
         return $this->restrictToItemsWithCount;
     }
 
-    public function withRestrictToItemsWithCount(?bool $restrictToItemsWithCount): SearchActivatableItemDataType
+    public function withRestrictToItemsWithCount(?bool $restrictToItemsWithCount): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->restrictToItemsWithCount = $restrictToItemsWithCount;
@@ -398,12 +398,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getFulfilledAmount(): ?NumberQueryType
+    public function getFulfilledAmount(): ?\Flexnet\EntitlementOrderService\Type\NumberQueryType
     {
         return $this->fulfilledAmount;
     }
 
-    public function withFulfilledAmount(?NumberQueryType $fulfilledAmount): SearchActivatableItemDataType
+    public function withFulfilledAmount(?\Flexnet\EntitlementOrderService\Type\NumberQueryType $fulfilledAmount): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->fulfilledAmount = $fulfilledAmount;
@@ -416,7 +416,7 @@ class SearchActivatableItemDataType
         return $this->userId;
     }
 
-    public function withUserId(?string $userId): SearchActivatableItemDataType
+    public function withUserId(?string $userId): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->userId = $userId;
@@ -424,12 +424,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getCustomAttributes(): ?CustomAttributesQueryListType
+    public function getCustomAttributes(): ?\Flexnet\EntitlementOrderService\Type\CustomAttributesQueryListType
     {
         return $this->customAttributes;
     }
 
-    public function withCustomAttributes(?CustomAttributesQueryListType $customAttributes): SearchActivatableItemDataType
+    public function withCustomAttributes(?\Flexnet\EntitlementOrderService\Type\CustomAttributesQueryListType $customAttributes): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->customAttributes = $customAttributes;
@@ -437,12 +437,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getSoldTo(): ?SimpleQueryType
+    public function getSoldTo(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->soldTo;
     }
 
-    public function withSoldTo(?SimpleQueryType $soldTo): SearchActivatableItemDataType
+    public function withSoldTo(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $soldTo): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -450,12 +450,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getParentBulkEntSoldTo(): ?SimpleQueryType
+    public function getParentBulkEntSoldTo(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->parentBulkEntSoldTo;
     }
 
-    public function withParentBulkEntSoldTo(?SimpleQueryType $parentBulkEntSoldTo): SearchActivatableItemDataType
+    public function withParentBulkEntSoldTo(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $parentBulkEntSoldTo): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->parentBulkEntSoldTo = $parentBulkEntSoldTo;
@@ -463,12 +463,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getActivatableItemType(): ?string
+    public function getActivatableItemType(): ?\Flexnet\EntitlementOrderService\Type\ActivatableItemType
     {
         return $this->activatableItemType;
     }
 
-    public function withActivatableItemType(?string $activatableItemType): SearchActivatableItemDataType
+    public function withActivatableItemType(?\Flexnet\EntitlementOrderService\Type\ActivatableItemType $activatableItemType): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->activatableItemType = $activatableItemType;
@@ -481,7 +481,7 @@ class SearchActivatableItemDataType
         return $this->allowPortalLogin;
     }
 
-    public function withAllowPortalLogin(?bool $allowPortalLogin): SearchActivatableItemDataType
+    public function withAllowPortalLogin(?bool $allowPortalLogin): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->allowPortalLogin = $allowPortalLogin;
@@ -489,12 +489,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getAccountUnitName(): ?PartnerTierQueryType
+    public function getAccountUnitName(): ?\Flexnet\EntitlementOrderService\Type\PartnerTierQueryType
     {
         return $this->accountUnitName;
     }
 
-    public function withAccountUnitName(?PartnerTierQueryType $accountUnitName): SearchActivatableItemDataType
+    public function withAccountUnitName(?\Flexnet\EntitlementOrderService\Type\PartnerTierQueryType $accountUnitName): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->accountUnitName = $accountUnitName;
@@ -502,12 +502,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getCurrentOwnerName(): ?SimpleQueryType
+    public function getCurrentOwnerName(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->currentOwnerName;
     }
 
-    public function withCurrentOwnerName(?SimpleQueryType $currentOwnerName): SearchActivatableItemDataType
+    public function withCurrentOwnerName(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $currentOwnerName): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->currentOwnerName = $currentOwnerName;
@@ -515,12 +515,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getLineItemParentLineItemId(): ?SimpleQueryType
+    public function getLineItemParentLineItemId(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->lineItemParentLineItemId;
     }
 
-    public function withLineItemParentLineItemId(?SimpleQueryType $lineItemParentLineItemId): SearchActivatableItemDataType
+    public function withLineItemParentLineItemId(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $lineItemParentLineItemId): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->lineItemParentLineItemId = $lineItemParentLineItemId;
@@ -528,12 +528,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getCreatedOnDateTime(): ?DateTimeQueryType
+    public function getCreatedOnDateTime(): ?\Flexnet\EntitlementOrderService\Type\DateTimeQueryType
     {
         return $this->createdOnDateTime;
     }
 
-    public function withCreatedOnDateTime(?DateTimeQueryType $createdOnDateTime): SearchActivatableItemDataType
+    public function withCreatedOnDateTime(?\Flexnet\EntitlementOrderService\Type\DateTimeQueryType $createdOnDateTime): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->createdOnDateTime = $createdOnDateTime;
@@ -541,12 +541,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getLastModifiedDateTime(): ?DateTimeQueryType
+    public function getLastModifiedDateTime(): ?\Flexnet\EntitlementOrderService\Type\DateTimeQueryType
     {
         return $this->lastModifiedDateTime;
     }
 
-    public function withLastModifiedDateTime(?DateTimeQueryType $lastModifiedDateTime): SearchActivatableItemDataType
+    public function withLastModifiedDateTime(?\Flexnet\EntitlementOrderService\Type\DateTimeQueryType $lastModifiedDateTime): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->lastModifiedDateTime = $lastModifiedDateTime;
@@ -554,12 +554,12 @@ class SearchActivatableItemDataType
         return $new;
     }
 
-    public function getLineItemAttributes(): ?LineItemCustomAttributesQueryListType
+    public function getLineItemAttributes(): ?\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributesQueryListType
     {
         return $this->lineItemAttributes;
     }
 
-    public function withLineItemAttributes(?LineItemCustomAttributesQueryListType $lineItemAttributes): SearchActivatableItemDataType
+    public function withLineItemAttributes(?\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributesQueryListType $lineItemAttributes): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         $new = clone $this;
         $new->lineItemAttributes = $lineItemAttributes;

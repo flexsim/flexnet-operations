@@ -27,7 +27,7 @@ class GetCountResponseDataType
         return $this->count;
     }
 
-    public function withCount(int $count): GetCountResponseDataType
+    public function withCount(int $count): \Flexnet\ProductPackagingService\Type\GetCountResponseDataType
     {
         $new = clone $this;
         $new->count = $count;

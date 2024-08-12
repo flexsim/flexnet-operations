@@ -15,7 +15,7 @@ class LicenseFileDataType
     private $licenseText;
 
     /**
-     * @var string|null
+     * @var \Flexnet\LicenseService\Type\Base64Binary|null
      */
     private $binaryLicense;
 
@@ -27,7 +27,7 @@ class LicenseFileDataType
     /**
      * Constructor
      */
-    public function __construct(string $licenseFileDefinitionName, string $licenseText = null, string $binaryLicense = null, string $fileName = null)
+    public function __construct(string $licenseFileDefinitionName, ?string $licenseText = null, ?\Flexnet\LicenseService\Type\Base64Binary $binaryLicense = null, ?string $fileName = null)
     {
         $this->licenseFileDefinitionName = $licenseFileDefinitionName;
         $this->licenseText = $licenseText;
@@ -35,7 +35,7 @@ class LicenseFileDataType
         $this->fileName = $fileName;
     }
 
-    public static function create(string $licenseFileDefinitionName, string $licenseText = null, string $binaryLicense = null, string $fileName = null)
+    public static function create(string $licenseFileDefinitionName, ?string $licenseText = null, ?\Flexnet\LicenseService\Type\Base64Binary $binaryLicense = null, ?string $fileName = null)
     {
         return new static(...\func_get_args());
     }
@@ -45,7 +45,7 @@ class LicenseFileDataType
         return $this->licenseFileDefinitionName;
     }
 
-    public function withLicenseFileDefinitionName(string $licenseFileDefinitionName): LicenseFileDataType
+    public function withLicenseFileDefinitionName(string $licenseFileDefinitionName): \Flexnet\LicenseService\Type\LicenseFileDataType
     {
         $new = clone $this;
         $new->licenseFileDefinitionName = $licenseFileDefinitionName;
@@ -58,7 +58,7 @@ class LicenseFileDataType
         return $this->licenseText;
     }
 
-    public function withLicenseText(?string $licenseText): LicenseFileDataType
+    public function withLicenseText(?string $licenseText): \Flexnet\LicenseService\Type\LicenseFileDataType
     {
         $new = clone $this;
         $new->licenseText = $licenseText;
@@ -66,12 +66,12 @@ class LicenseFileDataType
         return $new;
     }
 
-    public function getBinaryLicense(): ?string
+    public function getBinaryLicense(): ?\Flexnet\LicenseService\Type\Base64Binary
     {
         return $this->binaryLicense;
     }
 
-    public function withBinaryLicense(?string $binaryLicense): LicenseFileDataType
+    public function withBinaryLicense(?\Flexnet\LicenseService\Type\Base64Binary $binaryLicense): \Flexnet\LicenseService\Type\LicenseFileDataType
     {
         $new = clone $this;
         $new->binaryLicense = $binaryLicense;
@@ -84,7 +84,7 @@ class LicenseFileDataType
         return $this->fileName;
     }
 
-    public function withFileName(?string $fileName): LicenseFileDataType
+    public function withFileName(?string $fileName): \Flexnet\LicenseService\Type\LicenseFileDataType
     {
         $new = clone $this;
         $new->fileName = $fileName;

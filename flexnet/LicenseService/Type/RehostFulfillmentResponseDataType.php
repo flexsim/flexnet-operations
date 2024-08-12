@@ -19,7 +19,7 @@ class RehostFulfillmentResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|array<\Flexnet\LicenseService\Type\FulfillmentDataType>  $fulfillment
      */
-    public function __construct(int $recordRefNo, FulfillmentDataType|array $fulfillment)
+    public function __construct(int $recordRefNo, \Flexnet\LicenseService\Type\FulfillmentDataType|array $fulfillment)
     {
         $this->recordRefNo = $recordRefNo;
         $this->fulfillment = $fulfillment;
@@ -28,7 +28,7 @@ class RehostFulfillmentResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|array<\Flexnet\LicenseService\Type\FulfillmentDataType>  $fulfillment
      */
-    public static function create(int $recordRefNo, FulfillmentDataType|array $fulfillment)
+    public static function create(int $recordRefNo, \Flexnet\LicenseService\Type\FulfillmentDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -38,7 +38,7 @@ class RehostFulfillmentResponseDataType
         return $this->recordRefNo;
     }
 
-    public function withRecordRefNo(int $recordRefNo): RehostFulfillmentResponseDataType
+    public function withRecordRefNo(int $recordRefNo): \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType
     {
         $new = clone $this;
         $new->recordRefNo = $recordRefNo;
@@ -49,7 +49,7 @@ class RehostFulfillmentResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentDataType|array<\Flexnet\LicenseService\Type\FulfillmentDataType>
      */
-    public function getFulfillment(): FulfillmentDataType|array
+    public function getFulfillment(): \Flexnet\LicenseService\Type\FulfillmentDataType|array
     {
         return $this->fulfillment;
     }
@@ -57,7 +57,7 @@ class RehostFulfillmentResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|array<\Flexnet\LicenseService\Type\FulfillmentDataType>  $fulfillment
      */
-    public function withFulfillment(FulfillmentDataType|array $fulfillment): RehostFulfillmentResponseDataType
+    public function withFulfillment(\Flexnet\LicenseService\Type\FulfillmentDataType|array $fulfillment): \Flexnet\LicenseService\Type\RehostFulfillmentResponseDataType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;

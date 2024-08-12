@@ -27,7 +27,7 @@ class CustomAttributeDescriptorType
         return $this->attributeName;
     }
 
-    public function withAttributeName(string $attributeName): CustomAttributeDescriptorType
+    public function withAttributeName(string $attributeName): \Flexnet\LicenseService\Type\CustomAttributeDescriptorType
     {
         $new = clone $this;
         $new->attributeName = $attributeName;

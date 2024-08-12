@@ -14,7 +14,7 @@ class ReturnResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function __construct(ReturnFulfillmentResponseDataType|array $fulfillmentData = null)
+    public function __construct(\Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType|array|null $fulfillmentData = null)
     {
         $this->fulfillmentData = $fulfillmentData;
     }
@@ -22,7 +22,7 @@ class ReturnResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public static function create(ReturnFulfillmentResponseDataType|array $fulfillmentData = null)
+    public static function create(\Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType|array|null $fulfillmentData = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class ReturnResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType>|null
      */
-    public function getFulfillmentData(): ReturnFulfillmentResponseDataType|array|null
+    public function getFulfillmentData(): \Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType|array|null
     {
         return $this->fulfillmentData;
     }
@@ -38,7 +38,7 @@ class ReturnResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function withFulfillmentData(ReturnFulfillmentResponseDataType|array|null $fulfillmentData): ReturnResponseDataType
+    public function withFulfillmentData(\Flexnet\LicenseService\Type\ReturnFulfillmentResponseDataType|array|null $fulfillmentData): \Flexnet\LicenseService\Type\ReturnResponseDataType
     {
         $new = clone $this;
         $new->fulfillmentData = $fulfillmentData;

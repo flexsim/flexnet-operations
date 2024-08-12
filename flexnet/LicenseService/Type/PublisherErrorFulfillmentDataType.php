@@ -57,7 +57,7 @@ class PublisherErrorFulfillmentDataType
     /**
      * Constructor
      */
-    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, string $shipToEmail = null, string $shipToAddress = null, ServerIDsType $serverIds = null, NodeIDsType $nodeIds = null, CustomHostIDType $customHost = null, int $fulfillCount = null, bool $overridePolicy = null)
+    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $FNPTimeZoneValue = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\ServerIDsType $serverIds = null, ?\Flexnet\LicenseService\Type\NodeIDsType $nodeIds = null, ?\Flexnet\LicenseService\Type\CustomHostIDType $customHost = null, ?int $fulfillCount = null, ?bool $overridePolicy = null)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->licenseModelAttributes = $licenseModelAttributes;
@@ -71,17 +71,17 @@ class PublisherErrorFulfillmentDataType
         $this->overridePolicy = $overridePolicy;
     }
 
-    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, string $shipToEmail = null, string $shipToAddress = null, ServerIDsType $serverIds = null, NodeIDsType $nodeIds = null, CustomHostIDType $customHost = null, int $fulfillCount = null, bool $overridePolicy = null)
+    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $FNPTimeZoneValue = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\ServerIDsType $serverIds = null, ?\Flexnet\LicenseService\Type\NodeIDsType $nodeIds = null, ?\Flexnet\LicenseService\Type\CustomHostIDType $customHost = null, ?int $fulfillCount = null, ?bool $overridePolicy = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFulfillmentIdentifier(): FulfillmentIdentifierType
+    public function getFulfillmentIdentifier(): \Flexnet\LicenseService\Type\FulfillmentIdentifierType
     {
         return $this->fulfillmentIdentifier;
     }
 
-    public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): PublisherErrorFulfillmentDataType
+    public function withFulfillmentIdentifier(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillmentIdentifier = $fulfillmentIdentifier;
@@ -89,12 +89,12 @@ class PublisherErrorFulfillmentDataType
         return $new;
     }
 
-    public function getLicenseModelAttributes(): ?AttributeDescriptorDataType
+    public function getLicenseModelAttributes(): ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType
     {
         return $this->licenseModelAttributes;
     }
 
-    public function withLicenseModelAttributes(?AttributeDescriptorDataType $licenseModelAttributes): PublisherErrorFulfillmentDataType
+    public function withLicenseModelAttributes(?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
         $new->licenseModelAttributes = $licenseModelAttributes;
@@ -107,7 +107,7 @@ class PublisherErrorFulfillmentDataType
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): PublisherErrorFulfillmentDataType
+    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;
@@ -120,7 +120,7 @@ class PublisherErrorFulfillmentDataType
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(?string $shipToEmail): PublisherErrorFulfillmentDataType
+    public function withShipToEmail(?string $shipToEmail): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -133,7 +133,7 @@ class PublisherErrorFulfillmentDataType
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(?string $shipToAddress): PublisherErrorFulfillmentDataType
+    public function withShipToAddress(?string $shipToAddress): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -141,12 +141,12 @@ class PublisherErrorFulfillmentDataType
         return $new;
     }
 
-    public function getServerIds(): ?ServerIDsType
+    public function getServerIds(): ?\Flexnet\LicenseService\Type\ServerIDsType
     {
         return $this->serverIds;
     }
 
-    public function withServerIds(?ServerIDsType $serverIds): PublisherErrorFulfillmentDataType
+    public function withServerIds(?\Flexnet\LicenseService\Type\ServerIDsType $serverIds): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
         $new->serverIds = $serverIds;
@@ -154,12 +154,12 @@ class PublisherErrorFulfillmentDataType
         return $new;
     }
 
-    public function getNodeIds(): ?NodeIDsType
+    public function getNodeIds(): ?\Flexnet\LicenseService\Type\NodeIDsType
     {
         return $this->nodeIds;
     }
 
-    public function withNodeIds(?NodeIDsType $nodeIds): PublisherErrorFulfillmentDataType
+    public function withNodeIds(?\Flexnet\LicenseService\Type\NodeIDsType $nodeIds): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
         $new->nodeIds = $nodeIds;
@@ -167,12 +167,12 @@ class PublisherErrorFulfillmentDataType
         return $new;
     }
 
-    public function getCustomHost(): ?CustomHostIDType
+    public function getCustomHost(): ?\Flexnet\LicenseService\Type\CustomHostIDType
     {
         return $this->customHost;
     }
 
-    public function withCustomHost(?CustomHostIDType $customHost): PublisherErrorFulfillmentDataType
+    public function withCustomHost(?\Flexnet\LicenseService\Type\CustomHostIDType $customHost): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
         $new->customHost = $customHost;
@@ -185,7 +185,7 @@ class PublisherErrorFulfillmentDataType
         return $this->fulfillCount;
     }
 
-    public function withFulfillCount(?int $fulfillCount): PublisherErrorFulfillmentDataType
+    public function withFulfillCount(?int $fulfillCount): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillCount = $fulfillCount;
@@ -198,7 +198,7 @@ class PublisherErrorFulfillmentDataType
         return $this->overridePolicy;
     }
 
-    public function withOverridePolicy(?bool $overridePolicy): PublisherErrorFulfillmentDataType
+    public function withOverridePolicy(?bool $overridePolicy): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentDataType
     {
         $new = clone $this;
         $new->overridePolicy = $overridePolicy;

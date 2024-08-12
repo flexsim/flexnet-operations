@@ -16,7 +16,7 @@ class SetUniformSuiteStateRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType|array<\Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType>  $suite
      */
-    public function __construct(UniformSuiteStateDataType|array $suite)
+    public function __construct(\Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType|array $suite)
     {
         $this->suite = $suite;
     }
@@ -24,7 +24,7 @@ class SetUniformSuiteStateRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType|array<\Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType>  $suite
      */
-    public static function create(UniformSuiteStateDataType|array $suite)
+    public static function create(\Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType|array $suite)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class SetUniformSuiteStateRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType|array<\Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType>
      */
-    public function getSuite(): UniformSuiteStateDataType|array
+    public function getSuite(): \Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType|array
     {
         return $this->suite;
     }
@@ -40,7 +40,7 @@ class SetUniformSuiteStateRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType|array<\Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType>  $suite
      */
-    public function withSuite(UniformSuiteStateDataType|array $suite): SetUniformSuiteStateRequestType
+    public function withSuite(\Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType|array $suite): \Flexnet\ProductPackagingService\Type\SetUniformSuiteStateRequestType
     {
         $new = clone $this;
         $new->suite = $suite;

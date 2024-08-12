@@ -44,7 +44,7 @@ class EmailActivatableItemRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(string $activationId, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, EmailContactListType $ccEmailIdList = null, EmailContactListType $bccEmailIdList = null, string $locale = null)
+    public function __construct(string $activationId, ?bool $ignoreExistingEmailList = null, ?bool $validateEmailAddresses = null, ?\Flexnet\EntitlementOrderService\Type\EmailContactListType $emailIdList = null, ?\Flexnet\EntitlementOrderService\Type\EmailContactListType $ccEmailIdList = null, ?\Flexnet\EntitlementOrderService\Type\EmailContactListType $bccEmailIdList = null, ?string $locale = null)
     {
         $this->activationId = $activationId;
         $this->ignoreExistingEmailList = $ignoreExistingEmailList;
@@ -55,7 +55,7 @@ class EmailActivatableItemRequestType implements RequestInterface
         $this->locale = $locale;
     }
 
-    public static function create(string $activationId, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, EmailContactListType $ccEmailIdList = null, EmailContactListType $bccEmailIdList = null, string $locale = null)
+    public static function create(string $activationId, ?bool $ignoreExistingEmailList = null, ?bool $validateEmailAddresses = null, ?\Flexnet\EntitlementOrderService\Type\EmailContactListType $emailIdList = null, ?\Flexnet\EntitlementOrderService\Type\EmailContactListType $ccEmailIdList = null, ?\Flexnet\EntitlementOrderService\Type\EmailContactListType $bccEmailIdList = null, ?string $locale = null)
     {
         return new static(...\func_get_args());
     }
@@ -65,7 +65,7 @@ class EmailActivatableItemRequestType implements RequestInterface
         return $this->activationId;
     }
 
-    public function withActivationId(string $activationId): EmailActivatableItemRequestType
+    public function withActivationId(string $activationId): \Flexnet\EntitlementOrderService\Type\EmailActivatableItemRequestType
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -78,7 +78,7 @@ class EmailActivatableItemRequestType implements RequestInterface
         return $this->ignoreExistingEmailList;
     }
 
-    public function withIgnoreExistingEmailList(?bool $ignoreExistingEmailList): EmailActivatableItemRequestType
+    public function withIgnoreExistingEmailList(?bool $ignoreExistingEmailList): \Flexnet\EntitlementOrderService\Type\EmailActivatableItemRequestType
     {
         $new = clone $this;
         $new->ignoreExistingEmailList = $ignoreExistingEmailList;
@@ -91,7 +91,7 @@ class EmailActivatableItemRequestType implements RequestInterface
         return $this->validateEmailAddresses;
     }
 
-    public function withValidateEmailAddresses(?bool $validateEmailAddresses): EmailActivatableItemRequestType
+    public function withValidateEmailAddresses(?bool $validateEmailAddresses): \Flexnet\EntitlementOrderService\Type\EmailActivatableItemRequestType
     {
         $new = clone $this;
         $new->validateEmailAddresses = $validateEmailAddresses;
@@ -99,12 +99,12 @@ class EmailActivatableItemRequestType implements RequestInterface
         return $new;
     }
 
-    public function getEmailIdList(): ?EmailContactListType
+    public function getEmailIdList(): ?\Flexnet\EntitlementOrderService\Type\EmailContactListType
     {
         return $this->emailIdList;
     }
 
-    public function withEmailIdList(?EmailContactListType $emailIdList): EmailActivatableItemRequestType
+    public function withEmailIdList(?\Flexnet\EntitlementOrderService\Type\EmailContactListType $emailIdList): \Flexnet\EntitlementOrderService\Type\EmailActivatableItemRequestType
     {
         $new = clone $this;
         $new->emailIdList = $emailIdList;
@@ -112,12 +112,12 @@ class EmailActivatableItemRequestType implements RequestInterface
         return $new;
     }
 
-    public function getCcEmailIdList(): ?EmailContactListType
+    public function getCcEmailIdList(): ?\Flexnet\EntitlementOrderService\Type\EmailContactListType
     {
         return $this->ccEmailIdList;
     }
 
-    public function withCcEmailIdList(?EmailContactListType $ccEmailIdList): EmailActivatableItemRequestType
+    public function withCcEmailIdList(?\Flexnet\EntitlementOrderService\Type\EmailContactListType $ccEmailIdList): \Flexnet\EntitlementOrderService\Type\EmailActivatableItemRequestType
     {
         $new = clone $this;
         $new->ccEmailIdList = $ccEmailIdList;
@@ -125,12 +125,12 @@ class EmailActivatableItemRequestType implements RequestInterface
         return $new;
     }
 
-    public function getBccEmailIdList(): ?EmailContactListType
+    public function getBccEmailIdList(): ?\Flexnet\EntitlementOrderService\Type\EmailContactListType
     {
         return $this->bccEmailIdList;
     }
 
-    public function withBccEmailIdList(?EmailContactListType $bccEmailIdList): EmailActivatableItemRequestType
+    public function withBccEmailIdList(?\Flexnet\EntitlementOrderService\Type\EmailContactListType $bccEmailIdList): \Flexnet\EntitlementOrderService\Type\EmailActivatableItemRequestType
     {
         $new = clone $this;
         $new->bccEmailIdList = $bccEmailIdList;
@@ -143,7 +143,7 @@ class EmailActivatableItemRequestType implements RequestInterface
         return $this->locale;
     }
 
-    public function withLocale(?string $locale): EmailActivatableItemRequestType
+    public function withLocale(?string $locale): \Flexnet\EntitlementOrderService\Type\EmailActivatableItemRequestType
     {
         $new = clone $this;
         $new->locale = $locale;

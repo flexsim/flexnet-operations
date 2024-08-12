@@ -19,23 +19,23 @@ class GetFeaturesQueryResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, GetFeaturesQueryResponseDataType $responseData = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\GetFeaturesQueryResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, GetFeaturesQueryResponseDataType $responseData = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\GetFeaturesQueryResponseDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): GetFeaturesQueryResponseType
+    public function withStatusInfo(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo): \Flexnet\ProductPackagingService\Type\GetFeaturesQueryResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class GetFeaturesQueryResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?GetFeaturesQueryResponseDataType
+    public function getResponseData(): ?\Flexnet\ProductPackagingService\Type\GetFeaturesQueryResponseDataType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?GetFeaturesQueryResponseDataType $responseData): GetFeaturesQueryResponseType
+    public function withResponseData(?\Flexnet\ProductPackagingService\Type\GetFeaturesQueryResponseDataType $responseData): \Flexnet\ProductPackagingService\Type\GetFeaturesQueryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

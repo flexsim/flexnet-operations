@@ -17,13 +17,13 @@ class EntitlementIdentifierType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, EntitlementPKType $primaryKeys = null)
+    public function __construct(?string $uniqueId = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    public static function create(string $uniqueId = null, EntitlementPKType $primaryKeys = null)
+    public static function create(?string $uniqueId = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class EntitlementIdentifierType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): EntitlementIdentifierType
+    public function withUniqueId(?string $uniqueId): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -41,12 +41,12 @@ class EntitlementIdentifierType
         return $new;
     }
 
-    public function getPrimaryKeys(): ?EntitlementPKType
+    public function getPrimaryKeys(): ?\Flexnet\EntitlementOrderService\Type\EntitlementPKType
     {
         return $this->primaryKeys;
     }
 
-    public function withPrimaryKeys(?EntitlementPKType $primaryKeys): EntitlementIdentifierType
+    public function withPrimaryKeys(?\Flexnet\EntitlementOrderService\Type\EntitlementPKType $primaryKeys): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

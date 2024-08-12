@@ -17,13 +17,13 @@ class TrustedKeyIdentifierType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, TrustedKeyPKType $primaryKeys = null)
+    public function __construct(?string $uniqueId = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    public static function create(string $uniqueId = null, TrustedKeyPKType $primaryKeys = null)
+    public static function create(?string $uniqueId = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class TrustedKeyIdentifierType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): TrustedKeyIdentifierType
+    public function withUniqueId(?string $uniqueId): \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -41,12 +41,12 @@ class TrustedKeyIdentifierType
         return $new;
     }
 
-    public function getPrimaryKeys(): ?TrustedKeyPKType
+    public function getPrimaryKeys(): ?\Flexnet\ProductPackagingService\Type\TrustedKeyPKType
     {
         return $this->primaryKeys;
     }
 
-    public function withPrimaryKeys(?TrustedKeyPKType $primaryKeys): TrustedKeyIdentifierType
+    public function withPrimaryKeys(?\Flexnet\ProductPackagingService\Type\TrustedKeyPKType $primaryKeys): \Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

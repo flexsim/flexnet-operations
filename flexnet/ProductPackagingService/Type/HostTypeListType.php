@@ -14,7 +14,7 @@ class HostTypeListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|array<\Flexnet\ProductPackagingService\Type\HostTypePKType>  $hostType
      */
-    public function __construct(HostTypePKType|array $hostType)
+    public function __construct(\Flexnet\ProductPackagingService\Type\HostTypePKType|array $hostType)
     {
         $this->hostType = $hostType;
     }
@@ -22,7 +22,7 @@ class HostTypeListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|array<\Flexnet\ProductPackagingService\Type\HostTypePKType>  $hostType
      */
-    public static function create(HostTypePKType|array $hostType)
+    public static function create(\Flexnet\ProductPackagingService\Type\HostTypePKType|array $hostType)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class HostTypeListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\HostTypePKType|array<\Flexnet\ProductPackagingService\Type\HostTypePKType>
      */
-    public function getHostType(): HostTypePKType|array
+    public function getHostType(): \Flexnet\ProductPackagingService\Type\HostTypePKType|array
     {
         return $this->hostType;
     }
@@ -38,7 +38,7 @@ class HostTypeListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|array<\Flexnet\ProductPackagingService\Type\HostTypePKType>  $hostType
      */
-    public function withHostType(HostTypePKType|array $hostType): HostTypeListType
+    public function withHostType(\Flexnet\ProductPackagingService\Type\HostTypePKType|array $hostType): \Flexnet\ProductPackagingService\Type\HostTypeListType
     {
         $new = clone $this;
         $new->hostType = $hostType;

@@ -16,7 +16,7 @@ class RemoveEntitlementLineItemRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType>  $lineItemData
      */
-    public function __construct(RemoveEntitlementLineItemDataType|array $lineItemData)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|array $lineItemData)
     {
         $this->lineItemData = $lineItemData;
     }
@@ -24,7 +24,7 @@ class RemoveEntitlementLineItemRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType>  $lineItemData
      */
-    public static function create(RemoveEntitlementLineItemDataType|array $lineItemData)
+    public static function create(\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|array $lineItemData)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class RemoveEntitlementLineItemRequestType implements RequestInterface
     /**
      * @return \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType>
      */
-    public function getLineItemData(): RemoveEntitlementLineItemDataType|array
+    public function getLineItemData(): \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|array
     {
         return $this->lineItemData;
     }
@@ -40,7 +40,7 @@ class RemoveEntitlementLineItemRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType>  $lineItemData
      */
-    public function withLineItemData(RemoveEntitlementLineItemDataType|array $lineItemData): RemoveEntitlementLineItemRequestType
+    public function withLineItemData(\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType|array $lineItemData): \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemRequestType
     {
         $new = clone $this;
         $new->lineItemData = $lineItemData;

@@ -17,23 +17,23 @@ class ExpirationTermsDataType
     /**
      * Constructor
      */
-    public function __construct(DurationType $term = null, \DateTimeInterface $expirationDate = null)
+    public function __construct(?\Flexnet\EntitlementOrderService\Type\DurationType $term = null, ?\DateTimeInterface $expirationDate = null)
     {
         $this->term = $term;
         $this->expirationDate = $expirationDate;
     }
 
-    public static function create(DurationType $term = null, \DateTimeInterface $expirationDate = null)
+    public static function create(?\Flexnet\EntitlementOrderService\Type\DurationType $term = null, ?\DateTimeInterface $expirationDate = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getTerm(): ?DurationType
+    public function getTerm(): ?\Flexnet\EntitlementOrderService\Type\DurationType
     {
         return $this->term;
     }
 
-    public function withTerm(?DurationType $term): ExpirationTermsDataType
+    public function withTerm(?\Flexnet\EntitlementOrderService\Type\DurationType $term): \Flexnet\EntitlementOrderService\Type\ExpirationTermsDataType
     {
         $new = clone $this;
         $new->term = $term;
@@ -46,7 +46,7 @@ class ExpirationTermsDataType
         return $this->expirationDate;
     }
 
-    public function withExpirationDate(?\DateTimeInterface $expirationDate): ExpirationTermsDataType
+    public function withExpirationDate(?\DateTimeInterface $expirationDate): \Flexnet\EntitlementOrderService\Type\ExpirationTermsDataType
     {
         $new = clone $this;
         $new->expirationDate = $expirationDate;

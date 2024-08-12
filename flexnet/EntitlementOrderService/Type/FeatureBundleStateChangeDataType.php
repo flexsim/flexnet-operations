@@ -19,7 +19,7 @@ class FeatureBundleStateChangeDataType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier, StateChangeDataType|array $stateChangeRecord = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType $featureBundleIdentifier, \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array|null $stateChangeRecord = null)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
         $this->stateChangeRecord = $stateChangeRecord;
@@ -28,17 +28,17 @@ class FeatureBundleStateChangeDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier, StateChangeDataType|array $stateChangeRecord = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType $featureBundleIdentifier, \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array|null $stateChangeRecord = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFeatureBundleIdentifier(): FeatureBundleIdentifierType
+    public function getFeatureBundleIdentifier(): \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType
     {
         return $this->featureBundleIdentifier;
     }
 
-    public function withFeatureBundleIdentifier(FeatureBundleIdentifierType $featureBundleIdentifier): FeatureBundleStateChangeDataType
+    public function withFeatureBundleIdentifier(\Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType $featureBundleIdentifier): \Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeDataType
     {
         $new = clone $this;
         $new->featureBundleIdentifier = $featureBundleIdentifier;
@@ -49,7 +49,7 @@ class FeatureBundleStateChangeDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null
      */
-    public function getStateChangeRecord(): StateChangeDataType|array|null
+    public function getStateChangeRecord(): \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array|null
     {
         return $this->stateChangeRecord;
     }
@@ -57,7 +57,7 @@ class FeatureBundleStateChangeDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public function withStateChangeRecord(StateChangeDataType|array|null $stateChangeRecord): FeatureBundleStateChangeDataType
+    public function withStateChangeRecord(\Flexnet\EntitlementOrderService\Type\StateChangeDataType|array|null $stateChangeRecord): \Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeDataType
     {
         $new = clone $this;
         $new->stateChangeRecord = $stateChangeRecord;

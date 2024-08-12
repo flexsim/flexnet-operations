@@ -72,7 +72,7 @@ class GetFmtAttributesForBatchDataType
     /**
      * Constructor
      */
-    public function __construct(bool $needStartDate, bool $needVersionDate, bool $needVersionStartDate, bool $needServerId, bool $needNodeLockId, bool $needCustomHost, bool $needCount, bool $needSoldTo, OverDraftDataListType $overDraftData, string $modelType, AttributeMetaDescriptorDataType $modelAttributes = null, AttributeMetaDescriptorDataType $hostAttributes = null, bool $needTimeZone = null)
+    public function __construct(bool $needStartDate, bool $needVersionDate, bool $needVersionStartDate, bool $needServerId, bool $needNodeLockId, bool $needCustomHost, bool $needCount, bool $needSoldTo, \Flexnet\LicenseService\Type\OverDraftDataListType $overDraftData, string $modelType, ?\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType $modelAttributes = null, ?\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType $hostAttributes = null, ?bool $needTimeZone = null)
     {
         $this->needStartDate = $needStartDate;
         $this->needVersionDate = $needVersionDate;
@@ -89,7 +89,7 @@ class GetFmtAttributesForBatchDataType
         $this->needTimeZone = $needTimeZone;
     }
 
-    public static function create(bool $needStartDate, bool $needVersionDate, bool $needVersionStartDate, bool $needServerId, bool $needNodeLockId, bool $needCustomHost, bool $needCount, bool $needSoldTo, OverDraftDataListType $overDraftData, string $modelType, AttributeMetaDescriptorDataType $modelAttributes = null, AttributeMetaDescriptorDataType $hostAttributes = null, bool $needTimeZone = null)
+    public static function create(bool $needStartDate, bool $needVersionDate, bool $needVersionStartDate, bool $needServerId, bool $needNodeLockId, bool $needCustomHost, bool $needCount, bool $needSoldTo, \Flexnet\LicenseService\Type\OverDraftDataListType $overDraftData, string $modelType, ?\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType $modelAttributes = null, ?\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType $hostAttributes = null, ?bool $needTimeZone = null)
     {
         return new static(...\func_get_args());
     }
@@ -99,7 +99,7 @@ class GetFmtAttributesForBatchDataType
         return $this->needStartDate;
     }
 
-    public function withNeedStartDate(bool $needStartDate): GetFmtAttributesForBatchDataType
+    public function withNeedStartDate(bool $needStartDate): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->needStartDate = $needStartDate;
@@ -112,7 +112,7 @@ class GetFmtAttributesForBatchDataType
         return $this->needVersionDate;
     }
 
-    public function withNeedVersionDate(bool $needVersionDate): GetFmtAttributesForBatchDataType
+    public function withNeedVersionDate(bool $needVersionDate): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->needVersionDate = $needVersionDate;
@@ -125,7 +125,7 @@ class GetFmtAttributesForBatchDataType
         return $this->needVersionStartDate;
     }
 
-    public function withNeedVersionStartDate(bool $needVersionStartDate): GetFmtAttributesForBatchDataType
+    public function withNeedVersionStartDate(bool $needVersionStartDate): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->needVersionStartDate = $needVersionStartDate;
@@ -138,7 +138,7 @@ class GetFmtAttributesForBatchDataType
         return $this->needServerId;
     }
 
-    public function withNeedServerId(bool $needServerId): GetFmtAttributesForBatchDataType
+    public function withNeedServerId(bool $needServerId): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->needServerId = $needServerId;
@@ -151,7 +151,7 @@ class GetFmtAttributesForBatchDataType
         return $this->needNodeLockId;
     }
 
-    public function withNeedNodeLockId(bool $needNodeLockId): GetFmtAttributesForBatchDataType
+    public function withNeedNodeLockId(bool $needNodeLockId): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->needNodeLockId = $needNodeLockId;
@@ -164,7 +164,7 @@ class GetFmtAttributesForBatchDataType
         return $this->needCustomHost;
     }
 
-    public function withNeedCustomHost(bool $needCustomHost): GetFmtAttributesForBatchDataType
+    public function withNeedCustomHost(bool $needCustomHost): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->needCustomHost = $needCustomHost;
@@ -177,7 +177,7 @@ class GetFmtAttributesForBatchDataType
         return $this->needCount;
     }
 
-    public function withNeedCount(bool $needCount): GetFmtAttributesForBatchDataType
+    public function withNeedCount(bool $needCount): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->needCount = $needCount;
@@ -190,7 +190,7 @@ class GetFmtAttributesForBatchDataType
         return $this->needSoldTo;
     }
 
-    public function withNeedSoldTo(bool $needSoldTo): GetFmtAttributesForBatchDataType
+    public function withNeedSoldTo(bool $needSoldTo): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->needSoldTo = $needSoldTo;
@@ -198,12 +198,12 @@ class GetFmtAttributesForBatchDataType
         return $new;
     }
 
-    public function getOverDraftData(): OverDraftDataListType
+    public function getOverDraftData(): \Flexnet\LicenseService\Type\OverDraftDataListType
     {
         return $this->overDraftData;
     }
 
-    public function withOverDraftData(OverDraftDataListType $overDraftData): GetFmtAttributesForBatchDataType
+    public function withOverDraftData(\Flexnet\LicenseService\Type\OverDraftDataListType $overDraftData): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->overDraftData = $overDraftData;
@@ -216,7 +216,7 @@ class GetFmtAttributesForBatchDataType
         return $this->modelType;
     }
 
-    public function withModelType(string $modelType): GetFmtAttributesForBatchDataType
+    public function withModelType(string $modelType): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->modelType = $modelType;
@@ -224,12 +224,12 @@ class GetFmtAttributesForBatchDataType
         return $new;
     }
 
-    public function getModelAttributes(): ?AttributeMetaDescriptorDataType
+    public function getModelAttributes(): ?\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType
     {
         return $this->modelAttributes;
     }
 
-    public function withModelAttributes(?AttributeMetaDescriptorDataType $modelAttributes): GetFmtAttributesForBatchDataType
+    public function withModelAttributes(?\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType $modelAttributes): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->modelAttributes = $modelAttributes;
@@ -237,12 +237,12 @@ class GetFmtAttributesForBatchDataType
         return $new;
     }
 
-    public function getHostAttributes(): ?AttributeMetaDescriptorDataType
+    public function getHostAttributes(): ?\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType
     {
         return $this->hostAttributes;
     }
 
-    public function withHostAttributes(?AttributeMetaDescriptorDataType $hostAttributes): GetFmtAttributesForBatchDataType
+    public function withHostAttributes(?\Flexnet\LicenseService\Type\AttributeMetaDescriptorDataType $hostAttributes): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->hostAttributes = $hostAttributes;
@@ -255,7 +255,7 @@ class GetFmtAttributesForBatchDataType
         return $this->needTimeZone;
     }
 
-    public function withNeedTimeZone(?bool $needTimeZone): GetFmtAttributesForBatchDataType
+    public function withNeedTimeZone(?bool $needTimeZone): \Flexnet\LicenseService\Type\GetFmtAttributesForBatchDataType
     {
         $new = clone $this;
         $new->needTimeZone = $needTimeZone;

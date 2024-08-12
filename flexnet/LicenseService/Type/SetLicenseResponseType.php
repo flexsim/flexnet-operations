@@ -19,23 +19,23 @@ class SetLicenseResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedSetLicenseOnholdFulfillmentListType $failedData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedSetLicenseOnholdFulfillmentListType $failedData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): SetLicenseResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\SetLicenseResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class SetLicenseResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedSetLicenseOnholdFulfillmentListType
+    public function getFailedData(): ?\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedSetLicenseOnholdFulfillmentListType $failedData): SetLicenseResponseType
+    public function withFailedData(?\Flexnet\LicenseService\Type\FailedSetLicenseOnholdFulfillmentListType $failedData): \Flexnet\LicenseService\Type\SetLicenseResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

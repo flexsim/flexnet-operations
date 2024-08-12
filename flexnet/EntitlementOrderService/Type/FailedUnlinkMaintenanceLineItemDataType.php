@@ -17,23 +17,23 @@ class FailedUnlinkMaintenanceLineItemDataType
     /**
      * Constructor
      */
-    public function __construct(UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem = null, string $reason = null)
+    public function __construct(?\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem = null, ?string $reason = null)
     {
         $this->unlinkMaintenanceLineItem = $unlinkMaintenanceLineItem;
         $this->reason = $reason;
     }
 
-    public static function create(UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem = null, string $reason = null)
+    public static function create(?\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem = null, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUnlinkMaintenanceLineItem(): ?UnlinkMaintenanceLineItemDataType
+    public function getUnlinkMaintenanceLineItem(): ?\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType
     {
         return $this->unlinkMaintenanceLineItem;
     }
 
-    public function withUnlinkMaintenanceLineItem(?UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem): FailedUnlinkMaintenanceLineItemDataType
+    public function withUnlinkMaintenanceLineItem(?\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType $unlinkMaintenanceLineItem): \Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->unlinkMaintenanceLineItem = $unlinkMaintenanceLineItem;
@@ -46,7 +46,7 @@ class FailedUnlinkMaintenanceLineItemDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedUnlinkMaintenanceLineItemDataType
+    public function withReason(?string $reason): \Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->reason = $reason;

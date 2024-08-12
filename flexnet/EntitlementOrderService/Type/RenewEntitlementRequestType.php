@@ -16,7 +16,7 @@ class RenewEntitlementRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType>|null  $entitlementData
      */
-    public function __construct(RenewEntitlementDataType|array $entitlementData = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array|null $entitlementData = null)
     {
         $this->entitlementData = $entitlementData;
     }
@@ -24,7 +24,7 @@ class RenewEntitlementRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType>|null  $entitlementData
      */
-    public static function create(RenewEntitlementDataType|array $entitlementData = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array|null $entitlementData = null)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class RenewEntitlementRequestType implements RequestInterface
     /**
      * @return \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType>|null
      */
-    public function getEntitlementData(): RenewEntitlementDataType|array|null
+    public function getEntitlementData(): \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array|null
     {
         return $this->entitlementData;
     }
@@ -40,7 +40,7 @@ class RenewEntitlementRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType>|null  $entitlementData
      */
-    public function withEntitlementData(RenewEntitlementDataType|array|null $entitlementData): RenewEntitlementRequestType
+    public function withEntitlementData(\Flexnet\EntitlementOrderService\Type\RenewEntitlementDataType|array|null $entitlementData): \Flexnet\EntitlementOrderService\Type\RenewEntitlementRequestType
     {
         $new = clone $this;
         $new->entitlementData = $entitlementData;

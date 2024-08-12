@@ -10,30 +10,30 @@ class MaintenanceLineItemStateDataType
     private $lineItemIdentifier;
 
     /**
-     * @var string
+     * @var \Flexnet\EntitlementOrderService\Type\StateType
      */
     private $stateToSet;
 
     /**
      * Constructor
      */
-    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexnet\EntitlementOrderService\Type\StateType $stateToSet)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->stateToSet = $stateToSet;
     }
 
-    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexnet\EntitlementOrderService\Type\StateType $stateToSet)
     {
         return new static(...\func_get_args());
     }
 
-    public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
+    public function getLineItemIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
-    public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): MaintenanceLineItemStateDataType
+    public function withLineItemIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier): \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType
     {
         $new = clone $this;
         $new->lineItemIdentifier = $lineItemIdentifier;
@@ -41,12 +41,12 @@ class MaintenanceLineItemStateDataType
         return $new;
     }
 
-    public function getStateToSet(): string
+    public function getStateToSet(): \Flexnet\EntitlementOrderService\Type\StateType
     {
         return $this->stateToSet;
     }
 
-    public function withStateToSet(string $stateToSet): MaintenanceLineItemStateDataType
+    public function withStateToSet(\Flexnet\EntitlementOrderService\Type\StateType $stateToSet): \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemStateDataType
     {
         $new = clone $this;
         $new->stateToSet = $stateToSet;

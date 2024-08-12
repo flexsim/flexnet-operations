@@ -14,7 +14,7 @@ class FulfillmentIdentifierListType
      *
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>  $fulfillmentIdentifier
      */
-    public function __construct(FulfillmentIdentifierType|array $fulfillmentIdentifier)
+    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdentifierType|array $fulfillmentIdentifier)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
     }
@@ -22,7 +22,7 @@ class FulfillmentIdentifierListType
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>  $fulfillmentIdentifier
      */
-    public static function create(FulfillmentIdentifierType|array $fulfillmentIdentifier)
+    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdentifierType|array $fulfillmentIdentifier)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FulfillmentIdentifierListType
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>
      */
-    public function getFulfillmentIdentifier(): FulfillmentIdentifierType|array
+    public function getFulfillmentIdentifier(): \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array
     {
         return $this->fulfillmentIdentifier;
     }
@@ -38,7 +38,7 @@ class FulfillmentIdentifierListType
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentIdentifierType|array<\Flexnet\LicenseService\Type\FulfillmentIdentifierType>  $fulfillmentIdentifier
      */
-    public function withFulfillmentIdentifier(FulfillmentIdentifierType|array $fulfillmentIdentifier): FulfillmentIdentifierListType
+    public function withFulfillmentIdentifier(\Flexnet\LicenseService\Type\FulfillmentIdentifierType|array $fulfillmentIdentifier): \Flexnet\LicenseService\Type\FulfillmentIdentifierListType
     {
         $new = clone $this;
         $new->fulfillmentIdentifier = $fulfillmentIdentifier;

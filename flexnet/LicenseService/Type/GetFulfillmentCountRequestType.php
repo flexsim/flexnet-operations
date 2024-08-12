@@ -19,23 +19,23 @@ class GetFulfillmentCountRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(FulfillmentsQueryParametersType $queryParams = null, bool $excludeInactiveObsoleteLineItems = null)
+    public function __construct(?\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams = null, ?bool $excludeInactiveObsoleteLineItems = null)
     {
         $this->queryParams = $queryParams;
         $this->excludeInactiveObsoleteLineItems = $excludeInactiveObsoleteLineItems;
     }
 
-    public static function create(FulfillmentsQueryParametersType $queryParams = null, bool $excludeInactiveObsoleteLineItems = null)
+    public static function create(?\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams = null, ?bool $excludeInactiveObsoleteLineItems = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): ?FulfillmentsQueryParametersType
+    public function getQueryParams(): ?\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(?FulfillmentsQueryParametersType $queryParams): GetFulfillmentCountRequestType
+    public function withQueryParams(?\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams): \Flexnet\LicenseService\Type\GetFulfillmentCountRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -48,7 +48,7 @@ class GetFulfillmentCountRequestType implements RequestInterface
         return $this->excludeInactiveObsoleteLineItems;
     }
 
-    public function withExcludeInactiveObsoleteLineItems(?bool $excludeInactiveObsoleteLineItems): GetFulfillmentCountRequestType
+    public function withExcludeInactiveObsoleteLineItems(?bool $excludeInactiveObsoleteLineItems): \Flexnet\LicenseService\Type\GetFulfillmentCountRequestType
     {
         $new = clone $this;
         $new->excludeInactiveObsoleteLineItems = $excludeInactiveObsoleteLineItems;

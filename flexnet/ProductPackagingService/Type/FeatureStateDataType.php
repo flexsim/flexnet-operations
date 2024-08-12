@@ -10,30 +10,30 @@ class FeatureStateDataType
     private $featureIdentifier;
 
     /**
-     * @var string
+     * @var \Flexnet\ProductPackagingService\Type\StateType
      */
     private $stateToSet;
 
     /**
      * Constructor
      */
-    public function __construct(FeatureIdentifierType $featureIdentifier, string $stateToSet)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, \Flexnet\ProductPackagingService\Type\StateType $stateToSet)
     {
         $this->featureIdentifier = $featureIdentifier;
         $this->stateToSet = $stateToSet;
     }
 
-    public static function create(FeatureIdentifierType $featureIdentifier, string $stateToSet)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, \Flexnet\ProductPackagingService\Type\StateType $stateToSet)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFeatureIdentifier(): FeatureIdentifierType
+    public function getFeatureIdentifier(): \Flexnet\ProductPackagingService\Type\FeatureIdentifierType
     {
         return $this->featureIdentifier;
     }
 
-    public function withFeatureIdentifier(FeatureIdentifierType $featureIdentifier): FeatureStateDataType
+    public function withFeatureIdentifier(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier): \Flexnet\ProductPackagingService\Type\FeatureStateDataType
     {
         $new = clone $this;
         $new->featureIdentifier = $featureIdentifier;
@@ -41,12 +41,12 @@ class FeatureStateDataType
         return $new;
     }
 
-    public function getStateToSet(): string
+    public function getStateToSet(): \Flexnet\ProductPackagingService\Type\StateType
     {
         return $this->stateToSet;
     }
 
-    public function withStateToSet(string $stateToSet): FeatureStateDataType
+    public function withStateToSet(\Flexnet\ProductPackagingService\Type\StateType $stateToSet): \Flexnet\ProductPackagingService\Type\FeatureStateDataType
     {
         $new = clone $this;
         $new->stateToSet = $stateToSet;

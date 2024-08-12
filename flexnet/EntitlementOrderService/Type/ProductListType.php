@@ -14,7 +14,7 @@ class ProductListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|array<\Flexnet\EntitlementOrderService\Type\ProductIdentifierType>  $productIdentifier
      */
-    public function __construct(ProductIdentifierType|array $productIdentifier)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\ProductIdentifierType|array $productIdentifier)
     {
         $this->productIdentifier = $productIdentifier;
     }
@@ -22,7 +22,7 @@ class ProductListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|array<\Flexnet\EntitlementOrderService\Type\ProductIdentifierType>  $productIdentifier
      */
-    public static function create(ProductIdentifierType|array $productIdentifier)
+    public static function create(\Flexnet\EntitlementOrderService\Type\ProductIdentifierType|array $productIdentifier)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class ProductListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|array<\Flexnet\EntitlementOrderService\Type\ProductIdentifierType>
      */
-    public function getProductIdentifier(): ProductIdentifierType|array
+    public function getProductIdentifier(): \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|array
     {
         return $this->productIdentifier;
     }
@@ -38,7 +38,7 @@ class ProductListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ProductIdentifierType|array<\Flexnet\EntitlementOrderService\Type\ProductIdentifierType>  $productIdentifier
      */
-    public function withProductIdentifier(ProductIdentifierType|array $productIdentifier): ProductListType
+    public function withProductIdentifier(\Flexnet\EntitlementOrderService\Type\ProductIdentifierType|array $productIdentifier): \Flexnet\EntitlementOrderService\Type\ProductListType
     {
         $new = clone $this;
         $new->productIdentifier = $productIdentifier;

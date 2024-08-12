@@ -19,7 +19,7 @@ class EntitlementLifeCycleDataType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType>  $lineItemData
      */
-    public function __construct(LineItemLifeCycleDataType|array $lineItemData, EntitlementIdentifierType $parentEntitlementIdentifier = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array $lineItemData, ?\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null)
     {
         $this->lineItemData = $lineItemData;
         $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
@@ -28,17 +28,17 @@ class EntitlementLifeCycleDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType>  $lineItemData
      */
-    public static function create(LineItemLifeCycleDataType|array $lineItemData, EntitlementIdentifierType $parentEntitlementIdentifier = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array $lineItemData, ?\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $parentEntitlementIdentifier = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getParentEntitlementIdentifier(): ?EntitlementIdentifierType
+    public function getParentEntitlementIdentifier(): ?\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->parentEntitlementIdentifier;
     }
 
-    public function withParentEntitlementIdentifier(?EntitlementIdentifierType $parentEntitlementIdentifier): EntitlementLifeCycleDataType
+    public function withParentEntitlementIdentifier(?\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $parentEntitlementIdentifier): \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType
     {
         $new = clone $this;
         $new->parentEntitlementIdentifier = $parentEntitlementIdentifier;
@@ -49,7 +49,7 @@ class EntitlementLifeCycleDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType>
      */
-    public function getLineItemData(): LineItemLifeCycleDataType|array
+    public function getLineItemData(): \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array
     {
         return $this->lineItemData;
     }
@@ -57,7 +57,7 @@ class EntitlementLifeCycleDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType>  $lineItemData
      */
-    public function withLineItemData(LineItemLifeCycleDataType|array $lineItemData): EntitlementLifeCycleDataType
+    public function withLineItemData(\Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType|array $lineItemData): \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleDataType
     {
         $new = clone $this;
         $new->lineItemData = $lineItemData;

@@ -10,20 +10,20 @@ class DateTimeQueryType
     private $value;
 
     /**
-     * @var string
+     * @var \Flexnet\EntitlementOrderService\Type\DatedSearchType
      */
     private $searchType;
 
     /**
      * Constructor
      */
-    public function __construct(\DateTimeInterface $value, string $searchType)
+    public function __construct(\DateTimeInterface $value, \Flexnet\EntitlementOrderService\Type\DatedSearchType $searchType)
     {
         $this->value = $value;
         $this->searchType = $searchType;
     }
 
-    public static function create(\DateTimeInterface $value, string $searchType)
+    public static function create(\DateTimeInterface $value, \Flexnet\EntitlementOrderService\Type\DatedSearchType $searchType)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class DateTimeQueryType
         return $this->value;
     }
 
-    public function withValue(\DateTimeInterface $value): DateTimeQueryType
+    public function withValue(\DateTimeInterface $value): \Flexnet\EntitlementOrderService\Type\DateTimeQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -41,12 +41,12 @@ class DateTimeQueryType
         return $new;
     }
 
-    public function getSearchType(): string
+    public function getSearchType(): \Flexnet\EntitlementOrderService\Type\DatedSearchType
     {
         return $this->searchType;
     }
 
-    public function withSearchType(string $searchType): DateTimeQueryType
+    public function withSearchType(\Flexnet\EntitlementOrderService\Type\DatedSearchType $searchType): \Flexnet\EntitlementOrderService\Type\DateTimeQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;

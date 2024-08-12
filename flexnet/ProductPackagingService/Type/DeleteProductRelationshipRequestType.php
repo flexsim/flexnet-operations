@@ -16,7 +16,7 @@ class DeleteProductRelationshipRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>  $relationship
      */
-    public function __construct(ProductRelationshipDataType|array $relationship)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array $relationship)
     {
         $this->relationship = $relationship;
     }
@@ -24,7 +24,7 @@ class DeleteProductRelationshipRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>  $relationship
      */
-    public static function create(ProductRelationshipDataType|array $relationship)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array $relationship)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class DeleteProductRelationshipRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>
      */
-    public function getRelationship(): ProductRelationshipDataType|array
+    public function getRelationship(): \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array
     {
         return $this->relationship;
     }
@@ -40,7 +40,7 @@ class DeleteProductRelationshipRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array<\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType>  $relationship
      */
-    public function withRelationship(ProductRelationshipDataType|array $relationship): DeleteProductRelationshipRequestType
+    public function withRelationship(\Flexnet\ProductPackagingService\Type\ProductRelationshipDataType|array $relationship): \Flexnet\ProductPackagingService\Type\DeleteProductRelationshipRequestType
     {
         $new = clone $this;
         $new->relationship = $relationship;

@@ -24,7 +24,7 @@ class WebRegKeyDataType
      *
      * @param  string|array<string>|null  $webRegKey
      */
-    public function __construct(string|array $webRegKey = null, bool $autoGenerate = null, int $numAutoGenerate = null)
+    public function __construct(string|array|null $webRegKey = null, ?bool $autoGenerate = null, ?int $numAutoGenerate = null)
     {
         $this->webRegKey = $webRegKey;
         $this->autoGenerate = $autoGenerate;
@@ -34,7 +34,7 @@ class WebRegKeyDataType
     /**
      * @param  string|array<string>|null  $webRegKey
      */
-    public static function create(string|array $webRegKey = null, bool $autoGenerate = null, int $numAutoGenerate = null)
+    public static function create(string|array|null $webRegKey = null, ?bool $autoGenerate = null, ?int $numAutoGenerate = null)
     {
         return new static(...\func_get_args());
     }
@@ -50,7 +50,7 @@ class WebRegKeyDataType
     /**
      * @param  string|array<string>|null  $webRegKey
      */
-    public function withWebRegKey(string|array|null $webRegKey): WebRegKeyDataType
+    public function withWebRegKey(string|array|null $webRegKey): \Flexnet\EntitlementOrderService\Type\WebRegKeyDataType
     {
         $new = clone $this;
         $new->webRegKey = $webRegKey;
@@ -63,7 +63,7 @@ class WebRegKeyDataType
         return $this->autoGenerate;
     }
 
-    public function withAutoGenerate(?bool $autoGenerate): WebRegKeyDataType
+    public function withAutoGenerate(?bool $autoGenerate): \Flexnet\EntitlementOrderService\Type\WebRegKeyDataType
     {
         $new = clone $this;
         $new->autoGenerate = $autoGenerate;
@@ -76,7 +76,7 @@ class WebRegKeyDataType
         return $this->numAutoGenerate;
     }
 
-    public function withNumAutoGenerate(?int $numAutoGenerate): WebRegKeyDataType
+    public function withNumAutoGenerate(?int $numAutoGenerate): \Flexnet\EntitlementOrderService\Type\WebRegKeyDataType
     {
         $new = clone $this;
         $new->numAutoGenerate = $numAutoGenerate;

@@ -142,7 +142,7 @@ class BulkEntitlementResponseConfigRequestType
     /**
      * Constructor
      */
-    public function __construct(bool $entitlementId = null, bool $allowPortalLogin = null, bool $description = null, bool $state = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $orderId = null, bool $orderLineNumber = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseModel = null, bool $licenseTechnology = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $bulkEntitlementType = null, bool $createdUserId = null, bool $FNPTimeZoneValue = null, CustomAttributeDescriptorDataType $customAttributes = null)
+    public function __construct(?bool $entitlementId = null, ?bool $allowPortalLogin = null, ?bool $description = null, ?bool $state = null, ?bool $soldTo = null, ?bool $soldToDisplayName = null, ?bool $shipToEmail = null, ?bool $shipToAddress = null, ?bool $orderId = null, ?bool $orderLineNumber = null, ?bool $product = null, ?bool $productDescription = null, ?bool $partNumber = null, ?bool $partNumberDescription = null, ?bool $licenseModel = null, ?bool $licenseTechnology = null, ?bool $startDateOption = null, ?bool $isPermanent = null, ?bool $term = null, ?bool $expirationDate = null, ?bool $versionDate = null, ?bool $versionDateAttributes = null, ?bool $numberOfCopies = null, ?bool $bulkEntitlementType = null, ?bool $createdUserId = null, ?bool $FNPTimeZoneValue = null, ?\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorDataType $customAttributes = null)
     {
         $this->entitlementId = $entitlementId;
         $this->allowPortalLogin = $allowPortalLogin;
@@ -173,7 +173,7 @@ class BulkEntitlementResponseConfigRequestType
         $this->customAttributes = $customAttributes;
     }
 
-    public static function create(bool $entitlementId = null, bool $allowPortalLogin = null, bool $description = null, bool $state = null, bool $soldTo = null, bool $soldToDisplayName = null, bool $shipToEmail = null, bool $shipToAddress = null, bool $orderId = null, bool $orderLineNumber = null, bool $product = null, bool $productDescription = null, bool $partNumber = null, bool $partNumberDescription = null, bool $licenseModel = null, bool $licenseTechnology = null, bool $startDateOption = null, bool $isPermanent = null, bool $term = null, bool $expirationDate = null, bool $versionDate = null, bool $versionDateAttributes = null, bool $numberOfCopies = null, bool $bulkEntitlementType = null, bool $createdUserId = null, bool $FNPTimeZoneValue = null, CustomAttributeDescriptorDataType $customAttributes = null)
+    public static function create(?bool $entitlementId = null, ?bool $allowPortalLogin = null, ?bool $description = null, ?bool $state = null, ?bool $soldTo = null, ?bool $soldToDisplayName = null, ?bool $shipToEmail = null, ?bool $shipToAddress = null, ?bool $orderId = null, ?bool $orderLineNumber = null, ?bool $product = null, ?bool $productDescription = null, ?bool $partNumber = null, ?bool $partNumberDescription = null, ?bool $licenseModel = null, ?bool $licenseTechnology = null, ?bool $startDateOption = null, ?bool $isPermanent = null, ?bool $term = null, ?bool $expirationDate = null, ?bool $versionDate = null, ?bool $versionDateAttributes = null, ?bool $numberOfCopies = null, ?bool $bulkEntitlementType = null, ?bool $createdUserId = null, ?bool $FNPTimeZoneValue = null, ?\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorDataType $customAttributes = null)
     {
         return new static(...\func_get_args());
     }
@@ -183,7 +183,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->entitlementId;
     }
 
-    public function withEntitlementId(?bool $entitlementId): BulkEntitlementResponseConfigRequestType
+    public function withEntitlementId(?bool $entitlementId): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->entitlementId = $entitlementId;
@@ -196,7 +196,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->allowPortalLogin;
     }
 
-    public function withAllowPortalLogin(?bool $allowPortalLogin): BulkEntitlementResponseConfigRequestType
+    public function withAllowPortalLogin(?bool $allowPortalLogin): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->allowPortalLogin = $allowPortalLogin;
@@ -209,7 +209,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->description;
     }
 
-    public function withDescription(?bool $description): BulkEntitlementResponseConfigRequestType
+    public function withDescription(?bool $description): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->description = $description;
@@ -222,7 +222,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->state;
     }
 
-    public function withState(?bool $state): BulkEntitlementResponseConfigRequestType
+    public function withState(?bool $state): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->state = $state;
@@ -235,7 +235,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->soldTo;
     }
 
-    public function withSoldTo(?bool $soldTo): BulkEntitlementResponseConfigRequestType
+    public function withSoldTo(?bool $soldTo): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -248,7 +248,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->soldToDisplayName;
     }
 
-    public function withSoldToDisplayName(?bool $soldToDisplayName): BulkEntitlementResponseConfigRequestType
+    public function withSoldToDisplayName(?bool $soldToDisplayName): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->soldToDisplayName = $soldToDisplayName;
@@ -261,7 +261,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(?bool $shipToEmail): BulkEntitlementResponseConfigRequestType
+    public function withShipToEmail(?bool $shipToEmail): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -274,7 +274,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(?bool $shipToAddress): BulkEntitlementResponseConfigRequestType
+    public function withShipToAddress(?bool $shipToAddress): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -287,7 +287,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->orderId;
     }
 
-    public function withOrderId(?bool $orderId): BulkEntitlementResponseConfigRequestType
+    public function withOrderId(?bool $orderId): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->orderId = $orderId;
@@ -300,7 +300,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->orderLineNumber;
     }
 
-    public function withOrderLineNumber(?bool $orderLineNumber): BulkEntitlementResponseConfigRequestType
+    public function withOrderLineNumber(?bool $orderLineNumber): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->orderLineNumber = $orderLineNumber;
@@ -313,7 +313,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->product;
     }
 
-    public function withProduct(?bool $product): BulkEntitlementResponseConfigRequestType
+    public function withProduct(?bool $product): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->product = $product;
@@ -326,7 +326,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->productDescription;
     }
 
-    public function withProductDescription(?bool $productDescription): BulkEntitlementResponseConfigRequestType
+    public function withProductDescription(?bool $productDescription): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->productDescription = $productDescription;
@@ -339,7 +339,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->partNumber;
     }
 
-    public function withPartNumber(?bool $partNumber): BulkEntitlementResponseConfigRequestType
+    public function withPartNumber(?bool $partNumber): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -352,7 +352,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->partNumberDescription;
     }
 
-    public function withPartNumberDescription(?bool $partNumberDescription): BulkEntitlementResponseConfigRequestType
+    public function withPartNumberDescription(?bool $partNumberDescription): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->partNumberDescription = $partNumberDescription;
@@ -365,7 +365,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->licenseModel;
     }
 
-    public function withLicenseModel(?bool $licenseModel): BulkEntitlementResponseConfigRequestType
+    public function withLicenseModel(?bool $licenseModel): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->licenseModel = $licenseModel;
@@ -378,7 +378,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->licenseTechnology;
     }
 
-    public function withLicenseTechnology(?bool $licenseTechnology): BulkEntitlementResponseConfigRequestType
+    public function withLicenseTechnology(?bool $licenseTechnology): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->licenseTechnology = $licenseTechnology;
@@ -391,7 +391,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->startDateOption;
     }
 
-    public function withStartDateOption(?bool $startDateOption): BulkEntitlementResponseConfigRequestType
+    public function withStartDateOption(?bool $startDateOption): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->startDateOption = $startDateOption;
@@ -404,7 +404,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->isPermanent;
     }
 
-    public function withIsPermanent(?bool $isPermanent): BulkEntitlementResponseConfigRequestType
+    public function withIsPermanent(?bool $isPermanent): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->isPermanent = $isPermanent;
@@ -417,7 +417,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->term;
     }
 
-    public function withTerm(?bool $term): BulkEntitlementResponseConfigRequestType
+    public function withTerm(?bool $term): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->term = $term;
@@ -430,7 +430,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->expirationDate;
     }
 
-    public function withExpirationDate(?bool $expirationDate): BulkEntitlementResponseConfigRequestType
+    public function withExpirationDate(?bool $expirationDate): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->expirationDate = $expirationDate;
@@ -443,7 +443,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->versionDate;
     }
 
-    public function withVersionDate(?bool $versionDate): BulkEntitlementResponseConfigRequestType
+    public function withVersionDate(?bool $versionDate): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->versionDate = $versionDate;
@@ -456,7 +456,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->versionDateAttributes;
     }
 
-    public function withVersionDateAttributes(?bool $versionDateAttributes): BulkEntitlementResponseConfigRequestType
+    public function withVersionDateAttributes(?bool $versionDateAttributes): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->versionDateAttributes = $versionDateAttributes;
@@ -469,7 +469,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->numberOfCopies;
     }
 
-    public function withNumberOfCopies(?bool $numberOfCopies): BulkEntitlementResponseConfigRequestType
+    public function withNumberOfCopies(?bool $numberOfCopies): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->numberOfCopies = $numberOfCopies;
@@ -482,7 +482,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->bulkEntitlementType;
     }
 
-    public function withBulkEntitlementType(?bool $bulkEntitlementType): BulkEntitlementResponseConfigRequestType
+    public function withBulkEntitlementType(?bool $bulkEntitlementType): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->bulkEntitlementType = $bulkEntitlementType;
@@ -495,7 +495,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->createdUserId;
     }
 
-    public function withCreatedUserId(?bool $createdUserId): BulkEntitlementResponseConfigRequestType
+    public function withCreatedUserId(?bool $createdUserId): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->createdUserId = $createdUserId;
@@ -508,7 +508,7 @@ class BulkEntitlementResponseConfigRequestType
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(?bool $FNPTimeZoneValue): BulkEntitlementResponseConfigRequestType
+    public function withFNPTimeZoneValue(?bool $FNPTimeZoneValue): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;
@@ -516,12 +516,12 @@ class BulkEntitlementResponseConfigRequestType
         return $new;
     }
 
-    public function getCustomAttributes(): ?CustomAttributeDescriptorDataType
+    public function getCustomAttributes(): ?\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorDataType
     {
         return $this->customAttributes;
     }
 
-    public function withCustomAttributes(?CustomAttributeDescriptorDataType $customAttributes): BulkEntitlementResponseConfigRequestType
+    public function withCustomAttributes(?\Flexnet\EntitlementOrderService\Type\CustomAttributeDescriptorDataType $customAttributes): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         $new = clone $this;
         $new->customAttributes = $customAttributes;

@@ -14,7 +14,7 @@ class FailedAdvancedFmtLCResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType|array<\Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType>  $failedFulfillment
      */
-    public function __construct(FailedAdvancedFmtLCDataType|array $failedFulfillment)
+    public function __construct(\Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType|array $failedFulfillment)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
@@ -22,7 +22,7 @@ class FailedAdvancedFmtLCResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType|array<\Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType>  $failedFulfillment
      */
-    public static function create(FailedAdvancedFmtLCDataType|array $failedFulfillment)
+    public static function create(\Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType|array $failedFulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedAdvancedFmtLCResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType|array<\Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType>
      */
-    public function getFailedFulfillment(): FailedAdvancedFmtLCDataType|array
+    public function getFailedFulfillment(): \Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType|array
     {
         return $this->failedFulfillment;
     }
@@ -38,7 +38,7 @@ class FailedAdvancedFmtLCResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType|array<\Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType>  $failedFulfillment
      */
-    public function withFailedFulfillment(FailedAdvancedFmtLCDataType|array $failedFulfillment): FailedAdvancedFmtLCResponseDataType
+    public function withFailedFulfillment(\Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType|array $failedFulfillment): \Flexnet\LicenseService\Type\FailedAdvancedFmtLCResponseDataType
     {
         $new = clone $this;
         $new->failedFulfillment = $failedFulfillment;

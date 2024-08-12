@@ -29,7 +29,7 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int $pageNumber = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, ?int $pageNumber = null)
     {
         $this->bulkEntitlementSearchCriteria = $bulkEntitlementSearchCriteria;
         $this->bulkEntitlementResponseConfig = $bulkEntitlementResponseConfig;
@@ -37,17 +37,17 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         $this->pageNumber = $pageNumber;
     }
 
-    public static function create(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, int $pageNumber = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria, \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig, int $batchSize, ?int $pageNumber = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getBulkEntitlementSearchCriteria(): SearchBulkEntitlementDataType
+    public function getBulkEntitlementSearchCriteria(): \Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType
     {
         return $this->bulkEntitlementSearchCriteria;
     }
 
-    public function withBulkEntitlementSearchCriteria(SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria): GetBulkEntitlementPropertiesRequestType
+    public function withBulkEntitlementSearchCriteria(\Flexnet\EntitlementOrderService\Type\SearchBulkEntitlementDataType $bulkEntitlementSearchCriteria): \Flexnet\EntitlementOrderService\Type\GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;
         $new->bulkEntitlementSearchCriteria = $bulkEntitlementSearchCriteria;
@@ -55,12 +55,12 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         return $new;
     }
 
-    public function getBulkEntitlementResponseConfig(): BulkEntitlementResponseConfigRequestType
+    public function getBulkEntitlementResponseConfig(): \Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType
     {
         return $this->bulkEntitlementResponseConfig;
     }
 
-    public function withBulkEntitlementResponseConfig(BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig): GetBulkEntitlementPropertiesRequestType
+    public function withBulkEntitlementResponseConfig(\Flexnet\EntitlementOrderService\Type\BulkEntitlementResponseConfigRequestType $bulkEntitlementResponseConfig): \Flexnet\EntitlementOrderService\Type\GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;
         $new->bulkEntitlementResponseConfig = $bulkEntitlementResponseConfig;
@@ -73,7 +73,7 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         return $this->batchSize;
     }
 
-    public function withBatchSize(int $batchSize): GetBulkEntitlementPropertiesRequestType
+    public function withBatchSize(int $batchSize): \Flexnet\EntitlementOrderService\Type\GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;
@@ -86,7 +86,7 @@ class GetBulkEntitlementPropertiesRequestType implements RequestInterface
         return $this->pageNumber;
     }
 
-    public function withPageNumber(?int $pageNumber): GetBulkEntitlementPropertiesRequestType
+    public function withPageNumber(?int $pageNumber): \Flexnet\EntitlementOrderService\Type\GetBulkEntitlementPropertiesRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;

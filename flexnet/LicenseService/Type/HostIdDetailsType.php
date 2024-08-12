@@ -14,7 +14,7 @@ class HostIdDetailsType
      *
      * @param  \Flexnet\LicenseService\Type\HostIdDataDetailsType|array<\Flexnet\LicenseService\Type\HostIdDataDetailsType>  $hostIdData
      */
-    public function __construct(HostIdDataDetailsType|array $hostIdData)
+    public function __construct(\Flexnet\LicenseService\Type\HostIdDataDetailsType|array $hostIdData)
     {
         $this->hostIdData = $hostIdData;
     }
@@ -22,7 +22,7 @@ class HostIdDetailsType
     /**
      * @param  \Flexnet\LicenseService\Type\HostIdDataDetailsType|array<\Flexnet\LicenseService\Type\HostIdDataDetailsType>  $hostIdData
      */
-    public static function create(HostIdDataDetailsType|array $hostIdData)
+    public static function create(\Flexnet\LicenseService\Type\HostIdDataDetailsType|array $hostIdData)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class HostIdDetailsType
     /**
      * @return \Flexnet\LicenseService\Type\HostIdDataDetailsType|array<\Flexnet\LicenseService\Type\HostIdDataDetailsType>
      */
-    public function getHostIdData(): HostIdDataDetailsType|array
+    public function getHostIdData(): \Flexnet\LicenseService\Type\HostIdDataDetailsType|array
     {
         return $this->hostIdData;
     }
@@ -38,7 +38,7 @@ class HostIdDetailsType
     /**
      * @param  \Flexnet\LicenseService\Type\HostIdDataDetailsType|array<\Flexnet\LicenseService\Type\HostIdDataDetailsType>  $hostIdData
      */
-    public function withHostIdData(HostIdDataDetailsType|array $hostIdData): HostIdDetailsType
+    public function withHostIdData(\Flexnet\LicenseService\Type\HostIdDataDetailsType|array $hostIdData): \Flexnet\LicenseService\Type\HostIdDetailsType
     {
         $new = clone $this;
         $new->hostIdData = $hostIdData;

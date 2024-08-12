@@ -16,7 +16,7 @@ class CreateUniformSuiteRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType>  $uniformSuite
      */
-    public function __construct(CreateUniformSuiteDataType|array $uniformSuite)
+    public function __construct(\Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType|array $uniformSuite)
     {
         $this->uniformSuite = $uniformSuite;
     }
@@ -24,7 +24,7 @@ class CreateUniformSuiteRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType>  $uniformSuite
      */
-    public static function create(CreateUniformSuiteDataType|array $uniformSuite)
+    public static function create(\Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType|array $uniformSuite)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class CreateUniformSuiteRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType>
      */
-    public function getUniformSuite(): CreateUniformSuiteDataType|array
+    public function getUniformSuite(): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType|array
     {
         return $this->uniformSuite;
     }
@@ -40,7 +40,7 @@ class CreateUniformSuiteRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType>  $uniformSuite
      */
-    public function withUniformSuite(CreateUniformSuiteDataType|array $uniformSuite): CreateUniformSuiteRequestType
+    public function withUniformSuite(\Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType|array $uniformSuite): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteRequestType
     {
         $new = clone $this;
         $new->uniformSuite = $uniformSuite;

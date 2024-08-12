@@ -39,7 +39,7 @@ class AttributeDescriptorType
      *
      * @param  string|array<string>|null  $arrayValue
      */
-    public function __construct(string $attributeName, string $stringValue = null, \DateTimeInterface $dateValue = null, bool $booleanValue = null, int $integerValue = null, string|array $arrayValue = null)
+    public function __construct(string $attributeName, ?string $stringValue = null, ?\DateTimeInterface $dateValue = null, ?bool $booleanValue = null, ?int $integerValue = null, string|array|null $arrayValue = null)
     {
         $this->attributeName = $attributeName;
         $this->stringValue = $stringValue;
@@ -52,7 +52,7 @@ class AttributeDescriptorType
     /**
      * @param  string|array<string>|null  $arrayValue
      */
-    public static function create(string $attributeName, string $stringValue = null, \DateTimeInterface $dateValue = null, bool $booleanValue = null, int $integerValue = null, string|array $arrayValue = null)
+    public static function create(string $attributeName, ?string $stringValue = null, ?\DateTimeInterface $dateValue = null, ?bool $booleanValue = null, ?int $integerValue = null, string|array|null $arrayValue = null)
     {
         return new static(...\func_get_args());
     }
@@ -62,7 +62,7 @@ class AttributeDescriptorType
         return $this->attributeName;
     }
 
-    public function withAttributeName(string $attributeName): AttributeDescriptorType
+    public function withAttributeName(string $attributeName): \Flexnet\ProductPackagingService\Type\AttributeDescriptorType
     {
         $new = clone $this;
         $new->attributeName = $attributeName;
@@ -75,7 +75,7 @@ class AttributeDescriptorType
         return $this->stringValue;
     }
 
-    public function withStringValue(?string $stringValue): AttributeDescriptorType
+    public function withStringValue(?string $stringValue): \Flexnet\ProductPackagingService\Type\AttributeDescriptorType
     {
         $new = clone $this;
         $new->stringValue = $stringValue;
@@ -88,7 +88,7 @@ class AttributeDescriptorType
         return $this->dateValue;
     }
 
-    public function withDateValue(?\DateTimeInterface $dateValue): AttributeDescriptorType
+    public function withDateValue(?\DateTimeInterface $dateValue): \Flexnet\ProductPackagingService\Type\AttributeDescriptorType
     {
         $new = clone $this;
         $new->dateValue = $dateValue;
@@ -101,7 +101,7 @@ class AttributeDescriptorType
         return $this->booleanValue;
     }
 
-    public function withBooleanValue(?bool $booleanValue): AttributeDescriptorType
+    public function withBooleanValue(?bool $booleanValue): \Flexnet\ProductPackagingService\Type\AttributeDescriptorType
     {
         $new = clone $this;
         $new->booleanValue = $booleanValue;
@@ -114,7 +114,7 @@ class AttributeDescriptorType
         return $this->integerValue;
     }
 
-    public function withIntegerValue(?int $integerValue): AttributeDescriptorType
+    public function withIntegerValue(?int $integerValue): \Flexnet\ProductPackagingService\Type\AttributeDescriptorType
     {
         $new = clone $this;
         $new->integerValue = $integerValue;
@@ -133,7 +133,7 @@ class AttributeDescriptorType
     /**
      * @param  string|array<string>|null  $arrayValue
      */
-    public function withArrayValue(string|array|null $arrayValue): AttributeDescriptorType
+    public function withArrayValue(string|array|null $arrayValue): \Flexnet\ProductPackagingService\Type\AttributeDescriptorType
     {
         $new = clone $this;
         $new->arrayValue = $arrayValue;

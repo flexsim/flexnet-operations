@@ -14,7 +14,7 @@ class FailedUnlinkMaintenanceLineItemListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType>|null  $failedUnlinkMaintenanceLineItem
      */
-    public function __construct(FailedUnlinkMaintenanceLineItemDataType|array $failedUnlinkMaintenanceLineItem = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType|array|null $failedUnlinkMaintenanceLineItem = null)
     {
         $this->failedUnlinkMaintenanceLineItem = $failedUnlinkMaintenanceLineItem;
     }
@@ -22,7 +22,7 @@ class FailedUnlinkMaintenanceLineItemListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType>|null  $failedUnlinkMaintenanceLineItem
      */
-    public static function create(FailedUnlinkMaintenanceLineItemDataType|array $failedUnlinkMaintenanceLineItem = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType|array|null $failedUnlinkMaintenanceLineItem = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedUnlinkMaintenanceLineItemListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType>|null
      */
-    public function getFailedUnlinkMaintenanceLineItem(): FailedUnlinkMaintenanceLineItemDataType|array|null
+    public function getFailedUnlinkMaintenanceLineItem(): \Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType|array|null
     {
         return $this->failedUnlinkMaintenanceLineItem;
     }
@@ -38,7 +38,7 @@ class FailedUnlinkMaintenanceLineItemListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType>|null  $failedUnlinkMaintenanceLineItem
      */
-    public function withFailedUnlinkMaintenanceLineItem(FailedUnlinkMaintenanceLineItemDataType|array|null $failedUnlinkMaintenanceLineItem): FailedUnlinkMaintenanceLineItemListType
+    public function withFailedUnlinkMaintenanceLineItem(\Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemDataType|array|null $failedUnlinkMaintenanceLineItem): \Flexnet\EntitlementOrderService\Type\FailedUnlinkMaintenanceLineItemListType
     {
         $new = clone $this;
         $new->failedUnlinkMaintenanceLineItem = $failedUnlinkMaintenanceLineItem;

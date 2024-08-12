@@ -12,30 +12,30 @@ class ReturnShortCodeRequestType implements RequestInterface
     private $shortCodeData;
 
     /**
-     * @var string|null
+     * @var \Flexnet\LicenseService\Type\ReturnedShortCodeReturnReason|null
      */
     private $returnReason;
 
     /**
      * Constructor
      */
-    public function __construct(ReturnShortCodeDataType $shortCodeData = null, string $returnReason = null)
+    public function __construct(?\Flexnet\LicenseService\Type\ReturnShortCodeDataType $shortCodeData = null, ?\Flexnet\LicenseService\Type\ReturnedShortCodeReturnReason $returnReason = null)
     {
         $this->shortCodeData = $shortCodeData;
         $this->returnReason = $returnReason;
     }
 
-    public static function create(ReturnShortCodeDataType $shortCodeData = null, string $returnReason = null)
+    public static function create(?\Flexnet\LicenseService\Type\ReturnShortCodeDataType $shortCodeData = null, ?\Flexnet\LicenseService\Type\ReturnedShortCodeReturnReason $returnReason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getShortCodeData(): ?ReturnShortCodeDataType
+    public function getShortCodeData(): ?\Flexnet\LicenseService\Type\ReturnShortCodeDataType
     {
         return $this->shortCodeData;
     }
 
-    public function withShortCodeData(?ReturnShortCodeDataType $shortCodeData): ReturnShortCodeRequestType
+    public function withShortCodeData(?\Flexnet\LicenseService\Type\ReturnShortCodeDataType $shortCodeData): \Flexnet\LicenseService\Type\ReturnShortCodeRequestType
     {
         $new = clone $this;
         $new->shortCodeData = $shortCodeData;
@@ -43,12 +43,12 @@ class ReturnShortCodeRequestType implements RequestInterface
         return $new;
     }
 
-    public function getReturnReason(): ?string
+    public function getReturnReason(): ?\Flexnet\LicenseService\Type\ReturnedShortCodeReturnReason
     {
         return $this->returnReason;
     }
 
-    public function withReturnReason(?string $returnReason): ReturnShortCodeRequestType
+    public function withReturnReason(?\Flexnet\LicenseService\Type\ReturnedShortCodeReturnReason $returnReason): \Flexnet\LicenseService\Type\ReturnShortCodeRequestType
     {
         $new = clone $this;
         $new->returnReason = $returnReason;

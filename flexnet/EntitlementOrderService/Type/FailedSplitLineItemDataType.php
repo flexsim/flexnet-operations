@@ -17,23 +17,23 @@ class FailedSplitLineItemDataType
     /**
      * Constructor
      */
-    public function __construct(SplitLineItemInfoType $lineItemInfo, string $reason)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\SplitLineItemInfoType $lineItemInfo, string $reason)
     {
         $this->lineItemInfo = $lineItemInfo;
         $this->reason = $reason;
     }
 
-    public static function create(SplitLineItemInfoType $lineItemInfo, string $reason)
+    public static function create(\Flexnet\EntitlementOrderService\Type\SplitLineItemInfoType $lineItemInfo, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getLineItemInfo(): SplitLineItemInfoType
+    public function getLineItemInfo(): \Flexnet\EntitlementOrderService\Type\SplitLineItemInfoType
     {
         return $this->lineItemInfo;
     }
 
-    public function withLineItemInfo(SplitLineItemInfoType $lineItemInfo): FailedSplitLineItemDataType
+    public function withLineItemInfo(\Flexnet\EntitlementOrderService\Type\SplitLineItemInfoType $lineItemInfo): \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType
     {
         $new = clone $this;
         $new->lineItemInfo = $lineItemInfo;
@@ -46,7 +46,7 @@ class FailedSplitLineItemDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedSplitLineItemDataType
+    public function withReason(string $reason): \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType
     {
         $new = clone $this;
         $new->reason = $reason;

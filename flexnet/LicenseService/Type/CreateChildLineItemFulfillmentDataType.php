@@ -67,7 +67,7 @@ class CreateChildLineItemFulfillmentDataType
     /**
      * Constructor
      */
-    public function __construct(string $activationId, HostIdDetailsType $hostIdDetails, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $owner = null, string $FNPTimeZoneValue = null)
+    public function __construct(string $activationId, \Flexnet\LicenseService\Type\HostIdDetailsType $hostIdDetails, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $versionDate = null, ?\DateTimeInterface $versionStartDate = null, ?string $soldTo = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?bool $overridePolicy = null, ?string $owner = null, ?string $FNPTimeZoneValue = null)
     {
         $this->activationId = $activationId;
         $this->hostIdDetails = $hostIdDetails;
@@ -83,7 +83,7 @@ class CreateChildLineItemFulfillmentDataType
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
     }
 
-    public static function create(string $activationId, HostIdDetailsType $hostIdDetails, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $owner = null, string $FNPTimeZoneValue = null)
+    public static function create(string $activationId, \Flexnet\LicenseService\Type\HostIdDetailsType $hostIdDetails, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $versionDate = null, ?\DateTimeInterface $versionStartDate = null, ?string $soldTo = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?bool $overridePolicy = null, ?string $owner = null, ?string $FNPTimeZoneValue = null)
     {
         return new static(...\func_get_args());
     }
@@ -93,7 +93,7 @@ class CreateChildLineItemFulfillmentDataType
         return $this->activationId;
     }
 
-    public function withActivationId(string $activationId): CreateChildLineItemFulfillmentDataType
+    public function withActivationId(string $activationId): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -106,7 +106,7 @@ class CreateChildLineItemFulfillmentDataType
         return $this->startDate;
     }
 
-    public function withStartDate(?\DateTimeInterface $startDate): CreateChildLineItemFulfillmentDataType
+    public function withStartDate(?\DateTimeInterface $startDate): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -119,7 +119,7 @@ class CreateChildLineItemFulfillmentDataType
         return $this->versionDate;
     }
 
-    public function withVersionDate(?\DateTimeInterface $versionDate): CreateChildLineItemFulfillmentDataType
+    public function withVersionDate(?\DateTimeInterface $versionDate): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->versionDate = $versionDate;
@@ -132,7 +132,7 @@ class CreateChildLineItemFulfillmentDataType
         return $this->versionStartDate;
     }
 
-    public function withVersionStartDate(?\DateTimeInterface $versionStartDate): CreateChildLineItemFulfillmentDataType
+    public function withVersionStartDate(?\DateTimeInterface $versionStartDate): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->versionStartDate = $versionStartDate;
@@ -145,7 +145,7 @@ class CreateChildLineItemFulfillmentDataType
         return $this->soldTo;
     }
 
-    public function withSoldTo(?string $soldTo): CreateChildLineItemFulfillmentDataType
+    public function withSoldTo(?string $soldTo): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -158,7 +158,7 @@ class CreateChildLineItemFulfillmentDataType
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(?string $shipToEmail): CreateChildLineItemFulfillmentDataType
+    public function withShipToEmail(?string $shipToEmail): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -171,7 +171,7 @@ class CreateChildLineItemFulfillmentDataType
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(?string $shipToAddress): CreateChildLineItemFulfillmentDataType
+    public function withShipToAddress(?string $shipToAddress): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -179,12 +179,12 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    public function getLicenseModelAttributes(): ?AttributeDescriptorDataType
+    public function getLicenseModelAttributes(): ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType
     {
         return $this->licenseModelAttributes;
     }
 
-    public function withLicenseModelAttributes(?AttributeDescriptorDataType $licenseModelAttributes): CreateChildLineItemFulfillmentDataType
+    public function withLicenseModelAttributes(?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->licenseModelAttributes = $licenseModelAttributes;
@@ -192,12 +192,12 @@ class CreateChildLineItemFulfillmentDataType
         return $new;
     }
 
-    public function getHostIdDetails(): HostIdDetailsType
+    public function getHostIdDetails(): \Flexnet\LicenseService\Type\HostIdDetailsType
     {
         return $this->hostIdDetails;
     }
 
-    public function withHostIdDetails(HostIdDetailsType $hostIdDetails): CreateChildLineItemFulfillmentDataType
+    public function withHostIdDetails(\Flexnet\LicenseService\Type\HostIdDetailsType $hostIdDetails): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->hostIdDetails = $hostIdDetails;
@@ -210,7 +210,7 @@ class CreateChildLineItemFulfillmentDataType
         return $this->overridePolicy;
     }
 
-    public function withOverridePolicy(?bool $overridePolicy): CreateChildLineItemFulfillmentDataType
+    public function withOverridePolicy(?bool $overridePolicy): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->overridePolicy = $overridePolicy;
@@ -223,7 +223,7 @@ class CreateChildLineItemFulfillmentDataType
         return $this->owner;
     }
 
-    public function withOwner(?string $owner): CreateChildLineItemFulfillmentDataType
+    public function withOwner(?string $owner): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->owner = $owner;
@@ -236,7 +236,7 @@ class CreateChildLineItemFulfillmentDataType
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): CreateChildLineItemFulfillmentDataType
+    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;

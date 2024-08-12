@@ -22,24 +22,24 @@ class GetMatchingLineItemInfoType
     /**
      * Constructor
      */
-    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, string $targetTierName, AccountIdentifierType $targetAccountUnit)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, string $targetTierName, \Flexnet\EntitlementOrderService\Type\AccountIdentifierType $targetAccountUnit)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->targetTierName = $targetTierName;
         $this->targetAccountUnit = $targetAccountUnit;
     }
 
-    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, string $targetTierName, AccountIdentifierType $targetAccountUnit)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, string $targetTierName, \Flexnet\EntitlementOrderService\Type\AccountIdentifierType $targetAccountUnit)
     {
         return new static(...\func_get_args());
     }
 
-    public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
+    public function getLineItemIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
-    public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): GetMatchingLineItemInfoType
+    public function withLineItemIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier): \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType
     {
         $new = clone $this;
         $new->lineItemIdentifier = $lineItemIdentifier;
@@ -52,7 +52,7 @@ class GetMatchingLineItemInfoType
         return $this->targetTierName;
     }
 
-    public function withTargetTierName(string $targetTierName): GetMatchingLineItemInfoType
+    public function withTargetTierName(string $targetTierName): \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType
     {
         $new = clone $this;
         $new->targetTierName = $targetTierName;
@@ -60,12 +60,12 @@ class GetMatchingLineItemInfoType
         return $new;
     }
 
-    public function getTargetAccountUnit(): AccountIdentifierType
+    public function getTargetAccountUnit(): \Flexnet\EntitlementOrderService\Type\AccountIdentifierType
     {
         return $this->targetAccountUnit;
     }
 
-    public function withTargetAccountUnit(AccountIdentifierType $targetAccountUnit): GetMatchingLineItemInfoType
+    public function withTargetAccountUnit(\Flexnet\EntitlementOrderService\Type\AccountIdentifierType $targetAccountUnit): \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType
     {
         $new = clone $this;
         $new->targetAccountUnit = $targetAccountUnit;

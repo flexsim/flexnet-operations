@@ -87,7 +87,7 @@ class AdvancedFulfillmentLCDataType
     /**
      * Constructor
      */
-    public function __construct(string $fulfillmentId, string $childActivationId = null, int $fulfillCount = null, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, ServerIDsType $serverHost = null, string $nodeLockHost = null, NodeIDsType $countedNodeLockHostIds = null, CustomHostIDType $customHost = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
+    public function __construct(string $fulfillmentId, ?string $childActivationId = null, ?int $fulfillCount = null, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $versionDate = null, ?\DateTimeInterface $versionStartDate = null, ?string $soldTo = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\ServerIDsType $serverHost = null, ?string $nodeLockHost = null, ?\Flexnet\LicenseService\Type\NodeIDsType $countedNodeLockHostIds = null, ?\Flexnet\LicenseService\Type\CustomHostIDType $customHost = null, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?bool $overridePolicy = null, ?string $FNPTimeZoneValue = null)
     {
         $this->fulfillmentId = $fulfillmentId;
         $this->childActivationId = $childActivationId;
@@ -107,7 +107,7 @@ class AdvancedFulfillmentLCDataType
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
     }
 
-    public static function create(string $fulfillmentId, string $childActivationId = null, int $fulfillCount = null, \DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, ServerIDsType $serverHost = null, string $nodeLockHost = null, NodeIDsType $countedNodeLockHostIds = null, CustomHostIDType $customHost = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
+    public static function create(string $fulfillmentId, ?string $childActivationId = null, ?int $fulfillCount = null, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $versionDate = null, ?\DateTimeInterface $versionStartDate = null, ?string $soldTo = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\ServerIDsType $serverHost = null, ?string $nodeLockHost = null, ?\Flexnet\LicenseService\Type\NodeIDsType $countedNodeLockHostIds = null, ?\Flexnet\LicenseService\Type\CustomHostIDType $customHost = null, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?bool $overridePolicy = null, ?string $FNPTimeZoneValue = null)
     {
         return new static(...\func_get_args());
     }
@@ -117,7 +117,7 @@ class AdvancedFulfillmentLCDataType
         return $this->fulfillmentId;
     }
 
-    public function withFulfillmentId(string $fulfillmentId): AdvancedFulfillmentLCDataType
+    public function withFulfillmentId(string $fulfillmentId): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->fulfillmentId = $fulfillmentId;
@@ -130,7 +130,7 @@ class AdvancedFulfillmentLCDataType
         return $this->childActivationId;
     }
 
-    public function withChildActivationId(?string $childActivationId): AdvancedFulfillmentLCDataType
+    public function withChildActivationId(?string $childActivationId): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->childActivationId = $childActivationId;
@@ -143,7 +143,7 @@ class AdvancedFulfillmentLCDataType
         return $this->fulfillCount;
     }
 
-    public function withFulfillCount(?int $fulfillCount): AdvancedFulfillmentLCDataType
+    public function withFulfillCount(?int $fulfillCount): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->fulfillCount = $fulfillCount;
@@ -156,7 +156,7 @@ class AdvancedFulfillmentLCDataType
         return $this->startDate;
     }
 
-    public function withStartDate(?\DateTimeInterface $startDate): AdvancedFulfillmentLCDataType
+    public function withStartDate(?\DateTimeInterface $startDate): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -169,7 +169,7 @@ class AdvancedFulfillmentLCDataType
         return $this->versionDate;
     }
 
-    public function withVersionDate(?\DateTimeInterface $versionDate): AdvancedFulfillmentLCDataType
+    public function withVersionDate(?\DateTimeInterface $versionDate): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->versionDate = $versionDate;
@@ -182,7 +182,7 @@ class AdvancedFulfillmentLCDataType
         return $this->versionStartDate;
     }
 
-    public function withVersionStartDate(?\DateTimeInterface $versionStartDate): AdvancedFulfillmentLCDataType
+    public function withVersionStartDate(?\DateTimeInterface $versionStartDate): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->versionStartDate = $versionStartDate;
@@ -195,7 +195,7 @@ class AdvancedFulfillmentLCDataType
         return $this->soldTo;
     }
 
-    public function withSoldTo(?string $soldTo): AdvancedFulfillmentLCDataType
+    public function withSoldTo(?string $soldTo): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -208,7 +208,7 @@ class AdvancedFulfillmentLCDataType
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(?string $shipToEmail): AdvancedFulfillmentLCDataType
+    public function withShipToEmail(?string $shipToEmail): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -221,7 +221,7 @@ class AdvancedFulfillmentLCDataType
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(?string $shipToAddress): AdvancedFulfillmentLCDataType
+    public function withShipToAddress(?string $shipToAddress): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -229,12 +229,12 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    public function getServerHost(): ?ServerIDsType
+    public function getServerHost(): ?\Flexnet\LicenseService\Type\ServerIDsType
     {
         return $this->serverHost;
     }
 
-    public function withServerHost(?ServerIDsType $serverHost): AdvancedFulfillmentLCDataType
+    public function withServerHost(?\Flexnet\LicenseService\Type\ServerIDsType $serverHost): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->serverHost = $serverHost;
@@ -247,7 +247,7 @@ class AdvancedFulfillmentLCDataType
         return $this->nodeLockHost;
     }
 
-    public function withNodeLockHost(?string $nodeLockHost): AdvancedFulfillmentLCDataType
+    public function withNodeLockHost(?string $nodeLockHost): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->nodeLockHost = $nodeLockHost;
@@ -255,12 +255,12 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    public function getCountedNodeLockHostIds(): ?NodeIDsType
+    public function getCountedNodeLockHostIds(): ?\Flexnet\LicenseService\Type\NodeIDsType
     {
         return $this->countedNodeLockHostIds;
     }
 
-    public function withCountedNodeLockHostIds(?NodeIDsType $countedNodeLockHostIds): AdvancedFulfillmentLCDataType
+    public function withCountedNodeLockHostIds(?\Flexnet\LicenseService\Type\NodeIDsType $countedNodeLockHostIds): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->countedNodeLockHostIds = $countedNodeLockHostIds;
@@ -268,12 +268,12 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    public function getCustomHost(): ?CustomHostIDType
+    public function getCustomHost(): ?\Flexnet\LicenseService\Type\CustomHostIDType
     {
         return $this->customHost;
     }
 
-    public function withCustomHost(?CustomHostIDType $customHost): AdvancedFulfillmentLCDataType
+    public function withCustomHost(?\Flexnet\LicenseService\Type\CustomHostIDType $customHost): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->customHost = $customHost;
@@ -281,12 +281,12 @@ class AdvancedFulfillmentLCDataType
         return $new;
     }
 
-    public function getLicenseModelAttributes(): ?AttributeDescriptorDataType
+    public function getLicenseModelAttributes(): ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType
     {
         return $this->licenseModelAttributes;
     }
 
-    public function withLicenseModelAttributes(?AttributeDescriptorDataType $licenseModelAttributes): AdvancedFulfillmentLCDataType
+    public function withLicenseModelAttributes(?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->licenseModelAttributes = $licenseModelAttributes;
@@ -299,7 +299,7 @@ class AdvancedFulfillmentLCDataType
         return $this->overridePolicy;
     }
 
-    public function withOverridePolicy(?bool $overridePolicy): AdvancedFulfillmentLCDataType
+    public function withOverridePolicy(?bool $overridePolicy): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->overridePolicy = $overridePolicy;
@@ -312,7 +312,7 @@ class AdvancedFulfillmentLCDataType
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): AdvancedFulfillmentLCDataType
+    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;

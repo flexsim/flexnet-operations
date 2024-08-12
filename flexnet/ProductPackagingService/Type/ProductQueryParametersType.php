@@ -62,7 +62,7 @@ class ProductQueryParametersType
     /**
      * Constructor
      */
-    public function __construct(SimpleQueryType $productName = null, SimpleQueryType $version = null, SimpleQueryType $description = null, SimpleQueryType $partNumber = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null, SimpleQueryType $licenseTechnology = null, SimpleQueryType $hostType = null, bool $usedOnDevice = null, ProdCustomAttributesQueryListType $productAttributes = null)
+    public function __construct(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $productName = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $version = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $description = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $partNumber = null, ?\Flexnet\ProductPackagingService\Type\StateQueryType $state = null, ?\Flexnet\ProductPackagingService\Type\DateQueryType $creationDate = null, ?\Flexnet\ProductPackagingService\Type\DateQueryType $lastModifiedDate = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $licenseTechnology = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $hostType = null, ?bool $usedOnDevice = null, ?\Flexnet\ProductPackagingService\Type\ProdCustomAttributesQueryListType $productAttributes = null)
     {
         $this->productName = $productName;
         $this->version = $version;
@@ -77,17 +77,17 @@ class ProductQueryParametersType
         $this->productAttributes = $productAttributes;
     }
 
-    public static function create(SimpleQueryType $productName = null, SimpleQueryType $version = null, SimpleQueryType $description = null, SimpleQueryType $partNumber = null, StateQueryType $state = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null, SimpleQueryType $licenseTechnology = null, SimpleQueryType $hostType = null, bool $usedOnDevice = null, ProdCustomAttributesQueryListType $productAttributes = null)
+    public static function create(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $productName = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $version = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $description = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $partNumber = null, ?\Flexnet\ProductPackagingService\Type\StateQueryType $state = null, ?\Flexnet\ProductPackagingService\Type\DateQueryType $creationDate = null, ?\Flexnet\ProductPackagingService\Type\DateQueryType $lastModifiedDate = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $licenseTechnology = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $hostType = null, ?bool $usedOnDevice = null, ?\Flexnet\ProductPackagingService\Type\ProdCustomAttributesQueryListType $productAttributes = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getProductName(): ?SimpleQueryType
+    public function getProductName(): ?\Flexnet\ProductPackagingService\Type\SimpleQueryType
     {
         return $this->productName;
     }
 
-    public function withProductName(?SimpleQueryType $productName): ProductQueryParametersType
+    public function withProductName(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $productName): \Flexnet\ProductPackagingService\Type\ProductQueryParametersType
     {
         $new = clone $this;
         $new->productName = $productName;
@@ -95,12 +95,12 @@ class ProductQueryParametersType
         return $new;
     }
 
-    public function getVersion(): ?SimpleQueryType
+    public function getVersion(): ?\Flexnet\ProductPackagingService\Type\SimpleQueryType
     {
         return $this->version;
     }
 
-    public function withVersion(?SimpleQueryType $version): ProductQueryParametersType
+    public function withVersion(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $version): \Flexnet\ProductPackagingService\Type\ProductQueryParametersType
     {
         $new = clone $this;
         $new->version = $version;
@@ -108,12 +108,12 @@ class ProductQueryParametersType
         return $new;
     }
 
-    public function getDescription(): ?SimpleQueryType
+    public function getDescription(): ?\Flexnet\ProductPackagingService\Type\SimpleQueryType
     {
         return $this->description;
     }
 
-    public function withDescription(?SimpleQueryType $description): ProductQueryParametersType
+    public function withDescription(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $description): \Flexnet\ProductPackagingService\Type\ProductQueryParametersType
     {
         $new = clone $this;
         $new->description = $description;
@@ -121,12 +121,12 @@ class ProductQueryParametersType
         return $new;
     }
 
-    public function getPartNumber(): ?SimpleQueryType
+    public function getPartNumber(): ?\Flexnet\ProductPackagingService\Type\SimpleQueryType
     {
         return $this->partNumber;
     }
 
-    public function withPartNumber(?SimpleQueryType $partNumber): ProductQueryParametersType
+    public function withPartNumber(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $partNumber): \Flexnet\ProductPackagingService\Type\ProductQueryParametersType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -134,12 +134,12 @@ class ProductQueryParametersType
         return $new;
     }
 
-    public function getState(): ?StateQueryType
+    public function getState(): ?\Flexnet\ProductPackagingService\Type\StateQueryType
     {
         return $this->state;
     }
 
-    public function withState(?StateQueryType $state): ProductQueryParametersType
+    public function withState(?\Flexnet\ProductPackagingService\Type\StateQueryType $state): \Flexnet\ProductPackagingService\Type\ProductQueryParametersType
     {
         $new = clone $this;
         $new->state = $state;
@@ -147,12 +147,12 @@ class ProductQueryParametersType
         return $new;
     }
 
-    public function getCreationDate(): ?DateQueryType
+    public function getCreationDate(): ?\Flexnet\ProductPackagingService\Type\DateQueryType
     {
         return $this->creationDate;
     }
 
-    public function withCreationDate(?DateQueryType $creationDate): ProductQueryParametersType
+    public function withCreationDate(?\Flexnet\ProductPackagingService\Type\DateQueryType $creationDate): \Flexnet\ProductPackagingService\Type\ProductQueryParametersType
     {
         $new = clone $this;
         $new->creationDate = $creationDate;
@@ -160,12 +160,12 @@ class ProductQueryParametersType
         return $new;
     }
 
-    public function getLastModifiedDate(): ?DateQueryType
+    public function getLastModifiedDate(): ?\Flexnet\ProductPackagingService\Type\DateQueryType
     {
         return $this->lastModifiedDate;
     }
 
-    public function withLastModifiedDate(?DateQueryType $lastModifiedDate): ProductQueryParametersType
+    public function withLastModifiedDate(?\Flexnet\ProductPackagingService\Type\DateQueryType $lastModifiedDate): \Flexnet\ProductPackagingService\Type\ProductQueryParametersType
     {
         $new = clone $this;
         $new->lastModifiedDate = $lastModifiedDate;
@@ -173,12 +173,12 @@ class ProductQueryParametersType
         return $new;
     }
 
-    public function getLicenseTechnology(): ?SimpleQueryType
+    public function getLicenseTechnology(): ?\Flexnet\ProductPackagingService\Type\SimpleQueryType
     {
         return $this->licenseTechnology;
     }
 
-    public function withLicenseTechnology(?SimpleQueryType $licenseTechnology): ProductQueryParametersType
+    public function withLicenseTechnology(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $licenseTechnology): \Flexnet\ProductPackagingService\Type\ProductQueryParametersType
     {
         $new = clone $this;
         $new->licenseTechnology = $licenseTechnology;
@@ -186,12 +186,12 @@ class ProductQueryParametersType
         return $new;
     }
 
-    public function getHostType(): ?SimpleQueryType
+    public function getHostType(): ?\Flexnet\ProductPackagingService\Type\SimpleQueryType
     {
         return $this->hostType;
     }
 
-    public function withHostType(?SimpleQueryType $hostType): ProductQueryParametersType
+    public function withHostType(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $hostType): \Flexnet\ProductPackagingService\Type\ProductQueryParametersType
     {
         $new = clone $this;
         $new->hostType = $hostType;
@@ -204,7 +204,7 @@ class ProductQueryParametersType
         return $this->usedOnDevice;
     }
 
-    public function withUsedOnDevice(?bool $usedOnDevice): ProductQueryParametersType
+    public function withUsedOnDevice(?bool $usedOnDevice): \Flexnet\ProductPackagingService\Type\ProductQueryParametersType
     {
         $new = clone $this;
         $new->usedOnDevice = $usedOnDevice;
@@ -212,12 +212,12 @@ class ProductQueryParametersType
         return $new;
     }
 
-    public function getProductAttributes(): ?ProdCustomAttributesQueryListType
+    public function getProductAttributes(): ?\Flexnet\ProductPackagingService\Type\ProdCustomAttributesQueryListType
     {
         return $this->productAttributes;
     }
 
-    public function withProductAttributes(?ProdCustomAttributesQueryListType $productAttributes): ProductQueryParametersType
+    public function withProductAttributes(?\Flexnet\ProductPackagingService\Type\ProdCustomAttributesQueryListType $productAttributes): \Flexnet\ProductPackagingService\Type\ProductQueryParametersType
     {
         $new = clone $this;
         $new->productAttributes = $productAttributes;

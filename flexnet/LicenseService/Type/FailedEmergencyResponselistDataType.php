@@ -14,7 +14,7 @@ class FailedEmergencyResponselistDataType
      *
      * @param  \Flexnet\LicenseService\Type\FailedEmergencyResponseDataType|array<\Flexnet\LicenseService\Type\FailedEmergencyResponseDataType>|null  $failedFulfillment
      */
-    public function __construct(FailedEmergencyResponseDataType|array $failedFulfillment = null)
+    public function __construct(\Flexnet\LicenseService\Type\FailedEmergencyResponseDataType|array|null $failedFulfillment = null)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
@@ -22,7 +22,7 @@ class FailedEmergencyResponselistDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedEmergencyResponseDataType|array<\Flexnet\LicenseService\Type\FailedEmergencyResponseDataType>|null  $failedFulfillment
      */
-    public static function create(FailedEmergencyResponseDataType|array $failedFulfillment = null)
+    public static function create(\Flexnet\LicenseService\Type\FailedEmergencyResponseDataType|array|null $failedFulfillment = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedEmergencyResponselistDataType
     /**
      * @return \Flexnet\LicenseService\Type\FailedEmergencyResponseDataType|array<\Flexnet\LicenseService\Type\FailedEmergencyResponseDataType>|null
      */
-    public function getFailedFulfillment(): FailedEmergencyResponseDataType|array|null
+    public function getFailedFulfillment(): \Flexnet\LicenseService\Type\FailedEmergencyResponseDataType|array|null
     {
         return $this->failedFulfillment;
     }
@@ -38,7 +38,7 @@ class FailedEmergencyResponselistDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedEmergencyResponseDataType|array<\Flexnet\LicenseService\Type\FailedEmergencyResponseDataType>|null  $failedFulfillment
      */
-    public function withFailedFulfillment(FailedEmergencyResponseDataType|array|null $failedFulfillment): FailedEmergencyResponselistDataType
+    public function withFailedFulfillment(\Flexnet\LicenseService\Type\FailedEmergencyResponseDataType|array|null $failedFulfillment): \Flexnet\LicenseService\Type\FailedEmergencyResponselistDataType
     {
         $new = clone $this;
         $new->failedFulfillment = $failedFulfillment;

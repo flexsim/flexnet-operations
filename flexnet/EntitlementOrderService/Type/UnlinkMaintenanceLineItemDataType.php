@@ -17,23 +17,23 @@ class UnlinkMaintenanceLineItemDataType
     /**
      * Constructor
      */
-    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->maintenanceLineItemIdentifier = $maintenanceLineItemIdentifier;
     }
 
-    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
     {
         return new static(...\func_get_args());
     }
 
-    public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
+    public function getLineItemIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
-    public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): UnlinkMaintenanceLineItemDataType
+    public function withLineItemIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier): \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->lineItemIdentifier = $lineItemIdentifier;
@@ -41,12 +41,12 @@ class UnlinkMaintenanceLineItemDataType
         return $new;
     }
 
-    public function getMaintenanceLineItemIdentifier(): EntitlementLineItemIdentifierType
+    public function getMaintenanceLineItemIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
     {
         return $this->maintenanceLineItemIdentifier;
     }
 
-    public function withMaintenanceLineItemIdentifier(EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier): UnlinkMaintenanceLineItemDataType
+    public function withMaintenanceLineItemIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier): \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->maintenanceLineItemIdentifier = $maintenanceLineItemIdentifier;

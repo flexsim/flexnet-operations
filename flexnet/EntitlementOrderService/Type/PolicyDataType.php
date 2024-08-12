@@ -17,13 +17,13 @@ class PolicyDataType
     /**
      * Constructor
      */
-    public function __construct(int $allowedCount, PolicyTermType $policyTerm)
+    public function __construct(int $allowedCount, \Flexnet\EntitlementOrderService\Type\PolicyTermType $policyTerm)
     {
         $this->allowedCount = $allowedCount;
         $this->policyTerm = $policyTerm;
     }
 
-    public static function create(int $allowedCount, PolicyTermType $policyTerm)
+    public static function create(int $allowedCount, \Flexnet\EntitlementOrderService\Type\PolicyTermType $policyTerm)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class PolicyDataType
         return $this->allowedCount;
     }
 
-    public function withAllowedCount(int $allowedCount): PolicyDataType
+    public function withAllowedCount(int $allowedCount): \Flexnet\EntitlementOrderService\Type\PolicyDataType
     {
         $new = clone $this;
         $new->allowedCount = $allowedCount;
@@ -41,12 +41,12 @@ class PolicyDataType
         return $new;
     }
 
-    public function getPolicyTerm(): PolicyTermType
+    public function getPolicyTerm(): \Flexnet\EntitlementOrderService\Type\PolicyTermType
     {
         return $this->policyTerm;
     }
 
-    public function withPolicyTerm(PolicyTermType $policyTerm): PolicyDataType
+    public function withPolicyTerm(\Flexnet\EntitlementOrderService\Type\PolicyTermType $policyTerm): \Flexnet\EntitlementOrderService\Type\PolicyDataType
     {
         $new = clone $this;
         $new->policyTerm = $policyTerm;

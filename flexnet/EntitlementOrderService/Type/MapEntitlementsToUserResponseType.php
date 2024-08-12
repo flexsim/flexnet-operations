@@ -19,23 +19,23 @@ class MapEntitlementsToUserResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedMapEntitlementsToUserDataListType $failedData = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, ?\Flexnet\EntitlementOrderService\Type\FailedMapEntitlementsToUserDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedMapEntitlementsToUserDataListType $failedData = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, ?\Flexnet\EntitlementOrderService\Type\FailedMapEntitlementsToUserDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\EntitlementOrderService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): MapEntitlementsToUserResponseType
+    public function withStatusInfo(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo): \Flexnet\EntitlementOrderService\Type\MapEntitlementsToUserResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class MapEntitlementsToUserResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedMapEntitlementsToUserDataListType
+    public function getFailedData(): ?\Flexnet\EntitlementOrderService\Type\FailedMapEntitlementsToUserDataListType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedMapEntitlementsToUserDataListType $failedData): MapEntitlementsToUserResponseType
+    public function withFailedData(?\Flexnet\EntitlementOrderService\Type\FailedMapEntitlementsToUserDataListType $failedData): \Flexnet\EntitlementOrderService\Type\MapEntitlementsToUserResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

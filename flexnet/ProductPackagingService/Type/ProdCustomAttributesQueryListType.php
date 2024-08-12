@@ -14,7 +14,7 @@ class ProdCustomAttributesQueryListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\ProdCustomAttributeQueryType|array<\Flexnet\ProductPackagingService\Type\ProdCustomAttributeQueryType>|null  $attribute
      */
-    public function __construct(ProdCustomAttributeQueryType|array $attribute = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProdCustomAttributeQueryType|array|null $attribute = null)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class ProdCustomAttributesQueryListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProdCustomAttributeQueryType|array<\Flexnet\ProductPackagingService\Type\ProdCustomAttributeQueryType>|null  $attribute
      */
-    public static function create(ProdCustomAttributeQueryType|array $attribute = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProdCustomAttributeQueryType|array|null $attribute = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class ProdCustomAttributesQueryListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\ProdCustomAttributeQueryType|array<\Flexnet\ProductPackagingService\Type\ProdCustomAttributeQueryType>|null
      */
-    public function getAttribute(): ProdCustomAttributeQueryType|array|null
+    public function getAttribute(): \Flexnet\ProductPackagingService\Type\ProdCustomAttributeQueryType|array|null
     {
         return $this->attribute;
     }
@@ -38,7 +38,7 @@ class ProdCustomAttributesQueryListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProdCustomAttributeQueryType|array<\Flexnet\ProductPackagingService\Type\ProdCustomAttributeQueryType>|null  $attribute
      */
-    public function withAttribute(ProdCustomAttributeQueryType|array|null $attribute): ProdCustomAttributesQueryListType
+    public function withAttribute(\Flexnet\ProductPackagingService\Type\ProdCustomAttributeQueryType|array|null $attribute): \Flexnet\ProductPackagingService\Type\ProdCustomAttributesQueryListType
     {
         $new = clone $this;
         $new->attribute = $attribute;

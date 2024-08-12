@@ -14,7 +14,7 @@ class ProductStateChangeListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType>|null  $product
      */
-    public function __construct(ProductStateChangeDataType|array $product = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array|null $product = null)
     {
         $this->product = $product;
     }
@@ -22,7 +22,7 @@ class ProductStateChangeListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType>|null  $product
      */
-    public static function create(ProductStateChangeDataType|array $product = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array|null $product = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class ProductStateChangeListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType>|null
      */
-    public function getProduct(): ProductStateChangeDataType|array|null
+    public function getProduct(): \Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array|null
     {
         return $this->product;
     }
@@ -38,7 +38,7 @@ class ProductStateChangeListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType>|null  $product
      */
-    public function withProduct(ProductStateChangeDataType|array|null $product): ProductStateChangeListType
+    public function withProduct(\Flexnet\EntitlementOrderService\Type\ProductStateChangeDataType|array|null $product): \Flexnet\EntitlementOrderService\Type\ProductStateChangeListType
     {
         $new = clone $this;
         $new->product = $product;

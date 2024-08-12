@@ -14,22 +14,22 @@ class HandleProductCategoryToAcctResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo)
     {
         $this->statusInfo = $statusInfo;
     }
 
-    public static function create(StatusInfoType $statusInfo)
+    public static function create(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): HandleProductCategoryToAcctResponseType
+    public function withStatusInfo(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo): \Flexnet\ProductPackagingService\Type\HandleProductCategoryToAcctResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;

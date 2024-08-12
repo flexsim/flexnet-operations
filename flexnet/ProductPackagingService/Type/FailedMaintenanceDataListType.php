@@ -14,7 +14,7 @@ class FailedMaintenanceDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType>|null  $failedMaintenance
      */
-    public function __construct(FailedMaintenanceDataType|array $failedMaintenance = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType|array|null $failedMaintenance = null)
     {
         $this->failedMaintenance = $failedMaintenance;
     }
@@ -22,7 +22,7 @@ class FailedMaintenanceDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType>|null  $failedMaintenance
      */
-    public static function create(FailedMaintenanceDataType|array $failedMaintenance = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType|array|null $failedMaintenance = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedMaintenanceDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType>|null
      */
-    public function getFailedMaintenance(): FailedMaintenanceDataType|array|null
+    public function getFailedMaintenance(): \Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType|array|null
     {
         return $this->failedMaintenance;
     }
@@ -38,7 +38,7 @@ class FailedMaintenanceDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType>|null  $failedMaintenance
      */
-    public function withFailedMaintenance(FailedMaintenanceDataType|array|null $failedMaintenance): FailedMaintenanceDataListType
+    public function withFailedMaintenance(\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataType|array|null $failedMaintenance): \Flexnet\ProductPackagingService\Type\FailedMaintenanceDataListType
     {
         $new = clone $this;
         $new->failedMaintenance = $failedMaintenance;

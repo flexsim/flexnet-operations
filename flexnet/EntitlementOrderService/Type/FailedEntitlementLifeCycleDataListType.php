@@ -14,7 +14,7 @@ class FailedEntitlementLifeCycleDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType>|null  $failedEntitlement
      */
-    public function __construct(FailedEntitlementLifeCycleDataType|array $failedEntitlement = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType|array|null $failedEntitlement = null)
     {
         $this->failedEntitlement = $failedEntitlement;
     }
@@ -22,7 +22,7 @@ class FailedEntitlementLifeCycleDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType>|null  $failedEntitlement
      */
-    public static function create(FailedEntitlementLifeCycleDataType|array $failedEntitlement = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType|array|null $failedEntitlement = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedEntitlementLifeCycleDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType>|null
      */
-    public function getFailedEntitlement(): FailedEntitlementLifeCycleDataType|array|null
+    public function getFailedEntitlement(): \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType|array|null
     {
         return $this->failedEntitlement;
     }
@@ -38,7 +38,7 @@ class FailedEntitlementLifeCycleDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType|array<\Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType>|null  $failedEntitlement
      */
-    public function withFailedEntitlement(FailedEntitlementLifeCycleDataType|array|null $failedEntitlement): FailedEntitlementLifeCycleDataListType
+    public function withFailedEntitlement(\Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataType|array|null $failedEntitlement): \Flexnet\EntitlementOrderService\Type\FailedEntitlementLifeCycleDataListType
     {
         $new = clone $this;
         $new->failedEntitlement = $failedEntitlement;

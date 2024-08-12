@@ -17,13 +17,13 @@ class CreatePartNumberDataType
     /**
      * Constructor
      */
-    public function __construct(string $partId, string $description = null)
+    public function __construct(string $partId, ?string $description = null)
     {
         $this->partId = $partId;
         $this->description = $description;
     }
 
-    public static function create(string $partId, string $description = null)
+    public static function create(string $partId, ?string $description = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class CreatePartNumberDataType
         return $this->partId;
     }
 
-    public function withPartId(string $partId): CreatePartNumberDataType
+    public function withPartId(string $partId): \Flexnet\ProductPackagingService\Type\CreatePartNumberDataType
     {
         $new = clone $this;
         $new->partId = $partId;
@@ -46,7 +46,7 @@ class CreatePartNumberDataType
         return $this->description;
     }
 
-    public function withDescription(?string $description): CreatePartNumberDataType
+    public function withDescription(?string $description): \Flexnet\ProductPackagingService\Type\CreatePartNumberDataType
     {
         $new = clone $this;
         $new->description = $description;

@@ -38,7 +38,7 @@ class NodeIDsType
     /**
      * @param  string|array<string>  $nodeId
      */
-    public function withNodeId(string|array $nodeId): NodeIDsType
+    public function withNodeId(string|array $nodeId): \Flexnet\LicenseService\Type\NodeIDsType
     {
         $new = clone $this;
         $new->nodeId = $nodeId;

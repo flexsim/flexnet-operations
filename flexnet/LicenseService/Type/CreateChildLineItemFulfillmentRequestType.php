@@ -16,7 +16,7 @@ class CreateChildLineItemFulfillmentRequestType implements RequestInterface
      *
      * @param  \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType>  $fulfillment
      */
-    public function __construct(CreateChildLineItemFulfillmentDataType|array $fulfillment)
+    public function __construct(\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -24,7 +24,7 @@ class CreateChildLineItemFulfillmentRequestType implements RequestInterface
     /**
      * @param  \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType>  $fulfillment
      */
-    public static function create(CreateChildLineItemFulfillmentDataType|array $fulfillment)
+    public static function create(\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class CreateChildLineItemFulfillmentRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType>
      */
-    public function getFulfillment(): CreateChildLineItemFulfillmentDataType|array
+    public function getFulfillment(): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType|array
     {
         return $this->fulfillment;
     }
@@ -40,7 +40,7 @@ class CreateChildLineItemFulfillmentRequestType implements RequestInterface
     /**
      * @param  \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType|array<\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType>  $fulfillment
      */
-    public function withFulfillment(CreateChildLineItemFulfillmentDataType|array $fulfillment): CreateChildLineItemFulfillmentRequestType
+    public function withFulfillment(\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType|array $fulfillment): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentRequestType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;

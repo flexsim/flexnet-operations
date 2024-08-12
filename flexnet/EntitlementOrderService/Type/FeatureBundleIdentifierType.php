@@ -17,13 +17,13 @@ class FeatureBundleIdentifierType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, FeatureBundlePKType $primaryKeys = null)
+    public function __construct(?string $uniqueId = null, ?\Flexnet\EntitlementOrderService\Type\FeatureBundlePKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    public static function create(string $uniqueId = null, FeatureBundlePKType $primaryKeys = null)
+    public static function create(?string $uniqueId = null, ?\Flexnet\EntitlementOrderService\Type\FeatureBundlePKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class FeatureBundleIdentifierType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): FeatureBundleIdentifierType
+    public function withUniqueId(?string $uniqueId): \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -41,12 +41,12 @@ class FeatureBundleIdentifierType
         return $new;
     }
 
-    public function getPrimaryKeys(): ?FeatureBundlePKType
+    public function getPrimaryKeys(): ?\Flexnet\EntitlementOrderService\Type\FeatureBundlePKType
     {
         return $this->primaryKeys;
     }
 
-    public function withPrimaryKeys(?FeatureBundlePKType $primaryKeys): FeatureBundleIdentifierType
+    public function withPrimaryKeys(?\Flexnet\EntitlementOrderService\Type\FeatureBundlePKType $primaryKeys): \Flexnet\EntitlementOrderService\Type\FeatureBundleIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

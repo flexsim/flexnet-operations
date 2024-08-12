@@ -29,7 +29,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
     /**
      * Constructor
      */
-    public function __construct(SearchMaintenanceLineItemDataType $queryParams, EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int $pageNumber = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\SearchMaintenanceLineItemDataType $queryParams, \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, ?int $pageNumber = null)
     {
         $this->queryParams = $queryParams;
         $this->entitlementMaintenanceLineItemResponseConfig = $entitlementMaintenanceLineItemResponseConfig;
@@ -37,17 +37,17 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
         $this->pageNumber = $pageNumber;
     }
 
-    public static function create(SearchMaintenanceLineItemDataType $queryParams, EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, int $pageNumber = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\SearchMaintenanceLineItemDataType $queryParams, \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig, int $batchSize, ?int $pageNumber = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): SearchMaintenanceLineItemDataType
+    public function getQueryParams(): \Flexnet\EntitlementOrderService\Type\SearchMaintenanceLineItemDataType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(SearchMaintenanceLineItemDataType $queryParams): SearchEntitlementMaintenanceLineItemPropertiesRequestType
+    public function withQueryParams(\Flexnet\EntitlementOrderService\Type\SearchMaintenanceLineItemDataType $queryParams): \Flexnet\EntitlementOrderService\Type\SearchEntitlementMaintenanceLineItemPropertiesRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -55,12 +55,12 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
         return $new;
     }
 
-    public function getEntitlementMaintenanceLineItemResponseConfig(): EntitlementMaintenanceLineItemResponseConfigRequestType
+    public function getEntitlementMaintenanceLineItemResponseConfig(): \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemResponseConfigRequestType
     {
         return $this->entitlementMaintenanceLineItemResponseConfig;
     }
 
-    public function withEntitlementMaintenanceLineItemResponseConfig(EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig): SearchEntitlementMaintenanceLineItemPropertiesRequestType
+    public function withEntitlementMaintenanceLineItemResponseConfig(\Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemResponseConfigRequestType $entitlementMaintenanceLineItemResponseConfig): \Flexnet\EntitlementOrderService\Type\SearchEntitlementMaintenanceLineItemPropertiesRequestType
     {
         $new = clone $this;
         $new->entitlementMaintenanceLineItemResponseConfig = $entitlementMaintenanceLineItemResponseConfig;
@@ -73,7 +73,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
         return $this->batchSize;
     }
 
-    public function withBatchSize(int $batchSize): SearchEntitlementMaintenanceLineItemPropertiesRequestType
+    public function withBatchSize(int $batchSize): \Flexnet\EntitlementOrderService\Type\SearchEntitlementMaintenanceLineItemPropertiesRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;
@@ -86,7 +86,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesRequestType implements Reque
         return $this->pageNumber;
     }
 
-    public function withPageNumber(?int $pageNumber): SearchEntitlementMaintenanceLineItemPropertiesRequestType
+    public function withPageNumber(?int $pageNumber): \Flexnet\EntitlementOrderService\Type\SearchEntitlementMaintenanceLineItemPropertiesRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;

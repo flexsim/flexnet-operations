@@ -33,7 +33,7 @@ class CreatedPartNumberDataType
         return $this->recordRefNo;
     }
 
-    public function withRecordRefNo(string $recordRefNo): CreatedPartNumberDataType
+    public function withRecordRefNo(string $recordRefNo): \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType
     {
         $new = clone $this;
         $new->recordRefNo = $recordRefNo;
@@ -46,7 +46,7 @@ class CreatedPartNumberDataType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string $uniqueId): CreatedPartNumberDataType
+    public function withUniqueId(string $uniqueId): \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;

@@ -42,7 +42,7 @@ class ConsolidatedFulfillmentsQPType
     /**
      * Constructor
      */
-    public function __construct(SimpleQueryType $consolidatedLicenseId = null, SimpleQueryType $fulfillmentId = null, SimpleQueryType $activationId = null, SimpleQueryType $entitlementId = null, SimpleQueryType $soldTo = null, SimpleQueryType $criteria = null, StateQueryType $state = null)
+    public function __construct(?\Flexnet\LicenseService\Type\SimpleQueryType $consolidatedLicenseId = null, ?\Flexnet\LicenseService\Type\SimpleQueryType $fulfillmentId = null, ?\Flexnet\LicenseService\Type\SimpleQueryType $activationId = null, ?\Flexnet\LicenseService\Type\SimpleQueryType $entitlementId = null, ?\Flexnet\LicenseService\Type\SimpleQueryType $soldTo = null, ?\Flexnet\LicenseService\Type\SimpleQueryType $criteria = null, ?\Flexnet\LicenseService\Type\StateQueryType $state = null)
     {
         $this->consolidatedLicenseId = $consolidatedLicenseId;
         $this->fulfillmentId = $fulfillmentId;
@@ -53,17 +53,17 @@ class ConsolidatedFulfillmentsQPType
         $this->state = $state;
     }
 
-    public static function create(SimpleQueryType $consolidatedLicenseId = null, SimpleQueryType $fulfillmentId = null, SimpleQueryType $activationId = null, SimpleQueryType $entitlementId = null, SimpleQueryType $soldTo = null, SimpleQueryType $criteria = null, StateQueryType $state = null)
+    public static function create(?\Flexnet\LicenseService\Type\SimpleQueryType $consolidatedLicenseId = null, ?\Flexnet\LicenseService\Type\SimpleQueryType $fulfillmentId = null, ?\Flexnet\LicenseService\Type\SimpleQueryType $activationId = null, ?\Flexnet\LicenseService\Type\SimpleQueryType $entitlementId = null, ?\Flexnet\LicenseService\Type\SimpleQueryType $soldTo = null, ?\Flexnet\LicenseService\Type\SimpleQueryType $criteria = null, ?\Flexnet\LicenseService\Type\StateQueryType $state = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getConsolidatedLicenseId(): ?SimpleQueryType
+    public function getConsolidatedLicenseId(): ?\Flexnet\LicenseService\Type\SimpleQueryType
     {
         return $this->consolidatedLicenseId;
     }
 
-    public function withConsolidatedLicenseId(?SimpleQueryType $consolidatedLicenseId): ConsolidatedFulfillmentsQPType
+    public function withConsolidatedLicenseId(?\Flexnet\LicenseService\Type\SimpleQueryType $consolidatedLicenseId): \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType
     {
         $new = clone $this;
         $new->consolidatedLicenseId = $consolidatedLicenseId;
@@ -71,12 +71,12 @@ class ConsolidatedFulfillmentsQPType
         return $new;
     }
 
-    public function getFulfillmentId(): ?SimpleQueryType
+    public function getFulfillmentId(): ?\Flexnet\LicenseService\Type\SimpleQueryType
     {
         return $this->fulfillmentId;
     }
 
-    public function withFulfillmentId(?SimpleQueryType $fulfillmentId): ConsolidatedFulfillmentsQPType
+    public function withFulfillmentId(?\Flexnet\LicenseService\Type\SimpleQueryType $fulfillmentId): \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType
     {
         $new = clone $this;
         $new->fulfillmentId = $fulfillmentId;
@@ -84,12 +84,12 @@ class ConsolidatedFulfillmentsQPType
         return $new;
     }
 
-    public function getActivationId(): ?SimpleQueryType
+    public function getActivationId(): ?\Flexnet\LicenseService\Type\SimpleQueryType
     {
         return $this->activationId;
     }
 
-    public function withActivationId(?SimpleQueryType $activationId): ConsolidatedFulfillmentsQPType
+    public function withActivationId(?\Flexnet\LicenseService\Type\SimpleQueryType $activationId): \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -97,12 +97,12 @@ class ConsolidatedFulfillmentsQPType
         return $new;
     }
 
-    public function getEntitlementId(): ?SimpleQueryType
+    public function getEntitlementId(): ?\Flexnet\LicenseService\Type\SimpleQueryType
     {
         return $this->entitlementId;
     }
 
-    public function withEntitlementId(?SimpleQueryType $entitlementId): ConsolidatedFulfillmentsQPType
+    public function withEntitlementId(?\Flexnet\LicenseService\Type\SimpleQueryType $entitlementId): \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType
     {
         $new = clone $this;
         $new->entitlementId = $entitlementId;
@@ -110,12 +110,12 @@ class ConsolidatedFulfillmentsQPType
         return $new;
     }
 
-    public function getSoldTo(): ?SimpleQueryType
+    public function getSoldTo(): ?\Flexnet\LicenseService\Type\SimpleQueryType
     {
         return $this->soldTo;
     }
 
-    public function withSoldTo(?SimpleQueryType $soldTo): ConsolidatedFulfillmentsQPType
+    public function withSoldTo(?\Flexnet\LicenseService\Type\SimpleQueryType $soldTo): \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -123,12 +123,12 @@ class ConsolidatedFulfillmentsQPType
         return $new;
     }
 
-    public function getCriteria(): ?SimpleQueryType
+    public function getCriteria(): ?\Flexnet\LicenseService\Type\SimpleQueryType
     {
         return $this->criteria;
     }
 
-    public function withCriteria(?SimpleQueryType $criteria): ConsolidatedFulfillmentsQPType
+    public function withCriteria(?\Flexnet\LicenseService\Type\SimpleQueryType $criteria): \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType
     {
         $new = clone $this;
         $new->criteria = $criteria;
@@ -136,12 +136,12 @@ class ConsolidatedFulfillmentsQPType
         return $new;
     }
 
-    public function getState(): ?StateQueryType
+    public function getState(): ?\Flexnet\LicenseService\Type\StateQueryType
     {
         return $this->state;
     }
 
-    public function withState(?StateQueryType $state): ConsolidatedFulfillmentsQPType
+    public function withState(?\Flexnet\LicenseService\Type\StateQueryType $state): \Flexnet\LicenseService\Type\ConsolidatedFulfillmentsQPType
     {
         $new = clone $this;
         $new->state = $state;

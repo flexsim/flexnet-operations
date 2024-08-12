@@ -29,7 +29,7 @@ class GetMaintenanceQueryRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(int $pageNumber, int $batchSize, bool $returnContainedObjects, MaintenanceQueryParametersType $queryParams = null)
+    public function __construct(int $pageNumber, int $batchSize, bool $returnContainedObjects, ?\Flexnet\ProductPackagingService\Type\MaintenanceQueryParametersType $queryParams = null)
     {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -37,17 +37,17 @@ class GetMaintenanceQueryRequestType implements RequestInterface
         $this->queryParams = $queryParams;
     }
 
-    public static function create(int $pageNumber, int $batchSize, bool $returnContainedObjects, MaintenanceQueryParametersType $queryParams = null)
+    public static function create(int $pageNumber, int $batchSize, bool $returnContainedObjects, ?\Flexnet\ProductPackagingService\Type\MaintenanceQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): ?MaintenanceQueryParametersType
+    public function getQueryParams(): ?\Flexnet\ProductPackagingService\Type\MaintenanceQueryParametersType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(?MaintenanceQueryParametersType $queryParams): GetMaintenanceQueryRequestType
+    public function withQueryParams(?\Flexnet\ProductPackagingService\Type\MaintenanceQueryParametersType $queryParams): \Flexnet\ProductPackagingService\Type\GetMaintenanceQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -60,7 +60,7 @@ class GetMaintenanceQueryRequestType implements RequestInterface
         return $this->pageNumber;
     }
 
-    public function withPageNumber(int $pageNumber): GetMaintenanceQueryRequestType
+    public function withPageNumber(int $pageNumber): \Flexnet\ProductPackagingService\Type\GetMaintenanceQueryRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;
@@ -73,7 +73,7 @@ class GetMaintenanceQueryRequestType implements RequestInterface
         return $this->batchSize;
     }
 
-    public function withBatchSize(int $batchSize): GetMaintenanceQueryRequestType
+    public function withBatchSize(int $batchSize): \Flexnet\ProductPackagingService\Type\GetMaintenanceQueryRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;
@@ -86,7 +86,7 @@ class GetMaintenanceQueryRequestType implements RequestInterface
         return $this->returnContainedObjects;
     }
 
-    public function withReturnContainedObjects(bool $returnContainedObjects): GetMaintenanceQueryRequestType
+    public function withReturnContainedObjects(bool $returnContainedObjects): \Flexnet\ProductPackagingService\Type\GetMaintenanceQueryRequestType
     {
         $new = clone $this;
         $new->returnContainedObjects = $returnContainedObjects;
