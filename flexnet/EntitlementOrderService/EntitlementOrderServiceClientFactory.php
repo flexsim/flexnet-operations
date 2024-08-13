@@ -3,6 +3,7 @@
 namespace Flexnet\EntitlementOrderService;
 
 use Http\Client\Common\Plugin\AuthenticationPlugin;
+use Http\Client\Common\Plugin\HeaderAppendPlugin;
 use Http\Client\Common\PluginClient;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\Authentication\BasicAuth;
@@ -25,6 +26,8 @@ class EntitlementOrderServiceClientFactory
                     Psr18ClientDiscovery::find(),
                     [
                         new AuthenticationPlugin(new BasicAuth($username, $password)),
+                        new HeaderAppendPlugin(['User-Agent' => 'flexnet-soap']),
+
                     ]
                 )
             )
