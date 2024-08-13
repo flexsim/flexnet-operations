@@ -19,7 +19,7 @@ class LicenseServiceClientFactory
     public static function factory(string $wsdl, string $username, string $password): \Flexnet\LicenseService\LicenseServiceClient
     {
         $engine = DefaultEngineFactory::create(
-            ExtSoapOptions::defaults($wsdl, [])
+            ExtSoapOptions::defaults($wsdl, ['user_agent' => 'flexnet-soap-client'])
                 ->withClassMap(LicenseServiceClassmap::getCollection()),
             Psr18Transport::createForClient(
                 new PluginClient(
@@ -27,7 +27,7 @@ class LicenseServiceClientFactory
                     [
                         new AuthenticationPlugin(new BasicAuth($username, $password)),
                         new HeaderSetPlugin([
-                            'User-Agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1',
+                            'User-Agent' => 'flexnet-soap-client',
                         ]),
                     ]
                 )

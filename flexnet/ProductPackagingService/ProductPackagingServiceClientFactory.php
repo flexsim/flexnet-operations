@@ -19,7 +19,7 @@ class ProductPackagingServiceClientFactory
     public static function factory(string $wsdl, string $username, string $password): \Flexnet\ProductPackagingService\ProductPackagingServiceClient
     {
         $engine = DefaultEngineFactory::create(
-            ExtSoapOptions::defaults($wsdl, [])
+            ExtSoapOptions::defaults($wsdl, ['user_agent' => 'flexnet-soap-client'])
                 ->withClassMap(ProductPackagingServiceClassmap::getCollection()),
             Psr18Transport::createForClient(
                 new PluginClient(
@@ -27,7 +27,7 @@ class ProductPackagingServiceClientFactory
                     [
                         new AuthenticationPlugin(new BasicAuth($username, $password)),
                         new HeaderSetPlugin([
-                            'User-Agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1',
+                            'User-Agent' => 'flexnet-soap-client',
                         ]),
 
                     ]
