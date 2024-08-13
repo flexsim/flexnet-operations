@@ -4,6 +4,7 @@ namespace Flexnet\LicenseService;
 
 use Http\Client\Common\Plugin\AuthenticationPlugin;
 use Http\Client\Common\Plugin\HeaderAppendPlugin;
+use Http\Client\Common\Plugin\HeaderRemovePlugin;
 use Http\Client\Common\PluginClient;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\Authentication\BasicAuth;
@@ -26,6 +27,7 @@ class LicenseServiceClientFactory
                     Psr18ClientDiscovery::find(),
                     [
                         new AuthenticationPlugin(new BasicAuth($username, $password)),
+                        new HeaderRemovePlugin(['User-Agent']),
                         new HeaderAppendPlugin(['User-Agent' => 'flexnet-soap']),
                     ]
                 )
