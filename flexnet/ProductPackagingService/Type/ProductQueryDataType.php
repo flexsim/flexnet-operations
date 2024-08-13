@@ -25,7 +25,7 @@ class ProductQueryDataType
     private $description;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\StateType
+     * @var string
      */
     private $state;
 
@@ -142,7 +142,7 @@ class ProductQueryDataType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId, string $productName, \Flexnet\ProductPackagingService\Type\StateType $state, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties = null, ?\Flexnet\ProductPackagingService\Type\FeaturesListType $features = null, ?\Flexnet\ProductPackagingService\Type\FeatureBundlesListType $featureBundles = null, ?\Flexnet\ProductPackagingService\Type\LicenseModelsListType $licenseModels = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersListType $partNumbers = null, ?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType = null, ?\Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes = null, ?bool $usedOnDevice = null, ?string $productCategory = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes = null, ?bool $allowDownloadObsoleteFrInAdmin = null, ?bool $allowDownloadObsoleteFrInPortal = null, ?\DateTimeInterface $creationDate = null, ?\DateTimeInterface $lastModifiedDate = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes = null, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $endDate = null, ?string $upgradeEmailTemplateVarName = null)
+    public function __construct(string $uniqueId, string $productName, string $state, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties = null, ?\Flexnet\ProductPackagingService\Type\FeaturesListType $features = null, ?\Flexnet\ProductPackagingService\Type\FeatureBundlesListType $featureBundles = null, ?\Flexnet\ProductPackagingService\Type\LicenseModelsListType $licenseModels = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersListType $partNumbers = null, ?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType = null, ?\Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes = null, ?bool $usedOnDevice = null, ?string $productCategory = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes = null, ?bool $allowDownloadObsoleteFrInAdmin = null, ?bool $allowDownloadObsoleteFrInPortal = null, ?\DateTimeInterface $creationDate = null, ?\DateTimeInterface $lastModifiedDate = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes = null, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $endDate = null, ?string $upgradeEmailTemplateVarName = null)
     {
         $this->uniqueId = $uniqueId;
         $this->productName = $productName;
@@ -173,7 +173,7 @@ class ProductQueryDataType
         $this->upgradeEmailTemplateVarName = $upgradeEmailTemplateVarName;
     }
 
-    public static function create(string $uniqueId, string $productName, \Flexnet\ProductPackagingService\Type\StateType $state, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties = null, ?\Flexnet\ProductPackagingService\Type\FeaturesListType $features = null, ?\Flexnet\ProductPackagingService\Type\FeatureBundlesListType $featureBundles = null, ?\Flexnet\ProductPackagingService\Type\LicenseModelsListType $licenseModels = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersListType $partNumbers = null, ?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType = null, ?\Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes = null, ?bool $usedOnDevice = null, ?string $productCategory = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes = null, ?bool $allowDownloadObsoleteFrInAdmin = null, ?bool $allowDownloadObsoleteFrInPortal = null, ?\DateTimeInterface $creationDate = null, ?\DateTimeInterface $lastModifiedDate = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes = null, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $endDate = null, ?string $upgradeEmailTemplateVarName = null)
+    public static function create(string $uniqueId, string $productName, string $state, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties = null, ?\Flexnet\ProductPackagingService\Type\FeaturesListType $features = null, ?\Flexnet\ProductPackagingService\Type\FeatureBundlesListType $featureBundles = null, ?\Flexnet\ProductPackagingService\Type\LicenseModelsListType $licenseModels = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersListType $partNumbers = null, ?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType = null, ?\Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes = null, ?bool $usedOnDevice = null, ?string $productCategory = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes = null, ?bool $allowDownloadObsoleteFrInAdmin = null, ?bool $allowDownloadObsoleteFrInPortal = null, ?\DateTimeInterface $creationDate = null, ?\DateTimeInterface $lastModifiedDate = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes = null, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $endDate = null, ?string $upgradeEmailTemplateVarName = null)
     {
         return new static(...\func_get_args());
     }
@@ -230,12 +230,12 @@ class ProductQueryDataType
         return $new;
     }
 
-    public function getState(): \Flexnet\ProductPackagingService\Type\StateType
+    public function getState(): string
     {
         return $this->state;
     }
 
-    public function withState(\Flexnet\ProductPackagingService\Type\StateType $state): \Flexnet\ProductPackagingService\Type\ProductQueryDataType
+    public function withState(string $state): \Flexnet\ProductPackagingService\Type\ProductQueryDataType
     {
         $new = clone $this;
         $new->state = $state;

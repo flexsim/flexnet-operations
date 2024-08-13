@@ -10,20 +10,20 @@ class ProductIdentifierWithCountDataType
     private $productIdentifier;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\PositiveInteger
+     * @var string
      */
     private $count;
 
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier, \Flexnet\ProductPackagingService\Type\PositiveInteger $count)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier, string $count)
     {
         $this->productIdentifier = $productIdentifier;
         $this->count = $count;
     }
 
-    public static function create(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier, \Flexnet\ProductPackagingService\Type\PositiveInteger $count)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier, string $count)
     {
         return new static(...\func_get_args());
     }
@@ -41,12 +41,12 @@ class ProductIdentifierWithCountDataType
         return $new;
     }
 
-    public function getCount(): \Flexnet\ProductPackagingService\Type\PositiveInteger
+    public function getCount(): string
     {
         return $this->count;
     }
 
-    public function withCount(\Flexnet\ProductPackagingService\Type\PositiveInteger $count): \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType
+    public function withCount(string $count): \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType
     {
         $new = clone $this;
         $new->count = $count;

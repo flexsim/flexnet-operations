@@ -10,20 +10,20 @@ class FeatureStateDataType
     private $featureIdentifier;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\StateType
+     * @var string
      */
     private $stateToSet;
 
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, \Flexnet\ProductPackagingService\Type\StateType $stateToSet)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, string $stateToSet)
     {
         $this->featureIdentifier = $featureIdentifier;
         $this->stateToSet = $stateToSet;
     }
 
-    public static function create(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, \Flexnet\ProductPackagingService\Type\StateType $stateToSet)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, string $stateToSet)
     {
         return new static(...\func_get_args());
     }
@@ -41,12 +41,12 @@ class FeatureStateDataType
         return $new;
     }
 
-    public function getStateToSet(): \Flexnet\ProductPackagingService\Type\StateType
+    public function getStateToSet(): string
     {
         return $this->stateToSet;
     }
 
-    public function withStateToSet(\Flexnet\ProductPackagingService\Type\StateType $stateToSet): \Flexnet\ProductPackagingService\Type\FeatureStateDataType
+    public function withStateToSet(string $stateToSet): \Flexnet\ProductPackagingService\Type\FeatureStateDataType
     {
         $new = clone $this;
         $new->stateToSet = $stateToSet;

@@ -10,20 +10,20 @@ class NumberQueryType
     private $value;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\NumberSearchType
+     * @var string
      */
     private $searchType;
 
     /**
      * Constructor
      */
-    public function __construct(int $value, \Flexnet\EntitlementOrderService\Type\NumberSearchType $searchType)
+    public function __construct(int $value, string $searchType)
     {
         $this->value = $value;
         $this->searchType = $searchType;
     }
 
-    public static function create(int $value, \Flexnet\EntitlementOrderService\Type\NumberSearchType $searchType)
+    public static function create(int $value, string $searchType)
     {
         return new static(...\func_get_args());
     }
@@ -41,12 +41,12 @@ class NumberQueryType
         return $new;
     }
 
-    public function getSearchType(): \Flexnet\EntitlementOrderService\Type\NumberSearchType
+    public function getSearchType(): string
     {
         return $this->searchType;
     }
 
-    public function withSearchType(\Flexnet\EntitlementOrderService\Type\NumberSearchType $searchType): \Flexnet\EntitlementOrderService\Type\NumberQueryType
+    public function withSearchType(string $searchType): \Flexnet\EntitlementOrderService\Type\NumberQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;

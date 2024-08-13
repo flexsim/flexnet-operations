@@ -25,7 +25,7 @@ class UniformSuiteQueryDataType
     private $description;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\StateType
+     * @var string
      */
     private $state;
 
@@ -122,7 +122,7 @@ class UniformSuiteQueryDataType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId, string $suiteName, \Flexnet\ProductPackagingService\Type\StateType $state, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties = null, ?\Flexnet\ProductPackagingService\Type\ProductsListType $products = null, ?\Flexnet\ProductPackagingService\Type\LicenseModelsListType $licenseModels = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersListType $partNumbers = null, ?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType = null, ?\Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes = null, ?bool $usedOnDevice = null, ?string $productCategory = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes = null, ?bool $allowDownloadObsoleteFrInAdmin = null, ?bool $allowDownloadObsoleteFrInPortal = null, ?\DateTimeInterface $creationDate = null, ?\DateTimeInterface $lastModifiedDate = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes = null)
+    public function __construct(string $uniqueId, string $suiteName, string $state, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties = null, ?\Flexnet\ProductPackagingService\Type\ProductsListType $products = null, ?\Flexnet\ProductPackagingService\Type\LicenseModelsListType $licenseModels = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersListType $partNumbers = null, ?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType = null, ?\Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes = null, ?bool $usedOnDevice = null, ?string $productCategory = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes = null, ?bool $allowDownloadObsoleteFrInAdmin = null, ?bool $allowDownloadObsoleteFrInPortal = null, ?\DateTimeInterface $creationDate = null, ?\DateTimeInterface $lastModifiedDate = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes = null)
     {
         $this->uniqueId = $uniqueId;
         $this->suiteName = $suiteName;
@@ -149,7 +149,7 @@ class UniformSuiteQueryDataType
         $this->productAttributes = $productAttributes;
     }
 
-    public static function create(string $uniqueId, string $suiteName, \Flexnet\ProductPackagingService\Type\StateType $state, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties = null, ?\Flexnet\ProductPackagingService\Type\ProductsListType $products = null, ?\Flexnet\ProductPackagingService\Type\LicenseModelsListType $licenseModels = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersListType $partNumbers = null, ?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType = null, ?\Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes = null, ?bool $usedOnDevice = null, ?string $productCategory = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes = null, ?bool $allowDownloadObsoleteFrInAdmin = null, ?bool $allowDownloadObsoleteFrInPortal = null, ?\DateTimeInterface $creationDate = null, ?\DateTimeInterface $lastModifiedDate = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes = null)
+    public static function create(string $uniqueId, string $suiteName, string $state, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties = null, ?\Flexnet\ProductPackagingService\Type\ProductsListType $products = null, ?\Flexnet\ProductPackagingService\Type\LicenseModelsListType $licenseModels = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersListType $partNumbers = null, ?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType = null, ?\Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes = null, ?bool $usedOnDevice = null, ?string $productCategory = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes = null, ?bool $allowDownloadObsoleteFrInAdmin = null, ?bool $allowDownloadObsoleteFrInPortal = null, ?\DateTimeInterface $creationDate = null, ?\DateTimeInterface $lastModifiedDate = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes = null)
     {
         return new static(...\func_get_args());
     }
@@ -206,12 +206,12 @@ class UniformSuiteQueryDataType
         return $new;
     }
 
-    public function getState(): \Flexnet\ProductPackagingService\Type\StateType
+    public function getState(): string
     {
         return $this->state;
     }
 
-    public function withState(\Flexnet\ProductPackagingService\Type\StateType $state): \Flexnet\ProductPackagingService\Type\UniformSuiteQueryDataType
+    public function withState(string $state): \Flexnet\ProductPackagingService\Type\UniformSuiteQueryDataType
     {
         $new = clone $this;
         $new->state = $state;

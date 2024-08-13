@@ -10,7 +10,7 @@ class PartnerTierQueryType
     private $value;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\SimpleSearchType
+     * @var string
      */
     private $searchType;
 
@@ -27,7 +27,7 @@ class PartnerTierQueryType
     /**
      * Constructor
      */
-    public function __construct(string $value, \Flexnet\EntitlementOrderService\Type\SimpleSearchType $searchType, ?string $partnerTier = null, ?bool $isSearchByName = null)
+    public function __construct(string $value, string $searchType, ?string $partnerTier = null, ?bool $isSearchByName = null)
     {
         $this->value = $value;
         $this->searchType = $searchType;
@@ -35,7 +35,7 @@ class PartnerTierQueryType
         $this->isSearchByName = $isSearchByName;
     }
 
-    public static function create(string $value, \Flexnet\EntitlementOrderService\Type\SimpleSearchType $searchType, ?string $partnerTier = null, ?bool $isSearchByName = null)
+    public static function create(string $value, string $searchType, ?string $partnerTier = null, ?bool $isSearchByName = null)
     {
         return new static(...\func_get_args());
     }
@@ -53,12 +53,12 @@ class PartnerTierQueryType
         return $new;
     }
 
-    public function getSearchType(): \Flexnet\EntitlementOrderService\Type\SimpleSearchType
+    public function getSearchType(): string
     {
         return $this->searchType;
     }
 
-    public function withSearchType(\Flexnet\EntitlementOrderService\Type\SimpleSearchType $searchType): \Flexnet\EntitlementOrderService\Type\PartnerTierQueryType
+    public function withSearchType(string $searchType): \Flexnet\EntitlementOrderService\Type\PartnerTierQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;

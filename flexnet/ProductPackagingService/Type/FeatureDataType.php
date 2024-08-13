@@ -10,7 +10,7 @@ class FeatureDataType
     private $featureName;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\VersionFormatType
+     * @var string
      */
     private $versionFormat;
 
@@ -32,7 +32,7 @@ class FeatureDataType
     /**
      * Constructor
      */
-    public function __construct(string $featureName, \Flexnet\ProductPackagingService\Type\VersionFormatType $versionFormat, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType $featureOverrideParams = null)
+    public function __construct(string $featureName, string $versionFormat, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType $featureOverrideParams = null)
     {
         $this->featureName = $featureName;
         $this->versionFormat = $versionFormat;
@@ -41,7 +41,7 @@ class FeatureDataType
         $this->featureOverrideParams = $featureOverrideParams;
     }
 
-    public static function create(string $featureName, \Flexnet\ProductPackagingService\Type\VersionFormatType $versionFormat, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType $featureOverrideParams = null)
+    public static function create(string $featureName, string $versionFormat, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType $featureOverrideParams = null)
     {
         return new static(...\func_get_args());
     }
@@ -59,12 +59,12 @@ class FeatureDataType
         return $new;
     }
 
-    public function getVersionFormat(): \Flexnet\ProductPackagingService\Type\VersionFormatType
+    public function getVersionFormat(): string
     {
         return $this->versionFormat;
     }
 
-    public function withVersionFormat(\Flexnet\ProductPackagingService\Type\VersionFormatType $versionFormat): \Flexnet\ProductPackagingService\Type\FeatureDataType
+    public function withVersionFormat(string $versionFormat): \Flexnet\ProductPackagingService\Type\FeatureDataType
     {
         $new = clone $this;
         $new->versionFormat = $versionFormat;

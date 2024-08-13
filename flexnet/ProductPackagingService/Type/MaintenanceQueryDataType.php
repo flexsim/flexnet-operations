@@ -25,7 +25,7 @@ class MaintenanceQueryDataType
     private $description;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\StateType
+     * @var string
      */
     private $state;
 
@@ -52,7 +52,7 @@ class MaintenanceQueryDataType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId, string $maintenanceName, \Flexnet\ProductPackagingService\Type\StateType $state, ?string $version = null, ?string $description = null, ?bool $allowUpgrades = null, ?bool $allowUpsells = null, ?bool $allowRenewals = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType $partNumbers = null)
+    public function __construct(string $uniqueId, string $maintenanceName, string $state, ?string $version = null, ?string $description = null, ?bool $allowUpgrades = null, ?bool $allowUpsells = null, ?bool $allowRenewals = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType $partNumbers = null)
     {
         $this->uniqueId = $uniqueId;
         $this->maintenanceName = $maintenanceName;
@@ -65,7 +65,7 @@ class MaintenanceQueryDataType
         $this->partNumbers = $partNumbers;
     }
 
-    public static function create(string $uniqueId, string $maintenanceName, \Flexnet\ProductPackagingService\Type\StateType $state, ?string $version = null, ?string $description = null, ?bool $allowUpgrades = null, ?bool $allowUpsells = null, ?bool $allowRenewals = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType $partNumbers = null)
+    public static function create(string $uniqueId, string $maintenanceName, string $state, ?string $version = null, ?string $description = null, ?bool $allowUpgrades = null, ?bool $allowUpsells = null, ?bool $allowRenewals = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersSimpleListType $partNumbers = null)
     {
         return new static(...\func_get_args());
     }
@@ -122,12 +122,12 @@ class MaintenanceQueryDataType
         return $new;
     }
 
-    public function getState(): \Flexnet\ProductPackagingService\Type\StateType
+    public function getState(): string
     {
         return $this->state;
     }
 
-    public function withState(\Flexnet\ProductPackagingService\Type\StateType $state): \Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType
+    public function withState(string $state): \Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType
     {
         $new = clone $this;
         $new->state = $state;

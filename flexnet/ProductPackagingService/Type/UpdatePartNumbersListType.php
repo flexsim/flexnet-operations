@@ -10,7 +10,7 @@ class UpdatePartNumbersListType
     private $partNumber;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\CollectionOperationType
+     * @var string
      */
     private $opType;
 
@@ -19,7 +19,7 @@ class UpdatePartNumbersListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType>|null  $partNumber
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType, \Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array|null $partNumber = null)
+    public function __construct(string $opType, \Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array|null $partNumber = null)
     {
         $this->opType = $opType;
         $this->partNumber = $partNumber;
@@ -28,7 +28,7 @@ class UpdatePartNumbersListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType>|null  $partNumber
      */
-    public static function create(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType, \Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array|null $partNumber = null)
+    public static function create(string $opType, \Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array|null $partNumber = null)
     {
         return new static(...\func_get_args());
     }
@@ -52,12 +52,12 @@ class UpdatePartNumbersListType
         return $new;
     }
 
-    public function getOpType(): \Flexnet\ProductPackagingService\Type\CollectionOperationType
+    public function getOpType(): string
     {
         return $this->opType;
     }
 
-    public function withOpType(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType): \Flexnet\ProductPackagingService\Type\UpdatePartNumbersListType
+    public function withOpType(string $opType): \Flexnet\ProductPackagingService\Type\UpdatePartNumbersListType
     {
         $new = clone $this;
         $new->opType = $opType;

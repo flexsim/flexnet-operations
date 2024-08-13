@@ -10,7 +10,7 @@ class UpdateFeaturesListType
     private $feature;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\CollectionOperationType
+     * @var string
      */
     private $opType;
 
@@ -19,7 +19,7 @@ class UpdateFeaturesListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null  $feature
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType, \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array|null $feature = null)
+    public function __construct(string $opType, \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array|null $feature = null)
     {
         $this->opType = $opType;
         $this->feature = $feature;
@@ -28,7 +28,7 @@ class UpdateFeaturesListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null  $feature
      */
-    public static function create(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType, \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array|null $feature = null)
+    public static function create(string $opType, \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array|null $feature = null)
     {
         return new static(...\func_get_args());
     }
@@ -52,12 +52,12 @@ class UpdateFeaturesListType
         return $new;
     }
 
-    public function getOpType(): \Flexnet\ProductPackagingService\Type\CollectionOperationType
+    public function getOpType(): string
     {
         return $this->opType;
     }
 
-    public function withOpType(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType): \Flexnet\ProductPackagingService\Type\UpdateFeaturesListType
+    public function withOpType(string $opType): \Flexnet\ProductPackagingService\Type\UpdateFeaturesListType
     {
         $new = clone $this;
         $new->opType = $opType;

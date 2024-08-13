@@ -75,7 +75,7 @@ class CreateBulkEntitlementDataType
     private $orderLineNumber;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\StartDateOptionType|null
+     * @var string|null
      */
     private $startDateOption;
 
@@ -115,7 +115,7 @@ class CreateBulkEntitlementDataType
     private $numberOfCopies;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\BulkEntitlementType|null
+     * @var string|null
      */
     private $bulkEntitlementType;
 
@@ -142,7 +142,7 @@ class CreateBulkEntitlementDataType
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\EntitlementOrderService\Type\IdType $entitlementId, ?string $soldTo = null, ?\Flexnet\EntitlementOrderService\Type\ProductIdentifierType $product = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType $partNumber = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $licenseModel = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $FNPTimeZoneValue = null, ?\Flexnet\EntitlementOrderService\Type\PolicyAttributesListType $policyAttributes = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?string $orderId = null, ?string $orderLineNumber = null, ?\Flexnet\EntitlementOrderService\Type\StartDateOptionType $startDateOption = null, ?bool $isPermanent = null, ?\Flexnet\EntitlementOrderService\Type\DurationType $term = null, ?\DateTimeInterface $expirationDate = null, ?\DateTimeInterface $versionDate = null, ?\Flexnet\EntitlementOrderService\Type\VersionDateAttributesType $versionDateAttributes = null, ?string $description = null, ?int $numberOfCopies = null, ?\Flexnet\EntitlementOrderService\Type\BulkEntitlementType $bulkEntitlementType = null, ?bool $autoDeploy = null, ?\Flexnet\EntitlementOrderService\Type\EntitledProductDataListType $entitledProducts = null, ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners = null, ?bool $allowPortalLogin = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\IdType $entitlementId, ?string $soldTo = null, ?\Flexnet\EntitlementOrderService\Type\ProductIdentifierType $product = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType $partNumber = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $licenseModel = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $FNPTimeZoneValue = null, ?\Flexnet\EntitlementOrderService\Type\PolicyAttributesListType $policyAttributes = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?string $orderId = null, ?string $orderLineNumber = null, ?string $startDateOption = null, ?bool $isPermanent = null, ?\Flexnet\EntitlementOrderService\Type\DurationType $term = null, ?\DateTimeInterface $expirationDate = null, ?\DateTimeInterface $versionDate = null, ?\Flexnet\EntitlementOrderService\Type\VersionDateAttributesType $versionDateAttributes = null, ?string $description = null, ?int $numberOfCopies = null, ?string $bulkEntitlementType = null, ?bool $autoDeploy = null, ?\Flexnet\EntitlementOrderService\Type\EntitledProductDataListType $entitledProducts = null, ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners = null, ?bool $allowPortalLogin = null)
     {
         $this->entitlementId = $entitlementId;
         $this->soldTo = $soldTo;
@@ -173,7 +173,7 @@ class CreateBulkEntitlementDataType
         $this->allowPortalLogin = $allowPortalLogin;
     }
 
-    public static function create(\Flexnet\EntitlementOrderService\Type\IdType $entitlementId, ?string $soldTo = null, ?\Flexnet\EntitlementOrderService\Type\ProductIdentifierType $product = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType $partNumber = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $licenseModel = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $FNPTimeZoneValue = null, ?\Flexnet\EntitlementOrderService\Type\PolicyAttributesListType $policyAttributes = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?string $orderId = null, ?string $orderLineNumber = null, ?\Flexnet\EntitlementOrderService\Type\StartDateOptionType $startDateOption = null, ?bool $isPermanent = null, ?\Flexnet\EntitlementOrderService\Type\DurationType $term = null, ?\DateTimeInterface $expirationDate = null, ?\DateTimeInterface $versionDate = null, ?\Flexnet\EntitlementOrderService\Type\VersionDateAttributesType $versionDateAttributes = null, ?string $description = null, ?int $numberOfCopies = null, ?\Flexnet\EntitlementOrderService\Type\BulkEntitlementType $bulkEntitlementType = null, ?bool $autoDeploy = null, ?\Flexnet\EntitlementOrderService\Type\EntitledProductDataListType $entitledProducts = null, ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners = null, ?bool $allowPortalLogin = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\IdType $entitlementId, ?string $soldTo = null, ?\Flexnet\EntitlementOrderService\Type\ProductIdentifierType $product = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType $partNumber = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $licenseModel = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $FNPTimeZoneValue = null, ?\Flexnet\EntitlementOrderService\Type\PolicyAttributesListType $policyAttributes = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?string $orderId = null, ?string $orderLineNumber = null, ?string $startDateOption = null, ?bool $isPermanent = null, ?\Flexnet\EntitlementOrderService\Type\DurationType $term = null, ?\DateTimeInterface $expirationDate = null, ?\DateTimeInterface $versionDate = null, ?\Flexnet\EntitlementOrderService\Type\VersionDateAttributesType $versionDateAttributes = null, ?string $description = null, ?int $numberOfCopies = null, ?string $bulkEntitlementType = null, ?bool $autoDeploy = null, ?\Flexnet\EntitlementOrderService\Type\EntitledProductDataListType $entitledProducts = null, ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners = null, ?bool $allowPortalLogin = null)
     {
         return new static(...\func_get_args());
     }
@@ -360,12 +360,12 @@ class CreateBulkEntitlementDataType
         return $new;
     }
 
-    public function getStartDateOption(): ?\Flexnet\EntitlementOrderService\Type\StartDateOptionType
+    public function getStartDateOption(): ?string
     {
         return $this->startDateOption;
     }
 
-    public function withStartDateOption(?\Flexnet\EntitlementOrderService\Type\StartDateOptionType $startDateOption): \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType
+    public function withStartDateOption(?string $startDateOption): \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType
     {
         $new = clone $this;
         $new->startDateOption = $startDateOption;
@@ -464,12 +464,12 @@ class CreateBulkEntitlementDataType
         return $new;
     }
 
-    public function getBulkEntitlementType(): ?\Flexnet\EntitlementOrderService\Type\BulkEntitlementType
+    public function getBulkEntitlementType(): ?string
     {
         return $this->bulkEntitlementType;
     }
 
-    public function withBulkEntitlementType(?\Flexnet\EntitlementOrderService\Type\BulkEntitlementType $bulkEntitlementType): \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType
+    public function withBulkEntitlementType(?string $bulkEntitlementType): \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType
     {
         $new = clone $this;
         $new->bulkEntitlementType = $bulkEntitlementType;

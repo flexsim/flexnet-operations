@@ -10,7 +10,7 @@ class UpdateProductsListType
     private $productIdentifier;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\CollectionOperationType
+     * @var string
      */
     private $opType;
 
@@ -19,7 +19,7 @@ class UpdateProductsListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType>  $productIdentifier
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array $productIdentifier, \Flexnet\ProductPackagingService\Type\CollectionOperationType $opType)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array $productIdentifier, string $opType)
     {
         $this->productIdentifier = $productIdentifier;
         $this->opType = $opType;
@@ -28,7 +28,7 @@ class UpdateProductsListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType>  $productIdentifier
      */
-    public static function create(\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array $productIdentifier, \Flexnet\ProductPackagingService\Type\CollectionOperationType $opType)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array $productIdentifier, string $opType)
     {
         return new static(...\func_get_args());
     }
@@ -52,12 +52,12 @@ class UpdateProductsListType
         return $new;
     }
 
-    public function getOpType(): \Flexnet\ProductPackagingService\Type\CollectionOperationType
+    public function getOpType(): string
     {
         return $this->opType;
     }
 
-    public function withOpType(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType): \Flexnet\ProductPackagingService\Type\UpdateProductsListType
+    public function withOpType(string $opType): \Flexnet\ProductPackagingService\Type\UpdateProductsListType
     {
         $new = clone $this;
         $new->opType = $opType;

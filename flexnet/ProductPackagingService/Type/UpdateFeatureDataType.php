@@ -15,7 +15,7 @@ class UpdateFeatureDataType
     private $featureName;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\VersionFormatType|null
+     * @var string|null
      */
     private $versionFormat;
 
@@ -37,7 +37,7 @@ class UpdateFeatureDataType
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, ?string $featureName = null, ?\Flexnet\ProductPackagingService\Type\VersionFormatType $versionFormat = null, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType $featureOverrideParams = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, ?string $featureName = null, ?string $versionFormat = null, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType $featureOverrideParams = null)
     {
         $this->featureIdentifier = $featureIdentifier;
         $this->featureName = $featureName;
@@ -47,7 +47,7 @@ class UpdateFeatureDataType
         $this->featureOverrideParams = $featureOverrideParams;
     }
 
-    public static function create(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, ?string $featureName = null, ?\Flexnet\ProductPackagingService\Type\VersionFormatType $versionFormat = null, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType $featureOverrideParams = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, ?string $featureName = null, ?string $versionFormat = null, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeatureOverrideParamsType $featureOverrideParams = null)
     {
         return new static(...\func_get_args());
     }
@@ -78,12 +78,12 @@ class UpdateFeatureDataType
         return $new;
     }
 
-    public function getVersionFormat(): ?\Flexnet\ProductPackagingService\Type\VersionFormatType
+    public function getVersionFormat(): ?string
     {
         return $this->versionFormat;
     }
 
-    public function withVersionFormat(?\Flexnet\ProductPackagingService\Type\VersionFormatType $versionFormat): \Flexnet\ProductPackagingService\Type\UpdateFeatureDataType
+    public function withVersionFormat(?string $versionFormat): \Flexnet\ProductPackagingService\Type\UpdateFeatureDataType
     {
         $new = clone $this;
         $new->versionFormat = $versionFormat;

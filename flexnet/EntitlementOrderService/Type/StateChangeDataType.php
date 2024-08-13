@@ -5,7 +5,7 @@ namespace Flexnet\EntitlementOrderService\Type;
 class StateChangeDataType
 {
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\StateChangeEventType
+     * @var string
      */
     private $eventName;
 
@@ -27,7 +27,7 @@ class StateChangeDataType
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\EntitlementOrderService\Type\StateChangeEventType $eventName, \DateTimeInterface $eventDate, string $userId, ?string $description = null)
+    public function __construct(string $eventName, \DateTimeInterface $eventDate, string $userId, ?string $description = null)
     {
         $this->eventName = $eventName;
         $this->eventDate = $eventDate;
@@ -35,17 +35,17 @@ class StateChangeDataType
         $this->description = $description;
     }
 
-    public static function create(\Flexnet\EntitlementOrderService\Type\StateChangeEventType $eventName, \DateTimeInterface $eventDate, string $userId, ?string $description = null)
+    public static function create(string $eventName, \DateTimeInterface $eventDate, string $userId, ?string $description = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getEventName(): \Flexnet\EntitlementOrderService\Type\StateChangeEventType
+    public function getEventName(): string
     {
         return $this->eventName;
     }
 
-    public function withEventName(\Flexnet\EntitlementOrderService\Type\StateChangeEventType $eventName): \Flexnet\EntitlementOrderService\Type\StateChangeDataType
+    public function withEventName(string $eventName): \Flexnet\EntitlementOrderService\Type\StateChangeDataType
     {
         $new = clone $this;
         $new->eventName = $eventName;

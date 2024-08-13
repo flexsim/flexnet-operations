@@ -57,11 +57,16 @@ trait HasTypeMap
     {
         $typeElements = $this->typeElements($type->getName());
 
-        $fullType = $property->getType()
-            .match (Arr::get($typeElements, $property->getName().'._maxOccurs')) {
-                'unbounded' => '|array',
-                default => '',
-            }
+        $propertyElements = $this->typeElements(Str::afterLast($property->getType(), '\\'));
+
+        $fullType = match (true) {
+            Str::contains($property->getType(), '\\Flexnet') && blank($propertyElements) => 'string',
+            default => $property->getType(),
+        }
+        .match (Arr::get($typeElements, $property->getName().'._maxOccurs')) {
+            'unbounded' => '|array',
+            default => '',
+        }
         .match (Arr::get($typeElements, $property->getName().'._minOccurs')) {
             '0' => '|null',
             default => '',

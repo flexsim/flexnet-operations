@@ -10,20 +10,20 @@ class DurationType
     private $numDuration;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\DurationUnit
+     * @var string
      */
     private $durationUnit;
 
     /**
      * Constructor
      */
-    public function __construct(int $numDuration, \Flexnet\EntitlementOrderService\Type\DurationUnit $durationUnit)
+    public function __construct(int $numDuration, string $durationUnit)
     {
         $this->numDuration = $numDuration;
         $this->durationUnit = $durationUnit;
     }
 
-    public static function create(int $numDuration, \Flexnet\EntitlementOrderService\Type\DurationUnit $durationUnit)
+    public static function create(int $numDuration, string $durationUnit)
     {
         return new static(...\func_get_args());
     }
@@ -41,12 +41,12 @@ class DurationType
         return $new;
     }
 
-    public function getDurationUnit(): \Flexnet\EntitlementOrderService\Type\DurationUnit
+    public function getDurationUnit(): string
     {
         return $this->durationUnit;
     }
 
-    public function withDurationUnit(\Flexnet\EntitlementOrderService\Type\DurationUnit $durationUnit): \Flexnet\EntitlementOrderService\Type\DurationType
+    public function withDurationUnit(string $durationUnit): \Flexnet\EntitlementOrderService\Type\DurationType
     {
         $new = clone $this;
         $new->durationUnit = $durationUnit;

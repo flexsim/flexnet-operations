@@ -75,7 +75,7 @@ class EntitlementLineItemDataType
     private $startDate;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\StartDateOptionType|null
+     * @var string|null
      */
     private $startDateOption;
 
@@ -105,7 +105,7 @@ class EntitlementLineItemDataType
     private $versionDateAttributes;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\LineItemType|null
+     * @var string|null
      */
     private $lineItemType;
 
@@ -145,7 +145,7 @@ class EntitlementLineItemDataType
     private $isTrustedType;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\StateType|null
+     * @var string|null
      */
     private $state;
 
@@ -182,7 +182,7 @@ class EntitlementLineItemDataType
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\EntitlementOrderService\Type\IdType $activationId, int $numberOfCopies, ?string $description = null, ?\Flexnet\EntitlementOrderService\Type\ProductIdentifierType $product = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType $partNumber = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $licenseModel = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $FNPTimeZoneValue = null, ?\Flexnet\EntitlementOrderService\Type\PolicyAttributesListType $policyAttributes = null, ?string $orderId = null, ?string $orderLineNumber = null, ?\DateTimeInterface $startDate = null, ?\Flexnet\EntitlementOrderService\Type\StartDateOptionType $startDateOption = null, ?bool $isPermanent = null, ?\Flexnet\EntitlementOrderService\Type\DurationType $term = null, ?\DateTimeInterface $expirationDate = null, ?\DateTimeInterface $versionDate = null, ?\Flexnet\EntitlementOrderService\Type\VersionDateAttributesType $versionDateAttributes = null, ?\Flexnet\EntitlementOrderService\Type\LineItemType $lineItemType = null, ?\Flexnet\EntitlementOrderService\Type\EntitledProductDataListType $entitledProducts = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $lineItemAttributes = null, ?\Flexnet\EntitlementOrderService\Type\ProductCategoryDataType $productLine = null, ?int $numberOfRemainingCopies = null, ?int $fulfilledCount = null, ?int $availableExtraActivations = null, ?bool $isTrustedType = null, ?\Flexnet\EntitlementOrderService\Type\StateType $state = null, ?\Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $parentLineItem = null, ?\DateTimeInterface $createdOnDateTime = null, ?\DateTimeInterface $lastModifiedDateTime = null, ?int $overdraftMax = null, ?int $remainingOverdraftCount = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\IdType $activationId, int $numberOfCopies, ?string $description = null, ?\Flexnet\EntitlementOrderService\Type\ProductIdentifierType $product = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType $partNumber = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $licenseModel = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $FNPTimeZoneValue = null, ?\Flexnet\EntitlementOrderService\Type\PolicyAttributesListType $policyAttributes = null, ?string $orderId = null, ?string $orderLineNumber = null, ?\DateTimeInterface $startDate = null, ?string $startDateOption = null, ?bool $isPermanent = null, ?\Flexnet\EntitlementOrderService\Type\DurationType $term = null, ?\DateTimeInterface $expirationDate = null, ?\DateTimeInterface $versionDate = null, ?\Flexnet\EntitlementOrderService\Type\VersionDateAttributesType $versionDateAttributes = null, ?string $lineItemType = null, ?\Flexnet\EntitlementOrderService\Type\EntitledProductDataListType $entitledProducts = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $lineItemAttributes = null, ?\Flexnet\EntitlementOrderService\Type\ProductCategoryDataType $productLine = null, ?int $numberOfRemainingCopies = null, ?int $fulfilledCount = null, ?int $availableExtraActivations = null, ?bool $isTrustedType = null, ?string $state = null, ?\Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $parentLineItem = null, ?\DateTimeInterface $createdOnDateTime = null, ?\DateTimeInterface $lastModifiedDateTime = null, ?int $overdraftMax = null, ?int $remainingOverdraftCount = null)
     {
         $this->activationId = $activationId;
         $this->numberOfCopies = $numberOfCopies;
@@ -221,7 +221,7 @@ class EntitlementLineItemDataType
         $this->remainingOverdraftCount = $remainingOverdraftCount;
     }
 
-    public static function create(\Flexnet\EntitlementOrderService\Type\IdType $activationId, int $numberOfCopies, ?string $description = null, ?\Flexnet\EntitlementOrderService\Type\ProductIdentifierType $product = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType $partNumber = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $licenseModel = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $FNPTimeZoneValue = null, ?\Flexnet\EntitlementOrderService\Type\PolicyAttributesListType $policyAttributes = null, ?string $orderId = null, ?string $orderLineNumber = null, ?\DateTimeInterface $startDate = null, ?\Flexnet\EntitlementOrderService\Type\StartDateOptionType $startDateOption = null, ?bool $isPermanent = null, ?\Flexnet\EntitlementOrderService\Type\DurationType $term = null, ?\DateTimeInterface $expirationDate = null, ?\DateTimeInterface $versionDate = null, ?\Flexnet\EntitlementOrderService\Type\VersionDateAttributesType $versionDateAttributes = null, ?\Flexnet\EntitlementOrderService\Type\LineItemType $lineItemType = null, ?\Flexnet\EntitlementOrderService\Type\EntitledProductDataListType $entitledProducts = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $lineItemAttributes = null, ?\Flexnet\EntitlementOrderService\Type\ProductCategoryDataType $productLine = null, ?int $numberOfRemainingCopies = null, ?int $fulfilledCount = null, ?int $availableExtraActivations = null, ?bool $isTrustedType = null, ?\Flexnet\EntitlementOrderService\Type\StateType $state = null, ?\Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $parentLineItem = null, ?\DateTimeInterface $createdOnDateTime = null, ?\DateTimeInterface $lastModifiedDateTime = null, ?int $overdraftMax = null, ?int $remainingOverdraftCount = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\IdType $activationId, int $numberOfCopies, ?string $description = null, ?\Flexnet\EntitlementOrderService\Type\ProductIdentifierType $product = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType $partNumber = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $licenseModel = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel1 = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $alternateLicenseModel2 = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $FNPTimeZoneValue = null, ?\Flexnet\EntitlementOrderService\Type\PolicyAttributesListType $policyAttributes = null, ?string $orderId = null, ?string $orderLineNumber = null, ?\DateTimeInterface $startDate = null, ?string $startDateOption = null, ?bool $isPermanent = null, ?\Flexnet\EntitlementOrderService\Type\DurationType $term = null, ?\DateTimeInterface $expirationDate = null, ?\DateTimeInterface $versionDate = null, ?\Flexnet\EntitlementOrderService\Type\VersionDateAttributesType $versionDateAttributes = null, ?string $lineItemType = null, ?\Flexnet\EntitlementOrderService\Type\EntitledProductDataListType $entitledProducts = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $lineItemAttributes = null, ?\Flexnet\EntitlementOrderService\Type\ProductCategoryDataType $productLine = null, ?int $numberOfRemainingCopies = null, ?int $fulfilledCount = null, ?int $availableExtraActivations = null, ?bool $isTrustedType = null, ?string $state = null, ?\Flexnet\EntitlementOrderService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $parentLineItem = null, ?\DateTimeInterface $createdOnDateTime = null, ?\DateTimeInterface $lastModifiedDateTime = null, ?int $overdraftMax = null, ?int $remainingOverdraftCount = null)
     {
         return new static(...\func_get_args());
     }
@@ -408,12 +408,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getStartDateOption(): ?\Flexnet\EntitlementOrderService\Type\StartDateOptionType
+    public function getStartDateOption(): ?string
     {
         return $this->startDateOption;
     }
 
-    public function withStartDateOption(?\Flexnet\EntitlementOrderService\Type\StartDateOptionType $startDateOption): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType
+    public function withStartDateOption(?string $startDateOption): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->startDateOption = $startDateOption;
@@ -486,12 +486,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getLineItemType(): ?\Flexnet\EntitlementOrderService\Type\LineItemType
+    public function getLineItemType(): ?string
     {
         return $this->lineItemType;
     }
 
-    public function withLineItemType(?\Flexnet\EntitlementOrderService\Type\LineItemType $lineItemType): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType
+    public function withLineItemType(?string $lineItemType): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->lineItemType = $lineItemType;
@@ -590,12 +590,12 @@ class EntitlementLineItemDataType
         return $new;
     }
 
-    public function getState(): ?\Flexnet\EntitlementOrderService\Type\StateType
+    public function getState(): ?string
     {
         return $this->state;
     }
 
-    public function withState(?\Flexnet\EntitlementOrderService\Type\StateType $state): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType
+    public function withState(?string $state): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType
     {
         $new = clone $this;
         $new->state = $state;

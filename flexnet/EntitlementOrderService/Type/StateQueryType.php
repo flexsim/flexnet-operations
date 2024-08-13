@@ -5,35 +5,35 @@ namespace Flexnet\EntitlementOrderService\Type;
 class StateQueryType
 {
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\StateType
+     * @var string
      */
     private $value;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\SimpleSearchType
+     * @var string
      */
     private $searchType;
 
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\EntitlementOrderService\Type\StateType $value, \Flexnet\EntitlementOrderService\Type\SimpleSearchType $searchType)
+    public function __construct(string $value, string $searchType)
     {
         $this->value = $value;
         $this->searchType = $searchType;
     }
 
-    public static function create(\Flexnet\EntitlementOrderService\Type\StateType $value, \Flexnet\EntitlementOrderService\Type\SimpleSearchType $searchType)
+    public static function create(string $value, string $searchType)
     {
         return new static(...\func_get_args());
     }
 
-    public function getValue(): \Flexnet\EntitlementOrderService\Type\StateType
+    public function getValue(): string
     {
         return $this->value;
     }
 
-    public function withValue(\Flexnet\EntitlementOrderService\Type\StateType $value): \Flexnet\EntitlementOrderService\Type\StateQueryType
+    public function withValue(string $value): \Flexnet\EntitlementOrderService\Type\StateQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -41,12 +41,12 @@ class StateQueryType
         return $new;
     }
 
-    public function getSearchType(): \Flexnet\EntitlementOrderService\Type\SimpleSearchType
+    public function getSearchType(): string
     {
         return $this->searchType;
     }
 
-    public function withSearchType(\Flexnet\EntitlementOrderService\Type\SimpleSearchType $searchType): \Flexnet\EntitlementOrderService\Type\StateQueryType
+    public function withSearchType(string $searchType): \Flexnet\EntitlementOrderService\Type\StateQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;

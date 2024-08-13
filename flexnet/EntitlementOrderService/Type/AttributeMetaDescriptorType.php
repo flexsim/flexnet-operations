@@ -10,7 +10,7 @@ class AttributeMetaDescriptorType
     private $attributeName;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\AttributeDataType
+     * @var string
      */
     private $attributeDataType;
 
@@ -27,7 +27,7 @@ class AttributeMetaDescriptorType
     /**
      * Constructor
      */
-    public function __construct(string $attributeName, \Flexnet\EntitlementOrderService\Type\AttributeDataType $attributeDataType, string $namespace, ?\Flexnet\EntitlementOrderService\Type\ValueType $validValues = null)
+    public function __construct(string $attributeName, string $attributeDataType, string $namespace, ?\Flexnet\EntitlementOrderService\Type\ValueType $validValues = null)
     {
         $this->attributeName = $attributeName;
         $this->attributeDataType = $attributeDataType;
@@ -35,7 +35,7 @@ class AttributeMetaDescriptorType
         $this->validValues = $validValues;
     }
 
-    public static function create(string $attributeName, \Flexnet\EntitlementOrderService\Type\AttributeDataType $attributeDataType, string $namespace, ?\Flexnet\EntitlementOrderService\Type\ValueType $validValues = null)
+    public static function create(string $attributeName, string $attributeDataType, string $namespace, ?\Flexnet\EntitlementOrderService\Type\ValueType $validValues = null)
     {
         return new static(...\func_get_args());
     }
@@ -53,12 +53,12 @@ class AttributeMetaDescriptorType
         return $new;
     }
 
-    public function getAttributeDataType(): \Flexnet\EntitlementOrderService\Type\AttributeDataType
+    public function getAttributeDataType(): string
     {
         return $this->attributeDataType;
     }
 
-    public function withAttributeDataType(\Flexnet\EntitlementOrderService\Type\AttributeDataType $attributeDataType): \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType
+    public function withAttributeDataType(string $attributeDataType): \Flexnet\EntitlementOrderService\Type\AttributeMetaDescriptorType
     {
         $new = clone $this;
         $new->attributeDataType = $attributeDataType;

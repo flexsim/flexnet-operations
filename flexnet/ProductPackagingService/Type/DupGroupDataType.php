@@ -5,7 +5,7 @@ namespace Flexnet\ProductPackagingService\Type;
 class DupGroupDataType
 {
     /**
-     * @var \Flexnet\ProductPackagingService\Type\DupGroupType
+     * @var string
      */
     private $dupGroupOption;
 
@@ -17,23 +17,23 @@ class DupGroupDataType
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\DupGroupType $dupGroupOption, ?\Flexnet\ProductPackagingService\Type\GroupMaskDataType $groupMask = null)
+    public function __construct(string $dupGroupOption, ?\Flexnet\ProductPackagingService\Type\GroupMaskDataType $groupMask = null)
     {
         $this->dupGroupOption = $dupGroupOption;
         $this->groupMask = $groupMask;
     }
 
-    public static function create(\Flexnet\ProductPackagingService\Type\DupGroupType $dupGroupOption, ?\Flexnet\ProductPackagingService\Type\GroupMaskDataType $groupMask = null)
+    public static function create(string $dupGroupOption, ?\Flexnet\ProductPackagingService\Type\GroupMaskDataType $groupMask = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getDupGroupOption(): \Flexnet\ProductPackagingService\Type\DupGroupType
+    public function getDupGroupOption(): string
     {
         return $this->dupGroupOption;
     }
 
-    public function withDupGroupOption(\Flexnet\ProductPackagingService\Type\DupGroupType $dupGroupOption): \Flexnet\ProductPackagingService\Type\DupGroupDataType
+    public function withDupGroupOption(string $dupGroupOption): \Flexnet\ProductPackagingService\Type\DupGroupDataType
     {
         $new = clone $this;
         $new->dupGroupOption = $dupGroupOption;

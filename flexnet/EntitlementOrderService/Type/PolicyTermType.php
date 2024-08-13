@@ -10,20 +10,20 @@ class PolicyTermType
     private $duration;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\DurationUnit
+     * @var string
      */
     private $durationUnit;
 
     /**
      * Constructor
      */
-    public function __construct(int $duration, \Flexnet\EntitlementOrderService\Type\DurationUnit $durationUnit)
+    public function __construct(int $duration, string $durationUnit)
     {
         $this->duration = $duration;
         $this->durationUnit = $durationUnit;
     }
 
-    public static function create(int $duration, \Flexnet\EntitlementOrderService\Type\DurationUnit $durationUnit)
+    public static function create(int $duration, string $durationUnit)
     {
         return new static(...\func_get_args());
     }
@@ -41,12 +41,12 @@ class PolicyTermType
         return $new;
     }
 
-    public function getDurationUnit(): \Flexnet\EntitlementOrderService\Type\DurationUnit
+    public function getDurationUnit(): string
     {
         return $this->durationUnit;
     }
 
-    public function withDurationUnit(\Flexnet\EntitlementOrderService\Type\DurationUnit $durationUnit): \Flexnet\EntitlementOrderService\Type\PolicyTermType
+    public function withDurationUnit(string $durationUnit): \Flexnet\EntitlementOrderService\Type\PolicyTermType
     {
         $new = clone $this;
         $new->durationUnit = $durationUnit;

@@ -10,20 +10,20 @@ class FeatureIdentifierWithCountDataType
     private $featureIdentifier;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\PositiveInteger
+     * @var string
      */
     private $count;
 
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, \Flexnet\ProductPackagingService\Type\PositiveInteger $count)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, string $count)
     {
         $this->featureIdentifier = $featureIdentifier;
         $this->count = $count;
     }
 
-    public static function create(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, \Flexnet\ProductPackagingService\Type\PositiveInteger $count)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureIdentifierType $featureIdentifier, string $count)
     {
         return new static(...\func_get_args());
     }
@@ -41,12 +41,12 @@ class FeatureIdentifierWithCountDataType
         return $new;
     }
 
-    public function getCount(): \Flexnet\ProductPackagingService\Type\PositiveInteger
+    public function getCount(): string
     {
         return $this->count;
     }
 
-    public function withCount(\Flexnet\ProductPackagingService\Type\PositiveInteger $count): \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType
+    public function withCount(string $count): \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType
     {
         $new = clone $this;
         $new->count = $count;

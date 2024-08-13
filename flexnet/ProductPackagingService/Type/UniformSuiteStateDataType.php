@@ -10,20 +10,20 @@ class UniformSuiteStateDataType
     private $suiteIdentifier;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\StateType
+     * @var string
      */
     private $stateToSet;
 
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\SuiteIdentifierType $suiteIdentifier, \Flexnet\ProductPackagingService\Type\StateType $stateToSet)
+    public function __construct(\Flexnet\ProductPackagingService\Type\SuiteIdentifierType $suiteIdentifier, string $stateToSet)
     {
         $this->suiteIdentifier = $suiteIdentifier;
         $this->stateToSet = $stateToSet;
     }
 
-    public static function create(\Flexnet\ProductPackagingService\Type\SuiteIdentifierType $suiteIdentifier, \Flexnet\ProductPackagingService\Type\StateType $stateToSet)
+    public static function create(\Flexnet\ProductPackagingService\Type\SuiteIdentifierType $suiteIdentifier, string $stateToSet)
     {
         return new static(...\func_get_args());
     }
@@ -41,12 +41,12 @@ class UniformSuiteStateDataType
         return $new;
     }
 
-    public function getStateToSet(): \Flexnet\ProductPackagingService\Type\StateType
+    public function getStateToSet(): string
     {
         return $this->stateToSet;
     }
 
-    public function withStateToSet(\Flexnet\ProductPackagingService\Type\StateType $stateToSet): \Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType
+    public function withStateToSet(string $stateToSet): \Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType
     {
         $new = clone $this;
         $new->stateToSet = $stateToSet;

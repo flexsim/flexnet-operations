@@ -12,7 +12,7 @@ class CreateSimpleEntitlementRequestType implements RequestInterface
     private $simpleEntitlement;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\CreateOrUpdateOperationType|null
+     * @var string|null
      */
     private $opType;
 
@@ -21,7 +21,7 @@ class CreateSimpleEntitlementRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType>  $simpleEntitlement
      */
-    public function __construct(\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|array $simpleEntitlement, ?\Flexnet\EntitlementOrderService\Type\CreateOrUpdateOperationType $opType = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|array $simpleEntitlement, ?string $opType = null)
     {
         $this->simpleEntitlement = $simpleEntitlement;
         $this->opType = $opType;
@@ -30,7 +30,7 @@ class CreateSimpleEntitlementRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType>  $simpleEntitlement
      */
-    public static function create(\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|array $simpleEntitlement, ?\Flexnet\EntitlementOrderService\Type\CreateOrUpdateOperationType $opType = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType|array $simpleEntitlement, ?string $opType = null)
     {
         return new static(...\func_get_args());
     }
@@ -54,12 +54,12 @@ class CreateSimpleEntitlementRequestType implements RequestInterface
         return $new;
     }
 
-    public function getOpType(): ?\Flexnet\EntitlementOrderService\Type\CreateOrUpdateOperationType
+    public function getOpType(): ?string
     {
         return $this->opType;
     }
 
-    public function withOpType(?\Flexnet\EntitlementOrderService\Type\CreateOrUpdateOperationType $opType): \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementRequestType
+    public function withOpType(?string $opType): \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementRequestType
     {
         $new = clone $this;
         $new->opType = $opType;

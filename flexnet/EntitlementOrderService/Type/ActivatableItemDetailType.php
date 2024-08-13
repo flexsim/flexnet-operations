@@ -5,7 +5,7 @@ namespace Flexnet\EntitlementOrderService\Type;
 class ActivatableItemDetailType
 {
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\ActivatableItemType
+     * @var string
      */
     private $activatableItemType;
 
@@ -35,7 +35,7 @@ class ActivatableItemDetailType
     private $shipToAddress;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\StateType|null
+     * @var string|null
      */
     private $entitlementState;
 
@@ -57,7 +57,7 @@ class ActivatableItemDetailType
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\EntitlementOrderService\Type\ActivatableItemType $activatableItemType, string $entitlementId, string $soldTo, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType $activatableItemData, ?string $parentBulkEntitlementId = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\EntitlementOrderService\Type\StateType $entitlementState = null, ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $entitlementAttributes = null)
+    public function __construct(string $activatableItemType, string $entitlementId, string $soldTo, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType $activatableItemData, ?string $parentBulkEntitlementId = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?string $entitlementState = null, ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $entitlementAttributes = null)
     {
         $this->activatableItemType = $activatableItemType;
         $this->entitlementId = $entitlementId;
@@ -71,17 +71,17 @@ class ActivatableItemDetailType
         $this->entitlementAttributes = $entitlementAttributes;
     }
 
-    public static function create(\Flexnet\EntitlementOrderService\Type\ActivatableItemType $activatableItemType, string $entitlementId, string $soldTo, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType $activatableItemData, ?string $parentBulkEntitlementId = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\EntitlementOrderService\Type\StateType $entitlementState = null, ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $entitlementAttributes = null)
+    public static function create(string $activatableItemType, string $entitlementId, string $soldTo, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType $activatableItemData, ?string $parentBulkEntitlementId = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?string $entitlementState = null, ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $entitlementAttributes = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getActivatableItemType(): \Flexnet\EntitlementOrderService\Type\ActivatableItemType
+    public function getActivatableItemType(): string
     {
         return $this->activatableItemType;
     }
 
-    public function withActivatableItemType(\Flexnet\EntitlementOrderService\Type\ActivatableItemType $activatableItemType): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
+    public function withActivatableItemType(string $activatableItemType): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
     {
         $new = clone $this;
         $new->activatableItemType = $activatableItemType;
@@ -154,12 +154,12 @@ class ActivatableItemDetailType
         return $new;
     }
 
-    public function getEntitlementState(): ?\Flexnet\EntitlementOrderService\Type\StateType
+    public function getEntitlementState(): ?string
     {
         return $this->entitlementState;
     }
 
-    public function withEntitlementState(?\Flexnet\EntitlementOrderService\Type\StateType $entitlementState): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
+    public function withEntitlementState(?string $entitlementState): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
     {
         $new = clone $this;
         $new->entitlementState = $entitlementState;

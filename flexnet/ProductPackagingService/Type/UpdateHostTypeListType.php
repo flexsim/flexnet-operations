@@ -10,7 +10,7 @@ class UpdateHostTypeListType
     private $hostType;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\CollectionOperationType
+     * @var string
      */
     private $opType;
 
@@ -19,7 +19,7 @@ class UpdateHostTypeListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|array<\Flexnet\ProductPackagingService\Type\HostTypePKType>|null  $hostType
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType, \Flexnet\ProductPackagingService\Type\HostTypePKType|array|null $hostType = null)
+    public function __construct(string $opType, \Flexnet\ProductPackagingService\Type\HostTypePKType|array|null $hostType = null)
     {
         $this->opType = $opType;
         $this->hostType = $hostType;
@@ -28,7 +28,7 @@ class UpdateHostTypeListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|array<\Flexnet\ProductPackagingService\Type\HostTypePKType>|null  $hostType
      */
-    public static function create(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType, \Flexnet\ProductPackagingService\Type\HostTypePKType|array|null $hostType = null)
+    public static function create(string $opType, \Flexnet\ProductPackagingService\Type\HostTypePKType|array|null $hostType = null)
     {
         return new static(...\func_get_args());
     }
@@ -52,12 +52,12 @@ class UpdateHostTypeListType
         return $new;
     }
 
-    public function getOpType(): \Flexnet\ProductPackagingService\Type\CollectionOperationType
+    public function getOpType(): string
     {
         return $this->opType;
     }
 
-    public function withOpType(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType): \Flexnet\ProductPackagingService\Type\UpdateHostTypeListType
+    public function withOpType(string $opType): \Flexnet\ProductPackagingService\Type\UpdateHostTypeListType
     {
         $new = clone $this;
         $new->opType = $opType;

@@ -20,14 +20,14 @@ class LicenseTechnologyDetailsType
     private $hostTypes;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\StateType
+     * @var string
      */
     private $state;
 
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, \Flexnet\ProductPackagingService\Type\LicenseGeneratorsDetailsType $licenseGenerators, \Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes, \Flexnet\ProductPackagingService\Type\StateType $state)
+    public function __construct(\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, \Flexnet\ProductPackagingService\Type\LicenseGeneratorsDetailsType $licenseGenerators, \Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes, string $state)
     {
         $this->licenseTechnologyIdentifier = $licenseTechnologyIdentifier;
         $this->licenseGenerators = $licenseGenerators;
@@ -35,7 +35,7 @@ class LicenseTechnologyDetailsType
         $this->state = $state;
     }
 
-    public static function create(\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, \Flexnet\ProductPackagingService\Type\LicenseGeneratorsDetailsType $licenseGenerators, \Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes, \Flexnet\ProductPackagingService\Type\StateType $state)
+    public static function create(\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnologyIdentifier, \Flexnet\ProductPackagingService\Type\LicenseGeneratorsDetailsType $licenseGenerators, \Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes, string $state)
     {
         return new static(...\func_get_args());
     }
@@ -79,12 +79,12 @@ class LicenseTechnologyDetailsType
         return $new;
     }
 
-    public function getState(): \Flexnet\ProductPackagingService\Type\StateType
+    public function getState(): string
     {
         return $this->state;
     }
 
-    public function withState(\Flexnet\ProductPackagingService\Type\StateType $state): \Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType
+    public function withState(string $state): \Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType
     {
         $new = clone $this;
         $new->state = $state;

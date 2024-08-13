@@ -10,7 +10,7 @@ class UpdateLicenseModelsListType
     private $licenseModelIdentifiers;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\CollectionOperationType
+     * @var string
      */
     private $opType;
 
@@ -19,7 +19,7 @@ class UpdateLicenseModelsListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType>  $licenseModelIdentifiers
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers, \Flexnet\ProductPackagingService\Type\CollectionOperationType $opType)
+    public function __construct(\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers, string $opType)
     {
         $this->licenseModelIdentifiers = $licenseModelIdentifiers;
         $this->opType = $opType;
@@ -28,7 +28,7 @@ class UpdateLicenseModelsListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array<\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType>  $licenseModelIdentifiers
      */
-    public static function create(\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers, \Flexnet\ProductPackagingService\Type\CollectionOperationType $opType)
+    public static function create(\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType|array $licenseModelIdentifiers, string $opType)
     {
         return new static(...\func_get_args());
     }
@@ -52,12 +52,12 @@ class UpdateLicenseModelsListType
         return $new;
     }
 
-    public function getOpType(): \Flexnet\ProductPackagingService\Type\CollectionOperationType
+    public function getOpType(): string
     {
         return $this->opType;
     }
 
-    public function withOpType(\Flexnet\ProductPackagingService\Type\CollectionOperationType $opType): \Flexnet\ProductPackagingService\Type\UpdateLicenseModelsListType
+    public function withOpType(string $opType): \Flexnet\ProductPackagingService\Type\UpdateLicenseModelsListType
     {
         $new = clone $this;
         $new->opType = $opType;

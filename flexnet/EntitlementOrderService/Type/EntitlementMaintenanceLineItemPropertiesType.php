@@ -10,7 +10,7 @@ class EntitlementMaintenanceLineItemPropertiesType
     private $activationId;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\StateType|null
+     * @var string|null
      */
     private $state;
 
@@ -99,7 +99,7 @@ class EntitlementMaintenanceLineItemPropertiesType
      *
      * @param  string|array<string>|null  $linkedLineItemActivationId
      */
-    public function __construct(?\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $activationId = null, ?\Flexnet\EntitlementOrderService\Type\StateType $state = null, ?string $orderId = null, ?string $orderLineNumber = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementId = null, ?\Flexnet\EntitlementOrderService\Type\ProductIdentifierType $maintenanceProduct = null, ?string $maintenanceProductDescription = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType $maintenancePartNumber = null, ?string $maintenancePartNumberDescription = null, ?\DateTimeInterface $startDate = null, ?bool $isPermanent = null, ?\DateTimeInterface $expirationDate = null, ?\DateTimeInterface $createdOnDateTime = null, ?\DateTimeInterface $lastModifiedDateTime = null, string|array|null $linkedLineItemActivationId = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes = null, ?string $createdBy = null, ?string $lastModifiedBy = null)
+    public function __construct(?\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $activationId = null, ?string $state = null, ?string $orderId = null, ?string $orderLineNumber = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementId = null, ?\Flexnet\EntitlementOrderService\Type\ProductIdentifierType $maintenanceProduct = null, ?string $maintenanceProductDescription = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType $maintenancePartNumber = null, ?string $maintenancePartNumberDescription = null, ?\DateTimeInterface $startDate = null, ?bool $isPermanent = null, ?\DateTimeInterface $expirationDate = null, ?\DateTimeInterface $createdOnDateTime = null, ?\DateTimeInterface $lastModifiedDateTime = null, string|array|null $linkedLineItemActivationId = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes = null, ?string $createdBy = null, ?string $lastModifiedBy = null)
     {
         $this->activationId = $activationId;
         $this->state = $state;
@@ -124,7 +124,7 @@ class EntitlementMaintenanceLineItemPropertiesType
     /**
      * @param  string|array<string>|null  $linkedLineItemActivationId
      */
-    public static function create(?\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $activationId = null, ?\Flexnet\EntitlementOrderService\Type\StateType $state = null, ?string $orderId = null, ?string $orderLineNumber = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementId = null, ?\Flexnet\EntitlementOrderService\Type\ProductIdentifierType $maintenanceProduct = null, ?string $maintenanceProductDescription = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType $maintenancePartNumber = null, ?string $maintenancePartNumberDescription = null, ?\DateTimeInterface $startDate = null, ?bool $isPermanent = null, ?\DateTimeInterface $expirationDate = null, ?\DateTimeInterface $createdOnDateTime = null, ?\DateTimeInterface $lastModifiedDateTime = null, string|array|null $linkedLineItemActivationId = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes = null, ?string $createdBy = null, ?string $lastModifiedBy = null)
+    public static function create(?\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $activationId = null, ?string $state = null, ?string $orderId = null, ?string $orderLineNumber = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementId = null, ?\Flexnet\EntitlementOrderService\Type\ProductIdentifierType $maintenanceProduct = null, ?string $maintenanceProductDescription = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType $maintenancePartNumber = null, ?string $maintenancePartNumberDescription = null, ?\DateTimeInterface $startDate = null, ?bool $isPermanent = null, ?\DateTimeInterface $expirationDate = null, ?\DateTimeInterface $createdOnDateTime = null, ?\DateTimeInterface $lastModifiedDateTime = null, string|array|null $linkedLineItemActivationId = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $maintenanceLineItemAttributes = null, ?string $createdBy = null, ?string $lastModifiedBy = null)
     {
         return new static(...\func_get_args());
     }
@@ -142,12 +142,12 @@ class EntitlementMaintenanceLineItemPropertiesType
         return $new;
     }
 
-    public function getState(): ?\Flexnet\EntitlementOrderService\Type\StateType
+    public function getState(): ?string
     {
         return $this->state;
     }
 
-    public function withState(?\Flexnet\EntitlementOrderService\Type\StateType $state): \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType
+    public function withState(?string $state): \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType
     {
         $new = clone $this;
         $new->state = $state;

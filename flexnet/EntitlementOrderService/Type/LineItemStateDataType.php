@@ -10,7 +10,7 @@ class LineItemStateDataType
     private $lineItemIdentifier;
 
     /**
-     * @var \Flexnet\EntitlementOrderService\Type\StateType
+     * @var string
      */
     private $stateToSet;
 
@@ -22,14 +22,14 @@ class LineItemStateDataType
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexnet\EntitlementOrderService\Type\StateType $stateToSet, ?bool $includeChildItems = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet, ?bool $includeChildItems = null)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->stateToSet = $stateToSet;
         $this->includeChildItems = $includeChildItems;
     }
 
-    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexnet\EntitlementOrderService\Type\StateType $stateToSet, ?bool $includeChildItems = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, string $stateToSet, ?bool $includeChildItems = null)
     {
         return new static(...\func_get_args());
     }
@@ -47,12 +47,12 @@ class LineItemStateDataType
         return $new;
     }
 
-    public function getStateToSet(): \Flexnet\EntitlementOrderService\Type\StateType
+    public function getStateToSet(): string
     {
         return $this->stateToSet;
     }
 
-    public function withStateToSet(\Flexnet\EntitlementOrderService\Type\StateType $stateToSet): \Flexnet\EntitlementOrderService\Type\LineItemStateDataType
+    public function withStateToSet(string $stateToSet): \Flexnet\EntitlementOrderService\Type\LineItemStateDataType
     {
         $new = clone $this;
         $new->stateToSet = $stateToSet;

@@ -15,21 +15,21 @@ class PackagePropertiesDataType
     private $version;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\VersionFormatType
+     * @var string
      */
     private $versionFormat;
 
     /**
      * Constructor
      */
-    public function __construct(string $name, \Flexnet\ProductPackagingService\Type\VersionFormatType $versionFormat, ?string $version = null)
+    public function __construct(string $name, string $versionFormat, ?string $version = null)
     {
         $this->name = $name;
         $this->versionFormat = $versionFormat;
         $this->version = $version;
     }
 
-    public static function create(string $name, \Flexnet\ProductPackagingService\Type\VersionFormatType $versionFormat, ?string $version = null)
+    public static function create(string $name, string $versionFormat, ?string $version = null)
     {
         return new static(...\func_get_args());
     }
@@ -60,12 +60,12 @@ class PackagePropertiesDataType
         return $new;
     }
 
-    public function getVersionFormat(): \Flexnet\ProductPackagingService\Type\VersionFormatType
+    public function getVersionFormat(): string
     {
         return $this->versionFormat;
     }
 
-    public function withVersionFormat(\Flexnet\ProductPackagingService\Type\VersionFormatType $versionFormat): \Flexnet\ProductPackagingService\Type\PackagePropertiesDataType
+    public function withVersionFormat(string $versionFormat): \Flexnet\ProductPackagingService\Type\PackagePropertiesDataType
     {
         $new = clone $this;
         $new->versionFormat = $versionFormat;

@@ -100,7 +100,7 @@ class FulfillmentDataType
     private $licenseText;
 
     /**
-     * @var \Flexnet\LicenseService\Type\Base64Binary|null
+     * @var string|null
      */
     private $binaryLicense;
 
@@ -110,7 +110,7 @@ class FulfillmentDataType
     private $consolidatedHostLicense;
 
     /**
-     * @var \Flexnet\LicenseService\Type\SupportLicenseType|null
+     * @var string|null
      */
     private $supportAction;
 
@@ -135,12 +135,12 @@ class FulfillmentDataType
     private $licenseModelAttributes;
 
     /**
-     * @var \Flexnet\LicenseService\Type\StateType|null
+     * @var string|null
      */
     private $state;
 
     /**
-     * @var \Flexnet\LicenseService\Type\FulfillmentSourceType|null
+     * @var string|null
      */
     private $fulfillmentSource;
 
@@ -155,14 +155,14 @@ class FulfillmentDataType
     private $entitledProducts;
 
     /**
-     * @var \Flexnet\LicenseService\Type\ActivationType|null
+     * @var string|null
      */
     private $activationType;
 
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\LicenseService\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, string $fulfillmentType, \Flexnet\LicenseService\Type\EntitlementLineItemIdentifierType $lineItem, \Flexnet\LicenseService\Type\ProductIdentifierType $product, string $soldTo, string $fulfilledCount, string $overDraftCount, \DateTimeInterface $fulfillDate, \DateTimeInterface $fulfillDateTime, bool $isPermanent, \DateTimeInterface $lastModifiedDateTime, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\ServerIDsType $serverIds = null, ?\Flexnet\LicenseService\Type\NodeIDsType $nodeIds = null, ?\Flexnet\LicenseService\Type\CustomHostIDType $customHost = null, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $expirationDate = null, ?string $licenseText = null, ?\Flexnet\LicenseService\Type\Base64Binary $binaryLicense = null, ?\Flexnet\LicenseService\Type\ConsolidatedHostLicenseDataType $consolidatedHostLicense = null, ?\Flexnet\LicenseService\Type\SupportLicenseType $supportAction = null, ?\Flexnet\LicenseService\Type\FulfillmentIdentifierType $parentFulfillmentId = null, ?\Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?\Flexnet\LicenseService\Type\StateType $state = null, ?\Flexnet\LicenseService\Type\FulfillmentSourceType $fulfillmentSource = null, ?\Flexnet\LicenseService\Type\LicenseFileDataListType $licenseFiles = null, ?\Flexnet\LicenseService\Type\EntitledProductDataListType $entitledProducts = null, ?\Flexnet\LicenseService\Type\ActivationType $activationType = null)
+    public function __construct(\Flexnet\LicenseService\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, string $fulfillmentType, \Flexnet\LicenseService\Type\EntitlementLineItemIdentifierType $lineItem, \Flexnet\LicenseService\Type\ProductIdentifierType $product, string $soldTo, string $fulfilledCount, string $overDraftCount, \DateTimeInterface $fulfillDate, \DateTimeInterface $fulfillDateTime, bool $isPermanent, \DateTimeInterface $lastModifiedDateTime, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\ServerIDsType $serverIds = null, ?\Flexnet\LicenseService\Type\NodeIDsType $nodeIds = null, ?\Flexnet\LicenseService\Type\CustomHostIDType $customHost = null, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $expirationDate = null, ?string $licenseText = null, ?string $binaryLicense = null, ?\Flexnet\LicenseService\Type\ConsolidatedHostLicenseDataType $consolidatedHostLicense = null, ?string $supportAction = null, ?\Flexnet\LicenseService\Type\FulfillmentIdentifierType $parentFulfillmentId = null, ?\Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $state = null, ?string $fulfillmentSource = null, ?\Flexnet\LicenseService\Type\LicenseFileDataListType $licenseFiles = null, ?\Flexnet\LicenseService\Type\EntitledProductDataListType $entitledProducts = null, ?string $activationType = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
@@ -197,7 +197,7 @@ class FulfillmentDataType
         $this->activationType = $activationType;
     }
 
-    public static function create(\Flexnet\LicenseService\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, string $fulfillmentType, \Flexnet\LicenseService\Type\EntitlementLineItemIdentifierType $lineItem, \Flexnet\LicenseService\Type\ProductIdentifierType $product, string $soldTo, string $fulfilledCount, string $overDraftCount, \DateTimeInterface $fulfillDate, \DateTimeInterface $fulfillDateTime, bool $isPermanent, \DateTimeInterface $lastModifiedDateTime, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\ServerIDsType $serverIds = null, ?\Flexnet\LicenseService\Type\NodeIDsType $nodeIds = null, ?\Flexnet\LicenseService\Type\CustomHostIDType $customHost = null, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $expirationDate = null, ?string $licenseText = null, ?\Flexnet\LicenseService\Type\Base64Binary $binaryLicense = null, ?\Flexnet\LicenseService\Type\ConsolidatedHostLicenseDataType $consolidatedHostLicense = null, ?\Flexnet\LicenseService\Type\SupportLicenseType $supportAction = null, ?\Flexnet\LicenseService\Type\FulfillmentIdentifierType $parentFulfillmentId = null, ?\Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?\Flexnet\LicenseService\Type\StateType $state = null, ?\Flexnet\LicenseService\Type\FulfillmentSourceType $fulfillmentSource = null, ?\Flexnet\LicenseService\Type\LicenseFileDataListType $licenseFiles = null, ?\Flexnet\LicenseService\Type\EntitledProductDataListType $entitledProducts = null, ?\Flexnet\LicenseService\Type\ActivationType $activationType = null)
+    public static function create(\Flexnet\LicenseService\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, string $fulfillmentType, \Flexnet\LicenseService\Type\EntitlementLineItemIdentifierType $lineItem, \Flexnet\LicenseService\Type\ProductIdentifierType $product, string $soldTo, string $fulfilledCount, string $overDraftCount, \DateTimeInterface $fulfillDate, \DateTimeInterface $fulfillDateTime, bool $isPermanent, \DateTimeInterface $lastModifiedDateTime, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\ServerIDsType $serverIds = null, ?\Flexnet\LicenseService\Type\NodeIDsType $nodeIds = null, ?\Flexnet\LicenseService\Type\CustomHostIDType $customHost = null, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $expirationDate = null, ?string $licenseText = null, ?string $binaryLicense = null, ?\Flexnet\LicenseService\Type\ConsolidatedHostLicenseDataType $consolidatedHostLicense = null, ?string $supportAction = null, ?\Flexnet\LicenseService\Type\FulfillmentIdentifierType $parentFulfillmentId = null, ?\Flexnet\LicenseService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $state = null, ?string $fulfillmentSource = null, ?\Flexnet\LicenseService\Type\LicenseFileDataListType $licenseFiles = null, ?\Flexnet\LicenseService\Type\EntitledProductDataListType $entitledProducts = null, ?string $activationType = null)
     {
         return new static(...\func_get_args());
     }
@@ -449,12 +449,12 @@ class FulfillmentDataType
         return $new;
     }
 
-    public function getBinaryLicense(): ?\Flexnet\LicenseService\Type\Base64Binary
+    public function getBinaryLicense(): ?string
     {
         return $this->binaryLicense;
     }
 
-    public function withBinaryLicense(?\Flexnet\LicenseService\Type\Base64Binary $binaryLicense): \Flexnet\LicenseService\Type\FulfillmentDataType
+    public function withBinaryLicense(?string $binaryLicense): \Flexnet\LicenseService\Type\FulfillmentDataType
     {
         $new = clone $this;
         $new->binaryLicense = $binaryLicense;
@@ -475,12 +475,12 @@ class FulfillmentDataType
         return $new;
     }
 
-    public function getSupportAction(): ?\Flexnet\LicenseService\Type\SupportLicenseType
+    public function getSupportAction(): ?string
     {
         return $this->supportAction;
     }
 
-    public function withSupportAction(?\Flexnet\LicenseService\Type\SupportLicenseType $supportAction): \Flexnet\LicenseService\Type\FulfillmentDataType
+    public function withSupportAction(?string $supportAction): \Flexnet\LicenseService\Type\FulfillmentDataType
     {
         $new = clone $this;
         $new->supportAction = $supportAction;
@@ -540,12 +540,12 @@ class FulfillmentDataType
         return $new;
     }
 
-    public function getState(): ?\Flexnet\LicenseService\Type\StateType
+    public function getState(): ?string
     {
         return $this->state;
     }
 
-    public function withState(?\Flexnet\LicenseService\Type\StateType $state): \Flexnet\LicenseService\Type\FulfillmentDataType
+    public function withState(?string $state): \Flexnet\LicenseService\Type\FulfillmentDataType
     {
         $new = clone $this;
         $new->state = $state;
@@ -553,12 +553,12 @@ class FulfillmentDataType
         return $new;
     }
 
-    public function getFulfillmentSource(): ?\Flexnet\LicenseService\Type\FulfillmentSourceType
+    public function getFulfillmentSource(): ?string
     {
         return $this->fulfillmentSource;
     }
 
-    public function withFulfillmentSource(?\Flexnet\LicenseService\Type\FulfillmentSourceType $fulfillmentSource): \Flexnet\LicenseService\Type\FulfillmentDataType
+    public function withFulfillmentSource(?string $fulfillmentSource): \Flexnet\LicenseService\Type\FulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillmentSource = $fulfillmentSource;
@@ -592,12 +592,12 @@ class FulfillmentDataType
         return $new;
     }
 
-    public function getActivationType(): ?\Flexnet\LicenseService\Type\ActivationType
+    public function getActivationType(): ?string
     {
         return $this->activationType;
     }
 
-    public function withActivationType(?\Flexnet\LicenseService\Type\ActivationType $activationType): \Flexnet\LicenseService\Type\FulfillmentDataType
+    public function withActivationType(?string $activationType): \Flexnet\LicenseService\Type\FulfillmentDataType
     {
         $new = clone $this;
         $new->activationType = $activationType;

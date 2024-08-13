@@ -20,7 +20,7 @@ class FeatureBundleQueryDataType
     private $description;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\StateType
+     * @var string
      */
     private $state;
 
@@ -32,7 +32,7 @@ class FeatureBundleQueryDataType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId, string $name, \Flexnet\ProductPackagingService\Type\StateType $state, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeaturesListType $features = null)
+    public function __construct(string $uniqueId, string $name, string $state, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeaturesListType $features = null)
     {
         $this->uniqueId = $uniqueId;
         $this->name = $name;
@@ -41,7 +41,7 @@ class FeatureBundleQueryDataType
         $this->features = $features;
     }
 
-    public static function create(string $uniqueId, string $name, \Flexnet\ProductPackagingService\Type\StateType $state, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeaturesListType $features = null)
+    public static function create(string $uniqueId, string $name, string $state, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\FeaturesListType $features = null)
     {
         return new static(...\func_get_args());
     }
@@ -85,12 +85,12 @@ class FeatureBundleQueryDataType
         return $new;
     }
 
-    public function getState(): \Flexnet\ProductPackagingService\Type\StateType
+    public function getState(): string
     {
         return $this->state;
     }
 
-    public function withState(\Flexnet\ProductPackagingService\Type\StateType $state): \Flexnet\ProductPackagingService\Type\FeatureBundleQueryDataType
+    public function withState(string $state): \Flexnet\ProductPackagingService\Type\FeatureBundleQueryDataType
     {
         $new = clone $this;
         $new->state = $state;

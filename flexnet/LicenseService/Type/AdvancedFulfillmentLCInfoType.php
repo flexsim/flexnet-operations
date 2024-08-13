@@ -20,7 +20,7 @@ class AdvancedFulfillmentLCInfoType
     private $licenseText;
 
     /**
-     * @var \Flexnet\LicenseService\Type\Base64Binary|null
+     * @var string|null
      */
     private $binaryLicense;
 
@@ -32,7 +32,7 @@ class AdvancedFulfillmentLCInfoType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId, string $fulfillmentId, ?string $licenseText = null, ?\Flexnet\LicenseService\Type\Base64Binary $binaryLicense = null, ?\Flexnet\LicenseService\Type\LicenseFileDataListType $licenseFiles = null)
+    public function __construct(string $uniqueId, string $fulfillmentId, ?string $licenseText = null, ?string $binaryLicense = null, ?\Flexnet\LicenseService\Type\LicenseFileDataListType $licenseFiles = null)
     {
         $this->uniqueId = $uniqueId;
         $this->fulfillmentId = $fulfillmentId;
@@ -41,7 +41,7 @@ class AdvancedFulfillmentLCInfoType
         $this->licenseFiles = $licenseFiles;
     }
 
-    public static function create(string $uniqueId, string $fulfillmentId, ?string $licenseText = null, ?\Flexnet\LicenseService\Type\Base64Binary $binaryLicense = null, ?\Flexnet\LicenseService\Type\LicenseFileDataListType $licenseFiles = null)
+    public static function create(string $uniqueId, string $fulfillmentId, ?string $licenseText = null, ?string $binaryLicense = null, ?\Flexnet\LicenseService\Type\LicenseFileDataListType $licenseFiles = null)
     {
         return new static(...\func_get_args());
     }
@@ -85,12 +85,12 @@ class AdvancedFulfillmentLCInfoType
         return $new;
     }
 
-    public function getBinaryLicense(): ?\Flexnet\LicenseService\Type\Base64Binary
+    public function getBinaryLicense(): ?string
     {
         return $this->binaryLicense;
     }
 
-    public function withBinaryLicense(?\Flexnet\LicenseService\Type\Base64Binary $binaryLicense): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCInfoType
+    public function withBinaryLicense(?string $binaryLicense): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCInfoType
     {
         $new = clone $this;
         $new->binaryLicense = $binaryLicense;

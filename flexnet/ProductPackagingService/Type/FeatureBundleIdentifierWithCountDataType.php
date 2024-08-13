@@ -10,20 +10,20 @@ class FeatureBundleIdentifierWithCountDataType
     private $featureBundleIdentifier;
 
     /**
-     * @var \Flexnet\ProductPackagingService\Type\PositiveInteger
+     * @var string
      */
     private $count;
 
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier, \Flexnet\ProductPackagingService\Type\PositiveInteger $count)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier, string $count)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
         $this->count = $count;
     }
 
-    public static function create(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier, \Flexnet\ProductPackagingService\Type\PositiveInteger $count)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier, string $count)
     {
         return new static(...\func_get_args());
     }
@@ -41,12 +41,12 @@ class FeatureBundleIdentifierWithCountDataType
         return $new;
     }
 
-    public function getCount(): \Flexnet\ProductPackagingService\Type\PositiveInteger
+    public function getCount(): string
     {
         return $this->count;
     }
 
-    public function withCount(\Flexnet\ProductPackagingService\Type\PositiveInteger $count): \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType
+    public function withCount(string $count): \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType
     {
         $new = clone $this;
         $new->count = $count;
