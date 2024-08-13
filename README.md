@@ -44,16 +44,17 @@ echo $flexnetOperations->echoPhrase('Hello, Flexsim!');
 # Type Generation
 
 1. Fix types in wsdl files
-   1. ProductPackagineService
-      - featureBundlesListType - add minOccurs="0" to the "featureBundle" property
-      - featuresListType - add minOccurs="0" to the "feature" property
-      - getProductRelationshipsResponseType - add minOccurs="0" to the "relationship" property
-   2. LicenseService
-      - fulfillmentHistoryDetailsType - add minOccurs="0" to the "record" property
 
+    1. ProductPackagineService
+        - featureBundlesListType - add minOccurs="0" to the "featureBundle" property
+        - featuresListType - add minOccurs="0" to the "feature" property
+        - getProductRelationshipsResponseType - add minOccurs="0" to the "relationship" property
+    2. LicenseService
+        - fulfillmentHistoryDetailsType - add minOccurs="0" to the "record" property
 
 2. Normalize Extension types in the wsdl file by extracting them from the base type into the child type
 3. Run the flexnet WSDL file through the xml to json tool here: https://codebeautify.org/xmlviewer
+4. Replace all instances of `\Flexnet\**\Type\StatusType` with `string` in the types files
 
 # Client Factory Generation
 
@@ -97,8 +98,8 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Cole Shirley](https://github.com/cole.shirley)
-- [All Contributors](../../contributors)
+-   [Cole Shirley](https://github.com/cole.shirley)
+-   [All Contributors](../../contributors)
 
 ## License
 

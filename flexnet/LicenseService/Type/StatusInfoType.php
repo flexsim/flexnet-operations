@@ -5,7 +5,7 @@ namespace Flexnet\LicenseService\Type;
 class StatusInfoType
 {
     /**
-     * @var \Flexnet\LicenseService\Type\StatusType
+     * @var string
      */
     private $status;
 
@@ -17,23 +17,23 @@ class StatusInfoType
     /**
      * Constructor
      */
-    public function __construct(\Flexnet\LicenseService\Type\StatusType $status, ?string $reason = null)
+    public function __construct(string $status, ?string $reason = null)
     {
         $this->status = $status;
         $this->reason = $reason;
     }
 
-    public static function create(\Flexnet\LicenseService\Type\StatusType $status, ?string $reason = null)
+    public static function create(string $status, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatus(): \Flexnet\LicenseService\Type\StatusType
+    public function getStatus(): string
     {
         return $this->status;
     }
 
-    public function withStatus(\Flexnet\LicenseService\Type\StatusType $status): \Flexnet\LicenseService\Type\StatusInfoType
+    public function withStatus(string $status): \Flexnet\LicenseService\Type\StatusInfoType
     {
         $new = clone $this;
         $new->status = $status;
