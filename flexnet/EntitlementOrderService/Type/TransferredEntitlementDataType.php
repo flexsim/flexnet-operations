@@ -19,7 +19,7 @@ class TransferredEntitlementDataType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType|array<\Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType>|null  $lineItemIdentifierMap
      */
-    public function __construct(EntitlementIdentifierType $entitlementIdentifier, TransferredLineItemMapType|array $lineItemIdentifierMap = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType|array|null $lineItemIdentifierMap = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->lineItemIdentifierMap = $lineItemIdentifierMap;
@@ -28,17 +28,17 @@ class TransferredEntitlementDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType|array<\Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType>|null  $lineItemIdentifierMap
      */
-    public static function create(EntitlementIdentifierType $entitlementIdentifier, TransferredLineItemMapType|array $lineItemIdentifierMap = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType|array|null $lineItemIdentifierMap = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getEntitlementIdentifier(): EntitlementIdentifierType
+    public function getEntitlementIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
-    public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): TransferredEntitlementDataType
+    public function withEntitlementIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier): \Flexnet\EntitlementOrderService\Type\TransferredEntitlementDataType
     {
         $new = clone $this;
         $new->entitlementIdentifier = $entitlementIdentifier;
@@ -49,7 +49,7 @@ class TransferredEntitlementDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType|array<\Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType>|null
      */
-    public function getLineItemIdentifierMap(): TransferredLineItemMapType|array|null
+    public function getLineItemIdentifierMap(): \Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType|array|null
     {
         return $this->lineItemIdentifierMap;
     }
@@ -57,7 +57,7 @@ class TransferredEntitlementDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType|array<\Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType>|null  $lineItemIdentifierMap
      */
-    public function withLineItemIdentifierMap(TransferredLineItemMapType|array|null $lineItemIdentifierMap): TransferredEntitlementDataType
+    public function withLineItemIdentifierMap(\Flexnet\EntitlementOrderService\Type\TransferredLineItemMapType|array|null $lineItemIdentifierMap): \Flexnet\EntitlementOrderService\Type\TransferredEntitlementDataType
     {
         $new = clone $this;
         $new->lineItemIdentifierMap = $lineItemIdentifierMap;

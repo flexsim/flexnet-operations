@@ -17,23 +17,23 @@ class FailedFeatureStateDataType
     /**
      * Constructor
      */
-    public function __construct(FeatureStateDataType $feature, string $reason)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureStateDataType $feature, string $reason)
     {
         $this->feature = $feature;
         $this->reason = $reason;
     }
 
-    public static function create(FeatureStateDataType $feature, string $reason)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureStateDataType $feature, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFeature(): FeatureStateDataType
+    public function getFeature(): \Flexnet\ProductPackagingService\Type\FeatureStateDataType
     {
         return $this->feature;
     }
 
-    public function withFeature(FeatureStateDataType $feature): FailedFeatureStateDataType
+    public function withFeature(\Flexnet\ProductPackagingService\Type\FeatureStateDataType $feature): \Flexnet\ProductPackagingService\Type\FailedFeatureStateDataType
     {
         $new = clone $this;
         $new->feature = $feature;
@@ -46,7 +46,7 @@ class FailedFeatureStateDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedFeatureStateDataType
+    public function withReason(string $reason): \Flexnet\ProductPackagingService\Type\FailedFeatureStateDataType
     {
         $new = clone $this;
         $new->reason = $reason;

@@ -14,7 +14,7 @@ class AdvancedFmtLCResponseDataListType
      *
      * @param  \Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType|array<\Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType>  $fulfillment
      */
-    public function __construct(AdvancedFmtLCResponseDataType|array $fulfillment)
+    public function __construct(\Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -22,7 +22,7 @@ class AdvancedFmtLCResponseDataListType
     /**
      * @param  \Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType|array<\Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType>  $fulfillment
      */
-    public static function create(AdvancedFmtLCResponseDataType|array $fulfillment)
+    public static function create(\Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class AdvancedFmtLCResponseDataListType
     /**
      * @return \Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType|array<\Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType>
      */
-    public function getFulfillment(): AdvancedFmtLCResponseDataType|array
+    public function getFulfillment(): \Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType|array
     {
         return $this->fulfillment;
     }
@@ -38,7 +38,7 @@ class AdvancedFmtLCResponseDataListType
     /**
      * @param  \Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType|array<\Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType>  $fulfillment
      */
-    public function withFulfillment(AdvancedFmtLCResponseDataType|array $fulfillment): AdvancedFmtLCResponseDataListType
+    public function withFulfillment(\Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataType|array $fulfillment): \Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataListType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;

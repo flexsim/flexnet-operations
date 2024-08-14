@@ -37,7 +37,7 @@ class AddedEntitlementLineItemDataType
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifiers
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $maintenanceLineItemIdentifiers
      */
-    public function __construct(EntitlementIdentifierType $entitlementIdentifier, string|array $lineItemUniqueIds = null, string|array $maintenanceLineItemUniqueIds = null, EntitlementLineItemIdentifierType|array $lineItemIdentifiers = null, EntitlementLineItemIdentifierType|array $maintenanceLineItemIdentifiers = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier, string|array|null $lineItemUniqueIds = null, string|array|null $maintenanceLineItemUniqueIds = null, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array|null $lineItemIdentifiers = null, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array|null $maintenanceLineItemIdentifiers = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->lineItemUniqueIds = $lineItemUniqueIds;
@@ -52,17 +52,17 @@ class AddedEntitlementLineItemDataType
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifiers
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $maintenanceLineItemIdentifiers
      */
-    public static function create(EntitlementIdentifierType $entitlementIdentifier, string|array $lineItemUniqueIds = null, string|array $maintenanceLineItemUniqueIds = null, EntitlementLineItemIdentifierType|array $lineItemIdentifiers = null, EntitlementLineItemIdentifierType|array $maintenanceLineItemIdentifiers = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier, string|array|null $lineItemUniqueIds = null, string|array|null $maintenanceLineItemUniqueIds = null, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array|null $lineItemIdentifiers = null, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array|null $maintenanceLineItemIdentifiers = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getEntitlementIdentifier(): EntitlementIdentifierType
+    public function getEntitlementIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
-    public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): AddedEntitlementLineItemDataType
+    public function withEntitlementIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier): \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->entitlementIdentifier = $entitlementIdentifier;
@@ -81,7 +81,7 @@ class AddedEntitlementLineItemDataType
     /**
      * @param  string|array<string>|null  $lineItemUniqueIds
      */
-    public function withLineItemUniqueIds(string|array|null $lineItemUniqueIds): AddedEntitlementLineItemDataType
+    public function withLineItemUniqueIds(string|array|null $lineItemUniqueIds): \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->lineItemUniqueIds = $lineItemUniqueIds;
@@ -100,7 +100,7 @@ class AddedEntitlementLineItemDataType
     /**
      * @param  string|array<string>|null  $maintenanceLineItemUniqueIds
      */
-    public function withMaintenanceLineItemUniqueIds(string|array|null $maintenanceLineItemUniqueIds): AddedEntitlementLineItemDataType
+    public function withMaintenanceLineItemUniqueIds(string|array|null $maintenanceLineItemUniqueIds): \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->maintenanceLineItemUniqueIds = $maintenanceLineItemUniqueIds;
@@ -111,7 +111,7 @@ class AddedEntitlementLineItemDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null
      */
-    public function getLineItemIdentifiers(): EntitlementLineItemIdentifierType|array|null
+    public function getLineItemIdentifiers(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array|null
     {
         return $this->lineItemIdentifiers;
     }
@@ -119,7 +119,7 @@ class AddedEntitlementLineItemDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifiers
      */
-    public function withLineItemIdentifiers(EntitlementLineItemIdentifierType|array|null $lineItemIdentifiers): AddedEntitlementLineItemDataType
+    public function withLineItemIdentifiers(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array|null $lineItemIdentifiers): \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->lineItemIdentifiers = $lineItemIdentifiers;
@@ -130,7 +130,7 @@ class AddedEntitlementLineItemDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null
      */
-    public function getMaintenanceLineItemIdentifiers(): EntitlementLineItemIdentifierType|array|null
+    public function getMaintenanceLineItemIdentifiers(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array|null
     {
         return $this->maintenanceLineItemIdentifiers;
     }
@@ -138,7 +138,7 @@ class AddedEntitlementLineItemDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $maintenanceLineItemIdentifiers
      */
-    public function withMaintenanceLineItemIdentifiers(EntitlementLineItemIdentifierType|array|null $maintenanceLineItemIdentifiers): AddedEntitlementLineItemDataType
+    public function withMaintenanceLineItemIdentifiers(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array|null $maintenanceLineItemIdentifiers): \Flexnet\EntitlementOrderService\Type\AddedEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->maintenanceLineItemIdentifiers = $maintenanceLineItemIdentifiers;

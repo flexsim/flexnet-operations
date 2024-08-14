@@ -33,7 +33,7 @@ class ActivationIdOverDraftMapType
         return $this->activationId;
     }
 
-    public function withActivationId(string $activationId): ActivationIdOverDraftMapType
+    public function withActivationId(string $activationId): \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -46,7 +46,7 @@ class ActivationIdOverDraftMapType
         return $this->overDraftAllowed;
     }
 
-    public function withOverDraftAllowed(bool $overDraftAllowed): ActivationIdOverDraftMapType
+    public function withOverDraftAllowed(bool $overDraftAllowed): \Flexnet\LicenseService\Type\ActivationIdOverDraftMapType
     {
         $new = clone $this;
         $new->overDraftAllowed = $overDraftAllowed;

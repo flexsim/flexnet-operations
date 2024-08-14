@@ -14,7 +14,7 @@ class FailedProductCategoryDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType>|null  $failedProductCategory
      */
-    public function __construct(FailedProductCategoryDataType|array $failedProductCategory = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType|array|null $failedProductCategory = null)
     {
         $this->failedProductCategory = $failedProductCategory;
     }
@@ -22,7 +22,7 @@ class FailedProductCategoryDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType>|null  $failedProductCategory
      */
-    public static function create(FailedProductCategoryDataType|array $failedProductCategory = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType|array|null $failedProductCategory = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedProductCategoryDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType>|null
      */
-    public function getFailedProductCategory(): FailedProductCategoryDataType|array|null
+    public function getFailedProductCategory(): \Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType|array|null
     {
         return $this->failedProductCategory;
     }
@@ -38,7 +38,7 @@ class FailedProductCategoryDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType>|null  $failedProductCategory
      */
-    public function withFailedProductCategory(FailedProductCategoryDataType|array|null $failedProductCategory): FailedProductCategoryDataListType
+    public function withFailedProductCategory(\Flexnet\ProductPackagingService\Type\FailedProductCategoryDataType|array|null $failedProductCategory): \Flexnet\ProductPackagingService\Type\FailedProductCategoryDataListType
     {
         $new = clone $this;
         $new->failedProductCategory = $failedProductCategory;

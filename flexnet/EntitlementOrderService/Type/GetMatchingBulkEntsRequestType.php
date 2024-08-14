@@ -14,22 +14,22 @@ class GetMatchingBulkEntsRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(GetMatchingBulkEntsListType $bulkEntList)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsListType $bulkEntList)
     {
         $this->bulkEntList = $bulkEntList;
     }
 
-    public static function create(GetMatchingBulkEntsListType $bulkEntList)
+    public static function create(\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsListType $bulkEntList)
     {
         return new static(...\func_get_args());
     }
 
-    public function getBulkEntList(): GetMatchingBulkEntsListType
+    public function getBulkEntList(): \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsListType
     {
         return $this->bulkEntList;
     }
 
-    public function withBulkEntList(GetMatchingBulkEntsListType $bulkEntList): GetMatchingBulkEntsRequestType
+    public function withBulkEntList(\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsListType $bulkEntList): \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsRequestType
     {
         $new = clone $this;
         $new->bulkEntList = $bulkEntList;

@@ -29,7 +29,7 @@ class GetUniformSuitesQueryRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(int $pageNumber, int $batchSize, bool $returnContainedObjects, SuiteQueryParametersType $queryParams = null)
+    public function __construct(int $pageNumber, int $batchSize, bool $returnContainedObjects, ?\Flexnet\ProductPackagingService\Type\SuiteQueryParametersType $queryParams = null)
     {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
@@ -37,17 +37,17 @@ class GetUniformSuitesQueryRequestType implements RequestInterface
         $this->queryParams = $queryParams;
     }
 
-    public static function create(int $pageNumber, int $batchSize, bool $returnContainedObjects, SuiteQueryParametersType $queryParams = null)
+    public static function create(int $pageNumber, int $batchSize, bool $returnContainedObjects, ?\Flexnet\ProductPackagingService\Type\SuiteQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): ?SuiteQueryParametersType
+    public function getQueryParams(): ?\Flexnet\ProductPackagingService\Type\SuiteQueryParametersType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(?SuiteQueryParametersType $queryParams): GetUniformSuitesQueryRequestType
+    public function withQueryParams(?\Flexnet\ProductPackagingService\Type\SuiteQueryParametersType $queryParams): \Flexnet\ProductPackagingService\Type\GetUniformSuitesQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -60,7 +60,7 @@ class GetUniformSuitesQueryRequestType implements RequestInterface
         return $this->pageNumber;
     }
 
-    public function withPageNumber(int $pageNumber): GetUniformSuitesQueryRequestType
+    public function withPageNumber(int $pageNumber): \Flexnet\ProductPackagingService\Type\GetUniformSuitesQueryRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;
@@ -73,7 +73,7 @@ class GetUniformSuitesQueryRequestType implements RequestInterface
         return $this->batchSize;
     }
 
-    public function withBatchSize(int $batchSize): GetUniformSuitesQueryRequestType
+    public function withBatchSize(int $batchSize): \Flexnet\ProductPackagingService\Type\GetUniformSuitesQueryRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;
@@ -86,7 +86,7 @@ class GetUniformSuitesQueryRequestType implements RequestInterface
         return $this->returnContainedObjects;
     }
 
-    public function withReturnContainedObjects(bool $returnContainedObjects): GetUniformSuitesQueryRequestType
+    public function withReturnContainedObjects(bool $returnContainedObjects): \Flexnet\ProductPackagingService\Type\GetUniformSuitesQueryRequestType
     {
         $new = clone $this;
         $new->returnContainedObjects = $returnContainedObjects;

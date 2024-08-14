@@ -14,7 +14,7 @@ class GetProductsQueryResponseDataType
      *
      * @param  \Flexnet\ProductPackagingService\Type\ProductQueryDataType|array<\Flexnet\ProductPackagingService\Type\ProductQueryDataType>|null  $product
      */
-    public function __construct(ProductQueryDataType|array $product = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProductQueryDataType|array|null $product = null)
     {
         $this->product = $product;
     }
@@ -22,7 +22,7 @@ class GetProductsQueryResponseDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductQueryDataType|array<\Flexnet\ProductPackagingService\Type\ProductQueryDataType>|null  $product
      */
-    public static function create(ProductQueryDataType|array $product = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProductQueryDataType|array|null $product = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class GetProductsQueryResponseDataType
     /**
      * @return \Flexnet\ProductPackagingService\Type\ProductQueryDataType|array<\Flexnet\ProductPackagingService\Type\ProductQueryDataType>|null
      */
-    public function getProduct(): ProductQueryDataType|array|null
+    public function getProduct(): \Flexnet\ProductPackagingService\Type\ProductQueryDataType|array|null
     {
         return $this->product;
     }
@@ -38,7 +38,7 @@ class GetProductsQueryResponseDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductQueryDataType|array<\Flexnet\ProductPackagingService\Type\ProductQueryDataType>|null  $product
      */
-    public function withProduct(ProductQueryDataType|array|null $product): GetProductsQueryResponseDataType
+    public function withProduct(\Flexnet\ProductPackagingService\Type\ProductQueryDataType|array|null $product): \Flexnet\ProductPackagingService\Type\GetProductsQueryResponseDataType
     {
         $new = clone $this;
         $new->product = $product;

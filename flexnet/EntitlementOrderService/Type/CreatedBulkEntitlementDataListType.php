@@ -14,7 +14,7 @@ class CreatedBulkEntitlementDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType>|null  $createdBulkEntitlement
      */
-    public function __construct(CreatedBulkEntitlementDataType|array $createdBulkEntitlement = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType|array|null $createdBulkEntitlement = null)
     {
         $this->createdBulkEntitlement = $createdBulkEntitlement;
     }
@@ -22,7 +22,7 @@ class CreatedBulkEntitlementDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType>|null  $createdBulkEntitlement
      */
-    public static function create(CreatedBulkEntitlementDataType|array $createdBulkEntitlement = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType|array|null $createdBulkEntitlement = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class CreatedBulkEntitlementDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType>|null
      */
-    public function getCreatedBulkEntitlement(): CreatedBulkEntitlementDataType|array|null
+    public function getCreatedBulkEntitlement(): \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType|array|null
     {
         return $this->createdBulkEntitlement;
     }
@@ -38,7 +38,7 @@ class CreatedBulkEntitlementDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType>|null  $createdBulkEntitlement
      */
-    public function withCreatedBulkEntitlement(CreatedBulkEntitlementDataType|array|null $createdBulkEntitlement): CreatedBulkEntitlementDataListType
+    public function withCreatedBulkEntitlement(\Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType|array|null $createdBulkEntitlement): \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataListType
     {
         $new = clone $this;
         $new->createdBulkEntitlement = $createdBulkEntitlement;

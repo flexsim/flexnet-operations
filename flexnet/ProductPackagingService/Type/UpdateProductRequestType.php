@@ -16,7 +16,7 @@ class UpdateProductRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\UpdateProductDataType|array<\Flexnet\ProductPackagingService\Type\UpdateProductDataType>  $product
      */
-    public function __construct(UpdateProductDataType|array $product)
+    public function __construct(\Flexnet\ProductPackagingService\Type\UpdateProductDataType|array $product)
     {
         $this->product = $product;
     }
@@ -24,7 +24,7 @@ class UpdateProductRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\UpdateProductDataType|array<\Flexnet\ProductPackagingService\Type\UpdateProductDataType>  $product
      */
-    public static function create(UpdateProductDataType|array $product)
+    public static function create(\Flexnet\ProductPackagingService\Type\UpdateProductDataType|array $product)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class UpdateProductRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\UpdateProductDataType|array<\Flexnet\ProductPackagingService\Type\UpdateProductDataType>
      */
-    public function getProduct(): UpdateProductDataType|array
+    public function getProduct(): \Flexnet\ProductPackagingService\Type\UpdateProductDataType|array
     {
         return $this->product;
     }
@@ -40,7 +40,7 @@ class UpdateProductRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\UpdateProductDataType|array<\Flexnet\ProductPackagingService\Type\UpdateProductDataType>  $product
      */
-    public function withProduct(UpdateProductDataType|array $product): UpdateProductRequestType
+    public function withProduct(\Flexnet\ProductPackagingService\Type\UpdateProductDataType|array $product): \Flexnet\ProductPackagingService\Type\UpdateProductRequestType
     {
         $new = clone $this;
         $new->product = $product;

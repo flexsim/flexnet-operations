@@ -14,22 +14,22 @@ class GetProductRelationshipsRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(ProductIdentifierType $productIdentifier)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier)
     {
         $this->productIdentifier = $productIdentifier;
     }
 
-    public static function create(ProductIdentifierType $productIdentifier)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier)
     {
         return new static(...\func_get_args());
     }
 
-    public function getProductIdentifier(): ProductIdentifierType
+    public function getProductIdentifier(): \Flexnet\ProductPackagingService\Type\ProductIdentifierType
     {
         return $this->productIdentifier;
     }
 
-    public function withProductIdentifier(ProductIdentifierType $productIdentifier): GetProductRelationshipsRequestType
+    public function withProductIdentifier(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier): \Flexnet\ProductPackagingService\Type\GetProductRelationshipsRequestType
     {
         $new = clone $this;
         $new->productIdentifier = $productIdentifier;

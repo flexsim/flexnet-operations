@@ -14,7 +14,7 @@ class FailedFeatureDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedFeatureDataType|array<\Flexnet\ProductPackagingService\Type\FailedFeatureDataType>|null  $failedFeature
      */
-    public function __construct(FailedFeatureDataType|array $failedFeature = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FailedFeatureDataType|array|null $failedFeature = null)
     {
         $this->failedFeature = $failedFeature;
     }
@@ -22,7 +22,7 @@ class FailedFeatureDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedFeatureDataType|array<\Flexnet\ProductPackagingService\Type\FailedFeatureDataType>|null  $failedFeature
      */
-    public static function create(FailedFeatureDataType|array $failedFeature = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\FailedFeatureDataType|array|null $failedFeature = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedFeatureDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\FailedFeatureDataType|array<\Flexnet\ProductPackagingService\Type\FailedFeatureDataType>|null
      */
-    public function getFailedFeature(): FailedFeatureDataType|array|null
+    public function getFailedFeature(): \Flexnet\ProductPackagingService\Type\FailedFeatureDataType|array|null
     {
         return $this->failedFeature;
     }
@@ -38,7 +38,7 @@ class FailedFeatureDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedFeatureDataType|array<\Flexnet\ProductPackagingService\Type\FailedFeatureDataType>|null  $failedFeature
      */
-    public function withFailedFeature(FailedFeatureDataType|array|null $failedFeature): FailedFeatureDataListType
+    public function withFailedFeature(\Flexnet\ProductPackagingService\Type\FailedFeatureDataType|array|null $failedFeature): \Flexnet\ProductPackagingService\Type\FailedFeatureDataListType
     {
         $new = clone $this;
         $new->failedFeature = $failedFeature;

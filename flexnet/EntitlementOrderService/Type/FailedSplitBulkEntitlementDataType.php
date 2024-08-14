@@ -17,23 +17,23 @@ class FailedSplitBulkEntitlementDataType
     /**
      * Constructor
      */
-    public function __construct(SplitBulkEntitlementInfoType $bulkEntitlementInfo, string $reason)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo, string $reason)
     {
         $this->bulkEntitlementInfo = $bulkEntitlementInfo;
         $this->reason = $reason;
     }
 
-    public static function create(SplitBulkEntitlementInfoType $bulkEntitlementInfo, string $reason)
+    public static function create(\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getBulkEntitlementInfo(): SplitBulkEntitlementInfoType
+    public function getBulkEntitlementInfo(): \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType
     {
         return $this->bulkEntitlementInfo;
     }
 
-    public function withBulkEntitlementInfo(SplitBulkEntitlementInfoType $bulkEntitlementInfo): FailedSplitBulkEntitlementDataType
+    public function withBulkEntitlementInfo(\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType $bulkEntitlementInfo): \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType
     {
         $new = clone $this;
         $new->bulkEntitlementInfo = $bulkEntitlementInfo;
@@ -46,7 +46,7 @@ class FailedSplitBulkEntitlementDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedSplitBulkEntitlementDataType
+    public function withReason(string $reason): \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType
     {
         $new = clone $this;
         $new->reason = $reason;

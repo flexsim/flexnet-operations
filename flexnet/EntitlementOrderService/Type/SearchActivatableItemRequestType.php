@@ -24,24 +24,24 @@ class SearchActivatableItemRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int $pageNumber = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, ?int $pageNumber = null)
     {
         $this->activatableItemSearchCriteria = $activatableItemSearchCriteria;
         $this->batchSize = $batchSize;
         $this->pageNumber = $pageNumber;
     }
 
-    public static function create(SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, int $pageNumber = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType $activatableItemSearchCriteria, int $batchSize, ?int $pageNumber = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getActivatableItemSearchCriteria(): SearchActivatableItemDataType
+    public function getActivatableItemSearchCriteria(): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType
     {
         return $this->activatableItemSearchCriteria;
     }
 
-    public function withActivatableItemSearchCriteria(SearchActivatableItemDataType $activatableItemSearchCriteria): SearchActivatableItemRequestType
+    public function withActivatableItemSearchCriteria(\Flexnet\EntitlementOrderService\Type\SearchActivatableItemDataType $activatableItemSearchCriteria): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemRequestType
     {
         $new = clone $this;
         $new->activatableItemSearchCriteria = $activatableItemSearchCriteria;
@@ -54,7 +54,7 @@ class SearchActivatableItemRequestType implements RequestInterface
         return $this->batchSize;
     }
 
-    public function withBatchSize(int $batchSize): SearchActivatableItemRequestType
+    public function withBatchSize(int $batchSize): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;
@@ -67,7 +67,7 @@ class SearchActivatableItemRequestType implements RequestInterface
         return $this->pageNumber;
     }
 
-    public function withPageNumber(?int $pageNumber): SearchActivatableItemRequestType
+    public function withPageNumber(?int $pageNumber): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;

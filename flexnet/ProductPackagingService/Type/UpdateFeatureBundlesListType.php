@@ -19,7 +19,7 @@ class UpdateFeatureBundlesListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType>  $featureBundle
      */
-    public function __construct(FeatureBundleIdentifierWithCountDataType|array $featureBundle, string $opType)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle, string $opType)
     {
         $this->featureBundle = $featureBundle;
         $this->opType = $opType;
@@ -28,7 +28,7 @@ class UpdateFeatureBundlesListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType>  $featureBundle
      */
-    public static function create(FeatureBundleIdentifierWithCountDataType|array $featureBundle, string $opType)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle, string $opType)
     {
         return new static(...\func_get_args());
     }
@@ -36,7 +36,7 @@ class UpdateFeatureBundlesListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType>
      */
-    public function getFeatureBundle(): FeatureBundleIdentifierWithCountDataType|array
+    public function getFeatureBundle(): \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType|array
     {
         return $this->featureBundle;
     }
@@ -44,7 +44,7 @@ class UpdateFeatureBundlesListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType>  $featureBundle
      */
-    public function withFeatureBundle(FeatureBundleIdentifierWithCountDataType|array $featureBundle): UpdateFeatureBundlesListType
+    public function withFeatureBundle(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType|array $featureBundle): \Flexnet\ProductPackagingService\Type\UpdateFeatureBundlesListType
     {
         $new = clone $this;
         $new->featureBundle = $featureBundle;
@@ -57,7 +57,7 @@ class UpdateFeatureBundlesListType
         return $this->opType;
     }
 
-    public function withOpType(string $opType): UpdateFeatureBundlesListType
+    public function withOpType(string $opType): \Flexnet\ProductPackagingService\Type\UpdateFeatureBundlesListType
     {
         $new = clone $this;
         $new->opType = $opType;

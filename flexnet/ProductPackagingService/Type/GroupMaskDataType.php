@@ -5,30 +5,30 @@ namespace Flexnet\ProductPackagingService\Type;
 class GroupMaskDataType
 {
     /**
-     * @var string|array<string>|null
+     * @var string|array<\Flexnet\ProductPackagingService\Type\GroupMaskType>|null
      */
     private $option;
 
     /**
      * Constructor
      *
-     * @param  string|array<string>|null  $option
+     * @param  string|array<\Flexnet\ProductPackagingService\Type\GroupMaskType>|null  $option
      */
-    public function __construct(string|array $option = null)
+    public function __construct(string|array|null $option = null)
     {
         $this->option = $option;
     }
 
     /**
-     * @param  string|array<string>|null  $option
+     * @param  string|array<\Flexnet\ProductPackagingService\Type\GroupMaskType>|null  $option
      */
-    public static function create(string|array $option = null)
+    public static function create(string|array|null $option = null)
     {
         return new static(...\func_get_args());
     }
 
     /**
-     * @return string|array<string>|null
+     * @return string|array<\Flexnet\ProductPackagingService\Type\GroupMaskType>|null
      */
     public function getOption(): string|array|null
     {
@@ -36,9 +36,9 @@ class GroupMaskDataType
     }
 
     /**
-     * @param  string|array<string>|null  $option
+     * @param  string|array<\Flexnet\ProductPackagingService\Type\GroupMaskType>|null  $option
      */
-    public function withOption(string|array|null $option): GroupMaskDataType
+    public function withOption(string|array|null $option): \Flexnet\ProductPackagingService\Type\GroupMaskDataType
     {
         $new = clone $this;
         $new->option = $option;

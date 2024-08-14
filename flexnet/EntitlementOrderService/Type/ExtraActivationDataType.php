@@ -27,7 +27,7 @@ class ExtraActivationDataType
         return $this->allowedCount;
     }
 
-    public function withAllowedCount(int $allowedCount): ExtraActivationDataType
+    public function withAllowedCount(int $allowedCount): \Flexnet\EntitlementOrderService\Type\ExtraActivationDataType
     {
         $new = clone $this;
         $new->allowedCount = $allowedCount;

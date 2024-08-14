@@ -21,7 +21,7 @@ class HandleProductCategoriesToUserRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>  $productCategory
      */
-    public function __construct(UserIdentifierType $user, ProductCategoryDataType|array $productCategory)
+    public function __construct(\Flexnet\ProductPackagingService\Type\UserIdentifierType $user, \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array $productCategory)
     {
         $this->user = $user;
         $this->productCategory = $productCategory;
@@ -30,17 +30,17 @@ class HandleProductCategoriesToUserRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>  $productCategory
      */
-    public static function create(UserIdentifierType $user, ProductCategoryDataType|array $productCategory)
+    public static function create(\Flexnet\ProductPackagingService\Type\UserIdentifierType $user, \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array $productCategory)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUser(): UserIdentifierType
+    public function getUser(): \Flexnet\ProductPackagingService\Type\UserIdentifierType
     {
         return $this->user;
     }
 
-    public function withUser(UserIdentifierType $user): HandleProductCategoriesToUserRequestType
+    public function withUser(\Flexnet\ProductPackagingService\Type\UserIdentifierType $user): \Flexnet\ProductPackagingService\Type\HandleProductCategoriesToUserRequestType
     {
         $new = clone $this;
         $new->user = $user;
@@ -51,7 +51,7 @@ class HandleProductCategoriesToUserRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>
      */
-    public function getProductCategory(): ProductCategoryDataType|array
+    public function getProductCategory(): \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array
     {
         return $this->productCategory;
     }
@@ -59,7 +59,7 @@ class HandleProductCategoriesToUserRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>  $productCategory
      */
-    public function withProductCategory(ProductCategoryDataType|array $productCategory): HandleProductCategoriesToUserRequestType
+    public function withProductCategory(\Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array $productCategory): \Flexnet\ProductPackagingService\Type\HandleProductCategoriesToUserRequestType
     {
         $new = clone $this;
         $new->productCategory = $productCategory;

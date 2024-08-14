@@ -14,7 +14,7 @@ class PublisherErrorResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function __construct(PublisherErrorFulfillmentResponseDataType|array $fulfillmentData = null)
+    public function __construct(\Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType|array|null $fulfillmentData = null)
     {
         $this->fulfillmentData = $fulfillmentData;
     }
@@ -22,7 +22,7 @@ class PublisherErrorResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public static function create(PublisherErrorFulfillmentResponseDataType|array $fulfillmentData = null)
+    public static function create(\Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType|array|null $fulfillmentData = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class PublisherErrorResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType>|null
      */
-    public function getFulfillmentData(): PublisherErrorFulfillmentResponseDataType|array|null
+    public function getFulfillmentData(): \Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType|array|null
     {
         return $this->fulfillmentData;
     }
@@ -38,7 +38,7 @@ class PublisherErrorResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType|array<\Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType>|null  $fulfillmentData
      */
-    public function withFulfillmentData(PublisherErrorFulfillmentResponseDataType|array|null $fulfillmentData): PublisherErrorResponseDataType
+    public function withFulfillmentData(\Flexnet\LicenseService\Type\PublisherErrorFulfillmentResponseDataType|array|null $fulfillmentData): \Flexnet\LicenseService\Type\PublisherErrorResponseDataType
     {
         $new = clone $this;
         $new->fulfillmentData = $fulfillmentData;

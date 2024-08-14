@@ -16,7 +16,7 @@ class CreateProductCategoryRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType>  $productCategory
      */
-    public function __construct(CreateProductCategoryDataType|array $productCategory)
+    public function __construct(\Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType|array $productCategory)
     {
         $this->productCategory = $productCategory;
     }
@@ -24,7 +24,7 @@ class CreateProductCategoryRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType>  $productCategory
      */
-    public static function create(CreateProductCategoryDataType|array $productCategory)
+    public static function create(\Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType|array $productCategory)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class CreateProductCategoryRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType>
      */
-    public function getProductCategory(): CreateProductCategoryDataType|array
+    public function getProductCategory(): \Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType|array
     {
         return $this->productCategory;
     }
@@ -40,7 +40,7 @@ class CreateProductCategoryRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType>  $productCategory
      */
-    public function withProductCategory(CreateProductCategoryDataType|array $productCategory): CreateProductCategoryRequestType
+    public function withProductCategory(\Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType|array $productCategory): \Flexnet\ProductPackagingService\Type\CreateProductCategoryRequestType
     {
         $new = clone $this;
         $new->productCategory = $productCategory;

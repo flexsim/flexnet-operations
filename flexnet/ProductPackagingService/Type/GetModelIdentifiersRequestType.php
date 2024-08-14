@@ -14,22 +14,22 @@ class GetModelIdentifiersRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(IdentifierQueryParametersType $queryParams = null)
+    public function __construct(?\Flexnet\ProductPackagingService\Type\IdentifierQueryParametersType $queryParams = null)
     {
         $this->queryParams = $queryParams;
     }
 
-    public static function create(IdentifierQueryParametersType $queryParams = null)
+    public static function create(?\Flexnet\ProductPackagingService\Type\IdentifierQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): ?IdentifierQueryParametersType
+    public function getQueryParams(): ?\Flexnet\ProductPackagingService\Type\IdentifierQueryParametersType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(?IdentifierQueryParametersType $queryParams): GetModelIdentifiersRequestType
+    public function withQueryParams(?\Flexnet\ProductPackagingService\Type\IdentifierQueryParametersType $queryParams): \Flexnet\ProductPackagingService\Type\GetModelIdentifiersRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

@@ -16,7 +16,7 @@ class SetEntitlementStateRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateDataType>  $entitlement
      */
-    public function __construct(EntitlementStateDataType|array $entitlement)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementStateDataType|array $entitlement)
     {
         $this->entitlement = $entitlement;
     }
@@ -24,7 +24,7 @@ class SetEntitlementStateRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateDataType>  $entitlement
      */
-    public static function create(EntitlementStateDataType|array $entitlement)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementStateDataType|array $entitlement)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class SetEntitlementStateRequestType implements RequestInterface
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntitlementStateDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateDataType>
      */
-    public function getEntitlement(): EntitlementStateDataType|array
+    public function getEntitlement(): \Flexnet\EntitlementOrderService\Type\EntitlementStateDataType|array
     {
         return $this->entitlement;
     }
@@ -40,7 +40,7 @@ class SetEntitlementStateRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateDataType>  $entitlement
      */
-    public function withEntitlement(EntitlementStateDataType|array $entitlement): SetEntitlementStateRequestType
+    public function withEntitlement(\Flexnet\EntitlementOrderService\Type\EntitlementStateDataType|array $entitlement): \Flexnet\EntitlementOrderService\Type\SetEntitlementStateRequestType
     {
         $new = clone $this;
         $new->entitlement = $entitlement;

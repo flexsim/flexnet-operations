@@ -14,22 +14,22 @@ class RepairShortCodeRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(RepairShortCodeDataType $shortCodeData = null)
+    public function __construct(?\Flexnet\LicenseService\Type\RepairShortCodeDataType $shortCodeData = null)
     {
         $this->shortCodeData = $shortCodeData;
     }
 
-    public static function create(RepairShortCodeDataType $shortCodeData = null)
+    public static function create(?\Flexnet\LicenseService\Type\RepairShortCodeDataType $shortCodeData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getShortCodeData(): ?RepairShortCodeDataType
+    public function getShortCodeData(): ?\Flexnet\LicenseService\Type\RepairShortCodeDataType
     {
         return $this->shortCodeData;
     }
 
-    public function withShortCodeData(?RepairShortCodeDataType $shortCodeData): RepairShortCodeRequestType
+    public function withShortCodeData(?\Flexnet\LicenseService\Type\RepairShortCodeDataType $shortCodeData): \Flexnet\LicenseService\Type\RepairShortCodeRequestType
     {
         $new = clone $this;
         $new->shortCodeData = $shortCodeData;

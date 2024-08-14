@@ -17,23 +17,23 @@ class FailedChildLIFulfillmentDataType
     /**
      * Constructor
      */
-    public function __construct(CreateChildLineItemFulfillmentDataType $fulfillment, string $reason)
+    public function __construct(\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType $fulfillment, string $reason)
     {
         $this->fulfillment = $fulfillment;
         $this->reason = $reason;
     }
 
-    public static function create(CreateChildLineItemFulfillmentDataType $fulfillment, string $reason)
+    public static function create(\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType $fulfillment, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFulfillment(): CreateChildLineItemFulfillmentDataType
+    public function getFulfillment(): \Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType
     {
         return $this->fulfillment;
     }
 
-    public function withFulfillment(CreateChildLineItemFulfillmentDataType $fulfillment): FailedChildLIFulfillmentDataType
+    public function withFulfillment(\Flexnet\LicenseService\Type\CreateChildLineItemFulfillmentDataType $fulfillment): \Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;
@@ -46,7 +46,7 @@ class FailedChildLIFulfillmentDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedChildLIFulfillmentDataType
+    public function withReason(string $reason): \Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType
     {
         $new = clone $this;
         $new->reason = $reason;

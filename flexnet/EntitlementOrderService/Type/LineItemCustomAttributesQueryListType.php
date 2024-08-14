@@ -14,7 +14,7 @@ class LineItemCustomAttributesQueryListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType>|null  $attribute
      */
-    public function __construct(LineItemCustomAttributeQueryType|array $attribute = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType|array|null $attribute = null)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class LineItemCustomAttributesQueryListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType>|null  $attribute
      */
-    public static function create(LineItemCustomAttributeQueryType|array $attribute = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType|array|null $attribute = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class LineItemCustomAttributesQueryListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType>|null
      */
-    public function getAttribute(): LineItemCustomAttributeQueryType|array|null
+    public function getAttribute(): \Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType|array|null
     {
         return $this->attribute;
     }
@@ -38,7 +38,7 @@ class LineItemCustomAttributesQueryListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType|array<\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType>|null  $attribute
      */
-    public function withAttribute(LineItemCustomAttributeQueryType|array|null $attribute): LineItemCustomAttributesQueryListType
+    public function withAttribute(\Flexnet\EntitlementOrderService\Type\LineItemCustomAttributeQueryType|array|null $attribute): \Flexnet\EntitlementOrderService\Type\LineItemCustomAttributesQueryListType
     {
         $new = clone $this;
         $new->attribute = $attribute;

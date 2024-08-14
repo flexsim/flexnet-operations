@@ -19,23 +19,23 @@ class GetFulfillmentHistoryResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FulfillmentHistoryDataType $responseData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\FulfillmentHistoryDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FulfillmentHistoryDataType $responseData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\FulfillmentHistoryDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): GetFulfillmentHistoryResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\GetFulfillmentHistoryResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class GetFulfillmentHistoryResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?FulfillmentHistoryDataType
+    public function getResponseData(): ?\Flexnet\LicenseService\Type\FulfillmentHistoryDataType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?FulfillmentHistoryDataType $responseData): GetFulfillmentHistoryResponseType
+    public function withResponseData(?\Flexnet\LicenseService\Type\FulfillmentHistoryDataType $responseData): \Flexnet\LicenseService\Type\GetFulfillmentHistoryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

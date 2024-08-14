@@ -16,7 +16,7 @@ class DeleteMaintenanceRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\DeleteMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\DeleteMaintenanceDataType>  $maintenance
      */
-    public function __construct(DeleteMaintenanceDataType|array $maintenance)
+    public function __construct(\Flexnet\ProductPackagingService\Type\DeleteMaintenanceDataType|array $maintenance)
     {
         $this->maintenance = $maintenance;
     }
@@ -24,7 +24,7 @@ class DeleteMaintenanceRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\DeleteMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\DeleteMaintenanceDataType>  $maintenance
      */
-    public static function create(DeleteMaintenanceDataType|array $maintenance)
+    public static function create(\Flexnet\ProductPackagingService\Type\DeleteMaintenanceDataType|array $maintenance)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class DeleteMaintenanceRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\DeleteMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\DeleteMaintenanceDataType>
      */
-    public function getMaintenance(): DeleteMaintenanceDataType|array
+    public function getMaintenance(): \Flexnet\ProductPackagingService\Type\DeleteMaintenanceDataType|array
     {
         return $this->maintenance;
     }
@@ -40,7 +40,7 @@ class DeleteMaintenanceRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\DeleteMaintenanceDataType|array<\Flexnet\ProductPackagingService\Type\DeleteMaintenanceDataType>  $maintenance
      */
-    public function withMaintenance(DeleteMaintenanceDataType|array $maintenance): DeleteMaintenanceRequestType
+    public function withMaintenance(\Flexnet\ProductPackagingService\Type\DeleteMaintenanceDataType|array $maintenance): \Flexnet\ProductPackagingService\Type\DeleteMaintenanceRequestType
     {
         $new = clone $this;
         $new->maintenance = $maintenance;

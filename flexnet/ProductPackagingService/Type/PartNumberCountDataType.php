@@ -27,7 +27,7 @@ class PartNumberCountDataType
         return $this->count;
     }
 
-    public function withCount(int $count): PartNumberCountDataType
+    public function withCount(int $count): \Flexnet\ProductPackagingService\Type\PartNumberCountDataType
     {
         $new = clone $this;
         $new->count = $count;

@@ -14,536 +14,776 @@ class ProductPackagingServiceClient
      */
     private $caller;
 
-    public function __construct(Caller $caller)
+    public function __construct(\Phpro\SoapClient\Caller\Caller $caller)
     {
         $this->caller = $caller;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateFeatureRequestType  $createFeatureRequest
-     * @return ResultInterface|Type\CreateFeatureResponseType
+     * @param  RequestInterface & Type\CreateFeatureRequestType  $createFeatureRequest
+     * @return ResultInterface & Type\CreateFeatureResponseType
      *
      * @throws SoapException
      */
-    public function createFeature(Type\CreateFeatureRequestType $createFeatureRequest): Type\CreateFeatureResponseType
+    public function createFeature(\Flexnet\ProductPackagingService\Type\CreateFeatureRequestType $createFeatureRequest): \Flexnet\ProductPackagingService\Type\CreateFeatureResponseType
     {
-        return ($this->caller)('createFeature', $createFeatureRequest);
+        $response = ($this->caller)('createFeature', $createFeatureRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\CreateFeatureResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\UpdateFeatureRequestType  $updateFeatureRequest
-     * @return ResultInterface|Type\UpdateFeatureResponseType
+     * @param  RequestInterface & Type\UpdateFeatureRequestType  $updateFeatureRequest
+     * @return ResultInterface & Type\UpdateFeatureResponseType
      *
      * @throws SoapException
      */
-    public function updateFeature(Type\UpdateFeatureRequestType $updateFeatureRequest): Type\UpdateFeatureResponseType
+    public function updateFeature(\Flexnet\ProductPackagingService\Type\UpdateFeatureRequestType $updateFeatureRequest): \Flexnet\ProductPackagingService\Type\UpdateFeatureResponseType
     {
-        return ($this->caller)('updateFeature', $updateFeatureRequest);
+        $response = ($this->caller)('updateFeature', $updateFeatureRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\UpdateFeatureResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\DeleteFeatureRequestType  $deleteFeatureRequest
-     * @return ResultInterface|Type\DeleteFeatureResponseType
+     * @param  RequestInterface & Type\DeleteFeatureRequestType  $deleteFeatureRequest
+     * @return ResultInterface & Type\DeleteFeatureResponseType
      *
      * @throws SoapException
      */
-    public function deleteFeature(Type\DeleteFeatureRequestType $deleteFeatureRequest): Type\DeleteFeatureResponseType
+    public function deleteFeature(\Flexnet\ProductPackagingService\Type\DeleteFeatureRequestType $deleteFeatureRequest): \Flexnet\ProductPackagingService\Type\DeleteFeatureResponseType
     {
-        return ($this->caller)('deleteFeature', $deleteFeatureRequest);
+        $response = ($this->caller)('deleteFeature', $deleteFeatureRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\DeleteFeatureResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetFeatureCountRequestType  $getFeatureCountRequest
-     * @return ResultInterface|Type\GetFeatureCountResponseType
+     * @param  RequestInterface & Type\GetFeatureCountRequestType  $getFeatureCountRequest
+     * @return ResultInterface & Type\GetFeatureCountResponseType
      *
      * @throws SoapException
      */
-    public function getFeatureCount(Type\GetFeatureCountRequestType $getFeatureCountRequest): Type\GetFeatureCountResponseType
+    public function getFeatureCount(\Flexnet\ProductPackagingService\Type\GetFeatureCountRequestType $getFeatureCountRequest): \Flexnet\ProductPackagingService\Type\GetFeatureCountResponseType
     {
-        return ($this->caller)('getFeatureCount', $getFeatureCountRequest);
+        $response = ($this->caller)('getFeatureCount', $getFeatureCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetFeatureCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetFeaturesQueryRequestType  $getFeaturesQueryRequest
-     * @return ResultInterface|Type\GetFeaturesQueryResponseType
+     * @param  RequestInterface & Type\GetFeaturesQueryRequestType  $getFeaturesQueryRequest
+     * @return ResultInterface & Type\GetFeaturesQueryResponseType
      *
      * @throws SoapException
      */
-    public function getFeaturesQuery(Type\GetFeaturesQueryRequestType $getFeaturesQueryRequest): Type\GetFeaturesQueryResponseType
+    public function getFeaturesQuery(\Flexnet\ProductPackagingService\Type\GetFeaturesQueryRequestType $getFeaturesQueryRequest): \Flexnet\ProductPackagingService\Type\GetFeaturesQueryResponseType
     {
-        return ($this->caller)('getFeaturesQuery', $getFeaturesQueryRequest);
+        $response = ($this->caller)('getFeaturesQuery', $getFeaturesQueryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetFeaturesQueryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SetFeatureStateRequestType  $setFeatureStateRequest
-     * @return ResultInterface|Type\SetFeatureStateResponseType
+     * @param  RequestInterface & Type\SetFeatureStateRequestType  $setFeatureStateRequest
+     * @return ResultInterface & Type\SetFeatureStateResponseType
      *
      * @throws SoapException
      */
-    public function setFeatureState(Type\SetFeatureStateRequestType $setFeatureStateRequest): Type\SetFeatureStateResponseType
+    public function setFeatureState(\Flexnet\ProductPackagingService\Type\SetFeatureStateRequestType $setFeatureStateRequest): \Flexnet\ProductPackagingService\Type\SetFeatureStateResponseType
     {
-        return ($this->caller)('setFeatureState', $setFeatureStateRequest);
+        $response = ($this->caller)('setFeatureState', $setFeatureStateRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\SetFeatureStateResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateFeatureBundleRequestType  $createFeatureBundleRequest
-     * @return ResultInterface|Type\CreateFeatureBundleResponseType
+     * @param  RequestInterface & Type\CreateFeatureBundleRequestType  $createFeatureBundleRequest
+     * @return ResultInterface & Type\CreateFeatureBundleResponseType
      *
      * @throws SoapException
      */
-    public function createFeatureBundle(Type\CreateFeatureBundleRequestType $createFeatureBundleRequest): Type\CreateFeatureBundleResponseType
+    public function createFeatureBundle(\Flexnet\ProductPackagingService\Type\CreateFeatureBundleRequestType $createFeatureBundleRequest): \Flexnet\ProductPackagingService\Type\CreateFeatureBundleResponseType
     {
-        return ($this->caller)('createFeatureBundle', $createFeatureBundleRequest);
+        $response = ($this->caller)('createFeatureBundle', $createFeatureBundleRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\CreateFeatureBundleResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\UpdateFeatureBundleRequestType  $updateFeatureBundleRequest
-     * @return ResultInterface|Type\UpdateFeatureBundleResponseType
+     * @param  RequestInterface & Type\UpdateFeatureBundleRequestType  $updateFeatureBundleRequest
+     * @return ResultInterface & Type\UpdateFeatureBundleResponseType
      *
      * @throws SoapException
      */
-    public function updateFeatureBundle(Type\UpdateFeatureBundleRequestType $updateFeatureBundleRequest): Type\UpdateFeatureBundleResponseType
+    public function updateFeatureBundle(\Flexnet\ProductPackagingService\Type\UpdateFeatureBundleRequestType $updateFeatureBundleRequest): \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleResponseType
     {
-        return ($this->caller)('updateFeatureBundle', $updateFeatureBundleRequest);
+        $response = ($this->caller)('updateFeatureBundle', $updateFeatureBundleRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\UpdateFeatureBundleResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\DeleteFeatureBundleRequestType  $deleteFeatureBundleRequest
-     * @return ResultInterface|Type\DeleteFeatureBundleResponseType
+     * @param  RequestInterface & Type\DeleteFeatureBundleRequestType  $deleteFeatureBundleRequest
+     * @return ResultInterface & Type\DeleteFeatureBundleResponseType
      *
      * @throws SoapException
      */
-    public function deleteFeatureBundle(Type\DeleteFeatureBundleRequestType $deleteFeatureBundleRequest): Type\DeleteFeatureBundleResponseType
+    public function deleteFeatureBundle(\Flexnet\ProductPackagingService\Type\DeleteFeatureBundleRequestType $deleteFeatureBundleRequest): \Flexnet\ProductPackagingService\Type\DeleteFeatureBundleResponseType
     {
-        return ($this->caller)('deleteFeatureBundle', $deleteFeatureBundleRequest);
+        $response = ($this->caller)('deleteFeatureBundle', $deleteFeatureBundleRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\DeleteFeatureBundleResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetFeatureBundleCountRequestType  $getFeatureBundleCountRequest
-     * @return ResultInterface|Type\GetFeatureBundleCountResponseType
+     * @param  RequestInterface & Type\GetFeatureBundleCountRequestType  $getFeatureBundleCountRequest
+     * @return ResultInterface & Type\GetFeatureBundleCountResponseType
      *
      * @throws SoapException
      */
-    public function getFeatureBundleCount(Type\GetFeatureBundleCountRequestType $getFeatureBundleCountRequest): Type\GetFeatureBundleCountResponseType
+    public function getFeatureBundleCount(\Flexnet\ProductPackagingService\Type\GetFeatureBundleCountRequestType $getFeatureBundleCountRequest): \Flexnet\ProductPackagingService\Type\GetFeatureBundleCountResponseType
     {
-        return ($this->caller)('getFeatureBundleCount', $getFeatureBundleCountRequest);
+        $response = ($this->caller)('getFeatureBundleCount', $getFeatureBundleCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetFeatureBundleCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetFeatureBundlesQueryRequestType  $getFeatureBundlesQueryRequest
-     * @return ResultInterface|Type\GetFeatureBundlesQueryResponseType
+     * @param  RequestInterface & Type\GetFeatureBundlesQueryRequestType  $getFeatureBundlesQueryRequest
+     * @return ResultInterface & Type\GetFeatureBundlesQueryResponseType
      *
      * @throws SoapException
      */
-    public function getFeatureBundlesQuery(Type\GetFeatureBundlesQueryRequestType $getFeatureBundlesQueryRequest): Type\GetFeatureBundlesQueryResponseType
+    public function getFeatureBundlesQuery(\Flexnet\ProductPackagingService\Type\GetFeatureBundlesQueryRequestType $getFeatureBundlesQueryRequest): \Flexnet\ProductPackagingService\Type\GetFeatureBundlesQueryResponseType
     {
-        return ($this->caller)('getFeatureBundlesQuery', $getFeatureBundlesQueryRequest);
+        $response = ($this->caller)('getFeatureBundlesQuery', $getFeatureBundlesQueryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetFeatureBundlesQueryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SetFeatureBundleStateRequestType  $setFeatureBundleStateRequest
-     * @return ResultInterface|Type\SetFeatureBundleStateResponseType
+     * @param  RequestInterface & Type\SetFeatureBundleStateRequestType  $setFeatureBundleStateRequest
+     * @return ResultInterface & Type\SetFeatureBundleStateResponseType
      *
      * @throws SoapException
      */
-    public function setFeatureBundleState(Type\SetFeatureBundleStateRequestType $setFeatureBundleStateRequest): Type\SetFeatureBundleStateResponseType
+    public function setFeatureBundleState(\Flexnet\ProductPackagingService\Type\SetFeatureBundleStateRequestType $setFeatureBundleStateRequest): \Flexnet\ProductPackagingService\Type\SetFeatureBundleStateResponseType
     {
-        return ($this->caller)('setFeatureBundleState', $setFeatureBundleStateRequest);
+        $response = ($this->caller)('setFeatureBundleState', $setFeatureBundleStateRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\SetFeatureBundleStateResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateProductRequestType  $createProductRequest
-     * @return ResultInterface|Type\CreateProductResponseType
+     * @param  RequestInterface & Type\CreateProductRequestType  $createProductRequest
+     * @return ResultInterface & Type\CreateProductResponseType
      *
      * @throws SoapException
      */
-    public function createProduct(Type\CreateProductRequestType $createProductRequest): Type\CreateProductResponseType
+    public function createProduct(\Flexnet\ProductPackagingService\Type\CreateProductRequestType $createProductRequest): \Flexnet\ProductPackagingService\Type\CreateProductResponseType
     {
-        return ($this->caller)('createProduct', $createProductRequest);
+        $response = ($this->caller)('createProduct', $createProductRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\CreateProductResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\UpdateProductRequestType  $updateProductRequest
-     * @return ResultInterface|Type\UpdateProductResponseType
+     * @param  RequestInterface & Type\UpdateProductRequestType  $updateProductRequest
+     * @return ResultInterface & Type\UpdateProductResponseType
      *
      * @throws SoapException
      */
-    public function updateProduct(Type\UpdateProductRequestType $updateProductRequest): Type\UpdateProductResponseType
+    public function updateProduct(\Flexnet\ProductPackagingService\Type\UpdateProductRequestType $updateProductRequest): \Flexnet\ProductPackagingService\Type\UpdateProductResponseType
     {
-        return ($this->caller)('updateProduct', $updateProductRequest);
+        $response = ($this->caller)('updateProduct', $updateProductRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\UpdateProductResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\DeleteProductRequestType  $deleteProductRequest
-     * @return ResultInterface|Type\DeleteProductResponseType
+     * @param  RequestInterface & Type\DeleteProductRequestType  $deleteProductRequest
+     * @return ResultInterface & Type\DeleteProductResponseType
      *
      * @throws SoapException
      */
-    public function deleteProduct(Type\DeleteProductRequestType $deleteProductRequest): Type\DeleteProductResponseType
+    public function deleteProduct(\Flexnet\ProductPackagingService\Type\DeleteProductRequestType $deleteProductRequest): \Flexnet\ProductPackagingService\Type\DeleteProductResponseType
     {
-        return ($this->caller)('deleteProduct', $deleteProductRequest);
+        $response = ($this->caller)('deleteProduct', $deleteProductRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\DeleteProductResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetProductCountRequestType  $getProductCountRequest
-     * @return ResultInterface|Type\GetProductCountResponseType
+     * @param  RequestInterface & Type\GetProductCountRequestType  $getProductCountRequest
+     * @return ResultInterface & Type\GetProductCountResponseType
      *
      * @throws SoapException
      */
-    public function getProductCount(Type\GetProductCountRequestType $getProductCountRequest): Type\GetProductCountResponseType
+    public function getProductCount(\Flexnet\ProductPackagingService\Type\GetProductCountRequestType $getProductCountRequest): \Flexnet\ProductPackagingService\Type\GetProductCountResponseType
     {
-        return ($this->caller)('getProductCount', $getProductCountRequest);
+        $response = ($this->caller)('getProductCount', $getProductCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetProductCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetProductsQueryRequestType  $getProductsQueryRequest
-     * @return ResultInterface|Type\GetProductsQueryResponseType
+     * @param  RequestInterface & Type\GetProductsQueryRequestType  $getProductsQueryRequest
+     * @return ResultInterface & Type\GetProductsQueryResponseType
      *
      * @throws SoapException
      */
-    public function getProductsQuery(Type\GetProductsQueryRequestType $getProductsQueryRequest): Type\GetProductsQueryResponseType
+    public function getProductsQuery(\Flexnet\ProductPackagingService\Type\GetProductsQueryRequestType $getProductsQueryRequest): \Flexnet\ProductPackagingService\Type\GetProductsQueryResponseType
     {
-        return ($this->caller)('getProductsQuery', $getProductsQueryRequest);
+        $response = ($this->caller)('getProductsQuery', $getProductsQueryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetProductsQueryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateProductCategoryRequestType  $createProductCategoryRequest
-     * @return ResultInterface|Type\CreateProductCategoryResponseType
+     * @param  RequestInterface & Type\CreateProductCategoryRequestType  $createProductCategoryRequest
+     * @return ResultInterface & Type\CreateProductCategoryResponseType
      *
      * @throws SoapException
      */
-    public function createProductCategory(Type\CreateProductCategoryRequestType $createProductCategoryRequest): Type\CreateProductCategoryResponseType
+    public function createProductCategory(\Flexnet\ProductPackagingService\Type\CreateProductCategoryRequestType $createProductCategoryRequest): \Flexnet\ProductPackagingService\Type\CreateProductCategoryResponseType
     {
-        return ($this->caller)('createProductCategory', $createProductCategoryRequest);
+        $response = ($this->caller)('createProductCategory', $createProductCategoryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\CreateProductCategoryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetProductCategoriesRequestType  $getProductCategoriesRequest
-     * @return ResultInterface|Type\GetProductCategoriesResponseType
+     * @param  RequestInterface & Type\GetProductCategoriesRequestType  $getProductCategoriesRequest
+     * @return ResultInterface & Type\GetProductCategoriesResponseType
      *
      * @throws SoapException
      */
-    public function getProductCategories(Type\GetProductCategoriesRequestType $getProductCategoriesRequest): Type\GetProductCategoriesResponseType
+    public function getProductCategories(\Flexnet\ProductPackagingService\Type\GetProductCategoriesRequestType $getProductCategoriesRequest): \Flexnet\ProductPackagingService\Type\GetProductCategoriesResponseType
     {
-        return ($this->caller)('getProductCategories', $getProductCategoriesRequest);
+        $response = ($this->caller)('getProductCategories', $getProductCategoriesRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetProductCategoriesResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\HandleProductCategoriesToUserRequestType  $assignProductCategoriesToUserRequest
-     * @return ResultInterface|Type\HandleProductCategoriesToUserResponseType
+     * @param  RequestInterface & Type\HandleProductCategoriesToUserRequestType  $assignProductCategoriesToUserRequest
+     * @return ResultInterface & Type\HandleProductCategoriesToUserResponseType
      *
      * @throws SoapException
      */
-    public function assignProductCategoriesToUser(Type\HandleProductCategoriesToUserRequestType $assignProductCategoriesToUserRequest): Type\HandleProductCategoriesToUserResponseType
+    public function assignProductCategoriesToUser(\Flexnet\ProductPackagingService\Type\HandleProductCategoriesToUserRequestType $assignProductCategoriesToUserRequest): \Flexnet\ProductPackagingService\Type\HandleProductCategoriesToUserResponseType
     {
-        return ($this->caller)('assignProductCategoriesToUser', $assignProductCategoriesToUserRequest);
+        $response = ($this->caller)('assignProductCategoriesToUser', $assignProductCategoriesToUserRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\HandleProductCategoriesToUserResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\HandleProductCategoriesToUserRequestType  $removeProductCategoriesFromUserRequest
-     * @return ResultInterface|Type\HandleProductCategoriesToUserResponseType
+     * @param  RequestInterface & Type\HandleProductCategoriesToUserRequestType  $removeProductCategoriesFromUserRequest
+     * @return ResultInterface & Type\HandleProductCategoriesToUserResponseType
      *
      * @throws SoapException
      */
-    public function removeProductCategoriesFromUser(Type\HandleProductCategoriesToUserRequestType $removeProductCategoriesFromUserRequest): Type\HandleProductCategoriesToUserResponseType
+    public function removeProductCategoriesFromUser(\Flexnet\ProductPackagingService\Type\HandleProductCategoriesToUserRequestType $removeProductCategoriesFromUserRequest): \Flexnet\ProductPackagingService\Type\HandleProductCategoriesToUserResponseType
     {
-        return ($this->caller)('removeProductCategoriesFromUser', $removeProductCategoriesFromUserRequest);
+        $response = ($this->caller)('removeProductCategoriesFromUser', $removeProductCategoriesFromUserRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\HandleProductCategoriesToUserResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetUsersForProductCategoryRequestType  $getUsersForProductCategoryRequest
-     * @return ResultInterface|Type\GetUsersForProductCategoryResponseType
+     * @param  RequestInterface & Type\GetUsersForProductCategoryRequestType  $getUsersForProductCategoryRequest
+     * @return ResultInterface & Type\GetUsersForProductCategoryResponseType
      *
      * @throws SoapException
      */
-    public function getUsersForProductCategory(Type\GetUsersForProductCategoryRequestType $getUsersForProductCategoryRequest): Type\GetUsersForProductCategoryResponseType
+    public function getUsersForProductCategory(\Flexnet\ProductPackagingService\Type\GetUsersForProductCategoryRequestType $getUsersForProductCategoryRequest): \Flexnet\ProductPackagingService\Type\GetUsersForProductCategoryResponseType
     {
-        return ($this->caller)('getUsersForProductCategory', $getUsersForProductCategoryRequest);
+        $response = ($this->caller)('getUsersForProductCategory', $getUsersForProductCategoryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetUsersForProductCategoryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\HandleProductCategoryToAcctRequestType  $assignProductCategoriesToAcctRequest
-     * @return ResultInterface|Type\HandleProductCategoryToAcctResponseType
+     * @param  RequestInterface & Type\HandleProductCategoryToAcctRequestType  $assignProductCategoriesToAcctRequest
+     * @return ResultInterface & Type\HandleProductCategoryToAcctResponseType
      *
      * @throws SoapException
      */
-    public function assignProductCategoriesToAcct(Type\HandleProductCategoryToAcctRequestType $assignProductCategoriesToAcctRequest): Type\HandleProductCategoryToAcctResponseType
+    public function assignProductCategoriesToAcct(\Flexnet\ProductPackagingService\Type\HandleProductCategoryToAcctRequestType $assignProductCategoriesToAcctRequest): \Flexnet\ProductPackagingService\Type\HandleProductCategoryToAcctResponseType
     {
-        return ($this->caller)('assignProductCategoriesToAcct', $assignProductCategoriesToAcctRequest);
+        $response = ($this->caller)('assignProductCategoriesToAcct', $assignProductCategoriesToAcctRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\HandleProductCategoryToAcctResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\HandleProductCategoryToAcctRequestType  $removeProductCategoriesFromAcctRequest
-     * @return ResultInterface|Type\HandleProductCategoryToAcctResponseType
+     * @param  RequestInterface & Type\HandleProductCategoryToAcctRequestType  $removeProductCategoriesFromAcctRequest
+     * @return ResultInterface & Type\HandleProductCategoryToAcctResponseType
      *
      * @throws SoapException
      */
-    public function removeProductCategoriesFromAcct(Type\HandleProductCategoryToAcctRequestType $removeProductCategoriesFromAcctRequest): Type\HandleProductCategoryToAcctResponseType
+    public function removeProductCategoriesFromAcct(\Flexnet\ProductPackagingService\Type\HandleProductCategoryToAcctRequestType $removeProductCategoriesFromAcctRequest): \Flexnet\ProductPackagingService\Type\HandleProductCategoryToAcctResponseType
     {
-        return ($this->caller)('removeProductCategoriesFromAcct', $removeProductCategoriesFromAcctRequest);
+        $response = ($this->caller)('removeProductCategoriesFromAcct', $removeProductCategoriesFromAcctRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\HandleProductCategoryToAcctResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SetProductStateRequestType  $setProductStateRequest
-     * @return ResultInterface|Type\SetProductStateResponseType
+     * @param  RequestInterface & Type\SetProductStateRequestType  $setProductStateRequest
+     * @return ResultInterface & Type\SetProductStateResponseType
      *
      * @throws SoapException
      */
-    public function setProductState(Type\SetProductStateRequestType $setProductStateRequest): Type\SetProductStateResponseType
+    public function setProductState(\Flexnet\ProductPackagingService\Type\SetProductStateRequestType $setProductStateRequest): \Flexnet\ProductPackagingService\Type\SetProductStateResponseType
     {
-        return ($this->caller)('setProductState', $setProductStateRequest);
+        $response = ($this->caller)('setProductState', $setProductStateRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\SetProductStateResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateMaintenanceRequestType  $createMaintenanceRequest
-     * @return ResultInterface|Type\CreateMaintenanceResponseType
+     * @param  RequestInterface & Type\CreateMaintenanceRequestType  $createMaintenanceRequest
+     * @return ResultInterface & Type\CreateMaintenanceResponseType
      *
      * @throws SoapException
      */
-    public function createMaintenance(Type\CreateMaintenanceRequestType $createMaintenanceRequest): Type\CreateMaintenanceResponseType
+    public function createMaintenance(\Flexnet\ProductPackagingService\Type\CreateMaintenanceRequestType $createMaintenanceRequest): \Flexnet\ProductPackagingService\Type\CreateMaintenanceResponseType
     {
-        return ($this->caller)('createMaintenance', $createMaintenanceRequest);
+        $response = ($this->caller)('createMaintenance', $createMaintenanceRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\CreateMaintenanceResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\UpdateMaintenanceRequestType  $updateMaintenanceRequest
-     * @return ResultInterface|Type\UpdateMaintenanceResponseType
+     * @param  RequestInterface & Type\UpdateMaintenanceRequestType  $updateMaintenanceRequest
+     * @return ResultInterface & Type\UpdateMaintenanceResponseType
      *
      * @throws SoapException
      */
-    public function updateMaintenance(Type\UpdateMaintenanceRequestType $updateMaintenanceRequest): Type\UpdateMaintenanceResponseType
+    public function updateMaintenance(\Flexnet\ProductPackagingService\Type\UpdateMaintenanceRequestType $updateMaintenanceRequest): \Flexnet\ProductPackagingService\Type\UpdateMaintenanceResponseType
     {
-        return ($this->caller)('updateMaintenance', $updateMaintenanceRequest);
+        $response = ($this->caller)('updateMaintenance', $updateMaintenanceRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\UpdateMaintenanceResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\DeleteMaintenanceRequestType  $deleteMaintenanceRequest
-     * @return ResultInterface|Type\DeleteMaintenanceResponseType
+     * @param  RequestInterface & Type\DeleteMaintenanceRequestType  $deleteMaintenanceRequest
+     * @return ResultInterface & Type\DeleteMaintenanceResponseType
      *
      * @throws SoapException
      */
-    public function deleteMaintenance(Type\DeleteMaintenanceRequestType $deleteMaintenanceRequest): Type\DeleteMaintenanceResponseType
+    public function deleteMaintenance(\Flexnet\ProductPackagingService\Type\DeleteMaintenanceRequestType $deleteMaintenanceRequest): \Flexnet\ProductPackagingService\Type\DeleteMaintenanceResponseType
     {
-        return ($this->caller)('deleteMaintenance', $deleteMaintenanceRequest);
+        $response = ($this->caller)('deleteMaintenance', $deleteMaintenanceRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\DeleteMaintenanceResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetMaintenanceCountRequestType  $getMaintenanceCountRequest
-     * @return ResultInterface|Type\GetMaintenanceCountResponseType
+     * @param  RequestInterface & Type\GetMaintenanceCountRequestType  $getMaintenanceCountRequest
+     * @return ResultInterface & Type\GetMaintenanceCountResponseType
      *
      * @throws SoapException
      */
-    public function getMaintenanceCount(Type\GetMaintenanceCountRequestType $getMaintenanceCountRequest): Type\GetMaintenanceCountResponseType
+    public function getMaintenanceCount(\Flexnet\ProductPackagingService\Type\GetMaintenanceCountRequestType $getMaintenanceCountRequest): \Flexnet\ProductPackagingService\Type\GetMaintenanceCountResponseType
     {
-        return ($this->caller)('getMaintenanceCount', $getMaintenanceCountRequest);
+        $response = ($this->caller)('getMaintenanceCount', $getMaintenanceCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetMaintenanceCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetMaintenanceQueryRequestType  $getMaintenanceQueryRequest
-     * @return ResultInterface|Type\GetMaintenanceQueryResponseType
+     * @param  RequestInterface & Type\GetMaintenanceQueryRequestType  $getMaintenanceQueryRequest
+     * @return ResultInterface & Type\GetMaintenanceQueryResponseType
      *
      * @throws SoapException
      */
-    public function getMaintenanceQuery(Type\GetMaintenanceQueryRequestType $getMaintenanceQueryRequest): Type\GetMaintenanceQueryResponseType
+    public function getMaintenanceQuery(\Flexnet\ProductPackagingService\Type\GetMaintenanceQueryRequestType $getMaintenanceQueryRequest): \Flexnet\ProductPackagingService\Type\GetMaintenanceQueryResponseType
     {
-        return ($this->caller)('getMaintenanceQuery', $getMaintenanceQueryRequest);
+        $response = ($this->caller)('getMaintenanceQuery', $getMaintenanceQueryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetMaintenanceQueryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SetMaintenanceStateRequestType  $setMaintenanceStateRequest
-     * @return ResultInterface|Type\SetMaintenanceStateResponseType
+     * @param  RequestInterface & Type\SetMaintenanceStateRequestType  $setMaintenanceStateRequest
+     * @return ResultInterface & Type\SetMaintenanceStateResponseType
      *
      * @throws SoapException
      */
-    public function setMaintenanceState(Type\SetMaintenanceStateRequestType $setMaintenanceStateRequest): Type\SetMaintenanceStateResponseType
+    public function setMaintenanceState(\Flexnet\ProductPackagingService\Type\SetMaintenanceStateRequestType $setMaintenanceStateRequest): \Flexnet\ProductPackagingService\Type\SetMaintenanceStateResponseType
     {
-        return ($this->caller)('setMaintenanceState', $setMaintenanceStateRequest);
+        $response = ($this->caller)('setMaintenanceState', $setMaintenanceStateRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\SetMaintenanceStateResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateUniformSuiteRequestType  $createUniformSuiteRequest
-     * @return ResultInterface|Type\CreateUniformSuiteResponseType
+     * @param  RequestInterface & Type\CreateUniformSuiteRequestType  $createUniformSuiteRequest
+     * @return ResultInterface & Type\CreateUniformSuiteResponseType
      *
      * @throws SoapException
      */
-    public function createUniformSuite(Type\CreateUniformSuiteRequestType $createUniformSuiteRequest): Type\CreateUniformSuiteResponseType
+    public function createUniformSuite(\Flexnet\ProductPackagingService\Type\CreateUniformSuiteRequestType $createUniformSuiteRequest): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteResponseType
     {
-        return ($this->caller)('createUniformSuite', $createUniformSuiteRequest);
+        $response = ($this->caller)('createUniformSuite', $createUniformSuiteRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\CreateUniformSuiteResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\UpdateUniformSuiteRequestType  $updateUniformSuiteRequest
-     * @return ResultInterface|Type\UpdateUniformSuiteResponseType
+     * @param  RequestInterface & Type\UpdateUniformSuiteRequestType  $updateUniformSuiteRequest
+     * @return ResultInterface & Type\UpdateUniformSuiteResponseType
      *
      * @throws SoapException
      */
-    public function updateUniformSuite(Type\UpdateUniformSuiteRequestType $updateUniformSuiteRequest): Type\UpdateUniformSuiteResponseType
+    public function updateUniformSuite(\Flexnet\ProductPackagingService\Type\UpdateUniformSuiteRequestType $updateUniformSuiteRequest): \Flexnet\ProductPackagingService\Type\UpdateUniformSuiteResponseType
     {
-        return ($this->caller)('updateUniformSuite', $updateUniformSuiteRequest);
+        $response = ($this->caller)('updateUniformSuite', $updateUniformSuiteRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\UpdateUniformSuiteResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\DeleteUniformSuiteRequestType  $deleteUniformSuiteRequest
-     * @return ResultInterface|Type\DeleteUniformSuiteResponseType
+     * @param  RequestInterface & Type\DeleteUniformSuiteRequestType  $deleteUniformSuiteRequest
+     * @return ResultInterface & Type\DeleteUniformSuiteResponseType
      *
      * @throws SoapException
      */
-    public function deleteUniformSuite(Type\DeleteUniformSuiteRequestType $deleteUniformSuiteRequest): Type\DeleteUniformSuiteResponseType
+    public function deleteUniformSuite(\Flexnet\ProductPackagingService\Type\DeleteUniformSuiteRequestType $deleteUniformSuiteRequest): \Flexnet\ProductPackagingService\Type\DeleteUniformSuiteResponseType
     {
-        return ($this->caller)('deleteUniformSuite', $deleteUniformSuiteRequest);
+        $response = ($this->caller)('deleteUniformSuite', $deleteUniformSuiteRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\DeleteUniformSuiteResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetUniformSuiteCountRequestType  $getUniformSuiteCountRequest
-     * @return ResultInterface|Type\GetUniformSuiteCountResponseType
+     * @param  RequestInterface & Type\GetUniformSuiteCountRequestType  $getUniformSuiteCountRequest
+     * @return ResultInterface & Type\GetUniformSuiteCountResponseType
      *
      * @throws SoapException
      */
-    public function getUniformSuiteCount(Type\GetUniformSuiteCountRequestType $getUniformSuiteCountRequest): Type\GetUniformSuiteCountResponseType
+    public function getUniformSuiteCount(\Flexnet\ProductPackagingService\Type\GetUniformSuiteCountRequestType $getUniformSuiteCountRequest): \Flexnet\ProductPackagingService\Type\GetUniformSuiteCountResponseType
     {
-        return ($this->caller)('getUniformSuiteCount', $getUniformSuiteCountRequest);
+        $response = ($this->caller)('getUniformSuiteCount', $getUniformSuiteCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetUniformSuiteCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetUniformSuitesQueryRequestType  $getUniformSuitesQueryRequest
-     * @return ResultInterface|Type\GetUniformSuitesQueryResponseType
+     * @param  RequestInterface & Type\GetUniformSuitesQueryRequestType  $getUniformSuitesQueryRequest
+     * @return ResultInterface & Type\GetUniformSuitesQueryResponseType
      *
      * @throws SoapException
      */
-    public function getUniformSuiteQuery(Type\GetUniformSuitesQueryRequestType $getUniformSuitesQueryRequest): Type\GetUniformSuitesQueryResponseType
+    public function getUniformSuiteQuery(\Flexnet\ProductPackagingService\Type\GetUniformSuitesQueryRequestType $getUniformSuitesQueryRequest): \Flexnet\ProductPackagingService\Type\GetUniformSuitesQueryResponseType
     {
-        return ($this->caller)('getUniformSuiteQuery', $getUniformSuitesQueryRequest);
+        $response = ($this->caller)('getUniformSuiteQuery', $getUniformSuitesQueryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetUniformSuitesQueryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SetUniformSuiteStateRequestType  $setUniformSuiteStateRequest
-     * @return ResultInterface|Type\SetUniformSuiteStateResponseType
+     * @param  RequestInterface & Type\SetUniformSuiteStateRequestType  $setUniformSuiteStateRequest
+     * @return ResultInterface & Type\SetUniformSuiteStateResponseType
      *
      * @throws SoapException
      */
-    public function setUniformSuiteState(Type\SetUniformSuiteStateRequestType $setUniformSuiteStateRequest): Type\SetUniformSuiteStateResponseType
+    public function setUniformSuiteState(\Flexnet\ProductPackagingService\Type\SetUniformSuiteStateRequestType $setUniformSuiteStateRequest): \Flexnet\ProductPackagingService\Type\SetUniformSuiteStateResponseType
     {
-        return ($this->caller)('setUniformSuiteState', $setUniformSuiteStateRequest);
+        $response = ($this->caller)('setUniformSuiteState', $setUniformSuiteStateRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\SetUniformSuiteStateResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreatePartNumberRequestType  $createPartNumberRequest
-     * @return ResultInterface|Type\CreatePartNumberResponseType
+     * @param  RequestInterface & Type\CreatePartNumberRequestType  $createPartNumberRequest
+     * @return ResultInterface & Type\CreatePartNumberResponseType
      *
      * @throws SoapException
      */
-    public function createPartNumber(Type\CreatePartNumberRequestType $createPartNumberRequest): Type\CreatePartNumberResponseType
+    public function createPartNumber(\Flexnet\ProductPackagingService\Type\CreatePartNumberRequestType $createPartNumberRequest): \Flexnet\ProductPackagingService\Type\CreatePartNumberResponseType
     {
-        return ($this->caller)('createPartNumber', $createPartNumberRequest);
+        $response = ($this->caller)('createPartNumber', $createPartNumberRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\CreatePartNumberResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\DeletePartNumberRequestType  $deletePartNumberRequest
-     * @return ResultInterface|Type\DeletePartNumberResponseType
+     * @param  RequestInterface & Type\DeletePartNumberRequestType  $deletePartNumberRequest
+     * @return ResultInterface & Type\DeletePartNumberResponseType
      *
      * @throws SoapException
      */
-    public function deletePartNumber(Type\DeletePartNumberRequestType $deletePartNumberRequest): Type\DeletePartNumberResponseType
+    public function deletePartNumber(\Flexnet\ProductPackagingService\Type\DeletePartNumberRequestType $deletePartNumberRequest): \Flexnet\ProductPackagingService\Type\DeletePartNumberResponseType
     {
-        return ($this->caller)('deletePartNumber', $deletePartNumberRequest);
+        $response = ($this->caller)('deletePartNumber', $deletePartNumberRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\DeletePartNumberResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetPartNumberCountRequestType  $getPartNumberCountRequest
-     * @return ResultInterface|Type\GetPartNumberCountResponseType
+     * @param  RequestInterface & Type\GetPartNumberCountRequestType  $getPartNumberCountRequest
+     * @return ResultInterface & Type\GetPartNumberCountResponseType
      *
      * @throws SoapException
      */
-    public function getPartNumberCount(Type\GetPartNumberCountRequestType $getPartNumberCountRequest): Type\GetPartNumberCountResponseType
+    public function getPartNumberCount(\Flexnet\ProductPackagingService\Type\GetPartNumberCountRequestType $getPartNumberCountRequest): \Flexnet\ProductPackagingService\Type\GetPartNumberCountResponseType
     {
-        return ($this->caller)('getPartNumberCount', $getPartNumberCountRequest);
+        $response = ($this->caller)('getPartNumberCount', $getPartNumberCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetPartNumberCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetPartNumbersQueryRequestType  $getPartNumbersQueryRequest
-     * @return ResultInterface|Type\GetPartNumbersQueryResponseType
+     * @param  RequestInterface & Type\GetPartNumbersQueryRequestType  $getPartNumbersQueryRequest
+     * @return ResultInterface & Type\GetPartNumbersQueryResponseType
      *
      * @throws SoapException
      */
-    public function getPartNumbersQuery(Type\GetPartNumbersQueryRequestType $getPartNumbersQueryRequest): Type\GetPartNumbersQueryResponseType
+    public function getPartNumbersQuery(\Flexnet\ProductPackagingService\Type\GetPartNumbersQueryRequestType $getPartNumbersQueryRequest): \Flexnet\ProductPackagingService\Type\GetPartNumbersQueryResponseType
     {
-        return ($this->caller)('getPartNumbersQuery', $getPartNumbersQueryRequest);
+        $response = ($this->caller)('getPartNumbersQuery', $getPartNumbersQueryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetPartNumbersQueryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateProductRelationshipRequestType  $createProductRelationshipRequest
-     * @return ResultInterface|Type\CreateProductRelationshipResponseType
+     * @param  RequestInterface & Type\CreateProductRelationshipRequestType  $createProductRelationshipRequest
+     * @return ResultInterface & Type\CreateProductRelationshipResponseType
      *
      * @throws SoapException
      */
-    public function createProductRelationship(Type\CreateProductRelationshipRequestType $createProductRelationshipRequest): Type\CreateProductRelationshipResponseType
+    public function createProductRelationship(\Flexnet\ProductPackagingService\Type\CreateProductRelationshipRequestType $createProductRelationshipRequest): \Flexnet\ProductPackagingService\Type\CreateProductRelationshipResponseType
     {
-        return ($this->caller)('createProductRelationship', $createProductRelationshipRequest);
+        $response = ($this->caller)('createProductRelationship', $createProductRelationshipRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\CreateProductRelationshipResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\UpdateProductRelationshipRequestType  $updateProductRelationshipRequest
-     * @return ResultInterface|Type\UpdateProductRelationshipResponseType
+     * @param  RequestInterface & Type\UpdateProductRelationshipRequestType  $updateProductRelationshipRequest
+     * @return ResultInterface & Type\UpdateProductRelationshipResponseType
      *
      * @throws SoapException
      */
-    public function updateProductRelationship(Type\UpdateProductRelationshipRequestType $updateProductRelationshipRequest): Type\UpdateProductRelationshipResponseType
+    public function updateProductRelationship(\Flexnet\ProductPackagingService\Type\UpdateProductRelationshipRequestType $updateProductRelationshipRequest): \Flexnet\ProductPackagingService\Type\UpdateProductRelationshipResponseType
     {
-        return ($this->caller)('updateProductRelationship', $updateProductRelationshipRequest);
+        $response = ($this->caller)('updateProductRelationship', $updateProductRelationshipRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\UpdateProductRelationshipResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\DeleteProductRelationshipRequestType  $deleteProductRelationshipRequest
-     * @return ResultInterface|Type\DeleteProductRelationshipResponseType
+     * @param  RequestInterface & Type\DeleteProductRelationshipRequestType  $deleteProductRelationshipRequest
+     * @return ResultInterface & Type\DeleteProductRelationshipResponseType
      *
      * @throws SoapException
      */
-    public function deleteProductRelationship(Type\DeleteProductRelationshipRequestType $deleteProductRelationshipRequest): Type\DeleteProductRelationshipResponseType
+    public function deleteProductRelationship(\Flexnet\ProductPackagingService\Type\DeleteProductRelationshipRequestType $deleteProductRelationshipRequest): \Flexnet\ProductPackagingService\Type\DeleteProductRelationshipResponseType
     {
-        return ($this->caller)('deleteProductRelationship', $deleteProductRelationshipRequest);
+        $response = ($this->caller)('deleteProductRelationship', $deleteProductRelationshipRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\DeleteProductRelationshipResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetProductRelationshipsRequestType  $getProductRelationshipsRequest
-     * @return ResultInterface|Type\GetProductRelationshipsResponseType
+     * @param  RequestInterface & Type\GetProductRelationshipsRequestType  $getProductRelationshipsRequest
+     * @return ResultInterface & Type\GetProductRelationshipsResponseType
      *
      * @throws SoapException
      */
-    public function getProductRelationships(Type\GetProductRelationshipsRequestType $getProductRelationshipsRequest): Type\GetProductRelationshipsResponseType
+    public function getProductRelationships(\Flexnet\ProductPackagingService\Type\GetProductRelationshipsRequestType $getProductRelationshipsRequest): \Flexnet\ProductPackagingService\Type\GetProductRelationshipsResponseType
     {
-        return ($this->caller)('getProductRelationships', $getProductRelationshipsRequest);
+        $response = ($this->caller)('getProductRelationships', $getProductRelationshipsRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetProductRelationshipsResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetModelIdentifiersRequestType  $getModelIdentifiersRequest
-     * @return ResultInterface|Type\GetModelIdentifiersResponseType
+     * @param  RequestInterface & Type\GetModelIdentifiersRequestType  $getModelIdentifiersRequest
+     * @return ResultInterface & Type\GetModelIdentifiersResponseType
      *
      * @throws SoapException
      */
-    public function getLicenseModelIdentifiers(Type\GetModelIdentifiersRequestType $getModelIdentifiersRequest): Type\GetModelIdentifiersResponseType
+    public function getLicenseModelIdentifiers(\Flexnet\ProductPackagingService\Type\GetModelIdentifiersRequestType $getModelIdentifiersRequest): \Flexnet\ProductPackagingService\Type\GetModelIdentifiersResponseType
     {
-        return ($this->caller)('getLicenseModelIdentifiers', $getModelIdentifiersRequest);
+        $response = ($this->caller)('getLicenseModelIdentifiers', $getModelIdentifiersRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetModelIdentifiersResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetTransactionKeyIdentifiersRequestType  $getTransactionKeyIdentifiersRequest
-     * @return ResultInterface|Type\GetTransactionKeyIdentifiersResponseType
+     * @param  RequestInterface & Type\GetTransactionKeyIdentifiersRequestType  $getTransactionKeyIdentifiersRequest
+     * @return ResultInterface & Type\GetTransactionKeyIdentifiersResponseType
      *
      * @throws SoapException
      */
-    public function getTransactionKeyIdentifiers(Type\GetTransactionKeyIdentifiersRequestType $getTransactionKeyIdentifiersRequest): Type\GetTransactionKeyIdentifiersResponseType
+    public function getTransactionKeyIdentifiers(\Flexnet\ProductPackagingService\Type\GetTransactionKeyIdentifiersRequestType $getTransactionKeyIdentifiersRequest): \Flexnet\ProductPackagingService\Type\GetTransactionKeyIdentifiersResponseType
     {
-        return ($this->caller)('getTransactionKeyIdentifiers', $getTransactionKeyIdentifiersRequest);
+        $response = ($this->caller)('getTransactionKeyIdentifiers', $getTransactionKeyIdentifiersRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetTransactionKeyIdentifiersResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetLicenseTechnologyQueryRequestType  $getLicenseTechnologyQueryRequest
-     * @return ResultInterface|Type\GetLicenseTechnologyQueryResponseType
+     * @param  RequestInterface & Type\GetLicenseTechnologyQueryRequestType  $getLicenseTechnologyQueryRequest
+     * @return ResultInterface & Type\GetLicenseTechnologyQueryResponseType
      *
      * @throws SoapException
      */
-    public function getLicenseTechnologiesQuery(Type\GetLicenseTechnologyQueryRequestType $getLicenseTechnologyQueryRequest): Type\GetLicenseTechnologyQueryResponseType
+    public function getLicenseTechnologiesQuery(\Flexnet\ProductPackagingService\Type\GetLicenseTechnologyQueryRequestType $getLicenseTechnologyQueryRequest): \Flexnet\ProductPackagingService\Type\GetLicenseTechnologyQueryResponseType
     {
-        return ($this->caller)('getLicenseTechnologiesQuery', $getLicenseTechnologyQueryRequest);
+        $response = ($this->caller)('getLicenseTechnologiesQuery', $getLicenseTechnologyQueryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\ProductPackagingService\Type\GetLicenseTechnologyQueryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 }

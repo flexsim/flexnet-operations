@@ -39,7 +39,7 @@ class CreatedBulkEntitlementDataType
         return $this->recordRefNo;
     }
 
-    public function withRecordRefNo(string $recordRefNo): CreatedBulkEntitlementDataType
+    public function withRecordRefNo(string $recordRefNo): \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType
     {
         $new = clone $this;
         $new->recordRefNo = $recordRefNo;
@@ -52,7 +52,7 @@ class CreatedBulkEntitlementDataType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string $uniqueId): CreatedBulkEntitlementDataType
+    public function withUniqueId(string $uniqueId): \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -65,7 +65,7 @@ class CreatedBulkEntitlementDataType
         return $this->bulkEntitlementId;
     }
 
-    public function withBulkEntitlementId(string $bulkEntitlementId): CreatedBulkEntitlementDataType
+    public function withBulkEntitlementId(string $bulkEntitlementId): \Flexnet\EntitlementOrderService\Type\CreatedBulkEntitlementDataType
     {
         $new = clone $this;
         $new->bulkEntitlementId = $bulkEntitlementId;

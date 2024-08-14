@@ -44,7 +44,7 @@ class EmailEntitlementRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(EntitlementIdentifierType $entitlementIdentifier, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, EmailContactListType $ccEmailIdList = null, EmailContactListType $bccEmailIdList = null, string $locale = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier, ?bool $ignoreExistingEmailList = null, ?bool $validateEmailAddresses = null, ?\Flexnet\EntitlementOrderService\Type\EmailContactListType $emailIdList = null, ?\Flexnet\EntitlementOrderService\Type\EmailContactListType $ccEmailIdList = null, ?\Flexnet\EntitlementOrderService\Type\EmailContactListType $bccEmailIdList = null, ?string $locale = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->ignoreExistingEmailList = $ignoreExistingEmailList;
@@ -55,17 +55,17 @@ class EmailEntitlementRequestType implements RequestInterface
         $this->locale = $locale;
     }
 
-    public static function create(EntitlementIdentifierType $entitlementIdentifier, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, EmailContactListType $ccEmailIdList = null, EmailContactListType $bccEmailIdList = null, string $locale = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier, ?bool $ignoreExistingEmailList = null, ?bool $validateEmailAddresses = null, ?\Flexnet\EntitlementOrderService\Type\EmailContactListType $emailIdList = null, ?\Flexnet\EntitlementOrderService\Type\EmailContactListType $ccEmailIdList = null, ?\Flexnet\EntitlementOrderService\Type\EmailContactListType $bccEmailIdList = null, ?string $locale = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getEntitlementIdentifier(): EntitlementIdentifierType
+    public function getEntitlementIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
-    public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): EmailEntitlementRequestType
+    public function withEntitlementIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier): \Flexnet\EntitlementOrderService\Type\EmailEntitlementRequestType
     {
         $new = clone $this;
         $new->entitlementIdentifier = $entitlementIdentifier;
@@ -78,7 +78,7 @@ class EmailEntitlementRequestType implements RequestInterface
         return $this->ignoreExistingEmailList;
     }
 
-    public function withIgnoreExistingEmailList(?bool $ignoreExistingEmailList): EmailEntitlementRequestType
+    public function withIgnoreExistingEmailList(?bool $ignoreExistingEmailList): \Flexnet\EntitlementOrderService\Type\EmailEntitlementRequestType
     {
         $new = clone $this;
         $new->ignoreExistingEmailList = $ignoreExistingEmailList;
@@ -91,7 +91,7 @@ class EmailEntitlementRequestType implements RequestInterface
         return $this->validateEmailAddresses;
     }
 
-    public function withValidateEmailAddresses(?bool $validateEmailAddresses): EmailEntitlementRequestType
+    public function withValidateEmailAddresses(?bool $validateEmailAddresses): \Flexnet\EntitlementOrderService\Type\EmailEntitlementRequestType
     {
         $new = clone $this;
         $new->validateEmailAddresses = $validateEmailAddresses;
@@ -99,12 +99,12 @@ class EmailEntitlementRequestType implements RequestInterface
         return $new;
     }
 
-    public function getEmailIdList(): ?EmailContactListType
+    public function getEmailIdList(): ?\Flexnet\EntitlementOrderService\Type\EmailContactListType
     {
         return $this->emailIdList;
     }
 
-    public function withEmailIdList(?EmailContactListType $emailIdList): EmailEntitlementRequestType
+    public function withEmailIdList(?\Flexnet\EntitlementOrderService\Type\EmailContactListType $emailIdList): \Flexnet\EntitlementOrderService\Type\EmailEntitlementRequestType
     {
         $new = clone $this;
         $new->emailIdList = $emailIdList;
@@ -112,12 +112,12 @@ class EmailEntitlementRequestType implements RequestInterface
         return $new;
     }
 
-    public function getCcEmailIdList(): ?EmailContactListType
+    public function getCcEmailIdList(): ?\Flexnet\EntitlementOrderService\Type\EmailContactListType
     {
         return $this->ccEmailIdList;
     }
 
-    public function withCcEmailIdList(?EmailContactListType $ccEmailIdList): EmailEntitlementRequestType
+    public function withCcEmailIdList(?\Flexnet\EntitlementOrderService\Type\EmailContactListType $ccEmailIdList): \Flexnet\EntitlementOrderService\Type\EmailEntitlementRequestType
     {
         $new = clone $this;
         $new->ccEmailIdList = $ccEmailIdList;
@@ -125,12 +125,12 @@ class EmailEntitlementRequestType implements RequestInterface
         return $new;
     }
 
-    public function getBccEmailIdList(): ?EmailContactListType
+    public function getBccEmailIdList(): ?\Flexnet\EntitlementOrderService\Type\EmailContactListType
     {
         return $this->bccEmailIdList;
     }
 
-    public function withBccEmailIdList(?EmailContactListType $bccEmailIdList): EmailEntitlementRequestType
+    public function withBccEmailIdList(?\Flexnet\EntitlementOrderService\Type\EmailContactListType $bccEmailIdList): \Flexnet\EntitlementOrderService\Type\EmailEntitlementRequestType
     {
         $new = clone $this;
         $new->bccEmailIdList = $bccEmailIdList;
@@ -143,7 +143,7 @@ class EmailEntitlementRequestType implements RequestInterface
         return $this->locale;
     }
 
-    public function withLocale(?string $locale): EmailEntitlementRequestType
+    public function withLocale(?string $locale): \Flexnet\EntitlementOrderService\Type\EmailEntitlementRequestType
     {
         $new = clone $this;
         $new->locale = $locale;

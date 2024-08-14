@@ -27,7 +27,7 @@ class AcpiGenerationIdLicensePolicyDataType
         return $this->useACPIGenerationId;
     }
 
-    public function withUseACPIGenerationId(bool $useACPIGenerationId): AcpiGenerationIdLicensePolicyDataType
+    public function withUseACPIGenerationId(bool $useACPIGenerationId): \Flexnet\EntitlementOrderService\Type\AcpiGenerationIdLicensePolicyDataType
     {
         $new = clone $this;
         $new->useACPIGenerationId = $useACPIGenerationId;

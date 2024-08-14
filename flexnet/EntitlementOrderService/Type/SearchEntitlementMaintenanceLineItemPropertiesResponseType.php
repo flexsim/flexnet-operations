@@ -21,7 +21,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType extends Result
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType>|null  $entitlementMaintenanceLineItem
      */
-    public function __construct(StatusInfoType $statusInfo, EntitlementMaintenanceLineItemPropertiesType|array $entitlementMaintenanceLineItem = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array|null $entitlementMaintenanceLineItem = null)
     {
         $this->statusInfo = $statusInfo;
         $this->entitlementMaintenanceLineItem = $entitlementMaintenanceLineItem;
@@ -30,17 +30,17 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType extends Result
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType>|null  $entitlementMaintenanceLineItem
      */
-    public static function create(StatusInfoType $statusInfo, EntitlementMaintenanceLineItemPropertiesType|array $entitlementMaintenanceLineItem = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array|null $entitlementMaintenanceLineItem = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\EntitlementOrderService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): SearchEntitlementMaintenanceLineItemPropertiesResponseType
+    public function withStatusInfo(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo): \Flexnet\EntitlementOrderService\Type\SearchEntitlementMaintenanceLineItemPropertiesResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -51,7 +51,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType extends Result
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType>|null
      */
-    public function getEntitlementMaintenanceLineItem(): EntitlementMaintenanceLineItemPropertiesType|array|null
+    public function getEntitlementMaintenanceLineItem(): \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array|null
     {
         return $this->entitlementMaintenanceLineItem;
     }
@@ -59,7 +59,7 @@ class SearchEntitlementMaintenanceLineItemPropertiesResponseType extends Result
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array<\Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType>|null  $entitlementMaintenanceLineItem
      */
-    public function withEntitlementMaintenanceLineItem(EntitlementMaintenanceLineItemPropertiesType|array|null $entitlementMaintenanceLineItem): SearchEntitlementMaintenanceLineItemPropertiesResponseType
+    public function withEntitlementMaintenanceLineItem(\Flexnet\EntitlementOrderService\Type\EntitlementMaintenanceLineItemPropertiesType|array|null $entitlementMaintenanceLineItem): \Flexnet\EntitlementOrderService\Type\SearchEntitlementMaintenanceLineItemPropertiesResponseType
     {
         $new = clone $this;
         $new->entitlementMaintenanceLineItem = $entitlementMaintenanceLineItem;

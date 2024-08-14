@@ -33,7 +33,7 @@ class NewEntitlementLineItemDataType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string $uniqueId): NewEntitlementLineItemDataType
+    public function withUniqueId(string $uniqueId): \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -46,7 +46,7 @@ class NewEntitlementLineItemDataType
         return $this->activationId;
     }
 
-    public function withActivationId(string $activationId): NewEntitlementLineItemDataType
+    public function withActivationId(string $activationId): \Flexnet\EntitlementOrderService\Type\NewEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->activationId = $activationId;

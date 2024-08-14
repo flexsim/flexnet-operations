@@ -14,7 +14,7 @@ class EntitlementListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType>  $entitlementIdentifier
      */
-    public function __construct(EntitlementIdentifierType|array $entitlementIdentifier)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|array $entitlementIdentifier)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
     }
@@ -22,7 +22,7 @@ class EntitlementListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType>  $entitlementIdentifier
      */
-    public static function create(EntitlementIdentifierType|array $entitlementIdentifier)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|array $entitlementIdentifier)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class EntitlementListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType>
      */
-    public function getEntitlementIdentifier(): EntitlementIdentifierType|array
+    public function getEntitlementIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|array
     {
         return $this->entitlementIdentifier;
     }
@@ -38,7 +38,7 @@ class EntitlementListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType>  $entitlementIdentifier
      */
-    public function withEntitlementIdentifier(EntitlementIdentifierType|array $entitlementIdentifier): EntitlementListType
+    public function withEntitlementIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType|array $entitlementIdentifier): \Flexnet\EntitlementOrderService\Type\EntitlementListType
     {
         $new = clone $this;
         $new->entitlementIdentifier = $entitlementIdentifier;

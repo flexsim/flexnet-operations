@@ -17,23 +17,23 @@ class FailedUpdateUniformSuiteDataType
     /**
      * Constructor
      */
-    public function __construct(UpdateUniformSuiteDataType $uniformSuite, string $reason = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\UpdateUniformSuiteDataType $uniformSuite, ?string $reason = null)
     {
         $this->uniformSuite = $uniformSuite;
         $this->reason = $reason;
     }
 
-    public static function create(UpdateUniformSuiteDataType $uniformSuite, string $reason = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\UpdateUniformSuiteDataType $uniformSuite, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUniformSuite(): UpdateUniformSuiteDataType
+    public function getUniformSuite(): \Flexnet\ProductPackagingService\Type\UpdateUniformSuiteDataType
     {
         return $this->uniformSuite;
     }
 
-    public function withUniformSuite(UpdateUniformSuiteDataType $uniformSuite): FailedUpdateUniformSuiteDataType
+    public function withUniformSuite(\Flexnet\ProductPackagingService\Type\UpdateUniformSuiteDataType $uniformSuite): \Flexnet\ProductPackagingService\Type\FailedUpdateUniformSuiteDataType
     {
         $new = clone $this;
         $new->uniformSuite = $uniformSuite;
@@ -46,7 +46,7 @@ class FailedUpdateUniformSuiteDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedUpdateUniformSuiteDataType
+    public function withReason(?string $reason): \Flexnet\ProductPackagingService\Type\FailedUpdateUniformSuiteDataType
     {
         $new = clone $this;
         $new->reason = $reason;

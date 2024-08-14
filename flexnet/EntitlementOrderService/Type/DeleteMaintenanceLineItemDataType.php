@@ -12,22 +12,22 @@ class DeleteMaintenanceLineItemDataType
     /**
      * Constructor
      */
-    public function __construct(EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
     {
         $this->maintenanceLineItemIdentifier = $maintenanceLineItemIdentifier;
     }
 
-    public static function create(EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier)
     {
         return new static(...\func_get_args());
     }
 
-    public function getMaintenanceLineItemIdentifier(): EntitlementLineItemIdentifierType
+    public function getMaintenanceLineItemIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
     {
         return $this->maintenanceLineItemIdentifier;
     }
 
-    public function withMaintenanceLineItemIdentifier(EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier): DeleteMaintenanceLineItemDataType
+    public function withMaintenanceLineItemIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $maintenanceLineItemIdentifier): \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemDataType
     {
         $new = clone $this;
         $new->maintenanceLineItemIdentifier = $maintenanceLineItemIdentifier;

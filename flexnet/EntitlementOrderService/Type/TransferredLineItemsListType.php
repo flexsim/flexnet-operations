@@ -14,7 +14,7 @@ class TransferredLineItemsListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType>  $transferredLineItem
      */
-    public function __construct(TransferredLineItemDataType|array $transferredLineItem)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType|array $transferredLineItem)
     {
         $this->transferredLineItem = $transferredLineItem;
     }
@@ -22,7 +22,7 @@ class TransferredLineItemsListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType>  $transferredLineItem
      */
-    public static function create(TransferredLineItemDataType|array $transferredLineItem)
+    public static function create(\Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType|array $transferredLineItem)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class TransferredLineItemsListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType>
      */
-    public function getTransferredLineItem(): TransferredLineItemDataType|array
+    public function getTransferredLineItem(): \Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType|array
     {
         return $this->transferredLineItem;
     }
@@ -38,7 +38,7 @@ class TransferredLineItemsListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType>  $transferredLineItem
      */
-    public function withTransferredLineItem(TransferredLineItemDataType|array $transferredLineItem): TransferredLineItemsListType
+    public function withTransferredLineItem(\Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType|array $transferredLineItem): \Flexnet\EntitlementOrderService\Type\TransferredLineItemsListType
     {
         $new = clone $this;
         $new->transferredLineItem = $transferredLineItem;

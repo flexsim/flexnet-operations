@@ -14,7 +14,7 @@ class ChannelPartnerDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType|array<\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType>|null  $channelPartner
      */
-    public function __construct(ChannelPartnerDataType|array $channelPartner = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType|array|null $channelPartner = null)
     {
         $this->channelPartner = $channelPartner;
     }
@@ -22,7 +22,7 @@ class ChannelPartnerDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType|array<\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType>|null  $channelPartner
      */
-    public static function create(ChannelPartnerDataType|array $channelPartner = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType|array|null $channelPartner = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class ChannelPartnerDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType|array<\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType>|null
      */
-    public function getChannelPartner(): ChannelPartnerDataType|array|null
+    public function getChannelPartner(): \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType|array|null
     {
         return $this->channelPartner;
     }
@@ -38,7 +38,7 @@ class ChannelPartnerDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType|array<\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType>|null  $channelPartner
      */
-    public function withChannelPartner(ChannelPartnerDataType|array|null $channelPartner): ChannelPartnerDataListType
+    public function withChannelPartner(\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataType|array|null $channelPartner): \Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType
     {
         $new = clone $this;
         $new->channelPartner = $channelPartner;

@@ -33,7 +33,7 @@ class WebRegKeyCountDataType
         return $this->totalCount;
     }
 
-    public function withTotalCount(int $totalCount): WebRegKeyCountDataType
+    public function withTotalCount(int $totalCount): \Flexnet\EntitlementOrderService\Type\WebRegKeyCountDataType
     {
         $new = clone $this;
         $new->totalCount = $totalCount;
@@ -46,7 +46,7 @@ class WebRegKeyCountDataType
         return $this->redeemedCount;
     }
 
-    public function withRedeemedCount(int $redeemedCount): WebRegKeyCountDataType
+    public function withRedeemedCount(int $redeemedCount): \Flexnet\EntitlementOrderService\Type\WebRegKeyCountDataType
     {
         $new = clone $this;
         $new->redeemedCount = $redeemedCount;

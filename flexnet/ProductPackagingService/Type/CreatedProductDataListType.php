@@ -14,7 +14,7 @@ class CreatedProductDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\CreatedProductDataType|array<\Flexnet\ProductPackagingService\Type\CreatedProductDataType>|null  $createdProduct
      */
-    public function __construct(CreatedProductDataType|array $createdProduct = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\CreatedProductDataType|array|null $createdProduct = null)
     {
         $this->createdProduct = $createdProduct;
     }
@@ -22,7 +22,7 @@ class CreatedProductDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatedProductDataType|array<\Flexnet\ProductPackagingService\Type\CreatedProductDataType>|null  $createdProduct
      */
-    public static function create(CreatedProductDataType|array $createdProduct = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\CreatedProductDataType|array|null $createdProduct = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class CreatedProductDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\CreatedProductDataType|array<\Flexnet\ProductPackagingService\Type\CreatedProductDataType>|null
      */
-    public function getCreatedProduct(): CreatedProductDataType|array|null
+    public function getCreatedProduct(): \Flexnet\ProductPackagingService\Type\CreatedProductDataType|array|null
     {
         return $this->createdProduct;
     }
@@ -38,7 +38,7 @@ class CreatedProductDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatedProductDataType|array<\Flexnet\ProductPackagingService\Type\CreatedProductDataType>|null  $createdProduct
      */
-    public function withCreatedProduct(CreatedProductDataType|array|null $createdProduct): CreatedProductDataListType
+    public function withCreatedProduct(\Flexnet\ProductPackagingService\Type\CreatedProductDataType|array|null $createdProduct): \Flexnet\ProductPackagingService\Type\CreatedProductDataListType
     {
         $new = clone $this;
         $new->createdProduct = $createdProduct;

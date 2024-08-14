@@ -19,23 +19,23 @@ class TransferHostResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedTransferHostListDataType $failedData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\FailedTransferHostListDataType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedTransferHostListDataType $failedData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\FailedTransferHostListDataType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): TransferHostResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\TransferHostResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class TransferHostResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedTransferHostListDataType
+    public function getFailedData(): ?\Flexnet\LicenseService\Type\FailedTransferHostListDataType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedTransferHostListDataType $failedData): TransferHostResponseType
+    public function withFailedData(?\Flexnet\LicenseService\Type\FailedTransferHostListDataType $failedData): \Flexnet\LicenseService\Type\TransferHostResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

@@ -24,24 +24,24 @@ class RepairFulfillmentResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, RepairResponseDataType $responseData = null, FailedRepairResponselistDataType $failedData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\RepairResponseDataType $responseData = null, ?\Flexnet\LicenseService\Type\FailedRepairResponselistDataType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
         $this->failedData = $failedData;
     }
 
-    public static function create(StatusInfoType $statusInfo, RepairResponseDataType $responseData = null, FailedRepairResponselistDataType $failedData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\RepairResponseDataType $responseData = null, ?\Flexnet\LicenseService\Type\FailedRepairResponselistDataType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): RepairFulfillmentResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\RepairFulfillmentResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -49,12 +49,12 @@ class RepairFulfillmentResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?RepairResponseDataType
+    public function getResponseData(): ?\Flexnet\LicenseService\Type\RepairResponseDataType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?RepairResponseDataType $responseData): RepairFulfillmentResponseType
+    public function withResponseData(?\Flexnet\LicenseService\Type\RepairResponseDataType $responseData): \Flexnet\LicenseService\Type\RepairFulfillmentResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -62,12 +62,12 @@ class RepairFulfillmentResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedRepairResponselistDataType
+    public function getFailedData(): ?\Flexnet\LicenseService\Type\FailedRepairResponselistDataType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedRepairResponselistDataType $failedData): RepairFulfillmentResponseType
+    public function withFailedData(?\Flexnet\LicenseService\Type\FailedRepairResponselistDataType $failedData): \Flexnet\LicenseService\Type\RepairFulfillmentResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

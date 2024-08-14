@@ -14,7 +14,7 @@ class FailedMapEntitlementsToUserDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedIdDataType|array<\Flexnet\EntitlementOrderService\Type\FailedIdDataType>  $failedId
      */
-    public function __construct(FailedIdDataType|array $failedId)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FailedIdDataType|array $failedId)
     {
         $this->failedId = $failedId;
     }
@@ -22,7 +22,7 @@ class FailedMapEntitlementsToUserDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedIdDataType|array<\Flexnet\EntitlementOrderService\Type\FailedIdDataType>  $failedId
      */
-    public static function create(FailedIdDataType|array $failedId)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FailedIdDataType|array $failedId)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedMapEntitlementsToUserDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FailedIdDataType|array<\Flexnet\EntitlementOrderService\Type\FailedIdDataType>
      */
-    public function getFailedId(): FailedIdDataType|array
+    public function getFailedId(): \Flexnet\EntitlementOrderService\Type\FailedIdDataType|array
     {
         return $this->failedId;
     }
@@ -38,7 +38,7 @@ class FailedMapEntitlementsToUserDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedIdDataType|array<\Flexnet\EntitlementOrderService\Type\FailedIdDataType>  $failedId
      */
-    public function withFailedId(FailedIdDataType|array $failedId): FailedMapEntitlementsToUserDataListType
+    public function withFailedId(\Flexnet\EntitlementOrderService\Type\FailedIdDataType|array $failedId): \Flexnet\EntitlementOrderService\Type\FailedMapEntitlementsToUserDataListType
     {
         $new = clone $this;
         $new->failedId = $failedId;

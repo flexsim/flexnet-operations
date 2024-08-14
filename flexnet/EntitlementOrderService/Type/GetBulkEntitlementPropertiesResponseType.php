@@ -21,7 +21,7 @@ class GetBulkEntitlementPropertiesResponseType extends Result
      *
      * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType|array<\Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType>|null  $bulkEntitlement
      */
-    public function __construct(StatusInfoType $statusInfo, BulkEntitlementPropertiesType|array $bulkEntitlement = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, \Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType|array|null $bulkEntitlement = null)
     {
         $this->statusInfo = $statusInfo;
         $this->bulkEntitlement = $bulkEntitlement;
@@ -30,17 +30,17 @@ class GetBulkEntitlementPropertiesResponseType extends Result
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType|array<\Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType>|null  $bulkEntitlement
      */
-    public static function create(StatusInfoType $statusInfo, BulkEntitlementPropertiesType|array $bulkEntitlement = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, \Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType|array|null $bulkEntitlement = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\EntitlementOrderService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): GetBulkEntitlementPropertiesResponseType
+    public function withStatusInfo(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo): \Flexnet\EntitlementOrderService\Type\GetBulkEntitlementPropertiesResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -51,7 +51,7 @@ class GetBulkEntitlementPropertiesResponseType extends Result
     /**
      * @return \Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType|array<\Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType>|null
      */
-    public function getBulkEntitlement(): BulkEntitlementPropertiesType|array|null
+    public function getBulkEntitlement(): \Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType|array|null
     {
         return $this->bulkEntitlement;
     }
@@ -59,7 +59,7 @@ class GetBulkEntitlementPropertiesResponseType extends Result
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType|array<\Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType>|null  $bulkEntitlement
      */
-    public function withBulkEntitlement(BulkEntitlementPropertiesType|array|null $bulkEntitlement): GetBulkEntitlementPropertiesResponseType
+    public function withBulkEntitlement(\Flexnet\EntitlementOrderService\Type\BulkEntitlementPropertiesType|array|null $bulkEntitlement): \Flexnet\EntitlementOrderService\Type\GetBulkEntitlementPropertiesResponseType
     {
         $new = clone $this;
         $new->bulkEntitlement = $bulkEntitlement;

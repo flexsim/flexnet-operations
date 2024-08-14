@@ -37,7 +37,7 @@ class StateChangeResponseType
     /**
      * Constructor
      */
-    public function __construct(FeatureStateChangeListType $featureList = null, FeatureBundleStateChangeListType $featureBundleList = null, ProductStateChangeListType $productList = null, LicenseModelStateChangeListType $licenseModelList = null, EntitlementStateChangeListType $simpleEntitlementList = null, EntitlementStateChangeListType $bulkEntitlementList = null)
+    public function __construct(?\Flexnet\EntitlementOrderService\Type\FeatureStateChangeListType $featureList = null, ?\Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeListType $featureBundleList = null, ?\Flexnet\EntitlementOrderService\Type\ProductStateChangeListType $productList = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeListType $licenseModelList = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeListType $simpleEntitlementList = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeListType $bulkEntitlementList = null)
     {
         $this->featureList = $featureList;
         $this->featureBundleList = $featureBundleList;
@@ -47,17 +47,17 @@ class StateChangeResponseType
         $this->bulkEntitlementList = $bulkEntitlementList;
     }
 
-    public static function create(FeatureStateChangeListType $featureList = null, FeatureBundleStateChangeListType $featureBundleList = null, ProductStateChangeListType $productList = null, LicenseModelStateChangeListType $licenseModelList = null, EntitlementStateChangeListType $simpleEntitlementList = null, EntitlementStateChangeListType $bulkEntitlementList = null)
+    public static function create(?\Flexnet\EntitlementOrderService\Type\FeatureStateChangeListType $featureList = null, ?\Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeListType $featureBundleList = null, ?\Flexnet\EntitlementOrderService\Type\ProductStateChangeListType $productList = null, ?\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeListType $licenseModelList = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeListType $simpleEntitlementList = null, ?\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeListType $bulkEntitlementList = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFeatureList(): ?FeatureStateChangeListType
+    public function getFeatureList(): ?\Flexnet\EntitlementOrderService\Type\FeatureStateChangeListType
     {
         return $this->featureList;
     }
 
-    public function withFeatureList(?FeatureStateChangeListType $featureList): StateChangeResponseType
+    public function withFeatureList(?\Flexnet\EntitlementOrderService\Type\FeatureStateChangeListType $featureList): \Flexnet\EntitlementOrderService\Type\StateChangeResponseType
     {
         $new = clone $this;
         $new->featureList = $featureList;
@@ -65,12 +65,12 @@ class StateChangeResponseType
         return $new;
     }
 
-    public function getFeatureBundleList(): ?FeatureBundleStateChangeListType
+    public function getFeatureBundleList(): ?\Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeListType
     {
         return $this->featureBundleList;
     }
 
-    public function withFeatureBundleList(?FeatureBundleStateChangeListType $featureBundleList): StateChangeResponseType
+    public function withFeatureBundleList(?\Flexnet\EntitlementOrderService\Type\FeatureBundleStateChangeListType $featureBundleList): \Flexnet\EntitlementOrderService\Type\StateChangeResponseType
     {
         $new = clone $this;
         $new->featureBundleList = $featureBundleList;
@@ -78,12 +78,12 @@ class StateChangeResponseType
         return $new;
     }
 
-    public function getProductList(): ?ProductStateChangeListType
+    public function getProductList(): ?\Flexnet\EntitlementOrderService\Type\ProductStateChangeListType
     {
         return $this->productList;
     }
 
-    public function withProductList(?ProductStateChangeListType $productList): StateChangeResponseType
+    public function withProductList(?\Flexnet\EntitlementOrderService\Type\ProductStateChangeListType $productList): \Flexnet\EntitlementOrderService\Type\StateChangeResponseType
     {
         $new = clone $this;
         $new->productList = $productList;
@@ -91,12 +91,12 @@ class StateChangeResponseType
         return $new;
     }
 
-    public function getLicenseModelList(): ?LicenseModelStateChangeListType
+    public function getLicenseModelList(): ?\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeListType
     {
         return $this->licenseModelList;
     }
 
-    public function withLicenseModelList(?LicenseModelStateChangeListType $licenseModelList): StateChangeResponseType
+    public function withLicenseModelList(?\Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeListType $licenseModelList): \Flexnet\EntitlementOrderService\Type\StateChangeResponseType
     {
         $new = clone $this;
         $new->licenseModelList = $licenseModelList;
@@ -104,12 +104,12 @@ class StateChangeResponseType
         return $new;
     }
 
-    public function getSimpleEntitlementList(): ?EntitlementStateChangeListType
+    public function getSimpleEntitlementList(): ?\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeListType
     {
         return $this->simpleEntitlementList;
     }
 
-    public function withSimpleEntitlementList(?EntitlementStateChangeListType $simpleEntitlementList): StateChangeResponseType
+    public function withSimpleEntitlementList(?\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeListType $simpleEntitlementList): \Flexnet\EntitlementOrderService\Type\StateChangeResponseType
     {
         $new = clone $this;
         $new->simpleEntitlementList = $simpleEntitlementList;
@@ -117,12 +117,12 @@ class StateChangeResponseType
         return $new;
     }
 
-    public function getBulkEntitlementList(): ?EntitlementStateChangeListType
+    public function getBulkEntitlementList(): ?\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeListType
     {
         return $this->bulkEntitlementList;
     }
 
-    public function withBulkEntitlementList(?EntitlementStateChangeListType $bulkEntitlementList): StateChangeResponseType
+    public function withBulkEntitlementList(?\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeListType $bulkEntitlementList): \Flexnet\EntitlementOrderService\Type\StateChangeResponseType
     {
         $new = clone $this;
         $new->bulkEntitlementList = $bulkEntitlementList;

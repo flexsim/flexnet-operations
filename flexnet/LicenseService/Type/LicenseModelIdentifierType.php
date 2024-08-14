@@ -17,13 +17,13 @@ class LicenseModelIdentifierType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, LicenseModelPKType $primaryKeys = null)
+    public function __construct(?string $uniqueId = null, ?\Flexnet\LicenseService\Type\LicenseModelPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    public static function create(string $uniqueId = null, LicenseModelPKType $primaryKeys = null)
+    public static function create(?string $uniqueId = null, ?\Flexnet\LicenseService\Type\LicenseModelPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class LicenseModelIdentifierType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): LicenseModelIdentifierType
+    public function withUniqueId(?string $uniqueId): \Flexnet\LicenseService\Type\LicenseModelIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -41,12 +41,12 @@ class LicenseModelIdentifierType
         return $new;
     }
 
-    public function getPrimaryKeys(): ?LicenseModelPKType
+    public function getPrimaryKeys(): ?\Flexnet\LicenseService\Type\LicenseModelPKType
     {
         return $this->primaryKeys;
     }
 
-    public function withPrimaryKeys(?LicenseModelPKType $primaryKeys): LicenseModelIdentifierType
+    public function withPrimaryKeys(?\Flexnet\LicenseService\Type\LicenseModelPKType $primaryKeys): \Flexnet\LicenseService\Type\LicenseModelIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

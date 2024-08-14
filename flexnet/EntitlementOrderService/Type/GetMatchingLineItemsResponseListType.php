@@ -14,7 +14,7 @@ class GetMatchingLineItemsResponseListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType>  $matchingLineItem
      */
-    public function __construct(MatchingLineItemDataType|array $matchingLineItem)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType|array $matchingLineItem)
     {
         $this->matchingLineItem = $matchingLineItem;
     }
@@ -22,7 +22,7 @@ class GetMatchingLineItemsResponseListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType>  $matchingLineItem
      */
-    public static function create(MatchingLineItemDataType|array $matchingLineItem)
+    public static function create(\Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType|array $matchingLineItem)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class GetMatchingLineItemsResponseListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType>
      */
-    public function getMatchingLineItem(): MatchingLineItemDataType|array
+    public function getMatchingLineItem(): \Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType|array
     {
         return $this->matchingLineItem;
     }
@@ -38,7 +38,7 @@ class GetMatchingLineItemsResponseListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType>  $matchingLineItem
      */
-    public function withMatchingLineItem(MatchingLineItemDataType|array $matchingLineItem): GetMatchingLineItemsResponseListType
+    public function withMatchingLineItem(\Flexnet\EntitlementOrderService\Type\MatchingLineItemDataType|array $matchingLineItem): \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsResponseListType
     {
         $new = clone $this;
         $new->matchingLineItem = $matchingLineItem;

@@ -14,7 +14,7 @@ class GetUsersForProductCategoryResponseDataType
      *
      * @param  \Flexnet\ProductPackagingService\Type\UserIdentifierType|array<\Flexnet\ProductPackagingService\Type\UserIdentifierType>|null  $user
      */
-    public function __construct(UserIdentifierType|array $user = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\UserIdentifierType|array|null $user = null)
     {
         $this->user = $user;
     }
@@ -22,7 +22,7 @@ class GetUsersForProductCategoryResponseDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\UserIdentifierType|array<\Flexnet\ProductPackagingService\Type\UserIdentifierType>|null  $user
      */
-    public static function create(UserIdentifierType|array $user = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\UserIdentifierType|array|null $user = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class GetUsersForProductCategoryResponseDataType
     /**
      * @return \Flexnet\ProductPackagingService\Type\UserIdentifierType|array<\Flexnet\ProductPackagingService\Type\UserIdentifierType>|null
      */
-    public function getUser(): UserIdentifierType|array|null
+    public function getUser(): \Flexnet\ProductPackagingService\Type\UserIdentifierType|array|null
     {
         return $this->user;
     }
@@ -38,7 +38,7 @@ class GetUsersForProductCategoryResponseDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\UserIdentifierType|array<\Flexnet\ProductPackagingService\Type\UserIdentifierType>|null  $user
      */
-    public function withUser(UserIdentifierType|array|null $user): GetUsersForProductCategoryResponseDataType
+    public function withUser(\Flexnet\ProductPackagingService\Type\UserIdentifierType|array|null $user): \Flexnet\ProductPackagingService\Type\GetUsersForProductCategoryResponseDataType
     {
         $new = clone $this;
         $new->user = $user;

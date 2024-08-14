@@ -19,7 +19,7 @@ class UpdatePartNumbersSimpleListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType>|null  $partNumber
      */
-    public function __construct(string $opType, PartNumberIdentifierType|array $partNumber = null)
+    public function __construct(string $opType, \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array|null $partNumber = null)
     {
         $this->opType = $opType;
         $this->partNumber = $partNumber;
@@ -28,7 +28,7 @@ class UpdatePartNumbersSimpleListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType>|null  $partNumber
      */
-    public static function create(string $opType, PartNumberIdentifierType|array $partNumber = null)
+    public static function create(string $opType, \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array|null $partNumber = null)
     {
         return new static(...\func_get_args());
     }
@@ -36,7 +36,7 @@ class UpdatePartNumbersSimpleListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType>|null
      */
-    public function getPartNumber(): PartNumberIdentifierType|array|null
+    public function getPartNumber(): \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array|null
     {
         return $this->partNumber;
     }
@@ -44,7 +44,7 @@ class UpdatePartNumbersSimpleListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType>|null  $partNumber
      */
-    public function withPartNumber(PartNumberIdentifierType|array|null $partNumber): UpdatePartNumbersSimpleListType
+    public function withPartNumber(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType|array|null $partNumber): \Flexnet\ProductPackagingService\Type\UpdatePartNumbersSimpleListType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -57,7 +57,7 @@ class UpdatePartNumbersSimpleListType
         return $this->opType;
     }
 
-    public function withOpType(string $opType): UpdatePartNumbersSimpleListType
+    public function withOpType(string $opType): \Flexnet\ProductPackagingService\Type\UpdatePartNumbersSimpleListType
     {
         $new = clone $this;
         $new->opType = $opType;

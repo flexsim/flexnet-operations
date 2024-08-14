@@ -17,23 +17,23 @@ class FailedUpdateEntitlementLineItemDataType
     /**
      * Constructor
      */
-    public function __construct(UpdateEntitlementLineItemDataType $failedData = null, string $reason = null)
+    public function __construct(?\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType $failedData = null, ?string $reason = null)
     {
         $this->failedData = $failedData;
         $this->reason = $reason;
     }
 
-    public static function create(UpdateEntitlementLineItemDataType $failedData = null, string $reason = null)
+    public static function create(?\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType $failedData = null, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFailedData(): ?UpdateEntitlementLineItemDataType
+    public function getFailedData(): ?\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?UpdateEntitlementLineItemDataType $failedData): FailedUpdateEntitlementLineItemDataType
+    public function withFailedData(?\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType $failedData): \Flexnet\EntitlementOrderService\Type\FailedUpdateEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -46,7 +46,7 @@ class FailedUpdateEntitlementLineItemDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedUpdateEntitlementLineItemDataType
+    public function withReason(?string $reason): \Flexnet\EntitlementOrderService\Type\FailedUpdateEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->reason = $reason;

@@ -33,7 +33,7 @@ class SimpleQueryType
         return $this->value;
     }
 
-    public function withValue(string $value): SimpleQueryType
+    public function withValue(string $value): \Flexnet\ProductPackagingService\Type\SimpleQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -46,7 +46,7 @@ class SimpleQueryType
         return $this->searchType;
     }
 
-    public function withSearchType(string $searchType): SimpleQueryType
+    public function withSearchType(string $searchType): \Flexnet\ProductPackagingService\Type\SimpleQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;

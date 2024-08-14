@@ -12,22 +12,22 @@ class DeleteEntitlementDataType
     /**
      * Constructor
      */
-    public function __construct(EntitlementIdentifierType $entitlementIdentifier)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
     }
 
-    public static function create(EntitlementIdentifierType $entitlementIdentifier)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier)
     {
         return new static(...\func_get_args());
     }
 
-    public function getEntitlementIdentifier(): EntitlementIdentifierType
+    public function getEntitlementIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
-    public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): DeleteEntitlementDataType
+    public function withEntitlementIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier): \Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType
     {
         $new = clone $this;
         $new->entitlementIdentifier = $entitlementIdentifier;

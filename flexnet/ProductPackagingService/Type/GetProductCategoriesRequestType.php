@@ -24,14 +24,14 @@ class GetProductCategoriesRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(int $batchSize, bool $returnContainedObjects, int $pageNumber = null)
+    public function __construct(int $batchSize, bool $returnContainedObjects, ?int $pageNumber = null)
     {
         $this->batchSize = $batchSize;
         $this->returnContainedObjects = $returnContainedObjects;
         $this->pageNumber = $pageNumber;
     }
 
-    public static function create(int $batchSize, bool $returnContainedObjects, int $pageNumber = null)
+    public static function create(int $batchSize, bool $returnContainedObjects, ?int $pageNumber = null)
     {
         return new static(...\func_get_args());
     }
@@ -41,7 +41,7 @@ class GetProductCategoriesRequestType implements RequestInterface
         return $this->pageNumber;
     }
 
-    public function withPageNumber(?int $pageNumber): GetProductCategoriesRequestType
+    public function withPageNumber(?int $pageNumber): \Flexnet\ProductPackagingService\Type\GetProductCategoriesRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;
@@ -54,7 +54,7 @@ class GetProductCategoriesRequestType implements RequestInterface
         return $this->batchSize;
     }
 
-    public function withBatchSize(int $batchSize): GetProductCategoriesRequestType
+    public function withBatchSize(int $batchSize): \Flexnet\ProductPackagingService\Type\GetProductCategoriesRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;
@@ -67,7 +67,7 @@ class GetProductCategoriesRequestType implements RequestInterface
         return $this->returnContainedObjects;
     }
 
-    public function withReturnContainedObjects(bool $returnContainedObjects): GetProductCategoriesRequestType
+    public function withReturnContainedObjects(bool $returnContainedObjects): \Flexnet\ProductPackagingService\Type\GetProductCategoriesRequestType
     {
         $new = clone $this;
         $new->returnContainedObjects = $returnContainedObjects;

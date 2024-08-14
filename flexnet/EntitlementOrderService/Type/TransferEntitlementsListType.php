@@ -14,7 +14,7 @@ class TransferEntitlementsListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType>  $entitlementInfo
      */
-    public function __construct(TransferEntitlementInfoType|array $entitlementInfo)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType|array $entitlementInfo)
     {
         $this->entitlementInfo = $entitlementInfo;
     }
@@ -22,7 +22,7 @@ class TransferEntitlementsListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType>  $entitlementInfo
      */
-    public static function create(TransferEntitlementInfoType|array $entitlementInfo)
+    public static function create(\Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType|array $entitlementInfo)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class TransferEntitlementsListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType>
      */
-    public function getEntitlementInfo(): TransferEntitlementInfoType|array
+    public function getEntitlementInfo(): \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType|array
     {
         return $this->entitlementInfo;
     }
@@ -38,7 +38,7 @@ class TransferEntitlementsListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType|array<\Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType>  $entitlementInfo
      */
-    public function withEntitlementInfo(TransferEntitlementInfoType|array $entitlementInfo): TransferEntitlementsListType
+    public function withEntitlementInfo(\Flexnet\EntitlementOrderService\Type\TransferEntitlementInfoType|array $entitlementInfo): \Flexnet\EntitlementOrderService\Type\TransferEntitlementsListType
     {
         $new = clone $this;
         $new->entitlementInfo = $entitlementInfo;

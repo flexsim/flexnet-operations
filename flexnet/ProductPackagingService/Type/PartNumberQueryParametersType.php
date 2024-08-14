@@ -47,7 +47,7 @@ class PartNumberQueryParametersType
     /**
      * Constructor
      */
-    public function __construct(SimpleQueryType $partId = null, SimpleQueryType $description = null, SimpleQueryType $productName = null, SimpleQueryType $licenseModel = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null, bool $unmappedWithProduct = null, bool $unmappedWithLicenseModel = null)
+    public function __construct(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $partId = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $description = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $productName = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $licenseModel = null, ?\Flexnet\ProductPackagingService\Type\DateQueryType $creationDate = null, ?\Flexnet\ProductPackagingService\Type\DateQueryType $lastModifiedDate = null, ?bool $unmappedWithProduct = null, ?bool $unmappedWithLicenseModel = null)
     {
         $this->partId = $partId;
         $this->description = $description;
@@ -59,17 +59,17 @@ class PartNumberQueryParametersType
         $this->unmappedWithLicenseModel = $unmappedWithLicenseModel;
     }
 
-    public static function create(SimpleQueryType $partId = null, SimpleQueryType $description = null, SimpleQueryType $productName = null, SimpleQueryType $licenseModel = null, DateQueryType $creationDate = null, DateQueryType $lastModifiedDate = null, bool $unmappedWithProduct = null, bool $unmappedWithLicenseModel = null)
+    public static function create(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $partId = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $description = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $productName = null, ?\Flexnet\ProductPackagingService\Type\SimpleQueryType $licenseModel = null, ?\Flexnet\ProductPackagingService\Type\DateQueryType $creationDate = null, ?\Flexnet\ProductPackagingService\Type\DateQueryType $lastModifiedDate = null, ?bool $unmappedWithProduct = null, ?bool $unmappedWithLicenseModel = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getPartId(): ?SimpleQueryType
+    public function getPartId(): ?\Flexnet\ProductPackagingService\Type\SimpleQueryType
     {
         return $this->partId;
     }
 
-    public function withPartId(?SimpleQueryType $partId): PartNumberQueryParametersType
+    public function withPartId(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $partId): \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType
     {
         $new = clone $this;
         $new->partId = $partId;
@@ -77,12 +77,12 @@ class PartNumberQueryParametersType
         return $new;
     }
 
-    public function getDescription(): ?SimpleQueryType
+    public function getDescription(): ?\Flexnet\ProductPackagingService\Type\SimpleQueryType
     {
         return $this->description;
     }
 
-    public function withDescription(?SimpleQueryType $description): PartNumberQueryParametersType
+    public function withDescription(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $description): \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType
     {
         $new = clone $this;
         $new->description = $description;
@@ -90,12 +90,12 @@ class PartNumberQueryParametersType
         return $new;
     }
 
-    public function getProductName(): ?SimpleQueryType
+    public function getProductName(): ?\Flexnet\ProductPackagingService\Type\SimpleQueryType
     {
         return $this->productName;
     }
 
-    public function withProductName(?SimpleQueryType $productName): PartNumberQueryParametersType
+    public function withProductName(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $productName): \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType
     {
         $new = clone $this;
         $new->productName = $productName;
@@ -103,12 +103,12 @@ class PartNumberQueryParametersType
         return $new;
     }
 
-    public function getLicenseModel(): ?SimpleQueryType
+    public function getLicenseModel(): ?\Flexnet\ProductPackagingService\Type\SimpleQueryType
     {
         return $this->licenseModel;
     }
 
-    public function withLicenseModel(?SimpleQueryType $licenseModel): PartNumberQueryParametersType
+    public function withLicenseModel(?\Flexnet\ProductPackagingService\Type\SimpleQueryType $licenseModel): \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType
     {
         $new = clone $this;
         $new->licenseModel = $licenseModel;
@@ -116,12 +116,12 @@ class PartNumberQueryParametersType
         return $new;
     }
 
-    public function getCreationDate(): ?DateQueryType
+    public function getCreationDate(): ?\Flexnet\ProductPackagingService\Type\DateQueryType
     {
         return $this->creationDate;
     }
 
-    public function withCreationDate(?DateQueryType $creationDate): PartNumberQueryParametersType
+    public function withCreationDate(?\Flexnet\ProductPackagingService\Type\DateQueryType $creationDate): \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType
     {
         $new = clone $this;
         $new->creationDate = $creationDate;
@@ -129,12 +129,12 @@ class PartNumberQueryParametersType
         return $new;
     }
 
-    public function getLastModifiedDate(): ?DateQueryType
+    public function getLastModifiedDate(): ?\Flexnet\ProductPackagingService\Type\DateQueryType
     {
         return $this->lastModifiedDate;
     }
 
-    public function withLastModifiedDate(?DateQueryType $lastModifiedDate): PartNumberQueryParametersType
+    public function withLastModifiedDate(?\Flexnet\ProductPackagingService\Type\DateQueryType $lastModifiedDate): \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType
     {
         $new = clone $this;
         $new->lastModifiedDate = $lastModifiedDate;
@@ -147,7 +147,7 @@ class PartNumberQueryParametersType
         return $this->unmappedWithProduct;
     }
 
-    public function withUnmappedWithProduct(?bool $unmappedWithProduct): PartNumberQueryParametersType
+    public function withUnmappedWithProduct(?bool $unmappedWithProduct): \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType
     {
         $new = clone $this;
         $new->unmappedWithProduct = $unmappedWithProduct;
@@ -160,7 +160,7 @@ class PartNumberQueryParametersType
         return $this->unmappedWithLicenseModel;
     }
 
-    public function withUnmappedWithLicenseModel(?bool $unmappedWithLicenseModel): PartNumberQueryParametersType
+    public function withUnmappedWithLicenseModel(?bool $unmappedWithLicenseModel): \Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType
     {
         $new = clone $this;
         $new->unmappedWithLicenseModel = $unmappedWithLicenseModel;

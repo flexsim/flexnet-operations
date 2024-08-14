@@ -17,23 +17,23 @@ class FailedRepairShortCodeDataType
     /**
      * Constructor
      */
-    public function __construct(RepairShortCodeDataType $shortCodeData, string $reason)
+    public function __construct(\Flexnet\LicenseService\Type\RepairShortCodeDataType $shortCodeData, string $reason)
     {
         $this->shortCodeData = $shortCodeData;
         $this->reason = $reason;
     }
 
-    public static function create(RepairShortCodeDataType $shortCodeData, string $reason)
+    public static function create(\Flexnet\LicenseService\Type\RepairShortCodeDataType $shortCodeData, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getShortCodeData(): RepairShortCodeDataType
+    public function getShortCodeData(): \Flexnet\LicenseService\Type\RepairShortCodeDataType
     {
         return $this->shortCodeData;
     }
 
-    public function withShortCodeData(RepairShortCodeDataType $shortCodeData): FailedRepairShortCodeDataType
+    public function withShortCodeData(\Flexnet\LicenseService\Type\RepairShortCodeDataType $shortCodeData): \Flexnet\LicenseService\Type\FailedRepairShortCodeDataType
     {
         $new = clone $this;
         $new->shortCodeData = $shortCodeData;
@@ -46,7 +46,7 @@ class FailedRepairShortCodeDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedRepairShortCodeDataType
+    public function withReason(string $reason): \Flexnet\LicenseService\Type\FailedRepairShortCodeDataType
     {
         $new = clone $this;
         $new->reason = $reason;

@@ -14,22 +14,22 @@ class GetFeatureBundleCountRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(FeatureBundleQueryParametersType $queryParams = null)
+    public function __construct(?\Flexnet\ProductPackagingService\Type\FeatureBundleQueryParametersType $queryParams = null)
     {
         $this->queryParams = $queryParams;
     }
 
-    public static function create(FeatureBundleQueryParametersType $queryParams = null)
+    public static function create(?\Flexnet\ProductPackagingService\Type\FeatureBundleQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): ?FeatureBundleQueryParametersType
+    public function getQueryParams(): ?\Flexnet\ProductPackagingService\Type\FeatureBundleQueryParametersType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(?FeatureBundleQueryParametersType $queryParams): GetFeatureBundleCountRequestType
+    public function withQueryParams(?\Flexnet\ProductPackagingService\Type\FeatureBundleQueryParametersType $queryParams): \Flexnet\ProductPackagingService\Type\GetFeatureBundleCountRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

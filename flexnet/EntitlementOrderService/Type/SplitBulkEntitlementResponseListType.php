@@ -14,7 +14,7 @@ class SplitBulkEntitlementResponseListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType>  $splitBulkEntitlement
      */
-    public function __construct(SplitBulkEntitlementDataType|array $splitBulkEntitlement)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType|array $splitBulkEntitlement)
     {
         $this->splitBulkEntitlement = $splitBulkEntitlement;
     }
@@ -22,7 +22,7 @@ class SplitBulkEntitlementResponseListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType>  $splitBulkEntitlement
      */
-    public static function create(SplitBulkEntitlementDataType|array $splitBulkEntitlement)
+    public static function create(\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType|array $splitBulkEntitlement)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class SplitBulkEntitlementResponseListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType>
      */
-    public function getSplitBulkEntitlement(): SplitBulkEntitlementDataType|array
+    public function getSplitBulkEntitlement(): \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType|array
     {
         return $this->splitBulkEntitlement;
     }
@@ -38,7 +38,7 @@ class SplitBulkEntitlementResponseListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType>  $splitBulkEntitlement
      */
-    public function withSplitBulkEntitlement(SplitBulkEntitlementDataType|array $splitBulkEntitlement): SplitBulkEntitlementResponseListType
+    public function withSplitBulkEntitlement(\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementDataType|array $splitBulkEntitlement): \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementResponseListType
     {
         $new = clone $this;
         $new->splitBulkEntitlement = $splitBulkEntitlement;

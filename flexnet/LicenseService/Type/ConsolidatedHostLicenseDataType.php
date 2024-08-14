@@ -38,7 +38,7 @@ class ConsolidatedHostLicenseDataType
     /**
      * @param  string|array<string>  $license
      */
-    public function withLicense(string|array $license): ConsolidatedHostLicenseDataType
+    public function withLicense(string|array $license): \Flexnet\LicenseService\Type\ConsolidatedHostLicenseDataType
     {
         $new = clone $this;
         $new->license = $license;

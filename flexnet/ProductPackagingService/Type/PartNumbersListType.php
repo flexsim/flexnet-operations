@@ -14,7 +14,7 @@ class PartNumbersListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType>  $partNumber
      */
-    public function __construct(PartNumberIdentifierWithModelType|array $partNumber)
+    public function __construct(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array $partNumber)
     {
         $this->partNumber = $partNumber;
     }
@@ -22,7 +22,7 @@ class PartNumbersListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType>  $partNumber
      */
-    public static function create(PartNumberIdentifierWithModelType|array $partNumber)
+    public static function create(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array $partNumber)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class PartNumbersListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType>
      */
-    public function getPartNumber(): PartNumberIdentifierWithModelType|array
+    public function getPartNumber(): \Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array
     {
         return $this->partNumber;
     }
@@ -38,7 +38,7 @@ class PartNumbersListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array<\Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType>  $partNumber
      */
-    public function withPartNumber(PartNumberIdentifierWithModelType|array $partNumber): PartNumbersListType
+    public function withPartNumber(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierWithModelType|array $partNumber): \Flexnet\ProductPackagingService\Type\PartNumbersListType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;

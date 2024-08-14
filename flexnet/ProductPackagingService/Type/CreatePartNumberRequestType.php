@@ -21,7 +21,7 @@ class CreatePartNumberRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\CreatePartNumberDataType|array<\Flexnet\ProductPackagingService\Type\CreatePartNumberDataType>  $partNumber
      */
-    public function __construct(CreatePartNumberDataType|array $partNumber, bool $processSync = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\CreatePartNumberDataType|array $partNumber, ?bool $processSync = null)
     {
         $this->partNumber = $partNumber;
         $this->processSync = $processSync;
@@ -30,7 +30,7 @@ class CreatePartNumberRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatePartNumberDataType|array<\Flexnet\ProductPackagingService\Type\CreatePartNumberDataType>  $partNumber
      */
-    public static function create(CreatePartNumberDataType|array $partNumber, bool $processSync = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\CreatePartNumberDataType|array $partNumber, ?bool $processSync = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,7 +38,7 @@ class CreatePartNumberRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\CreatePartNumberDataType|array<\Flexnet\ProductPackagingService\Type\CreatePartNumberDataType>
      */
-    public function getPartNumber(): CreatePartNumberDataType|array
+    public function getPartNumber(): \Flexnet\ProductPackagingService\Type\CreatePartNumberDataType|array
     {
         return $this->partNumber;
     }
@@ -46,7 +46,7 @@ class CreatePartNumberRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatePartNumberDataType|array<\Flexnet\ProductPackagingService\Type\CreatePartNumberDataType>  $partNumber
      */
-    public function withPartNumber(CreatePartNumberDataType|array $partNumber): CreatePartNumberRequestType
+    public function withPartNumber(\Flexnet\ProductPackagingService\Type\CreatePartNumberDataType|array $partNumber): \Flexnet\ProductPackagingService\Type\CreatePartNumberRequestType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;
@@ -59,7 +59,7 @@ class CreatePartNumberRequestType implements RequestInterface
         return $this->processSync;
     }
 
-    public function withProcessSync(?bool $processSync): CreatePartNumberRequestType
+    public function withProcessSync(?bool $processSync): \Flexnet\ProductPackagingService\Type\CreatePartNumberRequestType
     {
         $new = clone $this;
         $new->processSync = $processSync;

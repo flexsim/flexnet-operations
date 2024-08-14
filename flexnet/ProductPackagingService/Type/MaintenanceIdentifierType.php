@@ -17,13 +17,13 @@ class MaintenanceIdentifierType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, MaintenancePKType $primaryKeys = null)
+    public function __construct(?string $uniqueId = null, ?\Flexnet\ProductPackagingService\Type\MaintenancePKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    public static function create(string $uniqueId = null, MaintenancePKType $primaryKeys = null)
+    public static function create(?string $uniqueId = null, ?\Flexnet\ProductPackagingService\Type\MaintenancePKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class MaintenanceIdentifierType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): MaintenanceIdentifierType
+    public function withUniqueId(?string $uniqueId): \Flexnet\ProductPackagingService\Type\MaintenanceIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -41,12 +41,12 @@ class MaintenanceIdentifierType
         return $new;
     }
 
-    public function getPrimaryKeys(): ?MaintenancePKType
+    public function getPrimaryKeys(): ?\Flexnet\ProductPackagingService\Type\MaintenancePKType
     {
         return $this->primaryKeys;
     }
 
-    public function withPrimaryKeys(?MaintenancePKType $primaryKeys): MaintenanceIdentifierType
+    public function withPrimaryKeys(?\Flexnet\ProductPackagingService\Type\MaintenancePKType $primaryKeys): \Flexnet\ProductPackagingService\Type\MaintenanceIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

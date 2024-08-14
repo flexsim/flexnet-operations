@@ -15,22 +15,23 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class EntitlementOrderServiceClientFactory
 {
-    public static function factory(string $wsdl, string $username, string $password): EntitlementOrderServiceClient
+    public static function factory(string $wsdl, string $username, string $password): \Flexnet\EntitlementOrderService\EntitlementOrderServiceClient
     {
         $engine = DefaultEngineFactory::create(
-            ExtSoapOptions::defaults($wsdl, [])
+            ExtSoapOptions::defaults($wsdl)
                 ->withClassMap(EntitlementOrderServiceClassmap::getCollection()),
             Psr18Transport::createForClient(
                 new PluginClient(
                     Psr18ClientDiscovery::find(),
                     [
                         new AuthenticationPlugin(new BasicAuth($username, $password)),
+
                     ]
                 )
             )
         );
 
-        $eventDispatcher = new EventDispatcher();
+        $eventDispatcher = new EventDispatcher;
         $caller = new EventDispatchingCaller(new EngineCaller($engine), $eventDispatcher);
 
         return new EntitlementOrderServiceClient($caller);

@@ -32,7 +32,7 @@ class ReturnFulfillmentDataType
     /**
      * Constructor
      */
-    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, int $partialCount = null, int $overDraftCount = null, bool $overridePolicy = null, bool $forceReturnOfThisTrustedFulfillment = null)
+    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, ?int $partialCount = null, ?int $overDraftCount = null, ?bool $overridePolicy = null, ?bool $forceReturnOfThisTrustedFulfillment = null)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->partialCount = $partialCount;
@@ -41,17 +41,17 @@ class ReturnFulfillmentDataType
         $this->forceReturnOfThisTrustedFulfillment = $forceReturnOfThisTrustedFulfillment;
     }
 
-    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, int $partialCount = null, int $overDraftCount = null, bool $overridePolicy = null, bool $forceReturnOfThisTrustedFulfillment = null)
+    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, ?int $partialCount = null, ?int $overDraftCount = null, ?bool $overridePolicy = null, ?bool $forceReturnOfThisTrustedFulfillment = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFulfillmentIdentifier(): FulfillmentIdentifierType
+    public function getFulfillmentIdentifier(): \Flexnet\LicenseService\Type\FulfillmentIdentifierType
     {
         return $this->fulfillmentIdentifier;
     }
 
-    public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): ReturnFulfillmentDataType
+    public function withFulfillmentIdentifier(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier): \Flexnet\LicenseService\Type\ReturnFulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillmentIdentifier = $fulfillmentIdentifier;
@@ -64,7 +64,7 @@ class ReturnFulfillmentDataType
         return $this->partialCount;
     }
 
-    public function withPartialCount(?int $partialCount): ReturnFulfillmentDataType
+    public function withPartialCount(?int $partialCount): \Flexnet\LicenseService\Type\ReturnFulfillmentDataType
     {
         $new = clone $this;
         $new->partialCount = $partialCount;
@@ -77,7 +77,7 @@ class ReturnFulfillmentDataType
         return $this->overDraftCount;
     }
 
-    public function withOverDraftCount(?int $overDraftCount): ReturnFulfillmentDataType
+    public function withOverDraftCount(?int $overDraftCount): \Flexnet\LicenseService\Type\ReturnFulfillmentDataType
     {
         $new = clone $this;
         $new->overDraftCount = $overDraftCount;
@@ -90,7 +90,7 @@ class ReturnFulfillmentDataType
         return $this->overridePolicy;
     }
 
-    public function withOverridePolicy(?bool $overridePolicy): ReturnFulfillmentDataType
+    public function withOverridePolicy(?bool $overridePolicy): \Flexnet\LicenseService\Type\ReturnFulfillmentDataType
     {
         $new = clone $this;
         $new->overridePolicy = $overridePolicy;
@@ -103,7 +103,7 @@ class ReturnFulfillmentDataType
         return $this->forceReturnOfThisTrustedFulfillment;
     }
 
-    public function withForceReturnOfThisTrustedFulfillment(?bool $forceReturnOfThisTrustedFulfillment): ReturnFulfillmentDataType
+    public function withForceReturnOfThisTrustedFulfillment(?bool $forceReturnOfThisTrustedFulfillment): \Flexnet\LicenseService\Type\ReturnFulfillmentDataType
     {
         $new = clone $this;
         $new->forceReturnOfThisTrustedFulfillment = $forceReturnOfThisTrustedFulfillment;

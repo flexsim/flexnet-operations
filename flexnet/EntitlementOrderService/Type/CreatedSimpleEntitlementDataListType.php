@@ -14,7 +14,7 @@ class CreatedSimpleEntitlementDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType>|null  $createdSimpleEntitlement
      */
-    public function __construct(CreatedSimpleEntitlementDataType|array $createdSimpleEntitlement = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array|null $createdSimpleEntitlement = null)
     {
         $this->createdSimpleEntitlement = $createdSimpleEntitlement;
     }
@@ -22,7 +22,7 @@ class CreatedSimpleEntitlementDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType>|null  $createdSimpleEntitlement
      */
-    public static function create(CreatedSimpleEntitlementDataType|array $createdSimpleEntitlement = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array|null $createdSimpleEntitlement = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class CreatedSimpleEntitlementDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType>|null
      */
-    public function getCreatedSimpleEntitlement(): CreatedSimpleEntitlementDataType|array|null
+    public function getCreatedSimpleEntitlement(): \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array|null
     {
         return $this->createdSimpleEntitlement;
     }
@@ -38,7 +38,7 @@ class CreatedSimpleEntitlementDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType>|null  $createdSimpleEntitlement
      */
-    public function withCreatedSimpleEntitlement(CreatedSimpleEntitlementDataType|array|null $createdSimpleEntitlement): CreatedSimpleEntitlementDataListType
+    public function withCreatedSimpleEntitlement(\Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataType|array|null $createdSimpleEntitlement): \Flexnet\EntitlementOrderService\Type\CreatedSimpleEntitlementDataListType
     {
         $new = clone $this;
         $new->createdSimpleEntitlement = $createdSimpleEntitlement;

@@ -37,7 +37,7 @@ class TransferLineItemInfoType
     /**
      * Constructor
      */
-    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, EntitlementIdentifierType $entitlementBelongsTo, bool $useSameActivationId = null, string $customActivationId = null, bool $generateActivationId = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementBelongsTo, ?bool $useSameActivationId = null, ?string $customActivationId = null, ?bool $generateActivationId = null)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->numberOfCopies = $numberOfCopies;
@@ -47,17 +47,17 @@ class TransferLineItemInfoType
         $this->generateActivationId = $generateActivationId;
     }
 
-    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, EntitlementIdentifierType $entitlementBelongsTo, bool $useSameActivationId = null, string $customActivationId = null, bool $generateActivationId = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, int $numberOfCopies, \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementBelongsTo, ?bool $useSameActivationId = null, ?string $customActivationId = null, ?bool $generateActivationId = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
+    public function getLineItemIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
-    public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): TransferLineItemInfoType
+    public function withLineItemIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier): \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType
     {
         $new = clone $this;
         $new->lineItemIdentifier = $lineItemIdentifier;
@@ -70,7 +70,7 @@ class TransferLineItemInfoType
         return $this->numberOfCopies;
     }
 
-    public function withNumberOfCopies(int $numberOfCopies): TransferLineItemInfoType
+    public function withNumberOfCopies(int $numberOfCopies): \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType
     {
         $new = clone $this;
         $new->numberOfCopies = $numberOfCopies;
@@ -83,7 +83,7 @@ class TransferLineItemInfoType
         return $this->useSameActivationId;
     }
 
-    public function withUseSameActivationId(?bool $useSameActivationId): TransferLineItemInfoType
+    public function withUseSameActivationId(?bool $useSameActivationId): \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType
     {
         $new = clone $this;
         $new->useSameActivationId = $useSameActivationId;
@@ -96,7 +96,7 @@ class TransferLineItemInfoType
         return $this->customActivationId;
     }
 
-    public function withCustomActivationId(?string $customActivationId): TransferLineItemInfoType
+    public function withCustomActivationId(?string $customActivationId): \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType
     {
         $new = clone $this;
         $new->customActivationId = $customActivationId;
@@ -109,7 +109,7 @@ class TransferLineItemInfoType
         return $this->generateActivationId;
     }
 
-    public function withGenerateActivationId(?bool $generateActivationId): TransferLineItemInfoType
+    public function withGenerateActivationId(?bool $generateActivationId): \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType
     {
         $new = clone $this;
         $new->generateActivationId = $generateActivationId;
@@ -117,12 +117,12 @@ class TransferLineItemInfoType
         return $new;
     }
 
-    public function getEntitlementBelongsTo(): EntitlementIdentifierType
+    public function getEntitlementBelongsTo(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->entitlementBelongsTo;
     }
 
-    public function withEntitlementBelongsTo(EntitlementIdentifierType $entitlementBelongsTo): TransferLineItemInfoType
+    public function withEntitlementBelongsTo(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementBelongsTo): \Flexnet\EntitlementOrderService\Type\TransferLineItemInfoType
     {
         $new = clone $this;
         $new->entitlementBelongsTo = $entitlementBelongsTo;

@@ -14,22 +14,22 @@ class EmailLicenseResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo)
     {
         $this->statusInfo = $statusInfo;
     }
 
-    public static function create(StatusInfoType $statusInfo)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): EmailLicenseResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\EmailLicenseResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;

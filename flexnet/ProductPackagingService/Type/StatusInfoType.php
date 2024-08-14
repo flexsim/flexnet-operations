@@ -17,13 +17,13 @@ class StatusInfoType
     /**
      * Constructor
      */
-    public function __construct(string $status, string $reason = null)
+    public function __construct(string $status, ?string $reason = null)
     {
         $this->status = $status;
         $this->reason = $reason;
     }
 
-    public static function create(string $status, string $reason = null)
+    public static function create(string $status, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class StatusInfoType
         return $this->status;
     }
 
-    public function withStatus(string $status): StatusInfoType
+    public function withStatus(string $status): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         $new = clone $this;
         $new->status = $status;
@@ -46,7 +46,7 @@ class StatusInfoType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): StatusInfoType
+    public function withReason(?string $reason): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         $new = clone $this;
         $new->reason = $reason;

@@ -14,7 +14,7 @@ class EmailContactListType
      *
      * @param  string|array<string>|null  $emailId
      */
-    public function __construct(string|array $emailId = null)
+    public function __construct(string|array|null $emailId = null)
     {
         $this->emailId = $emailId;
     }
@@ -22,7 +22,7 @@ class EmailContactListType
     /**
      * @param  string|array<string>|null  $emailId
      */
-    public static function create(string|array $emailId = null)
+    public static function create(string|array|null $emailId = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,7 +38,7 @@ class EmailContactListType
     /**
      * @param  string|array<string>|null  $emailId
      */
-    public function withEmailId(string|array|null $emailId): EmailContactListType
+    public function withEmailId(string|array|null $emailId): \Flexnet\LicenseService\Type\EmailContactListType
     {
         $new = clone $this;
         $new->emailId = $emailId;

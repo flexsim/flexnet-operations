@@ -24,24 +24,24 @@ class AdvancedFulfillmentLCResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, AdvancedFmtLCResponseDataListType $responseData = null, FailedAdvancedFmtLCResponseDataType $failedData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataListType $responseData = null, ?\Flexnet\LicenseService\Type\FailedAdvancedFmtLCResponseDataType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
         $this->failedData = $failedData;
     }
 
-    public static function create(StatusInfoType $statusInfo, AdvancedFmtLCResponseDataListType $responseData = null, FailedAdvancedFmtLCResponseDataType $failedData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataListType $responseData = null, ?\Flexnet\LicenseService\Type\FailedAdvancedFmtLCResponseDataType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): AdvancedFulfillmentLCResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -49,12 +49,12 @@ class AdvancedFulfillmentLCResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?AdvancedFmtLCResponseDataListType
+    public function getResponseData(): ?\Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataListType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?AdvancedFmtLCResponseDataListType $responseData): AdvancedFulfillmentLCResponseType
+    public function withResponseData(?\Flexnet\LicenseService\Type\AdvancedFmtLCResponseDataListType $responseData): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;
@@ -62,12 +62,12 @@ class AdvancedFulfillmentLCResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedAdvancedFmtLCResponseDataType
+    public function getFailedData(): ?\Flexnet\LicenseService\Type\FailedAdvancedFmtLCResponseDataType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedAdvancedFmtLCResponseDataType $failedData): AdvancedFulfillmentLCResponseType
+    public function withFailedData(?\Flexnet\LicenseService\Type\FailedAdvancedFmtLCResponseDataType $failedData): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

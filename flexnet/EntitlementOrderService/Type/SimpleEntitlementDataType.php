@@ -85,7 +85,7 @@ class SimpleEntitlementDataType
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType>|null  $lineItems
      * @param  \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemDataType>|null  $maintenanceLineItems
      */
-    public function __construct(IdType $entitlementId, string $soldTo, \DateTimeInterface $lastModifiedDateTime = null, string $description = null, string $soldToName = null, string $shipToEmail = null, string $shipToAddress = null, string $emailTemplateVariation = null, string $state = null, string $createdUserId = null, EntitlementLineItemDataType|array $lineItems = null, MaintenanceLineItemDataType|array $maintenanceLineItems = null, ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, AttributeDescriptorDataType $entitlementAttributes = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\IdType $entitlementId, string $soldTo, ?\DateTimeInterface $lastModifiedDateTime = null, ?string $description = null, ?string $soldToName = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?string $emailTemplateVariation = null, ?string $state = null, ?string $createdUserId = null, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType|array|null $lineItems = null, \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemDataType|array|null $maintenanceLineItems = null, ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners = null, ?bool $allowPortalLogin = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $entitlementAttributes = null)
     {
         $this->entitlementId = $entitlementId;
         $this->soldTo = $soldTo;
@@ -108,17 +108,17 @@ class SimpleEntitlementDataType
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType>|null  $lineItems
      * @param  \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemDataType>|null  $maintenanceLineItems
      */
-    public static function create(IdType $entitlementId, string $soldTo, \DateTimeInterface $lastModifiedDateTime = null, string $description = null, string $soldToName = null, string $shipToEmail = null, string $shipToAddress = null, string $emailTemplateVariation = null, string $state = null, string $createdUserId = null, EntitlementLineItemDataType|array $lineItems = null, MaintenanceLineItemDataType|array $maintenanceLineItems = null, ChannelPartnerDataListType $channelPartners = null, bool $allowPortalLogin = null, AttributeDescriptorDataType $entitlementAttributes = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\IdType $entitlementId, string $soldTo, ?\DateTimeInterface $lastModifiedDateTime = null, ?string $description = null, ?string $soldToName = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?string $emailTemplateVariation = null, ?string $state = null, ?string $createdUserId = null, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType|array|null $lineItems = null, \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemDataType|array|null $maintenanceLineItems = null, ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners = null, ?bool $allowPortalLogin = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $entitlementAttributes = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getEntitlementId(): IdType
+    public function getEntitlementId(): \Flexnet\EntitlementOrderService\Type\IdType
     {
         return $this->entitlementId;
     }
 
-    public function withEntitlementId(IdType $entitlementId): SimpleEntitlementDataType
+    public function withEntitlementId(\Flexnet\EntitlementOrderService\Type\IdType $entitlementId): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->entitlementId = $entitlementId;
@@ -131,7 +131,7 @@ class SimpleEntitlementDataType
         return $this->lastModifiedDateTime;
     }
 
-    public function withLastModifiedDateTime(?\DateTimeInterface $lastModifiedDateTime): SimpleEntitlementDataType
+    public function withLastModifiedDateTime(?\DateTimeInterface $lastModifiedDateTime): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->lastModifiedDateTime = $lastModifiedDateTime;
@@ -144,7 +144,7 @@ class SimpleEntitlementDataType
         return $this->description;
     }
 
-    public function withDescription(?string $description): SimpleEntitlementDataType
+    public function withDescription(?string $description): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -157,7 +157,7 @@ class SimpleEntitlementDataType
         return $this->soldTo;
     }
 
-    public function withSoldTo(string $soldTo): SimpleEntitlementDataType
+    public function withSoldTo(string $soldTo): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -170,7 +170,7 @@ class SimpleEntitlementDataType
         return $this->soldToName;
     }
 
-    public function withSoldToName(?string $soldToName): SimpleEntitlementDataType
+    public function withSoldToName(?string $soldToName): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->soldToName = $soldToName;
@@ -183,7 +183,7 @@ class SimpleEntitlementDataType
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(?string $shipToEmail): SimpleEntitlementDataType
+    public function withShipToEmail(?string $shipToEmail): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -196,7 +196,7 @@ class SimpleEntitlementDataType
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(?string $shipToAddress): SimpleEntitlementDataType
+    public function withShipToAddress(?string $shipToAddress): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -209,7 +209,7 @@ class SimpleEntitlementDataType
         return $this->emailTemplateVariation;
     }
 
-    public function withEmailTemplateVariation(?string $emailTemplateVariation): SimpleEntitlementDataType
+    public function withEmailTemplateVariation(?string $emailTemplateVariation): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->emailTemplateVariation = $emailTemplateVariation;
@@ -222,7 +222,7 @@ class SimpleEntitlementDataType
         return $this->state;
     }
 
-    public function withState(?string $state): SimpleEntitlementDataType
+    public function withState(?string $state): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->state = $state;
@@ -235,7 +235,7 @@ class SimpleEntitlementDataType
         return $this->createdUserId;
     }
 
-    public function withCreatedUserId(?string $createdUserId): SimpleEntitlementDataType
+    public function withCreatedUserId(?string $createdUserId): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->createdUserId = $createdUserId;
@@ -246,7 +246,7 @@ class SimpleEntitlementDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType>|null
      */
-    public function getLineItems(): EntitlementLineItemDataType|array|null
+    public function getLineItems(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType|array|null
     {
         return $this->lineItems;
     }
@@ -254,7 +254,7 @@ class SimpleEntitlementDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType>|null  $lineItems
      */
-    public function withLineItems(EntitlementLineItemDataType|array|null $lineItems): SimpleEntitlementDataType
+    public function withLineItems(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType|array|null $lineItems): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->lineItems = $lineItems;
@@ -265,7 +265,7 @@ class SimpleEntitlementDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemDataType>|null
      */
-    public function getMaintenanceLineItems(): MaintenanceLineItemDataType|array|null
+    public function getMaintenanceLineItems(): \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemDataType|array|null
     {
         return $this->maintenanceLineItems;
     }
@@ -273,7 +273,7 @@ class SimpleEntitlementDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\MaintenanceLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemDataType>|null  $maintenanceLineItems
      */
-    public function withMaintenanceLineItems(MaintenanceLineItemDataType|array|null $maintenanceLineItems): SimpleEntitlementDataType
+    public function withMaintenanceLineItems(\Flexnet\EntitlementOrderService\Type\MaintenanceLineItemDataType|array|null $maintenanceLineItems): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->maintenanceLineItems = $maintenanceLineItems;
@@ -281,12 +281,12 @@ class SimpleEntitlementDataType
         return $new;
     }
 
-    public function getChannelPartners(): ?ChannelPartnerDataListType
+    public function getChannelPartners(): ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType
     {
         return $this->channelPartners;
     }
 
-    public function withChannelPartners(?ChannelPartnerDataListType $channelPartners): SimpleEntitlementDataType
+    public function withChannelPartners(?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->channelPartners = $channelPartners;
@@ -299,7 +299,7 @@ class SimpleEntitlementDataType
         return $this->allowPortalLogin;
     }
 
-    public function withAllowPortalLogin(?bool $allowPortalLogin): SimpleEntitlementDataType
+    public function withAllowPortalLogin(?bool $allowPortalLogin): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->allowPortalLogin = $allowPortalLogin;
@@ -307,12 +307,12 @@ class SimpleEntitlementDataType
         return $new;
     }
 
-    public function getEntitlementAttributes(): ?AttributeDescriptorDataType
+    public function getEntitlementAttributes(): ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType
     {
         return $this->entitlementAttributes;
     }
 
-    public function withEntitlementAttributes(?AttributeDescriptorDataType $entitlementAttributes): SimpleEntitlementDataType
+    public function withEntitlementAttributes(?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $entitlementAttributes): \Flexnet\EntitlementOrderService\Type\SimpleEntitlementDataType
     {
         $new = clone $this;
         $new->entitlementAttributes = $entitlementAttributes;

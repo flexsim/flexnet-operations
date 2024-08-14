@@ -19,7 +19,7 @@ class UpdateHostTypeListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|array<\Flexnet\ProductPackagingService\Type\HostTypePKType>|null  $hostType
      */
-    public function __construct(string $opType, HostTypePKType|array $hostType = null)
+    public function __construct(string $opType, \Flexnet\ProductPackagingService\Type\HostTypePKType|array|null $hostType = null)
     {
         $this->opType = $opType;
         $this->hostType = $hostType;
@@ -28,7 +28,7 @@ class UpdateHostTypeListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|array<\Flexnet\ProductPackagingService\Type\HostTypePKType>|null  $hostType
      */
-    public static function create(string $opType, HostTypePKType|array $hostType = null)
+    public static function create(string $opType, \Flexnet\ProductPackagingService\Type\HostTypePKType|array|null $hostType = null)
     {
         return new static(...\func_get_args());
     }
@@ -36,7 +36,7 @@ class UpdateHostTypeListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\HostTypePKType|array<\Flexnet\ProductPackagingService\Type\HostTypePKType>|null
      */
-    public function getHostType(): HostTypePKType|array|null
+    public function getHostType(): \Flexnet\ProductPackagingService\Type\HostTypePKType|array|null
     {
         return $this->hostType;
     }
@@ -44,7 +44,7 @@ class UpdateHostTypeListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\HostTypePKType|array<\Flexnet\ProductPackagingService\Type\HostTypePKType>|null  $hostType
      */
-    public function withHostType(HostTypePKType|array|null $hostType): UpdateHostTypeListType
+    public function withHostType(\Flexnet\ProductPackagingService\Type\HostTypePKType|array|null $hostType): \Flexnet\ProductPackagingService\Type\UpdateHostTypeListType
     {
         $new = clone $this;
         $new->hostType = $hostType;
@@ -57,7 +57,7 @@ class UpdateHostTypeListType
         return $this->opType;
     }
 
-    public function withOpType(string $opType): UpdateHostTypeListType
+    public function withOpType(string $opType): \Flexnet\ProductPackagingService\Type\UpdateHostTypeListType
     {
         $new = clone $this;
         $new->opType = $opType;

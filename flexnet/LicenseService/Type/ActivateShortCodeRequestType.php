@@ -14,22 +14,22 @@ class ActivateShortCodeRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(CreateShortCodeDataType $shortCodeData = null)
+    public function __construct(?\Flexnet\LicenseService\Type\CreateShortCodeDataType $shortCodeData = null)
     {
         $this->shortCodeData = $shortCodeData;
     }
 
-    public static function create(CreateShortCodeDataType $shortCodeData = null)
+    public static function create(?\Flexnet\LicenseService\Type\CreateShortCodeDataType $shortCodeData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getShortCodeData(): ?CreateShortCodeDataType
+    public function getShortCodeData(): ?\Flexnet\LicenseService\Type\CreateShortCodeDataType
     {
         return $this->shortCodeData;
     }
 
-    public function withShortCodeData(?CreateShortCodeDataType $shortCodeData): ActivateShortCodeRequestType
+    public function withShortCodeData(?\Flexnet\LicenseService\Type\CreateShortCodeDataType $shortCodeData): \Flexnet\LicenseService\Type\ActivateShortCodeRequestType
     {
         $new = clone $this;
         $new->shortCodeData = $shortCodeData;

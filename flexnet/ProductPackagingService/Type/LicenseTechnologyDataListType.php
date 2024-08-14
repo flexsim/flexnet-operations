@@ -14,7 +14,7 @@ class LicenseTechnologyDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType|array<\Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType>|null  $licenseTechnology
      */
-    public function __construct(LicenseTechnologyDetailsType|array $licenseTechnology = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType|array|null $licenseTechnology = null)
     {
         $this->licenseTechnology = $licenseTechnology;
     }
@@ -22,7 +22,7 @@ class LicenseTechnologyDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType|array<\Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType>|null  $licenseTechnology
      */
-    public static function create(LicenseTechnologyDetailsType|array $licenseTechnology = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType|array|null $licenseTechnology = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class LicenseTechnologyDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType|array<\Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType>|null
      */
-    public function getLicenseTechnology(): LicenseTechnologyDetailsType|array|null
+    public function getLicenseTechnology(): \Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType|array|null
     {
         return $this->licenseTechnology;
     }
@@ -38,7 +38,7 @@ class LicenseTechnologyDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType|array<\Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType>|null  $licenseTechnology
      */
-    public function withLicenseTechnology(LicenseTechnologyDetailsType|array|null $licenseTechnology): LicenseTechnologyDataListType
+    public function withLicenseTechnology(\Flexnet\ProductPackagingService\Type\LicenseTechnologyDetailsType|array|null $licenseTechnology): \Flexnet\ProductPackagingService\Type\LicenseTechnologyDataListType
     {
         $new = clone $this;
         $new->licenseTechnology = $licenseTechnology;

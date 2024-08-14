@@ -14,7 +14,7 @@ class FailedSplitBulkEntitlementListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType>  $failedBulkEntitlement
      */
-    public function __construct(FailedSplitBulkEntitlementDataType|array $failedBulkEntitlement)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType|array $failedBulkEntitlement)
     {
         $this->failedBulkEntitlement = $failedBulkEntitlement;
     }
@@ -22,7 +22,7 @@ class FailedSplitBulkEntitlementListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType>  $failedBulkEntitlement
      */
-    public static function create(FailedSplitBulkEntitlementDataType|array $failedBulkEntitlement)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType|array $failedBulkEntitlement)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedSplitBulkEntitlementListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType>
      */
-    public function getFailedBulkEntitlement(): FailedSplitBulkEntitlementDataType|array
+    public function getFailedBulkEntitlement(): \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType|array
     {
         return $this->failedBulkEntitlement;
     }
@@ -38,7 +38,7 @@ class FailedSplitBulkEntitlementListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType>  $failedBulkEntitlement
      */
-    public function withFailedBulkEntitlement(FailedSplitBulkEntitlementDataType|array $failedBulkEntitlement): FailedSplitBulkEntitlementListType
+    public function withFailedBulkEntitlement(\Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementDataType|array $failedBulkEntitlement): \Flexnet\EntitlementOrderService\Type\FailedSplitBulkEntitlementListType
     {
         $new = clone $this;
         $new->failedBulkEntitlement = $failedBulkEntitlement;

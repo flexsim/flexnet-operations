@@ -22,14 +22,14 @@ class UserIdentifierType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, string $userName = null, UserPKType $primaryKeys = null)
+    public function __construct(?string $uniqueId = null, ?string $userName = null, ?\Flexnet\ProductPackagingService\Type\UserPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->userName = $userName;
         $this->primaryKeys = $primaryKeys;
     }
 
-    public static function create(string $uniqueId = null, string $userName = null, UserPKType $primaryKeys = null)
+    public static function create(?string $uniqueId = null, ?string $userName = null, ?\Flexnet\ProductPackagingService\Type\UserPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -39,7 +39,7 @@ class UserIdentifierType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): UserIdentifierType
+    public function withUniqueId(?string $uniqueId): \Flexnet\ProductPackagingService\Type\UserIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -52,7 +52,7 @@ class UserIdentifierType
         return $this->userName;
     }
 
-    public function withUserName(?string $userName): UserIdentifierType
+    public function withUserName(?string $userName): \Flexnet\ProductPackagingService\Type\UserIdentifierType
     {
         $new = clone $this;
         $new->userName = $userName;
@@ -60,12 +60,12 @@ class UserIdentifierType
         return $new;
     }
 
-    public function getPrimaryKeys(): ?UserPKType
+    public function getPrimaryKeys(): ?\Flexnet\ProductPackagingService\Type\UserPKType
     {
         return $this->primaryKeys;
     }
 
-    public function withPrimaryKeys(?UserPKType $primaryKeys): UserIdentifierType
+    public function withPrimaryKeys(?\Flexnet\ProductPackagingService\Type\UserPKType $primaryKeys): \Flexnet\ProductPackagingService\Type\UserIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

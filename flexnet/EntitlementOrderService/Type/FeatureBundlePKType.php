@@ -27,7 +27,7 @@ class FeatureBundlePKType
         return $this->name;
     }
 
-    public function withName(string $name): FeatureBundlePKType
+    public function withName(string $name): \Flexnet\EntitlementOrderService\Type\FeatureBundlePKType
     {
         $new = clone $this;
         $new->name = $name;

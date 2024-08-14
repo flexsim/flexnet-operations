@@ -19,7 +19,7 @@ class CreatedChildLIFulfillmentDataType
      *
      * @param  \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType>  $fulfillmentInfo
      */
-    public function __construct(int $recordRefNo, CreatedChildLIFulfillmentInfoType|array $fulfillmentInfo)
+    public function __construct(int $recordRefNo, \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType|array $fulfillmentInfo)
     {
         $this->recordRefNo = $recordRefNo;
         $this->fulfillmentInfo = $fulfillmentInfo;
@@ -28,7 +28,7 @@ class CreatedChildLIFulfillmentDataType
     /**
      * @param  \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType>  $fulfillmentInfo
      */
-    public static function create(int $recordRefNo, CreatedChildLIFulfillmentInfoType|array $fulfillmentInfo)
+    public static function create(int $recordRefNo, \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType|array $fulfillmentInfo)
     {
         return new static(...\func_get_args());
     }
@@ -38,7 +38,7 @@ class CreatedChildLIFulfillmentDataType
         return $this->recordRefNo;
     }
 
-    public function withRecordRefNo(int $recordRefNo): CreatedChildLIFulfillmentDataType
+    public function withRecordRefNo(int $recordRefNo): \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType
     {
         $new = clone $this;
         $new->recordRefNo = $recordRefNo;
@@ -49,7 +49,7 @@ class CreatedChildLIFulfillmentDataType
     /**
      * @return \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType>
      */
-    public function getFulfillmentInfo(): CreatedChildLIFulfillmentInfoType|array
+    public function getFulfillmentInfo(): \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType|array
     {
         return $this->fulfillmentInfo;
     }
@@ -57,7 +57,7 @@ class CreatedChildLIFulfillmentDataType
     /**
      * @param  \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType|array<\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType>  $fulfillmentInfo
      */
-    public function withFulfillmentInfo(CreatedChildLIFulfillmentInfoType|array $fulfillmentInfo): CreatedChildLIFulfillmentDataType
+    public function withFulfillmentInfo(\Flexnet\LicenseService\Type\CreatedChildLIFulfillmentInfoType|array $fulfillmentInfo): \Flexnet\LicenseService\Type\CreatedChildLIFulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillmentInfo = $fulfillmentInfo;

@@ -33,7 +33,7 @@ class StateQueryType
         return $this->value;
     }
 
-    public function withValue(string $value): StateQueryType
+    public function withValue(string $value): \Flexnet\LicenseService\Type\StateQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -46,7 +46,7 @@ class StateQueryType
         return $this->searchType;
     }
 
-    public function withSearchType(string $searchType): StateQueryType
+    public function withSearchType(string $searchType): \Flexnet\LicenseService\Type\StateQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;

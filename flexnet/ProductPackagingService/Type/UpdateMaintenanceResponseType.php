@@ -19,23 +19,23 @@ class UpdateMaintenanceResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedUpdateMaintenanceDataListType $failedData = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedUpdateMaintenanceDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedUpdateMaintenanceDataListType $failedData = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedUpdateMaintenanceDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): UpdateMaintenanceResponseType
+    public function withStatusInfo(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo): \Flexnet\ProductPackagingService\Type\UpdateMaintenanceResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class UpdateMaintenanceResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedUpdateMaintenanceDataListType
+    public function getFailedData(): ?\Flexnet\ProductPackagingService\Type\FailedUpdateMaintenanceDataListType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedUpdateMaintenanceDataListType $failedData): UpdateMaintenanceResponseType
+    public function withFailedData(?\Flexnet\ProductPackagingService\Type\FailedUpdateMaintenanceDataListType $failedData): \Flexnet\ProductPackagingService\Type\UpdateMaintenanceResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

@@ -19,23 +19,23 @@ class SetMaintenanceStateResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedMaintenanceStateDataListType $failedData = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedMaintenanceStateDataListType $failedData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedMaintenanceStateDataListType $failedData = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedMaintenanceStateDataListType $failedData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): SetMaintenanceStateResponseType
+    public function withStatusInfo(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo): \Flexnet\ProductPackagingService\Type\SetMaintenanceStateResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class SetMaintenanceStateResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedMaintenanceStateDataListType
+    public function getFailedData(): ?\Flexnet\ProductPackagingService\Type\FailedMaintenanceStateDataListType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedMaintenanceStateDataListType $failedData): SetMaintenanceStateResponseType
+    public function withFailedData(?\Flexnet\ProductPackagingService\Type\FailedMaintenanceStateDataListType $failedData): \Flexnet\ProductPackagingService\Type\SetMaintenanceStateResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;

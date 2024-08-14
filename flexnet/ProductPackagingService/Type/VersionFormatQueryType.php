@@ -33,7 +33,7 @@ class VersionFormatQueryType
         return $this->value;
     }
 
-    public function withValue(string $value): VersionFormatQueryType
+    public function withValue(string $value): \Flexnet\ProductPackagingService\Type\VersionFormatQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -46,7 +46,7 @@ class VersionFormatQueryType
         return $this->searchType;
     }
 
-    public function withSearchType(string $searchType): VersionFormatQueryType
+    public function withSearchType(string $searchType): \Flexnet\ProductPackagingService\Type\VersionFormatQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;

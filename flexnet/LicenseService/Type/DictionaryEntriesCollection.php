@@ -14,7 +14,7 @@ class DictionaryEntriesCollection
      *
      * @param  \Flexnet\LicenseService\Type\DictionaryEntry|array<\Flexnet\LicenseService\Type\DictionaryEntry>  $Entry
      */
-    public function __construct(DictionaryEntry|array $Entry)
+    public function __construct(\Flexnet\LicenseService\Type\DictionaryEntry|array $Entry)
     {
         $this->Entry = $Entry;
     }
@@ -22,7 +22,7 @@ class DictionaryEntriesCollection
     /**
      * @param  \Flexnet\LicenseService\Type\DictionaryEntry|array<\Flexnet\LicenseService\Type\DictionaryEntry>  $Entry
      */
-    public static function create(DictionaryEntry|array $Entry)
+    public static function create(\Flexnet\LicenseService\Type\DictionaryEntry|array $Entry)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class DictionaryEntriesCollection
     /**
      * @return \Flexnet\LicenseService\Type\DictionaryEntry|array<\Flexnet\LicenseService\Type\DictionaryEntry>
      */
-    public function getEntry(): DictionaryEntry|array
+    public function getEntry(): \Flexnet\LicenseService\Type\DictionaryEntry|array
     {
         return $this->Entry;
     }
@@ -38,7 +38,7 @@ class DictionaryEntriesCollection
     /**
      * @param  \Flexnet\LicenseService\Type\DictionaryEntry|array<\Flexnet\LicenseService\Type\DictionaryEntry>  $Entry
      */
-    public function withEntry(DictionaryEntry|array $Entry): DictionaryEntriesCollection
+    public function withEntry(\Flexnet\LicenseService\Type\DictionaryEntry|array $Entry): \Flexnet\LicenseService\Type\DictionaryEntriesCollection
     {
         $new = clone $this;
         $new->Entry = $Entry;

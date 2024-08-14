@@ -24,24 +24,24 @@ class RenewEntitlementResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedRenewEntitlementDataListType $failedData = null, CreatedRenewEntitlementDataListType $responseData = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, ?\Flexnet\EntitlementOrderService\Type\FailedRenewEntitlementDataListType $failedData = null, ?\Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedRenewEntitlementDataListType $failedData = null, CreatedRenewEntitlementDataListType $responseData = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, ?\Flexnet\EntitlementOrderService\Type\FailedRenewEntitlementDataListType $failedData = null, ?\Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\EntitlementOrderService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): RenewEntitlementResponseType
+    public function withStatusInfo(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo): \Flexnet\EntitlementOrderService\Type\RenewEntitlementResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -49,12 +49,12 @@ class RenewEntitlementResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedRenewEntitlementDataListType
+    public function getFailedData(): ?\Flexnet\EntitlementOrderService\Type\FailedRenewEntitlementDataListType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedRenewEntitlementDataListType $failedData): RenewEntitlementResponseType
+    public function withFailedData(?\Flexnet\EntitlementOrderService\Type\FailedRenewEntitlementDataListType $failedData): \Flexnet\EntitlementOrderService\Type\RenewEntitlementResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -62,12 +62,12 @@ class RenewEntitlementResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?CreatedRenewEntitlementDataListType
+    public function getResponseData(): ?\Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataListType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?CreatedRenewEntitlementDataListType $responseData): RenewEntitlementResponseType
+    public function withResponseData(?\Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataListType $responseData): \Flexnet\EntitlementOrderService\Type\RenewEntitlementResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

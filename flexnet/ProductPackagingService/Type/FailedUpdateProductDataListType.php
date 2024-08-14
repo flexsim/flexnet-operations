@@ -14,7 +14,7 @@ class FailedUpdateProductDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateProductDataType|array<\Flexnet\ProductPackagingService\Type\FailedUpdateProductDataType>|null  $failedProduct
      */
-    public function __construct(FailedUpdateProductDataType|array $failedProduct = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FailedUpdateProductDataType|array|null $failedProduct = null)
     {
         $this->failedProduct = $failedProduct;
     }
@@ -22,7 +22,7 @@ class FailedUpdateProductDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateProductDataType|array<\Flexnet\ProductPackagingService\Type\FailedUpdateProductDataType>|null  $failedProduct
      */
-    public static function create(FailedUpdateProductDataType|array $failedProduct = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\FailedUpdateProductDataType|array|null $failedProduct = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedUpdateProductDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\FailedUpdateProductDataType|array<\Flexnet\ProductPackagingService\Type\FailedUpdateProductDataType>|null
      */
-    public function getFailedProduct(): FailedUpdateProductDataType|array|null
+    public function getFailedProduct(): \Flexnet\ProductPackagingService\Type\FailedUpdateProductDataType|array|null
     {
         return $this->failedProduct;
     }
@@ -38,7 +38,7 @@ class FailedUpdateProductDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedUpdateProductDataType|array<\Flexnet\ProductPackagingService\Type\FailedUpdateProductDataType>|null  $failedProduct
      */
-    public function withFailedProduct(FailedUpdateProductDataType|array|null $failedProduct): FailedUpdateProductDataListType
+    public function withFailedProduct(\Flexnet\ProductPackagingService\Type\FailedUpdateProductDataType|array|null $failedProduct): \Flexnet\ProductPackagingService\Type\FailedUpdateProductDataListType
     {
         $new = clone $this;
         $new->failedProduct = $failedProduct;

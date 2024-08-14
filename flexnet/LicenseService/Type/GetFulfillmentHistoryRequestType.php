@@ -59,7 +59,7 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(string $activationId, SimpleQueryType $fulfillmentId = null, SimpleQueryType $userId = null, NumberQueryType $count = null, bool $policyOverridden = null, DateTimeQueryType $actionDateTime = null, string $lifeCycleAction = null, string $fulfillmentSource = null, int $pageNumber = null, int $batchSize = null)
+    public function __construct(string $activationId, ?\Flexnet\LicenseService\Type\SimpleQueryType $fulfillmentId = null, ?\Flexnet\LicenseService\Type\SimpleQueryType $userId = null, ?\Flexnet\LicenseService\Type\NumberQueryType $count = null, ?bool $policyOverridden = null, ?\Flexnet\LicenseService\Type\DateTimeQueryType $actionDateTime = null, ?string $lifeCycleAction = null, ?string $fulfillmentSource = null, ?int $pageNumber = null, ?int $batchSize = null)
     {
         $this->activationId = $activationId;
         $this->fulfillmentId = $fulfillmentId;
@@ -73,7 +73,7 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
         $this->batchSize = $batchSize;
     }
 
-    public static function create(string $activationId, SimpleQueryType $fulfillmentId = null, SimpleQueryType $userId = null, NumberQueryType $count = null, bool $policyOverridden = null, DateTimeQueryType $actionDateTime = null, string $lifeCycleAction = null, string $fulfillmentSource = null, int $pageNumber = null, int $batchSize = null)
+    public static function create(string $activationId, ?\Flexnet\LicenseService\Type\SimpleQueryType $fulfillmentId = null, ?\Flexnet\LicenseService\Type\SimpleQueryType $userId = null, ?\Flexnet\LicenseService\Type\NumberQueryType $count = null, ?bool $policyOverridden = null, ?\Flexnet\LicenseService\Type\DateTimeQueryType $actionDateTime = null, ?string $lifeCycleAction = null, ?string $fulfillmentSource = null, ?int $pageNumber = null, ?int $batchSize = null)
     {
         return new static(...\func_get_args());
     }
@@ -83,7 +83,7 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
         return $this->activationId;
     }
 
-    public function withActivationId(string $activationId): GetFulfillmentHistoryRequestType
+    public function withActivationId(string $activationId): \Flexnet\LicenseService\Type\GetFulfillmentHistoryRequestType
     {
         $new = clone $this;
         $new->activationId = $activationId;
@@ -91,12 +91,12 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
         return $new;
     }
 
-    public function getFulfillmentId(): ?SimpleQueryType
+    public function getFulfillmentId(): ?\Flexnet\LicenseService\Type\SimpleQueryType
     {
         return $this->fulfillmentId;
     }
 
-    public function withFulfillmentId(?SimpleQueryType $fulfillmentId): GetFulfillmentHistoryRequestType
+    public function withFulfillmentId(?\Flexnet\LicenseService\Type\SimpleQueryType $fulfillmentId): \Flexnet\LicenseService\Type\GetFulfillmentHistoryRequestType
     {
         $new = clone $this;
         $new->fulfillmentId = $fulfillmentId;
@@ -104,12 +104,12 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
         return $new;
     }
 
-    public function getUserId(): ?SimpleQueryType
+    public function getUserId(): ?\Flexnet\LicenseService\Type\SimpleQueryType
     {
         return $this->userId;
     }
 
-    public function withUserId(?SimpleQueryType $userId): GetFulfillmentHistoryRequestType
+    public function withUserId(?\Flexnet\LicenseService\Type\SimpleQueryType $userId): \Flexnet\LicenseService\Type\GetFulfillmentHistoryRequestType
     {
         $new = clone $this;
         $new->userId = $userId;
@@ -117,12 +117,12 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
         return $new;
     }
 
-    public function getCount(): ?NumberQueryType
+    public function getCount(): ?\Flexnet\LicenseService\Type\NumberQueryType
     {
         return $this->count;
     }
 
-    public function withCount(?NumberQueryType $count): GetFulfillmentHistoryRequestType
+    public function withCount(?\Flexnet\LicenseService\Type\NumberQueryType $count): \Flexnet\LicenseService\Type\GetFulfillmentHistoryRequestType
     {
         $new = clone $this;
         $new->count = $count;
@@ -135,7 +135,7 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
         return $this->policyOverridden;
     }
 
-    public function withPolicyOverridden(?bool $policyOverridden): GetFulfillmentHistoryRequestType
+    public function withPolicyOverridden(?bool $policyOverridden): \Flexnet\LicenseService\Type\GetFulfillmentHistoryRequestType
     {
         $new = clone $this;
         $new->policyOverridden = $policyOverridden;
@@ -143,12 +143,12 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
         return $new;
     }
 
-    public function getActionDateTime(): ?DateTimeQueryType
+    public function getActionDateTime(): ?\Flexnet\LicenseService\Type\DateTimeQueryType
     {
         return $this->actionDateTime;
     }
 
-    public function withActionDateTime(?DateTimeQueryType $actionDateTime): GetFulfillmentHistoryRequestType
+    public function withActionDateTime(?\Flexnet\LicenseService\Type\DateTimeQueryType $actionDateTime): \Flexnet\LicenseService\Type\GetFulfillmentHistoryRequestType
     {
         $new = clone $this;
         $new->actionDateTime = $actionDateTime;
@@ -161,7 +161,7 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
         return $this->lifeCycleAction;
     }
 
-    public function withLifeCycleAction(?string $lifeCycleAction): GetFulfillmentHistoryRequestType
+    public function withLifeCycleAction(?string $lifeCycleAction): \Flexnet\LicenseService\Type\GetFulfillmentHistoryRequestType
     {
         $new = clone $this;
         $new->lifeCycleAction = $lifeCycleAction;
@@ -174,7 +174,7 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
         return $this->fulfillmentSource;
     }
 
-    public function withFulfillmentSource(?string $fulfillmentSource): GetFulfillmentHistoryRequestType
+    public function withFulfillmentSource(?string $fulfillmentSource): \Flexnet\LicenseService\Type\GetFulfillmentHistoryRequestType
     {
         $new = clone $this;
         $new->fulfillmentSource = $fulfillmentSource;
@@ -187,7 +187,7 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
         return $this->pageNumber;
     }
 
-    public function withPageNumber(?int $pageNumber): GetFulfillmentHistoryRequestType
+    public function withPageNumber(?int $pageNumber): \Flexnet\LicenseService\Type\GetFulfillmentHistoryRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;
@@ -200,7 +200,7 @@ class GetFulfillmentHistoryRequestType implements RequestInterface
         return $this->batchSize;
     }
 
-    public function withBatchSize(?int $batchSize): GetFulfillmentHistoryRequestType
+    public function withBatchSize(?int $batchSize): \Flexnet\LicenseService\Type\GetFulfillmentHistoryRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;

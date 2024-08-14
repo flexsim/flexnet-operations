@@ -37,7 +37,7 @@ class PartNumberDataType
     /**
      * Constructor
      */
-    public function __construct(PartNumberIdentifierType $partNumberIdentifier, string $description, \DateTimeInterface $creationDate, \DateTimeInterface $lastModifiedDate, ProductIdentifierType $mappedProduct = null, LicenseModelIdentifierType $mappedLicenseModel = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType $partNumberIdentifier, string $description, \DateTimeInterface $creationDate, \DateTimeInterface $lastModifiedDate, ?\Flexnet\ProductPackagingService\Type\ProductIdentifierType $mappedProduct = null, ?\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType $mappedLicenseModel = null)
     {
         $this->partNumberIdentifier = $partNumberIdentifier;
         $this->description = $description;
@@ -47,17 +47,17 @@ class PartNumberDataType
         $this->mappedLicenseModel = $mappedLicenseModel;
     }
 
-    public static function create(PartNumberIdentifierType $partNumberIdentifier, string $description, \DateTimeInterface $creationDate, \DateTimeInterface $lastModifiedDate, ProductIdentifierType $mappedProduct = null, LicenseModelIdentifierType $mappedLicenseModel = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType $partNumberIdentifier, string $description, \DateTimeInterface $creationDate, \DateTimeInterface $lastModifiedDate, ?\Flexnet\ProductPackagingService\Type\ProductIdentifierType $mappedProduct = null, ?\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType $mappedLicenseModel = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getPartNumberIdentifier(): PartNumberIdentifierType
+    public function getPartNumberIdentifier(): \Flexnet\ProductPackagingService\Type\PartNumberIdentifierType
     {
         return $this->partNumberIdentifier;
     }
 
-    public function withPartNumberIdentifier(PartNumberIdentifierType $partNumberIdentifier): PartNumberDataType
+    public function withPartNumberIdentifier(\Flexnet\ProductPackagingService\Type\PartNumberIdentifierType $partNumberIdentifier): \Flexnet\ProductPackagingService\Type\PartNumberDataType
     {
         $new = clone $this;
         $new->partNumberIdentifier = $partNumberIdentifier;
@@ -70,7 +70,7 @@ class PartNumberDataType
         return $this->description;
     }
 
-    public function withDescription(string $description): PartNumberDataType
+    public function withDescription(string $description): \Flexnet\ProductPackagingService\Type\PartNumberDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -83,7 +83,7 @@ class PartNumberDataType
         return $this->creationDate;
     }
 
-    public function withCreationDate(\DateTimeInterface $creationDate): PartNumberDataType
+    public function withCreationDate(\DateTimeInterface $creationDate): \Flexnet\ProductPackagingService\Type\PartNumberDataType
     {
         $new = clone $this;
         $new->creationDate = $creationDate;
@@ -96,7 +96,7 @@ class PartNumberDataType
         return $this->lastModifiedDate;
     }
 
-    public function withLastModifiedDate(\DateTimeInterface $lastModifiedDate): PartNumberDataType
+    public function withLastModifiedDate(\DateTimeInterface $lastModifiedDate): \Flexnet\ProductPackagingService\Type\PartNumberDataType
     {
         $new = clone $this;
         $new->lastModifiedDate = $lastModifiedDate;
@@ -104,12 +104,12 @@ class PartNumberDataType
         return $new;
     }
 
-    public function getMappedProduct(): ?ProductIdentifierType
+    public function getMappedProduct(): ?\Flexnet\ProductPackagingService\Type\ProductIdentifierType
     {
         return $this->mappedProduct;
     }
 
-    public function withMappedProduct(?ProductIdentifierType $mappedProduct): PartNumberDataType
+    public function withMappedProduct(?\Flexnet\ProductPackagingService\Type\ProductIdentifierType $mappedProduct): \Flexnet\ProductPackagingService\Type\PartNumberDataType
     {
         $new = clone $this;
         $new->mappedProduct = $mappedProduct;
@@ -117,12 +117,12 @@ class PartNumberDataType
         return $new;
     }
 
-    public function getMappedLicenseModel(): ?LicenseModelIdentifierType
+    public function getMappedLicenseModel(): ?\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType
     {
         return $this->mappedLicenseModel;
     }
 
-    public function withMappedLicenseModel(?LicenseModelIdentifierType $mappedLicenseModel): PartNumberDataType
+    public function withMappedLicenseModel(?\Flexnet\ProductPackagingService\Type\LicenseModelIdentifierType $mappedLicenseModel): \Flexnet\ProductPackagingService\Type\PartNumberDataType
     {
         $new = clone $this;
         $new->mappedLicenseModel = $mappedLicenseModel;

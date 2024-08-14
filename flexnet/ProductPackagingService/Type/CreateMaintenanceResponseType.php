@@ -24,24 +24,24 @@ class CreateMaintenanceResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedMaintenanceDataListType $failedData = null, CreatedMaintenanceDataListType $responseData = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataListType $failedData = null, ?\Flexnet\ProductPackagingService\Type\CreatedMaintenanceDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedMaintenanceDataListType $failedData = null, CreatedMaintenanceDataListType $responseData = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataListType $failedData = null, ?\Flexnet\ProductPackagingService\Type\CreatedMaintenanceDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): CreateMaintenanceResponseType
+    public function withStatusInfo(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo): \Flexnet\ProductPackagingService\Type\CreateMaintenanceResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -49,12 +49,12 @@ class CreateMaintenanceResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedMaintenanceDataListType
+    public function getFailedData(): ?\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataListType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedMaintenanceDataListType $failedData): CreateMaintenanceResponseType
+    public function withFailedData(?\Flexnet\ProductPackagingService\Type\FailedMaintenanceDataListType $failedData): \Flexnet\ProductPackagingService\Type\CreateMaintenanceResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -62,12 +62,12 @@ class CreateMaintenanceResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?CreatedMaintenanceDataListType
+    public function getResponseData(): ?\Flexnet\ProductPackagingService\Type\CreatedMaintenanceDataListType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?CreatedMaintenanceDataListType $responseData): CreateMaintenanceResponseType
+    public function withResponseData(?\Flexnet\ProductPackagingService\Type\CreatedMaintenanceDataListType $responseData): \Flexnet\ProductPackagingService\Type\CreateMaintenanceResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

@@ -14,22 +14,22 @@ class GetFeatureCountRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(FeatureQueryParametersType $queryParams = null)
+    public function __construct(?\Flexnet\ProductPackagingService\Type\FeatureQueryParametersType $queryParams = null)
     {
         $this->queryParams = $queryParams;
     }
 
-    public static function create(FeatureQueryParametersType $queryParams = null)
+    public static function create(?\Flexnet\ProductPackagingService\Type\FeatureQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): ?FeatureQueryParametersType
+    public function getQueryParams(): ?\Flexnet\ProductPackagingService\Type\FeatureQueryParametersType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(?FeatureQueryParametersType $queryParams): GetFeatureCountRequestType
+    public function withQueryParams(?\Flexnet\ProductPackagingService\Type\FeatureQueryParametersType $queryParams): \Flexnet\ProductPackagingService\Type\GetFeatureCountRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;

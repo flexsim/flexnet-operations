@@ -14,7 +14,7 @@ class FailedDeleteWebRegKeyListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType>|null  $failedWebRegKey
      */
-    public function __construct(FailedDeleteWebRegKeyDataType|array $failedWebRegKey = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array|null $failedWebRegKey = null)
     {
         $this->failedWebRegKey = $failedWebRegKey;
     }
@@ -22,7 +22,7 @@ class FailedDeleteWebRegKeyListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType>|null  $failedWebRegKey
      */
-    public static function create(FailedDeleteWebRegKeyDataType|array $failedWebRegKey = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array|null $failedWebRegKey = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedDeleteWebRegKeyListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType>|null
      */
-    public function getFailedWebRegKey(): FailedDeleteWebRegKeyDataType|array|null
+    public function getFailedWebRegKey(): \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array|null
     {
         return $this->failedWebRegKey;
     }
@@ -38,7 +38,7 @@ class FailedDeleteWebRegKeyListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType>|null  $failedWebRegKey
      */
-    public function withFailedWebRegKey(FailedDeleteWebRegKeyDataType|array|null $failedWebRegKey): FailedDeleteWebRegKeyListType
+    public function withFailedWebRegKey(\Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyDataType|array|null $failedWebRegKey): \Flexnet\EntitlementOrderService\Type\FailedDeleteWebRegKeyListType
     {
         $new = clone $this;
         $new->failedWebRegKey = $failedWebRegKey;

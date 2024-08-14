@@ -27,7 +27,7 @@ class UserPKType
     /**
      * Constructor
      */
-    public function __construct(string $firstName, string $lastName, string $emailAddress, string $phoneNumber = null)
+    public function __construct(string $firstName, string $lastName, string $emailAddress, ?string $phoneNumber = null)
     {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
@@ -35,7 +35,7 @@ class UserPKType
         $this->phoneNumber = $phoneNumber;
     }
 
-    public static function create(string $firstName, string $lastName, string $emailAddress, string $phoneNumber = null)
+    public static function create(string $firstName, string $lastName, string $emailAddress, ?string $phoneNumber = null)
     {
         return new static(...\func_get_args());
     }
@@ -45,7 +45,7 @@ class UserPKType
         return $this->firstName;
     }
 
-    public function withFirstName(string $firstName): UserPKType
+    public function withFirstName(string $firstName): \Flexnet\ProductPackagingService\Type\UserPKType
     {
         $new = clone $this;
         $new->firstName = $firstName;
@@ -58,7 +58,7 @@ class UserPKType
         return $this->lastName;
     }
 
-    public function withLastName(string $lastName): UserPKType
+    public function withLastName(string $lastName): \Flexnet\ProductPackagingService\Type\UserPKType
     {
         $new = clone $this;
         $new->lastName = $lastName;
@@ -71,7 +71,7 @@ class UserPKType
         return $this->emailAddress;
     }
 
-    public function withEmailAddress(string $emailAddress): UserPKType
+    public function withEmailAddress(string $emailAddress): \Flexnet\ProductPackagingService\Type\UserPKType
     {
         $new = clone $this;
         $new->emailAddress = $emailAddress;
@@ -84,7 +84,7 @@ class UserPKType
         return $this->phoneNumber;
     }
 
-    public function withPhoneNumber(?string $phoneNumber): UserPKType
+    public function withPhoneNumber(?string $phoneNumber): \Flexnet\ProductPackagingService\Type\UserPKType
     {
         $new = clone $this;
         $new->phoneNumber = $phoneNumber;

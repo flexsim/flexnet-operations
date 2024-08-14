@@ -24,7 +24,7 @@ class CreatedRenewEntitlementDataType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType>|null  $renewedLineItem
      */
-    public function __construct(string $entitlementRecordRefNo, EntitlementIdentifierType $parentEntitlementIdentifier, RenewedEntitlementLineItemDataType|array $renewedLineItem = null)
+    public function __construct(string $entitlementRecordRefNo, \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $parentEntitlementIdentifier, \Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array|null $renewedLineItem = null)
     {
         $this->entitlementRecordRefNo = $entitlementRecordRefNo;
         $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
@@ -34,7 +34,7 @@ class CreatedRenewEntitlementDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType>|null  $renewedLineItem
      */
-    public static function create(string $entitlementRecordRefNo, EntitlementIdentifierType $parentEntitlementIdentifier, RenewedEntitlementLineItemDataType|array $renewedLineItem = null)
+    public static function create(string $entitlementRecordRefNo, \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $parentEntitlementIdentifier, \Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array|null $renewedLineItem = null)
     {
         return new static(...\func_get_args());
     }
@@ -44,7 +44,7 @@ class CreatedRenewEntitlementDataType
         return $this->entitlementRecordRefNo;
     }
 
-    public function withEntitlementRecordRefNo(string $entitlementRecordRefNo): CreatedRenewEntitlementDataType
+    public function withEntitlementRecordRefNo(string $entitlementRecordRefNo): \Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType
     {
         $new = clone $this;
         $new->entitlementRecordRefNo = $entitlementRecordRefNo;
@@ -52,12 +52,12 @@ class CreatedRenewEntitlementDataType
         return $new;
     }
 
-    public function getParentEntitlementIdentifier(): EntitlementIdentifierType
+    public function getParentEntitlementIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->parentEntitlementIdentifier;
     }
 
-    public function withParentEntitlementIdentifier(EntitlementIdentifierType $parentEntitlementIdentifier): CreatedRenewEntitlementDataType
+    public function withParentEntitlementIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $parentEntitlementIdentifier): \Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType
     {
         $new = clone $this;
         $new->parentEntitlementIdentifier = $parentEntitlementIdentifier;
@@ -68,7 +68,7 @@ class CreatedRenewEntitlementDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType>|null
      */
-    public function getRenewedLineItem(): RenewedEntitlementLineItemDataType|array|null
+    public function getRenewedLineItem(): \Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array|null
     {
         return $this->renewedLineItem;
     }
@@ -76,7 +76,7 @@ class CreatedRenewEntitlementDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType>|null  $renewedLineItem
      */
-    public function withRenewedLineItem(RenewedEntitlementLineItemDataType|array|null $renewedLineItem): CreatedRenewEntitlementDataType
+    public function withRenewedLineItem(\Flexnet\EntitlementOrderService\Type\RenewedEntitlementLineItemDataType|array|null $renewedLineItem): \Flexnet\EntitlementOrderService\Type\CreatedRenewEntitlementDataType
     {
         $new = clone $this;
         $new->renewedLineItem = $renewedLineItem;

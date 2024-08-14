@@ -16,7 +16,7 @@ class DeleteProductRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\DeleteProductDataType|array<\Flexnet\ProductPackagingService\Type\DeleteProductDataType>  $product
      */
-    public function __construct(DeleteProductDataType|array $product)
+    public function __construct(\Flexnet\ProductPackagingService\Type\DeleteProductDataType|array $product)
     {
         $this->product = $product;
     }
@@ -24,7 +24,7 @@ class DeleteProductRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\DeleteProductDataType|array<\Flexnet\ProductPackagingService\Type\DeleteProductDataType>  $product
      */
-    public static function create(DeleteProductDataType|array $product)
+    public static function create(\Flexnet\ProductPackagingService\Type\DeleteProductDataType|array $product)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class DeleteProductRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\DeleteProductDataType|array<\Flexnet\ProductPackagingService\Type\DeleteProductDataType>
      */
-    public function getProduct(): DeleteProductDataType|array
+    public function getProduct(): \Flexnet\ProductPackagingService\Type\DeleteProductDataType|array
     {
         return $this->product;
     }
@@ -40,7 +40,7 @@ class DeleteProductRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\DeleteProductDataType|array<\Flexnet\ProductPackagingService\Type\DeleteProductDataType>  $product
      */
-    public function withProduct(DeleteProductDataType|array $product): DeleteProductRequestType
+    public function withProduct(\Flexnet\ProductPackagingService\Type\DeleteProductDataType|array $product): \Flexnet\ProductPackagingService\Type\DeleteProductRequestType
     {
         $new = clone $this;
         $new->product = $product;

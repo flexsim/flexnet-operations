@@ -19,7 +19,7 @@ class EntitlementStateChangeDataType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public function __construct(EntitlementIdentifierType $entitlementIdentifier, StateChangeDataType|array $stateChangeRecord = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array|null $stateChangeRecord = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->stateChangeRecord = $stateChangeRecord;
@@ -28,17 +28,17 @@ class EntitlementStateChangeDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public static function create(EntitlementIdentifierType $entitlementIdentifier, StateChangeDataType|array $stateChangeRecord = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array|null $stateChangeRecord = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getEntitlementIdentifier(): EntitlementIdentifierType
+    public function getEntitlementIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
-    public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): EntitlementStateChangeDataType
+    public function withEntitlementIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier): \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType
     {
         $new = clone $this;
         $new->entitlementIdentifier = $entitlementIdentifier;
@@ -49,7 +49,7 @@ class EntitlementStateChangeDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null
      */
-    public function getStateChangeRecord(): StateChangeDataType|array|null
+    public function getStateChangeRecord(): \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array|null
     {
         return $this->stateChangeRecord;
     }
@@ -57,7 +57,7 @@ class EntitlementStateChangeDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public function withStateChangeRecord(StateChangeDataType|array|null $stateChangeRecord): EntitlementStateChangeDataType
+    public function withStateChangeRecord(\Flexnet\EntitlementOrderService\Type\StateChangeDataType|array|null $stateChangeRecord): \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType
     {
         $new = clone $this;
         $new->stateChangeRecord = $stateChangeRecord;

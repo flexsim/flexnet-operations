@@ -122,7 +122,7 @@ class UpdateProductDataType
     /**
      * Constructor
      */
-    public function __construct(ProductIdentifierType $productIdentifier, string $name = null, string $version = null, string $description = null, LicenseGeneratorIdentifierType $licenseGenerator = null, PackagePropertiesDataType $packageProperties = null, UpdateFeaturesListType $features = null, UpdateFeatureBundlesListType $featureBundles = null, UpdatePartNumbersListType $partNumbers = null, UpdateLicenseModelsListType $licenseModels = null, TrustedKeyIdentifierType $trustedKey = null, TrustedKeyIdentifierType $virtualTrustedKey = null, HostTypePKType $hostType = null, UpdateHostTypeListType $hostTypes = null, bool $usedOnDevice = null, string $productCategory = null, AttributeDescriptorDataType $customAttributes = null, bool $allowDownloadObsoleteFrInAdmin = null, bool $allowDownloadObsoleteFrInPortal = null, AttributeDescriptorDataType $productAttributes = null, \DateTimeInterface $startDate = null, \DateTimeInterface $endDate = null, string $upgradeEmailTemplateVarName = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier, ?string $name = null, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties = null, ?\Flexnet\ProductPackagingService\Type\UpdateFeaturesListType $features = null, ?\Flexnet\ProductPackagingService\Type\UpdateFeatureBundlesListType $featureBundles = null, ?\Flexnet\ProductPackagingService\Type\UpdatePartNumbersListType $partNumbers = null, ?\Flexnet\ProductPackagingService\Type\UpdateLicenseModelsListType $licenseModels = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, ?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType = null, ?\Flexnet\ProductPackagingService\Type\UpdateHostTypeListType $hostTypes = null, ?bool $usedOnDevice = null, ?string $productCategory = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes = null, ?bool $allowDownloadObsoleteFrInAdmin = null, ?bool $allowDownloadObsoleteFrInPortal = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes = null, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $endDate = null, ?string $upgradeEmailTemplateVarName = null)
     {
         $this->productIdentifier = $productIdentifier;
         $this->name = $name;
@@ -149,17 +149,17 @@ class UpdateProductDataType
         $this->upgradeEmailTemplateVarName = $upgradeEmailTemplateVarName;
     }
 
-    public static function create(ProductIdentifierType $productIdentifier, string $name = null, string $version = null, string $description = null, LicenseGeneratorIdentifierType $licenseGenerator = null, PackagePropertiesDataType $packageProperties = null, UpdateFeaturesListType $features = null, UpdateFeatureBundlesListType $featureBundles = null, UpdatePartNumbersListType $partNumbers = null, UpdateLicenseModelsListType $licenseModels = null, TrustedKeyIdentifierType $trustedKey = null, TrustedKeyIdentifierType $virtualTrustedKey = null, HostTypePKType $hostType = null, UpdateHostTypeListType $hostTypes = null, bool $usedOnDevice = null, string $productCategory = null, AttributeDescriptorDataType $customAttributes = null, bool $allowDownloadObsoleteFrInAdmin = null, bool $allowDownloadObsoleteFrInPortal = null, AttributeDescriptorDataType $productAttributes = null, \DateTimeInterface $startDate = null, \DateTimeInterface $endDate = null, string $upgradeEmailTemplateVarName = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier, ?string $name = null, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties = null, ?\Flexnet\ProductPackagingService\Type\UpdateFeaturesListType $features = null, ?\Flexnet\ProductPackagingService\Type\UpdateFeatureBundlesListType $featureBundles = null, ?\Flexnet\ProductPackagingService\Type\UpdatePartNumbersListType $partNumbers = null, ?\Flexnet\ProductPackagingService\Type\UpdateLicenseModelsListType $licenseModels = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, ?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType = null, ?\Flexnet\ProductPackagingService\Type\UpdateHostTypeListType $hostTypes = null, ?bool $usedOnDevice = null, ?string $productCategory = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes = null, ?bool $allowDownloadObsoleteFrInAdmin = null, ?bool $allowDownloadObsoleteFrInPortal = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes = null, ?\DateTimeInterface $startDate = null, ?\DateTimeInterface $endDate = null, ?string $upgradeEmailTemplateVarName = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getProductIdentifier(): ProductIdentifierType
+    public function getProductIdentifier(): \Flexnet\ProductPackagingService\Type\ProductIdentifierType
     {
         return $this->productIdentifier;
     }
 
-    public function withProductIdentifier(ProductIdentifierType $productIdentifier): UpdateProductDataType
+    public function withProductIdentifier(\Flexnet\ProductPackagingService\Type\ProductIdentifierType $productIdentifier): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->productIdentifier = $productIdentifier;
@@ -172,7 +172,7 @@ class UpdateProductDataType
         return $this->name;
     }
 
-    public function withName(?string $name): UpdateProductDataType
+    public function withName(?string $name): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->name = $name;
@@ -185,7 +185,7 @@ class UpdateProductDataType
         return $this->version;
     }
 
-    public function withVersion(?string $version): UpdateProductDataType
+    public function withVersion(?string $version): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->version = $version;
@@ -198,7 +198,7 @@ class UpdateProductDataType
         return $this->description;
     }
 
-    public function withDescription(?string $description): UpdateProductDataType
+    public function withDescription(?string $description): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -206,12 +206,12 @@ class UpdateProductDataType
         return $new;
     }
 
-    public function getLicenseGenerator(): ?LicenseGeneratorIdentifierType
+    public function getLicenseGenerator(): ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType
     {
         return $this->licenseGenerator;
     }
 
-    public function withLicenseGenerator(?LicenseGeneratorIdentifierType $licenseGenerator): UpdateProductDataType
+    public function withLicenseGenerator(?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->licenseGenerator = $licenseGenerator;
@@ -219,12 +219,12 @@ class UpdateProductDataType
         return $new;
     }
 
-    public function getPackageProperties(): ?PackagePropertiesDataType
+    public function getPackageProperties(): ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType
     {
         return $this->packageProperties;
     }
 
-    public function withPackageProperties(?PackagePropertiesDataType $packageProperties): UpdateProductDataType
+    public function withPackageProperties(?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->packageProperties = $packageProperties;
@@ -232,12 +232,12 @@ class UpdateProductDataType
         return $new;
     }
 
-    public function getFeatures(): ?UpdateFeaturesListType
+    public function getFeatures(): ?\Flexnet\ProductPackagingService\Type\UpdateFeaturesListType
     {
         return $this->features;
     }
 
-    public function withFeatures(?UpdateFeaturesListType $features): UpdateProductDataType
+    public function withFeatures(?\Flexnet\ProductPackagingService\Type\UpdateFeaturesListType $features): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->features = $features;
@@ -245,12 +245,12 @@ class UpdateProductDataType
         return $new;
     }
 
-    public function getFeatureBundles(): ?UpdateFeatureBundlesListType
+    public function getFeatureBundles(): ?\Flexnet\ProductPackagingService\Type\UpdateFeatureBundlesListType
     {
         return $this->featureBundles;
     }
 
-    public function withFeatureBundles(?UpdateFeatureBundlesListType $featureBundles): UpdateProductDataType
+    public function withFeatureBundles(?\Flexnet\ProductPackagingService\Type\UpdateFeatureBundlesListType $featureBundles): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->featureBundles = $featureBundles;
@@ -258,12 +258,12 @@ class UpdateProductDataType
         return $new;
     }
 
-    public function getPartNumbers(): ?UpdatePartNumbersListType
+    public function getPartNumbers(): ?\Flexnet\ProductPackagingService\Type\UpdatePartNumbersListType
     {
         return $this->partNumbers;
     }
 
-    public function withPartNumbers(?UpdatePartNumbersListType $partNumbers): UpdateProductDataType
+    public function withPartNumbers(?\Flexnet\ProductPackagingService\Type\UpdatePartNumbersListType $partNumbers): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->partNumbers = $partNumbers;
@@ -271,12 +271,12 @@ class UpdateProductDataType
         return $new;
     }
 
-    public function getLicenseModels(): ?UpdateLicenseModelsListType
+    public function getLicenseModels(): ?\Flexnet\ProductPackagingService\Type\UpdateLicenseModelsListType
     {
         return $this->licenseModels;
     }
 
-    public function withLicenseModels(?UpdateLicenseModelsListType $licenseModels): UpdateProductDataType
+    public function withLicenseModels(?\Flexnet\ProductPackagingService\Type\UpdateLicenseModelsListType $licenseModels): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->licenseModels = $licenseModels;
@@ -284,12 +284,12 @@ class UpdateProductDataType
         return $new;
     }
 
-    public function getTrustedKey(): ?TrustedKeyIdentifierType
+    public function getTrustedKey(): ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType
     {
         return $this->trustedKey;
     }
 
-    public function withTrustedKey(?TrustedKeyIdentifierType $trustedKey): UpdateProductDataType
+    public function withTrustedKey(?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->trustedKey = $trustedKey;
@@ -297,12 +297,12 @@ class UpdateProductDataType
         return $new;
     }
 
-    public function getVirtualTrustedKey(): ?TrustedKeyIdentifierType
+    public function getVirtualTrustedKey(): ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType
     {
         return $this->virtualTrustedKey;
     }
 
-    public function withVirtualTrustedKey(?TrustedKeyIdentifierType $virtualTrustedKey): UpdateProductDataType
+    public function withVirtualTrustedKey(?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->virtualTrustedKey = $virtualTrustedKey;
@@ -310,12 +310,12 @@ class UpdateProductDataType
         return $new;
     }
 
-    public function getHostType(): ?HostTypePKType
+    public function getHostType(): ?\Flexnet\ProductPackagingService\Type\HostTypePKType
     {
         return $this->hostType;
     }
 
-    public function withHostType(?HostTypePKType $hostType): UpdateProductDataType
+    public function withHostType(?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->hostType = $hostType;
@@ -323,12 +323,12 @@ class UpdateProductDataType
         return $new;
     }
 
-    public function getHostTypes(): ?UpdateHostTypeListType
+    public function getHostTypes(): ?\Flexnet\ProductPackagingService\Type\UpdateHostTypeListType
     {
         return $this->hostTypes;
     }
 
-    public function withHostTypes(?UpdateHostTypeListType $hostTypes): UpdateProductDataType
+    public function withHostTypes(?\Flexnet\ProductPackagingService\Type\UpdateHostTypeListType $hostTypes): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->hostTypes = $hostTypes;
@@ -341,7 +341,7 @@ class UpdateProductDataType
         return $this->usedOnDevice;
     }
 
-    public function withUsedOnDevice(?bool $usedOnDevice): UpdateProductDataType
+    public function withUsedOnDevice(?bool $usedOnDevice): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->usedOnDevice = $usedOnDevice;
@@ -354,7 +354,7 @@ class UpdateProductDataType
         return $this->productCategory;
     }
 
-    public function withProductCategory(?string $productCategory): UpdateProductDataType
+    public function withProductCategory(?string $productCategory): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->productCategory = $productCategory;
@@ -362,12 +362,12 @@ class UpdateProductDataType
         return $new;
     }
 
-    public function getCustomAttributes(): ?AttributeDescriptorDataType
+    public function getCustomAttributes(): ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType
     {
         return $this->customAttributes;
     }
 
-    public function withCustomAttributes(?AttributeDescriptorDataType $customAttributes): UpdateProductDataType
+    public function withCustomAttributes(?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->customAttributes = $customAttributes;
@@ -380,7 +380,7 @@ class UpdateProductDataType
         return $this->allowDownloadObsoleteFrInAdmin;
     }
 
-    public function withAllowDownloadObsoleteFrInAdmin(?bool $allowDownloadObsoleteFrInAdmin): UpdateProductDataType
+    public function withAllowDownloadObsoleteFrInAdmin(?bool $allowDownloadObsoleteFrInAdmin): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->allowDownloadObsoleteFrInAdmin = $allowDownloadObsoleteFrInAdmin;
@@ -393,7 +393,7 @@ class UpdateProductDataType
         return $this->allowDownloadObsoleteFrInPortal;
     }
 
-    public function withAllowDownloadObsoleteFrInPortal(?bool $allowDownloadObsoleteFrInPortal): UpdateProductDataType
+    public function withAllowDownloadObsoleteFrInPortal(?bool $allowDownloadObsoleteFrInPortal): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->allowDownloadObsoleteFrInPortal = $allowDownloadObsoleteFrInPortal;
@@ -401,12 +401,12 @@ class UpdateProductDataType
         return $new;
     }
 
-    public function getProductAttributes(): ?AttributeDescriptorDataType
+    public function getProductAttributes(): ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType
     {
         return $this->productAttributes;
     }
 
-    public function withProductAttributes(?AttributeDescriptorDataType $productAttributes): UpdateProductDataType
+    public function withProductAttributes(?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->productAttributes = $productAttributes;
@@ -419,7 +419,7 @@ class UpdateProductDataType
         return $this->startDate;
     }
 
-    public function withStartDate(?\DateTimeInterface $startDate): UpdateProductDataType
+    public function withStartDate(?\DateTimeInterface $startDate): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -432,7 +432,7 @@ class UpdateProductDataType
         return $this->endDate;
     }
 
-    public function withEndDate(?\DateTimeInterface $endDate): UpdateProductDataType
+    public function withEndDate(?\DateTimeInterface $endDate): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->endDate = $endDate;
@@ -445,7 +445,7 @@ class UpdateProductDataType
         return $this->upgradeEmailTemplateVarName;
     }
 
-    public function withUpgradeEmailTemplateVarName(?string $upgradeEmailTemplateVarName): UpdateProductDataType
+    public function withUpgradeEmailTemplateVarName(?string $upgradeEmailTemplateVarName): \Flexnet\ProductPackagingService\Type\UpdateProductDataType
     {
         $new = clone $this;
         $new->upgradeEmailTemplateVarName = $upgradeEmailTemplateVarName;

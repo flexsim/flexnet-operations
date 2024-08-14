@@ -57,7 +57,7 @@ class ActivatableItemDetailType
     /**
      * Constructor
      */
-    public function __construct(string $activatableItemType, string $entitlementId, string $soldTo, EntitlementLineItemDataType $activatableItemData, string $parentBulkEntitlementId = null, string $shipToEmail = null, string $shipToAddress = null, string $entitlementState = null, ChannelPartnerDataListType $channelPartners = null, AttributeDescriptorDataType $entitlementAttributes = null)
+    public function __construct(string $activatableItemType, string $entitlementId, string $soldTo, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType $activatableItemData, ?string $parentBulkEntitlementId = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?string $entitlementState = null, ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $entitlementAttributes = null)
     {
         $this->activatableItemType = $activatableItemType;
         $this->entitlementId = $entitlementId;
@@ -71,7 +71,7 @@ class ActivatableItemDetailType
         $this->entitlementAttributes = $entitlementAttributes;
     }
 
-    public static function create(string $activatableItemType, string $entitlementId, string $soldTo, EntitlementLineItemDataType $activatableItemData, string $parentBulkEntitlementId = null, string $shipToEmail = null, string $shipToAddress = null, string $entitlementState = null, ChannelPartnerDataListType $channelPartners = null, AttributeDescriptorDataType $entitlementAttributes = null)
+    public static function create(string $activatableItemType, string $entitlementId, string $soldTo, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType $activatableItemData, ?string $parentBulkEntitlementId = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?string $entitlementState = null, ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners = null, ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $entitlementAttributes = null)
     {
         return new static(...\func_get_args());
     }
@@ -81,7 +81,7 @@ class ActivatableItemDetailType
         return $this->activatableItemType;
     }
 
-    public function withActivatableItemType(string $activatableItemType): ActivatableItemDetailType
+    public function withActivatableItemType(string $activatableItemType): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
     {
         $new = clone $this;
         $new->activatableItemType = $activatableItemType;
@@ -94,7 +94,7 @@ class ActivatableItemDetailType
         return $this->parentBulkEntitlementId;
     }
 
-    public function withParentBulkEntitlementId(?string $parentBulkEntitlementId): ActivatableItemDetailType
+    public function withParentBulkEntitlementId(?string $parentBulkEntitlementId): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
     {
         $new = clone $this;
         $new->parentBulkEntitlementId = $parentBulkEntitlementId;
@@ -107,7 +107,7 @@ class ActivatableItemDetailType
         return $this->entitlementId;
     }
 
-    public function withEntitlementId(string $entitlementId): ActivatableItemDetailType
+    public function withEntitlementId(string $entitlementId): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
     {
         $new = clone $this;
         $new->entitlementId = $entitlementId;
@@ -120,7 +120,7 @@ class ActivatableItemDetailType
         return $this->soldTo;
     }
 
-    public function withSoldTo(string $soldTo): ActivatableItemDetailType
+    public function withSoldTo(string $soldTo): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -133,7 +133,7 @@ class ActivatableItemDetailType
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(?string $shipToEmail): ActivatableItemDetailType
+    public function withShipToEmail(?string $shipToEmail): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -146,7 +146,7 @@ class ActivatableItemDetailType
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(?string $shipToAddress): ActivatableItemDetailType
+    public function withShipToAddress(?string $shipToAddress): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -159,7 +159,7 @@ class ActivatableItemDetailType
         return $this->entitlementState;
     }
 
-    public function withEntitlementState(?string $entitlementState): ActivatableItemDetailType
+    public function withEntitlementState(?string $entitlementState): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
     {
         $new = clone $this;
         $new->entitlementState = $entitlementState;
@@ -167,12 +167,12 @@ class ActivatableItemDetailType
         return $new;
     }
 
-    public function getActivatableItemData(): EntitlementLineItemDataType
+    public function getActivatableItemData(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType
     {
         return $this->activatableItemData;
     }
 
-    public function withActivatableItemData(EntitlementLineItemDataType $activatableItemData): ActivatableItemDetailType
+    public function withActivatableItemData(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemDataType $activatableItemData): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
     {
         $new = clone $this;
         $new->activatableItemData = $activatableItemData;
@@ -180,12 +180,12 @@ class ActivatableItemDetailType
         return $new;
     }
 
-    public function getChannelPartners(): ?ChannelPartnerDataListType
+    public function getChannelPartners(): ?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType
     {
         return $this->channelPartners;
     }
 
-    public function withChannelPartners(?ChannelPartnerDataListType $channelPartners): ActivatableItemDetailType
+    public function withChannelPartners(?\Flexnet\EntitlementOrderService\Type\ChannelPartnerDataListType $channelPartners): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
     {
         $new = clone $this;
         $new->channelPartners = $channelPartners;
@@ -193,12 +193,12 @@ class ActivatableItemDetailType
         return $new;
     }
 
-    public function getEntitlementAttributes(): ?AttributeDescriptorDataType
+    public function getEntitlementAttributes(): ?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType
     {
         return $this->entitlementAttributes;
     }
 
-    public function withEntitlementAttributes(?AttributeDescriptorDataType $entitlementAttributes): ActivatableItemDetailType
+    public function withEntitlementAttributes(?\Flexnet\EntitlementOrderService\Type\AttributeDescriptorDataType $entitlementAttributes): \Flexnet\EntitlementOrderService\Type\ActivatableItemDetailType
     {
         $new = clone $this;
         $new->entitlementAttributes = $entitlementAttributes;

@@ -19,23 +19,23 @@ class GetActivatableItemCountResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, int $count = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, ?int $count = null)
     {
         $this->statusInfo = $statusInfo;
         $this->count = $count;
     }
 
-    public static function create(StatusInfoType $statusInfo, int $count = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, ?int $count = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\EntitlementOrderService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): GetActivatableItemCountResponseType
+    public function withStatusInfo(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo): \Flexnet\EntitlementOrderService\Type\GetActivatableItemCountResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -48,7 +48,7 @@ class GetActivatableItemCountResponseType extends Result
         return $this->count;
     }
 
-    public function withCount(?int $count): GetActivatableItemCountResponseType
+    public function withCount(?int $count): \Flexnet\EntitlementOrderService\Type\GetActivatableItemCountResponseType
     {
         $new = clone $this;
         $new->count = $count;

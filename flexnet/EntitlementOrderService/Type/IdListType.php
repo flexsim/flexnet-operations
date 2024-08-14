@@ -38,7 +38,7 @@ class IdListType
     /**
      * @param  string|array<string>  $id
      */
-    public function withId(string|array $id): IdListType
+    public function withId(string|array $id): \Flexnet\EntitlementOrderService\Type\IdListType
     {
         $new = clone $this;
         $new->id = $id;

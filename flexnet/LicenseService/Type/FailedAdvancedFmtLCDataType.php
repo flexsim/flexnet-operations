@@ -17,23 +17,23 @@ class FailedAdvancedFmtLCDataType
     /**
      * Constructor
      */
-    public function __construct(AdvancedFulfillmentLCDataType $fulfillment, string $reason)
+    public function __construct(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType $fulfillment, string $reason)
     {
         $this->fulfillment = $fulfillment;
         $this->reason = $reason;
     }
 
-    public static function create(AdvancedFulfillmentLCDataType $fulfillment, string $reason)
+    public static function create(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType $fulfillment, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFulfillment(): AdvancedFulfillmentLCDataType
+    public function getFulfillment(): \Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType
     {
         return $this->fulfillment;
     }
 
-    public function withFulfillment(AdvancedFulfillmentLCDataType $fulfillment): FailedAdvancedFmtLCDataType
+    public function withFulfillment(\Flexnet\LicenseService\Type\AdvancedFulfillmentLCDataType $fulfillment): \Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;
@@ -46,7 +46,7 @@ class FailedAdvancedFmtLCDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedAdvancedFmtLCDataType
+    public function withReason(string $reason): \Flexnet\LicenseService\Type\FailedAdvancedFmtLCDataType
     {
         $new = clone $this;
         $new->reason = $reason;

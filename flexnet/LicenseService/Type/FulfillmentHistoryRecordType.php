@@ -69,7 +69,7 @@ class FulfillmentHistoryRecordType
         return $this->fulfillmentId;
     }
 
-    public function withFulfillmentId(string $fulfillmentId): FulfillmentHistoryRecordType
+    public function withFulfillmentId(string $fulfillmentId): \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType
     {
         $new = clone $this;
         $new->fulfillmentId = $fulfillmentId;
@@ -82,7 +82,7 @@ class FulfillmentHistoryRecordType
         return $this->action;
     }
 
-    public function withAction(string $action): FulfillmentHistoryRecordType
+    public function withAction(string $action): \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType
     {
         $new = clone $this;
         $new->action = $action;
@@ -95,7 +95,7 @@ class FulfillmentHistoryRecordType
         return $this->actionDate;
     }
 
-    public function withActionDate(\DateTimeInterface $actionDate): FulfillmentHistoryRecordType
+    public function withActionDate(\DateTimeInterface $actionDate): \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType
     {
         $new = clone $this;
         $new->actionDate = $actionDate;
@@ -108,7 +108,7 @@ class FulfillmentHistoryRecordType
         return $this->actionDateTime;
     }
 
-    public function withActionDateTime(\DateTimeInterface $actionDateTime): FulfillmentHistoryRecordType
+    public function withActionDateTime(\DateTimeInterface $actionDateTime): \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType
     {
         $new = clone $this;
         $new->actionDateTime = $actionDateTime;
@@ -121,7 +121,7 @@ class FulfillmentHistoryRecordType
         return $this->actionPerformedBy;
     }
 
-    public function withActionPerformedBy(string $actionPerformedBy): FulfillmentHistoryRecordType
+    public function withActionPerformedBy(string $actionPerformedBy): \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType
     {
         $new = clone $this;
         $new->actionPerformedBy = $actionPerformedBy;
@@ -134,7 +134,7 @@ class FulfillmentHistoryRecordType
         return $this->isPolicyOverridden;
     }
 
-    public function withIsPolicyOverridden(bool $isPolicyOverridden): FulfillmentHistoryRecordType
+    public function withIsPolicyOverridden(bool $isPolicyOverridden): \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType
     {
         $new = clone $this;
         $new->isPolicyOverridden = $isPolicyOverridden;
@@ -147,7 +147,7 @@ class FulfillmentHistoryRecordType
         return $this->count;
     }
 
-    public function withCount(int $count): FulfillmentHistoryRecordType
+    public function withCount(int $count): \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType
     {
         $new = clone $this;
         $new->count = $count;
@@ -160,7 +160,7 @@ class FulfillmentHistoryRecordType
         return $this->fulfillmentSource;
     }
 
-    public function withFulfillmentSource(string $fulfillmentSource): FulfillmentHistoryRecordType
+    public function withFulfillmentSource(string $fulfillmentSource): \Flexnet\LicenseService\Type\FulfillmentHistoryRecordType
     {
         $new = clone $this;
         $new->fulfillmentSource = $fulfillmentSource;

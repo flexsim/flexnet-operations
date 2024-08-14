@@ -34,7 +34,7 @@ class EmailLicenseRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, string $locale = null)
+    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, ?bool $ignoreExistingEmailList = null, ?bool $validateEmailAddresses = null, ?\Flexnet\LicenseService\Type\EmailContactListType $emailIdList = null, ?string $locale = null)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->ignoreExistingEmailList = $ignoreExistingEmailList;
@@ -43,17 +43,17 @@ class EmailLicenseRequestType implements RequestInterface
         $this->locale = $locale;
     }
 
-    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, bool $ignoreExistingEmailList = null, bool $validateEmailAddresses = null, EmailContactListType $emailIdList = null, string $locale = null)
+    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, ?bool $ignoreExistingEmailList = null, ?bool $validateEmailAddresses = null, ?\Flexnet\LicenseService\Type\EmailContactListType $emailIdList = null, ?string $locale = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFulfillmentIdentifier(): FulfillmentIdentifierType
+    public function getFulfillmentIdentifier(): \Flexnet\LicenseService\Type\FulfillmentIdentifierType
     {
         return $this->fulfillmentIdentifier;
     }
 
-    public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): EmailLicenseRequestType
+    public function withFulfillmentIdentifier(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier): \Flexnet\LicenseService\Type\EmailLicenseRequestType
     {
         $new = clone $this;
         $new->fulfillmentIdentifier = $fulfillmentIdentifier;
@@ -66,7 +66,7 @@ class EmailLicenseRequestType implements RequestInterface
         return $this->ignoreExistingEmailList;
     }
 
-    public function withIgnoreExistingEmailList(?bool $ignoreExistingEmailList): EmailLicenseRequestType
+    public function withIgnoreExistingEmailList(?bool $ignoreExistingEmailList): \Flexnet\LicenseService\Type\EmailLicenseRequestType
     {
         $new = clone $this;
         $new->ignoreExistingEmailList = $ignoreExistingEmailList;
@@ -79,7 +79,7 @@ class EmailLicenseRequestType implements RequestInterface
         return $this->validateEmailAddresses;
     }
 
-    public function withValidateEmailAddresses(?bool $validateEmailAddresses): EmailLicenseRequestType
+    public function withValidateEmailAddresses(?bool $validateEmailAddresses): \Flexnet\LicenseService\Type\EmailLicenseRequestType
     {
         $new = clone $this;
         $new->validateEmailAddresses = $validateEmailAddresses;
@@ -87,12 +87,12 @@ class EmailLicenseRequestType implements RequestInterface
         return $new;
     }
 
-    public function getEmailIdList(): ?EmailContactListType
+    public function getEmailIdList(): ?\Flexnet\LicenseService\Type\EmailContactListType
     {
         return $this->emailIdList;
     }
 
-    public function withEmailIdList(?EmailContactListType $emailIdList): EmailLicenseRequestType
+    public function withEmailIdList(?\Flexnet\LicenseService\Type\EmailContactListType $emailIdList): \Flexnet\LicenseService\Type\EmailLicenseRequestType
     {
         $new = clone $this;
         $new->emailIdList = $emailIdList;
@@ -105,7 +105,7 @@ class EmailLicenseRequestType implements RequestInterface
         return $this->locale;
     }
 
-    public function withLocale(?string $locale): EmailLicenseRequestType
+    public function withLocale(?string $locale): \Flexnet\LicenseService\Type\EmailLicenseRequestType
     {
         $new = clone $this;
         $new->locale = $locale;

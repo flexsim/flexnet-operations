@@ -99,7 +99,7 @@ class PolicyAttributesDataType
         return $this->needRehostsPolicy;
     }
 
-    public function withNeedRehostsPolicy(bool $needRehostsPolicy): PolicyAttributesDataType
+    public function withNeedRehostsPolicy(bool $needRehostsPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needRehostsPolicy = $needRehostsPolicy;
@@ -112,7 +112,7 @@ class PolicyAttributesDataType
         return $this->needReturnsPolicy;
     }
 
-    public function withNeedReturnsPolicy(bool $needReturnsPolicy): PolicyAttributesDataType
+    public function withNeedReturnsPolicy(bool $needReturnsPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needReturnsPolicy = $needReturnsPolicy;
@@ -125,7 +125,7 @@ class PolicyAttributesDataType
         return $this->needRepairsPolicy;
     }
 
-    public function withNeedRepairsPolicy(bool $needRepairsPolicy): PolicyAttributesDataType
+    public function withNeedRepairsPolicy(bool $needRepairsPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needRepairsPolicy = $needRepairsPolicy;
@@ -138,7 +138,7 @@ class PolicyAttributesDataType
         return $this->needExtraActivationsPolicy;
     }
 
-    public function withNeedExtraActivationsPolicy(bool $needExtraActivationsPolicy): PolicyAttributesDataType
+    public function withNeedExtraActivationsPolicy(bool $needExtraActivationsPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needExtraActivationsPolicy = $needExtraActivationsPolicy;
@@ -151,7 +151,7 @@ class PolicyAttributesDataType
         return $this->needCancelLicensePolicy;
     }
 
-    public function withNeedCancelLicensePolicy(bool $needCancelLicensePolicy): PolicyAttributesDataType
+    public function withNeedCancelLicensePolicy(bool $needCancelLicensePolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needCancelLicensePolicy = $needCancelLicensePolicy;
@@ -164,7 +164,7 @@ class PolicyAttributesDataType
         return $this->needVirtualLicensePolicy;
     }
 
-    public function withNeedVirtualLicensePolicy(bool $needVirtualLicensePolicy): PolicyAttributesDataType
+    public function withNeedVirtualLicensePolicy(bool $needVirtualLicensePolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needVirtualLicensePolicy = $needVirtualLicensePolicy;
@@ -177,7 +177,7 @@ class PolicyAttributesDataType
         return $this->needReinstallPolicy;
     }
 
-    public function withNeedReinstallPolicy(bool $needReinstallPolicy): PolicyAttributesDataType
+    public function withNeedReinstallPolicy(bool $needReinstallPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needReinstallPolicy = $needReinstallPolicy;
@@ -190,7 +190,7 @@ class PolicyAttributesDataType
         return $this->needServerHostIdPolicy;
     }
 
-    public function withNeedServerHostIdPolicy(bool $needServerHostIdPolicy): PolicyAttributesDataType
+    public function withNeedServerHostIdPolicy(bool $needServerHostIdPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needServerHostIdPolicy = $needServerHostIdPolicy;
@@ -203,7 +203,7 @@ class PolicyAttributesDataType
         return $this->needNodelockedHostIdPolicy;
     }
 
-    public function withNeedNodelockedHostIdPolicy(bool $needNodelockedHostIdPolicy): PolicyAttributesDataType
+    public function withNeedNodelockedHostIdPolicy(bool $needNodelockedHostIdPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needNodelockedHostIdPolicy = $needNodelockedHostIdPolicy;
@@ -216,7 +216,7 @@ class PolicyAttributesDataType
         return $this->needPortalServerHostIdPolicy;
     }
 
-    public function withNeedPortalServerHostIdPolicy(bool $needPortalServerHostIdPolicy): PolicyAttributesDataType
+    public function withNeedPortalServerHostIdPolicy(bool $needPortalServerHostIdPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needPortalServerHostIdPolicy = $needPortalServerHostIdPolicy;
@@ -229,7 +229,7 @@ class PolicyAttributesDataType
         return $this->needPortalNodelockedHostIdPolicy;
     }
 
-    public function withNeedPortalNodelockedHostIdPolicy(bool $needPortalNodelockedHostIdPolicy): PolicyAttributesDataType
+    public function withNeedPortalNodelockedHostIdPolicy(bool $needPortalNodelockedHostIdPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needPortalNodelockedHostIdPolicy = $needPortalNodelockedHostIdPolicy;
@@ -242,7 +242,7 @@ class PolicyAttributesDataType
         return $this->needRedundantServerPolicy;
     }
 
-    public function withNeedRedundantServerPolicy(bool $needRedundantServerPolicy): PolicyAttributesDataType
+    public function withNeedRedundantServerPolicy(bool $needRedundantServerPolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needRedundantServerPolicy = $needRedundantServerPolicy;
@@ -255,7 +255,7 @@ class PolicyAttributesDataType
         return $this->needACPIGenerationIdLicensePolicy;
     }
 
-    public function withNeedACPIGenerationIdLicensePolicy(bool $needACPIGenerationIdLicensePolicy): PolicyAttributesDataType
+    public function withNeedACPIGenerationIdLicensePolicy(bool $needACPIGenerationIdLicensePolicy): \Flexnet\EntitlementOrderService\Type\PolicyAttributesDataType
     {
         $new = clone $this;
         $new->needACPIGenerationIdLicensePolicy = $needACPIGenerationIdLicensePolicy;

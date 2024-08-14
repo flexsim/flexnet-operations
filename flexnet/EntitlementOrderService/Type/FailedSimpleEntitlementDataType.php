@@ -17,23 +17,23 @@ class FailedSimpleEntitlementDataType
     /**
      * Constructor
      */
-    public function __construct(CreateSimpleEntitlementDataType $simpleEntitlement = null, string $reason = null)
+    public function __construct(?\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType $simpleEntitlement = null, ?string $reason = null)
     {
         $this->simpleEntitlement = $simpleEntitlement;
         $this->reason = $reason;
     }
 
-    public static function create(CreateSimpleEntitlementDataType $simpleEntitlement = null, string $reason = null)
+    public static function create(?\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType $simpleEntitlement = null, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getSimpleEntitlement(): ?CreateSimpleEntitlementDataType
+    public function getSimpleEntitlement(): ?\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType
     {
         return $this->simpleEntitlement;
     }
 
-    public function withSimpleEntitlement(?CreateSimpleEntitlementDataType $simpleEntitlement): FailedSimpleEntitlementDataType
+    public function withSimpleEntitlement(?\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementDataType $simpleEntitlement): \Flexnet\EntitlementOrderService\Type\FailedSimpleEntitlementDataType
     {
         $new = clone $this;
         $new->simpleEntitlement = $simpleEntitlement;
@@ -46,7 +46,7 @@ class FailedSimpleEntitlementDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedSimpleEntitlementDataType
+    public function withReason(?string $reason): \Flexnet\EntitlementOrderService\Type\FailedSimpleEntitlementDataType
     {
         $new = clone $this;
         $new->reason = $reason;

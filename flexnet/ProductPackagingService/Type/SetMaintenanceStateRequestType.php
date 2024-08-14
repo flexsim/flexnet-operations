@@ -16,7 +16,7 @@ class SetMaintenanceStateRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\MaintenanceStateDataType|array<\Flexnet\ProductPackagingService\Type\MaintenanceStateDataType>  $maintenance
      */
-    public function __construct(MaintenanceStateDataType|array $maintenance)
+    public function __construct(\Flexnet\ProductPackagingService\Type\MaintenanceStateDataType|array $maintenance)
     {
         $this->maintenance = $maintenance;
     }
@@ -24,7 +24,7 @@ class SetMaintenanceStateRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\MaintenanceStateDataType|array<\Flexnet\ProductPackagingService\Type\MaintenanceStateDataType>  $maintenance
      */
-    public static function create(MaintenanceStateDataType|array $maintenance)
+    public static function create(\Flexnet\ProductPackagingService\Type\MaintenanceStateDataType|array $maintenance)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class SetMaintenanceStateRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\MaintenanceStateDataType|array<\Flexnet\ProductPackagingService\Type\MaintenanceStateDataType>
      */
-    public function getMaintenance(): MaintenanceStateDataType|array
+    public function getMaintenance(): \Flexnet\ProductPackagingService\Type\MaintenanceStateDataType|array
     {
         return $this->maintenance;
     }
@@ -40,7 +40,7 @@ class SetMaintenanceStateRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\MaintenanceStateDataType|array<\Flexnet\ProductPackagingService\Type\MaintenanceStateDataType>  $maintenance
      */
-    public function withMaintenance(MaintenanceStateDataType|array $maintenance): SetMaintenanceStateRequestType
+    public function withMaintenance(\Flexnet\ProductPackagingService\Type\MaintenanceStateDataType|array $maintenance): \Flexnet\ProductPackagingService\Type\SetMaintenanceStateRequestType
     {
         $new = clone $this;
         $new->maintenance = $maintenance;

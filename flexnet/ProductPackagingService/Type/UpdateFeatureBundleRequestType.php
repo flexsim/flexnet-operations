@@ -16,7 +16,7 @@ class UpdateFeatureBundleRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType|array<\Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType>  $featureBundle
      */
-    public function __construct(UpdateFeatureBundleDataType|array $featureBundle)
+    public function __construct(\Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType|array $featureBundle)
     {
         $this->featureBundle = $featureBundle;
     }
@@ -24,7 +24,7 @@ class UpdateFeatureBundleRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType|array<\Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType>  $featureBundle
      */
-    public static function create(UpdateFeatureBundleDataType|array $featureBundle)
+    public static function create(\Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType|array $featureBundle)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class UpdateFeatureBundleRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType|array<\Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType>
      */
-    public function getFeatureBundle(): UpdateFeatureBundleDataType|array
+    public function getFeatureBundle(): \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType|array
     {
         return $this->featureBundle;
     }
@@ -40,7 +40,7 @@ class UpdateFeatureBundleRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType|array<\Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType>  $featureBundle
      */
-    public function withFeatureBundle(UpdateFeatureBundleDataType|array $featureBundle): UpdateFeatureBundleRequestType
+    public function withFeatureBundle(\Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType|array $featureBundle): \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleRequestType
     {
         $new = clone $this;
         $new->featureBundle = $featureBundle;

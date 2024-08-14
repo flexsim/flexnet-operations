@@ -24,24 +24,24 @@ class GetPartNumbersQueryRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(int $pageNumber, int $batchSize, PartNumberQueryParametersType $queryParams = null)
+    public function __construct(int $pageNumber, int $batchSize, ?\Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType $queryParams = null)
     {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
         $this->queryParams = $queryParams;
     }
 
-    public static function create(int $pageNumber, int $batchSize, PartNumberQueryParametersType $queryParams = null)
+    public static function create(int $pageNumber, int $batchSize, ?\Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): ?PartNumberQueryParametersType
+    public function getQueryParams(): ?\Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(?PartNumberQueryParametersType $queryParams): GetPartNumbersQueryRequestType
+    public function withQueryParams(?\Flexnet\ProductPackagingService\Type\PartNumberQueryParametersType $queryParams): \Flexnet\ProductPackagingService\Type\GetPartNumbersQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -54,7 +54,7 @@ class GetPartNumbersQueryRequestType implements RequestInterface
         return $this->pageNumber;
     }
 
-    public function withPageNumber(int $pageNumber): GetPartNumbersQueryRequestType
+    public function withPageNumber(int $pageNumber): \Flexnet\ProductPackagingService\Type\GetPartNumbersQueryRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;
@@ -67,7 +67,7 @@ class GetPartNumbersQueryRequestType implements RequestInterface
         return $this->batchSize;
     }
 
-    public function withBatchSize(int $batchSize): GetPartNumbersQueryRequestType
+    public function withBatchSize(int $batchSize): \Flexnet\ProductPackagingService\Type\GetPartNumbersQueryRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;

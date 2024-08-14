@@ -14,7 +14,7 @@ class ProductsListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType>  $product
      */
-    public function __construct(ProductIdentifierWithCountDataType|array $product)
+    public function __construct(\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array $product)
     {
         $this->product = $product;
     }
@@ -22,7 +22,7 @@ class ProductsListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType>  $product
      */
-    public static function create(ProductIdentifierWithCountDataType|array $product)
+    public static function create(\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array $product)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class ProductsListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType>
      */
-    public function getProduct(): ProductIdentifierWithCountDataType|array
+    public function getProduct(): \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array
     {
         return $this->product;
     }
@@ -38,7 +38,7 @@ class ProductsListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType>  $product
      */
-    public function withProduct(ProductIdentifierWithCountDataType|array $product): ProductsListType
+    public function withProduct(\Flexnet\ProductPackagingService\Type\ProductIdentifierWithCountDataType|array $product): \Flexnet\ProductPackagingService\Type\ProductsListType
     {
         $new = clone $this;
         $new->product = $product;

@@ -16,7 +16,7 @@ class DeleteEntitlementRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType>  $entitlement
      */
-    public function __construct(DeleteEntitlementDataType|array $entitlement)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType|array $entitlement)
     {
         $this->entitlement = $entitlement;
     }
@@ -24,7 +24,7 @@ class DeleteEntitlementRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType>  $entitlement
      */
-    public static function create(DeleteEntitlementDataType|array $entitlement)
+    public static function create(\Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType|array $entitlement)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class DeleteEntitlementRequestType implements RequestInterface
     /**
      * @return \Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType>
      */
-    public function getEntitlement(): DeleteEntitlementDataType|array
+    public function getEntitlement(): \Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType|array
     {
         return $this->entitlement;
     }
@@ -40,7 +40,7 @@ class DeleteEntitlementRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType>  $entitlement
      */
-    public function withEntitlement(DeleteEntitlementDataType|array $entitlement): DeleteEntitlementRequestType
+    public function withEntitlement(\Flexnet\EntitlementOrderService\Type\DeleteEntitlementDataType|array $entitlement): \Flexnet\EntitlementOrderService\Type\DeleteEntitlementRequestType
     {
         $new = clone $this;
         $new->entitlement = $entitlement;

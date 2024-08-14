@@ -15,10 +15,10 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class LicenseServiceClientFactory
 {
-    public static function factory(string $wsdl, string $username, string $password): LicenseServiceClient
+    public static function factory(string $wsdl, string $username, string $password): \Flexnet\LicenseService\LicenseServiceClient
     {
         $engine = DefaultEngineFactory::create(
-            ExtSoapOptions::defaults($wsdl, [])
+            ExtSoapOptions::defaults($wsdl)
                 ->withClassMap(LicenseServiceClassmap::getCollection()),
             Psr18Transport::createForClient(
                 new PluginClient(
@@ -30,7 +30,7 @@ class LicenseServiceClientFactory
             )
         );
 
-        $eventDispatcher = new EventDispatcher();
+        $eventDispatcher = new EventDispatcher;
         $caller = new EventDispatchingCaller(new EngineCaller($engine), $eventDispatcher);
 
         return new LicenseServiceClient($caller);

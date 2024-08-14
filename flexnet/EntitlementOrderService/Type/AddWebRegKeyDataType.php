@@ -17,23 +17,23 @@ class AddWebRegKeyDataType
     /**
      * Constructor
      */
-    public function __construct(EntitlementIdentifierType $bulkEntitlement, WebRegKeyDataType $webRegKeys)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $bulkEntitlement, \Flexnet\EntitlementOrderService\Type\WebRegKeyDataType $webRegKeys)
     {
         $this->bulkEntitlement = $bulkEntitlement;
         $this->webRegKeys = $webRegKeys;
     }
 
-    public static function create(EntitlementIdentifierType $bulkEntitlement, WebRegKeyDataType $webRegKeys)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $bulkEntitlement, \Flexnet\EntitlementOrderService\Type\WebRegKeyDataType $webRegKeys)
     {
         return new static(...\func_get_args());
     }
 
-    public function getBulkEntitlement(): EntitlementIdentifierType
+    public function getBulkEntitlement(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->bulkEntitlement;
     }
 
-    public function withBulkEntitlement(EntitlementIdentifierType $bulkEntitlement): AddWebRegKeyDataType
+    public function withBulkEntitlement(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $bulkEntitlement): \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType
     {
         $new = clone $this;
         $new->bulkEntitlement = $bulkEntitlement;
@@ -41,12 +41,12 @@ class AddWebRegKeyDataType
         return $new;
     }
 
-    public function getWebRegKeys(): WebRegKeyDataType
+    public function getWebRegKeys(): \Flexnet\EntitlementOrderService\Type\WebRegKeyDataType
     {
         return $this->webRegKeys;
     }
 
-    public function withWebRegKeys(WebRegKeyDataType $webRegKeys): AddWebRegKeyDataType
+    public function withWebRegKeys(\Flexnet\EntitlementOrderService\Type\WebRegKeyDataType $webRegKeys): \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType
     {
         $new = clone $this;
         $new->webRegKeys = $webRegKeys;

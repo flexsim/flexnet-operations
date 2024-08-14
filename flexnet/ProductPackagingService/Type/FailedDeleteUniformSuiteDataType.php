@@ -17,23 +17,23 @@ class FailedDeleteUniformSuiteDataType
     /**
      * Constructor
      */
-    public function __construct(SuiteIdentifierType $suiteIdentifier, string $reason = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\SuiteIdentifierType $suiteIdentifier, ?string $reason = null)
     {
         $this->suiteIdentifier = $suiteIdentifier;
         $this->reason = $reason;
     }
 
-    public static function create(SuiteIdentifierType $suiteIdentifier, string $reason = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\SuiteIdentifierType $suiteIdentifier, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getSuiteIdentifier(): SuiteIdentifierType
+    public function getSuiteIdentifier(): \Flexnet\ProductPackagingService\Type\SuiteIdentifierType
     {
         return $this->suiteIdentifier;
     }
 
-    public function withSuiteIdentifier(SuiteIdentifierType $suiteIdentifier): FailedDeleteUniformSuiteDataType
+    public function withSuiteIdentifier(\Flexnet\ProductPackagingService\Type\SuiteIdentifierType $suiteIdentifier): \Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType
     {
         $new = clone $this;
         $new->suiteIdentifier = $suiteIdentifier;
@@ -46,7 +46,7 @@ class FailedDeleteUniformSuiteDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedDeleteUniformSuiteDataType
+    public function withReason(?string $reason): \Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType
     {
         $new = clone $this;
         $new->reason = $reason;

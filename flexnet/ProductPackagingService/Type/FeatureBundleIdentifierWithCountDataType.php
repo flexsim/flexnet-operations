@@ -10,30 +10,30 @@ class FeatureBundleIdentifierWithCountDataType
     private $featureBundleIdentifier;
 
     /**
-     * @var int
+     * @var string
      */
     private $count;
 
     /**
      * Constructor
      */
-    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier, int $count)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier, string $count)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
         $this->count = $count;
     }
 
-    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier, int $count)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier, string $count)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFeatureBundleIdentifier(): FeatureBundleIdentifierType
+    public function getFeatureBundleIdentifier(): \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType
     {
         return $this->featureBundleIdentifier;
     }
 
-    public function withFeatureBundleIdentifier(FeatureBundleIdentifierType $featureBundleIdentifier): FeatureBundleIdentifierWithCountDataType
+    public function withFeatureBundleIdentifier(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier): \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType
     {
         $new = clone $this;
         $new->featureBundleIdentifier = $featureBundleIdentifier;
@@ -41,12 +41,12 @@ class FeatureBundleIdentifierWithCountDataType
         return $new;
     }
 
-    public function getCount(): int
+    public function getCount(): string
     {
         return $this->count;
     }
 
-    public function withCount(int $count): FeatureBundleIdentifierWithCountDataType
+    public function withCount(string $count): \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierWithCountDataType
     {
         $new = clone $this;
         $new->count = $count;

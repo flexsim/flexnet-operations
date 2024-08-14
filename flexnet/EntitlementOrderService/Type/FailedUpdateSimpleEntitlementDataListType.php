@@ -14,7 +14,7 @@ class FailedUpdateSimpleEntitlementDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType>|null  $failedSimpleEntitlement
      */
-    public function __construct(FailedUpdateSimpleEntitlementDataType|array $failedSimpleEntitlement = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType|array|null $failedSimpleEntitlement = null)
     {
         $this->failedSimpleEntitlement = $failedSimpleEntitlement;
     }
@@ -22,7 +22,7 @@ class FailedUpdateSimpleEntitlementDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType>|null  $failedSimpleEntitlement
      */
-    public static function create(FailedUpdateSimpleEntitlementDataType|array $failedSimpleEntitlement = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType|array|null $failedSimpleEntitlement = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedUpdateSimpleEntitlementDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType>|null
      */
-    public function getFailedSimpleEntitlement(): FailedUpdateSimpleEntitlementDataType|array|null
+    public function getFailedSimpleEntitlement(): \Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType|array|null
     {
         return $this->failedSimpleEntitlement;
     }
@@ -38,7 +38,7 @@ class FailedUpdateSimpleEntitlementDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType>|null  $failedSimpleEntitlement
      */
-    public function withFailedSimpleEntitlement(FailedUpdateSimpleEntitlementDataType|array|null $failedSimpleEntitlement): FailedUpdateSimpleEntitlementDataListType
+    public function withFailedSimpleEntitlement(\Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataType|array|null $failedSimpleEntitlement): \Flexnet\EntitlementOrderService\Type\FailedUpdateSimpleEntitlementDataListType
     {
         $new = clone $this;
         $new->failedSimpleEntitlement = $failedSimpleEntitlement;

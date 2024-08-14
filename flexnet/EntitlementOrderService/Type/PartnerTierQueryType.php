@@ -27,7 +27,7 @@ class PartnerTierQueryType
     /**
      * Constructor
      */
-    public function __construct(string $value, string $searchType, string $partnerTier = null, bool $isSearchByName = null)
+    public function __construct(string $value, string $searchType, ?string $partnerTier = null, ?bool $isSearchByName = null)
     {
         $this->value = $value;
         $this->searchType = $searchType;
@@ -35,7 +35,7 @@ class PartnerTierQueryType
         $this->isSearchByName = $isSearchByName;
     }
 
-    public static function create(string $value, string $searchType, string $partnerTier = null, bool $isSearchByName = null)
+    public static function create(string $value, string $searchType, ?string $partnerTier = null, ?bool $isSearchByName = null)
     {
         return new static(...\func_get_args());
     }
@@ -45,7 +45,7 @@ class PartnerTierQueryType
         return $this->value;
     }
 
-    public function withValue(string $value): PartnerTierQueryType
+    public function withValue(string $value): \Flexnet\EntitlementOrderService\Type\PartnerTierQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -58,7 +58,7 @@ class PartnerTierQueryType
         return $this->searchType;
     }
 
-    public function withSearchType(string $searchType): PartnerTierQueryType
+    public function withSearchType(string $searchType): \Flexnet\EntitlementOrderService\Type\PartnerTierQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;
@@ -71,7 +71,7 @@ class PartnerTierQueryType
         return $this->partnerTier;
     }
 
-    public function withPartnerTier(?string $partnerTier): PartnerTierQueryType
+    public function withPartnerTier(?string $partnerTier): \Flexnet\EntitlementOrderService\Type\PartnerTierQueryType
     {
         $new = clone $this;
         $new->partnerTier = $partnerTier;
@@ -84,7 +84,7 @@ class PartnerTierQueryType
         return $this->isSearchByName;
     }
 
-    public function withIsSearchByName(?bool $isSearchByName): PartnerTierQueryType
+    public function withIsSearchByName(?bool $isSearchByName): \Flexnet\EntitlementOrderService\Type\PartnerTierQueryType
     {
         $new = clone $this;
         $new->isSearchByName = $isSearchByName;

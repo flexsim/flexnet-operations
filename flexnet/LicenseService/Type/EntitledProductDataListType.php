@@ -14,7 +14,7 @@ class EntitledProductDataListType
      *
      * @param  \Flexnet\LicenseService\Type\EntitledProductDataType|array<\Flexnet\LicenseService\Type\EntitledProductDataType>|null  $entitledProduct
      */
-    public function __construct(EntitledProductDataType|array $entitledProduct = null)
+    public function __construct(\Flexnet\LicenseService\Type\EntitledProductDataType|array|null $entitledProduct = null)
     {
         $this->entitledProduct = $entitledProduct;
     }
@@ -22,7 +22,7 @@ class EntitledProductDataListType
     /**
      * @param  \Flexnet\LicenseService\Type\EntitledProductDataType|array<\Flexnet\LicenseService\Type\EntitledProductDataType>|null  $entitledProduct
      */
-    public static function create(EntitledProductDataType|array $entitledProduct = null)
+    public static function create(\Flexnet\LicenseService\Type\EntitledProductDataType|array|null $entitledProduct = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class EntitledProductDataListType
     /**
      * @return \Flexnet\LicenseService\Type\EntitledProductDataType|array<\Flexnet\LicenseService\Type\EntitledProductDataType>|null
      */
-    public function getEntitledProduct(): EntitledProductDataType|array|null
+    public function getEntitledProduct(): \Flexnet\LicenseService\Type\EntitledProductDataType|array|null
     {
         return $this->entitledProduct;
     }
@@ -38,7 +38,7 @@ class EntitledProductDataListType
     /**
      * @param  \Flexnet\LicenseService\Type\EntitledProductDataType|array<\Flexnet\LicenseService\Type\EntitledProductDataType>|null  $entitledProduct
      */
-    public function withEntitledProduct(EntitledProductDataType|array|null $entitledProduct): EntitledProductDataListType
+    public function withEntitledProduct(\Flexnet\LicenseService\Type\EntitledProductDataType|array|null $entitledProduct): \Flexnet\LicenseService\Type\EntitledProductDataListType
     {
         $new = clone $this;
         $new->entitledProduct = $entitledProduct;

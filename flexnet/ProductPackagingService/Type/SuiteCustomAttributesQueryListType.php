@@ -14,7 +14,7 @@ class SuiteCustomAttributesQueryListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType|array<\Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType>|null  $attribute
      */
-    public function __construct(SuiteCustomAttributeQueryType|array $attribute = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType|array|null $attribute = null)
     {
         $this->attribute = $attribute;
     }
@@ -22,7 +22,7 @@ class SuiteCustomAttributesQueryListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType|array<\Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType>|null  $attribute
      */
-    public static function create(SuiteCustomAttributeQueryType|array $attribute = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType|array|null $attribute = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class SuiteCustomAttributesQueryListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType|array<\Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType>|null
      */
-    public function getAttribute(): SuiteCustomAttributeQueryType|array|null
+    public function getAttribute(): \Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType|array|null
     {
         return $this->attribute;
     }
@@ -38,7 +38,7 @@ class SuiteCustomAttributesQueryListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType|array<\Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType>|null  $attribute
      */
-    public function withAttribute(SuiteCustomAttributeQueryType|array|null $attribute): SuiteCustomAttributesQueryListType
+    public function withAttribute(\Flexnet\ProductPackagingService\Type\SuiteCustomAttributeQueryType|array|null $attribute): \Flexnet\ProductPackagingService\Type\SuiteCustomAttributesQueryListType
     {
         $new = clone $this;
         $new->attribute = $attribute;

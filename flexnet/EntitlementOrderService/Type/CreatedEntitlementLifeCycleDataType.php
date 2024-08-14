@@ -24,7 +24,7 @@ class CreatedEntitlementLifeCycleDataType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType>|null  $createdLineItemData
      */
-    public function __construct(string $entitlementRecordRefNo, EntitlementIdentifierType $parentEntitlementIdentifier, LifeCycleLineItemDataType|array $createdLineItemData = null)
+    public function __construct(string $entitlementRecordRefNo, \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $parentEntitlementIdentifier, \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array|null $createdLineItemData = null)
     {
         $this->entitlementRecordRefNo = $entitlementRecordRefNo;
         $this->parentEntitlementIdentifier = $parentEntitlementIdentifier;
@@ -34,7 +34,7 @@ class CreatedEntitlementLifeCycleDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType>|null  $createdLineItemData
      */
-    public static function create(string $entitlementRecordRefNo, EntitlementIdentifierType $parentEntitlementIdentifier, LifeCycleLineItemDataType|array $createdLineItemData = null)
+    public static function create(string $entitlementRecordRefNo, \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $parentEntitlementIdentifier, \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array|null $createdLineItemData = null)
     {
         return new static(...\func_get_args());
     }
@@ -44,7 +44,7 @@ class CreatedEntitlementLifeCycleDataType
         return $this->entitlementRecordRefNo;
     }
 
-    public function withEntitlementRecordRefNo(string $entitlementRecordRefNo): CreatedEntitlementLifeCycleDataType
+    public function withEntitlementRecordRefNo(string $entitlementRecordRefNo): \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataType
     {
         $new = clone $this;
         $new->entitlementRecordRefNo = $entitlementRecordRefNo;
@@ -52,12 +52,12 @@ class CreatedEntitlementLifeCycleDataType
         return $new;
     }
 
-    public function getParentEntitlementIdentifier(): EntitlementIdentifierType
+    public function getParentEntitlementIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->parentEntitlementIdentifier;
     }
 
-    public function withParentEntitlementIdentifier(EntitlementIdentifierType $parentEntitlementIdentifier): CreatedEntitlementLifeCycleDataType
+    public function withParentEntitlementIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $parentEntitlementIdentifier): \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataType
     {
         $new = clone $this;
         $new->parentEntitlementIdentifier = $parentEntitlementIdentifier;
@@ -68,7 +68,7 @@ class CreatedEntitlementLifeCycleDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType>|null
      */
-    public function getCreatedLineItemData(): LifeCycleLineItemDataType|array|null
+    public function getCreatedLineItemData(): \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array|null
     {
         return $this->createdLineItemData;
     }
@@ -76,7 +76,7 @@ class CreatedEntitlementLifeCycleDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType>|null  $createdLineItemData
      */
-    public function withCreatedLineItemData(LifeCycleLineItemDataType|array|null $createdLineItemData): CreatedEntitlementLifeCycleDataType
+    public function withCreatedLineItemData(\Flexnet\EntitlementOrderService\Type\LifeCycleLineItemDataType|array|null $createdLineItemData): \Flexnet\EntitlementOrderService\Type\CreatedEntitlementLifeCycleDataType
     {
         $new = clone $this;
         $new->createdLineItemData = $createdLineItemData;

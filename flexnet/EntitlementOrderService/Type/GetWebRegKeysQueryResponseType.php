@@ -19,23 +19,23 @@ class GetWebRegKeysQueryResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, WebRegKeysDataListType $responseData = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, ?\Flexnet\EntitlementOrderService\Type\WebRegKeysDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, WebRegKeysDataListType $responseData = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo, ?\Flexnet\EntitlementOrderService\Type\WebRegKeysDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\EntitlementOrderService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): GetWebRegKeysQueryResponseType
+    public function withStatusInfo(\Flexnet\EntitlementOrderService\Type\StatusInfoType $statusInfo): \Flexnet\EntitlementOrderService\Type\GetWebRegKeysQueryResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class GetWebRegKeysQueryResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?WebRegKeysDataListType
+    public function getResponseData(): ?\Flexnet\EntitlementOrderService\Type\WebRegKeysDataListType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?WebRegKeysDataListType $responseData): GetWebRegKeysQueryResponseType
+    public function withResponseData(?\Flexnet\EntitlementOrderService\Type\WebRegKeysDataListType $responseData): \Flexnet\EntitlementOrderService\Type\GetWebRegKeysQueryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

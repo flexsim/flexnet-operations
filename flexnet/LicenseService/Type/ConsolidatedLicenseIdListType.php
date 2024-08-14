@@ -38,7 +38,7 @@ class ConsolidatedLicenseIdListType
     /**
      * @param  string|array<string>  $consolidatedLicenseId
      */
-    public function withConsolidatedLicenseId(string|array $consolidatedLicenseId): ConsolidatedLicenseIdListType
+    public function withConsolidatedLicenseId(string|array $consolidatedLicenseId): \Flexnet\LicenseService\Type\ConsolidatedLicenseIdListType
     {
         $new = clone $this;
         $new->consolidatedLicenseId = $consolidatedLicenseId;

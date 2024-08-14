@@ -17,13 +17,13 @@ class EntitlementIdentifierType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, EntitlementPKType $primaryKeys = null)
+    public function __construct(?string $uniqueId = null, ?\Flexnet\LicenseService\Type\EntitlementPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    public static function create(string $uniqueId = null, EntitlementPKType $primaryKeys = null)
+    public static function create(?string $uniqueId = null, ?\Flexnet\LicenseService\Type\EntitlementPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class EntitlementIdentifierType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): EntitlementIdentifierType
+    public function withUniqueId(?string $uniqueId): \Flexnet\LicenseService\Type\EntitlementIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -41,12 +41,12 @@ class EntitlementIdentifierType
         return $new;
     }
 
-    public function getPrimaryKeys(): ?EntitlementPKType
+    public function getPrimaryKeys(): ?\Flexnet\LicenseService\Type\EntitlementPKType
     {
         return $this->primaryKeys;
     }
 
-    public function withPrimaryKeys(?EntitlementPKType $primaryKeys): EntitlementIdentifierType
+    public function withPrimaryKeys(?\Flexnet\LicenseService\Type\EntitlementPKType $primaryKeys): \Flexnet\LicenseService\Type\EntitlementIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

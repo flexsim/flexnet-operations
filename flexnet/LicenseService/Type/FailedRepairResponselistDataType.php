@@ -14,7 +14,7 @@ class FailedRepairResponselistDataType
      *
      * @param  \Flexnet\LicenseService\Type\FailedRepairResponseDataType|array<\Flexnet\LicenseService\Type\FailedRepairResponseDataType>|null  $failedFulfillment
      */
-    public function __construct(FailedRepairResponseDataType|array $failedFulfillment = null)
+    public function __construct(\Flexnet\LicenseService\Type\FailedRepairResponseDataType|array|null $failedFulfillment = null)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
@@ -22,7 +22,7 @@ class FailedRepairResponselistDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedRepairResponseDataType|array<\Flexnet\LicenseService\Type\FailedRepairResponseDataType>|null  $failedFulfillment
      */
-    public static function create(FailedRepairResponseDataType|array $failedFulfillment = null)
+    public static function create(\Flexnet\LicenseService\Type\FailedRepairResponseDataType|array|null $failedFulfillment = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedRepairResponselistDataType
     /**
      * @return \Flexnet\LicenseService\Type\FailedRepairResponseDataType|array<\Flexnet\LicenseService\Type\FailedRepairResponseDataType>|null
      */
-    public function getFailedFulfillment(): FailedRepairResponseDataType|array|null
+    public function getFailedFulfillment(): \Flexnet\LicenseService\Type\FailedRepairResponseDataType|array|null
     {
         return $this->failedFulfillment;
     }
@@ -38,7 +38,7 @@ class FailedRepairResponselistDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedRepairResponseDataType|array<\Flexnet\LicenseService\Type\FailedRepairResponseDataType>|null  $failedFulfillment
      */
-    public function withFailedFulfillment(FailedRepairResponseDataType|array|null $failedFulfillment): FailedRepairResponselistDataType
+    public function withFailedFulfillment(\Flexnet\LicenseService\Type\FailedRepairResponseDataType|array|null $failedFulfillment): \Flexnet\LicenseService\Type\FailedRepairResponselistDataType
     {
         $new = clone $this;
         $new->failedFulfillment = $failedFulfillment;

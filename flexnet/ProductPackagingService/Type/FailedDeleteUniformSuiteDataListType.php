@@ -14,7 +14,7 @@ class FailedDeleteUniformSuiteDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType>|null  $failedUniformSuite
      */
-    public function __construct(FailedDeleteUniformSuiteDataType|array $failedUniformSuite = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType|array|null $failedUniformSuite = null)
     {
         $this->failedUniformSuite = $failedUniformSuite;
     }
@@ -22,7 +22,7 @@ class FailedDeleteUniformSuiteDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType>|null  $failedUniformSuite
      */
-    public static function create(FailedDeleteUniformSuiteDataType|array $failedUniformSuite = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType|array|null $failedUniformSuite = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedDeleteUniformSuiteDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType>|null
      */
-    public function getFailedUniformSuite(): FailedDeleteUniformSuiteDataType|array|null
+    public function getFailedUniformSuite(): \Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType|array|null
     {
         return $this->failedUniformSuite;
     }
@@ -38,7 +38,7 @@ class FailedDeleteUniformSuiteDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType>|null  $failedUniformSuite
      */
-    public function withFailedUniformSuite(FailedDeleteUniformSuiteDataType|array|null $failedUniformSuite): FailedDeleteUniformSuiteDataListType
+    public function withFailedUniformSuite(\Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataType|array|null $failedUniformSuite): \Flexnet\ProductPackagingService\Type\FailedDeleteUniformSuiteDataListType
     {
         $new = clone $this;
         $new->failedUniformSuite = $failedUniformSuite;

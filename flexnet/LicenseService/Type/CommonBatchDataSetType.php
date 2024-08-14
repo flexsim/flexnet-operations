@@ -52,7 +52,7 @@ class CommonBatchDataSetType
     /**
      * Constructor
      */
-    public function __construct(\DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
+    public function __construct(?\DateTimeInterface $startDate = null, ?\DateTimeInterface $versionDate = null, ?\DateTimeInterface $versionStartDate = null, ?string $soldTo = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?bool $overridePolicy = null, ?string $FNPTimeZoneValue = null)
     {
         $this->startDate = $startDate;
         $this->versionDate = $versionDate;
@@ -65,7 +65,7 @@ class CommonBatchDataSetType
         $this->FNPTimeZoneValue = $FNPTimeZoneValue;
     }
 
-    public static function create(\DateTimeInterface $startDate = null, \DateTimeInterface $versionDate = null, \DateTimeInterface $versionStartDate = null, string $soldTo = null, string $shipToEmail = null, string $shipToAddress = null, AttributeDescriptorDataType $licenseModelAttributes = null, bool $overridePolicy = null, string $FNPTimeZoneValue = null)
+    public static function create(?\DateTimeInterface $startDate = null, ?\DateTimeInterface $versionDate = null, ?\DateTimeInterface $versionStartDate = null, ?string $soldTo = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?bool $overridePolicy = null, ?string $FNPTimeZoneValue = null)
     {
         return new static(...\func_get_args());
     }
@@ -75,7 +75,7 @@ class CommonBatchDataSetType
         return $this->startDate;
     }
 
-    public function withStartDate(?\DateTimeInterface $startDate): CommonBatchDataSetType
+    public function withStartDate(?\DateTimeInterface $startDate): \Flexnet\LicenseService\Type\CommonBatchDataSetType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -88,7 +88,7 @@ class CommonBatchDataSetType
         return $this->versionDate;
     }
 
-    public function withVersionDate(?\DateTimeInterface $versionDate): CommonBatchDataSetType
+    public function withVersionDate(?\DateTimeInterface $versionDate): \Flexnet\LicenseService\Type\CommonBatchDataSetType
     {
         $new = clone $this;
         $new->versionDate = $versionDate;
@@ -101,7 +101,7 @@ class CommonBatchDataSetType
         return $this->versionStartDate;
     }
 
-    public function withVersionStartDate(?\DateTimeInterface $versionStartDate): CommonBatchDataSetType
+    public function withVersionStartDate(?\DateTimeInterface $versionStartDate): \Flexnet\LicenseService\Type\CommonBatchDataSetType
     {
         $new = clone $this;
         $new->versionStartDate = $versionStartDate;
@@ -114,7 +114,7 @@ class CommonBatchDataSetType
         return $this->soldTo;
     }
 
-    public function withSoldTo(?string $soldTo): CommonBatchDataSetType
+    public function withSoldTo(?string $soldTo): \Flexnet\LicenseService\Type\CommonBatchDataSetType
     {
         $new = clone $this;
         $new->soldTo = $soldTo;
@@ -127,7 +127,7 @@ class CommonBatchDataSetType
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(?string $shipToEmail): CommonBatchDataSetType
+    public function withShipToEmail(?string $shipToEmail): \Flexnet\LicenseService\Type\CommonBatchDataSetType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -140,7 +140,7 @@ class CommonBatchDataSetType
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(?string $shipToAddress): CommonBatchDataSetType
+    public function withShipToAddress(?string $shipToAddress): \Flexnet\LicenseService\Type\CommonBatchDataSetType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -148,12 +148,12 @@ class CommonBatchDataSetType
         return $new;
     }
 
-    public function getLicenseModelAttributes(): ?AttributeDescriptorDataType
+    public function getLicenseModelAttributes(): ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType
     {
         return $this->licenseModelAttributes;
     }
 
-    public function withLicenseModelAttributes(?AttributeDescriptorDataType $licenseModelAttributes): CommonBatchDataSetType
+    public function withLicenseModelAttributes(?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes): \Flexnet\LicenseService\Type\CommonBatchDataSetType
     {
         $new = clone $this;
         $new->licenseModelAttributes = $licenseModelAttributes;
@@ -166,7 +166,7 @@ class CommonBatchDataSetType
         return $this->overridePolicy;
     }
 
-    public function withOverridePolicy(?bool $overridePolicy): CommonBatchDataSetType
+    public function withOverridePolicy(?bool $overridePolicy): \Flexnet\LicenseService\Type\CommonBatchDataSetType
     {
         $new = clone $this;
         $new->overridePolicy = $overridePolicy;
@@ -179,7 +179,7 @@ class CommonBatchDataSetType
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): CommonBatchDataSetType
+    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): \Flexnet\LicenseService\Type\CommonBatchDataSetType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;

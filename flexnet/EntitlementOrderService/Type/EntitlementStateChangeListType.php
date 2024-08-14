@@ -14,7 +14,7 @@ class EntitlementStateChangeListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType>|null  $entitlement
      */
-    public function __construct(EntitlementStateChangeDataType|array $entitlement = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array|null $entitlement = null)
     {
         $this->entitlement = $entitlement;
     }
@@ -22,7 +22,7 @@ class EntitlementStateChangeListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType>|null  $entitlement
      */
-    public static function create(EntitlementStateChangeDataType|array $entitlement = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array|null $entitlement = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class EntitlementStateChangeListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType>|null
      */
-    public function getEntitlement(): EntitlementStateChangeDataType|array|null
+    public function getEntitlement(): \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array|null
     {
         return $this->entitlement;
     }
@@ -38,7 +38,7 @@ class EntitlementStateChangeListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType>|null  $entitlement
      */
-    public function withEntitlement(EntitlementStateChangeDataType|array|null $entitlement): EntitlementStateChangeListType
+    public function withEntitlement(\Flexnet\EntitlementOrderService\Type\EntitlementStateChangeDataType|array|null $entitlement): \Flexnet\EntitlementOrderService\Type\EntitlementStateChangeListType
     {
         $new = clone $this;
         $new->entitlement = $entitlement;

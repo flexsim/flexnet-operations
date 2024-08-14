@@ -16,7 +16,7 @@ class SetLineItemStateRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemStateDataType>  $lineItem
      */
-    public function __construct(LineItemStateDataType|array $lineItem)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array $lineItem)
     {
         $this->lineItem = $lineItem;
     }
@@ -24,7 +24,7 @@ class SetLineItemStateRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemStateDataType>  $lineItem
      */
-    public static function create(LineItemStateDataType|array $lineItem)
+    public static function create(\Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array $lineItem)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class SetLineItemStateRequestType implements RequestInterface
     /**
      * @return \Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemStateDataType>
      */
-    public function getLineItem(): LineItemStateDataType|array
+    public function getLineItem(): \Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array
     {
         return $this->lineItem;
     }
@@ -40,7 +40,7 @@ class SetLineItemStateRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array<\Flexnet\EntitlementOrderService\Type\LineItemStateDataType>  $lineItem
      */
-    public function withLineItem(LineItemStateDataType|array $lineItem): SetLineItemStateRequestType
+    public function withLineItem(\Flexnet\EntitlementOrderService\Type\LineItemStateDataType|array $lineItem): \Flexnet\EntitlementOrderService\Type\SetLineItemStateRequestType
     {
         $new = clone $this;
         $new->lineItem = $lineItem;

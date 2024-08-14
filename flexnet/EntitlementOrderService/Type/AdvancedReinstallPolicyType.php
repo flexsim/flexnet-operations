@@ -27,7 +27,7 @@ class AdvancedReinstallPolicyType
     /**
      * Constructor
      */
-    public function __construct(PolicyDataType $umn1Policy, PolicyDataType $umn2Policy, PolicyDataType $umn3Policy, PolicyDataType $midPolicy)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\PolicyDataType $umn1Policy, \Flexnet\EntitlementOrderService\Type\PolicyDataType $umn2Policy, \Flexnet\EntitlementOrderService\Type\PolicyDataType $umn3Policy, \Flexnet\EntitlementOrderService\Type\PolicyDataType $midPolicy)
     {
         $this->umn1Policy = $umn1Policy;
         $this->umn2Policy = $umn2Policy;
@@ -35,17 +35,17 @@ class AdvancedReinstallPolicyType
         $this->midPolicy = $midPolicy;
     }
 
-    public static function create(PolicyDataType $umn1Policy, PolicyDataType $umn2Policy, PolicyDataType $umn3Policy, PolicyDataType $midPolicy)
+    public static function create(\Flexnet\EntitlementOrderService\Type\PolicyDataType $umn1Policy, \Flexnet\EntitlementOrderService\Type\PolicyDataType $umn2Policy, \Flexnet\EntitlementOrderService\Type\PolicyDataType $umn3Policy, \Flexnet\EntitlementOrderService\Type\PolicyDataType $midPolicy)
     {
         return new static(...\func_get_args());
     }
 
-    public function getUmn1Policy(): PolicyDataType
+    public function getUmn1Policy(): \Flexnet\EntitlementOrderService\Type\PolicyDataType
     {
         return $this->umn1Policy;
     }
 
-    public function withUmn1Policy(PolicyDataType $umn1Policy): AdvancedReinstallPolicyType
+    public function withUmn1Policy(\Flexnet\EntitlementOrderService\Type\PolicyDataType $umn1Policy): \Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType
     {
         $new = clone $this;
         $new->umn1Policy = $umn1Policy;
@@ -53,12 +53,12 @@ class AdvancedReinstallPolicyType
         return $new;
     }
 
-    public function getUmn2Policy(): PolicyDataType
+    public function getUmn2Policy(): \Flexnet\EntitlementOrderService\Type\PolicyDataType
     {
         return $this->umn2Policy;
     }
 
-    public function withUmn2Policy(PolicyDataType $umn2Policy): AdvancedReinstallPolicyType
+    public function withUmn2Policy(\Flexnet\EntitlementOrderService\Type\PolicyDataType $umn2Policy): \Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType
     {
         $new = clone $this;
         $new->umn2Policy = $umn2Policy;
@@ -66,12 +66,12 @@ class AdvancedReinstallPolicyType
         return $new;
     }
 
-    public function getUmn3Policy(): PolicyDataType
+    public function getUmn3Policy(): \Flexnet\EntitlementOrderService\Type\PolicyDataType
     {
         return $this->umn3Policy;
     }
 
-    public function withUmn3Policy(PolicyDataType $umn3Policy): AdvancedReinstallPolicyType
+    public function withUmn3Policy(\Flexnet\EntitlementOrderService\Type\PolicyDataType $umn3Policy): \Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType
     {
         $new = clone $this;
         $new->umn3Policy = $umn3Policy;
@@ -79,12 +79,12 @@ class AdvancedReinstallPolicyType
         return $new;
     }
 
-    public function getMidPolicy(): PolicyDataType
+    public function getMidPolicy(): \Flexnet\EntitlementOrderService\Type\PolicyDataType
     {
         return $this->midPolicy;
     }
 
-    public function withMidPolicy(PolicyDataType $midPolicy): AdvancedReinstallPolicyType
+    public function withMidPolicy(\Flexnet\EntitlementOrderService\Type\PolicyDataType $midPolicy): \Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType
     {
         $new = clone $this;
         $new->midPolicy = $midPolicy;

@@ -33,7 +33,7 @@ class DurationType
         return $this->numDuration;
     }
 
-    public function withNumDuration(int $numDuration): DurationType
+    public function withNumDuration(int $numDuration): \Flexnet\EntitlementOrderService\Type\DurationType
     {
         $new = clone $this;
         $new->numDuration = $numDuration;
@@ -46,7 +46,7 @@ class DurationType
         return $this->durationUnit;
     }
 
-    public function withDurationUnit(string $durationUnit): DurationType
+    public function withDurationUnit(string $durationUnit): \Flexnet\EntitlementOrderService\Type\DurationType
     {
         $new = clone $this;
         $new->durationUnit = $durationUnit;

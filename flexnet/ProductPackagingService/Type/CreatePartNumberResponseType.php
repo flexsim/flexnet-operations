@@ -24,24 +24,24 @@ class CreatePartNumberResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedPartNumberDataListType $failedData = null, CreatedPartNumberDataListType $responseData = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedPartNumberDataListType $failedData = null, ?\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataListType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedPartNumberDataListType $failedData = null, CreatedPartNumberDataListType $responseData = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\FailedPartNumberDataListType $failedData = null, ?\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataListType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): CreatePartNumberResponseType
+    public function withStatusInfo(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo): \Flexnet\ProductPackagingService\Type\CreatePartNumberResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -49,12 +49,12 @@ class CreatePartNumberResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedPartNumberDataListType
+    public function getFailedData(): ?\Flexnet\ProductPackagingService\Type\FailedPartNumberDataListType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedPartNumberDataListType $failedData): CreatePartNumberResponseType
+    public function withFailedData(?\Flexnet\ProductPackagingService\Type\FailedPartNumberDataListType $failedData): \Flexnet\ProductPackagingService\Type\CreatePartNumberResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -62,12 +62,12 @@ class CreatePartNumberResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?CreatedPartNumberDataListType
+    public function getResponseData(): ?\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataListType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?CreatedPartNumberDataListType $responseData): CreatePartNumberResponseType
+    public function withResponseData(?\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataListType $responseData): \Flexnet\ProductPackagingService\Type\CreatePartNumberResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

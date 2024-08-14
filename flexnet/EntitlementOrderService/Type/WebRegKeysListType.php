@@ -14,7 +14,7 @@ class WebRegKeysListType
      *
      * @param  string|array<string>|null  $webRegKey
      */
-    public function __construct(string|array $webRegKey = null)
+    public function __construct(string|array|null $webRegKey = null)
     {
         $this->webRegKey = $webRegKey;
     }
@@ -22,7 +22,7 @@ class WebRegKeysListType
     /**
      * @param  string|array<string>|null  $webRegKey
      */
-    public static function create(string|array $webRegKey = null)
+    public static function create(string|array|null $webRegKey = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,7 +38,7 @@ class WebRegKeysListType
     /**
      * @param  string|array<string>|null  $webRegKey
      */
-    public function withWebRegKey(string|array|null $webRegKey): WebRegKeysListType
+    public function withWebRegKey(string|array|null $webRegKey): \Flexnet\EntitlementOrderService\Type\WebRegKeysListType
     {
         $new = clone $this;
         $new->webRegKey = $webRegKey;

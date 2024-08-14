@@ -14,7 +14,7 @@ class FailedRehostResponselistDataType
      *
      * @param  \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array<\Flexnet\LicenseService\Type\FailedRehostResponseDataType>|null  $failedFulfillment
      */
-    public function __construct(FailedRehostResponseDataType|array $failedFulfillment = null)
+    public function __construct(\Flexnet\LicenseService\Type\FailedRehostResponseDataType|array|null $failedFulfillment = null)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
@@ -22,7 +22,7 @@ class FailedRehostResponselistDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array<\Flexnet\LicenseService\Type\FailedRehostResponseDataType>|null  $failedFulfillment
      */
-    public static function create(FailedRehostResponseDataType|array $failedFulfillment = null)
+    public static function create(\Flexnet\LicenseService\Type\FailedRehostResponseDataType|array|null $failedFulfillment = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedRehostResponselistDataType
     /**
      * @return \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array<\Flexnet\LicenseService\Type\FailedRehostResponseDataType>|null
      */
-    public function getFailedFulfillment(): FailedRehostResponseDataType|array|null
+    public function getFailedFulfillment(): \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array|null
     {
         return $this->failedFulfillment;
     }
@@ -38,7 +38,7 @@ class FailedRehostResponselistDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedRehostResponseDataType|array<\Flexnet\LicenseService\Type\FailedRehostResponseDataType>|null  $failedFulfillment
      */
-    public function withFailedFulfillment(FailedRehostResponseDataType|array|null $failedFulfillment): FailedRehostResponselistDataType
+    public function withFailedFulfillment(\Flexnet\LicenseService\Type\FailedRehostResponseDataType|array|null $failedFulfillment): \Flexnet\LicenseService\Type\FailedRehostResponselistDataType
     {
         $new = clone $this;
         $new->failedFulfillment = $failedFulfillment;

@@ -22,14 +22,14 @@ class CreateFeatureBundleDataType
     /**
      * Constructor
      */
-    public function __construct(string $name, FeaturesListType $features, string $description = null)
+    public function __construct(string $name, \Flexnet\ProductPackagingService\Type\FeaturesListType $features, ?string $description = null)
     {
         $this->name = $name;
         $this->features = $features;
         $this->description = $description;
     }
 
-    public static function create(string $name, FeaturesListType $features, string $description = null)
+    public static function create(string $name, \Flexnet\ProductPackagingService\Type\FeaturesListType $features, ?string $description = null)
     {
         return new static(...\func_get_args());
     }
@@ -39,7 +39,7 @@ class CreateFeatureBundleDataType
         return $this->name;
     }
 
-    public function withName(string $name): CreateFeatureBundleDataType
+    public function withName(string $name): \Flexnet\ProductPackagingService\Type\CreateFeatureBundleDataType
     {
         $new = clone $this;
         $new->name = $name;
@@ -52,7 +52,7 @@ class CreateFeatureBundleDataType
         return $this->description;
     }
 
-    public function withDescription(?string $description): CreateFeatureBundleDataType
+    public function withDescription(?string $description): \Flexnet\ProductPackagingService\Type\CreateFeatureBundleDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -60,12 +60,12 @@ class CreateFeatureBundleDataType
         return $new;
     }
 
-    public function getFeatures(): FeaturesListType
+    public function getFeatures(): \Flexnet\ProductPackagingService\Type\FeaturesListType
     {
         return $this->features;
     }
 
-    public function withFeatures(FeaturesListType $features): CreateFeatureBundleDataType
+    public function withFeatures(\Flexnet\ProductPackagingService\Type\FeaturesListType $features): \Flexnet\ProductPackagingService\Type\CreateFeatureBundleDataType
     {
         $new = clone $this;
         $new->features = $features;

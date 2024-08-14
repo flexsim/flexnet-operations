@@ -17,13 +17,13 @@ class PartNumberIdentifierType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, PartNumberPKType $primaryKeys = null)
+    public function __construct(?string $uniqueId = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    public static function create(string $uniqueId = null, PartNumberPKType $primaryKeys = null)
+    public static function create(?string $uniqueId = null, ?\Flexnet\EntitlementOrderService\Type\PartNumberPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class PartNumberIdentifierType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): PartNumberIdentifierType
+    public function withUniqueId(?string $uniqueId): \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -41,12 +41,12 @@ class PartNumberIdentifierType
         return $new;
     }
 
-    public function getPrimaryKeys(): ?PartNumberPKType
+    public function getPrimaryKeys(): ?\Flexnet\EntitlementOrderService\Type\PartNumberPKType
     {
         return $this->primaryKeys;
     }
 
-    public function withPrimaryKeys(?PartNumberPKType $primaryKeys): PartNumberIdentifierType
+    public function withPrimaryKeys(?\Flexnet\EntitlementOrderService\Type\PartNumberPKType $primaryKeys): \Flexnet\EntitlementOrderService\Type\PartNumberIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

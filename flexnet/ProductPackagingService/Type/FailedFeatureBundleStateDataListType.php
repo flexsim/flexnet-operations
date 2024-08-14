@@ -14,7 +14,7 @@ class FailedFeatureBundleStateDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType|array<\Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType>|null  $failedFeatureBundle
      */
-    public function __construct(FailedFeatureBundleStateDataType|array $failedFeatureBundle = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType|array|null $failedFeatureBundle = null)
     {
         $this->failedFeatureBundle = $failedFeatureBundle;
     }
@@ -22,7 +22,7 @@ class FailedFeatureBundleStateDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType|array<\Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType>|null  $failedFeatureBundle
      */
-    public static function create(FailedFeatureBundleStateDataType|array $failedFeatureBundle = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType|array|null $failedFeatureBundle = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedFeatureBundleStateDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType|array<\Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType>|null
      */
-    public function getFailedFeatureBundle(): FailedFeatureBundleStateDataType|array|null
+    public function getFailedFeatureBundle(): \Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType|array|null
     {
         return $this->failedFeatureBundle;
     }
@@ -38,7 +38,7 @@ class FailedFeatureBundleStateDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType|array<\Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType>|null  $failedFeatureBundle
      */
-    public function withFailedFeatureBundle(FailedFeatureBundleStateDataType|array|null $failedFeatureBundle): FailedFeatureBundleStateDataListType
+    public function withFailedFeatureBundle(\Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataType|array|null $failedFeatureBundle): \Flexnet\ProductPackagingService\Type\FailedFeatureBundleStateDataListType
     {
         $new = clone $this;
         $new->failedFeatureBundle = $failedFeatureBundle;

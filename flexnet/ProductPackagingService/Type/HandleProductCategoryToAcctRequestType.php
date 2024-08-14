@@ -21,7 +21,7 @@ class HandleProductCategoryToAcctRequestType implements RequestInterface
      *
      * @param  \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>  $productCategory
      */
-    public function __construct(AccountIdentifierType $acct, ProductCategoryDataType|array $productCategory)
+    public function __construct(\Flexnet\ProductPackagingService\Type\AccountIdentifierType $acct, \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array $productCategory)
     {
         $this->acct = $acct;
         $this->productCategory = $productCategory;
@@ -30,17 +30,17 @@ class HandleProductCategoryToAcctRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>  $productCategory
      */
-    public static function create(AccountIdentifierType $acct, ProductCategoryDataType|array $productCategory)
+    public static function create(\Flexnet\ProductPackagingService\Type\AccountIdentifierType $acct, \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array $productCategory)
     {
         return new static(...\func_get_args());
     }
 
-    public function getAcct(): AccountIdentifierType
+    public function getAcct(): \Flexnet\ProductPackagingService\Type\AccountIdentifierType
     {
         return $this->acct;
     }
 
-    public function withAcct(AccountIdentifierType $acct): HandleProductCategoryToAcctRequestType
+    public function withAcct(\Flexnet\ProductPackagingService\Type\AccountIdentifierType $acct): \Flexnet\ProductPackagingService\Type\HandleProductCategoryToAcctRequestType
     {
         $new = clone $this;
         $new->acct = $acct;
@@ -51,7 +51,7 @@ class HandleProductCategoryToAcctRequestType implements RequestInterface
     /**
      * @return \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>
      */
-    public function getProductCategory(): ProductCategoryDataType|array
+    public function getProductCategory(): \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array
     {
         return $this->productCategory;
     }
@@ -59,7 +59,7 @@ class HandleProductCategoryToAcctRequestType implements RequestInterface
     /**
      * @param  \Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array<\Flexnet\ProductPackagingService\Type\ProductCategoryDataType>  $productCategory
      */
-    public function withProductCategory(ProductCategoryDataType|array $productCategory): HandleProductCategoryToAcctRequestType
+    public function withProductCategory(\Flexnet\ProductPackagingService\Type\ProductCategoryDataType|array $productCategory): \Flexnet\ProductPackagingService\Type\HandleProductCategoryToAcctRequestType
     {
         $new = clone $this;
         $new->productCategory = $productCategory;

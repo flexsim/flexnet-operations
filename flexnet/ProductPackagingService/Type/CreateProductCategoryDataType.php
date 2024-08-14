@@ -17,13 +17,13 @@ class CreateProductCategoryDataType
     /**
      * Constructor
      */
-    public function __construct(string $name, string $description = null)
+    public function __construct(string $name, ?string $description = null)
     {
         $this->name = $name;
         $this->description = $description;
     }
 
-    public static function create(string $name, string $description = null)
+    public static function create(string $name, ?string $description = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class CreateProductCategoryDataType
         return $this->name;
     }
 
-    public function withName(string $name): CreateProductCategoryDataType
+    public function withName(string $name): \Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType
     {
         $new = clone $this;
         $new->name = $name;
@@ -46,7 +46,7 @@ class CreateProductCategoryDataType
         return $this->description;
     }
 
-    public function withDescription(?string $description): CreateProductCategoryDataType
+    public function withDescription(?string $description): \Flexnet\ProductPackagingService\Type\CreateProductCategoryDataType
     {
         $new = clone $this;
         $new->description = $description;

@@ -16,7 +16,7 @@ class UpdateEntitlementLineItemRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType>  $lineItemData
      */
-    public function __construct(UpdateEntitlementLineItemDataType|array $lineItemData)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array $lineItemData)
     {
         $this->lineItemData = $lineItemData;
     }
@@ -24,7 +24,7 @@ class UpdateEntitlementLineItemRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType>  $lineItemData
      */
-    public static function create(UpdateEntitlementLineItemDataType|array $lineItemData)
+    public static function create(\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array $lineItemData)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class UpdateEntitlementLineItemRequestType implements RequestInterface
     /**
      * @return \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType>
      */
-    public function getLineItemData(): UpdateEntitlementLineItemDataType|array
+    public function getLineItemData(): \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array
     {
         return $this->lineItemData;
     }
@@ -40,7 +40,7 @@ class UpdateEntitlementLineItemRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType>  $lineItemData
      */
-    public function withLineItemData(UpdateEntitlementLineItemDataType|array $lineItemData): UpdateEntitlementLineItemRequestType
+    public function withLineItemData(\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemDataType|array $lineItemData): \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemRequestType
     {
         $new = clone $this;
         $new->lineItemData = $lineItemData;

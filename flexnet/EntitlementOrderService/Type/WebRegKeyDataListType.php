@@ -14,7 +14,7 @@ class WebRegKeyDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType>  $webRegKeyData
      */
-    public function __construct(AddWebRegKeyDataType|array $webRegKeyData)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array $webRegKeyData)
     {
         $this->webRegKeyData = $webRegKeyData;
     }
@@ -22,7 +22,7 @@ class WebRegKeyDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType>  $webRegKeyData
      */
-    public static function create(AddWebRegKeyDataType|array $webRegKeyData)
+    public static function create(\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array $webRegKeyData)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class WebRegKeyDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType>
      */
-    public function getWebRegKeyData(): AddWebRegKeyDataType|array
+    public function getWebRegKeyData(): \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array
     {
         return $this->webRegKeyData;
     }
@@ -38,7 +38,7 @@ class WebRegKeyDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array<\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType>  $webRegKeyData
      */
-    public function withWebRegKeyData(AddWebRegKeyDataType|array $webRegKeyData): WebRegKeyDataListType
+    public function withWebRegKeyData(\Flexnet\EntitlementOrderService\Type\AddWebRegKeyDataType|array $webRegKeyData): \Flexnet\EntitlementOrderService\Type\WebRegKeyDataListType
     {
         $new = clone $this;
         $new->webRegKeyData = $webRegKeyData;

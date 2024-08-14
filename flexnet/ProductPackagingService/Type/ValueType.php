@@ -14,7 +14,7 @@ class ValueType
      *
      * @param  string|array<string>|null  $value
      */
-    public function __construct(string|array $value = null)
+    public function __construct(string|array|null $value = null)
     {
         $this->value = $value;
     }
@@ -22,7 +22,7 @@ class ValueType
     /**
      * @param  string|array<string>|null  $value
      */
-    public static function create(string|array $value = null)
+    public static function create(string|array|null $value = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,7 +38,7 @@ class ValueType
     /**
      * @param  string|array<string>|null  $value
      */
-    public function withValue(string|array|null $value): ValueType
+    public function withValue(string|array|null $value): \Flexnet\ProductPackagingService\Type\ValueType
     {
         $new = clone $this;
         $new->value = $value;

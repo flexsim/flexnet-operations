@@ -32,7 +32,7 @@ class CategoryAttributeDataType
     /**
      * Constructor
      */
-    public function __construct(string $attributeName, bool $isRequired, string $dataType, string $maxLength = null, ValueType $validValues = null)
+    public function __construct(string $attributeName, bool $isRequired, string $dataType, ?string $maxLength = null, ?\Flexnet\ProductPackagingService\Type\ValueType $validValues = null)
     {
         $this->attributeName = $attributeName;
         $this->isRequired = $isRequired;
@@ -41,7 +41,7 @@ class CategoryAttributeDataType
         $this->validValues = $validValues;
     }
 
-    public static function create(string $attributeName, bool $isRequired, string $dataType, string $maxLength = null, ValueType $validValues = null)
+    public static function create(string $attributeName, bool $isRequired, string $dataType, ?string $maxLength = null, ?\Flexnet\ProductPackagingService\Type\ValueType $validValues = null)
     {
         return new static(...\func_get_args());
     }
@@ -51,7 +51,7 @@ class CategoryAttributeDataType
         return $this->attributeName;
     }
 
-    public function withAttributeName(string $attributeName): CategoryAttributeDataType
+    public function withAttributeName(string $attributeName): \Flexnet\ProductPackagingService\Type\CategoryAttributeDataType
     {
         $new = clone $this;
         $new->attributeName = $attributeName;
@@ -64,7 +64,7 @@ class CategoryAttributeDataType
         return $this->isRequired;
     }
 
-    public function withIsRequired(bool $isRequired): CategoryAttributeDataType
+    public function withIsRequired(bool $isRequired): \Flexnet\ProductPackagingService\Type\CategoryAttributeDataType
     {
         $new = clone $this;
         $new->isRequired = $isRequired;
@@ -77,7 +77,7 @@ class CategoryAttributeDataType
         return $this->dataType;
     }
 
-    public function withDataType(string $dataType): CategoryAttributeDataType
+    public function withDataType(string $dataType): \Flexnet\ProductPackagingService\Type\CategoryAttributeDataType
     {
         $new = clone $this;
         $new->dataType = $dataType;
@@ -90,7 +90,7 @@ class CategoryAttributeDataType
         return $this->maxLength;
     }
 
-    public function withMaxLength(?string $maxLength): CategoryAttributeDataType
+    public function withMaxLength(?string $maxLength): \Flexnet\ProductPackagingService\Type\CategoryAttributeDataType
     {
         $new = clone $this;
         $new->maxLength = $maxLength;
@@ -98,12 +98,12 @@ class CategoryAttributeDataType
         return $new;
     }
 
-    public function getValidValues(): ?ValueType
+    public function getValidValues(): ?\Flexnet\ProductPackagingService\Type\ValueType
     {
         return $this->validValues;
     }
 
-    public function withValidValues(?ValueType $validValues): CategoryAttributeDataType
+    public function withValidValues(?\Flexnet\ProductPackagingService\Type\ValueType $validValues): \Flexnet\ProductPackagingService\Type\CategoryAttributeDataType
     {
         $new = clone $this;
         $new->validValues = $validValues;

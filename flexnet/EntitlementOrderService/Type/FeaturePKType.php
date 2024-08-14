@@ -17,13 +17,13 @@ class FeaturePKType
     /**
      * Constructor
      */
-    public function __construct(string $name, string $version = null)
+    public function __construct(string $name, ?string $version = null)
     {
         $this->name = $name;
         $this->version = $version;
     }
 
-    public static function create(string $name, string $version = null)
+    public static function create(string $name, ?string $version = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class FeaturePKType
         return $this->name;
     }
 
-    public function withName(string $name): FeaturePKType
+    public function withName(string $name): \Flexnet\EntitlementOrderService\Type\FeaturePKType
     {
         $new = clone $this;
         $new->name = $name;
@@ -46,7 +46,7 @@ class FeaturePKType
         return $this->version;
     }
 
-    public function withVersion(?string $version): FeaturePKType
+    public function withVersion(?string $version): \Flexnet\EntitlementOrderService\Type\FeaturePKType
     {
         $new = clone $this;
         $new->version = $version;

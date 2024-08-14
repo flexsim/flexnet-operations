@@ -14,7 +14,7 @@ class FailedDeleteProductDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType>|null  $failedProduct
      */
-    public function __construct(FailedDeleteProductDataType|array $failedProduct = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType|array|null $failedProduct = null)
     {
         $this->failedProduct = $failedProduct;
     }
@@ -22,7 +22,7 @@ class FailedDeleteProductDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType>|null  $failedProduct
      */
-    public static function create(FailedDeleteProductDataType|array $failedProduct = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType|array|null $failedProduct = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedDeleteProductDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType>|null
      */
-    public function getFailedProduct(): FailedDeleteProductDataType|array|null
+    public function getFailedProduct(): \Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType|array|null
     {
         return $this->failedProduct;
     }
@@ -38,7 +38,7 @@ class FailedDeleteProductDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType>|null  $failedProduct
      */
-    public function withFailedProduct(FailedDeleteProductDataType|array|null $failedProduct): FailedDeleteProductDataListType
+    public function withFailedProduct(\Flexnet\ProductPackagingService\Type\FailedDeleteProductDataType|array|null $failedProduct): \Flexnet\ProductPackagingService\Type\FailedDeleteProductDataListType
     {
         $new = clone $this;
         $new->failedProduct = $failedProduct;

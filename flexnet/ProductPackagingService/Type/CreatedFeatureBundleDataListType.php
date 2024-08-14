@@ -14,7 +14,7 @@ class CreatedFeatureBundleDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\CorrelationDataType|array<\Flexnet\ProductPackagingService\Type\CorrelationDataType>|null  $createdFeatureBundle
      */
-    public function __construct(CorrelationDataType|array $createdFeatureBundle = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\CorrelationDataType|array|null $createdFeatureBundle = null)
     {
         $this->createdFeatureBundle = $createdFeatureBundle;
     }
@@ -22,7 +22,7 @@ class CreatedFeatureBundleDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CorrelationDataType|array<\Flexnet\ProductPackagingService\Type\CorrelationDataType>|null  $createdFeatureBundle
      */
-    public static function create(CorrelationDataType|array $createdFeatureBundle = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\CorrelationDataType|array|null $createdFeatureBundle = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class CreatedFeatureBundleDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\CorrelationDataType|array<\Flexnet\ProductPackagingService\Type\CorrelationDataType>|null
      */
-    public function getCreatedFeatureBundle(): CorrelationDataType|array|null
+    public function getCreatedFeatureBundle(): \Flexnet\ProductPackagingService\Type\CorrelationDataType|array|null
     {
         return $this->createdFeatureBundle;
     }
@@ -38,7 +38,7 @@ class CreatedFeatureBundleDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CorrelationDataType|array<\Flexnet\ProductPackagingService\Type\CorrelationDataType>|null  $createdFeatureBundle
      */
-    public function withCreatedFeatureBundle(CorrelationDataType|array|null $createdFeatureBundle): CreatedFeatureBundleDataListType
+    public function withCreatedFeatureBundle(\Flexnet\ProductPackagingService\Type\CorrelationDataType|array|null $createdFeatureBundle): \Flexnet\ProductPackagingService\Type\CreatedFeatureBundleDataListType
     {
         $new = clone $this;
         $new->createdFeatureBundle = $createdFeatureBundle;

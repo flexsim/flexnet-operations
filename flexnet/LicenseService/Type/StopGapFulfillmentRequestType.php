@@ -16,7 +16,7 @@ class StopGapFulfillmentRequestType implements RequestInterface
      *
      * @param  \Flexnet\LicenseService\Type\StopGapFulfillmentDataType|array<\Flexnet\LicenseService\Type\StopGapFulfillmentDataType>  $fulfillment
      */
-    public function __construct(StopGapFulfillmentDataType|array $fulfillment)
+    public function __construct(\Flexnet\LicenseService\Type\StopGapFulfillmentDataType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -24,7 +24,7 @@ class StopGapFulfillmentRequestType implements RequestInterface
     /**
      * @param  \Flexnet\LicenseService\Type\StopGapFulfillmentDataType|array<\Flexnet\LicenseService\Type\StopGapFulfillmentDataType>  $fulfillment
      */
-    public static function create(StopGapFulfillmentDataType|array $fulfillment)
+    public static function create(\Flexnet\LicenseService\Type\StopGapFulfillmentDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class StopGapFulfillmentRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\StopGapFulfillmentDataType|array<\Flexnet\LicenseService\Type\StopGapFulfillmentDataType>
      */
-    public function getFulfillment(): StopGapFulfillmentDataType|array
+    public function getFulfillment(): \Flexnet\LicenseService\Type\StopGapFulfillmentDataType|array
     {
         return $this->fulfillment;
     }
@@ -40,7 +40,7 @@ class StopGapFulfillmentRequestType implements RequestInterface
     /**
      * @param  \Flexnet\LicenseService\Type\StopGapFulfillmentDataType|array<\Flexnet\LicenseService\Type\StopGapFulfillmentDataType>  $fulfillment
      */
-    public function withFulfillment(StopGapFulfillmentDataType|array $fulfillment): StopGapFulfillmentRequestType
+    public function withFulfillment(\Flexnet\LicenseService\Type\StopGapFulfillmentDataType|array $fulfillment): \Flexnet\LicenseService\Type\StopGapFulfillmentRequestType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;

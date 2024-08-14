@@ -17,23 +17,23 @@ class ReinstallPolicyDataType
     /**
      * Constructor
      */
-    public function __construct(PolicyDataType $defaultPolicy = null, AdvancedReinstallPolicyType $advancedPolicy = null)
+    public function __construct(?\Flexnet\EntitlementOrderService\Type\PolicyDataType $defaultPolicy = null, ?\Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType $advancedPolicy = null)
     {
         $this->defaultPolicy = $defaultPolicy;
         $this->advancedPolicy = $advancedPolicy;
     }
 
-    public static function create(PolicyDataType $defaultPolicy = null, AdvancedReinstallPolicyType $advancedPolicy = null)
+    public static function create(?\Flexnet\EntitlementOrderService\Type\PolicyDataType $defaultPolicy = null, ?\Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType $advancedPolicy = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getDefaultPolicy(): ?PolicyDataType
+    public function getDefaultPolicy(): ?\Flexnet\EntitlementOrderService\Type\PolicyDataType
     {
         return $this->defaultPolicy;
     }
 
-    public function withDefaultPolicy(?PolicyDataType $defaultPolicy): ReinstallPolicyDataType
+    public function withDefaultPolicy(?\Flexnet\EntitlementOrderService\Type\PolicyDataType $defaultPolicy): \Flexnet\EntitlementOrderService\Type\ReinstallPolicyDataType
     {
         $new = clone $this;
         $new->defaultPolicy = $defaultPolicy;
@@ -41,12 +41,12 @@ class ReinstallPolicyDataType
         return $new;
     }
 
-    public function getAdvancedPolicy(): ?AdvancedReinstallPolicyType
+    public function getAdvancedPolicy(): ?\Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType
     {
         return $this->advancedPolicy;
     }
 
-    public function withAdvancedPolicy(?AdvancedReinstallPolicyType $advancedPolicy): ReinstallPolicyDataType
+    public function withAdvancedPolicy(?\Flexnet\EntitlementOrderService\Type\AdvancedReinstallPolicyType $advancedPolicy): \Flexnet\EntitlementOrderService\Type\ReinstallPolicyDataType
     {
         $new = clone $this;
         $new->advancedPolicy = $advancedPolicy;

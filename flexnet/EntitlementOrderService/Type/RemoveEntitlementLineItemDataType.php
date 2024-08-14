@@ -19,7 +19,7 @@ class RemoveEntitlementLineItemDataType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifier
      */
-    public function __construct(EntitlementIdentifierType $entitlementIdentifier, EntitlementLineItemIdentifierType|array $lineItemIdentifier = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array|null $lineItemIdentifier = null)
     {
         $this->entitlementIdentifier = $entitlementIdentifier;
         $this->lineItemIdentifier = $lineItemIdentifier;
@@ -28,17 +28,17 @@ class RemoveEntitlementLineItemDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifier
      */
-    public static function create(EntitlementIdentifierType $entitlementIdentifier, EntitlementLineItemIdentifierType|array $lineItemIdentifier = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array|null $lineItemIdentifier = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getEntitlementIdentifier(): EntitlementIdentifierType
+    public function getEntitlementIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType
     {
         return $this->entitlementIdentifier;
     }
 
-    public function withEntitlementIdentifier(EntitlementIdentifierType $entitlementIdentifier): RemoveEntitlementLineItemDataType
+    public function withEntitlementIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementIdentifierType $entitlementIdentifier): \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->entitlementIdentifier = $entitlementIdentifier;
@@ -49,7 +49,7 @@ class RemoveEntitlementLineItemDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null
      */
-    public function getLineItemIdentifier(): EntitlementLineItemIdentifierType|array|null
+    public function getLineItemIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array|null
     {
         return $this->lineItemIdentifier;
     }
@@ -57,7 +57,7 @@ class RemoveEntitlementLineItemDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array<\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType>|null  $lineItemIdentifier
      */
-    public function withLineItemIdentifier(EntitlementLineItemIdentifierType|array|null $lineItemIdentifier): RemoveEntitlementLineItemDataType
+    public function withLineItemIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType|array|null $lineItemIdentifier): \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->lineItemIdentifier = $lineItemIdentifier;

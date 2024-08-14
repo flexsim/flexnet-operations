@@ -14,481 +14,696 @@ class EntitlementOrderServiceClient
      */
     private $caller;
 
-    public function __construct(Caller $caller)
+    public function __construct(\Phpro\SoapClient\Caller\Caller $caller)
     {
         $this->caller = $caller;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateBulkEntitlementRequestType  $createBulkEntitlementRequest
-     * @return ResultInterface|Type\CreateBulkEntitlementResponseType
+     * @param  RequestInterface & Type\CreateBulkEntitlementRequestType  $createBulkEntitlementRequest
+     * @return ResultInterface & Type\CreateBulkEntitlementResponseType
      *
      * @throws SoapException
      */
-    public function createBulkEntitlement(Type\CreateBulkEntitlementRequestType $createBulkEntitlementRequest): Type\CreateBulkEntitlementResponseType
+    public function createBulkEntitlement(\Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementRequestType $createBulkEntitlementRequest): \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementResponseType
     {
-        return ($this->caller)('createBulkEntitlement', $createBulkEntitlementRequest);
+        $response = ($this->caller)('createBulkEntitlement', $createBulkEntitlementRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\CreateSimpleEntitlementRequestType  $createSimpleEntitlementRequest
-     * @return ResultInterface|Type\CreateSimpleEntitlementResponseType
+     * @param  RequestInterface & Type\CreateSimpleEntitlementRequestType  $createSimpleEntitlementRequest
+     * @return ResultInterface & Type\CreateSimpleEntitlementResponseType
      *
      * @throws SoapException
      */
-    public function createSimpleEntitlement(Type\CreateSimpleEntitlementRequestType $createSimpleEntitlementRequest): Type\CreateSimpleEntitlementResponseType
+    public function createSimpleEntitlement(\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementRequestType $createSimpleEntitlementRequest): \Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementResponseType
     {
-        return ($this->caller)('createSimpleEntitlement', $createSimpleEntitlementRequest);
+        $response = ($this->caller)('createSimpleEntitlement', $createSimpleEntitlementRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\CreateSimpleEntitlementResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\DeleteEntitlementRequestType  $deleteEntitlementRequest
-     * @return ResultInterface|Type\DeleteEntitlementResponseType
+     * @param  RequestInterface & Type\DeleteEntitlementRequestType  $deleteEntitlementRequest
+     * @return ResultInterface & Type\DeleteEntitlementResponseType
      *
      * @throws SoapException
      */
-    public function deleteEntitlement(Type\DeleteEntitlementRequestType $deleteEntitlementRequest): Type\DeleteEntitlementResponseType
+    public function deleteEntitlement(\Flexnet\EntitlementOrderService\Type\DeleteEntitlementRequestType $deleteEntitlementRequest): \Flexnet\EntitlementOrderService\Type\DeleteEntitlementResponseType
     {
-        return ($this->caller)('deleteEntitlement', $deleteEntitlementRequest);
+        $response = ($this->caller)('deleteEntitlement', $deleteEntitlementRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\DeleteEntitlementResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\AddWebRegKeyRequestType  $addWebRegKeyRequest
-     * @return ResultInterface|Type\AddWebRegKeyResponseType
+     * @param  RequestInterface & Type\AddWebRegKeyRequestType  $addWebRegKeyRequest
+     * @return ResultInterface & Type\AddWebRegKeyResponseType
      *
      * @throws SoapException
      */
-    public function createWebRegKey(Type\AddWebRegKeyRequestType $addWebRegKeyRequest): Type\AddWebRegKeyResponseType
+    public function createWebRegKey(\Flexnet\EntitlementOrderService\Type\AddWebRegKeyRequestType $addWebRegKeyRequest): \Flexnet\EntitlementOrderService\Type\AddWebRegKeyResponseType
     {
-        return ($this->caller)('createWebRegKey', $addWebRegKeyRequest);
+        $response = ($this->caller)('createWebRegKey', $addWebRegKeyRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\AddWebRegKeyResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\UpdateBulkEntitlementRequestType  $updateBulkEntitlementRequest
-     * @return ResultInterface|Type\UpdateBulkEntitlementResponseType
+     * @param  RequestInterface & Type\UpdateBulkEntitlementRequestType  $updateBulkEntitlementRequest
+     * @return ResultInterface & Type\UpdateBulkEntitlementResponseType
      *
      * @throws SoapException
      */
-    public function updateBulkEntitlement(Type\UpdateBulkEntitlementRequestType $updateBulkEntitlementRequest): Type\UpdateBulkEntitlementResponseType
+    public function updateBulkEntitlement(\Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementRequestType $updateBulkEntitlementRequest): \Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementResponseType
     {
-        return ($this->caller)('updateBulkEntitlement', $updateBulkEntitlementRequest);
+        $response = ($this->caller)('updateBulkEntitlement', $updateBulkEntitlementRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\UpdateBulkEntitlementResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\UpdateSimpleEntitlementRequestType  $updateSimpleEntitlementRequest
-     * @return ResultInterface|Type\UpdateSimpleEntitlementResponseType
+     * @param  RequestInterface & Type\UpdateSimpleEntitlementRequestType  $updateSimpleEntitlementRequest
+     * @return ResultInterface & Type\UpdateSimpleEntitlementResponseType
      *
      * @throws SoapException
      */
-    public function updateSimpleEntitlement(Type\UpdateSimpleEntitlementRequestType $updateSimpleEntitlementRequest): Type\UpdateSimpleEntitlementResponseType
+    public function updateSimpleEntitlement(\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementRequestType $updateSimpleEntitlementRequest): \Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementResponseType
     {
-        return ($this->caller)('updateSimpleEntitlement', $updateSimpleEntitlementRequest);
+        $response = ($this->caller)('updateSimpleEntitlement', $updateSimpleEntitlementRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\UpdateSimpleEntitlementResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\AddOnlyEntitlementLineItemRequestType  $createEntitlementLineItemRequest
-     * @return ResultInterface|Type\AddOnlyEntitlementLineItemResponseType
+     * @param  RequestInterface & Type\AddOnlyEntitlementLineItemRequestType  $createEntitlementLineItemRequest
+     * @return ResultInterface & Type\AddOnlyEntitlementLineItemResponseType
      *
      * @throws SoapException
      */
-    public function createEntitlementLineItem(Type\AddOnlyEntitlementLineItemRequestType $createEntitlementLineItemRequest): Type\AddOnlyEntitlementLineItemResponseType
+    public function createEntitlementLineItem(\Flexnet\EntitlementOrderService\Type\AddOnlyEntitlementLineItemRequestType $createEntitlementLineItemRequest): \Flexnet\EntitlementOrderService\Type\AddOnlyEntitlementLineItemResponseType
     {
-        return ($this->caller)('createEntitlementLineItem', $createEntitlementLineItemRequest);
+        $response = ($this->caller)('createEntitlementLineItem', $createEntitlementLineItemRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\AddOnlyEntitlementLineItemResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\ReplaceOnlyEntitlementLineItemRequestType  $replaceEntitlementLineItemRequest
-     * @return ResultInterface|Type\ReplaceOnlyEntitlementLineItemResponseType
+     * @param  RequestInterface & Type\ReplaceOnlyEntitlementLineItemRequestType  $replaceEntitlementLineItemRequest
+     * @return ResultInterface & Type\ReplaceOnlyEntitlementLineItemResponseType
      *
      * @throws SoapException
      */
-    public function replaceEntitlementLineItem(Type\ReplaceOnlyEntitlementLineItemRequestType $replaceEntitlementLineItemRequest): Type\ReplaceOnlyEntitlementLineItemResponseType
+    public function replaceEntitlementLineItem(\Flexnet\EntitlementOrderService\Type\ReplaceOnlyEntitlementLineItemRequestType $replaceEntitlementLineItemRequest): \Flexnet\EntitlementOrderService\Type\ReplaceOnlyEntitlementLineItemResponseType
     {
-        return ($this->caller)('replaceEntitlementLineItem', $replaceEntitlementLineItemRequest);
+        $response = ($this->caller)('replaceEntitlementLineItem', $replaceEntitlementLineItemRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\ReplaceOnlyEntitlementLineItemResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\RemoveEntitlementLineItemRequestType  $removeEntitlementLineItemRequest
-     * @return ResultInterface|Type\RemoveEntitlementLineItemResponseType
+     * @param  RequestInterface & Type\RemoveEntitlementLineItemRequestType  $removeEntitlementLineItemRequest
+     * @return ResultInterface & Type\RemoveEntitlementLineItemResponseType
      *
      * @throws SoapException
      */
-    public function deleteEntitlementLineItem(Type\RemoveEntitlementLineItemRequestType $removeEntitlementLineItemRequest): Type\RemoveEntitlementLineItemResponseType
+    public function deleteEntitlementLineItem(\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemRequestType $removeEntitlementLineItemRequest): \Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemResponseType
     {
-        return ($this->caller)('deleteEntitlementLineItem', $removeEntitlementLineItemRequest);
+        $response = ($this->caller)('deleteEntitlementLineItem', $removeEntitlementLineItemRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\UpdateEntitlementLineItemRequestType  $updateEntitlementLineItemRequest
-     * @return ResultInterface|Type\UpdateEntitlementLineItemResponseType
+     * @param  RequestInterface & Type\UpdateEntitlementLineItemRequestType  $updateEntitlementLineItemRequest
+     * @return ResultInterface & Type\UpdateEntitlementLineItemResponseType
      *
      * @throws SoapException
      */
-    public function updateEntitlementLineItem(Type\UpdateEntitlementLineItemRequestType $updateEntitlementLineItemRequest): Type\UpdateEntitlementLineItemResponseType
+    public function updateEntitlementLineItem(\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemRequestType $updateEntitlementLineItemRequest): \Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemResponseType
     {
-        return ($this->caller)('updateEntitlementLineItem', $updateEntitlementLineItemRequest);
+        $response = ($this->caller)('updateEntitlementLineItem', $updateEntitlementLineItemRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\UpdateEntitlementLineItemResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SearchEntitlementRequestType  $searchEntitlementRequest
-     * @return ResultInterface|Type\SearchEntitlementResponseType
+     * @param  RequestInterface & Type\SearchEntitlementRequestType  $searchEntitlementRequest
+     * @return ResultInterface & Type\SearchEntitlementResponseType
      *
      * @throws SoapException
      */
-    public function getEntitlementsQuery(Type\SearchEntitlementRequestType $searchEntitlementRequest): Type\SearchEntitlementResponseType
+    public function getEntitlementsQuery(\Flexnet\EntitlementOrderService\Type\SearchEntitlementRequestType $searchEntitlementRequest): \Flexnet\EntitlementOrderService\Type\SearchEntitlementResponseType
     {
-        return ($this->caller)('getEntitlementsQuery', $searchEntitlementRequest);
+        $response = ($this->caller)('getEntitlementsQuery', $searchEntitlementRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\SearchEntitlementResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetBulkEntitlementPropertiesRequestType  $getBulkEntitlementPropertiesRequest
-     * @return ResultInterface|Type\GetBulkEntitlementPropertiesResponseType
+     * @param  RequestInterface & Type\GetBulkEntitlementPropertiesRequestType  $getBulkEntitlementPropertiesRequest
+     * @return ResultInterface & Type\GetBulkEntitlementPropertiesResponseType
      *
      * @throws SoapException
      */
-    public function getBulkEntitlementPropertiesQuery(Type\GetBulkEntitlementPropertiesRequestType $getBulkEntitlementPropertiesRequest): Type\GetBulkEntitlementPropertiesResponseType
+    public function getBulkEntitlementPropertiesQuery(\Flexnet\EntitlementOrderService\Type\GetBulkEntitlementPropertiesRequestType $getBulkEntitlementPropertiesRequest): \Flexnet\EntitlementOrderService\Type\GetBulkEntitlementPropertiesResponseType
     {
-        return ($this->caller)('getBulkEntitlementPropertiesQuery', $getBulkEntitlementPropertiesRequest);
+        $response = ($this->caller)('getBulkEntitlementPropertiesQuery', $getBulkEntitlementPropertiesRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\GetBulkEntitlementPropertiesResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetBulkEntitlementCountRequestType  $getBulkEntitlementCountRequest
-     * @return ResultInterface|Type\GetBulkEntitlementCountResponseType
+     * @param  RequestInterface & Type\GetBulkEntitlementCountRequestType  $getBulkEntitlementCountRequest
+     * @return ResultInterface & Type\GetBulkEntitlementCountResponseType
      *
      * @throws SoapException
      */
-    public function getBulkEntitlementCount(Type\GetBulkEntitlementCountRequestType $getBulkEntitlementCountRequest): Type\GetBulkEntitlementCountResponseType
+    public function getBulkEntitlementCount(\Flexnet\EntitlementOrderService\Type\GetBulkEntitlementCountRequestType $getBulkEntitlementCountRequest): \Flexnet\EntitlementOrderService\Type\GetBulkEntitlementCountResponseType
     {
-        return ($this->caller)('getBulkEntitlementCount', $getBulkEntitlementCountRequest);
+        $response = ($this->caller)('getBulkEntitlementCount', $getBulkEntitlementCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\GetBulkEntitlementCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SearchActivatableItemRequestType  $searchActivatableItemRequest
-     * @return ResultInterface|Type\SearchActivatableItemResponseType
+     * @param  RequestInterface & Type\SearchActivatableItemRequestType  $searchActivatableItemRequest
+     * @return ResultInterface & Type\SearchActivatableItemResponseType
      *
      * @throws SoapException
      */
-    public function getActivatableItemsQuery(Type\SearchActivatableItemRequestType $searchActivatableItemRequest): Type\SearchActivatableItemResponseType
+    public function getActivatableItemsQuery(\Flexnet\EntitlementOrderService\Type\SearchActivatableItemRequestType $searchActivatableItemRequest): \Flexnet\EntitlementOrderService\Type\SearchActivatableItemResponseType
     {
-        return ($this->caller)('getActivatableItemsQuery', $searchActivatableItemRequest);
+        $response = ($this->caller)('getActivatableItemsQuery', $searchActivatableItemRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\SearchActivatableItemResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SearchEntitlementLineItemPropertiesRequestType  $searchEntitlementLineItemPropertiesRequest
-     * @return ResultInterface|Type\SearchEntitlementLineItemPropertiesResponseType
+     * @param  RequestInterface & Type\SearchEntitlementLineItemPropertiesRequestType  $searchEntitlementLineItemPropertiesRequest
+     * @return ResultInterface & Type\SearchEntitlementLineItemPropertiesResponseType
      *
      * @throws SoapException
      */
-    public function getEntitlementLineItemPropertiesQuery(Type\SearchEntitlementLineItemPropertiesRequestType $searchEntitlementLineItemPropertiesRequest): Type\SearchEntitlementLineItemPropertiesResponseType
+    public function getEntitlementLineItemPropertiesQuery(\Flexnet\EntitlementOrderService\Type\SearchEntitlementLineItemPropertiesRequestType $searchEntitlementLineItemPropertiesRequest): \Flexnet\EntitlementOrderService\Type\SearchEntitlementLineItemPropertiesResponseType
     {
-        return ($this->caller)('getEntitlementLineItemPropertiesQuery', $searchEntitlementLineItemPropertiesRequest);
+        $response = ($this->caller)('getEntitlementLineItemPropertiesQuery', $searchEntitlementLineItemPropertiesRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\SearchEntitlementLineItemPropertiesResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SearchEntitlementMaintenanceLineItemPropertiesRequestType  $searchEntitlementMaintenanceLineItemPropertiesRequest
-     * @return ResultInterface|Type\SearchEntitlementMaintenanceLineItemPropertiesResponseType
+     * @param  RequestInterface & Type\SearchEntitlementMaintenanceLineItemPropertiesRequestType  $searchEntitlementMaintenanceLineItemPropertiesRequest
+     * @return ResultInterface & Type\SearchEntitlementMaintenanceLineItemPropertiesResponseType
      *
      * @throws SoapException
      */
-    public function getEntitlementMaintenanceLineItemPropertiesQuery(Type\SearchEntitlementMaintenanceLineItemPropertiesRequestType $searchEntitlementMaintenanceLineItemPropertiesRequest): Type\SearchEntitlementMaintenanceLineItemPropertiesResponseType
+    public function getEntitlementMaintenanceLineItemPropertiesQuery(\Flexnet\EntitlementOrderService\Type\SearchEntitlementMaintenanceLineItemPropertiesRequestType $searchEntitlementMaintenanceLineItemPropertiesRequest): \Flexnet\EntitlementOrderService\Type\SearchEntitlementMaintenanceLineItemPropertiesResponseType
     {
-        return ($this->caller)('getEntitlementMaintenanceLineItemPropertiesQuery', $searchEntitlementMaintenanceLineItemPropertiesRequest);
+        $response = ($this->caller)('getEntitlementMaintenanceLineItemPropertiesQuery', $searchEntitlementMaintenanceLineItemPropertiesRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\SearchEntitlementMaintenanceLineItemPropertiesResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetEntitlementCountRequestType  $getEntitlementCountRequest
-     * @return ResultInterface|Type\GetEntitlementCountResponseType
+     * @param  RequestInterface & Type\GetEntitlementCountRequestType  $getEntitlementCountRequest
+     * @return ResultInterface & Type\GetEntitlementCountResponseType
      *
      * @throws SoapException
      */
-    public function getEntitlementCount(Type\GetEntitlementCountRequestType $getEntitlementCountRequest): Type\GetEntitlementCountResponseType
+    public function getEntitlementCount(\Flexnet\EntitlementOrderService\Type\GetEntitlementCountRequestType $getEntitlementCountRequest): \Flexnet\EntitlementOrderService\Type\GetEntitlementCountResponseType
     {
-        return ($this->caller)('getEntitlementCount', $getEntitlementCountRequest);
+        $response = ($this->caller)('getEntitlementCount', $getEntitlementCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\GetEntitlementCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetActivatableItemCountRequestType  $getActivatableItemCountRequest
-     * @return ResultInterface|Type\GetActivatableItemCountResponseType
+     * @param  RequestInterface & Type\GetActivatableItemCountRequestType  $getActivatableItemCountRequest
+     * @return ResultInterface & Type\GetActivatableItemCountResponseType
      *
      * @throws SoapException
      */
-    public function getActivatableItemCount(Type\GetActivatableItemCountRequestType $getActivatableItemCountRequest): Type\GetActivatableItemCountResponseType
+    public function getActivatableItemCount(\Flexnet\EntitlementOrderService\Type\GetActivatableItemCountRequestType $getActivatableItemCountRequest): \Flexnet\EntitlementOrderService\Type\GetActivatableItemCountResponseType
     {
-        return ($this->caller)('getActivatableItemCount', $getActivatableItemCountRequest);
+        $response = ($this->caller)('getActivatableItemCount', $getActivatableItemCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\GetActivatableItemCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetExactAvailableCountRequestType  $getExactAvailableCountRequest
-     * @return ResultInterface|Type\GetExactAvailableCountResponseType
+     * @param  RequestInterface & Type\GetExactAvailableCountRequestType  $getExactAvailableCountRequest
+     * @return ResultInterface & Type\GetExactAvailableCountResponseType
      *
      * @throws SoapException
      */
-    public function getExactAvailableCount(Type\GetExactAvailableCountRequestType $getExactAvailableCountRequest): Type\GetExactAvailableCountResponseType
+    public function getExactAvailableCount(\Flexnet\EntitlementOrderService\Type\GetExactAvailableCountRequestType $getExactAvailableCountRequest): \Flexnet\EntitlementOrderService\Type\GetExactAvailableCountResponseType
     {
-        return ($this->caller)('getExactAvailableCount', $getExactAvailableCountRequest);
+        $response = ($this->caller)('getExactAvailableCount', $getExactAvailableCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\GetExactAvailableCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SetEntitlementStateRequestType  $setEntitlementStateRequest
-     * @return ResultInterface|Type\SetEntitlementStateResponseType
+     * @param  RequestInterface & Type\SetEntitlementStateRequestType  $setEntitlementStateRequest
+     * @return ResultInterface & Type\SetEntitlementStateResponseType
      *
      * @throws SoapException
      */
-    public function setEntitlementState(Type\SetEntitlementStateRequestType $setEntitlementStateRequest): Type\SetEntitlementStateResponseType
+    public function setEntitlementState(\Flexnet\EntitlementOrderService\Type\SetEntitlementStateRequestType $setEntitlementStateRequest): \Flexnet\EntitlementOrderService\Type\SetEntitlementStateResponseType
     {
-        return ($this->caller)('setEntitlementState', $setEntitlementStateRequest);
+        $response = ($this->caller)('setEntitlementState', $setEntitlementStateRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\SetEntitlementStateResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetWebRegKeyCountRequestType  $getWebRegKeyCountRequest
-     * @return ResultInterface|Type\GetWebRegKeyCountResponseType
+     * @param  RequestInterface & Type\GetWebRegKeyCountRequestType  $getWebRegKeyCountRequest
+     * @return ResultInterface & Type\GetWebRegKeyCountResponseType
      *
      * @throws SoapException
      */
-    public function getWebRegKeyCount(Type\GetWebRegKeyCountRequestType $getWebRegKeyCountRequest): Type\GetWebRegKeyCountResponseType
+    public function getWebRegKeyCount(\Flexnet\EntitlementOrderService\Type\GetWebRegKeyCountRequestType $getWebRegKeyCountRequest): \Flexnet\EntitlementOrderService\Type\GetWebRegKeyCountResponseType
     {
-        return ($this->caller)('getWebRegKeyCount', $getWebRegKeyCountRequest);
+        $response = ($this->caller)('getWebRegKeyCount', $getWebRegKeyCountRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\GetWebRegKeyCountResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetWebRegKeysQueryRequestType  $getWebRegKeysQueryRequest
-     * @return ResultInterface|Type\GetWebRegKeysQueryResponseType
+     * @param  RequestInterface & Type\GetWebRegKeysQueryRequestType  $getWebRegKeysQueryRequest
+     * @return ResultInterface & Type\GetWebRegKeysQueryResponseType
      *
      * @throws SoapException
      */
-    public function getWebRegKeysQuery(Type\GetWebRegKeysQueryRequestType $getWebRegKeysQueryRequest): Type\GetWebRegKeysQueryResponseType
+    public function getWebRegKeysQuery(\Flexnet\EntitlementOrderService\Type\GetWebRegKeysQueryRequestType $getWebRegKeysQueryRequest): \Flexnet\EntitlementOrderService\Type\GetWebRegKeysQueryResponseType
     {
-        return ($this->caller)('getWebRegKeysQuery', $getWebRegKeysQueryRequest);
+        $response = ($this->caller)('getWebRegKeysQuery', $getWebRegKeysQueryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\GetWebRegKeysQueryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetEntitlementAttributesRequestType  $getEntitlementAttributesRequest
-     * @return ResultInterface|Type\GetEntitlementAttributesResponseType
+     * @param  RequestInterface & Type\GetEntitlementAttributesRequestType  $getEntitlementAttributesRequest
+     * @return ResultInterface & Type\GetEntitlementAttributesResponseType
      *
      * @throws SoapException
      */
-    public function getEntitlementAttributesFromModel(Type\GetEntitlementAttributesRequestType $getEntitlementAttributesRequest): Type\GetEntitlementAttributesResponseType
+    public function getEntitlementAttributesFromModel(\Flexnet\EntitlementOrderService\Type\GetEntitlementAttributesRequestType $getEntitlementAttributesRequest): \Flexnet\EntitlementOrderService\Type\GetEntitlementAttributesResponseType
     {
-        return ($this->caller)('getEntitlementAttributesFromModel', $getEntitlementAttributesRequest);
+        $response = ($this->caller)('getEntitlementAttributesFromModel', $getEntitlementAttributesRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\GetEntitlementAttributesResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\RenewEntitlementRequestType  $renewLicenseRequest
-     * @return ResultInterface|Type\RenewEntitlementResponseType
+     * @param  RequestInterface & Type\RenewEntitlementRequestType  $renewLicenseRequest
+     * @return ResultInterface & Type\RenewEntitlementResponseType
      *
      * @throws SoapException
      */
-    public function renewLicense(Type\RenewEntitlementRequestType $renewLicenseRequest): Type\RenewEntitlementResponseType
+    public function renewLicense(\Flexnet\EntitlementOrderService\Type\RenewEntitlementRequestType $renewLicenseRequest): \Flexnet\EntitlementOrderService\Type\RenewEntitlementResponseType
     {
-        return ($this->caller)('renewLicense', $renewLicenseRequest);
+        $response = ($this->caller)('renewLicense', $renewLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\RenewEntitlementResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\EntitlementLifeCycleRequestType  $upgradeLicenseRequest
-     * @return ResultInterface|Type\EntitlementLifeCycleResponseType
+     * @param  RequestInterface & Type\EntitlementLifeCycleRequestType  $upgradeLicenseRequest
+     * @return ResultInterface & Type\EntitlementLifeCycleResponseType
      *
      * @throws SoapException
      */
-    public function upgradeLicense(Type\EntitlementLifeCycleRequestType $upgradeLicenseRequest): Type\EntitlementLifeCycleResponseType
+    public function upgradeLicense(\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleRequestType $upgradeLicenseRequest): \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleResponseType
     {
-        return ($this->caller)('upgradeLicense', $upgradeLicenseRequest);
+        $response = ($this->caller)('upgradeLicense', $upgradeLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\EntitlementLifeCycleRequestType  $upsellLicenseRequest
-     * @return ResultInterface|Type\EntitlementLifeCycleResponseType
+     * @param  RequestInterface & Type\EntitlementLifeCycleRequestType  $upsellLicenseRequest
+     * @return ResultInterface & Type\EntitlementLifeCycleResponseType
      *
      * @throws SoapException
      */
-    public function upsellLicense(Type\EntitlementLifeCycleRequestType $upsellLicenseRequest): Type\EntitlementLifeCycleResponseType
+    public function upsellLicense(\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleRequestType $upsellLicenseRequest): \Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleResponseType
     {
-        return ($this->caller)('upsellLicense', $upsellLicenseRequest);
+        $response = ($this->caller)('upsellLicense', $upsellLicenseRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\EntitlementLifeCycleResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\MapEntitlementsToUserRequestType  $mapEntitlementsToUserRequest
-     * @return ResultInterface|Type\MapEntitlementsToUserResponseType
+     * @param  RequestInterface & Type\MapEntitlementsToUserRequestType  $mapEntitlementsToUserRequest
+     * @return ResultInterface & Type\MapEntitlementsToUserResponseType
      *
      * @throws SoapException
      */
-    public function mapEntitlementsToUser(Type\MapEntitlementsToUserRequestType $mapEntitlementsToUserRequest): Type\MapEntitlementsToUserResponseType
+    public function mapEntitlementsToUser(\Flexnet\EntitlementOrderService\Type\MapEntitlementsToUserRequestType $mapEntitlementsToUserRequest): \Flexnet\EntitlementOrderService\Type\MapEntitlementsToUserResponseType
     {
-        return ($this->caller)('mapEntitlementsToUser', $mapEntitlementsToUserRequest);
+        $response = ($this->caller)('mapEntitlementsToUser', $mapEntitlementsToUserRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\MapEntitlementsToUserResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\EmailEntitlementRequestType  $emailEntitlementRequest
-     * @return ResultInterface|Type\EmailEntitlementResponseType
+     * @param  RequestInterface & Type\EmailEntitlementRequestType  $emailEntitlementRequest
+     * @return ResultInterface & Type\EmailEntitlementResponseType
      *
      * @throws SoapException
      */
-    public function emailEntitlement(Type\EmailEntitlementRequestType $emailEntitlementRequest): Type\EmailEntitlementResponseType
+    public function emailEntitlement(\Flexnet\EntitlementOrderService\Type\EmailEntitlementRequestType $emailEntitlementRequest): \Flexnet\EntitlementOrderService\Type\EmailEntitlementResponseType
     {
-        return ($this->caller)('emailEntitlement', $emailEntitlementRequest);
+        $response = ($this->caller)('emailEntitlement', $emailEntitlementRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\EmailEntitlementResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\EmailActivatableItemRequestType  $emailActivatableItemRequest
-     * @return ResultInterface|Type\EmailActivatableItemResponseType
+     * @param  RequestInterface & Type\EmailActivatableItemRequestType  $emailActivatableItemRequest
+     * @return ResultInterface & Type\EmailActivatableItemResponseType
      *
      * @throws SoapException
      */
-    public function emailActivatableItem(Type\EmailActivatableItemRequestType $emailActivatableItemRequest): Type\EmailActivatableItemResponseType
+    public function emailActivatableItem(\Flexnet\EntitlementOrderService\Type\EmailActivatableItemRequestType $emailActivatableItemRequest): \Flexnet\EntitlementOrderService\Type\EmailActivatableItemResponseType
     {
-        return ($this->caller)('emailActivatableItem', $emailActivatableItemRequest);
+        $response = ($this->caller)('emailActivatableItem', $emailActivatableItemRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\EmailActivatableItemResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SetLineItemStateRequestType  $setLineItemStateRequest
-     * @return ResultInterface|Type\SetLineItemStateResponseType
+     * @param  RequestInterface & Type\SetLineItemStateRequestType  $setLineItemStateRequest
+     * @return ResultInterface & Type\SetLineItemStateResponseType
      *
      * @throws SoapException
      */
-    public function setLineItemState(Type\SetLineItemStateRequestType $setLineItemStateRequest): Type\SetLineItemStateResponseType
+    public function setLineItemState(\Flexnet\EntitlementOrderService\Type\SetLineItemStateRequestType $setLineItemStateRequest): \Flexnet\EntitlementOrderService\Type\SetLineItemStateResponseType
     {
-        return ($this->caller)('setLineItemState', $setLineItemStateRequest);
+        $response = ($this->caller)('setLineItemState', $setLineItemStateRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\SetLineItemStateResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SetMaintenanceLineItemStateRequestType  $setMaintenanceLineItemStateRequest
-     * @return ResultInterface|Type\SetMaintenanceLineItemStateResponseType
+     * @param  RequestInterface & Type\SetMaintenanceLineItemStateRequestType  $setMaintenanceLineItemStateRequest
+     * @return ResultInterface & Type\SetMaintenanceLineItemStateResponseType
      *
      * @throws SoapException
      */
-    public function setMaintenanceLineItemState(Type\SetMaintenanceLineItemStateRequestType $setMaintenanceLineItemStateRequest): Type\SetMaintenanceLineItemStateResponseType
+    public function setMaintenanceLineItemState(\Flexnet\EntitlementOrderService\Type\SetMaintenanceLineItemStateRequestType $setMaintenanceLineItemStateRequest): \Flexnet\EntitlementOrderService\Type\SetMaintenanceLineItemStateResponseType
     {
-        return ($this->caller)('setMaintenanceLineItemState', $setMaintenanceLineItemStateRequest);
+        $response = ($this->caller)('setMaintenanceLineItemState', $setMaintenanceLineItemStateRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\SetMaintenanceLineItemStateResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\DeleteWebRegKeyRequestType  $deleteWebRegKeyRequest
-     * @return ResultInterface|Type\DeleteWebRegKeyResponseType
+     * @param  RequestInterface & Type\DeleteWebRegKeyRequestType  $deleteWebRegKeyRequest
+     * @return ResultInterface & Type\DeleteWebRegKeyResponseType
      *
      * @throws SoapException
      */
-    public function deleteWebRegKey(Type\DeleteWebRegKeyRequestType $deleteWebRegKeyRequest): Type\DeleteWebRegKeyResponseType
+    public function deleteWebRegKey(\Flexnet\EntitlementOrderService\Type\DeleteWebRegKeyRequestType $deleteWebRegKeyRequest): \Flexnet\EntitlementOrderService\Type\DeleteWebRegKeyResponseType
     {
-        return ($this->caller)('deleteWebRegKey', $deleteWebRegKeyRequest);
+        $response = ($this->caller)('deleteWebRegKey', $deleteWebRegKeyRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\DeleteWebRegKeyResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\MergeEntitlementsRequestType  $mergeEntitlementsRequest
-     * @return ResultInterface|Type\MergeEntitlementsResponseType
+     * @param  RequestInterface & Type\MergeEntitlementsRequestType  $mergeEntitlementsRequest
+     * @return ResultInterface & Type\MergeEntitlementsResponseType
      *
      * @throws SoapException
      */
-    public function mergeEntitlements(Type\MergeEntitlementsRequestType $mergeEntitlementsRequest): Type\MergeEntitlementsResponseType
+    public function mergeEntitlements(\Flexnet\EntitlementOrderService\Type\MergeEntitlementsRequestType $mergeEntitlementsRequest): \Flexnet\EntitlementOrderService\Type\MergeEntitlementsResponseType
     {
-        return ($this->caller)('mergeEntitlements', $mergeEntitlementsRequest);
+        $response = ($this->caller)('mergeEntitlements', $mergeEntitlementsRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\MergeEntitlementsResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\TransferEntitlementsRequestType  $transferEntitlementsRequest
-     * @return ResultInterface|Type\TransferEntitlementsResponseType
+     * @param  RequestInterface & Type\TransferEntitlementsRequestType  $transferEntitlementsRequest
+     * @return ResultInterface & Type\TransferEntitlementsResponseType
      *
      * @throws SoapException
      */
-    public function transferEntitlement(Type\TransferEntitlementsRequestType $transferEntitlementsRequest): Type\TransferEntitlementsResponseType
+    public function transferEntitlement(\Flexnet\EntitlementOrderService\Type\TransferEntitlementsRequestType $transferEntitlementsRequest): \Flexnet\EntitlementOrderService\Type\TransferEntitlementsResponseType
     {
-        return ($this->caller)('transferEntitlement', $transferEntitlementsRequest);
+        $response = ($this->caller)('transferEntitlement', $transferEntitlementsRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\TransferEntitlementsResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\TransferLineItemsRequestType  $transferLineItemsRequest
-     * @return ResultInterface|Type\TransferLineItemsResponseType
+     * @param  RequestInterface & Type\TransferLineItemsRequestType  $transferLineItemsRequest
+     * @return ResultInterface & Type\TransferLineItemsResponseType
      *
      * @throws SoapException
      */
-    public function transferLineItem(Type\TransferLineItemsRequestType $transferLineItemsRequest): Type\TransferLineItemsResponseType
+    public function transferLineItem(\Flexnet\EntitlementOrderService\Type\TransferLineItemsRequestType $transferLineItemsRequest): \Flexnet\EntitlementOrderService\Type\TransferLineItemsResponseType
     {
-        return ($this->caller)('transferLineItem', $transferLineItemsRequest);
+        $response = ($this->caller)('transferLineItem', $transferLineItemsRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\TransferLineItemsResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetStateChangeHistoryRequestType  $getStateChangeHistoryRequest
-     * @return ResultInterface|Type\GetStateChangeHistoryResponseType
+     * @param  RequestInterface & Type\GetStateChangeHistoryRequestType  $getStateChangeHistoryRequest
+     * @return ResultInterface & Type\GetStateChangeHistoryResponseType
      *
      * @throws SoapException
      */
-    public function getStateChangeHistory(Type\GetStateChangeHistoryRequestType $getStateChangeHistoryRequest): Type\GetStateChangeHistoryResponseType
+    public function getStateChangeHistory(\Flexnet\EntitlementOrderService\Type\GetStateChangeHistoryRequestType $getStateChangeHistoryRequest): \Flexnet\EntitlementOrderService\Type\GetStateChangeHistoryResponseType
     {
-        return ($this->caller)('getStateChangeHistory', $getStateChangeHistoryRequest);
+        $response = ($this->caller)('getStateChangeHistory', $getStateChangeHistoryRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\GetStateChangeHistoryResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\LinkMaintenanceLineItemRequestType  $linkMaintenanceLineItemRequest
-     * @return ResultInterface|Type\LinkMaintenanceLineItemResponseType
+     * @param  RequestInterface & Type\LinkMaintenanceLineItemRequestType  $linkMaintenanceLineItemRequest
+     * @return ResultInterface & Type\LinkMaintenanceLineItemResponseType
      *
      * @throws SoapException
      */
-    public function linkMaintenanceLineItem(Type\LinkMaintenanceLineItemRequestType $linkMaintenanceLineItemRequest): Type\LinkMaintenanceLineItemResponseType
+    public function linkMaintenanceLineItem(\Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemRequestType $linkMaintenanceLineItemRequest): \Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemResponseType
     {
-        return ($this->caller)('linkMaintenanceLineItem', $linkMaintenanceLineItemRequest);
+        $response = ($this->caller)('linkMaintenanceLineItem', $linkMaintenanceLineItemRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\LinkMaintenanceLineItemResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SplitLineItemRequestType  $splitLineItemRequest
-     * @return ResultInterface|Type\SplitLineItemResponseType
+     * @param  RequestInterface & Type\SplitLineItemRequestType  $splitLineItemRequest
+     * @return ResultInterface & Type\SplitLineItemResponseType
      *
      * @throws SoapException
      */
-    public function splitLineItem(Type\SplitLineItemRequestType $splitLineItemRequest): Type\SplitLineItemResponseType
+    public function splitLineItem(\Flexnet\EntitlementOrderService\Type\SplitLineItemRequestType $splitLineItemRequest): \Flexnet\EntitlementOrderService\Type\SplitLineItemResponseType
     {
-        return ($this->caller)('splitLineItem', $splitLineItemRequest);
+        $response = ($this->caller)('splitLineItem', $splitLineItemRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\SplitLineItemResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\SplitBulkEntitlementRequestType  $splitBulkEntitlementRequest
-     * @return ResultInterface|Type\SplitBulkEntitlementResponseType
+     * @param  RequestInterface & Type\SplitBulkEntitlementRequestType  $splitBulkEntitlementRequest
+     * @return ResultInterface & Type\SplitBulkEntitlementResponseType
      *
      * @throws SoapException
      */
-    public function splitBulkEntitlement(Type\SplitBulkEntitlementRequestType $splitBulkEntitlementRequest): Type\SplitBulkEntitlementResponseType
+    public function splitBulkEntitlement(\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementRequestType $splitBulkEntitlementRequest): \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementResponseType
     {
-        return ($this->caller)('splitBulkEntitlement', $splitBulkEntitlementRequest);
+        $response = ($this->caller)('splitBulkEntitlement', $splitBulkEntitlementRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetMatchingLineItemsRequestType  $getMatchingLineItemsRequest
-     * @return ResultInterface|Type\GetMatchingLineItemsResponseType
+     * @param  RequestInterface & Type\GetMatchingLineItemsRequestType  $getMatchingLineItemsRequest
+     * @return ResultInterface & Type\GetMatchingLineItemsResponseType
      *
      * @throws SoapException
      */
-    public function getMatchingLineItems(Type\GetMatchingLineItemsRequestType $getMatchingLineItemsRequest): Type\GetMatchingLineItemsResponseType
+    public function getMatchingLineItems(\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsRequestType $getMatchingLineItemsRequest): \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsResponseType
     {
-        return ($this->caller)('getMatchingLineItems', $getMatchingLineItemsRequest);
+        $response = ($this->caller)('getMatchingLineItems', $getMatchingLineItemsRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\GetMatchingBulkEntsRequestType  $getMatchingBulkEntsRequest
-     * @return ResultInterface|Type\GetMatchingBulkEntsResponseType
+     * @param  RequestInterface & Type\GetMatchingBulkEntsRequestType  $getMatchingBulkEntsRequest
+     * @return ResultInterface & Type\GetMatchingBulkEntsResponseType
      *
      * @throws SoapException
      */
-    public function getMatchingBulkEnts(Type\GetMatchingBulkEntsRequestType $getMatchingBulkEntsRequest): Type\GetMatchingBulkEntsResponseType
+    public function getMatchingBulkEnts(\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsRequestType $getMatchingBulkEntsRequest): \Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsResponseType
     {
-        return ($this->caller)('getMatchingBulkEnts', $getMatchingBulkEntsRequest);
+        $response = ($this->caller)('getMatchingBulkEnts', $getMatchingBulkEntsRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\GetMatchingBulkEntsResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\DeleteMaintenanceLineItemRequestType  $deleteMaintenanceLineItemRequest
-     * @return ResultInterface|Type\DeleteMaintenanceLineItemResponseType
+     * @param  RequestInterface & Type\DeleteMaintenanceLineItemRequestType  $deleteMaintenanceLineItemRequest
+     * @return ResultInterface & Type\DeleteMaintenanceLineItemResponseType
      *
      * @throws SoapException
      */
-    public function deleteMaintenanceLineItem(Type\DeleteMaintenanceLineItemRequestType $deleteMaintenanceLineItemRequest): Type\DeleteMaintenanceLineItemResponseType
+    public function deleteMaintenanceLineItem(\Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemRequestType $deleteMaintenanceLineItemRequest): \Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemResponseType
     {
-        return ($this->caller)('deleteMaintenanceLineItem', $deleteMaintenanceLineItemRequest);
+        $response = ($this->caller)('deleteMaintenanceLineItem', $deleteMaintenanceLineItemRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\DeleteMaintenanceLineItemResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param  RequestInterface|Type\UnlinkMaintenanceLineItemRequestType  $unlinkMaintenanceLineItemRequest
-     * @return ResultInterface|Type\UnlinkMaintenanceLineItemResponseType
+     * @param  RequestInterface & Type\UnlinkMaintenanceLineItemRequestType  $unlinkMaintenanceLineItemRequest
+     * @return ResultInterface & Type\UnlinkMaintenanceLineItemResponseType
      *
      * @throws SoapException
      */
-    public function unlinkMaintenanceLineItem(Type\UnlinkMaintenanceLineItemRequestType $unlinkMaintenanceLineItemRequest): Type\UnlinkMaintenanceLineItemResponseType
+    public function unlinkMaintenanceLineItem(\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemRequestType $unlinkMaintenanceLineItemRequest): \Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemResponseType
     {
-        return ($this->caller)('unlinkMaintenanceLineItem', $unlinkMaintenanceLineItemRequest);
+        $response = ($this->caller)('unlinkMaintenanceLineItem', $unlinkMaintenanceLineItemRequest);
+
+        \Psl\Type\instance_of(\Flexnet\EntitlementOrderService\Type\UnlinkMaintenanceLineItemResponseType::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 }

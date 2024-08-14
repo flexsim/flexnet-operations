@@ -29,7 +29,7 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(FulfillmentsQueryParametersType $queryParams, FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, int $pageNumber = null)
+    public function __construct(\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams, \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, ?int $pageNumber = null)
     {
         $this->queryParams = $queryParams;
         $this->fulfillmentResponseConfig = $fulfillmentResponseConfig;
@@ -37,17 +37,17 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
         $this->pageNumber = $pageNumber;
     }
 
-    public static function create(FulfillmentsQueryParametersType $queryParams, FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, int $pageNumber = null)
+    public static function create(\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams, \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig, int $batchSize, ?int $pageNumber = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): FulfillmentsQueryParametersType
+    public function getQueryParams(): \Flexnet\LicenseService\Type\FulfillmentsQueryParametersType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(FulfillmentsQueryParametersType $queryParams): GetFulfillmentPropertiesRequestType
+    public function withQueryParams(\Flexnet\LicenseService\Type\FulfillmentsQueryParametersType $queryParams): \Flexnet\LicenseService\Type\GetFulfillmentPropertiesRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -55,12 +55,12 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
         return $new;
     }
 
-    public function getFulfillmentResponseConfig(): FulfillmentResponseConfigRequestType
+    public function getFulfillmentResponseConfig(): \Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType
     {
         return $this->fulfillmentResponseConfig;
     }
 
-    public function withFulfillmentResponseConfig(FulfillmentResponseConfigRequestType $fulfillmentResponseConfig): GetFulfillmentPropertiesRequestType
+    public function withFulfillmentResponseConfig(\Flexnet\LicenseService\Type\FulfillmentResponseConfigRequestType $fulfillmentResponseConfig): \Flexnet\LicenseService\Type\GetFulfillmentPropertiesRequestType
     {
         $new = clone $this;
         $new->fulfillmentResponseConfig = $fulfillmentResponseConfig;
@@ -73,7 +73,7 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
         return $this->batchSize;
     }
 
-    public function withBatchSize(int $batchSize): GetFulfillmentPropertiesRequestType
+    public function withBatchSize(int $batchSize): \Flexnet\LicenseService\Type\GetFulfillmentPropertiesRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;
@@ -86,7 +86,7 @@ class GetFulfillmentPropertiesRequestType implements RequestInterface
         return $this->pageNumber;
     }
 
-    public function withPageNumber(?int $pageNumber): GetFulfillmentPropertiesRequestType
+    public function withPageNumber(?int $pageNumber): \Flexnet\LicenseService\Type\GetFulfillmentPropertiesRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;

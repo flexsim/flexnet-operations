@@ -14,7 +14,7 @@ class GetMatchingLineItemsListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType>  $lineItemInfo
      */
-    public function __construct(GetMatchingLineItemInfoType|array $lineItemInfo)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType|array $lineItemInfo)
     {
         $this->lineItemInfo = $lineItemInfo;
     }
@@ -22,7 +22,7 @@ class GetMatchingLineItemsListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType>  $lineItemInfo
      */
-    public static function create(GetMatchingLineItemInfoType|array $lineItemInfo)
+    public static function create(\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType|array $lineItemInfo)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class GetMatchingLineItemsListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType>
      */
-    public function getLineItemInfo(): GetMatchingLineItemInfoType|array
+    public function getLineItemInfo(): \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType|array
     {
         return $this->lineItemInfo;
     }
@@ -38,7 +38,7 @@ class GetMatchingLineItemsListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType|array<\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType>  $lineItemInfo
      */
-    public function withLineItemInfo(GetMatchingLineItemInfoType|array $lineItemInfo): GetMatchingLineItemsListType
+    public function withLineItemInfo(\Flexnet\EntitlementOrderService\Type\GetMatchingLineItemInfoType|array $lineItemInfo): \Flexnet\EntitlementOrderService\Type\GetMatchingLineItemsListType
     {
         $new = clone $this;
         $new->lineItemInfo = $lineItemInfo;

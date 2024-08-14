@@ -24,24 +24,24 @@ class GetFeaturesQueryRequestType implements RequestInterface
     /**
      * Constructor
      */
-    public function __construct(int $pageNumber, int $batchSize, FeatureQueryParametersType $queryParams = null)
+    public function __construct(int $pageNumber, int $batchSize, ?\Flexnet\ProductPackagingService\Type\FeatureQueryParametersType $queryParams = null)
     {
         $this->pageNumber = $pageNumber;
         $this->batchSize = $batchSize;
         $this->queryParams = $queryParams;
     }
 
-    public static function create(int $pageNumber, int $batchSize, FeatureQueryParametersType $queryParams = null)
+    public static function create(int $pageNumber, int $batchSize, ?\Flexnet\ProductPackagingService\Type\FeatureQueryParametersType $queryParams = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getQueryParams(): ?FeatureQueryParametersType
+    public function getQueryParams(): ?\Flexnet\ProductPackagingService\Type\FeatureQueryParametersType
     {
         return $this->queryParams;
     }
 
-    public function withQueryParams(?FeatureQueryParametersType $queryParams): GetFeaturesQueryRequestType
+    public function withQueryParams(?\Flexnet\ProductPackagingService\Type\FeatureQueryParametersType $queryParams): \Flexnet\ProductPackagingService\Type\GetFeaturesQueryRequestType
     {
         $new = clone $this;
         $new->queryParams = $queryParams;
@@ -54,7 +54,7 @@ class GetFeaturesQueryRequestType implements RequestInterface
         return $this->pageNumber;
     }
 
-    public function withPageNumber(int $pageNumber): GetFeaturesQueryRequestType
+    public function withPageNumber(int $pageNumber): \Flexnet\ProductPackagingService\Type\GetFeaturesQueryRequestType
     {
         $new = clone $this;
         $new->pageNumber = $pageNumber;
@@ -67,7 +67,7 @@ class GetFeaturesQueryRequestType implements RequestInterface
         return $this->batchSize;
     }
 
-    public function withBatchSize(int $batchSize): GetFeaturesQueryRequestType
+    public function withBatchSize(int $batchSize): \Flexnet\ProductPackagingService\Type\GetFeaturesQueryRequestType
     {
         $new = clone $this;
         $new->batchSize = $batchSize;

@@ -16,7 +16,7 @@ class RepairFulfillmentRequestType implements RequestInterface
      *
      * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentDataType>  $fulfillment
      */
-    public function __construct(RepairFulfillmentDataType|array $fulfillment)
+    public function __construct(\Flexnet\LicenseService\Type\RepairFulfillmentDataType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -24,7 +24,7 @@ class RepairFulfillmentRequestType implements RequestInterface
     /**
      * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentDataType>  $fulfillment
      */
-    public static function create(RepairFulfillmentDataType|array $fulfillment)
+    public static function create(\Flexnet\LicenseService\Type\RepairFulfillmentDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class RepairFulfillmentRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentDataType>
      */
-    public function getFulfillment(): RepairFulfillmentDataType|array
+    public function getFulfillment(): \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array
     {
         return $this->fulfillment;
     }
@@ -40,7 +40,7 @@ class RepairFulfillmentRequestType implements RequestInterface
     /**
      * @param  \Flexnet\LicenseService\Type\RepairFulfillmentDataType|array<\Flexnet\LicenseService\Type\RepairFulfillmentDataType>  $fulfillment
      */
-    public function withFulfillment(RepairFulfillmentDataType|array $fulfillment): RepairFulfillmentRequestType
+    public function withFulfillment(\Flexnet\LicenseService\Type\RepairFulfillmentDataType|array $fulfillment): \Flexnet\LicenseService\Type\RepairFulfillmentRequestType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;

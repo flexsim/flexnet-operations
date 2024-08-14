@@ -17,23 +17,23 @@ class FailedRemoveEntitlementLineItemDataType
     /**
      * Constructor
      */
-    public function __construct(RemoveEntitlementLineItemDataType $failedData = null, string $reason = null)
+    public function __construct(?\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType $failedData = null, ?string $reason = null)
     {
         $this->failedData = $failedData;
         $this->reason = $reason;
     }
 
-    public static function create(RemoveEntitlementLineItemDataType $failedData = null, string $reason = null)
+    public static function create(?\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType $failedData = null, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFailedData(): ?RemoveEntitlementLineItemDataType
+    public function getFailedData(): ?\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?RemoveEntitlementLineItemDataType $failedData): FailedRemoveEntitlementLineItemDataType
+    public function withFailedData(?\Flexnet\EntitlementOrderService\Type\RemoveEntitlementLineItemDataType $failedData): \Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -46,7 +46,7 @@ class FailedRemoveEntitlementLineItemDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedRemoveEntitlementLineItemDataType
+    public function withReason(?string $reason): \Flexnet\EntitlementOrderService\Type\FailedRemoveEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->reason = $reason;

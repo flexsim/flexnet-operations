@@ -14,7 +14,7 @@ class FailedSplitLineItemListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType>  $failedLineItem
      */
-    public function __construct(FailedSplitLineItemDataType|array $failedLineItem)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType|array $failedLineItem)
     {
         $this->failedLineItem = $failedLineItem;
     }
@@ -22,7 +22,7 @@ class FailedSplitLineItemListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType>  $failedLineItem
      */
-    public static function create(FailedSplitLineItemDataType|array $failedLineItem)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType|array $failedLineItem)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedSplitLineItemListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType>
      */
-    public function getFailedLineItem(): FailedSplitLineItemDataType|array
+    public function getFailedLineItem(): \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType|array
     {
         return $this->failedLineItem;
     }
@@ -38,7 +38,7 @@ class FailedSplitLineItemListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType>  $failedLineItem
      */
-    public function withFailedLineItem(FailedSplitLineItemDataType|array $failedLineItem): FailedSplitLineItemListType
+    public function withFailedLineItem(\Flexnet\EntitlementOrderService\Type\FailedSplitLineItemDataType|array $failedLineItem): \Flexnet\EntitlementOrderService\Type\FailedSplitLineItemListType
     {
         $new = clone $this;
         $new->failedLineItem = $failedLineItem;

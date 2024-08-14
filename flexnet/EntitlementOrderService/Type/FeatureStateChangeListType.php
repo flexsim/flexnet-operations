@@ -14,7 +14,7 @@ class FeatureStateChangeListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType>|null  $feature
      */
-    public function __construct(FeatureStateChangeDataType|array $feature = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType|array|null $feature = null)
     {
         $this->feature = $feature;
     }
@@ -22,7 +22,7 @@ class FeatureStateChangeListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType>|null  $feature
      */
-    public static function create(FeatureStateChangeDataType|array $feature = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType|array|null $feature = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FeatureStateChangeListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType>|null
      */
-    public function getFeature(): FeatureStateChangeDataType|array|null
+    public function getFeature(): \Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType|array|null
     {
         return $this->feature;
     }
@@ -38,7 +38,7 @@ class FeatureStateChangeListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType>|null  $feature
      */
-    public function withFeature(FeatureStateChangeDataType|array|null $feature): FeatureStateChangeListType
+    public function withFeature(\Flexnet\EntitlementOrderService\Type\FeatureStateChangeDataType|array|null $feature): \Flexnet\EntitlementOrderService\Type\FeatureStateChangeListType
     {
         $new = clone $this;
         $new->feature = $feature;

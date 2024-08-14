@@ -32,7 +32,7 @@ class LineItemLifeCycleDataType
     /**
      * Constructor
      */
-    public function __construct(EntitlementLineItemIdentifierType $parentLineItemIdentifier, CreateEntitlementLineItemDataType $lineItem, bool $isFull = null, bool $allowActivationsOnParent = null, bool $autoDeploy = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier, \Flexnet\EntitlementOrderService\Type\CreateEntitlementLineItemDataType $lineItem, ?bool $isFull = null, ?bool $allowActivationsOnParent = null, ?bool $autoDeploy = null)
     {
         $this->parentLineItemIdentifier = $parentLineItemIdentifier;
         $this->lineItem = $lineItem;
@@ -41,17 +41,17 @@ class LineItemLifeCycleDataType
         $this->autoDeploy = $autoDeploy;
     }
 
-    public static function create(EntitlementLineItemIdentifierType $parentLineItemIdentifier, CreateEntitlementLineItemDataType $lineItem, bool $isFull = null, bool $allowActivationsOnParent = null, bool $autoDeploy = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier, \Flexnet\EntitlementOrderService\Type\CreateEntitlementLineItemDataType $lineItem, ?bool $isFull = null, ?bool $allowActivationsOnParent = null, ?bool $autoDeploy = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getParentLineItemIdentifier(): EntitlementLineItemIdentifierType
+    public function getParentLineItemIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
     {
         return $this->parentLineItemIdentifier;
     }
 
-    public function withParentLineItemIdentifier(EntitlementLineItemIdentifierType $parentLineItemIdentifier): LineItemLifeCycleDataType
+    public function withParentLineItemIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $parentLineItemIdentifier): \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType
     {
         $new = clone $this;
         $new->parentLineItemIdentifier = $parentLineItemIdentifier;
@@ -59,12 +59,12 @@ class LineItemLifeCycleDataType
         return $new;
     }
 
-    public function getLineItem(): CreateEntitlementLineItemDataType
+    public function getLineItem(): \Flexnet\EntitlementOrderService\Type\CreateEntitlementLineItemDataType
     {
         return $this->lineItem;
     }
 
-    public function withLineItem(CreateEntitlementLineItemDataType $lineItem): LineItemLifeCycleDataType
+    public function withLineItem(\Flexnet\EntitlementOrderService\Type\CreateEntitlementLineItemDataType $lineItem): \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType
     {
         $new = clone $this;
         $new->lineItem = $lineItem;
@@ -77,7 +77,7 @@ class LineItemLifeCycleDataType
         return $this->isFull;
     }
 
-    public function withIsFull(?bool $isFull): LineItemLifeCycleDataType
+    public function withIsFull(?bool $isFull): \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType
     {
         $new = clone $this;
         $new->isFull = $isFull;
@@ -90,7 +90,7 @@ class LineItemLifeCycleDataType
         return $this->allowActivationsOnParent;
     }
 
-    public function withAllowActivationsOnParent(?bool $allowActivationsOnParent): LineItemLifeCycleDataType
+    public function withAllowActivationsOnParent(?bool $allowActivationsOnParent): \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType
     {
         $new = clone $this;
         $new->allowActivationsOnParent = $allowActivationsOnParent;
@@ -103,7 +103,7 @@ class LineItemLifeCycleDataType
         return $this->autoDeploy;
     }
 
-    public function withAutoDeploy(?bool $autoDeploy): LineItemLifeCycleDataType
+    public function withAutoDeploy(?bool $autoDeploy): \Flexnet\EntitlementOrderService\Type\LineItemLifeCycleDataType
     {
         $new = clone $this;
         $new->autoDeploy = $autoDeploy;

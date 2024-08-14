@@ -19,7 +19,7 @@ class LicenseModelStateChangeDataType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public function __construct(LicenseModelIdentifierType $licenseModelIdentifier, StateChangeDataType|array $stateChangeRecord = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $licenseModelIdentifier, \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array|null $stateChangeRecord = null)
     {
         $this->licenseModelIdentifier = $licenseModelIdentifier;
         $this->stateChangeRecord = $stateChangeRecord;
@@ -28,17 +28,17 @@ class LicenseModelStateChangeDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public static function create(LicenseModelIdentifierType $licenseModelIdentifier, StateChangeDataType|array $stateChangeRecord = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $licenseModelIdentifier, \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array|null $stateChangeRecord = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getLicenseModelIdentifier(): LicenseModelIdentifierType
+    public function getLicenseModelIdentifier(): \Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType
     {
         return $this->licenseModelIdentifier;
     }
 
-    public function withLicenseModelIdentifier(LicenseModelIdentifierType $licenseModelIdentifier): LicenseModelStateChangeDataType
+    public function withLicenseModelIdentifier(\Flexnet\EntitlementOrderService\Type\LicenseModelIdentifierType $licenseModelIdentifier): \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType
     {
         $new = clone $this;
         $new->licenseModelIdentifier = $licenseModelIdentifier;
@@ -49,7 +49,7 @@ class LicenseModelStateChangeDataType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null
      */
-    public function getStateChangeRecord(): StateChangeDataType|array|null
+    public function getStateChangeRecord(): \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array|null
     {
         return $this->stateChangeRecord;
     }
@@ -57,7 +57,7 @@ class LicenseModelStateChangeDataType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\StateChangeDataType|array<\Flexnet\EntitlementOrderService\Type\StateChangeDataType>|null  $stateChangeRecord
      */
-    public function withStateChangeRecord(StateChangeDataType|array|null $stateChangeRecord): LicenseModelStateChangeDataType
+    public function withStateChangeRecord(\Flexnet\EntitlementOrderService\Type\StateChangeDataType|array|null $stateChangeRecord): \Flexnet\EntitlementOrderService\Type\LicenseModelStateChangeDataType
     {
         $new = clone $this;
         $new->stateChangeRecord = $stateChangeRecord;

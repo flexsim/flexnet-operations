@@ -14,7 +14,7 @@ class GetMaintenanceQueryResponseDataType
      *
      * @param  \Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType|array<\Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType>|null  $maintenance
      */
-    public function __construct(MaintenanceQueryDataType|array $maintenance = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType|array|null $maintenance = null)
     {
         $this->maintenance = $maintenance;
     }
@@ -22,7 +22,7 @@ class GetMaintenanceQueryResponseDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType|array<\Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType>|null  $maintenance
      */
-    public static function create(MaintenanceQueryDataType|array $maintenance = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType|array|null $maintenance = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class GetMaintenanceQueryResponseDataType
     /**
      * @return \Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType|array<\Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType>|null
      */
-    public function getMaintenance(): MaintenanceQueryDataType|array|null
+    public function getMaintenance(): \Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType|array|null
     {
         return $this->maintenance;
     }
@@ -38,7 +38,7 @@ class GetMaintenanceQueryResponseDataType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType|array<\Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType>|null  $maintenance
      */
-    public function withMaintenance(MaintenanceQueryDataType|array|null $maintenance): GetMaintenanceQueryResponseDataType
+    public function withMaintenance(\Flexnet\ProductPackagingService\Type\MaintenanceQueryDataType|array|null $maintenance): \Flexnet\ProductPackagingService\Type\GetMaintenanceQueryResponseDataType
     {
         $new = clone $this;
         $new->maintenance = $maintenance;

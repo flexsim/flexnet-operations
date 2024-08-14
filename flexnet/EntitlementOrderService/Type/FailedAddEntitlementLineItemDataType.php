@@ -17,23 +17,23 @@ class FailedAddEntitlementLineItemDataType
     /**
      * Constructor
      */
-    public function __construct(AddEntitlementLineItemDataType $lineItem = null, string $reason = null)
+    public function __construct(?\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType $lineItem = null, ?string $reason = null)
     {
         $this->lineItem = $lineItem;
         $this->reason = $reason;
     }
 
-    public static function create(AddEntitlementLineItemDataType $lineItem = null, string $reason = null)
+    public static function create(?\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType $lineItem = null, ?string $reason = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getLineItem(): ?AddEntitlementLineItemDataType
+    public function getLineItem(): ?\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType
     {
         return $this->lineItem;
     }
 
-    public function withLineItem(?AddEntitlementLineItemDataType $lineItem): FailedAddEntitlementLineItemDataType
+    public function withLineItem(?\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType $lineItem): \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->lineItem = $lineItem;
@@ -46,7 +46,7 @@ class FailedAddEntitlementLineItemDataType
         return $this->reason;
     }
 
-    public function withReason(?string $reason): FailedAddEntitlementLineItemDataType
+    public function withReason(?string $reason): \Flexnet\EntitlementOrderService\Type\FailedAddEntitlementLineItemDataType
     {
         $new = clone $this;
         $new->reason = $reason;

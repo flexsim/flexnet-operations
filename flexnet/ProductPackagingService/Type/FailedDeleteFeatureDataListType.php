@@ -14,7 +14,7 @@ class FailedDeleteFeatureDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataType>|null  $failedFeature
      */
-    public function __construct(FailedDeleteFeatureDataType|array $failedFeature = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataType|array|null $failedFeature = null)
     {
         $this->failedFeature = $failedFeature;
     }
@@ -22,7 +22,7 @@ class FailedDeleteFeatureDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataType>|null  $failedFeature
      */
-    public static function create(FailedDeleteFeatureDataType|array $failedFeature = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataType|array|null $failedFeature = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedDeleteFeatureDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataType>|null
      */
-    public function getFailedFeature(): FailedDeleteFeatureDataType|array|null
+    public function getFailedFeature(): \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataType|array|null
     {
         return $this->failedFeature;
     }
@@ -38,7 +38,7 @@ class FailedDeleteFeatureDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataType|array<\Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataType>|null  $failedFeature
      */
-    public function withFailedFeature(FailedDeleteFeatureDataType|array|null $failedFeature): FailedDeleteFeatureDataListType
+    public function withFailedFeature(\Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataType|array|null $failedFeature): \Flexnet\ProductPackagingService\Type\FailedDeleteFeatureDataListType
     {
         $new = clone $this;
         $new->failedFeature = $failedFeature;

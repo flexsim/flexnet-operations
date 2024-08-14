@@ -13,9 +13,7 @@ use Phpro\SoapClient\Exception\AssemblerException;
  */
 class ResultAssembler implements AssemblerInterface
 {
-    public function __construct(protected string $resultClass)
-    {
-    }
+    public function __construct(protected string $resultClass) {}
 
     /**
      * {@inheritdoc}

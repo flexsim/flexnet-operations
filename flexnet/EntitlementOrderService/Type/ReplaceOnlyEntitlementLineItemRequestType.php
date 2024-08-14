@@ -16,7 +16,7 @@ class ReplaceOnlyEntitlementLineItemRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
      */
-    public function __construct(AddEntitlementLineItemDataType|array $lineItem)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array $lineItem)
     {
         $this->lineItem = $lineItem;
     }
@@ -24,7 +24,7 @@ class ReplaceOnlyEntitlementLineItemRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
      */
-    public static function create(AddEntitlementLineItemDataType|array $lineItem)
+    public static function create(\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array $lineItem)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class ReplaceOnlyEntitlementLineItemRequestType implements RequestInterface
     /**
      * @return \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>
      */
-    public function getLineItem(): AddEntitlementLineItemDataType|array
+    public function getLineItem(): \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array
     {
         return $this->lineItem;
     }
@@ -40,7 +40,7 @@ class ReplaceOnlyEntitlementLineItemRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
      */
-    public function withLineItem(AddEntitlementLineItemDataType|array $lineItem): ReplaceOnlyEntitlementLineItemRequestType
+    public function withLineItem(\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array $lineItem): \Flexnet\EntitlementOrderService\Type\ReplaceOnlyEntitlementLineItemRequestType
     {
         $new = clone $this;
         $new->lineItem = $lineItem;

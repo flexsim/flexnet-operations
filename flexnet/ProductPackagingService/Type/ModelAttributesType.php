@@ -45,7 +45,7 @@ class ModelAttributesType
         return $this->needServerId;
     }
 
-    public function withNeedServerId(bool $needServerId): ModelAttributesType
+    public function withNeedServerId(bool $needServerId): \Flexnet\ProductPackagingService\Type\ModelAttributesType
     {
         $new = clone $this;
         $new->needServerId = $needServerId;
@@ -58,7 +58,7 @@ class ModelAttributesType
         return $this->needNodeLockId;
     }
 
-    public function withNeedNodeLockId(bool $needNodeLockId): ModelAttributesType
+    public function withNeedNodeLockId(bool $needNodeLockId): \Flexnet\ProductPackagingService\Type\ModelAttributesType
     {
         $new = clone $this;
         $new->needNodeLockId = $needNodeLockId;
@@ -71,7 +71,7 @@ class ModelAttributesType
         return $this->needCount;
     }
 
-    public function withNeedCount(bool $needCount): ModelAttributesType
+    public function withNeedCount(bool $needCount): \Flexnet\ProductPackagingService\Type\ModelAttributesType
     {
         $new = clone $this;
         $new->needCount = $needCount;
@@ -84,7 +84,7 @@ class ModelAttributesType
         return $this->needOverdraftCount;
     }
 
-    public function withNeedOverdraftCount(bool $needOverdraftCount): ModelAttributesType
+    public function withNeedOverdraftCount(bool $needOverdraftCount): \Flexnet\ProductPackagingService\Type\ModelAttributesType
     {
         $new = clone $this;
         $new->needOverdraftCount = $needOverdraftCount;

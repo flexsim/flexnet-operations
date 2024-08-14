@@ -33,7 +33,7 @@ class PolicyTermType
         return $this->duration;
     }
 
-    public function withDuration(int $duration): PolicyTermType
+    public function withDuration(int $duration): \Flexnet\EntitlementOrderService\Type\PolicyTermType
     {
         $new = clone $this;
         $new->duration = $duration;
@@ -46,7 +46,7 @@ class PolicyTermType
         return $this->durationUnit;
     }
 
-    public function withDurationUnit(string $durationUnit): PolicyTermType
+    public function withDurationUnit(string $durationUnit): \Flexnet\EntitlementOrderService\Type\PolicyTermType
     {
         $new = clone $this;
         $new->durationUnit = $durationUnit;

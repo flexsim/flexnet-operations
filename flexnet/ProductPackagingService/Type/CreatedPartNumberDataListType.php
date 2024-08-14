@@ -14,7 +14,7 @@ class CreatedPartNumberDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType|array<\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType>|null  $createdPartNumber
      */
-    public function __construct(CreatedPartNumberDataType|array $createdPartNumber = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType|array|null $createdPartNumber = null)
     {
         $this->createdPartNumber = $createdPartNumber;
     }
@@ -22,7 +22,7 @@ class CreatedPartNumberDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType|array<\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType>|null  $createdPartNumber
      */
-    public static function create(CreatedPartNumberDataType|array $createdPartNumber = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType|array|null $createdPartNumber = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class CreatedPartNumberDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType|array<\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType>|null
      */
-    public function getCreatedPartNumber(): CreatedPartNumberDataType|array|null
+    public function getCreatedPartNumber(): \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType|array|null
     {
         return $this->createdPartNumber;
     }
@@ -38,7 +38,7 @@ class CreatedPartNumberDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType|array<\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType>|null  $createdPartNumber
      */
-    public function withCreatedPartNumber(CreatedPartNumberDataType|array|null $createdPartNumber): CreatedPartNumberDataListType
+    public function withCreatedPartNumber(\Flexnet\ProductPackagingService\Type\CreatedPartNumberDataType|array|null $createdPartNumber): \Flexnet\ProductPackagingService\Type\CreatedPartNumberDataListType
     {
         $new = clone $this;
         $new->createdPartNumber = $createdPartNumber;

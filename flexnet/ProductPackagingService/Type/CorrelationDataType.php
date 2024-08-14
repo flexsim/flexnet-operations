@@ -33,7 +33,7 @@ class CorrelationDataType
         return $this->recordRefNo;
     }
 
-    public function withRecordRefNo(string $recordRefNo): CorrelationDataType
+    public function withRecordRefNo(string $recordRefNo): \Flexnet\ProductPackagingService\Type\CorrelationDataType
     {
         $new = clone $this;
         $new->recordRefNo = $recordRefNo;
@@ -46,7 +46,7 @@ class CorrelationDataType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(string $uniqueId): CorrelationDataType
+    public function withUniqueId(string $uniqueId): \Flexnet\ProductPackagingService\Type\CorrelationDataType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;

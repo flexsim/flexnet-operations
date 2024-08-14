@@ -42,7 +42,7 @@ class CreateShortCodeDataType
     /**
      * Constructor
      */
-    public function __construct(string $webRegkey, string $shortCode, string $bulkEntitlementId = null, PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null, string $shortCodeActivationType = null, FulfillmentIdentifierType $reinstallFulfillment = null)
+    public function __construct(string $webRegkey, string $shortCode, ?string $bulkEntitlementId = null, ?\Flexnet\LicenseService\Type\PublisherAttributesListDataType $publisherAttributes = null, ?bool $overridePolicy = null, ?string $shortCodeActivationType = null, ?\Flexnet\LicenseService\Type\FulfillmentIdentifierType $reinstallFulfillment = null)
     {
         $this->webRegkey = $webRegkey;
         $this->shortCode = $shortCode;
@@ -53,7 +53,7 @@ class CreateShortCodeDataType
         $this->reinstallFulfillment = $reinstallFulfillment;
     }
 
-    public static function create(string $webRegkey, string $shortCode, string $bulkEntitlementId = null, PublisherAttributesListDataType $publisherAttributes = null, bool $overridePolicy = null, string $shortCodeActivationType = null, FulfillmentIdentifierType $reinstallFulfillment = null)
+    public static function create(string $webRegkey, string $shortCode, ?string $bulkEntitlementId = null, ?\Flexnet\LicenseService\Type\PublisherAttributesListDataType $publisherAttributes = null, ?bool $overridePolicy = null, ?string $shortCodeActivationType = null, ?\Flexnet\LicenseService\Type\FulfillmentIdentifierType $reinstallFulfillment = null)
     {
         return new static(...\func_get_args());
     }
@@ -63,7 +63,7 @@ class CreateShortCodeDataType
         return $this->bulkEntitlementId;
     }
 
-    public function withBulkEntitlementId(?string $bulkEntitlementId): CreateShortCodeDataType
+    public function withBulkEntitlementId(?string $bulkEntitlementId): \Flexnet\LicenseService\Type\CreateShortCodeDataType
     {
         $new = clone $this;
         $new->bulkEntitlementId = $bulkEntitlementId;
@@ -76,7 +76,7 @@ class CreateShortCodeDataType
         return $this->webRegkey;
     }
 
-    public function withWebRegkey(string $webRegkey): CreateShortCodeDataType
+    public function withWebRegkey(string $webRegkey): \Flexnet\LicenseService\Type\CreateShortCodeDataType
     {
         $new = clone $this;
         $new->webRegkey = $webRegkey;
@@ -89,7 +89,7 @@ class CreateShortCodeDataType
         return $this->shortCode;
     }
 
-    public function withShortCode(string $shortCode): CreateShortCodeDataType
+    public function withShortCode(string $shortCode): \Flexnet\LicenseService\Type\CreateShortCodeDataType
     {
         $new = clone $this;
         $new->shortCode = $shortCode;
@@ -97,12 +97,12 @@ class CreateShortCodeDataType
         return $new;
     }
 
-    public function getPublisherAttributes(): ?PublisherAttributesListDataType
+    public function getPublisherAttributes(): ?\Flexnet\LicenseService\Type\PublisherAttributesListDataType
     {
         return $this->publisherAttributes;
     }
 
-    public function withPublisherAttributes(?PublisherAttributesListDataType $publisherAttributes): CreateShortCodeDataType
+    public function withPublisherAttributes(?\Flexnet\LicenseService\Type\PublisherAttributesListDataType $publisherAttributes): \Flexnet\LicenseService\Type\CreateShortCodeDataType
     {
         $new = clone $this;
         $new->publisherAttributes = $publisherAttributes;
@@ -115,7 +115,7 @@ class CreateShortCodeDataType
         return $this->overridePolicy;
     }
 
-    public function withOverridePolicy(?bool $overridePolicy): CreateShortCodeDataType
+    public function withOverridePolicy(?bool $overridePolicy): \Flexnet\LicenseService\Type\CreateShortCodeDataType
     {
         $new = clone $this;
         $new->overridePolicy = $overridePolicy;
@@ -128,7 +128,7 @@ class CreateShortCodeDataType
         return $this->shortCodeActivationType;
     }
 
-    public function withShortCodeActivationType(?string $shortCodeActivationType): CreateShortCodeDataType
+    public function withShortCodeActivationType(?string $shortCodeActivationType): \Flexnet\LicenseService\Type\CreateShortCodeDataType
     {
         $new = clone $this;
         $new->shortCodeActivationType = $shortCodeActivationType;
@@ -136,12 +136,12 @@ class CreateShortCodeDataType
         return $new;
     }
 
-    public function getReinstallFulfillment(): ?FulfillmentIdentifierType
+    public function getReinstallFulfillment(): ?\Flexnet\LicenseService\Type\FulfillmentIdentifierType
     {
         return $this->reinstallFulfillment;
     }
 
-    public function withReinstallFulfillment(?FulfillmentIdentifierType $reinstallFulfillment): CreateShortCodeDataType
+    public function withReinstallFulfillment(?\Flexnet\LicenseService\Type\FulfillmentIdentifierType $reinstallFulfillment): \Flexnet\LicenseService\Type\CreateShortCodeDataType
     {
         $new = clone $this;
         $new->reinstallFulfillment = $reinstallFulfillment;

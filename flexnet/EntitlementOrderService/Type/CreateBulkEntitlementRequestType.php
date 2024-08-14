@@ -16,7 +16,7 @@ class CreateBulkEntitlementRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType>  $bulkEntitlement
      */
-    public function __construct(CreateBulkEntitlementDataType|array $bulkEntitlement)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType|array $bulkEntitlement)
     {
         $this->bulkEntitlement = $bulkEntitlement;
     }
@@ -24,7 +24,7 @@ class CreateBulkEntitlementRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType>  $bulkEntitlement
      */
-    public static function create(CreateBulkEntitlementDataType|array $bulkEntitlement)
+    public static function create(\Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType|array $bulkEntitlement)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class CreateBulkEntitlementRequestType implements RequestInterface
     /**
      * @return \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType>
      */
-    public function getBulkEntitlement(): CreateBulkEntitlementDataType|array
+    public function getBulkEntitlement(): \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType|array
     {
         return $this->bulkEntitlement;
     }
@@ -40,7 +40,7 @@ class CreateBulkEntitlementRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType>  $bulkEntitlement
      */
-    public function withBulkEntitlement(CreateBulkEntitlementDataType|array $bulkEntitlement): CreateBulkEntitlementRequestType
+    public function withBulkEntitlement(\Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementDataType|array $bulkEntitlement): \Flexnet\EntitlementOrderService\Type\CreateBulkEntitlementRequestType
     {
         $new = clone $this;
         $new->bulkEntitlement = $bulkEntitlement;

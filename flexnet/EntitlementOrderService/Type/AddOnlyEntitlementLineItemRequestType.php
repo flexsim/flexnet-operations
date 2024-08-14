@@ -21,7 +21,7 @@ class AddOnlyEntitlementLineItemRequestType implements RequestInterface
      *
      * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
      */
-    public function __construct(AddEntitlementLineItemDataType|array $lineItem, string $opType = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array $lineItem, ?string $opType = null)
     {
         $this->lineItem = $lineItem;
         $this->opType = $opType;
@@ -30,7 +30,7 @@ class AddOnlyEntitlementLineItemRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
      */
-    public static function create(AddEntitlementLineItemDataType|array $lineItem, string $opType = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array $lineItem, ?string $opType = null)
     {
         return new static(...\func_get_args());
     }
@@ -38,7 +38,7 @@ class AddOnlyEntitlementLineItemRequestType implements RequestInterface
     /**
      * @return \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>
      */
-    public function getLineItem(): AddEntitlementLineItemDataType|array
+    public function getLineItem(): \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array
     {
         return $this->lineItem;
     }
@@ -46,7 +46,7 @@ class AddOnlyEntitlementLineItemRequestType implements RequestInterface
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array<\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType>  $lineItem
      */
-    public function withLineItem(AddEntitlementLineItemDataType|array $lineItem): AddOnlyEntitlementLineItemRequestType
+    public function withLineItem(\Flexnet\EntitlementOrderService\Type\AddEntitlementLineItemDataType|array $lineItem): \Flexnet\EntitlementOrderService\Type\AddOnlyEntitlementLineItemRequestType
     {
         $new = clone $this;
         $new->lineItem = $lineItem;
@@ -59,7 +59,7 @@ class AddOnlyEntitlementLineItemRequestType implements RequestInterface
         return $this->opType;
     }
 
-    public function withOpType(?string $opType): AddOnlyEntitlementLineItemRequestType
+    public function withOpType(?string $opType): \Flexnet\EntitlementOrderService\Type\AddOnlyEntitlementLineItemRequestType
     {
         $new = clone $this;
         $new->opType = $opType;

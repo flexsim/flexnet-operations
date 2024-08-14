@@ -17,23 +17,23 @@ class TransferredLineItemDataType
     /**
      * Constructor
      */
-    public function __construct(EntitlementLineItemIdentifierType $lineItemIdentifier, EntitlementLineItemIdentifierType $transferredFromId)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $transferredFromId)
     {
         $this->lineItemIdentifier = $lineItemIdentifier;
         $this->transferredFromId = $transferredFromId;
     }
 
-    public static function create(EntitlementLineItemIdentifierType $lineItemIdentifier, EntitlementLineItemIdentifierType $transferredFromId)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier, \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $transferredFromId)
     {
         return new static(...\func_get_args());
     }
 
-    public function getLineItemIdentifier(): EntitlementLineItemIdentifierType
+    public function getLineItemIdentifier(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
     {
         return $this->lineItemIdentifier;
     }
 
-    public function withLineItemIdentifier(EntitlementLineItemIdentifierType $lineItemIdentifier): TransferredLineItemDataType
+    public function withLineItemIdentifier(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $lineItemIdentifier): \Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType
     {
         $new = clone $this;
         $new->lineItemIdentifier = $lineItemIdentifier;
@@ -41,12 +41,12 @@ class TransferredLineItemDataType
         return $new;
     }
 
-    public function getTransferredFromId(): EntitlementLineItemIdentifierType
+    public function getTransferredFromId(): \Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType
     {
         return $this->transferredFromId;
     }
 
-    public function withTransferredFromId(EntitlementLineItemIdentifierType $transferredFromId): TransferredLineItemDataType
+    public function withTransferredFromId(\Flexnet\EntitlementOrderService\Type\EntitlementLineItemIdentifierType $transferredFromId): \Flexnet\EntitlementOrderService\Type\TransferredLineItemDataType
     {
         $new = clone $this;
         $new->transferredFromId = $transferredFromId;

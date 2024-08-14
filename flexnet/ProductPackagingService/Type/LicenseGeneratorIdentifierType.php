@@ -17,13 +17,13 @@ class LicenseGeneratorIdentifierType
     /**
      * Constructor
      */
-    public function __construct(string $uniqueId = null, LicenseGeneratorPKType $primaryKeys = null)
+    public function __construct(?string $uniqueId = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorPKType $primaryKeys = null)
     {
         $this->uniqueId = $uniqueId;
         $this->primaryKeys = $primaryKeys;
     }
 
-    public static function create(string $uniqueId = null, LicenseGeneratorPKType $primaryKeys = null)
+    public static function create(?string $uniqueId = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorPKType $primaryKeys = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class LicenseGeneratorIdentifierType
         return $this->uniqueId;
     }
 
-    public function withUniqueId(?string $uniqueId): LicenseGeneratorIdentifierType
+    public function withUniqueId(?string $uniqueId): \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType
     {
         $new = clone $this;
         $new->uniqueId = $uniqueId;
@@ -41,12 +41,12 @@ class LicenseGeneratorIdentifierType
         return $new;
     }
 
-    public function getPrimaryKeys(): ?LicenseGeneratorPKType
+    public function getPrimaryKeys(): ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorPKType
     {
         return $this->primaryKeys;
     }
 
-    public function withPrimaryKeys(?LicenseGeneratorPKType $primaryKeys): LicenseGeneratorIdentifierType
+    public function withPrimaryKeys(?\Flexnet\ProductPackagingService\Type\LicenseGeneratorPKType $primaryKeys): \Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType
     {
         $new = clone $this;
         $new->primaryKeys = $primaryKeys;

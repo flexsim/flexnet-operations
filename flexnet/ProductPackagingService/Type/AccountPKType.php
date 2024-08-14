@@ -27,7 +27,7 @@ class AccountPKType
         return $this->id;
     }
 
-    public function withId(string $id): AccountPKType
+    public function withId(string $id): \Flexnet\ProductPackagingService\Type\AccountPKType
     {
         $new = clone $this;
         $new->id = $id;

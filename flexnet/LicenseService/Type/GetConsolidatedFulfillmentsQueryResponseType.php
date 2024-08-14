@@ -19,23 +19,23 @@ class GetConsolidatedFulfillmentsQueryResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, GetConsolidatedFulfillmentsQueryResponseDataType $responseData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryResponseDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, GetConsolidatedFulfillmentsQueryResponseDataType $responseData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryResponseDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): GetConsolidatedFulfillmentsQueryResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class GetConsolidatedFulfillmentsQueryResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?GetConsolidatedFulfillmentsQueryResponseDataType
+    public function getResponseData(): ?\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryResponseDataType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?GetConsolidatedFulfillmentsQueryResponseDataType $responseData): GetConsolidatedFulfillmentsQueryResponseType
+    public function withResponseData(?\Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryResponseDataType $responseData): \Flexnet\LicenseService\Type\GetConsolidatedFulfillmentsQueryResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

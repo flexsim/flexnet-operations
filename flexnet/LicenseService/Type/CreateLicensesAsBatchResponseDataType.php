@@ -14,7 +14,7 @@ class CreateLicensesAsBatchResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|array<\Flexnet\LicenseService\Type\FulfillmentDataType>  $fulfillment
      */
-    public function __construct(FulfillmentDataType|array $fulfillment)
+    public function __construct(\Flexnet\LicenseService\Type\FulfillmentDataType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -22,7 +22,7 @@ class CreateLicensesAsBatchResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|array<\Flexnet\LicenseService\Type\FulfillmentDataType>  $fulfillment
      */
-    public static function create(FulfillmentDataType|array $fulfillment)
+    public static function create(\Flexnet\LicenseService\Type\FulfillmentDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class CreateLicensesAsBatchResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\FulfillmentDataType|array<\Flexnet\LicenseService\Type\FulfillmentDataType>
      */
-    public function getFulfillment(): FulfillmentDataType|array
+    public function getFulfillment(): \Flexnet\LicenseService\Type\FulfillmentDataType|array
     {
         return $this->fulfillment;
     }
@@ -38,7 +38,7 @@ class CreateLicensesAsBatchResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FulfillmentDataType|array<\Flexnet\LicenseService\Type\FulfillmentDataType>  $fulfillment
      */
-    public function withFulfillment(FulfillmentDataType|array $fulfillment): CreateLicensesAsBatchResponseDataType
+    public function withFulfillment(\Flexnet\LicenseService\Type\FulfillmentDataType|array $fulfillment): \Flexnet\LicenseService\Type\CreateLicensesAsBatchResponseDataType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;

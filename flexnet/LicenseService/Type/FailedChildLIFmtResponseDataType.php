@@ -14,7 +14,7 @@ class FailedChildLIFmtResponseDataType
      *
      * @param  \Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType>  $failedFulfillment
      */
-    public function __construct(FailedChildLIFulfillmentDataType|array $failedFulfillment)
+    public function __construct(\Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType|array $failedFulfillment)
     {
         $this->failedFulfillment = $failedFulfillment;
     }
@@ -22,7 +22,7 @@ class FailedChildLIFmtResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType>  $failedFulfillment
      */
-    public static function create(FailedChildLIFulfillmentDataType|array $failedFulfillment)
+    public static function create(\Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType|array $failedFulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedChildLIFmtResponseDataType
     /**
      * @return \Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType>
      */
-    public function getFailedFulfillment(): FailedChildLIFulfillmentDataType|array
+    public function getFailedFulfillment(): \Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType|array
     {
         return $this->failedFulfillment;
     }
@@ -38,7 +38,7 @@ class FailedChildLIFmtResponseDataType
     /**
      * @param  \Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType|array<\Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType>  $failedFulfillment
      */
-    public function withFailedFulfillment(FailedChildLIFulfillmentDataType|array $failedFulfillment): FailedChildLIFmtResponseDataType
+    public function withFailedFulfillment(\Flexnet\LicenseService\Type\FailedChildLIFulfillmentDataType|array $failedFulfillment): \Flexnet\LicenseService\Type\FailedChildLIFmtResponseDataType
     {
         $new = clone $this;
         $new->failedFulfillment = $failedFulfillment;

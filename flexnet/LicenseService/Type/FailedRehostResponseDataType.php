@@ -17,23 +17,23 @@ class FailedRehostResponseDataType
     /**
      * Constructor
      */
-    public function __construct(RehostFulfillmentDataType $fulfillment, string $reason)
+    public function __construct(\Flexnet\LicenseService\Type\RehostFulfillmentDataType $fulfillment, string $reason)
     {
         $this->fulfillment = $fulfillment;
         $this->reason = $reason;
     }
 
-    public static function create(RehostFulfillmentDataType $fulfillment, string $reason)
+    public static function create(\Flexnet\LicenseService\Type\RehostFulfillmentDataType $fulfillment, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFulfillment(): RehostFulfillmentDataType
+    public function getFulfillment(): \Flexnet\LicenseService\Type\RehostFulfillmentDataType
     {
         return $this->fulfillment;
     }
 
-    public function withFulfillment(RehostFulfillmentDataType $fulfillment): FailedRehostResponseDataType
+    public function withFulfillment(\Flexnet\LicenseService\Type\RehostFulfillmentDataType $fulfillment): \Flexnet\LicenseService\Type\FailedRehostResponseDataType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;
@@ -46,7 +46,7 @@ class FailedRehostResponseDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedRehostResponseDataType
+    public function withReason(string $reason): \Flexnet\LicenseService\Type\FailedRehostResponseDataType
     {
         $new = clone $this;
         $new->reason = $reason;

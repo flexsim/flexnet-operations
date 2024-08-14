@@ -14,7 +14,7 @@ class FailedUpdateBulkEntitlementDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataType>|null  $failedBulkEntitlement
      */
-    public function __construct(FailedUpdateBulkEntitlementDataType|array $failedBulkEntitlement = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataType|array|null $failedBulkEntitlement = null)
     {
         $this->failedBulkEntitlement = $failedBulkEntitlement;
     }
@@ -22,7 +22,7 @@ class FailedUpdateBulkEntitlementDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataType>|null  $failedBulkEntitlement
      */
-    public static function create(FailedUpdateBulkEntitlementDataType|array $failedBulkEntitlement = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataType|array|null $failedBulkEntitlement = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class FailedUpdateBulkEntitlementDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataType>|null
      */
-    public function getFailedBulkEntitlement(): FailedUpdateBulkEntitlementDataType|array|null
+    public function getFailedBulkEntitlement(): \Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataType|array|null
     {
         return $this->failedBulkEntitlement;
     }
@@ -38,7 +38,7 @@ class FailedUpdateBulkEntitlementDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataType|array<\Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataType>|null  $failedBulkEntitlement
      */
-    public function withFailedBulkEntitlement(FailedUpdateBulkEntitlementDataType|array|null $failedBulkEntitlement): FailedUpdateBulkEntitlementDataListType
+    public function withFailedBulkEntitlement(\Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataType|array|null $failedBulkEntitlement): \Flexnet\EntitlementOrderService\Type\FailedUpdateBulkEntitlementDataListType
     {
         $new = clone $this;
         $new->failedBulkEntitlement = $failedBulkEntitlement;

@@ -7,7 +7,7 @@ use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 
 class LicenseServiceClassmap
 {
-    public static function getCollection(): ClassMapCollection
+    public static function getCollection(): \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
         return new ClassMapCollection(
             new ClassMap('SimpleQueryType', Type\SimpleQueryType::class),

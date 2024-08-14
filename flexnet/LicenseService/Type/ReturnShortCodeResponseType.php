@@ -24,24 +24,24 @@ class ReturnShortCodeResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, FailedReturnShortCodeDataType $failedData = null, ReturnedShortCodeDataType $responseData = null)
+    public function __construct(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\FailedReturnShortCodeDataType $failedData = null, ?\Flexnet\LicenseService\Type\ReturnedShortCodeDataType $responseData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->failedData = $failedData;
         $this->responseData = $responseData;
     }
 
-    public static function create(StatusInfoType $statusInfo, FailedReturnShortCodeDataType $failedData = null, ReturnedShortCodeDataType $responseData = null)
+    public static function create(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo, ?\Flexnet\LicenseService\Type\FailedReturnShortCodeDataType $failedData = null, ?\Flexnet\LicenseService\Type\ReturnedShortCodeDataType $responseData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\LicenseService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): ReturnShortCodeResponseType
+    public function withStatusInfo(\Flexnet\LicenseService\Type\StatusInfoType $statusInfo): \Flexnet\LicenseService\Type\ReturnShortCodeResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -49,12 +49,12 @@ class ReturnShortCodeResponseType extends Result
         return $new;
     }
 
-    public function getFailedData(): ?FailedReturnShortCodeDataType
+    public function getFailedData(): ?\Flexnet\LicenseService\Type\FailedReturnShortCodeDataType
     {
         return $this->failedData;
     }
 
-    public function withFailedData(?FailedReturnShortCodeDataType $failedData): ReturnShortCodeResponseType
+    public function withFailedData(?\Flexnet\LicenseService\Type\FailedReturnShortCodeDataType $failedData): \Flexnet\LicenseService\Type\ReturnShortCodeResponseType
     {
         $new = clone $this;
         $new->failedData = $failedData;
@@ -62,12 +62,12 @@ class ReturnShortCodeResponseType extends Result
         return $new;
     }
 
-    public function getResponseData(): ?ReturnedShortCodeDataType
+    public function getResponseData(): ?\Flexnet\LicenseService\Type\ReturnedShortCodeDataType
     {
         return $this->responseData;
     }
 
-    public function withResponseData(?ReturnedShortCodeDataType $responseData): ReturnShortCodeResponseType
+    public function withResponseData(?\Flexnet\LicenseService\Type\ReturnedShortCodeDataType $responseData): \Flexnet\LicenseService\Type\ReturnShortCodeResponseType
     {
         $new = clone $this;
         $new->responseData = $responseData;

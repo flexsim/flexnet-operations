@@ -14,7 +14,7 @@ class PartNumberDataListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberDataType|array<\Flexnet\ProductPackagingService\Type\PartNumberDataType>|null  $partNumber
      */
-    public function __construct(PartNumberDataType|array $partNumber = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\PartNumberDataType|array|null $partNumber = null)
     {
         $this->partNumber = $partNumber;
     }
@@ -22,7 +22,7 @@ class PartNumberDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberDataType|array<\Flexnet\ProductPackagingService\Type\PartNumberDataType>|null  $partNumber
      */
-    public static function create(PartNumberDataType|array $partNumber = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\PartNumberDataType|array|null $partNumber = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class PartNumberDataListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\PartNumberDataType|array<\Flexnet\ProductPackagingService\Type\PartNumberDataType>|null
      */
-    public function getPartNumber(): PartNumberDataType|array|null
+    public function getPartNumber(): \Flexnet\ProductPackagingService\Type\PartNumberDataType|array|null
     {
         return $this->partNumber;
     }
@@ -38,7 +38,7 @@ class PartNumberDataListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\PartNumberDataType|array<\Flexnet\ProductPackagingService\Type\PartNumberDataType>|null  $partNumber
      */
-    public function withPartNumber(PartNumberDataType|array|null $partNumber): PartNumberDataListType
+    public function withPartNumber(\Flexnet\ProductPackagingService\Type\PartNumberDataType|array|null $partNumber): \Flexnet\ProductPackagingService\Type\PartNumberDataListType
     {
         $new = clone $this;
         $new->partNumber = $partNumber;

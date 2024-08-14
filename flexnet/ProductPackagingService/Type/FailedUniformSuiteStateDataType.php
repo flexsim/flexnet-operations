@@ -17,23 +17,23 @@ class FailedUniformSuiteStateDataType
     /**
      * Constructor
      */
-    public function __construct(UniformSuiteStateDataType $suite, string $reason)
+    public function __construct(\Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType $suite, string $reason)
     {
         $this->suite = $suite;
         $this->reason = $reason;
     }
 
-    public static function create(UniformSuiteStateDataType $suite, string $reason)
+    public static function create(\Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType $suite, string $reason)
     {
         return new static(...\func_get_args());
     }
 
-    public function getSuite(): UniformSuiteStateDataType
+    public function getSuite(): \Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType
     {
         return $this->suite;
     }
 
-    public function withSuite(UniformSuiteStateDataType $suite): FailedUniformSuiteStateDataType
+    public function withSuite(\Flexnet\ProductPackagingService\Type\UniformSuiteStateDataType $suite): \Flexnet\ProductPackagingService\Type\FailedUniformSuiteStateDataType
     {
         $new = clone $this;
         $new->suite = $suite;
@@ -46,7 +46,7 @@ class FailedUniformSuiteStateDataType
         return $this->reason;
     }
 
-    public function withReason(string $reason): FailedUniformSuiteStateDataType
+    public function withReason(string $reason): \Flexnet\ProductPackagingService\Type\FailedUniformSuiteStateDataType
     {
         $new = clone $this;
         $new->reason = $reason;

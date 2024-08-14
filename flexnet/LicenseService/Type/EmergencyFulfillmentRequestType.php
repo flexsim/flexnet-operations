@@ -16,7 +16,7 @@ class EmergencyFulfillmentRequestType implements RequestInterface
      *
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType>  $fulfillment
      */
-    public function __construct(EmergencyFulfillmentDataType|array $fulfillment)
+    public function __construct(\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array $fulfillment)
     {
         $this->fulfillment = $fulfillment;
     }
@@ -24,7 +24,7 @@ class EmergencyFulfillmentRequestType implements RequestInterface
     /**
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType>  $fulfillment
      */
-    public static function create(EmergencyFulfillmentDataType|array $fulfillment)
+    public static function create(\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array $fulfillment)
     {
         return new static(...\func_get_args());
     }
@@ -32,7 +32,7 @@ class EmergencyFulfillmentRequestType implements RequestInterface
     /**
      * @return \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType>
      */
-    public function getFulfillment(): EmergencyFulfillmentDataType|array
+    public function getFulfillment(): \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array
     {
         return $this->fulfillment;
     }
@@ -40,7 +40,7 @@ class EmergencyFulfillmentRequestType implements RequestInterface
     /**
      * @param  \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array<\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType>  $fulfillment
      */
-    public function withFulfillment(EmergencyFulfillmentDataType|array $fulfillment): EmergencyFulfillmentRequestType
+    public function withFulfillment(\Flexnet\LicenseService\Type\EmergencyFulfillmentDataType|array $fulfillment): \Flexnet\LicenseService\Type\EmergencyFulfillmentRequestType
     {
         $new = clone $this;
         $new->fulfillment = $fulfillment;

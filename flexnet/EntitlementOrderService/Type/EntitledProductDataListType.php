@@ -14,7 +14,7 @@ class EntitledProductDataListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProduct
      */
-    public function __construct(EntitledProductDataType|array $entitledProduct = null)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array|null $entitledProduct = null)
     {
         $this->entitledProduct = $entitledProduct;
     }
@@ -22,7 +22,7 @@ class EntitledProductDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProduct
      */
-    public static function create(EntitledProductDataType|array $entitledProduct = null)
+    public static function create(\Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array|null $entitledProduct = null)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class EntitledProductDataListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null
      */
-    public function getEntitledProduct(): EntitledProductDataType|array|null
+    public function getEntitledProduct(): \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array|null
     {
         return $this->entitledProduct;
     }
@@ -38,7 +38,7 @@ class EntitledProductDataListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array<\Flexnet\EntitlementOrderService\Type\EntitledProductDataType>|null  $entitledProduct
      */
-    public function withEntitledProduct(EntitledProductDataType|array|null $entitledProduct): EntitledProductDataListType
+    public function withEntitledProduct(\Flexnet\EntitlementOrderService\Type\EntitledProductDataType|array|null $entitledProduct): \Flexnet\EntitlementOrderService\Type\EntitledProductDataListType
     {
         $new = clone $this;
         $new->entitledProduct = $entitledProduct;

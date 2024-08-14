@@ -33,7 +33,7 @@ class DateQueryType
         return $this->value;
     }
 
-    public function withValue(\DateTimeInterface $value): DateQueryType
+    public function withValue(\DateTimeInterface $value): \Flexnet\EntitlementOrderService\Type\DateQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -46,7 +46,7 @@ class DateQueryType
         return $this->searchType;
     }
 
-    public function withSearchType(string $searchType): DateQueryType
+    public function withSearchType(string $searchType): \Flexnet\EntitlementOrderService\Type\DateQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;

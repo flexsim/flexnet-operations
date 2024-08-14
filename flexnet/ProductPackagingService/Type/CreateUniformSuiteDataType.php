@@ -97,7 +97,7 @@ class CreateUniformSuiteDataType
     /**
      * Constructor
      */
-    public function __construct(string $suiteName, string $version = null, string $description = null, LicenseTechnologyIdentifierType $licenseTechnology = null, LicenseGeneratorIdentifierType $licenseGenerator = null, PackagePropertiesDataType $packageProperties = null, ProductsListType $products = null, LicenseModelsListType $licenseModels = null, TrustedKeyIdentifierType $trustedKey = null, TrustedKeyIdentifierType $virtualTrustedKey = null, PartNumbersListType $partNumbers = null, HostTypePKType $hostType = null, HostTypeListType $hostTypes = null, bool $usedOnDevice = null, AttributeDescriptorDataType $customAttributes = null, bool $allowDownloadObsoleteFrInAdmin = null, bool $allowDownloadObsoleteFrInPortal = null, AttributeDescriptorDataType $productAttributes = null)
+    public function __construct(string $suiteName, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties = null, ?\Flexnet\ProductPackagingService\Type\ProductsListType $products = null, ?\Flexnet\ProductPackagingService\Type\LicenseModelsListType $licenseModels = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersListType $partNumbers = null, ?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType = null, ?\Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes = null, ?bool $usedOnDevice = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes = null, ?bool $allowDownloadObsoleteFrInAdmin = null, ?bool $allowDownloadObsoleteFrInPortal = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes = null)
     {
         $this->suiteName = $suiteName;
         $this->version = $version;
@@ -119,7 +119,7 @@ class CreateUniformSuiteDataType
         $this->productAttributes = $productAttributes;
     }
 
-    public static function create(string $suiteName, string $version = null, string $description = null, LicenseTechnologyIdentifierType $licenseTechnology = null, LicenseGeneratorIdentifierType $licenseGenerator = null, PackagePropertiesDataType $packageProperties = null, ProductsListType $products = null, LicenseModelsListType $licenseModels = null, TrustedKeyIdentifierType $trustedKey = null, TrustedKeyIdentifierType $virtualTrustedKey = null, PartNumbersListType $partNumbers = null, HostTypePKType $hostType = null, HostTypeListType $hostTypes = null, bool $usedOnDevice = null, AttributeDescriptorDataType $customAttributes = null, bool $allowDownloadObsoleteFrInAdmin = null, bool $allowDownloadObsoleteFrInPortal = null, AttributeDescriptorDataType $productAttributes = null)
+    public static function create(string $suiteName, ?string $version = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnology = null, ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator = null, ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties = null, ?\Flexnet\ProductPackagingService\Type\ProductsListType $products = null, ?\Flexnet\ProductPackagingService\Type\LicenseModelsListType $licenseModels = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey = null, ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey = null, ?\Flexnet\ProductPackagingService\Type\PartNumbersListType $partNumbers = null, ?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType = null, ?\Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes = null, ?bool $usedOnDevice = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes = null, ?bool $allowDownloadObsoleteFrInAdmin = null, ?bool $allowDownloadObsoleteFrInPortal = null, ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes = null)
     {
         return new static(...\func_get_args());
     }
@@ -129,7 +129,7 @@ class CreateUniformSuiteDataType
         return $this->suiteName;
     }
 
-    public function withSuiteName(string $suiteName): CreateUniformSuiteDataType
+    public function withSuiteName(string $suiteName): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->suiteName = $suiteName;
@@ -142,7 +142,7 @@ class CreateUniformSuiteDataType
         return $this->version;
     }
 
-    public function withVersion(?string $version): CreateUniformSuiteDataType
+    public function withVersion(?string $version): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->version = $version;
@@ -155,7 +155,7 @@ class CreateUniformSuiteDataType
         return $this->description;
     }
 
-    public function withDescription(?string $description): CreateUniformSuiteDataType
+    public function withDescription(?string $description): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -163,12 +163,12 @@ class CreateUniformSuiteDataType
         return $new;
     }
 
-    public function getLicenseTechnology(): ?LicenseTechnologyIdentifierType
+    public function getLicenseTechnology(): ?\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType
     {
         return $this->licenseTechnology;
     }
 
-    public function withLicenseTechnology(?LicenseTechnologyIdentifierType $licenseTechnology): CreateUniformSuiteDataType
+    public function withLicenseTechnology(?\Flexnet\ProductPackagingService\Type\LicenseTechnologyIdentifierType $licenseTechnology): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->licenseTechnology = $licenseTechnology;
@@ -176,12 +176,12 @@ class CreateUniformSuiteDataType
         return $new;
     }
 
-    public function getLicenseGenerator(): ?LicenseGeneratorIdentifierType
+    public function getLicenseGenerator(): ?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType
     {
         return $this->licenseGenerator;
     }
 
-    public function withLicenseGenerator(?LicenseGeneratorIdentifierType $licenseGenerator): CreateUniformSuiteDataType
+    public function withLicenseGenerator(?\Flexnet\ProductPackagingService\Type\LicenseGeneratorIdentifierType $licenseGenerator): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->licenseGenerator = $licenseGenerator;
@@ -189,12 +189,12 @@ class CreateUniformSuiteDataType
         return $new;
     }
 
-    public function getPackageProperties(): ?PackagePropertiesDataType
+    public function getPackageProperties(): ?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType
     {
         return $this->packageProperties;
     }
 
-    public function withPackageProperties(?PackagePropertiesDataType $packageProperties): CreateUniformSuiteDataType
+    public function withPackageProperties(?\Flexnet\ProductPackagingService\Type\PackagePropertiesDataType $packageProperties): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->packageProperties = $packageProperties;
@@ -202,12 +202,12 @@ class CreateUniformSuiteDataType
         return $new;
     }
 
-    public function getProducts(): ?ProductsListType
+    public function getProducts(): ?\Flexnet\ProductPackagingService\Type\ProductsListType
     {
         return $this->products;
     }
 
-    public function withProducts(?ProductsListType $products): CreateUniformSuiteDataType
+    public function withProducts(?\Flexnet\ProductPackagingService\Type\ProductsListType $products): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->products = $products;
@@ -215,12 +215,12 @@ class CreateUniformSuiteDataType
         return $new;
     }
 
-    public function getLicenseModels(): ?LicenseModelsListType
+    public function getLicenseModels(): ?\Flexnet\ProductPackagingService\Type\LicenseModelsListType
     {
         return $this->licenseModels;
     }
 
-    public function withLicenseModels(?LicenseModelsListType $licenseModels): CreateUniformSuiteDataType
+    public function withLicenseModels(?\Flexnet\ProductPackagingService\Type\LicenseModelsListType $licenseModels): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->licenseModels = $licenseModels;
@@ -228,12 +228,12 @@ class CreateUniformSuiteDataType
         return $new;
     }
 
-    public function getTrustedKey(): ?TrustedKeyIdentifierType
+    public function getTrustedKey(): ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType
     {
         return $this->trustedKey;
     }
 
-    public function withTrustedKey(?TrustedKeyIdentifierType $trustedKey): CreateUniformSuiteDataType
+    public function withTrustedKey(?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $trustedKey): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->trustedKey = $trustedKey;
@@ -241,12 +241,12 @@ class CreateUniformSuiteDataType
         return $new;
     }
 
-    public function getVirtualTrustedKey(): ?TrustedKeyIdentifierType
+    public function getVirtualTrustedKey(): ?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType
     {
         return $this->virtualTrustedKey;
     }
 
-    public function withVirtualTrustedKey(?TrustedKeyIdentifierType $virtualTrustedKey): CreateUniformSuiteDataType
+    public function withVirtualTrustedKey(?\Flexnet\ProductPackagingService\Type\TrustedKeyIdentifierType $virtualTrustedKey): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->virtualTrustedKey = $virtualTrustedKey;
@@ -254,12 +254,12 @@ class CreateUniformSuiteDataType
         return $new;
     }
 
-    public function getPartNumbers(): ?PartNumbersListType
+    public function getPartNumbers(): ?\Flexnet\ProductPackagingService\Type\PartNumbersListType
     {
         return $this->partNumbers;
     }
 
-    public function withPartNumbers(?PartNumbersListType $partNumbers): CreateUniformSuiteDataType
+    public function withPartNumbers(?\Flexnet\ProductPackagingService\Type\PartNumbersListType $partNumbers): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->partNumbers = $partNumbers;
@@ -267,12 +267,12 @@ class CreateUniformSuiteDataType
         return $new;
     }
 
-    public function getHostType(): ?HostTypePKType
+    public function getHostType(): ?\Flexnet\ProductPackagingService\Type\HostTypePKType
     {
         return $this->hostType;
     }
 
-    public function withHostType(?HostTypePKType $hostType): CreateUniformSuiteDataType
+    public function withHostType(?\Flexnet\ProductPackagingService\Type\HostTypePKType $hostType): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->hostType = $hostType;
@@ -280,12 +280,12 @@ class CreateUniformSuiteDataType
         return $new;
     }
 
-    public function getHostTypes(): ?HostTypeListType
+    public function getHostTypes(): ?\Flexnet\ProductPackagingService\Type\HostTypeListType
     {
         return $this->hostTypes;
     }
 
-    public function withHostTypes(?HostTypeListType $hostTypes): CreateUniformSuiteDataType
+    public function withHostTypes(?\Flexnet\ProductPackagingService\Type\HostTypeListType $hostTypes): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->hostTypes = $hostTypes;
@@ -298,7 +298,7 @@ class CreateUniformSuiteDataType
         return $this->usedOnDevice;
     }
 
-    public function withUsedOnDevice(?bool $usedOnDevice): CreateUniformSuiteDataType
+    public function withUsedOnDevice(?bool $usedOnDevice): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->usedOnDevice = $usedOnDevice;
@@ -306,12 +306,12 @@ class CreateUniformSuiteDataType
         return $new;
     }
 
-    public function getCustomAttributes(): ?AttributeDescriptorDataType
+    public function getCustomAttributes(): ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType
     {
         return $this->customAttributes;
     }
 
-    public function withCustomAttributes(?AttributeDescriptorDataType $customAttributes): CreateUniformSuiteDataType
+    public function withCustomAttributes(?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $customAttributes): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->customAttributes = $customAttributes;
@@ -324,7 +324,7 @@ class CreateUniformSuiteDataType
         return $this->allowDownloadObsoleteFrInAdmin;
     }
 
-    public function withAllowDownloadObsoleteFrInAdmin(?bool $allowDownloadObsoleteFrInAdmin): CreateUniformSuiteDataType
+    public function withAllowDownloadObsoleteFrInAdmin(?bool $allowDownloadObsoleteFrInAdmin): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->allowDownloadObsoleteFrInAdmin = $allowDownloadObsoleteFrInAdmin;
@@ -337,7 +337,7 @@ class CreateUniformSuiteDataType
         return $this->allowDownloadObsoleteFrInPortal;
     }
 
-    public function withAllowDownloadObsoleteFrInPortal(?bool $allowDownloadObsoleteFrInPortal): CreateUniformSuiteDataType
+    public function withAllowDownloadObsoleteFrInPortal(?bool $allowDownloadObsoleteFrInPortal): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->allowDownloadObsoleteFrInPortal = $allowDownloadObsoleteFrInPortal;
@@ -345,12 +345,12 @@ class CreateUniformSuiteDataType
         return $new;
     }
 
-    public function getProductAttributes(): ?AttributeDescriptorDataType
+    public function getProductAttributes(): ?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType
     {
         return $this->productAttributes;
     }
 
-    public function withProductAttributes(?AttributeDescriptorDataType $productAttributes): CreateUniformSuiteDataType
+    public function withProductAttributes(?\Flexnet\ProductPackagingService\Type\AttributeDescriptorDataType $productAttributes): \Flexnet\ProductPackagingService\Type\CreateUniformSuiteDataType
     {
         $new = clone $this;
         $new->productAttributes = $productAttributes;

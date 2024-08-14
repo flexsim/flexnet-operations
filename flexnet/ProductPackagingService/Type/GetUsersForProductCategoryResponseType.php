@@ -19,23 +19,23 @@ class GetUsersForProductCategoryResponseType extends Result
     /**
      * Constructor
      */
-    public function __construct(StatusInfoType $statusInfo, GetUsersForProductCategoryResponseDataType $userData = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\GetUsersForProductCategoryResponseDataType $userData = null)
     {
         $this->statusInfo = $statusInfo;
         $this->userData = $userData;
     }
 
-    public static function create(StatusInfoType $statusInfo, GetUsersForProductCategoryResponseDataType $userData = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo, ?\Flexnet\ProductPackagingService\Type\GetUsersForProductCategoryResponseDataType $userData = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getStatusInfo(): StatusInfoType
+    public function getStatusInfo(): \Flexnet\ProductPackagingService\Type\StatusInfoType
     {
         return $this->statusInfo;
     }
 
-    public function withStatusInfo(StatusInfoType $statusInfo): GetUsersForProductCategoryResponseType
+    public function withStatusInfo(\Flexnet\ProductPackagingService\Type\StatusInfoType $statusInfo): \Flexnet\ProductPackagingService\Type\GetUsersForProductCategoryResponseType
     {
         $new = clone $this;
         $new->statusInfo = $statusInfo;
@@ -43,12 +43,12 @@ class GetUsersForProductCategoryResponseType extends Result
         return $new;
     }
 
-    public function getUserData(): ?GetUsersForProductCategoryResponseDataType
+    public function getUserData(): ?\Flexnet\ProductPackagingService\Type\GetUsersForProductCategoryResponseDataType
     {
         return $this->userData;
     }
 
-    public function withUserData(?GetUsersForProductCategoryResponseDataType $userData): GetUsersForProductCategoryResponseType
+    public function withUserData(?\Flexnet\ProductPackagingService\Type\GetUsersForProductCategoryResponseDataType $userData): \Flexnet\ProductPackagingService\Type\GetUsersForProductCategoryResponseType
     {
         $new = clone $this;
         $new->userData = $userData;

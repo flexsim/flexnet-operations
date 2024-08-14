@@ -17,13 +17,13 @@ class EntCustomAttributeQueryType
     /**
      * Constructor
      */
-    public function __construct(string $attributeName, SimpleQueryType $stringValue = null)
+    public function __construct(string $attributeName, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $stringValue = null)
     {
         $this->attributeName = $attributeName;
         $this->stringValue = $stringValue;
     }
 
-    public static function create(string $attributeName, SimpleQueryType $stringValue = null)
+    public static function create(string $attributeName, ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $stringValue = null)
     {
         return new static(...\func_get_args());
     }
@@ -33,7 +33,7 @@ class EntCustomAttributeQueryType
         return $this->attributeName;
     }
 
-    public function withAttributeName(string $attributeName): EntCustomAttributeQueryType
+    public function withAttributeName(string $attributeName): \Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType
     {
         $new = clone $this;
         $new->attributeName = $attributeName;
@@ -41,12 +41,12 @@ class EntCustomAttributeQueryType
         return $new;
     }
 
-    public function getStringValue(): ?SimpleQueryType
+    public function getStringValue(): ?\Flexnet\EntitlementOrderService\Type\SimpleQueryType
     {
         return $this->stringValue;
     }
 
-    public function withStringValue(?SimpleQueryType $stringValue): EntCustomAttributeQueryType
+    public function withStringValue(?\Flexnet\EntitlementOrderService\Type\SimpleQueryType $stringValue): \Flexnet\EntitlementOrderService\Type\EntCustomAttributeQueryType
     {
         $new = clone $this;
         $new->stringValue = $stringValue;

@@ -14,7 +14,7 @@ class SplitBulkEntitlementListType
      *
      * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType|array<\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType>  $bulkEntitlementInfo
      */
-    public function __construct(SplitBulkEntitlementInfoType|array $bulkEntitlementInfo)
+    public function __construct(\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType|array $bulkEntitlementInfo)
     {
         $this->bulkEntitlementInfo = $bulkEntitlementInfo;
     }
@@ -22,7 +22,7 @@ class SplitBulkEntitlementListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType|array<\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType>  $bulkEntitlementInfo
      */
-    public static function create(SplitBulkEntitlementInfoType|array $bulkEntitlementInfo)
+    public static function create(\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType|array $bulkEntitlementInfo)
     {
         return new static(...\func_get_args());
     }
@@ -30,7 +30,7 @@ class SplitBulkEntitlementListType
     /**
      * @return \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType|array<\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType>
      */
-    public function getBulkEntitlementInfo(): SplitBulkEntitlementInfoType|array
+    public function getBulkEntitlementInfo(): \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType|array
     {
         return $this->bulkEntitlementInfo;
     }
@@ -38,7 +38,7 @@ class SplitBulkEntitlementListType
     /**
      * @param  \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType|array<\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType>  $bulkEntitlementInfo
      */
-    public function withBulkEntitlementInfo(SplitBulkEntitlementInfoType|array $bulkEntitlementInfo): SplitBulkEntitlementListType
+    public function withBulkEntitlementInfo(\Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementInfoType|array $bulkEntitlementInfo): \Flexnet\EntitlementOrderService\Type\SplitBulkEntitlementListType
     {
         $new = clone $this;
         $new->bulkEntitlementInfo = $bulkEntitlementInfo;

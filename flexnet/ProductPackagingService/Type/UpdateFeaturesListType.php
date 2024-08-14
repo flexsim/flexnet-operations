@@ -19,7 +19,7 @@ class UpdateFeaturesListType
      *
      * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null  $feature
      */
-    public function __construct(string $opType, FeatureIdentifierWithCountDataType|array $feature = null)
+    public function __construct(string $opType, \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array|null $feature = null)
     {
         $this->opType = $opType;
         $this->feature = $feature;
@@ -28,7 +28,7 @@ class UpdateFeaturesListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null  $feature
      */
-    public static function create(string $opType, FeatureIdentifierWithCountDataType|array $feature = null)
+    public static function create(string $opType, \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array|null $feature = null)
     {
         return new static(...\func_get_args());
     }
@@ -36,7 +36,7 @@ class UpdateFeaturesListType
     /**
      * @return \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null
      */
-    public function getFeature(): FeatureIdentifierWithCountDataType|array|null
+    public function getFeature(): \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array|null
     {
         return $this->feature;
     }
@@ -44,7 +44,7 @@ class UpdateFeaturesListType
     /**
      * @param  \Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array<\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType>|null  $feature
      */
-    public function withFeature(FeatureIdentifierWithCountDataType|array|null $feature): UpdateFeaturesListType
+    public function withFeature(\Flexnet\ProductPackagingService\Type\FeatureIdentifierWithCountDataType|array|null $feature): \Flexnet\ProductPackagingService\Type\UpdateFeaturesListType
     {
         $new = clone $this;
         $new->feature = $feature;
@@ -57,7 +57,7 @@ class UpdateFeaturesListType
         return $this->opType;
     }
 
-    public function withOpType(string $opType): UpdateFeaturesListType
+    public function withOpType(string $opType): \Flexnet\ProductPackagingService\Type\UpdateFeaturesListType
     {
         $new = clone $this;
         $new->opType = $opType;

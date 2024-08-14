@@ -27,7 +27,7 @@ class EntitlementPKType
         return $this->entitlementId;
     }
 
-    public function withEntitlementId(string $entitlementId): EntitlementPKType
+    public function withEntitlementId(string $entitlementId): \Flexnet\LicenseService\Type\EntitlementPKType
     {
         $new = clone $this;
         $new->entitlementId = $entitlementId;

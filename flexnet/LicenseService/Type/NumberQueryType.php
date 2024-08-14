@@ -33,7 +33,7 @@ class NumberQueryType
         return $this->value;
     }
 
-    public function withValue(int $value): NumberQueryType
+    public function withValue(int $value): \Flexnet\LicenseService\Type\NumberQueryType
     {
         $new = clone $this;
         $new->value = $value;
@@ -46,7 +46,7 @@ class NumberQueryType
         return $this->searchType;
     }
 
-    public function withSearchType(string $searchType): NumberQueryType
+    public function withSearchType(string $searchType): \Flexnet\LicenseService\Type\NumberQueryType
     {
         $new = clone $this;
         $new->searchType = $searchType;

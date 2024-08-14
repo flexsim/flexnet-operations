@@ -27,7 +27,7 @@ class UpdateFeatureBundleDataType
     /**
      * Constructor
      */
-    public function __construct(FeatureBundleIdentifierType $featureBundleIdentifier, string $name = null, string $description = null, UpdateFeaturesListType $features = null)
+    public function __construct(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier, ?string $name = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\UpdateFeaturesListType $features = null)
     {
         $this->featureBundleIdentifier = $featureBundleIdentifier;
         $this->name = $name;
@@ -35,17 +35,17 @@ class UpdateFeatureBundleDataType
         $this->features = $features;
     }
 
-    public static function create(FeatureBundleIdentifierType $featureBundleIdentifier, string $name = null, string $description = null, UpdateFeaturesListType $features = null)
+    public static function create(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier, ?string $name = null, ?string $description = null, ?\Flexnet\ProductPackagingService\Type\UpdateFeaturesListType $features = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFeatureBundleIdentifier(): FeatureBundleIdentifierType
+    public function getFeatureBundleIdentifier(): \Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType
     {
         return $this->featureBundleIdentifier;
     }
 
-    public function withFeatureBundleIdentifier(FeatureBundleIdentifierType $featureBundleIdentifier): UpdateFeatureBundleDataType
+    public function withFeatureBundleIdentifier(\Flexnet\ProductPackagingService\Type\FeatureBundleIdentifierType $featureBundleIdentifier): \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType
     {
         $new = clone $this;
         $new->featureBundleIdentifier = $featureBundleIdentifier;
@@ -58,7 +58,7 @@ class UpdateFeatureBundleDataType
         return $this->name;
     }
 
-    public function withName(?string $name): UpdateFeatureBundleDataType
+    public function withName(?string $name): \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType
     {
         $new = clone $this;
         $new->name = $name;
@@ -71,7 +71,7 @@ class UpdateFeatureBundleDataType
         return $this->description;
     }
 
-    public function withDescription(?string $description): UpdateFeatureBundleDataType
+    public function withDescription(?string $description): \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType
     {
         $new = clone $this;
         $new->description = $description;
@@ -79,12 +79,12 @@ class UpdateFeatureBundleDataType
         return $new;
     }
 
-    public function getFeatures(): ?UpdateFeaturesListType
+    public function getFeatures(): ?\Flexnet\ProductPackagingService\Type\UpdateFeaturesListType
     {
         return $this->features;
     }
 
-    public function withFeatures(?UpdateFeaturesListType $features): UpdateFeatureBundleDataType
+    public function withFeatures(?\Flexnet\ProductPackagingService\Type\UpdateFeaturesListType $features): \Flexnet\ProductPackagingService\Type\UpdateFeatureBundleDataType
     {
         $new = clone $this;
         $new->features = $features;

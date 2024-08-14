@@ -57,7 +57,7 @@ class EmergencyFulfillmentDataType
     /**
      * Constructor
      */
-    public function __construct(FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, string $shipToEmail = null, string $shipToAddress = null, ServerIDsType $serverIds = null, NodeIDsType $nodeIds = null, CustomHostIDType $customHost = null)
+    public function __construct(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $FNPTimeZoneValue = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\ServerIDsType $serverIds = null, ?\Flexnet\LicenseService\Type\NodeIDsType $nodeIds = null, ?\Flexnet\LicenseService\Type\CustomHostIDType $customHost = null)
     {
         $this->fulfillmentIdentifier = $fulfillmentIdentifier;
         $this->startDate = $startDate;
@@ -71,17 +71,17 @@ class EmergencyFulfillmentDataType
         $this->customHost = $customHost;
     }
 
-    public static function create(FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, AttributeDescriptorDataType $licenseModelAttributes = null, string $FNPTimeZoneValue = null, string $shipToEmail = null, string $shipToAddress = null, ServerIDsType $serverIds = null, NodeIDsType $nodeIds = null, CustomHostIDType $customHost = null)
+    public static function create(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier, \DateTimeInterface $startDate, \DateTimeInterface $endDate, ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes = null, ?string $FNPTimeZoneValue = null, ?string $shipToEmail = null, ?string $shipToAddress = null, ?\Flexnet\LicenseService\Type\ServerIDsType $serverIds = null, ?\Flexnet\LicenseService\Type\NodeIDsType $nodeIds = null, ?\Flexnet\LicenseService\Type\CustomHostIDType $customHost = null)
     {
         return new static(...\func_get_args());
     }
 
-    public function getFulfillmentIdentifier(): FulfillmentIdentifierType
+    public function getFulfillmentIdentifier(): \Flexnet\LicenseService\Type\FulfillmentIdentifierType
     {
         return $this->fulfillmentIdentifier;
     }
 
-    public function withFulfillmentIdentifier(FulfillmentIdentifierType $fulfillmentIdentifier): EmergencyFulfillmentDataType
+    public function withFulfillmentIdentifier(\Flexnet\LicenseService\Type\FulfillmentIdentifierType $fulfillmentIdentifier): \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType
     {
         $new = clone $this;
         $new->fulfillmentIdentifier = $fulfillmentIdentifier;
@@ -89,12 +89,12 @@ class EmergencyFulfillmentDataType
         return $new;
     }
 
-    public function getLicenseModelAttributes(): ?AttributeDescriptorDataType
+    public function getLicenseModelAttributes(): ?\Flexnet\LicenseService\Type\AttributeDescriptorDataType
     {
         return $this->licenseModelAttributes;
     }
 
-    public function withLicenseModelAttributes(?AttributeDescriptorDataType $licenseModelAttributes): EmergencyFulfillmentDataType
+    public function withLicenseModelAttributes(?\Flexnet\LicenseService\Type\AttributeDescriptorDataType $licenseModelAttributes): \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType
     {
         $new = clone $this;
         $new->licenseModelAttributes = $licenseModelAttributes;
@@ -107,7 +107,7 @@ class EmergencyFulfillmentDataType
         return $this->FNPTimeZoneValue;
     }
 
-    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): EmergencyFulfillmentDataType
+    public function withFNPTimeZoneValue(?string $FNPTimeZoneValue): \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType
     {
         $new = clone $this;
         $new->FNPTimeZoneValue = $FNPTimeZoneValue;
@@ -120,7 +120,7 @@ class EmergencyFulfillmentDataType
         return $this->startDate;
     }
 
-    public function withStartDate(\DateTimeInterface $startDate): EmergencyFulfillmentDataType
+    public function withStartDate(\DateTimeInterface $startDate): \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType
     {
         $new = clone $this;
         $new->startDate = $startDate;
@@ -133,7 +133,7 @@ class EmergencyFulfillmentDataType
         return $this->endDate;
     }
 
-    public function withEndDate(\DateTimeInterface $endDate): EmergencyFulfillmentDataType
+    public function withEndDate(\DateTimeInterface $endDate): \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType
     {
         $new = clone $this;
         $new->endDate = $endDate;
@@ -146,7 +146,7 @@ class EmergencyFulfillmentDataType
         return $this->shipToEmail;
     }
 
-    public function withShipToEmail(?string $shipToEmail): EmergencyFulfillmentDataType
+    public function withShipToEmail(?string $shipToEmail): \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToEmail = $shipToEmail;
@@ -159,7 +159,7 @@ class EmergencyFulfillmentDataType
         return $this->shipToAddress;
     }
 
-    public function withShipToAddress(?string $shipToAddress): EmergencyFulfillmentDataType
+    public function withShipToAddress(?string $shipToAddress): \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType
     {
         $new = clone $this;
         $new->shipToAddress = $shipToAddress;
@@ -167,12 +167,12 @@ class EmergencyFulfillmentDataType
         return $new;
     }
 
-    public function getServerIds(): ?ServerIDsType
+    public function getServerIds(): ?\Flexnet\LicenseService\Type\ServerIDsType
     {
         return $this->serverIds;
     }
 
-    public function withServerIds(?ServerIDsType $serverIds): EmergencyFulfillmentDataType
+    public function withServerIds(?\Flexnet\LicenseService\Type\ServerIDsType $serverIds): \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType
     {
         $new = clone $this;
         $new->serverIds = $serverIds;
@@ -180,12 +180,12 @@ class EmergencyFulfillmentDataType
         return $new;
     }
 
-    public function getNodeIds(): ?NodeIDsType
+    public function getNodeIds(): ?\Flexnet\LicenseService\Type\NodeIDsType
     {
         return $this->nodeIds;
     }
 
-    public function withNodeIds(?NodeIDsType $nodeIds): EmergencyFulfillmentDataType
+    public function withNodeIds(?\Flexnet\LicenseService\Type\NodeIDsType $nodeIds): \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType
     {
         $new = clone $this;
         $new->nodeIds = $nodeIds;
@@ -193,12 +193,12 @@ class EmergencyFulfillmentDataType
         return $new;
     }
 
-    public function getCustomHost(): ?CustomHostIDType
+    public function getCustomHost(): ?\Flexnet\LicenseService\Type\CustomHostIDType
     {
         return $this->customHost;
     }
 
-    public function withCustomHost(?CustomHostIDType $customHost): EmergencyFulfillmentDataType
+    public function withCustomHost(?\Flexnet\LicenseService\Type\CustomHostIDType $customHost): \Flexnet\LicenseService\Type\EmergencyFulfillmentDataType
     {
         $new = clone $this;
         $new->customHost = $customHost;
