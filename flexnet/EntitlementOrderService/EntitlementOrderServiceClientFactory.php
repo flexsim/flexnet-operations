@@ -3,7 +3,6 @@
 namespace Flexnet\EntitlementOrderService;
 
 use Http\Client\Common\Plugin\AuthenticationPlugin;
-use Http\Client\Common\Plugin\HeaderSetPlugin;
 use Http\Client\Common\PluginClient;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\Authentication\BasicAuth;
@@ -19,16 +18,13 @@ class EntitlementOrderServiceClientFactory
     public static function factory(string $wsdl, string $username, string $password): \Flexnet\EntitlementOrderService\EntitlementOrderServiceClient
     {
         $engine = DefaultEngineFactory::create(
-            ExtSoapOptions::defaults($wsdl, ['user_agent' => 'flexnet-soap-client'])
+            ExtSoapOptions::defaults($wsdl)
                 ->withClassMap(EntitlementOrderServiceClassmap::getCollection()),
             Psr18Transport::createForClient(
                 new PluginClient(
                     Psr18ClientDiscovery::find(),
                     [
                         new AuthenticationPlugin(new BasicAuth($username, $password)),
-                        new HeaderSetPlugin([
-                            'User-Agent' => 'flexnet-soap-client',
-                        ]),
 
                     ]
                 )
